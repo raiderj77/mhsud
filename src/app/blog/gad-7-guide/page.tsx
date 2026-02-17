@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { AdSlot } from "@/components/AdSlot";
 
 const ARTICLE_URL = `${SITE_URL}/blog/gad-7-guide`;
 
@@ -74,6 +75,8 @@ export default function GAD7GuidePage() {
             </p>
           </section>
 
+          <AdSlot position="Blog In-Content 1" className="my-8" />
+
           <section>
             <h2>How is it scored?</h2>
             <p>
@@ -113,6 +116,8 @@ export default function GAD7GuidePage() {
             </p>
           </section>
 
+          <AdSlot position="Blog In-Content 2" className="my-8" />
+
           <section>
             <h2>What the GAD-7 cannot tell you</h2>
             <p>
@@ -149,6 +154,8 @@ export default function GAD7GuidePage() {
             </p>
           </section>
 
+          <AdSlot position="Blog In-Content 3" className="my-8" />
+
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to take the GAD-7?</h3>
@@ -169,6 +176,8 @@ export default function GAD7GuidePage() {
               </details>
             ))}
           </section>
+
+          <AdSlot position="Blog In-Content 4" className="my-8" />
 
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Articles</h3>

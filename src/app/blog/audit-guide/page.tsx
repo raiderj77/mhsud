@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { AdSlot } from "@/components/AdSlot";
 
 const ARTICLE_URL = `${SITE_URL}/blog/audit-guide`;
 
@@ -78,6 +79,8 @@ export default function AUDITGuidePage() {
             </p>
           </section>
 
+          <AdSlot position="Blog In-Content 1" className="my-8" />
+
           <section>
             <h2>The four risk zones</h2>
             <p>
@@ -103,6 +106,8 @@ export default function AUDITGuidePage() {
               These zones were designed to guide what type of intervention a clinician might offer — not to diagnose a specific condition. Zone II doesn&apos;t mean you &quot;have a problem&quot;; it means your drinking pattern is associated with increased risk in population-level research, and a brief conversation with a provider might be beneficial.
             </p>
           </section>
+
+          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>How clinicians use the AUDIT</h2>
@@ -136,6 +141,8 @@ export default function AUDITGuidePage() {
               Like all self-report tools, it depends on honest responses. Underreporting is common with alcohol screening — stigma, denial, and minimization are well-documented in research. A low score does not necessarily mean low risk if you weren&apos;t fully honest with yourself while answering.
             </p>
           </section>
+
+          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>AUDIT vs. AUDIT-C</h2>
@@ -183,6 +190,8 @@ export default function AUDITGuidePage() {
               </details>
             ))}
           </section>
+
+          <AdSlot position="Blog In-Content 4" className="my-8" />
 
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Articles</h3>
