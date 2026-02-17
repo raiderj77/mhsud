@@ -68,10 +68,13 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you use analytics?</h2>
             <p>
-              We may use privacy-respecting analytics to understand general traffic patterns (e.g., which pages are visited, which countries visitors come from). If we do, we will use tools that do not track individual users across sites, do not use cookies for identification, and do not collect personal information. We will disclose the specific analytics provider in this policy.
+              We use Google Analytics (GA4) to understand general traffic patterns — which pages are visited, which countries visitors come from, and how people find our site. Google Analytics uses cookies and collects anonymized usage data. It does not have access to your screening answers (which never leave your browser).
             </p>
             <p>
-              <strong>Current status:</strong> No analytics are active at this time.
+              You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
+            </p>
+            <p>
+              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is active.
             </p>
           </section>
 
