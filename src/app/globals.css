@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-sand-50 text-neutral-800 font-sans transition-colors duration-300;
+  }
+
+  .dark body,
+  body.dark {
+    @apply bg-night-900 text-neutral-200;
+  }
+
+  /* Dark mode body background via class on html */
+  html.dark {
+    @apply bg-night-900;
+  }
+  html.dark body {
+    @apply bg-night-900 text-neutral-200;
+  }
+
+  /* Focus ring for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage-500;
+  }
+
+  /* Smooth transitions for dark mode */
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-2xl shadow-sm;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white
+      bg-gradient-to-br from-sage-500 to-sage-600
+      hover:from-sage-600 hover:to-sage-700
+      shadow-md hover:shadow-lg
+      transition-all duration-200
+      disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none;
+  }
+
+  .btn-secondary {
+    @apply px-5 py-3 rounded-xl font-medium
+      border border-sand-300 dark:border-neutral-600
+      text-neutral-600 dark:text-neutral-300
+      hover:bg-sand-100 dark:hover:bg-night-700
+      transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .prose-mh {
+    @apply text-neutral-600 dark:text-neutral-300 leading-relaxed;
+  }
+
+  .prose-mh h2 {
+    @apply font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mt-8 mb-3;
+  }
+
+  .prose-mh h3 {
+    @apply font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mt-6 mb-2;
+  }
+
+  .prose-mh p {
+    @apply mb-4;
+  }
+
+  .prose-mh ul {
+    @apply list-disc pl-5 mb-4 space-y-1;
+  }
+
+  .prose-mh a {
+    @apply text-sage-600 dark:text-sage-400 underline underline-offset-2 hover:text-sage-700 dark:hover:text-sage-300;
+  }
+}
