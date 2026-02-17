@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({ path: "/" });
@@ -40,6 +41,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <ThemeProvider>
+          <ScrollToTop />
           {/* Dark mode flash prevention */}
           <script
             dangerouslySetInnerHTML={{
