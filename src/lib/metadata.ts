@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "MindCheck Tools";
-export const SITE_URL = "https://mindchecktools.com"; // Update when live
+export const SITE_URL = "https://mindchecktools.com";
 export const SITE_DESCRIPTION =
   "Free, private mental health and substance use self-checks. No login, no data stored. PHQ-9, GAD-7, AUDIT, and more — all in your browser.";
 
