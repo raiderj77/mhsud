@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/audit-alcohol-test`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-c-alcohol-screen`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${SITE_URL}/privacy`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
   // Blog posts will be added dynamically as they're published
