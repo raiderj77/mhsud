@@ -18,7 +18,7 @@ const TOOLS = [
     time: "~2 min",
     questions: 9,
     color: "sage" as const,
-    status: "live" as const,
+    status: "live" as "live" | "coming",
   },
   {
     href: "/gad-7-anxiety-test",
@@ -28,7 +28,7 @@ const TOOLS = [
     time: "~2 min",
     questions: 7,
     color: "sage" as const,
-    status: "coming" as const,
+    status: "live" as "live" | "coming",
   },
   {
     href: "/audit-alcohol-test",
@@ -38,7 +38,7 @@ const TOOLS = [
     time: "~3 min",
     questions: 10,
     color: "sage" as const,
-    status: "coming" as const,
+    status: "live" as "live" | "coming",
   },
   {
     href: "/audit-c-alcohol-screen",
@@ -48,7 +48,7 @@ const TOOLS = [
     time: "~1 min",
     questions: 3,
     color: "sage" as const,
-    status: "coming" as const,
+    status: "live" as "live" | "coming",
   },
 ];
 

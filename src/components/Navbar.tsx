@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/phq-9-depression-test", label: "PHQ-9" },
   { href: "/gad-7-anxiety-test", label: "GAD-7" },
   { href: "/audit-alcohol-test", label: "AUDIT" },
+  { href: "/audit-c-alcohol-screen", label: "AUDIT-C" },
   { href: "/blog", label: "Blog" },
 ];
 
