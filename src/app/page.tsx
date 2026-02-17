@@ -50,6 +50,36 @@ const TOOLS = [
     color: "sage" as const,
     status: "live" as "live" | "coming",
   },
+  {
+    href: "/work-stress-check",
+    title: "Work Stress & Burnout",
+    description: "12 original questions about work demands, control, support, and recovery.",
+    badge: "Original",
+    time: "~3 min",
+    questions: 12,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
+    href: "/mental-load-calculator",
+    title: "Mental Load Calculator",
+    description: "See how planning, remembering, and organizing is distributed at home.",
+    badge: "Original",
+    time: "~3 min",
+    questions: 24,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
+    href: "/sleep-and-mood-check",
+    title: "Sleep & Mood Reflection",
+    description: "Explore how your sleep quality, habits, and mood affect each other.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 10,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
 ];
 
 const FEATURES = [

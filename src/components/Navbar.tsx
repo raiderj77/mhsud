@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: "/audit-alcohol-test", label: "AUDIT" },
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C" },
   { href: "/blog", label: "Blog" },
+  { href: "/crisis-resources", label: "Crisis Help" },
 ];
 
 export function Navbar() {

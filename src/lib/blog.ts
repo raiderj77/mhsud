@@ -18,7 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/phq-9-depression-test",
     date: "2025-01-15",
     readTime: "8 min read",
-    status: "draft",
+    status: "published",
   },
   {
     slug: "gad-7-guide",
@@ -28,7 +28,7 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/gad-7-anxiety-test",
     date: "2025-01-20",
     readTime: "7 min read",
-    status: "draft",
+    status: "published",
   },
   {
     slug: "audit-guide",
@@ -38,7 +38,7 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/audit-alcohol-test",
     date: "2025-01-25",
     readTime: "9 min read",
-    status: "draft",
+    status: "published",
   },
   {
     slug: "work-stress-vs-burnout",
