@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/privacy`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/cookies`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/terms`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
+    { url: `${SITE_URL}/accessibility`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
   const blogPages = BLOG_POSTS
