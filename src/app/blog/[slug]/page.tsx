@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getPostBySlug, posts } from "@/lib/blog";
-import { SITE_URL } from "@/lib/config";
+import { getPostBySlug, posts, type DynamicBlogPost } from "@/lib/blog";
+import { SITE_URL } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
 type ParamsPromise = Promise<{ slug: string }>;
@@ -182,7 +182,7 @@ export default async function BlogPostPage(props: { params: ParamsPromise }) {
               </p>
 
               <div className="mt-4 space-y-2">
-                {(related as any[]).map((p) => (
+                {(related as DynamicBlogPost[]).map((p) => (
                   <Link
                     key={p.slug}
                     href={`/blog/${p.slug}`}

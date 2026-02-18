@@ -9,6 +9,21 @@ export interface BlogPost {
   status: "published" | "draft";
 }
 
+export interface DynamicBlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  content: React.ReactNode;
+  faq: Array<{ question: string; answer: string }>;
+  related?: string[];
+}
+
+export const posts: DynamicBlogPost[] = [];
+
+export function getPostBySlug(slug: string): DynamicBlogPost | undefined {
+  return posts.find((p) => p.slug === slug);
+}
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "phq-9-guide",
