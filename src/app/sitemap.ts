@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/crisis-resources`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/privacy`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
+    { url: `${SITE_URL}/cookies`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
+    { url: `${SITE_URL}/terms`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
   const blogPages = BLOG_POSTS

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -116,6 +117,20 @@ export default function PrivacyPage() {
             <h2>Data security</h2>
             <p>
               Because we do not collect or store your questionnaire responses, there is no database of user answers to protect. Our site is served over HTTPS, and we follow standard security practices for web applications including security headers, content security policies, and regular dependency updates.
+            </p>
+          </section>
+
+          <section>
+            <h2>Your rights</h2>
+            <p>
+              Depending on where you live, you may have specific rights regarding your personal data. We detail these rights — including your rights under the GDPR (EEA/UK) and CCPA/CPRA (California) — in our <Link href="/terms">Terms of Use</Link>. In summary: you can withdraw cookie consent at any time, request information about data we process, and opt out of any data sharing. Since we don&apos;t store screening answers, there is typically no personal data to access or delete.
+            </p>
+          </section>
+
+          <section>
+            <h2>Related policies</h2>
+            <p>
+              For more details, see our <Link href="/cookies">Cookie Policy</Link> (what cookies we use, how to manage them) and <Link href="/terms">Terms of Use</Link> (legal disclaimers, GDPR rights, CCPA rights, limitation of liability).
             </p>
           </section>
 

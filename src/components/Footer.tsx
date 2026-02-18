@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FooterCookieButton } from "./FooterCookieButton";
 
 const TOOL_LINKS = [
   { href: "/phq-9-depression-test", label: "PHQ-9 Depression" },
@@ -11,6 +12,8 @@ const INFO_LINKS = [
   { href: "/blog", label: "Blog & Guides" },
   { href: "/about", label: "About" },
   { href: "/privacy", label: "Privacy Policy" },
+  { href: "/cookies", label: "Cookie Policy" },
+  { href: "/terms", label: "Terms of Use" },
 ];
 
 export function Footer() {
@@ -70,6 +73,13 @@ export function Footer() {
           <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-3">
             © {new Date().getFullYear()} MindCheck Tools. All rights reserved.
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
+            <FooterCookieButton />
+            <span className="text-neutral-300 dark:text-neutral-700">·</span>
+            <Link href="/terms#do-not-sell" className="text-xs text-neutral-400 dark:text-neutral-500 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
+              Do Not Sell or Share My Personal Information
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

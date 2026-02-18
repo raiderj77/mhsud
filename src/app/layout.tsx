@@ -5,6 +5,7 @@ import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { CookieConsent } from "@/components/CookieConsent";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({ path: "/" });
@@ -26,12 +27,29 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z" />
+        {/* Google Consent Mode v2 — must load BEFORE gtag */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XKHQN1NJ2Z');`,
+            __html: `
+              window.dataLayer=window.dataLayer||[];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent','default',{
+                'analytics_storage':'denied',
+                'ad_storage':'denied',
+                'ad_user_data':'denied',
+                'ad_personalization':'denied',
+                'functionality_storage':'granted',
+                'security_storage':'granted',
+                'wait_for_update':500
+              });
+              gtag('js',new Date());
+              gtag('config','G-XKHQN1NJ2Z',{send_page_view:true});
+            `,
           }}
+        />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
         />
         {/* Preconnect + Google Fonts via CSS (no build-time fetch) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,6 +86,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>
