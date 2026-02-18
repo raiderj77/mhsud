@@ -18,7 +18,7 @@ const TOOLS = [
     time: "~2 min",
     questions: 9,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/gad-7-anxiety-test",
@@ -28,7 +28,7 @@ const TOOLS = [
     time: "~2 min",
     questions: 7,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/audit-alcohol-test",
@@ -38,7 +38,7 @@ const TOOLS = [
     time: "~3 min",
     questions: 10,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/audit-c-alcohol-screen",
@@ -48,7 +48,7 @@ const TOOLS = [
     time: "~1 min",
     questions: 3,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/work-stress-check",
@@ -58,7 +58,7 @@ const TOOLS = [
     time: "~3 min",
     questions: 12,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/mental-load-calculator",
@@ -68,7 +68,7 @@ const TOOLS = [
     time: "~3 min",
     questions: 24,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
   {
     href: "/sleep-and-mood-check",
@@ -78,7 +78,7 @@ const TOOLS = [
     time: "~2 min",
     questions: 10,
     color: "sage" as const,
-    status: "live" as "live" | "coming",
+    status: "live" as const,
   },
 ];
 
@@ -180,21 +180,14 @@ export default function HomePage() {
           {TOOLS.map((tool) => (
             <Link
               key={tool.href}
-              href={tool.status === "live" ? tool.href : "#"}
-              className={`card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 ${
-                tool.status === "coming" ? "opacity-60 pointer-events-none" : ""
-              }`}
+              href={tool.href}
+              className="card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex gap-2">
                   <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
                     {tool.badge}
                   </span>
-                  {tool.status === "coming" && (
-                    <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">
-                      Coming Soon
-                    </span>
-                  )}
                 </div>
                 <svg className="w-5 h-5 text-neutral-300 dark:text-neutral-600 group-hover:text-sage-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
@@ -267,16 +260,15 @@ export default function HomePage() {
               excerpt: "Understanding the WHO's alcohol screening tool and what your score can and can't tell you.",
             },
           ].map((post) => (
-            <div key={post.slug} className="card p-5 opacity-60">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="card p-5 group hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 transition-all">
               <span className="text-xs font-medium text-sage-600 dark:text-sage-400 mb-2 block">Guide</span>
-              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2 leading-snug">
+              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2 leading-snug group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
                 {post.title}
               </h3>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
                 {post.excerpt}
               </p>
-              <span className="inline-block mt-3 text-xs text-warm-600 dark:text-warm-400 font-medium">Coming Soon</span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

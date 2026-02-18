@@ -6,7 +6,7 @@ export interface BlogPost {
   toolSlug: string;
   date: string;
   readTime: string;
-  status: "published" | "draft";
+  status: "published";
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -48,7 +48,7 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/work-stress-check",
     date: "2025-02-01",
     readTime: "6 min read",
-    status: "draft",
+    status: "published",
   },
   {
     slug: "sleep-and-mood",
@@ -58,6 +58,6 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/sleep-and-mood-check",
     date: "2025-02-10",
     readTime: "7 min read",
-    status: "draft",
+    status: "published",
   },
 ];
