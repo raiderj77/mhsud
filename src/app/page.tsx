@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/",
   title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
   description:
-    "Take free, private mental health and substance use self-checks. PHQ-9 depression screening, GAD-7 anxiety test, AUDIT alcohol screening — all in your browser, no data stored.",
+    "Take free, private mental health and substance use self-checks. PHQ-9 depression screening, GAD-7 anxiety test, AUDIT alcohol screening — scored in your browser, answers never stored.",
 });
 
 const TOOLS = [
@@ -90,7 +90,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Completely Private",
-    text: "Your answers never leave your browser. No accounts, no cookies, no tracking. When you close the page, your data is gone.",
+    text: "Your screening answers are scored in your browser and never sent to any server. No accounts, no login, no way to connect your results to you.",
   },
   {
     icon: (
@@ -137,7 +137,7 @@ export default function HomePage() {
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
-            Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no data stored, no judgment — just honest reflection and clear next steps.
+            Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no login, no judgment — your answers are scored locally and never stored.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/phq-9-depression-test" className="btn-primary text-base">
@@ -227,7 +227,7 @@ export default function HomePage() {
               Every answer you give is processed entirely in your browser using client-side JavaScript. We have no server, no database, and no way to see your responses. When you close the page, your data is gone.
             </p>
             <p className="text-sage-200/60 text-sm">
-              No cookies. No analytics tracking your answers. No accounts. No exceptions.
+              We use analytics and may display ads — but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_NAME = "MindCheck Tools";
 export const SITE_URL = "https://mindchecktools.com";
 export const SITE_DESCRIPTION =
-  "Free, private mental health and substance use self-checks. No login, no data stored. PHQ-9, GAD-7, AUDIT, and more — all in your browser.";
+  "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.";
 
 export const DEFAULT_KEYWORDS = [
   "mental health self-check",

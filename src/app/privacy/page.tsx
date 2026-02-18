@@ -5,7 +5,7 @@ export const metadata: Metadata = createMetadata({
   path: "/privacy",
   title: "Privacy Policy — How We Protect Your Data",
   description:
-    "MindCheck Tools privacy policy. Your answers never leave your browser. No accounts, no cookies, no tracking, no data stored. Complete transparency about how our mental health self-checks work.",
+    "MindCheck Tools privacy policy. Your screening answers never leave your browser. No accounts, no login. We use analytics and may display ads, but they never access your responses. Full transparency.",
 });
 
 export default function PrivacyPage() {
