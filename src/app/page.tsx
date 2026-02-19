@@ -267,7 +267,7 @@ export default function HomePage() {
               excerpt: "Understanding the WHO's alcohol screening tool and what your score can and can't tell you.",
             },
           ].map((post) => (
-            <div key={post.slug} className="card p-5 opacity-60">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
               <span className="text-xs font-medium text-sage-600 dark:text-sage-400 mb-2 block">Guide</span>
               <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2 leading-snug">
                 {post.title}
@@ -275,8 +275,8 @@ export default function HomePage() {
               <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
                 {post.excerpt}
               </p>
-              <span className="inline-block mt-3 text-xs text-warm-600 dark:text-warm-400 font-medium">Coming Soon</span>
-            </div>
+              <span className="inline-block mt-3 text-xs text-sage-600 dark:text-sage-400 font-medium hover:underline">Read guide →</span>
+            </Link>
           ))}
         </div>
       </section>
