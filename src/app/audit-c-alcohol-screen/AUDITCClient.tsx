@@ -296,7 +296,7 @@ export function AUDITCClient({ faqData }: Props) {
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If you're concerned about your drinking, help is available:</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If you&apos;re concerned about your drinking, help is available:</p>
             <div className="space-y-2.5">
               {[
                 { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 — free, confidential, 24/7 referrals", color: "text-sage-600 dark:text-sage-400" },
