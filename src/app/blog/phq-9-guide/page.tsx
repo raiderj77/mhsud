@@ -209,6 +209,8 @@ export default function PHQ9GuidePage() {
               </Link>
             </div>
           </section>
+
+          <AuthorBio />
         </div>
       </article>
     </>
