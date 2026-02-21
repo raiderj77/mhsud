@@ -215,6 +215,9 @@ export default function SleepMoodPage() {
             <Link href="/sleep-and-mood-check" className="btn-primary text-sm">Take the Sleep &amp; Mood Self-Check</Link>
           </div>
 
+          {/* Author Bio */}
+          <AuthorBio />
+
           {/* FAQ */}
           <section className="not-prose mt-12">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>

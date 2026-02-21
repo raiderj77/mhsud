@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/work-stress-vs-burnout`;
 
@@ -210,6 +211,9 @@ export default function WorkStressBurnoutPage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Your answers never leave your browser.</p>
             <Link href="/work-stress-check" className="btn-primary text-sm">Take the Work Stress Self-Check</Link>
           </div>
+
+          {/* Author Bio */}
+          <AuthorBio />
 
           {/* FAQ */}
           <section className="not-prose mt-12">
