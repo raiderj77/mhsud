@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/sleep-and-mood`;
 

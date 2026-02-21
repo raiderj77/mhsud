@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
 
@@ -172,6 +173,9 @@ export default function PHQ9GuidePage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
             <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Self-Check</Link>
           </div>
+
+          {/* Author Bio */}
+          <AuthorBio />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

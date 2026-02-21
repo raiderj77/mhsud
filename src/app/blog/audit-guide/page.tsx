@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/audit-guide`;
 
@@ -176,6 +177,9 @@ export default function AUDITGuidePage() {
               <Link href="/audit-c-alcohol-screen" className="btn-secondary text-sm">Quick AUDIT-C (3 Questions)</Link>
             </div>
           </div>
+
+          {/* Author Bio */}
+          <AuthorBio />
 
           {/* FAQ */}
           <section className="not-prose mt-12">
