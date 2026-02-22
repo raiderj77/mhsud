@@ -60,4 +60,14 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     status: "published",
   },
+  {
+    slug: "seasonal-affective-disorder",
+    title: "Seasonal Affective Disorder (SAD): Understanding Winter Depression and Light Therapy",
+    excerpt: "What is seasonal affective disorder? Learn why it happens in winter, how light therapy works, why it differs from regular depression, and when to seek professional help.",
+    category: "Education",
+    toolSlug: "/phq-9-depression-test",
+    date: "2025-02-21",
+    readTime: "9 min read",
+    status: "published",
+  },
 ];
