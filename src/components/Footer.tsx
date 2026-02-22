@@ -83,6 +83,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+    <div className="mt-4 text-center"><p className="text-xs text-neutral-400 dark:text-neutral-500">More Free Tools: <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 transition-colors">Creator Revenue Calculator</a> · <a href="https://fibertools.app" className="hover:text-sage-600 transition-colors">FiberTools</a></p></div>
     </footer>
   );
 }
