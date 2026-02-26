@@ -122,17 +122,17 @@ export function BurnoutClient({ faqData }: Props) {
   const furthestAnswered = answers.findLastIndex((a) => a !== null);
 
   // Calculate subscale scores
-  const emotionalExhaustionScore = answers.slice(0, 5).reduce((sum, a) => {
+  const emotionalExhaustionScore = answers.slice(0, 5).reduce<number>((sum, a) => {
     if (a === null) return sum;
     return sum + a;
   }, 0);
   
-  const depersonalizationScore = answers.slice(5, 10).reduce((sum, a) => {
+  const depersonalizationScore = answers.slice(5, 10).reduce<number>((sum, a) => {
     if (a === null) return sum;
     return sum + a;
   }, 0);
   
-  const personalAccomplishmentScore = answers.slice(10, 15).reduce((sum, a) => {
+  const personalAccomplishmentScore = answers.slice(10, 15).reduce<number>((sum, a) => {
     if (a === null) return sum;
     // Reverse score for personal accomplishment questions
     return sum + (6 - a);
@@ -182,10 +182,14 @@ export function BurnoutClient({ faqData }: Props) {
         </p>
       </header>
 
-      <AdSlot slotId="burnout-top" className="mb-8" />
+      <AdSlot position="burnout-top" className="mb-8" />
 
       {!accepted ? (
-        <DisclaimerGate onAccept={() => setAccepted(true)} />
+        <DisclaimerGate
+          toolName="Burnout Assessment"
+          toolDescription="This self-check uses a validated burnout assessment tool based on established psychological measures to help you understand your current stress and burnout levels."
+          onAccept={() => setAccepted(true)}
+        />
       ) : (
         <>
           {/* Progress Bar */}
@@ -211,7 +215,7 @@ export function BurnoutClient({ faqData }: Props) {
             {QUESTIONS.map((q, qi) => (
               <div
                 key={qi}
-                ref={(el) => (questionRefs.current[qi] = el)}
+                ref={(el) => { questionRefs.current[qi] = el; }}
                 className={`p-5 rounded-xl border transition-all duration-200 ${
                   answers[qi] !== null
                     ? "border-sage-300 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20"
@@ -385,7 +389,7 @@ export function BurnoutClient({ faqData }: Props) {
             </div>
           )}
 
-          <AdSlot slotId="burnout-middle" className="my-8" />
+          <AdSlot position="burnout-middle" className="my-8" />
 
           {/* FAQ */}
           <section className="mb-12">
@@ -593,7 +597,7 @@ export function BurnoutClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot slotId="burnout-bottom" className="mb-8" />
+          <AdSlot position="burnout-bottom" className="mb-8" />
 
           {/* Disclaimer */}
           <div className="text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-night-700 pt-6">

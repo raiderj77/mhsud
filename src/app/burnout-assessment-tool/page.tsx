@@ -71,16 +71,7 @@ export default function BurnoutAssessmentPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            faqJsonLd({
-              name: "Burnout Assessment Tool FAQ",
-              description: "Frequently asked questions about the burnout assessment tool",
-              questions: faqData.map((faq) => ({
-                question: faq.question,
-                answer: faq.answer,
-              })),
-            })
-          ),
+          __html: JSON.stringify(faqJsonLd(faqData)),
         }}
       />
       <script

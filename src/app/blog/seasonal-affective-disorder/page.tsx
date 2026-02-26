@@ -156,7 +156,7 @@ export default function SeasonalAffectiveDisorderPage() {
               body&apos;s internal 24-hour clock. In winter, shortened daylight means less bright light exposure,
               especially in the morning. This disruption can affect the timing of melatonin (a hormone that promotes
               sleep) and serotonin (a neurotransmitter linked to mood). A landmark study published in{" "}
-              <em>JAMA Psychiatry</em> (Meesters et al., 2011) found that light therapy's effectiveness correlates with
+              <em>JAMA Psychiatry</em> (Meesters et al., 2011) found that light therapy&apos;s effectiveness correlates with
               its ability to reset circadian rhythm timing.
             </p>
             <p>
@@ -219,12 +219,12 @@ export default function SeasonalAffectiveDisorderPage() {
             <p>
               <strong>How it works:</strong> A light therapy box produces light at an intensity of 10,000 lux — roughly 25
               times brighter than typical indoor lighting. You position yourself about 16–24 inches from the light and let
-              it shine into your eyes (though you don't stare directly at the light). Sessions typically last 20–30 minutes
+              it shine into your eyes (though you don&apos;t stare directly at the light). Sessions typically last 20–30 minutes
               and are most effective when done early in the morning, ideally within 30 minutes of waking.
             </p>
             <p>
               <strong>Research evidence:</strong> Multiple randomized controlled trials and meta-analyses support light
-              therapy's efficacy. A meta-analysis published in the <em>Journal of Affective Disorders</em> (Goel et al.,
+              therapy&apos;s efficacy. A meta-analysis published in the <em>Journal of Affective Disorders</em> (Goel et al.,
               2005) found that light therapy produced symptom improvement in 50–80% of people with SAD when properly
               administered. The National Institute of Mental Health cites light therapy as a first-line treatment for SAD.
             </p>
@@ -236,7 +236,7 @@ export default function SeasonalAffectiveDisorderPage() {
             <p>
               <strong>Choosing a light:</strong> Not all light sources are equally effective. Effective SAD lights must
               produce 10,000 lux, filter out harmful UV light, and allow proper positioning for eye exposure. Many
-              smartphone &quot;light apps&quot; or standard desk lamps are ineffective because they don't produce sufficient
+              smartphone &quot;light apps&quot; or standard desk lamps are ineffective because they don&apos;t produce sufficient
               lux. Investing in a dedicated SAD light from a reputable manufacturer is important.
             </p>
           </section>
