@@ -7,15 +7,15 @@ const ARTICLE_URL = `${SITE_URL}/blog/depression-screening-guide`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/depression-screening-guide",
-  title: "Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help",
+  title: "Depression Screening Guide: PHQ-9 Assessment, USPSTF Guidelines & Treatment Options",
   description:
-    "Learn about depression screening recommendations for adults, how the PHQ-9 assessment works, and evidence-based steps for managing depressive symptoms. Includes crisis resources and clinical guidance.",
+    "Complete guide to depression screening for adults. Learn how the PHQ-9 assessment works, understand USPSTF recommendations, and discover evidence-based treatment approaches. Includes crisis resources.",
   keywords: [
-    "depression screening", "PHQ-9", "USPSTF depression guidelines", "clinical depression",
-    "mental health assessment", "depression symptoms", "suicide prevention", "mental health resources",
-    "depression treatment options", "psychotherapy for depression", "antidepressant medication",
-    "depression self-help", "mental health crisis resources", "988 suicide lifeline",
-    "SAMHSA helpline", "depression diagnosis", "mental health screening"
+    "depression screening", "PHQ-9 assessment", "USPSTF depression guidelines", "clinical depression",
+    "mental health screening", "depression symptoms", "suicide prevention resources", "mental health assessment",
+    "depression treatment options", "psychotherapy for depression", "antidepressant medication guide",
+    "988 suicide lifeline", "SAMHSA helpline", "depression diagnosis process", "mental health resources",
+    "PHQ-9 scoring", "depression screening tools"
   ],
 });
 
@@ -63,7 +63,7 @@ export default function DepressionScreeningGuidePage() {
             Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help
           </h1>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Depression affects approximately 21 million U.S. adults annually, yet many go undiagnosed for years. This comprehensive guide explains depression screening from a clinical perspective, including how screening tools work, what your results may indicate, and evidence-based steps toward better mental health.
+            Depression touches roughly 21 million American adults each year, yet diagnosis often comes years after symptoms begin. This guide explores depression screening through a clinical lens—explaining how screening tools function, what results might suggest, and practical steps toward improved mental health based on current evidence.
           </p>
           <div className="mt-6">
             <Link href="/phq-9-depression-test" className="btn-primary text-sm">
@@ -76,7 +76,7 @@ export default function DepressionScreeningGuidePage() {
           <section>
             <h2>Understanding Depression: More Than Just Sadness</h2>
             <p>
-              Depression represents one of the most significant public health challenges of our time, affecting approximately <strong>280 million people worldwide</strong> according to the World Health Organization. In the United States alone, <strong>major depressive disorder affects about 21 million adults annually</strong>, making it one of the most common mental health conditions. Despite its prevalence, depression remains underdiagnosed and undertreated, with only about <strong>35% of those affected receiving adequate treatment</strong>.
+              Depression stands among our era's most pressing public health concerns, impacting roughly <strong>280 million individuals globally</strong> according to World Health Organization estimates. Within the United States, <strong>major depressive disorder affects approximately 21 million adults each year</strong>, ranking it among the most prevalent mental health conditions. Despite this widespread impact, depression frequently goes undiagnosed and undertreated—only about <strong>one-third of affected individuals receive appropriate care</strong>.
             </p>
             
             <h3>Clinical Depression vs. Normal Sadness</h3>
