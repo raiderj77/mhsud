@@ -244,6 +244,24 @@ export function MentalLoadClient({ faqData }: Props) {
 
           <AdSlot position="Footer" className="mb-8" />
 
+          <div className="card p-5 sm:p-6 mb-5">
+            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If mental load is affecting your well-being, help is available:</p>
+            <div className="space-y-2.5">
+              {[
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
+              ].map((r) => (
+                <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
+                  <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
+                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">Original tool by MindCheck Tools. For reflection and conversation only.</p>
           </footer>
