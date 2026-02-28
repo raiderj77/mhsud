@@ -76,14 +76,14 @@ export default function DepressionScreeningGuidePage() {
           <section>
             <h2>Understanding Depression: More Than Just Sadness</h2>
             <p>
-              Depression stands among our era&apos;s most pressing public health concerns, impacting roughly <strong>280 million individuals globally</strong> according to World Health Organization estimates. Within the United States, <strong>major depressive disorder affects approximately 21 million adults each year</strong>, ranking it among the most prevalent mental health conditions. Despite this widespread impact, depression frequently goes undiagnosed and undertreated—only about <strong>one-third of affected individuals receive appropriate care</strong>.
+              Depression touches lives in profound ways, affecting roughly <strong>280 million people worldwide</strong> according to World Health Organization estimates. In the United States alone, <strong>major depressive disorder impacts about 21 million adults each year</strong>, making it one of our most common mental health conditions. Yet despite its prevalence, depression often remains hidden—only about <strong>one in three people who need treatment actually receive it</strong>.
             </p>
             
             <h3>Clinical Depression vs. Normal Sadness</h3>
             <p>
-              Many people confuse clinical depression with temporary sadness or grief, but they represent fundamentally different experiences:
+              It&apos;s easy to confuse clinical depression with everyday sadness, but they&apos;re fundamentally different experiences:
             </p>
-            
+
             <div className="not-prose my-6 space-y-4">
               <div className="p-4 card">
                 <h4 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">Normal Sadness/Grief:</h4>
@@ -106,18 +106,18 @@ export default function DepressionScreeningGuidePage() {
               </div>
             </div>
             
-            <h3>The Neurobiology of Depression</h3>
+            <h3>The Science Behind Depression</h3>
             <p>
-              Modern research reveals depression involves complex biological mechanisms:
+              Depression isn&apos;t just &quot;feeling sad&quot;—it involves tangible biological changes:
             </p>
             <ul>
-              <li><strong>Neurotransmitter imbalances</strong> involving serotonin, norepinephrine, and dopamine</li>
-              <li><strong>Inflammatory processes</strong> that affect brain function</li>
-              <li><strong>Structural brain changes</strong> in areas regulating mood and cognition</li>
-              <li><strong>Genetic factors</strong> that increase vulnerability</li>
+              <li><strong>Chemical shifts</strong> in neurotransmitters like serotonin and dopamine</li>
+              <li><strong>Inflammation markers</strong> that can influence brain function</li>
+              <li><strong>Physical changes</strong> in brain regions that handle mood and thinking</li>
+              <li><strong>Genetic factors</strong> that may increase susceptibility</li>
             </ul>
             <p>
-              A 2023 meta-analysis in <em>JAMA Psychiatry</em> confirmed that depression involves <strong>measurable changes in brain connectivity and structure</strong>, validating its status as a medical condition requiring appropriate treatment.
+              Recent research in <em>JAMA Psychiatry</em> confirms what many have long suspected: depression involves <strong>real, measurable changes in brain structure and function</strong>. This understanding helps validate depression as a medical condition deserving proper care, not just willpower.
             </p>
           </section>
 
@@ -128,12 +128,12 @@ export default function DepressionScreeningGuidePage() {
             
             <h3>Current Guidelines</h3>
             <p>
-              The U.S. Preventive Services Task Force (USPSTF) recommends <strong>depression screening for all adults aged 18 and older</strong> when adequate systems are in place for accurate diagnosis, effective treatment, and appropriate follow-up. This represents a <strong>Grade B recommendation</strong>, indicating:
+              The U.S. Preventive Services Task Force (USPSTF) now recommends <strong>routine depression screening for all adults 18 and older</strong>, provided there are systems to ensure proper diagnosis, treatment, and follow-up. This <strong>Grade B recommendation</strong> means:
             </p>
             <ul>
-              <li><strong>Substantial net benefit</strong> from screening</li>
-              <li><strong>Moderate certainty</strong> of evidence</li>
-              <li><strong>Strong recommendation</strong> for implementation</li>
+              <li><strong>Clear benefits</strong> outweigh any risks</li>
+              <li><strong>Solid evidence</strong> supports screening effectiveness</li>
+              <li><strong>Strong encouragement</strong> for healthcare providers to implement screening</li>
             </ul>
             
             <h3>Screening Populations</h3>
@@ -152,18 +152,18 @@ export default function DepressionScreeningGuidePage() {
               <li><strong>Clinical judgment</strong> guides timing between screenings</li>
             </ul>
             
-            <h3>Why Routine Screening Matters</h3>
+            <h3>Why Routine Screening Makes a Difference</h3>
             <p>
-              Before widespread screening implementation:
+              Before routine screening became common:
             </p>
             <ul>
-              <li><strong>50-70% of depression cases</strong> went undetected in primary care</li>
-              <li>Average delay to treatment: <strong>6-8 years</strong></li>
-              <li>Significant <strong>functional impairment</strong> during untreated periods</li>
-              <li>Increased risk of <strong>suicide and substance use disorders</strong></li>
+              <li><strong>Half to two-thirds of depression cases</strong> slipped through unnoticed in primary care</li>
+              <li>People waited <strong>6-8 years on average</strong> before getting treatment</li>
+              <li>Untreated depression caused significant <strong>daily struggles</strong> during those years</li>
+              <li>Risks of <strong>suicide and substance use</strong> increased without intervention</li>
             </ul>
             <p>
-              Routine screening addresses these gaps by creating systematic opportunities for identification and intervention.
+              Routine screening helps catch depression earlier, giving people a chance to address symptoms before they become overwhelming.
             </p>
           </section>
 
@@ -398,7 +398,7 @@ export default function DepressionScreeningGuidePage() {
               <ul className="text-sm text-amber-700 dark:text-amber-300 space-y-1 pl-5">
                 <li>• <strong>Call or text 988</strong> for the Suicide & Crisis Lifeline (available 24/7)</li>
                 <li>• <strong>Call 911</strong> or go to the nearest emergency room</li>
-                <li>• <strong>Contact the SAMHSA National Helpline:</strong> 1-800-662-4357 for treatment referral and information</li>
+                <li>• <strong>Contact SAMHSA:</strong> 1-800-662-4357 (24/7 treatment referral and information)</li>
               </ul>
             </div>
             <p className="text-sm text-amber-700 dark:text-amber-300 mt-4">

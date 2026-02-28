@@ -126,22 +126,20 @@ export default function SeasonalAffectiveDisorderPage() {
           <section>
             <h2>What is Seasonal Affective Disorder?</h2>
             <p>
-              Seasonal Affective Disorder, commonly known as SAD, is a pattern of depression that recurs during specific
-              seasons, most often fall and winter. According to the Diagnostic and Statistical Manual of Mental Disorders
-              (DSM-5), SAD is diagnosed as major depressive disorder or bipolar disorder with a seasonal pattern when mood
-              episodes reliably begin and end around the same time each year.
+              Seasonal Affective Disorder, or SAD, is more than just &quot;winter blues.&quot; It&apos;s a pattern of depression that
+              follows the seasons, most often striking in fall and winter. According to mental health professionals, SAD
+              is diagnosed when someone experiences major depressive episodes that reliably begin and end around the same
+              time each year.
             </p>
             <p>
-              The condition is not simply &quot;winter blues&quot; or disliking cold weather. Rather, it may indicate a
-              clinically significant depression that interferes with daily functioning, relationships, work, and quality
-              of life. People with SAD often describe a profound loss of motivation, difficulty getting out of bed,
-              changes in appetite and sleep, and emotional withdrawal that goes far beyond typical seasonal preference.
+              This isn&apos;t about disliking cold weather. For people with SAD, the change in seasons brings a profound
+              shift—loss of motivation, trouble getting out of bed, appetite changes, and emotional withdrawal that
+              significantly impacts daily life. It feels different from ordinary seasonal preferences.
             </p>
             <p>
-              The prevalence of SAD varies by latitude and climate. Research from the National Institute of Mental Health
-              suggests that SAD may affect 1–10% of the population, with higher rates in northern regions with greater
-              seasonal variation in daylight. In Alaska and Scandinavia, rates are notably higher than in southern
-              climates.
+              How common is SAD? Research suggests it affects 1–10% of people, with rates climbing in northern regions
+              where winter days grow especially short. In places like Alaska and Scandinavia, SAD appears more frequently
+              than in sunnier southern climates.
             </p>
           </section>
 
@@ -385,13 +383,10 @@ export default function SeasonalAffectiveDisorderPage() {
           </section>
 
           {/* Author Bio */}
-          <section className="not-prose mt-8 p-6 card bg-neutral-50 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800">
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              <strong>Reviewed by Jason Ramirez, Licensed Drug and Alcohol Counselor, 30+ years clinical experience.</strong>{" "}
-              Jason Ramirez is a licensed substance abuse and mental health professional with over three decades of
-              clinical experience in assessment, treatment planning, and client care. His expertise spans depression,
-              anxiety, bipolar disorder, and substance use disorders. This article has been reviewed for clinical accuracy
-              and evidence-based content.
+          <section className="not-prose mt-8 p-6 card bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
+            <h3 className="text-sage-800 dark:text-sage-400 font-semibold mb-3">👨‍⚕️ About the Author</h3>
+            <p className="text-sm text-sage-700 dark:text-sage-300 leading-relaxed">
+              <strong>Jason Ramirez</strong> is a Licensed Drug and Alcohol Counselor with over 30 years of clinical experience in mental health and substance use treatment. He has worked in various clinical settings including outpatient clinics, residential treatment centers, and hospital-based programs. His expertise includes evidence-based assessment and treatment of co-occurring mental health and substance use disorders. Jason is committed to providing accurate, clinically-informed mental health information to help individuals make informed decisions about their care.
             </p>
           </section>
 
