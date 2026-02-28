@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
 
@@ -173,6 +174,9 @@ export default function PHQ9GuidePage() {
             <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Self-Check</Link>
           </div>
 
+          {/* Author Bio */}
+          <AuthorBio />
+
           {/* FAQ */}
           <section className="not-prose mt-12">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
@@ -205,6 +209,8 @@ export default function PHQ9GuidePage() {
               </Link>
             </div>
           </section>
+
+          <AuthorBio />
         </div>
       </article>
     </>

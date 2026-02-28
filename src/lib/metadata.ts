@@ -155,16 +155,21 @@ export function articleJsonLd({
     dateModified,
     image: image || `${SITE_URL}/og-default.png`,
     author: {
-      "@type": "Organization",
-      name: SITE_NAME,
+      "@type": "Person",
+      name: "Jason Ramirez",
+      description: "Licensed Drug and Alcohol Counselor with 30+ years of clinical experience",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+      },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    mainEntityOfPage: url,
   };
 }
 
@@ -177,7 +182,11 @@ export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: item.url,
+      item: {
+        "@id": item.url,
+        "@type": "WebPage",
+        name: item.name,
+      },
     })),
   };
 }

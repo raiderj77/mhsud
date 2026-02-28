@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/gad-7-guide`;
 
@@ -162,6 +163,9 @@ export default function GAD7GuidePage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
             <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Self-Check</Link>
           </div>
+
+          {/* Author Bio */}
+          <AuthorBio />
 
           {/* FAQ */}
           <section className="not-prose mt-12">
