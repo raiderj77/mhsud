@@ -89,3 +89,85 @@
     @apply text-sage-600 dark:text-sage-400 underline underline-offset-2 hover:text-sage-700 dark:hover:text-sage-300;
   }
 }
+/* ─── Print Styles ─── */
+/* Append this to the END of your globals.css file */
+
+@media print {
+  /* Hide everything except results */
+  nav, footer, .sticky, [data-ad-position],
+  .btn-primary, .btn-secondary, button,
+  .badge, .animate-fade-in > section:last-of-type {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Clean up for printing */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  #printable-results {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure score card prints nicely */
+  #printable-results .card:first-child > div:first-child {
+    background: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+/* ─── Print Styles ─── */
+/* Append this to the END of your globals.css file */
+
+@media print {
+  /* Hide everything except results */
+  nav, footer, .sticky, [data-ad-position],
+  .btn-primary, .btn-secondary, button,
+  .badge, .animate-fade-in > section:last-of-type {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Clean up for printing */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  #printable-results {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure score card prints nicely */
+  #printable-results .card:first-child > div:first-child {
+    background: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

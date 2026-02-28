@@ -1,0 +1,86 @@
+# MindCheck Tools
+
+> Free, private mental health self-checks. Your answers are scored in your browser and never stored.
+
+MindCheck Tools provides validated, evidence-based mental health screening instruments as free, private web tools. All scoring happens client-side — no accounts, no login, no data collection.
+
+## Self-Check Tools
+
+### PHQ-9 Depression Self-Check
+- URL: https://mindchecktools.com/phq-9-depression-test
+- Description: 9-question validated depression screener (Patient Health Questionnaire-9). Scores 0-27 across minimal, mild, moderate, moderately severe, and severe ranges.
+- Time: ~2 minutes
+- Source: Developed by Drs. Spitzer, Williams, and Kroenke. Public domain.
+- Questions answered: Am I depressed? How severe are my depression symptoms? What does my PHQ-9 score mean?
+
+### GAD-7 Anxiety Self-Check
+- URL: https://mindchecktools.com/gad-7-anxiety-test
+- Description: 7-question validated generalized anxiety screener. Scores 0-21 across minimal, mild, moderate, and severe ranges.
+- Time: ~2 minutes
+- Source: Developed by Drs. Spitzer, Kroenke, Williams, and Löwe. Public domain.
+- Questions answered: Do I have anxiety? How bad is my anxiety? What does my GAD-7 score mean?
+
+### AUDIT Alcohol Use Screen
+- URL: https://mindchecktools.com/audit-alcohol-test
+- Description: 10-item WHO alcohol screening tool to reflect on relationship with alcohol. Scores 0-40 across low-risk, hazardous, harmful, and possible dependence ranges.
+- Time: ~3 minutes
+- Source: World Health Organization. Public domain.
+- Questions answered: Do I drink too much? Is my drinking a problem? What is AUDIT alcohol screening?
+
+### AUDIT-C Quick Screen
+- URL: https://mindchecktools.com/audit-c-alcohol-screen
+- Description: 3-question brief alcohol screen used in primary care settings worldwide.
+- Time: ~1 minute
+- Source: Derived from WHO AUDIT. Public domain.
+- Questions answered: Quick alcohol screening, brief alcohol use assessment.
+
+### Work Stress & Burnout Check
+- URL: https://mindchecktools.com/work-stress-check
+- Description: 12 original questions about work demands, control, support, and recovery.
+- Time: ~3 minutes
+- Questions answered: Am I burned out? Is my work stress normal? Work-life balance assessment.
+
+### Mental Load Calculator
+- URL: https://mindchecktools.com/mental-load-calculator
+- Description: See how planning, remembering, and organizing is distributed at home.
+- Time: ~3 minutes
+- Questions answered: Who carries the mental load? Household labor distribution.
+
+### Sleep & Mood Reflection
+- URL: https://mindchecktools.com/sleep-and-mood-check
+- Description: Explore how your sleep quality, habits, and mood affect each other.
+- Time: ~2 minutes
+- Questions answered: Is poor sleep affecting my mental health? Sleep-mood connection.
+
+## Educational Guides
+
+- PHQ-9 Guide: https://mindchecktools.com/blog/phq-9-guide
+- GAD-7 Guide: https://mindchecktools.com/blog/gad-7-guide
+- AUDIT Guide: https://mindchecktools.com/blog/audit-guide
+- Work Stress vs Burnout: https://mindchecktools.com/blog/work-stress-vs-burnout
+- Sleep and Mood: https://mindchecktools.com/blog/sleep-and-mood
+- Seasonal Affective Disorder: https://mindchecktools.com/blog/seasonal-affective-disorder
+
+## Crisis Resources
+- URL: https://mindchecktools.com/crisis-resources
+- 988 Suicide & Crisis Lifeline (US): Call or text 988
+- Crisis Text Line (US): Text HOME to 741741
+- International: findahelpline.com
+
+## Important Disclaimers
+All tools are for educational and self-reflection purposes only. They are NOT a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. All responses are processed entirely in the browser and are never stored or transmitted.
+
+## Technical Details
+- Framework: Next.js (static export compatible)
+- Hosting: Vercel
+- Privacy: Zero server-side data collection, no accounts, all scoring is client-side JavaScript
+- Ads: Google AdSense (ca-pub-7171402107622932) — ads never access screening responses
+- Analytics: Google Analytics with Consent Mode v2
+
+## Related Sites
+- FiberTools: https://fibertools.app — Fiber arts calculators
+- Creator Revenue Calculator: https://creatorrevenuecalculator.com — Creator monetization tools
+- FlipMyCase: https://flipmycase.com — Text conversion utilities
+
+## Contact
+- Email: hello@mindchecktools.com

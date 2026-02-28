@@ -81,9 +81,17 @@ export function Footer() {
               Do Not Sell or Share My Personal Information
             </Link>
           </div>
+          {/* Sister Sites */}
+          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-4">
+            More Free Tools:{" "}
+            <a href="https://fibertools.app" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FiberTools</a>
+            {" · "}
+            <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Creator Revenue Calculator</a>
+            {" · "}
+            <a href="https://flipmycase.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FlipMyCase</a>
+          </p>
         </div>
       </div>
-    <div className="mt-4 text-center"><p className="text-xs text-neutral-400 dark:text-neutral-500">More Free Tools: <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 transition-colors">Creator Revenue Calculator</a> · <a href="https://fibertools.app" className="hover:text-sage-600 transition-colors">FiberTools</a></p></div>
     </footer>
   );
 }

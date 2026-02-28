@@ -8,7 +8,12 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
-export const metadata: Metadata = createMetadata({ path: "/" });
+export const metadata: Metadata = {
+  ...createMetadata({ path: "/" }),
+  other: {
+    "google-adsense-account": "ca-pub-7171402107622932",
+  },
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -50,6 +55,12 @@ export default function RootLayout({
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
+        />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
+          crossOrigin="anonymous"
         />
         {/* Preconnect + Google Fonts via CSS (no build-time fetch) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

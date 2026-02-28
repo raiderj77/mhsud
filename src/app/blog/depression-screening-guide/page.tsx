@@ -38,10 +38,10 @@ const FAQ_DATA = [
   },
   { 
     question: "How long does it take for depression treatment to work?", 
-    answer: "Timelines vary depending on the treatment approach. Psychotherapy often shows benefits within 4-8 weeks. Antidepressant medications typically take 2-4 weeks to begin working and 6-8 weeks for full effect. Most people experience gradual improvement rather than sudden recovery. It's important to continue treatment even if improvements seem slow, and to communicate regularly with your provider about progress." 
+    answer: "Timelines vary depending on the treatment approach. Psychotherapy often shows benefits within 4-8 weeks. Antidepressant medications typically take 2-4 weeks to begin working and 6-8 weeks for full effect. Most people experience gradual improvement rather than sudden recovery. It&apos;s important to continue treatment even if improvements seem slow, and to communicate regularly with your provider about progress." 
   },
   { 
-    question: "What's the difference between sadness and clinical depression?", 
+    question: "What&apos;s the difference between sadness and clinical depression?", 
     answer: "Sadness is a normal emotional response to difficult situations and typically fluctuates with circumstances. Clinical depression involves persistent symptoms (lasting two weeks or more) that significantly impair daily functioning and may occur without obvious triggers. Depression often includes physical symptoms (sleep changes, appetite changes, fatigue) and cognitive symptoms (difficulty concentrating, feelings of worthlessness) beyond just low mood." 
   },
 ];
@@ -76,7 +76,7 @@ export default function DepressionScreeningGuidePage() {
           <section>
             <h2>Understanding Depression: More Than Just Sadness</h2>
             <p>
-              Depression stands among our era's most pressing public health concerns, impacting roughly <strong>280 million individuals globally</strong> according to World Health Organization estimates. Within the United States, <strong>major depressive disorder affects approximately 21 million adults each year</strong>, ranking it among the most prevalent mental health conditions. Despite this widespread impact, depression frequently goes undiagnosed and undertreated—only about <strong>one-third of affected individuals receive appropriate care</strong>.
+              Depression stands among our era&apos;s most pressing public health concerns, impacting roughly <strong>280 million individuals globally</strong> according to World Health Organization estimates. Within the United States, <strong>major depressive disorder affects approximately 21 million adults each year</strong>, ranking it among the most prevalent mental health conditions. Despite this widespread impact, depression frequently goes undiagnosed and undertreated—only about <strong>one-third of affected individuals receive appropriate care</strong>.
             </p>
             
             <h3>Clinical Depression vs. Normal Sadness</h3>
@@ -91,7 +91,7 @@ export default function DepressionScreeningGuidePage() {
                   <li>• Typically tied to specific events or losses</li>
                   <li>• Fluctuates in intensity</li>
                   <li>• Usually improves with time and support</li>
-                  <li>• Doesn't typically impair overall functioning</li>
+                  <li>• Doesn&apos;t typically impair overall functioning</li>
                 </ul>
               </div>
               
@@ -372,7 +372,7 @@ export default function DepressionScreeningGuidePage() {
           <section>
             <h2>Conclusion: Taking the Next Steps</h2>
             <p>
-              Depression screening represents a powerful tool for early identification and intervention, but it's only the beginning of the journey toward mental wellness. If your screening results suggest possible depression:
+              Depression screening represents a powerful tool for early identification and intervention, but it&apos;s only the beginning of the journey toward mental wellness. If your screening results suggest possible depression:
             </p>
             <ol className="list-decimal pl-5 space-y-2">
               <li><strong>Schedule an appointment</strong> with your healthcare provider for comprehensive evaluation</li>

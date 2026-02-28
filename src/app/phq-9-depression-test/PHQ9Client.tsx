@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
@@ -38,7 +38,6 @@ function getRange(score: number) {
   return RANGES.find((r) => score >= r.min && score <= r.max)!;
 }
 
-// Color mappings per range key
 const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = {
   minimal:      { text: "text-sage-700 dark:text-sage-400",         bg: "bg-sage-50 dark:bg-sage-950/30",      bar: "from-sage-400 to-sage-600" },
   mild:         { text: "text-sage-700 dark:text-sage-400",         bg: "bg-sage-50 dark:bg-sage-950/30",      bar: "from-sage-400 to-sage-600" },
@@ -59,8 +58,10 @@ export function PHQ9Client({ faqData }: Props) {
   const [showResults, setShowResults] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [showScoring, setShowScoring] = useState(false);
+  const [shareMessage, setShareMessage] = useState("");
   const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const printRef = useRef<HTMLDivElement>(null);
 
   const totalScore = answers.reduce<number>((s, a) => s + (a ?? 0), 0);
   const allAnswered = answers.every((a) => a !== null);
@@ -97,9 +98,42 @@ export function PHQ9Client({ faqData }: Props) {
     setShowResults(false);
     setShowScoring(false);
     setExpandedFaq(null);
+    setShareMessage("");
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   }
+
+  const handlePrint = useCallback(() => {
+    window.print();
+  }, []);
+
+  const handleShare = useCallback(async (mode: "results" | "blank") => {
+    const url = "https://mindchecktools.com/phq-9-depression-test";
+
+    if (mode === "blank") {
+      const shareData = {
+        title: "PHQ-9 Depression Self-Check — Free & Private",
+        text: "Take a free, private PHQ-9 depression self-check. Your answers never leave your browser.",
+        url,
+      };
+      if (navigator.share) {
+        try { await navigator.share(shareData); return; } catch { /* user cancelled */ }
+      }
+      await navigator.clipboard.writeText(url);
+      setShareMessage("Link copied!");
+      setTimeout(() => setShareMessage(""), 2500);
+      return;
+    }
+
+    // Share results summary (no individual answers — privacy first)
+    const summary = `PHQ-9 Self-Check Results\nScore: ${totalScore}/27 — ${range.level} symptom level\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: "My PHQ-9 Results", text: summary }); return; } catch { /* user cancelled */ }
+    }
+    await navigator.clipboard.writeText(summary);
+    setShareMessage("Results copied!");
+    setTimeout(() => setShareMessage(""), 2500);
+  }, [totalScore, range.level]);
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -256,54 +290,110 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           )}
 
-          {/* Score Card */}
-          <div className="card overflow-hidden mb-5">
-            <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
-              <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your PHQ-9 Score</p>
-              <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 27 — {range.level} symptom level</p>
-              <div className="mt-6">
-                <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
-                  <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 27) * 100}%` }} />
+          {/* Printable Results Area */}
+          <div ref={printRef} id="printable-results">
+            {/* Score Card */}
+            <div className="card overflow-hidden mb-5">
+              <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
+                <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your PHQ-9 Score</p>
+                <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 27 — {range.level} symptom level</p>
+                <div className="mt-6">
+                  <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
+                    <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 27) * 100}%` }} />
+                  </div>
+                  <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                    <span>0 — Minimal</span>
+                    <span>27 — Severe</span>
+                  </div>
                 </div>
-                <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
-                  <span>0 — Minimal</span>
-                  <span>27 — Severe</span>
+              </div>
+              <div className="p-5 sm:p-6 space-y-4">
+                <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
+                <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                    <strong>What you can consider next:</strong> {range.suggestion}
+                  </p>
+                </div>
+                <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
+                  <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
+                    <strong>Important reminder:</strong> This score reflects your self-reported symptoms, not a clinical diagnosis. Many factors influence how you feel, and only a healthcare professional who knows your situation can properly interpret these results. This tool is for personal reflection and education only.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="p-5 sm:p-6 space-y-4">
-              <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  <strong>What you can consider next:</strong> {range.suggestion}
-                </p>
+
+            {/* Answer Summary */}
+            <div className="card p-5 sm:p-6 mb-5">
+              <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
+              <div className="divide-y divide-sand-100 dark:divide-neutral-700">
+                {QUESTIONS.map((q, i) => (
+                  <div key={i} className="flex justify-between items-start gap-3 py-2.5">
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed flex-1">
+                      {i + 1}. {q}
+                    </span>
+                    <span className={`text-sm font-semibold whitespace-nowrap ${
+                      answers[i]! >= 2 ? "text-warm-600 dark:text-warm-400" : "text-sage-600 dark:text-sage-400"
+                    }`}>
+                      {OPTIONS[answers[i]!]?.label} ({answers[i]})
+                    </span>
+                  </div>
+                ))}
               </div>
-              <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
-                <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
-                  <strong>Important reminder:</strong> This score reflects your self-reported symptoms, not a clinical diagnosis. Many factors influence how you feel, and only a healthcare professional who knows your situation can properly interpret these results. This tool is for personal reflection and education only.
-                </p>
-              </div>
+            </div>
+
+            {/* Print-only footer */}
+            <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
+              <p>PHQ-9 Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
 
-          {/* Answer Summary */}
-          <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
-            <div className="divide-y divide-sand-100 dark:divide-neutral-700">
-              {QUESTIONS.map((q, i) => (
-                <div key={i} className="flex justify-between items-start gap-3 py-2.5">
-                  <span className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed flex-1">
-                    {i + 1}. {q}
-                  </span>
-                  <span className={`text-sm font-semibold whitespace-nowrap ${
-                    answers[i]! >= 2 ? "text-warm-600 dark:text-warm-400" : "text-sage-600 dark:text-sage-400"
-                  }`}>
-                    {OPTIONS[answers[i]!]?.label} ({answers[i]})
-                  </span>
-                </div>
-              ))}
+          {/* Action Buttons: Start Over, Print, Share */}
+          <div className="flex flex-wrap gap-3 mb-5">
+            <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">
+              Start Over
+            </button>
+            <button
+              onClick={handlePrint}
+              className="btn-secondary px-5 py-4 flex items-center gap-2"
+              title="Print your results"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+              <span className="hidden sm:inline">Print</span>
+            </button>
+          </div>
+
+          {/* Share Buttons */}
+          <div className="card p-4 mb-8">
+            <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-3">Share</p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => handleShare("results")}
+                className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Copy My Results
+              </button>
+              <button
+                onClick={() => handleShare("blank")}
+                className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                </svg>
+                Share Blank Test
+              </button>
             </div>
+            {shareMessage && (
+              <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">
+                ✓ {shareMessage}
+              </p>
+            )}
           </div>
 
           {/* How Scoring Works */}
@@ -363,13 +453,6 @@ export function PHQ9Client({ faqData }: Props) {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex gap-3 mb-8">
-            <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">
-              Start Over
-            </button>
           </div>
 
           <AdSlot position="Below Results" className="mb-8" />
