@@ -113,7 +113,7 @@ export default function AnxietyCopingStrategiesPage() {
           </div>
         </header>
 
-        <AdSlot slotId="article_top" className="my-8" />
+        <AdSlot position="article_top" className="my-8" />
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <div className="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 dark:border-amber-400 p-6 my-8 rounded-r">
@@ -567,7 +567,7 @@ export default function AnxietyCopingStrategiesPage() {
           </div>
         </div>
 
-        <AdSlot slotId="article_bottom" className="my-8" />
+        <AdSlot position="article_bottom" className="my-8" />
 
         <div className="mt-12">
           <h3 className="text-xl font-semibold mb-6">Related Articles</h3>
