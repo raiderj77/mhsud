@@ -66,6 +66,36 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Crisis Resources */}
+        <div className="border-t border-amber-200 dark:border-amber-800 pt-6 mb-6">
+          <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-3 text-center">
+            Crisis Resources
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+              <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
+                988 Suicide & Crisis Lifeline
+              </p>
+              <p className="text-xs text-amber-600 dark:text-amber-300">
+                Call or text 988 • 24/7 free & confidential support
+              </p>
+            </div>
+            <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+              <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
+                SAMHSA National Helpline
+              </p>
+              <p className="text-xs text-amber-600 dark:text-amber-300">
+                1-800-662-4357 • Treatment referral & information
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-amber-600 dark:text-amber-400 text-center mt-3">
+            <Link href="/crisis-resources" className="hover:text-amber-800 dark:hover:text-amber-200 underline">
+              View all crisis resources and international helplines →
+            </Link>
+          </p>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-sand-200 dark:border-neutral-800 pt-6">
           <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed text-center max-w-2xl mx-auto">
