@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CrisisBanner } from "@/components/CrisisBanner";
@@ -42,7 +43,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google Consent Mode v2 — must load BEFORE gtag */}
-        <script
+        <Script
+          id="google-consent-mode"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer=window.dataLayer||[];
@@ -61,8 +64,8 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          async
+        <Script
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
         />
         {/* Google AdSense */}
