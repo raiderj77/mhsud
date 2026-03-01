@@ -6,11 +6,11 @@ const TOOL_URL = `${SITE_URL}/mental-load-calculator`;
 
 export const metadata: Metadata = createMetadata({
   path: "/mental-load-calculator",
-  title: "Free Mental Load Calculator — Who Carries the Invisible Work?",
+  title: "Mental Load Calculator & Test | MindCheckTools",
   description:
-    "Reflect on how planning, remembering, and organizing tasks are distributed in your household. 100% private, ~3 minutes. A conversation starter — not a clinical tool.",
+    "Feeling overwhelmed managing everything at home? Take our free mental load calculator to measure your invisible labor and find balance. No sign-up needed.",
   keywords: [
-    "mental load calculator", "emotional labor assessment", "invisible labor tool",
+    "mental load calculator", "mental load test", "emotional labor assessment", "invisible labor tool",
     "household mental load", "invisible workload check", "cognitive labor quiz",
     "mental load in relationships", "who does more housework", "household task distribution",
     "emotional labor calculator", "planning burden assessment",
