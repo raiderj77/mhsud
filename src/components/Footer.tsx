@@ -6,6 +6,7 @@ const TOOL_LINKS = [
   { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety" },
   { href: "/audit-alcohol-test", label: "AUDIT Alcohol" },
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
+  { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
 const INFO_LINKS = [
