@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 import { BlogListClient } from "./BlogListClient";
 
@@ -19,6 +19,18 @@ export default function BlogPage() {
   const categories = Array.from(new Set(BLOG_POSTS.map((p) => p.category)));
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", url: SITE_URL },
+              { name: "Blog", url: `${SITE_URL}/blog` },
+            ])
+          ),
+        }}
+      />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
       <header className="mb-10">
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
@@ -31,5 +43,6 @@ export default function BlogPage() {
 
       <BlogListClient posts={sortedPosts} categories={categories} />
     </div>
+    </>
   );
 }

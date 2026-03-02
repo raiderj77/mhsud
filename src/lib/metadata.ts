@@ -92,7 +92,7 @@ export function toolPageJsonLd({
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "SoftwareApplication",
     name,
     description,
     url,
