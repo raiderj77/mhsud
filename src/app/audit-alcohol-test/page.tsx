@@ -6,43 +6,41 @@ const TOOL_URL = `${SITE_URL}/audit-alcohol-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/audit-alcohol-test",
-  title: "Free AUDIT Alcohol Use Screen (WHO, Private, Not a Diagnosis)",
+  title: "AUDIT Alcohol Test | Free Alcohol Screening Tool",
   description:
-    "Take the WHO AUDIT alcohol screening questionnaire online for free. 10 questions, ~3 minutes, 100% private — your answers never leave your browser. Not a diagnosis.",
+    "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, honest, no sign-up. Results in 3 minutes.",
   keywords: [
-    "audit alcohol test", "alcohol use disorders identification test",
-    "alcohol screening questionnaire", "alcohol self-assessment",
+    "audit alcohol test", "alcohol screening test", "alcohol assessment",
+    "alcohol use disorders identification test", "alcohol screening questionnaire",
     "who alcohol test", "audit score", "alcohol use screen",
     "drinking self-assessment", "am i drinking too much",
-    "alcohol risk assessment", "audit questionnaire online",
-    "free alcohol test", "alcohol screening tool", "audit-10",
-    "who audit", "alcohol use screening", "drinking habits test",
+    "audit questionnaire online", "free alcohol test", "who audit",
   ],
   openGraph: {
-    title: "AUDIT Alcohol Use Screen — WHO, Free & Private",
-    description: "Take the WHO AUDIT alcohol screening tool. 10 questions, private, not a diagnosis.",
+    title: "AUDIT Alcohol Test | Free Alcohol Screening Tool",
+    description: "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, no sign-up. Results in 3 minutes.",
     url: TOOL_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What is the AUDIT?", answer: "The Alcohol Use Disorders Identification Test (AUDIT) is a 10-item screening tool developed by the World Health Organization (WHO). It is in the public domain and can be used freely. It is designed to help identify people whose alcohol consumption may be putting them at risk." },
+  { question: "What is the AUDIT alcohol test?", answer: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool developed by the World Health Organization to identify hazardous and harmful alcohol use. It is widely used in primary care, emergency settings, and counseling to initiate conversations about alcohol use." },
+  { question: "How is the AUDIT scored?", answer: "AUDIT scores range from 0–40. A score of 8 or above suggests hazardous alcohol use and warrants a brief intervention. Scores of 16 and above indicate harmful use, and scores of 20 or above may suggest alcohol dependence requiring further assessment." },
+  { question: "What is the difference between the AUDIT and AUDIT-C?", answer: "The AUDIT is the full 10-question assessment covering frequency, quantity, and consequences of drinking. The AUDIT-C is a shorter 3-question version using only the first three questions — it is faster but focuses solely on consumption rather than consequences or dependence." },
+  { question: "Is the AUDIT test confidential?", answer: "Yes. This online version processes all your responses in your browser only. Nothing you enter is stored or transmitted to any server. Your results are completely private." },
+  { question: "What should I do if I score high on the AUDIT?", answer: "A high AUDIT score is a signal worth taking seriously. Consider speaking with your primary care doctor or a licensed substance use counselor. Many people find that even a brief conversation with a professional leads to meaningful changes. You can also explore SAMHSA's National Helpline at 1-800-662-4357 for free, confidential support." },
   { question: "Can this tool diagnose an alcohol use disorder?", answer: "No. The AUDIT is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can diagnose an alcohol use disorder through a comprehensive evaluation." },
-  { question: "How is the AUDIT score calculated?", answer: "Each of the 10 questions is scored from 0 to 4. Your total score ranges from 0 to 40. Research has established zones that correspond to low risk, hazardous use, harmful use, and possible dependence — but these are guidelines for further assessment, not diagnoses." },
-  { question: "What do the AUDIT risk zones mean?", answer: "Zone I (0-7): Lower risk. Zone II (8-15): Hazardous use — alcohol may be increasing your risk of harm. Zone III (16-19): Harmful use — alcohol is likely causing harm. Zone IV (20-40): Possible dependence — a comprehensive assessment is recommended. These zones guide clinical decisions about intervention level." },
-  { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser. Your answers are never sent to any server, stored in any database, or shared with anyone." },
   { question: "What if I'm concerned about withdrawal?", answer: "If you drink heavily and are considering reducing or stopping, please talk to a healthcare professional first. Alcohol withdrawal can be medically dangerous and sometimes requires supervised care. Do not attempt to stop suddenly without medical guidance if you have been drinking heavily." },
-  { question: "How is the AUDIT different from AUDIT-C?", answer: "The AUDIT-C uses only the first 3 questions of the full AUDIT as a brief screen. The full AUDIT provides more detailed information about drinking patterns, dependence symptoms, and alcohol-related harm. Both are valid screening tools." },
   { question: "Who created the AUDIT?", answer: "The AUDIT was developed by the World Health Organization as a simple method of screening for excessive drinking. It has been validated across many countries and cultures and is in the public domain." },
 ];
 
 export default function AUDITPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT Alcohol Use Screen", description: "Free, private WHO AUDIT alcohol screening questionnaire. 10 questions scored 0-40 with risk zone interpretation.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Use Screen", url: TOOL_URL }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: TOOL_URL }])) }} />
       <AUDITClient faqData={FAQ_DATA} />
     </>
   );
