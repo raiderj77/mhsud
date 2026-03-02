@@ -9,6 +9,14 @@ const TOOL_LINKS = [
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
+const TARGETED_LINKS = [
+  { href: "/depression-test-for-teens", label: "Depression Test for Teens" },
+  { href: "/anxiety-test-for-women", label: "Anxiety Test for Women" },
+  { href: "/alcohol-screening-for-college-students", label: "Alcohol Screen: College" },
+  { href: "/burnout-test-for-nurses", label: "Burnout Test for Nurses" },
+  { href: "/depression-screening-for-veterans", label: "Depression Screen: Veterans" },
+];
+
 const INFO_LINKS = [
   { href: "/blog", label: "Blog & Guides" },
   { href: "/about", label: "About" },
@@ -22,7 +30,7 @@ export function Footer() {
   return (
     <footer className="border-t border-sand-200 dark:border-neutral-800 bg-sand-100 dark:bg-night-950 mt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -43,6 +51,20 @@ export function Footer() {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Self-Checks</h4>
             <ul className="space-y-2">
               {TOOL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Targeted Screenings */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Targeted Screenings</h4>
+            <ul className="space-y-2">
+              {TARGETED_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
                     {link.label}

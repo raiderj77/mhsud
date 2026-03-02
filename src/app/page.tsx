@@ -216,6 +216,69 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Targeted Screenings */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
+        <div className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
+            Screenings for Specific Groups
+          </h2>
+          <p className="text-neutral-500 dark:text-neutral-400">
+            The same validated tools, with educational context tailored to your situation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            {
+              href: "/depression-test-for-teens",
+              title: "Depression Test for Teens",
+              description: "PHQ-9 screening with teen-specific info on signs, stats, and youth crisis resources.",
+              badge: "Teens",
+            },
+            {
+              href: "/anxiety-test-for-women",
+              title: "Anxiety Test for Women",
+              description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.",
+              badge: "Women",
+            },
+            {
+              href: "/alcohol-screening-for-college-students",
+              title: "Alcohol Screening for College Students",
+              description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.",
+              badge: "College",
+            },
+            {
+              href: "/burnout-test-for-nurses",
+              title: "Burnout Test for Nurses",
+              description: "Burnout assessment with nursing-specific info on compassion fatigue and shift work impact.",
+              badge: "Nurses",
+            },
+            {
+              href: "/depression-screening-for-veterans",
+              title: "Depression Screening for Veterans",
+              description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.",
+              badge: "Veterans",
+            },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="card p-5 group hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 transition-all"
+            >
+              <span className="badge bg-sky-50 dark:bg-sky-950/30 text-sky-700 dark:text-sky-400 mb-3 inline-block">
+                {item.badge}
+              </span>
+              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                {item.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Privacy Callout */}
       <section className="bg-sage-600 dark:bg-sage-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
