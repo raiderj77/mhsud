@@ -6,47 +6,45 @@ const TOOL_URL = `${SITE_URL}/phq-9-depression-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/phq-9-depression-test",
-  title: "Free PHQ-9 Depression Self-Check (Private, Not a Diagnosis)",
+  title: "PHQ-9 Depression Test | Free Screening Tool",
   description:
-    "Take the PHQ-9 depression screening questionnaire online for free. 9 questions, ~2 minutes, 100% private — your answers never leave your browser. Not a diagnosis.",
+    "Take the free PHQ-9 depression screening test used by doctors worldwide. 9 questions, 3 minutes. Private, instant results. Not a diagnosis — a starting point.",
   keywords: [
+    "phq-9 test", "phq 9 questionnaire", "depression screening test",
     "phq9", "phq-9", "depression test", "depression questionnaire",
     "depression self-assessment", "online depression checker", "depression screening",
     "patient health questionnaire 9", "phq9 online", "phq-9 score",
-    "depression self-check", "free depression test", "mental health screening",
-    "am i depressed quiz", "depression symptoms test", "phq-9 scoring",
-    "depression scale", "mood assessment",
+    "free depression test", "mental health screening",
   ],
   openGraph: {
-    title: "PHQ-9 Depression Self-Check — Free & Private",
-    description: "Take the validated PHQ-9 depression screener. 9 questions, private, not a diagnosis.",
+    title: "PHQ-9 Depression Test | Free Screening Tool",
+    description: "Take the free PHQ-9 depression screening test used by doctors worldwide. 9 questions, 3 minutes. Private, instant results.",
     url: TOOL_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What is the PHQ-9?", answer: "The Patient Health Questionnaire-9 (PHQ-9) is a validated, 9-item self-report tool developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, with funding from Pfizer Inc. It was placed in the public domain and is free to use without permission. It is widely used in clinical and research settings worldwide to screen for depressive symptoms." },
+  { question: "What is the PHQ-9 test?", answer: "The PHQ-9 (Patient Health Questionnaire-9) is a clinically validated 9-question screening tool used by doctors and mental health professionals to assess the severity of depression. It measures how often you have experienced symptoms like low mood, sleep changes, and loss of interest over the past two weeks." },
+  { question: "How is the PHQ-9 scored?", answer: "Each of the 9 questions is scored 0–3 (Not at all, Several days, More than half the days, Nearly every day). Total scores range from 0–27: 1–4 is minimal depression, 5–9 is mild, 10–14 is moderate, 15–19 is moderately severe, and 20–27 is severe depression." },
+  { question: "Is the PHQ-9 questionnaire accurate?", answer: "The PHQ-9 has strong clinical validity and is widely used in primary care settings. However, it is a screening tool, not a diagnostic instrument. A positive screen should be followed up with a licensed mental health professional for a proper evaluation." },
+  { question: "Can I use the PHQ-9 test online for free?", answer: "Yes. This tool provides the full PHQ-9 questionnaire at no cost. Your responses are processed entirely in your browser and are never stored or transmitted to any server." },
+  { question: "What should I do if my PHQ-9 score is high?", answer: "A high score (10 or above) suggests it may be helpful to speak with a doctor or mental health professional. This screening tool is a starting point for a conversation, not a final answer. If you are in crisis or having thoughts of self-harm, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988." },
   { question: "Can this tool diagnose depression?", answer: "No. The PHQ-9 is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can diagnose depression through a comprehensive evaluation that considers your full medical history, symptoms, and circumstances." },
-  { question: "How is the PHQ-9 score calculated?", answer: "Each of the 9 questions is scored from 0 (not at all) to 3 (nearly every day). Your total score ranges from 0 to 27. Research has established ranges that correspond to minimal, mild, moderate, moderately severe, and severe symptom levels — but these ranges are guidelines, not diagnoses." },
-  { question: "How accurate is the PHQ-9?", answer: "The PHQ-9 has been extensively validated in research, showing good sensitivity and specificity for detecting major depressive disorder when used as a screening tool. However, no screening tool is perfect — false positives and false negatives occur, which is why professional follow-up is essential." },
+  { question: "How often should I take the PHQ-9?", answer: "Some people find it helpful to complete the PHQ-9 periodically (e.g., every 2–4 weeks) to notice patterns over time. You can share results with your healthcare provider to support ongoing conversations about your mental health." },
   { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
-  { question: "How often should I use the PHQ-9?", answer: "Some people find it helpful to complete the PHQ-9 periodically (e.g., every 2-4 weeks) to notice patterns over time. You can share results with your healthcare provider to support ongoing conversations about your mental health." },
-  { question: "What should I do if my score is high?", answer: "A higher score suggests more depressive symptoms, but it does not mean you have a specific diagnosis. Please consider talking with a healthcare provider, therapist, or counselor. If you are having thoughts of self-harm, please reach out to a crisis service immediately." },
-  { question: "Who created the PHQ-9?", answer: "The PHQ-9 was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke with an educational grant from Pfizer Inc. It is in the public domain. This online implementation provides a clean, private, and accessible way to use this public-domain instrument." },
 ];
 
 export default function PHQ9Page() {
   return (
     <>
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "PHQ-9 Depression Self-Check",
-              description: "Free, private PHQ-9 depression screening questionnaire. 9 questions scored 0-27 with result interpretation. Runs entirely in your browser.",
+              name: "PHQ-9 Depression Test",
+              description: "A free online implementation of the PHQ-9 Patient Health Questionnaire, the gold-standard 9-item depression screening tool used by clinicians worldwide.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: new Date().toISOString().split("T")[0],
@@ -66,7 +64,7 @@ export default function PHQ9Page() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "PHQ-9 Depression Self-Check", url: TOOL_URL },
+              { name: "PHQ-9 Depression Test", url: TOOL_URL },
             ])
           ),
         }}
