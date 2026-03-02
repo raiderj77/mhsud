@@ -95,53 +95,167 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         </div>
 
         {/* H1 */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Alcohol Screening for College Students
         </h1>
 
-        {/* Intro */}
-        <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-          College is a time of independence, social exploration — and often, increased alcohol exposure.
-          Nearly <strong>1 in 3 college students</strong> engage in binge drinking. This free, private
-          screening uses the AUDIT — the World Health Organization&apos;s gold-standard alcohol assessment
-          — to help you honestly evaluate your drinking patterns. It is <strong>not a diagnosis</strong>,
-          but it can help you understand where you stand.
-        </p>
+        {/* Warm Empathetic Intro */}
+        <div className="mb-6">
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
+            Let&apos;s be honest — in college, drinking is everywhere. The pregames, the parties,
+            the tailgates, the &quot;just one more.&quot; Everyone around you seems fine, so it&apos;s
+            easy to think your drinking is fine too. But if you&apos;re here, some part of you is
+            wondering. Maybe you blacked out and don&apos;t want to admit it. Maybe you&apos;re
+            spending more money on alcohol than food. Maybe you just want to know where the line is.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            Asking that question takes more courage than most people realize. This screening
+            uses the <strong>AUDIT</strong> — the World Health Organization&apos;s gold-standard
+            alcohol assessment — to give you an honest, private look at your drinking patterns.
+            No judgment, no lectures, no one watching. It is <strong>not a diagnosis</strong>,
+            just a clear-eyed check-in with yourself.
+          </p>
+        </div>
 
-        {/* Quick Facts Box */}
-        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5 mb-8">
-          <h2 className="text-sm font-semibold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">
-            College Drinking: Quick Facts
+        {/* Prominent CTA */}
+        <div className="mb-10">
+          <a
+            href="#screening"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold text-base hover:bg-amber-700 transition-colors shadow-sm"
+          >
+            Start the Alcohol Screening
+          </a>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Takes about 3 minutes. Completely private — nothing is stored or shared with your school.
+          </p>
+        </div>
+
+        {/* Why This Matters */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Why This Matters
           </h2>
-          <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-            <li>• About <strong>1,519 college students</strong> ages 18–24 die each year from alcohol-related injuries (NIAAA)</li>
-            <li>• Roughly <strong>33%</strong> of full-time college students engage in binge drinking</li>
-            <li>• <strong>1 in 4</strong> college students report academic consequences from drinking</li>
-            <li>• Many students overestimate how much their peers drink, which normalizes heavier use</li>
+          <div className="grid gap-4">
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">1,519 deaths per year</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                An estimated 1,519 college students ages 18–24 die each year from alcohol-related
+                unintentional injuries, including motor vehicle crashes.
+                <span className="text-slate-500 dark:text-slate-400"> — NIAAA</span>
+              </p>
+            </div>
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">1 in 3 binge drink</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                About 33% of full-time college students engage in binge drinking — but students
+                consistently <em>overestimate</em> how much their peers drink, which makes heavy
+                drinking feel more normal than it is.
+                <span className="text-slate-500 dark:text-slate-400"> — NIAAA/SAMHSA</span>
+              </p>
+            </div>
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">1 in 4 affected academically</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                25% of college students report academic consequences from drinking — missed classes,
+                falling behind, lower grades. The impact goes beyond the party.
+                <span className="text-slate-500 dark:text-slate-400"> — NIAAA</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What To Expect */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            What To Expect
+          </h2>
+          <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+            <div className="space-y-4 text-slate-700 dark:text-slate-300">
+              <p>
+                This screening uses the <strong>AUDIT</strong> (Alcohol Use Disorders Identification Test),
+                a 10-question tool developed by the World Health Organization and used in healthcare
+                settings around the world.
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><strong>How it works:</strong> You&apos;ll answer 10 questions about your drinking frequency, quantity, and any consequences you&apos;ve experienced. The questions cover the past year of your drinking.</p>
+                <p><strong>Your score:</strong> Ranges from 0 to 40. Scores of 8 or above suggest hazardous or harmful drinking patterns. You&apos;ll see exactly what your score means and what the clinical thresholds are.</p>
+                <p><strong>Be honest:</strong> This only works if you&apos;re honest with yourself. Nobody else sees your answers. There&apos;s no &quot;right&quot; answer — just your actual experience.</p>
+                <p><strong>Your privacy:</strong> This runs entirely in your browser. Nothing is stored, sent to a server, or shared with your school, parents, or anyone else. When you close the page, it&apos;s gone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* The Screening Tool */}
+      <div id="screening">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
+            Take the AUDIT Alcohol Screening
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Answer each question honestly based on your drinking over the past year.
+          </p>
+        </div>
+        <AUDITClient faqData={FAQ_DATA} />
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
+        {/* Next Steps */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Your Next Steps
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Your campus counseling center</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Most colleges offer free, confidential counseling — and you don&apos;t need to be in
+                crisis to use it. Even one session can help you think through your relationship with
+                alcohol. Check your school&apos;s student health services website.
+              </p>
+            </div>
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Talk to someone you trust</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                An RA, a friend, a professor, a family member. You don&apos;t have to have all the
+                answers — just saying &quot;I&apos;m worried about my drinking&quot; out loud
+                can be a powerful first step.
+              </p>
+            </div>
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Free confidential help</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free,
+                confidential, 24/7 treatment referrals and information. They can help you find
+                local resources, including programs specifically for young adults.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Crisis Resources */}
+        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+            Crisis Resources
+          </h2>
+          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+            </li>
           </ul>
         </div>
 
-        {/* Educational Content */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Why This Screening Matters for College Students
-        </h2>
-        <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
-          <p>
-            College environments often normalize heavy drinking through social events, peer pressure, and
-            cultural traditions. It can be difficult to recognize when drinking has crossed from social to
-            problematic. The AUDIT asks about your drinking frequency, quantity, and consequences — giving
-            you an objective picture that cuts through the noise of campus culture.
-          </p>
-          <p>
-            Alcohol misuse in college is linked to academic decline, increased risk of sexual assault,
-            injuries, and the development of long-term alcohol use disorders. Research shows that drinking
-            patterns established in college often persist into adulthood. Screening now can help you make
-            informed choices during a critical period of your life.
-          </p>
+        {/* Clinical Disclaimer */}
+        <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
             healthcare professional can diagnose an alcohol use disorder. Your responses are processed
-            entirely in your browser and are never stored or transmitted.
+            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            healthcare professional for medical advice.
           </p>
         </div>
 
@@ -153,28 +267,6 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
           </p>
         </div>
 
-        {/* Additional Resources */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Resources for College Students
-        </h2>
-        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
-          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
-            </li>
-            <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
-            </li>
-            <li>
-              <strong>Your Campus Counseling Center:</strong> Most colleges offer free, confidential counseling — check your school&apos;s student health services
-            </li>
-            <li>
-              <strong>NIAAA College Drinking Resources:</strong> Evidence-based information at{" "}
-              <span className="font-medium">CollegeDrinkingPrevention.gov</span>
-            </li>
-          </ul>
-        </div>
-
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline">
@@ -183,23 +275,11 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
           <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline">
             AUDIT-C Quick Screen →
           </Link>
-          <Link href="/depression-test-for-teens" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Depression Test for Teens →
+          <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
+            PHQ-9 Depression Test →
           </Link>
         </div>
-
-        {/* Transition to Tool */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Take the AUDIT Alcohol Screening
-        </h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-4">
-          The screening below takes about 3 minutes. Answer each question honestly based on your
-          drinking over the past year. Your results are completely private — nothing is stored or
-          shared.
-        </p>
       </div>
-
-      <AUDITClient faqData={FAQ_DATA} />
     </>
   );
 }

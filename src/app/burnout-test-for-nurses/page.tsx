@@ -95,55 +95,170 @@ export default function BurnoutTestForNursesPage() {
         </div>
 
         {/* H1 */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Burnout Test for Nurses
         </h1>
 
-        {/* Intro */}
-        <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-          Nursing is one of the most emotionally demanding professions, and burnout rates among nurses
-          have reached critical levels. If you&apos;re a nurse feeling emotionally drained, detached, or
-          questioning whether you can keep going, this free screening can help you assess where you are.
-          It is <strong>not a diagnosis</strong>, but it can validate what you may already be feeling
-          and encourage you to seek support.
-        </p>
+        {/* Warm Empathetic Intro */}
+        <div className="mb-6">
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
+            You became a nurse because you care. And you&apos;ve kept showing up — through
+            short staffing, 12-hour shifts that turn into 14, patients who need more than
+            you can give, and a system that keeps asking for more while giving you less. If
+            you&apos;re reading this on a break you probably shouldn&apos;t be taking, or at
+            3 a.m. after a shift that won&apos;t leave your head, you already know something
+            isn&apos;t right.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            Burnout isn&apos;t weakness — it&apos;s what happens when good people are put in
+            unsustainable situations for too long. You&apos;re not failing at nursing.
+            The system is failing you. This free, private screening can help you put words to
+            what you&apos;re feeling and figure out what to do next. It is{" "}
+            <strong>not a diagnosis</strong>, but it can be the validation you need to take
+            yourself as seriously as you take your patients.
+          </p>
+        </div>
 
-        {/* Quick Facts Box */}
-        <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5 mb-8">
-          <h2 className="text-sm font-semibold text-rose-800 dark:text-rose-300 uppercase tracking-wide mb-3">
-            Nurse Burnout: Quick Facts
+        {/* Prominent CTA */}
+        <div className="mb-10">
+          <a
+            href="#screening"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-rose-600 text-white font-semibold text-base hover:bg-rose-700 transition-colors shadow-sm"
+          >
+            Start the Burnout Screening
+          </a>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Takes about 5 minutes. Completely private — nothing is stored or shared.
+          </p>
+        </div>
+
+        {/* Why This Matters */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Why This Matters
           </h2>
-          <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-            <li>• An estimated <strong>30–50%</strong> of nurses experience burnout at any given time</li>
-            <li>• Post-pandemic surveys found burnout rates exceeding <strong>60%</strong> among bedside nurses</li>
-            <li>• Nurse burnout is linked to <strong>higher patient mortality</strong> and increased medical errors</li>
-            <li>• Nearly <strong>1 in 5 nurses</strong> left the profession between 2020 and 2023</li>
+          <div className="grid gap-4">
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-rose-700 dark:text-rose-300 mb-1">30–50% burned out</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Studies consistently find that 30–50% of nurses experience significant burnout at any
+                given time. Post-pandemic surveys put that number above 60% for bedside nurses.
+                <span className="text-slate-500 dark:text-slate-400"> — National Academy of Medicine</span>
+              </p>
+            </div>
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-rose-700 dark:text-rose-300 mb-1">100,000+ left</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                More than 100,000 registered nurses left the profession between 2020 and 2023,
+                citing burnout, stress, and unsustainable working conditions.
+                <span className="text-slate-500 dark:text-slate-400"> — NCSBN</span>
+              </p>
+            </div>
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-rose-700 dark:text-rose-300 mb-1">Patient safety</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Research links nurse burnout to higher patient mortality, increased medical errors,
+                and more hospital-acquired infections. Taking care of yourself isn&apos;t selfish
+                — it&apos;s part of taking care of your patients.
+                <span className="text-slate-500 dark:text-slate-400"> — The Lancet</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What To Expect */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            What To Expect
+          </h2>
+          <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+            <div className="space-y-4 text-slate-700 dark:text-slate-300">
+              <p>
+                This screening assesses three core dimensions of burnout that are especially
+                relevant for healthcare workers:
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><strong>Emotional exhaustion:</strong> Feeling drained, depleted, and like you have nothing left to give — the most recognized dimension of burnout.</p>
+                <p><strong>Depersonalization:</strong> Feeling detached from patients, treating them as tasks rather than people, or developing a cynical attitude you didn&apos;t used to have.</p>
+                <p><strong>Reduced accomplishment:</strong> Feeling like your work doesn&apos;t matter, you&apos;re not making a difference, or you&apos;ve lost your sense of purpose.</p>
+                <p><strong>Your results:</strong> You&apos;ll see where you fall on each dimension and overall. There are no &quot;pass/fail&quot; answers — this is about understanding where you are right now.</p>
+                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, coworkers, or anyone else.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* The Screening Tool */}
+      <div id="screening">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
+            Take the Burnout Assessment
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Answer each question based on how you&apos;ve been feeling about your work.
+          </p>
+        </div>
+        <BurnoutClient faqData={FAQ_DATA} />
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
+        {/* Next Steps */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Your Next Steps
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Use your EAP</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Most hospitals and healthcare systems offer a free <strong>Employee Assistance
+                Program</strong> with confidential counseling sessions. Ask your HR department —
+                it&apos;s usually 3–8 free sessions, and your employer doesn&apos;t know what
+                you discuss. This exists specifically for situations like this.
+              </p>
+            </div>
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Peer support programs</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Many state nursing boards offer <strong>peer assistance programs</strong> specifically
+                for nurses experiencing burnout, stress, or substance use concerns. These are
+                confidential and run by nurses who understand your reality.
+              </p>
+            </div>
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Set one boundary this week</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                You can&apos;t fix the system overnight, but you can protect yourself. Say no to one
+                overtime shift. Take your full lunch break. Leave on time once. Small boundaries
+                aren&apos;t selfish — they&apos;re survival.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Crisis Resources */}
+        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+            Crisis Resources
+          </h2>
+          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+            </li>
           </ul>
         </div>
 
-        {/* Educational Content */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Why This Screening Matters for Nurses
-        </h2>
-        <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
-          <p>
-            Nurses are trained to care for others, often at the expense of their own well-being. The culture
-            of nursing sometimes treats exhaustion as a badge of honor, making it harder to recognize when
-            chronic stress has crossed into burnout. This screening assesses three core dimensions:
-            emotional exhaustion, depersonalization (feeling detached from patients), and reduced personal
-            accomplishment.
-          </p>
-          <p>
-            The aftermath of the COVID-19 pandemic amplified existing burnout drivers — staffing shortages,
-            mandatory overtime, moral distress from resource limitations, and the cumulative grief of patient
-            loss. Whether you are a bedside nurse, travel nurse, nurse practitioner, or nursing student,
-            understanding your current burnout level is the first step toward protecting both yourself and
-            your patients.
-          </p>
+        {/* Clinical Disclaimer */}
+        <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
             healthcare professional can assess burnout or related conditions. Your responses are processed
-            entirely in your browser and are never stored or transmitted.
+            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            healthcare professional for medical advice.
           </p>
         </div>
 
@@ -155,27 +270,6 @@ export default function BurnoutTestForNursesPage() {
           </p>
         </div>
 
-        {/* Additional Resources */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Resources for Nurses
-        </h2>
-        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
-          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
-            </li>
-            <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
-            </li>
-            <li>
-              <strong>Employee Assistance Program (EAP):</strong> Most hospitals offer free, confidential counseling through your EAP — ask your HR department
-            </li>
-            <li>
-              <strong>Nurse Support Programs:</strong> Many state nursing boards offer peer assistance programs for nurses experiencing burnout or substance use concerns
-            </li>
-          </ul>
-        </div>
-
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">
@@ -184,22 +278,11 @@ export default function BurnoutTestForNursesPage() {
           <Link href="/work-stress-check" className="text-sky-600 dark:text-sky-400 hover:underline">
             Work Stress Check →
           </Link>
-          <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
-            PHQ-9 Depression Test →
+          <Link href="/sleep-and-mood-check" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Sleep &amp; Mood Check →
           </Link>
         </div>
-
-        {/* Transition to Tool */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Take the Burnout Assessment
-        </h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-4">
-          The screening below takes about 5 minutes. Answer each question based on how you&apos;ve been
-          feeling about your work. Your results are completely private.
-        </p>
       </div>
-
-      <BurnoutClient faqData={FAQ_DATA} />
     </>
   );
 }

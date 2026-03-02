@@ -95,56 +95,176 @@ export default function DepressionScreeningForVeteransPage() {
         </div>
 
         {/* H1 */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Depression Screening for Veterans
         </h1>
 
-        {/* Intro */}
-        <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-          Veterans face unique mental health challenges — from combat exposure and moral injury to the
-          difficult transition back to civilian life. Depression affects roughly <strong>1 in 3
-          veterans</strong> who visit VA primary care. This free, private screening uses the PHQ-9,
-          the same tool used across VA facilities, to help you understand your symptoms. It is{" "}
-          <strong>not a diagnosis</strong>, but it can be a first step toward getting support you&apos;ve
-          earned.
-        </p>
+        {/* Warm Empathetic Intro */}
+        <div className="mb-6">
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
+            You served. You did what was asked of you, and you did it well. But coming home
+            doesn&apos;t always feel like the relief everyone said it would. Maybe the things
+            that used to matter don&apos;t anymore. Maybe you&apos;re going through the motions
+            but can&apos;t feel much of anything. Maybe you&apos;re carrying something heavy
+            and you&apos;re not sure what to call it. You don&apos;t have to call it anything
+            yet — you just have to be honest with yourself for a few minutes.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            The military trained you to push through pain. But depression isn&apos;t a mission
+            you can power through — and recognizing that isn&apos;t weakness. It&apos;s the
+            same awareness that kept you and your team alive. This free, private screening uses
+            the <strong>PHQ-9</strong>, the exact same tool used across VA facilities, to help
+            you understand what&apos;s going on. It is <strong>not a diagnosis</strong>,
+            and it has absolutely no connection to your VA records, benefits, or disability
+            rating. No one sees your results but you.
+          </p>
+        </div>
 
-        {/* Quick Facts Box */}
-        <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5 mb-8">
-          <h2 className="text-sm font-semibold text-green-800 dark:text-green-300 uppercase tracking-wide mb-3">
-            Veteran Depression: Quick Facts
+        {/* Prominent CTA */}
+        <div className="mb-10">
+          <a
+            href="#screening"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-green-700 text-white font-semibold text-base hover:bg-green-800 transition-colors shadow-sm"
+          >
+            Start the Depression Screening
+          </a>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Takes about 3 minutes. Completely private — not connected to the VA in any way.
+          </p>
+        </div>
+
+        {/* Why This Matters */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Why This Matters
           </h2>
-          <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-            <li>• Roughly <strong>1 in 3 veterans</strong> in VA primary care screen positive for depression</li>
-            <li>• About <strong>50%</strong> of veterans with PTSD also have co-occurring depression</li>
-            <li>• Veterans are at <strong>1.5x higher risk</strong> for suicide compared to non-veteran adults</li>
-            <li>• Depression is highly treatable — the VA offers mental health services with no out-of-pocket cost for eligible veterans</li>
+          <div className="grid gap-4">
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-green-700 dark:text-green-300 mb-1">1 in 3 veterans</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Roughly one in three veterans visiting VA primary care clinics screen positive for
+                depression. It&apos;s far more common than most people — including many
+                veterans — realize.
+                <span className="text-slate-500 dark:text-slate-400"> — VA/DOD Clinical Practice Guidelines</span>
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-green-700 dark:text-green-300 mb-1">50% overlap with PTSD</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                About half of veterans diagnosed with PTSD also have co-occurring depression.
+                The two conditions share symptoms like sleep problems, emotional numbness, and
+                loss of interest — which means depression can hide behind a PTSD diagnosis.
+                <span className="text-slate-500 dark:text-slate-400"> — RAND Corporation</span>
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-green-700 dark:text-green-300 mb-1">1.5x suicide risk</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Veterans are 1.5 times more likely to die by suicide compared to non-veteran adults.
+                Early screening and connection to care are among the most effective prevention strategies.
+                <span className="text-slate-500 dark:text-slate-400"> — VA National Veteran Suicide Prevention Report</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What To Expect */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            What To Expect
+          </h2>
+          <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+            <div className="space-y-4 text-slate-700 dark:text-slate-300">
+              <p>
+                This screening uses the <strong>PHQ-9</strong> (Patient Health Questionnaire-9),
+                the same 9-question tool used at VA medical centers across the country.
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><strong>How it works:</strong> You&apos;ll answer 9 questions about how you&apos;ve been feeling over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day). Straightforward, no tricks.</p>
+                <p><strong>Your score:</strong> Ranges from 0 to 27. Higher scores suggest more significant symptoms. You&apos;ll see the clinical ranges and what your score means in plain language.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t distinguish between depression, PTSD, TBI-related symptoms, or grief. A healthcare provider can help sort that out — this gives you a starting point.</p>
+                <p><strong>Your privacy:</strong> This has no connection to the VA, DOD, or any government system. Nothing is stored or transmitted. No one can access your results — not the VA, not your chain of command, not anyone. When you close this page, your data is gone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* The Screening Tool */}
+      <div id="screening">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
+            Take the PHQ-9 Depression Screening
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Answer each question based on how you&apos;ve been feeling over the past two weeks.
+          </p>
+        </div>
+        <PHQ9Client faqData={FAQ_DATA} />
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
+        {/* Next Steps */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Your Next Steps
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Veterans Crisis Line</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Dial <strong>988</strong> then press <strong>1</strong> — or text <strong>838255</strong>.
+                Free, confidential, 24/7. Staffed by people who understand military experience.
+                You don&apos;t need to be in immediate danger to call — they&apos;re there for
+                any level of distress.
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">VA Mental Health Services</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Call <strong>1-877-222-8387</strong> to connect with VA mental health services.
+                If you&apos;re enrolled in VA healthcare, mental health services come at no
+                out-of-pocket cost. Even if you&apos;re not enrolled, the VA provides crisis
+                care regardless of enrollment status or discharge type.
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Vet Centers</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Readjustment counseling for combat veterans, their families, and survivors of military
+                sexual trauma. <strong>No VA enrollment required.</strong> These are community-based,
+                staffed by veterans, and separate from VA medical centers. There are over 300 locations
+                nationwide.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Crisis Resources */}
+        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+            Crisis Resources
+          </h2>
+          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              <strong>Veterans Crisis Line:</strong> Dial <strong>988</strong> then press <strong>1</strong> — or text <strong>838255</strong>
+            </li>
+            <li>
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — available to everyone, 24/7
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+            </li>
           </ul>
         </div>
 
-        {/* Educational Content */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Why This Screening Matters for Veterans
-        </h2>
-        <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
-          <p>
-            Military culture emphasizes toughness and self-reliance — qualities that serve well in combat
-            but can become barriers to seeking mental health support. Many veterans view depression as
-            weakness or believe they should be able to handle it on their own. The reality is that
-            depression is a medical condition, often influenced by traumatic brain injury, chronic pain,
-            sleep disorders, and the neurological effects of prolonged stress.
-          </p>
-          <p>
-            The transition from military to civilian life brings its own risk factors: loss of purpose and
-            identity, separation from the close-knit military community, difficulty relating to civilians,
-            and navigating a very different daily structure. These stressors can trigger or worsen
-            depression, even years after separation. The PHQ-9 gives you a structured, private way to
-            check in with yourself — no judgment, no paperwork, no one watching.
-          </p>
+        {/* Clinical Disclaimer */}
+        <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
             healthcare professional can diagnose depression. Your responses are processed entirely in your
-            browser and are never stored or transmitted.
+            browser and are never stored or transmitted. Always consult a qualified healthcare professional
+            for medical advice.
           </p>
         </div>
 
@@ -156,30 +276,6 @@ export default function DepressionScreeningForVeteransPage() {
           </p>
         </div>
 
-        {/* Additional Resources */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Resources for Veterans
-        </h2>
-        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
-          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li>
-              <strong>Veterans Crisis Line:</strong> Dial <strong>988</strong> then press <strong>1</strong> — or text <strong>838255</strong> — free, 24/7, confidential
-            </li>
-            <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — available to everyone
-            </li>
-            <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
-            </li>
-            <li>
-              <strong>VA Mental Health Services:</strong> Veterans enrolled in VA healthcare can access mental health services — contact your local VA facility or call <strong>1-877-222-8387</strong>
-            </li>
-            <li>
-              <strong>Vet Centers:</strong> Readjustment counseling for combat veterans and their families — no VA enrollment required
-            </li>
-          </ul>
-        </div>
-
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
@@ -188,23 +284,11 @@ export default function DepressionScreeningForVeteransPage() {
           <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             GAD-7 Anxiety Test →
           </Link>
-          <Link href="/depression-test-for-teens" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Depression Test for Teens →
+          <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Burnout Assessment Tool →
           </Link>
         </div>
-
-        {/* Transition to Tool */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Take the PHQ-9 Depression Screening
-        </h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-4">
-          The screening below takes about 3 minutes. Answer each question based on how you&apos;ve been
-          feeling over the past two weeks. Your results are completely private — nothing is stored or
-          shared with anyone, including the VA.
-        </p>
       </div>
-
-      <PHQ9Client faqData={FAQ_DATA} />
     </>
   );
 }

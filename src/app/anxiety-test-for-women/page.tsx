@@ -95,53 +95,168 @@ export default function AnxietyTestForWomenPage() {
         </div>
 
         {/* H1 */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Anxiety Test for Women
         </h1>
 
-        {/* Intro */}
-        <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-          Women are <strong>twice as likely</strong> as men to experience generalized anxiety disorder.
-          Hormonal changes, caregiving demands, and life transitions can all intensify anxiety. This
-          free, private screening uses the GAD-7 — the same tool doctors use — to help you understand
-          your symptoms. It is <strong>not a diagnosis</strong>, but a starting point for a conversation
-          with a healthcare provider.
-        </p>
+        {/* Warm Empathetic Intro */}
+        <div className="mb-6">
+          <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
+            You know that feeling — the tightness in your chest when you wake up, the racing
+            thoughts at 2 a.m., the way you can&apos;t stop worrying even when you know
+            logically that things are probably fine. You hold it together for everyone around
+            you, but inside, the worry doesn&apos;t stop. You might wonder if this is just
+            how life is, or if something more is going on.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            It&apos;s not &quot;just stress.&quot; Women experience anxiety disorders at
+            nearly <strong>twice the rate of men</strong>, shaped by a unique mix of hormonal
+            changes, life demands, and expectations that pile up over time. This free, private
+            screening can help you understand whether what you&apos;re experiencing goes
+            beyond everyday worry. It is <strong>not a diagnosis</strong>, but it can give you
+            clarity — and permission to take the next step.
+          </p>
+        </div>
 
-        {/* Quick Facts Box */}
-        <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5 mb-8">
-          <h2 className="text-sm font-semibold text-purple-800 dark:text-purple-300 uppercase tracking-wide mb-3">
-            Anxiety in Women: Quick Facts
+        {/* Prominent CTA */}
+        <div className="mb-10">
+          <a
+            href="#screening"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-purple-600 text-white font-semibold text-base hover:bg-purple-700 transition-colors shadow-sm"
+          >
+            Start the Anxiety Screening
+          </a>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Takes about 2 minutes. Completely private — nothing is stored or shared.
+          </p>
+        </div>
+
+        {/* Why This Matters */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Why This Matters
           </h2>
-          <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-            <li>• Women are <strong>2x more likely</strong> to be diagnosed with an anxiety disorder than men (NIMH)</li>
-            <li>• Anxiety often first appears or worsens during hormonal transitions — puberty, pregnancy, postpartum, perimenopause</li>
-            <li>• Approximately <strong>1 in 5 women</strong> will experience an anxiety disorder in any given year</li>
-            <li>• Anxiety disorders are highly treatable, yet many women wait years before seeking help</li>
+          <div className="grid gap-4">
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">2x the risk</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Women are twice as likely as men to be diagnosed with generalized anxiety disorder.
+                It&apos;s not a matter of being &quot;more sensitive&quot; — biology, hormones, and social
+                factors create real differences.
+                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+              </p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">1 in 5 women</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Approximately 23% of women experience an anxiety disorder in any given year. That means
+                if you&apos;re struggling, you&apos;re far from alone.
+                <span className="text-slate-500 dark:text-slate-400"> — ADAA</span>
+              </p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <p className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">Up to 20%</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Perinatal anxiety affects up to 15–20% of women during pregnancy and the
+                postpartum period — yet it often goes unrecognized because the focus is on
+                postpartum depression.
+                <span className="text-slate-500 dark:text-slate-400"> — ACOG</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What To Expect */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            What To Expect
+          </h2>
+          <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+            <div className="space-y-4 text-slate-700 dark:text-slate-300">
+              <p>
+                This screening uses the <strong>GAD-7</strong> (Generalized Anxiety Disorder-7),
+                a 7-question tool used by primary care doctors, therapists, and OB-GYNs worldwide.
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><strong>How it works:</strong> You&apos;ll answer 7 questions about how often you&apos;ve been bothered by specific anxiety symptoms over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day).</p>
+                <p><strong>Your score:</strong> Ranges from 0 to 21. Scores of 5, 10, and 15 represent mild, moderate, and severe anxiety thresholds. You&apos;ll see exactly what your score means.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t tell you <em>why</em> you&apos;re anxious (hormones, life stress, a clinical disorder, or all three). A healthcare provider can help you figure that out.</p>
+                <p><strong>Your privacy:</strong> Everything happens in your browser. Your answers are never stored, transmitted, or visible to anyone but you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* The Screening Tool */}
+      <div id="screening">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
+            Take the GAD-7 Anxiety Screening
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">
+            Answer each question based on how you&apos;ve been feeling over the past two weeks.
+          </p>
+        </div>
+        <GAD7Client faqData={FAQ_DATA} />
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
+        {/* Next Steps */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Your Next Steps
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Talk to your doctor</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Your primary care doctor or OB-GYN is a great first step. Bring your screening
+                results — it gives them something concrete to discuss. Anxiety disorders are highly
+                treatable with therapy, lifestyle changes, and sometimes medication.
+              </p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Pregnant or postpartum?</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                <strong>Postpartum Support International:</strong> Call <strong>1-800-944-4773</strong> or
+                text <strong>503-894-4773</strong>. Trained counselors who specialize in perinatal
+                mood and anxiety disorders. Free, confidential.
+              </p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Find a therapist</h3>
+              <p className="text-sm text-slate-700 dark:text-slate-300">
+                Cognitive Behavioral Therapy (CBT) is one of the most effective treatments for anxiety.
+                Ask your insurance for in-network therapists, or check if your employer offers an
+                Employee Assistance Program (EAP) with free sessions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Crisis Resources */}
+        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+            Crisis Resources
+          </h2>
+          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+            </li>
           </ul>
         </div>
 
-        {/* Educational Content */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Why This Screening Matters for Women
-        </h2>
-        <div className="prose prose-slate dark:prose-invert max-w-none mb-6">
-          <p>
-            Anxiety in women is influenced by a unique combination of biological, psychological, and social
-            factors. Fluctuations in estrogen and progesterone — during the menstrual cycle, pregnancy,
-            postpartum recovery, and perimenopause — directly affect neurotransmitters that regulate mood
-            and anxiety. This means anxiety symptoms can shift throughout different life stages.
-          </p>
-          <p>
-            Beyond hormones, women often carry disproportionate caregiving responsibilities, face workplace
-            inequality, and are more likely to experience certain types of trauma. These stressors can
-            compound anxiety over time. The GAD-7 provides a structured way to assess your current anxiety
-            level so you can make informed decisions about your next steps.
-          </p>
+        {/* Clinical Disclaimer */}
+        <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
             healthcare professional can diagnose an anxiety disorder. Your responses are processed entirely in
-            your browser and are never stored or transmitted.
+            your browser and are never stored or transmitted. Always consult a qualified healthcare professional
+            for medical advice.
           </p>
         </div>
 
@@ -153,24 +268,6 @@ export default function AnxietyTestForWomenPage() {
           </p>
         </div>
 
-        {/* Additional Resources */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Resources for Women
-        </h2>
-        <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
-          <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
-            </li>
-            <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
-            </li>
-            <li>
-              <strong>Postpartum Support International:</strong> Call <strong>1-800-944-4773</strong> or text <strong>503-894-9453</strong> — support for perinatal mood and anxiety disorders
-            </li>
-          </ul>
-        </div>
-
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline">
@@ -179,22 +276,11 @@ export default function AnxietyTestForWomenPage() {
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             PHQ-9 Depression Test →
           </Link>
-          <Link href="/depression-test-for-teens" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Depression Test for Teens →
+          <Link href="/sleep-and-mood-check" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Sleep &amp; Mood Check →
           </Link>
         </div>
-
-        {/* Transition to Tool */}
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
-          Take the GAD-7 Anxiety Screening
-        </h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-4">
-          The screening below takes about 2 minutes. Answer each question based on how you&apos;ve been
-          feeling over the past two weeks. Your results are completely private.
-        </p>
       </div>
-
-      <GAD7Client faqData={FAQ_DATA} />
     </>
   );
 }
