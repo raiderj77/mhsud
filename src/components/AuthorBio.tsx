@@ -1,6 +1,6 @@
 /**
  * Author bio component for blog posts.
- * Displays Jason Ramirez's credentials and clinical experience.
+ * Displays clinical reviewer credentials and experience.
  * Required on every blog post per TOOLS.md.
  */
 
@@ -13,15 +13,15 @@ export function AuthorBio() {
         </div>
         <div>
           <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-            Reviewed by Jason Ramirez
+            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)
           </h3>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-            Licensed Drug and Alcohol Counselor with 30+ years of clinical experience
+            with 11 years of clinical experience in substance abuse counseling
           </p>
           <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">
-            Jason has worked in diverse clinical settings including inpatient treatment, outpatient programs, 
-            and community mental health. He specializes in evidence-based screening tools and their appropriate 
-            clinical application. All content on MindCheck Tools is reviewed for clinical accuracy and 
+            Our clinical reviewer has worked in diverse clinical settings including inpatient treatment, outpatient programs,
+            and community mental health, specializing in evidence-based screening tools and their appropriate
+            clinical application. All content on MindCheck Tools is reviewed for clinical accuracy and
             adherence to best practices in mental health education.
           </p>
         </div>

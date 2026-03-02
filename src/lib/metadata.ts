@@ -156,8 +156,8 @@ export function articleJsonLd({
     image: image || `${SITE_URL}/og-default.png`,
     author: {
       "@type": "Person",
-      name: "Jason Ramirez",
-      description: "Licensed Drug and Alcohol Counselor with 30+ years of clinical experience",
+      name: "MindCheck Tools Clinical Reviewer",
+      description: "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling",
       url: SITE_URL,
     },
     publisher: {

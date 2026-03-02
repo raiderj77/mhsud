@@ -384,9 +384,9 @@ export default function SeasonalAffectiveDisorderPage() {
 
           {/* Author Bio */}
           <section className="not-prose mt-8 p-6 card bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
-            <h3 className="text-sage-800 dark:text-sage-400 font-semibold mb-3">👨‍⚕️ About the Author</h3>
+            <h3 className="text-sage-800 dark:text-sage-400 font-semibold mb-3">👨‍⚕️ About the Reviewer</h3>
             <p className="text-sm text-sage-700 dark:text-sage-300 leading-relaxed">
-              <strong>Jason Ramirez</strong> is a Licensed Drug and Alcohol Counselor with over 30 years of clinical experience in mental health and substance use treatment. He has worked in various clinical settings including outpatient clinics, residential treatment centers, and hospital-based programs. His expertise includes evidence-based assessment and treatment of co-occurring mental health and substance use disorders. Jason is committed to providing accurate, clinically-informed mental health information to help individuals make informed decisions about their care.
+              Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. Our reviewer has worked in various clinical settings including outpatient clinics, residential treatment centers, and hospital-based programs, with expertise in evidence-based assessment and treatment of co-occurring mental health and substance use disorders. All content on MindCheck Tools is reviewed for clinical accuracy to help individuals make informed decisions about their care.
             </p>
           </section>
 

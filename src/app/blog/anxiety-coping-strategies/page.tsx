@@ -107,7 +107,7 @@ export default function AnxietyCopingStrategiesPage() {
             interventions that can help reduce anxiety symptoms effectively.
           </p>
           <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
-            <span>Reviewed by Jason Ramirez, Licensed Drug and Alcohol Counselor, 30+ years clinical experience</span>
+            <span>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling</span>
             <span>•</span>
             <span>Updated February 24, 2026</span>
           </div>
@@ -510,16 +510,16 @@ export default function AnxietyCopingStrategiesPage() {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center">
-                  <span className="text-sage-700 dark:text-sage-400 font-semibold">JR</span>
+                  <span className="text-sage-700 dark:text-sage-400 text-lg">👨‍⚕️</span>
                 </div>
               </div>
               <div>
                 <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
-                  Reviewed by Jason Ramirez
+                  Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)
                 </h4>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-                  Licensed Drug and Alcohol Counselor with 30+ years of clinical experience. 
-                  Specializes in evidence-based treatments for anxiety and co-occurring disorders. 
+                  with 11 years of clinical experience in substance abuse counseling.
+                  Specializes in evidence-based treatments for anxiety and co-occurring disorders.
                   All content is reviewed for clinical accuracy and alignment with current research.
                 </p>
                 <div className="flex gap-4 mt-3 text-xs text-neutral-500 dark:text-neutral-500">

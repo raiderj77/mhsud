@@ -461,10 +461,10 @@ export function BurnoutClient({ faqData }: Props) {
               </div>
               <div>
                 <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">
-                  Reviewed by Jason Ramirez
+                  Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)
                 </h3>
                 <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-2">
-                  Licensed Drug and Alcohol Counselor, 30+ years clinical experience.
+                  with 11 years of clinical experience in substance abuse counseling.
                 </p>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
                   This tool is designed to provide educational insight and is based on established burnout research. It is not a substitute for professional medical advice.
