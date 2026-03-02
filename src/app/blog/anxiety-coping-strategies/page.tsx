@@ -113,6 +113,12 @@ export default function AnxietyCopingStrategiesPage() {
           </div>
         </header>
 
+        <div className="mt-6 mb-8">
+          <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">
+            Take the GAD-7 Anxiety Self-Check →
+          </Link>
+        </div>
+
         <AdSlot position="article_top" className="my-8" />
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -565,6 +571,13 @@ export default function AnxietyCopingStrategiesPage() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center my-8">
+          <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your anxiety level</h3>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The GAD-7 is a clinically validated screening tool. Free, private, and takes about 2 minutes.</p>
+          <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Anxiety Self-Check</Link>
         </div>
 
         <AdSlot position="article_bottom" className="my-8" />

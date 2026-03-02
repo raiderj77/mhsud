@@ -396,12 +396,16 @@ export default function SeasonalAffectiveDisorderPage() {
               Struggling with seasonal mood changes?
             </h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
-              If you&apos;re experiencing depression, please reach out to a healthcare provider or call{" "}
-              <strong>988</strong>.
+              The PHQ-9 is a clinically validated depression screening tool. Free, private, and takes about 3 minutes.
             </p>
-            <Link href="/crisis-resources" className="btn-primary text-sm">
-              Find Crisis &amp; Support Resources
-            </Link>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">
+                Take the PHQ-9 Depression Self-Check
+              </Link>
+              <Link href="/crisis-resources" className="btn-primary text-sm">
+                Find Crisis &amp; Support Resources
+              </Link>
+            </div>
           </div>
 
           {/* FAQ */}

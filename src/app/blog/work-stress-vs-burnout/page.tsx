@@ -51,9 +51,12 @@ export default function WorkStressBurnoutPage() {
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Everyone has stressful days at work. But when exhaustion becomes your baseline and no amount of rest seems to help, you might wonder: am I burned out or just stressed? This guide breaks down the real differences, explains what the WHO actually says about burnout, and is honest about why online self-checks — including ours — are only a starting point.
           </p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/work-stress-check" className="btn-primary text-sm">
               Take the Work Stress Self-Check →
+            </Link>
+            <Link href="/burnout-assessment-tool" className="btn-primary text-sm">
+              Take the Burnout Assessment →
             </Link>
           </div>
         </header>
@@ -209,7 +212,10 @@ export default function WorkStressBurnoutPage() {
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Want to reflect on your work stress?</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Your answers never leave your browser.</p>
-            <Link href="/work-stress-check" className="btn-primary text-sm">Take the Work Stress Self-Check</Link>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/work-stress-check" className="btn-primary text-sm">Take the Work Stress Self-Check</Link>
+              <Link href="/burnout-assessment-tool" className="btn-primary text-sm">Take the Burnout Assessment</Link>
+            </div>
           </div>
 
           {/* Author Bio */}
