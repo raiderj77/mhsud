@@ -97,6 +97,19 @@ There are unmerged branches from a previous AI agent. Before creating new branch
 ## Communication Style
 Jason needs ALL instructions explained step-by-step like he is 5 years old. Never assume he knows how to do something. Always break it down into the simplest possible steps with exact commands.
 
+## Agent Council
+Jason has a 7-agent advisory council in the `agents/` folder. Each agent has a specific perspective and output format. Use them for strategic decisions by having each agent analyze the same topic from their angle, then synthesize in `shared_reasoning.md`.
+
+| Agent | File | Role | Emoji |
+|-------|------|------|-------|
+| Revenue Optimist | `agents/optimist.md` | Finds upside, growth potential, and opportunity | :green_circle: |
+| Risk Auditor | `agents/risk-auditor.md` | Stress-tests ideas, finds hidden risks, YMYL compliance | :red_circle: |
+| Data Analyst | `agents/data-analyst.md` | Evidence-only analysis, benchmarks, ROI calculations | :large_blue_circle: |
+| SEO Strategist | `agents/seo-strategist.md` | Keyword research, rankings, schema, content gaps | :mag: |
+| UX Auditor | `agents/ux-auditor.md` | Tool design, user flow, mobile, accessibility, page speed | :art: |
+| Content Strategist | `agents/content-strategist.md` | Blog planning, topical authority, pSEO, internal linking | :memo: |
+| Competitor Watcher | `agents/competitor-watcher.md` | Monitors MHA, PsychCentral, ConvertCase, EasyCrochet | :eye: |
+
 ## Current Priorities (March 2026)
 1. Audit and merge Milton's unmerged branches
 2. Add schema markup to all tool pages
