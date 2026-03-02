@@ -243,9 +243,9 @@ export function WorkStressClient({ faqData }: Props) {
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
+                { name: "Burnout Assessment", desc: "Evaluate whether work stress has progressed to burnout", href: "/burnout-assessment-tool" },
                 { name: "PHQ-9 Depression Self-Check", desc: "Work stress and depression often overlap", href: "/phq-9-depression-test" },
                 { name: "GAD-7 Anxiety Self-Check", desc: "Anxiety is a common companion to work stress", href: "/gad-7-anxiety-test" },
-                { name: "Sleep & Mood Reflection", desc: "How work stress affects your sleep", href: "/sleep-and-mood-check" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>

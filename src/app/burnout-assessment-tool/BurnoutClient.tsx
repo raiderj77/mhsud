@@ -571,7 +571,7 @@ export function BurnoutClient({ faqData }: Props) {
             <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
               Related Mental Health Tools
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link
                 href="/work-stress-check"
                 className="p-5 rounded-xl border border-neutral-200 dark:border-night-700 hover:border-sage-300 dark:hover:border-sage-800 hover:bg-sage-50/50 dark:hover:bg-sage-950/20 transition-all group"
@@ -592,6 +592,17 @@ export function BurnoutClient({ faqData }: Props) {
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
                   Professional depression screening based on the Patient Health Questionnaire.
+                </p>
+              </Link>
+              <Link
+                href="/gad-7-anxiety-test"
+                className="p-5 rounded-xl border border-neutral-200 dark:border-night-700 hover:border-sage-300 dark:hover:border-sage-800 hover:bg-sage-50/50 dark:hover:bg-sage-950/20 transition-all group"
+              >
+                <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-2 group-hover:text-sage-700 dark:group-hover:text-sage-400">
+                  GAD-7 Anxiety Test
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  Clinically validated anxiety screening used by healthcare professionals worldwide.
                 </p>
               </Link>
             </div>
