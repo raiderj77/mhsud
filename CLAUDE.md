@@ -1,118 +1,75 @@
-# CLAUDE.md — mindchecktools.com
+# CLAUDE.md - mindchecktools.com
+# Claude Code reads this automatically. Follow every instruction.
 
-## Project Overview
-Mental health screening tools website. Free, private, browser-based self-checks for depression, anxiety, alcohol use, burnout, and more. This is a YMYL (Your Money Your Life) site — Google holds it to the highest quality standards.
+## IDENTITY
+This is the mindchecktools.com codebase. Mental health screening tools.
+NUMBER ONE PRIORITY SITE in the portfolio. YMYL content.
+Google holds health content to the HIGHEST standard.
 
-**Live URL:** https://mindchecktools.com
-**GitHub:** raiderj77/mhsud
-**Hosting:** Vercel (auto-deploys when you push to main)
-**Owner:** Solo entrepreneur with CADC-II (Certified Alcohol and Drug Counselor II, 11 years clinical experience in substance abuse counseling)
+## BEFORE DOING ANYTHING
+1. Read this entire file first.
+2. Read EMPIRE_BUILD_STANDARDS.md in this repo root before deploying anything.
+3. Show Jason a plan before making any changes. Wait for his approval.
+4. Explain everything step-by-step as if Jason is 5 years old.
+5. Never assume he knows how to do something.
 
-## Tech Stack
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- No database — all tools run client-side in the browser
-- No user accounts — privacy-first, nothing stored
+## REPO STRUCTURE
 
-## Project Structure
-```
-src/
-├── app/                    # Pages (App Router)
-│   ├── page.tsx           # Homepage
-│   ├── phq-9-depression-test/
-│   ├── gad-7-anxiety-test/
-│   ├── audit-alcohol-test/
-│   ├── audit-c-alcohol-screen/
-│   ├── mental-load-calculator/
-│   ├── sleep-and-mood-check/
-│   ├── work-stress-check/
-│   ├── crisis-resources/
-│   ├── blog/              # Blog posts (MDX or similar)
-│   └── (legal pages: about, privacy, terms, accessibility, cookies)
-├── components/
-│   ├── Footer.tsx
-│   └── (other shared components)
-└── (lib, utils, types as needed)
-```
+### Tier 1: Read First (Always)
+- CLAUDE.md (this file)
+- EMPIRE_BUILD_STANDARDS.md (quality gate for every deploy)
+- src/config/ (centralized tool config - auto-populates nav, footer, sitemap)
+- src/app/layout.tsx (root layout, global metadata, AdSense script)
+- shared_reasoning.md (Agent Council decisions)
 
-## Critical Rules — NEVER Violate These
+### Tier 2: Read When Task Touches This Area
+- src/app/tools/ (all 7 tool pages)
+- src/app/blog/ (all blog posts and blog layout)
+- src/app/components/ (shared UI: ad units, disclaimers, crisis resources)
+- public/ (static assets, llms.txt, robots.txt, sitemap)
 
-### YMYL Compliance (Non-Negotiable)
-1. **Every tool page MUST include:**
-   - Clinical disclaimer: "This is a screening tool for educational purposes only — not a diagnosis"
-   - 988 Suicide & Crisis Lifeline (call or text 988)
-   - SAMHSA National Helpline: 1-800-662-4357
-   - "Always consult a qualified healthcare professional"
-   - Privacy statement: "Your responses are processed entirely in your browser and are never stored or transmitted"
+### Tier 3: Never Read Unless Jason Asks
+- node_modules/, .next/, .git/, .env files
 
-2. **Every blog post MUST include:**
-   - Author bio: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling"
-   - NEVER include Jason's name in public-facing content (blog posts, bios, about page)
-   - Links to relevant crisis resources
-   - Clinical disclaimer
+## TECH STACK
+- Next.js App Router with TypeScript and Tailwind CSS
+- Hosted on Vercel (auto-deploys when you push to main - BE CAREFUL)
+- Client components for interactive tools, server components for pages
+- Adding a new tool: add to config, create page + component, auto-appears in nav/footer/sitemap
 
-3. **NEVER:**
-   - Use Jason's real name in ANY public-facing content (blog posts, author bios, about page, anywhere visitors can see)
-   - Claim more than 11 years of counseling experience
-   - Diagnose or claim to diagnose any condition
-   - Recommend specific medications or treatments
-   - Store, transmit, or log any user responses
-   - Use language that minimizes mental health concerns
-   - Remove or weaken any existing disclaimers or crisis resources
+## YMYL REQUIREMENTS (Non-Negotiable)
+Every tool page MUST have:
+- SAMHSA hotline: 1-800-662-4357
+- 988 Suicide and Crisis Lifeline
+- Clinical disclaimer (screening tool, not a diagnosis)
+- Privacy note (all processing in browser)
+- Author bios on blog content (Reviewed by a CADC-II)
+- NO personal name anywhere on any page
 
-### Tool Development Standards
-- All screening tools use validated, public domain instruments (PHQ-9, GAD-7, AUDIT, etc.)
-- Always cite the original instrument authors
-- Results must include score interpretation WITH the caveat that only professionals can diagnose
-- Include a consent/acknowledgment step before users can start a screening
-- Show crisis resources prominently, especially on tools related to depression or self-harm
+Never use: diagnose, diagnosis, cure, treatment plan
+Always use: screening, assessment, check, may indicate
 
-### SEO Requirements
-- Every tool page needs: optimized title tag (<60 chars), meta description (<155 chars), H1 with target keyword
-- Every tool page needs SoftwareApplication JSON-LD schema
-- Every tool page needs FAQPage JSON-LD schema (5 relevant questions)
-- Every page needs BreadcrumbList schema
-- Internal links: every tool links to 2-3 related tools, every blog post links to relevant tools
-- Hub-and-spoke: homepage is the hub, tools and blog posts are spokes
+## WORKFLOW (Baby Steps - Never Skip)
+1. AUDIT: Read relevant code files, report what you find
+2. PLAN: Show what you intend to do, wait for approval
+3. EXECUTE: Make changes one at a time
+4. REVIEW: Show the result
+5. STANDARDS CHECK: Verify against EMPIRE_BUILD_STANDARDS.md
+6. DEPLOY: Push to main ONLY after Jason says OK
+7. VERIFY: Confirm live site looks correct
 
-## Existing Branches (Milton Leftovers)
-There are unmerged branches from a previous AI agent. Before creating new branches, check if the work already exists:
-- agent/add-burnout-assessment-tool
-- agent/add-samhsa-to-all-tools
-- agent/add-author-bio-to-blogs
-- agent/anxiety-coping-strategies-blog
-- agent/fix-sad-eslint-errors
-- blog/depression-screening-guide
-- blog/seasonal-affective-disorder
-- upgrade/adsense-blog-share
+## CURRENT STATUS
+- 7 tools live, 6 blog posts live
+- AdSense integrated, awaiting approval
+- E-E-A-T compliance complete
+- Agent Council installed
+- GSC: 15 clicks, 77 impressions, 19.5% CTR, position 21.5
 
-## Git Workflow
-1. Always work on a feature branch (never commit directly to main)
-2. Branch naming: feature/[description] or fix/[description]
-3. Show Jason the diff before merging to main
-4. Pushing to main triggers Vercel auto-deploy — be careful
-5. Test locally with `npm run dev` before pushing
-
-## Communication Style
-Jason needs ALL instructions explained step-by-step like he is 5 years old. Never assume he knows how to do something. Always break it down into the simplest possible steps with exact commands.
-
-## Agent Council
-Jason has a 7-agent advisory council in the `agents/` folder. Each agent has a specific perspective and output format. Use them for strategic decisions by having each agent analyze the same topic from their angle, then synthesize in `shared_reasoning.md`.
-
-| Agent | File | Role | Emoji |
-|-------|------|------|-------|
-| Revenue Optimist | `agents/optimist.md` | Finds upside, growth potential, and opportunity | :green_circle: |
-| Risk Auditor | `agents/risk-auditor.md` | Stress-tests ideas, finds hidden risks, YMYL compliance | :red_circle: |
-| Data Analyst | `agents/data-analyst.md` | Evidence-only analysis, benchmarks, ROI calculations | :large_blue_circle: |
-| SEO Strategist | `agents/seo-strategist.md` | Keyword research, rankings, schema, content gaps | :mag: |
-| UX Auditor | `agents/ux-auditor.md` | Tool design, user flow, mobile, accessibility, page speed | :art: |
-| Content Strategist | `agents/content-strategist.md` | Blog planning, topical authority, pSEO, internal linking | :memo: |
-| Competitor Watcher | `agents/competitor-watcher.md` | Monitors MHA, PsychCentral, ConvertCase, EasyCrochet | :eye: |
-
-## Current Priorities (March 2026)
-1. Audit and merge Milton's unmerged branches
-2. Add schema markup to all tool pages
-3. Implement AdSense (max 2-3 units per page, tasteful placement)
-4. Build more screening tools (burnout assessment is next)
-5. Create pSEO pages: "[condition] test for [demographic]"
+## DO NOT
+- Push to main without explicit approval
+- Delete files without asking
+- Build new features before auditing what exists
+- Skip the plan step
+- Make medical claims or use diagnostic language
+- Put personal names on anything public-facing
+- Ignore EMPIRE_BUILD_STANDARDS.md
