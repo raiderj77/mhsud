@@ -129,7 +129,7 @@ export default function WorkStressBurnoutPage() {
               ))}
             </div>
             <p>
-              Most people who take a burnout self-check are somewhere between stages 2 and 4. The important thing is not to identify your exact stage but to recognize that the trajectory is real — and that earlier intervention leads to better outcomes.
+              Most people who take a <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout self-check</Link> are somewhere between stages 2 and 4. The important thing is not to identify your exact stage but to recognize that the trajectory is real — and that earlier intervention leads to better outcomes.
             </p>
           </section>
 
