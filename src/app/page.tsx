@@ -91,6 +91,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/mdq-bipolar-screening",
+    title: "MDQ Bipolar Screening",
+    description: "Validated 3-part screening tool for bipolar spectrum disorders. Assesses symptoms, co-occurrence, and functional impact.",
+    badge: "Validated",
+    time: "~3 min",
+    questions: 15,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

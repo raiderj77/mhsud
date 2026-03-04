@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
   { href: "/pcl-5-ptsd-screening", label: "PCL-5" },
   { href: "/asrs-adhd-screening", label: "ASRS" },
+  { href: "/mdq-bipolar-screening", label: "MDQ" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

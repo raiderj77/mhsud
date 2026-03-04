@@ -10,6 +10,7 @@ const TOOL_LINKS = [
   { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Substance Screen" },
   { href: "/pcl-5-ptsd-screening", label: "PCL-5 PTSD Screening" },
   { href: "/asrs-adhd-screening", label: "ASRS ADHD Screening" },
+  { href: "/mdq-bipolar-screening", label: "MDQ Bipolar Screening" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

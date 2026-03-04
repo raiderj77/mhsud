@@ -62,6 +62,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by the World Health Organization (WHO) in collaboration with leading ADHD researchers. Public domain.
 - Questions answered: Do I have ADHD? Adult ADHD screening test. What does the ASRS score mean?
 
+### MDQ Bipolar Screening
+- URL: https://mindchecktools.com/mdq-bipolar-screening
+- Description: Validated 3-part Mood Disorder Questionnaire (MDQ) for bipolar spectrum disorders. 13 symptom questions, 1 co-occurrence question, 1 functional impact question. Positive screen requires all 3 criteria met (7+ symptoms, co-occurrence, moderate+ impact).
+- Time: ~3 minutes
+- Source: Developed by Robert M.A. Hirschfeld, MD, and colleagues. Free to reproduce for clinical and research purposes.
+- Questions answered: Do I have bipolar disorder? Bipolar screening test. What does a positive MDQ screen mean?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
