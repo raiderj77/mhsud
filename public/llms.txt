@@ -34,6 +34,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Derived from WHO AUDIT. Public domain.
 - Questions answered: Quick alcohol screening, brief alcohol use assessment.
 
+### DAST-10 Drug Screening
+- URL: https://mindchecktools.com/dast-10-drug-screening
+- Description: 10-item validated drug abuse screening test. Scores 0-10 across no problems, low, moderate, substantial, and severe ranges.
+- Time: ~2 minutes
+- Source: Developed by Dr. Harvey Skinner. Public domain.
+- Questions answered: Do I have a drug problem? Drug abuse screening test. What does my DAST-10 score mean?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

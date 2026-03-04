@@ -51,6 +51,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/dast-10-drug-screening",
+    title: "DAST-10 Drug Screening",
+    description: "10-item validated drug use screening test to reflect on drug use patterns and their impact.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 10,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

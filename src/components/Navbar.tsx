@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/gad-7-anxiety-test", label: "GAD-7" },
   { href: "/audit-alcohol-test", label: "AUDIT" },
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C" },
+  { href: "/dast-10-drug-screening", label: "DAST-10" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
