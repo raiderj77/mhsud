@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: "/dast-10-drug-screening", label: "DAST-10" },
   { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
   { href: "/pcl-5-ptsd-screening", label: "PCL-5" },
+  { href: "/pc-ptsd-5-screening", label: "PC-PTSD-5" },
   { href: "/asrs-adhd-screening", label: "ASRS" },
   { href: "/mdq-bipolar-screening", label: "MDQ" },
   { href: "/oci-r-ocd-screening", label: "OCI-R" },

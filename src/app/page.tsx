@@ -81,6 +81,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/pc-ptsd-5-screening",
+    title: "PC-PTSD-5 PTSD Screen",
+    description: "5-item yes/no PTSD screen developed by the VA National Center for PTSD. Quick first-step screen with trauma exposure gate question. Cutoff of 3+ is positive.",
+    badge: "Validated",
+    time: "~1 min",
+    questions: 5,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/asrs-adhd-screening",
     title: "ASRS ADHD Screening",
     description: "6-item WHO-developed screening tool for adult ADHD using research-validated thresholds.",

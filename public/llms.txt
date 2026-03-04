@@ -55,6 +55,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by the National Center for PTSD, U.S. Department of Veterans Affairs. Public domain.
 - Questions answered: Do I have PTSD? What does my PCL-5 score mean? What is the PCL-5 cutoff score?
 
+### PC-PTSD-5 PTSD Screening
+- URL: https://mindchecktools.com/pc-ptsd-5-screening
+- Description: 5-item yes/no PTSD screen developed by the VA National Center for PTSD (Primary Care PTSD Screen for DSM-5). Begins with a trauma exposure gate question, then asks about five past-month symptoms: nightmares/intrusive memories, avoidance, hypervigilance, numbness/detachment, and guilt/blame. Score 0-5, cutoff of 3+ is a positive screen.
+- Time: ~1 minute
+- Source: Developed by the National Center for PTSD, U.S. Department of Veterans Affairs. Validated by Prins et al. (2016). Public domain.
+- Questions answered: Do I have PTSD? Quick PTSD screening test. What is the PC-PTSD-5? VA PTSD screening tool. PC-PTSD-5 vs PCL-5.
+
 ### ASRS ADHD Screening
 - URL: https://mindchecktools.com/asrs-adhd-screening
 - Description: 6-item WHO-developed adult ADHD screening tool (Adult ADHD Self-Report Scale v1.1 Part A). Uses research-validated thresholds where different questions have different positive cutoffs. 4+ positive responses suggests further evaluation is warranted.

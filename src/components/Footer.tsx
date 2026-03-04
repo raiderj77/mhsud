@@ -9,6 +9,7 @@ const TOOL_LINKS = [
   { href: "/dast-10-drug-screening", label: "DAST-10 Drug Screening" },
   { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Substance Screen" },
   { href: "/pcl-5-ptsd-screening", label: "PCL-5 PTSD Screening" },
+  { href: "/pc-ptsd-5-screening", label: "PC-PTSD-5 PTSD Screen" },
   { href: "/asrs-adhd-screening", label: "ASRS ADHD Screening" },
   { href: "/mdq-bipolar-screening", label: "MDQ Bipolar Screening" },
   { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
