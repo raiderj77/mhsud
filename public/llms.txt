@@ -104,6 +104,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by the World Health Organization (1998). Public domain.
 - Questions answered: What is the WHO-5? How is the WHO-5 scored? WHO-5 well-being index test. Mental wellbeing assessment. Am I doing okay mentally?
 
+### K6 Psychological Distress Scale
+- URL: https://mindchecktools.com/k6-distress-scale
+- Description: 6-item Kessler Psychological Distress Scale measuring nonspecific psychological distress over the past 30 days. Items rated 0 (None of the time) to 4 (All of the time). Total score 0-24. Score of 13+ = serious psychological distress (SPD), the same threshold used in SAMHSA national surveys.
+- Time: ~2 minutes
+- Source: Developed by Ronald Kessler et al. at Harvard Medical School in collaboration with the WHO. Public domain.
+- Questions answered: What is the K6? K6 distress scale test. Psychological distress screening. What does a K6 score of 13 mean? K6 vs K10.
+
 ### SCOFF Eating Disorder Screening
 - URL: https://mindchecktools.com/scoff-eating-disorder-screening
 - Description: 5-item validated eating disorder screening tool (SCOFF questionnaire). Yes/No format screening for anorexia, bulimia, binge eating disorder, and other eating disorders. Score of 2+ is a positive screen. Sensitivity ~84.6%, specificity ~89.6%.

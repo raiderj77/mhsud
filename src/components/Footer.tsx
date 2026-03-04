@@ -16,6 +16,7 @@ const TOOL_LINKS = [
   { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
   { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Depression/Anxiety/Stress" },
   { href: "/who-5-wellbeing-index", label: "WHO-5 Well-Being Index" },
+  { href: "/k6-distress-scale", label: "K6 Distress Scale" },
   { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder Screen" },
   { href: "/aq-10-autism-screening", label: "AQ-10 Autism Screening" },
   { href: "/sobriety-calculator", label: "Sobriety Calculator" },

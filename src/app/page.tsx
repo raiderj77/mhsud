@@ -151,6 +151,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/k6-distress-scale",
+    title: "K6 Psychological Distress Scale",
+    description: "6-item measure of nonspecific psychological distress used in national health surveys. Past 30 days. Score of 13+ = serious psychological distress.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 6,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/scoff-eating-disorder-screening",
     title: "SCOFF Eating Disorder Screen",
     description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",
