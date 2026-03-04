@@ -13,6 +13,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Drs. Spitzer, Williams, and Kroenke. Public domain.
 - Questions answered: Am I depressed? How severe are my depression symptoms? What does my PHQ-9 score mean?
 
+### CES-D Depression Scale
+- URL: https://mindchecktools.com/ces-d-depression-scale
+- Description: 20-item self-report depression screening tool developed by NIMH (Radloff, 1977). Items rated 0-3 for past week. Total score 0-60. Items 4, 8, 12, 16 are reverse-scored positive-affect items. Clinical cutoff of 16+ suggests further evaluation for depression.
+- Time: ~5 minutes
+- Source: Developed by Lenore Radloff at the National Institute of Mental Health. Public domain (U.S. government work).
+- Questions answered: What is the CES-D? CES-D depression test online. CES-D scoring. CES-D vs PHQ-9. What does a CES-D score of 16 mean?
+
 ### GAD-7 Anxiety Self-Check
 - URL: https://mindchecktools.com/gad-7-anxiety-test
 - Description: 7-question validated generalized anxiety screener. Scores 0-21 across minimal, mild, moderate, and severe ranges.

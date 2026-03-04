@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { url: SITE_URL, lastModified: now, changeFrequency: "weekly" as const, priority: 1.0 },
     { url: `${SITE_URL}/phq-9-depression-test`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${SITE_URL}/ces-d-depression-scale`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/gad-7-anxiety-test`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-alcohol-test`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-c-alcohol-screen`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },

@@ -21,6 +21,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/ces-d-depression-scale",
+    title: "CES-D Depression Scale",
+    description: "20-item NIMH depression screener covering mood, guilt, hopelessness, appetite, and sleep. Includes 4 reverse-scored positive items. Cutoff of 16+.",
+    badge: "Validated",
+    time: "~5 min",
+    questions: 20,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/gad-7-anxiety-test",
     title: "GAD-7 Anxiety Self-Check",
     description: "7-question validated anxiety screener for generalized anxiety symptoms.",

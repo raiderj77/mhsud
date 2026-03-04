@@ -3,6 +3,7 @@ import { FooterCookieButton } from "./FooterCookieButton";
 
 const TOOL_LINKS = [
   { href: "/phq-9-depression-test", label: "PHQ-9 Depression" },
+  { href: "/ces-d-depression-scale", label: "CES-D Depression Scale" },
   { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety" },
   { href: "/audit-alcohol-test", label: "AUDIT Alcohol" },
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
