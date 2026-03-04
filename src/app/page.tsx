@@ -171,6 +171,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/bac-calculator",
+    title: "BAC Calculator",
+    description: "Estimate blood alcohol content using the Widmark formula. See BAC level, effects, legal status, and time until sober.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 4,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

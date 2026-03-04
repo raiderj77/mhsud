@@ -18,6 +18,7 @@ const TOOL_LINKS = [
   { href: "/sobriety-calculator", label: "Sobriety Calculator" },
   { href: "/money-saved-recovery-calculator", label: "Money Saved Calculator" },
   { href: "/health-recovery-timeline", label: "Health Recovery Timeline" },
+  { href: "/bac-calculator", label: "BAC Calculator" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

@@ -115,6 +115,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute
 - Questions answered: What happens when you stop drinking timeline? Body recovery after quitting alcohol. Quit smoking health timeline. Opioid recovery timeline.
 
+### BAC Calculator
+- URL: https://mindchecktools.com/bac-calculator
+- Description: Blood alcohol content estimator using the Widmark formula. Inputs: biological sex, weight, number of drinks, time elapsed, drink type. Outputs: estimated BAC, legal status, effects at current level, time until sober, visual BAC gauge.
+- Time: ~1 minute
+- Questions answered: What is my BAC? How drunk am I? When will I be sober? Blood alcohol calculator. How long does alcohol stay in system?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
