@@ -31,6 +31,7 @@ const NAV_LINKS = [
   { href: "/urge-surfing-timer", label: "Urge Surf" },
   { href: "/readiness-to-change", label: "Readiness" },
   { href: "/trigger-identification-worksheet", label: "Triggers" },
+  { href: "/coping-skills-randomizer", label: "Coping" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

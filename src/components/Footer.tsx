@@ -27,6 +27,7 @@ const TOOL_LINKS = [
   { href: "/urge-surfing-timer", label: "Urge Surfing Timer" },
   { href: "/readiness-to-change", label: "Readiness to Change" },
   { href: "/trigger-identification-worksheet", label: "Trigger Worksheet" },
+  { href: "/coping-skills-randomizer", label: "Coping Skills Randomizer" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

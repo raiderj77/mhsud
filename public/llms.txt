@@ -169,6 +169,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~8 minutes
 - Questions answered: What are my addiction triggers? Relapse triggers list. How to identify triggers. Addiction trigger categories. Coping strategies for triggers.
 
+### Coping Skills Randomizer
+- URL: https://mindchecktools.com/coping-skills-randomizer
+- Description: Random healthy coping skill generator with 51 evidence-based skills across 6 categories: Physical, Social, Creative, Mindfulness, Cognitive, and Sensory. Each skill includes step-by-step instructions. Category filtering, favorites, and full browse mode. Designed for use during cravings or difficult moments.
+- Time: ~1 minute
+- Questions answered: What to do instead of using? Coping skills for addiction. Healthy coping strategies. Random coping skill generator. Recovery coping tools.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
