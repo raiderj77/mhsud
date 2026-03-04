@@ -39,6 +39,10 @@ const NAV_LINKS = [
   { href: "/daily-recovery-check-in", label: "Daily" },
   { href: "/family-impact-assessment", label: "Family" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
+  { href: "/spin-social-anxiety-test", label: "SPIN" },
+  { href: "/who-assist-substance-screening", label: "ASSIST" },
+  { href: "/crafft-substance-screening", label: "CRAFFT" },
+  { href: "/ace-questionnaire", label: "ACE" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
 ];

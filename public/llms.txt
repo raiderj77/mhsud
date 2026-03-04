@@ -216,6 +216,34 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Original educational tool. Not a validated clinical instrument.
 - Questions answered: Is my family member an addict quiz? How does addiction affect families? Am I enabling an addict? Family impact of addiction assessment. Concerned about someone's drinking.
 
+### WHO ASSIST Substance Use Screening
+- URL: https://mindchecktools.com/who-assist-substance-screening
+- Description: WHO ASSIST v3.1 (Alcohol, Smoking and Substance Involvement Screening Test). Covers 10 substance categories: tobacco, alcohol, cannabis, cocaine, amphetamine-type stimulants, inhalants, sedatives, hallucinogens, opioids, and other. Stepped wizard interface asks lifetime use, then per-substance follow-up questions about frequency, cravings, problems, failed obligations, concern from others, and attempts to cut down. Substance-Specific Involvement Score (0-39) with three risk levels: low (no intervention), moderate (brief intervention), high (intensive treatment). Alcohol has different cutoffs (0-10 low) vs other substances (0-3 low). Includes Q8 injection drug use risk flag.
+- Time: ~5-10 minutes
+- Source: Developed by the World Health Organization. Validated across 8 countries. Public domain.
+- Questions answered: WHO ASSIST screening. Substance use risk assessment. Drug and alcohol screening test. What is the ASSIST? ASSIST scoring. Substance involvement score.
+
+### CRAFFT 2.1+N Adolescent Substance Screening
+- URL: https://mindchecktools.com/crafft-substance-screening
+- Description: CRAFFT 2.1+N validated substance use screening for adolescents ages 12-21. Part A asks 4 yes/no questions about past-12-month use of alcohol, cannabis, other substances, and nicotine (+N). Part B asks 6 CRAFFT questions (Car, Relax, Alone, Forget, Friends/Family, Trouble) — or just the Car question if no substance use reported. Score 0-6, cutoff of 2+ is a positive screen. Age-appropriate language and design. Includes youth-specific crisis resources (Crisis Text Line, Teen Line).
+- Time: ~2 minutes
+- Source: Developed by Dr. John R. Knight et al. at Boston Children's Hospital/Harvard Medical School. Recommended by the American Academy of Pediatrics.
+- Questions answered: CRAFFT screening for teens. Teen drug and alcohol screening. Adolescent substance use test. What is the CRAFFT? CRAFFT score meaning.
+
+### ACE Questionnaire — Adverse Childhood Experiences
+- URL: https://mindchecktools.com/ace-questionnaire
+- Description: 10-item Adverse Childhood Experiences (ACE) Questionnaire based on the CDC-Kaiser Permanente ACE Study (Felitti & Anda, 1995-1997). Yes/no questions about childhood adversity before age 18 across three categories: abuse (emotional, physical, sexual), neglect (emotional, physical), and household dysfunction (domestic violence, substance abuse, mental illness, parental separation, incarcerated household member). Score 0-10. Includes content warning gate, prominent resilience framing ("Your Score Is Not Your Destiny"), CDC-identified protective factors, and trauma-specific crisis resources (RAINN, Childhelp, SAMHSA, 988).
+- Time: ~2-3 minutes
+- Source: CDC-Kaiser Permanente Adverse Childhood Experiences Study (Felitti et al., 1998). Public domain.
+- Questions answered: What is my ACE score? ACE questionnaire online. Adverse childhood experiences test. What does an ACE score mean? ACE score and health risks. Childhood trauma screening. Is a high ACE score a diagnosis?
+
+### SPIN Social Anxiety Test
+- URL: https://mindchecktools.com/spin-social-anxiety-test
+- Description: 17-item Social Phobia Inventory (SPIN) developed by Connor, Davidson, et al. (2000) at Duke University. Measures social anxiety across three subscales: Fear (6 items, 0-24), Avoidance (7 items, 0-28), and Physiological (4 items, 0-16). Total score 0-68. Five severity levels: 0-20 none/mild, 21-30 moderate, 31-40 severe, 41-50 very severe, 51-68 extremely severe. Clinical cutoff of 19+ for social anxiety disorder.
+- Time: ~3 minutes
+- Source: Developed by Connor, Davidson, Churchill, Sherwood, Foa, and Weisler (2000) at Duke University Medical Center.
+- Questions answered: Do I have social anxiety? Social phobia test. SPIN social anxiety screening. What does my SPIN score mean? Social anxiety disorder test. Fear of social situations.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

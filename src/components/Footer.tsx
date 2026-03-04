@@ -35,6 +35,10 @@ const TOOL_LINKS = [
   { href: "/daily-recovery-check-in", label: "Daily Recovery Check-In" },
   { href: "/family-impact-assessment", label: "Family Impact Assessment" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
+  { href: "/spin-social-anxiety-test", label: "SPIN Social Anxiety" },
+  { href: "/who-assist-substance-screening", label: "WHO ASSIST Screening" },
+  { href: "/crafft-substance-screening", label: "CRAFFT Teen Screening" },
+  { href: "/ace-questionnaire", label: "ACE Questionnaire" },
 ];
 
 const TARGETED_LINKS = [
