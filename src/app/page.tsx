@@ -241,6 +241,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/readiness-to-change",
+    title: "Readiness to Change Assessment",
+    description: "Identify your Stage of Change based on Prochaska & DiClemente's model. 15 statements with stage-specific next steps and resources.",
+    badge: "Original",
+    time: "~5 min",
+    questions: 15,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/treatment-cost-estimator`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/relapse-prevention-plan`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/urge-surfing-timer`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/readiness-to-change`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/work-stress-check`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/mental-load-calculator`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/sleep-and-mood-check`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },

@@ -157,6 +157,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~15 minutes
 - Questions answered: What is urge surfing? How to resist cravings. Craving timer. Mindfulness for addiction. How long do cravings last?
 
+### Readiness to Change Assessment
+- URL: https://mindchecktools.com/readiness-to-change
+- Description: Original educational assessment based on Prochaska & DiClemente's Transtheoretical Model (Stages of Change). 15 Likert-scale statements identify which stage of change you are in: Precontemplation, Contemplation, Preparation, Action, or Maintenance. Results include stage-specific next steps, recommended tools, and score breakdown across all five stages.
+- Time: ~5 minutes
+- Questions answered: What stage of change am I in? Am I ready to quit? Stages of change assessment. Readiness to change quiz. Motivation to change.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -25,6 +25,7 @@ const TOOL_LINKS = [
   { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator" },
   { href: "/relapse-prevention-plan", label: "Relapse Prevention Plan" },
   { href: "/urge-surfing-timer", label: "Urge Surfing Timer" },
+  { href: "/readiness-to-change", label: "Readiness to Change" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
