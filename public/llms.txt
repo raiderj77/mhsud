@@ -90,6 +90,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Morgan et al. (1999). Free to use in clinical and research settings.
 - Questions answered: Do I have an eating disorder? Eating disorder screening test. What does SCOFF stand for? What does a positive SCOFF screen mean?
 
+### AQ-10 Autism Spectrum Screening
+- URL: https://mindchecktools.com/aq-10-autism-screening
+- Description: 10-item validated autism spectrum screening tool (Autism Spectrum Quotient - 10 item). 4-option response scale with binary scoring. Score of 6+ is a positive screen per NICE guidelines. Screens for social communication, attention switching, detail orientation, and imagination traits.
+- Time: ~2 minutes
+- Source: Developed by Simon Baron-Cohen et al. at the Autism Research Centre, University of Cambridge. Free to use.
+- Questions answered: Do I have autism? Adult autism screening test. What does my AQ-10 score mean? What is the AQ-10 cutoff score?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

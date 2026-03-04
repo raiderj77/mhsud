@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: "/oci-r-ocd-screening", label: "OCI-R" },
   { href: "/dass-21-depression-anxiety-stress", label: "DASS-21" },
   { href: "/scoff-eating-disorder-screening", label: "SCOFF" },
+  { href: "/aq-10-autism-screening", label: "AQ-10" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

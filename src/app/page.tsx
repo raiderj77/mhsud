@@ -131,6 +131,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/aq-10-autism-screening",
+    title: "AQ-10 Autism Spectrum Screen",
+    description: "10-item validated screening tool for autism spectrum traits in adults. Developed at the University of Cambridge.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 10,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",
