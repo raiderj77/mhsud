@@ -41,6 +41,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Dr. Harvey Skinner. Public domain.
 - Questions answered: Do I have a drug problem? Drug abuse screening test. What does my DAST-10 score mean?
 
+### CAGE-AID Substance Use Screen
+- URL: https://mindchecktools.com/cage-aid-substance-abuse-screening
+- Description: 4-item validated screening tool for both alcohol and drug use concerns. Adapted from the original CAGE to include drugs. Score of 2+ is a positive screen.
+- Time: ~1 minute
+- Source: Adapted from the CAGE questionnaire by Dr. John Ewing. Public domain.
+- Questions answered: Do I have a substance abuse problem? CAGE-AID screening test. What does a positive CAGE-AID screen mean?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

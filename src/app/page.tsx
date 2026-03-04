@@ -61,6 +61,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/cage-aid-substance-abuse-screening",
+    title: "CAGE-AID Substance Use Screen",
+    description: "4-question validated screening for both alcohol and drug use concerns.",
+    badge: "Quick",
+    time: "~1 min",
+    questions: 4,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

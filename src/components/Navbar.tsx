@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: "/audit-alcohol-test", label: "AUDIT" },
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C" },
   { href: "/dast-10-drug-screening", label: "DAST-10" },
+  { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
