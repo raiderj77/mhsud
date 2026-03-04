@@ -27,6 +27,7 @@ const NAV_LINKS = [
   { href: "/halt-check-in", label: "HALT" },
   { href: "/withdrawal-timeline", label: "Withdrawal" },
   { href: "/treatment-cost-estimator", label: "Costs" },
+  { href: "/relapse-prevention-plan", label: "Plan" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

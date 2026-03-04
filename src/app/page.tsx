@@ -221,6 +221,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/relapse-prevention-plan",
+    title: "Relapse Prevention Plan Builder",
+    description: "Build a personalized relapse prevention plan. Identify triggers, warning signs, coping strategies, emergency contacts, safe activities, and a craving action plan.",
+    badge: "Original",
+    time: "~10 min",
+    questions: 7,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

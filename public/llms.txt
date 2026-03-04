@@ -145,6 +145,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2 minutes
 - Questions answered: How much does rehab cost? Drug treatment cost. Addiction treatment cost estimator. Does insurance cover rehab? How to pay for rehab.
 
+### Relapse Prevention Plan Builder
+- URL: https://mindchecktools.com/relapse-prevention-plan
+- Description: Free interactive worksheet for building a personalized relapse prevention plan. 7-section builder covering triggers, warning signs, coping strategies, emergency contacts, safe activities, places to avoid, and a craving action plan. Generates a printable plan document.
+- Time: ~10 minutes
+- Questions answered: How do I make a relapse prevention plan? Relapse prevention worksheet. Trigger identification. Craving action plan. Recovery planning tool.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -23,6 +23,7 @@ const TOOL_LINKS = [
   { href: "/halt-check-in", label: "HALT Check-In" },
   { href: "/withdrawal-timeline", label: "Withdrawal Timeline" },
   { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator" },
+  { href: "/relapse-prevention-plan", label: "Relapse Prevention Plan" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
