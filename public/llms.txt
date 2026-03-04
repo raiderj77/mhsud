@@ -69,6 +69,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Robert M.A. Hirschfeld, MD, and colleagues. Free to reproduce for clinical and research purposes.
 - Questions answered: Do I have bipolar disorder? Bipolar screening test. What does a positive MDQ screen mean?
 
+### OCI-R OCD Screening
+- URL: https://mindchecktools.com/oci-r-ocd-screening
+- Description: 18-item validated OCD screening tool (Obsessive-Compulsive Inventory - Revised). Scores 0-72 with clinical cutoff at 21. Includes 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
+- Time: ~3 minutes
+- Source: Developed by Foa et al. (2002). Free to use in clinical and research settings.
+- Questions answered: Do I have OCD? OCD screening test. What does my OCI-R score mean? What are OCD subtypes?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

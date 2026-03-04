@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { href: "/pcl-5-ptsd-screening", label: "PCL-5" },
   { href: "/asrs-adhd-screening", label: "ASRS" },
   { href: "/mdq-bipolar-screening", label: "MDQ" },
+  { href: "/oci-r-ocd-screening", label: "OCI-R" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

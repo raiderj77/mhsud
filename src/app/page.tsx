@@ -101,6 +101,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/oci-r-ocd-screening",
+    title: "OCI-R OCD Screening",
+    description: "18-item validated OCD screening with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.",
+    badge: "Validated",
+    time: "~3 min",
+    questions: 18,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

@@ -11,6 +11,7 @@ const TOOL_LINKS = [
   { href: "/pcl-5-ptsd-screening", label: "PCL-5 PTSD Screening" },
   { href: "/asrs-adhd-screening", label: "ASRS ADHD Screening" },
   { href: "/mdq-bipolar-screening", label: "MDQ Bipolar Screening" },
+  { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
