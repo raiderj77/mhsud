@@ -90,6 +90,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Lovibond & Lovibond (1995). Public domain.
 - Questions answered: Am I depressed, anxious, or stressed? DASS-21 screening test. What does my DASS-21 score mean? Depression vs anxiety vs stress.
 
+### WHO-5 Well-Being Index
+- URL: https://mindchecktools.com/who-5-wellbeing-index
+- Description: 5-item positive wellbeing measure from the World Health Organization. Each item rated 0-5 (At no time to All of the time) for the past 2 weeks. Raw score 0-25, multiplied by 4 for percentage score 0-100%. Score below 50% suggests further evaluation; below 28% suggests depression screening with PHQ-9.
+- Time: ~2 minutes
+- Source: Developed by the World Health Organization (1998). Public domain.
+- Questions answered: What is the WHO-5? How is the WHO-5 scored? WHO-5 well-being index test. Mental wellbeing assessment. Am I doing okay mentally?
+
 ### SCOFF Eating Disorder Screening
 - URL: https://mindchecktools.com/scoff-eating-disorder-screening
 - Description: 5-item validated eating disorder screening tool (SCOFF questionnaire). Yes/No format screening for anorexia, bulimia, binge eating disorder, and other eating disorders. Score of 2+ is a positive screen. Sensitivity ~84.6%, specificity ~89.6%.

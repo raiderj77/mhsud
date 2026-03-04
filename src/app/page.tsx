@@ -131,6 +131,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/who-5-wellbeing-index",
+    title: "WHO-5 Well-Being Index",
+    description: "5-item positive wellbeing measure from the WHO. Percentage score 0-100. Below 50% suggests further evaluation; below 28% suggests depression screening.",
+    badge: "WHO",
+    time: "~2 min",
+    questions: 5,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/scoff-eating-disorder-screening",
     title: "SCOFF Eating Disorder Screen",
     description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",

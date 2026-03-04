@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: "/mdq-bipolar-screening", label: "MDQ" },
   { href: "/oci-r-ocd-screening", label: "OCI-R" },
   { href: "/dass-21-depression-anxiety-stress", label: "DASS-21" },
+  { href: "/who-5-wellbeing-index", label: "WHO-5" },
   { href: "/scoff-eating-disorder-screening", label: "SCOFF" },
   { href: "/aq-10-autism-screening", label: "AQ-10" },
   { href: "/sobriety-calculator", label: "Sobriety" },
