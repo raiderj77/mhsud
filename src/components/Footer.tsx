@@ -13,6 +13,7 @@ const TOOL_LINKS = [
   { href: "/mdq-bipolar-screening", label: "MDQ Bipolar Screening" },
   { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
   { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Depression/Anxiety/Stress" },
+  { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder Screen" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

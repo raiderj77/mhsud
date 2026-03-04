@@ -121,6 +121,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/scoff-eating-disorder-screening",
+    title: "SCOFF Eating Disorder Screen",
+    description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",
+    badge: "Quick",
+    time: "~1 min",
+    questions: 5,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

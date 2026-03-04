@@ -83,6 +83,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Lovibond & Lovibond (1995). Public domain.
 - Questions answered: Am I depressed, anxious, or stressed? DASS-21 screening test. What does my DASS-21 score mean? Depression vs anxiety vs stress.
 
+### SCOFF Eating Disorder Screening
+- URL: https://mindchecktools.com/scoff-eating-disorder-screening
+- Description: 5-item validated eating disorder screening tool (SCOFF questionnaire). Yes/No format screening for anorexia, bulimia, binge eating disorder, and other eating disorders. Score of 2+ is a positive screen. Sensitivity ~84.6%, specificity ~89.6%.
+- Time: ~1 minute
+- Source: Developed by Morgan et al. (1999). Free to use in clinical and research settings.
+- Questions answered: Do I have an eating disorder? Eating disorder screening test. What does SCOFF stand for? What does a positive SCOFF screen mean?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
