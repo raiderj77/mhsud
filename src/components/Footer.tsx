@@ -12,6 +12,7 @@ const TOOL_LINKS = [
   { href: "/asrs-adhd-screening", label: "ASRS ADHD Screening" },
   { href: "/mdq-bipolar-screening", label: "MDQ Bipolar Screening" },
   { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
+  { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Depression/Anxiety/Stress" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

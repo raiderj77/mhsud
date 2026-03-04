@@ -111,6 +111,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/dass-21-depression-anxiety-stress",
+    title: "DASS-21 Depression/Anxiety/Stress",
+    description: "One test, three answers. Screens depression, anxiety, and stress simultaneously with separate severity ratings.",
+    badge: "3-in-1",
+    time: "~4 min",
+    questions: 21,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

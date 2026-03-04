@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: "/asrs-adhd-screening", label: "ASRS" },
   { href: "/mdq-bipolar-screening", label: "MDQ" },
   { href: "/oci-r-ocd-screening", label: "OCI-R" },
+  { href: "/dass-21-depression-anxiety-stress", label: "DASS-21" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

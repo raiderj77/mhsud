@@ -76,6 +76,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Foa et al. (2002). Free to use in clinical and research settings.
 - Questions answered: Do I have OCD? OCD screening test. What does my OCI-R score mean? What are OCD subtypes?
 
+### DASS-21 Depression, Anxiety & Stress Screening
+- URL: https://mindchecktools.com/dass-21-depression-anxiety-stress
+- Description: 21-item validated screening tool that measures depression, anxiety, and stress simultaneously. Three separate subscale scores (0-42 each) with 5 severity levels per subscale. Scores are raw totals multiplied by 2 (DASS-21 short form equivalent).
+- Time: ~4 minutes
+- Source: Developed by Lovibond & Lovibond (1995). Public domain.
+- Questions answered: Am I depressed, anxious, or stressed? DASS-21 screening test. What does my DASS-21 score mean? Depression vs anxiety vs stress.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
