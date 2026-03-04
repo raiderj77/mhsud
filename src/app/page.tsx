@@ -71,6 +71,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/pcl-5-ptsd-screening",
+    title: "PCL-5 PTSD Screening",
+    description: "20-item validated PTSD screening measure developed by the National Center for PTSD.",
+    badge: "Validated",
+    time: "~5 min",
+    questions: 20,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

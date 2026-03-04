@@ -48,6 +48,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Adapted from the CAGE questionnaire by Dr. John Ewing. Public domain.
 - Questions answered: Do I have a substance abuse problem? CAGE-AID screening test. What does a positive CAGE-AID screen mean?
 
+### PCL-5 PTSD Screening
+- URL: https://mindchecktools.com/pcl-5-ptsd-screening
+- Description: 20-item validated PTSD screening measure (PTSD Checklist for DSM-5). Scores 0-80 across four DSM-5 symptom clusters. Cutoff score of 33 suggests probable PTSD.
+- Time: ~5 minutes
+- Source: Developed by the National Center for PTSD, U.S. Department of Veterans Affairs. Public domain.
+- Questions answered: Do I have PTSD? What does my PCL-5 score mean? What is the PCL-5 cutoff score?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

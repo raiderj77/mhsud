@@ -8,6 +8,7 @@ const TOOL_LINKS = [
   { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
   { href: "/dast-10-drug-screening", label: "DAST-10 Drug Screening" },
   { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Substance Screen" },
+  { href: "/pcl-5-ptsd-screening", label: "PCL-5 PTSD Screening" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
