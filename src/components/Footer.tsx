@@ -22,6 +22,7 @@ const TOOL_LINKS = [
   { href: "/standard-drinks-calculator", label: "Standard Drinks Calculator" },
   { href: "/halt-check-in", label: "HALT Check-In" },
   { href: "/withdrawal-timeline", label: "Withdrawal Timeline" },
+  { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

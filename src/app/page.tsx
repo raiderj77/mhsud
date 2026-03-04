@@ -211,6 +211,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/treatment-cost-estimator",
+    title: "Treatment Cost Estimator",
+    description: "See estimated costs for addiction treatment: outpatient, IOP, residential rehab, detox, MAT, and sober living. Insurance and financial aid info included.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 1,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

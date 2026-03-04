@@ -139,6 +139,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2 minutes
 - Questions answered: How long does withdrawal last? Alcohol withdrawal timeline. Opioid withdrawal symptoms day by day. Benzo withdrawal timeline. Drug withdrawal symptoms. What is medical detox?
 
+### Treatment Cost Estimator
+- URL: https://mindchecktools.com/treatment-cost-estimator
+- Description: Informational tool showing estimated cost ranges for addiction treatment types: outpatient counseling, IOP, PHP, residential rehab (30/60/90 days), medical detox, MAT (Suboxone, methadone, Vivitrol), and sober living. Includes insurance coverage info (Mental Health Parity Act), financial assistance options, and SAMHSA Treatment Locator.
+- Time: ~2 minutes
+- Questions answered: How much does rehab cost? Drug treatment cost. Addiction treatment cost estimator. Does insurance cover rehab? How to pay for rehab.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
