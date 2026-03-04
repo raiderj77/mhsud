@@ -97,6 +97,24 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Simon Baron-Cohen et al. at the Autism Research Centre, University of Cambridge. Free to use.
 - Questions answered: Do I have autism? Adult autism screening test. What does my AQ-10 score mean? What is the AQ-10 cutoff score?
 
+### Sobriety Calculator & Day Counter
+- URL: https://mindchecktools.com/sobriety-calculator
+- Description: Free sobriety day counter. Enter your clean date, track days sober, see recovery milestones (24h to 10 years), next milestone countdown, motivational messages, and estimated money saved. Date saves in browser localStorage.
+- Time: ~1 minute
+- Questions answered: How many days sober am I? Sobriety milestone tracker. Clean date calculator. Recovery day counter.
+
+### Money Saved in Recovery Calculator
+- URL: https://mindchecktools.com/money-saved-recovery-calculator
+- Description: Calculate money saved by not using alcohol, cigarettes, cannabis, cocaine, opioids, or methamphetamine. Preset spending averages by substance, fun comparisons, and 1/5/10 year savings projections.
+- Time: ~2 minutes
+- Questions answered: How much money saved not drinking? Cost of addiction calculator. Savings from quitting smoking. Financial impact of recovery.
+
+### Health Recovery Timeline
+- URL: https://mindchecktools.com/health-recovery-timeline
+- Description: Interactive visual timeline showing what happens to your body after you quit alcohol, cigarettes/nicotine, or opioids. Based on medical research. Shows past milestones as completed and future ones with countdowns.
+- Time: ~1 minute
+- Questions answered: What happens when you stop drinking timeline? Body recovery after quitting alcohol. Quit smoking health timeline. Opioid recovery timeline.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

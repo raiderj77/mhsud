@@ -15,6 +15,9 @@ const TOOL_LINKS = [
   { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Depression/Anxiety/Stress" },
   { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder Screen" },
   { href: "/aq-10-autism-screening", label: "AQ-10 Autism Screening" },
+  { href: "/sobriety-calculator", label: "Sobriety Calculator" },
+  { href: "/money-saved-recovery-calculator", label: "Money Saved Calculator" },
+  { href: "/health-recovery-timeline", label: "Health Recovery Timeline" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
