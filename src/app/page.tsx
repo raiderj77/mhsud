@@ -271,6 +271,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/daily-recovery-check-in",
+    title: "Daily Recovery Check-In",
+    description: "Quick daily wellness check: mood, cravings, sleep, stress, connection, physical health. Track trends over 7 and 30 days with a streak counter. Saves locally.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 8,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

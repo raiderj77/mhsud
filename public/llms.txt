@@ -175,6 +175,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute
 - Questions answered: What to do instead of using? Coping skills for addiction. Healthy coping strategies. Random coping skill generator. Recovery coping tools.
 
+### Daily Recovery Check-In
+- URL: https://mindchecktools.com/daily-recovery-check-in
+- Description: Quick daily wellness check for people in recovery. Track mood, craving level, sleep quality, stress, connection to others, and physical health on 1-10 scales. Includes gratitude and goal entries. Saves to browser localStorage for 7-day and 30-day trend tracking. Streak counter for consecutive days checked in. Overall wellness score with color-coded bars.
+- Time: ~2 minutes
+- Questions answered: Daily recovery check in. Sobriety check in. Recovery journal online. Daily mood tracker for recovery. How am I doing in recovery?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
