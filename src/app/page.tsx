@@ -231,6 +231,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/urge-surfing-timer",
+    title: "Urge Surfing Timer",
+    description: "Ride out cravings with a guided mindfulness timer. Wave animation, box breathing, and rotating prompts based on Alan Marlatt's urge surfing technique.",
+    badge: "Original",
+    time: "~15 min",
+    questions: 1,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

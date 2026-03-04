@@ -151,6 +151,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~10 minutes
 - Questions answered: How do I make a relapse prevention plan? Relapse prevention worksheet. Trigger identification. Craving action plan. Recovery planning tool.
 
+### Urge Surfing Timer
+- URL: https://mindchecktools.com/urge-surfing-timer
+- Description: Guided mindfulness timer for riding out cravings using Alan Marlatt's urge surfing technique. Includes animated wave visualization, box breathing guide (4-4-4-4), rotating mindfulness prompts, and configurable countdown timer (5-30 minutes). Based on Mindfulness-Based Relapse Prevention (MBRP) research.
+- Time: ~15 minutes
+- Questions answered: What is urge surfing? How to resist cravings. Craving timer. Mindfulness for addiction. How long do cravings last?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
