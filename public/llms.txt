@@ -127,6 +127,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute
 - Questions answered: How many standard drinks is that? What is a standard drink? Standard drink calculator. How many drinks in a bottle of wine? How many standard drinks in a pint of beer?
 
+### HALT Check-In
+- URL: https://mindchecktools.com/halt-check-in
+- Description: Daily recovery check-in based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each dimension on a 1-5 scale and see your current vulnerability level with personalized coping suggestions. Used widely in 12-step and recovery programs.
+- Time: ~1 minute
+- Questions answered: Am I at risk for relapse? HALT recovery tool. HALT check in. Daily recovery self-check. What does HALT stand for in recovery?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -20,6 +20,7 @@ const TOOL_LINKS = [
   { href: "/health-recovery-timeline", label: "Health Recovery Timeline" },
   { href: "/bac-calculator", label: "BAC Calculator" },
   { href: "/standard-drinks-calculator", label: "Standard Drinks Calculator" },
+  { href: "/halt-check-in", label: "HALT Check-In" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

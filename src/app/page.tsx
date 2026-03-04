@@ -191,6 +191,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/halt-check-in",
+    title: "HALT Check-In",
+    description: "Daily recovery check-in based on the HALT acronym. Rate Hungry, Angry, Lonely, Tired and see your vulnerability level with coping suggestions.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 4,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

@@ -24,6 +24,7 @@ const NAV_LINKS = [
   { href: "/health-recovery-timeline", label: "Timeline" },
   { href: "/bac-calculator", label: "BAC" },
   { href: "/standard-drinks-calculator", label: "Drinks" },
+  { href: "/halt-check-in", label: "HALT" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
