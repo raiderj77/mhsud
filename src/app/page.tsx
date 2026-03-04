@@ -281,6 +281,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/family-impact-assessment",
+    title: "Family Impact Assessment",
+    description: "For families concerned about a loved one's substance use. 18 questions across 7 domains: behavior changes, finances, relationships, children, emotional toll, safety, and enabling behaviors.",
+    badge: "Original",
+    time: "~5 min",
+    questions: 18,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

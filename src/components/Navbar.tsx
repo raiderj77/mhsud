@@ -33,6 +33,7 @@ const NAV_LINKS = [
   { href: "/trigger-identification-worksheet", label: "Triggers" },
   { href: "/coping-skills-randomizer", label: "Coping" },
   { href: "/daily-recovery-check-in", label: "Daily" },
+  { href: "/family-impact-assessment", label: "Family" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

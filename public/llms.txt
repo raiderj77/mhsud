@@ -181,6 +181,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2 minutes
 - Questions answered: Daily recovery check in. Sobriety check in. Recovery journal online. Daily mood tracker for recovery. How am I doing in recovery?
 
+### Family Impact Assessment
+- URL: https://mindchecktools.com/family-impact-assessment
+- Description: Original educational assessment for family members and loved ones concerned about someone's substance use. 18 Likert-scale questions across 7 domains: behavior changes, financial impact, relationship impact, impact on children/dependents, emotional toll, safety concerns, and enabling behaviors. Scores 0-72 across minimal, mild, moderate, and significant impact ranges. Results include validation, psychoeducation about addiction as a disease, domain-specific guidance, next steps (Al-Anon, Nar-Anon, family therapy), self-care recommendations, and safety alerts.
+- Time: ~5 minutes
+- Source: Original educational tool. Not a validated clinical instrument.
+- Questions answered: Is my family member an addict quiz? How does addiction affect families? Am I enabling an addict? Family impact of addiction assessment. Concerned about someone's drinking.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

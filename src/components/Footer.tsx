@@ -29,6 +29,7 @@ const TOOL_LINKS = [
   { href: "/trigger-identification-worksheet", label: "Trigger Worksheet" },
   { href: "/coping-skills-randomizer", label: "Coping Skills Randomizer" },
   { href: "/daily-recovery-check-in", label: "Daily Recovery Check-In" },
+  { href: "/family-impact-assessment", label: "Family Impact Assessment" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 
