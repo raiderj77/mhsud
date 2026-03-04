@@ -163,6 +163,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~5 minutes
 - Questions answered: What stage of change am I in? Am I ready to quit? Stages of change assessment. Readiness to change quiz. Motivation to change.
 
+### Trigger Identification Worksheet
+- URL: https://mindchecktools.com/trigger-identification-worksheet
+- Description: Interactive worksheet for identifying personal addiction triggers across six categories: People, Places, Emotional, Situational, Time-Based, and Sensory. Common triggers as checkboxes plus custom entries. Generates a personalized trigger profile with category-specific coping strategy suggestions. Printable output.
+- Time: ~8 minutes
+- Questions answered: What are my addiction triggers? Relapse triggers list. How to identify triggers. Addiction trigger categories. Coping strategies for triggers.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -251,6 +251,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/trigger-identification-worksheet",
+    title: "Trigger Identification Worksheet",
+    description: "Identify your personal triggers across 6 categories: people, places, emotions, situations, times, and sensory cues. Get a printable trigger profile with coping strategies.",
+    badge: "Original",
+    time: "~8 min",
+    questions: 6,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",
