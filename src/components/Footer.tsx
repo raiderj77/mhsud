@@ -21,6 +21,7 @@ const TOOL_LINKS = [
   { href: "/bac-calculator", label: "BAC Calculator" },
   { href: "/standard-drinks-calculator", label: "Standard Drinks Calculator" },
   { href: "/halt-check-in", label: "HALT Check-In" },
+  { href: "/withdrawal-timeline", label: "Withdrawal Timeline" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
 ];
 

@@ -201,6 +201,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/withdrawal-timeline",
+    title: "Withdrawal Timeline",
+    description: "See what to expect during withdrawal from alcohol, opioids, benzos, stimulants, meth, cannabis, or nicotine. Phase-by-phase symptoms with severity ratings.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 1,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

@@ -133,6 +133,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute
 - Questions answered: Am I at risk for relapse? HALT recovery tool. HALT check in. Daily recovery self-check. What does HALT stand for in recovery?
 
+### Withdrawal Timeline
+- URL: https://mindchecktools.com/withdrawal-timeline
+- Description: Informational tool showing detailed withdrawal timelines for 8 substances: alcohol, opioids (heroin/fentanyl), opioids (prescription), benzodiazepines, cocaine/stimulants, methamphetamine, cannabis, and nicotine. Phase-by-phase symptoms with severity ratings, PAWS information, MAT options, and critical safety warnings for life-threatening withdrawal types.
+- Time: ~2 minutes
+- Questions answered: How long does withdrawal last? Alcohol withdrawal timeline. Opioid withdrawal symptoms day by day. Benzo withdrawal timeline. Drug withdrawal symptoms. What is medical detox?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
