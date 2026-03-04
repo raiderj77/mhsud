@@ -23,6 +23,7 @@ const NAV_LINKS = [
   { href: "/money-saved-recovery-calculator", label: "Savings" },
   { href: "/health-recovery-timeline", label: "Timeline" },
   { href: "/bac-calculator", label: "BAC" },
+  { href: "/standard-drinks-calculator", label: "Drinks" },
   { href: "/burnout-assessment-tool", label: "Burnout" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },

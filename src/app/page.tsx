@@ -181,6 +181,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/standard-drinks-calculator",
+    title: "Standard Drinks Calculator",
+    description: "Calculate how many standard drinks are in any beverage. 16 presets with visual comparison bars show that many common drinks are more than one standard drink.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 2,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

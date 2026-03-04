@@ -121,6 +121,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute
 - Questions answered: What is my BAC? How drunk am I? When will I be sober? Blood alcohol calculator. How long does alcohol stay in system?
 
+### Standard Drinks Calculator
+- URL: https://mindchecktools.com/standard-drinks-calculator
+- Description: Calculate how many US standard drinks (14g pure alcohol) are in any beverage. Enter container size and alcohol percentage, or browse 16 presets for beer, wine, spirits, and cocktails. Visual comparison bars show that many common drinks contain more than one standard drink.
+- Time: ~1 minute
+- Questions answered: How many standard drinks is that? What is a standard drink? Standard drink calculator. How many drinks in a bottle of wine? How many standard drinks in a pint of beer?
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
