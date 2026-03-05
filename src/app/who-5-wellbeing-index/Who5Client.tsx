@@ -275,6 +275,23 @@ export function Who5Client({ faqData }: Props) {
           </div>
         </div>
 
+        {/* Sources & Further Reading */}
+        <section className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <div className="card p-5 sm:p-6">
+            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li>
+                World Health Organization. WHO-5 Well-Being Index.{" "}
+                <a href="https://www.who.int/mental_health/media/en/76.pdf" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — WHO-5 Index</a>
+              </li>
+              <li>
+                Topp, C. W., Østergaard, S. D., Søndergaard, S., &amp; Bech, P. (2015). The WHO-5 Well-Being Index: a systematic review of the literature.{" "}
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25831962/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — WHO-5 Systematic Review</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">

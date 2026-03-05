@@ -510,6 +510,27 @@ export function CAGEAIDClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Brown, R. L., &amp; Rounds, L. A. (1995). Conjoint screening questionnaires for alcohol and other drug abuse: criterion validity in a primary care practice.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/7726686/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — CAGE-AID Validation</a>
+                </li>
+                <li>
+                  SAMHSA National Helpline.{" "}
+                  <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+                </li>
+                <li>
+                  National Institute on Drug Abuse (NIDA). Screening Tools &amp; Resources.{" "}
+                  <a href="https://nida.nih.gov/nidamed-medical-health-professionals/screening-tools-resources" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nida.nih.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

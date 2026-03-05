@@ -354,6 +354,27 @@ export function CrafftClient({ faqData }: Props) {
           </p>
         </div>
 
+        {/* Sources & Further Reading */}
+        <section className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <div className="card p-5 sm:p-6">
+            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li>
+                Knight, J. R., Sherritt, L., Shrier, L. A., et al. (2002). Validity of the CRAFFT substance abuse screening test among adolescent clinic patients.{" "}
+                <a href="https://pubmed.ncbi.nlm.nih.gov/12042886/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — CRAFFT Validation</a>
+              </li>
+              <li>
+                SAMHSA. Underage Drinking.{" "}
+                <a href="https://www.samhsa.gov/underage-drinking" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+              </li>
+              <li>
+                National Institute on Drug Abuse (NIDA). Adolescent Brain &amp; Substance Use.{" "}
+                <a href="https://nida.nih.gov/research-topics/adolescent-brain" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nida.nih.gov</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">

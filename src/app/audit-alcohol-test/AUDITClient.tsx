@@ -384,6 +384,27 @@ export function AUDITClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test — Guidelines for Use in Primary Care (2nd ed.).{" "}
+                  <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — AUDIT Manual</a>
+                </li>
+                <li>
+                  National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Use Disorder.{" "}
+                  <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-use-disorder" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">niaaa.nih.gov</a>
+                </li>
+                <li>
+                  SAMHSA National Helpline.{" "}
+                  <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

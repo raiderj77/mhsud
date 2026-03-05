@@ -556,6 +556,23 @@ export function AQ10Client({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Allison, C., Auyeung, B., &amp; Baron-Cohen, S. (2012). Toward brief &ldquo;Red Flags&rdquo; for autism screening: The Short Autism Spectrum Quotient.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/22265366/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — AQ-10 Validation</a>
+                </li>
+                <li>
+                  National Institute of Mental Health (NIMH). Autism Spectrum Disorder.{" "}
+                  <a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

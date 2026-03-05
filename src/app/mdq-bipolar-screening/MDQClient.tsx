@@ -753,6 +753,27 @@ export function MDQClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Hirschfeld, R. M., Williams, J. B., Spitzer, R. L., et al. (2000). Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/11095557/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — MDQ Validation</a>
+                </li>
+                <li>
+                  National Institute of Mental Health (NIMH). Bipolar Disorder.{" "}
+                  <a href="https://www.nimh.nih.gov/health/topics/bipolar-disorder" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+                </li>
+                <li>
+                  SAMHSA. Mental Health.{" "}
+                  <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

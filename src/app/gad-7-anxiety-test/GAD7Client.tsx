@@ -282,6 +282,27 @@ export function GAD7Client({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Spitzer, R. L., Kroenke, K., Williams, J. B., &amp; Löwe, B. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Validation Study</a>
+                </li>
+                <li>
+                  National Institute of Mental Health (NIMH). Anxiety Disorders.{" "}
+                  <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+                </li>
+                <li>
+                  American Psychological Association. Anxiety.{" "}
+                  <a href="https://www.apa.org/topics/anxiety" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">apa.org</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

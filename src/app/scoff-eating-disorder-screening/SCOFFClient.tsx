@@ -511,6 +511,27 @@ export function SCOFFClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Morgan, J. F., Reid, F., &amp; Lacey, J. H. (1999). The SCOFF questionnaire: assessment of a new screening tool for eating disorders.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/10604269/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — SCOFF Validation</a>
+                </li>
+                <li>
+                  National Institute of Mental Health (NIMH). Eating Disorders.{" "}
+                  <a href="https://www.nimh.nih.gov/health/topics/eating-disorders" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+                </li>
+                <li>
+                  SAMHSA. Mental Health.{" "}
+                  <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

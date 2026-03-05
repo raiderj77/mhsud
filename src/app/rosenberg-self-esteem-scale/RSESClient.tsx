@@ -272,6 +272,23 @@ export function RSESClient({ faqData }: Props) {
           </p>
         </div>
 
+        {/* Sources & Further Reading */}
+        <section className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <div className="card p-5 sm:p-6">
+            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li>
+                American Psychological Association. Rosenberg Self-Esteem Scale.{" "}
+                <a href="https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/self-esteem" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">APA — Rosenberg Self-Esteem Scale</a>
+              </li>
+              <li>
+                National Institute of Mental Health (NIMH). Mental Health Information.{" "}
+                <a href="https://www.nimh.nih.gov/health" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">

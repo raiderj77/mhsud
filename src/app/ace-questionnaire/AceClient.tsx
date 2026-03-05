@@ -481,6 +481,27 @@ export function AceClient({ faqData }: Props) {
           </ul>
         </div>
 
+        {/* Sources & Further Reading */}
+        <section className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <div className="card p-5 sm:p-6">
+            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li>
+                Felitti, V. J., Anda, R. F., Nordenberg, D., et al. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults.{" "}
+                <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Original ACE Study</a>
+              </li>
+              <li>
+                Centers for Disease Control and Prevention. Adverse Childhood Experiences (ACEs).{" "}
+                <a href="https://www.cdc.gov/aces/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">cdc.gov</a>
+              </li>
+              <li>
+                SAMHSA. Trauma and Violence.{" "}
+                <a href="https://www.samhsa.gov/trauma-violence" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">

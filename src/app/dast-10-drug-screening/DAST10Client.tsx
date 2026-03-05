@@ -518,6 +518,27 @@ export function DAST10Client({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  Skinner, H. A. (1982). The Drug Abuse Screening Test.{" "}
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/7183189/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Original DAST Paper</a>
+                </li>
+                <li>
+                  SAMHSA. Find Treatment.{" "}
+                  <a href="https://www.samhsa.gov/find-treatment" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">samhsa.gov</a>
+                </li>
+                <li>
+                  National Institute on Drug Abuse (NIDA). Screening Tools &amp; Resources.{" "}
+                  <a href="https://nida.nih.gov/nidamed-medical-health-professionals/screening-tools-resources" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nida.nih.gov</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

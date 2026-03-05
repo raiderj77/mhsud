@@ -617,6 +617,27 @@ export function PCL5Client({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
+          {/* Sources & Further Reading */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <div className="card p-5 sm:p-6">
+              <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>
+                  National Center for PTSD. PTSD Checklist for DSM-5 (PCL-5).{" "}
+                  <a href="https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">VA National Center for PTSD</a>
+                </li>
+                <li>
+                  National Institute of Mental Health (NIMH). Post-Traumatic Stress Disorder.{" "}
+                  <a href="https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+                </li>
+                <li>
+                  American Psychological Association. Clinical Practice Guideline for the Treatment of PTSD.{" "}
+                  <a href="https://www.apa.org/ptsd-guideline" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">apa.org</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
           {/* Related Tools */}
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>

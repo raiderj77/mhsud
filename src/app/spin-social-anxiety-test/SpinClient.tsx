@@ -415,6 +415,27 @@ export function SpinClient({ faqData }: Props) {
           </p>
         </div>
 
+        {/* Sources & Further Reading */}
+        <section className="mb-8">
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <div className="card p-5 sm:p-6">
+            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <li>
+                Connor, K. M., Davidson, J. R., Churchill, L. E., et al. (2000). Psychometric properties of the Social Phobia Inventory (SPIN).{" "}
+                <a href="https://pubmed.ncbi.nlm.nih.gov/10836122/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — SPIN Validation</a>
+              </li>
+              <li>
+                National Institute of Mental Health (NIMH). Social Anxiety Disorder.{" "}
+                <a href="https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">nimh.nih.gov</a>
+              </li>
+              <li>
+                American Psychological Association. Anxiety.{" "}
+                <a href="https://www.apa.org/topics/anxiety" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">apa.org</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
