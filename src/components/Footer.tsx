@@ -41,6 +41,7 @@ const TOOL_LINKS = [
   { href: "/ace-questionnaire", label: "ACE Questionnaire" },
   { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe Stress" },
   { href: "/rosenberg-self-esteem-scale", label: "Rosenberg Self-Esteem" },
+  { href: "/ucla-loneliness-scale", label: "UCLA Loneliness Scale" },
 ];
 
 const TARGETED_LINKS = [

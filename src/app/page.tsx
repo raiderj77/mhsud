@@ -391,6 +391,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/ucla-loneliness-scale",
+    title: "UCLA Loneliness Scale",
+    description: "20-item measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items. Score 20-80. Research cutoff 44+ for elevated loneliness.",
+    badge: "Validated",
+    time: "~5 min",
+    questions: 20,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",
