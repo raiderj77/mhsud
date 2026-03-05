@@ -39,6 +39,8 @@ const TOOL_LINKS = [
   { href: "/who-assist-substance-screening", label: "WHO ASSIST Screening" },
   { href: "/crafft-substance-screening", label: "CRAFFT Teen Screening" },
   { href: "/ace-questionnaire", label: "ACE Questionnaire" },
+  { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe Stress" },
+  { href: "/rosenberg-self-esteem-scale", label: "Rosenberg Self-Esteem" },
 ];
 
 const TARGETED_LINKS = [

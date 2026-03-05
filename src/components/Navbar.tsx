@@ -43,6 +43,8 @@ const NAV_LINKS = [
   { href: "/who-assist-substance-screening", label: "ASSIST" },
   { href: "/crafft-substance-screening", label: "CRAFFT" },
   { href: "/ace-questionnaire", label: "ACE" },
+  { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe" },
+  { href: "/rosenberg-self-esteem-scale", label: "RSES" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
 ];
