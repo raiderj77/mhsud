@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 
@@ -66,11 +66,18 @@ export function PcPtsd5Client({ faqData }: Props) {
   const [gateAnswer, setGateAnswer] = useState<boolean | null>(null);
   const [answers, setAnswers] = useState<Record<number, boolean>>({});
   const [showResults, setShowResults] = useState(false);
+  const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const allAnswered = SYMPTOM_ITEMS.every((item) => answers[item.id] !== undefined);
 
   function handleSymptomAnswer(id: number, value: boolean) {
     setAnswers((prev) => ({ ...prev, [id]: value }));
+    const idx = SYMPTOM_ITEMS.findIndex((item) => item.id === id);
+    if (idx < SYMPTOM_ITEMS.length - 1) {
+      setTimeout(() => {
+        questionRefs.current[idx + 1]?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 200);
+    }
   }
 
   /* Scoring */
@@ -515,6 +522,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         {SYMPTOM_ITEMS.map((item, idx) => (
           <div
             key={item.id}
+            ref={(el) => { questionRefs.current[idx] = el; }}
             className={`p-4 rounded-xl border transition-colors ${
               answers[item.id] !== undefined
                 ? "bg-white dark:bg-night-800 border-sage-200 dark:border-sage-800"
@@ -522,8 +530,12 @@ export function PcPtsd5Client({ faqData }: Props) {
             }`}
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="shrink-0 w-7 h-7 rounded-full bg-sand-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-500 dark:text-neutral-400">
-                {idx + 1}
+              <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
+                answers[item.id] !== undefined
+                  ? "bg-sage-500 text-white"
+                  : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
+              }`}>
+                {answers[item.id] !== undefined ? "✓" : idx + 1}
               </span>
               <div>
                 <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">

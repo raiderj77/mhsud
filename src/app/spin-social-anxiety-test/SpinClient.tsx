@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 
@@ -224,11 +224,18 @@ interface Props {
 export function SpinClient({ faqData }: Props) {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
+  const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const allAnswered = ITEMS.every((item) => answers[item.id] !== undefined);
 
   function handleAnswer(id: number, value: number) {
     setAnswers((prev) => ({ ...prev, [id]: value }));
+    const idx = ITEMS.findIndex((item) => item.id === id);
+    if (idx < ITEMS.length - 1) {
+      setTimeout(() => {
+        questionRefs.current[idx + 1]?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 200);
+    }
   }
 
   const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
@@ -554,15 +561,15 @@ export function SpinClient({ faqData }: Props) {
         </p>
       </div>
 
-      {/* Progress */}
-      <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+      {/* Progress — sticky */}
+      <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
+        <div className="flex justify-between text-xs font-semibold text-sage-600 dark:text-sage-400 mb-1">
           <span>{answeredCount} of {ITEMS.length} answered</span>
           <span>{Math.round((answeredCount / ITEMS.length) * 100)}%</span>
         </div>
-        <div className="w-full h-2 bg-sand-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+        <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-sage-500 rounded-full transition-all duration-300"
+            className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500"
             style={{ width: `${(answeredCount / ITEMS.length) * 100}%` }}
           />
         </div>
@@ -575,6 +582,7 @@ export function SpinClient({ faqData }: Props) {
           return (
             <div
               key={item.id}
+              ref={(el) => { questionRefs.current[idx] = el; }}
               className={`p-4 rounded-xl border transition-colors ${
                 answers[item.id] !== undefined
                   ? "bg-white dark:bg-night-800 border-sage-200 dark:border-sage-800"
@@ -582,8 +590,12 @@ export function SpinClient({ faqData }: Props) {
               }`}
             >
               <div className="flex items-start gap-3 mb-3">
-                <span className="shrink-0 w-7 h-7 rounded-full bg-sand-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-500 dark:text-neutral-400">
-                  {idx + 1}
+                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
+                  answers[item.id] !== undefined
+                    ? "bg-sage-500 text-white"
+                    : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
+                }`}>
+                  {answers[item.id] !== undefined ? "✓" : idx + 1}
                 </span>
                 <div>
                   <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">

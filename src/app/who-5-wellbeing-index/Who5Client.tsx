@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 
@@ -128,11 +128,18 @@ interface Props {
 export function Who5Client({ faqData }: Props) {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
+  const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const allAnswered = ITEMS.every((item) => answers[item.id] !== undefined);
 
   function handleAnswer(id: number, value: number) {
     setAnswers((prev) => ({ ...prev, [id]: value }));
+    const idx = ITEMS.findIndex((item) => item.id === id);
+    if (idx < ITEMS.length - 1) {
+      setTimeout(() => {
+        questionRefs.current[idx + 1]?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 200);
+    }
   }
 
   const rawScore = Object.values(answers).reduce((a, b) => a + b, 0);
@@ -424,6 +431,7 @@ export function Who5Client({ faqData }: Props) {
         {ITEMS.map((item, idx) => (
           <div
             key={item.id}
+            ref={(el) => { questionRefs.current[idx] = el; }}
             className={`p-4 rounded-xl border transition-colors ${
               answers[item.id] !== undefined
                 ? "bg-white dark:bg-night-800 border-sage-200 dark:border-sage-800"
@@ -431,19 +439,23 @@ export function Who5Client({ faqData }: Props) {
             }`}
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="shrink-0 w-7 h-7 rounded-full bg-sand-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-500 dark:text-neutral-400">
-                {idx + 1}
+              <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
+                answers[item.id] !== undefined
+                  ? "bg-sage-500 text-white"
+                  : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
+              }`}>
+                {answers[item.id] !== undefined ? "✓" : idx + 1}
               </span>
               <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {item.text}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 ml-10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 ml-10">
               {SCALE_OPTIONS.map((opt) => (
                 <button
                   key={opt.value}
                   onClick={() => handleAnswer(item.id, opt.value)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors text-center ${
                     answers[item.id] === opt.value
                       ? "bg-sage-600 text-white"
                       : "bg-sand-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-sage-100 dark:hover:bg-sage-900/30"

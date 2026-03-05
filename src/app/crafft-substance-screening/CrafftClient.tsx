@@ -535,8 +535,12 @@ export function CrafftClient({ faqData }: Props) {
               }`}
             >
               <div className="flex items-start gap-3 mb-3">
-                <span className="shrink-0 w-7 h-7 rounded-full bg-sand-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-500 dark:text-neutral-400">
-                  {idx + 1}
+                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
+                  partAAnswers[q.id] !== undefined
+                    ? "bg-sage-500 text-white"
+                    : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
+                }`}>
+                  {partAAnswers[q.id] !== undefined ? "✓" : idx + 1}
                 </span>
                 <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
                   {q.text}
