@@ -244,6 +244,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Connor, Davidson, Churchill, Sherwood, Foa, and Weisler (2000) at Duke University Medical Center.
 - Questions answered: Do I have social anxiety? Social phobia test. SPIN social anxiety screening. What does my SPIN score mean? Social anxiety disorder test. Fear of social situations.
 
+### Box Breathing Exercise
+- URL: https://mindchecktools.com/box-breathing-exercise
+- Description: Free visual guided box breathing tool with animated square. Supports 3-3-3-3 (beginner), 4-4-4-4 (standard), 5-5-5-5 (advanced), and custom timing patterns. Session lengths of 2, 5, or 10 minutes. Includes cycle counter, optional ambient sound via Web Audio API, and calming visual animation synced to breathing phases. Used for anxiety, stress management, focus, and recovery support.
+- Time: ~2-10 minutes
+- Questions answered: What is box breathing? Box breathing exercise online. 4-4-4-4 breathing technique. Breathing exercise for anxiety. Square breathing. How to do box breathing.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

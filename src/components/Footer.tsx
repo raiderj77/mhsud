@@ -46,6 +46,7 @@ const WELLNESS_TOOLS = [
   { href: "/work-stress-check", label: "Work Stress Check" },
   { href: "/sleep-and-mood-check", label: "Sleep & Mood" },
   { href: "/mental-load-calculator", label: "Mental Load" },
+  { href: "/box-breathing-exercise", label: "Box Breathing" },
 ];
 
 const RECOVERY_TOOLS = [
