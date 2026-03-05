@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -499,9 +500,7 @@ export function CopingSkillsClient({ faqData }: Props) {
             or medical care. If you are in crisis or struggling with substance use, please reach out to a
             qualified professional.
           </p>
-          <p className="mt-2 text-xs">
-            Content reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
-          </p>
+          <ToolReviewerBio />
         </div>
 
         <div className="bg-crisis-50 dark:bg-crisis-950/30 rounded-xl p-5 border border-crisis-200 dark:border-crisis-800">

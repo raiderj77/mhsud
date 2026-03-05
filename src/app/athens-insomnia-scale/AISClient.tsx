@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -479,6 +480,8 @@ export function AISClient({ faqData }: Props) {
             The Athens Insomnia Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a sleep disorder. A score of 6 or higher suggests insomnia that may warrant professional evaluation. This tool does not screen for sleep apnea, restless leg syndrome, or other medical sleep conditions. Always consult a qualified healthcare professional for persistent sleep difficulties. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

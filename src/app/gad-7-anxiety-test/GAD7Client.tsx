@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const QUESTIONS = [
   "Feeling nervous, anxious, or on edge",
@@ -306,6 +307,7 @@ export function GAD7Client({ faqData }: Props) {
             <p className="text-xs text-neutral-400 dark:text-neutral-500">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
+            <ToolReviewerBio />
           </footer>
         </div>
       )}

@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -393,6 +394,8 @@ export function UCLAClient({ faqData }: Props) {
             The UCLA Loneliness Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a mental health condition. An elevated score suggests significant loneliness that may benefit from professional support. Always consult a qualified healthcare professional for mental health concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

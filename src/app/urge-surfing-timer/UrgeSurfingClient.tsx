@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ── constants ─────────────────────────────────────────── */
 
@@ -541,9 +542,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
             to a qualified professional. Urge surfing is a coping technique — it does not replace comprehensive
             recovery support.
           </p>
-          <p className="mt-2 text-xs">
-            Content reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
-          </p>
+          <ToolReviewerBio />
         </div>
 
         {/* crisis resources */}

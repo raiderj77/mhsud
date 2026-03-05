@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -522,11 +523,7 @@ export function AQ10Client({ faqData }: Props) {
                   Whether or not a screening leads to a formal assessment, exploring the question &ldquo;could I be autistic?&rdquo; can be meaningful. Many people find that learning about autism helps explain lifelong patterns — social difficulties, sensory sensitivities, intense interests, or a persistent sense of being &ldquo;different.&rdquo; A comprehensive evaluation by a qualified specialist is the only way to confirm autism, but <strong>understanding yourself better is always worthwhile</strong>. If the AQ-10 resonates with your experiences, consider exploring further through the <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">ASRS ADHD screening</Link> (given the high overlap between autism and ADHD) or the <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> to check for co-occurring anxiety, depression, or stress.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

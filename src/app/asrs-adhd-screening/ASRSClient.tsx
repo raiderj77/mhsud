@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -536,11 +537,7 @@ export function ASRSClient({ faqData }: Props) {
                   ADHD cannot be identified through a screening tool alone. A proper evaluation typically involves a detailed clinical interview covering current symptoms and childhood history, standardized rating scales, assessment of functional impairment across multiple settings (work, home, relationships), and ruling out other conditions that can mimic ADHD symptoms. Many professionals with experience in adult ADHD — including psychiatrists, psychologists, and some primary care providers — can conduct this evaluation. If you screen positive, your primary care provider is often a good first point of contact.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

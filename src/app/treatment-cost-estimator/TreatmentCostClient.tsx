@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ── Types & Data ─────────────────────────────────────── */
 
@@ -506,9 +507,7 @@ export function TreatmentCostClient({ faqData }: Props) {
           <p>
             All interactions are processed entirely in your browser. Nothing is stored or transmitted.
           </p>
-          <p className="text-neutral-400 dark:text-neutral-500">
-            Content reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
-          </p>
+          <ToolReviewerBio />
         </div>
 
         <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-2xl p-5">

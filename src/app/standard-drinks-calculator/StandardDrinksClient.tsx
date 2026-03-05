@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -399,11 +400,7 @@ export function StandardDrinksClient({ faqData }: Props) {
               Alcohol content in beer, wine, and cocktails has been trending upward. The average ABV of craft beer has risen from about 5% to over 6% in the past decade, with many popular styles (IPAs, stouts, sours) routinely exceeding 7%. Wine has similarly crept from an average of 11-12% to 13-14%. Restaurant cocktails are often served in larger portions with higher alcohol content than home pours. Understanding these trends makes standard drink awareness more important than ever for making informed choices about consumption.
             </p>
           </div>
-          <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-            </p>
-          </div>
+          <ToolReviewerBio />
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Milestones ──────────────────────────────────────────────────────────
 
@@ -443,11 +444,7 @@ export function SobrietyClient({ faqData }: Props) {
                   If you experience a relapse, it does not erase your progress. The National Institute on Drug Abuse (NIDA) recognizes substance use disorders as <strong>chronic conditions</strong> with relapse rates (40-60%) comparable to type 1 diabetes, hypertension, and asthma. Relapse is a signal to adjust your approach — not a sign of failure. Every period of sobriety strengthens recovery skills and builds resilience. If you need to reset your counter, do so without shame. The <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">CAGE-AID screening</Link> and <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DAST-10</Link> can help you reflect on your substance use at any point in your journey.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

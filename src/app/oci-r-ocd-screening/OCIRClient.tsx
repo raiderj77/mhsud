@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -558,11 +559,7 @@ export function OCIRClient({ faqData }: Props) {
                   Your total score provides an overall picture, while the subscale breakdown shows which OCD dimensions contribute most to your distress. This information can be useful when discussing your experiences with a healthcare provider. If your score is above the clinical cutoff of 21, or if any individual subscale is notably elevated, speaking with a mental health professional experienced with OCD is recommended. The <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">GAD-7 anxiety screening</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">PHQ-9 depression screening</Link> may also provide useful complementary information, as anxiety and depression commonly co-occur with OCD. The International OCD Foundation (617-973-5801) maintains a directory of OCD specialists.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

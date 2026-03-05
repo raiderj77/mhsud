@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 interface Domain {
   name: string;
@@ -264,6 +265,7 @@ export function MentalLoadClient({ faqData }: Props) {
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">Original tool by MindCheck Tools. For reflection and conversation only.</p>
+            <ToolReviewerBio />
           </footer>
         </div>
       )}

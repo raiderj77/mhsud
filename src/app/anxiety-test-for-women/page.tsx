@@ -266,6 +266,9 @@ export default function AnxietyTestForWomenPage() {
             <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)</strong> with 11 years
             of clinical experience in substance abuse counseling.
           </p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
+            Last reviewed: March 2026 by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
+          </p>
         </div>
 
         {/* Internal Links */}

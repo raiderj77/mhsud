@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -477,11 +478,7 @@ export function SCOFFClient({ faqData }: Props) {
                   Many people with eating disorders do not seek help on their own, often due to shame, denial, or not recognizing their behaviors as problematic. Brief screening tools like the SCOFF can help identify individuals who may benefit from professional evaluation. Early identification is important because eating disorders are treatable — <strong>recovery is possible</strong> — and outcomes improve with earlier intervention. Effective approaches include cognitive-behavioral therapy, family-based approaches, and nutritional counseling, often combined. The <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">PHQ-9</Link> may also be useful, as depression and anxiety frequently co-occur with eating disorders.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

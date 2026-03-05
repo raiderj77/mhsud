@@ -18,11 +18,14 @@ export function AuthorBio() {
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
             with 11 years of clinical experience in substance abuse counseling
           </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">
+          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
             Our clinical reviewer has worked in diverse clinical settings including inpatient treatment, outpatient programs,
             and community mental health, specializing in evidence-based screening tools and their appropriate
             clinical application. All content on MindCheck Tools is reviewed for clinical accuracy and
             adherence to best practices in mental health education.
+          </p>
+          <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            Last reviewed: March 2026 by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
           </p>
         </div>
       </div>

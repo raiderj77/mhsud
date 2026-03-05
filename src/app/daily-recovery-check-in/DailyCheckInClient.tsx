@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -628,9 +629,7 @@ export function DailyCheckInClient({ faqData }: Props) {
             medical device, or substitute for professional care. If you notice concerning trends in your
             scores, please reach out to a qualified healthcare professional or counselor.
           </p>
-          <p className="mt-2 text-xs">
-            Content reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
-          </p>
+          <ToolReviewerBio />
         </div>
 
         <div className="bg-crisis-50 dark:bg-crisis-950/30 rounded-xl p-5 border border-crisis-200 dark:border-crisis-800">

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -396,6 +397,8 @@ export function HolmesRaheClient({ faqData }: Props) {
             Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

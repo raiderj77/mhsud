@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -719,11 +720,7 @@ export function MDQClient({ faqData }: Props) {
                   A screening tool like the MDQ can identify individuals who may benefit from further evaluation, but it cannot replace a comprehensive clinical assessment. Bipolar disorder shares symptoms with many other conditions including major depression, ADHD, anxiety disorders, and certain personality disorders. A qualified professional will conduct a thorough interview, review your full mood and developmental history, and consider other possible explanations before reaching any conclusions. If you have concerns about your mood patterns, the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">PHQ-9 depression screening</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">GAD-7 anxiety screening</Link> may also provide useful information to discuss with your provider.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

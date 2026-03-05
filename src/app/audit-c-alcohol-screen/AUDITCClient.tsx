@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 interface Question {
   text: string;
@@ -317,6 +318,7 @@ export function AUDITCClient({ faqData }: Props) {
               The AUDIT-C is derived from the AUDIT developed by the World Health Organization. It is in the public domain.
             </p>
             <p className="text-xs text-neutral-400 dark:text-neutral-500">This tool is for educational purposes only. Not medical advice, a diagnosis, or a treatment recommendation.</p>
+            <ToolReviewerBio />
           </footer>
         </div>
       )}

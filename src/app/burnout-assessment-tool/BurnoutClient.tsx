@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -439,39 +440,7 @@ export function BurnoutClient({ faqData }: Props) {
             </div>
           </section>
 
-          {/* Author Bio */}
-          <div className="mb-10 p-6 rounded-2xl bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-sage-600 dark:text-sage-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">
-                  Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)
-                </h3>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-2">
-                  with 11 years of clinical experience in substance abuse counseling.
-                </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  This tool is designed to provide educational insight and is based on established burnout research. It is not a substitute for professional medical advice.
-                </p>
-              </div>
-            </div>
-          </div>
+          <ToolReviewerBio />
 
           {/* Crisis Resources */}
           <div className="mb-10 p-6 rounded-2xl bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800">

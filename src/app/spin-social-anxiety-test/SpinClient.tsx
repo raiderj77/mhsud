@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -479,9 +480,11 @@ export function SpinClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The SPIN is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have social anxiety disorder. A score of 19 or higher suggests social anxiety symptoms that may warrant professional evaluation. Always consult a qualified healthcare professional for mental health concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+            The SPIN is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have social anxiety disorder. A score of 19 or higher suggests social anxiety symptoms that may warrant professional evaluation. Always consult a qualified healthcare professional for mental health concerns.
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

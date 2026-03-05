@@ -3,6 +3,7 @@
 import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -697,9 +698,7 @@ export function ReadinessClient({ faqData }: Props) {
             for reflection, not a definitive evaluation. Always consult a qualified healthcare professional
             or counselor for personalized guidance.
           </p>
-          <p className="mt-2 text-xs">
-            Content reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
-          </p>
+          <ToolReviewerBio />
         </div>
 
         <div className="bg-crisis-50 dark:bg-crisis-950/30 rounded-xl p-5 border border-crisis-200 dark:border-crisis-800">

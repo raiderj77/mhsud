@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -544,6 +545,8 @@ export function AceClient({ faqData }: Props) {
             The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources — trauma-specific */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 interface Question {
   text: string;
@@ -406,6 +407,7 @@ export function AUDITClient({ faqData }: Props) {
               The AUDIT was developed by the World Health Organization. It is in the public domain and can be reproduced and used freely.
             </p>
             <p className="text-xs text-neutral-400 dark:text-neutral-500">This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.</p>
+            <ToolReviewerBio />
           </footer>
         </div>
       )}

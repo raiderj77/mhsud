@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -586,11 +587,7 @@ export function DASS21Client({ faqData }: Props) {
                   The DASS-21 is the short form of the original 42-item DASS. Because it uses half as many items, raw scores are multiplied by 2 to produce final scores on the same scale as the full version. Each subscale uses different severity thresholds — for instance, a depression score of 14 is &quot;Moderate&quot; while the same score for stress is &quot;Normal&quot; — because these conditions have different baseline distributions in the general population. The DASS-21 has been validated across many cultures and settings (Lovibond &amp; Lovibond, 1995) and is widely used in both clinical practice and research.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

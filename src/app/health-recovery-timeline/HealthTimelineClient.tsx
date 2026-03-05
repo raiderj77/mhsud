@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Timeline Data ───────────────────────────────────────────────────────
 
@@ -409,11 +410,7 @@ export function HealthTimelineClient({ faqData }: Props) {
                   These timelines are based on averages from published medical research and represent general patterns. Your experience may differ based on your age, duration of use, overall health, genetics, and other factors. Some effects of long-term heavy substance use may not be fully reversible. This tool is not a substitute for medical care — if you are in early recovery or considering stopping, <strong>please work with a healthcare provider</strong> who can monitor your health and manage any withdrawal safely.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

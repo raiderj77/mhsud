@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -484,11 +485,7 @@ export function DAST10Client({ faqData }: Props) {
                   If your DAST-10 results suggest a moderate, substantial, or severe level of drug-related concerns, the most important next step is to have a conversation with a qualified healthcare provider or substance use counselor. They can conduct a comprehensive assessment, discuss your specific situation, and help determine whether further support would be beneficial. You can reach the SAMHSA National Helpline at 1-800-662-4357 for free, confidential treatment referrals available 24 hours a day, 7 days a week. Remember: seeking help is a sign of strength, not weakness, and effective support is available regardless of your circumstances.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

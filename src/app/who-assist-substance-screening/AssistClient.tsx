@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -872,6 +873,8 @@ export function AssistClient({ faqData }: Props) {
             The WHO ASSIST is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a substance use disorder. Scores suggesting moderate or high risk warrant follow-up with a qualified healthcare professional. Always consult a healthcare provider for substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

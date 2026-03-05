@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 /* ------------------------------------------------------------------ */
 /*  Types & Data                                                       */
@@ -631,6 +632,8 @@ export function FamilyImpactClient({ faqData }: Props) {
             This tool is for educational and self-reflection purposes only. It is not a clinical assessment, and it does not screen, assess, or evaluate your loved one. Results do not constitute medical advice, a professional evaluation, or a recommendation for any specific course of action. Always consult a qualified healthcare professional, licensed counselor, or addiction specialist for guidance about substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
+
+        <ToolReviewerBio />
 
         {/* Crisis Resources */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">

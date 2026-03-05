@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -533,11 +534,7 @@ export function BACClient({ faqData }: Props) {
                   Even low BAC levels impair driving ability. Research shows that crash risk begins increasing at <strong>BAC 0.02%</strong> and doubles by 0.05%. At the legal limit of 0.08%, crash risk is approximately <strong>4 times higher</strong> than at 0.00%. Beyond driving, elevated BAC increases risk of falls, injuries, poor decision-making, and alcohol poisoning. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT screening</Link> can help you reflect on your overall relationship with alcohol, and the <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT-C quick screen</Link> takes just 1 minute.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

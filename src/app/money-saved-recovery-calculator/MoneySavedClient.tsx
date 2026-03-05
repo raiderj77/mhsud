@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -422,11 +423,7 @@ export function MoneySavedClient({ faqData }: Props) {
                   Financial recovery is a real and meaningful part of overall recovery. Many people in early recovery have accumulated significant debt, damaged their credit, or lost assets. The money saved by not purchasing substances is the first step, but the benefits compound over time: improved work performance leads to raises and promotions, better health reduces medical costs, and clearer thinking leads to better financial decisions. Consider using your savings to build an <strong>emergency fund</strong> (a critical stability factor that reduces relapse risk), pay down debt, or invest in your future. The <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">Sobriety Calculator</Link> can help you track your overall recovery milestones alongside these financial gains.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute financial or medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

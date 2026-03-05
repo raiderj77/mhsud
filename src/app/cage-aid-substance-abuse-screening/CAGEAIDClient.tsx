@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -476,11 +477,7 @@ export function CAGEAIDClient({ faqData }: Props) {
                   If you scored 2 or higher, the most important next step is to have a conversation with a healthcare provider or substance use counselor. They can conduct a comprehensive assessment and help determine what kind of support, if any, would be appropriate for your situation. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential treatment referrals 24 hours a day, 7 days a week. Remember: seeking information about your health is a positive step, and effective support is available.
                 </p>
               </div>
-              <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</strong> This content is for educational purposes only and does not constitute medical advice.
-                </p>
-              </div>
+              <ToolReviewerBio />
             </div>
           </section>
 

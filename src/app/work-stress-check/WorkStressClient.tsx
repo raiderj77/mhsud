@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const QUESTIONS = [
   { text: "I feel overwhelmed by the amount of work I need to do.", domain: "Demands" },
@@ -278,6 +279,7 @@ export function WorkStressClient({ faqData }: Props) {
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">This is an original tool created by MindCheck Tools. It is not based on any proprietary or copyrighted scale.</p>
             <p className="text-xs text-neutral-400 dark:text-neutral-500">For personal reflection only. Not medical advice, a diagnosis, or a treatment recommendation.</p>
+            <ToolReviewerBio />
           </footer>
         </div>
       )}
