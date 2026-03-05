@@ -287,6 +287,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~10 minutes
 - Questions answered: What is a values card sort? Personal values exercise. Identify my values quiz. Core values list. Motivational interviewing values card sort. What are my top values? Values clarification exercise.
 
+### DBT Crisis Survival Skills Cards
+- URL: https://mindchecktools.com/dbt-crisis-skills
+- Description: Free interactive DBT distress tolerance skills cards. 22 crisis survival skills organized by four acronyms: TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), STOP (Stop, Take a step back, Observe, Proceed mindfully), ACCEPTS (Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations), and IMPROVE (Imagery, Meaning, Prayer, Relaxation, One thing at a time, Vacation, Encouragement). Each card flips to show detailed instructions and concrete examples. Random skill button for crisis moments. Based on Dialectical Behavior Therapy by Dr. Marsha Linehan.
+- Time: ~1 minute per skill (reference tool — no fixed completion time)
+- Questions answered: What are DBT distress tolerance skills? DBT skills cards. TIPP skills DBT. ACCEPTS DBT. STOP skill DBT. IMPROVE DBT. Crisis survival skills. Dialectical behavior therapy coping skills.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -86,6 +86,7 @@ const CATEGORIES: Category[] = [
       { href: "/cbt-thought-record", label: "Thought Record", sub: "CBT thought diary worksheet" },
       { href: "/worry-time-scheduler", label: "Worry Time", sub: "CBT worry postponement" },
       { href: "/values-card-sort", label: "Values Card Sort", sub: "Personal values exercise" },
+      { href: "/dbt-crisis-skills", label: "DBT Skills Cards", sub: "Crisis survival skills" },
     ],
   },
   {
