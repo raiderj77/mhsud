@@ -411,6 +411,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/brief-resilience-scale",
+    title: "Brief Resilience Scale",
+    description: "6-item measure of ability to bounce back from stress (Smith et al., 2008). Mean score 1-5. Three reverse-scored items. Low resilience below 3.00.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 6,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

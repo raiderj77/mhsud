@@ -43,6 +43,7 @@ const TOOL_LINKS = [
   { href: "/rosenberg-self-esteem-scale", label: "Rosenberg Self-Esteem" },
   { href: "/ucla-loneliness-scale", label: "UCLA Loneliness Scale" },
   { href: "/athens-insomnia-scale", label: "Athens Insomnia Scale" },
+  { href: "/brief-resilience-scale", label: "Brief Resilience Scale" },
 ];
 
 const TARGETED_LINKS = [
