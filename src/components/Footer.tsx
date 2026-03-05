@@ -49,6 +49,7 @@ const WELLNESS_TOOLS = [
   { href: "/box-breathing-exercise", label: "Box Breathing" },
   { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding" },
   { href: "/cognitive-distortion-identifier", label: "Thought Patterns" },
+  { href: "/safety-plan", label: "Safety Plan" },
 ];
 
 const RECOVERY_TOOLS = [

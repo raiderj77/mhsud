@@ -262,6 +262,13 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~5 minutes
 - Questions answered: What are cognitive distortions? Cognitive distortions list with examples. CBT thought record worksheet. How to reframe negative thoughts. Thinking errors CBT. Cognitive distortion identifier.
 
+### Safety Plan
+- URL: https://mindchecktools.com/safety-plan
+- Description: Free crisis safety planning tool based on the Stanley-Brown Safety Planning Intervention. 6-step guided plan: (1) warning signs, (2) internal coping strategies with suggestion chips, (3) people and places for distraction, (4) people to ask for help with phone numbers, (5) professionals and crisis contacts (988 Lifeline, Crisis Text Line, Veterans Crisis Line pre-filled), (6) making the environment safer. Generates printable plan. Auto-saves to browser localStorage. Crisis resources displayed prominently throughout. Designed with warmth and hope for people experiencing suicidal thoughts.
+- Time: ~10-15 minutes
+- Source: Based on Stanley & Brown Safety Planning Intervention (2012). Recommended by SPRC, VA, and Joint Commission.
+- Questions answered: What is a safety plan? Safety plan template. Suicide safety plan. Crisis safety planning. Stanley-Brown safety plan. How to make a safety plan. 988 crisis lifeline.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
