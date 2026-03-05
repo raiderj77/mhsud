@@ -47,6 +47,7 @@ const WELLNESS_TOOLS = [
   { href: "/sleep-and-mood-check", label: "Sleep & Mood" },
   { href: "/mental-load-calculator", label: "Mental Load" },
   { href: "/box-breathing-exercise", label: "Box Breathing" },
+  { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding" },
 ];
 
 const RECOVERY_TOOLS = [

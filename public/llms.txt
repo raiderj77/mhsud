@@ -250,6 +250,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2-10 minutes
 - Questions answered: What is box breathing? Box breathing exercise online. 4-4-4-4 breathing technique. Breathing exercise for anxiety. Square breathing. How to do box breathing.
 
+### 5-4-3-2-1 Grounding Exercise
+- URL: https://mindchecktools.com/five-senses-grounding
+- Description: Free guided 5-4-3-2-1 sensory grounding exercise for anxiety, panic attacks, and dissociation. Step-by-step tool walks through naming 5 things you see, 4 you touch, 3 you hear, 2 you smell, and 1 you taste. Text inputs for engagement, progress indicator, optional 10-second breathing pause between steps, and calming completion summary with all responses. Based on CBT/DBT distress tolerance skills.
+- Time: ~3-5 minutes
+- Questions answered: What is the 5-4-3-2-1 grounding technique? Grounding exercise for anxiety. Grounding technique for panic attacks. 5 senses grounding exercise. Sensory grounding for dissociation.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

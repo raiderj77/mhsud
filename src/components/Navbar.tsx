@@ -80,6 +80,7 @@ const CATEGORIES: Category[] = [
       { href: "/sleep-and-mood-check", label: "Sleep & Mood", sub: "Sleep-mood connection" },
       { href: "/mental-load-calculator", label: "Mental Load", sub: "Cognitive load check" },
       { href: "/box-breathing-exercise", label: "Box Breathing", sub: "Guided breathing exercise" },
+      { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding", sub: "Sensory grounding exercise" },
     ],
   },
   {
