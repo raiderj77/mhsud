@@ -281,6 +281,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute to park a worry, 15-30 minutes for a worry session
 - Questions answered: What is worry time CBT? Worry postponement technique. How to schedule worry time. Stimulus control for worry. CBT anxiety management. Worry diary tool. How to stop worrying all day.
 
+### Values Card Sort
+- URL: https://mindchecktools.com/values-card-sort
+- Description: Free interactive values card sort exercise. Sort 43 personal values into three categories (Very Important, Somewhat Important, Not Important), narrow to your top 5 core values, rank them in order of priority, and reflect with guided prompts. Used in Motivational Interviewing, recovery counseling, and personal development. Based on the values clarification work of William R. Miller.
+- Time: ~10 minutes
+- Questions answered: What is a values card sort? Personal values exercise. Identify my values quiz. Core values list. Motivational interviewing values card sort. What are my top values? Values clarification exercise.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

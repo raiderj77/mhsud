@@ -52,6 +52,7 @@ const WELLNESS_TOOLS = [
   { href: "/safety-plan", label: "Safety Plan" },
   { href: "/cbt-thought-record", label: "Thought Record" },
   { href: "/worry-time-scheduler", label: "Worry Time" },
+  { href: "/values-card-sort", label: "Values Card Sort" },
 ];
 
 const RECOVERY_TOOLS = [
