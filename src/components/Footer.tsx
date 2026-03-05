@@ -76,10 +76,30 @@ const RECOVERY_TOOLS = [
 
 const TARGETED_LINKS = [
   { href: "/depression-test-for-teens", label: "Depression: Teens" },
-  { href: "/anxiety-test-for-women", label: "Anxiety: Women" },
-  { href: "/alcohol-screening-for-college-students", label: "Alcohol: College" },
-  { href: "/burnout-test-for-nurses", label: "Burnout: Nurses" },
+  { href: "/depression-test-for-seniors", label: "Depression: Seniors" },
+  { href: "/depression-test-for-new-moms", label: "Depression: New Moms" },
   { href: "/depression-screening-for-veterans", label: "Depression: Veterans" },
+  { href: "/anxiety-test-for-women", label: "Anxiety: Women" },
+  { href: "/anxiety-test-for-teens", label: "Anxiety: Teens" },
+  { href: "/anxiety-test-for-men", label: "Anxiety: Men" },
+  { href: "/ptsd-test-veterans", label: "PTSD: Veterans" },
+  { href: "/ptsd-test-first-responders", label: "PTSD: First Responders" },
+  { href: "/adhd-test-adults", label: "ADHD: Adults" },
+  { href: "/adhd-test-women", label: "ADHD: Women" },
+  { href: "/ocd-test-teens", label: "OCD: Teens" },
+  { href: "/bipolar-test-young-adults", label: "Bipolar: Young Adults" },
+  { href: "/social-anxiety-test-college", label: "Social Anxiety: Students" },
+  { href: "/alcohol-screening-for-college-students", label: "Alcohol: College" },
+  { href: "/alcohol-screening-military", label: "Alcohol: Military" },
+  { href: "/drug-screening-teens", label: "Substances: Teens" },
+  { href: "/substance-abuse-test-parents", label: "Substances: Parents" },
+  { href: "/stress-test-college-students", label: "Stress: College" },
+  { href: "/burnout-test-for-nurses", label: "Burnout: Nurses" },
+  { href: "/burnout-test-for-healthcare-workers", label: "Burnout: Healthcare" },
+  { href: "/burnout-test-for-teachers", label: "Burnout: Teachers" },
+  { href: "/burnout-test-parents", label: "Burnout: Parents" },
+  { href: "/loneliness-test-seniors", label: "Loneliness: Seniors" },
+  { href: "/eating-disorder-test-athletes", label: "Eating Disorder: Athletes" },
 ];
 
 const INFO_LINKS = [

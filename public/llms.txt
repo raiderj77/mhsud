@@ -293,6 +293,133 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~1 minute per skill (reference tool — no fixed completion time)
 - Questions answered: What are DBT distress tolerance skills? DBT skills cards. TIPP skills DBT. ACCEPTS DBT. STOP skill DBT. IMPROVE DBT. Crisis survival skills. Dialectical behavior therapy coping skills.
 
+## Targeted Demographic Screenings
+
+### Depression Test for Teens
+- URL: https://mindchecktools.com/depression-test-for-teens
+- Description: PHQ-9 depression screening with teen-specific educational content. Covers adolescent depression prevalence (1 in 5), social media impact, school performance effects, and age-appropriate next steps.
+- Base tool: PHQ-9
+
+### Anxiety Test for Women
+- URL: https://mindchecktools.com/anxiety-test-for-women
+- Description: GAD-7 anxiety screening with content about how anxiety uniquely affects women, including hormonal influences, societal pressures, and gender-specific symptom presentation.
+- Base tool: GAD-7
+
+### Alcohol Screening for College Students
+- URL: https://mindchecktools.com/alcohol-screening-for-college-students
+- Description: AUDIT alcohol screening with college-specific context about binge drinking culture, academic impact, and campus resources.
+- Base tool: AUDIT
+
+### Burnout Test for Nurses
+- URL: https://mindchecktools.com/burnout-test-for-nurses
+- Description: Burnout assessment with nursing-specific content about compassion fatigue, moral injury, staffing shortages, and healthcare worker well-being.
+- Base tool: Burnout Assessment
+
+### Depression Screening for Veterans
+- URL: https://mindchecktools.com/depression-screening-for-veterans
+- Description: PHQ-9 depression screening with veteran-specific context about military culture, service-connected depression, VA resources, and the Veterans Crisis Line.
+- Base tool: PHQ-9
+
+### PTSD Test for Veterans
+- URL: https://mindchecktools.com/ptsd-test-veterans
+- Description: PCL-5 PTSD screening with veteran-specific content about combat trauma, military sexual trauma, VA treatment options, and the Veterans Crisis Line.
+- Base tool: PCL-5
+
+### ADHD Test for Adults
+- URL: https://mindchecktools.com/adhd-test-adults
+- Description: ASRS ADHD screening with adult-specific content about late diagnosis, workplace challenges, 4.4% adult prevalence, and underdiagnosis patterns.
+- Base tool: ASRS
+
+### ADHD Test for Women
+- URL: https://mindchecktools.com/adhd-test-women
+- Description: ASRS ADHD screening with content about how ADHD presents differently in women, masking behaviors, hormonal effects, and late diagnosis patterns.
+- Base tool: ASRS
+
+### Anxiety Test for Teens
+- URL: https://mindchecktools.com/anxiety-test-for-teens
+- Description: GAD-7 anxiety screening with teen-specific content about 1 in 3 prevalence, social media impact, school anxiety, and age-appropriate coping strategies.
+- Base tool: GAD-7
+
+### Anxiety Test for Men
+- URL: https://mindchecktools.com/anxiety-test-for-men
+- Description: GAD-7 anxiety screening with content about how anxiety manifests in men through anger, irritability, and physical symptoms, plus stigma barriers to seeking help.
+- Base tool: GAD-7
+
+### Depression Test for Seniors
+- URL: https://mindchecktools.com/depression-test-for-seniors
+- Description: PHQ-9 depression screening with content about late-life depression, pseudodementia, medication interactions, isolation, and the Eldercare Locator resource.
+- Base tool: PHQ-9
+
+### Depression Test for New Moms
+- URL: https://mindchecktools.com/depression-test-for-new-moms
+- Description: PHQ-9 depression screening with content about postpartum depression (1 in 7), baby blues vs PPD, hormonal changes, and PSI helpline resources.
+- Base tool: PHQ-9
+
+### OCD Test for Teens
+- URL: https://mindchecktools.com/ocd-test-teens
+- Description: OCI-R OCD screening with teen-specific content about adolescent OCD onset, ERP therapy, common teen OCD themes, and IOCDF resources.
+- Base tool: OCI-R
+
+### Burnout Test for Teachers
+- URL: https://mindchecktools.com/burnout-test-for-teachers
+- Description: Burnout assessment with teacher-specific content about 44% burnout rates, systemic causes, compassion fatigue, and educator support resources.
+- Base tool: Burnout Assessment
+
+### Burnout Test for Healthcare Workers
+- URL: https://mindchecktools.com/burnout-test-for-healthcare-workers
+- Description: Burnout assessment with healthcare worker content about moral injury, pandemic impact, staffing crises, and Dr. Lorna Breen Heroes' Foundation resources.
+- Base tool: Burnout Assessment
+
+### Stress Test for College Students
+- URL: https://mindchecktools.com/stress-test-college-students
+- Description: DASS-21 screening with college-specific content about academic pressure, financial stress, imposter syndrome, and campus mental health resources.
+- Base tool: DASS-21
+
+### Alcohol Screening for Military
+- URL: https://mindchecktools.com/alcohol-screening-military
+- Description: AUDIT alcohol screening with military-specific content about drinking culture, deployment-related use, confidential resources, and MFLC counseling.
+- Base tool: AUDIT
+
+### Drug Screening for Teens
+- URL: https://mindchecktools.com/drug-screening-teens
+- Description: CRAFFT substance screening with teen-specific content about adolescent brain development, peer pressure, early intervention, and youth crisis resources.
+- Base tool: CRAFFT
+
+### Substance Abuse Test for Parents
+- URL: https://mindchecktools.com/substance-abuse-test-parents
+- Description: CAGE-AID substance screening with content for parents about how substance use affects parenting, family dynamics, and children's well-being.
+- Base tool: CAGE-AID
+
+### Bipolar Test for Young Adults
+- URL: https://mindchecktools.com/bipolar-test-young-adults
+- Description: MDQ bipolar screening with young adult content about typical age of onset, misdiagnosis patterns, college challenges, and early intervention importance.
+- Base tool: MDQ
+
+### Social Anxiety Test for College Students
+- URL: https://mindchecktools.com/social-anxiety-test-college
+- Description: SPIN social anxiety screening with college-specific content about classroom participation anxiety, social isolation, and campus counseling resources.
+- Base tool: SPIN
+
+### Loneliness Test for Seniors
+- URL: https://mindchecktools.com/loneliness-test-seniors
+- Description: UCLA Loneliness Scale screening with senior-specific content about social isolation health risks, retirement transitions, and community connection resources.
+- Base tool: UCLA Loneliness Scale
+
+### PTSD Test for First Responders
+- URL: https://mindchecktools.com/ptsd-test-first-responders
+- Description: PCL-5 PTSD screening with first responder content about cumulative trauma, critical incidents, peer support programs, and confidential resources.
+- Base tool: PCL-5
+
+### Burnout Test for Parents
+- URL: https://mindchecktools.com/burnout-test-parents
+- Description: Burnout assessment with parental burnout content about exhaustion, emotional distance from children, and parenting-specific recovery strategies.
+- Base tool: Burnout Assessment
+
+### Eating Disorder Test for Athletes
+- URL: https://mindchecktools.com/eating-disorder-test-athletes
+- Description: SCOFF eating disorder screening with athlete-specific content about RED-S, weight-class sports, performance pressure, and sports dietitian resources.
+- Base tool: SCOFF
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.

@@ -599,36 +599,31 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            {
-              href: "/depression-test-for-teens",
-              title: "Depression Test for Teens",
-              description: "PHQ-9 screening with teen-specific info on signs, stats, and youth crisis resources.",
-              badge: "Teens",
-            },
-            {
-              href: "/anxiety-test-for-women",
-              title: "Anxiety Test for Women",
-              description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.",
-              badge: "Women",
-            },
-            {
-              href: "/alcohol-screening-for-college-students",
-              title: "Alcohol Screening for College Students",
-              description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.",
-              badge: "College",
-            },
-            {
-              href: "/burnout-test-for-nurses",
-              title: "Burnout Test for Nurses",
-              description: "Burnout assessment with nursing-specific info on compassion fatigue and shift work impact.",
-              badge: "Nurses",
-            },
-            {
-              href: "/depression-screening-for-veterans",
-              title: "Depression Screening for Veterans",
-              description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.",
-              badge: "Veterans",
-            },
+            { href: "/depression-test-for-teens", title: "Depression Test for Teens", description: "PHQ-9 screening with teen-specific info on signs, stats, and youth crisis resources.", badge: "Teens" },
+            { href: "/depression-test-for-seniors", title: "Depression Test for Seniors", description: "PHQ-9 screening with context on late-life depression, isolation, and eldercare resources.", badge: "Seniors" },
+            { href: "/depression-test-for-new-moms", title: "Depression Test for New Moms", description: "PHQ-9 screening with postpartum depression info, baby blues vs PPD, and PSI helpline.", badge: "New Moms" },
+            { href: "/depression-screening-for-veterans", title: "Depression Test for Veterans", description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.", badge: "Veterans" },
+            { href: "/anxiety-test-for-women", title: "Anxiety Test for Women", description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.", badge: "Women" },
+            { href: "/anxiety-test-for-teens", title: "Anxiety Test for Teens", description: "GAD-7 screening with teen anxiety stats, social media impact, and youth crisis resources.", badge: "Teens" },
+            { href: "/anxiety-test-for-men", title: "Anxiety Test for Men", description: "GAD-7 screening with info on how anxiety manifests differently in men — anger, physical symptoms.", badge: "Men" },
+            { href: "/ptsd-test-veterans", title: "PTSD Test for Veterans", description: "PCL-5 screening with combat PTSD stats, VA treatment info, and Veterans Crisis Line.", badge: "Veterans" },
+            { href: "/ptsd-test-first-responders", title: "PTSD Test for First Responders", description: "PCL-5 screening for police, firefighters, EMTs with cumulative trauma context.", badge: "First Responders" },
+            { href: "/adhd-test-adults", title: "ADHD Test for Adults", description: "WHO ASRS screening with info on adult ADHD underdiagnosis, symptoms, and getting evaluated.", badge: "Adults" },
+            { href: "/adhd-test-women", title: "ADHD Test for Women", description: "ASRS screening with info on masking, hormonal effects, and why women are diagnosed late.", badge: "Women" },
+            { href: "/ocd-test-teens", title: "OCD Test for Teens", description: "OCI-R screening with teen OCD info, common themes, and ERP treatment resources.", badge: "Teens" },
+            { href: "/bipolar-test-young-adults", title: "Bipolar Test for Young Adults", description: "MDQ screening with info on onset age, misdiagnosis as depression, and hypomania.", badge: "Young Adults" },
+            { href: "/social-anxiety-test-college", title: "Social Anxiety Test for Students", description: "SPIN screening with college social anxiety info, academic impact, and campus resources.", badge: "College" },
+            { href: "/alcohol-screening-for-college-students", title: "Alcohol Screening for College", description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.", badge: "College" },
+            { href: "/alcohol-screening-military", title: "Alcohol Screening for Military", description: "AUDIT screening with military drinking culture context, career concerns, and VA resources.", badge: "Military" },
+            { href: "/drug-screening-teens", title: "Drug Screening for Teens", description: "CRAFFT screening for ages 12-21 with age-appropriate info and teen treatment resources.", badge: "Teens" },
+            { href: "/substance-abuse-test-parents", title: "Substance Screening for Parents", description: "CAGE-AID screening with info on parenting impact, custody concerns, and family treatment.", badge: "Parents" },
+            { href: "/stress-test-college-students", title: "Stress Test for College Students", description: "DASS-21 screening with college stress stats, campus resources, and JED Foundation info.", badge: "College" },
+            { href: "/burnout-test-for-nurses", title: "Burnout Test for Nurses", description: "Burnout assessment with nursing-specific info on compassion fatigue and shift work impact.", badge: "Nurses" },
+            { href: "/burnout-test-for-healthcare-workers", title: "Burnout Test for Healthcare Workers", description: "Burnout assessment for all healthcare staff with post-pandemic context and moral injury info.", badge: "Healthcare" },
+            { href: "/burnout-test-for-teachers", title: "Burnout Test for Teachers", description: "Burnout assessment with teacher-specific context on emotional labor and systemic causes.", badge: "Teachers" },
+            { href: "/burnout-test-parents", title: "Burnout Test for Parents", description: "Parental burnout assessment covering exhaustion, detachment, and guilt with self-care guidance.", badge: "Parents" },
+            { href: "/loneliness-test-seniors", title: "Loneliness Test for Seniors", description: "UCLA Loneliness Scale with senior isolation stats, health impact, and community resources.", badge: "Seniors" },
+            { href: "/eating-disorder-test-athletes", title: "Eating Disorder Test for Athletes", description: "SCOFF screening with RED-S info, sport-specific risks, and athletic body image context.", badge: "Athletes" },
           ].map((item) => (
             <Link
               key={item.href}
