@@ -50,6 +50,7 @@ const WELLNESS_TOOLS = [
   { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding" },
   { href: "/cognitive-distortion-identifier", label: "Thought Patterns" },
   { href: "/safety-plan", label: "Safety Plan" },
+  { href: "/cbt-thought-record", label: "Thought Record" },
 ];
 
 const RECOVERY_TOOLS = [

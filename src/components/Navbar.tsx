@@ -83,6 +83,7 @@ const CATEGORIES: Category[] = [
       { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding", sub: "Sensory grounding exercise" },
       { href: "/cognitive-distortion-identifier", label: "Thought Patterns", sub: "CBT distortion identifier" },
       { href: "/safety-plan", label: "Safety Plan", sub: "Crisis safety planning tool" },
+      { href: "/cbt-thought-record", label: "Thought Record", sub: "CBT thought diary worksheet" },
     ],
   },
   {

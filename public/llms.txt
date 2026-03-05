@@ -269,6 +269,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Based on Stanley & Brown Safety Planning Intervention (2012). Recommended by SPRC, VA, and Joint Commission.
 - Questions answered: What is a safety plan? Safety plan template. Suicide safety plan. Crisis safety planning. Stanley-Brown safety plan. How to make a safety plan. 988 crisis lifeline.
 
+### CBT Thought Record Worksheet
+- URL: https://mindchecktools.com/cbt-thought-record
+- Description: Free interactive 7-column CBT thought record worksheet. Steps: (1) describe the situation, (2) capture automatic thought with belief rating 0-100%, (3) name emotions with intensity 0-100, (4) list evidence supporting the thought, (5) list evidence against the thought, (6) write a balanced alternative thought with belief rating, (7) re-rate emotions. Shows before/after emotion comparison with visual bars. Saves entries to browser localStorage as a private thought journal. Printable output. Based on Aaron Beck, David Burns, and Christine Padesky's CBT model.
+- Time: ~10 minutes per entry
+- Questions answered: What is a CBT thought record? Thought record worksheet online. CBT thought diary. How to challenge negative thoughts. Cognitive restructuring worksheet. Automatic thoughts CBT.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
