@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/holmes-rahe-stress-inventory`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/rosenberg-self-esteem-scale`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/ucla-loneliness-scale`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/athens-insomnia-scale`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/crisis-resources`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },

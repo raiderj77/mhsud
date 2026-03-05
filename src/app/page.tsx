@@ -401,6 +401,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/athens-insomnia-scale",
+    title: "Athens Insomnia Scale",
+    description: "8-item insomnia severity measure based on ICD-10 criteria (Soldatos et al., 2000). Past month. Score 0-24. Cutoff of 6+ for insomnia (93% sensitivity).",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 8,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/work-stress-check",
     title: "Work Stress & Burnout",
     description: "12 original questions about work demands, control, support, and recovery.",

@@ -46,6 +46,7 @@ const NAV_LINKS = [
   { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe" },
   { href: "/rosenberg-self-esteem-scale", label: "RSES" },
   { href: "/ucla-loneliness-scale", label: "UCLA" },
+  { href: "/athens-insomnia-scale", label: "AIS" },
   { href: "/blog", label: "Blog" },
   { href: "/crisis-resources", label: "Crisis Help" },
 ];
