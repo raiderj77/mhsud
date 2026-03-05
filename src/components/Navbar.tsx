@@ -81,6 +81,7 @@ const CATEGORIES: Category[] = [
       { href: "/mental-load-calculator", label: "Mental Load", sub: "Cognitive load check" },
       { href: "/box-breathing-exercise", label: "Box Breathing", sub: "Guided breathing exercise" },
       { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding", sub: "Sensory grounding exercise" },
+      { href: "/cognitive-distortion-identifier", label: "Thought Patterns", sub: "CBT distortion identifier" },
     ],
   },
   {

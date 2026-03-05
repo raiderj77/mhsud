@@ -256,6 +256,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~3-5 minutes
 - Questions answered: What is the 5-4-3-2-1 grounding technique? Grounding exercise for anxiety. Grounding technique for panic attacks. 5 senses grounding exercise. Sensory grounding for dissociation.
 
+### Cognitive Distortion Identifier
+- URL: https://mindchecktools.com/cognitive-distortion-identifier
+- Description: Free CBT-based educational tool for identifying cognitive distortions. User writes a negative thought, selects from 16 common thinking errors (all-or-nothing thinking, overgeneralization, catastrophizing, emotional reasoning, etc.) with descriptions and examples, then receives guided reframing prompts to write a balanced alternative thought. Based on the work of Aaron Beck and David Burns. Not AI-powered — user self-identifies distortions.
+- Time: ~5 minutes
+- Questions answered: What are cognitive distortions? Cognitive distortions list with examples. CBT thought record worksheet. How to reframe negative thoughts. Thinking errors CBT. Cognitive distortion identifier.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
