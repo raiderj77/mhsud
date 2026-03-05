@@ -84,6 +84,7 @@ const CATEGORIES: Category[] = [
       { href: "/cognitive-distortion-identifier", label: "Thought Patterns", sub: "CBT distortion identifier" },
       { href: "/safety-plan", label: "Safety Plan", sub: "Crisis safety planning tool" },
       { href: "/cbt-thought-record", label: "Thought Record", sub: "CBT thought diary worksheet" },
+      { href: "/worry-time-scheduler", label: "Worry Time", sub: "CBT worry postponement" },
     ],
   },
   {

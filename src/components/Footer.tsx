@@ -51,6 +51,7 @@ const WELLNESS_TOOLS = [
   { href: "/cognitive-distortion-identifier", label: "Thought Patterns" },
   { href: "/safety-plan", label: "Safety Plan" },
   { href: "/cbt-thought-record", label: "Thought Record" },
+  { href: "/worry-time-scheduler", label: "Worry Time" },
 ];
 
 const RECOVERY_TOOLS = [

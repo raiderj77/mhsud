@@ -275,6 +275,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~10 minutes per entry
 - Questions answered: What is a CBT thought record? Thought record worksheet online. CBT thought diary. How to challenge negative thoughts. Cognitive restructuring worksheet. Automatic thoughts CBT.
 
+### Worry Time Scheduler
+- URL: https://mindchecktools.com/worry-time-scheduler
+- Description: Free CBT worry postponement tool. Schedule a daily worry time (15-30 minutes), park worries throughout the day with a quick capture button, then process each worry in a guided session with structured prompts (still relevant? solvable? action step? worst-case probability). Tracks worry patterns over time with stats (total worries parked, percent resolved before session, average worry relevance). Based on the stimulus control and scheduled worry techniques from CBT for generalized anxiety disorder. Auto-saves to browser localStorage.
+- Time: ~1 minute to park a worry, 15-30 minutes for a worry session
+- Questions answered: What is worry time CBT? Worry postponement technique. How to schedule worry time. Stimulus control for worry. CBT anxiety management. Worry diary tool. How to stop worrying all day.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
