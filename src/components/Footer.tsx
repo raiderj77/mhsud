@@ -218,7 +218,7 @@ export function Footer() {
               <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
                 988 Suicide &amp; Crisis Lifeline
               </p>
-              <p className="text-xs text-amber-600 dark:text-amber-300">
+              <p className="text-xs text-amber-700 dark:text-amber-300">
                 Call or text 988 &bull; 24/7 free &amp; confidential support
               </p>
             </div>
@@ -226,12 +226,12 @@ export function Footer() {
               <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
                 SAMHSA National Helpline
               </p>
-              <p className="text-xs text-amber-600 dark:text-amber-300">
+              <p className="text-xs text-amber-700 dark:text-amber-300">
                 1-800-662-4357 &bull; Treatment referral &amp; information
               </p>
             </div>
           </div>
-          <p className="text-xs text-amber-600 dark:text-amber-400 text-center mt-3">
+          <p className="text-xs text-amber-700 dark:text-amber-400 text-center mt-3">
             <Link href="/crisis-resources" className="hover:text-amber-800 dark:hover:text-amber-200 underline">
               View all crisis resources and international helplines &rarr;
             </Link>
