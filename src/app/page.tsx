@@ -680,19 +680,19 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
             {
-              title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire",
-              slug: "phq-9-guide",
-              excerpt: "Learn what the PHQ-9 measures, how scores are interpreted, and why it's only a starting point.",
+              title: "Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety",
+              slug: "cognitive-distortions-list",
+              excerpt: "Learn about 15 common cognitive distortions, how they fuel anxiety, and how CBT can help you reframe them.",
             },
             {
-              title: "GAD-7 Anxiety Scale: What It Measures and How Doctors Interpret Scores",
-              slug: "gad-7-guide",
-              excerpt: "A plain-language guide to the world's most common anxiety screener.",
+              title: "What Happens When You Stop Drinking: A Timeline",
+              slug: "quit-drinking-timeline",
+              excerpt: "Hour-by-hour and week-by-week timeline of body recovery after quitting alcohol, with critical safety warnings.",
             },
             {
-              title: "AUDIT Alcohol Screening: How It Works and Why Clinicians Use It",
-              slug: "audit-guide",
-              excerpt: "Understanding the WHO's alcohol screening tool and what your score can and can't tell you.",
+              title: "DBT Skills for Everyday Life: A Beginner's Guide",
+              slug: "dbt-skills-beginners",
+              excerpt: "The 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — explained simply.",
             },
           ].map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">

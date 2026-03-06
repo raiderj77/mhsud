@@ -269,7 +269,6 @@ export default function EatingDisorderSignsPage() {
             </div>
           </section>
 
-          <AuthorBio />
         </div>
       </article>
     </>
