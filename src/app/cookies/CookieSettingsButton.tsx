@@ -1,10 +1,17 @@
 "use client";
 
-import { resetCookieConsent } from "@/components/CookieConsent";
+declare global {
+  interface Window {
+    Cookiebot?: { renew: () => void };
+  }
+}
 
 export function CookieSettingsButton() {
   return (
-    <button onClick={resetCookieConsent} className="btn-secondary text-sm">
+    <button
+      onClick={() => window.Cookiebot?.renew()}
+      className="btn-secondary text-sm"
+    >
       Change Cookie Preferences
     </button>
   );

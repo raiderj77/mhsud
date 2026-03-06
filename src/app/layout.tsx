@@ -6,7 +6,6 @@ import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { CookieConsent } from "@/components/CookieConsent";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -42,27 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Consent Mode v2 — must load BEFORE gtag */}
+        {/* Cookiebot CMP — must load before any other scripts */}
         <Script
-          id="google-consent-mode"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer=window.dataLayer||[];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent','default',{
-                'analytics_storage':'denied',
-                'ad_storage':'denied',
-                'ad_user_data':'denied',
-                'ad_personalization':'denied',
-                'functionality_storage':'granted',
-                'security_storage':'granted',
-                'wait_for_update':500
-              });
-              gtag('js',new Date());
-              gtag('config','G-XKHQN1NJ2Z',{send_page_view:true});
-            `,
-          }}
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
         />
         <Script
           strategy="afterInteractive"
@@ -109,7 +94,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>
