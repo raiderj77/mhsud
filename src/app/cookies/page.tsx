@@ -19,7 +19,6 @@ const COOKIE_TABLE = [
     consent: "Not required",
     cookies: [
       { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
-      { name: "mh-cookie-consent", purpose: "Stores your cookie consent preferences", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
     ],
   },
   {
