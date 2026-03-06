@@ -49,6 +49,14 @@ export default function RootLayout({
           data-blockingmode="auto"
           strategy="beforeInteractive"
         />
+        {/* Cookiebot GCM integration — sets consent defaults and signals to Google */}
+        <Script
+          id="CookiebotCallback"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+          data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
+          strategy="beforeInteractive"
+        />
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
