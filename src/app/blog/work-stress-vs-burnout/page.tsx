@@ -237,8 +237,6 @@ export default function WorkStressBurnoutPage() {
             ))}
           </section>
 
-          <AdSlot position="Blog In-Content 4" className="my-8" />
-
           {/* Related */}
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Articles</h3>

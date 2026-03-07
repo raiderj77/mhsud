@@ -338,8 +338,6 @@ export default function SeasonalAffectiveDisorderPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 4" className="my-8" />
-
           {/* References */}
           <section className="not-prose mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
             <h3 className="font-serif text-lg font-semibold text-neutral-900 dark:text-neutral-50 mb-4">

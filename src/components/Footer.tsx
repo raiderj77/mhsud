@@ -244,7 +244,7 @@ export function Footer() {
             All tools on this site are for educational and self-reflection purposes only. They are not a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>
           <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-3">
-            &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
+            This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <FooterCookieButton />

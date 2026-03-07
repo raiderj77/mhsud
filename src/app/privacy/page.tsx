@@ -95,7 +95,7 @@ export default function PrivacyPage() {
               When ad networks are active, they may collect anonymized data according to their own privacy policies. We will list active ad partners here when applicable.
             </p>
             <p>
-              <strong>Current status:</strong> No advertising is active at this time.
+              <strong>Current status:</strong> This site uses Google AdSense to display advertisements that help support ongoing development and free access to all tools.
             </p>
           </section>
 

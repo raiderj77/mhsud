@@ -181,8 +181,6 @@ export default function GAD7GuidePage() {
             ))}
           </section>
 
-          <AdSlot position="Blog In-Content 4" className="my-8" />
-
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
