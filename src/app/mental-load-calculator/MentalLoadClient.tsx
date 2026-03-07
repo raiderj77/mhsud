@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
@@ -37,6 +37,7 @@ export function MentalLoadClient({ faqData }: Props) {
   const [answers, setAnswers] = useState<Record<string, number | null>>({});
   const [showResults, setShowResults] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [shareMessage, setShareMessage] = useState("");
   const resultsRef = useRef<HTMLDivElement>(null);
 
   const allTasks = DOMAINS.flatMap((d) => d.tasks.map((t) => `${d.name}::${t}`));
@@ -86,6 +87,35 @@ export function MentalLoadClient({ faqData }: Props) {
   };
   const lc = loadLabels[loadLevel];
 
+  const handlePrint = useCallback(() => {
+    window.print();
+  }, []);
+
+  const handleShare = useCallback(async (mode: "results" | "blank") => {
+    const url = "https://mindchecktools.com/mental-load-calculator";
+    if (mode === "blank") {
+      const shareData = {
+        title: "Mental Load Calculator — Free & Private",
+        text: "Take a free, private Mental Load Calculator. Your answers never leave your browser.",
+        url,
+      };
+      if (navigator.share) {
+        try { await navigator.share(shareData); return; } catch { /* user cancelled */ }
+      }
+      await navigator.clipboard.writeText(url);
+      setShareMessage("Link copied!");
+      setTimeout(() => setShareMessage(""), 2500);
+      return;
+    }
+    const summary = `Mental Load Calculator Results\nLoad: ${loadPct}% — ${lc.label}\n\nThis is a reflection tool, not a diagnosis. Take the self-check: ${url}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: "My Mental Load Calculator Results", text: summary }); return; } catch { /* user cancelled */ }
+    }
+    await navigator.clipboard.writeText(summary);
+    setShareMessage("Results copied!");
+    setTimeout(() => setShareMessage(""), 2500);
+  }, [loadPct, lc.label]);
+
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <header className="mb-8">
@@ -102,6 +132,7 @@ export function MentalLoadClient({ faqData }: Props) {
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last updated: March 2026</p>
       </header>
 
       {!accepted && (
@@ -208,6 +239,45 @@ export function MentalLoadClient({ faqData }: Props) {
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
+            <button
+              onClick={handlePrint}
+              className="btn-secondary px-5 py-4 flex items-center gap-2"
+              title="Print your results"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+              <span className="hidden sm:inline">Print</span>
+            </button>
+          </div>
+
+          <div className="card p-4 mb-8">
+            <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-3">Share</p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => handleShare("results")}
+                className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Copy My Results
+              </button>
+              <button
+                onClick={() => handleShare("blank")}
+                className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                </svg>
+                Share Blank Test
+              </button>
+            </div>
+            {shareMessage && (
+              <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">
+                ✓ {shareMessage}
+              </p>
+            )}
           </div>
 
           <AdSlot position="Below Results" className="mb-8" />
