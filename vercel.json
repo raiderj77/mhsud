@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.mindchecktools.com" }],
+      "destination": "https://mindchecktools.com/$1",
+      "permanent": true
+    }
+  ]
+}
