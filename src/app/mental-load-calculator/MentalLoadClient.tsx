@@ -157,7 +157,7 @@ export function MentalLoadClient({ faqData }: Props) {
       )}
 
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in">
+        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
           <div className="card overflow-hidden mb-5">
             <div className={`${lc.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${lc.text} mb-2`}>Your Mental Load</p>

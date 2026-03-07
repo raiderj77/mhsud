@@ -281,6 +281,7 @@ export function BurnoutClient({ faqData }: Props) {
           {showResults && (
             <div
               ref={resultsRef}
+              aria-live="polite"
               className={`mb-12 p-6 rounded-2xl ${colors.bg} border ${colors.text.replace("text-", "border-")}/30`}
             >
               <div className="flex items-center justify-between mb-4">

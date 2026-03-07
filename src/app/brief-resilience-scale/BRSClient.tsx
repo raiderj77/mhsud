@@ -157,7 +157,7 @@ export function BRSClient({ faqData }: Props) {
     const isLow = meanScore < 3.0;
 
     return (
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10" aria-live="polite">
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
           Your Resilience Results
         </h1>

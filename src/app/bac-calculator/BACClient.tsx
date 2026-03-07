@@ -302,7 +302,7 @@ export function BACClient({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div className="animate-fade-in">
+        <div className="animate-fade-in" aria-live="polite">
           {/* BAC Score Card */}
           <div id="printable-results">
             <div className="card overflow-hidden mb-5">

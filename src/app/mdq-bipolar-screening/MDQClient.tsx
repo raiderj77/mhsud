@@ -253,7 +253,7 @@ export function MDQClient({ faqData }: Props) {
                           <button
                             key={opt.value}
                             onClick={() => handlePart1(qi, opt.value)}
-                            className={`p-2.5 rounded-xl border-2 text-center transition-all text-sm leading-tight ${
+                            className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                               part1[qi] === opt.value
                                 ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold"
                                 : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
@@ -299,7 +299,7 @@ export function MDQClient({ faqData }: Props) {
                       <button
                         key={opt.value}
                         onClick={() => handlePart2(opt.value)}
-                        className={`p-2.5 rounded-xl border-2 text-center transition-all text-sm leading-tight ${
+                        className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                           part2 === opt.value
                             ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold"
                             : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
@@ -343,7 +343,7 @@ export function MDQClient({ faqData }: Props) {
                       <button
                         key={opt.value}
                         onClick={() => setPart3(opt.value)}
-                        className={`p-2.5 rounded-xl border-2 text-center transition-all text-sm leading-tight ${
+                        className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                           part3 === opt.value
                             ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold"
                             : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
@@ -372,7 +372,7 @@ export function MDQClient({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in">
+        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
           {/* Positive Screen Alert */}
           {positiveScreen && (
             <div className="bg-warm-50 dark:bg-warm-950/30 border-2 border-warm-300 dark:border-warm-800 rounded-2xl p-5 sm:p-6 mb-5">

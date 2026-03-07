@@ -185,7 +185,7 @@ export function Navbar() {
             <button
               ref={buttonRef}
               onClick={() => setToolsOpen(!toolsOpen)}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${
                 toolsOpen
                   ? "text-sage-700 dark:text-sage-400 bg-sage-50 dark:bg-sage-950/30"
                   : "text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30"
@@ -197,13 +197,13 @@ export function Navbar() {
               </svg>
             </button>
 
-            <Link href="/blog" className="px-3 py-1.5 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
+            <Link href="/blog" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
               Blog
             </Link>
-            <Link href="/crisis-resources" className="px-3 py-1.5 rounded-lg text-sm font-medium text-crisis-600 dark:text-crisis-400 hover:bg-crisis-50 dark:hover:bg-crisis-950/30 transition-colors">
+            <Link href="/crisis-resources" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-crisis-600 dark:text-crisis-400 hover:bg-crisis-50 dark:hover:bg-crisis-950/30 transition-colors">
               Crisis Help
             </Link>
-            <Link href="/about" className="px-3 py-1.5 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
+            <Link href="/about" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
               About
             </Link>
             <div className="ml-2 border-l border-sand-200 dark:border-neutral-700 pl-2">
@@ -216,7 +216,7 @@ export function Navbar() {
             <DarkModeToggle />
             <button
               onClick={() => { setMenuOpen(!menuOpen); setToolsOpen(false); }}
-              className="p-2 rounded-lg hover:bg-sand-200 dark:hover:bg-night-700"
+              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-sand-200 dark:hover:bg-night-700"
               aria-label="Toggle menu"
             >
               {menuOpen ? (

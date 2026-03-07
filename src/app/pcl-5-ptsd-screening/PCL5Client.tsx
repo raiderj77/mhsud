@@ -317,7 +317,7 @@ export function PCL5Client({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in">
+        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
           {/* Probable PTSD Alert */}
           {probablePTSD && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5">

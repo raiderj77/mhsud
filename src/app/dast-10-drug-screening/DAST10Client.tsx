@@ -232,7 +232,7 @@ export function DAST10Client({ faqData }: Props) {
                           <button
                             key={opt.value}
                             onClick={() => handleAnswer(qi, opt.value)}
-                            className={`p-2.5 rounded-xl border-2 text-center transition-all text-sm leading-tight ${
+                            className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                               answers[qi] === opt.value
                                 ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold"
                                 : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
@@ -263,7 +263,7 @@ export function DAST10Client({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in">
+        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
           {/* High Score Safety Alert */}
           {highRisk && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5">

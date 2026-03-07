@@ -257,7 +257,7 @@ export function ASRSClient({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in">
+        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
           {/* Positive Screen Alert */}
           {screenPositive && (
             <div className="bg-warm-50 dark:bg-warm-950/30 border-2 border-warm-300 dark:border-warm-800 rounded-2xl p-5 sm:p-6 mb-5">

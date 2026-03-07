@@ -260,7 +260,7 @@ export function MoneySavedClient({ faqData }: Props) {
 
       {/* Results */}
       {showResults && (
-        <div className="animate-fade-in">
+        <div className="animate-fade-in" aria-live="polite">
           {/* Big Savings Card */}
           <div id="printable-results" className="card overflow-hidden mb-5">
             <div className="bg-gradient-to-br from-sage-50 to-sage-100 dark:from-sage-950/30 dark:to-sage-900/20 p-6 sm:p-8 text-center">
