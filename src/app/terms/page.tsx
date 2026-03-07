@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/terms",
   title: "Terms of Use — MindCheck Tools",
   description:
-    "Terms of use for MindCheck Tools. Important disclaimers about our mental health self-check tools, your rights, our limitations, and applicable privacy regulations.",
+    "Terms of use for MindCheck Tools. Disclaimers about our free mental health self-checks, your rights, and our limitations.",
   keywords: [
     "terms of use", "disclaimer", "mental health tool disclaimer",
     "not medical advice", "terms and conditions",

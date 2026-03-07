@@ -8,7 +8,7 @@ const ARTICLE_URL = `${SITE_URL}/blog/audit-guide`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/audit-guide",
-  title: "AUDIT Alcohol Screening Tool: How It Works and Why Clinicians Use It",
+  title: "AUDIT Alcohol Test Explained: Scoring & Risk Zones",
   description:
     "Learn what the WHO AUDIT alcohol screening tool measures, how it's scored, what the risk zones mean, and why it's used worldwide. Educational guide — not a diagnosis.",
   keywords: [

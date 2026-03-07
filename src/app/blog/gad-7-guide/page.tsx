@@ -8,7 +8,7 @@ const ARTICLE_URL = `${SITE_URL}/blog/gad-7-guide`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/gad-7-guide",
-  title: "GAD-7 Anxiety Scale: What It Measures and How Doctors Interpret Scores",
+  title: "GAD-7 Explained: Scoring, Interpretation & Limits",
   description:
     "Learn what the GAD-7 anxiety screener measures, how healthcare providers use it, its scoring ranges, and its limitations. Plain-language educational guide — not a diagnosis tool.",
   keywords: [

@@ -8,7 +8,7 @@ const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/phq-9-guide",
-  title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire (and What It Can't Tell You)",
+  title: "PHQ-9 Explained: Scoring, Interpretation & Limits",
   description:
     "Learn what the PHQ-9 depression screener measures, how healthcare providers interpret scores, why it's only a starting point, and what to do with your results. Plain-language guide.",
   keywords: [

@@ -6,7 +6,7 @@ import { BlogListClient } from "./BlogListClient";
 export const metadata: Metadata = createMetadata({
   path: "/blog",
   title: "Mental Health Guides & Education",
-  description: "Educational articles about mental health screening tools, depression, anxiety, alcohol use, and when to seek professional help. Evidence-based, plain-language guides.",
+  description: "Free articles on mental health screening, depression, anxiety, and alcohol use. Evidence-based, plain-language guides. No signup required.",
 });
 
 export default function BlogPage() {

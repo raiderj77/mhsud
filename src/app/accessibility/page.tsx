@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/accessibility",
   title: "Accessibility Statement — MindCheck Tools",
   description:
-    "MindCheck Tools accessibility statement. Our commitment to making mental health self-check tools usable by everyone, including people with disabilities.",
+    "Our commitment to making free mental health self-checks usable by everyone, including people with disabilities.",
   keywords: [
     "accessibility statement", "web accessibility", "WCAG compliance",
     "accessible mental health tools", "screen reader compatible",

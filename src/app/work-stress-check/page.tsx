@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/work-stress-check`;
 
 export const metadata: Metadata = createMetadata({
   path: "/work-stress-check",
-  title: "Free Work Stress & Burnout Self-Check (Private, Not a Diagnosis)",
+  title: "Work Stress & Burnout Self-Check | Free & Private",
   description:
     "Reflect on your work stress and burnout risk with this original 12-question self-check. 100% private, ~3 minutes. Not a clinical tool — for personal reflection only.",
   keywords: [
