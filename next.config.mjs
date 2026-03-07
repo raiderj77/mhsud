@@ -51,7 +51,6 @@ const nextConfig = {
       // Common misspellings / variants
       // www → no-www canonical redirect
       // www → no-www canonical redirect
-      { source: "/:path*", destination: "https://mindchecktools.com/:path*", permanent: true, has: [{ type: "host", value: "www.mindchecktools.com" }] },
       { source: "/phq9", destination: "/phq-9-depression-test", permanent: true },
       { source: "/gad7", destination: "/gad-7-anxiety-test", permanent: true },
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },
