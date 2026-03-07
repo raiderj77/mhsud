@@ -244,6 +244,41 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Source: Developed by Connor, Davidson, Churchill, Sherwood, Foa, and Weisler (2000) at Duke University Medical Center.
 - Questions answered: Do I have social anxiety? Social phobia test. SPIN social anxiety screening. What does my SPIN score mean? Social anxiety disorder test. Fear of social situations.
 
+### Holmes-Rahe Stress Inventory
+- URL: https://mindchecktools.com/holmes-rahe-stress-inventory
+- Description: 43-item Social Readjustment Rating Scale (Holmes & Rahe, 1967). Checklist of major life events from the past 12 months scored in Life Change Units (LCU). Total score indicates stress-related illness risk: under 150 low, 150-299 moderate, 300+ high.
+- Time: ~3 minutes
+- Source: Developed by Thomas Holmes and Richard Rahe (1967). Public domain.
+- Questions answered: How stressed am I? Holmes-Rahe stress test. Life stress checklist. What is my stress score? Life change units.
+
+### Rosenberg Self-Esteem Scale
+- URL: https://mindchecktools.com/rosenberg-self-esteem-scale
+- Description: 10-item validated self-esteem measure (RSES, Rosenberg 1965). 4-point Likert scale with 5 reverse-scored items. Score 0-30. Higher scores indicate higher self-esteem. One of the most widely used self-esteem instruments in psychology.
+- Time: ~2 minutes
+- Source: Developed by Morris Rosenberg (1965). Public domain.
+- Questions answered: Do I have low self-esteem? Self-esteem test. Rosenberg self-esteem scale online. What is my self-esteem score?
+
+### UCLA Loneliness Scale
+- URL: https://mindchecktools.com/ucla-loneliness-scale
+- Description: 20-item UCLA Loneliness Scale Version 3 (Russell, 1996). 4-point scale with 9 reverse-scored items. Score 20-80. Research cutoff of 44+ suggests elevated loneliness. Measures subjective feelings of loneliness and social isolation.
+- Time: ~3 minutes
+- Source: Developed by Daniel Russell (1996). Public domain.
+- Questions answered: Am I lonely? Loneliness test. UCLA loneliness scale online. What does my loneliness score mean? Social isolation test.
+
+### Athens Insomnia Scale
+- URL: https://mindchecktools.com/athens-insomnia-scale
+- Description: 8-item validated insomnia screening tool (AIS, Soldatos et al. 2000). Assesses sleep difficulties over the past month based on ICD-10 criteria. Score 0-24. Score of 6+ suggests insomnia warranting further evaluation.
+- Time: ~2 minutes
+- Source: Developed by Soldatos, Dikeos, and Paparrigopoulos (2000). Public domain.
+- Questions answered: Do I have insomnia? Insomnia test. Athens insomnia scale online. Sleep disorder screening. What does my insomnia score mean?
+
+### Brief Resilience Scale
+- URL: https://mindchecktools.com/brief-resilience-scale
+- Description: 6-item Brief Resilience Scale (BRS, Smith et al. 2008). 5-point Likert scale with 3 reverse-scored items. Mean score 1.00-5.00 across low, normal, and high resilience ranges. Measures ability to bounce back from stress and adversity.
+- Time: ~2 minutes
+- Source: Developed by Smith, Dalen, Wiggins, Steger, Lohr, and Bernard (2008).
+- Questions answered: How resilient am I? Resilience test. Brief resilience scale online. What is my resilience score? Bounce back from stress test.
+
 ### Box Breathing Exercise
 - URL: https://mindchecktools.com/box-breathing-exercise
 - Description: Free visual guided box breathing tool with animated square. Supports 3-3-3-3 (beginner), 4-4-4-4 (standard), 5-5-5-5 (advanced), and custom timing patterns. Session lengths of 2, 5, or 10 minutes. Includes cycle counter, optional ambient sound via Web Audio API, and calming visual animation synced to breathing phases. Used for anxiety, stress management, focus, and recovery support.
@@ -469,6 +504,9 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - 988 Suicide & Crisis Lifeline (US): Call or text 988
 - Crisis Text Line (US): Text HOME to 741741
 - International: findahelpline.com
+
+## Clinical Authority
+All educational content and blog articles are reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. The CADC-II credential is issued by state certification boards and requires supervised clinical hours, continuing education, and passing a national exam. This reviewer ensures all content uses appropriate clinical language ("screening" not "diagnosis"), references validated instruments, and includes crisis resources.
 
 ## Important Disclaimers
 All tools are for educational and self-reflection purposes only. They are NOT a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. All responses are processed entirely in the browser and are never stored or transmitted.
