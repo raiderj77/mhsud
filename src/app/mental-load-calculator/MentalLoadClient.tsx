@@ -213,7 +213,7 @@ export function MentalLoadClient({ faqData }: Props) {
 
           {/* Domain breakdown */}
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Breakdown by Area</h3>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Breakdown by Area</h2>
             <div className="space-y-4">
               {domainResults.filter((d) => d.total > 0).map((d) => (
                 <div key={d.name}>
@@ -342,7 +342,7 @@ export function MentalLoadClient({ faqData }: Props) {
           </section>
 
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "Burnout Assessment Tool", desc: "Work stress compounds household load", href: "/burnout-assessment-tool" },
@@ -360,7 +360,7 @@ export function MentalLoadClient({ faqData }: Props) {
           <AdSlot position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If mental load is affecting your well-being, help is available:</p>
             <div className="space-y-2.5">
               {[

@@ -232,7 +232,7 @@ export function GAD7Client({ faqData }: Props) {
           </div>
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h2>
             <div className="divide-y divide-sand-100 dark:divide-neutral-700">
               {QUESTIONS.map((q, i) => (
                 <div key={i} className="flex justify-between items-start gap-3 py-2.5">
@@ -269,7 +269,7 @@ export function GAD7Client({ faqData }: Props) {
           </div>
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If anxiety is affecting your daily life, support is available:</p>
             <div className="space-y-2.5">
               {[
@@ -374,7 +374,7 @@ export function GAD7Client({ faqData }: Props) {
           </section>
 
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "PHQ-9 Depression Self-Check", desc: "9-question validated depression screener", href: "/phq-9-depression-test" },
