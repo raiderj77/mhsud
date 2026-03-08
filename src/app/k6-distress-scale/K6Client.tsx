@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -338,6 +341,34 @@ export function K6Client({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="K6 Psychological Distress Scale"
+          toolUrl="https://mindchecktools.com/k6-distress-scale"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={totalScore >= 13
+            ? "Your score meets the threshold for serious psychological distress. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources available."
+            : totalScore >= 5
+              ? "Consider taking a more specific screening like the PHQ-9 or GAD-7 to better understand what you are experiencing, or speak with a healthcare provider."
+              : "Continue monitoring your well-being. If you notice changes in how you feel, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["k6-distress-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_OPTIONS.find((o) => o.value === (answers[item.id] ?? 0))?.label} (${answers[item.id] ?? 0}/4)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["k6-distress-scale"] && (
+          <ReflectionPrompts
+            toolName="K6 Psychological Distress Scale"
+            prompts={REFLECTION_PROMPTS["k6-distress-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

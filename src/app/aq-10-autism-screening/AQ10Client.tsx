@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -418,6 +421,30 @@ export function AQ10Client({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="AQ-10 Autism Screening"
+            toolUrl="https://mindchecktools.com/aq-10-autism-screening"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["aq-10-autism-screening"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: OPTIONS.find((o) => o.value === answers[i])?.label ?? "",
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["aq-10-autism-screening"] && (
+            <ReflectionPrompts
+              toolName="AQ-10 Autism Screening"
+              prompts={REFLECTION_PROMPTS["aq-10-autism-screening"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

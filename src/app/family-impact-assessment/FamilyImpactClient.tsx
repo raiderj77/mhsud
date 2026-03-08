@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Types & Data                                                       */
@@ -564,6 +567,30 @@ export function FamilyImpactClient({ faqData }: Props) {
             Retake Assessment
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="Family Impact Assessment"
+          toolUrl="https://mindchecktools.com/family-impact-assessment"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion="Consider reaching out to a family support group like Al-Anon or Nar-Anon, or speaking with a therapist who specializes in addiction and family systems."
+          reflectionPrompts={REFLECTION_PROMPTS["family-impact-assessment"]?.prompts ?? []}
+          responses={STATEMENTS.map((s) => ({
+            question: s.text,
+            answer: SCALE_LABELS[answers[s.id] ?? 0],
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["family-impact-assessment"] && (
+          <ReflectionPrompts
+            toolName="Family Impact Assessment"
+            prompts={REFLECTION_PROMPTS["family-impact-assessment"].prompts}
+          />
+        )}
 
         {/* Score Guide */}
         <div className="mb-10">

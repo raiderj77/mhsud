@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Distortion data ─────────────────────────────────── */
 
@@ -588,6 +590,13 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["cognitive-distortion-identifier"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["cognitive-distortion-identifier"].prompts}
+          toolName={REFLECTION_PROMPTS["cognitive-distortion-identifier"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ── */}
       <section className="mb-12">

@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 const QUESTIONS = [
   { text: "I have difficulty falling asleep most nights.", domain: "Quality" },
@@ -295,6 +298,30 @@ export function SleepMoodClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="Sleep & Mood Reflection"
+            toolUrl="https://mindchecktools.com/sleep-and-mood-check"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["sleep-and-mood-check"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q.text,
+              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["sleep-and-mood-check"] && (
+            <ReflectionPrompts
+              toolName="Sleep & Mood Reflection"
+              prompts={REFLECTION_PROMPTS["sleep-and-mood-check"].prompts}
+            />
+          )}
 
           <AdSlot position="Below Results" className="mb-8" />
 

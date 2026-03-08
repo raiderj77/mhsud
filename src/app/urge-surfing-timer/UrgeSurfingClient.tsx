@@ -4,6 +4,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── constants ─────────────────────────────────────────── */
 
@@ -530,6 +532,13 @@ export function UrgeSurfingClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["urge-surfing-timer"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["urge-surfing-timer"].prompts}
+          toolName={REFLECTION_PROMPTS["urge-surfing-timer"].toolName}
+        />
+      )}
 
       {/* ─── YMYL FOOTER ──────────────────────────────── */}
       <footer className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400 mb-8">

@@ -4,6 +4,8 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Timeline Data ───────────────────────────────────────────────────────
 
@@ -362,6 +364,14 @@ export function HealthTimelineClient({ faqData }: Props) {
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">{"\u2713"} {shareMessage}</p>
             )}
           </div>
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["health-recovery-timeline"] && (
+            <ReflectionPrompts
+              prompts={REFLECTION_PROMPTS["health-recovery-timeline"].prompts}
+              toolName={REFLECTION_PROMPTS["health-recovery-timeline"].toolName}
+            />
+          )}
 
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6 mb-5">

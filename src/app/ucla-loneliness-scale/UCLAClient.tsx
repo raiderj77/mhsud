@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -378,6 +381,30 @@ export function UCLAClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="UCLA Loneliness Scale"
+          toolUrl="https://mindchecktools.com/ucla-loneliness-scale"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={isElevated ? "Consider reaching out to a therapist or counselor. Cognitive-behavioral therapy (CBT) has the strongest evidence base for treating loneliness." : "If you notice changes in how connected you feel, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["ucla-loneliness-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_OPTIONS.find((o) => o.value === answers[item.id])?.label ?? ""} (scored ${scoreItem(item, answers[item.id] ?? 1)}/4)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["ucla-loneliness-scale"] && (
+          <ReflectionPrompts
+            toolName="UCLA Loneliness Scale"
+            prompts={REFLECTION_PROMPTS["ucla-loneliness-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

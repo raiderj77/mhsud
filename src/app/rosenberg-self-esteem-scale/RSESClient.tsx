@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -323,6 +326,30 @@ export function RSESClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="Rosenberg Self-Esteem Scale"
+          toolUrl="https://mindchecktools.com/rosenberg-self-esteem-scale"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={isLow ? "Consider speaking with a therapist or counselor who can help you explore what may be contributing to how you feel about yourself." : "If you notice changes in how you feel about yourself, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["rosenberg-self-esteem-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_OPTIONS.find((o) => o.value === answers[item.id])?.label ?? ""} (scored ${scoreItem(item, answers[item.id] ?? 0)}/3)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["rosenberg-self-esteem-scale"] && (
+          <ReflectionPrompts
+            toolName="Rosenberg Self-Esteem Scale"
+            prompts={REFLECTION_PROMPTS["rosenberg-self-esteem-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

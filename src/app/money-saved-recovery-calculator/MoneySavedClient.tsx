@@ -4,6 +4,9 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -375,6 +378,26 @@ export function MoneySavedClient({ faqData }: Props) {
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">{"\u2713"} {shareMessage}</p>
             )}
           </div>
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["money-saved-recovery-calculator"] && (
+            <>
+              <ReflectionPrompts
+                prompts={REFLECTION_PROMPTS["money-saved-recovery-calculator"].prompts}
+                toolName={REFLECTION_PROMPTS["money-saved-recovery-calculator"].toolName}
+              />
+              <ReflectionSummary
+                toolName={REFLECTION_PROMPTS["money-saved-recovery-calculator"].toolName}
+                toolUrl="https://mindchecktools.com/money-saved-recovery-calculator"
+                score={usd(totalSaved)}
+                severityLabel={`${totalDays} days sober`}
+                scoreRange={`${usd(Math.round(dailyCost))}/day savings`}
+                interpretation={`In ${totalDays} days of recovery, you have saved approximately ${usd(totalSaved)} that would have been spent on ${sub.label}.`}
+                suggestion="Consider putting your savings toward an emergency fund, paying down debt, or investing in your future."
+                reflectionPrompts={REFLECTION_PROMPTS["money-saved-recovery-calculator"].prompts}
+              />
+            </>
+          )}
 
           {/* Disclaimer */}
           <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4 mb-5">

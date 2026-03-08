@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -683,6 +685,13 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["trigger-identification-worksheet"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["trigger-identification-worksheet"].prompts}
+          toolName={REFLECTION_PROMPTS["trigger-identification-worksheet"].toolName}
+        />
+      )}
 
       {/* ─── YMYL FOOTER ──────────────────────────────── */}
       <footer className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400 mb-8">

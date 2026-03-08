@@ -479,6 +479,23 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2 minutes
 - Questions answered: Is poor sleep affecting my mental health? Sleep-mood connection.
 
+## Guides
+
+- How to Talk to Your Doctor About Mental Health: https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health — Exact language, preparation steps, and what to expect when discussing depression, anxiety, or substance use with a healthcare provider. Includes word-for-word scripts and tips for first therapy appointments.
+
+## Score Interpretation Guides
+
+- PHQ-9 Score Interpretation: https://mindchecktools.com/phq-9-score-interpretation — What each PHQ-9 depression score range means, when to seek help, and how to share results with your doctor.
+- GAD-7 Score Interpretation: https://mindchecktools.com/gad-7-score-interpretation — What each GAD-7 anxiety score range means, factors that affect your score, and next steps.
+- AUDIT Score Interpretation: https://mindchecktools.com/audit-score-interpretation — What each AUDIT alcohol screening score means, including hazardous, harmful, and dependence ranges.
+- DAST-10 Score Interpretation: https://mindchecktools.com/dast-10-score-interpretation — What each DAST-10 drug screening score means and when to seek professional support.
+- PCL-5 Score Interpretation: https://mindchecktools.com/pcl-5-score-interpretation — What your PCL-5 PTSD screening score means, clinical cutoff of 31-33, and symptom clusters.
+- ASRS ADHD Score Interpretation: https://mindchecktools.com/asrs-score-interpretation — What a positive or negative ASRS ADHD screening result means for adults.
+- MDQ Bipolar Score Interpretation: https://mindchecktools.com/mdq-score-interpretation — What a positive MDQ bipolar screening means, three-part criteria explained.
+- DASS-21 Score Interpretation: https://mindchecktools.com/dass-21-score-interpretation — What your DASS-21 depression, anxiety, and stress subscale scores mean.
+- ACE Score Interpretation: https://mindchecktools.com/ace-score-interpretation — What your ACE adverse childhood experiences score means, protective factors, and resilience.
+- AUDIT-C Score Interpretation: https://mindchecktools.com/audit-c-score-interpretation — What your brief AUDIT-C alcohol screening score means, gender-specific thresholds.
+
 ## Educational Guides
 
 - PHQ-9 Guide: https://mindchecktools.com/blog/phq-9-guide

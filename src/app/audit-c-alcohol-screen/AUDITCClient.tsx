@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 interface Question {
   text: string;
@@ -327,6 +330,30 @@ export function AUDITCClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="AUDIT-C Quick Alcohol Screen"
+            toolUrl="https://mindchecktools.com/audit-c-alcohol-screen"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["audit-c-alcohol-screen"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q.text,
+              answer: q.options.find((o) => o.value === answers[i])?.label ?? "",
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["audit-c-alcohol-screen"] && (
+            <ReflectionPrompts
+              toolName="AUDIT-C Quick Alcohol Screen"
+              prompts={REFLECTION_PROMPTS["audit-c-alcohol-screen"].prompts}
+            />
+          )}
 
           <AdSlot position="Below Results" className="mb-8" />
 

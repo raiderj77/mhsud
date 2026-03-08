@@ -4,6 +4,8 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types & Data ─────────────────────────────────────── */
 
@@ -395,6 +397,14 @@ export function TreatmentCostClient({ faqData }: Props) {
           </div>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in">{shareMessage}</p>
+          )}
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["treatment-cost-estimator"] && (
+            <ReflectionPrompts
+              prompts={REFLECTION_PROMPTS["treatment-cost-estimator"].prompts}
+              toolName={REFLECTION_PROMPTS["treatment-cost-estimator"].toolName}
+            />
           )}
 
           <AdSlot position="cost-results" className="mt-6" />

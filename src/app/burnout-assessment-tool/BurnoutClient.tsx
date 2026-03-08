@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -467,6 +470,30 @@ export function BurnoutClient({ faqData }: Props) {
                 )}
               </div>
             </>
+          )}
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="Burnout Assessment Tool"
+            toolUrl="https://mindchecktools.com/burnout-assessment-tool"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["burnout-assessment-tool"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["burnout-assessment-tool"] && (
+            <ReflectionPrompts
+              toolName="Burnout Assessment Tool"
+              prompts={REFLECTION_PROMPTS["burnout-assessment-tool"].prompts}
+            />
           )}
 
           <AdSlot position="burnout-middle" className="my-8" />

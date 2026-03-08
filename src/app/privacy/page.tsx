@@ -100,6 +100,13 @@ export default function PrivacyPage() {
           </section>
 
           <section>
+            <h2>Reflection summaries</h2>
+            <p>
+              Our screening tools offer a &quot;Download Reflection Summary&quot; feature that generates a summary of your results as an HTML file. This summary is generated <strong>entirely in your browser</strong> using client-side JavaScript. MindCheck Tools does not receive, store, or transmit your answers, scores, or reflection summaries. The file is created locally on your device and saved directly to your downloads folder.
+            </p>
+          </section>
+
+          <section>
             <h2>Third-party links</h2>
             <p>
               Our site may link to external resources such as crisis hotlines, professional organizations, and educational materials. These external sites have their own privacy policies. We are not responsible for their content or data practices, but we only link to resources we believe are reputable.

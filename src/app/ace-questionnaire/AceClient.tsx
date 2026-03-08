@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -536,6 +539,36 @@ export function AceClient({ faqData }: Props) {
             Retake Questionnaire
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="ACE Questionnaire"
+          toolUrl="https://mindchecktools.com/ace-questionnaire"
+          score={score}
+          severityLabel={score === 0 ? "No ACEs Reported" : score <= 3 ? "Some Adversity Reported" : "Higher Adversity Reported"}
+          scoreRange={score === 0 ? "0" : score <= 3 ? "1–3" : "4+"}
+          interpretation={
+            score === 0
+              ? "You did not report any of the 10 categories of adverse childhood experiences."
+              : score <= 3
+                ? "You reported some categories of childhood adversity. Research associates ACE scores in this range with some increased statistical risk for certain health outcomes."
+                : "You reported a higher number of childhood adversity categories. Research associates higher ACE scores with increased statistical risk for certain health outcomes."
+          }
+          suggestion="Consider sharing your results with a healthcare provider or trauma-informed therapist. An ACE score is not a prediction or destiny — resilience can be built at any age."
+          reflectionPrompts={REFLECTION_PROMPTS["ace-questionnaire"]?.prompts ?? []}
+          responses={ACE_ITEMS.map((item) => ({
+            question: item.label,
+            answer: answers[item.id] === true ? "Yes" : "No",
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["ace-questionnaire"] && (
+          <ReflectionPrompts
+            toolName="ACE Questionnaire"
+            prompts={REFLECTION_PROMPTS["ace-questionnaire"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

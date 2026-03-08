@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -322,6 +325,30 @@ export function BRSClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="Brief Resilience Scale"
+          toolUrl="https://mindchecktools.com/brief-resilience-scale"
+          score={meanDisplay}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={isLow ? "Consider speaking with a therapist or counselor who can help you build coping strategies and strengthen your resilience." : "Continue maintaining your support systems and self-care practices. You can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["brief-resilience-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_OPTIONS.find((o) => o.value === answers[item.id])?.label ?? ""} (scored ${scoreItem(item, answers[item.id] ?? 1)}/5)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["brief-resilience-scale"] && (
+          <ReflectionPrompts
+            toolName="Brief Resilience Scale"
+            prompts={REFLECTION_PROMPTS["brief-resilience-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

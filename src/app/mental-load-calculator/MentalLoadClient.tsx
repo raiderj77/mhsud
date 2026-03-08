@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 interface Domain {
   name: string;
@@ -279,6 +282,32 @@ export function MentalLoadClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="Mental Load Calculator"
+            toolUrl="https://mindchecktools.com/mental-load-calculator"
+            score={`${loadPct}%`}
+            severityLabel={lc.label}
+            scoreRange={loadPct >= 75 ? "75–100%" : loadPct >= 50 ? "50–74%" : "0–49%"}
+            interpretation={
+              loadPct >= 75
+                ? "You reported carrying most of the planning, remembering, and organizing across many areas of your household. This level of cognitive labor can contribute to stress and burnout over time."
+                : loadPct >= 50
+                  ? "You reported carrying a moderate share of the household's mental load. Some areas appear more balanced than others."
+                  : "Your responses suggest a relatively balanced distribution of household cognitive labor, or that many tasks are shared."
+            }
+            suggestion="The most valuable thing you can do with these results is share them with the people you live with and talk about what you notice."
+            reflectionPrompts={REFLECTION_PROMPTS["mental-load-calculator"]?.prompts ?? []}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["mental-load-calculator"] && (
+            <ReflectionPrompts
+              toolName="Mental Load Calculator"
+              prompts={REFLECTION_PROMPTS["mental-load-calculator"].prompts}
+            />
+          )}
 
           <AdSlot position="Below Results" className="mb-8" />
 

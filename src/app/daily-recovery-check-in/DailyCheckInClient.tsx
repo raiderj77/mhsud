@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -619,6 +621,13 @@ export function DailyCheckInClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["daily-recovery-check-in"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["daily-recovery-check-in"].prompts}
+          toolName={REFLECTION_PROMPTS["daily-recovery-check-in"].toolName}
+        />
+      )}
 
       {/* ─── YMYL FOOTER ──────────────────────────────── */}
       <footer className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400 mb-8">

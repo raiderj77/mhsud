@@ -4,6 +4,8 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Presets ──────────────────────────────────────────── */
 
@@ -734,6 +736,13 @@ export function BoxBreathingClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["box-breathing-exercise"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["box-breathing-exercise"].prompts}
+          toolName={REFLECTION_PROMPTS["box-breathing-exercise"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ── */}
       <section className="mb-12">

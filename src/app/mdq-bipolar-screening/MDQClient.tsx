@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -621,6 +624,48 @@ export function MDQClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="MDQ Bipolar Screening Self-Check"
+            toolUrl="https://mindchecktools.com/mdq-bipolar-screening"
+            score={part1YesCount}
+            severityLabel={positiveScreen ? "Positive Screen" : "Negative Screen"}
+            scoreRange={positiveScreen ? "All 3 criteria met" : "Not all criteria met"}
+            interpretation={
+              positiveScreen
+                ? "Your responses meet all three criteria for a positive MDQ screen, which suggests that further evaluation for bipolar spectrum disorders by a qualified mental health professional may be beneficial."
+                : "A negative screen means not all three MDQ criteria were met at this time. This does not rule out bipolar disorder or other mood concerns."
+            }
+            suggestion={
+              positiveScreen
+                ? "A positive screen suggests that speaking with a mental health professional about your mood experiences may be beneficial. Your primary care provider can be a good starting point."
+                : "If you are experiencing mood difficulties that affect your daily life, speaking with a healthcare provider is still encouraged."
+            }
+            reflectionPrompts={REFLECTION_PROMPTS["mdq-bipolar-screening"]?.prompts ?? []}
+            responses={[
+              ...PART1_QUESTIONS.map((q, i) => ({
+                question: q,
+                answer: part1[i] === 1 ? "Yes" : "No",
+              })),
+              {
+                question: "Several symptoms occurred during the same period",
+                answer: part2 === 1 ? "Yes" : "No",
+              },
+              {
+                question: "Level of problems caused",
+                answer: IMPACT_OPTIONS[part3 ?? 0].label,
+              },
+            ]}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["mdq-bipolar-screening"] && (
+            <ReflectionPrompts
+              toolName="MDQ Bipolar Screening Self-Check"
+              prompts={REFLECTION_PROMPTS["mdq-bipolar-screening"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

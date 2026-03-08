@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -758,6 +760,13 @@ export function WorryTimeClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["worry-time-scheduler"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["worry-time-scheduler"].prompts}
+          toolName={REFLECTION_PROMPTS["worry-time-scheduler"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ── */}
       <section className="mb-12">

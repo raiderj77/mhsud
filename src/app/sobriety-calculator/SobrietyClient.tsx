@@ -4,6 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Milestones ──────────────────────────────────────────────────────────
 
@@ -396,6 +399,26 @@ export function SobrietyClient({ faqData }: Props) {
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">{"\u2713"} {shareMessage}</p>
             )}
           </div>
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["sobriety-calculator"] && (
+            <>
+              <ReflectionPrompts
+                prompts={REFLECTION_PROMPTS["sobriety-calculator"].prompts}
+                toolName={REFLECTION_PROMPTS["sobriety-calculator"].toolName}
+              />
+              <ReflectionSummary
+                toolName={REFLECTION_PROMPTS["sobriety-calculator"].toolName}
+                toolUrl="https://mindchecktools.com/sobriety-calculator"
+                score={`${totalDays} days`}
+                severityLabel={earnedMilestones.length > 0 ? earnedMilestones[earnedMilestones.length - 1].label : "Starting out"}
+                scoreRange={`${totalDays} days sober`}
+                interpretation={getMotivationalMessage(totalDays)}
+                suggestion="Continue tracking your recovery milestones and celebrate each day of progress."
+                reflectionPrompts={REFLECTION_PROMPTS["sobriety-calculator"].prompts}
+              />
+            </>
+          )}
 
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6 mb-5">

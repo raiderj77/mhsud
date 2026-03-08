@@ -4,6 +4,9 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -486,6 +489,26 @@ export function BACClient({ faqData }: Props) {
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">{"\u2713"} {shareMessage}</p>
             )}
           </div>
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["bac-calculator"] && (
+            <>
+              <ReflectionPrompts
+                prompts={REFLECTION_PROMPTS["bac-calculator"].prompts}
+                toolName={REFLECTION_PROMPTS["bac-calculator"].toolName}
+              />
+              <ReflectionSummary
+                toolName={REFLECTION_PROMPTS["bac-calculator"].toolName}
+                toolUrl="https://mindchecktools.com/bac-calculator"
+                score={`${bac.toFixed(3)}%`}
+                severityLabel={effects.level}
+                scoreRange={`${standardDrinks.toFixed(1)} standard drinks`}
+                interpretation={effects.effects}
+                suggestion={bac >= 0.08 ? "You are above the legal limit. Do not drive. Seek a safe ride home." : "Even below the legal limit, alcohol impairs judgment. Never drive after drinking."}
+                reflectionPrompts={REFLECTION_PROMPTS["bac-calculator"].prompts}
+              />
+            </>
+          )}
 
           {/* Emergency Resources */}
           <div className="card p-5 sm:p-6 mb-5">

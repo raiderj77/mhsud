@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -409,6 +412,40 @@ export function CrafftClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="CRAFFT Screening"
+          toolUrl="https://mindchecktools.com/crafft-substance-screening"
+          score={score}
+          severityLabel={isPositive ? "Higher Risk — Positive Screen" : "Lower Risk"}
+          scoreRange={isPositive ? "2+" : "0–1"}
+          interpretation={
+            isPositive
+              ? "Your answers suggest that your use of alcohol or drugs might be putting you at risk. Talking to someone you trust could be really helpful."
+              : score === 1
+                ? "Your overall score is below the screening threshold, which is a positive sign. However, you did answer Yes to one question."
+                : "Your answers suggest a lower level of risk right now."
+          }
+          suggestion={
+            isPositive
+              ? "Consider talking to a trusted adult, school counselor, doctor, or other healthcare provider about your results."
+              : "Keep making safe choices, and remember that this screening is always here if things change."
+          }
+          reflectionPrompts={REFLECTION_PROMPTS["crafft-substance-screening"]?.prompts ?? []}
+          responses={visiblePartB.map((item) => ({
+            question: `${item.keyword}: ${item.text}`,
+            answer: partBAnswers[item.id] === true ? "Yes" : "No",
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["crafft-substance-screening"] && (
+          <ReflectionPrompts
+            toolName="CRAFFT Screening"
+            prompts={REFLECTION_PROMPTS["crafft-substance-screening"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

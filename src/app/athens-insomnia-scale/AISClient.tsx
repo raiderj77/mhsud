@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -463,6 +466,30 @@ export function AISClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="Athens Insomnia Scale"
+          toolUrl="https://mindchecktools.com/athens-insomnia-scale"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={isInsomnia ? "Consider speaking with a healthcare provider about your sleep difficulties. Cognitive Behavioral Therapy for Insomnia (CBT-I) is the recommended first-line treatment." : "Continue maintaining good sleep habits. If you notice changes in your sleep patterns, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["athens-insomnia-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: `${item.label}: ${item.text}`,
+            answer: `${item.options[answers[item.id] ?? 0]} (${answers[item.id] ?? 0}/3)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["athens-insomnia-scale"] && (
+          <ReflectionPrompts
+            toolName="Athens Insomnia Scale"
+            prompts={REFLECTION_PROMPTS["athens-insomnia-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

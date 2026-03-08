@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -434,6 +437,34 @@ export function PcPtsd5Client({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="PC-PTSD-5 Quick PTSD Screen"
+          toolUrl="https://mindchecktools.com/pc-ptsd-5-screening"
+          score={totalScore}
+          severityLabel={isPositiveScreen ? "Positive Screen" : "Negative Screen"}
+          scoreRange={isPositiveScreen ? "3–5" : "0–2"}
+          interpretation={isPositiveScreen
+            ? "Your score meets the cutoff (3 or higher) for a positive PTSD screen. This does not mean you have PTSD — it means that your symptoms may warrant further evaluation by a qualified professional."
+            : "Your score is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress, those concerns are still worth discussing with a healthcare provider."}
+          suggestion={isPositiveScreen
+            ? "Consider taking the full PCL-5 for a more detailed assessment, or speak with your primary care provider, therapist, or a VA mental health provider about your results."
+            : "If your situation changes or symptoms develop, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["pc-ptsd-5-screening"]?.prompts ?? []}
+          responses={SYMPTOM_ITEMS.map((item) => ({
+            question: item.text,
+            answer: answers[item.id] === true ? "Yes" : "No",
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["pc-ptsd-5-screening"] && (
+          <ReflectionPrompts
+            toolName="PC-PTSD-5 Quick PTSD Screen"
+            prompts={REFLECTION_PROMPTS["pc-ptsd-5-screening"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

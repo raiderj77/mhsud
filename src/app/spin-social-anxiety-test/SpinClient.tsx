@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -470,6 +473,30 @@ export function SpinClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="SPIN Social Anxiety Self-Check"
+          toolUrl="https://mindchecktools.com/spin-social-anxiety-test"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={clinicalCutoff ? "Consider speaking with a healthcare provider or therapist about your social anxiety symptoms. Cognitive-behavioral therapy (CBT) and/or medication have strong evidence for treating social anxiety." : "If you notice social anxiety increasing or interfering with activities you want to do, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["spin-social-anxiety-test"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: SCALE_OPTIONS.find((o) => o.value === answers[item.id])?.label ?? "",
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["spin-social-anxiety-test"] && (
+          <ReflectionPrompts
+            toolName="SPIN Social Anxiety Self-Check"
+            prompts={REFLECTION_PROMPTS["spin-social-anxiety-test"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
