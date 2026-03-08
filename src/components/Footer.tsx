@@ -56,6 +56,7 @@ const WELLNESS_TOOLS = [
   { href: "/values-card-sort", label: "Values Card Sort" },
   { href: "/dbt-crisis-skills", label: "DBT Skills Cards" },
   { href: "/attachment-style-quiz", label: "Attachment Style Quiz" },
+  { href: "/big-five-personality-test", label: "Big Five Personality" },
 ];
 
 const RECOVERY_TOOLS = [

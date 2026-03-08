@@ -816,6 +816,22 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "big-five-personality-test": {
+    toolName: "Big Five Personality Test (IPIP-NEO-50)",
+    prompts: [
+      "Which of the five traits surprised you the most — either higher or lower than you expected?",
+      "How does your Extraversion score match the way you actually feel in social situations versus how others perceive you?",
+      "Think about your Conscientiousness score — does it reflect how you approach work, school, or daily responsibilities?",
+      "Your Neuroticism score reflects emotional reactivity. What situations tend to bring out your strongest emotional responses?",
+      "How might your Openness and Agreeableness scores shape the kinds of friendships and relationships you seek out?",
+      "If you could shift one trait by a few points in either direction, which would it be and why?",
+    ],
+    faqEntries: [
+      { question: "What should I do after taking the Big Five personality test?", answer: "Reflect on how each trait shows up in your daily life. Consider whether your scores match your self-image or reveal blind spots. If you want deeper insight, a psychologist can administer the full NEO-PI-R (240 items) with professional interpretation. The reflection prompts on this page can help you organize your thoughts." },
+      { question: "Can personality traits change over time?", answer: "Yes. Research shows personality is relatively stable but not fixed. People generally become more conscientious, agreeable, and emotionally stable with age. Intentional effort, life experiences, and therapy can also produce meaningful shifts in personality traits." },
+    ],
+  },
+
   "attachment-style-quiz": {
     toolName: "ECR-R Attachment Style Quiz",
     prompts: [
