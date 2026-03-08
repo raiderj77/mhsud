@@ -171,7 +171,7 @@ export function AceClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
           Adverse Childhood Experiences · CDC-Kaiser Study · 10 Questions
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         <AdSlot position="tool-top" />
 
@@ -264,7 +264,7 @@ export function AceClient({ faqData }: Props) {
           </p>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your responses are scored entirely in your browser. Nothing is stored or transmitted.
         </p>
       </div>
@@ -392,7 +392,7 @@ export function AceClient({ faqData }: Props) {
                     <span className="text-sm font-bold text-neutral-700 dark:text-neutral-200">
                       {item.label}
                     </span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400">
                       {CATEGORY_META[item.category].label}
                     </span>
                   </div>
@@ -455,7 +455,7 @@ export function AceClient({ faqData }: Props) {
               <p className="text-xs text-red-700 dark:text-red-300">Higher adversity</p>
             </div>
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             These ranges are descriptive, not diagnostic. The ACE study did not define clinical cutoffs.
           </p>
         </div>
@@ -636,7 +636,7 @@ export function AceClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -674,7 +674,7 @@ export function AceClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         Answer each question based on your experiences <strong>before age 18</strong>.
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         ~2-3 minutes &middot; 10 Yes/No questions &middot; Completely private
       </p>
 
@@ -689,7 +689,7 @@ export function AceClient({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{answeredCount} of 10 answered</span>
           <span>{Math.round((answeredCount / 10) * 100)}%</span>
         </div>
@@ -710,7 +710,7 @@ export function AceClient({ faqData }: Props) {
             <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-1">
               {meta.label}
             </h2>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
               {cat === "abuse" && "Before your 18th birthday:"}
               {cat === "neglect" && "Before your 18th birthday:"}
               {cat === "dysfunction" && "While you were growing up, during your first 18 years of life:"}
@@ -765,13 +765,13 @@ export function AceClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all 10 questions to continue
           </p>
         )}
@@ -810,7 +810,7 @@ export function AceClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

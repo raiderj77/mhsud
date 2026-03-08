@@ -188,7 +188,7 @@ export function CesdClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Depression screening · Past week · {ITEMS.length} items
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>
@@ -268,7 +268,7 @@ export function CesdClient({ faqData }: Props) {
                       }}
                     />
                   </div>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
                     {SCALE_SHORT[raw]}
                     {item.reverse && " → reverse scored"}
                   </p>
@@ -303,7 +303,7 @@ export function CesdClient({ faqData }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             Clinical cutoff: 16+ suggests further evaluation
           </p>
         </div>
@@ -442,7 +442,7 @@ export function CesdClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -482,7 +482,7 @@ export function CesdClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         For each statement, select how often you have felt this way <strong>during the past week</strong>.
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         20 questions · ~5 minutes · Completely private · NIMH public domain instrument
       </p>
 
@@ -557,13 +557,13 @@ export function CesdClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {ITEMS.length} questions to continue
           </p>
         )}
@@ -596,7 +596,7 @@ export function CesdClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

@@ -135,7 +135,7 @@ export default function DoctorGuidePage() {
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
             Starting the conversation about mental health can feel intimidating. This guide gives you exact language, practical steps, and everything you need to make that appointment productive.
           </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-3">Last updated: March 7, 2026</p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Last updated: March 7, 2026</p>
         </header>
 
         <div className="prose-mh space-y-10">
@@ -347,7 +347,7 @@ export default function DoctorGuidePage() {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.description}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.description}</p>
                 </Link>
               ))}
             </div>
@@ -369,7 +369,7 @@ export default function DoctorGuidePage() {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -378,7 +378,7 @@ export default function DoctorGuidePage() {
 
         {/* Footer */}
         <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 mt-10 text-center">
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
             This guide is for educational purposes only. It is not medical advice or a substitute for professional care. The suggestions on this page are intended to help you prepare for a conversation with a healthcare provider — they are not clinical recommendations.
           </p>
           <ToolReviewerBio />

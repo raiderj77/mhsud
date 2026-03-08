@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/dast-10-guide`;
@@ -64,7 +63,7 @@ export default function DAST10GuidePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Tool Guide</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">8 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">8 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Understanding the DAST-10: Scoring, Interpretation & What Your Results Mean
@@ -273,11 +272,11 @@ export default function DAST10GuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">10-item validated drug abuse screening test</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-item validated drug abuse screening test</p>
               </Link>
               <Link href="/cage-aid-substance-abuse-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Substance Use Screen</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">4-item combined alcohol and drug screening tool</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">4-item combined alcohol and drug screening tool</p>
               </Link>
             </div>
           </section>
@@ -288,11 +287,11 @@ export default function DAST10GuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/audit-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding the WHO&apos;s alcohol screening tool</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the WHO&apos;s alcohol screening tool</p>
               </Link>
               <Link href="/blog/stages-of-change-recovery" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Stages of Change in Addiction Recovery</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding where you are in the recovery process</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding where you are in the recovery process</p>
               </Link>
             </div>
           </section>

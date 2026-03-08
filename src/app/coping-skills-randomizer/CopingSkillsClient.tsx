@@ -209,7 +209,7 @@ export function CopingSkillsClient({ faqData }: Props) {
         Struggling right now? Press the button and get a healthy coping skill with instructions.
         51 evidence-based skills across 6 categories. Try it, and if it does not help, try another.
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="coping-top" />
 
@@ -237,7 +237,7 @@ export function CopingSkillsClient({ faqData }: Props) {
           })}
         </div>
         {activeFilters.size > 0 && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
             Showing {filteredSkills.length} of {SKILLS.length} skills &middot;{" "}
             <button onClick={() => setActiveFilters(new Set())} className="text-sage-600 dark:text-sage-400 hover:underline">
               Clear filters
@@ -272,7 +272,7 @@ export function CopingSkillsClient({ faqData }: Props) {
           {currentSkill ? "Try Another Skill" : "Give Me A Coping Skill"}
         </button>
         {showFavoritesOnly && filteredSkills.filter((s) => favorites.has(s.id)).length === 0 && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             No favorites match current filters. Clear filters or add more favorites.
           </p>
         )}
@@ -314,7 +314,7 @@ export function CopingSkillsClient({ faqData }: Props) {
           </div>
 
           {/* encouragement */}
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center italic">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center italic">
             You do not need to do this perfectly. Just starting is enough.
           </p>
         </section>
@@ -348,7 +348,7 @@ export function CopingSkillsClient({ faqData }: Props) {
                 <div key={cat}>
                   <h3 className={`font-serif font-bold ${info.textLight} ${info.textDark} mb-3 flex items-center gap-2`}>
                     <span>{info.icon}</span> {info.label}
-                    <span className="text-xs font-normal text-neutral-400 dark:text-neutral-500">({catSkills.length})</span>
+                    <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">({catSkills.length})</span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {catSkills.map((skill) => (
@@ -524,7 +524,7 @@ export function CopingSkillsClient({ faqData }: Props) {
           </ul>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No data is stored, transmitted, or collected.
           Your selections are completely private.
         </p>

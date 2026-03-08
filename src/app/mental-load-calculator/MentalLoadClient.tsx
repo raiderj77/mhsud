@@ -135,7 +135,7 @@ export function MentalLoadClient({ faqData }: Props) {
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last updated: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 2026</p>
       </header>
 
       {!accepted && (
@@ -151,7 +151,7 @@ export function MentalLoadClient({ faqData }: Props) {
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answered.length} of {allTasks.length} answered</span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">Who usually handles this?</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Who usually handles this?</span>
             </div>
             <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -222,7 +222,7 @@ export function MentalLoadClient({ faqData }: Props) {
                 <div key={d.name}>
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">{d.icon} {d.name}</span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400">
                       {d.mostlyMe} mostly me · {d.shared} shared · {d.mostlyOther} mostly other
                     </span>
                   </div>
@@ -380,7 +380,7 @@ export function MentalLoadClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -400,14 +400,14 @@ export function MentalLoadClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">Original tool by MindCheck Tools. For reflection and conversation only.</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">Original tool by MindCheck Tools. For reflection and conversation only.</p>
             <ToolReviewerBio />
           </footer>
         </div>

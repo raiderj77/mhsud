@@ -455,7 +455,7 @@ export function BoxBreathingClient({ faqData }: Props) {
                   <p className={`text-2xl sm:text-3xl font-serif font-bold transition-colors ${PHASE_COLORS[breathPhase]}`}>
                     {PHASE_LABELS[breathPhase]}
                   </p>
-                  <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-1">
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
                     {Math.ceil(currentPhaseDuration - phaseProgress)}s
                   </p>
                 </>
@@ -764,7 +764,7 @@ export function BoxBreathingClient({ faqData }: Props) {
               className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
             >
               <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -794,7 +794,7 @@ export function BoxBreathingClient({ faqData }: Props) {
 
       {/* ── Privacy ── */}
       <div className="text-center mb-6">
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">
           Your privacy matters. This tool runs entirely in your browser. No data is stored, collected, or transmitted.
         </p>
       </div>
@@ -803,7 +803,7 @@ export function BoxBreathingClient({ faqData }: Props) {
 
       {/* ── Authoritative Sources ── */}
       <section className="mt-8 mb-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
           Authoritative Sources
         </h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">

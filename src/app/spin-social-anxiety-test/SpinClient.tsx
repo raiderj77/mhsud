@@ -275,7 +275,7 @@ export function SpinClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Social anxiety · Past week · {ITEMS.length} items
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>
@@ -391,7 +391,7 @@ export function SpinClient({ faqData }: Props) {
                     style={{ width: `${pct}%`, backgroundColor: itemColor(val) }}
                   />
                 </div>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">
                   {chosen?.label}
                 </p>
               </div>
@@ -414,7 +414,7 @@ export function SpinClient({ faqData }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             19+ = clinical cutoff for social anxiety disorder (Connor et al., 2000)
           </p>
         </div>
@@ -560,7 +560,7 @@ export function SpinClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -600,7 +600,7 @@ export function SpinClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A 17-item measure of social anxiety covering fear, avoidance, and physiological symptoms.
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         17 questions · ~3 minutes · Completely private · Connor et al. (2000)
       </p>
 
@@ -686,13 +686,13 @@ export function SpinClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {ITEMS.length} questions to continue
           </p>
         )}
@@ -723,7 +723,7 @@ export function SpinClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

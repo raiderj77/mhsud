@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Terms of Use</h1>
-          <p className="text-sm text-neutral-400 dark:text-neutral-500">Last updated: February 17, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: February 17, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">

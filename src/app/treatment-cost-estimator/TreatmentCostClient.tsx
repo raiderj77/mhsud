@@ -245,7 +245,7 @@ export function TreatmentCostClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Cost disclaimer */}
@@ -265,7 +265,7 @@ export function TreatmentCostClient({ faqData }: Props) {
         <div className="space-y-3">
           {["Outpatient", "Residential", "Medical", "MAT", "Housing"].map((category) => (
             <div key={category}>
-              <p className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">{category === "MAT" ? "Medication-Assisted Treatment" : category}</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">{category === "MAT" ? "Medication-Assisted Treatment" : category}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
                 {TREATMENTS.filter((t) => t.category === category).map((t) => {
                   return (
@@ -280,7 +280,7 @@ export function TreatmentCostClient({ faqData }: Props) {
                       aria-pressed={selectedKey === t.key}
                     >
                       <span className="font-semibold block">{t.shortName}</span>
-                      <span className={`text-xs ${selectedKey === t.key ? "text-sage-100" : "text-neutral-400 dark:text-neutral-500"}`}>
+                      <span className={`text-xs ${selectedKey === t.key ? "text-sage-100" : "text-neutral-500 dark:text-neutral-400"}`}>
                         {formatCost(t.costLow)} - {formatCost(t.costHigh)} {t.costPer}
                       </span>
                     </button>
@@ -309,10 +309,10 @@ export function TreatmentCostClient({ faqData }: Props) {
 
             {/* Big cost range */}
             <div className="bg-sand-50 dark:bg-night-700 rounded-2xl p-5 mb-5">
-              <p className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">Estimated Cost Range</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Estimated Cost Range</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">{formatCost(selected.costLow)}</span>
-                <span className="text-neutral-400 dark:text-neutral-500 text-lg">—</span>
+                <span className="text-neutral-500 dark:text-neutral-400 text-lg">—</span>
                 <span className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">{formatCost(selected.costHigh)}</span>
               </div>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">{selected.costPer}</p>
@@ -436,7 +436,7 @@ export function TreatmentCostClient({ faqData }: Props) {
                   <td className="py-2.5 pr-4 text-neutral-700 dark:text-neutral-200">{t.shortName}</td>
                   <td className="py-2.5 pr-4 text-neutral-600 dark:text-neutral-300 whitespace-nowrap">
                     {formatCost(t.costLow)} - {formatCost(t.costHigh)}
-                    <span className="text-neutral-400 dark:text-neutral-500 text-xs ml-1">/{t.costPer.replace("per ", "").replace("total ", "")}</span>
+                    <span className="text-neutral-500 dark:text-neutral-400 text-xs ml-1">/{t.costPer.replace("per ", "").replace("total ", "")}</span>
                   </td>
                   <td className="py-2.5 text-neutral-500 dark:text-neutral-400 hidden sm:table-cell">{t.duration}</td>
                 </tr>
@@ -444,7 +444,7 @@ export function TreatmentCostClient({ faqData }: Props) {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-3">Click any row to see details. All costs are general national estimates without insurance.</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Click any row to see details. All costs are general national estimates without insurance.</p>
       </section>
 
       {/* Educational Content */}
@@ -503,7 +503,7 @@ export function TreatmentCostClient({ faqData }: Props) {
       </section>
 
       {/* Disclaimer + Crisis Resources */}
-      <footer className="mt-12 space-y-4 text-xs text-neutral-400 dark:text-neutral-500">
+      <footer className="mt-12 space-y-4 text-xs text-neutral-500 dark:text-neutral-400">
         <div className="bg-sand-50 dark:bg-night-800 rounded-2xl p-5 space-y-2">
           <p className="font-semibold text-neutral-500 dark:text-neutral-400">About This Tool</p>
           <p>

@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/relapse-prevention-plan-guide`;
@@ -60,7 +59,7 @@ export default function RelapsePreventionPlanGuidePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Recovery</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How to Build a Relapse Prevention Plan
@@ -288,11 +287,11 @@ export default function RelapsePreventionPlanGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/relapse-prevention-plan" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Relapse Prevention Plan Builder</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Guided tool to create your personalized prevention plan</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Guided tool to create your personalized prevention plan</p>
               </Link>
               <Link href="/halt-check-in" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">HALT Check-In</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Daily Hungry, Angry, Lonely, Tired self-check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Daily Hungry, Angry, Lonely, Tired self-check</p>
               </Link>
             </div>
           </section>
@@ -303,11 +302,11 @@ export default function RelapsePreventionPlanGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/stages-of-change-recovery" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Stages of Change in Addiction Recovery</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding where you are in the recovery process</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding where you are in the recovery process</p>
               </Link>
               <Link href="/blog/quit-drinking-timeline" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Quit Drinking Timeline</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">What to expect when you stop drinking</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">What to expect when you stop drinking</p>
               </Link>
             </div>
           </section>

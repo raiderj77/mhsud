@@ -141,7 +141,7 @@ export function SleepMoodClient({ faqData }: Props) {
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last updated: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 2026</p>
       </header>
 
       {!accepted && (
@@ -157,7 +157,7 @@ export function SleepMoodClient({ faqData }: Props) {
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answers.filter((a) => a !== null).length} of 10 answered</span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">Over the last <strong>2 weeks</strong></span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Over the last <strong>2 weeks</strong></span>
             </div>
             <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -171,7 +171,7 @@ export function SleepMoodClient({ faqData }: Props) {
               const showLabel = q.domain !== prevDomain;
               return (
                 <div key={qi}>
-                  {showLabel && <div className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wide mt-4 mb-2">Sleep {q.domain}</div>}
+                  {showLabel && <div className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mt-4 mb-2">Sleep {q.domain}</div>}
                   <div ref={(el) => { questionRefs.current[qi] = el; }} className={`card p-5 transition-all duration-300 ${isReachable ? "opacity-100" : "opacity-30 pointer-events-none"} ${answers[qi] !== null ? "border-sage-200 dark:border-sage-800" : ""}`}>
                     <div className="flex gap-3 items-start">
                       <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all ${answers[qi] !== null ? "bg-sage-500 text-white" : "bg-sand-100 dark:bg-night-700 text-neutral-400"}`}>
@@ -229,7 +229,7 @@ export function SleepMoodClient({ faqData }: Props) {
                 <div key={d.domain}>
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">{d.domain}</span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-500">{d.score}/{d.max}</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400">{d.score}/{d.max}</span>
                   </div>
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full transition-all duration-500 ${d.pct >= 67 ? "bg-gradient-to-r from-crisis-400 to-crisis-600" : d.pct >= 34 ? "bg-gradient-to-r from-warm-400 to-warm-600" : "bg-gradient-to-r from-sage-400 to-sage-600"}`} style={{ width: `${d.pct}%` }} />
@@ -352,7 +352,7 @@ export function SleepMoodClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -372,14 +372,14 @@ export function SleepMoodClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">Original tool by MindCheck Tools. Not a clinical assessment.</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">Original tool by MindCheck Tools. Not a clinical assessment.</p>
             <ToolReviewerBio />
           </footer>
         </div>

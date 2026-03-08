@@ -41,7 +41,8 @@ export function AdSlot({
 
   return (
     <div
-      className={`my-6 min-h-[90px] ${className}`}
+      className={`my-6 min-h-[250px] ${className}`}
+      style={{ contain: "layout" }}
       data-ad-position={position}
       aria-label="Advertisement"
       role="complementary"

@@ -31,8 +31,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['"Source Serif 4"', "Georgia", "serif"],
-        sans: ['"DM Sans"', '"Helvetica Neue"', "sans-serif"],
+        serif: ["var(--font-source-serif)", "Georgia", "serif"],
+        sans: ["var(--font-dm-sans)", '"Helvetica Neue"', "sans-serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out forwards",

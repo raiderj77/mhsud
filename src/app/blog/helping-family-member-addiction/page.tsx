@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/helping-family-member-addiction`;
@@ -60,7 +59,7 @@ export default function HelpingFamilyMemberAddictionPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Family Support</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How to Help a Family Member with Addiction
@@ -234,7 +233,7 @@ export default function HelpingFamilyMemberAddictionPage() {
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 card hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <div>
                     <span className="text-sm font-semibold text-sage-600 dark:text-sage-400">{r.name}</span>
-                    <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                   </div>
                 </a>
               ))}
@@ -277,11 +276,11 @@ export default function HelpingFamilyMemberAddictionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/family-impact-assessment" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Family Impact Assessment</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understand how a loved one&apos;s substance use affects your family</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand how a loved one&apos;s substance use affects your family</p>
               </Link>
               <Link href="/cage-aid-substance-abuse-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Substance Abuse Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Quick screening for substance use concerns</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Quick screening for substance use concerns</p>
               </Link>
             </div>
           </section>
@@ -292,11 +291,11 @@ export default function HelpingFamilyMemberAddictionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/stages-of-change-recovery" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Stages of Change in Addiction Recovery</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understand the 5 stages of change model for recovery</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand the 5 stages of change model for recovery</p>
               </Link>
               <Link href="/blog/relapse-prevention-plan-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Relapse Prevention Plan Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Build a practical plan for maintaining recovery</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Build a practical plan for maintaining recovery</p>
               </Link>
             </div>
           </section>

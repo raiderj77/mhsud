@@ -583,7 +583,7 @@ export default function HomePage() {
             Mental health self-checks you can{" "}
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
-          <p className="text-sm text-neutral-400 dark:text-neutral-500 mb-5">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.{" "}
             <Link
               href="/about"
@@ -608,6 +608,7 @@ export default function HomePage() {
 
       {/* Features */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
+        <h2 className="sr-only">Why trust our tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {FEATURES.map((f) => (
             <div key={f.title} className="card p-6">
@@ -671,7 +672,7 @@ export default function HomePage() {
                       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
                         {tool.description}
                       </p>
-                      <div className="flex gap-4 text-xs text-neutral-400 dark:text-neutral-500">
+                      <div className="flex gap-4 text-xs text-neutral-500 dark:text-neutral-400">
                         <span>{tool.questions} questions</span>
                         <span>{tool.time}</span>
                         <span>🔒 Private</span>

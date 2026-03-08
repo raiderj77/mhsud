@@ -154,7 +154,7 @@ export function MoneySavedClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Input Form */}
@@ -176,7 +176,7 @@ export function MoneySavedClient({ faqData }: Props) {
                   <option key={s.key} value={s.key}>{s.label}</option>
                 ))}
               </select>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-1">Average spending: {sub.range}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Average spending: {sub.range}</p>
             </div>
 
             {/* Spending */}
@@ -186,7 +186,7 @@ export function MoneySavedClient({ faqData }: Props) {
               </label>
               <div className="flex gap-2">
                 <div className="relative flex-1">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 text-sm">$</span>
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 dark:text-neutral-400 text-sm">$</span>
                   <input
                     id="amount"
                     type="number"
@@ -287,7 +287,7 @@ export function MoneySavedClient({ faqData }: Props) {
                   { label: "Yearly", value: usd(dailyCost * 365) },
                 ].map((r) => (
                   <div key={r.label} className="bg-sand-50 dark:bg-night-700 rounded-xl p-3 text-center">
-                    <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-1">{r.label}</p>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-1">{r.label}</p>
                     <p className="text-sm font-bold text-neutral-800 dark:text-neutral-100">{r.value}</p>
                   </div>
                 ))}
@@ -340,7 +340,7 @@ export function MoneySavedClient({ faqData }: Props) {
                 );
               })}
             </div>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-3">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">
               Based on current spending rate of {usd(Math.round(dailyCost))}/day. Does not account for inflation or changing prices.
             </p>
           </div>
@@ -421,7 +421,7 @@ export function MoneySavedClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -491,7 +491,7 @@ export function MoneySavedClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -501,10 +501,10 @@ export function MoneySavedClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               This is an original tool created by MindCheck Tools. Spending estimates are approximate and for motivational purposes.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not financial or medical advice.
             </p>
           </footer>

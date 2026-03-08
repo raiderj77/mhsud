@@ -215,7 +215,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                       ? "bg-sage-600 text-white"
                       : active
                       ? "bg-sage-600 text-white ring-2 ring-offset-2 ring-sage-400 dark:ring-offset-night-800"
-                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500"
+                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
                   }`}
                 >
                   {done ? (
@@ -226,7 +226,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                     i + 1
                   )}
                 </div>
-                <span className={`text-[10px] sm:text-xs font-medium ${active ? "text-sage-700 dark:text-sage-400" : "text-neutral-400 dark:text-neutral-500"}`}>
+                <span className={`text-[10px] sm:text-xs font-medium ${active ? "text-sage-700 dark:text-sage-400" : "text-neutral-500 dark:text-neutral-400"}`}>
                   {label}
                 </span>
               </div>
@@ -264,7 +264,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
               <label htmlFor="thought-input" className="block text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">
                 What negative thought is on your mind?
               </label>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-3">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
                 Write it exactly as it sounds in your head. Don&apos;t filter or soften it.
               </p>
               <textarea
@@ -295,7 +295,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           <div className="space-y-5">
             {/* User's thought */}
             <div className="bg-sand-50 dark:bg-night-900 rounded-xl p-4 border border-sand-200 dark:border-neutral-700">
-              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Your thought</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Your thought</p>
               <p className="text-sm text-neutral-700 dark:text-neutral-200 italic">&ldquo;{thought}&rdquo;</p>
             </div>
 
@@ -366,7 +366,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
               >
                 Back
               </button>
-              <div className="text-sm text-neutral-400 dark:text-neutral-500">
+              <div className="text-sm text-neutral-500 dark:text-neutral-400">
                 {selected.size} selected
               </div>
               <button
@@ -389,7 +389,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           <div ref={reframeRef} className="space-y-6">
             {/* Original thought */}
             <div className="bg-sand-50 dark:bg-night-900 rounded-xl p-4 border border-sand-200 dark:border-neutral-700">
-              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Your original thought</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Your original thought</p>
               <p className="text-sm text-neutral-700 dark:text-neutral-200 italic">&ldquo;{thought}&rdquo;</p>
             </div>
 
@@ -419,7 +419,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
               <label htmlFor="balanced-thought" className="block text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">
                 Now, how might you rethink this?
               </label>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-3">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
                 Using the reframing prompts above, write a more balanced version of your original thought. It doesn&apos;t have to be positive — just more accurate and fair.
               </p>
               <textarea
@@ -475,11 +475,11 @@ export function CognitiveDistortionClient({ faqData }: Props) {
             {/* Summary */}
             <div className="bg-sand-50 dark:bg-night-900 rounded-xl p-5 space-y-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Original thought</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Original thought</p>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 italic">&ldquo;{thought}&rdquo;</p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">
+                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">
                   Distortions identified ({selectedDistortions.length})
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -491,7 +491,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                 </div>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Balanced thought</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Balanced thought</p>
                 <p className="text-sm text-sage-700 dark:text-sage-400 font-medium">&ldquo;{balancedThought}&rdquo;</p>
               </div>
             </div>
@@ -618,7 +618,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
               className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
             >
               <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -647,7 +647,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
       </section>
 
       <div className="text-center mb-6">
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">
           Your privacy matters. This tool runs entirely in your browser. Nothing you type is stored, collected, or transmitted.
         </p>
       </div>
@@ -656,7 +656,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
 
       {/* ── Authoritative Sources ── */}
       <section className="mt-8 mb-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
           Authoritative Sources
         </h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">

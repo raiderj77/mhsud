@@ -152,7 +152,7 @@ export function CrafftClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Substance use screening · Ages 12–21 · CRAFFT 2.1+N
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${
@@ -321,7 +321,7 @@ export function CrafftClient({ faqData }: Props) {
                 }`}>
                   <span className="text-neutral-700 dark:text-neutral-200 pr-4 text-xs leading-relaxed">
                     {q.id === "alcohol" ? "Alcohol" : q.id === "cannabis" ? "Cannabis" : q.id === "other" ? "Other substances" : "Nicotine/tobacco"}
-                    {q.id === "nicotine" && <span className="text-neutral-400 dark:text-neutral-500"> (+N)</span>}
+                    {q.id === "nicotine" && <span className="text-neutral-500 dark:text-neutral-400"> (+N)</span>}
                   </span>
                   <span className={`shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full ${
                     val
@@ -353,7 +353,7 @@ export function CrafftClient({ faqData }: Props) {
               <p className="text-xs text-amber-700 dark:text-amber-300">2+ (positive screen)</p>
             </div>
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             Score is based on Part B (CRAFFT) questions only. Part A and the nicotine question are not scored.
           </p>
         </div>
@@ -508,7 +508,7 @@ export function CrafftClient({ faqData }: Props) {
           </p>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -549,7 +549,7 @@ export function CrafftClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A quick, confidential check-in about alcohol, drugs, and safety — designed for young people ages 12–21.
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         ~2 minutes · Yes/No questions · Completely private · CRAFFT 2.1+N
       </p>
 
@@ -565,7 +565,7 @@ export function CrafftClient({ faqData }: Props) {
       {/* Progress */}
       {totalQuestions > 0 && (
         <div className="mb-6">
-          <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+          <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
             <span>{answeredCount} of {totalQuestions} answered</span>
             <span>{Math.round((answeredCount / totalQuestions) * 100)}%</span>
           </div>
@@ -583,7 +583,7 @@ export function CrafftClient({ faqData }: Props) {
         <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-1">
           Part A: Past 12 Months
         </h2>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
           Answer Yes or No to each question.
         </p>
         <div className="space-y-3">
@@ -607,7 +607,7 @@ export function CrafftClient({ faqData }: Props) {
                 <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
                   {q.text}
                   {q.id === "nicotine" && (
-                    <span className="ml-1 text-xs text-neutral-400 dark:text-neutral-500">(+N)</span>
+                    <span className="ml-1 text-xs text-neutral-500 dark:text-neutral-400">(+N)</span>
                   )}
                 </p>
               </div>
@@ -644,7 +644,7 @@ export function CrafftClient({ faqData }: Props) {
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-1">
             Part B: CRAFFT Questions
           </h2>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
             {anyGatingYes
               ? "Answer Yes or No to each of the six CRAFFT questions."
               : "Since you answered \"No\" to alcohol, cannabis, and other substances, only the safety question below is needed."
@@ -708,13 +708,13 @@ export function CrafftClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all questions to continue
           </p>
         )}
@@ -756,7 +756,7 @@ export function CrafftClient({ faqData }: Props) {
         </p>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

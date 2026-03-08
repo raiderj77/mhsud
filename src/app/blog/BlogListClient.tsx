@@ -29,7 +29,7 @@ export function BlogListClient({ posts, categories }: Props) {
         {/* Search */}
         <div className="relative">
           <svg
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 dark:text-neutral-500 pointer-events-none"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500 dark:text-neutral-400 pointer-events-none"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -74,7 +74,7 @@ export function BlogListClient({ posts, categories }: Props) {
       </div>
 
       {/* Results count */}
-      <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
         {filtered.length} {filtered.length === 1 ? "article" : "articles"}
         {search && ` matching "${search}"`}
         {activeCategory && ` in ${activeCategory}`}
@@ -84,7 +84,7 @@ export function BlogListClient({ posts, categories }: Props) {
       <div className="space-y-4">
         {filtered.length === 0 && (
           <div className="card p-8 text-center">
-            <p className="text-neutral-400 dark:text-neutral-500">No articles found. Try a different search or filter.</p>
+            <p className="text-neutral-500 dark:text-neutral-400">No articles found. Try a different search or filter.</p>
           </div>
         )}
         {filtered.map((post) => (
@@ -96,8 +96,8 @@ export function BlogListClient({ posts, categories }: Props) {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">{post.category}</span>
-                  <span className="text-xs text-neutral-400 dark:text-neutral-500">{post.readTime}</span>
-                  <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                  <span className="text-xs text-neutral-500 dark:text-neutral-400">{post.readTime}</span>
+                  <span className="text-xs text-neutral-500 dark:text-neutral-400">
                     {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                   </span>
                   {post.status === "draft" && (

@@ -163,7 +163,7 @@ export function DAST10Client({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -191,7 +191,7 @@ export function DAST10Client({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 10 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 Yes / No
               </span>
             </div>
@@ -309,7 +309,7 @@ export function DAST10Client({ faqData }: Props) {
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 10) * 100}%` }} />
                   </div>
-                  <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                  <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
                     <span>0 — No Problems</span>
                     <span>10 — Severe</span>
                   </div>
@@ -459,7 +459,7 @@ export function DAST10Client({ faqData }: Props) {
                     </div>
                   );
                 })}
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   These ranges come from published research guidelines, not from this website. They should not be treated as diagnostic thresholds.
                 </p>
               </div>
@@ -481,7 +481,7 @@ export function DAST10Client({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -578,7 +578,7 @@ export function DAST10Client({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -588,10 +588,10 @@ export function DAST10Client({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The DAST-10 was developed by Dr. Harvey A. Skinner, Ph.D. It is in the public domain. No permission required to reproduce, translate, display, or distribute.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

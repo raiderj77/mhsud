@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/loneliness-mental-health`;
@@ -48,7 +47,7 @@ export default function LonelinessMentalHealthPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Loneliness Epidemic: Why It Matters for Your Mental Health
@@ -253,11 +252,11 @@ export default function LonelinessMentalHealthPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/ucla-loneliness-scale" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">UCLA Loneliness Scale</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">The most widely used loneliness screening in research and clinical settings</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">The most widely used loneliness screening in research and clinical settings</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">A validated screening for depressive symptoms used by clinicians worldwide</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">A validated screening for depressive symptoms used by clinicians worldwide</p>
               </Link>
             </div>
           </section>
@@ -268,11 +267,11 @@ export default function LonelinessMentalHealthPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/social-anxiety-vs-introversion" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Social Anxiety vs. Introversion</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding the difference between a personality trait and a clinical concern</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the difference between a personality trait and a clinical concern</p>
               </Link>
               <Link href="/blog/phq-9-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Scale Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How clinicians use and interpret depression screening scores</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians use and interpret depression screening scores</p>
               </Link>
             </div>
           </section>

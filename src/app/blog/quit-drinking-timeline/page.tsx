@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/quit-drinking-timeline`;
@@ -72,7 +71,7 @@ export default function QuitDrinkingTimelinePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">10 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">10 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             What Happens When You Stop Drinking: A Timeline
@@ -335,11 +334,11 @@ export default function QuitDrinkingTimelinePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/health-recovery-timeline" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Health Recovery Timeline</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Visualize your body&apos;s healing milestones after quitting</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Visualize your body&apos;s healing milestones after quitting</p>
               </Link>
               <Link href="/audit-alcohol-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">WHO-developed 10-question alcohol risk assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO-developed 10-question alcohol risk assessment</p>
               </Link>
             </div>
           </section>
@@ -350,11 +349,11 @@ export default function QuitDrinkingTimelinePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/audit-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How the AUDIT works and what the risk zones mean</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How the AUDIT works and what the risk zones mean</p>
               </Link>
               <Link href="/blog/stages-of-change-recovery" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Stages of Change in Recovery</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding readiness for change in substance use recovery</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding readiness for change in substance use recovery</p>
               </Link>
             </div>
           </section>

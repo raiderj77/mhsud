@@ -291,10 +291,10 @@ export function AssistClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
           The Alcohol, Smoking and Substance Involvement Screening Test — a comprehensive substance use screening developed by the World Health Organization.
         </p>
-        <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+        <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
           10 substance categories · ~5–10 minutes · Completely private · WHO ASSIST v3.1
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         <AdSlot position="tool-top" />
 
@@ -341,7 +341,7 @@ export function AssistClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your responses are scored entirely in your browser. Nothing is stored or transmitted.
         </p>
       </div>
@@ -386,7 +386,7 @@ export function AssistClient({ faqData }: Props) {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{s.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">{s.examples}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{s.examples}</p>
                 </div>
               </div>
             </button>
@@ -471,7 +471,7 @@ export function AssistClient({ faqData }: Props) {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         {/* Progress */}
         <div className="mb-6">
-          <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+          <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
             <span>Substance {subIdx + 1} of {endorsed.length}</span>
             <span>{Math.round(progressPct)}%</span>
           </div>
@@ -549,7 +549,7 @@ export function AssistClient({ faqData }: Props) {
             className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
               complete
                 ? "bg-sage-600 text-white hover:bg-sage-700"
-                : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+                : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
             }`}
           >
             {subIdx < endorsed.length - 1
@@ -571,7 +571,7 @@ export function AssistClient({ faqData }: Props) {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         {/* Progress */}
         <div className="mb-6">
-          <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+          <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
             <span>Final Question</span>
             <span>{Math.round(progressPct)}%</span>
           </div>
@@ -622,7 +622,7 @@ export function AssistClient({ faqData }: Props) {
             className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
               q8Answer !== undefined
                 ? "bg-sage-600 text-white hover:bg-sage-700"
-                : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+                : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
             }`}
           >
             See My Results →
@@ -802,7 +802,7 @@ export function AssistClient({ faqData }: Props) {
               <p className="text-xs text-red-700 dark:text-red-300">27+ (all)</p>
             </div>
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center">
             Max score per substance: 39 · Alcohol has a higher low-risk threshold because it is legal and widely consumed
           </p>
         </div>
@@ -956,7 +956,7 @@ export function AssistClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 

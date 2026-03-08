@@ -28,7 +28,7 @@ export function AuthorByline({ publishedDate, modifiedDate }: AuthorBylineProps)
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
           {SITE_AUTHOR.credentialFull} &middot; {SITE_AUTHOR.experience}
         </p>
-        <div className="flex items-center gap-3 text-xs text-neutral-400 dark:text-neutral-500 mt-1">
+        <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
           <span>
             Published: <time dateTime={publishedDate}>{formatDate(publishedDate)}</time>
           </span>

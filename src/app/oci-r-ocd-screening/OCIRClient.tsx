@@ -190,7 +190,7 @@ export function OCIRClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -211,7 +211,7 @@ export function OCIRClient({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 18 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 Past month
               </span>
             </div>
@@ -275,7 +275,7 @@ export function OCIRClient({ faqData }: Props) {
                                 : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
                             }`}
                           >
-                            <span className="block text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">{opt.value}</span>
+                            <span className="block text-xs text-neutral-500 dark:text-neutral-400 mb-0.5">{opt.value}</span>
                             {opt.label}
                           </button>
                         ))}
@@ -342,7 +342,7 @@ export function OCIRClient({ faqData }: Props) {
                   <div className="absolute top-0 h-2" style={{ left: `${(21 / 72) * 100}%` }}>
                     <div className="w-0.5 h-full bg-neutral-400 dark:bg-neutral-500" />
                   </div>
-                  <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                  <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
                     <span>0 — Minimal</span>
                     <span className="absolute" style={{ left: `${(21 / 72) * 100}%`, transform: "translateX(-50%)" }}>21 cutoff</span>
                     <span>72 — Severe</span>
@@ -367,7 +367,7 @@ export function OCIRClient({ faqData }: Props) {
             {/* Subscale Breakdown */}
             <div className="card p-5 sm:p-6 mb-5">
               <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-1">Subscale Breakdown</h3>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">Each subscale has 3 items with a maximum score of 12.</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">Each subscale has 3 items with a maximum score of 12.</p>
               <div className="space-y-3">
                 {SUBSCALES.map((sub) => {
                   const score = subscaleScore(sub.items);
@@ -526,7 +526,7 @@ export function OCIRClient({ faqData }: Props) {
                     </div>
                   );
                 })}
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   The 6 subscales (Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing) each consist of 3 items with a maximum of 12 per subscale. The clinical cutoff and subscale structure are based on the validation research by Foa et al. (2002).
                 </p>
               </div>
@@ -549,7 +549,7 @@ export function OCIRClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -652,7 +652,7 @@ export function OCIRClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -662,10 +662,10 @@ export function OCIRClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The OCI-R (Obsessive-Compulsive Inventory - Revised) was developed by Foa et al. (2002). It is free to use in clinical and research settings.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

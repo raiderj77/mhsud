@@ -119,7 +119,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Screening complete
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         <div className="p-6 rounded-xl border-2 mb-8 bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800">
           <div className="flex items-center justify-between mb-3">
@@ -521,7 +521,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
           A brief PTSD screen developed by the VA National Center for PTSD. 5 yes/no questions.
         </p>
-        <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+        <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
           ~1 minute · Completely private · Public domain instrument
         </p>
 
@@ -572,7 +572,7 @@ export function PcPtsd5Client({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{answeredCount} of {SYMPTOM_ITEMS.length} answered</span>
           <span>{Math.round((answeredCount / SYMPTOM_ITEMS.length) * 100)}%</span>
         </div>
@@ -608,7 +608,7 @@ export function PcPtsd5Client({ faqData }: Props) {
                 <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
                   {item.text}
                 </p>
-                <span className="text-xs text-neutral-400 dark:text-neutral-500 mt-1 inline-block">
+                <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 inline-block">
                   {item.label}
                 </span>
               </div>
@@ -647,13 +647,13 @@ export function PcPtsd5Client({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {SYMPTOM_ITEMS.length} questions to continue
           </p>
         )}
@@ -707,7 +707,7 @@ function YmylFooter({ faqData }: { faqData: { question: string; answer: string }
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
         Your responses were scored entirely in your browser. Nothing was stored or transmitted.
       </p>
 

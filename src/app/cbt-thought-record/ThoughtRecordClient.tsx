@@ -189,7 +189,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
                       ? "bg-sage-600 text-white"
                       : active
                       ? "bg-sage-600 text-white ring-2 ring-offset-1 ring-sage-400 dark:ring-offset-night-800"
-                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 hover:bg-sand-300 dark:hover:bg-neutral-600"
+                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 hover:bg-sand-300 dark:hover:bg-neutral-600"
                   }`}
                   aria-label={`Step ${sNum}: ${label}`}
                 >
@@ -415,10 +415,10 @@ export function ThoughtRecordClient({ faqData }: Props) {
             <div>
               <h2 className="text-lg font-serif font-bold text-neutral-800 dark:text-neutral-100 mb-1">4. Evidence Supporting the Thought</h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">What facts (not feelings) support your automatic thought? Be specific and objective.</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic mt-1">Tip: &quot;I feel like I&apos;ll get fired&quot; is a feeling, not evidence. &quot;I missed a deadline last week&quot; is evidence.</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic mt-1">Tip: &quot;I feel like I&apos;ll get fired&quot; is a feeling, not evidence. &quot;I missed a deadline last week&quot; is evidence.</p>
             </div>
             <div className="bg-sand-50 dark:bg-night-900 rounded-xl p-4 border border-sand-200 dark:border-neutral-700 mb-2">
-              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Your thought</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Your thought</p>
               <p className="text-sm text-neutral-700 dark:text-neutral-200 italic">&ldquo;{automaticThought}&rdquo;</p>
             </div>
             <div className="space-y-3">
@@ -448,7 +448,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400">What facts contradict or don&apos;t fit with your automatic thought? What would you tell a friend in this situation?</p>
             </div>
             <div className="bg-sand-50 dark:bg-night-900 rounded-xl p-4 border border-sand-200 dark:border-neutral-700 mb-2">
-              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Your thought</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">Your thought</p>
               <p className="text-sm text-neutral-700 dark:text-neutral-200 italic">&ldquo;{automaticThought}&rdquo;</p>
             </div>
             <div className="space-y-3">
@@ -637,7 +637,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               )}
             </div>
 
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center print:hidden">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center print:hidden">
               This record has been saved to your browser. It will be here when you come back.
             </p>
           </div>
@@ -667,7 +667,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
                         <p className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
                           {rec.situation.length > 60 ? rec.situation.slice(0, 60) + "..." : rec.situation}
                         </p>
-                        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                        <p className="text-xs text-neutral-500 dark:text-neutral-400">
                           {rec.date} &middot; {rec.emotions.map((e) => `${e.name} ${e.before}\u2192${e.after}`).join(", ")}
                         </p>
                       </div>
@@ -803,7 +803,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
             ].map((tool) => (
               <Link key={tool.href} href={tool.href} className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors">
                 <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
               </Link>
             ))}
           </div>
@@ -830,7 +830,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
         </section>
 
         <div className="text-center mb-6">
-          <p className="text-xs text-neutral-400 dark:text-neutral-500">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400">
             Your privacy matters. Thought records are saved only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared.
           </p>
         </div>
@@ -838,7 +838,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
         <ToolReviewerBio />
 
         <section className="mt-8 mb-4">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Authoritative Sources</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Authoritative Sources</h2>
           <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
             <li>
               <a href="https://beckinstitute.org/about/aaron-t-beck-md/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">

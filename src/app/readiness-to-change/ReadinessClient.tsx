@@ -362,10 +362,10 @@ export function ReadinessClient({ faqData }: Props) {
         Based on the <span className="font-medium text-neutral-700 dark:text-neutral-300">Stages of Change model</span> by
         Prochaska &amp; DiClemente. 15 statements to help you understand where you are in the change process.
       </p>
-      <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mb-8">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
         This is an original educational tool, not a validated clinical instrument.
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="readiness-top" />
 
@@ -383,7 +383,7 @@ export function ReadinessClient({ faqData }: Props) {
             {shuffled.map((st, idx) => (
               <div key={st.id} className="border-b border-sand-200 dark:border-neutral-700 pb-5 last:border-0 last:pb-0">
                 <p className="font-medium text-neutral-800 dark:text-neutral-100 mb-3 text-sm">
-                  <span className="text-neutral-400 dark:text-neutral-500 mr-2">{idx + 1}.</span>
+                  <span className="text-neutral-500 dark:text-neutral-400 mr-2">{idx + 1}.</span>
                   {st.text}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -412,7 +412,7 @@ export function ReadinessClient({ faqData }: Props) {
               <p className="text-sm text-neutral-500 dark:text-neutral-400">
                 {Object.keys(answers).length} of {STATEMENTS.length} answered
               </p>
-              <p className="text-sm text-neutral-400 dark:text-neutral-500">
+              <p className="text-sm text-neutral-500 dark:text-neutral-400">
                 {Math.round((Object.keys(answers).length / STATEMENTS.length) * 100)}%
               </p>
             </div>
@@ -431,7 +431,7 @@ export function ReadinessClient({ faqData }: Props) {
                 See My Results
               </button>
               {!allAnswered && (
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
                   Please answer all 15 statements to see your results.
                 </p>
               )}
@@ -446,7 +446,7 @@ export function ReadinessClient({ faqData }: Props) {
           <section className="card p-6 sm:p-8 mb-6 print:shadow-none print:border-0" aria-label="Your results" aria-live="polite">
             {/* primary stage */}
             <div className={`${stageInfo.bgLight} ${stageInfo.bgDark} rounded-xl p-6 text-center mb-6`}>
-              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-1">
                 Your Primary Stage
               </p>
               <h2 className={`font-serif text-2xl sm:text-3xl font-bold ${stageInfo.textLight} ${stageInfo.textDark} mb-1`}>
@@ -460,7 +460,7 @@ export function ReadinessClient({ faqData }: Props) {
             {/* wheel */}
             <div className="mb-6">
               {renderWheel()}
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-2">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
                 The Stages of Change cycle — your current stage is highlighted
               </p>
             </div>
@@ -490,7 +490,7 @@ export function ReadinessClient({ faqData }: Props) {
                         <span className={`text-xs font-medium ${isActive ? info.textLight + " " + info.textDark : "text-neutral-500 dark:text-neutral-400"}`}>
                           {info.label}
                         </span>
-                        <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                        <span className="text-xs text-neutral-500 dark:text-neutral-400">
                           {scores[stage]} / {maxScore}
                         </span>
                       </div>
@@ -736,7 +736,7 @@ export function ReadinessClient({ faqData }: Props) {
           </ul>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No answers are stored, transmitted, or collected.
           Your responses are completely private.
         </p>

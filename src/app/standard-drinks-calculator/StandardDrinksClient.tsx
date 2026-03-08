@@ -126,7 +126,7 @@ export function StandardDrinksClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Reference */}
@@ -141,7 +141,7 @@ export function StandardDrinksClient({ faqData }: Props) {
             <div key={r.label} className="text-center">
               <span className="text-2xl block mb-1">{r.icon}</span>
               <p className="text-xs font-semibold text-neutral-700 dark:text-neutral-200">{r.label}</p>
-              <p className="text-[11px] text-neutral-400 dark:text-neutral-500">{r.detail}</p>
+              <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{r.detail}</p>
             </div>
           ))}
         </div>
@@ -208,7 +208,7 @@ export function StandardDrinksClient({ faqData }: Props) {
                   style={{ width: `${Math.min((customResult / 4) * 100, 100)}%` }}
                 />
               </div>
-              <div className="flex justify-between text-[10px] text-neutral-400 dark:text-neutral-500 mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">
                 <span>0</span>
                 <span>1 std</span>
                 <span>2 std</span>
@@ -220,7 +220,7 @@ export function StandardDrinksClient({ faqData }: Props) {
         )}
         {customResult === null && (
           <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-5 text-center">
-            <p className="text-sm text-neutral-400 dark:text-neutral-500">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
               Enter volume and ABV to see standard drink equivalents.
             </p>
           </div>
@@ -275,7 +275,7 @@ export function StandardDrinksClient({ faqData }: Props) {
                 <div className="flex justify-between items-baseline mb-1">
                   <div>
                     <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">{p.name}</span>
-                    <span className="text-xs text-neutral-400 dark:text-neutral-500 ml-2">{p.oz} oz, {p.abv}%</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 ml-2">{p.oz} oz, {p.abv}%</span>
                   </div>
                   <span className={`text-sm font-bold ${c.text}`}>
                     {p.drinks.toFixed(1)}
@@ -379,7 +379,7 @@ export function StandardDrinksClient({ faqData }: Props) {
           ].map((r) => (
             <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
               <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
             </div>
           ))}
         </div>
@@ -455,7 +455,7 @@ export function StandardDrinksClient({ faqData }: Props) {
           ].map((t) => (
             <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
               <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
             </Link>
           ))}
         </div>
@@ -465,10 +465,10 @@ export function StandardDrinksClient({ faqData }: Props) {
 
       {/* Attribution */}
       <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
           This is an original tool. Standard drink definition based on NIAAA guidelines (14g pure alcohol).
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">
           This tool is for educational purposes only. It is not medical advice or a treatment recommendation.
         </p>
       </footer>

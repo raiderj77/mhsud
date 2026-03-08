@@ -143,7 +143,7 @@ export function Footer() {
             </p>
 
             {/* Resources links */}
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-2">Resources</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">Resources</h4>
             <ul className="space-y-1.5">
               {INFO_LINKS.map((link) => (
                 <li key={link.href}>
@@ -157,7 +157,7 @@ export function Footer() {
 
           {/* Screening Tools column */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Screening Tools</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Screening Tools</h4>
             <div className="space-y-4">
               {SCREENING_TOOLS.map((group) => (
                 <div key={group.heading}>
@@ -178,7 +178,7 @@ export function Footer() {
 
           {/* Wellness & Stress column */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Stress &amp; Well-Being</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Stress &amp; Well-Being</h4>
             <ul className="space-y-1.5">
               {WELLNESS_TOOLS.map((link) => (
                 <li key={link.href}>
@@ -190,7 +190,7 @@ export function Footer() {
             </ul>
 
             {/* Targeted Screenings */}
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-2 mt-6">Targeted Screenings</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2 mt-6">Targeted Screenings</h4>
             <ul className="space-y-1.5">
               {TARGETED_LINKS.map((link) => (
                 <li key={link.href}>
@@ -204,7 +204,7 @@ export function Footer() {
 
           {/* Recovery Tools column */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Recovery Tools</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Recovery Tools</h4>
             <ul className="space-y-1.5">
               {RECOVERY_TOOLS.map((link) => (
                 <li key={link.href}>
@@ -249,21 +249,21 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-sand-200 dark:border-neutral-800 pt-6">
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed text-center max-w-2xl mx-auto">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto">
             All tools on this site are for educational and self-reflection purposes only. They are not a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-3">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
             This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <FooterCookieButton />
             <span className="text-neutral-300 dark:text-neutral-700">&middot;</span>
-            <Link href="/terms#do-not-sell" className="text-xs text-neutral-400 dark:text-neutral-500 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
+            <Link href="/terms#do-not-sell" className="text-xs text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
               Do Not Sell or Share My Personal Information
             </Link>
           </div>
           {/* Sister Sites */}
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-4">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-4">
             More Free Tools:{" "}
             <a href="https://fibertools.app" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FiberTools</a>
             {" · "}

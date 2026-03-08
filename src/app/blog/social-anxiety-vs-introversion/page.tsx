@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/social-anxiety-vs-introversion`;
@@ -72,7 +71,7 @@ export default function SocialAnxietyVsIntroversionPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">8 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">8 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Social Anxiety vs Introversion: Understanding the Difference
@@ -272,11 +271,11 @@ export default function SocialAnxietyVsIntroversionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/spin-social-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">SPIN Social Anxiety Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Free, private screening for social anxiety symptoms</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Free, private screening for social anxiety symptoms</p>
               </Link>
               <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Self-Check</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Clinically validated generalized anxiety screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Clinically validated generalized anxiety screening</p>
               </Link>
             </div>
           </section>
@@ -287,11 +286,11 @@ export default function SocialAnxietyVsIntroversionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/loneliness-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Loneliness and Mental Health</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How social isolation affects mental well-being</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How social isolation affects mental well-being</p>
               </Link>
               <Link href="/blog/gad-7-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How clinicians use and interpret anxiety scores</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians use and interpret anxiety scores</p>
               </Link>
             </div>
           </section>

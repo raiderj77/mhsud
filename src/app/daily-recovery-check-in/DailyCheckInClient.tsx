@@ -220,7 +220,7 @@ export function DailyCheckInClient({ faqData }: Props) {
   if (!loaded) {
     return (
       <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-        <div className="text-center py-20 text-neutral-400 dark:text-neutral-500">Loading...</div>
+        <div className="text-center py-20 text-neutral-500 dark:text-neutral-400">Loading...</div>
       </main>
     );
   }
@@ -236,10 +236,10 @@ export function DailyCheckInClient({ faqData }: Props) {
         A quick daily wellness check to track how you are doing in recovery. Takes under 2 minutes.
         Your data saves in your browser so you can see trends over time.
       </p>
-      <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mb-8">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
         Data is stored in your browser only. It is never sent anywhere.
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="daily-top" />
 
@@ -249,7 +249,7 @@ export function DailyCheckInClient({ faqData }: Props) {
           <h2 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-1 text-center">
             {todayEntry ? "Edit Today\u2019s Check-In" : "Today\u2019s Check-In"}
           </h2>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mb-6">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-6">
             {new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}
           </p>
 
@@ -274,7 +274,7 @@ export function DailyCheckInClient({ faqData }: Props) {
                     onChange={(e) => setters[dim.key](Number(e.target.value))}
                     className="w-full h-2 rounded-full appearance-none cursor-pointer accent-sage-600 bg-sand-200 dark:bg-night-700"
                   />
-                  <div className="flex justify-between text-[10px] text-neutral-400 dark:text-neutral-500 mt-0.5">
+                  <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-400 mt-0.5">
                     <span>{dim.lowLabel}</span>
                     <span>{dim.highLabel}</span>
                   </div>
@@ -332,13 +332,13 @@ export function DailyCheckInClient({ faqData }: Props) {
               <p className="text-3xl font-bold text-sage-600 dark:text-sage-400">{streak.current}</p>
               <p className="text-xs text-neutral-500 dark:text-neutral-400">Day Streak</p>
               {streak.longest > streak.current && (
-                <p className="text-[10px] text-neutral-400 dark:text-neutral-500 mt-1">Best: {streak.longest} days</p>
+                <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">Best: {streak.longest} days</p>
               )}
             </div>
             <div className="card p-4 text-center">
               <p className={`text-3xl font-bold ${scoreTextColor(Math.round(overallToday))}`}>{overallToday}</p>
               <p className="text-xs text-neutral-500 dark:text-neutral-400">Overall Today</p>
-              <p className="text-[10px] text-neutral-400 dark:text-neutral-500 mt-1">Average of 6 scores</p>
+              <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">Average of 6 scores</p>
             </div>
           </div>
 
@@ -406,7 +406,7 @@ export function DailyCheckInClient({ faqData }: Props) {
               </div>
 
               {trendEntries.length === 0 ? (
-                <p className="text-sm text-neutral-400 dark:text-neutral-500 text-center py-4">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center py-4">
                   No entries in the last {trendRange} days.
                 </p>
               ) : (
@@ -429,7 +429,7 @@ export function DailyCheckInClient({ faqData }: Props) {
                               style={{ height: `${Math.max(pct, 5)}%` }}
                               title={`${formatDateShort(entry.date)}: ${overall}/10`}
                             />
-                            <span className="text-[8px] text-neutral-400 dark:text-neutral-500 mt-1 truncate w-full text-center">
+                            <span className="text-[8px] text-neutral-500 dark:text-neutral-400 mt-1 truncate w-full text-center">
                               {trendRange <= 7 || trendEntries.length <= 10
                                 ? formatDateShort(entry.date).replace(/\s/, "\n")
                                 : ""}
@@ -486,7 +486,7 @@ export function DailyCheckInClient({ faqData }: Props) {
                       <div className="px-3 pb-3 space-y-1.5">
                         {DIMENSIONS.map((dim) => (
                           <div key={dim.key} className="flex items-center gap-2 text-xs">
-                            <span className="text-neutral-400 dark:text-neutral-500 w-16">{dim.label}</span>
+                            <span className="text-neutral-500 dark:text-neutral-400 w-16">{dim.label}</span>
                             <div className="flex-1 bg-sand-200 dark:bg-night-700 rounded-full h-1.5">
                               <div className={`h-1.5 rounded-full ${scoreColor(entry[dim.key] as number)}`} style={{ width: `${(entry[dim.key] as number) * 10}%` }} />
                             </div>
@@ -505,12 +505,12 @@ export function DailyCheckInClient({ faqData }: Props) {
 
           {/* data management */}
           <div className="text-center mb-8 print:hidden">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-2">
               {entries.length} check-in{entries.length !== 1 ? "s" : ""} saved in your browser
             </p>
             <button
               onClick={handleClearAll}
-              className="text-xs text-neutral-400 dark:text-neutral-500 hover:text-crisis-600 dark:hover:text-crisis-400 transition-colors"
+              className="text-xs text-neutral-500 dark:text-neutral-400 hover:text-crisis-600 dark:hover:text-crisis-400 transition-colors"
             >
               Clear all data
             </button>
@@ -653,7 +653,7 @@ export function DailyCheckInClient({ faqData }: Props) {
           </ul>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your check-in data is stored in your browser&rsquo;s localStorage. It is never sent to any server.
           Clearing your browser data will erase your history.
         </p>

@@ -304,7 +304,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Assessment completed · {STATEMENTS.length} questions
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Safety Alert */}
         {hasSafetyConcern && (
@@ -688,7 +688,7 @@ export function FamilyImpactClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -733,7 +733,7 @@ export function FamilyImpactClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         For family members and loved ones concerned about someone&apos;s substance use. This assessment helps you reflect on how their use is affecting <em>your</em> life.
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         {STATEMENTS.length} questions · ~5 minutes · Completely private
       </p>
 
@@ -741,7 +741,7 @@ export function FamilyImpactClient({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{answeredCount} of {STATEMENTS.length} answered</span>
           <span>{Math.round((answeredCount / STATEMENTS.length) * 100)}%</span>
         </div>
@@ -807,13 +807,13 @@ export function FamilyImpactClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {STATEMENTS.length} questions to continue
           </p>
         )}
@@ -852,7 +852,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

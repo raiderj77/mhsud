@@ -167,7 +167,7 @@ export function BRSClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Brief Resilience Scale &middot; {ITEMS.length} items &middot; Mean score 1.00&ndash;5.00
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>
@@ -234,7 +234,7 @@ export function BRSClient({ faqData }: Props) {
                   <p className="text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
                     {item.text}
                     {item.reversed && (
-                      <span className="ml-1 text-xs text-neutral-400 dark:text-neutral-500">(reverse-scored)</span>
+                      <span className="ml-1 text-xs text-neutral-500 dark:text-neutral-400">(reverse-scored)</span>
                     )}
                   </p>
                   <span className="shrink-0 text-sm font-bold text-neutral-600 dark:text-neutral-300">
@@ -247,7 +247,7 @@ export function BRSClient({ faqData }: Props) {
                     style={{ width: `${pct}%`, backgroundColor: itemColor(scored) }}
                   />
                 </div>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">
                   {chosenLabel}
                 </p>
               </div>
@@ -270,7 +270,7 @@ export function BRSClient({ faqData }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             Score is the mean (average) of all 6 items after reverse scoring
           </p>
         </div>
@@ -415,7 +415,7 @@ export function BRSClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -455,7 +455,7 @@ export function BRSClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A measure of your ability to bounce back or recover from stress (Smith et al., 2008).
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         6 questions &middot; ~2 minutes &middot; Completely private
       </p>
 
@@ -470,7 +470,7 @@ export function BRSClient({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{answeredCount} of {ITEMS.length} answered</span>
           <span>{Math.round((answeredCount / ITEMS.length) * 100)}%</span>
         </div>
@@ -533,13 +533,13 @@ export function BRSClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {ITEMS.length} questions to continue
           </p>
         )}
@@ -570,7 +570,7 @@ export function BRSClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

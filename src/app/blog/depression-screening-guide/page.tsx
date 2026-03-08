@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/depression-screening-guide`;
@@ -66,7 +65,7 @@ export default function DepressionScreeningGuidePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Clinical Guide</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">12 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">12 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help
@@ -429,7 +428,7 @@ export default function DepressionScreeningGuidePage() {
               <li>5. Cipriani, A., et al. (2018). Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis. <em>The Lancet</em>, 391(10128), 1357-1366.</li>
               <li>6. World Health Organization. (2023). Depression Fact Sheet. Retrieved from https://www.who.int/news-room/fact-sheets/detail/depression</li>
             </ol>
-            <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-4">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
               <em>Note: This article was reviewed for clinical accuracy and updated with current evidence-based recommendations.</em>
             </p>
           </section>

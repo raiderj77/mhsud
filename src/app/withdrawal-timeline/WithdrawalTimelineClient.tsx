@@ -208,7 +208,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Always-visible medical warning */}
@@ -451,7 +451,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
       </section>
 
       {/* Disclaimer + Crisis Resources */}
-      <footer className="mt-12 space-y-4 text-xs text-neutral-400 dark:text-neutral-500">
+      <footer className="mt-12 space-y-4 text-xs text-neutral-500 dark:text-neutral-400">
         <div className="bg-sand-50 dark:bg-night-800 rounded-2xl p-5 space-y-2">
           <p className="font-semibold text-neutral-500 dark:text-neutral-400">About This Tool</p>
           <p>

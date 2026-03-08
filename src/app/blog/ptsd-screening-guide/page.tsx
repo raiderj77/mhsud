@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/ptsd-screening-guide`;
@@ -61,7 +60,7 @@ export default function PTSDScreeningGuidePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             PTSD Screening: When and Why to Get Tested
@@ -302,11 +301,11 @@ export default function PTSDScreeningGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">20-item validated PTSD symptom checklist</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">20-item validated PTSD symptom checklist</p>
               </Link>
               <Link href="/pc-ptsd-5-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PC-PTSD-5 Quick Screen</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">5-item primary care PTSD screening tool</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">5-item primary care PTSD screening tool</p>
               </Link>
             </div>
           </section>
@@ -317,11 +316,11 @@ export default function PTSDScreeningGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/ace-score-meaning" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ACE Score Meaning & Interpretation</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding adverse childhood experiences and their impact</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding adverse childhood experiences and their impact</p>
               </Link>
               <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Scoring & Interpretation Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding the drug abuse screening test</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the drug abuse screening test</p>
               </Link>
             </div>
           </section>

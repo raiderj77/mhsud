@@ -181,7 +181,7 @@ export function GroundingClient({ faqData }: Props) {
                       ? `${c.badge} text-white`
                       : current
                       ? `${c.badge} text-white ring-2 ring-offset-2 dark:ring-offset-night-800 ${c.ring}`
-                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500"
+                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
                   }`}
                 >
                   {done ? (
@@ -207,7 +207,7 @@ export function GroundingClient({ faqData }: Props) {
               className={`text-[10px] sm:text-xs font-medium ${
                 i === stepIndex && appPhase === "active"
                   ? COLOR_MAP[s.color].text
-                  : "text-neutral-400 dark:text-neutral-500"
+                  : "text-neutral-500 dark:text-neutral-400"
               }`}
             >
               {s.sense}
@@ -313,7 +313,7 @@ export function GroundingClient({ faqData }: Props) {
               <p className="text-neutral-600 dark:text-neutral-400 mb-1">
                 {step.prompt}
               </p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic mb-4">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic mb-4">
                 {step.hint}
               </p>
 
@@ -374,7 +374,7 @@ export function GroundingClient({ faqData }: Props) {
             <p className="text-5xl font-bold text-sage-600 dark:text-sage-400 font-serif">
               {transitionCountdown}
             </p>
-            <p className="text-sm text-neutral-400 dark:text-neutral-500">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
               Next: <strong>{STEPS[stepIndex + 1]?.count}</strong> things you can <strong>{STEPS[stepIndex + 1]?.sense.toLowerCase()}</strong>
             </p>
             <button
@@ -568,7 +568,7 @@ export function GroundingClient({ faqData }: Props) {
               className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
             >
               <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -598,7 +598,7 @@ export function GroundingClient({ faqData }: Props) {
 
       {/* ── Privacy ── */}
       <div className="text-center mb-6">
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">
           Your privacy matters. This tool runs entirely in your browser. Nothing you type is stored, collected, or transmitted.
         </p>
       </div>
@@ -607,7 +607,7 @@ export function GroundingClient({ faqData }: Props) {
 
       {/* ── Authoritative Sources ── */}
       <section className="mt-8 mb-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
           Authoritative Sources
         </h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">

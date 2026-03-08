@@ -135,7 +135,7 @@ export default function AboutPage() {
               ].map((tool) => (
                 <Link key={tool.href} href={tool.href} className="card p-4 block hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="font-semibold text-sage-600 dark:text-sage-400 mb-1">{tool.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.detail}</p>
                 </Link>
               ))}
             </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
             <p>
               For privacy concerns: <strong>privacy@mindchecktools.com</strong>
             </p>
-            <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-4">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
               Please note: we cannot provide mental health advice, clinical recommendations, or crisis support via email. If you need immediate help, please use the crisis resources listed on our tools or call your local emergency number.
             </p>
           </section>

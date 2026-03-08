@@ -256,7 +256,7 @@ export function HolmesRaheClient({ faqData }: Props) {
               </p>
             </div>
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             Risk percentages are from the original 1967 research and describe
             population-level statistical associations, not individual
             predictions.
@@ -473,7 +473,7 @@ export function HolmesRaheClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored
           or transmitted.
         </p>
@@ -517,7 +517,7 @@ export function HolmesRaheClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         Social Readjustment Rating Scale &middot; Holmes &amp; Rahe (1967)
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         43 items &middot; ~3 minutes &middot; Completely private
       </p>
 
@@ -538,7 +538,7 @@ export function HolmesRaheClient({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{checkedCount} of 43 checked</span>
           <span>Running total: {totalLcu} LCU</span>
         </div>
@@ -623,7 +623,7 @@ export function HolmesRaheClient({ faqData }: Props) {
             <p className="text-sm font-bold text-neutral-800 dark:text-neutral-100">
               Total: {totalLcu} LCU
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               {checkedCount} event{checkedCount !== 1 ? "s" : ""} checked
             </p>
           </div>
@@ -667,7 +667,7 @@ export function HolmesRaheClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or
         transmitted.
       </p>

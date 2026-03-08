@@ -157,7 +157,7 @@ export function ASRSClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -185,7 +185,7 @@ export function ASRSClient({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 6 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 Over the past <strong>6 months</strong>
               </span>
             </div>
@@ -312,7 +312,7 @@ export function ASRSClient({ faqData }: Props) {
                       );
                     })}
                   </div>
-                  <div className="flex justify-center gap-4 mt-3 text-[11px] text-neutral-400 dark:text-neutral-500">
+                  <div className="flex justify-center gap-4 mt-3 text-[11px] text-neutral-500 dark:text-neutral-400">
                     <span className="flex items-center gap-1.5">
                       <span className="w-3 h-3 rounded bg-warm-500 dark:bg-warm-600 inline-block" /> Positive
                     </span>
@@ -372,7 +372,7 @@ export function ASRSClient({ faqData }: Props) {
                           )}
                         </div>
                       </div>
-                      <p className="text-[10px] text-neutral-400 dark:text-neutral-500 mt-1">
+                      <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">
                         Positive threshold: {getPositiveThresholdLabel(i)}
                       </p>
                     </div>
@@ -513,7 +513,7 @@ export function ASRSClient({ faqData }: Props) {
                     </span>
                   </div>
                 </div>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   This scoring method is based on the WHO&apos;s validated research. It should not be treated as a diagnostic threshold.
                 </p>
               </div>
@@ -535,7 +535,7 @@ export function ASRSClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -638,7 +638,7 @@ export function ASRSClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -648,10 +648,10 @@ export function ASRSClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The ASRS v1.1 was developed by the World Health Organization (WHO) in collaboration with Drs. Lenard Adler, Ronald Kessler, and Thomas Spencer. It is free to use for clinical and research purposes.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

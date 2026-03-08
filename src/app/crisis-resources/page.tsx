@@ -128,7 +128,7 @@ export default function CrisisResourcesPage() {
                   <span className={`text-sm font-bold ${r.accent} whitespace-nowrap`}>{r.contact}</span>
                 </div>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{r.detail}</p>
-                <span className="inline-block mt-2 text-xs text-neutral-400 dark:text-neutral-500">{r.hours}</span>
+                <span className="inline-block mt-2 text-xs text-neutral-500 dark:text-neutral-400">{r.hours}</span>
               </div>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function CrisisResourcesPage() {
           <div className="space-y-2">
             {INTL_RESOURCES.map((r) => (
               <div key={r.country + r.name} className="card p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <span className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 w-28 flex-shrink-0 uppercase tracking-wide">{r.country}</span>
+                <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 w-28 flex-shrink-0 uppercase tracking-wide">{r.country}</span>
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.name}</span>
                   <span className="text-sm text-neutral-500 dark:text-neutral-400"> — {r.detail}</span>
@@ -184,7 +184,7 @@ export default function CrisisResourcesPage() {
               </div>
             ))}
           </div>
-          <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-4 leading-relaxed">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4 leading-relaxed">
             This is not a comprehensive list. For crisis resources in your specific country and language, visit <strong>findahelpline.com</strong> — a search engine for crisis lines worldwide.
           </p>
         </section>
@@ -209,10 +209,10 @@ export default function CrisisResourcesPage() {
 
         {/* Footer note */}
         <div className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
             This page is for informational purposes only. MindCheck Tools is not a crisis service and cannot provide emergency support. If you are in danger, please contact emergency services or a crisis hotline directly.
           </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mt-2">
             Resource information is believed to be accurate as of the date of publication. If you notice outdated information, please contact us at hello@mindchecktools.com.
           </p>
         </div>

@@ -246,7 +246,7 @@ export function AISClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Athens Insomnia Scale &middot; {ITEMS.length} items &middot; Past month &middot; Score 0&ndash;24
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>
@@ -353,7 +353,7 @@ export function AISClient({ faqData }: Props) {
                       style={{ width: `${pct}%`, backgroundColor: itemColor(val) }}
                     />
                   </div>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
                     {item.options[val]}
                   </p>
                 </div>
@@ -387,7 +387,7 @@ export function AISClient({ faqData }: Props) {
                       style={{ width: `${pct}%`, backgroundColor: itemColor(val) }}
                     />
                   </div>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
                     {item.options[val]}
                   </p>
                 </div>
@@ -411,7 +411,7 @@ export function AISClient({ faqData }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2 text-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
             6+ = Insomnia threshold (93% sensitivity, 85% specificity)
           </p>
         </div>
@@ -553,7 +553,7 @@ export function AISClient({ faqData }: Props) {
           </div>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500 mb-10">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
           Your responses were scored entirely in your browser. Nothing was stored or transmitted.
         </p>
 
@@ -593,7 +593,7 @@ export function AISClient({ faqData }: Props) {
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A validated measure of insomnia severity based on ICD-10 criteria (Soldatos et al., 2000).
       </p>
-      <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
+      <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         8 questions &middot; ~2 minutes &middot; Past month &middot; Completely private
       </p>
 
@@ -608,7 +608,7 @@ export function AISClient({ faqData }: Props) {
 
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 mb-1">
+        <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-1">
           <span>{answeredCount} of {ITEMS.length} answered</span>
           <span>{Math.round((answeredCount / ITEMS.length) * 100)}%</span>
         </div>
@@ -674,13 +674,13 @@ export function AISClient({ faqData }: Props) {
           className={`px-8 py-3 rounded-xl text-base font-semibold transition-colors ${
             allAnswered
               ? "bg-sage-600 text-white hover:bg-sage-700 shadow-sm"
-              : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+              : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
           }`}
         >
           See My Results
         </button>
         {!allAnswered && (
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
             Please answer all {ITEMS.length} questions to continue
           </p>
         )}
@@ -711,7 +711,7 @@ export function AISClient({ faqData }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
         Your responses are scored entirely in your browser. Nothing is stored or transmitted.
       </p>
     </div>

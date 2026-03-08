@@ -310,10 +310,10 @@ export function TriggerWorksheetClient({ faqData }: Props) {
         Identify your personal triggers across six categories. Check off the ones that apply to you,
         add your own, and get a personalized trigger profile with coping strategies.
       </p>
-      <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mb-8">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
         Your answers stay in your browser and are never stored or sent anywhere.
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="triggers-top" />
 
@@ -330,7 +330,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                     <h2 className={`font-serif font-bold text-lg ${cat.textLight} ${cat.textDark}`}>
                       {cat.label}
                     </h2>
-                    <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400">
                       Check all that apply to you
                     </p>
                   </div>
@@ -414,7 +414,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                   </div>
                 )}
                 {customTriggers[cat.key].length >= 5 && (
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">Maximum 5 custom triggers per category.</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">Maximum 5 custom triggers per category.</p>
                 )}
               </div>
             ))}
@@ -439,7 +439,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                     className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                       count > 0
                         ? `${cat.bgLight} ${cat.bgDark} ${cat.textLight} ${cat.textDark}`
-                        : "bg-sand-100 dark:bg-night-800 text-neutral-400 dark:text-neutral-500"
+                        : "bg-sand-100 dark:bg-night-800 text-neutral-500 dark:text-neutral-400"
                     }`}
                   >
                     {cat.icon} {count}
@@ -456,7 +456,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
               Generate My Trigger Profile
             </button>
             {totalSelected === 0 && (
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
                 Select at least one trigger to generate your profile.
               </p>
             )}
@@ -718,7 +718,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           </ul>
         </div>
 
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No data is stored, transmitted, or collected.
           Your responses are completely private.
         </p>

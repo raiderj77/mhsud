@@ -125,7 +125,7 @@ export default function ContactPage() {
             </ul>
           </section>
 
-          <p className="text-sm text-neutral-400 dark:text-neutral-500 pt-6 border-t border-neutral-200 dark:border-neutral-800">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 pt-6 border-t border-neutral-200 dark:border-neutral-800">
             Thank you for using MindCheck Tools. We&apos;re committed to making mental health self-checks accessible, private, and free for everyone.
           </p>
         </div>

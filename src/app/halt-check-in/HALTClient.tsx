@@ -264,7 +264,7 @@ export function HALTClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       <AdSlot position="halt-top" className="mb-6" />
@@ -284,9 +284,9 @@ export function HALTClient({ faqData }: Props) {
                 </label>
                 <span className="text-sm font-bold text-sage-600 dark:text-sage-400">{scores[dim.key]}/5</span>
               </div>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-2 ml-8">{dim.question}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-2 ml-8">{dim.question}</p>
               <div className="flex items-center gap-2 ml-8">
-                <span className="text-[11px] text-neutral-400 dark:text-neutral-500 w-16 text-right shrink-0">{dim.lowLabel}</span>
+                <span className="text-[11px] text-neutral-500 dark:text-neutral-400 w-16 text-right shrink-0">{dim.lowLabel}</span>
                 <div className="flex gap-1.5 flex-1 justify-center">
                   {[1, 2, 3, 4, 5].map((val) => (
                     <button
@@ -303,7 +303,7 @@ export function HALTClient({ faqData }: Props) {
                     </button>
                   ))}
                 </div>
-                <span className="text-[11px] text-neutral-400 dark:text-neutral-500 w-16 shrink-0">{dim.highLabel}</span>
+                <span className="text-[11px] text-neutral-500 dark:text-neutral-400 w-16 shrink-0">{dim.highLabel}</span>
               </div>
             </div>
           ))}
@@ -515,7 +515,7 @@ export function HALTClient({ faqData }: Props) {
       </section>
 
       {/* Disclaimer + Crisis Resources */}
-      <footer className="mt-12 space-y-4 text-xs text-neutral-400 dark:text-neutral-500">
+      <footer className="mt-12 space-y-4 text-xs text-neutral-500 dark:text-neutral-400">
         <div className="bg-sand-50 dark:bg-night-800 rounded-2xl p-5 space-y-2">
           <p className="font-semibold text-neutral-500 dark:text-neutral-400">About This Tool</p>
           <p>

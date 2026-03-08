@@ -153,7 +153,7 @@ export function CAGEAIDClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -174,7 +174,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 4 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 Yes / No
               </span>
             </div>
@@ -292,7 +292,7 @@ export function CAGEAIDClient({ faqData }: Props) {
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 4) * 100}%` }} />
                   </div>
-                  <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                  <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
                     <span>0 — Negative</span>
                     <span>4 — Positive</span>
                   </div>
@@ -445,7 +445,7 @@ export function CAGEAIDClient({ faqData }: Props) {
                     </div>
                   );
                 })}
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   The cutoff score of 2 is based on published research. It should not be treated as a diagnostic threshold — it is a flag for further evaluation.
                 </p>
               </div>
@@ -467,7 +467,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -570,7 +570,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -580,10 +580,10 @@ export function CAGEAIDClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The CAGE-AID is an adaptation of the CAGE questionnaire (developed by Dr. John Ewing) to include drug use screening. It is in the public domain. No permission required to reproduce, translate, display, or distribute.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

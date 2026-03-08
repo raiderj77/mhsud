@@ -214,7 +214,7 @@ export function BurnoutClient({ faqData }: Props) {
         <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
           Assess emotional exhaustion, depersonalization, and reduced personal accomplishment with this professionally-designed screening tool.
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last updated: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 2026</p>
       </header>
 
       <AdSlot position="burnout-top" className="mb-8" />

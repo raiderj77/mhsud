@@ -253,7 +253,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                       ? "bg-sage-600 text-white"
                       : active
                       ? "bg-sage-600 text-white ring-2 ring-offset-2 ring-sage-400 dark:ring-offset-night-800"
-                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500 hover:bg-sand-300 dark:hover:bg-neutral-600"
+                      : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400 hover:bg-sand-300 dark:hover:bg-neutral-600"
                   }`}
                   aria-label={`Step ${sNum}: ${STEP_TITLES[i]}`}
                 >
@@ -320,7 +320,7 @@ export function SafetyPlanClient({ faqData }: Props) {
         of a safety plan so you have it ready when you need it most. <strong>You matter, and you
         deserve support.</strong>
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <CrisisBar />
 
@@ -341,7 +341,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
                 What thoughts, feelings, moods, images, or situations tell you that a crisis may be developing?
               </p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 Recognizing these early can help you use your plan before things escalate.
               </p>
             </div>
@@ -396,7 +396,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
                 Activities that help take your mind off problems — things you can do alone, without contacting another person.
               </p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 These don&apos;t have to solve the problem. They just need to get you through the moment.
               </p>
             </div>
@@ -496,7 +496,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
                 People you trust enough to tell that you&apos;re struggling. These are people who will listen and help — a friend, family member, sponsor, faith leader, or anyone you feel safe with.
               </p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 Reaching out is a sign of strength, not weakness.
               </p>
             </div>
@@ -602,7 +602,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                 between yourself and anything that could be used for self-harm. Even small steps make
                 a real difference.
               </p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 italic">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 You do not have to do all of these. Even one step can help keep you safe.
               </p>
             </div>
@@ -803,7 +803,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               </button>
             </div>
 
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center print:hidden">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center print:hidden">
               Your plan is automatically saved in your browser. It will be here when you come back.
             </p>
           </div>
@@ -926,7 +926,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                 className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
               >
                 <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
               </Link>
             ))}
           </div>
@@ -981,7 +981,7 @@ export function SafetyPlanClient({ faqData }: Props) {
         </section>
 
         <div className="text-center mb-6">
-          <p className="text-xs text-neutral-400 dark:text-neutral-500">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400">
             Your privacy matters. Your safety plan is stored only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared with anyone.
           </p>
         </div>
@@ -990,7 +990,7 @@ export function SafetyPlanClient({ faqData }: Props) {
 
         {/* ── Authoritative Sources ── */}
         <section className="mt-8 mb-4">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
             Authoritative Sources
           </h2>
           <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">

@@ -127,7 +127,7 @@ function ChipSuggestions({ suggestions, current, onAdd }: {
   if (available.length === 0) return null;
   return (
     <div className="ml-9 mt-2">
-      <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-1.5">Common examples (tap to add):</p>
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-1.5">Common examples (tap to add):</p>
       <div className="flex flex-wrap gap-1.5">
         {available.slice(0, 8).map((s) => (
           <button
@@ -211,7 +211,7 @@ export function RelapsePlanClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       <AdSlot position="plan-top" className="mb-6" />
@@ -285,7 +285,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                 </div>
               ))}
               {plan.triggers.filter((t) => t.trim()).length === 0 && (
-                <p className="text-sm text-neutral-400 dark:text-neutral-500 italic">Fill in your triggers above first, then come back to pair each one with a coping strategy.</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 italic">Fill in your triggers above first, then come back to pair each one with a coping strategy.</p>
               )}
             </div>
           </div>
@@ -383,13 +383,13 @@ export function RelapsePlanClient({ faqData }: Props) {
             className={`w-full py-3.5 rounded-xl font-semibold text-base transition-colors ${
               hasContent
                 ? "bg-sage-600 hover:bg-sage-700 dark:bg-sage-500 dark:hover:bg-sage-600 text-white"
-                : "bg-sand-200 dark:bg-night-700 text-neutral-400 dark:text-neutral-500 cursor-not-allowed"
+                : "bg-sand-200 dark:bg-night-700 text-neutral-500 dark:text-neutral-400 cursor-not-allowed"
             }`}
           >
             Generate My Plan
           </button>
           {!hasContent && (
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center">Fill in at least one trigger or safe activity to generate your plan.</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center">Fill in at least one trigger or safe activity to generate your plan.</p>
           )}
         </div>
       )}
@@ -400,7 +400,7 @@ export function RelapsePlanClient({ faqData }: Props) {
           <div className="card p-6 sm:p-8 print:shadow-none print:border-none" id="plan-preview">
             <div className="text-center mb-6 pb-4 border-b border-sand-200 dark:border-neutral-700">
               <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">My Relapse Prevention Plan</h2>
-              <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-1">Created {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Created {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
             </div>
 
             {/* Triggers + Coping */}
@@ -605,7 +605,7 @@ export function RelapsePlanClient({ faqData }: Props) {
       </section>
 
       {/* Disclaimer + Crisis Resources */}
-      <footer className="mt-12 space-y-4 text-xs text-neutral-400 dark:text-neutral-500 print:hidden">
+      <footer className="mt-12 space-y-4 text-xs text-neutral-500 dark:text-neutral-400 print:hidden">
         <div className="bg-sand-50 dark:bg-night-800 rounded-2xl p-5 space-y-2">
           <p className="font-semibold text-neutral-500 dark:text-neutral-400">About This Tool</p>
           <p>

@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/sleep-and-mood`;
@@ -51,7 +50,7 @@ export default function SleepMoodPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">7 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">7 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)
@@ -249,11 +248,11 @@ export default function SleepMoodPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/work-stress-vs-burnout" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Work Stress vs. Clinical Burnout</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">The difference between everyday stress and burnout, and why online quizzes have limits</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">The difference between everyday stress and burnout, and why online quizzes have limits</p>
               </Link>
               <Link href="/blog/gad-7-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Scale Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How clinicians use and interpret anxiety scores</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians use and interpret anxiety scores</p>
               </Link>
             </div>
           </section>

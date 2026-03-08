@@ -170,7 +170,7 @@ export function SobrietyClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Input Form */}
@@ -197,7 +197,7 @@ export function SobrietyClient({ faqData }: Props) {
                   Estimated daily spending on substance (optional)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 text-sm">$</span>
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 dark:text-neutral-400 text-sm">$</span>
                   <input
                     id="daily-spend"
                     type="number"
@@ -209,7 +209,7 @@ export function SobrietyClient({ faqData }: Props) {
                     className="w-full p-3 pl-7 rounded-xl border-2 border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-800 dark:text-neutral-100 focus:border-sage-400 dark:focus:border-sage-600 focus:outline-none transition-colors"
                   />
                 </div>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-1">Used to estimate money saved. Not required.</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Used to estimate money saved. Not required.</p>
               </div>
             </div>
             <button
@@ -278,7 +278,7 @@ export function SobrietyClient({ faqData }: Props) {
               <p className="text-sm text-neutral-500 dark:text-neutral-400">
                 Based on ${spend.toFixed(2)}/day &times; {totalDays.toLocaleString()} days
               </p>
-              <div className="mt-3 text-xs text-neutral-400 dark:text-neutral-500">
+              <div className="mt-3 text-xs text-neutral-500 dark:text-neutral-400">
                 <Link href="/money-saved-recovery-calculator" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">
                   Get a detailed savings breakdown with projections &rarr;
                 </Link>
@@ -327,7 +327,7 @@ export function SobrietyClient({ faqData }: Props) {
                   >
                     <span className="text-2xl block mb-1">{m.icon}</span>
                     <p className={`text-xs font-bold ${
-                      earned ? "text-amber-700 dark:text-amber-400" : "text-neutral-400 dark:text-neutral-500"
+                      earned ? "text-amber-700 dark:text-amber-400" : "text-neutral-500 dark:text-neutral-400"
                     }`}>
                       {m.label}
                     </p>
@@ -339,7 +339,7 @@ export function SobrietyClient({ faqData }: Props) {
               })}
             </div>
             {earnedMilestones.length > 0 && (
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-3">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
                 {earnedMilestones.length} of {MILESTONES.length} milestones earned
               </p>
             )}
@@ -436,7 +436,7 @@ export function SobrietyClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -512,7 +512,7 @@ export function SobrietyClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -522,10 +522,10 @@ export function SobrietyClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               This is an original tool created by MindCheck Tools. It is not a validated clinical instrument.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational and motivational purposes only. It is not medical advice or a treatment recommendation.
             </p>
           </footer>

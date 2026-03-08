@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/anxiety-coping-strategies`;
@@ -105,7 +104,7 @@ export default function AnxietyCopingStrategiesPage() {
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
               Clinical Guide
             </span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">12 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">12 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Evidence-Based Anxiety Coping Strategies: Clinical Guide to Managing Anxiety Symptoms

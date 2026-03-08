@@ -211,7 +211,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
         <span className="font-medium text-neutral-700 dark:text-neutral-300">Alan Marlatt&rsquo;s urge surfing technique</span>.
         Most cravings pass within 15&ndash;30 minutes.
       </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="urge-surfing-top" />
 
@@ -303,7 +303,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
             <p className="text-5xl sm:text-6xl font-mono font-bold text-neutral-800 dark:text-neutral-100 tracking-wider">
               {formatTime(secondsLeft)}
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-1">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
               {formatTime(elapsed)} elapsed of {selectedMinutes}:00
             </p>
           </div>
@@ -330,7 +330,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
                 {breathPhase.label}
               </span>
             </div>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Box Breathing (4-4-4-4)</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Box Breathing (4-4-4-4)</p>
           </div>
 
           {/* mindfulness prompt */}
@@ -568,7 +568,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
         </div>
 
         {/* privacy */}
-        <p className="text-xs text-center text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No data is stored, transmitted, or collected.
           Your session is completely private.
         </p>

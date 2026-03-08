@@ -88,7 +88,7 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
             ))}
           </ol>
 
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-5 leading-relaxed border-t border-sand-200 dark:border-neutral-700 pt-4">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-5 leading-relaxed border-t border-sand-200 dark:border-neutral-700 pt-4">
             These questions are for personal reflection only. If your results concern you, please share them with a qualified healthcare provider.
           </p>
         </div>

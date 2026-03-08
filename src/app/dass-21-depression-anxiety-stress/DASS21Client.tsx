@@ -262,7 +262,7 @@ export function DASS21Client({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 21 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 Past week
               </span>
             </div>
@@ -322,7 +322,7 @@ export function DASS21Client({ faqData }: Props) {
                                 : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"
                             }`}
                           >
-                            <span className="block text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">{opt.value}</span>
+                            <span className="block text-xs text-neutral-500 dark:text-neutral-400 mb-0.5">{opt.value}</span>
                             {opt.label}
                           </button>
                         ))}
@@ -378,9 +378,9 @@ export function DASS21Client({ faqData }: Props) {
             {/* Three Subscale Cards */}
             <div className="card overflow-hidden mb-5">
               <div className="p-5 sm:p-6 border-b border-sand-200 dark:border-neutral-700">
-                <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-1">DASS-21 Results</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">DASS-21 Results</p>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100">Three-Subscale Breakdown</h3>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-1">Scores are raw totals multiplied by 2 (DASS-21 to DASS-42 equivalent). Max 42 per subscale.</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Scores are raw totals multiplied by 2 (DASS-21 to DASS-42 equivalent). Max 42 per subscale.</p>
               </div>
               <div className="p-5 sm:p-6 space-y-4">
                 <SubScaleCard sub="D" score={dScore} sev={dSev} />
@@ -556,7 +556,7 @@ export function DASS21Client({ faqData }: Props) {
                   );
                 })}
 
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   Scoring and severity cutoffs based on the original DASS manual by Lovibond &amp; Lovibond (1995). Note that each subscale uses different thresholds because depression, anxiety, and stress have different distributions in the general population.
                 </p>
               </div>
@@ -578,7 +578,7 @@ export function DASS21Client({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -681,7 +681,7 @@ export function DASS21Client({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -691,10 +691,10 @@ export function DASS21Client({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The DASS-21 (Depression Anxiety Stress Scales) was developed by S.H. Lovibond and P.F. Lovibond (1995). It is in the public domain and free to reproduce.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

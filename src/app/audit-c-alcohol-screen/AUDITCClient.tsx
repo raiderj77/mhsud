@@ -162,7 +162,7 @@ export function AUDITCClient({ faqData }: Props) {
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last updated: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 2026</p>
       </header>
 
       {!accepted && (
@@ -178,7 +178,7 @@ export function AUDITCClient({ faqData }: Props) {
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answers.filter((a) => a !== null).length} of 3 answered</span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">Quick screen — be honest with yourself</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Quick screen — be honest with yourself</span>
             </div>
             <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -228,7 +228,7 @@ export function AUDITCClient({ faqData }: Props) {
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 12) * 100}%` }} />
                 </div>
-                <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
                   <span>0 — Lower Risk</span><span>12 — Higher Risk</span>
                 </div>
               </div>
@@ -405,7 +405,7 @@ export function AUDITCClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -425,17 +425,17 @@ export function AUDITCClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The AUDIT-C is derived from the AUDIT developed by the World Health Organization. It is in the public domain.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">This tool is for educational purposes only. Not medical advice, a diagnosis, or a treatment recommendation.</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">This tool is for educational purposes only. Not medical advice, a diagnosis, or a treatment recommendation.</p>
             <ToolReviewerBio />
           </footer>
         </div>

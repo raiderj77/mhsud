@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/stages-of-change-recovery`;
@@ -60,7 +59,7 @@ export default function StagesOfChangeRecoveryPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             The Stages of Change in Addiction Recovery
@@ -261,11 +260,11 @@ export default function StagesOfChangeRecoveryPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/readiness-to-change" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Readiness to Change Self-Check</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Identify your current stage of change readiness</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Identify your current stage of change readiness</p>
               </Link>
               <Link href="/sobriety-calculator" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Sobriety Calculator</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Track your recovery milestones and progress</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Track your recovery milestones and progress</p>
               </Link>
             </div>
           </section>
@@ -276,11 +275,11 @@ export default function StagesOfChangeRecoveryPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/relapse-prevention-plan-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Relapse Prevention Plan Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Build a practical plan for maintaining recovery</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Build a practical plan for maintaining recovery</p>
               </Link>
               <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Scoring &amp; Interpretation Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding the drug abuse screening test</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the drug abuse screening test</p>
               </Link>
             </div>
           </section>

@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/seasonal-affective-disorder`;
@@ -104,7 +103,7 @@ export default function SeasonalAffectiveDisorderPage() {
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
               Education
             </span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Seasonal Affective Disorder (SAD): Understanding Winter Depression and Light Therapy
@@ -451,7 +450,7 @@ export default function SeasonalAffectiveDisorderPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">
                   PHQ-9 Depression Screening Guide
                 </p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">
                   Understanding depression screening tools
                 </p>
               </Link>
@@ -459,7 +458,7 @@ export default function SeasonalAffectiveDisorderPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">
                   Sleep &amp; Mood Connection
                 </p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">
                   How sleep deprivation affects mental health
                 </p>
               </Link>

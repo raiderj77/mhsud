@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
@@ -48,7 +47,7 @@ export default function PHQ9GuidePage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Tool Guide</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">8 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">8 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             PHQ-9 Explained: How Clinicians Use This Depression Questionnaire (and What It Can&apos;t Tell You)
@@ -208,11 +207,11 @@ export default function PHQ9GuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/gad-7-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Scale Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How clinicians use and interpret anxiety scores</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians use and interpret anxiety scores</p>
               </Link>
               <Link href="/blog/audit-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Understanding the WHO&apos;s alcohol screening tool</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the WHO&apos;s alcohol screening tool</p>
               </Link>
             </div>
           </section>

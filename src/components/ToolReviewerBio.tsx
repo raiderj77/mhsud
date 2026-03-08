@@ -13,7 +13,7 @@ export function ToolReviewerBio() {
         </strong>{" "}
         with {SITE_AUTHOR.experience} in substance abuse counseling.
       </p>
-      <p className="text-xs text-neutral-400 dark:text-neutral-500">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400">
         Last reviewed: March 2026
       </p>
     </div>

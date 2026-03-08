@@ -406,7 +406,7 @@ export function WorryTimeClient({ faqData }: Props) {
               </h3>
               {todayWorries.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-sm text-neutral-400 dark:text-neutral-500">No worries parked today. That can be a good thing.</p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400">No worries parked today. That can be a good thing.</p>
                 </div>
               ) : (
                 <div className="space-y-2">
@@ -420,10 +420,10 @@ export function WorryTimeClient({ faqData }: Props) {
                       }`}
                     >
                       <div className="flex-1 min-w-0">
-                        <p className={`text-sm ${w.processed ? "line-through text-neutral-400 dark:text-neutral-500" : "text-neutral-700 dark:text-neutral-200"}`}>
+                        <p className={`text-sm ${w.processed ? "line-through text-neutral-500 dark:text-neutral-400" : "text-neutral-700 dark:text-neutral-200"}`}>
                           {w.text}
                         </p>
-                        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">
+                        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
                           {w.timestamp}
                           {w.processed && w.stillRelevant === false && " — resolved on its own"}
                           {w.processed && w.stillRelevant === true && " — addressed"}
@@ -782,7 +782,7 @@ export function WorryTimeClient({ faqData }: Props) {
           ].map((tool) => (
             <Link key={tool.href} href={tool.href} className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors">
               <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500">{tool.desc}</p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -809,7 +809,7 @@ export function WorryTimeClient({ faqData }: Props) {
       </section>
 
       <div className="text-center mb-6">
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">
           Your privacy matters. Your worry log is saved only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared.
         </p>
       </div>
@@ -817,7 +817,7 @@ export function WorryTimeClient({ faqData }: Props) {
       <ToolReviewerBio />
 
       <section className="mt-8 mb-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Authoritative Sources</h2>
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Authoritative Sources</h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
             <a href="https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">

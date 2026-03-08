@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/eating-disorder-signs`;
@@ -48,7 +47,7 @@ export default function EatingDisorderSignsPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Understanding Eating Disorders: Types, Signs &amp; Screening
@@ -254,11 +253,11 @@ export default function EatingDisorderSignsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/scoff-eating-disorder-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">SCOFF Eating Disorder Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Quick 5-question eating disorder self-check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Quick 5-question eating disorder self-check</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Screen for depressive symptoms in 2 minutes</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depressive symptoms in 2 minutes</p>
               </Link>
             </div>
           </section>
@@ -269,11 +268,11 @@ export default function EatingDisorderSignsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/what-ocd-looks-like" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">What OCD Actually Looks Like</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Common misconceptions and real-world signs</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Common misconceptions and real-world signs</p>
               </Link>
               <Link href="/blog/phq-9-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">How clinicians use and interpret depression scores</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians use and interpret depression scores</p>
               </Link>
             </div>
           </section>

@@ -203,7 +203,7 @@ export function PCL5Client({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -231,7 +231,7 @@ export function PCL5Client({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answers.filter((a) => a !== null).length} of 20 answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 In the past <strong>month</strong>
               </span>
             </div>
@@ -251,7 +251,7 @@ export function PCL5Client({ faqData }: Props) {
                 <div className={`w-2 h-8 rounded-full bg-gradient-to-b ${CLUSTER_COLORS[cluster.key]}`} />
                 <div>
                   <h2 className="text-sm font-bold text-neutral-700 dark:text-neutral-200">{cluster.label}</h2>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">{cluster.sublabel}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{cluster.sublabel}</p>
                 </div>
               </div>
 
@@ -294,7 +294,7 @@ export function PCL5Client({ faqData }: Props) {
                                 }`}
                               >
                                 {opt.label}
-                                <span className="block text-[10px] text-neutral-400 dark:text-neutral-500 mt-0.5">({opt.value})</span>
+                                <span className="block text-[10px] text-neutral-500 dark:text-neutral-400 mt-0.5">({opt.value})</span>
                               </button>
                             ))}
                           </div>
@@ -359,7 +359,7 @@ export function PCL5Client({ faqData }: Props) {
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 80) * 100}%` }} />
                   </div>
-                  <div className="flex justify-between text-[11px] text-neutral-400 dark:text-neutral-500 mt-1.5">
+                  <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
                     <span>0 — Minimal</span>
                     <span className="text-center">33 cutoff</span>
                     <span>80 — Severe</span>
@@ -388,7 +388,7 @@ export function PCL5Client({ faqData }: Props) {
             {/* Cluster Breakdown */}
             <div className="card p-5 sm:p-6 mb-5">
               <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Symptom Cluster Breakdown</h3>
-              <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-4">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
                 The PCL-5 measures four DSM-5 symptom clusters. Higher scores within a cluster suggest more distress in that area.
               </p>
               <div className="space-y-4">
@@ -401,7 +401,7 @@ export function PCL5Client({ faqData }: Props) {
                       <div className="flex justify-between items-center mb-1.5">
                         <div>
                           <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{cluster.label}</span>
-                          <span className="text-xs text-neutral-400 dark:text-neutral-500 ml-2">{cluster.sublabel}</span>
+                          <span className="text-xs text-neutral-500 dark:text-neutral-400 ml-2">{cluster.sublabel}</span>
                         </div>
                         <span className="text-sm font-bold text-neutral-600 dark:text-neutral-300">{score}/{max}</span>
                       </div>
@@ -551,7 +551,7 @@ export function PCL5Client({ faqData }: Props) {
                     </div>
                   );
                 })}
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   These ranges are based on published research from the National Center for PTSD. They should not be treated as diagnostic thresholds.
                 </p>
               </div>
@@ -574,7 +574,7 @@ export function PCL5Client({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -677,7 +677,7 @@ export function PCL5Client({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -687,10 +687,10 @@ export function PCL5Client({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The PCL-5 was developed by the National Center for PTSD at the U.S. Department of Veterans Affairs. It is in the public domain. No permission required to reproduce, translate, display, or distribute.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

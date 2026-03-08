@@ -168,7 +168,7 @@ export function HealthTimelineClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Medical Disclaimer */}
@@ -279,7 +279,7 @@ export function HealthTimelineClient({ faqData }: Props) {
                       <div className={`relative z-10 w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
                         passed
                           ? "bg-sage-500 text-white"
-                          : "bg-sand-200 dark:bg-neutral-700 text-neutral-400 dark:text-neutral-500"
+                          : "bg-sand-200 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400"
                       }`}>
                         {passed ? (
                           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -300,7 +300,7 @@ export function HealthTimelineClient({ faqData }: Props) {
                             </span>
                           )}
                         </div>
-                        <p className={`text-xs leading-relaxed ${passed ? "text-sage-600 dark:text-sage-400" : "text-neutral-400 dark:text-neutral-500"}`}>
+                        <p className={`text-xs leading-relaxed ${passed ? "text-sage-600 dark:text-sage-400" : "text-neutral-500 dark:text-neutral-400"}`}>
                           {m.description}
                         </p>
                       </div>
@@ -389,7 +389,7 @@ export function HealthTimelineClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -465,7 +465,7 @@ export function HealthTimelineClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -475,10 +475,10 @@ export function HealthTimelineClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               This is an original tool. Health timelines are based on published medical research and represent general patterns. Individual recovery varies.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice or a treatment recommendation. Always consult a healthcare provider.
             </p>
           </footer>

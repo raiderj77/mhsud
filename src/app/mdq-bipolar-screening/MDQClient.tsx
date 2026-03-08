@@ -178,7 +178,7 @@ export function MDQClient({ faqData }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
@@ -199,7 +199,7 @@ export function MDQClient({ faqData }: Props) {
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">
                 {answeredCount} of {totalItems} answered
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">
                 3 Parts
               </span>
             </div>
@@ -217,7 +217,7 @@ export function MDQClient({ faqData }: Props) {
               <span className="inline-block bg-violet-50 dark:bg-violet-950/30 text-violet-600 dark:text-violet-400 text-xs font-bold px-2.5 py-1 rounded-lg uppercase tracking-wide">
                 Part 1 of 3
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">13 symptom questions</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">13 symptom questions</span>
             </div>
             <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
               {PART1_INTRO}
@@ -283,7 +283,7 @@ export function MDQClient({ faqData }: Props) {
               <span className="inline-block bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg uppercase tracking-wide">
                 Part 2 of 3
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">Co-occurrence</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Co-occurrence</span>
             </div>
             <div className={`card p-5 ${part2 !== null ? "border-sage-200 dark:border-sage-800" : ""}`}>
               <div className="flex gap-3 items-start">
@@ -327,7 +327,7 @@ export function MDQClient({ faqData }: Props) {
               <span className="inline-block bg-rose-50 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400 text-xs font-bold px-2.5 py-1 rounded-lg uppercase tracking-wide">
                 Part 3 of 3
               </span>
-              <span className="text-xs text-neutral-400 dark:text-neutral-500">Functional impact</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Functional impact</span>
             </div>
             <div className={`card p-5 ${part3 !== null ? "border-sage-200 dark:border-sage-800" : ""}`}>
               <div className="flex gap-3 items-start">
@@ -423,7 +423,7 @@ export function MDQClient({ faqData }: Props) {
               {/* Three Criteria Breakdown */}
               <div className="p-5 sm:p-6 space-y-3">
                 <h3 className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100 mb-1">Three-Part Criteria</h3>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-3">A positive screen requires all three criteria to be met.</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">A positive screen requires all three criteria to be met.</p>
 
                 {/* Criterion 1 */}
                 <div className={`flex items-start gap-3 p-4 rounded-xl border ${
@@ -526,7 +526,7 @@ export function MDQClient({ faqData }: Props) {
               <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
 
               {/* Part 1 Summary */}
-              <p className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">Part 1: Symptoms ({part1YesCount}/13 Yes)</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Part 1: Symptoms ({part1YesCount}/13 Yes)</p>
               <div className="divide-y divide-sand-100 dark:divide-neutral-700 mb-4">
                 {PART1_QUESTIONS.map((q, i) => (
                   <div key={i} className="flex justify-between items-start gap-3 py-2.5">
@@ -546,7 +546,7 @@ export function MDQClient({ faqData }: Props) {
               </div>
 
               {/* Part 2 Summary */}
-              <p className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">Part 2: Co-occurrence</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Part 2: Co-occurrence</p>
               <div className="flex justify-between items-start gap-3 py-2.5 border-b border-sand-100 dark:border-neutral-700 mb-4">
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed flex-1">
                   Several symptoms occurred during the same period
@@ -559,7 +559,7 @@ export function MDQClient({ faqData }: Props) {
               </div>
 
               {/* Part 3 Summary */}
-              <p className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-2">Part 3: Functional Impact</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Part 3: Functional Impact</p>
               <div className="flex justify-between items-start gap-3 py-2.5">
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed flex-1">
                   Level of problems caused
@@ -706,7 +706,7 @@ export function MDQClient({ faqData }: Props) {
                     </span>
                   </div>
                 </div>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed pt-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
                   This conjunctive approach (requiring all three criteria) was designed to reduce false positives while maintaining sensitivity for bipolar spectrum disorders. The scoring is based on the original validation research by Hirschfeld et al. (2000).
                 </p>
               </div>
@@ -728,7 +728,7 @@ export function MDQClient({ faqData }: Props) {
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{r.detail}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">{r.detail}</p>
                 </div>
               ))}
             </div>
@@ -831,7 +831,7 @@ export function MDQClient({ faqData }: Props) {
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">{t.desc}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
               ))}
             </div>
@@ -841,10 +841,10 @@ export function MDQClient({ faqData }: Props) {
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
-            <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed mb-2">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
               The Mood Disorder Questionnaire (MDQ) was developed by Robert M.A. Hirschfeld, MD, and colleagues. It is free to reproduce for clinical and research purposes.
             </p>
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
           </footer>

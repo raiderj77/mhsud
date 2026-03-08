@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CrisisBanner } from "@/components/CrisisBanner";
@@ -7,6 +8,20 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  variable: "--font-source-serif",
+});
 
 export const metadata: Metadata = {
   ...createMetadata({ path: "/" }),
@@ -51,12 +66,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
         {/*
-          FIX: Single Cookiebot script (was duplicated — caused double consent dialogs).
+          Cookiebot consent management.
+          data-blockingmode="auto" handles script blocking via Cookiebot's own mechanism,
+          so afterInteractive is safe — Cookiebot still blocks other scripts until consent.
           data-georegions handles EU/GB region-specific consent requirements.
-          Must load beforeInteractive to block other scripts until consent is granted.
         */}
         <Script
           id="Cookiebot"
@@ -64,7 +80,7 @@ export default function RootLayout({
           data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
           data-blockingmode="auto"
           data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
 
         {/*
@@ -108,14 +124,6 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
           crossOrigin="anonymous"
           strategy="lazyOnload"
-        />
-
-        {/* Preconnect + Google Fonts via CSS (no build-time fetch) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
-          rel="stylesheet"
         />
 
         {/* Organization JSON-LD */}

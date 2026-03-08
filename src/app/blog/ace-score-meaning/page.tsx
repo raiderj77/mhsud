@@ -4,7 +4,6 @@ import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } 
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
-import { SITE_AUTHOR } from "@/config/author";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/ace-score-meaning`;
@@ -61,7 +60,7 @@ export default function ACEScoreMeaningPage() {
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-400 dark:text-neutral-500">10 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">10 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             ACE Scores: What Your Childhood Experiences Mean for Your Health
@@ -310,11 +309,11 @@ export default function ACEScoreMeaningPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/ace-questionnaire" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ACE Questionnaire</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">10-item adverse childhood experiences screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-item adverse childhood experiences screening</p>
               </Link>
               <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">20-item validated PTSD symptom checklist</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">20-item validated PTSD symptom checklist</p>
               </Link>
             </div>
           </section>
@@ -325,11 +324,11 @@ export default function ACEScoreMeaningPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/blog/ptsd-screening-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PTSD Screening Guide</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">When and why to get screened for PTSD</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">When and why to get screened for PTSD</p>
               </Link>
               <Link href="/blog/dbt-skills-beginners" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DBT Skills for Beginners</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">Dialectical behavior therapy skills overview</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Dialectical behavior therapy skills overview</p>
               </Link>
             </div>
           </section>
