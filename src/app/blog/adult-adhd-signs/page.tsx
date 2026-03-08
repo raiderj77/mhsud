@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/adult-adhd-signs`;
 
@@ -18,7 +21,12 @@ export const metadata: Metadata = createMetadata({
     "ADHD emotional dysregulation", "ADHD and anxiety", "ADHD and depression",
     "adult ADHD evaluation", "ADHD comorbidities", "ADHD treatment options",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "adult-adhd-signs")!;
 
 const FAQ_DATA = [
   { question: "Can adults develop ADHD?", answer: "ADHD is a neurodevelopmental condition, meaning it begins in childhood. Adults do not develop ADHD out of nowhere. However, many adults have had ADHD their entire lives without knowing it. Symptoms may become more noticeable in adulthood when external structures like school schedules and parental oversight are removed. If you are experiencing ADHD-like symptoms for the first time as an adult with no childhood history, a comprehensive evaluation can help determine whether ADHD was always present or whether another condition is responsible." },
@@ -31,7 +39,7 @@ const FAQ_DATA = [
 export default function AdultAdhdSignsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Adult ADHD: Signs You Might Have Missed", description: "Common signs of ADHD in adults, why it's underdiagnosed, the three presentations, and how to get screened.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Adult ADHD: Signs You Might Have Missed", description: "Common signs of ADHD in adults, why it's underdiagnosed, the three presentations, and how to get screened.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Adult ADHD Signs", url: ARTICLE_URL }])) }} />
 
@@ -44,6 +52,7 @@ export default function AdultAdhdSignsPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Adult ADHD: Signs You Might Have Missed
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             ADHD does not disappear when you turn eighteen. An estimated 4.4% of adults in the United States have ADHD, yet the majority remain undiagnosed. Many spend years wondering why they struggle with things that seem effortless for everyone else. This guide covers the signs of ADHD in adults, why so many people are missed, and how to take the first step toward getting screened.
           </p>
@@ -246,7 +255,7 @@ export default function AdultAdhdSignsPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

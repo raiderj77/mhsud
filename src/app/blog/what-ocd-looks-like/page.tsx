@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/what-ocd-looks-like`;
 
@@ -19,7 +22,12 @@ export const metadata: Metadata = createMetadata({
     "scrupulosity OCD", "OCD anxiety cycle", "OCD compulsions",
     "OCD reassurance seeking",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "what-ocd-looks-like")!;
 
 const FAQ_DATA = [
   {
@@ -52,7 +60,7 @@ const FAQ_DATA = [
 export default function WhatOCDLooksLikePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "OCD Myths vs Reality: What OCD Really Looks Like", description: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and the OCI-R screening tool.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "OCD Myths vs Reality: What OCD Really Looks Like", description: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and the OCI-R screening tool.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "What OCD Really Looks Like", url: ARTICLE_URL }])) }} />
 
@@ -65,6 +73,7 @@ export default function WhatOCDLooksLikePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             OCD Myths vs Reality: What OCD Really Looks Like
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             &quot;I&apos;m so OCD about my desk.&quot; You&apos;ve probably heard someone say this — or something like it. But obsessive-compulsive disorder is not a personality quirk or a preference for neatness. It&apos;s a chronic mental health condition that affects roughly 2&ndash;3% of the population and can be profoundly disabling when left untreated. Here&apos;s what OCD actually looks like, beyond the stereotypes.
           </p>
@@ -255,7 +264,7 @@ export default function WhatOCDLooksLikePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

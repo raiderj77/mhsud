@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/audit-guide`;
 
@@ -17,7 +20,12 @@ export const metadata: Metadata = createMetadata({
     "audit questionnaire explained", "alcohol use assessment guide",
     "audit clinical use", "audit-c vs audit", "alcohol screening tool guide",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "audit-guide")!;
 
 const FAQ_DATA = [
   { question: "What counts as 'one drink' in the AUDIT?", answer: "A standard drink varies by country but generally contains about 14 grams of pure alcohol (US definition). This is roughly equivalent to 12 oz of regular beer (5% alcohol), 5 oz of wine (12% alcohol), or 1.5 oz of distilled spirits (40% alcohol). Many drinks served in bars and at home exceed these amounts." },
@@ -31,7 +39,7 @@ const FAQ_DATA = [
 export default function AUDITGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "AUDIT Alcohol Screening Tool: How It Works and Why Clinicians Use It", description: "A plain-language guide to the WHO AUDIT alcohol screening tool.", url: ARTICLE_URL, datePublished: "2025-01-25", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "AUDIT Alcohol Screening Tool: How It Works and Why Clinicians Use It", description: "A plain-language guide to the WHO AUDIT alcohol screening tool.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "AUDIT Guide", url: ARTICLE_URL }])) }} />
 
@@ -44,6 +52,7 @@ export default function AUDITGuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             AUDIT Alcohol Screening Tool: How It Works and Why Clinicians Use It
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The WHO&apos;s AUDIT is the most widely used alcohol screening tool in the world. Here&apos;s what it measures, how the risk zones work, what clinicians do with the results, and what it can&apos;t tell you about your relationship with alcohol.
           </p>
@@ -179,7 +188,7 @@ export default function AUDITGuidePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

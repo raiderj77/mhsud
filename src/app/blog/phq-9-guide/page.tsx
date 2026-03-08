@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
 
@@ -18,7 +21,12 @@ export const metadata: Metadata = createMetadata({
     "patient health questionnaire explained", "phq-9 clinical use",
     "phq-9 limitations", "depression screening tool", "phq-9 cutoff scores",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "phq-9-guide")!;
 
 const FAQ_DATA = [
   { question: "Is the PHQ-9 the same as a depression diagnosis?", answer: "No. The PHQ-9 is a screening tool that identifies possible depressive symptoms. A diagnosis of depression requires a comprehensive clinical evaluation by a qualified healthcare professional, including consideration of medical history, symptom duration, functional impact, and ruling out other causes." },
@@ -32,7 +40,7 @@ const FAQ_DATA = [
 export default function PHQ9GuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire", description: "A plain-language guide to the PHQ-9 depression screener — what it measures, how it's scored, and what it can't tell you.", url: ARTICLE_URL, datePublished: "2025-01-15", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire", description: "A plain-language guide to the PHQ-9 depression screener — what it measures, how it's scored, and what it can't tell you.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "PHQ-9 Guide", url: ARTICLE_URL }])) }} />
 
@@ -45,6 +53,7 @@ export default function PHQ9GuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             PHQ-9 Explained: How Clinicians Use This Depression Questionnaire (and What It Can&apos;t Tell You)
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The PHQ-9 is one of the most widely used depression screening tools in the world. But what does it actually measure, how do healthcare providers interpret the scores, and what are its limitations? This guide walks through everything in plain language.
           </p>
@@ -175,7 +184,7 @@ export default function PHQ9GuidePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">
@@ -208,7 +217,7 @@ export default function PHQ9GuidePage() {
             </div>
           </section>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
         </div>
       </article>
     </>

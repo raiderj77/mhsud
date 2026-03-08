@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/work-stress-vs-burnout`;
 
@@ -21,7 +24,12 @@ export const metadata: Metadata = createMetadata({
     "work burnout self-check private online", "burnout risk factors remote workers",
     "three dimensions of burnout WHO definition",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "work-stress-vs-burnout")!;
 
 const FAQ_DATA = [
   { question: "Am I burned out or just stressed?", answer: "Stress is typically tied to specific demands and resolves when those demands ease. Burnout is a state of chronic exhaustion, cynicism, and reduced effectiveness that persists even after a vacation or break. If rest doesn't restore you, burnout is more likely — but only a professional can make that determination in your specific context." },
@@ -35,7 +43,7 @@ const FAQ_DATA = [
 export default function WorkStressBurnoutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Work Stress vs. Burnout: How to Tell the Difference", description: "A plain-language guide to the difference between everyday work stress and clinical burnout — what the WHO says, why online quizzes have limits, and when to talk to a professional.", url: ARTICLE_URL, datePublished: "2025-02-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Work Stress vs. Burnout: How to Tell the Difference", description: "A plain-language guide to the difference between everyday work stress and clinical burnout — what the WHO says, why online quizzes have limits, and when to talk to a professional.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Work Stress vs. Burnout", url: ARTICLE_URL }])) }} />
 
@@ -48,6 +56,7 @@ export default function WorkStressBurnoutPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Work Stress vs. Burnout: How to Tell the Difference (and What Online Quizzes Can&apos;t Tell You)
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Everyone has stressful days at work. But when exhaustion becomes your baseline and no amount of rest seems to help, you might wonder: am I burned out or just stressed? This guide breaks down the real differences, explains what the WHO actually says about burnout, and is honest about why online self-checks — including ours — are only a starting point.
           </p>
@@ -219,7 +228,7 @@ export default function WorkStressBurnoutPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

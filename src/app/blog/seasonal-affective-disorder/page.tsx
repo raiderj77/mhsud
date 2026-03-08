@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/seasonal-affective-disorder`;
 
@@ -18,7 +21,12 @@ export const metadata: Metadata = createMetadata({
     "seasonal depression treatment", "SAD screening", "light therapy boxes",
     "how to treat SAD", "circadian rhythm disorder", "melatonin seasonal depression",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "seasonal-affective-disorder")!;
 
 const FAQ_DATA = [
   {
@@ -65,8 +73,8 @@ export default function SeasonalAffectiveDisorderPage() {
               description:
                 "Evidence-based clinical guide to seasonal affective disorder — what it is, why it happens, light therapy, and treatment options.",
               url: ARTICLE_URL,
-              datePublished: "2025-02-21",
-              dateModified: new Date().toISOString().split("T")[0],
+              datePublished: POST_DATA.publishedDate,
+              dateModified: POST_DATA.modifiedDate,
             })
           ),
         }}
@@ -101,6 +109,7 @@ export default function SeasonalAffectiveDisorderPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Seasonal Affective Disorder (SAD): Understanding Winter Depression and Light Therapy
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             For millions of people, fall and winter bring more than just cold weather — they bring mood changes,
             fatigue, and social withdrawal. If this pattern sounds familiar, you may be experiencing seasonal affective
@@ -382,7 +391,7 @@ export default function SeasonalAffectiveDisorderPage() {
           </section>
 
           {/* Author Bio — standardized AuthorBio component for E-E-A-T consistency */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center mt-10">

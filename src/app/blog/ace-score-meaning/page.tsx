@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/ace-score-meaning`;
 
@@ -17,7 +20,12 @@ export const metadata: Metadata = createMetadata({
     "resilience and ACEs", "trauma-informed care", "ACE score health risks",
     "CDC Kaiser ACE study",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "ace-score-meaning")!;
 
 const FAQ_DATA = [
   {
@@ -45,7 +53,7 @@ const FAQ_DATA = [
 export default function ACEScoreMeaningPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "ACE Scores: What Your Childhood Experiences Mean for Your Health", description: "What your ACE score means, how adverse childhood experiences affect health, and why resilience matters more than the number.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "ACE Scores: What Your Childhood Experiences Mean for Your Health", description: "What your ACE score means, how adverse childhood experiences affect health, and why resilience matters more than the number.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "ACE Score Meaning", url: ARTICLE_URL }])) }} />
 
@@ -58,6 +66,7 @@ export default function ACEScoreMeaningPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             ACE Scores: What Your Childhood Experiences Mean for Your Health
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Adverse childhood experiences (ACEs) can shape long-term health outcomes — but they do not define your future. Here&apos;s what the research says, what your ACE score may indicate, and why resilience matters more than the number.
           </p>
@@ -279,7 +288,7 @@ export default function ACEScoreMeaningPage() {
             <Link href="/ace-questionnaire" className="btn-primary text-sm">Take the ACE Self-Check</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

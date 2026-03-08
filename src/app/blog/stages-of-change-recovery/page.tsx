@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/stages-of-change-recovery`;
 
@@ -16,7 +19,12 @@ export const metadata: Metadata = createMetadata({
     "prochaska diclemente model", "readiness to change", "addiction recovery stages",
     "relapse prevention", "motivational interviewing", "stages of recovery",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "stages-of-change-recovery")!;
 
 const FAQ_DATA = [
   {
@@ -44,7 +52,7 @@ const FAQ_DATA = [
 export default function StagesOfChangeRecoveryPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "The Stages of Change in Addiction Recovery", description: "Understand the 5 stages of change model for addiction recovery. Learn what helps at each stage and how relapse fits in.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "The Stages of Change in Addiction Recovery", description: "Understand the 5 stages of change model for addiction recovery. Learn what helps at each stage and how relapse fits in.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Stages of Change in Recovery", url: ARTICLE_URL }])) }} />
 
@@ -57,6 +65,7 @@ export default function StagesOfChangeRecoveryPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             The Stages of Change in Addiction Recovery
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Recovery is not a single decision — it is a process that unfolds over time. The stages of change model helps you understand where you are, what helps at each point, and why setbacks are a normal part of the journey.
           </p>
@@ -230,7 +239,7 @@ export default function StagesOfChangeRecoveryPage() {
             <Link href="/readiness-to-change" className="btn-primary text-sm">Take the Readiness to Change Self-Check</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

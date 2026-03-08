@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/terms",
-  title: "Terms of Use — MindCheck Tools",
+  title: "Terms of Use",
   description:
     "Terms of use for MindCheck Tools. Disclaimers about our free mental health self-checks, your rights, and our limitations.",
   keywords: [

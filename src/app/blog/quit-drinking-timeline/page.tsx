@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/quit-drinking-timeline`;
 
@@ -23,7 +26,12 @@ export const metadata: Metadata = createMetadata({
     "benefits of sobriety timeline",
     "alcohol withdrawal dangers",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "quit-drinking-timeline")!;
 
 const FAQ_DATA = [
   {
@@ -56,7 +64,7 @@ const FAQ_DATA = [
 export default function QuitDrinkingTimelinePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "What Happens When You Stop Drinking: A Timeline", description: "Hour-by-hour and week-by-week timeline of what happens to your body after quitting alcohol.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "What Happens When You Stop Drinking: A Timeline", description: "Hour-by-hour and week-by-week timeline of what happens to your body after quitting alcohol.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Quit Drinking Timeline", url: ARTICLE_URL }])) }} />
 
@@ -69,6 +77,7 @@ export default function QuitDrinkingTimelinePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             What Happens When You Stop Drinking: A Timeline
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Your body begins recovering from alcohol faster than you might think. Here is an evidence-based timeline of what happens when you stop drinking — from the first 24 hours through your first full year. This guide also covers critical safety information about alcohol withdrawal that everyone considering sobriety should understand.
           </p>
@@ -304,7 +313,7 @@ export default function QuitDrinkingTimelinePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { SITE_AUTHOR } from "@/config/author";
 
 export const metadata: Metadata = createMetadata({
   path: "/about",
-  title: "About MindCheck Tools — Our Mission & Approach",
+  title: "About Us — Our Mission & Approach",
   description:
     "MindCheck Tools provides free, private, evidence-based mental health self-checks. Learn about our mission, how our tools work, and why privacy and clinical accuracy matter to us.",
 });
@@ -77,6 +78,22 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </section>
+
+          {/* Who reviews our content */}
+          <section>
+            <h2>Who reviews our content</h2>
+            <p>
+              All screening tools and educational content on MindCheck Tools are reviewed by{" "}
+              <strong>{SITE_AUTHOR.name}</strong>, a {SITE_AUTHOR.credentialFull} with{" "}
+              {SITE_AUTHOR.experience} in behavioral health, substance use treatment,
+              and clinical screening.
+            </p>
+            <p>
+              {SITE_AUTHOR.name} ensures that every tool uses the correct validated instrument
+              wording, that scoring algorithms match published clinical guidelines, and that
+              result interpretations include appropriate clinical context and limitations.
+            </p>
           </section>
 
           {/* What we are not */}

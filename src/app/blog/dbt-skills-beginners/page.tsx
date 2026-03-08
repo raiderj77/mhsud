@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/dbt-skills-beginners`;
 
@@ -18,7 +21,12 @@ export const metadata: Metadata = createMetadata({
     "DBT PLEASE skills", "opposite action DBT", "DBT for anxiety", "DBT for depression",
     "Marsha Linehan DBT",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "dbt-skills-beginners")!;
 
 const FAQ_DATA = [
   { question: "Do I need to have BPD to use DBT?", answer: "No. DBT was originally developed for borderline personality disorder, but research has since shown it to be effective for a wide range of concerns. DBT skills are now used to help people manage anxiety, depression, eating disorders, substance use, PTSD, and everyday emotional overwhelm. You do not need any specific screening result to benefit from learning and practicing DBT skills in your daily life." },
@@ -31,7 +39,7 @@ const FAQ_DATA = [
 export default function DbtSkillsBeginnersPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "DBT Skills for Everyday Life: A Beginner's Guide", description: "Learn the 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — in plain language.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "DBT Skills for Everyday Life: A Beginner's Guide", description: "Learn the 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — in plain language.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "DBT Skills for Beginners", url: ARTICLE_URL }])) }} />
 
@@ -44,6 +52,7 @@ export default function DbtSkillsBeginnersPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             DBT Skills for Everyday Life: A Beginner&apos;s Guide
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Dialectical behavior therapy sounds clinical and complicated, but the skills at its core are surprisingly practical. Originally developed for people in severe emotional pain, DBT skills have since proven useful for anyone who wants to manage stress, handle difficult emotions, and communicate more effectively. This guide breaks down all four DBT skill modules in plain language — no therapy degree required.
           </p>
@@ -273,7 +282,7 @@ export default function DbtSkillsBeginnersPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

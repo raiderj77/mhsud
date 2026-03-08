@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/cognitive-distortions-list`;
 
@@ -19,7 +22,12 @@ export const metadata: Metadata = createMetadata({
     "anxiety thought patterns", "cognitive distortion identifier", "overgeneralization",
     "jumping to conclusions cognitive distortion",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "cognitive-distortions-list")!;
 
 const FAQ_DATA = [
   {
@@ -52,7 +60,7 @@ const FAQ_DATA = [
 export default function CognitiveDistortionsListPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety", description: "Learn about 15 common cognitive distortions from CBT, how they fuel anxiety, and how to reframe them with examples and alternative thoughts.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety", description: "Learn about 15 common cognitive distortions from CBT, how they fuel anxiety, and how to reframe them with examples and alternative thoughts.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Cognitive Distortions List", url: ARTICLE_URL }])) }} />
 
@@ -65,6 +73,7 @@ export default function CognitiveDistortionsListPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Your brain is wired to protect you — but sometimes that wiring misfires. Cognitive distortions are automatic thinking patterns that twist how you interpret reality, often making situations feel worse than they are. This guide covers 15 common distortions, with real-world examples and reframed alternatives to help you start noticing them in your own thinking.
           </p>
@@ -306,7 +315,7 @@ export default function CognitiveDistortionsListPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

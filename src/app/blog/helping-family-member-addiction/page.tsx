@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/helping-family-member-addiction`;
 
@@ -16,7 +19,12 @@ export const metadata: Metadata = createMetadata({
     "family addiction support", "codependency addiction", "setting boundaries addiction",
     "Al-Anon", "Nar-Anon", "family impact of addiction", "loved one substance abuse",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "helping-family-member-addiction")!;
 
 const FAQ_DATA = [
   {
@@ -44,7 +52,7 @@ const FAQ_DATA = [
 export default function HelpingFamilyMemberAddictionPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How to Help a Family Member with Addiction", description: "Practical guidance for families dealing with a loved one's addiction. Learn about boundaries, enabling, self-care, and support resources.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How to Help a Family Member with Addiction", description: "Practical guidance for families dealing with a loved one's addiction. Learn about boundaries, enabling, self-care, and support resources.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Helping a Family Member with Addiction", url: ARTICLE_URL }])) }} />
 
@@ -57,6 +65,7 @@ export default function HelpingFamilyMemberAddictionPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How to Help a Family Member with Addiction
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Watching someone you love struggle with addiction is one of the most painful experiences a family can face. You want to help, but you may not know how — or whether the things you are doing are actually making things worse. This guide offers practical, evidence-based guidance for families navigating this difficult situation.
           </p>
@@ -246,7 +255,7 @@ export default function HelpingFamilyMemberAddictionPage() {
             <Link href="/family-impact-assessment" className="btn-primary text-sm">Take the Family Impact Assessment</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

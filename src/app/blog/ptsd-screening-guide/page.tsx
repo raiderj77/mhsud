@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/ptsd-screening-guide`;
 
@@ -17,7 +20,12 @@ export const metadata: Metadata = createMetadata({
     "PTSD assessment", "PTSD score meaning", "PTSD screening tool",
     "post traumatic stress screening", "PTSD self check",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "ptsd-screening-guide")!;
 
 const FAQ_DATA = [
   {
@@ -45,7 +53,7 @@ const FAQ_DATA = [
 export default function PTSDScreeningGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "PTSD Screening: When and Why to Get Tested", description: "Learn when to get screened for PTSD, how the PCL-5 and PC-PTSD-5 work, and what different scores mean.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "PTSD Screening: When and Why to Get Tested", description: "Learn when to get screened for PTSD, how the PCL-5 and PC-PTSD-5 work, and what different scores mean.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "PTSD Screening Guide", url: ARTICLE_URL }])) }} />
 
@@ -58,6 +66,7 @@ export default function PTSDScreeningGuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             PTSD Screening: When and Why to Get Tested
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Post-traumatic stress disorder affects millions of people each year, but many go unscreened. Here&apos;s what PTSD screening involves, who should consider it, and what to expect from validated tools like the PCL-5 and PC-PTSD-5.
           </p>
@@ -271,7 +280,7 @@ export default function PTSDScreeningGuidePage() {
             <Link href="/pcl-5-ptsd-screening" className="btn-primary text-sm">Take the PCL-5 Self-Check</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

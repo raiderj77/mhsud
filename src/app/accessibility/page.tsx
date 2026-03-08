@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/accessibility",
-  title: "Accessibility Statement — MindCheck Tools",
+  title: "Accessibility Statement",
   description:
     "Our commitment to making free mental health self-checks usable by everyone, including people with disabilities.",
   keywords: [

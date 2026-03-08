@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 export const SITE_NAME = "MindCheck Tools";
 export const SITE_URL = "https://mindchecktools.com";
@@ -79,7 +80,7 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    sameAs: [],
+    sameAs: ["https://github.com/raiderj77/mhsud"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
@@ -167,11 +168,11 @@ export function articleJsonLd({
     datePublished,
     dateModified,
     image: image || `${SITE_URL}/og-default.png`,
-    author: {
+    author: AUTHOR_SCHEMA,
+    reviewedBy: {
       "@type": "Person",
-      name: "MindCheck Tools Clinical Reviewer",
-      description: "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling",
-      url: SITE_URL,
+      name: SITE_AUTHOR.name,
+      jobTitle: SITE_AUTHOR.credentialFull,
     },
     publisher: {
       "@type": "Organization",
@@ -207,8 +208,9 @@ export function medicalWebPageJsonLd({
     lastReviewed,
     reviewedBy: {
       "@type": "Person",
-      jobTitle: "Certified Drug and Alcohol Counselor (CADC-II)",
-      description: "11 years of clinical experience",
+      name: SITE_AUTHOR.name,
+      jobTitle: SITE_AUTHOR.credentialFull,
+      description: SITE_AUTHOR.experience,
     },
     medicalAudience: {
       "@type": "MedicalAudience",

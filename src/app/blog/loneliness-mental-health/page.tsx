@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/loneliness-mental-health`;
 
@@ -19,7 +22,12 @@ export const metadata: Metadata = createMetadata({
     "signs of chronic loneliness", "loneliness in young adults",
     "evidence-based strategies for loneliness", "when loneliness becomes clinical",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "loneliness-mental-health")!;
 
 const FAQ_DATA = [
   { question: "Is loneliness a mental health condition?", answer: "Loneliness itself is not classified as a mental health disorder. It is a subjective emotional state — a feeling that your social connections are insufficient in quality or quantity. However, chronic loneliness is a significant risk factor for developing mental health conditions such as depression, anxiety, and substance use concerns. If loneliness persists for weeks or months and begins affecting your daily functioning, it may indicate an underlying issue worth exploring with a healthcare provider." },
@@ -32,7 +40,7 @@ const FAQ_DATA = [
 export default function LonelinessMentalHealthPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Loneliness Epidemic: Why It Matters for Your Mental Health", description: "The loneliness epidemic is a public health crisis. Learn how chronic loneliness affects mental and physical health, and evidence-based strategies to help.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Loneliness Epidemic: Why It Matters for Your Mental Health", description: "The loneliness epidemic is a public health crisis. Learn how chronic loneliness affects mental and physical health, and evidence-based strategies to help.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Loneliness & Mental Health", url: ARTICLE_URL }])) }} />
 
@@ -45,6 +53,7 @@ export default function LonelinessMentalHealthPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Loneliness Epidemic: Why It Matters for Your Mental Health
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             In 2023, the US Surgeon General declared loneliness a public health crisis on par with smoking and obesity. That declaration was not hyperbole. Chronic loneliness reshapes your brain, weakens your immune system, and significantly increases your risk of depression, anxiety, and premature death. This guide explains what the research says, who is most affected, and what actually helps.
           </p>
@@ -220,7 +229,7 @@ export default function LonelinessMentalHealthPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

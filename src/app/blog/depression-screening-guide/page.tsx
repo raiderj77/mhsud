@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/depression-screening-guide`;
 
@@ -18,7 +21,12 @@ export const metadata: Metadata = createMetadata({
     "988 suicide lifeline", "SAMHSA helpline", "depression diagnosis process", "mental health resources",
     "PHQ-9 scoring", "depression screening tools"
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "depression-screening-guide")!;
 
 const FAQ_DATA = [
   { 
@@ -50,7 +58,7 @@ const FAQ_DATA = [
 export default function DepressionScreeningGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help", description: "A comprehensive guide to depression screening, including how screening tools work, evidence-based treatment options, and crisis resources.", url: ARTICLE_URL, datePublished: "2026-02-26", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help", description: "A comprehensive guide to depression screening, including how screening tools work, evidence-based treatment options, and crisis resources.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Depression Screening Guide", url: ARTICLE_URL }])) }} />
 
@@ -63,6 +71,7 @@ export default function DepressionScreeningGuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Depression Screening: Understanding PHQ-9, USPSTF Guidelines & When to Seek Help
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Depression touches roughly 21 million American adults each year, yet diagnosis often comes years after symptoms begin. This guide explores depression screening through a clinical lens—explaining how screening tools function, what results might suggest, and practical steps toward improved mental health based on current evidence.
           </p>
@@ -408,7 +417,7 @@ export default function DepressionScreeningGuidePage() {
           </section>
 
           {/* Author Bio — standardized component for E-E-A-T consistency */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           <section>
             <h3>References and Further Reading</h3>

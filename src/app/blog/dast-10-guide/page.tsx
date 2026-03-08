@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/dast-10-guide`;
 
@@ -16,7 +19,12 @@ export const metadata: Metadata = createMetadata({
     "DAST-10 score meaning", "DAST-10 vs CAGE-AID", "DAST-10 vs AUDIT",
     "drug screening tool", "substance use screening", "DAST-10 questions explained",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "dast-10-guide")!;
 
 const FAQ_DATA = [
   {
@@ -48,7 +56,7 @@ const FAQ_DATA = [
 export default function DAST10GuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "DAST-10 Scoring & Interpretation: Complete Guide", description: "Learn how the DAST-10 drug screening is scored, what each level means, and how it compares to the CAGE-AID.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "DAST-10 Scoring & Interpretation: Complete Guide", description: "Learn how the DAST-10 drug screening is scored, what each level means, and how it compares to the CAGE-AID.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "DAST-10 Guide", url: ARTICLE_URL }])) }} />
 
@@ -61,6 +69,7 @@ export default function DAST10GuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Understanding the DAST-10: Scoring, Interpretation & What Your Results Mean
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The DAST-10 is one of the most widely used drug screening tools in clinical settings. Here&apos;s what it measures, how scoring works, and what to do with your results.
           </p>
@@ -242,7 +251,7 @@ export default function DAST10GuidePage() {
             <Link href="/dast-10-drug-screening" className="btn-primary text-sm">Take the DAST-10 Self-Check</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

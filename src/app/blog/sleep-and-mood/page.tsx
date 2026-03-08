@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/sleep-and-mood`;
 
@@ -21,7 +24,12 @@ export const metadata: Metadata = createMetadata({
     "poor sleep mood swings irritability", "tired but can't sleep mind racing",
     "how to tell if sleep is affecting your mood",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "sleep-and-mood")!;
 
 const FAQ_DATA = [
   { question: "Does poor sleep cause depression, or does depression cause poor sleep?", answer: "Both. Research consistently shows a bidirectional relationship. Insomnia increases the risk of developing depression by roughly five times, and about 75% of people with depression experience insomnia. They reinforce each other in a cycle — poor sleep worsens mood, and low mood disrupts sleep. Breaking the cycle often requires addressing both sides." },
@@ -35,7 +43,7 @@ const FAQ_DATA = [
 export default function SleepMoodPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)", description: "The science behind the sleep-mood connection — why poor sleep worsens anxiety and depression, and what to do about it.", url: ARTICLE_URL, datePublished: "2025-02-10", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)", description: "The science behind the sleep-mood connection — why poor sleep worsens anxiety and depression, and what to do about it.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Sleep & Mood Guide", url: ARTICLE_URL }])) }} />
 
@@ -48,6 +56,7 @@ export default function SleepMoodPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             You already know you feel terrible after a bad night&apos;s sleep. But the relationship between sleep and mood goes far deeper than grogginess. Research shows that sleep and mental health are locked in a bidirectional cycle — each one powerfully shaping the other. This guide explains what the science says, how to recognize when sleep is undermining your mental health, and what you can actually do about it.
           </p>
@@ -216,7 +225,7 @@ export default function SleepMoodPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">

@@ -7,6 +7,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   status: "published" | "draft";
+  publishedDate: string;
+  modifiedDate: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -19,6 +21,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-01-15",
     readTime: "8 min read",
     status: "published",
+    publishedDate: "2025-01-15",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "gad-7-guide",
@@ -29,6 +33,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-01-20",
     readTime: "7 min read",
     status: "published",
+    publishedDate: "2025-01-20",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "audit-guide",
@@ -39,6 +45,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-01-25",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2025-01-25",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "work-stress-vs-burnout",
@@ -49,6 +57,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-02-01",
     readTime: "6 min read",
     status: "published",
+    publishedDate: "2025-02-01",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "sleep-and-mood",
@@ -59,6 +69,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-02-10",
     readTime: "7 min read",
     status: "published",
+    publishedDate: "2025-02-10",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "seasonal-affective-disorder",
@@ -69,6 +81,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-02-21",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2025-02-21",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "depression-screening-guide",
@@ -79,6 +93,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-03-01",
     readTime: "10 min read",
     status: "published",
+    publishedDate: "2025-03-01",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "anxiety-coping-strategies",
@@ -89,6 +105,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-03-10",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2025-03-10",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "dast-10-guide",
@@ -99,6 +117,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "8 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "ptsd-screening-guide",
@@ -109,6 +129,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "adult-adhd-signs",
@@ -119,6 +141,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "bipolar-vs-depression",
@@ -129,6 +153,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "what-ocd-looks-like",
@@ -139,6 +165,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "stages-of-change-recovery",
@@ -149,6 +177,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "quit-drinking-timeline",
@@ -159,6 +189,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "10 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "eating-disorder-signs",
@@ -169,6 +201,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "relapse-prevention-plan-guide",
@@ -179,6 +213,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "cognitive-distortions-list",
@@ -189,6 +225,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "10 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "ace-score-meaning",
@@ -199,6 +237,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "10 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "social-anxiety-vs-introversion",
@@ -209,6 +249,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "8 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "loneliness-mental-health",
@@ -219,6 +261,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "dbt-skills-beginners",
@@ -229,6 +273,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "10 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
   {
     slug: "helping-family-member-addiction",
@@ -239,5 +285,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
+    publishedDate: "2026-03-05",
+    modifiedDate: "2026-03-08",
   },
 ];

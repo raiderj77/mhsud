@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/contact",
-  title: "Contact MindCheck Tools",
+  title: "Contact Us",
   description:
     "Get in touch with the MindCheck Tools team. Questions, feedback, or accessibility concerns — we're here to help.",
 });

@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/anxiety-coping-strategies`;
 
@@ -19,7 +22,12 @@ export const metadata: Metadata = createMetadata({
     "social anxiety coping", "health anxiety management", "anxiety symptoms relief",
     "professional anxiety treatment", "anxiety support resources",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "anxiety-coping-strategies")!;
 
 const FAQ_DATA = [
   {
@@ -66,8 +74,8 @@ export default function AnxietyCopingStrategiesPage() {
               description:
                 "Clinically validated anxiety management techniques backed by NIH research, including cognitive-behavioral approaches, mindfulness practices, and lifestyle interventions.",
               url: ARTICLE_URL,
-              datePublished: "2026-02-24",
-              dateModified: new Date().toISOString().split("T")[0],
+              datePublished: POST_DATA.publishedDate,
+              dateModified: POST_DATA.modifiedDate,
             })
           ),
         }}
@@ -102,6 +110,7 @@ export default function AnxietyCopingStrategiesPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Evidence-Based Anxiety Coping Strategies: Clinical Guide to Managing Anxiety Symptoms
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
             Learn clinically validated anxiety management techniques backed by NIH research, 
             including cognitive-behavioral approaches, mindfulness practices, and lifestyle 
@@ -514,7 +523,7 @@ export default function AnxietyCopingStrategiesPage() {
           </p>
 
           {/* Author Bio — standardized component for E-E-A-T consistency */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
             <h3 className="text-xl font-semibold mb-4">References & Further Reading</h3>

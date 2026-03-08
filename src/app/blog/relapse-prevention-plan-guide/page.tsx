@@ -3,6 +3,9 @@ import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
+import { AuthorByline } from "@/components/AuthorByline";
+import { SITE_AUTHOR } from "@/config/author";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/relapse-prevention-plan-guide`;
 
@@ -16,7 +19,12 @@ export const metadata: Metadata = createMetadata({
     "relapse warning signs", "relapse triggers", "coping skills for recovery",
     "HALT check-in", "relapse prevention toolkit", "stages of relapse",
   ],
+  openGraph: {
+    type: "article",
+  },
 });
+
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "relapse-prevention-plan-guide")!;
 
 const FAQ_DATA = [
   {
@@ -44,7 +52,7 @@ const FAQ_DATA = [
 export default function RelapsePreventionPlanGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How to Build a Relapse Prevention Plan", description: "Step-by-step guide to building a relapse prevention plan. Learn the three stages of relapse, identify triggers, and create your coping toolkit.", url: ARTICLE_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How to Build a Relapse Prevention Plan", description: "Step-by-step guide to building a relapse prevention plan. Learn the three stages of relapse, identify triggers, and create your coping toolkit.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Relapse Prevention Plan Guide", url: ARTICLE_URL }])) }} />
 
@@ -57,6 +65,7 @@ export default function RelapsePreventionPlanGuidePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How to Build a Relapse Prevention Plan
           </h1>
+          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Recovery is not a straight line. A relapse prevention plan gives you a concrete, personalized roadmap for recognizing warning signs early and responding before a setback becomes a crisis. Here&apos;s how to build one step by step.
           </p>
@@ -257,7 +266,7 @@ export default function RelapsePreventionPlanGuidePage() {
             <Link href="/relapse-prevention-plan" className="btn-primary text-sm">Build Your Plan Now</Link>
           </div>
 
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section className="not-prose mt-12">
