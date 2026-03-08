@@ -4,6 +4,8 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Suggestion chips ─────────────────────────────────── */
 
@@ -526,6 +528,14 @@ export function RelapsePlanClient({ faqData }: Props) {
           </div>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in print:hidden">{shareMessage}</p>
+          )}
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["relapse-prevention-plan"] && (
+            <ReflectionPrompts
+              prompts={REFLECTION_PROMPTS["relapse-prevention-plan"].prompts}
+              toolName={REFLECTION_PROMPTS["relapse-prevention-plan"].toolName}
+            />
           )}
 
           <AdSlot position="plan-results" className="mt-6 print:hidden" />

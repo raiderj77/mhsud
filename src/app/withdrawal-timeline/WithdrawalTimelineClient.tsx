@@ -4,6 +4,8 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types & Data ─────────────────────────────────────── */
 
@@ -360,6 +362,14 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
           </div>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in">{shareMessage}</p>
+          )}
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["withdrawal-timeline"] && (
+            <ReflectionPrompts
+              prompts={REFLECTION_PROMPTS["withdrawal-timeline"].prompts}
+              toolName={REFLECTION_PROMPTS["withdrawal-timeline"].toolName}
+            />
           )}
 
           <AdSlot position="withdrawal-results" className="mt-6" />

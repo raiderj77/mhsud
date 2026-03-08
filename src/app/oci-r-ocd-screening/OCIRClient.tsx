@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -465,6 +468,30 @@ export function OCIRClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="OCI-R OCD Screening Self-Check"
+            toolUrl="https://mindchecktools.com/oci-r-ocd-screening"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["oci-r-ocd-screening"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: `${OPTIONS[answers[i] ?? 0].label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["oci-r-ocd-screening"] && (
+            <ReflectionPrompts
+              toolName="OCI-R OCD Screening Self-Check"
+              prompts={REFLECTION_PROMPTS["oci-r-ocd-screening"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

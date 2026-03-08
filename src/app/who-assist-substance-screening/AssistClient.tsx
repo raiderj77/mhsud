@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -858,6 +861,48 @@ export function AssistClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="WHO ASSIST Screening"
+          toolUrl="https://mindchecktools.com/who-assist-substance-screening"
+          score={results.length > 0 ? results.map((r) => `${r.displayName}: ${r.score}`).join(", ") : "No substances endorsed"}
+          severityLabel={
+            hasHighRisk ? "High Risk" : hasModerateRisk ? "Moderate Risk" : "Low Risk"
+          }
+          scoreRange={
+            hasHighRisk ? "27+" : hasModerateRisk ? "4–26 (11–26 alcohol)" : "0–3 (0–10 alcohol)"
+          }
+          interpretation={
+            hasHighRisk
+              ? "One or more of your substance scores suggest a high risk of severe problems. An intensive assessment by a qualified healthcare professional is strongly recommended."
+              : hasModerateRisk
+                ? "One or more of your substance scores suggest a moderate risk of health and other problems. Consider reducing or stopping use and discussing your results with a healthcare provider."
+                : results.length === 0
+                  ? "You indicated no recent substance use. Your risk level is low for all categories."
+                  : "Your substance use scores suggest a low risk of problems at this time. No intervention is needed."
+          }
+          suggestion={
+            hasHighRisk
+              ? "Please speak with a healthcare professional or contact SAMHSA at 1-800-662-4357 for a treatment referral."
+              : hasModerateRisk
+                ? "A brief intervention from a healthcare provider may be helpful. Consider discussing your results with a doctor or counselor."
+                : "Continue making healthy choices. You can retake this screening anytime if things change."
+          }
+          reflectionPrompts={REFLECTION_PROMPTS["who-assist-substance-screening"]?.prompts ?? []}
+          responses={results.map((r) => ({
+            question: r.displayName,
+            answer: `Score: ${r.score} — ${r.risk.label}`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["who-assist-substance-screening"] && (
+          <ReflectionPrompts
+            toolName="WHO ASSIST Screening"
+            prompts={REFLECTION_PROMPTS["who-assist-substance-screening"].prompts}
+          />
+        )}
 
         <AdSlot position="results-middle" />
 

@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -398,6 +401,30 @@ export function PHQ9Client({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="PHQ-9 Depression Self-Check"
+            toolUrl="https://mindchecktools.com/phq-9-depression-test"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["phq-9-depression-test"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["phq-9-depression-test"] && (
+            <ReflectionPrompts
+              toolName="PHQ-9 Depression Self-Check"
+              prompts={REFLECTION_PROMPTS["phq-9-depression-test"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

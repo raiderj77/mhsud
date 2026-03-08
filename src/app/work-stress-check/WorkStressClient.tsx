@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 const QUESTIONS = [
   { text: "I feel overwhelmed by the amount of work I need to do.", domain: "Demands" },
@@ -220,6 +223,30 @@ export function WorkStressClient({ faqData }: Props) {
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="Work Stress Self-Check"
+            toolUrl="https://mindchecktools.com/work-stress-check"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["work-stress-check"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q.text,
+              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["work-stress-check"] && (
+            <ReflectionPrompts
+              toolName="Work Stress Self-Check"
+              prompts={REFLECTION_PROMPTS["work-stress-check"].prompts}
+            />
+          )}
 
           <AdSlot position="Below Results" className="mb-8" />
 

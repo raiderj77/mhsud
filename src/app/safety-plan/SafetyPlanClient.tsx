@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Crisis contacts (always visible) ────────────────── */
 
@@ -895,6 +897,13 @@ export function SafetyPlanClient({ faqData }: Props) {
             ))}
           </div>
         </section>
+
+        {REFLECTION_PROMPTS["safety-plan"] && (
+          <ReflectionPrompts
+            prompts={REFLECTION_PROMPTS["safety-plan"].prompts}
+            toolName={REFLECTION_PROMPTS["safety-plan"].toolName}
+          />
+        )}
 
         {/* ── Related Tools ── */}
         <section className="mb-12">

@@ -4,6 +4,8 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -574,6 +576,13 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["dbt-crisis-skills"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["dbt-crisis-skills"].prompts}
+          toolName={REFLECTION_PROMPTS["dbt-crisis-skills"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ────────────────────────────── */}
       <section className="mt-12">

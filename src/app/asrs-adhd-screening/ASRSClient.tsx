@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -430,6 +433,38 @@ export function ASRSClient({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="ASRS v1.1 Adult ADHD Self-Check"
+            toolUrl="https://mindchecktools.com/asrs-adhd-screening"
+            score={positiveCount}
+            severityLabel={screenPositive ? "Positive Screen" : "Negative Screen"}
+            scoreRange={screenPositive ? "4–6 positive" : "0–3 positive"}
+            interpretation={
+              screenPositive
+                ? "Your symptom pattern is consistent with adult ADHD. A comprehensive evaluation by a qualified professional is recommended to determine whether ADHD or another condition may be contributing to these symptoms."
+                : "Your responses do not meet the threshold for a positive ADHD screen at this time. If you continue to experience difficulty with attention, organization, or restlessness that affects your daily life, consider discussing your concerns with a healthcare provider."
+            }
+            suggestion={
+              screenPositive
+                ? "Speak with your primary care provider or a mental health professional experienced with adult ADHD. Bring your results to help start the conversation."
+                : "Continue to monitor how you are feeling. If your situation changes or symptoms become more noticeable, consider taking this screen again or speaking with a healthcare provider."
+            }
+            reflectionPrompts={REFLECTION_PROMPTS["asrs-adhd-screening"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: `${OPTIONS[answers[i]!]?.label}${isPositive(i, answers[i]!) ? " (Positive)" : ""}`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["asrs-adhd-screening"] && (
+            <ReflectionPrompts
+              toolName="ASRS v1.1 Adult ADHD Self-Check"
+              prompts={REFLECTION_PROMPTS["asrs-adhd-screening"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

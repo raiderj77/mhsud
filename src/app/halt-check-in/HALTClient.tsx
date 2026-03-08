@@ -4,6 +4,9 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -406,6 +409,26 @@ export function HALTClient({ faqData }: Props) {
           </div>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in">{shareMessage}</p>
+          )}
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["halt-check-in"] && (
+            <>
+              <ReflectionPrompts
+                prompts={REFLECTION_PROMPTS["halt-check-in"].prompts}
+                toolName={REFLECTION_PROMPTS["halt-check-in"].toolName}
+              />
+              <ReflectionSummary
+                toolName={REFLECTION_PROMPTS["halt-check-in"].toolName}
+                toolUrl="https://mindchecktools.com/halt-check-in"
+                score={`${total}/20`}
+                severityLabel={vuln.label}
+                scoreRange="4-20 range"
+                interpretation={vuln.description}
+                suggestion={lowDimensions.length > 0 ? `Focus on addressing: ${lowDimensions.map(d => d.label).join(", ")}.` : "Your basic needs are met. Keep doing what you are doing."}
+                reflectionPrompts={REFLECTION_PROMPTS["halt-check-in"].prompts}
+              />
+            </>
           )}
 
           <AdSlot position="halt-results" className="mt-6" />

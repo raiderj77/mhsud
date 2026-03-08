@@ -4,6 +4,9 @@ import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -556,6 +559,26 @@ export function ReadinessClient({ faqData }: Props) {
               </button>
             </div>
           </section>
+
+          {/* Reflection */}
+          {REFLECTION_PROMPTS["readiness-to-change"] && (
+            <>
+              <ReflectionPrompts
+                prompts={REFLECTION_PROMPTS["readiness-to-change"].prompts}
+                toolName={REFLECTION_PROMPTS["readiness-to-change"].toolName}
+              />
+              <ReflectionSummary
+                toolName={REFLECTION_PROMPTS["readiness-to-change"].toolName}
+                toolUrl="https://mindchecktools.com/readiness-to-change"
+                score={stageInfo.label}
+                severityLabel={stageInfo.short}
+                scoreRange={`${scores[primaryStage]}/${maxScore} in primary stage`}
+                interpretation={stageInfo.description}
+                suggestion={stageInfo.nextSteps[0]}
+                reflectionPrompts={REFLECTION_PROMPTS["readiness-to-change"].prompts}
+              />
+            </>
+          )}
 
           {/* important note */}
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-8 text-sm text-amber-800 dark:text-amber-200">

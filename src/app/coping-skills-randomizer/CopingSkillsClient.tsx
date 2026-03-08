@@ -4,6 +4,8 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -489,6 +491,13 @@ export function CopingSkillsClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["coping-skills-randomizer"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["coping-skills-randomizer"].prompts}
+          toolName={REFLECTION_PROMPTS["coping-skills-randomizer"].toolName}
+        />
+      )}
 
       {/* ─── YMYL FOOTER ──────────────────────────────── */}
       <footer className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400 mb-8">

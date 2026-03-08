@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -326,6 +329,32 @@ export function Who5Client({ faqData }: Props) {
             Retake Assessment
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="WHO-5 Well-Being Index"
+          toolUrl="https://mindchecktools.com/who-5-wellbeing-index"
+          score={rawScore}
+          severityLabel={tier.label}
+          scoreRange={tier.rawRange}
+          interpretation={tier.message}
+          suggestion={pctScore < 50
+            ? "A WHO-5 percentage score below 50% suggests that further evaluation may be appropriate. Consider taking the PHQ-9 depression screening and speaking with a healthcare provider."
+            : "Continue the habits and routines that support your wellbeing, and remember that periodic check-ins can help you notice changes early."}
+          reflectionPrompts={REFLECTION_PROMPTS["who-5-wellbeing-index"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_OPTIONS.find((o) => o.value === (answers[item.id] ?? 0))?.label} (${answers[item.id] ?? 0}/5)`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["who-5-wellbeing-index"] && (
+          <ReflectionPrompts
+            toolName="WHO-5 Well-Being Index"
+            prompts={REFLECTION_PROMPTS["who-5-wellbeing-index"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

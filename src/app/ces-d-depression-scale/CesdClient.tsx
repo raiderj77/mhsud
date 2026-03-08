@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -355,6 +358,30 @@ export function CesdClient({ faqData }: Props) {
             Retake Screening
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="CES-D Depression Scale"
+          toolUrl="https://mindchecktools.com/ces-d-depression-scale"
+          score={totalScore}
+          severityLabel={tier.label}
+          scoreRange={tier.range}
+          interpretation={tier.message}
+          suggestion={totalScore >= 16 ? "Consider taking the PHQ-9 for a more specific depression screening, and consider speaking with a healthcare provider about how you have been feeling." : "If you notice depressive symptoms increasing or persisting, you can retake this screening at any time."}
+          reflectionPrompts={REFLECTION_PROMPTS["ces-d-depression-scale"]?.prompts ?? []}
+          responses={ITEMS.map((item) => ({
+            question: item.text,
+            answer: `${SCALE_SHORT[answers[item.id] ?? 0]}${item.reverse ? " (reverse scored)" : ""}`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["ces-d-depression-scale"] && (
+          <ReflectionPrompts
+            toolName="CES-D Depression Scale"
+            prompts={REFLECTION_PROMPTS["ces-d-depression-scale"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -779,6 +781,13 @@ export function ThoughtRecordClient({ faqData }: Props) {
             ))}
           </div>
         </section>
+
+        {REFLECTION_PROMPTS["cbt-thought-record"] && (
+          <ReflectionPrompts
+            prompts={REFLECTION_PROMPTS["cbt-thought-record"].prompts}
+            toolName={REFLECTION_PROMPTS["cbt-thought-record"].toolName}
+          />
+        )}
 
         {/* ── Related Tools ── */}
         <section className="mb-12">

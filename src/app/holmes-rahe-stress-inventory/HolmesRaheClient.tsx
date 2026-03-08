@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ================================================================== */
 /*  Data                                                               */
@@ -362,6 +365,30 @@ export function HolmesRaheClient({ faqData }: Props) {
             Retake Inventory
           </button>
         </div>
+
+        {/* Download Reflection Summary */}
+        <ReflectionSummary
+          toolName="Holmes-Rahe Stress Inventory"
+          toolUrl="https://mindchecktools.com/holmes-rahe-stress-inventory"
+          score={`${totalLcu} LCU`}
+          severityLabel={tierLabel[tier]}
+          scoreRange={tier === "low" ? "0–149" : tier === "moderate" ? "150–299" : "300+"}
+          interpretation={tierMessage[tier]}
+          suggestion={tier === "high" ? "Speaking with a healthcare professional about stress management may be helpful." : tier === "moderate" ? "Coping strategies, social support, and self-care can all influence outcomes. Consider monitoring your stress levels." : "Continue maintaining your well-being. If you experience significant life changes, you can retake this inventory."}
+          reflectionPrompts={REFLECTION_PROMPTS["holmes-rahe-stress-inventory"]?.prompts ?? []}
+          responses={checkedEvents.map((e) => ({
+            question: e.text,
+            answer: `${e.lcu} LCU`,
+          }))}
+        />
+
+        {/* Reflection Prompts */}
+        {REFLECTION_PROMPTS["holmes-rahe-stress-inventory"] && (
+          <ReflectionPrompts
+            toolName="Holmes-Rahe Stress Inventory"
+            prompts={REFLECTION_PROMPTS["holmes-rahe-stress-inventory"].prompts}
+          />
+        )}
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

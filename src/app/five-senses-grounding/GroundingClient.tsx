@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Step definitions ────────────────────────────────── */
 
@@ -538,6 +540,13 @@ export function GroundingClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["five-senses-grounding"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["five-senses-grounding"].prompts}
+          toolName={REFLECTION_PROMPTS["five-senses-grounding"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ── */}
       <section className="mb-12">

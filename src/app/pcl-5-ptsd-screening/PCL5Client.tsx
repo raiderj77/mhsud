@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -490,6 +493,30 @@ export function PCL5Client({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="PCL-5 PTSD Self-Check"
+            toolUrl="https://mindchecktools.com/pcl-5-ptsd-screening"
+            score={totalScore}
+            severityLabel={range.level}
+            scoreRange={`${range.min}–${range.max}`}
+            interpretation={range.description}
+            suggestion={range.suggestion}
+            reflectionPrompts={REFLECTION_PROMPTS["pcl-5-ptsd-screening"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q,
+              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["pcl-5-ptsd-screening"] && (
+            <ReflectionPrompts
+              toolName="PCL-5 PTSD Self-Check"
+              prompts={REFLECTION_PROMPTS["pcl-5-ptsd-screening"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

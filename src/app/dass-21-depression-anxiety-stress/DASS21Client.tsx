@@ -5,6 +5,9 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 // ── Data ────────────────────────────────────────────────────────────────
 
@@ -481,6 +484,32 @@ export function DASS21Client({ faqData }: Props) {
               </p>
             )}
           </div>
+
+          {/* Download Reflection Summary */}
+          <ReflectionSummary
+            toolName="DASS-21 Depression, Anxiety & Stress Self-Check"
+            toolUrl="https://mindchecktools.com/dass-21-depression-anxiety-stress"
+            score={dScore + aScore + sScore}
+            severityLabel={`D: ${dSev.level} / A: ${aSev.level} / S: ${sSev.level}`}
+            scoreRange={`D: ${dScore}/42, A: ${aScore}/42, S: ${sScore}/42`}
+            interpretation={`Depression: ${dSev.level} (${dScore}/42). Anxiety: ${aSev.level} (${aScore}/42). Stress: ${sSev.level} (${sScore}/42).`}
+            suggestion={anyElevated
+              ? "One or more of your subscale scores is in the moderate or higher range. Speaking with a healthcare provider or mental health professional about these results is recommended."
+              : "Your scores fall in the normal to mild range across all three dimensions. Continue to be mindful of your emotional well-being."}
+            reflectionPrompts={REFLECTION_PROMPTS["dass-21-depression-anxiety-stress"]?.prompts ?? []}
+            responses={QUESTIONS.map((q, i) => ({
+              question: q.text,
+              answer: `${answers[i]} — ${OPTIONS[answers[i] ?? 0].label}`,
+            }))}
+          />
+
+          {/* Reflection Prompts */}
+          {REFLECTION_PROMPTS["dass-21-depression-anxiety-stress"] && (
+            <ReflectionPrompts
+              toolName="DASS-21 Depression, Anxiety & Stress Self-Check"
+              prompts={REFLECTION_PROMPTS["dass-21-depression-anxiety-stress"].prompts}
+            />
+          )}
 
           {/* How Scoring Works */}
           <div className="card overflow-hidden mb-5">

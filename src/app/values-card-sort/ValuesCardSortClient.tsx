@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import { ReflectionPrompts } from "@/components/ReflectionPrompts";
+import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -653,6 +655,13 @@ export function ValuesCardSortClient({ faqData }: Props) {
           ))}
         </div>
       </section>
+
+      {REFLECTION_PROMPTS["values-card-sort"] && (
+        <ReflectionPrompts
+          prompts={REFLECTION_PROMPTS["values-card-sort"].prompts}
+          toolName={REFLECTION_PROMPTS["values-card-sort"].toolName}
+        />
+      )}
 
       {/* ── Related Tools ────────────────────────────── */}
       <section className="mt-12 print:hidden">
