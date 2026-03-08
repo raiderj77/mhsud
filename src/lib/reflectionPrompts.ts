@@ -816,6 +816,22 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "msi-bpd-screening": {
+    toolName: "MSI-BPD Borderline Personality Disorder Screening",
+    prompts: [
+      "Which of the ten areas felt most relevant to your current experience — and has that changed over time?",
+      "Have you noticed patterns in your closest relationships that you would like to understand better?",
+      "When you experience intense emotions, what has helped you feel more grounded in the past?",
+      "Is there someone in your life — a friend, family member, or professional — you feel safe talking to about these experiences?",
+      "What would feel like one small, manageable step toward better understanding yourself this week?",
+      "If you could share one thing about your emotional experiences with a mental health professional, what would it be?",
+    ],
+    faqEntries: [
+      { question: "What should I do after taking the MSI-BPD screening?", answer: "After completing the MSI-BPD, take a moment to reflect on which items felt most relevant to your daily life. Consider writing down your score and any patterns you notice so you can share them with a mental health professional. The reflection prompts on this page can help you organize your thoughts before seeking further evaluation." },
+      { question: "How can I use my MSI-BPD results to talk to a therapist about borderline personality disorder?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. You might say: 'I took an MSI-BPD screening online and scored [X] — I would like to discuss what that means for me.' A qualified professional can help determine whether a comprehensive evaluation is appropriate." },
+    ],
+  },
+
   "dbt-crisis-skills": {
     toolName: "DBT Crisis Survival Skills",
     prompts: [

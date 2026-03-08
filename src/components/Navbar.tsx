@@ -63,6 +63,7 @@ const CATEGORIES: Category[] = [
       { href: "/oci-r-ocd-screening", label: "OCI-R", sub: "OCD screening" },
       { href: "/scoff-eating-disorder-screening", label: "SCOFF", sub: "Eating disorder screen" },
       { href: "/aq-10-autism-screening", label: "AQ-10", sub: "Autism spectrum screen" },
+      { href: "/msi-bpd-screening", label: "MSI-BPD", sub: "Borderline personality screen" },
     ],
   },
   {

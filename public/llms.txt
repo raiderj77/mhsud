@@ -29,6 +29,7 @@ Crisis resources are present on every tool page: 988 Suicide & Crisis Lifeline (
 - [OCI-R OCD Screening](https://mindchecktools.com/oci-r-ocd-screening): 18-item OCD Inventory with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
 - [SCOFF Eating Disorder Screen](https://mindchecktools.com/scoff-eating-disorder-screening): 5-item validated screener for anorexia, bulimia, and other eating disorders.
 - [AQ-10 Autism Spectrum Screen](https://mindchecktools.com/aq-10-autism-screening): 10-item autism spectrum screening for adults. Developed at the University of Cambridge.
+- [MSI-BPD Borderline Personality Disorder Screening](https://mindchecktools.com/msi-bpd-screening): 10-item McLean Screening Instrument for BPD by Zanarini et al. (2003). Yes/no format. Cutoff 7+ for positive screen.
 - [Holmes-Rahe Stress Inventory](https://mindchecktools.com/holmes-rahe-stress-inventory): 43-item life stress checklist. Scored in Life Change Units with three risk tiers.
 - [Rosenberg Self-Esteem Scale](https://mindchecktools.com/rosenberg-self-esteem-scale): 10-item global self-esteem measure. Score 0–30. Below 15 suggests low self-esteem.
 - [UCLA Loneliness Scale](https://mindchecktools.com/ucla-loneliness-scale): 20-item measure of subjective loneliness. Score 20–80. Cutoff 44+ for elevated loneliness.
