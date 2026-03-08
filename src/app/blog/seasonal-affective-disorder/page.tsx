@@ -7,9 +7,9 @@ const ARTICLE_URL = `${SITE_URL}/blog/seasonal-affective-disorder`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/seasonal-affective-disorder",
-  title: "Seasonal Affective Disorder (SAD): Understanding Winter Depression and Light Therapy",
+  title: "Seasonal Affective Disorder (SAD): Signs & Help",
   description:
-    "What is seasonal affective disorder? Learn how SAD differs from depression, why it happens in winter, how light therapy works, and when to seek professional help. Evidence-based clinical guide.",
+    "What is SAD? How it differs from depression, why it happens in winter, how light therapy works, and when to seek help. Free guide.",
   keywords: [
     "seasonal affective disorder", "SAD explained", "winter depression", "light therapy",
     "seasonal depression symptoms", "what causes SAD", "light therapy effectiveness",

@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/phq-9-guide",
   title: "PHQ-9 Explained: Scoring, Interpretation & Limits",
   description:
-    "Learn what the PHQ-9 depression screener measures, how healthcare providers interpret scores, why it's only a starting point, and what to do with your results. Plain-language guide.",
+    "What the PHQ-9 measures, how scores are interpreted, its limits, and what to do with your results. Free plain-language guide.",
   keywords: [
     "phq-9 explained", "phq-9 interpretation", "how doctors use phq-9",
     "phq-9 scoring guide", "depression screening explained", "phq-9 accuracy",

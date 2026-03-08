@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/anxiety-test-for-women",
   title: "Anxiety Test for Women | Free GAD-7 Screening",
   description:
-    "Free anxiety screening for women using the clinically validated GAD-7. Understand how hormones, life stages, and stress affect anxiety. Private, instant results.",
+    "Free anxiety screening for women using the GAD-7. Learn how hormones and life stages affect anxiety. Private, instant results.",
   keywords: [
     "anxiety test for women", "women anxiety screening", "female anxiety test",
     "anxiety quiz for women", "gad-7 for women", "womens mental health test",

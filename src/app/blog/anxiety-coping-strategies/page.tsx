@@ -7,9 +7,9 @@ const ARTICLE_URL = `${SITE_URL}/blog/anxiety-coping-strategies`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/anxiety-coping-strategies",
-  title: "Evidence-Based Anxiety Coping Strategies: Clinical Guide to Managing Anxiety Symptoms",
+  title: "Anxiety Coping Strategies: Evidence-Based Guide",
   description:
-    "Learn clinically validated anxiety coping strategies backed by NIH research. Discover cognitive-behavioral techniques, mindfulness practices, and lifestyle changes that can help manage anxiety symptoms effectively.",
+    "Evidence-based anxiety coping strategies — CBT techniques, mindfulness, breathing exercises, and lifestyle changes. Free guide.",
   keywords: [
     "anxiety coping strategies", "anxiety management techniques", "clinical anxiety treatment",
     "evidence-based anxiety relief", "cognitive behavioral therapy for anxiety",

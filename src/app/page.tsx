@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/",
   title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
   description:
-    "Take free, private mental health and substance use self-checks. PHQ-9 depression screening, GAD-7 anxiety test, AUDIT alcohol screening — scored in your browser, answers never stored.",
+    "Free, private mental health self-checks — PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
 });
 
 const TOOLS = [

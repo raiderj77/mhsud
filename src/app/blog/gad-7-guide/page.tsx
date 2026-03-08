@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/gad-7-guide",
   title: "GAD-7 Explained: Scoring, Interpretation & Limits",
   description:
-    "Learn what the GAD-7 anxiety screener measures, how healthcare providers use it, its scoring ranges, and its limitations. Plain-language educational guide — not a diagnosis tool.",
+    "What the GAD-7 anxiety screener measures, scoring ranges, limitations, and how providers use it. Free educational guide.",
   keywords: [
     "gad-7 explained", "gad-7 interpretation", "gad-7 scoring guide",
     "anxiety screening explained", "gad-7 accuracy", "what is gad-7",

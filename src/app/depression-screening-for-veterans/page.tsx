@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/depression-screening-for-veterans",
   title: "Depression Screening for Veterans | Free PHQ-9",
   description:
-    "Free depression screening for veterans using the PHQ-9. Understand military-related depression, PTSD connections, and VA resources. Private, instant results.",
+    "Free depression screening for veterans using the PHQ-9. Includes VA resources and PTSD info. Private, instant results.",
   keywords: [
     "depression screening veterans", "veteran depression test", "military depression screening",
     "ptsd depression test veterans", "va depression screening", "veteran mental health test",

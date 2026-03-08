@@ -8,9 +8,9 @@ const ARTICLE_URL = `${SITE_URL}/blog/work-stress-vs-burnout`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/work-stress-vs-burnout",
-  title: "Work Stress vs. Burnout: How to Tell the Difference (and What Online Quizzes Can't Tell You)",
+  title: "Work Stress vs Burnout: How to Tell the Difference",
   description:
-    "Am I burned out or just stressed? Learn the WHO-defined signs of clinical burnout vs. normal work stress, why online self-checks have limits, and when to talk to a professional.",
+    "Am I burned out or just stressed? Learn WHO-defined burnout signs vs normal work stress and when to see a professional.",
   keywords: [
     "am i burned out or just stressed", "work stress vs burnout difference",
     "signs of burnout vs normal stress", "burnout self-assessment quiz accuracy",

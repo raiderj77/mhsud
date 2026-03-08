@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/burnout-test-for-nurses",
   title: "Burnout Test for Nurses | Free Self-Assessment",
   description:
-    "Free burnout screening designed for nurses. Assess emotional exhaustion, compassion fatigue, and depersonalization. Private, instant results. Not a diagnosis.",
+    "Free burnout screening for nurses — assess emotional exhaustion, compassion fatigue, and depersonalization. Private, instant results.",
   keywords: [
     "burnout test for nurses", "nurse burnout assessment", "nursing burnout quiz",
     "compassion fatigue test nurses", "nurse burnout screening", "healthcare burnout test",

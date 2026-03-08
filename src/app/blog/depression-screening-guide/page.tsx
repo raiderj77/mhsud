@@ -7,9 +7,9 @@ const ARTICLE_URL = `${SITE_URL}/blog/depression-screening-guide`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/depression-screening-guide",
-  title: "Depression Screening Guide: PHQ-9 Assessment, USPSTF Guidelines & Treatment Options",
+  title: "Depression Screening Guide: PHQ-9 & Next Steps",
   description:
-    "Complete guide to depression screening for adults. Learn how the PHQ-9 assessment works, understand USPSTF recommendations, and discover evidence-based treatment approaches. Includes crisis resources.",
+    "Complete depression screening guide — how the PHQ-9 works, USPSTF recommendations, and evidence-based next steps. Free resource.",
   keywords: [
     "depression screening", "PHQ-9 assessment", "USPSTF depression guidelines", "clinical depression",
     "mental health screening", "depression symptoms", "suicide prevention resources", "mental health assessment",

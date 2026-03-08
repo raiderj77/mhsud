@@ -8,9 +8,9 @@ const ARTICLE_URL = `${SITE_URL}/blog/sleep-and-mood`;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/sleep-and-mood",
-  title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)",
+  title: "How Sleep Affects Your Mood: The Science",
   description:
-    "The science behind the sleep-mood connection: why poor sleep worsens anxiety and depression, how to tell if sleep is affecting your mental health, and what to do about it.",
+    "Why poor sleep worsens anxiety and depression, how to tell if sleep is affecting your mental health, and what to do about it. Free guide.",
   keywords: [
     "how does sleep affect your mood", "signs poor sleep affecting mental health",
     "am i depressed or just tired", "sleep and depression connection explained",

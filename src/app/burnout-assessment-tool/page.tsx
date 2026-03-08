@@ -7,7 +7,7 @@ const TOOL_URL = `${SITE_URL}/burnout-assessment-tool`;
 export const metadata: Metadata = createMetadata({
   path: "/burnout-assessment-tool",
   title: "Burnout Assessment Tool | Free Professional Self-Check",
-  description: "Take our free, clinically-informed burnout screening tool. Assess emotional exhaustion, depersonalization, and reduced personal accomplishment with immediate results and guidance.",
+  description: "Free burnout screening tool — assess emotional exhaustion, depersonalization, and reduced accomplishment. Private, instant results. No signup.",
   keywords: [
     "burnout assessment", "burnout test", "emotional exhaustion", "work burnout", 
     "professional burnout", "mental health screening", "stress assessment", "burnout symptoms",

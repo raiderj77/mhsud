@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/alcohol-screening-for-college-students",
   title: "Alcohol Screening for College Students | Free AUDIT",
   description:
-    "Free alcohol screening for college students using the WHO's AUDIT tool. 10 questions, private results, no sign-up. Understand your drinking patterns honestly.",
+    "Free alcohol screening for college students — WHO AUDIT tool. 10 questions, private results, no sign-up. Understand your drinking patterns.",
   keywords: [
     "alcohol screening college students", "college drinking test", "alcohol test for students",
     "binge drinking quiz", "college alcohol assessment", "audit test college",

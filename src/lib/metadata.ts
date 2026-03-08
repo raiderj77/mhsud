@@ -20,13 +20,17 @@ export const DEFAULT_KEYWORDS = [
 
 /** Base metadata shared across all pages */
 export function createMetadata(overrides: Partial<Metadata> & { path?: string }): Metadata {
-  const { path = "", ...rest } = overrides;
+  const { path = "", openGraph: ogOverrides, twitter: twOverrides, ...rest } = overrides;
   const url = `${SITE_URL}${path}`;
+
+  const defaultTitle = `${SITE_NAME} — Free, Private Mental Health Self-Checks`;
+  const pageTitle = typeof rest.title === "string" ? rest.title : defaultTitle;
+  const pageDescription = (rest.description as string) ?? SITE_DESCRIPTION;
 
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: `${SITE_NAME} — Free, Private Mental Health Self-Checks`,
+      default: defaultTitle,
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
@@ -38,13 +42,15 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
       locale: "en_US",
       url,
       siteName: SITE_NAME,
-      title: `${SITE_NAME} — Free, Private Mental Health Self-Checks`,
-      description: SITE_DESCRIPTION,
+      title: pageTitle,
+      description: pageDescription,
+      ...ogOverrides,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${SITE_NAME}`,
-      description: SITE_DESCRIPTION,
+      title: pageTitle,
+      description: pageDescription,
+      ...twOverrides,
     },
     robots: {
       index: true,

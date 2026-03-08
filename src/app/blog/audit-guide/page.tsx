@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/audit-guide",
   title: "AUDIT Alcohol Test Explained: Scoring & Risk Zones",
   description:
-    "Learn what the WHO AUDIT alcohol screening tool measures, how it's scored, what the risk zones mean, and why it's used worldwide. Educational guide — not a diagnosis.",
+    "How the WHO AUDIT alcohol screening is scored, what risk zones mean, and why it's used worldwide. Free educational guide.",
   keywords: [
     "audit alcohol test explained", "audit screening interpretation",
     "who audit scoring", "alcohol screening guide", "audit risk zones",
