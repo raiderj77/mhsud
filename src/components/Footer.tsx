@@ -55,6 +55,7 @@ const WELLNESS_TOOLS = [
   { href: "/worry-time-scheduler", label: "Worry Time" },
   { href: "/values-card-sort", label: "Values Card Sort" },
   { href: "/dbt-crisis-skills", label: "DBT Skills Cards" },
+  { href: "/attachment-style-quiz", label: "Attachment Style Quiz" },
 ];
 
 const RECOVERY_TOOLS = [

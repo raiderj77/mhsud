@@ -816,6 +816,22 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "attachment-style-quiz": {
+    toolName: "ECR-R Attachment Style Quiz",
+    prompts: [
+      "Which of the four attachment styles resonated most with how you experience close relationships?",
+      "Have you noticed patterns in how you respond when a partner pulls away or gets too close?",
+      "How do your early relationship experiences — with caregivers or first partners — show up in your current relationships?",
+      "What does feeling emotionally safe in a relationship look like for you?",
+      "Is there one relationship pattern you would like to understand or shift, even slightly?",
+      "If you could share one thing about your attachment style with a partner or therapist, what would it be?",
+    ],
+    faqEntries: [
+      { question: "What should I do after taking the ECR-R attachment style quiz?", answer: "After completing the ECR-R, reflect on which questions felt most true for you and whether your attachment patterns have changed over time. Consider sharing your results with a therapist who can help you explore how these patterns affect your relationships. The reflection prompts on this page can help you organize your thoughts." },
+      { question: "Can therapy help me develop a more secure attachment style?", answer: "Yes. Research consistently shows that attachment styles can become more secure through therapy, particularly approaches like Emotionally Focused Therapy (EFT), psychodynamic therapy, and attachment-based interventions. A therapist can help you understand your patterns and develop healthier ways of relating to others." },
+    ],
+  },
+
   "msi-bpd-screening": {
     toolName: "MSI-BPD Borderline Personality Disorder Screening",
     prompts: [

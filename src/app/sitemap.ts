@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/scoff-eating-disorder-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/aq-10-autism-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/msi-bpd-screening`, lastModified: "2026-03-08T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/attachment-style-quiz`, lastModified: "2026-03-08T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/sobriety-calculator`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/money-saved-recovery-calculator`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/health-recovery-timeline`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

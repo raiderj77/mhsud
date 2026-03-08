@@ -88,6 +88,7 @@ const CATEGORIES: Category[] = [
       { href: "/worry-time-scheduler", label: "Worry Time", sub: "CBT worry postponement" },
       { href: "/values-card-sort", label: "Values Card Sort", sub: "Personal values exercise" },
       { href: "/dbt-crisis-skills", label: "DBT Skills Cards", sub: "Crisis survival skills" },
+      { href: "/attachment-style-quiz", label: "Attachment Style", sub: "ECR-R relationship quiz" },
     ],
   },
   {
