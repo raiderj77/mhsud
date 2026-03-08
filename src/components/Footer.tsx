@@ -100,6 +100,14 @@ const TARGETED_LINKS = [
   { href: "/burnout-test-parents", label: "Burnout: Parents" },
   { href: "/loneliness-test-seniors", label: "Loneliness: Seniors" },
   { href: "/eating-disorder-test-athletes", label: "Eating Disorder: Athletes" },
+  { href: "/caregiver-burnout-assessment", label: "Caregiver Burnout" },
+  { href: "/compassion-fatigue-test", label: "Compassion Fatigue" },
+  { href: "/postpartum-depression-test", label: "Postpartum Depression" },
+  { href: "/grief-assessment", label: "Grief Assessment" },
+  { href: "/am-i-depressed-quiz", label: "Am I Depressed?" },
+  { href: "/do-i-have-ptsd-quiz", label: "Do I Have PTSD?" },
+  { href: "/am-i-an-alcoholic-quiz", label: "Am I an Alcoholic?" },
+  { href: "/phq-4-anxiety-depression-screen", label: "PHQ-4 Quick Screen" },
 ];
 
 const INFO_LINKS = [

@@ -455,6 +455,54 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Description: SCOFF eating disorder screening with athlete-specific content about RED-S, weight-class sports, performance pressure, and sports dietitian resources.
 - Base tool: SCOFF
 
+### Am I Depressed Quiz
+- URL: https://mindchecktools.com/am-i-depressed-quiz
+- Description: PHQ-9 depression screening with conversational framing for users searching "am I depressed" or "do I have depression." Includes score table, signs of depression list, and FAQ covering the difference between sadness and clinical depression.
+- Base tool: PHQ-9
+- Questions answered: Am I depressed? Do I have depression? Am I depressed or just sad? How to know if you are depressed.
+
+### Do I Have PTSD Quiz
+- URL: https://mindchecktools.com/do-i-have-ptsd-quiz
+- Description: PCL-5 PTSD screening with conversational framing for users searching "do I have PTSD." Includes four symptom cluster breakdown (intrusion, avoidance, negative cognition, arousal) and FAQ on complex trauma, C-PTSD, and treatment options including CPT and EMDR.
+- Base tool: PCL-5
+- Questions answered: Do I have PTSD? Am I traumatized? PTSD quiz free. Signs of PTSD quiz.
+
+### Am I an Alcoholic Quiz
+- URL: https://mindchecktools.com/am-i-an-alcoholic-quiz
+- Description: WHO AUDIT alcohol screening with conversational framing for users searching "am I an alcoholic" or "do I have a drinking problem." Includes AUD spectrum explanation, warning signs, and SAMHSA/AA/SMART Recovery resources.
+- Base tool: AUDIT
+- Questions answered: Am I an alcoholic? Do I have a drinking problem? Am I drinking too much? Alcohol use disorder test.
+
+### Caregiver Burnout Assessment
+- URL: https://mindchecktools.com/caregiver-burnout-assessment
+- Description: Burnout assessment for family caregivers of elderly parents, ill spouses, or children with special needs. Covers caregiver exhaustion, resentment, and loss of self. Includes ARCH National Respite Network and Caregiver Action Network resources.
+- Base tool: Burnout Assessment
+- Questions answered: Caregiver burnout test. Am I burned out as a caregiver? Family caregiver burnout assessment.
+
+### Compassion Fatigue Test
+- URL: https://mindchecktools.com/compassion-fatigue-test
+- Description: Burnout assessment for nurses, therapists, social workers, first responders, and family caregivers. Covers compassion fatigue vs burnout distinction, secondary traumatic stress, and ProQOL dimensions.
+- Base tool: Burnout Assessment
+- Questions answered: Compassion fatigue test. Do I have compassion fatigue? Compassion fatigue quiz for nurses. Secondary traumatic stress test.
+
+### Postpartum Depression Test
+- URL: https://mindchecktools.com/postpartum-depression-test
+- Description: PHQ-9 depression screening for new mothers and parents. Covers baby blues vs PPD distinction, 1-in-7 prevalence, paternal PPD, and Postpartum Support International helpline (1-800-944-4773).
+- Base tool: PHQ-9
+- Questions answered: Postpartum depression test. Am I depressed after baby? Baby blues vs postpartum depression. PPD quiz free.
+
+### Grief Assessment
+- URL: https://mindchecktools.com/grief-assessment
+- Description: PHQ-9 depression screening framed for grief and bereavement. Covers normal grief vs complicated/prolonged grief disorder (PGD), DSM-5 criteria, Complicated Grief Treatment (CGT), and GriefShare resources.
+- Base tool: PHQ-9
+- Questions answered: Grief assessment. Complicated grief test. Is my grief normal? Prolonged grief disorder quiz.
+
+### PHQ-4 Anxiety & Depression Screen
+- URL: https://mindchecktools.com/phq-4-anxiety-depression-screen
+- Description: Ultra-brief 4-question validated screening tool combining GAD-7 items 1-2 (anxiety subscale) and PHQ-9 items 1-2 (depression subscale). Scores 0-12 with separate anxiety and depression subscores. Validated by Kroenke et al. (2009). Fastest way to screen for both anxiety and depression simultaneously.
+- Time: ~1 minute
+- Questions answered: PHQ-4 test. Quick anxiety and depression screen. Ultra-brief mental health screening. PHQ-4 score interpretation.
+
 ### Burnout Assessment Tool
 - URL: https://mindchecktools.com/burnout-assessment-tool
 - Description: Clinically-informed burnout screening tool assessing the three dimensions of burnout: emotional exhaustion, depersonalization (cynicism), and reduced personal accomplishment. 15 Likert-scale questions with immediate scoring and personalized guidance.
