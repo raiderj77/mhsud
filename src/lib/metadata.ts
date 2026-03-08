@@ -44,6 +44,7 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
       siteName: SITE_NAME,
       title: pageTitle,
       description: pageDescription,
+      images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: pageTitle }],
       ...ogOverrides,
     },
     twitter: {

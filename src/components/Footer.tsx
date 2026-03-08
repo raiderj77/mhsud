@@ -110,6 +110,7 @@ const INFO_LINKS = [
   { href: "/cookies", label: "Cookie Policy" },
   { href: "/terms", label: "Terms of Use" },
   { href: "/accessibility", label: "Accessibility" },
+  { href: "/disclaimer", label: "Disclaimer" },
 ];
 
 export function Footer() {

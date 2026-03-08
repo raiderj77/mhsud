@@ -10,6 +10,10 @@ import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   ...createMetadata({ path: "/" }),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -18,6 +22,7 @@ export const metadata: Metadata = {
     title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
     description:
       "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools — Free, Private Mental Health Self-Checks" }],
   },
   other: {
     "google-adsense-account": "ca-pub-7171402107622932",
