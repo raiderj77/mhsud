@@ -320,6 +320,9 @@ export default function BpdScreeningForYoungAdultsPage() {
           <Link href="/msi-bpd-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
             MSI-BPD Screening →
           </Link>
+          <Link href="/bpd-test-for-women" className="text-sky-600 dark:text-sky-400 hover:underline">
+            BPD Test for Women →
+          </Link>
           <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline">
             DASS-21 Depression Anxiety Stress →
           </Link>

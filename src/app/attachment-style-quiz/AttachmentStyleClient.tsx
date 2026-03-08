@@ -660,9 +660,9 @@ export function AttachmentStyleClient({ faqData }: Props) {
             <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
+                { name: "Attachment Style Test for Couples", desc: "ECR-R with relationship-focused context", href: "/attachment-style-test-for-couples" },
                 { name: "UCLA Loneliness Scale", desc: "20-item measure of subjective loneliness", href: "/ucla-loneliness-scale" },
                 { name: "Rosenberg Self-Esteem Scale", desc: "10-item global self-esteem measure", href: "/rosenberg-self-esteem-scale" },
-                { name: "PHQ-9 Depression Self-Check", desc: "9-question validated depression screener", href: "/phq-9-depression-test" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>

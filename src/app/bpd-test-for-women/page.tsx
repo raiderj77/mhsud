@@ -347,6 +347,9 @@ export default function BpdTestForWomenPage() {
           <Link href="/msi-bpd-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
             MSI-BPD Screening →
           </Link>
+          <Link href="/bpd-screening-for-young-adults" className="text-sky-600 dark:text-sky-400 hover:underline">
+            BPD Screening for Young Adults →
+          </Link>
           <Link href="/attachment-style-quiz" className="text-sky-600 dark:text-sky-400 hover:underline">
             Attachment Style Quiz →
           </Link>

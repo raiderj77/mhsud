@@ -632,9 +632,9 @@ export function ASRSClient({ faqData }: Props) {
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
+                { name: "ADHD Test for Teens", desc: "ASRS screening with teen-specific context", href: "/adhd-test-for-teens" },
                 { name: "PHQ-9 Depression Self-Check", desc: "9-question validated depression screener", href: "/phq-9-depression-test" },
                 { name: "GAD-7 Anxiety Self-Check", desc: "7-question validated anxiety screener", href: "/gad-7-anxiety-test" },
-                { name: "PCL-5 PTSD Screening", desc: "20-item PTSD screening with cluster breakdown", href: "/pcl-5-ptsd-screening" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>

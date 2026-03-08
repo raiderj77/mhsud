@@ -545,7 +545,7 @@ export function PHQ9Client({ faqData }: Props) {
               {[
                 { name: "GAD-7 Anxiety Self-Check", desc: "7-question validated anxiety screener", href: "/gad-7-anxiety-test" },
                 { name: "AUDIT Alcohol Use Screen", desc: "10-item WHO alcohol screening tool", href: "/audit-alcohol-test" },
-                { name: "Sleep & Mood Reflection", desc: "Explore how sleep affects wellbeing", href: "/sleep-and-mood-check" },
+                { name: "Depression Test for Men", desc: "PHQ-9 with context on how depression presents in men", href: "/depression-test-for-men" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
