@@ -282,6 +282,50 @@ export function MentalLoadClient({ faqData }: Props) {
 
           <AdSlot position="Below Results" className="mb-8" />
 
+          <section className="card p-5 sm:p-6 mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Understanding Mental Load</h2>
+            <div className="prose prose-neutral dark:prose-invert max-w-none text-sm leading-relaxed space-y-3">
+              <p>
+                Mental load — sometimes called &quot;cognitive labor&quot; or &quot;invisible labor&quot; — refers to the ongoing
+                work of managing, planning, and organizing household life. It goes beyond completing tasks: it includes
+                remembering appointments, noticing when supplies run low, tracking school deadlines, coordinating
+                schedules, and anticipating what needs to happen next. Research by sociologist Allison Daminger (2019)
+                identifies four stages of cognitive labor: anticipating needs, identifying options, deciding among them,
+                and monitoring the results.
+              </p>
+              <p>
+                Studies consistently show that mental load falls disproportionately on one partner in a household —
+                most often women, even in dual-income families. A 2019 study published in the <em>American Sociological
+                Review</em> found that mothers are more likely to perform the anticipation and monitoring stages of
+                household management, while fathers are more often involved only when directly asked. This imbalance
+                can persist even when physical tasks are shared equally.
+              </p>
+              <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mt-4 mb-2">How Mental Load Affects Well-Being</h3>
+              <p>
+                Carrying a disproportionate mental load is associated with higher rates of stress, anxiety, and
+                burnout. Research published in <em>Sex Roles</em> (2021) found a significant link between unequal
+                cognitive labor and reduced relationship satisfaction. The person carrying more mental load often
+                reports feeling overwhelmed, underappreciated, and emotionally exhausted — symptoms that overlap
+                with clinical burnout.
+              </p>
+              <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mt-4 mb-2">Strategies for Rebalancing</h3>
+              <p>
+                Addressing mental load starts with making the invisible visible. This tool helps by breaking down
+                household cognitive labor into concrete domains. From there, evidence-based strategies include:
+              </p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li><strong>Full ownership transfer</strong> — assign entire domains (not individual tasks) so both partners carry the planning and follow-through</li>
+                <li><strong>Regular check-ins</strong> — schedule brief weekly conversations to review what each person is carrying</li>
+                <li><strong>Externalize systems</strong> — shared calendars, grocery lists, and task apps reduce the need for one person to remember everything</li>
+                <li><strong>Let go of gatekeeping</strong> — allow your partner to manage tasks their way, even if the approach differs from yours</li>
+              </ul>
+              <p>
+                If mental load is contributing to persistent stress, low mood, or relationship conflict, consider
+                speaking with a therapist who specializes in couples or family dynamics.
+              </p>
+            </div>
+          </section>
+
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
             <div className="space-y-2">
