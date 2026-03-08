@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/dbt-skills-beginners`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "dbt-skills-beginners")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/dbt-skills-beginners",
@@ -22,10 +23,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "dbt-skills-beginners")!;
 
 const FAQ_DATA = [
   { question: "Do I need to have BPD to use DBT?", answer: "No. DBT was originally developed for borderline personality disorder, but research has since shown it to be effective for a wide range of concerns. DBT skills are now used to help people manage anxiety, depression, eating disorders, substance use, PTSD, and everyday emotional overwhelm. You do not need any specific screening result to benefit from learning and practicing DBT skills in your daily life." },

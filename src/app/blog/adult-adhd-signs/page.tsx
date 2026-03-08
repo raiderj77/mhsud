@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/adult-adhd-signs`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "adult-adhd-signs")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/adult-adhd-signs",
@@ -22,10 +23,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "adult-adhd-signs")!;
 
 const FAQ_DATA = [
   { question: "Can adults develop ADHD?", answer: "ADHD is a neurodevelopmental condition, meaning it begins in childhood. Adults do not develop ADHD out of nowhere. However, many adults have had ADHD their entire lives without knowing it. Symptoms may become more noticeable in adulthood when external structures like school schedules and parental oversight are removed. If you are experiencing ADHD-like symptoms for the first time as an adult with no childhood history, a comprehensive evaluation can help determine whether ADHD was always present or whether another condition is responsible." },

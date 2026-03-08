@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/gad-7-guide`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "gad-7-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/gad-7-guide",
@@ -21,10 +22,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "gad-7-guide")!;
 
 const FAQ_DATA = [
   { question: "Does the GAD-7 only detect generalized anxiety disorder?", answer: "While developed for generalized anxiety, research shows the GAD-7 has reasonable sensitivity for panic disorder, social anxiety disorder, and PTSD. However, it is not a specific diagnostic tool for any of these conditions — a positive screen warrants professional evaluation to determine the specific nature of the anxiety." },

@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/seasonal-affective-disorder`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "seasonal-affective-disorder")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/seasonal-affective-disorder",
@@ -22,10 +23,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "seasonal-affective-disorder")!;
 
 const FAQ_DATA = [
   {

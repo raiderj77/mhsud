@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/loneliness-mental-health`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "loneliness-mental-health")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/loneliness-mental-health",
@@ -23,10 +24,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "loneliness-mental-health")!;
 
 const FAQ_DATA = [
   { question: "Is loneliness a mental health condition?", answer: "Loneliness itself is not classified as a mental health disorder. It is a subjective emotional state — a feeling that your social connections are insufficient in quality or quantity. However, chronic loneliness is a significant risk factor for developing mental health conditions such as depression, anxiety, and substance use concerns. If loneliness persists for weeks or months and begins affecting your daily functioning, it may indicate an underlying issue worth exploring with a healthcare provider." },

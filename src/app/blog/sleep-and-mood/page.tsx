@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/sleep-and-mood`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "sleep-and-mood")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/sleep-and-mood",
@@ -25,10 +26,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "sleep-and-mood")!;
 
 const FAQ_DATA = [
   { question: "Does poor sleep cause depression, or does depression cause poor sleep?", answer: "Both. Research consistently shows a bidirectional relationship. Insomnia increases the risk of developing depression by roughly five times, and about 75% of people with depression experience insomnia. They reinforce each other in a cycle — poor sleep worsens mood, and low mood disrupts sleep. Breaking the cycle often requires addressing both sides." },

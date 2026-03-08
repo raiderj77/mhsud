@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/phq-9-guide`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "phq-9-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/phq-9-guide",
@@ -22,10 +23,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "phq-9-guide")!;
 
 const FAQ_DATA = [
   { question: "Is the PHQ-9 the same as a depression diagnosis?", answer: "No. The PHQ-9 is a screening tool that identifies possible depressive symptoms. A diagnosis of depression requires a comprehensive clinical evaluation by a qualified healthcare professional, including consideration of medical history, symptom duration, functional impact, and ruling out other causes." },

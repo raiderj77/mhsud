@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/relapse-prevention-plan-guide`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "relapse-prevention-plan-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/relapse-prevention-plan-guide",
@@ -20,10 +21,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "relapse-prevention-plan-guide")!;
 
 const FAQ_DATA = [
   {

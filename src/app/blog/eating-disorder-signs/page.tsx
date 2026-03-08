@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/eating-disorder-signs`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "eating-disorder-signs")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/eating-disorder-signs",
@@ -23,10 +24,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "eating-disorder-signs")!;
 
 const FAQ_DATA = [
   { question: "Can men have eating disorders?", answer: "Yes. Eating disorders affect people of all genders. Research suggests that approximately one in three people with an eating disorder is male. Men may be underdiagnosed because of stereotypes that frame eating disorders as conditions that only affect women. Men may also present with different symptoms, such as excessive exercise or a focus on muscularity rather than thinness." },

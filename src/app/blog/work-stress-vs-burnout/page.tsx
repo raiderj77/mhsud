@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/work-stress-vs-burnout`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "work-stress-vs-burnout")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/work-stress-vs-burnout",
@@ -25,10 +26,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "work-stress-vs-burnout")!;
 
 const FAQ_DATA = [
   { question: "Am I burned out or just stressed?", answer: "Stress is typically tied to specific demands and resolves when those demands ease. Burnout is a state of chronic exhaustion, cynicism, and reduced effectiveness that persists even after a vacation or break. If rest doesn't restore you, burnout is more likely — but only a professional can make that determination in your specific context." },

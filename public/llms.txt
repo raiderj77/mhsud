@@ -1,598 +1,134 @@
 # MindCheck Tools
 
-> Free, private mental health self-checks. Your answers are scored in your browser and never stored.
+> Free, private mental health self-checks and recovery tools. All assessments run entirely in your browser — no accounts, no login, no server storage. Answers are scored client-side and never transmitted.
+
+MindCheck Tools offers validated clinical screening instruments and original wellness tools for depression, anxiety, PTSD, substance use, ADHD, OCD, bipolar disorder, eating disorders, autism spectrum, and recovery support. All YMYL content is reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience. Tools are educational screening instruments only — not a diagnosis or treatment.
+
+Crisis resources are present on every tool page: 988 Suicide & Crisis Lifeline (call or text 988) and SAMHSA National Helpline 1-800-662-4357.
+
+## Validated Clinical Screening Tools
+
+- [PHQ-9 Depression Self-Check](https://mindchecktools.com/phq-9-depression-test): 9-item Patient Health Questionnaire for depression screening. Widely used by clinicians worldwide. Scores 0–27 with five severity ranges.
+- [CES-D Depression Scale](https://mindchecktools.com/ces-d-depression-scale): 20-item NIMH depression screener covering mood, guilt, hopelessness, appetite, and sleep. Cutoff 16+.
+- [GAD-7 Anxiety Self-Check](https://mindchecktools.com/gad-7-anxiety-test): 7-item Generalized Anxiety Disorder scale. Standard clinical screener for anxiety symptoms.
+- [DASS-21 Depression/Anxiety/Stress](https://mindchecktools.com/dass-21-depression-anxiety-stress): One test, three scores. Screens depression, anxiety, and stress simultaneously with separate severity ratings.
+- [WHO-5 Well-Being Index](https://mindchecktools.com/who-5-wellbeing-index): 5-item WHO positive wellbeing measure. Percentage score 0–100. Below 50% suggests further evaluation.
+- [K6 Psychological Distress Scale](https://mindchecktools.com/k6-distress-scale): 6-item nonspecific psychological distress measure used in national health surveys. Score 13+ = serious distress.
+- [SPIN Social Anxiety Test](https://mindchecktools.com/spin-social-anxiety-test): 17-item Social Phobia Inventory with Fear, Avoidance, and Physiological subscales. Cutoff 19+.
+- [PCL-5 PTSD Screening](https://mindchecktools.com/pcl-5-ptsd-screening): 20-item PTSD Checklist developed by the National Center for PTSD. DSM-5 aligned.
+- [PC-PTSD-5 PTSD Screen](https://mindchecktools.com/pc-ptsd-5-screening): 5-item VA brief PTSD screen with trauma exposure gate question. Cutoff 3+.
+- [ACE Questionnaire](https://mindchecktools.com/ace-questionnaire): 10-item Adverse Childhood Experiences questionnaire from the CDC-Kaiser study. Score 0–10 with resilience framing.
+- [AUDIT Alcohol Use Screen](https://mindchecktools.com/audit-alcohol-test): 10-item WHO Alcohol Use Disorders Identification Test. Gold standard alcohol screening.
+- [AUDIT-C Quick Screen](https://mindchecktools.com/audit-c-alcohol-screen): 3-item brief alcohol screen used in primary care. Faster version of the full AUDIT.
+- [DAST-10 Drug Screening](https://mindchecktools.com/dast-10-drug-screening): 10-item validated drug use screening test. Reflects on drug use patterns and impact.
+- [CAGE-AID Substance Use Screen](https://mindchecktools.com/cage-aid-substance-abuse-screening): 4-item validated screen for both alcohol and drug use concerns.
+- [CRAFFT Screening for Teens](https://mindchecktools.com/crafft-substance-screening): Validated substance use screening for ages 12–21 (CRAFFT 2.1+N). Includes nicotine screening. Cutoff 2+.
+- [WHO ASSIST Substance Screening](https://mindchecktools.com/who-assist-substance-screening): Comprehensive WHO screening covering 10 substance categories. Per-substance risk scores 0–39.
+- [ASRS ADHD Screening](https://mindchecktools.com/asrs-adhd-screening): 6-item WHO-developed Adult ADHD Self-Report Scale using research-validated thresholds.
+- [MDQ Bipolar Screening](https://mindchecktools.com/mdq-bipolar-screening): 3-part Mood Disorder Questionnaire for bipolar spectrum disorders. Assesses symptoms, co-occurrence, and functional impact.
+- [OCI-R OCD Screening](https://mindchecktools.com/oci-r-ocd-screening): 18-item OCD Inventory with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
+- [SCOFF Eating Disorder Screen](https://mindchecktools.com/scoff-eating-disorder-screening): 5-item validated screener for anorexia, bulimia, and other eating disorders.
+- [AQ-10 Autism Spectrum Screen](https://mindchecktools.com/aq-10-autism-screening): 10-item autism spectrum screening for adults. Developed at the University of Cambridge.
+- [Holmes-Rahe Stress Inventory](https://mindchecktools.com/holmes-rahe-stress-inventory): 43-item life stress checklist. Scored in Life Change Units with three risk tiers.
+- [Rosenberg Self-Esteem Scale](https://mindchecktools.com/rosenberg-self-esteem-scale): 10-item global self-esteem measure. Score 0–30. Below 15 suggests low self-esteem.
+- [UCLA Loneliness Scale](https://mindchecktools.com/ucla-loneliness-scale): 20-item measure of subjective loneliness. Score 20–80. Cutoff 44+ for elevated loneliness.
+- [Athens Insomnia Scale](https://mindchecktools.com/athens-insomnia-scale): 8-item ICD-10 insomnia severity measure. Cutoff 6+ for insomnia (93% sensitivity).
+- [Brief Resilience Scale](https://mindchecktools.com/brief-resilience-scale): 6-item measure of ability to bounce back from stress. Score 1–5. Low resilience below 3.00.
+
+## Original Wellness & Stress Tools
+
+- [Work Stress & Burnout Check](https://mindchecktools.com/work-stress-check): 12 questions on work demands, control, support, and recovery.
+- [Burnout Assessment Tool](https://mindchecktools.com/burnout-assessment-tool): Original burnout screener covering exhaustion, cynicism, and efficacy.
+- [Mental Load Calculator](https://mindchecktools.com/mental-load-calculator): 24 questions on how planning, remembering, and organizing is distributed at home.
+- [Sleep & Mood Reflection](https://mindchecktools.com/sleep-and-mood-check): Explore how sleep quality, habits, and mood affect each other.
+
+## Recovery Tools (Substance Use & Addiction)
+
+- [Sobriety Calculator](https://mindchecktools.com/sobriety-calculator): Track days sober, milestone badges, and money saved. Date saves locally.
+- [Money Saved in Recovery](https://mindchecktools.com/money-saved-recovery-calculator): Calculate savings from not drinking or using. Preset averages by substance with projections.
+- [Health Recovery Timeline](https://mindchecktools.com/health-recovery-timeline): Interactive timeline of body recovery after quitting. Covers alcohol, nicotine, and opioids.
+- [BAC Calculator](https://mindchecktools.com/bac-calculator): Estimate blood alcohol content using the Widmark formula. Shows effects, legal status, and time until sober.
+- [Standard Drinks Calculator](https://mindchecktools.com/standard-drinks-calculator): Calculate standard drinks in any beverage. 16 presets with visual comparison.
+- [HALT Check-In](https://mindchecktools.com/halt-check-in): Daily recovery check-in based on HALT (Hungry, Angry, Lonely, Tired). Vulnerability level with coping suggestions.
+- [Withdrawal Timeline](https://mindchecktools.com/withdrawal-timeline): Phase-by-phase withdrawal symptoms for alcohol, opioids, benzos, stimulants, meth, cannabis, and nicotine.
+- [Treatment Cost Estimator](https://mindchecktools.com/treatment-cost-estimator): Estimated costs for outpatient, IOP, residential rehab, detox, MAT, and sober living. Insurance info included.
+- [Relapse Prevention Plan Builder](https://mindchecktools.com/relapse-prevention-plan): Build a personalized plan. Identify triggers, warning signs, coping strategies, emergency contacts, and craving action plan.
+- [Urge Surfing Timer](https://mindchecktools.com/urge-surfing-timer): Guided mindfulness timer for riding out cravings. Wave animation, box breathing, based on Alan Marlatt's technique.
+- [Readiness to Change Assessment](https://mindchecktools.com/readiness-to-change): 15 statements based on Prochaska & DiClemente's Stages of Change model with stage-specific next steps.
+- [Trigger Identification Worksheet](https://mindchecktools.com/trigger-identification-worksheet): Identify personal triggers across 6 categories: people, places, emotions, situations, times, sensory cues.
+- [Coping Skills Randomizer](https://mindchecktools.com/coping-skills-randomizer): 51 evidence-based coping skills across 6 categories with instructions. Filter by category, save favorites.
+- [Daily Recovery Check-In](https://mindchecktools.com/daily-recovery-check-in): Daily wellness check tracking mood, cravings, sleep, stress, connection. 7 and 30-day trends with streak counter.
+- [Family Impact Assessment](https://mindchecktools.com/family-impact-assessment): 18 questions for families concerned about a loved one's substance use. 7 domains including finances, relationships, safety.
+
+## Mindfulness & CBT Tools
+
+- [Box Breathing Exercise](https://mindchecktools.com/box-breathing-exercise): Guided box breathing for stress and anxiety regulation.
+- [5-4-3-2-1 Grounding](https://mindchecktools.com/five-senses-grounding): Five senses grounding technique for anxiety and dissociation.
+- [Cognitive Distortion Identifier](https://mindchecktools.com/cognitive-distortion-identifier): Identify thinking errors that fuel anxiety and depression.
+- [Safety Plan](https://mindchecktools.com/safety-plan): Personalized safety planning tool for crisis prevention.
+- [CBT Thought Record](https://mindchecktools.com/cbt-thought-record): Structured thought record for challenging negative automatic thoughts.
+- [Worry Time Scheduler](https://mindchecktools.com/worry-time-scheduler): Schedule contained worry time to reduce intrusive thoughts.
+- [Values Card Sort](https://mindchecktools.com/values-card-sort): Identify core personal values for use in ACT and motivational work.
+- [DBT Crisis Skills Cards](https://mindchecktools.com/dbt-crisis-skills): DBT distress tolerance and emotion regulation skills for crisis moments.
+
+## Targeted Screenings (Demographic-Specific pSEO Pages)
+
+These pages use validated tools with educational context tailored to specific populations:
+
+- [Depression Test for Teens](https://mindchecktools.com/depression-test-for-teens): PHQ-9 with teen-specific context, signs, and youth crisis resources.
+- [Depression Test for Seniors](https://mindchecktools.com/depression-test-for-seniors): PHQ-9 with late-life depression context, isolation, and eldercare resources.
+- [Depression Test for New Moms](https://mindchecktools.com/depression-test-for-new-moms): PHQ-9 with postpartum depression info, baby blues vs PPD, PSI helpline.
+- [Depression Test for Veterans](https://mindchecktools.com/depression-screening-for-veterans): PHQ-9 with veteran-specific PTSD, transition, and VA resources.
+- [Anxiety Test for Women](https://mindchecktools.com/anxiety-test-for-women): GAD-7 with hormonal factors, life stages, and women's mental health context.
+- [Anxiety Test for Teens](https://mindchecktools.com/anxiety-test-for-teens): GAD-7 with teen anxiety stats, social media impact, youth crisis resources.
+- [Anxiety Test for Men](https://mindchecktools.com/anxiety-test-for-men): GAD-7 with info on how anxiety manifests in men (anger, physical symptoms).
+- [PTSD Test for Veterans](https://mindchecktools.com/ptsd-test-veterans): PCL-5 with combat PTSD stats, VA treatment info, Veterans Crisis Line.
+- [PTSD Test for First Responders](https://mindchecktools.com/ptsd-test-first-responders): PCL-5 for police, firefighters, EMTs with cumulative trauma context.
+- [ADHD Test for Adults](https://mindchecktools.com/adhd-test-adults): ASRS with adult ADHD underdiagnosis, symptoms, and evaluation info.
+- [ADHD Test for Women](https://mindchecktools.com/adhd-test-women): ASRS with masking, hormonal effects, and why women are diagnosed late.
+- [OCD Test for Teens](https://mindchecktools.com/ocd-test-teens): OCI-R with teen OCD info, common themes, and ERP treatment resources.
+- [Bipolar Test for Young Adults](https://mindchecktools.com/bipolar-test-young-adults): MDQ with onset age, misdiagnosis as depression, and hypomania info.
+- [Social Anxiety Test for College Students](https://mindchecktools.com/social-anxiety-test-college): SPIN with college social anxiety, academic impact, campus resources.
+- [Alcohol Screening for College Students](https://mindchecktools.com/alcohol-screening-for-college-students): AUDIT with college drinking stats, binge drinking, and campus resources.
+- [Alcohol Screening for Military](https://mindchecktools.com/alcohol-screening-military): AUDIT with military drinking culture, career concerns, and VA resources.
+- [Drug Screening for Teens](https://mindchecktools.com/drug-screening-teens): CRAFFT for ages 12–21 with age-appropriate info and teen treatment resources.
+- [Substance Screening for Parents](https://mindchecktools.com/substance-abuse-test-parents): CAGE-AID with parenting impact, custody concerns, and family treatment.
+- [Stress Test for College Students](https://mindchecktools.com/stress-test-college-students): DASS-21 with college stress stats, campus resources, and JED Foundation.
+- [Burnout Test for Nurses](https://mindchecktools.com/burnout-test-for-nurses): Burnout assessment with nursing-specific compassion fatigue and shift work context.
+- [Burnout Test for Healthcare Workers](https://mindchecktools.com/burnout-test-for-healthcare-workers): Burnout assessment for all healthcare staff with post-pandemic and moral injury context.
+- [Burnout Test for Teachers](https://mindchecktools.com/burnout-test-for-teachers): Burnout assessment with teacher emotional labor and systemic causes.
+- [Burnout Test for Parents](https://mindchecktools.com/burnout-test-parents): Parental burnout covering exhaustion, detachment, and guilt with self-care guidance.
+- [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): UCLA Loneliness Scale with senior isolation stats, health impact, community resources.
+- [Eating Disorder Test for Athletes](https://mindchecktools.com/eating-disorder-test-athletes): SCOFF with RED-S info, sport-specific risks, and athletic body image context.
+
+## Blog & Educational Guides
 
-MindCheck Tools provides validated, evidence-based mental health screening instruments as free, private web tools. All scoring happens client-side — no accounts, no login, no data collection.
+- [Blog Index](https://mindchecktools.com/blog): All guides and educational content.
+- [Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety](https://mindchecktools.com/blog/cognitive-distortions-list)
+- [What Happens When You Stop Drinking: A Timeline](https://mindchecktools.com/blog/quit-drinking-timeline)
+- [DBT Skills for Everyday Life: A Beginner's Guide](https://mindchecktools.com/blog/dbt-skills-beginners)
+- [PHQ-9 Guide](https://mindchecktools.com/blog/phq-9-guide)
+- [GAD-7 Guide](https://mindchecktools.com/blog/gad-7-guide)
+- [AUDIT Guide](https://mindchecktools.com/blog/audit-guide)
+- [Work Stress vs Burnout](https://mindchecktools.com/blog/work-stress-vs-burnout)
+- [Sleep and Mood](https://mindchecktools.com/blog/sleep-and-mood)
+- [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide)
+- [Anxiety Coping Strategies](https://mindchecktools.com/blog/anxiety-coping-strategies)
 
-## Self-Check Tools
+## Site Information
 
-### PHQ-9 Depression Self-Check
-- URL: https://mindchecktools.com/phq-9-depression-test
-- Description: 9-question validated depression screener (Patient Health Questionnaire-9). Scores 0-27 across minimal, mild, moderate, moderately severe, and severe ranges.
-- Time: ~2 minutes
-- Source: Developed by Drs. Spitzer, Williams, and Kroenke. Public domain.
-- Questions answered: Am I depressed? How severe are my depression symptoms? What does my PHQ-9 score mean?
+- [About](https://mindchecktools.com/about): About MindCheck Tools and our clinical reviewer credentials.
+- [Crisis Resources](https://mindchecktools.com/crisis-resources): Full list of crisis resources and international helplines.
+- [Privacy Policy](https://mindchecktools.com/privacy)
+- [Terms of Use](https://mindchecktools.com/terms)
+- [Cookie Policy](https://mindchecktools.com/cookies)
+- [Accessibility Statement](https://mindchecktools.com/accessibility)
+- [Contact](https://mindchecktools.com/contact)
 
-### CES-D Depression Scale
-- URL: https://mindchecktools.com/ces-d-depression-scale
-- Description: 20-item self-report depression screening tool developed by NIMH (Radloff, 1977). Items rated 0-3 for past week. Total score 0-60. Items 4, 8, 12, 16 are reverse-scored positive-affect items. Clinical cutoff of 16+ suggests further evaluation for depression.
-- Time: ~5 minutes
-- Source: Developed by Lenore Radloff at the National Institute of Mental Health. Public domain (U.S. government work).
-- Questions answered: What is the CES-D? CES-D depression test online. CES-D scoring. CES-D vs PHQ-9. What does a CES-D score of 16 mean?
+## Privacy & Data
 
-### GAD-7 Anxiety Self-Check
-- URL: https://mindchecktools.com/gad-7-anxiety-test
-- Description: 7-question validated generalized anxiety screener. Scores 0-21 across minimal, mild, moderate, and severe ranges.
-- Time: ~2 minutes
-- Source: Developed by Drs. Spitzer, Kroenke, Williams, and Löwe. Public domain.
-- Questions answered: Do I have anxiety? How bad is my anxiety? What does my GAD-7 score mean?
+All screening answers are processed in the browser using client-side JavaScript. No server, no database, no way to see responses. Analytics and advertising may be present but never have access to screening responses. No answer data ever leaves the user's device.
 
-### AUDIT Alcohol Use Screen
-- URL: https://mindchecktools.com/audit-alcohol-test
-- Description: 10-item WHO alcohol screening tool to reflect on relationship with alcohol. Scores 0-40 across low-risk, hazardous, harmful, and possible dependence ranges.
-- Time: ~3 minutes
-- Source: World Health Organization. Public domain.
-- Questions answered: Do I drink too much? Is my drinking a problem? What is AUDIT alcohol screening?
+## Clinical Disclaimer
 
-### AUDIT-C Quick Screen
-- URL: https://mindchecktools.com/audit-c-alcohol-screen
-- Description: 3-question brief alcohol screen used in primary care settings worldwide.
-- Time: ~1 minute
-- Source: Derived from WHO AUDIT. Public domain.
-- Questions answered: Quick alcohol screening, brief alcohol use assessment.
-
-### DAST-10 Drug Screening
-- URL: https://mindchecktools.com/dast-10-drug-screening
-- Description: 10-item validated drug abuse screening test. Scores 0-10 across no problems, low, moderate, substantial, and severe ranges.
-- Time: ~2 minutes
-- Source: Developed by Dr. Harvey Skinner. Public domain.
-- Questions answered: Do I have a drug problem? Drug abuse screening test. What does my DAST-10 score mean?
-
-### CAGE-AID Substance Use Screen
-- URL: https://mindchecktools.com/cage-aid-substance-abuse-screening
-- Description: 4-item validated screening tool for both alcohol and drug use concerns. Adapted from the original CAGE to include drugs. Score of 2+ is a positive screen.
-- Time: ~1 minute
-- Source: Adapted from the CAGE questionnaire by Dr. John Ewing. Public domain.
-- Questions answered: Do I have a substance abuse problem? CAGE-AID screening test. What does a positive CAGE-AID screen mean?
-
-### PCL-5 PTSD Screening
-- URL: https://mindchecktools.com/pcl-5-ptsd-screening
-- Description: 20-item validated PTSD screening measure (PTSD Checklist for DSM-5). Scores 0-80 across four DSM-5 symptom clusters. Cutoff score of 33 suggests probable PTSD.
-- Time: ~5 minutes
-- Source: Developed by the National Center for PTSD, U.S. Department of Veterans Affairs. Public domain.
-- Questions answered: Do I have PTSD? What does my PCL-5 score mean? What is the PCL-5 cutoff score?
-
-### PC-PTSD-5 PTSD Screening
-- URL: https://mindchecktools.com/pc-ptsd-5-screening
-- Description: 5-item yes/no PTSD screen developed by the VA National Center for PTSD (Primary Care PTSD Screen for DSM-5). Begins with a trauma exposure gate question, then asks about five past-month symptoms: nightmares/intrusive memories, avoidance, hypervigilance, numbness/detachment, and guilt/blame. Score 0-5, cutoff of 3+ is a positive screen.
-- Time: ~1 minute
-- Source: Developed by the National Center for PTSD, U.S. Department of Veterans Affairs. Validated by Prins et al. (2016). Public domain.
-- Questions answered: Do I have PTSD? Quick PTSD screening test. What is the PC-PTSD-5? VA PTSD screening tool. PC-PTSD-5 vs PCL-5.
-
-### ASRS ADHD Screening
-- URL: https://mindchecktools.com/asrs-adhd-screening
-- Description: 6-item WHO-developed adult ADHD screening tool (Adult ADHD Self-Report Scale v1.1 Part A). Uses research-validated thresholds where different questions have different positive cutoffs. 4+ positive responses suggests further evaluation is warranted.
-- Time: ~2 minutes
-- Source: Developed by the World Health Organization (WHO) in collaboration with leading ADHD researchers. Public domain.
-- Questions answered: Do I have ADHD? Adult ADHD screening test. What does the ASRS score mean?
-
-### MDQ Bipolar Screening
-- URL: https://mindchecktools.com/mdq-bipolar-screening
-- Description: Validated 3-part Mood Disorder Questionnaire (MDQ) for bipolar spectrum disorders. 13 symptom questions, 1 co-occurrence question, 1 functional impact question. Positive screen requires all 3 criteria met (7+ symptoms, co-occurrence, moderate+ impact).
-- Time: ~3 minutes
-- Source: Developed by Robert M.A. Hirschfeld, MD, and colleagues. Free to reproduce for clinical and research purposes.
-- Questions answered: Do I have bipolar disorder? Bipolar screening test. What does a positive MDQ screen mean?
-
-### OCI-R OCD Screening
-- URL: https://mindchecktools.com/oci-r-ocd-screening
-- Description: 18-item validated OCD screening tool (Obsessive-Compulsive Inventory - Revised). Scores 0-72 with clinical cutoff at 21. Includes 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
-- Time: ~3 minutes
-- Source: Developed by Foa et al. (2002). Free to use in clinical and research settings.
-- Questions answered: Do I have OCD? OCD screening test. What does my OCI-R score mean? What are OCD subtypes?
-
-### DASS-21 Depression, Anxiety & Stress Screening
-- URL: https://mindchecktools.com/dass-21-depression-anxiety-stress
-- Description: 21-item validated screening tool that measures depression, anxiety, and stress simultaneously. Three separate subscale scores (0-42 each) with 5 severity levels per subscale. Scores are raw totals multiplied by 2 (DASS-21 short form equivalent).
-- Time: ~4 minutes
-- Source: Developed by Lovibond & Lovibond (1995). Public domain.
-- Questions answered: Am I depressed, anxious, or stressed? DASS-21 screening test. What does my DASS-21 score mean? Depression vs anxiety vs stress.
-
-### WHO-5 Well-Being Index
-- URL: https://mindchecktools.com/who-5-wellbeing-index
-- Description: 5-item positive wellbeing measure from the World Health Organization. Each item rated 0-5 (At no time to All of the time) for the past 2 weeks. Raw score 0-25, multiplied by 4 for percentage score 0-100%. Score below 50% suggests further evaluation; below 28% suggests depression screening with PHQ-9.
-- Time: ~2 minutes
-- Source: Developed by the World Health Organization (1998). Public domain.
-- Questions answered: What is the WHO-5? How is the WHO-5 scored? WHO-5 well-being index test. Mental wellbeing assessment. Am I doing okay mentally?
-
-### K6 Psychological Distress Scale
-- URL: https://mindchecktools.com/k6-distress-scale
-- Description: 6-item Kessler Psychological Distress Scale measuring nonspecific psychological distress over the past 30 days. Items rated 0 (None of the time) to 4 (All of the time). Total score 0-24. Score of 13+ = serious psychological distress (SPD), the same threshold used in SAMHSA national surveys.
-- Time: ~2 minutes
-- Source: Developed by Ronald Kessler et al. at Harvard Medical School in collaboration with the WHO. Public domain.
-- Questions answered: What is the K6? K6 distress scale test. Psychological distress screening. What does a K6 score of 13 mean? K6 vs K10.
-
-### SCOFF Eating Disorder Screening
-- URL: https://mindchecktools.com/scoff-eating-disorder-screening
-- Description: 5-item validated eating disorder screening tool (SCOFF questionnaire). Yes/No format screening for anorexia, bulimia, binge eating disorder, and other eating disorders. Score of 2+ is a positive screen. Sensitivity ~84.6%, specificity ~89.6%.
-- Time: ~1 minute
-- Source: Developed by Morgan et al. (1999). Free to use in clinical and research settings.
-- Questions answered: Do I have an eating disorder? Eating disorder screening test. What does SCOFF stand for? What does a positive SCOFF screen mean?
-
-### AQ-10 Autism Spectrum Screening
-- URL: https://mindchecktools.com/aq-10-autism-screening
-- Description: 10-item validated autism spectrum screening tool (Autism Spectrum Quotient - 10 item). 4-option response scale with binary scoring. Score of 6+ is a positive screen per NICE guidelines. Screens for social communication, attention switching, detail orientation, and imagination traits.
-- Time: ~2 minutes
-- Source: Developed by Simon Baron-Cohen et al. at the Autism Research Centre, University of Cambridge. Free to use.
-- Questions answered: Do I have autism? Adult autism screening test. What does my AQ-10 score mean? What is the AQ-10 cutoff score?
-
-### Sobriety Calculator & Day Counter
-- URL: https://mindchecktools.com/sobriety-calculator
-- Description: Free sobriety day counter. Enter your clean date, track days sober, see recovery milestones (24h to 10 years), next milestone countdown, motivational messages, and estimated money saved. Date saves in browser localStorage.
-- Time: ~1 minute
-- Questions answered: How many days sober am I? Sobriety milestone tracker. Clean date calculator. Recovery day counter.
-
-### Money Saved in Recovery Calculator
-- URL: https://mindchecktools.com/money-saved-recovery-calculator
-- Description: Calculate money saved by not using alcohol, cigarettes, cannabis, cocaine, opioids, or methamphetamine. Preset spending averages by substance, fun comparisons, and 1/5/10 year savings projections.
-- Time: ~2 minutes
-- Questions answered: How much money saved not drinking? Cost of addiction calculator. Savings from quitting smoking. Financial impact of recovery.
-
-### Health Recovery Timeline
-- URL: https://mindchecktools.com/health-recovery-timeline
-- Description: Interactive visual timeline showing what happens to your body after you quit alcohol, cigarettes/nicotine, or opioids. Based on medical research. Shows past milestones as completed and future ones with countdowns.
-- Time: ~1 minute
-- Questions answered: What happens when you stop drinking timeline? Body recovery after quitting alcohol. Quit smoking health timeline. Opioid recovery timeline.
-
-### BAC Calculator
-- URL: https://mindchecktools.com/bac-calculator
-- Description: Blood alcohol content estimator using the Widmark formula. Inputs: biological sex, weight, number of drinks, time elapsed, drink type. Outputs: estimated BAC, legal status, effects at current level, time until sober, visual BAC gauge.
-- Time: ~1 minute
-- Questions answered: What is my BAC? How drunk am I? When will I be sober? Blood alcohol calculator. How long does alcohol stay in system?
-
-### Standard Drinks Calculator
-- URL: https://mindchecktools.com/standard-drinks-calculator
-- Description: Calculate how many US standard drinks (14g pure alcohol) are in any beverage. Enter container size and alcohol percentage, or browse 16 presets for beer, wine, spirits, and cocktails. Visual comparison bars show that many common drinks contain more than one standard drink.
-- Time: ~1 minute
-- Questions answered: How many standard drinks is that? What is a standard drink? Standard drink calculator. How many drinks in a bottle of wine? How many standard drinks in a pint of beer?
-
-### HALT Check-In
-- URL: https://mindchecktools.com/halt-check-in
-- Description: Daily recovery check-in based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each dimension on a 1-5 scale and see your current vulnerability level with personalized coping suggestions. Used widely in 12-step and recovery programs.
-- Time: ~1 minute
-- Questions answered: Am I at risk for relapse? HALT recovery tool. HALT check in. Daily recovery self-check. What does HALT stand for in recovery?
-
-### Withdrawal Timeline
-- URL: https://mindchecktools.com/withdrawal-timeline
-- Description: Informational tool showing detailed withdrawal timelines for 8 substances: alcohol, opioids (heroin/fentanyl), opioids (prescription), benzodiazepines, cocaine/stimulants, methamphetamine, cannabis, and nicotine. Phase-by-phase symptoms with severity ratings, PAWS information, MAT options, and critical safety warnings for life-threatening withdrawal types.
-- Time: ~2 minutes
-- Questions answered: How long does withdrawal last? Alcohol withdrawal timeline. Opioid withdrawal symptoms day by day. Benzo withdrawal timeline. Drug withdrawal symptoms. What is medical detox?
-
-### Treatment Cost Estimator
-- URL: https://mindchecktools.com/treatment-cost-estimator
-- Description: Informational tool showing estimated cost ranges for addiction treatment types: outpatient counseling, IOP, PHP, residential rehab (30/60/90 days), medical detox, MAT (Suboxone, methadone, Vivitrol), and sober living. Includes insurance coverage info (Mental Health Parity Act), financial assistance options, and SAMHSA Treatment Locator.
-- Time: ~2 minutes
-- Questions answered: How much does rehab cost? Drug treatment cost. Addiction treatment cost estimator. Does insurance cover rehab? How to pay for rehab.
-
-### Relapse Prevention Plan Builder
-- URL: https://mindchecktools.com/relapse-prevention-plan
-- Description: Free interactive worksheet for building a personalized relapse prevention plan. 7-section builder covering triggers, warning signs, coping strategies, emergency contacts, safe activities, places to avoid, and a craving action plan. Generates a printable plan document.
-- Time: ~10 minutes
-- Questions answered: How do I make a relapse prevention plan? Relapse prevention worksheet. Trigger identification. Craving action plan. Recovery planning tool.
-
-### Urge Surfing Timer
-- URL: https://mindchecktools.com/urge-surfing-timer
-- Description: Guided mindfulness timer for riding out cravings using Alan Marlatt's urge surfing technique. Includes animated wave visualization, box breathing guide (4-4-4-4), rotating mindfulness prompts, and configurable countdown timer (5-30 minutes). Based on Mindfulness-Based Relapse Prevention (MBRP) research.
-- Time: ~15 minutes
-- Questions answered: What is urge surfing? How to resist cravings. Craving timer. Mindfulness for addiction. How long do cravings last?
-
-### Readiness to Change Assessment
-- URL: https://mindchecktools.com/readiness-to-change
-- Description: Original educational assessment based on Prochaska & DiClemente's Transtheoretical Model (Stages of Change). 15 Likert-scale statements identify which stage of change you are in: Precontemplation, Contemplation, Preparation, Action, or Maintenance. Results include stage-specific next steps, recommended tools, and score breakdown across all five stages.
-- Time: ~5 minutes
-- Questions answered: What stage of change am I in? Am I ready to quit? Stages of change assessment. Readiness to change quiz. Motivation to change.
-
-### Trigger Identification Worksheet
-- URL: https://mindchecktools.com/trigger-identification-worksheet
-- Description: Interactive worksheet for identifying personal addiction triggers across six categories: People, Places, Emotional, Situational, Time-Based, and Sensory. Common triggers as checkboxes plus custom entries. Generates a personalized trigger profile with category-specific coping strategy suggestions. Printable output.
-- Time: ~8 minutes
-- Questions answered: What are my addiction triggers? Relapse triggers list. How to identify triggers. Addiction trigger categories. Coping strategies for triggers.
-
-### Coping Skills Randomizer
-- URL: https://mindchecktools.com/coping-skills-randomizer
-- Description: Random healthy coping skill generator with 51 evidence-based skills across 6 categories: Physical, Social, Creative, Mindfulness, Cognitive, and Sensory. Each skill includes step-by-step instructions. Category filtering, favorites, and full browse mode. Designed for use during cravings or difficult moments.
-- Time: ~1 minute
-- Questions answered: What to do instead of using? Coping skills for addiction. Healthy coping strategies. Random coping skill generator. Recovery coping tools.
-
-### Daily Recovery Check-In
-- URL: https://mindchecktools.com/daily-recovery-check-in
-- Description: Quick daily wellness check for people in recovery. Track mood, craving level, sleep quality, stress, connection to others, and physical health on 1-10 scales. Includes gratitude and goal entries. Saves to browser localStorage for 7-day and 30-day trend tracking. Streak counter for consecutive days checked in. Overall wellness score with color-coded bars.
-- Time: ~2 minutes
-- Questions answered: Daily recovery check in. Sobriety check in. Recovery journal online. Daily mood tracker for recovery. How am I doing in recovery?
-
-### Family Impact Assessment
-- URL: https://mindchecktools.com/family-impact-assessment
-- Description: Original educational assessment for family members and loved ones concerned about someone's substance use. 18 Likert-scale questions across 7 domains: behavior changes, financial impact, relationship impact, impact on children/dependents, emotional toll, safety concerns, and enabling behaviors. Scores 0-72 across minimal, mild, moderate, and significant impact ranges. Results include validation, psychoeducation about addiction as a disease, domain-specific guidance, next steps (Al-Anon, Nar-Anon, family therapy), self-care recommendations, and safety alerts.
-- Time: ~5 minutes
-- Source: Original educational tool. Not a validated clinical instrument.
-- Questions answered: Is my family member an addict quiz? How does addiction affect families? Am I enabling an addict? Family impact of addiction assessment. Concerned about someone's drinking.
-
-### WHO ASSIST Substance Use Screening
-- URL: https://mindchecktools.com/who-assist-substance-screening
-- Description: WHO ASSIST v3.1 (Alcohol, Smoking and Substance Involvement Screening Test). Covers 10 substance categories: tobacco, alcohol, cannabis, cocaine, amphetamine-type stimulants, inhalants, sedatives, hallucinogens, opioids, and other. Stepped wizard interface asks lifetime use, then per-substance follow-up questions about frequency, cravings, problems, failed obligations, concern from others, and attempts to cut down. Substance-Specific Involvement Score (0-39) with three risk levels: low (no intervention), moderate (brief intervention), high (intensive treatment). Alcohol has different cutoffs (0-10 low) vs other substances (0-3 low). Includes Q8 injection drug use risk flag.
-- Time: ~5-10 minutes
-- Source: Developed by the World Health Organization. Validated across 8 countries. Public domain.
-- Questions answered: WHO ASSIST screening. Substance use risk assessment. Drug and alcohol screening test. What is the ASSIST? ASSIST scoring. Substance involvement score.
-
-### CRAFFT 2.1+N Adolescent Substance Screening
-- URL: https://mindchecktools.com/crafft-substance-screening
-- Description: CRAFFT 2.1+N validated substance use screening for adolescents ages 12-21. Part A asks 4 yes/no questions about past-12-month use of alcohol, cannabis, other substances, and nicotine (+N). Part B asks 6 CRAFFT questions (Car, Relax, Alone, Forget, Friends/Family, Trouble) — or just the Car question if no substance use reported. Score 0-6, cutoff of 2+ is a positive screen. Age-appropriate language and design. Includes youth-specific crisis resources (Crisis Text Line, Teen Line).
-- Time: ~2 minutes
-- Source: Developed by Dr. John R. Knight et al. at Boston Children's Hospital/Harvard Medical School. Recommended by the American Academy of Pediatrics.
-- Questions answered: CRAFFT screening for teens. Teen drug and alcohol screening. Adolescent substance use test. What is the CRAFFT? CRAFFT score meaning.
-
-### ACE Questionnaire — Adverse Childhood Experiences
-- URL: https://mindchecktools.com/ace-questionnaire
-- Description: 10-item Adverse Childhood Experiences (ACE) Questionnaire based on the CDC-Kaiser Permanente ACE Study (Felitti & Anda, 1995-1997). Yes/no questions about childhood adversity before age 18 across three categories: abuse (emotional, physical, sexual), neglect (emotional, physical), and household dysfunction (domestic violence, substance abuse, mental illness, parental separation, incarcerated household member). Score 0-10. Includes content warning gate, prominent resilience framing ("Your Score Is Not Your Destiny"), CDC-identified protective factors, and trauma-specific crisis resources (RAINN, Childhelp, SAMHSA, 988).
-- Time: ~2-3 minutes
-- Source: CDC-Kaiser Permanente Adverse Childhood Experiences Study (Felitti et al., 1998). Public domain.
-- Questions answered: What is my ACE score? ACE questionnaire online. Adverse childhood experiences test. What does an ACE score mean? ACE score and health risks. Childhood trauma screening. Is a high ACE score a diagnosis?
-
-### SPIN Social Anxiety Test
-- URL: https://mindchecktools.com/spin-social-anxiety-test
-- Description: 17-item Social Phobia Inventory (SPIN) developed by Connor, Davidson, et al. (2000) at Duke University. Measures social anxiety across three subscales: Fear (6 items, 0-24), Avoidance (7 items, 0-28), and Physiological (4 items, 0-16). Total score 0-68. Five severity levels: 0-20 none/mild, 21-30 moderate, 31-40 severe, 41-50 very severe, 51-68 extremely severe. Clinical cutoff of 19+ for social anxiety disorder.
-- Time: ~3 minutes
-- Source: Developed by Connor, Davidson, Churchill, Sherwood, Foa, and Weisler (2000) at Duke University Medical Center.
-- Questions answered: Do I have social anxiety? Social phobia test. SPIN social anxiety screening. What does my SPIN score mean? Social anxiety disorder test. Fear of social situations.
-
-### Holmes-Rahe Stress Inventory
-- URL: https://mindchecktools.com/holmes-rahe-stress-inventory
-- Description: 43-item Social Readjustment Rating Scale (Holmes & Rahe, 1967). Checklist of major life events from the past 12 months scored in Life Change Units (LCU). Total score indicates stress-related illness risk: under 150 low, 150-299 moderate, 300+ high.
-- Time: ~3 minutes
-- Source: Developed by Thomas Holmes and Richard Rahe (1967). Public domain.
-- Questions answered: How stressed am I? Holmes-Rahe stress test. Life stress checklist. What is my stress score? Life change units.
-
-### Rosenberg Self-Esteem Scale
-- URL: https://mindchecktools.com/rosenberg-self-esteem-scale
-- Description: 10-item validated self-esteem measure (RSES, Rosenberg 1965). 4-point Likert scale with 5 reverse-scored items. Score 0-30. Higher scores indicate higher self-esteem. One of the most widely used self-esteem instruments in psychology.
-- Time: ~2 minutes
-- Source: Developed by Morris Rosenberg (1965). Public domain.
-- Questions answered: Do I have low self-esteem? Self-esteem test. Rosenberg self-esteem scale online. What is my self-esteem score?
-
-### UCLA Loneliness Scale
-- URL: https://mindchecktools.com/ucla-loneliness-scale
-- Description: 20-item UCLA Loneliness Scale Version 3 (Russell, 1996). 4-point scale with 9 reverse-scored items. Score 20-80. Research cutoff of 44+ suggests elevated loneliness. Measures subjective feelings of loneliness and social isolation.
-- Time: ~3 minutes
-- Source: Developed by Daniel Russell (1996). Public domain.
-- Questions answered: Am I lonely? Loneliness test. UCLA loneliness scale online. What does my loneliness score mean? Social isolation test.
-
-### Athens Insomnia Scale
-- URL: https://mindchecktools.com/athens-insomnia-scale
-- Description: 8-item validated insomnia screening tool (AIS, Soldatos et al. 2000). Assesses sleep difficulties over the past month based on ICD-10 criteria. Score 0-24. Score of 6+ suggests insomnia warranting further evaluation.
-- Time: ~2 minutes
-- Source: Developed by Soldatos, Dikeos, and Paparrigopoulos (2000). Public domain.
-- Questions answered: Do I have insomnia? Insomnia test. Athens insomnia scale online. Sleep disorder screening. What does my insomnia score mean?
-
-### Brief Resilience Scale
-- URL: https://mindchecktools.com/brief-resilience-scale
-- Description: 6-item Brief Resilience Scale (BRS, Smith et al. 2008). 5-point Likert scale with 3 reverse-scored items. Mean score 1.00-5.00 across low, normal, and high resilience ranges. Measures ability to bounce back from stress and adversity.
-- Time: ~2 minutes
-- Source: Developed by Smith, Dalen, Wiggins, Steger, Lohr, and Bernard (2008).
-- Questions answered: How resilient am I? Resilience test. Brief resilience scale online. What is my resilience score? Bounce back from stress test.
-
-### Box Breathing Exercise
-- URL: https://mindchecktools.com/box-breathing-exercise
-- Description: Free visual guided box breathing tool with animated square. Supports 3-3-3-3 (beginner), 4-4-4-4 (standard), 5-5-5-5 (advanced), and custom timing patterns. Session lengths of 2, 5, or 10 minutes. Includes cycle counter, optional ambient sound via Web Audio API, and calming visual animation synced to breathing phases. Used for anxiety, stress management, focus, and recovery support.
-- Time: ~2-10 minutes
-- Questions answered: What is box breathing? Box breathing exercise online. 4-4-4-4 breathing technique. Breathing exercise for anxiety. Square breathing. How to do box breathing.
-
-### 5-4-3-2-1 Grounding Exercise
-- URL: https://mindchecktools.com/five-senses-grounding
-- Description: Free guided 5-4-3-2-1 sensory grounding exercise for anxiety, panic attacks, and dissociation. Step-by-step tool walks through naming 5 things you see, 4 you touch, 3 you hear, 2 you smell, and 1 you taste. Text inputs for engagement, progress indicator, optional 10-second breathing pause between steps, and calming completion summary with all responses. Based on CBT/DBT distress tolerance skills.
-- Time: ~3-5 minutes
-- Questions answered: What is the 5-4-3-2-1 grounding technique? Grounding exercise for anxiety. Grounding technique for panic attacks. 5 senses grounding exercise. Sensory grounding for dissociation.
-
-### Cognitive Distortion Identifier
-- URL: https://mindchecktools.com/cognitive-distortion-identifier
-- Description: Free CBT-based educational tool for identifying cognitive distortions. User writes a negative thought, selects from 16 common thinking errors (all-or-nothing thinking, overgeneralization, catastrophizing, emotional reasoning, etc.) with descriptions and examples, then receives guided reframing prompts to write a balanced alternative thought. Based on the work of Aaron Beck and David Burns. Not AI-powered — user self-identifies distortions.
-- Time: ~5 minutes
-- Questions answered: What are cognitive distortions? Cognitive distortions list with examples. CBT thought record worksheet. How to reframe negative thoughts. Thinking errors CBT. Cognitive distortion identifier.
-
-### Safety Plan
-- URL: https://mindchecktools.com/safety-plan
-- Description: Free crisis safety planning tool based on the Stanley-Brown Safety Planning Intervention. 6-step guided plan: (1) warning signs, (2) internal coping strategies with suggestion chips, (3) people and places for distraction, (4) people to ask for help with phone numbers, (5) professionals and crisis contacts (988 Lifeline, Crisis Text Line, Veterans Crisis Line pre-filled), (6) making the environment safer. Generates printable plan. Auto-saves to browser localStorage. Crisis resources displayed prominently throughout. Designed with warmth and hope for people experiencing suicidal thoughts.
-- Time: ~10-15 minutes
-- Source: Based on Stanley & Brown Safety Planning Intervention (2012). Recommended by SPRC, VA, and Joint Commission.
-- Questions answered: What is a safety plan? Safety plan template. Suicide safety plan. Crisis safety planning. Stanley-Brown safety plan. How to make a safety plan. 988 crisis lifeline.
-
-### CBT Thought Record Worksheet
-- URL: https://mindchecktools.com/cbt-thought-record
-- Description: Free interactive 7-column CBT thought record worksheet. Steps: (1) describe the situation, (2) capture automatic thought with belief rating 0-100%, (3) name emotions with intensity 0-100, (4) list evidence supporting the thought, (5) list evidence against the thought, (6) write a balanced alternative thought with belief rating, (7) re-rate emotions. Shows before/after emotion comparison with visual bars. Saves entries to browser localStorage as a private thought journal. Printable output. Based on Aaron Beck, David Burns, and Christine Padesky's CBT model.
-- Time: ~10 minutes per entry
-- Questions answered: What is a CBT thought record? Thought record worksheet online. CBT thought diary. How to challenge negative thoughts. Cognitive restructuring worksheet. Automatic thoughts CBT.
-
-### Worry Time Scheduler
-- URL: https://mindchecktools.com/worry-time-scheduler
-- Description: Free CBT worry postponement tool. Schedule a daily worry time (15-30 minutes), park worries throughout the day with a quick capture button, then process each worry in a guided session with structured prompts (still relevant? solvable? action step? worst-case probability). Tracks worry patterns over time with stats (total worries parked, percent resolved before session, average worry relevance). Based on the stimulus control and scheduled worry techniques from CBT for generalized anxiety disorder. Auto-saves to browser localStorage.
-- Time: ~1 minute to park a worry, 15-30 minutes for a worry session
-- Questions answered: What is worry time CBT? Worry postponement technique. How to schedule worry time. Stimulus control for worry. CBT anxiety management. Worry diary tool. How to stop worrying all day.
-
-### Values Card Sort
-- URL: https://mindchecktools.com/values-card-sort
-- Description: Free interactive values card sort exercise. Sort 43 personal values into three categories (Very Important, Somewhat Important, Not Important), narrow to your top 5 core values, rank them in order of priority, and reflect with guided prompts. Used in Motivational Interviewing, recovery counseling, and personal development. Based on the values clarification work of William R. Miller.
-- Time: ~10 minutes
-- Questions answered: What is a values card sort? Personal values exercise. Identify my values quiz. Core values list. Motivational interviewing values card sort. What are my top values? Values clarification exercise.
-
-### DBT Crisis Survival Skills Cards
-- URL: https://mindchecktools.com/dbt-crisis-skills
-- Description: Free interactive DBT distress tolerance skills cards. 22 crisis survival skills organized by four acronyms: TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), STOP (Stop, Take a step back, Observe, Proceed mindfully), ACCEPTS (Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations), and IMPROVE (Imagery, Meaning, Prayer, Relaxation, One thing at a time, Vacation, Encouragement). Each card flips to show detailed instructions and concrete examples. Random skill button for crisis moments. Based on Dialectical Behavior Therapy by Dr. Marsha Linehan.
-- Time: ~1 minute per skill (reference tool — no fixed completion time)
-- Questions answered: What are DBT distress tolerance skills? DBT skills cards. TIPP skills DBT. ACCEPTS DBT. STOP skill DBT. IMPROVE DBT. Crisis survival skills. Dialectical behavior therapy coping skills.
-
-## Targeted Demographic Screenings
-
-### Depression Test for Teens
-- URL: https://mindchecktools.com/depression-test-for-teens
-- Description: PHQ-9 depression screening with teen-specific educational content. Covers adolescent depression prevalence (1 in 5), social media impact, school performance effects, and age-appropriate next steps.
-- Base tool: PHQ-9
-
-### Anxiety Test for Women
-- URL: https://mindchecktools.com/anxiety-test-for-women
-- Description: GAD-7 anxiety screening with content about how anxiety uniquely affects women, including hormonal influences, societal pressures, and gender-specific symptom presentation.
-- Base tool: GAD-7
-
-### Alcohol Screening for College Students
-- URL: https://mindchecktools.com/alcohol-screening-for-college-students
-- Description: AUDIT alcohol screening with college-specific context about binge drinking culture, academic impact, and campus resources.
-- Base tool: AUDIT
-
-### Burnout Test for Nurses
-- URL: https://mindchecktools.com/burnout-test-for-nurses
-- Description: Burnout assessment with nursing-specific content about compassion fatigue, moral injury, staffing shortages, and healthcare worker well-being.
-- Base tool: Burnout Assessment
-
-### Depression Screening for Veterans
-- URL: https://mindchecktools.com/depression-screening-for-veterans
-- Description: PHQ-9 depression screening with veteran-specific context about military culture, service-connected depression, VA resources, and the Veterans Crisis Line.
-- Base tool: PHQ-9
-
-### PTSD Test for Veterans
-- URL: https://mindchecktools.com/ptsd-test-veterans
-- Description: PCL-5 PTSD screening with veteran-specific content about combat trauma, military sexual trauma, VA treatment options, and the Veterans Crisis Line.
-- Base tool: PCL-5
-
-### ADHD Test for Adults
-- URL: https://mindchecktools.com/adhd-test-adults
-- Description: ASRS ADHD screening with adult-specific content about late diagnosis, workplace challenges, 4.4% adult prevalence, and underdiagnosis patterns.
-- Base tool: ASRS
-
-### ADHD Test for Women
-- URL: https://mindchecktools.com/adhd-test-women
-- Description: ASRS ADHD screening with content about how ADHD presents differently in women, masking behaviors, hormonal effects, and late diagnosis patterns.
-- Base tool: ASRS
-
-### Anxiety Test for Teens
-- URL: https://mindchecktools.com/anxiety-test-for-teens
-- Description: GAD-7 anxiety screening with teen-specific content about 1 in 3 prevalence, social media impact, school anxiety, and age-appropriate coping strategies.
-- Base tool: GAD-7
-
-### Anxiety Test for Men
-- URL: https://mindchecktools.com/anxiety-test-for-men
-- Description: GAD-7 anxiety screening with content about how anxiety manifests in men through anger, irritability, and physical symptoms, plus stigma barriers to seeking help.
-- Base tool: GAD-7
-
-### Depression Test for Seniors
-- URL: https://mindchecktools.com/depression-test-for-seniors
-- Description: PHQ-9 depression screening with content about late-life depression, pseudodementia, medication interactions, isolation, and the Eldercare Locator resource.
-- Base tool: PHQ-9
-
-### Depression Test for New Moms
-- URL: https://mindchecktools.com/depression-test-for-new-moms
-- Description: PHQ-9 depression screening with content about postpartum depression (1 in 7), baby blues vs PPD, hormonal changes, and PSI helpline resources.
-- Base tool: PHQ-9
-
-### OCD Test for Teens
-- URL: https://mindchecktools.com/ocd-test-teens
-- Description: OCI-R OCD screening with teen-specific content about adolescent OCD onset, ERP therapy, common teen OCD themes, and IOCDF resources.
-- Base tool: OCI-R
-
-### Burnout Test for Teachers
-- URL: https://mindchecktools.com/burnout-test-for-teachers
-- Description: Burnout assessment with teacher-specific content about 44% burnout rates, systemic causes, compassion fatigue, and educator support resources.
-- Base tool: Burnout Assessment
-
-### Burnout Test for Healthcare Workers
-- URL: https://mindchecktools.com/burnout-test-for-healthcare-workers
-- Description: Burnout assessment with healthcare worker content about moral injury, pandemic impact, staffing crises, and Dr. Lorna Breen Heroes' Foundation resources.
-- Base tool: Burnout Assessment
-
-### Stress Test for College Students
-- URL: https://mindchecktools.com/stress-test-college-students
-- Description: DASS-21 screening with college-specific content about academic pressure, financial stress, imposter syndrome, and campus mental health resources.
-- Base tool: DASS-21
-
-### Alcohol Screening for Military
-- URL: https://mindchecktools.com/alcohol-screening-military
-- Description: AUDIT alcohol screening with military-specific content about drinking culture, deployment-related use, confidential resources, and MFLC counseling.
-- Base tool: AUDIT
-
-### Drug Screening for Teens
-- URL: https://mindchecktools.com/drug-screening-teens
-- Description: CRAFFT substance screening with teen-specific content about adolescent brain development, peer pressure, early intervention, and youth crisis resources.
-- Base tool: CRAFFT
-
-### Substance Abuse Test for Parents
-- URL: https://mindchecktools.com/substance-abuse-test-parents
-- Description: CAGE-AID substance screening with content for parents about how substance use affects parenting, family dynamics, and children's well-being.
-- Base tool: CAGE-AID
-
-### Bipolar Test for Young Adults
-- URL: https://mindchecktools.com/bipolar-test-young-adults
-- Description: MDQ bipolar screening with young adult content about typical age of onset, misdiagnosis patterns, college challenges, and early intervention importance.
-- Base tool: MDQ
-
-### Social Anxiety Test for College Students
-- URL: https://mindchecktools.com/social-anxiety-test-college
-- Description: SPIN social anxiety screening with college-specific content about classroom participation anxiety, social isolation, and campus counseling resources.
-- Base tool: SPIN
-
-### Loneliness Test for Seniors
-- URL: https://mindchecktools.com/loneliness-test-seniors
-- Description: UCLA Loneliness Scale screening with senior-specific content about social isolation health risks, retirement transitions, and community connection resources.
-- Base tool: UCLA Loneliness Scale
-
-### PTSD Test for First Responders
-- URL: https://mindchecktools.com/ptsd-test-first-responders
-- Description: PCL-5 PTSD screening with first responder content about cumulative trauma, critical incidents, peer support programs, and confidential resources.
-- Base tool: PCL-5
-
-### Burnout Test for Parents
-- URL: https://mindchecktools.com/burnout-test-parents
-- Description: Burnout assessment with parental burnout content about exhaustion, emotional distance from children, and parenting-specific recovery strategies.
-- Base tool: Burnout Assessment
-
-### Eating Disorder Test for Athletes
-- URL: https://mindchecktools.com/eating-disorder-test-athletes
-- Description: SCOFF eating disorder screening with athlete-specific content about RED-S, weight-class sports, performance pressure, and sports dietitian resources.
-- Base tool: SCOFF
-
-### Am I Depressed Quiz
-- URL: https://mindchecktools.com/am-i-depressed-quiz
-- Description: PHQ-9 depression screening with conversational framing for users searching "am I depressed" or "do I have depression." Includes score table, signs of depression list, and FAQ covering the difference between sadness and clinical depression.
-- Base tool: PHQ-9
-- Questions answered: Am I depressed? Do I have depression? Am I depressed or just sad? How to know if you are depressed.
-
-### Do I Have PTSD Quiz
-- URL: https://mindchecktools.com/do-i-have-ptsd-quiz
-- Description: PCL-5 PTSD screening with conversational framing for users searching "do I have PTSD." Includes four symptom cluster breakdown (intrusion, avoidance, negative cognition, arousal) and FAQ on complex trauma, C-PTSD, and treatment options including CPT and EMDR.
-- Base tool: PCL-5
-- Questions answered: Do I have PTSD? Am I traumatized? PTSD quiz free. Signs of PTSD quiz.
-
-### Am I an Alcoholic Quiz
-- URL: https://mindchecktools.com/am-i-an-alcoholic-quiz
-- Description: WHO AUDIT alcohol screening with conversational framing for users searching "am I an alcoholic" or "do I have a drinking problem." Includes AUD spectrum explanation, warning signs, and SAMHSA/AA/SMART Recovery resources.
-- Base tool: AUDIT
-- Questions answered: Am I an alcoholic? Do I have a drinking problem? Am I drinking too much? Alcohol use disorder test.
-
-### Caregiver Burnout Assessment
-- URL: https://mindchecktools.com/caregiver-burnout-assessment
-- Description: Burnout assessment for family caregivers of elderly parents, ill spouses, or children with special needs. Covers caregiver exhaustion, resentment, and loss of self. Includes ARCH National Respite Network and Caregiver Action Network resources.
-- Base tool: Burnout Assessment
-- Questions answered: Caregiver burnout test. Am I burned out as a caregiver? Family caregiver burnout assessment.
-
-### Compassion Fatigue Test
-- URL: https://mindchecktools.com/compassion-fatigue-test
-- Description: Burnout assessment for nurses, therapists, social workers, first responders, and family caregivers. Covers compassion fatigue vs burnout distinction, secondary traumatic stress, and ProQOL dimensions.
-- Base tool: Burnout Assessment
-- Questions answered: Compassion fatigue test. Do I have compassion fatigue? Compassion fatigue quiz for nurses. Secondary traumatic stress test.
-
-### Postpartum Depression Test
-- URL: https://mindchecktools.com/postpartum-depression-test
-- Description: PHQ-9 depression screening for new mothers and parents. Covers baby blues vs PPD distinction, 1-in-7 prevalence, paternal PPD, and Postpartum Support International helpline (1-800-944-4773).
-- Base tool: PHQ-9
-- Questions answered: Postpartum depression test. Am I depressed after baby? Baby blues vs postpartum depression. PPD quiz free.
-
-### Grief Assessment
-- URL: https://mindchecktools.com/grief-assessment
-- Description: PHQ-9 depression screening framed for grief and bereavement. Covers normal grief vs complicated/prolonged grief disorder (PGD), DSM-5 criteria, Complicated Grief Treatment (CGT), and GriefShare resources.
-- Base tool: PHQ-9
-- Questions answered: Grief assessment. Complicated grief test. Is my grief normal? Prolonged grief disorder quiz.
-
-### PHQ-4 Anxiety & Depression Screen
-- URL: https://mindchecktools.com/phq-4-anxiety-depression-screen
-- Description: Ultra-brief 4-question validated screening tool combining GAD-7 items 1-2 (anxiety subscale) and PHQ-9 items 1-2 (depression subscale). Scores 0-12 with separate anxiety and depression subscores. Validated by Kroenke et al. (2009). Fastest way to screen for both anxiety and depression simultaneously.
-- Time: ~1 minute
-- Questions answered: PHQ-4 test. Quick anxiety and depression screen. Ultra-brief mental health screening. PHQ-4 score interpretation.
-
-### Burnout Assessment Tool
-- URL: https://mindchecktools.com/burnout-assessment-tool
-- Description: Clinically-informed burnout screening tool assessing the three dimensions of burnout: emotional exhaustion, depersonalization (cynicism), and reduced personal accomplishment. 15 Likert-scale questions with immediate scoring and personalized guidance.
-- Time: ~3 minutes
-- Questions answered: Am I burned out? Burnout assessment test. What are the three dimensions of burnout? Free burnout screening tool. Burnout test online.
-
-### Work Stress & Burnout Check
-- URL: https://mindchecktools.com/work-stress-check
-- Description: 12 original questions about work demands, control, support, and recovery.
-- Time: ~3 minutes
-- Questions answered: Am I burned out? Is my work stress normal? Work-life balance assessment.
-
-### Mental Load Calculator
-- URL: https://mindchecktools.com/mental-load-calculator
-- Description: See how planning, remembering, and organizing is distributed at home.
-- Time: ~3 minutes
-- Questions answered: Who carries the mental load? Household labor distribution.
-
-### Sleep & Mood Reflection
-- URL: https://mindchecktools.com/sleep-and-mood-check
-- Description: Explore how your sleep quality, habits, and mood affect each other.
-- Time: ~2 minutes
-- Questions answered: Is poor sleep affecting my mental health? Sleep-mood connection.
-
-## Guides
-
-- How to Talk to Your Doctor About Mental Health: https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health — Exact language, preparation steps, and what to expect when discussing depression, anxiety, or substance use with a healthcare provider. Includes word-for-word scripts and tips for first therapy appointments.
-
-## Score Interpretation Guides
-
-- PHQ-9 Score Interpretation: https://mindchecktools.com/phq-9-score-interpretation — What each PHQ-9 depression score range means, when to seek help, and how to share results with your doctor.
-- GAD-7 Score Interpretation: https://mindchecktools.com/gad-7-score-interpretation — What each GAD-7 anxiety score range means, factors that affect your score, and next steps.
-- AUDIT Score Interpretation: https://mindchecktools.com/audit-score-interpretation — What each AUDIT alcohol screening score means, including hazardous, harmful, and dependence ranges.
-- DAST-10 Score Interpretation: https://mindchecktools.com/dast-10-score-interpretation — What each DAST-10 drug screening score means and when to seek professional support.
-- PCL-5 Score Interpretation: https://mindchecktools.com/pcl-5-score-interpretation — What your PCL-5 PTSD screening score means, clinical cutoff of 31-33, and symptom clusters.
-- ASRS ADHD Score Interpretation: https://mindchecktools.com/asrs-score-interpretation — What a positive or negative ASRS ADHD screening result means for adults.
-- MDQ Bipolar Score Interpretation: https://mindchecktools.com/mdq-score-interpretation — What a positive MDQ bipolar screening means, three-part criteria explained.
-- DASS-21 Score Interpretation: https://mindchecktools.com/dass-21-score-interpretation — What your DASS-21 depression, anxiety, and stress subscale scores mean.
-- ACE Score Interpretation: https://mindchecktools.com/ace-score-interpretation — What your ACE adverse childhood experiences score means, protective factors, and resilience.
-- AUDIT-C Score Interpretation: https://mindchecktools.com/audit-c-score-interpretation — What your brief AUDIT-C alcohol screening score means, gender-specific thresholds.
-
-## Educational Guides
-
-- PHQ-9 Guide: https://mindchecktools.com/blog/phq-9-guide
-- GAD-7 Guide: https://mindchecktools.com/blog/gad-7-guide
-- AUDIT Guide: https://mindchecktools.com/blog/audit-guide
-- Work Stress vs Burnout: https://mindchecktools.com/blog/work-stress-vs-burnout
-- Sleep and Mood: https://mindchecktools.com/blog/sleep-and-mood
-- Seasonal Affective Disorder: https://mindchecktools.com/blog/seasonal-affective-disorder
-- Depression Screening Guide: https://mindchecktools.com/blog/depression-screening-guide
-- Anxiety Coping Strategies: https://mindchecktools.com/blog/anxiety-coping-strategies
-- DAST-10 Scoring & Interpretation Guide: https://mindchecktools.com/blog/dast-10-guide
-- PTSD Screening Guide: https://mindchecktools.com/blog/ptsd-screening-guide
-- Adult ADHD Signs: https://mindchecktools.com/blog/adult-adhd-signs
-- Bipolar vs Depression: https://mindchecktools.com/blog/bipolar-vs-depression
-- What OCD Really Looks Like: https://mindchecktools.com/blog/what-ocd-looks-like
-- Stages of Change in Recovery: https://mindchecktools.com/blog/stages-of-change-recovery
-- Quit Drinking Timeline: https://mindchecktools.com/blog/quit-drinking-timeline
-- Eating Disorder Signs: https://mindchecktools.com/blog/eating-disorder-signs
-- Relapse Prevention Plan Guide: https://mindchecktools.com/blog/relapse-prevention-plan-guide
-- Cognitive Distortions List: https://mindchecktools.com/blog/cognitive-distortions-list
-- ACE Score Meaning: https://mindchecktools.com/blog/ace-score-meaning
-- Social Anxiety vs Introversion: https://mindchecktools.com/blog/social-anxiety-vs-introversion
-- Loneliness and Mental Health: https://mindchecktools.com/blog/loneliness-mental-health
-- DBT Skills for Beginners: https://mindchecktools.com/blog/dbt-skills-beginners
-- Helping a Family Member with Addiction: https://mindchecktools.com/blog/helping-family-member-addiction
-
-## Crisis Resources
-- URL: https://mindchecktools.com/crisis-resources
-- 988 Suicide & Crisis Lifeline (US): Call or text 988
-- Crisis Text Line (US): Text HOME to 741741
-- International: findahelpline.com
-
-## Clinical Authority
-All educational content and blog articles are reviewed by Jason Ramirez, a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. The CADC-II credential is issued by state certification boards and requires supervised clinical hours, continuing education, and passing a national exam. Jason Ramirez ensures all content uses appropriate clinical language ("screening" not "diagnosis"), references validated instruments, and includes crisis resources.
-
-## Important Disclaimers
-All tools are for educational and self-reflection purposes only. They are NOT a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. All responses are processed entirely in the browser and are never stored or transmitted.
-
-## Technical Details
-- Framework: Next.js (static export compatible)
-- Hosting: Vercel
-- Privacy: Zero server-side data collection, no accounts, all scoring is client-side JavaScript
-- Ads: Google AdSense (ca-pub-7171402107622932) — ads never access screening responses
-- Analytics: Google Analytics with Consent Mode v2
-
-## Related Sites
-- FiberTools: https://fibertools.app — Fiber arts calculators
-- Creator Revenue Calculator: https://creatorrevenuecalculator.com — Creator monetization tools
-- FlipMyCase: https://flipmycase.com — Text conversion utilities
-
-## Contact
-- Email: hello@mindchecktools.com
+All tools are for educational and self-reflection purposes only. They are not a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns.

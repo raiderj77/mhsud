@@ -7,6 +7,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/audit-guide`;
+const POST_DATA = BLOG_POSTS.find((p) => p.slug === "audit-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/audit-guide",
@@ -21,10 +22,10 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     type: "article",
+    publishedTime: POST_DATA.publishedDate,
+    modifiedTime: POST_DATA.modifiedDate,
   },
 });
-
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "audit-guide")!;
 
 const FAQ_DATA = [
   { question: "What counts as 'one drink' in the AUDIT?", answer: "A standard drink varies by country but generally contains about 14 grams of pure alcohol (US definition). This is roughly equivalent to 12 oz of regular beer (5% alcohol), 5 oz of wine (12% alcohol), or 1.5 oz of distilled spirits (40% alcohol). Many drinks served in bars and at home exceed these amounts." },
