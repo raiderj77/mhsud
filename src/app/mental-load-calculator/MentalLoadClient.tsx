@@ -301,7 +301,7 @@ export function MentalLoadClient({ faqData }: Props) {
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
-                { name: "Work Stress & Burnout", desc: "Work stress compounds household load", href: "/work-stress-check" },
+                { name: "Burnout Assessment Tool", desc: "Work stress compounds household load", href: "/burnout-assessment-tool" },
                 { name: "PHQ-9 Depression Check", desc: "Persistent overload can affect mood", href: "/phq-9-depression-test" },
                 { name: "Sleep & Mood Reflection", desc: "See how load affects your rest", href: "/sleep-and-mood-check" },
               ].map((t) => (

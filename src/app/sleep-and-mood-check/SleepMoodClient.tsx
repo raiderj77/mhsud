@@ -321,7 +321,7 @@ export function SleepMoodClient({ faqData }: Props) {
               {[
                 { name: "PHQ-9 Depression Self-Check", desc: "Sleep problems and depression often co-occur", href: "/phq-9-depression-test" },
                 { name: "GAD-7 Anxiety Self-Check", desc: "Anxiety is a leading cause of poor sleep", href: "/gad-7-anxiety-test" },
-                { name: "Work Stress & Burnout", desc: "See how work stress affects your rest", href: "/work-stress-check" },
+                { name: "Burnout Assessment Tool", desc: "See how work stress affects your rest", href: "/burnout-assessment-tool" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>

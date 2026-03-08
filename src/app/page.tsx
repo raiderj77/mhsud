@@ -431,6 +431,16 @@ const TOOLS = [
     status: "live" as "live" | "coming",
   },
   {
+    href: "/burnout-assessment-tool",
+    title: "Burnout Assessment Tool",
+    description: "Assess emotional exhaustion, depersonalization, and reduced accomplishment with a clinically informed burnout screening.",
+    badge: "Validated",
+    time: "~3 min",
+    questions: 15,
+    color: "sage" as const,
+    status: "live" as "live" | "coming",
+  },
+  {
     href: "/mental-load-calculator",
     title: "Mental Load Calculator",
     description: "See how planning, remembering, and organizing is distributed at home.",
