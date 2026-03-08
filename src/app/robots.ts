@@ -27,8 +27,13 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
-        // Anthropic's Claude crawler for citations
+        // Anthropic's Claude crawler (legacy name, kept for backwards compatibility)
         userAgent: "anthropic-ai",
+        allow: "/",
+      },
+      {
+        // Anthropic's Claude crawler (current name)
+        userAgent: "ClaudeBot",
         allow: "/",
       },
       {
@@ -39,6 +44,31 @@ export default function robots(): MetadataRoute.Robots {
       {
         // Bing/Copilot AI crawler
         userAgent: "Bingbot",
+        allow: "/",
+      },
+      {
+        // OpenAI search crawler for ChatGPT search/citations
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
+      {
+        // ChatGPT browsing agent (user-initiated web browsing)
+        userAgent: "ChatGPT-User",
+        allow: "/",
+      },
+      {
+        // Common Crawl — feeds most AI training datasets
+        userAgent: "CCBot",
+        allow: "/",
+      },
+      {
+        // Meta AI crawler
+        userAgent: "meta-externalagent",
+        allow: "/",
+      },
+      {
+        // Apple Intelligence / Siri AI features
+        userAgent: "Applebot-Extended",
         allow: "/",
       },
     ],
