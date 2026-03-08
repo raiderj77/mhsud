@@ -60,6 +60,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/worry-time-scheduler`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/values-card-sort`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/dbt-crisis-skills`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    // Score interpretation guides
+    { url: `${SITE_URL}/phq-9-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/gad-7-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/audit-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/dast-10-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/pcl-5-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/asrs-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/mdq-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/dass-21-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/ace-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/audit-c-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     // Targeted demographic screening pages
     { url: `${SITE_URL}/depression-test-for-teens`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/anxiety-test-for-women`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
