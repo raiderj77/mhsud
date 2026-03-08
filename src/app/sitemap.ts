@@ -60,6 +60,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/worry-time-scheduler`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/values-card-sort`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/dbt-crisis-skills`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    // Guides
+    { url: `${SITE_URL}/how-to-talk-to-your-doctor-about-mental-health`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     // Score interpretation guides
     { url: `${SITE_URL}/phq-9-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/gad-7-score-interpretation`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },

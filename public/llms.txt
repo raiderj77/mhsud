@@ -479,6 +479,10 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Time: ~2 minutes
 - Questions answered: Is poor sleep affecting my mental health? Sleep-mood connection.
 
+## Guides
+
+- How to Talk to Your Doctor About Mental Health: https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health — Exact language, preparation steps, and what to expect when discussing depression, anxiety, or substance use with a healthcare provider. Includes word-for-word scripts and tips for first therapy appointments.
+
 ## Score Interpretation Guides
 
 - PHQ-9 Score Interpretation: https://mindchecktools.com/phq-9-score-interpretation — What each PHQ-9 depression score range means, when to seek help, and how to share results with your doctor.
