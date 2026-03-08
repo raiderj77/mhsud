@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/phq-4-anxiety-depression-screen`;
 
 const QUESTIONS = [
   {
