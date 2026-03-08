@@ -129,7 +129,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         </div>
 
         {/* The Tool */}
-        <BurnoutClient />
+        <BurnoutClient faqData={FAQ_DATA} />
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">

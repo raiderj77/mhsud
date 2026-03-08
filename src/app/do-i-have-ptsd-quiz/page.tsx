@@ -134,7 +134,7 @@ export default function DoIHavePTSDQuizPage() {
         </div>
 
         {/* The Tool */}
-        <PCL5Client />
+        <PCL5Client faqData={FAQ_DATA} />
 
         {/* PTSD Symptom Clusters */}
         <div className="mt-10 mb-8">

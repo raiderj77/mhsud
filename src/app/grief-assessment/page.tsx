@@ -130,7 +130,7 @@ export default function GriefAssessmentPage() {
         </div>
 
         {/* The Tool */}
-        <PHQ9Client />
+        <PHQ9Client faqData={FAQ_DATA} />
 
         {/* Grief Warning Signs */}
         <div className="mt-10 mb-8">

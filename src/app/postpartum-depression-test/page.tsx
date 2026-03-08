@@ -135,7 +135,7 @@ export default function PostpartumDepressionTestPage() {
         </div>
 
         {/* The Tool */}
-        <PHQ9Client />
+        <PHQ9Client faqData={FAQ_DATA} />
 
         {/* Baby Blues vs PPD */}
         <div className="mt-10 mb-8">

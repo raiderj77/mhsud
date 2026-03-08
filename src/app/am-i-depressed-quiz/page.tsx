@@ -134,7 +134,7 @@ export default function AmIDepressedQuizPage() {
         </div>
 
         {/* The Tool */}
-        <PHQ9Client />
+        <PHQ9Client faqData={FAQ_DATA} />
 
         {/* What the Results Mean */}
         <div className="mt-10 mb-8">

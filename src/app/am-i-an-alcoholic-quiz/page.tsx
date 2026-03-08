@@ -5,6 +5,7 @@ import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/am-i-an-alcoholic-quiz`;
 
+
 export const metadata: Metadata = createMetadata({
   path: "/am-i-an-alcoholic-quiz",
   title: "Am I an Alcoholic? Free Quiz | WHO AUDIT Alcohol Screening",
@@ -135,7 +136,7 @@ export default function AmIAnAlcoholicQuizPage() {
         </div>
 
         {/* The Tool */}
-        <AUDITClient />
+        <AUDITClient faqData={FAQ_DATA} />
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">

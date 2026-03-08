@@ -131,7 +131,7 @@ export default function CompassionFatigueTestPage() {
         </div>
 
         {/* The Tool */}
-        <BurnoutClient />
+        <BurnoutClient faqData={FAQ_DATA} />
 
         {/* Compassion Fatigue vs Burnout Table */}
         <div className="mt-10 mb-8">
