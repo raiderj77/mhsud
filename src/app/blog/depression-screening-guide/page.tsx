@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/depression-screening-guide`;
 
@@ -406,12 +407,8 @@ export default function DepressionScreeningGuidePage() {
             </p>
           </section>
 
-          <section className="p-6 card bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
-            <h3 className="text-sage-800 dark:text-sage-400 font-semibold mb-3">👨‍⚕️ About the Reviewer</h3>
-            <p className="text-sm text-sage-700 dark:text-sage-300">
-              Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. Our reviewer has worked in various clinical settings including outpatient clinics, residential treatment centers, and hospital-based programs, with expertise in evidence-based assessment and treatment of co-occurring mental health and substance use disorders. All content on MindCheck Tools is reviewed for clinical accuracy to help individuals make informed decisions about their care.
-            </p>
-          </section>
+          {/* Author Bio — standardized component for E-E-A-T consistency */}
+          <AuthorBio />
 
           <section>
             <h3>References and Further Reading</h3>

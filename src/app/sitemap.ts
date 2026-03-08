@@ -109,11 +109,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/disclaimer`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
+  // FIX: Use actual blog post publish dates for lastModified.
+  // Using now() for all posts tells Google they were all modified today,
+  // which wastes crawl budget and reduces trust in the sitemap.
   const blogPages = BLOG_POSTS
     .filter((p) => p.status === "published")
     .map((p) => ({
       url: `${SITE_URL}/blog/${p.slug}`,
-      lastModified: now,
+      lastModified: new Date(p.date).toISOString(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));

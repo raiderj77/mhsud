@@ -46,32 +46,63 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Cookiebot CMP — must load before any other scripts */}
+        {/*
+          FIX: Single Cookiebot script (was duplicated — caused double consent dialogs).
+          data-georegions handles EU/GB region-specific consent requirements.
+          Must load beforeInteractive to block other scripts until consent is granted.
+        */}
         <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
           data-blockingmode="auto"
-          strategy="beforeInteractive"
-        />
-        {/* Cookiebot GCM integration — sets consent defaults and signals to Google */}
-        <Script
-          id="CookiebotCallback"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
           data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
           strategy="beforeInteractive"
         />
+
+        {/*
+          FIX: gtag initialization with Consent Mode v2.
+          The gtag/js script alone does NOT initialize tracking — the inline init is required.
+          Consent defaults are set to 'denied' until Cookiebot grants permission (GDPR/CCPA compliant).
+        */}
         <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500
+              });
+              gtag('js', new Date());
+              gtag('config', 'G-XKHQN1NJ2Z', { anonymize_ip: true });
+            `,
+          }}
+        />
+        <Script
+          id="gtag-script"
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
         />
-        {/* Google AdSense */}
-        <script
-          async
+
+        {/*
+          FIX: Google AdSense — using Next.js Script component (lazyOnload).
+          Previously used a bare <script> tag which bypassed Next.js script optimization
+          and blocked page rendering. lazyOnload defers until after page is interactive,
+          improving LCP and CLS Core Web Vitals scores.
+        */}
+        <Script
+          id="adsense-script"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
           crossOrigin="anonymous"
+          strategy="lazyOnload"
         />
+
         {/* Preconnect + Google Fonts via CSS (no build-time fetch) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -79,6 +110,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
           rel="stylesheet"
         />
+
         {/* Organization JSON-LD */}
         <script
           type="application/ld+json"

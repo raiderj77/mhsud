@@ -71,7 +71,12 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
   };
 }
 
-/** JSON-LD for organization (site-wide) */
+/**
+ * JSON-LD for organization (site-wide).
+ * FIX: Added logo with dimensions, contactPoint, and sameAs placeholder array.
+ * Google uses sameAs to verify entity identity and build Knowledge Graph entries.
+ * Populate sameAs URLs once social profiles are created.
+ */
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -79,7 +84,25 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    sameAs: [],
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/logo.png`,
+      width: 512,
+      height: 512,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@mindchecktools.com",
+      contactType: "customer support",
+    },
+    // FIX: sameAs was empty — add social profile URLs as they are created.
+    // Even one verified social profile significantly improves E-E-A-T signals.
+    sameAs: [
+      // "https://www.facebook.com/mindchecktools",
+      // "https://twitter.com/mindchecktools",
+      // "https://www.linkedin.com/company/mindchecktools",
+      // "https://www.pinterest.com/mindchecktools",
+    ],
   };
 }
 
@@ -136,7 +159,12 @@ export function faqJsonLd(faqs: { question: string; answer: string }[]) {
   };
 }
 
-/** JSON-LD for blog/article */
+/**
+ * JSON-LD for blog/article.
+ * FIX: Changed @type from "Article" to "MedicalWebPage" for health content.
+ * Added reviewedBy, image dimensions, medicalAudience, and proper mainEntityOfPage.
+ * Google Health carousel and featured snippets require MedicalWebPage schema for health topics.
+ */
 export function articleJsonLd({
   title,
   description,
@@ -144,6 +172,7 @@ export function articleJsonLd({
   datePublished,
   dateModified,
   image,
+  wordCount,
 }: {
   title: string;
   description: string;
@@ -151,21 +180,33 @@ export function articleJsonLd({
   datePublished: string;
   dateModified: string;
   image?: string;
+  wordCount?: number;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "MedicalWebPage",
     headline: title,
     description,
     url,
     datePublished,
     dateModified,
-    image: image || `${SITE_URL}/og-default.png`,
+    image: {
+      "@type": "ImageObject",
+      url: image || `${SITE_URL}/og-default.png`,
+      width: 1200,
+      height: 630,
+    },
+    ...(wordCount ? { wordCount } : {}),
     author: {
       "@type": "Person",
       name: "MindCheck Tools Clinical Reviewer",
       description: "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling",
-      url: SITE_URL,
+      url: `${SITE_URL}/about`,
+    },
+    reviewedBy: {
+      "@type": "Person",
+      name: "MindCheck Tools Clinical Reviewer",
+      description: "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience",
     },
     publisher: {
       "@type": "Organization",
@@ -174,9 +215,19 @@ export function articleJsonLd({
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/logo.png`,
+        width: 512,
+        height: 512,
       },
     },
-    mainEntityOfPage: url,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    // Signals to Google Health that this is patient-facing health content
+    audience: {
+      "@type": "MedicalAudience",
+      audienceType: "Patient",
+    },
   };
 }
 

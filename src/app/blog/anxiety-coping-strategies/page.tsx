@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
+import { AuthorBio } from "@/components/AuthorBio";
 
 const ARTICLE_URL = `${SITE_URL}/blog/anxiety-coping-strategies`;
 
@@ -512,30 +513,8 @@ export default function AnxietyCopingStrategiesPage() {
             reduction and improved quality of life.
           </p>
 
-          <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8 mt-10">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center">
-                  <span className="text-sage-700 dark:text-sage-400 text-lg">👨‍⚕️</span>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
-                  Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)
-                </h4>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-                  with 11 years of clinical experience in substance abuse counseling.
-                  Specializes in evidence-based treatments for anxiety and co-occurring disorders.
-                  All content is reviewed for clinical accuracy and alignment with current research.
-                </p>
-                <div className="flex gap-4 mt-3 text-xs text-neutral-500 dark:text-neutral-500">
-                  <span>Last reviewed: February 24, 2026</span>
-                  <span>•</span>
-                  <span>Clinical accuracy verified</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Author Bio — standardized component for E-E-A-T consistency */}
+          <AuthorBio />
 
           <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
             <h3 className="text-xl font-semibold mb-4">References & Further Reading</h3>
