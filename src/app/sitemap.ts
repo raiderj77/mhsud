@@ -102,6 +102,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/ptsd-test-first-responders`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/burnout-test-parents`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/eating-disorder-test-athletes`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/bpd-test-for-women`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/bpd-screening-for-young-adults`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/attachment-style-test-for-couples`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/depression-test-for-men`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/adhd-test-for-teens`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     // Conversational / intent-based landing pages (low-competition keywords)
     { url: `${SITE_URL}/am-i-depressed-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/do-i-have-ptsd-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

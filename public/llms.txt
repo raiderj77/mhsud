@@ -103,6 +103,11 @@ These pages use validated tools with educational context tailored to specific po
 - [Burnout Test for Parents](https://mindchecktools.com/burnout-test-parents): Parental burnout covering exhaustion, detachment, and guilt with self-care guidance.
 - [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): UCLA Loneliness Scale with senior isolation stats, health impact, community resources.
 - [Eating Disorder Test for Athletes](https://mindchecktools.com/eating-disorder-test-athletes): SCOFF with RED-S info, sport-specific risks, and athletic body image context.
+- [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): MSI-BPD screening with women-specific BPD presentation, hormonal influences, and comorbidity context.
+- [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): MSI-BPD screening with adolescent/young adult onset context and early intervention info.
+- [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): ECR-R attachment quiz with couples dynamics, anxious-avoidant patterns, and communication context.
+- [Depression Test for Men](https://mindchecktools.com/depression-test-for-men): PHQ-9 with male depression presentation (anger, irritability, substance use) and help-seeking barriers.
+- [ADHD Test for Teens](https://mindchecktools.com/adhd-test-for-teens): ASRS ADHD screening with adolescent-specific context, school impact, and teen vs adult presentation.
 
 ## Blog & Educational Guides
 
