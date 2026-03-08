@@ -474,7 +474,7 @@ export function CrafftClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The CRAFFT is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a substance use problem. A positive screen (score of 2+) suggests that further conversation with a trusted adult or healthcare provider may be helpful. Always consult a qualified healthcare professional for substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+            The CRAFFT is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a substance use problem. A positive screen (score of 2+) suggests that further conversation with a trusted adult or healthcare provider may be helpful. Always consult a qualified healthcare professional for substance use concerns. Reviewed by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
 
@@ -724,7 +724,7 @@ export function CrafftClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The CRAFFT is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a substance use problem. A positive screen (score of 2+) suggests that further conversation with a trusted adult or healthcare provider may be helpful. Always consult a qualified healthcare professional for substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+          The CRAFFT is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a substance use problem. A positive screen (score of 2+) suggests that further conversation with a trusted adult or healthcare provider may be helpful. Always consult a qualified healthcare professional for substance use concerns. Reviewed by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II).
         </p>
       </div>
 

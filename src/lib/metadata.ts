@@ -36,8 +36,8 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
     },
     description: SITE_DESCRIPTION,
     keywords: DEFAULT_KEYWORDS,
-    authors: [{ name: SITE_NAME }],
-    creator: SITE_NAME,
+    authors: [{ name: SITE_AUTHOR.name }],
+    creator: SITE_AUTHOR.name,
     openGraph: {
       type: "website",
       locale: "en_US",

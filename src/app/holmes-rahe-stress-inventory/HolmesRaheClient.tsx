@@ -441,8 +441,7 @@ export function HolmesRaheClient({ faqData }: Props) {
             prediction of future health outcomes. The risk percentages cited are
             population-level statistical associations from the original 1967
             research and do not predict individual outcomes. Always consult a
-            qualified healthcare professional for health concerns. Reviewed by a
-            Certified Drug and Alcohol Counselor (CADC-II).
+            qualified healthcare professional for health concerns. Reviewed by Jason Ramirez,\n            Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
 
@@ -645,7 +644,7 @@ export function HolmesRaheClient({ faqData }: Props) {
           prediction of future health outcomes. The risk percentages cited are
           population-level statistical associations from the original 1967
           research and do not predict individual outcomes. Always consult a
-          qualified healthcare professional for health concerns. Reviewed by a
+          qualified healthcare professional for health concerns. Reviewed by Jason Ramirez,
           Certified Drug and Alcohol Counselor (CADC-II).
         </p>
       </div>

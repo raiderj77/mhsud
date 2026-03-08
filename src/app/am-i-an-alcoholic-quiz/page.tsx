@@ -230,7 +230,7 @@ export default function AmIAnAlcoholicQuizPage() {
         {/* Author Bio */}
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            <strong>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)</strong> with 11 years
+            <strong>Reviewed by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II)</strong> with 11 years
             of clinical experience in substance abuse and addiction counseling.
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">

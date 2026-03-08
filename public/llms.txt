@@ -577,7 +577,7 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - International: findahelpline.com
 
 ## Clinical Authority
-All educational content and blog articles are reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. The CADC-II credential is issued by state certification boards and requires supervised clinical hours, continuing education, and passing a national exam. This reviewer ensures all content uses appropriate clinical language ("screening" not "diagnosis"), references validated instruments, and includes crisis resources.
+All educational content and blog articles are reviewed by Jason Ramirez, a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance abuse counseling. The CADC-II credential is issued by state certification boards and requires supervised clinical hours, continuing education, and passing a national exam. Jason Ramirez ensures all content uses appropriate clinical language ("screening" not "diagnosis"), references validated instruments, and includes crisis resources.
 
 ## Important Disclaimers
 All tools are for educational and self-reflection purposes only. They are NOT a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. All responses are processed entirely in the browser and are never stored or transmitted.

@@ -702,7 +702,7 @@ export function SpinClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The SPIN is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have social anxiety disorder. A score of 19 or higher suggests social anxiety symptoms that may warrant professional evaluation. Always consult a qualified healthcare professional for mental health concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+          The SPIN is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have social anxiety disorder. A score of 19 or higher suggests social anxiety symptoms that may warrant professional evaluation. Always consult a qualified healthcare professional for mental health concerns. Reviewed by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II).
         </p>
       </div>
 
