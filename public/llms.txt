@@ -455,6 +455,12 @@ MindCheck Tools provides validated, evidence-based mental health screening instr
 - Description: SCOFF eating disorder screening with athlete-specific content about RED-S, weight-class sports, performance pressure, and sports dietitian resources.
 - Base tool: SCOFF
 
+### Burnout Assessment Tool
+- URL: https://mindchecktools.com/burnout-assessment-tool
+- Description: Clinically-informed burnout screening tool assessing the three dimensions of burnout: emotional exhaustion, depersonalization (cynicism), and reduced personal accomplishment. 15 Likert-scale questions with immediate scoring and personalized guidance.
+- Time: ~3 minutes
+- Questions answered: Am I burned out? Burnout assessment test. What are the three dimensions of burnout? Free burnout screening tool. Burnout test online.
+
 ### Work Stress & Burnout Check
 - URL: https://mindchecktools.com/work-stress-check
 - Description: 12 original questions about work demands, control, support, and recovery.
