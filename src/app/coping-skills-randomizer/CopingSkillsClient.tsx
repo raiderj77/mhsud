@@ -209,6 +209,7 @@ export function CopingSkillsClient({ faqData }: Props) {
         Struggling right now? Press the button and get a healthy coping skill with instructions.
         51 evidence-based skills across 6 categories. Try it, and if it does not help, try another.
       </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="coping-top" />
 

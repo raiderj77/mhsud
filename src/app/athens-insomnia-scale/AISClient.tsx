@@ -246,6 +246,7 @@ export function AISClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Athens Insomnia Scale &middot; {ITEMS.length} items &middot; Past month &middot; Score 0&ndash;24
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>

@@ -152,6 +152,7 @@ export function CrafftClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Substance use screening · Ages 12–21 · CRAFFT 2.1+N
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${

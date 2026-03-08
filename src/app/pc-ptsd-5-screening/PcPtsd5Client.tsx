@@ -119,6 +119,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Screening complete
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         <div className="p-6 rounded-xl border-2 mb-8 bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800">
           <div className="flex items-center justify-between mb-3">

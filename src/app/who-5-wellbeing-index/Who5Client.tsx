@@ -177,6 +177,7 @@ export function Who5Client({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Well-Being Index · Past 2 weeks
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>

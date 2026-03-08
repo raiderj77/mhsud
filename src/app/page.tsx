@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, breadcrumbJsonLd, faqJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/",
@@ -9,7 +9,29 @@ export const metadata: Metadata = createMetadata({
     "Free, private mental health self-checks — PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
 });
 
-const TOOLS = [
+type ToolCategory = "Depression & Mood" | "Anxiety & Stress" | "PTSD & Trauma" | "Substance Use & Addiction" | "Other Conditions" | "Stress, Burnout & Well-Being" | "Recovery Tools";
+
+const TOOL_CATEGORIES: ToolCategory[] = [
+  "Depression & Mood",
+  "Anxiety & Stress",
+  "PTSD & Trauma",
+  "Substance Use & Addiction",
+  "Other Conditions",
+  "Stress, Burnout & Well-Being",
+  "Recovery Tools",
+];
+
+const TOOLS: {
+  href: string;
+  title: string;
+  description: string;
+  badge: string;
+  time: string;
+  questions: number;
+  color: "sage";
+  status: "live" | "coming";
+  category: ToolCategory;
+}[] = [
   {
     href: "/phq-9-depression-test",
     title: "PHQ-9 Depression Self-Check",
@@ -17,8 +39,9 @@ const TOOLS = [
     badge: "Validated",
     time: "~2 min",
     questions: 9,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Depression & Mood",
   },
   {
     href: "/ces-d-depression-scale",
@@ -27,88 +50,9 @@ const TOOLS = [
     badge: "Validated",
     time: "~5 min",
     questions: 20,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/gad-7-anxiety-test",
-    title: "GAD-7 Anxiety Self-Check",
-    description: "7-question validated anxiety screener for generalized anxiety symptoms.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 7,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/audit-alcohol-test",
-    title: "AUDIT Alcohol Use Screen",
-    description: "10-item WHO alcohol screening tool to reflect on your relationship with alcohol.",
-    badge: "WHO",
-    time: "~3 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/audit-c-alcohol-screen",
-    title: "AUDIT-C Quick Screen",
-    description: "3-question brief alcohol screen used in primary care settings worldwide.",
-    badge: "Quick",
-    time: "~1 min",
-    questions: 3,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/dast-10-drug-screening",
-    title: "DAST-10 Drug Screening",
-    description: "10-item validated drug use screening test to reflect on drug use patterns and their impact.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/cage-aid-substance-abuse-screening",
-    title: "CAGE-AID Substance Use Screen",
-    description: "4-question validated screening for both alcohol and drug use concerns.",
-    badge: "Quick",
-    time: "~1 min",
-    questions: 4,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/pcl-5-ptsd-screening",
-    title: "PCL-5 PTSD Screening",
-    description: "20-item validated PTSD screening measure developed by the National Center for PTSD.",
-    badge: "Validated",
-    time: "~5 min",
-    questions: 20,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/pc-ptsd-5-screening",
-    title: "PC-PTSD-5 PTSD Screen",
-    description: "5-item yes/no PTSD screen developed by the VA National Center for PTSD. Quick first-step screen with trauma exposure gate question. Cutoff of 3+ is positive.",
-    badge: "Validated",
-    time: "~1 min",
-    questions: 5,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/asrs-adhd-screening",
-    title: "ASRS ADHD Screening",
-    description: "6-item WHO-developed screening tool for adult ADHD using research-validated thresholds.",
-    badge: "WHO",
-    time: "~2 min",
-    questions: 6,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Depression & Mood",
   },
   {
     href: "/mdq-bipolar-screening",
@@ -117,18 +61,20 @@ const TOOLS = [
     badge: "Validated",
     time: "~3 min",
     questions: 15,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Depression & Mood",
   },
   {
-    href: "/oci-r-ocd-screening",
-    title: "OCI-R OCD Screening",
-    description: "18-item validated OCD screening with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.",
+    href: "/gad-7-anxiety-test",
+    title: "GAD-7 Anxiety Self-Check",
+    description: "7-question validated anxiety screener for generalized anxiety symptoms.",
     badge: "Validated",
-    time: "~3 min",
-    questions: 18,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    time: "~2 min",
+    questions: 7,
+    color: "sage",
+    status: "live",
+    category: "Anxiety & Stress",
   },
   {
     href: "/dass-21-depression-anxiety-stress",
@@ -137,228 +83,9 @@ const TOOLS = [
     badge: "3-in-1",
     time: "~4 min",
     questions: 21,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/who-5-wellbeing-index",
-    title: "WHO-5 Well-Being Index",
-    description: "5-item positive wellbeing measure from the WHO. Percentage score 0-100. Below 50% suggests further evaluation; below 28% suggests depression screening.",
-    badge: "WHO",
-    time: "~2 min",
-    questions: 5,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/k6-distress-scale",
-    title: "K6 Psychological Distress Scale",
-    description: "6-item measure of nonspecific psychological distress used in national health surveys. Past 30 days. Score of 13+ = serious psychological distress.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 6,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/scoff-eating-disorder-screening",
-    title: "SCOFF Eating Disorder Screen",
-    description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",
-    badge: "Quick",
-    time: "~1 min",
-    questions: 5,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/aq-10-autism-screening",
-    title: "AQ-10 Autism Spectrum Screen",
-    description: "10-item validated screening tool for autism spectrum traits in adults. Developed at the University of Cambridge.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/sobriety-calculator",
-    title: "Sobriety Calculator",
-    description: "Track days sober, hit milestones, and estimate money saved. Your date saves locally and persists between visits.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 1,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/money-saved-recovery-calculator",
-    title: "Money Saved in Recovery",
-    description: "Calculate how much you've saved by not drinking or using. Preset averages by substance with projections and comparisons.",
-    badge: "Original",
-    time: "~2 min",
-    questions: 3,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/health-recovery-timeline",
-    title: "Health Recovery Timeline",
-    description: "See what happens to your body after you quit. Interactive timeline based on medical research for alcohol, nicotine, and opioids.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 2,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/bac-calculator",
-    title: "BAC Calculator",
-    description: "Estimate blood alcohol content using the Widmark formula. See BAC level, effects, legal status, and time until sober.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 4,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/standard-drinks-calculator",
-    title: "Standard Drinks Calculator",
-    description: "Calculate how many standard drinks are in any beverage. 16 presets with visual comparison bars show that many common drinks are more than one standard drink.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 2,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/halt-check-in",
-    title: "HALT Check-In",
-    description: "Daily recovery check-in based on the HALT acronym. Rate Hungry, Angry, Lonely, Tired and see your vulnerability level with coping suggestions.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 4,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/withdrawal-timeline",
-    title: "Withdrawal Timeline",
-    description: "See what to expect during withdrawal from alcohol, opioids, benzos, stimulants, meth, cannabis, or nicotine. Phase-by-phase symptoms with severity ratings.",
-    badge: "Original",
-    time: "~2 min",
-    questions: 1,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/treatment-cost-estimator",
-    title: "Treatment Cost Estimator",
-    description: "See estimated costs for addiction treatment: outpatient, IOP, residential rehab, detox, MAT, and sober living. Insurance and financial aid info included.",
-    badge: "Original",
-    time: "~2 min",
-    questions: 1,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/relapse-prevention-plan",
-    title: "Relapse Prevention Plan Builder",
-    description: "Build a personalized relapse prevention plan. Identify triggers, warning signs, coping strategies, emergency contacts, safe activities, and a craving action plan.",
-    badge: "Original",
-    time: "~10 min",
-    questions: 7,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/urge-surfing-timer",
-    title: "Urge Surfing Timer",
-    description: "Ride out cravings with a guided mindfulness timer. Wave animation, box breathing, and rotating prompts based on Alan Marlatt's urge surfing technique.",
-    badge: "Original",
-    time: "~15 min",
-    questions: 1,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/readiness-to-change",
-    title: "Readiness to Change Assessment",
-    description: "Identify your Stage of Change based on Prochaska & DiClemente's model. 15 statements with stage-specific next steps and resources.",
-    badge: "Original",
-    time: "~5 min",
-    questions: 15,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/trigger-identification-worksheet",
-    title: "Trigger Identification Worksheet",
-    description: "Identify your personal triggers across 6 categories: people, places, emotions, situations, times, and sensory cues. Get a printable trigger profile with coping strategies.",
-    badge: "Original",
-    time: "~8 min",
-    questions: 6,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/coping-skills-randomizer",
-    title: "Coping Skills Randomizer",
-    description: "Get a random healthy coping skill when you are struggling. 51 evidence-based skills across 6 categories with instructions. Filter by category, save favorites.",
-    badge: "Original",
-    time: "~1 min",
-    questions: 1,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/daily-recovery-check-in",
-    title: "Daily Recovery Check-In",
-    description: "Quick daily wellness check: mood, cravings, sleep, stress, connection, physical health. Track trends over 7 and 30 days with a streak counter. Saves locally.",
-    badge: "Original",
-    time: "~2 min",
-    questions: 8,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/family-impact-assessment",
-    title: "Family Impact Assessment",
-    description: "For families concerned about a loved one's substance use. 18 questions across 7 domains: behavior changes, finances, relationships, children, emotional toll, safety, and enabling behaviors.",
-    badge: "Original",
-    time: "~5 min",
-    questions: 18,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/crafft-substance-screening",
-    title: "CRAFFT Screening for Teens",
-    description: "Validated substance use screening for ages 12-21 (CRAFFT 2.1+N). Part A gates Part B yes/no CRAFFT questions. Score of 2+ is positive screen. Includes nicotine screening.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/who-assist-substance-screening",
-    title: "WHO ASSIST Substance Screening",
-    description: "Comprehensive WHO screening covering 10 substance categories. Stepped wizard with per-substance risk scores (0-39). Three risk levels with intervention recommendations.",
-    badge: "WHO",
-    time: "~5–10 min",
-    questions: 67,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/ace-questionnaire",
-    title: "ACE Questionnaire",
-    description: "10-item Adverse Childhood Experiences questionnaire from the CDC-Kaiser study. Yes/no format with resilience framing and protective factors. Score 0-10.",
-    badge: "CDC",
-    time: "~2 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Anxiety & Stress",
   },
   {
     href: "/spin-social-anxiety-test",
@@ -367,8 +94,20 @@ const TOOLS = [
     badge: "Validated",
     time: "~3 min",
     questions: 17,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Anxiety & Stress",
+  },
+  {
+    href: "/k6-distress-scale",
+    title: "K6 Psychological Distress Scale",
+    description: "6-item measure of nonspecific psychological distress used in national health surveys. Past 30 days. Score of 13+ = serious psychological distress.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 6,
+    color: "sage",
+    status: "live",
+    category: "Anxiety & Stress",
   },
   {
     href: "/holmes-rahe-stress-inventory",
@@ -377,28 +116,174 @@ const TOOLS = [
     badge: "Validated",
     time: "~3 min",
     questions: 43,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Anxiety & Stress",
   },
   {
-    href: "/rosenberg-self-esteem-scale",
-    title: "Rosenberg Self-Esteem Scale",
-    description: "10-item measure of global self-esteem (Rosenberg, 1965). 4-point scale with 5 reverse-scored items. Score 0-30. Below 15 suggests low self-esteem.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
-  },
-  {
-    href: "/ucla-loneliness-scale",
-    title: "UCLA Loneliness Scale",
-    description: "20-item measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items. Score 20-80. Research cutoff 44+ for elevated loneliness.",
+    href: "/pcl-5-ptsd-screening",
+    title: "PCL-5 PTSD Screening",
+    description: "20-item validated PTSD screening measure developed by the National Center for PTSD.",
     badge: "Validated",
     time: "~5 min",
     questions: 20,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "PTSD & Trauma",
+  },
+  {
+    href: "/pc-ptsd-5-screening",
+    title: "PC-PTSD-5 PTSD Screen",
+    description: "5-item yes/no PTSD screen developed by the VA National Center for PTSD. Quick first-step screen with trauma exposure gate question. Cutoff of 3+ is positive.",
+    badge: "Validated",
+    time: "~1 min",
+    questions: 5,
+    color: "sage",
+    status: "live",
+    category: "PTSD & Trauma",
+  },
+  {
+    href: "/ace-questionnaire",
+    title: "ACE Questionnaire",
+    description: "10-item Adverse Childhood Experiences questionnaire from the CDC-Kaiser study. Yes/no format with resilience framing and protective factors. Score 0-10.",
+    badge: "CDC",
+    time: "~2 min",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "PTSD & Trauma",
+  },
+  {
+    href: "/audit-alcohol-test",
+    title: "AUDIT Alcohol Use Screen",
+    description: "10-item WHO alcohol screening tool to reflect on your relationship with alcohol.",
+    badge: "WHO",
+    time: "~3 min",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/audit-c-alcohol-screen",
+    title: "AUDIT-C Quick Screen",
+    description: "3-question brief alcohol screen used in primary care settings worldwide.",
+    badge: "Quick",
+    time: "~1 min",
+    questions: 3,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/dast-10-drug-screening",
+    title: "DAST-10 Drug Screening",
+    description: "10-item validated drug use screening test to reflect on drug use patterns and their impact.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/cage-aid-substance-abuse-screening",
+    title: "CAGE-AID Substance Use Screen",
+    description: "4-question validated screening for both alcohol and drug use concerns.",
+    badge: "Quick",
+    time: "~1 min",
+    questions: 4,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/crafft-substance-screening",
+    title: "CRAFFT Screening for Teens",
+    description: "Validated substance use screening for ages 12-21 (CRAFFT 2.1+N). Part A gates Part B yes/no CRAFFT questions. Score of 2+ is positive screen. Includes nicotine screening.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/who-assist-substance-screening",
+    title: "WHO ASSIST Substance Screening",
+    description: "Comprehensive WHO screening covering 10 substance categories. Stepped wizard with per-substance risk scores (0-39). Three risk levels with intervention recommendations.",
+    badge: "WHO",
+    time: "~5\u201310 min",
+    questions: 67,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/bac-calculator",
+    title: "BAC Calculator",
+    description: "Estimate blood alcohol content using the Widmark formula. See BAC level, effects, legal status, and time until sober.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 4,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/standard-drinks-calculator",
+    title: "Standard Drinks Calculator",
+    description: "Calculate how many standard drinks are in any beverage. 16 presets with visual comparison bars show that many common drinks are more than one standard drink.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 2,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
+    href: "/asrs-adhd-screening",
+    title: "ASRS ADHD Screening",
+    description: "6-item WHO-developed screening tool for adult ADHD using research-validated thresholds.",
+    badge: "WHO",
+    time: "~2 min",
+    questions: 6,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
+  },
+  {
+    href: "/oci-r-ocd-screening",
+    title: "OCI-R OCD Screening",
+    description: "18-item validated OCD screening with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.",
+    badge: "Validated",
+    time: "~3 min",
+    questions: 18,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
+  },
+  {
+    href: "/scoff-eating-disorder-screening",
+    title: "SCOFF Eating Disorder Screen",
+    description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",
+    badge: "Quick",
+    time: "~1 min",
+    questions: 5,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
+  },
+  {
+    href: "/aq-10-autism-screening",
+    title: "AQ-10 Autism Spectrum Screen",
+    description: "10-item validated screening tool for autism spectrum traits in adults. Developed at the University of Cambridge.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
   },
   {
     href: "/athens-insomnia-scale",
@@ -407,18 +292,42 @@ const TOOLS = [
     badge: "Validated",
     time: "~2 min",
     questions: 8,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
   },
   {
-    href: "/brief-resilience-scale",
-    title: "Brief Resilience Scale",
-    description: "6-item measure of ability to bounce back from stress (Smith et al., 2008). Mean score 1-5. Three reverse-scored items. Low resilience below 3.00.",
+    href: "/ucla-loneliness-scale",
+    title: "UCLA Loneliness Scale",
+    description: "20-item measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items. Score 20-80. Research cutoff 44+ for elevated loneliness.",
+    badge: "Validated",
+    time: "~5 min",
+    questions: 20,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
+  },
+  {
+    href: "/rosenberg-self-esteem-scale",
+    title: "Rosenberg Self-Esteem Scale",
+    description: "10-item measure of global self-esteem (Rosenberg, 1965). 4-point scale with 5 reverse-scored items. Score 0-30. Below 15 suggests low self-esteem.",
     badge: "Validated",
     time: "~2 min",
-    questions: 6,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    questions: 10,
+    color: "sage",
+    status: "live",
+    category: "Other Conditions",
+  },
+  {
+    href: "/who-5-wellbeing-index",
+    title: "WHO-5 Well-Being Index",
+    description: "5-item positive wellbeing measure from the WHO. Percentage score 0-100. Below 50% suggests further evaluation; below 28% suggests depression screening.",
+    badge: "WHO",
+    time: "~2 min",
+    questions: 5,
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
   },
   {
     href: "/work-stress-check",
@@ -427,8 +336,9 @@ const TOOLS = [
     badge: "Original",
     time: "~3 min",
     questions: 12,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
   },
   {
     href: "/burnout-assessment-tool",
@@ -437,8 +347,9 @@ const TOOLS = [
     badge: "Validated",
     time: "~3 min",
     questions: 15,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
   },
   {
     href: "/mental-load-calculator",
@@ -447,8 +358,9 @@ const TOOLS = [
     badge: "Original",
     time: "~3 min",
     questions: 24,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
   },
   {
     href: "/sleep-and-mood-check",
@@ -457,8 +369,163 @@ const TOOLS = [
     badge: "Original",
     time: "~2 min",
     questions: 10,
-    color: "sage" as const,
-    status: "live" as "live" | "coming",
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
+  },
+  {
+    href: "/brief-resilience-scale",
+    title: "Brief Resilience Scale",
+    description: "6-item measure of ability to bounce back from stress (Smith et al., 2008). Mean score 1-5. Three reverse-scored items. Low resilience below 3.00.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 6,
+    color: "sage",
+    status: "live",
+    category: "Stress, Burnout & Well-Being",
+  },
+  {
+    href: "/sobriety-calculator",
+    title: "Sobriety Calculator",
+    description: "Track days sober, hit milestones, and estimate money saved. Your date saves locally and persists between visits.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 1,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/money-saved-recovery-calculator",
+    title: "Money Saved in Recovery",
+    description: "Calculate how much you've saved by not drinking or using. Preset averages by substance with projections and comparisons.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 3,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/health-recovery-timeline",
+    title: "Health Recovery Timeline",
+    description: "See what happens to your body after you quit. Interactive timeline based on medical research for alcohol, nicotine, and opioids.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 2,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/halt-check-in",
+    title: "HALT Check-In",
+    description: "Daily recovery check-in based on the HALT acronym. Rate Hungry, Angry, Lonely, Tired and see your vulnerability level with coping suggestions.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 4,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/withdrawal-timeline",
+    title: "Withdrawal Timeline",
+    description: "See what to expect during withdrawal from alcohol, opioids, benzos, stimulants, meth, cannabis, or nicotine. Phase-by-phase symptoms with severity ratings.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 1,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/treatment-cost-estimator",
+    title: "Treatment Cost Estimator",
+    description: "See estimated costs for addiction treatment: outpatient, IOP, residential rehab, detox, MAT, and sober living. Insurance and financial aid info included.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 1,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/relapse-prevention-plan",
+    title: "Relapse Prevention Plan Builder",
+    description: "Build a personalized relapse prevention plan. Identify triggers, warning signs, coping strategies, emergency contacts, safe activities, and a craving action plan.",
+    badge: "Original",
+    time: "~10 min",
+    questions: 7,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/urge-surfing-timer",
+    title: "Urge Surfing Timer",
+    description: "Ride out cravings with a guided mindfulness timer. Wave animation, box breathing, and rotating prompts based on Alan Marlatt's urge surfing technique.",
+    badge: "Original",
+    time: "~15 min",
+    questions: 1,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/readiness-to-change",
+    title: "Readiness to Change Assessment",
+    description: "Identify your Stage of Change based on Prochaska & DiClemente's model. 15 statements with stage-specific next steps and resources.",
+    badge: "Original",
+    time: "~5 min",
+    questions: 15,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/trigger-identification-worksheet",
+    title: "Trigger Identification Worksheet",
+    description: "Identify your personal triggers across 6 categories: people, places, emotions, situations, times, and sensory cues. Get a printable trigger profile with coping strategies.",
+    badge: "Original",
+    time: "~8 min",
+    questions: 6,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/coping-skills-randomizer",
+    title: "Coping Skills Randomizer",
+    description: "Get a random healthy coping skill when you are struggling. 51 evidence-based skills across 6 categories with instructions. Filter by category, save favorites.",
+    badge: "Original",
+    time: "~1 min",
+    questions: 1,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/daily-recovery-check-in",
+    title: "Daily Recovery Check-In",
+    description: "Quick daily wellness check: mood, cravings, sleep, stress, connection, physical health. Track trends over 7 and 30 days with a streak counter. Saves locally.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 8,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
+  },
+  {
+    href: "/family-impact-assessment",
+    title: "Family Impact Assessment",
+    description: "For families concerned about a loved one's substance use. 18 questions across 7 domains: behavior changes, finances, relationships, children, emotional toll, safety, and enabling behaviors.",
+    badge: "Original",
+    time: "~5 min",
+    questions: 18,
+    color: "sage",
+    status: "live",
+    category: "Recovery Tools",
   },
 ];
 
@@ -512,10 +579,13 @@ export default function HomePage() {
             <span className="w-1.5 h-1.5 rounded-full bg-sage-500 animate-pulse" />
             Free &amp; Private
           </div>
-          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-5">
+          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
             Mental health self-checks you can{" "}
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
+          <p className="text-sm text-neutral-400 dark:text-neutral-500 mb-5">
+            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
+          </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
             Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no login, no judgment — your answers are scored locally and never stored.
           </p>
@@ -556,43 +626,56 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {TOOLS.map((tool) => (
-            <Link
-              key={tool.href}
-              href={tool.status === "live" ? tool.href : "#"}
-              className={`card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 ${
-                tool.status === "coming" ? "opacity-60 pointer-events-none" : ""
-              }`}
-            >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex gap-2">
-                  <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
-                    {tool.badge}
-                  </span>
-                  {tool.status === "coming" && (
-                    <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">
-                      Coming Soon
-                    </span>
-                  )}
+        <div className="space-y-10">
+          {TOOL_CATEGORIES.map((category) => {
+            const categoryTools = TOOLS.filter((t) => t.category === category);
+            if (categoryTools.length === 0) return null;
+            return (
+              <div key={category}>
+                <h3 className="font-serif text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+                  {category}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {categoryTools.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.status === "live" ? tool.href : "#"}
+                      className={`card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 ${
+                        tool.status === "coming" ? "opacity-60 pointer-events-none" : ""
+                      }`}
+                    >
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex gap-2">
+                          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
+                            {tool.badge}
+                          </span>
+                          {tool.status === "coming" && (
+                            <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">
+                              Coming Soon
+                            </span>
+                          )}
+                        </div>
+                        <svg className="w-5 h-5 text-neutral-300 dark:text-neutral-600 group-hover:text-sage-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                      </div>
+                      <h4 className="font-serif font-semibold text-lg text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
+                        {tool.title}
+                      </h4>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
+                        {tool.description}
+                      </p>
+                      <div className="flex gap-4 text-xs text-neutral-400 dark:text-neutral-500">
+                        <span>{tool.questions} questions</span>
+                        <span>{tool.time}</span>
+                        <span>🔒 Private</span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-                <svg className="w-5 h-5 text-neutral-300 dark:text-neutral-600 group-hover:text-sage-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
               </div>
-              <h3 className="font-serif font-semibold text-lg text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
-                {tool.title}
-              </h3>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
-                {tool.description}
-              </p>
-              <div className="flex gap-4 text-xs text-neutral-400 dark:text-neutral-500">
-                <span>{tool.questions} questions</span>
-                <span>{tool.time}</span>
-                <span>🔒 Private</span>
-              </div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -715,6 +798,47 @@ export default function HomePage() {
               </p>
               <span className="inline-block mt-3 text-xs text-sage-600 dark:text-sage-400 font-medium hover:underline">Read guide →</span>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
+        <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-8">
+          Frequently Asked Questions
+        </h2>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              faqJsonLd([
+                { question: "What is a mental health screening tool?", answer: "A mental health screening tool is a short questionnaire designed to identify possible symptoms of conditions like depression, anxiety, or substance use concerns. These tools are used by clinicians as a first step and are not a substitute for a professional evaluation." },
+                { question: "Are these screening tools free to use?", answer: "Yes. Every screening tool on MindCheck Tools is completely free with no signup, no login, and no paywall. You can take any screening as many times as you like at no cost." },
+                { question: "Are my answers private and anonymous?", answer: "Yes. All screening responses are scored entirely in your browser using client-side JavaScript. Your answers are never sent to a server, stored in a database, or shared with anyone. When you close the page, your data is gone." },
+                { question: "What is the difference between a screening and a diagnosis?", answer: "A screening identifies possible symptoms that may warrant further evaluation. A diagnosis is made by a qualified healthcare professional after a comprehensive clinical assessment. Screening tools like the PHQ-9 or GAD-7 are starting points, not final answers." },
+                { question: "How accurate are these self-assessment tools?", answer: "The validated screening tools on this site (PHQ-9, GAD-7, AUDIT, etc.) have been tested in clinical research and shown to have good sensitivity and specificity. However, no self-assessment is perfect. Results should be discussed with a healthcare provider for proper interpretation." },
+                { question: "What should I do after completing a screening?", answer: "If your results suggest elevated symptoms, consider speaking with a doctor, therapist, or counselor. You can also call the SAMHSA National Helpline at 1-800-662-4357 for free, confidential referrals. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
+              ])
+            ),
+          }}
+        />
+        <div className="space-y-6">
+          {[
+            { q: "What is a mental health screening tool?", a: "A mental health screening tool is a short questionnaire designed to identify possible symptoms of conditions like depression, anxiety, or substance use concerns. These tools are used by clinicians as a first step and are not a substitute for a professional evaluation." },
+            { q: "Are these screening tools free to use?", a: "Yes. Every screening tool on MindCheck Tools is completely free with no signup, no login, and no paywall. You can take any screening as many times as you like at no cost." },
+            { q: "Are my answers private and anonymous?", a: "Yes. All screening responses are scored entirely in your browser using client-side JavaScript. Your answers are never sent to a server, stored in a database, or shared with anyone. When you close the page, your data is gone." },
+            { q: "What is the difference between a screening and a diagnosis?", a: "A screening identifies possible symptoms that may warrant further evaluation. A diagnosis is made by a qualified healthcare professional after a comprehensive clinical assessment. Screening tools like the PHQ-9 or GAD-7 are starting points, not final answers." },
+            { q: "How accurate are these self-assessment tools?", a: "The validated screening tools on this site (PHQ-9, GAD-7, AUDIT, etc.) have been tested in clinical research and shown to have good sensitivity and specificity. However, no self-assessment is perfect. Results should be discussed with a healthcare provider for proper interpretation." },
+            { q: "What should I do after completing a screening?", a: "If your results suggest elevated symptoms, consider speaking with a doctor, therapist, or counselor. You can also call the SAMHSA National Helpline at 1-800-662-4357 for free, confidential referrals. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
+          ].map((faq) => (
+            <div key={faq.q} className="card p-5 sm:p-6">
+              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
+                {faq.q}
+              </h3>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
           ))}
         </div>
       </section>

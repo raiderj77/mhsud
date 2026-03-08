@@ -171,6 +171,7 @@ export function AceClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
           Adverse Childhood Experiences · CDC-Kaiser Study · 10 Questions
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         <AdSlot position="tool-top" />
 

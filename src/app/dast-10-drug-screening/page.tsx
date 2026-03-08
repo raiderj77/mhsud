@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { DAST10Client } from "./DAST10Client";
 
 const TOOL_URL = `${SITE_URL}/dast-10-drug-screening`;
@@ -65,6 +65,20 @@ export default function DAST10Page() {
               { name: "Home", url: SITE_URL },
               { name: "DAST-10 Drug Screening Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "DAST-10 Drug Screening Test",
+              description: "A free online implementation of the DAST-10 Drug Abuse Screening Test, a validated 10-item yes/no questionnaire used by clinicians to screen for drug use problems.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

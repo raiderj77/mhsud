@@ -211,6 +211,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
         <span className="font-medium text-neutral-700 dark:text-neutral-300">Alan Marlatt&rsquo;s urge surfing technique</span>.
         Most cravings pass within 15&ndash;30 minutes.
       </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="urge-surfing-top" />
 

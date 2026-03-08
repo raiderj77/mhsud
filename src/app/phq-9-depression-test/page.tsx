@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "./PHQ9Client";
 
 const TOOL_URL = `${SITE_URL}/phq-9-depression-test`;
@@ -66,6 +66,20 @@ export default function PHQ9Page() {
               { name: "Home", url: SITE_URL },
               { name: "PHQ-9 Depression Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "PHQ-9 Depression Test",
+              description: "A free online implementation of the PHQ-9 Patient Health Questionnaire, the gold-standard 9-item depression screening tool used by clinicians worldwide.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

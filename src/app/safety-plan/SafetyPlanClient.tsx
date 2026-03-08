@@ -320,6 +320,7 @@ export function SafetyPlanClient({ faqData }: Props) {
         of a safety plan so you have it ready when you need it most. <strong>You matter, and you
         deserve support.</strong>
       </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
       <CrisisBar />
 

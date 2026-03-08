@@ -193,6 +193,7 @@ export function UCLAClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           UCLA Loneliness Scale (Version 3) &middot; {ITEMS.length} items &middot; Score 20&ndash;80
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
         <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>

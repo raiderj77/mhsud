@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { CrafftClient } from "./CrafftClient";
 
 const TOOL_URL = `${SITE_URL}/crafft-substance-screening`;
@@ -90,6 +90,20 @@ export default function CrafftPage() {
               { name: "Home", url: SITE_URL },
               { name: "CRAFFT Screening", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "CRAFFT 2.1+N Adolescent Substance Screening",
+              description: "A free online implementation of the CRAFFT 2.1+N, a validated substance use screening tool for adolescents ages 12-21.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

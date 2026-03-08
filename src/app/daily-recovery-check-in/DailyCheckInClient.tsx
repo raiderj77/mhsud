@@ -239,6 +239,7 @@ export function DailyCheckInClient({ faqData }: Props) {
       <p className="text-xs text-neutral-400 dark:text-neutral-500 text-center mb-8">
         Data is stored in your browser only. It is never sent anywhere.
       </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
       <AdSlot position="daily-top" />
 

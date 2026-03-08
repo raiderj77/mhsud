@@ -80,6 +80,12 @@ export function organizationJsonLd() {
     url: SITE_URL,
     description: SITE_DESCRIPTION,
     sameAs: [],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: `${SITE_URL}/contact`,
+      availableLanguage: "English",
+    },
   };
 }
 
@@ -177,6 +183,37 @@ export function articleJsonLd({
       },
     },
     mainEntityOfPage: url,
+  };
+}
+
+/** JSON-LD for MedicalWebPage (priority tool pages) */
+export function medicalWebPageJsonLd({
+  name,
+  description,
+  url,
+  lastReviewed,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  lastReviewed: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name,
+    description,
+    url,
+    lastReviewed,
+    reviewedBy: {
+      "@type": "Person",
+      jobTitle: "Certified Drug and Alcohol Counselor (CADC-II)",
+      description: "11 years of clinical experience",
+    },
+    medicalAudience: {
+      "@type": "MedicalAudience",
+      audienceType: "Patient",
+    },
   };
 }
 

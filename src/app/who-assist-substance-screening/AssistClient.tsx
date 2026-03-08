@@ -294,6 +294,7 @@ export function AssistClient({ faqData }: Props) {
         <p className="text-center text-xs text-neutral-400 dark:text-neutral-500 mb-8">
           10 substance categories · ~5–10 minutes · Completely private · WHO ASSIST v3.1
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         <AdSlot position="tool-top" />
 

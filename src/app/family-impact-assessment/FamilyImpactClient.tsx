@@ -304,6 +304,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Assessment completed · {STATEMENTS.length} questions
         </p>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
 
         {/* Safety Alert */}
         {hasSafetyConcern && (

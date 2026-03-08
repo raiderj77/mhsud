@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { ASRSClient } from "./ASRSClient";
 
 const TOOL_URL = `${SITE_URL}/asrs-adhd-screening`;
@@ -65,6 +65,20 @@ export default function ASRSPage() {
               { name: "Home", url: SITE_URL },
               { name: "ASRS ADHD Screening Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "ASRS v1.1 Adult ADHD Screening Test",
+              description: "A free online implementation of the ASRS v1.1 (Adult ADHD Self-Report Scale), a WHO-developed 6-item screening tool for adult ADHD.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { MDQClient } from "./MDQClient";
 
 const TOOL_URL = `${SITE_URL}/mdq-bipolar-screening`;
@@ -65,6 +65,20 @@ export default function MDQPage() {
               { name: "Home", url: SITE_URL },
               { name: "MDQ Bipolar Screening Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "MDQ Mood Disorder Questionnaire — Bipolar Screening Test",
+              description: "A free online implementation of the Mood Disorder Questionnaire (MDQ), a validated screening tool for bipolar spectrum disorders.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

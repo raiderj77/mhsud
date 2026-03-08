@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { AUDITClient } from "./AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/audit-alcohol-test`;
@@ -41,6 +41,7 @@ export default function AUDITPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: TOOL_URL }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, lastReviewed: "2026-03-07" })) }} />
       <AUDITClient faqData={FAQ_DATA} />
     </>
   );

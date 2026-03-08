@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "./PCL5Client";
 
 const TOOL_URL = `${SITE_URL}/pcl-5-ptsd-screening`;
@@ -65,6 +65,20 @@ export default function PCL5Page() {
               { name: "Home", url: SITE_URL },
               { name: "PCL-5 PTSD Screening Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "PCL-5 PTSD Screening Test",
+              description: "A free online implementation of the PCL-5 (PTSD Checklist for DSM-5), a validated 20-item PTSD screening measure developed by the National Center for PTSD.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

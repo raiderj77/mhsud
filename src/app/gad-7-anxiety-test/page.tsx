@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { GAD7Client } from "./GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/gad-7-anxiety-test`;
@@ -64,6 +64,19 @@ export default function GAD7Page() {
               { name: "Home", url: SITE_URL },
               { name: "GAD-7 Anxiety Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "GAD-7 Anxiety Test",
+              description: "A free online implementation of the GAD-7 (Generalized Anxiety Disorder-7) questionnaire, a clinically validated screening tool for measuring anxiety severity.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

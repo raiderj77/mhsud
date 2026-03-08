@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { OCIRClient } from "./OCIRClient";
 
 const TOOL_URL = `${SITE_URL}/oci-r-ocd-screening`;
@@ -65,6 +65,20 @@ export default function OCIRPage() {
               { name: "Home", url: SITE_URL },
               { name: "OCI-R OCD Screening Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "OCI-R Obsessive-Compulsive Inventory — OCD Screening Test",
+              description: "A free online implementation of the OCI-R (Obsessive-Compulsive Inventory - Revised), a validated 18-item screening tool for OCD symptoms with 6 subscales.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

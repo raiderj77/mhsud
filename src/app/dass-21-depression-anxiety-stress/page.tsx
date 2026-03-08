@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { DASS21Client } from "./DASS21Client";
 
 const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
@@ -66,6 +66,20 @@ export default function DASS21Page() {
               { name: "Home", url: SITE_URL },
               { name: "DASS-21 Depression Anxiety Stress Test", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "DASS-21 Depression Anxiety Stress Screening Test",
+              description: "A free online implementation of the DASS-21 (Depression Anxiety Stress Scales), a validated 21-item screening tool that simultaneously measures depression, anxiety, and stress.",
+              url: TOOL_URL,
+              lastReviewed: "2026-03-07",
+            })
           ),
         }}
       />

@@ -153,6 +153,7 @@ export function SCOFFClient({ faqData }: Props) {
             </span>
           ))}
         </div>
+        <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-2">Last reviewed: March 2026</p>
       </header>
 
       {/* Disclaimer Gate */}
