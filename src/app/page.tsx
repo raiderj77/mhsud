@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { createMetadata, breadcrumbJsonLd, faqJsonLd, SITE_URL } from "@/lib/metadata";
+import { ToolGrid } from "@/components/ToolGrid";
+import type { ToolCategory, Tool, TargetedScreening } from "@/components/ToolGrid";
 
 export const metadata: Metadata = createMetadata({
   path: "/",
@@ -8,8 +10,6 @@ export const metadata: Metadata = createMetadata({
   description:
     "Free, private mental health self-checks — PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
 });
-
-type ToolCategory = "Depression & Mood" | "Anxiety & Stress" | "PTSD & Trauma" | "Substance Use & Addiction" | "Other Conditions" | "Stress, Burnout & Well-Being" | "Recovery Tools";
 
 const TOOL_CATEGORIES: ToolCategory[] = [
   "Depression & Mood",
@@ -21,17 +21,7 @@ const TOOL_CATEGORIES: ToolCategory[] = [
   "Recovery Tools",
 ];
 
-const TOOLS: {
-  href: string;
-  title: string;
-  description: string;
-  badge: string;
-  time: string;
-  questions: number;
-  color: "sage";
-  status: "live" | "coming";
-  category: ToolCategory;
-}[] = [
+const TOOLS: Tool[] = [
   {
     href: "/phq-9-depression-test",
     title: "PHQ-9 Depression Self-Check",
@@ -592,6 +582,34 @@ const FEATURES = [
   },
 ];
 
+const TARGETED_SCREENINGS: TargetedScreening[] = [
+  { href: "/depression-test-for-teens", title: "Depression Test for Teens", description: "PHQ-9 screening with teen-specific info on signs, stats, and youth crisis resources.", badge: "Teens" },
+  { href: "/depression-test-for-seniors", title: "Depression Test for Seniors", description: "PHQ-9 screening with context on late-life depression, isolation, and eldercare resources.", badge: "Seniors" },
+  { href: "/depression-test-for-new-moms", title: "Depression Test for New Moms", description: "PHQ-9 screening with postpartum depression info, baby blues vs PPD, and PSI helpline.", badge: "New Moms" },
+  { href: "/depression-screening-for-veterans", title: "Depression Test for Veterans", description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.", badge: "Veterans" },
+  { href: "/anxiety-test-for-women", title: "Anxiety Test for Women", description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.", badge: "Women" },
+  { href: "/anxiety-test-for-teens", title: "Anxiety Test for Teens", description: "GAD-7 screening with teen anxiety stats, social media impact, and youth crisis resources.", badge: "Teens" },
+  { href: "/anxiety-test-for-men", title: "Anxiety Test for Men", description: "GAD-7 screening with info on how anxiety manifests differently in men — anger, physical symptoms.", badge: "Men" },
+  { href: "/ptsd-test-veterans", title: "PTSD Test for Veterans", description: "PCL-5 screening with combat PTSD stats, VA treatment info, and Veterans Crisis Line.", badge: "Veterans" },
+  { href: "/ptsd-test-first-responders", title: "PTSD Test for First Responders", description: "PCL-5 screening for police, firefighters, EMTs with cumulative trauma context.", badge: "First Responders" },
+  { href: "/adhd-test-adults", title: "ADHD Test for Adults", description: "WHO ASRS screening with info on adult ADHD underdiagnosis, symptoms, and getting evaluated.", badge: "Adults" },
+  { href: "/adhd-test-women", title: "ADHD Test for Women", description: "ASRS screening with info on masking, hormonal effects, and why women are diagnosed late.", badge: "Women" },
+  { href: "/ocd-test-teens", title: "OCD Test for Teens", description: "OCI-R screening with teen OCD info, common themes, and ERP treatment resources.", badge: "Teens" },
+  { href: "/bipolar-test-young-adults", title: "Bipolar Test for Young Adults", description: "MDQ screening with info on onset age, misdiagnosis as depression, and hypomania.", badge: "Young Adults" },
+  { href: "/social-anxiety-test-college", title: "Social Anxiety Test for Students", description: "SPIN screening with college social anxiety info, academic impact, and campus resources.", badge: "College" },
+  { href: "/alcohol-screening-for-college-students", title: "Alcohol Screening for College", description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.", badge: "College" },
+  { href: "/alcohol-screening-military", title: "Alcohol Screening for Military", description: "AUDIT screening with military drinking culture context, career concerns, and VA resources.", badge: "Military" },
+  { href: "/drug-screening-teens", title: "Drug Screening for Teens", description: "CRAFFT screening for ages 12-21 with age-appropriate info and teen treatment resources.", badge: "Teens" },
+  { href: "/substance-abuse-test-parents", title: "Substance Screening for Parents", description: "CAGE-AID screening with info on parenting impact, custody concerns, and family treatment.", badge: "Parents" },
+  { href: "/stress-test-college-students", title: "Stress Test for College Students", description: "DASS-21 screening with college stress stats, campus resources, and JED Foundation info.", badge: "College" },
+  { href: "/burnout-test-for-nurses", title: "Burnout Test for Nurses", description: "Burnout assessment with nursing-specific info on compassion fatigue and shift work impact.", badge: "Nurses" },
+  { href: "/burnout-test-for-healthcare-workers", title: "Burnout Test for Healthcare Workers", description: "Burnout assessment for all healthcare staff with post-pandemic context and moral injury info.", badge: "Healthcare" },
+  { href: "/burnout-test-for-teachers", title: "Burnout Test for Teachers", description: "Burnout assessment with teacher-specific context on emotional labor and systemic causes.", badge: "Teachers" },
+  { href: "/burnout-test-parents", title: "Burnout Test for Parents", description: "Parental burnout assessment covering exhaustion, detachment, and guilt with self-care guidance.", badge: "Parents" },
+  { href: "/loneliness-test-seniors", title: "Loneliness Test for Seniors", description: "UCLA Loneliness Scale with senior isolation stats, health impact, and community resources.", badge: "Seniors" },
+  { href: "/eating-disorder-test-athletes", title: "Eating Disorder Test for Athletes", description: "SCOFF screening with RED-S info, sport-specific risks, and athletic body image context.", badge: "Athletes" },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -655,127 +673,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tools Grid */}
-      <section id="tools" className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
-        <div className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-            Self-Check Tools
-          </h2>
-          <p className="text-neutral-500 dark:text-neutral-400">
-            Choose a screening tool to get started. Each one runs entirely in your browser.
-          </p>
-        </div>
-
-        <div className="space-y-10">
-          {TOOL_CATEGORIES.map((category) => {
-            const categoryTools = TOOLS.filter((t) => t.category === category);
-            if (categoryTools.length === 0) return null;
-            return (
-              <div key={category}>
-                <h3 className="font-serif text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
-                  {category}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {categoryTools.map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.status === "live" ? tool.href : "#"}
-                      className={`card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 ${
-                        tool.status === "coming" ? "opacity-60 pointer-events-none" : ""
-                      }`}
-                    >
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex gap-2">
-                          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
-                            {tool.badge}
-                          </span>
-                          {tool.status === "coming" && (
-                            <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">
-                              Coming Soon
-                            </span>
-                          )}
-                        </div>
-                        <svg className="w-5 h-5 text-neutral-300 dark:text-neutral-600 group-hover:text-sage-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                        </svg>
-                      </div>
-                      <h4 className="font-serif font-semibold text-lg text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
-                        {tool.title}
-                      </h4>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
-                        {tool.description}
-                      </p>
-                      <div className="flex gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-                        <span>{tool.questions} questions</span>
-                        <span>{tool.time}</span>
-                        <span>🔒 Private</span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Targeted Screenings */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
-        <div className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-            Screenings for Specific Groups
-          </h2>
-          <p className="text-neutral-500 dark:text-neutral-400">
-            The same validated tools, with educational context tailored to your situation.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { href: "/depression-test-for-teens", title: "Depression Test for Teens", description: "PHQ-9 screening with teen-specific info on signs, stats, and youth crisis resources.", badge: "Teens" },
-            { href: "/depression-test-for-seniors", title: "Depression Test for Seniors", description: "PHQ-9 screening with context on late-life depression, isolation, and eldercare resources.", badge: "Seniors" },
-            { href: "/depression-test-for-new-moms", title: "Depression Test for New Moms", description: "PHQ-9 screening with postpartum depression info, baby blues vs PPD, and PSI helpline.", badge: "New Moms" },
-            { href: "/depression-screening-for-veterans", title: "Depression Test for Veterans", description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.", badge: "Veterans" },
-            { href: "/anxiety-test-for-women", title: "Anxiety Test for Women", description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.", badge: "Women" },
-            { href: "/anxiety-test-for-teens", title: "Anxiety Test for Teens", description: "GAD-7 screening with teen anxiety stats, social media impact, and youth crisis resources.", badge: "Teens" },
-            { href: "/anxiety-test-for-men", title: "Anxiety Test for Men", description: "GAD-7 screening with info on how anxiety manifests differently in men — anger, physical symptoms.", badge: "Men" },
-            { href: "/ptsd-test-veterans", title: "PTSD Test for Veterans", description: "PCL-5 screening with combat PTSD stats, VA treatment info, and Veterans Crisis Line.", badge: "Veterans" },
-            { href: "/ptsd-test-first-responders", title: "PTSD Test for First Responders", description: "PCL-5 screening for police, firefighters, EMTs with cumulative trauma context.", badge: "First Responders" },
-            { href: "/adhd-test-adults", title: "ADHD Test for Adults", description: "WHO ASRS screening with info on adult ADHD underdiagnosis, symptoms, and getting evaluated.", badge: "Adults" },
-            { href: "/adhd-test-women", title: "ADHD Test for Women", description: "ASRS screening with info on masking, hormonal effects, and why women are diagnosed late.", badge: "Women" },
-            { href: "/ocd-test-teens", title: "OCD Test for Teens", description: "OCI-R screening with teen OCD info, common themes, and ERP treatment resources.", badge: "Teens" },
-            { href: "/bipolar-test-young-adults", title: "Bipolar Test for Young Adults", description: "MDQ screening with info on onset age, misdiagnosis as depression, and hypomania.", badge: "Young Adults" },
-            { href: "/social-anxiety-test-college", title: "Social Anxiety Test for Students", description: "SPIN screening with college social anxiety info, academic impact, and campus resources.", badge: "College" },
-            { href: "/alcohol-screening-for-college-students", title: "Alcohol Screening for College", description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.", badge: "College" },
-            { href: "/alcohol-screening-military", title: "Alcohol Screening for Military", description: "AUDIT screening with military drinking culture context, career concerns, and VA resources.", badge: "Military" },
-            { href: "/drug-screening-teens", title: "Drug Screening for Teens", description: "CRAFFT screening for ages 12-21 with age-appropriate info and teen treatment resources.", badge: "Teens" },
-            { href: "/substance-abuse-test-parents", title: "Substance Screening for Parents", description: "CAGE-AID screening with info on parenting impact, custody concerns, and family treatment.", badge: "Parents" },
-            { href: "/stress-test-college-students", title: "Stress Test for College Students", description: "DASS-21 screening with college stress stats, campus resources, and JED Foundation info.", badge: "College" },
-            { href: "/burnout-test-for-nurses", title: "Burnout Test for Nurses", description: "Burnout assessment with nursing-specific info on compassion fatigue and shift work impact.", badge: "Nurses" },
-            { href: "/burnout-test-for-healthcare-workers", title: "Burnout Test for Healthcare Workers", description: "Burnout assessment for all healthcare staff with post-pandemic context and moral injury info.", badge: "Healthcare" },
-            { href: "/burnout-test-for-teachers", title: "Burnout Test for Teachers", description: "Burnout assessment with teacher-specific context on emotional labor and systemic causes.", badge: "Teachers" },
-            { href: "/burnout-test-parents", title: "Burnout Test for Parents", description: "Parental burnout assessment covering exhaustion, detachment, and guilt with self-care guidance.", badge: "Parents" },
-            { href: "/loneliness-test-seniors", title: "Loneliness Test for Seniors", description: "UCLA Loneliness Scale with senior isolation stats, health impact, and community resources.", badge: "Seniors" },
-            { href: "/eating-disorder-test-athletes", title: "Eating Disorder Test for Athletes", description: "SCOFF screening with RED-S info, sport-specific risks, and athletic body image context.", badge: "Athletes" },
-          ].map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="card p-5 group hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 transition-all"
-            >
-              <span className="badge bg-sky-50 dark:bg-sky-950/30 text-sky-700 dark:text-sky-400 mb-3 inline-block">
-                {item.badge}
-              </span>
-              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                {item.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* Tools Grid + Targeted Screenings (client component for search/filter) */}
+      <ToolGrid
+        tools={TOOLS}
+        toolCategories={TOOL_CATEGORIES}
+        targetedScreenings={TARGETED_SCREENINGS}
+      />
 
       {/* Privacy Callout */}
       <section className="bg-sage-600 dark:bg-sage-900">
