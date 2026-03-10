@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -d C:/Users/jason/empire/mhsud/src/app/*/ | sed 's|C:/Users/jason/empire/mhsud/src/app/||' | sed 's|/$||' | sort)",
+      "Bash(cd \"C:/Users/jason/empire/mhsud\" && npm run build 2>&1)",
+      "Bash(cd \"C:/Users/jason/empire/mhsud\" && npx next build 2>&1)",
+      "Bash(cd \"C:/Users/jason/empire/mhsud\" && npm install 2>&1 | tail -5)",
+      "Bash(cd \"C:/Users/jason/empire/mhsud\" && ./node_modules/.bin/next build 2>&1)"
+    ]
+  }
+}

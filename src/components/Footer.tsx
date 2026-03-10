@@ -225,13 +225,21 @@ export function Footer() {
           <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-3 text-center">
             Crisis Resources
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
               <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
                 988 Suicide &amp; Crisis Lifeline
               </p>
               <p className="text-xs text-amber-700 dark:text-amber-300">
                 Call or text 988 &bull; 24/7 free &amp; confidential support
+              </p>
+            </div>
+            <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+              <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
+                Crisis Text Line
+              </p>
+              <p className="text-xs text-amber-700 dark:text-amber-300">
+                Text HOME to 741741 &bull; 24/7 crisis support
               </p>
             </div>
             <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
@@ -273,6 +281,10 @@ export function Footer() {
             <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Creator Revenue Calculator</a>
             {" · "}
             <a href="https://flipmycase.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FlipMyCase</a>
+            {" · "}
+            <a href="https://contractextract.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">ContractExtract</a>
+            {" · "}
+            <a href="https://medicalbillreader.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Medical Bill Reader</a>
           </p>
         </div>
       </div>

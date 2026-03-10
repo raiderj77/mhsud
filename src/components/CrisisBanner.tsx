@@ -9,7 +9,8 @@ export function CrisisBanner() {
         <span className="opacity-90">
           These are educational screening tools only — not a diagnosis or treatment.
           If you are in crisis, please call{" "}
-          <strong className="font-semibold">988 Suicide & Crisis Lifeline</strong> (call or text 988) or{" "}
+          <strong className="font-semibold">988 Suicide & Crisis Lifeline</strong> (call or text 988),{" "}
+          <strong className="font-semibold">Crisis Text Line</strong> (text HOME to 741741), or{" "}
           <strong className="font-semibold">SAMHSA National Helpline: 1-800-662-4357</strong>.
         </span>
       </div>
