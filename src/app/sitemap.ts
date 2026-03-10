@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastUpdated = "2026-03-08T00:00:00.000Z";
+  const lastUpdated = "2026-03-10T00:00:00.000Z";
 
   const staticPages = [
     { url: SITE_URL, lastModified: lastUpdated, changeFrequency: "weekly" as const, priority: 1.0 },
