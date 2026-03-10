@@ -736,6 +736,12 @@ export function ReadinessClient({ faqData }: Props) {
           </ul>
         </div>
 
+        <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
+          <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+            Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+          </Link>
+        </div>
+
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No answers are stored, transmitted, or collected.
           Your responses are completely private.

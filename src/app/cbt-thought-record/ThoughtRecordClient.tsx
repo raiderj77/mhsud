@@ -829,6 +829,12 @@ export function ThoughtRecordClient({ faqData }: Props) {
           </div>
         </section>
 
+        <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
+          <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+            Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+          </Link>
+        </div>
+
         <div className="text-center mb-6">
           <p className="text-xs text-neutral-500 dark:text-neutral-400">
             Your privacy matters. Thought records are saved only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared.

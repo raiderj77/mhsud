@@ -289,6 +289,12 @@ export function GAD7Client({ faqData }: Props) {
             </div>
           </div>
 
+          <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
+            <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+              Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+            </Link>
+          </div>
+
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
             <button

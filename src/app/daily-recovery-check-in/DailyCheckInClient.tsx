@@ -653,6 +653,12 @@ export function DailyCheckInClient({ faqData }: Props) {
           </ul>
         </div>
 
+        <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
+          <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+            Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+          </Link>
+        </div>
+
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your check-in data is stored in your browser&rsquo;s localStorage. It is never sent to any server.
           Clearing your browser data will erase your history.

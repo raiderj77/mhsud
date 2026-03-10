@@ -254,6 +254,12 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         </ul>
       </div>
 
+      <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
+        <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+          Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+        </Link>
+      </div>
+
       {/* Clinical Disclaimer */}
       <div className="mb-6">
         <p className="text-sm text-slate-500 dark:text-slate-400 italic">
