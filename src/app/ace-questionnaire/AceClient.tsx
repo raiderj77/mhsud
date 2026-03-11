@@ -260,7 +260,7 @@ export function AceClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by Jason Ramirez, CADC-II, Certified Drug and Alcohol Counselor with 11 years of clinical experience.
+            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
           </p>
         </div>
 
@@ -597,7 +597,7 @@ export function AceClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by Jason Ramirez, CADC-II, Certified Drug and Alcohol Counselor with 11 years of clinical experience.
+            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
           </p>
         </div>
 
@@ -787,7 +787,7 @@ export function AceClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by Jason Ramirez, CADC-II, Certified Drug and Alcohol Counselor with 11 years of clinical experience.
+          The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
         </p>
       </div>
 
