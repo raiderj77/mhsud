@@ -61,7 +61,8 @@ How to maintain these:
 - Maintain About page with verifiable organizational info and mission
 - Include Contact information accessible from every page
 - Describe editorial review process (especially for YMYL content)
-- Attribution: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)" — NEVER use personal name
+- Attribution in body copy: "Certified Drug and Alcohol Counselor (CADC-II)" — never use personal name in body copy or headings
+- Attribution in bylines: named attribution REQUIRED for E-E-A-T — "Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See /about/jason-ramirez."
 - All content reviewed by licensed CADC-II professional. Cite validated instruments and authoritative sources (WHO, CDC, APA). Describe editorial review process on About page.
 
 ## 5. Structured Data (JSON-LD)
@@ -232,7 +233,7 @@ Footer links to all sister sites (exclude self):
 
 ## Warnings — Things Claude Code Must NEVER Do
 
-1. Never expose the site owner's personal name in code, content, comments, or metadata
+1. Never use personal name in body copy, headings, code comments, or non-YMYL metadata. Named byline attribution IS required on YMYL pages (see E-E-A-T section). JSON-LD Person schema on author pages always permitted.
 2. Never modify ads.txt unless explicitly asked
 3. Never remove legal pages (privacy, terms)
 4. Never hardcode API keys — use environment variables

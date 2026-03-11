@@ -852,7 +852,11 @@ Run through this EVERY time before deploying:
 
 Things Claude Code must NEVER do on ANY Empire site:
 
-1. **Personal name in public-facing content requires a deliberate decision.** Default is credential-only attribution. Exception: on Tier 3 YMYL sites where a named, credentialed reviewer strengthens E-E-A-T, a real name may be used — but only when a dedicated author page with Person schema exists and the name is consistently formatted as [Name], [Credential] linking to that author page. Never expose personal name in code comments, metadata, or configuration files.
+1. **Personal name usage depends on context:**
+   - **Body copy / headings** — Never use personal name. Use credential-only language. Example: "Certified Drug and Alcohol Counselor (CADC-II)".
+   - **Byline attribution on YMYL pages** — Named attribution REQUIRED for E-E-A-T. Format: "Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See /about/jason-ramirez." A dedicated author page with Person schema must exist and the name must be consistently formatted as [Name], [Credential] linking to that author page.
+   - **JSON-LD / structured data** — Named Person schema always permitted and required on author pages regardless of context.
+   - **Code comments, non-YMYL metadata, configuration files** — Never expose personal name.
 2. **Never modify ads.txt** unless explicitly asked — incorrect ads.txt stops ALL ad revenue
 3. **Never remove legal pages** (privacy policy, terms of service) — creates legal exposure
 4. **Never hardcode API keys** in any file — use environment variables exclusively
