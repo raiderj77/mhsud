@@ -73,7 +73,7 @@ export default function AlcoholScreeningMilitaryPage() {
               description: "A free, confidential alcohol screening tool for military service members and veterans using the clinically validated AUDIT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: "2026-03-11",
             })
           ),
         }}
@@ -199,6 +199,84 @@ export default function AlcoholScreeningMilitaryPage() {
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is reported to your command, the VA, your security clearance review, or anyone else. Period.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* The Self-Medication Cycle */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Self-Medication Cycle: From Combat Stress to Dependence
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Combat and operational stress create measurable neurological changes — a
+              dysregulated HPA axis (your body&apos;s stress command center), heightened startle
+              response, and chronic hyperarousal that makes it difficult to relax or sleep.
+              Alcohol suppresses these responses temporarily: it quiets the hypervigilance,
+              softens the intrusive memories, and makes sleep feel possible. That temporary
+              relief is what makes the self-medication cycle so powerful.
+            </p>
+            <p>
+              The problem is neurochemical. Alcohol boosts GABA (a calming neurotransmitter) and
+              suppresses glutamate (an excitatory one) — creating short-term calm. But the brain
+              adapts by upregulating glutamate and downregulating GABA, which means each morning
+              after brings more anxiety, worse sleep, and stronger hyperarousal than before. The
+              only thing that provides relief is more alcohol. This isn&apos;t a character flaw
+              — it is a predictable neurological trap, and it requires professional support to
+              break safely.
+            </p>
+          </div>
+        </div>
+
+        {/* Barriers Beyond Stigma */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Barriers Beyond Stigma: Why Service Members Don&apos;t Seek Help
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Stigma gets most of the attention, but the barriers to help-seeking in military
+              populations are more structural than many realize. Fitness-for-duty evaluations,
+              concerns about MOS or rating impacts, fear of involuntary separation, and the
+              practical reality that seeking treatment requires time away from duties all create
+              real obstacles. For many service members, &quot;toughing it out&quot; is not just a
+              cultural expectation — it was trained behavior that kept them and their unit alive.
+              Unlearning it requires a compelling reason and a safe environment.
+            </p>
+            <p>
+              Confidential options do exist. Military OneSource provides up to 12 non-medical
+              counseling sessions that are not reported to your command. The AUDIT screening
+              you&apos;re about to take runs entirely in your browser — no records, no tracking.
+              Chaplains offer privileged communication. And self-referral for substance use
+              treatment is protected under DOD policy and is generally viewed more favorably than
+              a command-directed referral after an incident. Reaching out early gives you the
+              most options.
+            </p>
+          </div>
+        </div>
+
+        {/* The Post-Deployment Window */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Post-Deployment Window: When Risk Is Highest
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              A well-documented pattern in military populations: alcohol is restricted or
+              unavailable during deployment, consumption surges during R&amp;R and immediately
+              post-deployment, and heavy drinking can become entrenched during the reintegration
+              period. Research identifies the first 6 months after returning from deployment as
+              the highest-risk window for developing hazardous drinking patterns — a period when
+              the stress of combat is still fresh but the structure of deployment is gone.
+            </p>
+            <p>
+              Reintegration stress compounds the risk. Reconnecting with family dynamics that
+              shifted during absence, re-establishing routines, navigating changed relationships,
+              and adjusting to a pace of life that feels simultaneously too slow and overwhelming
+              — these transitions create their own pressures. Alcohol often fills the gap between
+              how things were supposed to feel and how they actually do. If you are within a year
+              of returning from deployment, this screening is especially relevant.
+            </p>
           </div>
         </div>
       </div>

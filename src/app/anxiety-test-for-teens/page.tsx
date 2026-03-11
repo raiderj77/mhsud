@@ -61,7 +61,7 @@ const FAQ_DATA = [
 export default function AnxietyTestForTeensPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-11" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "GAD-7 Anxiety Test", url: `${SITE_URL}/gad-7-anxiety-test` }, { name: "Anxiety Test for Teens", url: TOOL_URL }])) }} />
 
@@ -120,6 +120,118 @@ export default function AnxietyTestForTeensPage() {
             <p>Social media adds a dimension of anxiety that no previous generation has faced. The constant comparison, fear of missing out, cyberbullying, and pressure to present a perfect life online can significantly amplify anxiety symptoms. Research shows a correlation between heavy social media use and increased anxiety in adolescents.</p>
             <p>Academic pressure is another major driver. The emphasis on grades, test scores, college admissions, and extracurricular activities creates an environment where many teens feel they can never do enough. Perfectionism — the belief that anything less than perfect is failure — is closely linked to anxiety and is increasingly common among high-achieving teens.</p>
             <p>The good news: anxiety is one of the most treatable mental health conditions. CBT, in particular, has strong evidence for helping teens identify anxious thoughts, challenge them, and gradually face feared situations. Many teens see significant improvement. The first step is recognizing that what you are feeling has a name and that help is available.</p>
+          </div>
+        </div>
+
+        {/* The Comparison Trap */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Comparison Trap: Social Media and Your Developing Brain
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Your brain is still developing its prefrontal cortex — the part responsible for
+              evaluating information rationally and regulating emotions. At the same time, the
+              dopamine-seeking reward system is fully active. Social media algorithms are
+              designed to exploit exactly this combination: they feed you content that triggers
+              emotional reactions (comparison, envy, outrage, FOMO) because that keeps you
+              scrolling. Your brain is wired to respond to these triggers more intensely than
+              an adult&apos;s.
+            </p>
+            <p>
+              The &quot;highlight reel&quot; effect — seeing everyone else&apos;s best moments
+              while experiencing your own unfiltered reality — creates a distorted sense of what
+              is normal. Research shows that teens who spend more than 3 hours daily on social
+              media have double the risk of anxiety and depression symptoms. Notification anxiety
+              (the stress of constant alerts), sleep disruption from late-night scrolling, and
+              cyberbullying compound the effect. Reducing screen time — even by 30 minutes a day
+              — has measurable benefits.
+            </p>
+          </div>
+        </div>
+
+        {/* When Anxiety Looks Like Something Else */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            When Anxiety Looks Like Something Else
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Teen anxiety often gets mislabeled by adults who don&apos;t recognize what
+              they&apos;re seeing. The result: the wrong problem gets addressed while the
+              anxiety underneath goes untreated.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-300 dark:border-slate-600">
+                    <th className="py-2 pr-4 font-semibold text-slate-900 dark:text-white">What adults see</th>
+                    <th className="py-2 font-semibold text-slate-900 dark:text-white">What may actually be happening</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700 dark:text-slate-300">
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-3 pr-4">&quot;Defiance&quot; or school refusal</td>
+                    <td className="py-3">Avoidance of anxiety-triggering situations (presentations, social interactions, tests)</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-3 pr-4">&quot;Laziness&quot; or procrastination</td>
+                    <td className="py-3">Paralysis from perfectionism or fear of failure</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-3 pr-4">&quot;Attention-seeking&quot;</td>
+                    <td className="py-3">Somatic complaints (headaches, stomachaches) that are real physical anxiety symptoms</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-3 pr-4">&quot;Not paying attention&quot; (ADHD?)</td>
+                    <td className="py-3">Racing anxious thoughts making concentration impossible</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">&quot;Attitude problem&quot; or anger</td>
+                    <td className="py-3">Fight response to overwhelming anxiety — irritability is anxiety&apos;s bodyguard</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Talking to Adults About Anxiety */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            How to Talk to Adults About Your Anxiety
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Telling someone you&apos;re struggling is hard — especially when &quot;I&apos;m
+              fine&quot; has been your default for months. You don&apos;t need to have it all
+              figured out before you say something. Here are some ways to start:
+            </p>
+            <div className="space-y-3">
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">To a parent</h3>
+                <p className="text-sm">
+                  &quot;I&apos;ve been feeling really anxious lately — not just normal stressed,
+                  but like it&apos;s hard to function. I think I might need to talk to someone
+                  about it.&quot;
+                </p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">To a school counselor</h3>
+                <p className="text-sm">
+                  &quot;I&apos;ve been having trouble with worry and it&apos;s affecting my
+                  schoolwork. Can we talk about what options are available?&quot;
+                </p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">If talking feels impossible</h3>
+                <p className="text-sm">
+                  Write it down. Show them this page. Text HOME to 741741 (Crisis Text Line) and
+                  talk to a trained counselor first. You don&apos;t have to get the words perfect
+                  — you just have to get them out.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

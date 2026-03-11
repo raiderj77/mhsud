@@ -32,7 +32,7 @@ const FAQ_DATA = [
 export default function DepressionTestForSeniorsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Seniors — PHQ-9 Screening", description: "A free, private depression screening tool for older adults using the PHQ-9.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Seniors — PHQ-9 Screening", description: "A free, private depression screening tool for older adults using the PHQ-9.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-11" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "PHQ-9 Depression Test", url: `${SITE_URL}/phq-9-depression-test` }, { name: "Depression Test for Seniors", url: TOOL_URL }])) }} />
 
@@ -79,6 +79,83 @@ export default function DepressionTestForSeniorsPage() {
             <p>Major risk factors for late-life depression include chronic illness (heart disease, diabetes, cancer, Parkinson&apos;s), chronic pain, loss of a spouse or close friends, social isolation, reduced mobility, caregiving stress, and polypharmacy (side effects from multiple medications). Retirement and the loss of professional identity can also trigger depression.</p>
             <p>The relationship between depression and dementia is complex. Depression can cause cognitive symptoms that mimic dementia (called pseudodementia), and depression is also a risk factor for developing actual dementia. Getting an accurate diagnosis matters because depression-related cognitive decline is often reversible with treatment.</p>
             <p>The good news: depression in older adults is highly treatable. Both therapy (especially CBT and problem-solving therapy) and antidepressant medication are effective. Social engagement, physical activity (even gentle exercise like walking), and community involvement are also protective. Medicare covers annual depression screening and mental health treatment.</p>
+          </div>
+        </div>
+
+        {/* Vascular Depression: A Geriatric-Specific Risk */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Vascular Depression: When Cardiovascular Health Affects Mood
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Geriatric psychiatry has identified a subtype of late-life depression called
+              <strong> vascular depression</strong>, caused by small-vessel disease in the brain.
+              Conditions like hypertension, diabetes, and atherosclerosis can damage the tiny
+              blood vessels that supply brain regions responsible for mood regulation. Brain
+              imaging studies show that older adults with these white matter changes are
+              significantly more likely to develop depression — even without a prior history.
+            </p>
+            <p>
+              Vascular depression tends to present differently: more psychomotor slowing (moving
+              and thinking slowly), less guilt or self-blame, and poorer response to standard
+              antidepressants alone. It responds better when cardiovascular risk factors are also
+              managed — making blood pressure control, blood sugar management, and physical
+              activity part of the approach. If you or a loved one developed depression for the
+              first time after age 60, vascular factors are worth discussing with a doctor.
+            </p>
+          </div>
+        </div>
+
+        {/* The Retirement Identity Crisis */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Retirement Identity Crisis
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Retirement is often framed as a reward, but for many older adults it triggers an
+              identity crisis that can lead to depression. Work provides structure, social
+              connection, a sense of purpose, and a clear role in the world. When that disappears
+              — sometimes abruptly — the void can be disorienting. Studies show that depression
+              risk increases in the first two years after retirement, particularly for people
+              whose identity was closely tied to their career.
+            </p>
+            <p>
+              The loss is compounded when it coincides with other transitions: children moving
+              away, a spouse&apos;s declining health, or moving to a new community. The solution
+              is not to &quot;stay busy&quot; — it is to rebuild a sense of meaning. Volunteering,
+              mentoring, part-time work, creative pursuits, or community involvement can provide
+              the structure and purpose that work once filled. Recognizing that this adjustment
+              period is real — and that struggling with it does not mean you are ungrateful — is
+              an important first step.
+            </p>
+          </div>
+        </div>
+
+        {/* When Grief Becomes Depression */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            When Grief Becomes Depression in Older Adults
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Older adults face a unique grief pattern that clinicians call <strong>bereavement
+              overload</strong> — the accumulation of multiple losses in a compressed timeframe.
+              The death of a spouse, siblings, lifelong friends, and peers can arrive in rapid
+              succession, leaving little time to process each loss before the next one comes.
+              This cumulative grief differs from a single bereavement and carries a higher risk
+              of tipping into clinical depression.
+            </p>
+            <p>
+              Grief and depression share symptoms — sadness, sleep disruption, appetite changes,
+              withdrawal. The key differences: grief tends to come in waves tied to reminders of
+              the person, while depression is more persistent and pervasive. Grief preserves
+              self-esteem; depression often brings feelings of worthlessness. When grief lingers
+              beyond 12 months with undiminished intensity and begins to impair daily functioning,
+              it may have evolved into prolonged grief disorder, major depression, or both —
+              conditions that benefit from targeted professional support.
+            </p>
           </div>
         </div>
       </div>

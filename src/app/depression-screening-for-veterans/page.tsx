@@ -61,7 +61,7 @@ export default function DepressionScreeningForVeteransPage() {
               description: "A free, private depression screening tool for veterans using the clinically validated PHQ-9 questionnaire. Includes VA resources and veteran-specific mental health information.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-01",
+              dateModified: "2026-03-11",
             })
           ),
         }}
@@ -186,6 +186,84 @@ export default function DepressionScreeningForVeteransPage() {
                 <p><strong>Your privacy:</strong> This has no connection to the VA, DOD, or any government system. Nothing is stored or transmitted. No one can access your results — not the VA, not your chain of command, not anyone. When you close this page, your data is gone.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Moral Injury and Depression */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Moral Injury: The Depression That Doesn&apos;t Look Like PTSD
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Not all service-related depression comes from fear or danger. <strong>Moral
+              injury</strong> — the deep psychological wound from participating in, witnessing,
+              or failing to prevent events that violate your moral code — manifests primarily as
+              depression, not the hyperarousal and flashbacks of classic PTSD. Veterans with
+              moral injury describe pervasive shame, self-condemnation, withdrawal from
+              relationships, and a collapse of the belief systems that once gave life meaning.
+            </p>
+            <p>
+              Standard PTSD treatments (prolonged exposure, CPT) are designed for fear-based
+              trauma and may not fully address moral injury. Emerging approaches like Adaptive
+              Disclosure Therapy and Impact of Killing — developed specifically for moral injury
+              — address the guilt, shame, and existential questions directly. If your depression
+              feels more like punishment you are inflicting on yourself than fear of external
+              threats, moral injury is worth exploring with a provider who understands it.
+            </p>
+          </div>
+        </div>
+
+        {/* The Transition Identity Gap */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Transition Gap: Losing Your Military Identity
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The military gave you rank, mission, belonging, and a clear place in the world.
+              Separation removes all of that simultaneously. Many veterans describe the
+              transition to civilian life as an identity crisis: you know who you were in
+              uniform, but you don&apos;t know who you are without it. Civilian workplaces lack
+              the camaraderie and shared purpose of military service. Social dynamics feel
+              confusing. The skills that made you exceptional in service don&apos;t always
+              translate in ways employers recognize.
+            </p>
+            <p>
+              Research shows that depression risk peaks during the first two years after
+              separation, regardless of combat exposure. The loss is not just a job — it is a
+              community, a structure, and an identity built over years or decades. Programs like
+              the VA&apos;s Solid Start initiative, which proactively contacts recently separated
+              veterans, exist because this transition window is so critical. If you separated
+              within the last three years and are feeling lost, disconnected, or purposeless,
+              those feelings have a name and they are shared by many who served alongside you.
+            </p>
+          </div>
+        </div>
+
+        {/* When Standard Treatments Aren't Enough */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            When Standard Approaches Aren&apos;t Enough: Advanced Options
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              If you have tried therapy and medication without adequate relief, you are not out
+              of options. The VA has expanded access to several advanced approaches for
+              treatment-resistant depression: <strong>esketamine (Spravato)</strong>, a nasal
+              spray approved for treatment-resistant depression that works through a different
+              brain pathway than traditional antidepressants; intensive outpatient programs that
+              combine multiple modalities over 2-3 weeks; and complementary approaches including
+              yoga, acupuncture, and meditation that are now offered at many VA facilities.
+            </p>
+            <p>
+              The VA also runs clinical trials for emerging treatments. Peer support specialists
+              — veterans who have navigated their own mental health recovery and are trained to
+              support others — are available through many VA facilities and veteran service
+              organizations like Team Red White &amp; Blue, Wounded Warrior Project, and Give an
+              Hour. Sometimes the most effective support comes from someone who has carried the
+              same weight and found a way forward.
+            </p>
           </div>
         </div>
       </div>

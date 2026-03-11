@@ -61,7 +61,7 @@ export default function BurnoutTestForNursesPage() {
               description: "A free, private burnout screening tool for nurses assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-01",
+              dateModified: "2026-03-11",
             })
           ),
         }}
@@ -185,6 +185,99 @@ export default function BurnoutTestForNursesPage() {
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, coworkers, or anyone else.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Moral Distress in Nursing */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Moral Distress: When You Know What&apos;s Right but Can&apos;t Do It
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Moral distress occurs when you know the ethically correct action for your patient
+              but institutional constraints prevent you from taking it. Short staffing means you
+              can&apos;t give the care your patients need. Insurance denials force discharges you
+              know are premature. You provide aggressive interventions for patients who expressed
+              a wish for comfort care. You watch preventable harm happen because the system
+              won&apos;t allocate the resources to stop it.
+            </p>
+            <p>
+              Unlike burnout, which builds gradually from workload and exhaustion, moral distress
+              creates acute psychological wounds each time it occurs — and those wounds
+              accumulate. Research on the <strong>crescendo effect</strong> shows that moral
+              distress compounds over a career: each new incident reactivates the residue from
+              previous ones, lowering the threshold for the next episode. Nurses who leave the
+              profession frequently cite moral distress — not just exhaustion — as the deciding
+              factor.
+            </p>
+          </div>
+        </div>
+
+        {/* The Three Faces of Nursing Burnout */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Three Faces of Nursing Burnout
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Burnout is measured across three dimensions, and each one shows up differently on
+              the unit:
+            </p>
+            <div className="space-y-3">
+              <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Emotional exhaustion</h3>
+                <p className="text-sm">
+                  Dreading the alarm clock. Crying in the car before or after shifts. Counting
+                  down the hours from the moment you clock in. Feeling like you&apos;re running
+                  on empty but somehow keep showing up. Calling out more often — not because
+                  you&apos;re sick, but because you genuinely cannot face another shift.
+                </p>
+              </div>
+              <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Depersonalization</h3>
+                <p className="text-sm">
+                  Referring to patients by room number instead of name. Dark humor that used to
+                  be a coping mechanism becoming something sharper. Feeling nothing when a patient
+                  deteriorates. Going through the clinical motions while emotionally checked out.
+                  This isn&apos;t who you went into nursing to be.
+                </p>
+              </div>
+              <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Reduced accomplishment</h3>
+                <p className="text-sm">
+                  Questioning whether you make a difference. Feeling like &quot;anyone could do
+                  this.&quot; Imposter syndrome despite years of experience. The &quot;making a
+                  difference&quot; narrative that drew you to nursing now feels hollow. Wondering
+                  if you chose the wrong career — or if nursing chose to break you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* System vs Self */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            System vs. Self: Where the Problem Actually Lives
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The wellness industry&apos;s answer to nursing burnout — yoga, meditation apps,
+              resilience training — puts the burden on individual nurses to cope with
+              fundamentally broken systems. These strategies help at the margins, but they cannot
+              fix unsafe staffing ratios, mandatory overtime, or chronic underfunding. Research is
+              unambiguous: burnout is primarily a workplace problem, not an individual one.
+            </p>
+            <p>
+              California&apos;s landmark nurse-to-patient ratio law (the only mandated ratios in
+              the U.S.) demonstrated that adequate staffing reduces burnout, decreases medical
+              errors, and lowers patient mortality. Magnet-designated hospitals consistently
+              report lower burnout and better patient outcomes. Shared governance models that give
+              nurses decision-making power over practice conditions improve retention. The
+              evidence is clear: systemic changes work. Individual self-care helps you survive
+              while advocating for those changes — but it was never meant to be the solution.
+            </p>
           </div>
         </div>
       </div>
