@@ -35,9 +35,9 @@ const nextConfig = {
               // AdSense ad images and tracking pixels
               "img-src 'self' data: https: https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://www.googletagmanager.com",
               // AdSense + Analytics + Cookiebot connections
-              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://consent.cookiebot.com https://consentcdn.cookiebot.com https://fundingchoicesmessages.google.com",
+              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://consent.cookiebot.com https://consentcdn.cookiebot.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google",
               // AdSense iframes (required for ad rendering)
-              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://consent.cookiebot.com https://fundingchoicesmessages.google.com",
+              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://consent.cookiebot.com https://consentcdn.cookiebot.com https://fundingchoicesmessages.google.com",
             ].join("; "),
           },
         ],
