@@ -144,7 +144,7 @@ export default function AdhdTestWomenPage() {
         <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified healthcare professional can diagnose ADHD. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
-          <p className="text-sm text-slate-600 dark:text-slate-400"><strong>Reviewed by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II)</strong> with 11 years of clinical experience in substance abuse counseling.</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">Reviewed by <a href="/about/jason-ramirez">Jason Ramirez, CADC-II</a>, Certified Drug and Alcohol Counselor with 11 years of clinical experience.</p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: March 2026 by Jason Ramirez, Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.</p>
         </div>
 

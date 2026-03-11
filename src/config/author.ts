@@ -14,7 +14,7 @@ export const AUTHOR_SCHEMA = {
   "@type": "Person" as const,
   name: SITE_AUTHOR.name,
   jobTitle: SITE_AUTHOR.credentialFull,
-  url: "https://mindchecktools.com/about",
+  url: "https://mindchecktools.com/about/jason-ramirez",
 };
 
 // For the homepage hero — credential only, no name

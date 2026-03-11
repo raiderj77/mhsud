@@ -31,7 +31,7 @@ export function AuthorBio({ publishedDate, modifiedDate }: AuthorBioProps) {
         <div>
           <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
             Reviewed by{" "}
-            <Link href="/about" className="underline hover:text-sage-600 dark:hover:text-sage-300 transition-colors">
+            <Link href="/about/jason-ramirez" className="underline hover:text-sage-600 dark:hover:text-sage-300 transition-colors">
               {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
             </Link>
           </h3>

@@ -7,7 +7,7 @@ export function ToolReviewerBio() {
       <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
         <strong>
           Reviewed by{" "}
-          <Link href="/about" className="underline hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
+          <Link href="/about/jason-ramirez" className="underline hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
             {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
           </Link>
         </strong>{" "}
