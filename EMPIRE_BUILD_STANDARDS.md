@@ -852,7 +852,7 @@ Run through this EVERY time before deploying:
 
 Things Claude Code must NEVER do on ANY Empire site:
 
-1. **Never expose the site owner's personal name** in any code, content, comments, metadata, or configuration
+1. **Personal name in public-facing content requires a deliberate decision.** Default is credential-only attribution. Exception: on Tier 3 YMYL sites where a named, credentialed reviewer strengthens E-E-A-T, a real name may be used — but only when a dedicated author page with Person schema exists and the name is consistently formatted as [Name], [Credential] linking to that author page. Never expose personal name in code comments, metadata, or configuration files.
 2. **Never modify ads.txt** unless explicitly asked — incorrect ads.txt stops ALL ad revenue
 3. **Never remove legal pages** (privacy policy, terms of service) — creates legal exposure
 4. **Never hardcode API keys** in any file — use environment variables exclusively
