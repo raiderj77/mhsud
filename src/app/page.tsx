@@ -635,7 +635,7 @@ export default function HomePage() {
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
-            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.{" "}
+            Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.{" "}
             <Link
               href="/about"
               className="underline hover:text-neutral-300 transition-colors"

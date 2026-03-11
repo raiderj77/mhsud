@@ -657,7 +657,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            This tool is for educational and self-reflection purposes only. It is not a clinical assessment, and it does not screen, assess, or evaluate your loved one. Results do not constitute medical advice, a professional evaluation, or a recommendation for any specific course of action. Always consult a qualified healthcare professional, licensed counselor, or addiction specialist for guidance about substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
+            This tool is for educational and self-reflection purposes only. It is not a clinical assessment, and it does not screen, assess, or evaluate your loved one. Results do not constitute medical advice, a professional evaluation, or a recommendation for any specific course of action. Always consult a qualified healthcare professional, licensed counselor, or addiction specialist for guidance about substance use concerns. Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.
           </p>
         </div>
 
@@ -829,7 +829,7 @@ export function FamilyImpactClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          This tool is for educational and self-reflection purposes only. It is not a clinical assessment, and it does not screen, assess, or evaluate your loved one. Results do not constitute medical advice, a professional evaluation, or a recommendation for any specific course of action. Always consult a qualified healthcare professional, licensed counselor, or addiction specialist for guidance about substance use concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
+          This tool is for educational and self-reflection purposes only. It is not a clinical assessment, and it does not screen, assess, or evaluate your loved one. Results do not constitute medical advice, a professional evaluation, or a recommendation for any specific course of action. Always consult a qualified healthcare professional, licensed counselor, or addiction specialist for guidance about substance use concerns. Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.
         </p>
       </div>
 
