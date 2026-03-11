@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Last updated: {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+            Last updated: March 11, 2026
           </p>
         </header>
 
@@ -59,17 +59,34 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you use cookies?</h2>
             <p>
-              We use a single <strong>localStorage</strong> entry to remember your dark mode preference (light or dark theme). This is stored only on your device and is never transmitted to us. We do not use tracking cookies, advertising cookies, or any third-party cookies for the purpose of identifying or profiling you.
+              We use a single <strong>localStorage</strong> entry to remember your dark mode preference (light or dark theme). This is stored only on your device and is never transmitted to us.
             </p>
             <p>
-              If we add advertising in the future, third-party ad networks may set their own cookies. We will update this policy before that happens and clearly disclose which ad partners are involved.
+              The following third-party services may set cookies on this site:
+            </p>
+            <ul>
+              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d) — our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
+              <li><strong>Google Analytics (GA4)</strong> — anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
+              <li><strong>Google AdSense</strong> — advertising. On health screening pages, we use non-personalized ads that do not use behavioral targeting or health-related data for ad selection. Ads are never placed adjacent to crisis resources.</li>
+            </ul>
+            <p>
+              You can manage your cookie preferences at any time through the Cookiebot consent banner or your browser settings.
             </p>
           </section>
 
           <section>
-            <h2>Do you use analytics?</h2>
+            <h2>What data is collected through analytics and advertising?</h2>
             <p>
-              We use Google Analytics (GA4) to understand general traffic patterns — which pages are visited, which countries visitors come from, and how people find our site. Google Analytics uses cookies and collects anonymized usage data. It does not have access to your screening answers (which never leave your browser).
+              We use Google Analytics (GA4) and Google AdSense, which may automatically collect the following categories of information through cookies and standard web protocols:
+            </p>
+            <ul>
+              <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
+              <li><strong>Network information:</strong> IP address (anonymized by GA4 by default), approximate geographic location (city/region level, not precise)</li>
+              <li><strong>Usage data:</strong> pages visited, time on page, referral URLs, click interactions</li>
+              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics, Google AdSense, and Cookiebot (our consent management platform)</li>
+            </ul>
+            <p>
+              <strong>None of this data includes your screening answers, scores, or results.</strong> Screening data never leaves your browser and is never accessible to analytics or advertising systems.
             </p>
             <p>
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
@@ -87,15 +104,29 @@ export default function PrivacyPage() {
           </section>
 
           <section>
+            <h2>Data retention</h2>
+            <p>
+              We retain data for the minimum period necessary:
+            </p>
+            <ul>
+              <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
+              <li><strong>Cookie consent preferences:</strong> 12 months (managed by Cookiebot, stored on your device).</li>
+              <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
+              <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
+              <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
+            </ul>
+          </section>
+
+          <section>
             <h2>Advertising</h2>
             <p>
-              Our site may display advertisements to support the cost of development and hosting. Ad placements are positioned away from crisis resources and emergency content. We will never place ads in a way that exploits distress or interferes with access to help.
+              This site uses Google AdSense (publisher ID: ca-pub-7171402107622932) to display advertisements that support free access to all tools.
             </p>
             <p>
-              When ad networks are active, they may collect anonymized data according to their own privacy policies. We will list active ad partners here when applicable.
+              <strong>Health data is never passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser and are never accessible to Google AdSense or any other advertising platform. On health screening pages, we use non-personalized ads that do not rely on behavioral profiling or health-related data for ad targeting.
             </p>
             <p>
-              <strong>Current status:</strong> This site uses Google AdSense to display advertisements that help support ongoing development and free access to all tools.
+              Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
             </p>
           </section>
 
@@ -130,8 +161,60 @@ export default function PrivacyPage() {
           <section>
             <h2>Your rights</h2>
             <p>
-              Depending on where you live, you may have specific rights regarding your personal data. We detail these rights — including your rights under the GDPR (EEA/UK) and CCPA/CPRA (California) — in our <Link href="/terms">Terms of Use</Link>. In summary: you can withdraw cookie consent at any time, request information about data we process, and opt out of any data sharing. Since we don&apos;t store screening answers, there is typically no personal data to access or delete.
+              Depending on where you live, you have specific rights regarding your personal data:
             </p>
+
+            <h3>CCPA/CPRA (California residents)</h3>
+            <ul>
+              <li><strong>Right to know:</strong> You can request the categories of personal information we collect and the purposes for which it is used.</li>
+              <li><strong>Right to delete:</strong> You can request deletion of personal information we hold about you.</li>
+              <li><strong>Right to correct:</strong> You can request correction of inaccurate personal information.</li>
+              <li><strong>Right to opt out of sale or sharing:</strong> See the &quot;Do Not Sell or Share&quot; section below.</li>
+              <li><strong>Right to limit use of sensitive personal information:</strong> We do not collect sensitive personal information as defined by the CCPA. Screening data is processed entirely in your browser and is never collected by us.</li>
+              <li><strong>Right to non-discrimination:</strong> We will not discriminate against you for exercising any of these rights.</li>
+            </ul>
+
+            <h3>CCPA sensitive data categories (effective January 2026)</h3>
+            <p>
+              The CCPA defines expanded sensitive data categories including mental and physical health information, biometric data, genetic data, precise geolocation, and citizenship or immigration status. <strong>We do not collect any of these categories.</strong> Mental health screening results are processed entirely in your browser and never transmitted to or stored on our servers. We do not collect biometric data, genetic data, precise geolocation, or citizenship/immigration information.
+            </p>
+
+            <h3>GDPR (EEA/UK residents)</h3>
+            <p>
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
+            </p>
+            <p>
+              <strong>GDPR Article 9 — Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR, requiring explicit consent for processing. Because all screening results on MindCheck Tools are processed entirely in your browser and never transmitted to our servers, we do not process health data as a data controller. No health-related data is shared with third parties, including advertising systems.
+            </p>
+
+            <h3>Washington My Health My Data Act (MHMDA)</h3>
+            <p>
+              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data — all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
+            </p>
+
+            <h3>Maryland Online Data Privacy Act (MODPA — effective October 2025)</h3>
+            <p>
+              Maryland&apos;s MODPA prohibits the sale of health data and requires heightened protections for sensitive data. MindCheck Tools does not sell any personal data, including health data. Screening results are never collected, stored, or shared.
+            </p>
+
+            <p>
+              To exercise any of these rights, contact us at privacy@mindchecktools.com. We will respond within 45 days (CCPA) or 30 days (GDPR).
+            </p>
+          </section>
+
+          <section>
+            <h2>Do Not Sell or Share My Personal Information</h2>
+            <p>
+              <strong>We do not sell or share your personal information</strong> as defined by the California Consumer Privacy Act (CCPA/CPRA). We do not sell screening data, analytics data, or any other personal information to third parties.
+            </p>
+            <p>
+              Google AdSense may use cookies to serve ads based on your prior visits to this or other websites. This activity may constitute &quot;sharing&quot; under the CCPA. You can opt out by:
+            </p>
+            <ul>
+              <li>Declining advertising cookies through our Cookiebot consent banner</li>
+              <li>Enabling <strong>Global Privacy Control (GPC)</strong> in your browser — we honor GPC signals as a valid opt-out request under the CCPA</li>
+              <li>Visiting <strong>Google&apos;s Ad Settings</strong> at adssettings.google.com to opt out of personalized advertising</li>
+            </ul>
           </section>
 
           <section>
