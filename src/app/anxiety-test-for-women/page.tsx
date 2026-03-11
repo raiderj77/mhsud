@@ -61,7 +61,7 @@ export default function AnxietyTestForWomenPage() {
               description: "A free, private anxiety screening tool for women using the clinically validated GAD-7 questionnaire. Includes information on hormonal and life-stage factors.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-01",
+              dateModified: "2026-03-11",
             })
           ),
         }}
@@ -183,6 +183,137 @@ export default function AnxietyTestForWomenPage() {
                 <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t tell you <em>why</em> you&apos;re anxious (hormones, life stress, a clinical disorder, or all three). A healthcare provider can help you figure that out.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Your answers are never stored, transmitted, or visible to anyone but you.</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How Hormones Drive Anxiety in Women */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            How Hormones Drive Anxiety in Women
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Anxiety isn&apos;t &quot;all in your head&quot; — it&apos;s partly in your endocrine system.
+              Estrogen and progesterone directly influence serotonin, GABA, and the
+              hypothalamic-pituitary-adrenal (HPA) axis, which controls your stress response.
+              When these hormones fluctuate, your brain&apos;s anxiety thermostat can shift
+              without any change in your actual circumstances.
+            </p>
+            <div className="space-y-3">
+              <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Premenstrual phase</h3>
+                <p className="text-sm">
+                  The sharp drop in estrogen and progesterone in the luteal phase (days 14–28) can
+                  trigger or worsen anxiety. Up to 5–8% of women experience premenstrual dysphoric
+                  disorder (PMDD), which includes severe anxiety as a core symptom.
+                </p>
+              </div>
+              <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Perimenopause</h3>
+                <p className="text-sm">
+                  Erratic estrogen fluctuations during the menopausal transition (typically ages 40–55)
+                  are strongly associated with new-onset anxiety, even in women with no prior history.
+                  Many women mistake perimenopausal anxiety for &quot;just stress.&quot;
+                </p>
+              </div>
+              <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Postpartum</h3>
+                <p className="text-sm">
+                  The massive hormone drop after delivery — estrogen falls by over 100-fold within
+                  48 hours — can trigger postpartum anxiety, which is at least as common as
+                  postpartum depression but far less discussed.
+                </p>
+              </div>
+              <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Thyroid connection</h3>
+                <p className="text-sm">
+                  Women are 5–8 times more likely than men to have thyroid disorders, and both
+                  hyperthyroidism and Hashimoto&apos;s thyroiditis can mimic or amplify anxiety
+                  symptoms. A simple blood test can rule this out.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Anxiety Across Women's Life Stages */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Anxiety Across Women&apos;s Life Stages
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr className="border-b border-slate-300 dark:border-slate-600">
+                  <th className="py-2 pr-4 font-semibold text-slate-900 dark:text-white">Life Stage</th>
+                  <th className="py-2 pr-4 font-semibold text-slate-900 dark:text-white">Common Triggers</th>
+                  <th className="py-2 font-semibold text-slate-900 dark:text-white">What to Watch For</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700 dark:text-slate-300">
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <td className="py-3 pr-4 font-medium">Adolescence</td>
+                  <td className="py-3 pr-4">Puberty, social media, academic pressure</td>
+                  <td className="py-3">Perfectionism, avoidance of social situations, somatic complaints (headaches, stomach aches)</td>
+                </tr>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <td className="py-3 pr-4 font-medium">Young adulthood (20s–30s)</td>
+                  <td className="py-3 pr-4">Career pressure, relationship stress, fertility concerns</td>
+                  <td className="py-3">Imposter syndrome, decision paralysis, health anxiety</td>
+                </tr>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <td className="py-3 pr-4 font-medium">Pregnancy</td>
+                  <td className="py-3 pr-4">Hormonal surges, body changes, health fears</td>
+                  <td className="py-3">Intrusive thoughts about the baby&apos;s safety, hypervigilance, insomnia unrelated to discomfort</td>
+                </tr>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <td className="py-3 pr-4 font-medium">Postpartum</td>
+                  <td className="py-3 pr-4">Hormone crash, sleep deprivation, identity shift</td>
+                  <td className="py-3">Constant worry about the baby, inability to rest even when baby sleeps, racing heart</td>
+                </tr>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <td className="py-3 pr-4 font-medium">Midlife (40s–50s)</td>
+                  <td className="py-3 pr-4">Perimenopause, caregiving burden, career plateau</td>
+                  <td className="py-3">New-onset panic attacks, night sweats with anxiety, irritability mistaken for personality change</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-medium">Menopause &amp; beyond</td>
+                  <td className="py-3 pr-4">Estrogen decline, retirement, loss and grief</td>
+                  <td className="py-3">Health anxiety, social withdrawal, sleep disruption that fuels daytime worry</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* The Worry-Rumination Pattern */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Worry-Rumination Pattern
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Research shows that women are more likely than men to engage in <strong>rumination</strong> —
+              the tendency to replay worries, analyze them from every angle, and mentally rehearse
+              worst-case scenarios. Rumination doesn&apos;t feel like anxiety; it feels like problem-solving.
+              But it keeps your stress response activated without ever reaching a resolution.
+            </p>
+            <p>
+              The worry-rumination cycle works like this: a trigger (an email, a comment, a physical
+              sensation) activates a &quot;what if&quot; thought. You try to think your way to certainty,
+              but anxiety-driven problems don&apos;t have certain answers. The lack of resolution
+              increases distress, which generates more &quot;what if&quot; thoughts.
+            </p>
+            <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Breaking the cycle</h3>
+              <p className="text-sm">
+                Cognitive Behavioral Therapy (CBT) and mindfulness-based approaches are the most
+                evidence-supported strategies for interrupting rumination. CBT helps you identify
+                and challenge the &quot;what if&quot; thoughts, while mindfulness trains you to notice
+                the thoughts without engaging in the analysis loop. Both are available through
+                individual therapy, group programs, and structured self-help tools.
+              </p>
             </div>
           </div>
         </div>
