@@ -99,6 +99,165 @@ export default function DepressionTestForNewMomsPage() {
             <p>Treatment is effective and available. Cognitive behavioral therapy and interpersonal therapy are first-line treatments. Several antidepressants are considered compatible with breastfeeding. Postpartum Support International (1-800-944-4773) provides immediate support and provider referrals. You do not have to white-knuckle through this.</p>
           </div>
         </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Baby Blues vs. Postpartum Depression: The Key Distinctions
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              These two experiences are frequently confused — including by new mothers living through
+              them.
+            </p>
+            <div className="overflow-x-auto my-4">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-300 dark:border-slate-600">
+                    <th className="text-left py-2 pr-4 font-semibold">Feature</th>
+                    <th className="text-left py-2 px-4 font-semibold">Baby Blues</th>
+                    <th className="text-left py-2 pl-4 font-semibold">Postpartum Depression</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-600 dark:text-slate-400">
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4 font-medium">Onset</td>
+                    <td className="py-2 px-4">Days 2–5 after birth</td>
+                    <td className="py-2 pl-4">Within 4 weeks (up to 12 months)</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4 font-medium">Duration</td>
+                    <td className="py-2 px-4">Resolves within 2 weeks</td>
+                    <td className="py-2 pl-4">Persists without treatment</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4 font-medium">Severity</td>
+                    <td className="py-2 px-4">Mild to moderate</td>
+                    <td className="py-2 pl-4">Moderate to severe</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4 font-medium">Daily functioning</td>
+                    <td className="py-2 px-4">Largely intact</td>
+                    <td className="py-2 pl-4">Significantly impaired</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4 font-medium">Resolves without treatment</td>
+                    <td className="py-2 px-4">Yes</td>
+                    <td className="py-2 pl-4">Rarely</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-4 font-medium">Affects</td>
+                    <td className="py-2 px-4">70–80% of new mothers</td>
+                    <td className="py-2 pl-4">~1 in 7 new mothers</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <strong>The single most important indicator:</strong> if significant symptoms persist
+              beyond two weeks postpartum, it is not baby blues. A professional evaluation is
+              warranted.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            How PPD Actually Presents — Beyond the Obvious
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Postpartum depression doesn&apos;t always look like the tearful, overwhelmed mother who
+              can&apos;t get out of bed. The presentation is often more complex, and these
+              less-recognized forms are the ones most likely to go unidentified:
+            </p>
+            <p>
+              <strong>Anxiety as the primary feature:</strong> Many women with PPD present primarily
+              with anxiety — intrusive thoughts about harm coming to the baby, inability to sleep
+              even when the baby sleeps, constant monitoring and hypervigilance. This is often not
+              recognized as PPD.
+            </p>
+            <p>
+              <strong>Irritability and anger:</strong> Some women experience PPD as rage —
+              disproportionate anger at partners, older children, or themselves. This presentation is
+              especially associated with shame and non-disclosure because it conflicts with
+              expectations of new motherhood.
+            </p>
+            <p>
+              <strong>Emotional numbness:</strong> Feeling detached from the baby, unable to feel the
+              love that&apos;s &quot;supposed&quot; to be there, going through caregiving motions
+              without emotional connection. This symptom is particularly likely to be hidden out of
+              fear of judgment.
+            </p>
+            <p>
+              <strong>Intrusive thoughts:</strong> Unwanted, frightening thoughts about accidentally
+              or intentionally harming the baby. These thoughts are ego-dystonic — the mother is
+              horrified by them, not planning to act — and are a symptom of PPD and perinatal OCD,
+              not evidence of danger. They should be disclosed to a clinician, who will not interpret
+              them as intent.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Treatment: What&apos;s Now Available
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Treatment for PPD has expanded significantly. Most women recover fully with appropriate
+              care.
+            </p>
+            <p>
+              <strong>Therapy:</strong> Interpersonal therapy (IPT) and CBT both have strong evidence
+              for PPD. IPT specifically addresses the role transitions and relationship changes of new
+              parenthood.
+            </p>
+            <p>
+              <strong>SSRIs:</strong> Several are considered compatible with breastfeeding. Sertraline
+              and paroxetine have the most safety data in breastfeeding populations. The decision
+              weighs medication exposure against the documented risks of untreated maternal
+              depression — a conversation for your prescribing physician.
+            </p>
+            <p>
+              <strong>Zuranolone (Zurzuvae):</strong> FDA-approved specifically for PPD in 2023. Oral
+              medication, taken once daily for 14 days. Targets the neurosteroid pathway implicated in
+              postpartum hormonal shifts. Clinical trials showed rapid onset — symptom improvement
+              within days rather than the weeks typical of SSRIs. This is a significant development
+              for women who need faster relief.
+            </p>
+            <p>
+              <strong>Brexanolone (Zulresso):</strong> Also FDA-approved specifically for PPD;
+              administered as a 60-hour IV infusion in a healthcare setting.
+            </p>
+            <p>
+              <strong>Peer support:</strong> Postpartum Support International (PSI) — postpartum.net,
+              helpline <strong>1-800-944-4773</strong> — provides warmlines, peer support groups, and
+              referrals specifically for perinatal mental health. Often the fastest access point.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            When PPD Can Start — It&apos;s Not Just the First Weeks
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              PPD can onset any time within the <strong>first year postpartum</strong> — not just
+              immediately after birth. Many cases begin at 3–6 months, sometimes triggered by:
+            </p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Returning to work</li>
+              <li>Weaning from breastfeeding (estrogen drop)</li>
+              <li>Sleep deprivation accumulation</li>
+              <li>Relationship stress in the postpartum adjustment period</li>
+            </ul>
+            <p>
+              If you&apos;re six months postpartum and this screen resonates, it&apos;s not too late
+              for PPD — and it&apos;s not too late for treatment.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="screening">

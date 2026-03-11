@@ -185,6 +185,148 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             </div>
           </div>
         </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Cannabis and Anxiety: What Students Need to Know
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Cannabis is widely used by college students for anxiety management — and the short-term
+              effect is real. Cannabis acutely reduces anxiety for many people. This is why it feels
+              like a solution.
+            </p>
+            <p>The longer-term picture is more complicated:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                Regular cannabis use is associated with <strong>worsened anxiety over time</strong> — not
+                improved. The relief is real; the rebound and tolerance progression erode it.
+              </li>
+              <li>
+                The potency of commercially available cannabis has increased dramatically. Average THC
+                content in flower was approximately 4% in the 1990s; it now routinely exceeds 20–25%.
+                The anxiety-reducing effects of lower-potency cannabis don&apos;t scale linearly with
+                higher potency.
+              </li>
+              <li>
+                Cannabis use disorder affects approximately <strong>1 in 6 people</strong> who start
+                using before age 18, and rates are elevated in frequent college-age users. The
+                developing brain is more vulnerable to dependency patterns.
+              </li>
+              <li>
+                High-potency cannabis and concentrates are associated with <strong>cannabis-induced
+                anxiety and panic</strong> — the substance that was being used to manage anxiety can
+                trigger it at higher doses.
+              </li>
+            </ul>
+            <p>
+              If you&apos;re using cannabis regularly to manage anxiety, the anxiety and the use
+              pattern both deserve clinical attention. The{" "}
+              <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline">AUDIT-C</Link>{" "}
+              screens for alcohol; the{" "}
+              <Link href="/dast-10-drug-screening" className="text-sky-600 dark:text-sky-400 hover:underline">DAST-10</Link>{" "}
+              can help you assess your cannabis use pattern.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Binge Drinking and the College Context
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The AUDIT defines a &quot;heavy drinking occasion&quot; as 6+ standard drinks. The
+              National College Health Assessment defines binge drinking as 5+ drinks in a sitting for
+              men, 4+ for women.
+            </p>
+            <p>
+              By either definition, binge drinking is the dominant pattern in college drinking
+              culture — not daily dependence. The AUDIT and AUDIT-C are calibrated to detect both
+              patterns, but scores can be elevated by infrequent heavy drinking even without daily use.
+            </p>
+            <p>What the research shows about college binge drinking:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Acute risks — impaired judgment, accidents, sexual assault, alcohol poisoning — are
+                concentrated in binge episodes, not moderate regular drinking
+              </li>
+              <li>
+                The pattern established in college predicts drinking trajectory in young adulthood
+              </li>
+              <li>
+                Students who binge drink to manage social anxiety often find the anxiety worsens as
+                tolerance to alcohol&apos;s social lubricating effect develops
+              </li>
+            </ul>
+            <p>
+              If your AUDIT score is elevated primarily because of weekend binge patterns rather than
+              daily use, that&apos;s still clinically relevant — it just points to a different kind of
+              conversation.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Cost-Effective Help Options for Students
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Cost and access are the most common barriers to mental health care for college students
+              after stigma. Specific options:
+            </p>
+            <div className="space-y-3">
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Campus counseling centers</p>
+                <p className="text-sm">
+                  Free to enrolled students. Wait times vary — access early in the semester, not at
+                  finals. Most campuses now offer same-day crisis triage even when scheduled
+                  appointments are backed up.
+                </p>
+              </div>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Open Path Collective</p>
+                <p className="text-sm">
+                  openpathcollective.org — Reduced-cost therapy at $30–$80 per session for
+                  income-qualifying individuals. Legitimate licensed therapists, not interns.
+                </p>
+              </div>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Community mental health centers</p>
+                <p className="text-sm">
+                  Most cities and counties have sliding-scale outpatient mental health services.
+                  SAMHSA&apos;s treatment locator at findtreatment.gov filters by location and payment
+                  type.
+                </p>
+              </div>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Telehealth</p>
+                <p className="text-sm">
+                  BetterHelp, Talkspace, and similar platforms offer faster access than campus
+                  waitlists. Many student health insurance plans now cover telehealth mental
+                  health — check your coverage before paying out of pocket.
+                </p>
+              </div>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">The JED Foundation</p>
+                <p className="text-sm">
+                  jedfoundation.org — Specific mental health resources for college students and young
+                  adults, including a treatment finder and crisis support.
+                </p>
+              </div>
+              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Academic accommodations</p>
+                <p className="text-sm">
+                  Documented anxiety disorders may qualify for extended test time, reduced-distraction
+                  testing environments, and attendance flexibility through disability services.
+                  Documentation from a clinician is required — worth pursuing if anxiety is affecting
+                  academic performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* The Screening Tool */}

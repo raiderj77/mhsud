@@ -207,6 +207,107 @@ export default function PTSDTestFirstRespondersPage() {
             </div>
           </div>
         </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Cumulative Trauma vs. Single-Incident PTSD
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Most first responders don&apos;t develop PTSD from one catastrophic event — they develop
+              it from the accumulated weight of thousands of difficult calls over a career. This
+              distinction matters because it changes how the condition presents and how it&apos;s
+              explained to yourself and others.
+            </p>
+            <p>
+              <strong>Single-incident PTSD</strong> has a clear &quot;before&quot; — a specific event
+              that changed things. The person can often point to it.
+            </p>
+            <p>
+              <strong>Cumulative trauma</strong> builds slowly and invisibly. There&apos;s no single
+              event to point to. The firefighter who has worked pediatric codes for 15 years, the
+              dispatcher who has managed active shooter calls, the EMT whose 3,000th overdose call
+              feels exactly like the first — this is cumulative critical incident stress, and it
+              produces the same PTSD symptom profile without the clear origin story.
+            </p>
+            <p>
+              This creates a specific barrier: many first responders don&apos;t believe they
+              &quot;qualify&quot; for PTSD because nothing happened that seemed bad enough on its own.
+              The cumulative weight doesn&apos;t feel like a trauma — it feels like the job. This is
+              the operational normalization of traumatic load, and it&apos;s one of the reasons first
+              responder PTSD goes unrecognized for so long.
+            </p>
+            <p>
+              If you can&apos;t point to a specific event but recognize the symptom pattern on this
+              screen, the absence of a clear incident doesn&apos;t invalidate what you&apos;re
+              experiencing.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Operational Hypervigilance Problem
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              First responders are trained to maintain tactical awareness — scanning environments,
+              positioning near exits, reading rooms for threats. These skills are professional assets
+              in operational contexts.
+            </p>
+            <p>
+              The problem: the nervous system doesn&apos;t switch these off when you&apos;re off duty.
+              Hypervigilance that kept you alive on the job becomes hypervigilance at your kid&apos;s
+              birthday party, at a restaurant, at a family gathering. What was adaptive becomes
+              exhausting and relationship-damaging.
+            </p>
+            <p>
+              Many first responders interpret this as &quot;just how I am now&quot; — a personality
+              change, a consequence of the job they&apos;ve accepted. It is neither. It is a clinical
+              symptom that responds to treatment. Prolonged Exposure and CPT both include specific
+              components that address hypervigilance and help the nervous system recalibrate threat
+              assessment between operational and civilian contexts.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Crisis and Support Resources Built for First Responders
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              These resources are specifically designed for public safety and emergency services
+              professionals — staffed by people who understand the culture:
+            </p>
+            <div className="space-y-3">
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Safe Call Now: <strong>1-206-459-3020</strong></p>
+                <p className="text-sm">Confidential 24/7 crisis referral line specifically for public safety and emergency services. Staffed by former first responders and mental health professionals with first responder experience.</p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">First H.E.L.P.</p>
+                <p className="text-sm">firsthelp.org — Peer support and survivor assistance for first responders with PTSD and suicide history. Specific survivor support program.</p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Badge of Life</p>
+                <p className="text-sm">badgeoflife.com — Psychological survival resources specifically for law enforcement.</p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">IAFF Center of Excellence</p>
+                <p className="text-sm">iaff-coe.org — Residential treatment program with specific programming for firefighters and their families.</p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">Code Green Campaign</p>
+                <p className="text-sm">codegreencampaign.org — Mental health awareness resources for EMS and fire; provider directory for clinicians with first responder experience.</p>
+              </div>
+              <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
+                <p className="font-semibold text-slate-900 dark:text-white">SAMHSA First Responder Resources</p>
+                <p className="text-sm">samhsa.gov/first-responders — Federal treatment locator and resources with first responder filter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* The Screening Tool */}

@@ -204,6 +204,154 @@ export default function PtsdTestVeteransPage() {
             </p>
           </div>
         </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Moral Injury: Beyond Fear-Based PTSD
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Standard PTSD models are built around fear — a threat was perceived, the nervous system
+              encoded it, and now it activates inappropriately. But a significant portion of veteran
+              PTSD involves something different: <strong>moral injury</strong>.
+            </p>
+            <p>
+              Moral injury occurs when a service member participates in, witnesses, fails to prevent,
+              or learns about actions that violate their deeply held moral beliefs. It is not fear of
+              death — it is the psychological weight of what happened, what was done, or what
+              wasn&apos;t done. Common sources include:
+            </p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Following orders that resulted in civilian casualties</li>
+              <li>Failing to save a fellow service member</li>
+              <li>Witnessing atrocities without ability to intervene</li>
+              <li>Being ordered to do something that felt morally wrong</li>
+              <li>Surviving when others did not (survivor guilt)</li>
+            </ul>
+            <p>
+              Moral injury produces guilt, shame, spiritual distress, and a fractured sense of
+              self — not the hypervigilance and flashbacks that define classic PTSD. Standard trauma
+              treatments like Prolonged Exposure address fear-based PTSD effectively; they address
+              moral injury only partially.
+            </p>
+            <p>
+              If your PTSD symptoms center more on guilt, shame, &quot;what I did&quot; or &quot;what
+              I failed to do&quot; rather than fear of re-experiencing, tell your clinician
+              explicitly. Adaptive Disclosure therapy and spiritually-integrated approaches are
+              specifically designed for moral injury and are increasingly available through VA and
+              community providers.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            TBI and PTSD: The Overlapping Picture
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Approximately <strong>22% of veterans with PTSD</strong> also have a comorbid traumatic
+              brain injury from blast exposure. This matters clinically because TBI and PTSD produce
+              nearly identical symptom profiles:
+            </p>
+            <div className="overflow-x-auto my-4">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-300 dark:border-slate-600">
+                    <th className="text-left py-2 pr-4 font-semibold">Symptom</th>
+                    <th className="text-center py-2 px-4 font-semibold">PTSD</th>
+                    <th className="text-center py-2 pl-4 font-semibold">TBI</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-600 dark:text-slate-400">
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Irritability and anger</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Difficulty concentrating</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Sleep disruption</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Memory problems</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Headaches</td>
+                    <td className="text-center py-2 px-4">—</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Emotional numbing</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">—</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 dark:border-slate-700">
+                    <td className="py-2 pr-4">Flashbacks</td>
+                    <td className="text-center py-2 px-4">&#x2713;</td>
+                    <td className="text-center py-2 pl-4">—</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-4">Light/noise sensitivity</td>
+                    <td className="text-center py-2 px-4">—</td>
+                    <td className="text-center py-2 pl-4">&#x2713;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              When both are present, treating only one produces incomplete results. A comprehensive
+              evaluation at a VA Polytrauma center — which specializes in co-occurring TBI/PTSD — is
+              the appropriate standard of care if you sustained blast exposure during service.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Military Sexual Trauma (MST)
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Military sexual trauma — sexual assault or sexual harassment during military
+              service — affects approximately <strong>23% of women and 1% of men</strong> who have
+              used VA care (VA, 2023). MST is among the strongest predictors of PTSD in veterans.
+            </p>
+            <p>Key facts every veteran should know:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <strong>VA care for MST is available regardless of discharge status or service
+                length.</strong> Veterans who experienced MST are entitled to free VA mental health
+                treatment for MST-related conditions, even if they are otherwise ineligible for VA
+                care.
+              </li>
+              <li>
+                MST does not have to have been reported at the time of service to qualify for VA
+                care or disability benefits.
+              </li>
+              <li>
+                The VA has MST Coordinators at every VA medical center — a specific point of contact
+                for navigating MST-related care.
+              </li>
+              <li>
+                PTSD stemming from MST often presents differently than combat PTSD and responds best
+                to clinicians with specific MST training.
+              </li>
+            </ul>
+            <p>
+              If MST is part of your history, contact the MST Coordinator at your nearest VA
+              facility. You can find yours at va.gov/find-locations.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="screening">

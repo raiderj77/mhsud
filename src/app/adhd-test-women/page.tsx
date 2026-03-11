@@ -122,6 +122,113 @@ export default function AdhdTestWomenPage() {
             <p>If this screening resonates with you, know that diagnosis is not a label — it is a key that unlocks understanding, self-compassion, and effective strategies. Many women describe their ADHD diagnosis as one of the most important moments of their lives.</p>
           </div>
         </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Misdiagnosis Pipeline
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Women with ADHD are frequently diagnosed with anxiety or depression before ADHD is ever
+              considered — often because those conditions are genuinely present. The problem is
+              they&apos;re being treated as primary conditions when they&apos;re actually downstream
+              consequences of unmanaged ADHD.
+            </p>
+            <p>The typical pattern:</p>
+            <ol className="list-decimal pl-6 space-y-1">
+              <li>Years of struggling with time management, follow-through, and organization</li>
+              <li>Chronic self-criticism and the belief that you&apos;re &quot;not trying hard enough&quot;</li>
+              <li>Anxiety develops — the constant fear of dropping balls, forgetting things, failing</li>
+              <li>Depression follows — the accumulated weight of underperformance despite real effort</li>
+              <li>Anxiety and depression are treated, with partial improvement</li>
+              <li>The underlying ADHD remains unaddressed</li>
+            </ol>
+            <p>
+              Research shows the average age of ADHD diagnosis in women is <strong>36</strong> — compared
+              to age 7 for boys. That gap represents decades of struggling without explanation, and often
+              a trail of anxiety and depression diagnoses that treated the smoke while the fire continued
+              burning.
+            </p>
+            <p>
+              If you&apos;ve had anxiety or depression treatment that produced incomplete results, ADHD
+              is worth specifically evaluating.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            How Hormones Affect ADHD Symptoms
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              This is one of the most underrecognized aspects of ADHD in women — and it&apos;s
+              completely absent from standard ADHD symptom lists.
+            </p>
+            <p>
+              Estrogen modulates dopamine function, the neurotransmitter system central to ADHD. When
+              estrogen rises, dopamine availability improves and ADHD symptoms often ease. When estrogen
+              drops, dopamine suffers and symptoms worsen. This creates predictable symptom fluctuation
+              across hormonal cycles:
+            </p>
+            <p>
+              <strong>Menstrual cycle:</strong> Many women with ADHD experience significant symptom
+              worsening in the luteal phase — the 1–2 weeks before menstruation when estrogen drops.
+              This can look like severe PMS or PMDD and be treated as such, while the underlying ADHD
+              mechanism goes unaddressed. If your worst days track with your cycle, this is relevant
+              clinical information.
+            </p>
+            <p>
+              <strong>Postpartum:</strong> The hormonal crash after delivery can severely worsen ADHD
+              symptoms. Combined with sleep deprivation and the executive function demands of a newborn,
+              the postpartum period is often when undiagnosed ADHD in women becomes impossible to manage.
+            </p>
+            <p>
+              <strong>Perimenopause and menopause:</strong> The sustained estrogen decline of
+              perimenopause can cause dramatic ADHD symptom worsening — sometimes to the point that a
+              woman who managed adequately for decades suddenly cannot function. Many women receive their
+              first ADHD diagnosis in their 40s or 50s because perimenopause pushed previously-compensated
+              symptoms past the threshold of manageability.
+            </p>
+            <p>
+              If you notice your ADHD symptoms track with hormonal changes, tell your prescribing
+              physician. Stimulant dosing may need adjustment across the cycle, and some women benefit
+              from hormone-informed treatment approaches.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Recognition Checklist: Signs of Undiagnosed ADHD in Women
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Many women with ADHD recognize themselves across multiple items on this list. This is not
+              a diagnostic tool — it is a pattern recognition aid:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Starting projects with genuine enthusiasm, finishing few</li>
+              <li>Chronic lateness despite sincere effort to be on time</li>
+              <li>A living space or workspace others describe as chaotic, despite real attempts to organize</li>
+              <li><strong>Hyperfocus:</strong> complete absorption in interesting tasks for hours, alternating with inability to engage with uninteresting tasks at all</li>
+              <li>Losing things constantly — keys, phone, the item you just put down 30 seconds ago</li>
+              <li>Reading the same paragraph multiple times without retaining it</li>
+              <li><strong>Time blindness:</strong> genuine shock that it&apos;s already [time], hours later than expected</li>
+              <li>A comprehensive mental to-do list and a short completed one</li>
+              <li>Talking over people or finishing their sentences — not from rudeness but because thoughts move faster than conversation</li>
+              <li>Saying yes to things and immediately feeling overwhelmed by the commitment</li>
+              <li>A history of being described as &quot;so smart but not living up to potential&quot;</li>
+              <li>Multiple incomplete diagnoses of anxiety or depression with only partial treatment response</li>
+              <li><strong>Rejection-sensitive dysphoria:</strong> intense emotional pain from perceived criticism or rejection, disproportionate to the situation</li>
+            </ul>
+            <p>
+              If several of these resonate strongly, the ASRS screening above is a reasonable next step,
+              followed by a comprehensive evaluation with a clinician familiar with ADHD presentation in
+              women.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="screening">
