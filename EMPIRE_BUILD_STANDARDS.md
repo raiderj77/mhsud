@@ -2,7 +2,7 @@
 
 > **Read this file before making ANY changes to ANY Empire site.**
 > This is the single source of truth for all development, compliance, and deployment decisions across the Empire portfolio.
-> Last updated: March 9, 2026
+> Last updated: March 13, 2026
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## 1. Empire Overview
 
-The Empire is a portfolio of 6 websites: 4 utility tools (ad-supported via Google AdSense) and 2 micro-SaaS properties. All run Next.js on Vercel.
+The Empire is a portfolio of 7 websites: 5 utility tools (ad-supported via Google AdSense) and 2 micro-SaaS properties. All run Next.js on Vercel.
 
 ### Shared Configuration
 
@@ -52,7 +52,7 @@ Every site is assigned a compliance tier that determines which additional requir
 Sites: flipmycase.com, creatorrevenuecalculator.com
 
 **Tier 2 — YMYL-Adjacent**: Tier 1 + legal disclaimers, document privacy, enhanced data handling disclosures.
-Sites: contractextract.com
+Sites: contractextract.com, 524tracker.com
 
 **Tier 3 — Full YMYL**: Tier 2 + health data privacy (GDPR Article 9, WA MHMDA, MD MODPA), crisis resources on every page, licensed professional review attribution, Cookiebot CMP, non-personalized ad consideration, AAA accessibility consideration for cognitive accessibility.
 Sites: mindchecktools.com, medicalbillreader.com
@@ -156,15 +156,31 @@ Every Empire site must have these pages:
 - **Special Rules**: Identify CPT, ICD-10, HCPCS codes in plain language. Flag potential billing errors. Explain insurance columns (allowed amount, patient responsibility). Always caveat as informational only.
 - **Security**: Use `Referrer-Policy: no-referrer` on analysis pages.
 
+### 524tracker.com
+- **Type**: Utility (ad-supported) | **Tier**: YMYL-Adjacent
+- **Repo**: `524tracker` (`C:\Users\jason\empire\524tracker`)
+- **Purpose**: Credit card application rules tracker — Chase 5/24, Amex lifetime bonus, Citi 8/65, BofA 2/3/4, plus annual fee reminders, hard inquiry tracker, card value calculator, best-cards-by-category
+- **Monetization**: AdSense + credit card affiliate links (Chase, Amex, Capital One — $50–$200 per approved card)
+- **Attribution**: "Built by an experienced web professional"
+- **Schema Types**: Organization, WebSite, WebApplication (per tool), BreadcrumbList
+- **Required Disclaimer**: "This tool is for informational and educational purposes only. Credit card terms, eligibility rules, and approval odds change frequently. Always verify current rules directly with the card issuer before applying. This is not financial advice."
+- **Special Rules**:
+  - All affiliate links MUST include `rel="nofollow sponsored"`
+  - Financial disclaimer on EVERY tool page (Tier 2 requirement)
+  - All rule data (5/24, Amex lifetime, Citi 8/65, BofA 2/3/4) stored client-side via localStorage — NEVER passed to advertising systems
+  - Content sourced from community knowledge (r/churning) — always caveat that rules may change
+  - No personally identifiable financial data collected or stored server-side
+
 ### Cross-Site Links
 
-Every site footer links to the other 5 sister sites (never to itself):
+Every site footer links to the other 6 sister sites (never to itself):
 - [FiberTools](https://fibertools.app)
 - [MindCheck Tools](https://mindchecktools.com)
 - [FlipMyCase](https://flipmycase.com)
 - [Creator Revenue Calculator](https://creatorrevenuecalculator.com)
 - [ContractExtract](https://contractextract.com)
 - [Medical Bill Reader](https://medicalbillreader.com)
+- [524 Tracker](https://524tracker.com)
 
 ---
 
@@ -852,11 +868,7 @@ Run through this EVERY time before deploying:
 
 Things Claude Code must NEVER do on ANY Empire site:
 
-1. **Personal name usage depends on context:**
-   - **Body copy / headings** — Never use personal name. Use credential-only language. Example: "Certified Drug and Alcohol Counselor (CADC-II)".
-   - **Byline attribution on YMYL pages** — Named attribution REQUIRED for E-E-A-T. Format: "Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See /about/jason-ramirez." A dedicated author page with Person schema must exist and the name must be consistently formatted as [Name], [Credential] linking to that author page.
-   - **JSON-LD / structured data** — Named Person schema always permitted and required on author pages regardless of context.
-   - **Code comments, non-YMYL metadata, configuration files** — Never expose personal name.
+1. **Never expose the site owner's personal name** in any code, content, comments, metadata, or configuration
 2. **Never modify ads.txt** unless explicitly asked — incorrect ads.txt stops ALL ad revenue
 3. **Never remove legal pages** (privacy policy, terms of service) — creates legal exposure
 4. **Never hardcode API keys** in any file — use environment variables exclusively
