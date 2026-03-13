@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Last updated: March 11, 2026
+            Effective Date: January 1, 2026 | Last Reviewed: March 2026
           </p>
         </header>
 
@@ -164,21 +164,6 @@ export default function PrivacyPage() {
               Depending on where you live, you have specific rights regarding your personal data:
             </p>
 
-            <h3>CCPA/CPRA (California residents)</h3>
-            <ul>
-              <li><strong>Right to know:</strong> You can request the categories of personal information we collect and the purposes for which it is used.</li>
-              <li><strong>Right to delete:</strong> You can request deletion of personal information we hold about you.</li>
-              <li><strong>Right to correct:</strong> You can request correction of inaccurate personal information.</li>
-              <li><strong>Right to opt out of sale or sharing:</strong> See the &quot;Do Not Sell or Share&quot; section below.</li>
-              <li><strong>Right to limit use of sensitive personal information:</strong> We do not collect sensitive personal information as defined by the CCPA. Screening data is processed entirely in your browser and is never collected by us.</li>
-              <li><strong>Right to non-discrimination:</strong> We will not discriminate against you for exercising any of these rights.</li>
-            </ul>
-
-            <h3>CCPA sensitive data categories (effective January 2026)</h3>
-            <p>
-              The CCPA defines expanded sensitive data categories including mental and physical health information, biometric data, genetic data, precise geolocation, and citizenship or immigration status. <strong>We do not collect any of these categories.</strong> Mental health screening results are processed entirely in your browser and never transmitted to or stored on our servers. We do not collect biometric data, genetic data, precise geolocation, or citizenship/immigration information.
-            </p>
-
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
               Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
@@ -198,23 +183,81 @@ export default function PrivacyPage() {
             </p>
 
             <p>
-              To exercise any of these rights, contact us at privacy@mindchecktools.com. We will respond within 45 days (CCPA) or 30 days (GDPR).
+              To exercise any of these rights, contact us at privacy@mindchecktools.com. We will respond within 30 days (GDPR). For California privacy rights, see the dedicated section below.
             </p>
           </section>
 
-          <section>
-            <h2>Do Not Sell or Share My Personal Information</h2>
+          <section id="california-privacy" aria-labelledby="california-heading">
+            <h2 id="california-heading">California Privacy Rights (CCPA/CPRA)</h2>
+
             <p>
-              <strong>We do not sell or share your personal information</strong> as defined by the California Consumer Privacy Act (CCPA/CPRA). We do not sell screening data, analytics data, or any other personal information to third parties.
+              If you are a California resident, the California Consumer Privacy Act (CCPA) as amended
+              by the California Privacy Rights Act (CPRA) grants you specific rights regarding your
+              personal information. This section describes those rights and how to exercise them.
+              These rights are effective as of January 1, 2026.
             </p>
-            <p>
-              Google AdSense may use cookies to serve ads based on your prior visits to this or other websites. This activity may constitute &quot;sharing&quot; under the CCPA. You can opt out by:
-            </p>
+
+            <h3>Information We Collect</h3>
+            <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li>Declining advertising cookies through our Cookiebot consent banner</li>
-              <li>Enabling <strong>Global Privacy Control (GPC)</strong> in your browser — we honor GPC signals as a valid opt-out request under the CCPA</li>
-              <li>Visiting <strong>Google&apos;s Ad Settings</strong> at adssettings.google.com to opt out of personalized advertising</li>
+              <li><strong>Identifiers:</strong> IP address, browser type, device identifiers collected via analytics.</li>
+              <li><strong>Internet or network activity:</strong> Pages visited, time on site, referring URLs.</li>
+              <li><strong>Inferred data:</strong> Interests or preferences inferred from browsing behavior via advertising partners.</li>
             </ul>
+
+            <h3>Sensitive Personal Information</h3>
+            <p>
+              As of January 1, 2026, California law defines an expanded category of sensitive personal
+              information. <strong>MindCheck Tools does not knowingly collect sensitive personal
+              information</strong> as defined under CPRA, which includes: precise geolocation data,
+              racial or ethnic origin, religious beliefs, union membership, contents of private
+              communications, genetic data, biometric data, health or medical information, or sexual
+              orientation. Mental health screening responses entered into our tools are processed
+              entirely client-side and are never transmitted to our servers, stored, or shared with
+              any third party including advertising systems.
+            </p>
+
+            <h3>Data Minimization</h3>
+            <p>
+              We collect only the minimum personal information necessary to operate this service.
+              We do not collect personal information beyond what is reasonably necessary and
+              proportionate to the purposes disclosed in this policy.
+            </p>
+
+            <h3>How We Use Your Information</h3>
+            <ul>
+              <li>To display advertising through Google AdSense (non-personalized ads are used on health screening pages)</li>
+              <li>To analyze site traffic and improve user experience via analytics</li>
+              <li>To maintain site security and prevent fraud</li>
+            </ul>
+            <p>We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising without your consent.</p>
+
+            <h3>Your Rights as a California Resident</h3>
+            <ul>
+              <li><strong>Right to Know:</strong> You may request disclosure of the categories and specific pieces of personal information we have collected about you in the past 12 months.</li>
+              <li><strong>Right to Delete:</strong> You may request deletion of personal information we have collected, subject to certain exceptions.</li>
+              <li><strong>Right to Correct:</strong> You may request correction of inaccurate personal information we maintain about you.</li>
+              <li><strong>Right to Opt-Out:</strong> You may opt out of the sale or sharing of your personal information. We do not sell personal information. You may also opt out via a Global Privacy Control (GPC) signal from your browser, which we honor automatically.</li>
+              <li><strong>Right to Limit Use of Sensitive Information:</strong> You may direct us to limit our use and disclosure of sensitive personal information to purposes necessary to provide the service.</li>
+              <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of these rights.</li>
+            </ul>
+
+            <h3>Do Not Sell or Share My Personal Information</h3>
+            <p>
+              We do not sell personal information. To opt out of sharing for advertising purposes,
+              you may use a <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
+              browser. Our Consent Management Platform (Cookiebot) also provides granular consent controls.
+            </p>
+
+            <h3>How to Submit a Request</h3>
+            <p>To exercise your California privacy rights, contact us via the <a href="/contact">Contact page</a>. We will respond within 45 days. We may need to verify your identity before processing your request.</p>
+
+            <h3>Data Retention</h3>
+            <p>
+              Analytics data is retained for 26 months and then deleted. We do not retain mental health
+              screening responses — all processing is client-side only. Server logs are retained for
+              90 days for security purposes.
+            </p>
           </section>
 
           <section>
