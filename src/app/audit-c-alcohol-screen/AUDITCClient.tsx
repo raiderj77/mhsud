@@ -163,6 +163,7 @@ export function AUDITCClient({ faqData }: Props) {
           ))}
         </div>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 2026</p>
+        <ToolReviewerBio />
       </header>
 
       {!accepted && (
