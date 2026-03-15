@@ -56,12 +56,21 @@ export default function GAD7ScoreInterpretationPage() {
         }}
       />
 
+      {/* Answer Capsule */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16">
+        <div className="bg-sage-50 dark:bg-sage-950/20 border border-sage-200 dark:border-sage-800 rounded-xl p-5 mb-0">
+          <p className="text-sm text-sage-700 dark:text-sage-400 leading-relaxed">
+            <strong>Quick summary:</strong> GAD-7 scores range from 0&ndash;21. Scores of 5, 10, and 15 represent mild, moderate, and severe anxiety respectively. This tool is validated for screening generalized anxiety disorder in clinical and community settings.
+          </p>
+        </div>
+      </div>
+
       <ScoreInterpretationLayout
         testName="GAD-7"
         testAbbreviation="GAD-7"
         toolPageHref="/gad-7-anxiety-test"
         blogGuideHref="/blog/gad-7-guide"
-        lastUpdated="March 7, 2026"
+        lastUpdated="March 14, 2026"
         intro={[
           "The GAD-7 (Generalized Anxiety Disorder 7-item scale) is a brief, validated screening tool developed by Drs. Spitzer, Kroenke, Williams, and L\u00f6we. Originally designed for primary care settings, it has become one of the most widely used anxiety measures in clinical practice, research, and community health programs worldwide. Your score reflects the frequency of anxiety symptoms over the past two weeks.",
           "Each of the seven questions is scored from 0 (not at all) to 3 (nearly every day), producing a total between 0 and 21. The score maps to four severity levels that clinicians and researchers use to guide recommendations. The GAD-7 has strong psychometric properties, with a sensitivity of 89% and specificity of 82% for identifying generalized anxiety disorder at a cutoff of 10.",

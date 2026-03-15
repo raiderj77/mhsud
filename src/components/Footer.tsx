@@ -127,6 +127,22 @@ const INFO_LINKS = [
 export function Footer() {
   return (
     <footer className="border-t border-sand-200 dark:border-neutral-800 bg-sand-100 dark:bg-night-950 mt-20">
+      {/* 988 Crisis Lifeline Banner */}
+      <div className="bg-crisis-50 dark:bg-crisis-950/40 border-b border-crisis-200 dark:border-crisis-800 py-3 px-4 text-center">
+        <p className="text-sm text-crisis-700 dark:text-crisis-300">
+          If you or someone you know is in crisis, call or text{" "}
+          <strong className="font-semibold">988</strong> (Suicide &amp; Crisis Lifeline) or visit{" "}
+          <a
+            href="https://988lifeline.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline font-semibold hover:text-crisis-900 dark:hover:text-crisis-100 transition-colors"
+          >
+            988lifeline.org
+          </a>
+        </p>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {/* Top section: Brand + columns */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-10">
@@ -285,6 +301,8 @@ export function Footer() {
             <a href="https://contractextract.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">ContractExtract</a>
             {" · "}
             <a href="https://medicalbillreader.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Medical Bill Reader</a>
+            {" · "}
+            <a href="https://524tracker.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">524Tracker</a>
           </p>
         </div>
       </div>

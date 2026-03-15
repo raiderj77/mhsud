@@ -83,6 +83,15 @@ export default function MDQPage() {
         }}
       />
 
+      {/* YMYL Disclaimer */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8">
+        <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4 mb-6">
+          <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
+            <strong>Important:</strong> This questionnaire is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider.
+          </p>
+        </div>
+      </div>
+
       <MDQClient faqData={FAQ_DATA} />
     </>
   );
