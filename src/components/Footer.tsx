@@ -277,7 +277,10 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-sand-200 dark:border-neutral-800 pt-6">
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto">
-            All tools on this site are for educational and self-reflection purposes only. They are not a diagnosis, medical advice, or treatment recommendation. Always consult a qualified healthcare professional for mental health concerns. Your responses are processed entirely in your browser and are never stored or transmitted.
+            These screening tools are for informational purposes only and are not a substitute for professional medical or mental health advice. Always consult a qualified healthcare provider or licensed mental health professional regarding any mental health concerns. Your responses are processed entirely in your browser and are never stored or transmitted.
+          </p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto mt-2">
+            If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) — available 24/7.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
             This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
