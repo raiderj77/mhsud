@@ -98,7 +98,7 @@ export default function MDQPage() {
         <h2>What Do My MDQ Results Mean?</h2>
       </section>
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+        Last updated: March 16, 2026
       </p>
 <MDQClient faqData={FAQ_DATA} />
     </>

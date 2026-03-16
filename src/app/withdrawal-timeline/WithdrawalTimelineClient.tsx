@@ -223,7 +223,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
 
       {/* Substance Selector */}
       <div className="card p-6 sm:p-8 mb-6">
-        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Select a Substance</h2>
+        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Select a Substance to View Its Timeline</h2>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">Choose the substance to view its withdrawal timeline.</p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">

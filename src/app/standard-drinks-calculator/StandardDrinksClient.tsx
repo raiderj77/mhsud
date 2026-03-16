@@ -149,7 +149,7 @@ export function StandardDrinksClient({ faqData }: Props) {
 
       {/* Custom Calculator */}
       <div className="card p-6 sm:p-8 mb-6">
-        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-5">Calculate Your Drink</h2>
+        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-5">Calculate Your Drink&apos;s Standard Equivalent</h2>
         <div className="grid grid-cols-2 gap-4 mb-5">
           <div>
             <label htmlFor="volume" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
@@ -231,7 +231,7 @@ export function StandardDrinksClient({ faqData }: Props) {
 
       {/* Presets Comparison */}
       <div id="printable-results" className="card p-5 sm:p-6 mb-6">
-        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Common Drinks Compared</h2>
+        <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Common Drinks Compared by Standard Units</h2>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
           Many drinks you order contain more than one standard drink. The bar shows how each compares.
         </p>

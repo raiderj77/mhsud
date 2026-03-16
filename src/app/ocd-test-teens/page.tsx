@@ -62,7 +62,7 @@ export default function OcdTestTeensPage() {
           <p className="text-slate-600 dark:text-slate-300 mb-4">Rate how much each experience has bothered you during the past month.</p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+        Last updated: March 16, 2026
       </p>
       <section className="sr-only">
         <h2>What Is the Teen OCD Screening?</h2>

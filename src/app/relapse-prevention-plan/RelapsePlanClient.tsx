@@ -221,7 +221,7 @@ export function RelapsePlanClient({ faqData }: Props) {
         <div className="space-y-6">
           {/* 1. Triggers */}
           <div className="card p-6 sm:p-8">
-            <SectionHeader num={1} title="My Triggers" desc="What people, places, situations, or emotions increase your urge to use?" />
+            <SectionHeader num={1} title="My Personal Relapse Triggers" desc="What people, places, situations, or emotions increase your urge to use?" />
             <TextInputList
               items={plan.triggers}
               onChange={(i, v) => setPlan((p) => ({ ...p, triggers: updateArr(p.triggers, i, v) }))}
@@ -234,7 +234,7 @@ export function RelapsePlanClient({ faqData }: Props) {
 
           {/* 2. Warning Signs */}
           <div className="card p-6 sm:p-8">
-            <SectionHeader num={2} title="My Warning Signs" desc="What changes in yourself signal that you may be heading toward relapse?" />
+            <SectionHeader num={2} title="My Personal Warning Signs" desc="What changes in yourself signal that you may be heading toward relapse?" />
 
             <div className="space-y-4 ml-9">
               {([
@@ -292,7 +292,7 @@ export function RelapsePlanClient({ faqData }: Props) {
 
           {/* 4. Emergency Contacts */}
           <div className="card p-6 sm:p-8">
-            <SectionHeader num={4} title="Emergency Contacts" desc="Who will you call when you are struggling? Have these numbers ready." />
+            <SectionHeader num={4} title="My Emergency Support Contacts" desc="Who will you call when you are struggling? Have these numbers ready." />
             <div className="space-y-4 ml-9">
               {plan.contacts.map((contact, i) => (
                 <div key={i} className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
@@ -328,7 +328,7 @@ export function RelapsePlanClient({ faqData }: Props) {
 
           {/* 5. Safe Activities */}
           <div className="card p-6 sm:p-8">
-            <SectionHeader num={5} title="Safe Activities" desc="What healthy activities can you do when cravings hit or you need a distraction?" />
+            <SectionHeader num={5} title="My Safe Recovery Activities" desc="What healthy activities can you do when cravings hit or you need a distraction?" />
             <TextInputList
               items={plan.safeActivities}
               onChange={(i, v) => setPlan((p) => ({ ...p, safeActivities: updateArr(p.safeActivities, i, v) }))}

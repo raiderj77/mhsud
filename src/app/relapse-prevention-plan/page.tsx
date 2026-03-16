@@ -76,7 +76,7 @@ export default function RelapsePlanPage() {
       </section>
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+        Last updated: March 16, 2026
       </p>
 <RelapsePlanClient faqData={FAQ_DATA} />
     </>

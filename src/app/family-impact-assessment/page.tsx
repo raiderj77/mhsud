@@ -102,7 +102,7 @@ export default function FamilyImpactAssessmentPage() {
       />
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+        Last updated: March 16, 2026
       </p>
       <section className="sr-only">
         <h2>What Is the Family Impact Assessment?</h2>
