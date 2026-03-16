@@ -210,7 +210,15 @@ export default function DrugScreeningTeensPage() {
             Answer each question honestly. There are no right or wrong answers.
           </p>
         </div>
-        <CrafftClient faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Teen Drug Screening?</h2>
+        <h2>How Is the Teen Drug Screening Scored?</h2>
+        <h2>What Do My Drug Screening Results Mean?</h2>
+      </section>
+<CrafftClient faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

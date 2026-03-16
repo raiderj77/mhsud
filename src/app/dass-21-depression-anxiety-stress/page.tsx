@@ -89,7 +89,10 @@ export default function DASS21Page() {
         <h2>How Is the DASS-21 Scored?</h2>
         <h2>What Do My DASS-21 Results Mean?</h2>
       </section>
-      <DASS21Client faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+<DASS21Client faqData={FAQ_DATA} />
     </>
   );
 }

@@ -130,7 +130,15 @@ export default function GriefAssessmentPage() {
         </div>
 
         {/* The Tool */}
-        <PHQ9Client faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Grief Assessment Tool?</h2>
+        <h2>How Is the Grief Assessment Scored?</h2>
+        <h2>What Do My Grief Assessment Results Mean?</h2>
+      </section>
+<PHQ9Client faqData={FAQ_DATA} />
 
         {/* Grief Warning Signs */}
         <div className="mt-10 mb-8">

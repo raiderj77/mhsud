@@ -265,7 +265,15 @@ export default function DepressionTestForNewMomsPage() {
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Take the PHQ-9 Depression Screening</h2>
           <p className="text-slate-600 dark:text-slate-300 mb-4">Answer each question based on how you&apos;ve been feeling over the past two weeks.</p>
         </div>
-        <PHQ9Client faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Postpartum Depression Screening?</h2>
+        <h2>How Is the Postpartum Depression Screen Scored?</h2>
+        <h2>What Do My Postpartum Depression Results Mean?</h2>
+      </section>
+<PHQ9Client faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

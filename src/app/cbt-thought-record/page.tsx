@@ -88,7 +88,15 @@ export default function CbtThoughtRecordPage() {
         }}
       />
 
-      <ThoughtRecordClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is a CBT Thought Record?</h2>
+        <h2>How Does the CBT Thought Record Work?</h2>
+        <h2>What Do My Thought Record Results Mean?</h2>
+      </section>
+<ThoughtRecordClient faqData={FAQ_DATA} />
     </>
   );
 }

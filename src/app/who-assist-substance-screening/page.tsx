@@ -94,7 +94,15 @@ export default function AssistPage() {
         }}
       />
 
-      <AssistClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the WHO ASSIST Substance Screening?</h2>
+        <h2>How Is the WHO ASSIST Scored?</h2>
+        <h2>What Do My WHO ASSIST Results Mean?</h2>
+      </section>
+<AssistClient faqData={FAQ_DATA} />
     </>
   );
 }

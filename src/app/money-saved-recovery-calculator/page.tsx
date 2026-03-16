@@ -68,7 +68,15 @@ export default function MoneySavedPage() {
         }}
       />
 
-      <MoneySavedClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Recovery Savings Calculator?</h2>
+        <h2>How Does the Recovery Savings Calculator Work?</h2>
+        <h2>What Do My Recovery Savings Results Mean?</h2>
+      </section>
+<MoneySavedClient faqData={FAQ_DATA} />
     </>
   );
 }

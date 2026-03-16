@@ -88,7 +88,10 @@ export default function GAD7Page() {
         <h2>How Is the GAD-7 Scored?</h2>
         <h2>What Do My GAD-7 Results Mean?</h2>
       </section>
-      <GAD7Client faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+<GAD7Client faqData={FAQ_DATA} />
     </>
   );
 }

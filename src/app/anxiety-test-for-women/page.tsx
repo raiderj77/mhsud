@@ -329,7 +329,15 @@ export default function AnxietyTestForWomenPage() {
             Answer each question based on how you&apos;ve been feeling over the past two weeks.
           </p>
         </div>
-        <GAD7Client faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is Anxiety Screening for Women?</h2>
+        <h2>How Is the Anxiety Test Scored?</h2>
+        <h2>What Do My Anxiety Screening Results Mean?</h2>
+      </section>
+<GAD7Client faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

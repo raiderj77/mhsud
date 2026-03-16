@@ -211,7 +211,15 @@ export default function BurnoutTestForHealthcareWorkersPage() {
             Answer each question based on how you&apos;ve been feeling about your work.
           </p>
         </div>
-        <BurnoutClient faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is Healthcare Worker Burnout Screening?</h2>
+        <h2>How Is the Burnout Test Scored?</h2>
+        <h2>What Do My Burnout Screening Results Mean?</h2>
+      </section>
+<BurnoutClient faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

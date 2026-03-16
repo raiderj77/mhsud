@@ -43,7 +43,10 @@ export default function AUDITCPage() {
         <h2>How Is the AUDIT-C Scored?</h2>
         <h2>What Do My AUDIT-C Results Mean?</h2>
       </section>
-      <AUDITCClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+<AUDITCClient faqData={FAQ_DATA} />
     </>
   );
 }

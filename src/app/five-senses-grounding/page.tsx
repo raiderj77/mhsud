@@ -87,7 +87,15 @@ export default function FiveSensesGroundingPage() {
         }}
       />
 
-      <GroundingClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Five Senses Grounding Exercise?</h2>
+        <h2>How Does Five Senses Grounding Work?</h2>
+        <h2>What Are the Benefits of Grounding Exercises?</h2>
+      </section>
+<GroundingClient faqData={FAQ_DATA} />
     </>
   );
 }

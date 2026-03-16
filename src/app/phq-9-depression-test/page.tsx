@@ -90,7 +90,10 @@ export default function PHQ9Page() {
         <h2>How Is the PHQ-9 Scored?</h2>
         <h2>What Do My PHQ-9 Results Mean?</h2>
       </section>
-      <PHQ9Client faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+<PHQ9Client faqData={FAQ_DATA} />
 
       {/* Internal Links */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">

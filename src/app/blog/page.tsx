@@ -41,7 +41,7 @@ export default function BlogPage() {
         </p>
       </header>
 
-      <BlogListClient posts={sortedPosts} categories={categories} />
+<BlogListClient posts={sortedPosts} categories={categories} />
     </div>
     </>
   );

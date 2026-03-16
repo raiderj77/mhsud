@@ -69,7 +69,15 @@ export default function CopingSkillsPage() {
         }}
       />
 
-      <CopingSkillsClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Coping Skills Randomizer?</h2>
+        <h2>How Does the Coping Skills Randomizer Work?</h2>
+        <h2>What Are Evidence-Based Coping Skills?</h2>
+      </section>
+<CopingSkillsClient faqData={FAQ_DATA} />
     </>
   );
 }

@@ -220,7 +220,15 @@ export default function EatingDisorderTestAthletesPage() {
             Answer each question honestly based on your current relationship with food and your body.
           </p>
         </div>
-        <SCOFFClient faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Athlete Eating Disorder Screening?</h2>
+        <h2>How Is the Eating Disorder Test Scored?</h2>
+        <h2>What Do My Eating Disorder Results Mean?</h2>
+      </section>
+<SCOFFClient faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

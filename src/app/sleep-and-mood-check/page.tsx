@@ -31,7 +31,15 @@ export default function SleepMoodPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Sleep & Mood Reflection Tool", description: "Original 10-question tool to reflect on sleep quality, duration, and mood impact.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Sleep & Mood Reflection", url: TOOL_URL }])) }} />
-      <SleepMoodClient faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the Sleep and Mood Check?</h2>
+        <h2>How Does the Sleep and Mood Check Work?</h2>
+        <h2>What Do My Sleep and Mood Results Mean?</h2>
+      </section>
+<SleepMoodClient faqData={FAQ_DATA} />
     </>
   );
 }

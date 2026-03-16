@@ -278,7 +278,15 @@ export default function DepressionScreeningForVeteransPage() {
             Answer each question based on how you&apos;ve been feeling over the past two weeks.
           </p>
         </div>
-        <PHQ9Client faqData={FAQ_DATA} />
+              <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is Depression Screening for Veterans?</h2>
+        <h2>How Is the Veteran Depression Screen Scored?</h2>
+        <h2>What Do My Depression Screening Results Mean?</h2>
+      </section>
+<PHQ9Client faqData={FAQ_DATA} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

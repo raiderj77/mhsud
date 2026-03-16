@@ -94,7 +94,15 @@ export default function Who5Page() {
         }}
       />
 
-      <Who5Client faqData={FAQ_DATA} />
+            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
+      </p>
+      <section className="sr-only">
+        <h2>What Is the WHO-5 Wellbeing Index?</h2>
+        <h2>How Is the WHO-5 Scored?</h2>
+        <h2>What Do My WHO-5 Results Mean?</h2>
+      </section>
+<Who5Client faqData={FAQ_DATA} />
     </>
   );
 }
