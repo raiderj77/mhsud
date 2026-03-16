@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/msi-bpd-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/msi-bpd-screening",
-  title: "MSI-BPD Screening Test | Free Borderline Personality Disorder Check",
+  title: "MSI-BPD Borderline Personality Screen",
   description:
     "Take the free MSI-BPD borderline personality disorder screening. 10 yes/no questions, 2 minutes. Private, instant results. Not a diagnosis — a starting point.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "free bpd screening", "mental health screening",
   ],
   openGraph: {
-    title: "MSI-BPD Screening Test | Free Borderline Personality Disorder Check",
+    title: "MSI-BPD Borderline Personality Screen",
     description: "Take the free MSI-BPD borderline personality disorder screening. 10 yes/no questions, 2 minutes. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -47,7 +47,7 @@ export default function MSIBPDPage() {
               description: "A free online implementation of the McLean Screening Instrument for Borderline Personality Disorder (MSI-BPD), a validated 10-item yes/no screening tool developed by Zanarini et al.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: "2026-03-16",
             })
           ),
         }}

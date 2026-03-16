@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/cage-aid-substance-abuse-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/cage-aid-substance-abuse-screening",
-  title: "CAGE-AID Screening Test | Free Substance Use Check",
+  title: "CAGE-AID Substance Use Screening",
   description:
     "Take the free CAGE-AID substance abuse screening. 4 yes/no questions, 1 minute. Screens for both alcohol and drug use. Private, instant results.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "drug and alcohol self-assessment", "cage-aid substance use",
   ],
   openGraph: {
-    title: "CAGE-AID Screening Test | Free Substance Use Check",
+    title: "CAGE-AID Substance Use Screening",
     description: "Take the free CAGE-AID substance abuse screening. 4 yes/no questions, 1 minute. Screens for both alcohol and drug use.",
     url: TOOL_URL,
     type: "website",

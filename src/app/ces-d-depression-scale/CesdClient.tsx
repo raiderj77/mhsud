@@ -308,9 +308,9 @@ export function CesdClient({ faqData }: Props) {
           </p>
         </div>
 
-        {/* Sources & Further Reading */}
+        {/* What Research Is This Based On? */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -386,7 +386,7 @@ export function CesdClient({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the CES-D</h2>
+          <h2>What Is the CES-D?</h2>
           <p>
             The CES-D (Center for Epidemiologic Studies Depression Scale) is a 20-item self-report depression screening tool developed by Lenore Radloff at the National Institute of Mental Health (NIMH) in 1977. It was originally designed for use in epidemiological research to measure depressive symptomatology in the general population. Since its publication, it has become one of the most widely used depression screening instruments in the world, cited in thousands of studies.
           </p>
@@ -485,6 +485,9 @@ export function CesdClient({ faqData }: Props) {
       <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
         CES-D Depression Scale
       </h1>
+      <p className="text-sm text-gray-500 mt-1 mb-4 text-center">
+        Last updated: <time dateTime="2026-03">March 2026</time>
+      </p>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         For each statement, select how often you have felt this way <strong>during the past week</strong>.
       </p>

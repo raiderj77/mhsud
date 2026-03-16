@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/scoff-eating-disorder-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/scoff-eating-disorder-screening",
-  title: "SCOFF Eating Disorder Screening | Free Self-Check",
+  title: "SCOFF Eating Disorder Screening",
   description:
-    "Take the free SCOFF eating disorder screening. 5 questions, 1 minute. Validated screener for anorexia, bulimia, and other eating disorders. Private, instant results.",
+    "Take the free SCOFF eating disorder screening. 5 questions, instant results, clinically validated. Reviewed by a CADC-II counselor. Not a diagnosis.",
   keywords: [
     "scoff", "eating disorder test", "eating disorder screening",
     "scoff questionnaire", "do i have an eating disorder", "eating disorder quiz",
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "eating disorder assessment",
   ],
   openGraph: {
-    title: "SCOFF Eating Disorder Screening | Free Self-Check",
+    title: "SCOFF Eating Disorder Screening",
     description: "Take the free SCOFF eating disorder screening. 5 questions, 1 minute. Validated screener for eating disorders.",
     url: TOOL_URL,
     type: "website",

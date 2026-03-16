@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/mdq-bipolar-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/mdq-bipolar-screening",
-  title: "MDQ Bipolar Screening Test | Free Mood Disorder Check",
+  title: "MDQ Bipolar Disorder Screening",
   description:
     "Take the free MDQ bipolar screening test. 15 items, 3 minutes. Validated screener for bipolar spectrum disorders. Private, instant results.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "bipolar screening test online",
   ],
   openGraph: {
-    title: "MDQ Bipolar Screening Test | Free Mood Disorder Check",
+    title: "MDQ Bipolar Disorder Screening",
     description: "Take the free MDQ bipolar screening test. 15 items, 3 minutes. Validated screener for bipolar spectrum disorders.",
     url: TOOL_URL,
     type: "website",

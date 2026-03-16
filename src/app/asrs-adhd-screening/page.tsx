@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/asrs-adhd-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/asrs-adhd-screening",
-  title: "ASRS ADHD Screening Test | Free Adult ADHD Check",
+  title: "ASRS Adult ADHD Screening Test",
   description:
     "Take the free ASRS v1.1 adult ADHD screening test. 6 questions, 2 minutes. WHO-developed screener for adult ADHD. Private, instant results.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "who adhd screening", "adhd checklist adults",
   ],
   openGraph: {
-    title: "ASRS ADHD Screening Test | Free Adult ADHD Check",
+    title: "ASRS Adult ADHD Screening Test",
     description: "Take the free ASRS v1.1 adult ADHD screening test. 6 questions, 2 minutes. WHO-developed screener for adult ADHD.",
     url: TOOL_URL,
     type: "website",

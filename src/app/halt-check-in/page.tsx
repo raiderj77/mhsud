@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   path: "/halt-check-in",
   title: "HALT Check-In | Free Recovery Self-Check Tool",
   description:
-    "Free HALT check-in for recovery. Rate Hungry, Angry, Lonely, Tired on a 1-5 scale. See your vulnerability level and get coping suggestions. Private, instant, no signup.",
+    "Use the free HALT check-in to identify emotional triggers in recovery. Are you Hungry, Angry, Lonely, or Tired? Takes 60 seconds. Reviewed by CADC-II.",
   keywords: [
     "HALT recovery tool", "HALT check in",
     "relapse prevention tool", "am I at risk for relapse",

@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/audit-alcohol-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/audit-alcohol-test",
-  title: "AUDIT Alcohol Test | Free Alcohol Screening Tool",
+  title: "AUDIT Alcohol Use Screening Test",
   description:
     "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, honest, no sign-up. Results in 3 minutes.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "audit questionnaire online", "free alcohol test", "who audit",
   ],
   openGraph: {
-    title: "AUDIT Alcohol Test | Free Alcohol Screening Tool",
+    title: "AUDIT Alcohol Use Screening Test",
     description: "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, no sign-up. Results in 3 minutes.",
     url: TOOL_URL,
     type: "website",

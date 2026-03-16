@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/health-recovery-timeline`;
 
 export const metadata: Metadata = createMetadata({
   path: "/health-recovery-timeline",
-  title: "Health Recovery Timeline | What Happens When You Quit",
+  title: "Health Recovery Timeline After Quitting",
   description:
     "See what happens to your body after you stop drinking, smoking, or using drugs. Interactive timeline based on medical research. Free, private, instant.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "body healing after quitting smoking",
   ],
   openGraph: {
-    title: "Health Recovery Timeline | What Happens When You Quit",
+    title: "Health Recovery Timeline After Quitting",
     description: "See what happens to your body after you stop drinking, smoking, or using. Interactive timeline based on medical research.",
     url: TOOL_URL,
     type: "website",

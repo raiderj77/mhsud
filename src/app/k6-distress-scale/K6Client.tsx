@@ -287,9 +287,9 @@ export function K6Client({ faqData }: Props) {
           </p>
         </div>
 
-        {/* Sources & Further Reading */}
+        {/* What Research Is This Based On? */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -373,7 +373,7 @@ export function K6Client({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the K6</h2>
+          <h2>What Is the K6 Distress Scale?</h2>
           <p>
             The Kessler Psychological Distress Scale (K6) is a 6-item screening tool developed by Ronald Kessler and colleagues at Harvard Medical School in collaboration with the World Health Organization. It was designed as a brief, efficient measure of nonspecific psychological distress \u2014 meaning it detects general emotional difficulty without identifying a specific condition like depression or anxiety.
           </p>

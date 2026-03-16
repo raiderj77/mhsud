@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/money-saved-recovery-calculator`;
 
 export const metadata: Metadata = createMetadata({
   path: "/money-saved-recovery-calculator",
-  title: "Money Saved in Recovery Calculator | Free Savings Tracker",
+  title: "Money Saved in Recovery Calculator",
   description:
     "Calculate how much money you've saved by not drinking or using. Enter your substance, spending, and sober date. Free, private, instant results.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "money saved not using drugs", "financial recovery calculator",
   ],
   openGraph: {
-    title: "Money Saved in Recovery Calculator | Free Savings Tracker",
+    title: "Money Saved in Recovery Calculator",
     description: "Calculate how much money you've saved by not drinking or using. Free, private, instant results.",
     url: TOOL_URL,
     type: "website",

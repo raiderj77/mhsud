@@ -385,9 +385,9 @@ export function GAD7Client({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
-          {/* Sources & Further Reading */}
+          {/* What Research Is This Based On? */}
           <section className="mb-8">
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>

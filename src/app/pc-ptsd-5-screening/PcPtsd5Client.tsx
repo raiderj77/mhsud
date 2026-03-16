@@ -147,9 +147,9 @@ export function PcPtsd5Client({ faqData }: Props) {
           </p>
         </div>
 
-        {/* Sources & Further Reading */}
+        {/* What Research Is This Based On? */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -387,9 +387,9 @@ export function PcPtsd5Client({ faqData }: Props) {
 
         <AdSlot position="results-middle" />
 
-        {/* Sources & Further Reading */}
+        {/* What Research Is This Based On? */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -469,7 +469,7 @@ export function PcPtsd5Client({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the PC-PTSD-5</h2>
+          <h2>What Is the PC-PTSD-5?</h2>
           <p>
             The PC-PTSD-5 (Primary Care PTSD Screen for DSM-5) is a 5-item screening tool developed by the National Center for PTSD at the U.S. Department of Veterans Affairs. It is designed as a brief, first-step screen that can be used in primary care and other non-specialty medical settings to identify individuals who may have PTSD and warrant further assessment.
           </p>
@@ -484,12 +484,20 @@ export function PcPtsd5Client({ faqData }: Props) {
           <p>
             If you are experiencing distressing symptoms after a traumatic event — whether or not this screen is positive — you deserve support. Effective, evidence-based approaches for trauma-related difficulties include Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and Eye Movement Desensitization and Reprocessing (EMDR). Your primary care provider, a mental health professional, or the resources listed above can help you get started.
           </p>
+          <h2>Who Should Take the PC-PTSD-5?</h2>
+          <p>
+            The PC-PTSD-5 is appropriate for anyone who has experienced or witnessed a traumatic event and wants a quick initial check of whether PTSD symptoms may be present. It is especially useful for people who are unsure whether their experiences warrant a full evaluation. Veterans, first responders, survivors of violence or abuse, and anyone who has experienced a life-threatening event may find this screening helpful as a first step.
+          </p>
+          <h2>What Do My PC-PTSD-5 Results Mean?</h2>
+          <p>
+            A positive screen (3 or more &quot;Yes&quot; answers) means your symptom pattern is consistent with what is commonly seen in people who may have PTSD. It does not confirm PTSD — it means a more thorough evaluation is recommended. A negative screen (0–2) suggests PTSD symptoms are less likely based on your current responses, but does not rule out trauma-related difficulties. If you are experiencing distress regardless of your score, that is still worth discussing with a healthcare provider.
+          </p>
         </div>
 
         {/* Score Guide */}
         <div className="mb-10">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Scoring Guide
+            How Is the PC-PTSD-5 Scored?
           </h2>
           <div className="grid grid-cols-2 gap-2">
             <div className="p-3 rounded-lg text-center bg-green-50 dark:bg-green-950/30">
@@ -566,6 +574,9 @@ export function PcPtsd5Client({ faqData }: Props) {
       <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
         PC-PTSD-5 Screening
       </h1>
+      <p className="text-sm text-gray-500 mt-1 mb-4 text-center">
+        Last updated: <time dateTime="2026-03">March 2026</time>
+      </p>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
         In the <strong>past month</strong>, have you&hellip;
       </p>

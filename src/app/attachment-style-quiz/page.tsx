@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/attachment-style-quiz`;
 
 export const metadata: Metadata = createMetadata({
   path: "/attachment-style-quiz",
-  title: "Attachment Style Quiz | Free ECR-R Relationship Test",
+  title: "Attachment Style Quiz — ECR-R Test",
   description:
-    "Take the free ECR-R attachment style quiz. 36 questions, 5 minutes. Discover your attachment style: Secure, Preoccupied, Dismissing, or Fearful. Private, instant results.",
+    "Discover your attachment style with the free ECR-R quiz. Secure, anxious, avoidant, or disorganized — understand how you connect in relationships.",
   keywords: [
     "attachment style quiz", "ecr-r", "attachment style test",
     "attachment test", "relationship attachment style",
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "fearful avoidant test", "dismissive avoidant quiz",
   ],
   openGraph: {
-    title: "Attachment Style Quiz | Free ECR-R Relationship Test",
+    title: "Attachment Style Quiz — ECR-R Test",
     description: "Take the free ECR-R attachment style quiz. 36 questions, 5 minutes. Discover your attachment style. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -47,7 +47,7 @@ export default function AttachmentStylePage() {
               description: "A free online implementation of the Experiences in Close Relationships - Revised (ECR-R), a validated 36-item attachment style questionnaire by Fraley, Waller, and Brennan (2000).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: "2026-03-16",
             })
           ),
         }}

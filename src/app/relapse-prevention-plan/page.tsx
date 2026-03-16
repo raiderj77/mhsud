@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/relapse-prevention-plan`;
 
 export const metadata: Metadata = createMetadata({
   path: "/relapse-prevention-plan",
-  title: "Relapse Prevention Plan Builder | Free Worksheet",
+  title: "Relapse Prevention Plan Builder",
   description:
-    "Build a personalized relapse prevention plan. Identify triggers, warning signs, coping strategies, emergency contacts, and a craving action plan. Free, private, printable.",
+    "Build a free personalized relapse prevention plan. Identify triggers, coping strategies, and support contacts. Reviewed by a CADC-II counselor.",
   keywords: [
     "relapse prevention plan", "relapse prevention worksheet",
     "relapse prevention plan template", "relapse prevention strategies",
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "coping strategies for addiction", "relapse prevention plan PDF",
   ],
   openGraph: {
-    title: "Relapse Prevention Plan Builder | Free Worksheet",
+    title: "Relapse Prevention Plan Builder",
     description: "Build your own relapse prevention plan: triggers, warning signs, coping strategies, emergency contacts, and a craving action plan. Free and printable.",
     url: TOOL_URL,
     type: "website",

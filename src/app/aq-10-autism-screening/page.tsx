@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/aq-10-autism-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/aq-10-autism-screening",
-  title: "AQ-10 Autism Screening | Free Autism Spectrum Self-Check",
+  title: "AQ-10 Autism Spectrum Screening",
   description:
     "Take the free AQ-10 autism spectrum screening. 10 questions, 2 minutes. Validated screener for autism traits in adults. Private, instant results.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "autism assessment", "neurodivergent screening",
   ],
   openGraph: {
-    title: "AQ-10 Autism Screening | Free Autism Spectrum Self-Check",
+    title: "AQ-10 Autism Spectrum Screening",
     description: "Take the free AQ-10 autism spectrum screening. 10 questions, 2 minutes. Validated screener for autism traits in adults.",
     url: TOOL_URL,
     type: "website",

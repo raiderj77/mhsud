@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/treatment-cost-estimator`;
 
 export const metadata: Metadata = createMetadata({
   path: "/treatment-cost-estimator",
-  title: "Treatment Cost Estimator | How Much Does Rehab Cost?",
+  title: "Treatment Cost Estimator — Rehab Costs",
   description:
     "Estimate the cost of addiction treatment: outpatient, IOP, residential rehab, detox, MAT, sober living. Includes insurance and financial aid info. Free, no signup.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "how to pay for rehab", "does insurance cover rehab",
   ],
   openGraph: {
-    title: "Treatment Cost Estimator | How Much Does Rehab Cost?",
+    title: "Treatment Cost Estimator — Rehab Costs",
     description: "See estimated costs for addiction treatment by type: outpatient, IOP, residential, detox, MAT, and sober living. Insurance and financial aid info included.",
     url: TOOL_URL,
     type: "website",

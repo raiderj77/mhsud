@@ -451,7 +451,7 @@ export function TreatmentCostClient({ faqData }: Props) {
       <section className="mt-12 space-y-8 print:hidden">
         <div>
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Understanding Levels of Care
+            What Are the Levels of Addiction Treatment?
           </h2>
           <div className="prose-custom">
             <p>

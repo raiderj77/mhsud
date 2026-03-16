@@ -6,7 +6,7 @@ const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
 
 export const metadata: Metadata = createMetadata({
   path: "/dass-21-depression-anxiety-stress",
-  title: "DASS-21 Test | Free Depression, Anxiety & Stress Check",
+  title: "DASS-21 Depression Anxiety Stress Test",
   description:
     "Take the free DASS-21 screening. 21 questions, 4 minutes. Screens depression, anxiety, and stress in one test. Private, instant results.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "dass-21 self-assessment",
   ],
   openGraph: {
-    title: "DASS-21 Test | Free Depression, Anxiety & Stress Check",
+    title: "DASS-21 Depression Anxiety Stress Test",
     description: "Take the free DASS-21 screening. 21 questions, 4 minutes. Screens depression, anxiety, and stress in one test.",
     url: TOOL_URL,
     type: "website",

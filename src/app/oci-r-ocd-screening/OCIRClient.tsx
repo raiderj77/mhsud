@@ -566,7 +566,7 @@ export function OCIRClient({ faqData }: Props) {
           {/* Educational Content */}
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">
-              Understanding OCD and the OCI-R
+              What Is OCD and How Does the OCI-R Work?
             </h2>
             <div className="card p-5 sm:p-6 space-y-4">
               <div>
@@ -626,9 +626,9 @@ export function OCIRClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
-          {/* Sources & Further Reading */}
+          {/* What Research Is This Based On? */}
           <section className="mb-8">
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>

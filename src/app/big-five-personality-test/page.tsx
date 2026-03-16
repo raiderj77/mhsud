@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/big-five-personality-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/big-five-personality-test",
-  title: "Big Five Personality Test | Free IPIP-NEO-50 Assessment",
+  title: "Big Five Personality Test — IPIP-NEO",
   description:
-    "Take the free Big Five (OCEAN) personality test. 50 questions, 10 minutes. Measure Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Private, instant results.",
+    "Take the free Big Five personality test (IPIP-NEO-50). Measure openness, conscientiousness, extraversion, agreeableness, and neuroticism in minutes.",
   keywords: [
     "big five personality test", "ocean personality test",
     "ipip-neo-50", "big 5 personality test",
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "five factor personality test", "big five inventory",
   ],
   openGraph: {
-    title: "Big Five Personality Test | Free IPIP-NEO-50 Assessment",
+    title: "Big Five Personality Test — IPIP-NEO",
     description: "Take the free Big Five (OCEAN) personality test. 50 questions, 10 minutes. Measure Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -47,7 +47,7 @@ export default function BigFivePersonalityTestPage() {
               description: "A free online implementation of the IPIP-NEO-50, a validated 50-item Big Five personality assessment based on Goldberg (1999) and Johnson (2014).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: "2026-03-16",
             })
           ),
         }}

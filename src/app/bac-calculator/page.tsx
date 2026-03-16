@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/bac-calculator`;
 
 export const metadata: Metadata = createMetadata({
   path: "/bac-calculator",
-  title: "BAC Calculator | Blood Alcohol Content Estimator",
+  title: "BAC Calculator — Blood Alcohol Estimator",
   description:
-    "Estimate your blood alcohol content with our free BAC calculator. Enter weight, drinks, and time. See estimated BAC, effects, and time until sober. Private and instant.",
+    "Estimate your blood alcohol content with our free BAC calculator. Enter drinks, weight, and time for an instant estimate. Never drive impaired.",
   keywords: [
     "bac calculator", "blood alcohol calculator", "blood alcohol content calculator",
     "how drunk am i calculator", "when will i be sober calculator",
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "standard drink calculator", "blood alcohol level",
   ],
   openGraph: {
-    title: "BAC Calculator | Blood Alcohol Content Estimator",
+    title: "BAC Calculator — Blood Alcohol Estimator",
     description: "Estimate your blood alcohol content. See BAC level, effects, and time until sober. Free, private, instant.",
     url: TOOL_URL,
     type: "website",

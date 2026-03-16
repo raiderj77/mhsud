@@ -487,6 +487,58 @@ export function MSIBPDClient({ faqData }: Props) {
 
           <AdSlot position="Below Results" className="mb-8" />
 
+          {/* What Is the MSI-BPD Screening Tool? */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Is the MSI-BPD Screening Tool?</h2>
+            <div className="card p-5 sm:p-6">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
+                The MSI-BPD (McLean Screening Instrument for Borderline Personality Disorder) is a 10-item yes/no screening tool developed by Dr. Mary Zanarini and colleagues at McLean Hospital. It is designed to identify individuals who may meet criteria for borderline personality disorder (BPD) and is widely used in clinical and research settings.
+              </p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                BPD is a complex mental health condition characterized by patterns of emotional instability, difficulties in relationships, identity disturbance, and impulsive behaviors. It affects approximately 1.6% of the general population and is treatable with evidence-based therapies such as Dialectical Behavior Therapy (DBT) and Mentalization-Based Treatment (MBT).
+              </p>
+            </div>
+          </section>
+
+          {/* How Is the MSI-BPD Scored? */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">How Is the MSI-BPD Scored?</h2>
+            <div className="card p-5 sm:p-6">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
+                Each &quot;Yes&quot; answer scores 1 point, for a total between 0 and 10. A score of 7 or higher is considered a positive screen, suggesting that further evaluation by a qualified mental health professional may be warranted. Scores of 5 to 6 fall in an uncertain range where BPD features may be present but cannot be confirmed or ruled out without professional assessment.
+              </p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Scores of 0 to 4 suggest a lower likelihood of meeting full BPD criteria, though individual items endorsed may still reflect meaningful experiences worth discussing with a provider.
+              </p>
+            </div>
+          </section>
+
+          {/* What Do My MSI-BPD Results Mean? */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Do My MSI-BPD Results Mean?</h2>
+            <div className="card p-5 sm:p-6">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
+                Your MSI-BPD score indicates the number of BPD-related experiences you endorsed. A higher score suggests more features associated with BPD, but this screening cannot confirm or rule out any condition. Many factors — including current stress, other mental health conditions, and life circumstances — can influence your responses.
+              </p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                If your score suggests further evaluation, consider speaking with a mental health professional who has experience with personality disorders. A comprehensive assessment typically includes a detailed clinical interview and consideration of your full history.
+              </p>
+            </div>
+          </section>
+
+          {/* Is the MSI-BPD a Diagnosis? */}
+          <section className="mb-8">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Is the MSI-BPD a Diagnosis?</h2>
+            <div className="card p-5 sm:p-6">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
+                No. The MSI-BPD is a screening instrument, not a diagnostic tool. It is designed to identify individuals who may benefit from a more comprehensive evaluation. Only a qualified mental health professional can assess personality disorders through a thorough clinical evaluation that considers your full history, current functioning, and other possible explanations for your experiences.
+              </p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                A positive screen is a starting point for a deeper conversation — not a label or a conclusion. Borderline personality disorder is highly treatable, and early identification can lead to effective support.
+              </p>
+            </div>
+          </section>
+
           {/* FAQ */}
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">
@@ -516,9 +568,9 @@ export function MSIBPDClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
-          {/* Sources & Further Reading */}
+          {/* What Research Is This Based On? */}
           <section className="mb-8">
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>

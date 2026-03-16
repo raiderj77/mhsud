@@ -440,7 +440,7 @@ export function HALTClient({ faqData }: Props) {
       <section className="mt-12 space-y-8 print:hidden">
         <div>
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            What Is HALT and Why Does It Matter in Recovery?
+            What Does HALT Stand For in Recovery?
           </h2>
           <div className="prose-custom">
             <p>
@@ -457,7 +457,7 @@ export function HALTClient({ faqData }: Props) {
 
         <div>
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            How to Use HALT as a Daily Practice
+            How Does the HALT Check-In Work?
           </h2>
           <div className="prose-custom">
             <p>
@@ -477,7 +477,7 @@ export function HALTClient({ faqData }: Props) {
 
         <div>
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Why Each HALT Factor Matters
+            When Should You Use a HALT Check-In?
           </h2>
           <div className="prose-custom">
             <p>
@@ -491,6 +491,25 @@ export function HALTClient({ faqData }: Props) {
             </p>
             <p>
               <strong>Tired:</strong> Sleep deprivation reduces willpower, emotional regulation, and impulse control. It also increases anxiety and depression. In early recovery, disrupted sleep is common — making rest an especially important area to monitor.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            What to Do After Your HALT Check-In
+          </h2>
+          <div className="prose-custom">
+            <p>
+              Once you identify which HALT factors are elevated, take immediate action to address them. Even small steps can reduce vulnerability significantly.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-neutral-600 dark:text-neutral-300">
+              <li><strong>If Hungry:</strong> Eat something nutritious. Keep easy, healthy snacks available. In recovery, regular meals help stabilize mood and energy.</li>
+              <li><strong>If Angry:</strong> Name the feeling out loud. Call a sponsor, trusted friend, or counselor. Write about it. Physical activity like walking can help discharge the energy.</li>
+              <li><strong>If Lonely:</strong> Reach out to someone — even a brief text or phone call. Attend a meeting, visit a coffee shop, or spend time in a public space. Connection does not have to be deep to be helpful.</li>
+              <li><strong>If Tired:</strong> Rest if you can. If not, reduce your commitments for the day and avoid making important decisions. Even a 20-minute nap or quiet break can help restore capacity.</li>
+            </ul>
+            <p>
+              The goal is not perfection — it is awareness. By regularly checking in with HALT, you build the habit of noticing what you need before a craving or emotional crisis takes over.
             </p>
           </div>
         </div>

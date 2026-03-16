@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/phq-9-depression-test",
   title: "PHQ-9 Depression Test | Free Screening Tool",
   description:
-    "Take the free PHQ-9 depression screening test used by doctors worldwide. 9 questions, 3 minutes. Private, instant results. Not a diagnosis — a starting point.",
+    "Take the free PHQ-9 depression screening test. 9 questions, instant results, clinically validated. Reviewed by a CADC-II counselor. Not a diagnosis.",
   keywords: [
     "phq-9 test", "phq 9 questionnaire", "depression screening test",
     "phq9", "phq-9", "depression test", "depression questionnaire",

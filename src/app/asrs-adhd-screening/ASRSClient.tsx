@@ -143,6 +143,9 @@ export function ASRSClient({ faqData }: Props) {
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
           ASRS v1.1 Adult ADHD Self-Check
         </h1>
+        <p className="text-sm text-gray-500 mt-1 mb-4">
+          Last updated: <time dateTime="2026-03">March 2026</time>
+        </p>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
           A WHO-developed screening tool that helps identify symptoms consistent with adult ADHD. This is the validated 6-item Part A screener used in clinical and research settings. Your answers stay in your browser and are never stored.
         </p>
@@ -552,7 +555,7 @@ export function ASRSClient({ faqData }: Props) {
           {/* Educational Content */}
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">
-              Understanding Adult ADHD
+              What Is Adult ADHD?
             </h2>
             <div className="card p-5 sm:p-6 space-y-4">
               <div>
@@ -612,9 +615,9 @@ export function ASRSClient({ faqData }: Props) {
 
           <AdSlot position="Mid Content" className="mb-8" />
 
-          {/* Sources & Further Reading */}
+          {/* What Research Is This Based On? */}
           <section className="mb-8">
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>

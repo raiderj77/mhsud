@@ -279,9 +279,9 @@ export function Who5Client({ faqData }: Props) {
           </div>
         </div>
 
-        {/* Sources & Further Reading */}
+        {/* What Research Is This Based On? */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Research Is This Based On?</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -359,7 +359,7 @@ export function Who5Client({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the WHO-5 Well-Being Index</h2>
+          <h2>What Is the WHO-5 Well-Being Index?</h2>
           <p>
             The WHO-5 Well-Being Index is a short, self-reported measure of current mental wellbeing developed by the World Health Organization in 1998. It is one of the most widely used measures of subjective wellbeing in the world, translated into more than 30 languages, and has been validated in numerous studies across diverse populations.
           </p>

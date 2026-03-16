@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/standard-drinks-calculator`;
 
 export const metadata: Metadata = createMetadata({
   path: "/standard-drinks-calculator",
-  title: "Standard Drinks Calculator | How Many Drinks Is That?",
+  title: "Standard Drinks Calculator",
   description:
-    "Calculate how many standard drinks are in your beverage. Enter size and alcohol %. See presets for beer, wine, cocktails. Many common drinks are more than 1 standard drink.",
+    "Find out how many standard drinks are in your beverage. Enter type, size, and alcohol percentage for an instant count. Free and clinically informed.",
   keywords: [
     "standard drinks calculator", "how many drinks is that",
     "what is a standard drink", "standard drink calculator",
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "how much is one drink of alcohol", "standard drink size",
   ],
   openGraph: {
-    title: "Standard Drinks Calculator | How Many Drinks Is That?",
+    title: "Standard Drinks Calculator",
     description: "Calculate how many standard drinks are in your beverage. Many common drinks contain more than one standard drink.",
     url: TOOL_URL,
     type: "website",

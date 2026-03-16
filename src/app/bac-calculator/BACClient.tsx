@@ -543,7 +543,7 @@ export function BACClient({ faqData }: Props) {
           {/* Educational Content */}
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">
-              Understanding Blood Alcohol Content
+              What Is Blood Alcohol Content (BAC)?
             </h2>
             <div className="card p-5 sm:p-6 space-y-4">
               <div>

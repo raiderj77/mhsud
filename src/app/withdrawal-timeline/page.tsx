@@ -6,9 +6,9 @@ const TOOL_URL = `${SITE_URL}/withdrawal-timeline`;
 
 export const metadata: Metadata = createMetadata({
   path: "/withdrawal-timeline",
-  title: "Withdrawal Timeline | What to Expect by Substance",
+  title: "Withdrawal Timeline by Substance",
   description:
-    "See withdrawal timelines for alcohol, opioids, benzos, stimulants, cannabis, and nicotine. Hour-by-hour and day-by-day symptoms, severity, and safety warnings. Free and private.",
+    "See what to expect during withdrawal by substance. Alcohol, opioids, stimulants, and more — day-by-day timeline reviewed by a CADC-II counselor.",
   keywords: [
     "withdrawal timeline", "alcohol withdrawal timeline",
     "opioid withdrawal timeline", "how long does withdrawal last",
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "withdrawal symptoms day by day", "detox timeline",
   ],
   openGraph: {
-    title: "Withdrawal Timeline | What to Expect by Substance",
+    title: "Withdrawal Timeline by Substance",
     description: "Detailed withdrawal timelines for 8 substances. See symptoms phase by phase with severity ratings and safety warnings.",
     url: TOOL_URL,
     type: "website",
