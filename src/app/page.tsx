@@ -634,6 +634,7 @@ export default function HomePage() {
             Mental health self-checks you can{" "}
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
+          <p className="text-sm text-gray-500 mt-1 mb-4 text-center">Last updated: March 16, 2026</p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
             Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.{" "}
             <Link
@@ -708,7 +709,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-              Guides &amp; Education
+              Guides &amp; Educational Resources
             </h2>
             <p className="text-neutral-500 dark:text-neutral-400">
               Understand the tools, the science behind them, and when to seek help.
@@ -754,7 +755,7 @@ export default function HomePage() {
       {/* FAQ Section */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
         <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-8">
-          Frequently Asked Questions
+          Frequently Asked Questions About Mental Health Screenings
         </h2>
         <script
           type="application/ld+json"

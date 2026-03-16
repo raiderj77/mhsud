@@ -110,7 +110,7 @@ export function ToolGrid({
       <section id="tools" className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
         <div className="mb-8">
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-            Self-Check Tools
+            Free Mental Health Self-Check Tools
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400">
             Choose a screening tool to get started. Each one runs entirely in your browser.
