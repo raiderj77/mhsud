@@ -418,7 +418,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
 
         <div>
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="prose-custom">
             <ul className="list-disc pl-5 space-y-2 text-neutral-600 dark:text-neutral-300">

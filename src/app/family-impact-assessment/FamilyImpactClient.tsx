@@ -503,7 +503,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link
@@ -617,7 +617,7 @@ export function FamilyImpactClient({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About This Assessment</h2>
+          <h2>About This Assessment Tool</h2>
           <p>
             The Family Impact Assessment is an original educational tool designed to help family members and loved ones reflect on how substance use is affecting their lives. It is not a validated clinical instrument — it is a structured self-reflection exercise that covers seven key areas commonly affected when a family member struggles with substance use.
           </p>

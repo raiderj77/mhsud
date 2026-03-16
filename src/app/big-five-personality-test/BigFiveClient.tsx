@@ -742,7 +742,7 @@ export function BigFiveClient({ faqData }: Props) {
 
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6 mb-5">
-            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h2>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               If you are struggling with your emotional well-being, support is available:
             </p>
@@ -823,7 +823,7 @@ export function BigFiveClient({ faqData }: Props) {
 
           {/* Related Tools */}
           <section className="mb-8">
-            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h2>
+            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "Attachment Style Quiz", desc: "36-item measure of attachment patterns", href: "/attachment-style-quiz" },

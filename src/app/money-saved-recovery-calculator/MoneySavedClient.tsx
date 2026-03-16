@@ -409,7 +409,7 @@ export function MoneySavedClient({ faqData }: Props) {
 
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               Recovery is about more than money. If you need support:
             </p>
@@ -488,7 +488,7 @@ export function MoneySavedClient({ faqData }: Props) {
 
           {/* Related Tools */}
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "Sobriety Calculator", desc: "Track days sober and recovery milestones", href: "/sobriety-calculator" },

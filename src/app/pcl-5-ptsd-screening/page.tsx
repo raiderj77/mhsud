@@ -83,6 +83,9 @@ export default function PCL5Page() {
         }}
       />
 
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: <time dateTime="2026-03">March 2026</time>
+      </p>
       <PCL5Client faqData={FAQ_DATA} />
     </>
   );

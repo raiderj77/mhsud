@@ -253,7 +253,7 @@ export function AUDITCClient({ faqData }: Props) {
           </div>
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
+            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h3>
             <div className="divide-y divide-sand-100 dark:divide-neutral-700">
               {QUESTIONS.map((q, i) => {
                 const selected = q.options.find((o) => o.value === answers[i]);
@@ -397,7 +397,7 @@ export function AUDITCClient({ faqData }: Props) {
           </section>
 
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "Full AUDIT (10 Questions)", desc: "Comprehensive WHO alcohol screen", href: "/audit-alcohol-test" },
@@ -415,7 +415,7 @@ export function AUDITCClient({ faqData }: Props) {
           <AdSlot position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If you&apos;re concerned about your drinking, help is available:</p>
             <div className="space-y-2.5">
               {[

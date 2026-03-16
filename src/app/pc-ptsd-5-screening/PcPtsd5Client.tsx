@@ -167,7 +167,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/phq-9-depression-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
@@ -407,7 +407,7 @@ export function PcPtsd5Client({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/pcl-5-ptsd-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
@@ -574,9 +574,6 @@ export function PcPtsd5Client({ faqData }: Props) {
       <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
         PC-PTSD-5 Screening
       </h1>
-      <p className="text-sm text-gray-500 mt-1 mb-4 text-center">
-        Last updated: <time dateTime="2026-03">March 2026</time>
-      </p>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
         In the <strong>past month</strong>, have you&hellip;
       </p>

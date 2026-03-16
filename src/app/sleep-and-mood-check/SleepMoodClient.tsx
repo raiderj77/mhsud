@@ -343,7 +343,7 @@ export function SleepMoodClient({ faqData }: Props) {
           <AdSlot position="Mid Content" className="mb-8" />
 
           <section className="mb-8">
-            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h2>
+            <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "PHQ-9 Depression Self-Check", desc: "Sleep problems and depression often co-occur", href: "/phq-9-depression-test" },
@@ -361,7 +361,7 @@ export function SleepMoodClient({ faqData }: Props) {
           <AdSlot position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
-            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h2>
+            <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If sleep or mood concerns are affecting your life, help is available:</p>
             <div className="space-y-2.5">
               {[

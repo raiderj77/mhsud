@@ -421,7 +421,7 @@ export function SpinClient({ faqData }: Props) {
 
         {/* Sources & Further Reading */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources and Further Reading References</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -443,7 +443,7 @@ export function SpinClient({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/gad-7-anxiety-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
@@ -501,7 +501,7 @@ export function SpinClient({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the SPIN</h2>
+          <h2>About the SPIN Assessment</h2>
           <p>
             The Social Phobia Inventory (SPIN) was developed in 2000 by Kathryn Connor, Jonathan Davidson, and colleagues at Duke University Medical Center. It was designed as a brief, comprehensive self-report measure that captures the three core dimensions of social anxiety disorder: fear, avoidance, and physiological symptoms. Since its publication, it has become one of the most widely used measures of social anxiety in both clinical practice and research.
           </p>

@@ -233,7 +233,7 @@ export function CesdClient({ faqData }: Props) {
 
         {/* Item Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          Item Breakdown
+          Your Item-by-Item Breakdown
         </h2>
         <div className="space-y-2 mb-8">
           {ITEMS.map((item) => {
@@ -293,7 +293,7 @@ export function CesdClient({ faqData }: Props) {
         {/* Score Guide */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Score Ranges
+            Understanding the Score Ranges
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {TIERS.map((t) => (
@@ -328,7 +328,7 @@ export function CesdClient({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/phq-9-depression-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
@@ -393,11 +393,11 @@ export function CesdClient({ faqData }: Props) {
           <p>
             The CES-D asks about experiences over the <strong>past week</strong>, covering depressed mood, feelings of guilt and worthlessness, helplessness and hopelessness, psychomotor retardation, loss of appetite, and sleep disturbance. Four items (#4, #8, #12, #16) are positively worded and reverse-scored to reduce response bias and assess positive affect.
           </p>
-          <h2>CES-D vs. PHQ-9</h2>
+          <h2>How the CES-D Compares to the PHQ-9</h2>
           <p>
             Both the CES-D and the <Link href="/phq-9-depression-test">PHQ-9</Link> screen for depression, but they differ in important ways. The CES-D has 20 items and covers a broader range of depressive experiences, including interpersonal difficulties and positive affect. The PHQ-9 has 9 items directly aligned with DSM-5 diagnostic criteria for major depressive disorder, making it more specific and more commonly used in clinical settings today. The CES-D remains widely used in research, community screening, and populations where a broader assessment is preferred.
           </p>
-          <h2>Scoring and Interpretation</h2>
+          <h2>How Scoring and Interpretation Works</h2>
           <p>
             The total score ranges from 0 to 60. A score of <strong>16 or higher</strong> is the traditionally used cutoff suggesting clinically significant depressive symptoms. This cutoff was established in Radloff&apos;s original 1977 validation study and has been replicated across many populations. However, a score above 16 does not confirm depression — it indicates that further evaluation by a qualified professional is recommended.
           </p>
@@ -485,9 +485,6 @@ export function CesdClient({ faqData }: Props) {
       <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
         CES-D Depression Scale
       </h1>
-      <p className="text-sm text-gray-500 mt-1 mb-4 text-center">
-        Last updated: <time dateTime="2026-03">March 2026</time>
-      </p>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         For each statement, select how often you have felt this way <strong>during the past week</strong>.
       </p>

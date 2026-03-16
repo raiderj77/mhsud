@@ -321,7 +321,7 @@ export function SCOFFClient({ faqData }: Props) {
 
             {/* Answer Summary */}
             <div className="card p-5 sm:p-6 mb-5">
-              <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Responses</h3>
+              <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h3>
               <div className="divide-y divide-sand-100 dark:divide-neutral-700">
                 {QUESTIONS.map((q, i) => (
                   <div key={i} className="flex justify-between items-start gap-3 py-2.5">
@@ -460,7 +460,7 @@ export function SCOFFClient({ faqData }: Props) {
 
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6 mb-5">
-            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support?</h3>
+            <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               If you are struggling with eating, food, or body image, you are not alone. Help is available:
             </p>
@@ -568,7 +568,7 @@ export function SCOFFClient({ faqData }: Props) {
 
           {/* Related Tools */}
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "DASS-21 Depression/Anxiety/Stress", desc: "One test screens three conditions", href: "/dass-21-depression-anxiety-stress" },

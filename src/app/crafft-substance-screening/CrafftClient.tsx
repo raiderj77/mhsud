@@ -360,7 +360,7 @@ export function CrafftClient({ faqData }: Props) {
 
         {/* Sources & Further Reading */}
         <section className="mb-8">
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources &amp; Further Reading</h2>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources and Further Reading References</h2>
           <div className="card p-5 sm:p-6">
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
@@ -382,7 +382,7 @@ export function CrafftClient({ faqData }: Props) {
         {/* Related Tools */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/depression-test-for-teens" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
@@ -450,7 +450,7 @@ export function CrafftClient({ faqData }: Props) {
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
-          <h2>About the CRAFFT</h2>
+          <h2>About the CRAFFT Screening</h2>
           <p>
             The CRAFFT was developed by Dr. John R. Knight and colleagues at the Center for Adolescent Substance Abuse Research (CeASAR) at Boston Children&apos;s Hospital and Harvard Medical School. It was first published in 1999 and has been updated several times, with version 2.1+N being the most current. It is the most widely studied and recommended adolescent substance use screening tool in the world.
           </p>

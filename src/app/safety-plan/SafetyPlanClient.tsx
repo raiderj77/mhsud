@@ -909,7 +909,7 @@ export function SafetyPlanClient({ faqData }: Props) {
         {/* ── Related Tools ── */}
         <section className="mb-12">
           <h2 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-            Related Tools
+            Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[

@@ -599,7 +599,7 @@ export function BACClient({ faqData }: Props) {
 
           {/* Related Tools */}
           <section className="mb-8">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "AUDIT Alcohol Screen", desc: "10-item WHO alcohol screening tool", href: "/audit-alcohol-test" },
