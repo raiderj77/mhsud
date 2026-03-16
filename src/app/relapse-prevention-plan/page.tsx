@@ -69,6 +69,12 @@ export default function RelapsePlanPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is a Relapse Prevention Plan?</h2>
+        <h2>How Does the Relapse Prevention Plan Tool Work?</h2>
+        <h2>What Do My Relapse Prevention Results Mean?</h2>
+      </section>
+
       <RelapsePlanClient faqData={FAQ_DATA} />
     </>
   );

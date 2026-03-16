@@ -38,6 +38,11 @@ export default function AUDITCPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT-C Alcohol Screening Test", description: "A free online implementation of the AUDIT-C, a validated 3-question rapid alcohol screening tool derived from the WHO's AUDIT. Used in primary care for quick identification of hazardous drinking.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT-C Alcohol Screen", url: TOOL_URL }])) }} />
+      <section className="sr-only">
+        <h2>What Is the AUDIT-C Alcohol Screen?</h2>
+        <h2>How Is the AUDIT-C Scored?</h2>
+        <h2>What Do My AUDIT-C Results Mean?</h2>
+      </section>
       <AUDITCClient faqData={FAQ_DATA} />
     </>
   );

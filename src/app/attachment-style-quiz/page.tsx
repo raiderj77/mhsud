@@ -84,6 +84,11 @@ export default function AttachmentStylePage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the ECR-R Attachment Style Quiz?</h2>
+        <h2>How Is the ECR-R Scored?</h2>
+        <h2>What Do My Attachment Style Results Mean?</h2>
+      </section>
       <AttachmentStyleClient faqData={FAQ_DATA} />
     </>
   );

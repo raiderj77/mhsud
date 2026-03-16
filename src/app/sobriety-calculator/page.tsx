@@ -68,6 +68,12 @@ export default function SobrietyCalculatorPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the Sobriety Calculator?</h2>
+        <h2>How Does the Sobriety Calculator Work?</h2>
+        <h2>What Do My Sobriety Milestones Mean?</h2>
+      </section>
+
       <SobrietyClient faqData={FAQ_DATA} />
     </>
   );

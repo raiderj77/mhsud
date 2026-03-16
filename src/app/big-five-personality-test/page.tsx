@@ -84,6 +84,12 @@ export default function BigFivePersonalityTestPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the Big Five Personality Test?</h2>
+        <h2>How Is the Big Five Test Scored?</h2>
+        <h2>What Do My Personality Results Mean?</h2>
+      </section>
+
       <BigFiveClient faqData={FAQ_DATA} />
     </>
   );

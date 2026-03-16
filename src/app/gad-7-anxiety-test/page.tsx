@@ -83,6 +83,11 @@ export default function GAD7Page() {
           ),
         }}
       />
+      <section className="sr-only">
+        <h2>What Is the GAD-7 Anxiety Screening?</h2>
+        <h2>How Is the GAD-7 Scored?</h2>
+        <h2>What Do My GAD-7 Results Mean?</h2>
+      </section>
       <GAD7Client faqData={FAQ_DATA} />
     </>
   );

@@ -84,6 +84,11 @@ export default function DASS21Page() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the DASS-21 Screening?</h2>
+        <h2>How Is the DASS-21 Scored?</h2>
+        <h2>What Do My DASS-21 Results Mean?</h2>
+      </section>
       <DASS21Client faqData={FAQ_DATA} />
     </>
   );

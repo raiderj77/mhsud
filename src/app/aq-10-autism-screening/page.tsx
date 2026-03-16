@@ -69,6 +69,11 @@ export default function AQ10Page() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the AQ-10 Autism Screening?</h2>
+        <h2>How Is the AQ-10 Scored?</h2>
+        <h2>What Do My AQ-10 Results Mean?</h2>
+      </section>
       <AQ10Client faqData={FAQ_DATA} />
     </>
   );

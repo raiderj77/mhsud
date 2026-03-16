@@ -69,6 +69,12 @@ export default function WithdrawalTimelinePage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the Withdrawal Timeline Tool?</h2>
+        <h2>How Does the Withdrawal Timeline Work?</h2>
+        <h2>What Do My Withdrawal Timeline Results Mean?</h2>
+      </section>
+
       <WithdrawalTimelineClient faqData={FAQ_DATA} />
     </>
   );

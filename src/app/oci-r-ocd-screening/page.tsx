@@ -83,6 +83,11 @@ export default function OCIRPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the OCI-R OCD Screening?</h2>
+        <h2>How Is the OCI-R Scored?</h2>
+        <h2>What Do My OCI-R Results Mean?</h2>
+      </section>
       <OCIRClient faqData={FAQ_DATA} />
     </>
   );

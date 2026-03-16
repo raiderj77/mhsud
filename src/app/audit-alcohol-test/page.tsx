@@ -42,6 +42,11 @@ export default function AUDITPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: TOOL_URL }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, lastReviewed: "2026-03-07" })) }} />
+      <section className="sr-only">
+        <h2>What Is the AUDIT Alcohol Screening?</h2>
+        <h2>How Is the AUDIT Scored?</h2>
+        <h2>What Do My AUDIT Results Mean?</h2>
+      </section>
       <AUDITClient faqData={FAQ_DATA} />
     </>
   );

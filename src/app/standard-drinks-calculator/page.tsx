@@ -69,6 +69,12 @@ export default function StandardDrinksPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the Standard Drinks Calculator?</h2>
+        <h2>How Are Standard Drinks Calculated?</h2>
+        <h2>What Do My Standard Drink Results Mean?</h2>
+      </section>
+
       <StandardDrinksClient faqData={FAQ_DATA} />
     </>
   );

@@ -69,6 +69,12 @@ export default function TreatmentCostPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the Treatment Cost Estimator?</h2>
+        <h2>How Does the Treatment Cost Estimator Work?</h2>
+        <h2>What Do My Treatment Cost Results Mean?</h2>
+      </section>
+
       <TreatmentCostClient faqData={FAQ_DATA} />
     </>
   );

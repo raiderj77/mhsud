@@ -84,8 +84,13 @@ export default function DAST10Page() {
       />
 
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03">March 2026</time>
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
       </p>
+      <section className="sr-only">
+        <h2>What Is the DAST-10 Drug Screening?</h2>
+        <h2>How Is the DAST-10 Scored?</h2>
+        <h2>What Do My DAST-10 Results Mean?</h2>
+      </section>
       <DAST10Client faqData={FAQ_DATA} />
     </>
   );

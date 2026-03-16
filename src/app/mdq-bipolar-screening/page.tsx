@@ -92,6 +92,11 @@ export default function MDQPage() {
         </div>
       </div>
 
+      <section className="sr-only">
+        <h2>What Is the MDQ Bipolar Screening?</h2>
+        <h2>How Is the MDQ Scored?</h2>
+        <h2>What Do My MDQ Results Mean?</h2>
+      </section>
       <MDQClient faqData={FAQ_DATA} />
     </>
   );

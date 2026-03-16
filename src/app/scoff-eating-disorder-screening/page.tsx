@@ -70,6 +70,11 @@ export default function SCOFFPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the SCOFF Eating Disorder Screening?</h2>
+        <h2>How Is the SCOFF Scored?</h2>
+        <h2>What Do My SCOFF Results Mean?</h2>
+      </section>
       <SCOFFClient faqData={FAQ_DATA} />
     </>
   );

@@ -95,8 +95,13 @@ export default function PcPtsd5Page() {
       />
 
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: <time dateTime="2026-03">March 2026</time>
+        Last updated: <time dateTime="2026-03-16">March 16, 2026</time>
       </p>
+      <section className="sr-only">
+        <h2>What Is the PC-PTSD-5 Screening?</h2>
+        <h2>How Is the PC-PTSD-5 Scored?</h2>
+        <h2>What Do My PC-PTSD-5 Results Mean?</h2>
+      </section>
       <PcPtsd5Client faqData={FAQ_DATA} />
     </>
   );

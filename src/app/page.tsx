@@ -673,6 +673,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="sr-only">
+        <h2>What Are Mental Health Screening Tools?</h2>
+        <h2>How Do Mental Health Screenings Work?</h2>
+        <h2>What Do My Screening Results Mean?</h2>
+      </section>
+
       {/* Tools Grid + Targeted Screenings (client component for search/filter) */}
       <ToolGrid
         tools={TOOLS}

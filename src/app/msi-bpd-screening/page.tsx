@@ -84,6 +84,11 @@ export default function MSIBPDPage() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the MSI-BPD Screening?</h2>
+        <h2>How Is the MSI-BPD Scored?</h2>
+        <h2>What Do My MSI-BPD Results Mean?</h2>
+      </section>
       <MSIBPDClient faqData={FAQ_DATA} />
     </>
   );

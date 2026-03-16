@@ -85,6 +85,11 @@ export default function PHQ9Page() {
         }}
       />
 
+      <section className="sr-only">
+        <h2>What Is the PHQ-9 Depression Screening?</h2>
+        <h2>How Is the PHQ-9 Scored?</h2>
+        <h2>What Do My PHQ-9 Results Mean?</h2>
+      </section>
       <PHQ9Client faqData={FAQ_DATA} />
 
       {/* Internal Links */}
