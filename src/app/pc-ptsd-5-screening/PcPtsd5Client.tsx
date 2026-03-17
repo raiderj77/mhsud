@@ -278,7 +278,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* Symptom Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -385,7 +385,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           </div>
         </div>
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* What Research Is This Based On? */}
         <section className="mb-8">
@@ -533,7 +533,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           ~1 minute · Completely private · Public domain instrument
         </p>
 
-        <AdSlot position="tool-top" />
+        <AdSlot npa position="tool-top" />
 
         <div className="p-6 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl mb-8">
           <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">

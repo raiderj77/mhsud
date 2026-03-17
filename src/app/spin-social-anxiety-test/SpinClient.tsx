@@ -298,7 +298,7 @@ export function SpinClient({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* Clinical Cutoff Alert */}
         {clinicalCutoff && totalScore >= 21 && (
@@ -399,7 +399,7 @@ export function SpinClient({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* Score Guide */}
         <div className="mb-8">
@@ -610,7 +610,7 @@ export function SpinClient({ faqData }: Props) {
         17 questions · ~3 minutes · Completely private · Connor et al. (2000)
       </p>
 
-      <AdSlot position="tool-top" />
+      <AdSlot npa position="tool-top" />
 
       {/* Instruction */}
       <div className="mb-6 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">

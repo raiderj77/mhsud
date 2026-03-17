@@ -180,7 +180,7 @@ export function K6Client({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* SPD Follow-up Recommendation */}
         {isSPD && (
@@ -267,7 +267,7 @@ export function K6Client({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* Score Guide */}
         <div className="mb-8">
@@ -479,7 +479,7 @@ export function K6Client({ faqData }: Props) {
         6 questions · ~2 minutes · Completely private · Public domain instrument
       </p>
 
-      <AdSlot position="tool-top" />
+      <AdSlot npa position="tool-top" />
 
       {/* Stem */}
       <div className="mb-6 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">

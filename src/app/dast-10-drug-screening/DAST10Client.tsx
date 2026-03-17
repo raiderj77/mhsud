@@ -493,7 +493,7 @@ export function DAST10Client({ faqData }: Props) {
             </Link>
           </div>
 
-          <AdSlot position="Below Results" className="mb-8" />
+          <AdSlot npa position="Below Results" className="mb-8" />
 
           {/* Educational Content */}
           <section className="mb-8">
@@ -550,7 +550,7 @@ export function DAST10Client({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Mid Content" className="mb-8" />
+          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -590,7 +590,7 @@ export function DAST10Client({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Footer" className="mb-8" />
+          <AdSlot npa position="Footer" className="mb-8" />
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">

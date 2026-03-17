@@ -15,6 +15,9 @@ interface AdSlotProps {
    */
   adSlot?: string;
   adFormat?: "auto" | "rectangle" | "vertical" | "horizontal";
+  /** When true, signals AdSense to serve non-personalized ads (data-npa="1").
+   *  Required on health screening pages per privacy policy. */
+  npa?: boolean;
 }
 
 export function AdSlot({
@@ -22,6 +25,7 @@ export function AdSlot({
   className = "",
   adSlot,
   adFormat = "auto",
+  npa = false,
 }: AdSlotProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
@@ -53,6 +57,7 @@ export function AdSlot({
           style={{ display: "block" }}
           data-ad-client="ca-pub-7171402107622932"
           {...(adSlot ? { "data-ad-slot": adSlot } : {})}
+          {...(npa ? { "data-npa": "1" } : {})}
           data-ad-format={adFormat}
           data-full-width-responsive="true"
         />

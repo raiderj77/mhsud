@@ -211,7 +211,7 @@ export function CesdClient({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* PHQ-9 Nudge */}
         {showPhq9Nudge && (
@@ -278,7 +278,7 @@ export function CesdClient({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* Reverse Scoring Explainer */}
         <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl">
@@ -492,7 +492,7 @@ export function CesdClient({ faqData }: Props) {
         20 questions · ~5 minutes · Completely private · NIMH public domain instrument
       </p>
 
-      <AdSlot position="tool-top" />
+      <AdSlot npa position="tool-top" />
 
       {/* Progress — sticky */}
       <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">

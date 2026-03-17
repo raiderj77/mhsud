@@ -356,7 +356,7 @@ export function AUDITCClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="Below Results" className="mb-8" />
+          <AdSlot npa position="Below Results" className="mb-8" />
 
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
@@ -373,7 +373,7 @@ export function AUDITCClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Mid Content" className="mb-8" />
+          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -412,7 +412,7 @@ export function AUDITCClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Footer" className="mb-8" />
+          <AdSlot npa position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h3>

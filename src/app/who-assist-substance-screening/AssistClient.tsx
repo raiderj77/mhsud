@@ -296,7 +296,7 @@ export function AssistClient({ faqData }: Props) {
         </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
-        <AdSlot position="tool-top" />
+        <AdSlot npa position="tool-top" />
 
         <div className="mb-8 p-5 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">
           <h2 className="text-base font-bold text-sage-700 dark:text-sage-300 mb-3">What to Expect</h2>
@@ -715,7 +715,7 @@ export function AssistClient({ faqData }: Props) {
           </div>
         )}
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* Injection Risk Flag */}
         {injectionRisk && (
@@ -905,7 +905,7 @@ export function AssistClient({ faqData }: Props) {
           />
         )}
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
