@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
+
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -394,8 +394,6 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         Evidence-based distress tolerance skills from Dialectical Behavior Therapy. Tap any card to see detailed instructions and examples. Use the random button when you need a skill fast.
       </p>
 
-      <AdSlot position="top-banner" className="mb-6" />
-
       {/* Random Skill button */}
       <button
         onClick={handleRandom}
@@ -514,8 +512,6 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         })}
       </div>
 
-      <AdSlot position="mid-content" className="my-8" />
-
       {/* ── Educational Content ──────────────────────── */}
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -609,8 +605,6 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
           ))}
         </div>
       </section>
-
-      <AdSlot position="bottom-content" className="mt-8" />
 
       {/* ── Clinical Disclaimer ──────────────────────── */}
       <section className="mt-12">
