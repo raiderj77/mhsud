@@ -21,7 +21,7 @@ const nextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" }, // DENY blocks AdSense iframes — changed to SAMEORIGIN
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()" },
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           {
@@ -40,6 +40,13 @@ const nextConfig = {
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://consent.cookiebot.com https://consentcdn.cookiebot.com https://fundingchoicesmessages.google.com",
             ].join("; "),
           },
+        ],
+      },
+      {
+        // Screening pages: no-referrer to prevent health URLs leaking to third parties
+        source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|dast-10-drug-screening|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|oci-r-ocd-screening|spin-social-anxiety-test|mdq-bipolar-screening|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator)",
+        headers: [
+          { key: "Referrer-Policy", value: "no-referrer" },
         ],
       },
       {
