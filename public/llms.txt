@@ -153,7 +153,7 @@
 - [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide): Complete guide to depression screening, USPSTF guidelines, and treatment options
 - [Understanding Your Screening Results](https://mindchecktools.com/blog/understanding-mental-health-screening-results): What screening results mean, what they do not mean, and practical next steps
 
-## Blog — Condition Explainers
+## Blog — Condition and Population Guides
 
 - [What Is Anxiety?](https://mindchecktools.com/blog/what-is-anxiety): Symptoms, types, and evidence-based treatment for anxiety disorders
 - [What Is Generalized Anxiety Disorder?](https://mindchecktools.com/blog/what-is-generalized-anxiety-disorder): Deep dive into GAD symptoms, causes, and treatments
@@ -182,15 +182,71 @@
 - [ACE Score Meaning](https://mindchecktools.com/blog/ace-score-meaning): What your ACE score means and why resilience matters more than the number
 - [Loneliness and Mental Health](https://mindchecktools.com/blog/loneliness-mental-health): How chronic loneliness affects mental and physical health
 - [Seasonal Affective Disorder](https://mindchecktools.com/blog/seasonal-affective-disorder): Understanding winter depression, light therapy, and when to seek help
+- [Depression in Older Adults](https://mindchecktools.com/blog/depression-seniors-guide): Signs that are often missed and why depression is not normal aging
+- [Depression in New Moms](https://mindchecktools.com/blog/depression-new-moms-guide): Beyond baby blues — signs, risk factors, and how screening helps
+- [Depression in Veterans](https://mindchecktools.com/blog/depression-veterans-guide): Why depression goes unrecognized in veterans and how to get support
+- [Depression in Men](https://mindchecktools.com/blog/depression-men-guide): Why male depression looks different and goes untreated
+- [Anxiety in Women](https://mindchecktools.com/blog/anxiety-women-guide): Why women are affected more and what hormones, trauma, and mental load contribute
+- [Anxiety in Men](https://mindchecktools.com/blog/anxiety-men-guide): How male anxiety hides as anger, workaholism, and physical symptoms
+- [PTSD in Veterans](https://mindchecktools.com/blog/ptsd-veterans-guide): Signs, screening, and getting the right support after military service
+- [PTSD in First Responders](https://mindchecktools.com/blog/ptsd-first-responders-guide): The hidden cost of saving lives — cumulative trauma and confidential screening
+- [ADHD in Women](https://mindchecktools.com/blog/adhd-women-guide): Why ADHD goes undiagnosed in women and how hormones affect symptoms
+- [ADHD Test for Adults](https://mindchecktools.com/blog/adhd-adults-guide): How to know if you should get screened for adult ADHD
+- [Bipolar in Young Adults](https://mindchecktools.com/blog/bipolar-young-adults-guide): Early signs and why bipolar is often misdiagnosed as depression
+- [Depression in Teenagers](https://mindchecktools.com/blog/depression-teens-guide): Signs parents should know and how teen depression differs from adult depression
+- [Anxiety in Teenagers](https://mindchecktools.com/blog/anxiety-teens-guide): How to recognize teen anxiety and what actually helps
+- [OCD in Teenagers](https://mindchecktools.com/blog/ocd-teens-guide): What OCD looks like in teens and how ERP treatment works
+- [ADHD in Teenagers](https://mindchecktools.com/blog/adhd-teens-guide): Signs, challenges, and how screening helps teens get support
+- [Substance Use Screening for Teens](https://mindchecktools.com/blog/drug-screening-teens-guide): The CRAFFT screening tool and how to start a conversation
+- [BPD in Young Adults](https://mindchecktools.com/blog/bpd-young-adults-guide): Early signs, getting assessed, and finding help
+- [BPD in Women](https://mindchecktools.com/blog/bpd-women-guide): Diagnosis, gender bias, and evidence-based treatment
+- [Social Anxiety in College](https://mindchecktools.com/blog/social-anxiety-college-guide): How to recognize it and find support on campus
+- [Alcohol Screening for College Students](https://mindchecktools.com/blog/alcohol-screening-college-guide): When social drinking becomes a problem
+- [Alcohol Use in the Military](https://mindchecktools.com/blog/alcohol-screening-military-guide): Culture, risk, and confidential screening options
+- [College Stress](https://mindchecktools.com/blog/stress-college-students-guide): When academic pressure becomes a mental health concern
+- [Loneliness in Older Adults](https://mindchecktools.com/blog/loneliness-seniors-guide): Why it matters for health and what to do about it
+- [Eating Disorders in Athletes](https://mindchecktools.com/blog/eating-disorder-athletes-guide): RED-S, sport-specific risks, and confidential screening
+- [Substance Use Screening for Parents](https://mindchecktools.com/blog/substance-abuse-parents-guide): Honest assessment without judgment
+
+## Blog — Burnout Population Guides
+
+- [Burnout in Healthcare Workers](https://mindchecktools.com/blog/burnout-healthcare-workers-guide): Signs, causes, moral injury, and what actually helps
+- [Nurse Burnout](https://mindchecktools.com/blog/burnout-nurses-guide): Why it happens, how it feels, and what to do about it
+- [Teacher Burnout](https://mindchecktools.com/blog/burnout-teachers-guide): Signs, causes, and strategies for educators
+- [Parental Burnout](https://mindchecktools.com/blog/burnout-parents-guide): When the demands of parenting become overwhelming
+- [Caregiver Burnout](https://mindchecktools.com/blog/caregiver-burnout-guide): Signs, prevention, and getting help for yourself
 
 ## Blog — Recovery and Treatment
 
 - [Stages of Change in Recovery](https://mindchecktools.com/blog/stages-of-change-recovery): The 5 stages of change model for addiction recovery
 - [Quit Drinking Timeline](https://mindchecktools.com/blog/quit-drinking-timeline): Hour-by-hour timeline of what happens when you stop drinking
 - [Relapse Prevention Plan Guide](https://mindchecktools.com/blog/relapse-prevention-plan-guide): How to build a relapse prevention plan step by step
+- [Relapse Prevention Guide](https://mindchecktools.com/blog/relapse-prevention-guide): The three stages of relapse and how to intervene early
+- [Trigger Identification Guide](https://mindchecktools.com/blog/trigger-identification-guide): How to recognize and manage personal relapse triggers
+- [Sobriety Calculator Guide](https://mindchecktools.com/blog/sobriety-calculator-guide): Why tracking your sober days matters for recovery
+- [Withdrawal Symptoms Guide](https://mindchecktools.com/blog/withdrawal-symptoms-guide): What to expect by substance and when to seek medical help
+- [Money Saved in Recovery](https://mindchecktools.com/blog/money-saved-recovery-guide): How sobriety changes your finances
+- [Health Recovery Timeline](https://mindchecktools.com/blog/health-recovery-timeline-guide): What happens to your body after quitting substances
+- [Treatment Cost Guide](https://mindchecktools.com/blog/treatment-cost-guide): Addiction treatment costs, insurance, and how to pay
+- [HALT Check-In Guide](https://mindchecktools.com/blog/halt-checkin-guide): The recovery check-in that prevents relapse
+- [Daily Recovery Check-In Guide](https://mindchecktools.com/blog/daily-recovery-checkin-guide): Why structured self-reflection supports sobriety
+- [Readiness to Change Guide](https://mindchecktools.com/blog/readiness-to-change-guide): Assessing where you are in the change process
+- [Coping Skills Guide](https://mindchecktools.com/blog/coping-skills-guide): Evidence-based coping techniques that actually work
+- [How Addiction Affects Families](https://mindchecktools.com/blog/family-impact-addiction-guide): Understanding the ripple effects on every family member
 - [DBT Skills for Beginners](https://mindchecktools.com/blog/dbt-skills-beginners): The 4 DBT skill modules explained in plain language
 - [Cognitive Distortions List](https://mindchecktools.com/blog/cognitive-distortions-list): 15 common thinking errors that fuel anxiety and depression
 - [Anxiety Coping Strategies](https://mindchecktools.com/blog/anxiety-coping-strategies): Evidence-based techniques for managing anxiety symptoms
+
+## Blog — Therapeutic Techniques
+
+- [CBT Thought Records](https://mindchecktools.com/blog/cbt-thought-record-guide): How to challenge negative thinking patterns with the 7-column method
+- [Urge Surfing Guide](https://mindchecktools.com/blog/urge-surfing-guide): How to ride out cravings without giving in
+- [Values Clarification Guide](https://mindchecktools.com/blog/values-clarification-guide): How knowing what matters guides better decisions
+- [Box Breathing Guide](https://mindchecktools.com/blog/box-breathing-guide): A simple 4-4-4-4 technique for anxiety, stress, and panic
+- [Grounding Techniques Guide](https://mindchecktools.com/blog/grounding-techniques-guide): How the 5-4-3-2-1 method calms anxiety and dissociation
+- [Worry Time Guide](https://mindchecktools.com/blog/worry-time-guide): How scheduling your worries reduces anxiety
+- [DBT Crisis Survival Skills](https://mindchecktools.com/blog/dbt-crisis-skills-guide): What to do when you cannot think straight
+- [Safety Planning Guide](https://mindchecktools.com/blog/safety-planning-guide): A step-by-step guide to creating your crisis plan
 
 ## Blog — Help-Seeking and Wellness
 
