@@ -76,6 +76,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
+        {/* DNS preconnect for critical third-party origins — reduces connection latency */}
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
+        <link rel="dns-prefetch" href="https://adservice.google.com" />
+
         {/*
           Cookiebot consent management.
           data-blockingmode="auto" handles script blocking via Cookiebot's own mechanism,
@@ -96,9 +103,13 @@ export default function RootLayout({
           The gtag/js script alone does NOT initialize tracking — the inline init is required.
           Consent defaults are set to 'denied' until Cookiebot grants permission (GDPR/CCPA compliant).
         */}
+        {/*
+          FIX: GTM deferred to lazyOnload — analytics does not need to block paint.
+          Consent Mode v2 defaults are still set before any tracking fires.
+        */}
         <Script
           id="gtag-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -119,7 +130,7 @@ export default function RootLayout({
         />
         <Script
           id="gtag-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
         />
 

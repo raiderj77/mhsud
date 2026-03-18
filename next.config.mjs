@@ -5,6 +5,11 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 
+  // Eliminate legacy polyfills for modern browsers (saves ~12KB)
+  experimental: {
+    browsersListForSwc: true,
+  },
+
   // Aggressive image optimization
   images: {
     formats: ["image/avif", "image/webp"],
