@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is a safety plan?",
     answer:
-      "A safety plan is a written, prioritized list of coping strategies and resources that you can use when you are experiencing a suicidal crisis or overwhelming emotional distress. It is designed to be used in the moment \u2014 when your thinking may be clouded and decision-making is impaired. The plan walks you through a series of steps, starting with internal strategies and escalating to professional help, so you always have a next step to try.",
+      "A safety plan is a written, prioritized list of coping strategies and resources for use during a suicidal crisis or overwhelming emotional distress. It is designed for moments when thinking is clouded and decision-making is impaired. The plan walks you through escalating steps, from internal coping strategies to professional help, so you always have a next step.",
   },
   {
     question: "Is a safety plan the same as a no-suicide contract?",
     answer:
-      "No. A no-suicide contract (or \u201Ccontract for safety\u201D) is an agreement where a person promises not to attempt suicide. Research has shown that no-suicide contracts are NOT effective at reducing suicide risk and may actually create a false sense of security for clinicians. The Stanley-Brown Safety Planning Intervention, by contrast, is an evidence-based tool that provides actionable coping strategies. Safety plans reduce suicide attempts; no-suicide contracts do not.",
+      "No. A no-suicide contract asks someone to promise not to attempt suicide, but research shows these contracts are not effective and may create a false sense of security. The Stanley-Brown Safety Planning Intervention is an evidence-based tool providing actionable coping strategies. Safety plans reduce suicide attempts; no-suicide contracts do not.",
   },
   {
     question: "When should I use my safety plan?",
     answer:
-      "Use your safety plan at the earliest sign of a crisis \u2014 when you first notice warning signs such as increasing hopelessness, withdrawal from others, racing thoughts about death or self-harm, or overwhelming emotional pain. The earlier you engage with your safety plan, the more effective it is. You do not need to wait until you are in acute danger to start using it.",
+      "Use your safety plan at the earliest sign of a crisis \u2014 when you first notice increasing hopelessness, withdrawal from others, racing thoughts about self-harm, or overwhelming emotional pain. The earlier you engage with your plan, the more effective it is. You do not need to wait until you are in acute danger to start using it.",
   },
   {
     question: "Should I create a safety plan with a therapist?",
     answer:
-      "Ideally, yes. Research shows that safety plans are most effective when created collaboratively with a trained clinician who can help you identify specific, personalized coping strategies and ensure the plan is thorough. However, having any safety plan is better than having none. If you do not currently have a therapist, you can create an initial plan on your own and refine it later with professional support.",
+      "Ideally, yes. Research shows safety plans are most effective when created collaboratively with a trained clinician who can help you identify personalized coping strategies. However, having any safety plan is better than having none. If you do not currently have a therapist, you can create an initial plan on your own and refine it later with professional support.",
   },
 ];
 

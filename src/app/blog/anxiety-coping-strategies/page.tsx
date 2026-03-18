@@ -33,32 +33,32 @@ const FAQ_DATA = [
   {
     question: "What's the difference between normal anxiety and an anxiety disorder?",
     answer:
-      "Normal anxiety is a temporary response to stress that helps us stay alert and focused. Anxiety disorders involve persistent, excessive worry that interferes with daily functioning and lasts for months. According to the National Institute of Mental Health (NIMH), anxiety disorders affect approximately 19% of U.S. adults each year. If anxiety symptoms persist for six months or more and significantly impact your work, relationships, or quality of life, it may indicate an anxiety disorder requiring professional evaluation.",
+      "Normal anxiety is a temporary response to stress that helps you stay alert. Anxiety disorders involve persistent, excessive worry that interferes with daily functioning for months. According to NIMH, anxiety disorders affect approximately 19% of U.S. adults each year. If symptoms persist for six months and significantly impact work, relationships, or quality of life, professional evaluation is recommended.",
   },
   {
     question: "How quickly do anxiety coping strategies work?",
     answer:
-      "Different strategies work at different speeds. Breathing exercises and grounding techniques can provide immediate relief during acute anxiety episodes. Cognitive restructuring and mindfulness practices typically show benefits within weeks of consistent practice. Research published in JAMA Psychiatry indicates that cognitive-behavioral techniques can reduce anxiety symptoms by 50% or more within 12-16 weeks when practiced regularly. Consistency is more important than perfection when implementing these strategies.",
+      "Different strategies work at different speeds. Breathing exercises and grounding techniques provide immediate relief during acute episodes. Cognitive restructuring and mindfulness typically show benefits within weeks of consistent practice. Research indicates cognitive-behavioral techniques can reduce anxiety symptoms by 50% or more within 12\u201316 weeks. Consistency matters more than perfection when implementing these strategies.",
   },
   {
     question: "Can I use these strategies instead of medication?",
     answer:
-      "For mild to moderate anxiety, evidence-based coping strategies may be sufficient as a first-line approach. However, for moderate to severe anxiety disorders, the American Psychological Association recommends a combination of psychotherapy (like CBT) and medication as the most effective treatment. A 2020 meta-analysis in The Lancet Psychiatry found that combined treatment approaches yielded better long-term outcomes than either approach alone. Always consult with a healthcare provider before making changes to your treatment plan.",
+      "For mild to moderate anxiety, evidence-based coping strategies may be sufficient as a first-line approach. For moderate to severe anxiety disorders, the APA recommends combining psychotherapy and medication for the most effective treatment. A meta-analysis in The Lancet Psychiatry found combined approaches yield better long-term outcomes than either alone. Always consult a healthcare provider before changing your treatment plan.",
   },
   {
     question: "What if coping strategies make my anxiety worse?",
     answer:
-      "Some individuals with severe anxiety may experience initial discomfort when confronting anxious thoughts or sensations. This is sometimes called the 'anxiety paradox'—trying to control anxiety can increase it. If strategies consistently worsen your symptoms, it may indicate the need for professional guidance. A licensed therapist can help you implement techniques at an appropriate pace and address underlying factors contributing to your anxiety.",
+      "Some individuals with severe anxiety may experience initial discomfort when confronting anxious thoughts. This is sometimes called the anxiety paradox — trying to control anxiety can temporarily increase it. If strategies consistently worsen your symptoms, professional guidance may be needed. A licensed therapist can help implement techniques at an appropriate pace and address underlying contributing factors.",
   },
   {
     question: "Are there specific strategies for panic attacks?",
     answer:
-      "Yes, panic attacks require specialized approaches. The 5-4-3-2-1 grounding technique, diaphragmatic breathing, and temperature changes (like holding an ice cube) can help interrupt panic cycles. Research in the Journal of Anxiety Disorders shows that interoceptive exposure—safely recreating physical sensations of panic—can reduce panic attack frequency by up to 80% when guided by a professional. For recurrent panic attacks, cognitive-behavioral therapy specifically for panic disorder is considered the gold standard treatment.",
+      "Yes. The 5-4-3-2-1 grounding technique, diaphragmatic breathing, and temperature changes (like holding ice) can interrupt panic cycles. Research shows interoceptive exposure — safely recreating physical sensations of panic — can reduce panic attack frequency by up to 80% when professionally guided. For recurrent panic attacks, CBT specifically for panic disorder is the gold standard treatment.",
   },
   {
     question: "How do I know when to seek professional help for anxiety?",
     answer:
-      "Consider seeking professional help if: 1) Anxiety interferes with daily responsibilities for two weeks or more, 2) You avoid situations due to anxiety, 3) Physical symptoms (racing heart, dizziness, nausea) are frequent, 4) You experience panic attacks, 5) Anxiety affects sleep or appetite significantly, or 6) You use substances to cope with anxiety. The Anxiety and Depression Association of America recommends professional evaluation if anxiety symptoms persist despite self-help efforts.",
+      "Consider seeking professional help if anxiety interferes with daily responsibilities for two weeks or more, you avoid situations due to anxiety, physical symptoms are frequent, you experience panic attacks, sleep or appetite are significantly affected, or you use substances to cope. The ADAA recommends professional evaluation if symptoms persist despite self-help efforts.",
   },
 ];
 

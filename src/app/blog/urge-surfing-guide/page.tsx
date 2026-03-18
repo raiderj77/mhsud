@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How long do cravings last?",
     answer:
-      "Most cravings peak within 15\u201330 minutes and then naturally subside if you do not act on them. Research on substance cravings consistently shows that the intensity follows a wave-like pattern \u2014 rising, cresting, and falling. Some cravings may feel shorter (5\u201310 minutes) or longer (up to 45 minutes) depending on the trigger, but they are always temporary. The key insight of urge surfing is that no craving lasts forever.",
+      "Most cravings peak within 15\u201330 minutes and naturally subside if you do not act on them. Intensity follows a wave-like pattern \u2014 rising, cresting, and falling. Some cravings may feel shorter or longer depending on the trigger, but they are always temporary. The key insight of urge surfing is that no craving lasts forever.",
   },
   {
     question: "Does urge surfing actually work?",
     answer:
-      "Yes. Urge surfing has been studied as part of Mindfulness-Based Relapse Prevention (MBRP), which has shown significant reductions in substance use and craving intensity in randomized controlled trials. A 2014 study by Bowen et al. found that MBRP participants had significantly lower rates of relapse compared to standard relapse prevention at 12-month follow-up. The technique works by changing your relationship to cravings rather than trying to suppress them.",
+      "Yes. Urge surfing is a core component of Mindfulness-Based Relapse Prevention (MBRP), which shows significant reductions in substance use in randomized controlled trials. A 2014 study by Bowen et al. found MBRP participants had significantly lower relapse rates at 12-month follow-up. The technique works by changing your relationship to cravings rather than suppressing them.",
   },
   {
     question: "What if the urge doesn't go away?",
     answer:
-      "If an urge feels persistent, it may be that you are fighting it rather than observing it. Resistance can intensify cravings. Try shifting your attention to the physical sensations themselves \u2014 where exactly in your body do you feel the urge? What does it feel like? Sometimes a craving will come in multiple waves. Each wave still peaks and passes. If cravings feel unmanageable, reach out to a therapist, sponsor, or call SAMHSA\u2019s helpline at 1-800-662-4357.",
+      "If an urge feels persistent, you may be fighting it rather than observing it \u2014 resistance intensifies cravings. Shift attention to the physical sensations: where in your body do you feel the urge? Cravings sometimes come in multiple waves, each peaking and passing. If cravings feel unmanageable, call SAMHSA\u2019s helpline at 1-800-662-4357.",
   },
   {
     question: "Can urge surfing help with non-substance cravings?",
     answer:
-      "Yes. Urge surfing has been applied to a wide range of compulsive behaviors including binge eating, gambling, compulsive shopping, and problematic internet use. The underlying principle is the same: cravings for any behavior follow the same wave pattern and will pass without action. Mindfulness-based approaches are now used across behavioral addictions, not just substance use disorders.",
+      "Yes. Urge surfing applies to compulsive behaviors including binge eating, gambling, compulsive shopping, and problematic internet use. The underlying principle is the same: cravings for any behavior follow a wave pattern and pass without action. Mindfulness-based approaches are now used across behavioral addictions, not just substance use disorders.",
   },
 ];
 

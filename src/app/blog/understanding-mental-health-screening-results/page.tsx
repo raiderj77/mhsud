@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can I use these results to self-diagnose?",
     answer:
-      "No. Screening results can tell you that your symptom pattern crosses a validated statistical threshold \u2014 they cannot diagnose you with a condition. Diagnosis requires a comprehensive clinical evaluation that considers your full history, context, and functioning. Self-diagnosis based on screening scores leads to either unnecessary alarm or false reassurance.",
+      "No. Screening results indicate your symptom pattern crosses a validated statistical threshold \u2014 they cannot diagnose a condition. Diagnosis requires comprehensive clinical evaluation considering your full history, context, and functioning. Self-diagnosis based on screening scores can lead to unnecessary alarm or false reassurance. A clinician provides the context screening tools cannot.",
   },
   {
     question: "I scored high on multiple screens. Does that mean I have multiple conditions?",
     answer:
-      "It means multiple symptom dimensions are elevated, which is worth discussing with a clinician. Mental health conditions frequently co-occur \u2014 depression and anxiety together, PTSD and depression, ADHD and anxiety. But elevated scores across multiple tools might also reflect how interrelated these symptom dimensions are, or situational distress that\u2019s affecting all areas. A clinician can help sort out what\u2019s what.",
+      "It means multiple symptom dimensions are elevated, which is worth discussing with a clinician. Mental health conditions frequently co-occur \u2014 depression with anxiety, PTSD with depression. But elevated scores across tools might also reflect interrelated symptoms or situational distress affecting all areas. A clinician can help determine what is driving the pattern.",
   },
   {
     question: "Should I be worried about my results?",
     answer:
-      "A high score is a signal worth taking seriously \u2014 not a cause for panic. These tools were designed to identify people who might benefit from professional evaluation, and a high score means you\u2019re in that group. Worry less about what the score \u201cmeans\u201d and focus on the concrete next step: talking to your doctor or a therapist.",
+      "A high score is a signal worth taking seriously, not a cause for panic. These tools identify people who might benefit from professional evaluation, and a high score places you in that group. Focus less on what the score means and more on the concrete next step: talking to your doctor or a therapist about what you are experiencing.",
   },
   {
     question: "How accurate are these screening tools?",
     answer:
-      "The tools on this site are among the most validated in clinical and research settings \u2014 the PHQ-9, GAD-7, PCL-5, and AUDIT are used in primary care, hospitals, and research worldwide. Sensitivity (correctly identifying people with a condition) typically ranges from 70\u201390%; specificity (correctly ruling out those without) is similar. No screening tool is perfect \u2014 which is why clinical evaluation follows a positive screen.",
+      "The PHQ-9, GAD-7, PCL-5, and AUDIT are among the most validated screening tools in clinical practice, used in primary care and research worldwide. Sensitivity and specificity typically range from 70\u201390%. No screening tool is perfect, which is why clinical evaluation follows a positive screen to confirm or rule out a condition.",
   },
 ];
 

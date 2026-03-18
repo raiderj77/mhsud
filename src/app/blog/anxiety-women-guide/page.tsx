@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "Why are women more likely to have anxiety?",
     answer:
-      "The 2:1 ratio reflects a combination of biological, psychological, and social factors. Hormonal fluctuations across the menstrual cycle, pregnancy, and perimenopause affect neurotransmitter systems involved in anxiety. Higher rates of trauma and sexual violence increase vulnerability. Socialization patterns that emphasize vigilance, caretaking, and emotional labor add chronic cognitive load. No single factor explains the gap &mdash; it is the interaction of all of them.",
+      "The 2:1 ratio reflects biological, psychological, and social factors working together. Hormonal fluctuations across the menstrual cycle, pregnancy, and perimenopause affect neurotransmitter systems involved in anxiety. Higher rates of trauma increase vulnerability. Socialization patterns emphasizing vigilance and emotional labor add chronic cognitive load. No single factor explains the gap &mdash; it is their interaction.",
   },
   {
     question: "Can hormones cause anxiety?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Is perimenopause-related anxiety common?",
     answer:
-      "Yes. Research suggests that women are 2&ndash;4 times more likely to experience anxiety during perimenopause compared to premenopause, even women with no prior anxiety history. Fluctuating and declining estrogen levels affect the brain&apos;s stress response system. Many women in their 40s and 50s are surprised by new-onset anxiety and do not connect it to perimenopause. It is underrecognized by both patients and providers.",
+      "Yes. Research suggests women are 2&ndash;4 times more likely to experience anxiety during perimenopause compared to premenopause, even those with no prior history. Fluctuating estrogen levels affect the brain&apos;s stress response system. Many women in their 40s and 50s do not connect new-onset anxiety to perimenopause. It remains underrecognized by both patients and providers.",
   },
   {
     question: "How is anxiety in women treated?",

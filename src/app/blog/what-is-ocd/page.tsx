@@ -34,22 +34,22 @@ const FAQ_DATA = [
   {
     question: "I have intrusive thoughts about harming someone. Does that mean I\u2019m dangerous?",
     answer:
-      "No. Intrusive harm thoughts are a common OCD presentation \u2014 they arise precisely because the person finds them horrifying and contrary to their deepest values. The research is clear: people with OCD who have harm obsessions are not at elevated risk of acting on them. The distress the thoughts produce is evidence of how contrary they are to who you are. Please bring these thoughts to an OCD-experienced therapist without shame.",
+      "No. Intrusive harm thoughts are a common OCD presentation that arise because the person finds them horrifying and contrary to their values. Research confirms people with harm OCD are not at elevated risk of acting on these thoughts. The distress they cause is evidence of how contrary they are to who you are.",
   },
   {
     question: "Is OCD an anxiety disorder?",
     answer:
-      "In the DSM-5, OCD was moved out of the anxiety disorders chapter into its own category (Obsessive-Compulsive and Related Disorders). However, anxiety is central to the OCD cycle \u2014 obsessions produce anxiety, and compulsions function to reduce it. The category change reflects increasing understanding of OCD\u2019s distinct neurobiology and the fact that ERP, not standard anxiety management, is the appropriate treatment.",
+      "The DSM-5 moved OCD into its own category, Obsessive-Compulsive and Related Disorders. While anxiety remains central to the OCD cycle, the reclassification reflects OCD\u2019s distinct neurobiology and the fact that ERP, not standard anxiety management, is the appropriate treatment approach.",
   },
   {
     question: "Can OCD get better on its own without treatment?",
     answer:
-      "OCD rarely remits without treatment. The avoidance and compulsion patterns that maintain OCD tend to entrench over time without intervention. However, OCD does fluctuate \u2014 stress and major life changes can worsen symptoms, and periods of relative stability occur. Effective treatment \u2014 particularly ERP \u2014 produces durable improvement, not just temporary symptom relief.",
+      "OCD rarely remits without treatment. Avoidance and compulsion patterns tend to entrench over time without intervention. OCD does fluctuate with stress and life changes, but effective treatment through ERP produces durable improvement rather than just temporary symptom relief.",
   },
   {
     question: "How long does OCD treatment take?",
     answer:
-      "Most people see significant improvement with ERP over a course of 12\u201320 sessions. This is shorter than many people expect given how entrenched OCD can feel. More chronic or severe presentations may require longer treatment. Maintenance \u2014 applying ERP principles independently after formal treatment \u2014 is important for preventing relapse.",
+      "Most people see significant improvement with ERP over 12\u201320 sessions, shorter than many expect. More chronic or severe presentations may require longer treatment. Applying ERP principles independently after formal therapy is important for preventing relapse long-term.",
   },
 ];
 

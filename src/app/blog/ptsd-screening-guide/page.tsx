@@ -30,23 +30,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "When should I get screened for PTSD?",
-    answer: "You should consider screening if you have experienced a traumatic event and are still having distressing symptoms — such as flashbacks, nightmares, emotional numbness, or hypervigilance — that last longer than one month and interfere with your daily life. You do not need to wait for symptoms to become severe. Early screening can help identify concerns before they worsen. Primary care providers, mental health professionals, and validated online tools like the PCL-5 and PC-PTSD-5 can all be starting points.",
+    answer: "Consider screening if you experienced a traumatic event and still have distressing symptoms such as flashbacks, nightmares, emotional numbness, or hypervigilance lasting longer than one month that interfere with daily life. You do not need to wait for symptoms to become severe. Primary care providers and validated online tools like the PCL-5 can be starting points.",
   },
   {
     question: "Can PTSD develop years later?",
-    answer: "Yes. While PTSD symptoms typically begin within three months of a traumatic event, some people experience what is called delayed-onset PTSD, where symptoms first appear six months or even years after the trauma. A new stressor, a life transition, or another traumatic event can trigger symptoms related to an earlier experience. This is one reason screening remains valuable even if the traumatic event happened long ago.",
+    answer: "Yes. While symptoms typically begin within three months of a traumatic event, delayed-onset PTSD can appear six months or even years later. A new stressor, life transition, or another traumatic event can trigger symptoms related to an earlier experience. This is why screening remains valuable even if the traumatic event happened long ago.",
   },
   {
     question: "What's the difference between PCL-5 and PC-PTSD-5?",
-    answer: "The PC-PTSD-5 is a brief 5-item screening tool designed for quick initial identification — it asks yes/no questions and uses a cutoff score of 3 to flag individuals who may benefit from further evaluation. The PCL-5 is a more comprehensive 20-item self-report measure that assesses each of the 20 DSM-5 PTSD symptoms on a severity scale of 0-4, producing a total score from 0-80. A score of 33 or higher on the PCL-5 may indicate clinically significant PTSD symptoms. The PC-PTSD-5 is a quick screen; the PCL-5 provides more detail.",
+    answer: "The PC-PTSD-5 is a brief 5-item yes/no screening tool using a cutoff of 3 to flag individuals needing further evaluation. The PCL-5 is a comprehensive 20-item measure assessing each DSM-5 PTSD symptom on a 0\u20134 severity scale, producing a score from 0\u201380. A PCL-5 score of 33 or higher may indicate clinically significant symptoms. The PC-PTSD-5 is a quick screen while the PCL-5 provides more detail.",
   },
   {
     question: "Is PTSD treatment effective?",
-    answer: "Yes. PTSD is one of the most treatable mental health conditions. Evidence-based therapies such as Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and Eye Movement Desensitization and Reprocessing (EMDR) have strong research support. Studies show that many people experience significant improvement within 8-16 sessions. Medications, particularly certain antidepressants, can also help manage symptoms. The VA and the American Psychological Association both recommend these approaches as first-line treatments.",
+    answer: "Yes. PTSD is one of the most treatable mental health conditions. Evidence-based therapies including Cognitive Processing Therapy, Prolonged Exposure, and EMDR have strong research support. Many people experience significant improvement within 8\u201316 sessions. Certain antidepressant medications can also help. The VA and American Psychological Association recommend these as first-line treatments.",
   },
   {
     question: "Can PTSD go away on its own?",
-    answer: "Some people who develop PTSD symptoms after a traumatic event do experience natural recovery, particularly in the first few months. However, when symptoms persist beyond three months, they are less likely to resolve without professional support. Untreated PTSD can become chronic and may worsen over time, potentially leading to co-occurring conditions like depression, substance use, or relationship difficulties. Screening and early intervention significantly improve long-term outcomes.",
+    answer: "Some people experience natural recovery, particularly in the first few months after trauma. However, when symptoms persist beyond three months, they are less likely to resolve without professional support. Untreated PTSD can become chronic and may worsen, potentially leading to co-occurring depression, substance use, or relationship difficulties. Early intervention significantly improves outcomes.",
   },
 ];
 
@@ -266,11 +266,22 @@ export default function PTSDScreeningGuidePage() {
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
-          {/* Disclaimer */}
-          <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
-            <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
-            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The PCL-5 and PC-PTSD-5 are screening tools, not diagnostic instruments. A screening result may indicate the presence of symptoms, but only a qualified healthcare professional can provide a clinical evaluation.</p>
-            <p className="mt-2">If you or someone you know is struggling, call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7). If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline).</p>
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This content is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. The PCL-5 and PC-PTSD-5 are screening tools, not diagnostic instruments. Only a qualified healthcare professional can provide a clinical evaluation.
+            </p>
+          </div>
+
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
           </div>
 
           {/* CTA */}

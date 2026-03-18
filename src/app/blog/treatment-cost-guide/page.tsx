@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Does insurance cover addiction treatment?",
     answer:
-      "Yes. Under the Affordable Care Act (ACA) and the Mental Health Parity and Addiction Equity Act, most health insurance plans are required to cover substance use disorder treatment at the same level as other medical conditions. This includes Marketplace plans, employer-sponsored insurance, Medicaid, and Medicare. Coverage typically includes detox, inpatient, outpatient, and medication-assisted treatment. However, specific coverage levels, copays, and network restrictions vary by plan. Contact your insurer directly or ask the treatment facility to verify your benefits before admission.",
+      "Yes. Under the ACA and Mental Health Parity Act, most insurance plans must cover substance use treatment at the same level as other medical conditions. This includes Marketplace plans, employer insurance, Medicaid, and Medicare. Coverage typically includes detox, inpatient, outpatient, and medication-assisted treatment. Verify benefits with your insurer before admission.",
   },
   {
     question: "How much does rehab cost without insurance?",
     answer:
-      "Without insurance, treatment costs vary widely by level of care. Outpatient programs may cost $1,000\u2013$10,000 for a course of treatment. Intensive outpatient programs (IOP) typically range from $3,000\u2013$15,000. Residential (inpatient) programs range from $5,000\u2013$30,000 or more for a 30-day stay, with luxury facilities charging significantly more. Medical detox costs $250\u2013$800 per day. However, many facilities offer sliding scale fees, payment plans, and scholarship programs. State-funded programs and SAMHSA grant-funded facilities may offer treatment at no cost.",
+      "Costs vary widely: outpatient runs $1,000\u2013$10,000, intensive outpatient $3,000\u2013$15,000, and residential programs $5,000\u2013$30,000+ for 30 days. Medical detox costs $250\u2013$800 per day. Many facilities offer sliding scale fees, payment plans, and scholarships. State-funded and SAMHSA grant-funded programs may provide treatment at no cost.",
   },
   {
     question: "What is the cheapest way to get treatment?",
     answer:
-      "The most affordable options include: state-funded treatment programs (often free or very low cost), SAMHSA-funded facilities, community health centers with behavioral health services, 12-step programs like AA and NA (free), and SMART Recovery meetings (free). Medicaid covers addiction treatment in all 50 states. Many private facilities offer sliding scale fees based on income. Telehealth options have also expanded access to affordable outpatient counseling. Use SAMHSA\u2019s treatment locator at findtreatment.gov or call 1-800-662-4357 to find free or low-cost options near you.",
+      "State-funded programs are often free or very low cost. SAMHSA-funded facilities, community health centers, and mutual support groups like AA, NA, and SMART Recovery are also free. Medicaid covers addiction treatment in all 50 states. Call SAMHSA at 1-800-662-4357 or visit findtreatment.gov to find affordable options near you.",
   },
   {
     question: "Is addiction treatment worth the cost?",
     answer:
-      "From a purely economic perspective, research consistently shows that addiction treatment saves money. NIDA estimates that every dollar invested in treatment yields a $4\u2013$7 return in reduced drug-related crime, criminal justice costs, and theft. When healthcare savings are included, the return can exceed 12:1. At the individual level, the cost of untreated addiction \u2014 in healthcare, legal fees, lost income, and relationship damage \u2014 almost always exceeds the cost of treatment. Treatment also significantly reduces risk of overdose, the leading cause of accidental death in the United States.",
+      "Yes. NIDA estimates every dollar invested in treatment yields $4\u2013$7 in reduced crime costs, exceeding 12:1 when healthcare savings are included. The cost of untreated addiction in healthcare, legal fees, lost income, and relationship damage almost always exceeds treatment costs. Treatment also significantly reduces overdose risk.",
   },
 ];
 

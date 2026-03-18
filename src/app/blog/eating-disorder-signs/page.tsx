@@ -30,11 +30,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Can men have eating disorders?", answer: "Yes. Eating disorders affect people of all genders. Research suggests that approximately one in three people with an eating disorder is male. Men may be underdiagnosed because of stereotypes that frame eating disorders as conditions that only affect women. Men may also present with different symptoms, such as excessive exercise or a focus on muscularity rather than thinness." },
-  { question: "Is binge eating disorder real?", answer: "Yes. Binge eating disorder (BED) is a clinically recognized condition and the most common eating disorder in the United States. It involves recurring episodes of eating large amounts of food in a short period while feeling a loss of control. BED is associated with significant emotional distress and physical health consequences, and it responds to evidence-based treatment." },
-  { question: "What's the difference between dieting and an eating disorder?", answer: "Dieting typically involves making conscious food choices with some flexibility. An eating disorder involves persistent patterns of disordered eating that cause significant distress, impair daily functioning, and feel difficult or impossible to control. Warning signs include obsessive calorie counting, rigid food rules, intense fear of weight gain, withdrawal from social eating, and continued restriction despite negative health effects." },
-  { question: "Are eating disorders genetic?", answer: "Research indicates that genetics play a significant role in eating disorder risk. Studies of twins suggest that 40-60% of the risk for anorexia nervosa, bulimia nervosa, and binge eating disorder may be attributable to genetic factors. However, genetics alone do not cause eating disorders — environmental factors, psychological traits, and life experiences also contribute." },
-  { question: "Can you recover from an eating disorder?", answer: "Yes. Recovery from an eating disorder is possible with appropriate support. Research shows that with evidence-based treatment, many people achieve full recovery. Early intervention improves outcomes significantly. Treatment often involves a combination of therapy, nutritional counseling, medical monitoring, and sometimes medication. Recovery timelines vary, and setbacks are a normal part of the process." },
+  { question: "Can men have eating disorders?", answer: "Yes. Approximately one in three people with an eating disorder is male. Men are often underdiagnosed because stereotypes frame eating disorders as affecting only women. Male presentations may differ, featuring excessive exercise or focus on muscularity rather than thinness. Screening and awareness efforts should include all genders." },
+  { question: "Is binge eating disorder real?", answer: "Yes. Binge eating disorder is a clinically recognized condition and the most common eating disorder in the United States. It involves recurring episodes of eating large amounts while feeling a loss of control, without regular compensatory behaviors. BED causes significant emotional distress and responds to evidence-based treatment." },
+  { question: "What's the difference between dieting and an eating disorder?", answer: "Dieting involves conscious food choices with flexibility. An eating disorder involves persistent disordered eating patterns that cause significant distress and impair daily functioning. Warning signs include obsessive calorie counting, rigid food rules, intense fear of weight gain, social withdrawal around meals, and continued restriction despite health consequences." },
+  { question: "Are eating disorders genetic?", answer: "Research indicates genetics play a significant role. Twin studies suggest 40\u201360% of risk for anorexia, bulimia, and binge eating disorder may be attributable to genetic factors. However, genetics alone do not cause eating disorders. Environmental factors, psychological traits, and life experiences also contribute to their development." },
+  { question: "Can you recover from an eating disorder?", answer: "Yes. With evidence-based treatment, many people achieve full recovery. Early intervention significantly improves outcomes. Treatment typically combines therapy, nutritional counseling, medical monitoring, and sometimes medication. Recovery timelines vary and setbacks are normal, but sustained improvement is the expected outcome with appropriate support." },
 ];
 
 export default function EatingDisorderSignsPage() {
@@ -215,17 +215,22 @@ export default function EatingDisorderSignsPage() {
             <Link href="/scoff-eating-disorder-screening" className="btn-primary text-sm">Take the SCOFF Self-Check</Link>
           </div>
 
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>National Alliance for Eating Disorders</strong> &mdash; <strong>1-866-662-1235</strong></li>
+            </ul>
+          </div>
+
           {/* Clinical Disclaimer */}
-          <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/10 border-amber-200 dark:border-amber-800 not-prose text-xs text-neutral-500 dark:text-neutral-400 space-y-2 mt-8">
-            <p className="font-semibold text-neutral-700 dark:text-neutral-300">Important Disclaimer</p>
-            <p>
-              This article is for educational purposes only and is not a substitute for professional medical advice, clinical assessment, or treatment. The information provided here is a screening resource — it does not offer a diagnosis or treatment plan. If you are concerned about your eating behaviors or those of someone you know, please consult a qualified healthcare provider.
-            </p>
-            <p>
-              <strong>Crisis Resources:</strong><br />
-              SAMHSA National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7)<br />
-              988 Suicide &amp; Crisis Lifeline: Call or text <strong>988</strong><br />
-              National Alliance for Eating Disorders Helpline: <strong>1-866-662-1235</strong>
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. The information provided here is a screening resource and does not constitute a clinical assessment. If you are concerned about your eating behaviors, please consult a qualified healthcare provider.
             </p>
           </div>
 

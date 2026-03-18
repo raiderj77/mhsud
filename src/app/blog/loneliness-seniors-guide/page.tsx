@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is loneliness in older adults?",
     answer:
-      "According to the National Academies of Sciences, Engineering, and Medicine (NASEM), approximately 25% of adults aged 65 and older are socially isolated, and a significant proportion report feeling lonely. The rates increase with age \u2014 among adults over 75, isolation rates climb higher as mobility decreases, health conditions accumulate, and social networks shrink through bereavement and relocation.",
+      "According to NASEM, approximately 25% of adults aged 65 and older are socially isolated, and a significant proportion report feeling lonely. Rates increase with age \u2014 among adults over 75, isolation climbs as mobility decreases, health conditions accumulate, and social networks shrink through bereavement and relocation.",
   },
   {
     question: "Is loneliness the same as being alone?",
     answer:
-      "No. Loneliness is subjective \u2014 it is the gap between the social connection you want and what you have. Being alone is an objective state of having limited social contact. A person can be surrounded by others and still feel lonely, and a person who lives alone may feel socially fulfilled. Research shows that subjective loneliness is a stronger predictor of health outcomes than objective social isolation, though both carry risks.",
+      "No. Loneliness is subjective \u2014 the gap between the connection you want and what you have. Being alone is an objective state. You can be surrounded by others and feel lonely, or live alone and feel fulfilled. Research shows subjective loneliness predicts health outcomes more strongly than objective isolation, though both carry risks.",
   },
   {
     question: "Can loneliness cause health problems?",
     answer:
-      "Yes. Research associates chronic loneliness with a 29% increased risk of heart disease, 32% increased risk of stroke, 50% increased risk of dementia, and 26% increased risk of premature death. Loneliness activates chronic stress responses that elevate inflammation, weaken immune function, disrupt sleep, and accelerate cognitive decline. The U.S. Surgeon General\u2019s 2023 Advisory called loneliness a public health crisis with health effects comparable to smoking 15 cigarettes per day.",
+      "Yes. Research links chronic loneliness to a 29% increased risk of heart disease, 32% increased stroke risk, 50% increased dementia risk, and 26% increased risk of premature death. Loneliness activates chronic stress responses that elevate inflammation, weaken immunity, and accelerate cognitive decline.",
   },
   {
     question: "What can help a lonely older adult?",
     answer:
-      "Evidence-based approaches include: structured social activities (senior centers, faith communities, volunteer programs), technology training to enable video calls and social media connection, cognitive behavioral therapy to address negative thought patterns about social interaction, pet companionship, intergenerational programs, transportation assistance, and regular wellness check-ins. Assessment is a valuable first step because it helps quantify the subjective experience and identify specific areas where connection is lacking.",
+      "Evidence-based approaches include structured social activities, technology training for video calls, cognitive behavioral therapy for negative social thought patterns, pet companionship, intergenerational programs, and transportation assistance. Assessment is a valuable first step because it quantifies the experience and identifies specific areas where connection is lacking.",
   },
 ];
 

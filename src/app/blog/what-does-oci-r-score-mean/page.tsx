@@ -32,7 +32,7 @@ const FAQ_DATA = [
   {
     question: "Is having intrusive thoughts the same as having OCD?",
     answer:
-      "No. Intrusive thoughts \u2014 unwanted, often disturbing thoughts about harm, sexuality, or taboo subjects \u2014 are a universal human experience. Research shows that approximately 94% of people report them (Rachman & de Silva, 1978). What distinguishes OCD is the significance the person assigns to those thoughts, the distress they cause, and the compulsive behaviors or mental rituals used to neutralize them.",
+      "No. Intrusive thoughts \u2014 unwanted, often disturbing thoughts about harm, sexuality, or taboo subjects \u2014 are a universal human experience. Research shows approximately 94% of people report them (Rachman & de Silva, 1978). What distinguishes OCD is the distress these thoughts cause and the compulsive behaviors or mental rituals used to neutralize them.",
   },
   {
     question: "Can OCD develop in adulthood?",
@@ -42,7 +42,7 @@ const FAQ_DATA = [
   {
     question: "Is the OCI-R the right screening tool for \u201cpure O\u201d OCD?",
     answer:
-      "\u201cPure O\u201d refers to OCD presentations dominated by obsessions with less obvious behavioral compulsions \u2014 but nearly all involve covert mental compulsions (the Neutralizing subscale captures some of this). The OCI-R Obsessing subscale is the most relevant for pure-O presentations. However, the OCI-R may underdetect pure-O OCD because mental rituals are less visible in self-report. The Dimensional Obsessive Compulsive Scale (DOCS) may be more sensitive for this presentation.",
+      "\u201cPure O\u201d refers to OCD dominated by obsessions with less obvious behavioral compulsions, though nearly all involve covert mental rituals. The OCI-R Obsessing subscale is most relevant for this presentation. However, the OCI-R may underdetect pure-O OCD because mental rituals are less visible in self-report. The DOCS may be more sensitive for pure-O presentations.",
   },
   {
     question: "My OCI-R score is below 21 but I still feel like something is wrong. Should I seek help?",

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is the difference between values and goals?",
     answer:
-      "Values are directions you want to move in \u2014 ongoing qualities you want to bring to your life (such as honesty, connection, creativity, or health). Goals are specific, achievable destinations along those directions (such as \u201Crun a 5K\u201D or \u201Ccall my sister every week\u201D). You can achieve a goal and be done with it. A value is never \u201Ccompleted\u201D \u2014 it is a compass heading you continue to move toward. This distinction matters because values keep you oriented even when specific goals fail or change.",
+      "Values are ongoing directions you want to move in, like honesty, connection, or health. Goals are specific destinations along those directions, like running a 5K. You complete a goal and move on; a value is never finished. This distinction matters because values keep you oriented even when specific goals fail or change.",
   },
   {
     question: "How are values used in addiction recovery?",
     answer:
-      "In recovery, values provide motivation that goes beyond \u201Cavoiding substances.\u201D Instead of defining recovery by what you are not doing, values help you define it by what you are moving toward. When a craving arises, connecting with your values (family, health, integrity) creates a reason to stay the course that is more compelling than willpower alone. ACT-based recovery programs use values as a foundation for building a meaningful life that makes substance use less appealing.",
+      "Values reframe recovery from what you are giving up to what you are moving toward. When cravings arise, connecting with values like family, health, or integrity creates motivation more compelling than willpower alone. ACT-based recovery programs use values as a foundation for building a meaningful life that makes substance use less appealing.",
   },
   {
     question: "Can your values change over time?",
     answer:
-      "Yes. Values are not fixed traits \u2014 they evolve with life experience, development, and changing circumstances. What mattered most at 20 may shift by 40. Major life events (becoming a parent, experiencing illness, going through recovery) often prompt a reassessment of values. Periodic values clarification \u2014 every year or after a major life change \u2014 helps ensure your daily actions align with what currently matters most to you.",
+      "Yes. Values evolve with life experience and changing circumstances. What mattered most at 20 may shift by 40. Major life events like becoming a parent, experiencing illness, or entering recovery often prompt reassessment. Periodic values clarification \u2014 yearly or after major changes \u2014 helps ensure daily actions align with what currently matters most.",
   },
   {
     question: "What is a values card sort?",
     answer:
-      "A values card sort is an exercise where you sort a set of value cards (each naming a core value like \u201Cfamily,\u201D \u201Ccreativity,\u201D \u201Cindependence,\u201D \u201Chealth\u201D) into categories: very important, important, and not important. The process of comparing and prioritizing forces you to make choices about what matters most, which is more revealing than simply picking from a list. The MindCheck Tools values card sort provides this exercise in a free digital format.",
+      "A values card sort involves sorting cards naming core values (family, creativity, independence, health) into categories: very important, important, and not important. Comparing and prioritizing forces genuine choices about what matters most, which is more revealing than picking from a list. The MindCheck Tools values card sort offers this exercise in a free digital format.",
   },
 ];
 

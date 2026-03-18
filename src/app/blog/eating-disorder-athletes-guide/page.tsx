@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common are eating disorders in athletes?",
     answer:
-      "Athletes are 2\u20133 times more likely to develop eating disorders than the general population. Rates vary by sport: aesthetic sports (gymnastics, figure skating, dance) report prevalence of 13\u201347%, weight-class sports (wrestling, boxing, rowing) report 15\u201330%, and endurance sports (distance running, cycling, triathlon) report 15\u201325%. These numbers likely underestimate the true prevalence because athletes are less likely to report symptoms due to performance culture and fear of losing playing time.",
+      "Athletes are 2\u20133 times more likely to develop eating disorders than the general population. Aesthetic sports report 13\u201347% prevalence, weight-class sports 15\u201330%, and endurance sports 15\u201325%. These numbers likely underestimate true prevalence because athletes underreport symptoms due to performance culture.",
   },
   {
     question: "What is RED-S (Relative Energy Deficiency in Sport)?",
     answer:
-      "RED-S is a syndrome caused by insufficient caloric intake relative to energy expenditure from exercise. It replaces the older concept of the \u201cfemale athlete triad\u201d because it affects all genders and has broader health consequences. RED-S impairs bone health, menstrual function (in females), metabolic rate, immunity, protein synthesis, cardiovascular health, and psychological well-being. It can occur even without a formal eating disorder \u2014 any athlete who chronically under-fuels relative to training demands is at risk.",
+      "RED-S is a syndrome caused by insufficient caloric intake relative to exercise expenditure. It replaces the older \u201cfemale athlete triad\u201d concept because it affects all genders. RED-S impairs bone health, metabolic rate, immunity, cardiovascular health, and psychological well-being. Any chronically under-fueled athlete is at risk.",
   },
   {
     question: "Can male athletes have eating disorders?",
     answer:
-      "Yes. An estimated 33% of athletes with eating disorders are male, but they are significantly underscreened and underdiagnosed. Male athletes face unique risk factors including pressure to \u201cmake weight\u201d in wrestling and boxing, body composition manipulation in sports emphasizing leanness, and the use of excessive exercise or purging to control weight while maintaining muscle. Screening tools developed primarily for female populations may miss male presentations, which often focus on muscularity and body composition rather than thinness.",
+      "Yes. An estimated 33% of athletes with eating disorders are male, but they are significantly underscreened. Male athletes face pressure to \u201cmake weight\u201d and manipulate body composition. Screening tools developed for female populations may miss male presentations, which often focus on muscularity rather than thinness.",
   },
   {
     question: "How should coaches address eating concerns?",
     answer:
-      "Coaches should never comment on athletes\u2019 body weight, shape, or food choices. If a coach suspects disordered eating, the recommended approach is to express concern privately, focus on observable behaviors (declining performance, fatigue, injuries) rather than appearance, refer to the athletic trainer or team physician, and avoid any ultimatums about weight. Coaches should also examine their own language and culture \u2014 weigh-ins, body fat testing, and weight-based performance expectations can all trigger or reinforce disordered eating patterns.",
+      "Coaches should never comment on weight, body shape, or food choices. If disordered eating is suspected, express concern privately, focus on observable behaviors like declining performance and fatigue, and refer to the athletic trainer or team physician. Avoid weight-related ultimatums and examine team culture around weigh-ins.",
   },
 ];
 

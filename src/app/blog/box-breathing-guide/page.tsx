@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How does box breathing reduce anxiety?",
     answer:
-      "Box breathing activates the parasympathetic nervous system through the vagus nerve by extending the duration of each breathing cycle. Slow, controlled breathing shifts your body from sympathetic (fight-or-flight) to parasympathetic (rest-and-digest) dominance. This reduces cortisol levels, lowers heart rate and blood pressure, and increases heart rate variability &mdash; all physiological markers of a calmer state. The counting component also redirects attention away from anxious thoughts.",
+      "Box breathing activates the parasympathetic nervous system through the vagus nerve by slowing each breathing cycle. This shifts your body from fight-or-flight to rest-and-digest dominance, reducing cortisol, lowering heart rate and blood pressure, and increasing heart rate variability. The counting component also redirects attention away from anxious thoughts.",
   },
   {
     question: "How many rounds of box breathing should I do?",
     answer:
-      "Most people notice a calming effect within 3&ndash;5 rounds (approximately 2&ndash;3 minutes). For acute anxiety or panic, 5&ndash;10 rounds is recommended. There is no upper limit &mdash; you can practice for as long as feels helpful. Navy SEALs reportedly practice for 5&ndash;10 minutes before high-stress situations. Starting with 4 rounds and adjusting based on how you feel is a reasonable approach.",
+      "Most people notice a calming effect within 3&ndash;5 rounds (approximately 2&ndash;3 minutes). For acute anxiety or panic, 5&ndash;10 rounds is recommended. There is no upper limit. Navy SEALs reportedly practice for 5&ndash;10 minutes before high-stress situations. Starting with 4 rounds and adjusting based on how you feel is a reasonable approach.",
   },
   {
     question: "Can box breathing help with panic attacks?",
     answer:
-      "Yes. Box breathing can be helpful during a panic attack, though it works best when practiced regularly before panic occurs so the technique is familiar. During a panic attack, the breath-holding phases may feel uncomfortable. If so, simplify to slow inhale (4 seconds) and extended exhale (6&ndash;8 seconds) without the holds. The key mechanism &mdash; slowing the breathing rate &mdash; still activates the parasympathetic response.",
+      "Yes. Box breathing can help during a panic attack, though it works best when practiced regularly beforehand. During a panic attack, the breath-holding phases may feel uncomfortable. If so, simplify to slow inhale (4 seconds) and extended exhale (6&ndash;8 seconds) without holds. The key mechanism &mdash; slowing the breathing rate &mdash; still activates the parasympathetic response.",
   },
   {
     question: "Is box breathing the same as 4-7-8 breathing?",
     answer:
-      "No. Box breathing uses equal intervals (4-4-4-4): inhale 4 seconds, hold 4, exhale 4, hold 4. The 4-7-8 technique (developed by Dr. Andrew Weil) uses asymmetric intervals: inhale 4 seconds, hold 7, exhale 8. Both techniques slow the breathing rate to activate the parasympathetic nervous system, but 4-7-8 places more emphasis on the extended exhale, which some people find more calming for sleep. Box breathing&apos;s equal structure makes it easier to learn and remember.",
+      "No. Box breathing uses equal intervals (4-4-4-4): inhale 4, hold 4, exhale 4, hold 4. The 4-7-8 technique uses asymmetric intervals: inhale 4, hold 7, exhale 8. Both slow the breathing rate to activate the parasympathetic nervous system. The 4-7-8 method emphasizes extended exhale for sleep, while box breathing&apos;s equal structure is easier to learn and remember.",
   },
 ];
 

@@ -31,27 +31,27 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   { 
     question: "Is a positive depression screening result the same as a depression diagnosis?", 
-    answer: "No. Screening tools like the PHQ-9 are designed to identify possible depressive symptoms that warrant further evaluation. A clinical diagnosis of depression requires a comprehensive assessment by a qualified healthcare professional, including consideration of symptom duration, functional impact, medical history, and ruling out other potential causes of symptoms." 
+    answer: "No. Screening tools like the PHQ-9 identify possible depressive symptoms that warrant further evaluation. A clinical diagnosis requires comprehensive assessment by a qualified professional, including consideration of symptom duration, functional impact, medical history, and ruling out other potential causes of symptoms."
   },
   { 
     question: "What should I do if my PHQ-9 score suggests moderate or severe depression?", 
-    answer: "Schedule an appointment with your healthcare provider to discuss your results. Bring your score with you and be prepared to talk about how symptoms have been affecting your daily life. Your provider can conduct a thorough evaluation, discuss treatment options (including therapy, medication, or both), and help you develop a plan that fits your needs and preferences." 
+    answer: "Schedule an appointment with your healthcare provider to discuss your results. Bring your score and be prepared to describe how symptoms affect your daily life. Your provider can conduct a thorough evaluation, discuss treatment options including therapy, medication, or both, and help develop a plan that fits your needs and preferences."
   },
   { 
     question: "How accurate is the PHQ-9 for detecting depression?", 
-    answer: "The PHQ-9 has been extensively validated and shows approximately 88% sensitivity and 88% specificity for detecting major depression in primary care settings. However, no screening tool is perfect, and results should always be interpreted in context by a healthcare professional who can consider cultural factors, medical conditions, medications, and individual circumstances." 
+    answer: "The PHQ-9 shows approximately 88% sensitivity and 88% specificity for detecting major depression in primary care settings. However, no screening tool is perfect. Results should always be interpreted in context by a healthcare professional who can consider cultural factors, medical conditions, medications, and individual circumstances."
   },
   { 
     question: "Can lifestyle changes really help with depression?", 
-    answer: "Yes, evidence supports several lifestyle interventions for depression. Regular exercise, sleep optimization, balanced nutrition, and mindfulness practices have all shown benefits in research studies. For mild depression, these approaches may be sufficient. For moderate to severe depression, they typically work best alongside professional treatment rather than as standalone interventions." 
+    answer: "Yes, evidence supports several lifestyle interventions for depression. Regular exercise, sleep optimization, balanced nutrition, and mindfulness practices all show benefits in research. For mild depression, these approaches may be sufficient. For moderate to severe depression, they work best alongside professional treatment rather than as standalone interventions."
   },
   { 
     question: "How long does it take for depression treatment to work?", 
-    answer: "Timelines vary depending on the treatment approach. Psychotherapy often shows benefits within 4-8 weeks. Antidepressant medications typically take 2-4 weeks to begin working and 6-8 weeks for full effect. Most people experience gradual improvement rather than sudden recovery. It&apos;s important to continue treatment even if improvements seem slow, and to communicate regularly with your provider about progress." 
+    answer: "Timelines vary by treatment approach. Psychotherapy often shows benefits within 4\u20138 weeks. Antidepressants typically take 2\u20134 weeks to begin working and 6\u20138 weeks for full effect. Most people experience gradual improvement rather than sudden recovery. Continue treatment even if progress seems slow, and communicate regularly with your provider."
   },
   { 
     question: "What&apos;s the difference between sadness and clinical depression?", 
-    answer: "Sadness is a normal emotional response to difficult situations and typically fluctuates with circumstances. Clinical depression involves persistent symptoms (lasting two weeks or more) that significantly impair daily functioning and may occur without obvious triggers. Depression often includes physical symptoms (sleep changes, appetite changes, fatigue) and cognitive symptoms (difficulty concentrating, feelings of worthlessness) beyond just low mood." 
+    answer: "Sadness is a normal emotional response that typically fluctuates with circumstances. Clinical depression involves persistent symptoms lasting two weeks or more that significantly impair daily functioning, often without obvious triggers. Depression includes physical symptoms like sleep and appetite changes, fatigue, and cognitive symptoms like difficulty concentrating and feelings of worthlessness."
   },
 ];
 
@@ -397,7 +397,7 @@ export default function DepressionScreeningGuidePage() {
           </section>
 
           <section className="p-6 card bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
-            <h3 className="text-amber-800 dark:text-amber-400 font-semibold mb-3">⚠️ Clinical Disclaimer</h3>
+            <h3 className="text-amber-800 dark:text-amber-400 font-semibold mb-3">Clinical Disclaimer</h3>
             <p className="text-sm text-amber-700 dark:text-amber-300">
               <strong>Important:</strong> This article provides educational information about depression screening and is not a substitute for professional medical advice, diagnosis, or treatment. Depression screening tools like the PHQ-9 are screening instruments only—they cannot provide a diagnosis. Only qualified healthcare professionals can diagnose depression and recommend appropriate treatment.
             </p>
@@ -407,6 +407,7 @@ export default function DepressionScreeningGuidePage() {
               </p>
               <ul className="text-sm text-amber-700 dark:text-amber-300 space-y-1 pl-5">
                 <li>• <strong>Call or text 988</strong> for the Suicide & Crisis Lifeline (available 24/7)</li>
+                <li>• <strong>Text HOME to 741741</strong> for the Crisis Text Line (free, 24/7)</li>
                 <li>• <strong>Call 911</strong> or go to the nearest emergency room</li>
                 <li>• <strong>Contact SAMHSA:</strong> 1-800-662-4357 (24/7 treatment referral and information)</li>
               </ul>
@@ -432,6 +433,51 @@ export default function DepressionScreeningGuidePage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
               <em>Note: This article was reviewed for clinical accuracy and updated with current evidence-based recommendations.</em>
             </p>
+          </section>
+
+          {/* CTA */}
+          <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a free depression screening</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The PHQ-9 takes under 3 minutes. Free, private, and your answers never leave your browser.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Self-Check</Link>
+              <Link href="/dass-21-depression-anxiety-stress" className="btn-primary text-sm">DASS-21 Screening</Link>
+            </div>
+          </div>
+
+          {/* FAQ */}
+          <section className="not-prose mt-12">
+            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
+            {FAQ_DATA.map((faq, i) => (
+              <details key={i} className="card mb-2 group">
+                <summary className="p-4 cursor-pointer flex justify-between items-center text-sm font-semibold text-neutral-700 dark:text-neutral-200 list-none">
+                  {faq.question}
+                  <svg className="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </summary>
+                <div className="px-4 pb-4">
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </section>
+
+          {/* Related Tools */}
+          <section className="not-prose mt-10">
+            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Standard validated depression screening</p>
+              </Link>
+              <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Depression, anxiety, and stress assessment</p>
+              </Link>
+              <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Generalized anxiety screening</p>
+              </Link>
+            </div>
           </section>
         </div>
       </article>

@@ -37,22 +37,22 @@ const FAQ_DATA = [
   {
     question: "Is the PHQ-9 free to use?",
     answer:
-      "Yes. The PHQ-9 is in the public domain. It was developed with US government funding and has been made freely available for clinical and research use. You can access it without cost through MindCheck Tools and many other platforms.",
+      "Yes. The PHQ-9 is in the public domain, developed with US government funding and freely available for clinical and research use. You can access it at no cost through MindCheck Tools and many other platforms without any licensing fees.",
   },
   {
     question: "Can a PHQ-9 score change week to week?",
     answer:
-      "Yes. The PHQ-9 asks about the past two weeks, so your score can vary as your circumstances, sleep, stress, or mood changes. This is actually useful \u2014 many clinicians track PHQ-9 scores over time to measure treatment progress or relapse.",
+      "Yes. The PHQ-9 asks about the past two weeks, so scores vary as circumstances, sleep, stress, or mood changes. Many clinicians track PHQ-9 scores over time to measure treatment progress, with a 5-point reduction considered clinically meaningful improvement.",
   },
   {
     question: "Do I need a doctor to administer the PHQ-9?",
     answer:
-      "No. The PHQ-9 was designed as a patient-administered self-report tool. You can complete it without clinical supervision. However, interpreting a score in the context of your full mental health picture, history, and life circumstances is where clinical guidance adds value.",
+      "No. The PHQ-9 was designed as a patient-administered self-report tool you can complete without clinical supervision. However, interpreting your score in the context of your full mental health picture is where professional guidance adds meaningful value.",
   },
   {
     question: "Is the PHQ-9 used for children?",
     answer:
-      "The standard PHQ-9 was validated for adults. There is a modified version \u2014 the PHQ-A (Adolescent) \u2014 designed for ages 13\u201317 and validated in adolescent populations (Johnson et al., 2002). If you\u2019re looking for a screen for someone under 18, the PHQ-A or a clinician referral is more appropriate.",
+      "The standard PHQ-9 was validated for adults. A modified version, the PHQ-A (Adolescent), is designed for ages 13\u201317 and validated in adolescent populations. For screening someone under 18, the PHQ-A or a clinician referral is the more appropriate option.",
   },
 ];
 

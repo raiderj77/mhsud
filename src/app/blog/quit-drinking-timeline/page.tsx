@@ -37,27 +37,27 @@ const FAQ_DATA = [
   {
     question: "Is it dangerous to quit drinking suddenly?",
     answer:
-      "It can be, especially if you have been drinking heavily or daily for an extended period. Alcohol is one of the few substances where withdrawal can be life-threatening. Symptoms such as seizures and delirium tremens may occur in severe cases. If you drink heavily, consult a healthcare provider before stopping. Medical supervision can make the process significantly safer through medication-assisted tapering or supervised detoxification.",
+      "It can be, especially if you have been drinking heavily or daily for an extended period. Alcohol is one of the few substances where withdrawal can be life-threatening, with seizures and delirium tremens possible in severe cases. If you drink heavily, consult a healthcare provider before stopping. Medical supervision makes the process significantly safer.",
   },
   {
     question: "What is delirium tremens?",
     answer:
-      "Delirium tremens (DTs) is a severe form of alcohol withdrawal that typically begins 48 to 72 hours after the last drink. Symptoms may include confusion, rapid heartbeat, high blood pressure, fever, and hallucinations. DTs are a medical emergency and can be fatal without treatment. They are most likely to occur in people who have been drinking heavily for years or who have experienced withdrawal before. This is one of the key reasons medical supervision is so important when stopping alcohol use.",
+      "Delirium tremens (DTs) is a severe form of alcohol withdrawal typically beginning 48 to 72 hours after the last drink. Symptoms include confusion, rapid heartbeat, high blood pressure, fever, and hallucinations. DTs are a medical emergency that can be fatal without treatment, most common in people who drank heavily for years or experienced withdrawal before.",
   },
   {
     question: "How long until my liver recovers?",
     answer:
-      "The liver begins healing relatively quickly. Research suggests that liver fat may start to decrease within two weeks, with more significant reductions by one month. After three months of abstinence, measurable improvements in liver function are often observed. However, the degree of recovery depends on how much damage has occurred. Early-stage fatty liver disease is often fully reversible, while advanced scarring (cirrhosis) may not fully reverse. A healthcare provider can assess your liver health through blood tests and imaging.",
+      "The liver begins healing relatively quickly. Liver fat may start decreasing within two weeks, with more significant reductions by one month. After three months, measurable improvements in liver function are often observed. Early-stage fatty liver disease is often fully reversible, while advanced scarring may not fully reverse. A healthcare provider can assess your liver health through blood tests.",
   },
   {
     question: "Will I lose weight if I stop drinking?",
     answer:
-      "Many people do experience weight loss after stopping alcohol, though individual results vary. Alcohol is calorie-dense (about 7 calories per gram), and mixed drinks can contain significant added sugar. A person drinking four beers per day, for example, may be consuming over 600 extra calories daily. Beyond the calories in the drinks themselves, alcohol can increase appetite and reduce inhibitions around food choices. Most people notice gradual changes over weeks to months rather than immediate weight loss.",
+      "Many people experience weight loss after stopping alcohol, though results vary. Alcohol is calorie-dense at about 7 calories per gram, and someone drinking four beers daily may consume over 600 extra calories. Alcohol also increases appetite and reduces inhibitions around food choices. Most people notice gradual changes over weeks to months rather than immediate weight loss.",
   },
   {
     question: "How long does alcohol withdrawal last?",
     answer:
-      "Acute alcohol withdrawal symptoms typically begin 6 to 24 hours after the last drink and may last 5 to 7 days. Minor symptoms like anxiety, insomnia, and tremors usually appear first. More severe symptoms, if they occur, tend to peak around 48 to 72 hours. However, some people experience post-acute withdrawal symptoms (PAWS) — including mood swings, anxiety, sleep disturbances, and low energy — that can persist for weeks or months. The severity and duration depend on factors like how long and how heavily you were drinking, your overall health, and whether you have experienced withdrawal before.",
+      "Acute withdrawal symptoms typically begin 6 to 24 hours after the last drink and may last 5 to 7 days. More severe symptoms peak around 48 to 72 hours. Some people experience post-acute withdrawal symptoms (PAWS), including mood swings, anxiety, and sleep disturbances, that persist for weeks or months. Severity depends on drinking history and overall health.",
   },
 ];
 
@@ -120,6 +120,9 @@ export default function QuitDrinkingTimelinePage() {
                 </a>
                 <a href="tel:988" className="inline-flex items-center gap-1.5 rounded-lg bg-red-100 dark:bg-red-900/40 px-4 py-2 text-sm font-semibold text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/60 transition-colors">
                   988 Suicide &amp; Crisis Lifeline
+                </a>
+                <a href="sms:741741&body=HOME" className="inline-flex items-center gap-1.5 rounded-lg bg-red-100 dark:bg-red-900/40 px-4 py-2 text-sm font-semibold text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/60 transition-colors">
+                  Crisis Text Line: Text HOME to 741741
                 </a>
               </div>
             </div>
@@ -264,7 +267,7 @@ export default function QuitDrinkingTimelinePage() {
               Financial improvements can be substantial. The cost of alcohol itself, plus associated spending (dining out, ride-shares, impulse purchases while intoxicated), adds up quickly. Many people are surprised by how much money they save.
             </p>
             <p>
-              Productivity and professional performance often improve as cognitive function sharpens, energy increases, and mornings become consistently reliable. Hobbies and interests that may have been neglected while drinking often resurface, providing new sources of meaning and enjoyment.
+              Productivity and professional performance often improve as cognitive function sharpens, energy increases, and mornings become consistently reliable. Hobbies and interests that may have been neglected while drinking often resurface, providing new sources of meaning and enjoyment. Tracking your progress with a <Link href="/sobriety-calculator">sobriety calculator</Link> can help you stay motivated by making these gains visible.
             </p>
           </section>
 

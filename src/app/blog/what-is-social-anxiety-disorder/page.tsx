@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is social anxiety disorder the same as being introverted?",
     answer:
-      "No. Introversion is a personality trait involving preference for less stimulation \u2014 introverts can enjoy social situations but find large amounts of them draining. Social anxiety disorder involves fear and avoidance driven by the anticipation of negative evaluation. Many introverts have no social anxiety; many people with social anxiety would love to be more socially engaged but find it too frightening.",
+      "No. Introversion is a preference for less stimulation \u2014 introverts can enjoy socializing but find it draining. Social anxiety involves fear and avoidance driven by anticipation of negative evaluation. Many introverts have no social anxiety, and many people with social anxiety wish they could engage more but find it too frightening.",
   },
   {
     question: "Can social anxiety develop in adulthood?",
     answer:
-      "Social anxiety disorder most commonly begins in adolescence \u2014 median onset is around age 13 \u2014 but can develop or significantly worsen in adulthood, particularly after a humiliating social experience or during periods of social isolation. Pandemic-related social withdrawal in 2020\u20132021 significantly elevated social anxiety rates in adults who were previously unaffected.",
+      "Yes. While social anxiety most commonly begins around age 13, it can develop or worsen in adulthood after humiliating social experiences or periods of isolation. Pandemic-related social withdrawal in 2020\u20132021 elevated social anxiety rates in previously unaffected adults.",
   },
   {
     question: "Does social anxiety get better with age?",
     answer:
-      "Without treatment, social anxiety tends to persist and often worsens \u2014 the avoidance that provides short-term relief entrenches the disorder over time. With treatment, the prognosis is very good. Some people do experience modest natural improvement over decades, but waiting for natural resolution means years or decades of unnecessary limitation.",
+      "Without treatment, social anxiety tends to persist as avoidance patterns entrench the disorder over time. With evidence-based treatment, the prognosis is very good. Waiting for natural resolution means years of unnecessary limitation when effective interventions are readily available.",
   },
   {
     question: "Can children have social anxiety disorder?",
     answer:
-      "Yes. Social anxiety is one of the most common anxiety disorders in children and adolescents. It often presents as school refusal, reluctance to participate in class, avoidance of social activities, or clinginess in younger children. Cognitive behavioral therapy adapted for children (with parent involvement) is effective. Early treatment is important \u2014 social anxiety during development can significantly impair academic, social, and identity development.",
+      "Yes. Social anxiety is one of the most common childhood anxiety disorders, often presenting as school refusal, reluctance to participate in class, or avoidance of social activities. CBT adapted for children with parent involvement is effective, and early treatment prevents impairment in academic and social development.",
   },
 ];
 

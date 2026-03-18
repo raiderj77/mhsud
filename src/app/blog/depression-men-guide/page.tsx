@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Do men experience depression differently than women?",
     answer:
-      "Yes. While the core condition is the same, men are more likely to express depression through anger, irritability, aggression, risk-taking behavior, substance use, and overwork rather than sadness or tearfulness. Men also report more physical symptoms like headaches, digestive problems, and chronic pain. These &quot;externalizing&quot; symptoms often go unrecognized as depression by both men themselves and their healthcare providers.",
+      "Yes. Men are more likely to express depression through anger, irritability, aggression, risk-taking, substance use, and overwork rather than sadness or tearfulness. Men also report more physical symptoms like headaches and chronic pain. These externalizing symptoms often go unrecognized as depression by both men themselves and their healthcare providers.",
   },
   {
     question: "Why are men less likely to seek help for depression?",
     answer:
-      "Multiple factors contribute: socialization that equates emotional vulnerability with weakness, difficulty recognizing depression in themselves (because it does not look like sadness), fear of stigma from peers and employers, lack of close confidants to talk to, and a tendency to self-medicate with alcohol or overwork rather than seeking professional support. Men are also less likely to have a regular primary care provider.",
+      "Multiple factors contribute: socialization that equates vulnerability with weakness, difficulty recognizing depression when it presents as anger rather than sadness, fear of stigma from peers and employers, lack of close confidants, and a tendency to self-medicate with alcohol or overwork. Men are also less likely to have a regular primary care provider.",
   },
   {
     question: "Can anger be a sign of depression?",
     answer:
-      "Yes. Irritability and anger are among the most common depression symptoms in men, yet they are often overlooked as mood symptoms. Researchers describe &quot;irritable depression&quot; or &quot;masculine depression&quot; patterns where anger replaces sadness as the dominant emotional experience. If anger is persistent, disproportionate to situations, or accompanied by sleep problems and loss of interest, depression may be a contributing factor.",
+      "Yes. Irritability and anger are among the most common depression symptoms in men, yet they are often overlooked. Researchers describe irritable or masculine depression patterns where anger replaces sadness as the dominant experience. If anger is persistent, disproportionate, or accompanied by sleep problems and loss of interest, depression may be a contributing factor.",
   },
   {
     question: "What should I do if I think a man in my life is depressed?",
     answer:
-      "Avoid leading with &quot;I think you are depressed&quot; as this may trigger defensiveness. Instead, mention specific changes you have noticed: &quot;You seem more stressed lately&quot; or &quot;I have noticed you have not been sleeping well.&quot; Normalize the experience, share a screening tool as a low-pressure starting point, and offer practical support like helping find a provider. Be persistent but patient.",
+      "Avoid leading with &quot;I think you are depressed&quot; as this may trigger defensiveness. Instead, mention specific changes: &quot;You seem more stressed lately&quot; or &quot;I noticed you have not been sleeping well.&quot; Normalize the experience, share a screening tool as a low-pressure starting point, and offer practical support like helping find a provider. Be persistent but patient.",
   },
 ];
 

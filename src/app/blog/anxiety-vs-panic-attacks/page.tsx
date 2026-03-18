@@ -33,12 +33,12 @@ const FAQ_DATA = [
   {
     question: "Can a panic attack actually hurt you?",
     answer:
-      "No. Despite how terrifying they feel, panic attacks are not medically dangerous. The heart rate elevation, breathlessness, and chest tightness are driven by adrenaline \u2014 the same system that activates during vigorous exercise. They do not cause heart attacks, fainting, or other physical harm. The danger feels real because the nervous system is responding as though there is genuine threat, but there isn\u2019t.",
+      "No. Despite how terrifying they feel, panic attacks are not medically dangerous. The heart rate elevation, breathlessness, and chest tightness are driven by adrenaline \u2014 the same system activated during vigorous exercise. They do not cause heart attacks or fainting. The danger feels real because the nervous system responds as though genuine threat exists, but it does not.",
   },
   {
     question: "How do I know if I\u2019m having a panic attack or a heart attack?",
     answer:
-      "Both can involve chest tightness, racing heart, breathlessness, and fear. Cardiac emergencies tend to involve persistent chest pressure (not just tightness), pain radiating to the arm, jaw, or back, and symptoms that worsen progressively rather than peaking and subsiding within minutes. If you are uncertain \u2014 especially if you have cardiac risk factors \u2014 seek medical attention. Misidentifying a panic attack as a heart attack is far preferable to the reverse.",
+      "Both can involve chest tightness, racing heart, breathlessness, and fear. Cardiac emergencies tend to involve persistent chest pressure, pain radiating to the arm, jaw, or back, and symptoms that worsen progressively rather than peaking and subsiding within minutes. If you are uncertain \u2014 especially with cardiac risk factors \u2014 seek medical attention immediately.",
   },
   {
     question: "Do panic attacks get worse over time if untreated?",

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is it normal to drink to cope with parenting stress?",
     answer:
-      "Using alcohol to manage parenting stress is extremely common, but common does not mean risk-free. Research from the American Academy of Pediatrics indicates that parents \u2014 particularly mothers \u2014 have seen rising rates of alcohol use since 2016, accelerated during the pandemic. Occasional use and problematic use exist on a spectrum. The key questions are whether your use is escalating over time, whether you feel you need to drink to get through parenting tasks, and whether you have tried to cut back but found it difficult. A screening can help you understand where you fall on that spectrum without judgment.",
+      "Using alcohol to manage parenting stress is common but not risk-free. Parents, particularly mothers, have seen rising alcohol use rates since 2016. Key questions are whether your use is escalating, whether you feel you need to drink to parent, and whether cutting back has been difficult. A screening can clarify where you fall on that spectrum.",
   },
   {
     question: "How does parental substance use affect children?",
     answer:
-      "The Adverse Childhood Experiences (ACEs) study identified household substance use as one of the ten original ACE categories associated with long-term health consequences. Children in homes with parental substance use may experience inconsistent caregiving, emotional unavailability, attachment disruption, and increased anxiety. They are statistically more likely to develop substance use patterns themselves. However, outcomes depend heavily on the severity of use, the presence of other protective factors, and whether the parent seeks support. Recognizing patterns early and taking action is one of the most protective things a parent can do.",
+      "The ACEs study identified household substance use as one of ten categories linked to long-term health consequences. Children may experience inconsistent caregiving, attachment disruption, and increased anxiety, and are more likely to develop substance use patterns themselves. However, outcomes depend on severity and protective factors. Early recognition is one of the most protective steps a parent can take.",
   },
   {
     question: "Will screening lead to involvement with child protective services?",
     answer:
-      "The MindCheck Tools substance use screening is completely private. It runs entirely in your browser, does not collect personal information, and does not store or transmit your answers. No one \u2014 including this website \u2014 can see your results. Self-screening is not a reportable event. It is a personal tool to help you evaluate your own patterns privately. If you decide to seek professional help afterward, conversations with therapists and counselors are protected by confidentiality laws, with very limited exceptions related to imminent danger to a child.",
+      "No. The MindCheck Tools screening runs entirely in your browser, collects no personal information, and stores nothing. No one can see your results. Self-screening is not a reportable event. If you later seek professional help, conversations with therapists are protected by confidentiality laws, with very limited exceptions involving imminent danger.",
   },
   {
     question: "Where can parents get confidential help?",
     answer:
-      "SAMHSA\u2019s National Helpline (1-800-662-4357) is free, confidential, and available 24/7 in English and Spanish. They provide referrals to local treatment facilities, support groups, and community-based organizations. Many therapists specialize in parental substance use and offer telehealth appointments for privacy and convenience. Mutual support groups like SMART Recovery have online meetings available at any hour. Your primary care provider can also discuss your concerns confidentially. Remember that seeking help is an act of responsible parenting, not a failure.",
+      "SAMHSA\u2019s National Helpline (1-800-662-4357) is free, confidential, and available 24/7. They provide referrals to local treatment facilities and support groups. Many therapists specialize in parental substance use and offer telehealth for privacy. SMART Recovery offers free online meetings. Seeking help is an act of responsible parenting, not failure.",
   },
 ];
 

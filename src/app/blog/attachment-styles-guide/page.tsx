@@ -38,7 +38,7 @@ const FAQ_DATA = [
   {
     question: "What is the most common attachment style?",
     answer:
-      "Secure attachment is the most common, estimated at approximately 56% of the adult population. Avoidant attachment accounts for roughly 23%, anxious attachment for about 19%, and disorganized (fearful-avoidant) attachment for approximately 5%. These percentages vary by study and population.",
+      "Secure attachment is the most common, estimated at approximately 56% of the adult population. Avoidant attachment accounts for roughly 23%, anxious attachment for about 19%, and disorganized (fearful-avoidant) attachment for approximately 5%. These percentages vary by study, population, and measurement method, but the general pattern is consistent across research.",
   },
   {
     question: "How does attachment style affect romantic relationships?",

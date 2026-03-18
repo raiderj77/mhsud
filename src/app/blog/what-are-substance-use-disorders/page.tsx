@@ -34,22 +34,22 @@ const FAQ_DATA = [
   {
     question: "Is substance use disorder a choice?",
     answer:
-      "The initial decision to use a substance involves choice. The development of SUD does not \u2014 it is the result of neurobiological changes that impair the very decision-making systems that would allow someone to simply choose to stop. This is why willpower alone is often insufficient and why SUD is classified as a chronic medical condition rather than a moral failure.",
+      "The initial decision to use a substance involves choice, but the development of SUD does not. It results from neurobiological changes that impair the decision-making systems needed to simply stop. This is why willpower alone is often insufficient and why SUD is classified as a chronic medical condition rather than a moral failure.",
   },
   {
     question: "Can someone recover without formal treatment?",
     answer:
-      "Yes. Research shows that the majority of people who resolve substance use disorders do so without formal treatment \u2014 through natural recovery, life changes, peer support, or informal support networks (Kelly et al., 2017). However, formal treatment significantly improves outcomes for moderate and severe SUD, and medications for alcohol and opioid use disorder save lives. Formal treatment is strongly recommended at moderate-to-severe severity.",
+      "Yes. Research shows many people resolve substance use disorders through natural recovery, life changes, and peer support without formal treatment. However, formal treatment significantly improves outcomes for moderate and severe SUD, and medications for alcohol and opioid use disorder save lives. Formal treatment is strongly recommended at moderate-to-severe severity.",
   },
   {
     question: "What\u2019s the difference between physical dependence and addiction?",
     answer:
-      "Physical dependence refers to the physiological adaptation to a substance \u2014 tolerance and withdrawal \u2014 which can occur with many medications even when used exactly as prescribed. A patient taking prescribed opioids long-term may develop physical dependence without having SUD. SUD requires the full pattern of impaired control, social impairment, risky use, and craving \u2014 not just physical dependence.",
+      "Physical dependence refers to tolerance and withdrawal, which can occur with medications used exactly as prescribed. A patient on long-term opioids may develop physical dependence without having SUD. Substance use disorder requires the broader pattern of impaired control, social impairment, risky use, and craving \u2014 not just physical dependence alone.",
   },
   {
     question: "How do I help someone I care about who has SUD?",
     answer:
-      "The most evidence-based approach for family members is CRAFT (Community Reinforcement and Family Training) \u2014 significantly more effective than confrontation, ultimatums, or Al-Anon approaches alone at getting a loved one into treatment (Miller et al., 1999). SAMHSA\u2019s helpline (1-800-662-4357) can provide referrals for family support services.",
+      "CRAFT (Community Reinforcement and Family Training) is the most evidence-based approach for family members \u2014 significantly more effective than confrontation or ultimatums at encouraging a loved one into treatment. SAMHSA\u2019s helpline (1-800-662-4357) provides free, confidential referrals for family support services and treatment programs available 24 hours a day.",
   },
 ];
 

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What are the stages of change?",
     answer:
-      "The Transtheoretical Model identifies five stages: Precontemplation (not yet considering change), Contemplation (thinking about change but ambivalent), Preparation (planning to change soon), Action (actively making changes), and Maintenance (sustaining changes over time). These stages are not strictly linear \u2014 people move back and forth between them, and revisiting earlier stages is a normal part of the process rather than a failure. Each stage requires different strategies and support.",
+      "The Transtheoretical Model identifies five stages: Precontemplation (not yet considering change), Contemplation (thinking about it), Preparation (planning to act soon), Action (actively making changes), and Maintenance (sustaining changes over time). People move back and forth between stages, and revisiting earlier stages is a normal part of the process.",
   },
   {
     question: "Can you be in more than one stage at a time?",
     answer:
-      "Yes. It is common to be in different stages for different behaviors or aspects of use. For example, someone might be in the action stage regarding their alcohol use but still in contemplation about their relationship with other substances. You might also fluctuate between stages within a single day \u2014 feeling motivated in the morning and ambivalent by evening. The stages describe a general orientation toward change rather than a rigid, fixed position.",
+      "Yes. You can be in different stages for different behaviors. For example, someone might be in the action stage for alcohol use but still in contemplation about other substances. You may also fluctuate within a single day. The stages describe a general orientation toward change rather than a rigid, fixed position.",
   },
   {
     question: "What if I&apos;m not ready to change?",
     answer:
-      "Not being ready to change is not a personal failing \u2014 it is a stage in the change process. Precontemplation and contemplation are valid and important stages where meaningful internal work happens. The most helpful approaches at these stages include motivational interviewing (exploring your own values and concerns without pressure), education about the effects of substance use, and honest self-reflection. Pressure from others to change before you are ready typically increases resistance rather than motivation. The readiness assessment can help you clarify where you are right now.",
+      "Not being ready is not a personal failing \u2014 it is a recognized stage in the change process. Precontemplation and contemplation are valid stages where meaningful internal work happens. Motivational interviewing, education, and honest self-reflection are the most helpful approaches. The readiness assessment can help you clarify where you are right now.",
   },
   {
     question: "How does the readiness assessment work?",
     answer:
-      "The MindCheck Tools readiness to change assessment asks a series of questions about your current thoughts, feelings, and behaviors related to substance use or the behavior you are considering changing. Based on your responses, it identifies which stage of change best describes your current position and provides tailored guidance for your stage \u2014 not a one-size-fits-all recommendation, but specific strategies matched to where you actually are. It is free, private, and your answers are processed entirely in your browser.",
+      "The assessment asks questions about your current thoughts, feelings, and behaviors related to the change you are considering. Based on your responses, it identifies which stage of change best describes your position and provides tailored guidance with specific strategies matched to where you are. It is free, private, and processed entirely in your browser.",
   },
 ];
 

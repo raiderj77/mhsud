@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How long does withdrawal last?",
     answer:
-      "Withdrawal duration depends on the substance, how long and how heavily it was used, and individual factors. Alcohol withdrawal typically peaks at 24\u201372 hours and resolves within 5\u20137 days for acute symptoms. Opioid withdrawal peaks at 1\u20133 days and resolves in about a week. Post-acute withdrawal symptoms (PAWS) \u2014 including mood instability, sleep disruption, and cravings \u2014 can persist for weeks to months.",
+      "Duration depends on the substance and usage history. Alcohol withdrawal typically peaks at 24\u201372 hours and resolves within 5\u20137 days. Opioid withdrawal peaks at 1\u20133 days and resolves in about a week. Post-acute symptoms like mood instability and cravings can persist for weeks to months.",
   },
   {
     question: "Is withdrawal dangerous?",
     answer:
-      "Withdrawal from alcohol and benzodiazepines can be life-threatening and should always involve medical supervision. Seizures, delirium tremens (DTs), and cardiovascular complications are the primary risks. Opioid withdrawal is extremely uncomfortable but rarely fatal on its own, though dehydration and complications can occur. Stimulant withdrawal is generally not medically dangerous but can produce severe depression.",
+      "Withdrawal from alcohol and benzodiazepines can be life-threatening due to seizure risk and should always involve medical supervision. Opioid withdrawal is extremely uncomfortable but rarely fatal. Stimulant withdrawal is generally not medically dangerous but can produce severe depression.",
   },
   {
     question: "Can I detox at home?",
     answer:
-      "It depends on the substance and severity. Home detox from alcohol or benzodiazepines is medically inadvisable due to seizure risk. Mild cannabis or stimulant withdrawal may be manageable at home with support. A healthcare provider can assess your situation and recommend the appropriate level of care \u2014 from outpatient monitoring to medically supervised detox.",
+      "It depends on the substance and severity. Home detox from alcohol or benzodiazepines is medically inadvisable due to seizure risk. Mild cannabis or stimulant withdrawal may be manageable at home with support. A healthcare provider can recommend the appropriate level of care for your situation.",
   },
   {
     question: "What is post-acute withdrawal syndrome (PAWS)?",
     answer:
-      "PAWS refers to withdrawal symptoms that persist beyond the acute phase \u2014 typically lasting weeks to months after the substance is cleared from your system. Common PAWS symptoms include mood swings, anxiety, irritability, sleep disturbance, difficulty concentrating, and intermittent cravings. PAWS is thought to result from the brain gradually rebalancing neurotransmitter systems that adapted to chronic substance use.",
+      "PAWS refers to withdrawal symptoms persisting beyond the acute phase, typically lasting weeks to months. Common symptoms include mood swings, anxiety, sleep disturbance, difficulty concentrating, and intermittent cravings. PAWS results from the brain gradually rebalancing neurotransmitter systems that adapted to chronic substance use.",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function WithdrawalSymptomsGuidePage() {
               Repeated substance use causes the brain to adapt by adjusting its own neurotransmitter production and receptor sensitivity. When the substance is removed, the brain is temporarily in a state of imbalance &mdash; overexcited or underregulated depending on the substance class. This imbalance produces withdrawal symptoms.
             </p>
             <p>
-              Physical dependence (the body&apos;s adaptation to a substance) is distinct from addiction (compulsive use despite consequences), though they often co-occur. Someone taking prescribed benzodiazepines daily for months will develop physical dependence and may experience withdrawal even without addiction.
+              Physical dependence (the body&apos;s adaptation to a substance) is distinct from addiction (compulsive use despite consequences), though they often co-occur. Someone taking prescribed benzodiazepines daily for months will develop physical dependence and may experience withdrawal even without addiction. If you are concerned about your alcohol use specifically, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT screening tool</Link> can help you assess your drinking pattern before making changes.
             </p>
           </section>
 
@@ -225,6 +225,10 @@ export default function WithdrawalSymptomsGuidePage() {
               <Link href="/sobriety-calculator" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Sobriety Calculator</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Track your sobriety milestones</p>
+              </Link>
+              <Link href="/audit-alcohol-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screen</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO-validated alcohol use screening</p>
               </Link>
             </div>
           </section>

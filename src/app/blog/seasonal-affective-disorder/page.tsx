@@ -32,32 +32,32 @@ const FAQ_DATA = [
   {
     question: "Is SAD the same as depression?",
     answer:
-      "SAD is a specific pattern of depression that recurs seasonally. If you have depression that is more severe or longer-lasting in certain seasons, you may have major depressive disorder with a seasonal pattern. The distinction matters because seasonal depression may respond differently to light therapy than non-seasonal depression. A professional evaluation can clarify whether your pattern is truly seasonal or something else.",
+      "SAD is a specific pattern of depression that recurs seasonally. If your depression is more severe or longer-lasting in certain seasons, you may have major depressive disorder with a seasonal pattern. The distinction matters because seasonal depression may respond to light therapy differently than non-seasonal depression. A professional evaluation can clarify your pattern.",
   },
   {
     question: "Do light therapy boxes really work?",
     answer:
-      "Research supports light therapy as an effective treatment for SAD. Studies in journals like JAMA Psychiatry and the American Journal of Psychiatry show that 10,000 lux light therapy used for 20-30 minutes daily, especially in early morning, can significantly improve seasonal depression symptoms. However, effectiveness varies between individuals, and quality matters — a proper SAD light should be 10,000 lux and used at the right time of day.",
+      "Research supports light therapy as an effective SAD treatment. Studies show that 10,000 lux light therapy used for 20\u201330 minutes daily in the early morning can significantly improve seasonal depression symptoms. Effectiveness varies between individuals, and quality matters \u2014 a proper SAD light should produce 10,000 lux and be used at the right time of day.",
   },
   {
     question: "Can vitamin D prevent or treat SAD?",
     answer:
-      "The relationship between vitamin D and seasonal depression is complex. Low vitamin D levels may contribute to depression in some people, and vitamin D supplementation has been studied as a SAD treatment. However, the evidence is mixed — some studies show benefit, others don&apos;t. Rather than relying solely on vitamin D supplementation, talking to a healthcare provider about screening and comprehensive treatment is important.",
+      "The relationship between vitamin D and seasonal depression is complex. Low vitamin D levels may contribute to depression in some people, and supplementation has been studied as a SAD treatment. However, the evidence is mixed. Rather than relying solely on vitamin D, talking to a healthcare provider about comprehensive screening and treatment is recommended.",
   },
   {
     question: "When should I start light therapy — in fall or winter?",
     answer:
-      "If you have a clear pattern of depression starting in fall, starting light therapy in fall before symptoms become severe may be more effective than waiting until winter. Some people begin treatment in late September or early October. Conversely, if your depression has already started, beginning light therapy sooner is generally better than waiting.",
+      "If you have a clear pattern of depression starting in fall, beginning light therapy before symptoms become severe may be more effective than waiting until winter. Some people start treatment in late September or early October. If your depression has already started, beginning light therapy sooner is generally better than delaying.",
   },
   {
     question: "Is light therapy safe to use long-term?",
     answer:
-      "Light therapy is generally safe for long-term use when used correctly. However, some people experience side effects like eye strain, headaches, or agitation, usually when the light intensity is too high or timing is wrong. People with bipolar disorder or certain eye conditions should consult a healthcare provider before starting light therapy, as there are special considerations.",
+      "Light therapy is generally safe for long-term use when used correctly. Some people experience side effects like eye strain, headaches, or agitation, usually when intensity is too high or timing is wrong. People with bipolar disorder or certain eye conditions should consult a healthcare provider before starting, as there are important special considerations.",
   },
   {
     question: "What if light therapy doesn&apos;t help my seasonal depression?",
     answer:
-      "Not everyone responds to light therapy alone. If light therapy isn&apos;t helping after several weeks of consistent use, consider combining it with other evidence-based treatments like cognitive-behavioral therapy (CBT) for SAD or medication. A healthcare provider can help you adjust your approach or explore additional options.",
+      "Not everyone responds to light therapy alone. If it is not helping after several weeks of consistent use, consider combining it with cognitive-behavioral therapy for SAD or medication. A healthcare provider can help you adjust your approach, explore additional evidence-based options, or evaluate whether another condition may be contributing to your symptoms.",
   },
 ];
 
@@ -133,6 +133,16 @@ export default function SeasonalAffectiveDisorderPage() {
         </div>
 
         <div className="prose-mh space-y-8">
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
           <section>
             <h2>What is Seasonal Affective Disorder?</h2>
             <p>
@@ -405,8 +415,8 @@ export default function SeasonalAffectiveDisorderPage() {
               <Link href="/phq-9-depression-test" className="btn-primary text-sm">
                 Take the PHQ-9 Depression Self-Check
               </Link>
-              <Link href="/crisis-resources" className="btn-primary text-sm">
-                Find Crisis &amp; Support Resources
+              <Link href="/sleep-and-mood-check" className="btn-primary text-sm">
+                Take the Sleep &amp; Mood Check
               </Link>
             </div>
           </div>

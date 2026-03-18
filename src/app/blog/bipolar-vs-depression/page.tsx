@@ -37,27 +37,27 @@ const FAQ_DATA = [
   {
     question: "Can you have bipolar disorder and depression at the same time?",
     answer:
-      "Bipolar disorder includes depressive episodes as a core feature — so in a sense, depression is part of bipolar disorder. However, the two are distinct conditions. Someone with bipolar disorder experiences both depressive and manic or hypomanic episodes, while someone with major depressive disorder (sometimes called unipolar depression) experiences only depressive episodes. A thorough screening by a qualified professional can help distinguish between the two.",
+      "Bipolar disorder includes depressive episodes as a core feature, so depression is part of it. However, someone with bipolar disorder also experiences manic or hypomanic episodes, while someone with major depressive disorder experiences only depressive episodes. A thorough screening by a qualified professional can help distinguish between the two conditions.",
   },
   {
     question: "What does hypomania feel like?",
     answer:
-      "Hypomania may feel like a period of unusually high energy, reduced need for sleep, racing thoughts, increased talkativeness, and heightened confidence. Unlike full mania, hypomania does not typically cause severe impairment or require hospitalization. Many people experiencing hypomania feel productive and positive, which is one reason it often goes unreported to healthcare providers — and why bipolar II is frequently missed.",
+      "Hypomania feels like a period of unusually high energy, reduced sleep need, racing thoughts, increased talkativeness, and heightened confidence. Unlike full mania, it does not cause severe impairment or require hospitalization. Many people experiencing hypomania feel productive and positive, which is why it often goes unreported and bipolar II is frequently missed.",
   },
   {
     question: "Can antidepressants make bipolar disorder worse?",
     answer:
-      "Research suggests that antidepressants taken without a mood stabilizer may trigger manic or hypomanic episodes in some people with bipolar disorder. They may also increase the frequency of mood cycling. This is one of the most important reasons accurate screening matters — the standard treatment for unipolar depression can potentially worsen bipolar disorder. A healthcare provider can help determine the safest approach for your situation.",
+      "Research suggests that antidepressants without a mood stabilizer may trigger manic or hypomanic episodes in some people with bipolar disorder and increase mood cycling frequency. This is why accurate screening matters \u2014 standard depression treatment can potentially worsen bipolar disorder. A healthcare provider can help determine the safest approach for your situation.",
   },
   {
     question: "How is bipolar disorder screened for?",
     answer:
-      "Screening typically involves a combination of clinical interviews, mood history review, and validated screening instruments. The Mood Disorder Questionnaire (MDQ) is one widely used screening tool that asks about lifetime experiences of manic and hypomanic symptoms. However, no screening tool can replace a comprehensive evaluation by a qualified mental health professional. Screening results may indicate the need for further assessment — they are not a diagnosis.",
+      "Screening typically involves clinical interviews, mood history review, and validated instruments. The Mood Disorder Questionnaire (MDQ) is a widely used tool that asks about lifetime experiences of manic and hypomanic symptoms. No screening tool replaces a comprehensive evaluation by a qualified mental health professional. Results may indicate the need for further assessment, not a diagnosis.",
   },
   {
     question: "Is bipolar disorder hereditary?",
     answer:
-      "Genetics play a significant role in bipolar disorder. Research from the National Institute of Mental Health indicates that people with a first-degree relative (parent or sibling) who has bipolar disorder are at higher risk. However, having a family history does not mean you will develop the condition — many people with genetic risk factors never do. Environmental factors, life experiences, and other variables also contribute.",
+      "Genetics play a significant role. Research from the National Institute of Mental Health indicates that people with a first-degree relative who has bipolar disorder are at higher risk. However, family history does not guarantee developing the condition \u2014 many people with genetic risk factors never do. Environmental factors and life experiences also contribute.",
   },
 ];
 
@@ -217,7 +217,7 @@ export default function BipolarVsDepressionPage() {
               This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment — they do not confirm or rule out any condition.
             </p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mt-2">
-              If you or someone you know is in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <strong>988</strong>, or reach the <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong> (free, confidential, 24/7).
+              If you or someone you know is in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <strong>988</strong>, text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or reach the <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong> (free, confidential, 24/7).
             </p>
           </div>
 

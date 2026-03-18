@@ -37,27 +37,27 @@ const FAQ_DATA = [
   {
     question: "How do I know if I need a therapist or a psychiatrist?",
     answer:
-      "Therapists provide talk therapy; psychiatrists primarily manage medication. Most people start with a therapist, who can refer you to a psychiatrist if medication seems appropriate. If you\u2019re experiencing severe symptoms that significantly impair functioning, a psychiatrist evaluation may be the right first call.",
+      "Therapists provide talk therapy; psychiatrists primarily manage medication. Most people start with a therapist, who can refer to a psychiatrist if medication seems appropriate. If you are experiencing severe symptoms that significantly impair daily functioning, a psychiatrist evaluation may be the right first step.",
   },
   {
     question: "What if I\u2019ve tried therapy before and it didn\u2019t help?",
     answer:
-      "Therapeutic fit matters enormously. Research suggests that the quality of the therapeutic relationship (often called the \u201Ctherapeutic alliance\u201D) is one of the strongest predictors of outcome \u2014 sometimes more than the specific technique used. If therapy hasn\u2019t worked before, try a different therapist before concluding therapy doesn\u2019t work for you.",
+      "Therapeutic fit matters enormously. The quality of the therapeutic relationship is one of the strongest predictors of outcome, sometimes more than the specific technique used. If therapy has not worked before, try a different therapist or modality before concluding that therapy itself is ineffective for you.",
   },
   {
     question: "Is it okay to see a therapist if nothing is really wrong?",
     answer:
-      "Absolutely. Many people use therapy proactively \u2014 to build resilience, understand patterns, improve relationships, or prepare for a major life transition. There\u2019s no minimum threshold of suffering required to benefit from support.",
+      "Yes. Many people use therapy proactively to build resilience, understand patterns, improve relationships, or prepare for major life transitions. There is no minimum threshold of suffering required to benefit from professional support and self-exploration.",
   },
   {
     question: "How long does therapy take?",
     answer:
-      "It depends entirely on what you\u2019re working on and what kind of therapy is used. Some people resolve a specific issue in 6\u201312 sessions. Others benefit from ongoing support over years. Your therapist should discuss goals and expected timelines with you early on, and the plan should be revisited regularly.",
+      "It depends on what you are working on and which approach is used. Some people resolve a specific issue in 6\u201312 sessions, while others benefit from ongoing support over years. Your therapist should discuss goals and timelines early on and revisit the plan regularly.",
   },
   {
     question: "Can I do therapy online?",
     answer:
-      "Yes. Telehealth therapy has expanded dramatically and is now covered by most major insurance plans. Research consistently shows that online therapy produces outcomes comparable to in-person sessions for most conditions (Luo et al., 2020).",
+      "Yes. Telehealth therapy has expanded dramatically and is covered by most major insurance plans. Research consistently shows online therapy produces outcomes comparable to in-person sessions for most conditions, making it a convenient and effective option for many people.",
   },
 ];
 

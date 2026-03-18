@@ -37,22 +37,22 @@ const FAQ_DATA = [
   {
     question: "Can you have depression and anxiety at the same time?",
     answer:
-      "Yes \u2014 and it\u2019s common. Approximately 50% of people diagnosed with major depression also meet criteria for an anxiety disorder (Kessler et al., 2003). The two conditions share neurobiological mechanisms and respond to many of the same treatments, which is why they are often addressed together.",
+      "Yes, and it is common. Approximately 50% of people with major depression also meet criteria for an anxiety disorder. The two conditions share neurobiological mechanisms and respond to many of the same treatments, including CBT and SSRIs, which is why clinicians often screen for and address both together.",
   },
   {
     question: "Which comes first, depression or anxiety?",
     answer:
-      "Research suggests anxiety disorders more frequently precede depression rather than the other way around. Chronic anxiety can be emotionally exhausting and eventually contribute to depressive symptoms. However, this pattern varies by individual \u2014 either can appear first, and sometimes they develop simultaneously.",
+      "Research suggests anxiety disorders more frequently precede depression. Chronic anxiety can be emotionally exhausting and eventually contribute to depressive symptoms. However, this pattern varies individually \u2014 either can appear first, and sometimes they develop simultaneously. Screening for both provides the clearest picture.",
   },
   {
     question: "Is it possible to have anxiety symptoms without an anxiety disorder?",
     answer:
-      "Absolutely. Anxiety symptoms exist on a spectrum. The anxiety disorders represent the clinical end of that spectrum \u2014 where worry is excessive, difficult to control, and causing significant impairment. Many people experience anxiety symptoms that are distressing without meeting the full criteria for a disorder. Both ends of the spectrum can benefit from support.",
+      "Yes. Anxiety symptoms exist on a spectrum. Clinical anxiety disorders represent the end where worry is excessive, uncontrollable, and causing significant impairment. Many people experience distressing anxiety without meeting full diagnostic criteria. Both ends of the spectrum can benefit from professional support and coping strategies.",
   },
   {
     question: "How long does it take to treat depression and anxiety?",
     answer:
-      "Many people see meaningful improvement within 8\u201316 weeks of beginning CBT or appropriate medication. More severe or long-standing presentations may take longer. Relapses can occur, which is why developing sustainable coping strategies alongside acute treatment matters.",
+      "Many people see meaningful improvement within 8\u201316 weeks of beginning CBT or appropriate medication. More severe or long-standing cases may take longer. Relapses can occur, which is why developing sustainable coping strategies alongside acute treatment is an important part of recovery.",
   },
 ];
 

@@ -33,12 +33,12 @@ const FAQ_DATA = [
   {
     question: "Do men get anxiety as often as women?",
     answer:
-      "Women are diagnosed with anxiety disorders at roughly twice the rate of men, but researchers believe the actual gap is smaller than the numbers suggest. Men are less likely to report anxiety symptoms, less likely to seek help, and more likely to express anxiety through behaviors (anger, substance use, overwork) that are not captured by standard diagnostic criteria. The true prevalence in men is likely underestimated.",
+      "Women are diagnosed at roughly twice the rate of men, but researchers believe the actual gap is smaller. Men are less likely to report anxiety symptoms, less likely to seek help, and more likely to express anxiety through behaviors like anger, substance use, and overwork that standard diagnostic criteria do not capture. True prevalence in men is likely underestimated.",
   },
   {
     question: "How does anxiety present differently in men?",
     answer:
-      "Men with anxiety are more likely to experience irritability, anger outbursts, difficulty relaxing, muscle tension, workaholism, control behaviors, and substance use rather than the classic worry-and-avoidance presentation. Physical symptoms like chest tightness, GI problems, and headaches are also more common. Men often describe their experience as &quot;stress&quot; rather than anxiety, which delays recognition and treatment.",
+      "Men with anxiety are more likely to experience irritability, anger outbursts, difficulty relaxing, muscle tension, workaholism, control behaviors, and substance use rather than classic worry and avoidance. Physical symptoms like chest tightness, GI problems, and headaches are also common. Men often describe their experience as stress rather than anxiety, which delays recognition and treatment.",
   },
   {
     question: "Can anxiety cause physical symptoms like chest pain?",

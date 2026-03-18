@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can you develop ADHD as an adult?",
     answer:
-      "ADHD is a neurodevelopmental condition, which means it originates during brain development. Current clinical consensus holds that ADHD does not develop for the first time in adulthood. However, many adults with ADHD were never identified in childhood \u2014 particularly those with the predominantly inattentive presentation (formerly called ADD), which lacks the hyperactive behaviors that prompt referrals in childhood. What often looks like \u201cdeveloping ADHD as an adult\u201d is actually a lifelong condition becoming visible for the first time as life demands exceed the person\u2019s compensatory strategies.",
+      "ADHD originates during brain development and does not develop for the first time in adulthood. However, many adults were never identified in childhood \u2014 particularly those with the predominantly inattentive presentation, which lacks hyperactive behaviors that prompt referrals. What looks like \u201cdeveloping ADHD as an adult\u201d is usually a lifelong condition becoming visible as life demands exceed compensatory strategies.",
   },
   {
     question: "What does adult ADHD look like?",
     answer:
-      "Adult ADHD often looks different from the stereotype of a hyperactive child. Common presentations include chronic disorganization, difficulty finishing projects, time blindness (consistently misjudging how long tasks take), emotional reactivity, internal restlessness rather than physical hyperactivity, difficulty sustaining attention in conversations or meetings, impulsive decisions (spending, career changes, relationships), and a pattern of underperformance relative to ability. Many adults describe a history of being told they are \u201csmart but lazy\u201d or \u201cnot reaching their potential.\u201d",
+      "Adult ADHD often looks different from childhood stereotypes. Common presentations include chronic disorganization, difficulty finishing projects, time blindness, emotional reactivity, internal restlessness, difficulty sustaining attention in meetings, and impulsive decisions. Many adults describe being told they are \u201csmart but lazy\u201d or \u201cnot reaching their potential\u201d \u2014 a pattern of underperformance relative to ability.",
   },
   {
     question: "Should I get tested for ADHD as an adult?",
     answer:
-      "Consider pursuing an assessment if you recognize a persistent pattern \u2014 not just an occasional bad day \u2014 of inattention, disorganization, impulsivity, or emotional reactivity that consistently interferes with your work, relationships, or daily functioning. If you have always struggled with things like time management, task completion, and organization despite genuinely trying, and if these struggles have been present since childhood (even if no one noticed), a screening is a reasonable starting point. The ASRS-v1.1 is a WHO-recommended adult ADHD screening that takes under five minutes.",
+      "Consider an assessment if you recognize a persistent pattern of inattention, disorganization, impulsivity, or emotional reactivity that interferes with work, relationships, or daily functioning. If you have always struggled with time management and organization despite genuinely trying, and these struggles trace back to childhood, a screening is a reasonable starting point. The ASRS-v1.1 takes under five minutes.",
   },
   {
     question: "Is ADHD overdiagnosed in adults?",
     answer:
-      "The evidence suggests the opposite. While there has been growing awareness of adult ADHD, epidemiological studies estimate that 2.5\u20134.4% of adults have ADHD, yet the majority remain unidentified and untreated. Underdiagnosis is particularly common in women, people of color, adults with primarily inattentive presentations, and those with high IQ who compensated through childhood. That said, a careful professional evaluation is important to distinguish ADHD from conditions with overlapping symptoms such as anxiety, depression, sleep disorders, and thyroid conditions.",
+      "The evidence suggests the opposite. Epidemiological studies estimate 2.5\u20134.4% of adults have ADHD, yet most remain unidentified. Underdiagnosis is particularly common in women, people of color, and those with inattentive presentations or high IQ who compensated through childhood. A careful professional evaluation remains important to distinguish ADHD from overlapping conditions like anxiety, depression, and sleep disorders.",
   },
 ];
 

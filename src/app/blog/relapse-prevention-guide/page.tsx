@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What are the three stages of relapse?",
     answer:
-      "Relapse unfolds in three stages: emotional relapse (poor self-care, bottling emotions, isolation), mental relapse (thinking about using, romanticizing past use, bargaining), and physical relapse (obtaining and using the substance). Recognizing the early emotional and mental stages gives you the best chance of intervening before use occurs.",
+      "Relapse unfolds in three stages: emotional relapse (poor self-care, bottling emotions, isolation), mental relapse (thinking about using, romanticizing past use, bargaining), and physical relapse (obtaining and using the substance). Recognizing the early emotional and mental stages gives you the best chance of intervening before use actually occurs.",
   },
   {
     question: "Does relapse mean treatment failed?",
     answer:
-      "No. NIDA compares addiction relapse rates (40\u201360%) to those of other chronic conditions like hypertension and asthma. Relapse is a signal that your treatment plan needs adjustment, not that recovery is impossible. Many people in long-term recovery experienced one or more setbacks along the way. The key is reconnecting with support quickly.",
+      "No. NIDA compares addiction relapse rates (40\u201360%) to those of other chronic conditions like hypertension and asthma. Relapse signals that your treatment plan needs adjustment, not that recovery is impossible. Many people in long-term recovery experienced setbacks along the way. The key is reconnecting with your support system quickly.",
   },
   {
     question: "What is the most common cause of relapse?",
     answer:
-      "Research by Marlatt and Gordon identified negative emotional states as the leading trigger for relapse, accounting for roughly 35% of initial relapse episodes. Other common triggers include social pressure, interpersonal conflict, and encountering environmental cues associated with past use. A relapse prevention plan helps you prepare for your personal high-risk situations.",
+      "Research by Marlatt and Gordon identified negative emotional states as the leading trigger, accounting for roughly 35% of initial relapse episodes. Other common triggers include social pressure, interpersonal conflict, and environmental cues associated with past use. A written relapse prevention plan helps you prepare for your personal high-risk situations before they arise.",
   },
   {
     question: "How long does relapse risk last?",
     answer:
-      "Risk is highest in the first 90 days of recovery and remains elevated through the first year. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with support \u2014 therapy, mutual aid, healthy routines \u2014 provides a durable buffer against relapse at any stage.",
+      "Risk is highest in the first 90 days and remains elevated through the first year of recovery. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with therapy, mutual aid, and healthy routines provides a durable protective buffer against relapse at any stage of recovery.",
   },
 ];
 

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How much does the average person spend on alcohol?",
     answer:
-      "According to Bureau of Labor Statistics data, the average American household spends approximately $500\u2013$600 per month on alcoholic beverages when you include drinks purchased at bars, restaurants, and retail. For individuals with alcohol use disorder, spending can be significantly higher \u2014 often exceeding $1,000 per month when factoring in increased consumption, premium products, and associated costs like late-night food or transportation.",
+      "Bureau of Labor Statistics data shows the average American household spends approximately $500\u2013$600 per month on alcoholic beverages, including bars, restaurants, and retail purchases. For individuals with alcohol use disorder, spending often exceeds $1,000 per month when factoring in increased consumption and associated costs like late-night food or transportation.",
   },
   {
     question: "Does sobriety really save money?",
     answer:
-      "Yes. The direct savings from not purchasing alcohol or substances are often substantial on their own, but the hidden cost savings are even larger. These include reduced healthcare expenses, lower insurance premiums, fewer legal costs, improved work performance (leading to better income), and avoided costs from accidents or property damage. Most people in recovery report noticeable financial improvement within the first few months.",
+      "Yes. Direct savings from not purchasing alcohol are substantial, but hidden savings are even larger: reduced healthcare expenses, lower insurance premiums, fewer legal costs, and improved work performance leading to better income. Most people in recovery report noticeable financial improvement within the first few months.",
   },
   {
     question: "What are the hidden costs of drinking?",
     answer:
-      "Hidden costs include DUI charges ($10,000\u2013$25,000 on average), increased health insurance premiums, medical costs for alcohol-related conditions, lost wages from missed work or reduced productivity, relationship costs (therapy, divorce), property damage, and impulse purchases made while intoxicated. These hidden costs often exceed the direct cost of alcohol by a factor of two to five.",
+      "Hidden costs include DUI charges ($10,000\u2013$25,000 on average), increased health insurance premiums, medical costs for alcohol-related conditions, lost wages from missed work, relationship costs such as therapy or divorce, and impulse purchases made while intoxicated. These hidden costs often exceed the direct cost of alcohol by two to five times.",
   },
   {
     question: "How do I calculate my savings?",
     answer:
-      "To calculate your savings, estimate your average daily or weekly spending on alcohol or substances before getting sober, then multiply by the number of days since your sobriety date. The MindCheck Tools money saved in recovery calculator does this automatically \u2014 enter your sobriety date and your estimated previous spending, and it calculates your total savings instantly. Your data stays in your browser and is never stored or transmitted.",
+      "Estimate your average daily or weekly spending on alcohol before getting sober, then multiply by the number of days since your sobriety date. The MindCheck Tools money saved in recovery calculator does this automatically. Enter your sobriety date and estimated previous spending to see your total savings instantly. Your data stays in your browser.",
   },
 ];
 

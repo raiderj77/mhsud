@@ -28,12 +28,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Does the GAD-7 only detect generalized anxiety disorder?", answer: "While developed for generalized anxiety, research shows the GAD-7 has reasonable sensitivity for panic disorder, social anxiety disorder, and PTSD. However, it is not a specific diagnostic tool for any of these conditions — a positive screen warrants professional evaluation to determine the specific nature of the anxiety." },
-  { question: "Can anxiety medication be prescribed based on a GAD-7 score alone?", answer: "No. Treatment decisions require a comprehensive clinical evaluation. However, sharing your GAD-7 score with a provider gives them useful information about the frequency and severity of your symptoms, which can inform — but not replace — their clinical judgment." },
-  { question: "What's the difference between normal worry and clinical anxiety?", answer: "Everyone worries. Clinical anxiety is distinguished by its persistence, intensity, and impact on functioning. The GAD-7 helps capture this by asking about frequency over two weeks and including items about difficulty controlling worry and its physical effects. But the distinction ultimately requires professional assessment." },
-  { question: "Can physical health conditions affect my GAD-7 score?", answer: "Yes. Conditions like thyroid disorders, heart disease, chronic pain, and medication side effects can produce symptoms that overlap with anxiety — such as restlessness, irritability, and difficulty relaxing. This is one reason professional follow-up is important: a provider can help determine what's contributing to your symptoms." },
-  { question: "My score was low but I still feel anxious. Why?", answer: "The GAD-7 captures a specific set of symptoms. Some forms of anxiety — like specific phobias, health anxiety, or situational anxiety — may not be fully captured by these seven questions. If you feel anxious, that experience is valid regardless of a screening score." },
-  { question: "How is the GAD-7 different from the GAD-2?", answer: "The GAD-2 uses only the first two questions of the GAD-7 as an ultra-brief screen. It's sometimes used as a first step in clinical settings — if the GAD-2 is positive, the full GAD-7 is administered. Our site offers the full GAD-7 for a more complete picture." },
+  { question: "Does the GAD-7 only detect generalized anxiety disorder?", answer: "While developed for generalized anxiety, the GAD-7 has reasonable sensitivity for panic disorder, social anxiety, and PTSD. However, it cannot distinguish between these conditions. A positive screen warrants professional evaluation to determine the specific nature of the anxiety and appropriate next steps." },
+  { question: "Can anxiety medication be prescribed based on a GAD-7 score alone?", answer: "No. Treatment decisions require comprehensive clinical evaluation. Sharing your GAD-7 score gives a provider useful information about symptom frequency and severity, which can inform their clinical judgment but never replaces a thorough professional assessment of your individual situation." },
+  { question: "What's the difference between normal worry and clinical anxiety?", answer: "Clinical anxiety is distinguished by persistence, intensity, and impact on daily functioning. The GAD-7 captures this by asking about symptom frequency over two weeks, including difficulty controlling worry and physical effects. However, the distinction ultimately requires professional assessment beyond a screening score." },
+  { question: "Can physical health conditions affect my GAD-7 score?", answer: "Yes. Thyroid disorders, heart disease, chronic pain, and medication side effects can produce symptoms overlapping with anxiety, such as restlessness and difficulty relaxing. This is why professional follow-up matters \u2014 a provider can help determine what is contributing to your symptoms." },
+  { question: "My score was low but I still feel anxious. Why?", answer: "The GAD-7 captures a specific set of symptoms. Some forms of anxiety like specific phobias, health anxiety, or situational anxiety may not be fully reflected in these seven questions. If you feel anxious, that experience is valid regardless of your screening score and worth discussing with a provider." },
+  { question: "How is the GAD-7 different from the GAD-2?", answer: "The GAD-2 uses only the first two GAD-7 questions as an ultra-brief screen. In clinical settings, a positive GAD-2 triggers the full GAD-7. Our site offers the complete GAD-7 for a more thorough picture of anxiety symptoms across all seven domains." },
 ];
 
 export default function GAD7GuidePage() {
@@ -62,6 +62,22 @@ export default function GAD7GuidePage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with questions about a medical or mental health condition.
+            </p>
+          </div>
+
           <section>
             <h2>What is the GAD-7?</h2>
             <p>

@@ -42,12 +42,12 @@ const FAQ_DATA = [
   {
     question: "Can PTSD develop years after a traumatic event?",
     answer:
-      "Yes. Delayed-onset PTSD \u2014 where full symptom criteria are not met until at least six months after the trauma \u2014 occurs in a meaningful minority of cases (Andrews et al., 2007). A recent high score doesn\u2019t require a recent trauma.",
+      "Yes. Delayed-onset PTSD \u2014 where full symptom criteria are not met until at least six months after the trauma \u2014 occurs in a meaningful minority of cases (Andrews et al., 2007). Life transitions, additional stressors, or even media exposure can activate symptoms from earlier trauma. A recent high score does not require a recent traumatic event.",
   },
   {
     question: "Can the PCL-5 be used to track treatment progress?",
     answer:
-      "Yes \u2014 this is one of its primary clinical uses. A reduction of 10\u201320 points is generally considered a clinically meaningful improvement (Weathers et al., 2013). Many trauma therapists administer it monthly to track symptom changes during treatment.",
+      "Yes \u2014 this is one of its primary clinical uses. A reduction of 10\u201320 points is generally considered a clinically meaningful improvement (Weathers et al., 2013). Many trauma therapists administer it monthly to track symptom changes during treatment, making it a valuable tool for measuring progress over the course of therapy.",
   },
   {
     question: "Is PTSD only caused by combat or extreme violence?",

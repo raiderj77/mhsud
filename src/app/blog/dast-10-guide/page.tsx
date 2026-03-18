@@ -29,27 +29,27 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is a DAST-10 score of 3?",
-    answer: "A DAST-10 score of 3 falls in the moderate level (3-5), which may indicate a moderate level of problems related to drug use. This score suggests that drug use may be affecting your life in some areas and that further evaluation by a healthcare professional is recommended. It is not a diagnosis — it is a screening result that warrants a conversation with a provider.",
+    answer: "A score of 3 falls in the moderate level (3\u20135), indicating drug use may be affecting your life in some areas. Further evaluation by a healthcare professional is recommended at this level. It is not a diagnosis \u2014 it is a screening result that warrants a conversation with your provider about what it may mean for you.",
   },
   {
     question: "Is the DAST-10 a diagnosis?",
-    answer: "No. The DAST-10 is a screening tool, not a diagnostic instrument. It identifies the possibility and severity of drug-related problems, but it cannot diagnose a substance use disorder. A clinical diagnosis requires a comprehensive evaluation by a qualified healthcare professional who considers your full history, circumstances, and clinical criteria.",
+    answer: "No. The DAST-10 is a screening tool, not a diagnostic instrument. It identifies the possibility and severity of drug-related problems but cannot diagnose a substance use disorder. A clinical diagnosis requires a comprehensive evaluation by a qualified healthcare professional who considers your full history, circumstances, and clinical criteria.",
   },
   {
     question: "How is the DAST-10 different from the CAGE-AID?",
-    answer: "The DAST-10 focuses specifically on drug use (excluding alcohol and tobacco) and provides a severity score from 0-10 with five distinct levels. The CAGE-AID screens for both alcohol and drug use combined using just 4 questions, with a simpler positive/negative result (score of 2+ is a positive screen). The DAST-10 gives more detail about the degree of drug-related problems, while the CAGE-AID is a quicker combined screen.",
+    answer: "The DAST-10 focuses on drug use only (excluding alcohol and tobacco) and provides a severity score from 0\u201310 across five levels. The CAGE-AID screens for both alcohol and drug use with just 4 questions and a simpler positive/negative result. The DAST-10 gives more detail about drug-related problems, while the CAGE-AID is a quicker combined screen.",
   },
   {
     question: "Can I take the DAST-10 for someone else?",
-    answer: "The DAST-10 is designed as a self-report tool — each question asks about your own experiences. Answering on behalf of someone else would reduce the accuracy of the results, as many questions involve internal experiences (like guilt, cravings, or withdrawal symptoms) that are difficult to observe from outside. If you are concerned about a loved one, consider using our Family Impact Assessment tool instead.",
+    answer: "The DAST-10 is a self-report tool \u2014 each question asks about your own experiences. Answering for someone else reduces accuracy since many questions involve internal experiences like guilt, cravings, or withdrawal symptoms that are difficult to observe externally. If you are concerned about a loved one, consider using our Family Impact Assessment tool instead.",
   },
   {
     question: "What should I do if I score high on the DAST-10?",
-    answer: "A high score (6-8 substantial, 9-10 severe) suggests that drug use may be significantly impacting your life. The most important next step is to speak with a healthcare professional — your primary care provider, a counselor, or a substance use specialist. You can also call SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals 24/7. A screening score is a starting point, not a final answer.",
+    answer: "A high score (6\u20138 substantial, 9\u201310 severe) suggests drug use may be significantly impacting your life. The most important next step is speaking with a healthcare professional \u2014 your primary care provider, counselor, or substance use specialist. You can also call SAMHSA at 1-800-662-4357 for free, confidential referrals 24/7. A screening score is a starting point, not a final answer.",
   },
   {
     question: "Does the DAST-10 include alcohol or tobacco?",
-    answer: "No. The DAST-10 specifically excludes alcohol and tobacco. The instructions ask you to consider only drug use, including prescription medications used outside their prescribed purpose, over-the-counter medications used in excess, and illicit substances. For alcohol screening, consider the AUDIT. For a combined alcohol and drug screen, consider the CAGE-AID.",
+    answer: "No. The DAST-10 specifically excludes alcohol and tobacco. It asks you to consider only drug use, including prescription medications used outside their prescribed purpose, over-the-counter medications used in excess, and illicit substances. For alcohol screening, consider the AUDIT. For a combined alcohol and drug screen, consider the CAGE-AID.",
   },
 ];
 
@@ -237,11 +237,20 @@ export default function DAST10GuidePage() {
             </p>
           </section>
 
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
           {/* Disclaimer */}
           <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
             <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
-            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. Always consult a qualified healthcare professional for concerns about substance use.</p>
-            <p className="mt-2">If you or someone you know is struggling with substance use, call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7). If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline).</p>
+            <p>This article is for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for concerns about substance use.</p>
           </div>
 
           {/* CTA */}

@@ -34,22 +34,22 @@ const FAQ_DATA = [
   {
     question: "Is anxiety genetic?",
     answer:
-      "Anxiety has a meaningful genetic component \u2014 heritability estimates range from 30\u201350% depending on the disorder and study design. However, genetics is not destiny: environmental factors, early experiences, learned patterns, and treatment all significantly affect whether and how anxiously someone lives. Having an anxious parent or sibling increases risk but does not determine outcome.",
+      "Anxiety has a meaningful genetic component, with heritability estimates of 30\u201350%. However, environmental factors, early experiences, and treatment all significantly affect outcomes. Having an anxious parent increases risk but does not determine whether you will develop an anxiety disorder.",
   },
   {
     question: "Can anxiety go away on its own?",
     answer:
-      "Some acute anxiety tied to specific stressors does resolve as circumstances change. Established anxiety disorders are less likely to resolve without intervention \u2014 particularly because avoidance patterns become entrenched over time, and the disorder maintains itself through those patterns. Even mild anxiety disorders respond well to evidence-based treatment, and early intervention generally produces better outcomes.",
+      "Acute anxiety tied to specific stressors may resolve when circumstances change. Established anxiety disorders rarely resolve without intervention because avoidance patterns become entrenched and self-reinforcing. Even mild anxiety disorders respond well to evidence-based treatment, and early intervention produces better outcomes.",
   },
   {
     question: "What\u2019s the difference between anxiety and stress?",
     answer:
-      "Stress is typically a response to an identifiable external pressure \u2014 a deadline, a conflict, a difficult situation. It tends to resolve when the stressor is removed. Anxiety is an internal state that persists even when the external trigger is gone or absent \u2014 an anticipatory fear about what might happen. The two can overlap: chronic stress can trigger anxiety, and anxiety amplifies the response to stressors. But anxiety disorders involve a pattern of internal apprehension that persists across changing circumstances.",
+      "Stress is a response to identifiable external pressure and tends to resolve when the stressor is removed. Anxiety is an internal state that persists even without an obvious trigger. Chronic stress can trigger anxiety disorders, but anxiety involves anticipatory fear that continues across changing circumstances.",
   },
   {
     question: "Can anxiety cause physical symptoms?",
     answer:
-      "Yes. Anxiety produces significant physical symptoms through the sympathetic nervous system: muscle tension, rapid heartbeat, shallow breathing, gastrointestinal symptoms, headaches, fatigue, and sweating. These are physiologically real \u2014 not \u201call in your head.\u201d Medically unexplained physical symptoms are sometimes the primary presentation of anxiety, particularly in people who don\u2019t identify emotional experience readily.",
+      "Yes. Anxiety produces real physical symptoms through the sympathetic nervous system, including muscle tension, rapid heartbeat, shallow breathing, GI symptoms, headaches, and fatigue. These are physiologically genuine, not imagined, and are sometimes the primary reason people first seek medical attention.",
   },
 ];
 

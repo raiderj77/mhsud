@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Why is bipolar often misdiagnosed as depression?",
     answer:
-      "People with bipolar disorder spend far more time in depressive episodes than manic or hypomanic ones, and depressive episodes are more likely to prompt help-seeking. When a young adult presents with depression, clinicians may not ask about past episodes of elevated mood or energy. Hypomania in particular can feel productive and positive, so individuals may not report it as a problem.",
+      "People with bipolar disorder spend far more time in depressive episodes than manic or hypomanic ones, and depressive episodes are more likely to prompt help-seeking. Clinicians may not ask about past elevated mood episodes. Hypomania in particular can feel productive and positive, so individuals may not report it as a problem.",
   },
   {
     question: "Should young adults with depression be screened for bipolar?",

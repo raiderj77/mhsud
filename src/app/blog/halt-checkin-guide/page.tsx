@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What does HALT stand for?",
     answer:
-      "HALT stands for Hungry, Angry, Lonely, and Tired \u2014 four basic physical and emotional states that increase vulnerability to relapse. The acronym serves as a quick self-check: when you feel a craving or an urge to use, pause and ask whether you are experiencing one or more of these states. Often, addressing the underlying need (eating, processing emotions, connecting with someone, or resting) reduces or eliminates the craving.",
+      "HALT stands for Hungry, Angry, Lonely, and Tired \u2014 four physical and emotional states that increase vulnerability to relapse. When you feel a craving, pause and check whether you are experiencing one of these states. Addressing the underlying need often reduces the urge significantly.",
   },
   {
     question: "How does HALT prevent relapse?",
     answer:
-      "HALT works through a concept called interoceptive awareness \u2014 the ability to recognize and correctly interpret your body\u2019s internal signals. In early recovery, many people have difficulty distinguishing between a craving and a basic unmet need. The HALT framework provides a simple, concrete checklist that helps you identify what you actually need in the moment. By addressing the real need (food, emotional processing, connection, or rest), the craving often resolves on its own. This aligns with Marlatt and Gordon\u2019s relapse prevention model, which emphasizes identifying and managing high-risk situations.",
+      "HALT builds interoceptive awareness \u2014 the ability to recognize your body\u2019s internal signals. Many people in early recovery confuse cravings with unmet basic needs. The HALT checklist helps you identify the real need in the moment, and addressing it often resolves the craving on its own.",
   },
   {
     question: "When should I do a HALT check-in?",
     answer:
-      "The most important time to use HALT is when you feel a craving, urge, or emotional disturbance that you cannot immediately explain. However, many people in recovery find it helpful to do regular preventive check-ins \u2014 for example, at set times during the day (morning, midday, and evening) or whenever they notice their mood shifting. The goal is to catch vulnerability states before they escalate. The MindCheck Tools HALT check-in tool provides a quick, structured way to do this daily.",
+      "Use HALT whenever you feel a craving, urge, or unexplained mood shift. Many people also do preventive check-ins at set times \u2014 morning, midday, and evening \u2014 to catch vulnerability states before they escalate. The MindCheck Tools HALT check-in provides a quick, structured way to practice daily.",
   },
   {
     question: "Is HALT evidence-based?",
     answer:
-      "HALT originated in 12-step recovery culture and has been widely used in clinical settings for decades. While the acronym itself is not a formally validated clinical instrument, the underlying principles are well-supported by research. Marlatt and Gordon\u2019s relapse prevention model identifies negative emotional states, interpersonal conflict, and social pressure as the three highest-risk categories for relapse \u2014 all of which map directly to HALT states. Research on interoceptive awareness, emotional regulation, and sleep deprivation further supports the importance of monitoring these basic needs in recovery.",
+      "HALT originated in 12-step recovery culture and is widely used in clinical settings. While not a formally validated instrument, its principles align with Marlatt and Gordon\u2019s relapse prevention model, which identifies negative emotional states and interpersonal conflict as the highest-risk relapse categories \u2014 directly mapping to HALT states.",
   },
 ];
 

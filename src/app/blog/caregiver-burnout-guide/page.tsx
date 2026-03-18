@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is caregiver burnout?",
     answer:
-      "Caregiver burnout is a state of physical, emotional, and mental exhaustion that occurs when a person providing care for someone else \u2014 typically a family member with a chronic illness, disability, or age-related decline \u2014 becomes overwhelmed by the demands of caregiving. It involves emotional exhaustion, depersonalization (feeling detached from the person you are caring for), and a reduced sense of personal accomplishment in the caregiving role.",
+      "Caregiver burnout is a state of physical, emotional, and mental exhaustion that occurs when the demands of caring for a loved one with chronic illness, disability, or age-related decline become overwhelming. It involves emotional exhaustion, feeling detached from the person you are caring for, and a reduced sense of accomplishment in the caregiving role.",
   },
   {
     question: "How common is caregiver burnout?",
     answer:
-      "Caregiver burnout is extremely common. AARP estimates that 53 million Americans serve as unpaid caregivers. Studies suggest that 40\u201370% of family caregivers experience clinically significant symptoms of depression, and caregiver burnout rates are even higher when the care recipient has dementia, serious mental illness, or complex medical needs. The National Alliance for Caregiving found that 36% of caregivers describe their situation as highly stressful.",
+      "Caregiver burnout is extremely common. AARP estimates 53 million Americans serve as unpaid caregivers. Studies suggest 40\u201370% experience clinically significant depression symptoms, with rates even higher when the care recipient has dementia or complex medical needs. The National Alliance for Caregiving found 36% of caregivers describe their situation as highly stressful.",
   },
   {
     question: "What is respite care?",
     answer:
-      "Respite care provides temporary relief for primary caregivers. It can take many forms: in-home care where a professional or volunteer stays with your loved one, adult day programs, short-term residential care, or informal arrangements with family and friends. The ARCH National Respite Network (archrespite.org) maintains a locator for respite services by state. Many Area Agencies on Aging also offer respite programs, some on a sliding fee scale.",
+      "Respite care provides temporary relief for primary caregivers through in-home care, adult day programs, short-term residential care, or informal arrangements with family and friends. The ARCH National Respite Network (archrespite.org) maintains a state-by-state locator for services. Many Area Agencies on Aging also offer respite programs, some on a sliding fee scale.",
   },
   {
     question: "When should a caregiver seek professional help?",
     answer:
-      "Seek professional help if you are experiencing persistent sadness or hopelessness, using alcohol or substances to cope, neglecting your own health needs, feeling resentful or angry toward the person you are caring for, having thoughts of self-harm, or noticing that caregiving stress is affecting your relationships, work, or physical health. A therapist experienced with caregiver issues can help you develop coping strategies, process grief, and make difficult decisions about care.",
+      "Seek professional help if you experience persistent sadness or hopelessness, use substances to cope, neglect your own health, feel resentful toward the person you care for, have thoughts of self-harm, or notice caregiving stress affecting your relationships and physical health. A therapist experienced with caregiver issues can help you develop coping strategies and process grief.",
   },
 ];
 

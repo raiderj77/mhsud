@@ -32,22 +32,22 @@ const FAQ_DATA = [
   {
     question: "What if the person doesn\u2019t want help?",
     answer:
-      "You cannot force someone to accept help \u2014 and attempting to do so usually damages the relationship. What you can do: stay connected, express care without conditions, share resources without pressure, and take care of yourself. Change happens when people are ready, and sustained connection from someone who isn\u2019t going anywhere is the most powerful long-term influence you have.",
+      "You cannot force someone to accept help, and attempting to usually damages the relationship. Stay connected, express care without conditions, share resources without pressure, and take care of yourself. Sustained connection from someone who isn\u2019t going anywhere is the most powerful long-term influence you have.",
   },
   {
     question: "Is it okay to ask someone directly if they\u2019re thinking about suicide?",
     answer:
-      "Yes. Research is clear: asking about suicide does not increase risk. It opens the door for someone who may be desperately hoping someone will notice. Ask directly and calmly: \u201cI\u2019ve been worried about you \u2014 are you having thoughts of hurting yourself?\u201d Then listen without panic.",
+      "Yes. Research is clear that asking about suicide does not increase risk \u2014 it opens the door for someone who may be hoping someone will notice. Ask directly and calmly: \u201cAre you having thoughts of hurting yourself?\u201d Then listen without panic. Your calm presence matters more than perfect words.",
   },
   {
     question: "How do I avoid saying the wrong thing?",
     answer:
-      "You will say imperfect things \u2014 everyone does. The relationship, not individual words, is what provides support. What matters most is that the person feels they can trust you, that you won\u2019t judge them, and that you\u2019ll still be there tomorrow. Consistent presence over time means more than any single perfectly crafted sentence.",
+      "You will say imperfect things \u2014 everyone does. The relationship, not individual words, is what provides support. What matters most is that the person trusts you, knows you won\u2019t judge them, and believes you\u2019ll be there tomorrow. Consistent presence over time matters more than any perfectly crafted sentence.",
   },
   {
     question: "How long does supporting someone with a mental health condition usually take?",
     answer:
-      "Mental health conditions vary enormously in duration and trajectory. Some episodes are time-limited; some conditions are chronic and require ongoing support. What you\u2019re signing up for when you support someone is not a defined arc but a relationship with someone navigating a real challenge. Long-term support requires sustainable habits \u2014 which is why taking care of yourself is non-negotiable.",
+      "It varies. Some episodes are time-limited; some conditions are chronic and require ongoing support. Supporting someone means committing to a relationship, not a defined timeline. Long-term support requires sustainable habits on your end \u2014 which is why taking care of yourself is non-negotiable.",
   },
 ];
 
@@ -307,7 +307,7 @@ export default function HowToSupportSomeonePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio />
+          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
 
           {/* FAQ */}
           <section>

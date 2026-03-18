@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is PTSD in veterans?",
     answer:
-      "The U.S. Department of Veterans Affairs estimates that 11\u201320% of veterans who served in Operations Iraqi Freedom and Enduring Freedom have PTSD in a given year. Rates for Vietnam-era veterans are estimated at about 30% over their lifetime. These rates are significantly higher than the roughly 6\u20137% lifetime prevalence in the general U.S. population.",
+      "The VA estimates that 11\u201320% of post-9/11 veterans experience PTSD in a given year, while lifetime rates for Vietnam-era veterans reach approximately 30%. These rates are significantly higher than the roughly 6\u20137% lifetime prevalence in the general U.S. population, reflecting the intensity of military trauma exposure.",
   },
   {
     question: "Can PTSD appear years after military service?",
     answer:
-      "Yes. Delayed-onset PTSD is well documented in veterans. Symptoms may not emerge until months or even years after separation from service. Major life transitions \u2014 retirement, loss of a loved one, or health changes \u2014 can trigger symptoms that were previously managed through the structure and mission focus of military life.",
+      "Yes. Delayed-onset PTSD is well documented in veterans. Symptoms may not emerge until months or even years after separation from service. Major life transitions such as retirement, loss of a loved one, or health changes can trigger symptoms that were previously managed through the structure and mission focus of military life.",
   },
   {
     question: "What treatments work for veteran PTSD?",
     answer:
-      "The VA and Department of Defense clinical guidelines recommend three evidence-based psychotherapies: Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and Eye Movement Desensitization and Reprocessing (EMDR). All three have strong research support specifically in veteran populations. Medications such as sertraline and paroxetine are also FDA-approved for PTSD.",
+      "The VA and Department of Defense recommend three evidence-based psychotherapies: Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and EMDR. All three have strong research support specifically in veteran populations. Medications such as sertraline and paroxetine are also FDA-approved for PTSD treatment and can be used alone or combined with therapy.",
   },
   {
     question: "Is PTSD a sign of weakness?",
     answer:
-      "No. PTSD is a neurobiological response to trauma, not a character flaw or sign of weakness. The brain\u2019s threat-detection system becomes overactivated after severe or repeated trauma. Many of the toughest, most resilient service members develop PTSD. Seeking help is an act of strength, not an admission of failure.",
+      "No. PTSD is a neurobiological response to trauma, not a character flaw or sign of weakness. The brain\u2019s threat-detection system becomes overactivated after severe or repeated trauma exposure. Many of the toughest and most resilient service members develop PTSD. Seeking help is an act of strength, not an admission of failure.",
   },
 ];
 

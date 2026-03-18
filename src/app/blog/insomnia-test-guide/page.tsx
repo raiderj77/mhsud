@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What counts as insomnia?",
     answer:
-      "Insomnia disorder, as defined by the DSM-5, requires difficulty initiating sleep, maintaining sleep, or early morning awakening that occurs at least 3 nights per week for 3 or more months and causes significant distress or impairment in daytime functioning. Occasional difficulty sleeping \u2014 due to stress, travel, or schedule changes \u2014 is common and does not meet the threshold for insomnia disorder.",
+      "The DSM-5 defines insomnia disorder as difficulty initiating or maintaining sleep, occurring at least 3 nights per week for 3 or more months, that causes significant distress or daytime impairment. Occasional sleep difficulty due to stress or schedule changes is common and does not meet the clinical threshold.",
   },
   {
     question: "Is the Athens Insomnia Scale clinically validated?",
     answer:
-      "Yes. The Athens Insomnia Scale (AIS) was developed by Soldatos et al. in 2000 and has been validated in multiple clinical populations. It is an 8-item self-report questionnaire based on the ICD-10 diagnostic criteria for insomnia. A score of 6 or higher indicates clinically significant insomnia. The AIS demonstrates strong internal consistency and test-retest reliability across studies.",
+      "Yes. The Athens Insomnia Scale was developed by Soldatos et al. in 2000 and validated in multiple clinical populations. It is an 8-item questionnaire based on ICD-10 insomnia criteria. A score of 6 or higher indicates clinically significant insomnia, with strong internal consistency and test-retest reliability.",
   },
   {
     question: "Can insomnia cause depression?",
     answer:
-      "Research strongly suggests a bidirectional relationship. People with chronic insomnia have approximately twice the risk of developing depression compared to people who sleep well. Insomnia also worsens existing depression and reduces the effectiveness of antidepressant treatment. Treating insomnia \u2014 particularly with CBT-I \u2014 has been shown to improve depressive symptoms even in the absence of direct depression treatment.",
+      "Research suggests a bidirectional relationship. People with chronic insomnia have approximately twice the risk of developing depression. Insomnia also worsens existing depression and reduces antidepressant effectiveness. Treating insomnia with CBT-I has been shown to improve depressive symptoms even without direct depression treatment.",
   },
   {
     question: "What is CBT-I and how does it work?",
     answer:
-      "Cognitive Behavioral Therapy for Insomnia (CBT-I) is a structured program that addresses the thoughts, behaviors, and habits that perpetuate insomnia. Core components include sleep restriction (limiting time in bed to actual sleep time), stimulus control (re-associating the bed with sleep rather than wakefulness), cognitive restructuring (changing unhelpful beliefs about sleep), and relaxation techniques. CBT-I is recommended as the first-line treatment for chronic insomnia by major medical organizations because it produces durable results that persist after treatment ends.",
+      "CBT-I is a structured program addressing the thoughts, behaviors, and habits that perpetuate insomnia. Core components include sleep restriction, stimulus control, cognitive restructuring, and relaxation techniques. It is the recommended first-line treatment for chronic insomnia because it produces durable results that persist after treatment ends.",
   },
 ];
 

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What are the family roles in addiction?",
     answer:
-      "Claudia Black and Sharon Wegscheider-Cruse identified four primary roles that family members adopt in response to addiction: the Hero (overachiever who tries to make the family look normal), the Scapegoat (acts out to draw attention away from the real problem), the Lost Child (withdraws and becomes invisible to avoid conflict), and the Mascot (uses humor to deflect tension). These roles develop unconsciously as survival strategies and often persist into adulthood, affecting relationships and self-identity long after the addiction is addressed.",
+      "Researchers identified four primary roles family members adopt: the Hero (overachiever maintaining appearances), the Scapegoat (acts out to divert attention), the Lost Child (withdraws to avoid conflict), and the Mascot (uses humor to deflect tension). These develop unconsciously as survival strategies and often persist into adulthood.",
   },
   {
     question: "Is codependency a real condition?",
     answer:
-      "Codependency is not a formal clinical diagnosis in the DSM-5, but it describes a well-recognized pattern of behavior where a person prioritizes another\u2019s needs at the expense of their own, often in the context of a relationship with someone who has a substance use problem. Codependency involves difficulty setting boundaries, people-pleasing, low self-worth tied to caretaking, and enabling behaviors. While the term has been debated in clinical circles, the patterns it describes are real and can cause significant emotional harm. Therapy, particularly with a counselor experienced in family systems, can help.",
+      "Codependency is not a formal DSM-5 diagnosis, but it describes well-recognized patterns where a person prioritizes another\u2019s needs at their own expense. It involves difficulty setting boundaries, people-pleasing, enabling, and low self-worth tied to caretaking. Therapy with a family systems counselor can help address these patterns.",
   },
   {
     question: "How can families support recovery without enabling?",
     answer:
-      "The line between support and enabling can be difficult to navigate. Support means encouraging recovery efforts, maintaining healthy boundaries, attending your own therapy or support groups, and allowing natural consequences for substance use. Enabling means shielding someone from the consequences of their use \u2014 making excuses, covering financially, minimizing the problem, or avoiding difficult conversations. The key distinction is whether your actions help the person face reality or help them avoid it. Programs like Al-Anon and Nar-Anon help families learn this balance through shared experience.",
+      "Support means encouraging recovery efforts, maintaining boundaries, and allowing natural consequences. Enabling means shielding someone from consequences through excuses, financial covering, or minimizing the problem. The key question is whether your actions help the person face reality or avoid it. Al-Anon and Nar-Anon teach this balance.",
   },
   {
     question: "Should families go to therapy too?",
     answer:
-      "Yes. Family therapy is strongly recommended as part of a comprehensive recovery approach. Addiction disrupts family systems in ways that do not automatically resolve when the person stops using. Unresolved resentment, broken trust, dysfunctional communication patterns, and codependency require their own healing process. Family therapy modalities like Behavioral Couples Therapy and the Community Reinforcement and Family Training (CRAFT) approach have strong research support. Individual therapy for affected family members is also valuable, especially for processing grief, anger, and trauma.",
+      "Yes. Addiction disrupts family systems in ways that do not automatically resolve when substance use stops. Unresolved resentment, broken trust, and codependency require their own healing process. Family therapy modalities like CRAFT and Behavioral Couples Therapy have strong research support. Individual therapy for family members is also valuable.",
   },
 ];
 

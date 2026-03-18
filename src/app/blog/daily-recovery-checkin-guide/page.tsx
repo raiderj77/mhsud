@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "When is the best time to do a recovery check-in?",
     answer:
-      "Both morning and evening check-ins have value, and many people in recovery benefit from doing both. Morning check-ins set intentions for the day \u2014 what you are committed to doing for your recovery, potential challenges you anticipate, and what you are grateful for. Evening check-ins provide reflection \u2014 how the day went, what cravings or emotions arose, what you did well, and what you want to adjust. If you only do one, choose whichever time you are most likely to do consistently.",
+      "Both morning and evening check-ins have value. Morning check-ins set intentions \u2014 what you are committed to, challenges you anticipate, and what you are grateful for. Evening check-ins provide reflection on how the day went, what cravings arose, and what you want to adjust. If you only do one, choose whichever time you are most likely to do consistently.",
   },
   {
     question: "What should I include in a daily check-in?",
     answer:
-      "An effective daily check-in covers five core areas: mood (how are you feeling emotionally), sleep quality (how well did you rest), craving intensity (on a 0\u201310 scale, how strong are your urges today), gratitude (at least one thing you appreciate), and one recovery action (something specific you are doing for your recovery today). Additional areas to track include social connection, physical health, and any triggers you encountered. The MindCheck Tools daily recovery check-in provides a guided template for all of these areas.",
+      "An effective check-in covers five core areas: mood, sleep quality, craving intensity on a 0\u201310 scale, gratitude (at least one thing you appreciate), and one specific recovery action for the day. You can also track social connection, physical health, and triggers. The MindCheck Tools daily recovery check-in provides a guided template covering all of these areas.",
   },
   {
     question: "How does self-monitoring help recovery?",
     answer:
-      "Self-monitoring \u2014 the practice of regularly tracking your own behavior, thoughts, and feelings \u2014 is one of the most well-supported behavior change techniques. Burke et al. (2011) found that self-monitoring is the single most effective component of behavioral interventions for habit change. In recovery, it works by increasing awareness of patterns (you notice triggers before they escalate), creating accountability (you are answering to yourself daily), and providing early warning signs when things are heading in a risky direction.",
+      "Self-monitoring \u2014 regularly tracking your behavior, thoughts, and feelings \u2014 is one of the most well-supported behavior change techniques. Burke et al. (2011) found it to be the single most effective component of behavioral interventions. In recovery, it increases awareness of patterns, creates daily accountability, and provides early warning signs when things are heading in a risky direction.",
   },
   {
     question: "Do I need to do this forever?",
     answer:
-      "There is no requirement to do daily check-ins forever, but many people in long-term recovery find that some form of ongoing self-reflection remains valuable indefinitely. In early recovery (the first year), daily check-ins are most important because awareness of your internal state is still developing. Over time, you may reduce frequency to weekly or adjust the format. The key is maintaining some form of structured self-reflection, even as it evolves. Recovery is a lifelong process, and self-awareness is its foundation.",
+      "There is no requirement to do daily check-ins forever, but many people in long-term recovery find ongoing self-reflection valuable. In early recovery, daily check-ins are most important because internal awareness is still developing. Over time, you may reduce frequency to weekly or adjust the format. The key is maintaining some structured self-reflection as recovery evolves.",
   },
 ];
 

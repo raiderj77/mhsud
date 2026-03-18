@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How long does therapy take?",
     answer:
-      "It depends entirely on what you\u2019re working on. Brief CBT for a specific phobia or situational anxiety might be 8\u201316 sessions. Trauma-focused work often runs 16\u201324 sessions. Long-term psychodynamic work may continue for years. Many people check in periodically over their lives rather than completing a single course of treatment. Ask your therapist at the outset what they expect the work to look like.",
+      "It depends on what you\u2019re working on. Brief CBT for a phobia might be 8\u201316 sessions. Trauma-focused work often runs 16\u201324 sessions. Long-term psychodynamic work may continue for years. Many people check in periodically rather than completing a single course. Ask your therapist what they expect.",
   },
   {
     question: "What if I try a therapist and don\u2019t like them?",
     answer:
-      "This is normal and expected. Research suggests it takes some people 2\u20133 tries to find a therapist they connect with. A first session that doesn\u2019t feel right doesn\u2019t mean therapy won\u2019t help \u2014 it may mean that particular therapist isn\u2019t the right fit. It\u2019s completely acceptable to say \u201cI don\u2019t think this is the right fit for me\u201d and try someone else.",
+      "This is normal. Research suggests it takes some people 2\u20133 tries to find a good fit. A first session that doesn\u2019t feel right doesn\u2019t mean therapy won\u2019t help \u2014 it may mean that particular therapist isn\u2019t the right match. It\u2019s completely acceptable to say so and try someone else.",
   },
   {
     question: "Should I see a therapist or a psychiatrist?",
     answer:
-      "A therapist provides counseling and psychotherapy. A psychiatrist is a medical doctor who can prescribe medication and often focuses on medication management. For many conditions (depression, anxiety), the research supports combining psychotherapy and medication as more effective than either alone. If you might need medication, start with your primary care physician or seek a psychiatrist referral; if you want to begin with therapy alone, a therapist is the right starting point.",
+      "A therapist provides counseling and psychotherapy. A psychiatrist is a medical doctor who prescribes medication. For depression and anxiety, combining both is often most effective. If you might need medication, start with your primary care physician or seek a psychiatrist referral. For therapy alone, a therapist is the right starting point.",
   },
   {
     question: "Is online therapy as good as in-person?",
     answer:
-      "For most conditions, research shows comparable outcomes between telehealth and in-person therapy (Berryhill et al., 2019). Telehealth significantly improves access for people in rural areas, those with transportation barriers, and those with scheduling constraints. In-person has advantages for some presentations \u2014 particularly trauma work that involves significant somatic (body-based) components. Either is a legitimate choice.",
+      "For most conditions, research shows comparable outcomes between telehealth and in-person therapy. Telehealth significantly improves access for people in rural areas or with transportation barriers. In-person may have advantages for trauma work involving somatic components. Either is a legitimate, evidence-supported choice.",
   },
 ];
 

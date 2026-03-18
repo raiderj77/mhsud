@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is grounding and how does it work?",
     answer:
-      "Grounding is a set of techniques that redirect your attention from internal distress &mdash; anxious thoughts, panic, flashbacks, or dissociation &mdash; to the present physical environment. It works by engaging the sensory cortex and prefrontal cortex, which interrupts the amygdala-driven anxiety loop. By focusing on what you can see, touch, hear, smell, and taste right now, you activate neural pathways that compete with the fear response and bring you back to the present moment.",
+      "Grounding redirects attention from internal distress to the present physical environment. It engages the sensory cortex and prefrontal cortex, interrupting the amygdala-driven anxiety loop. By focusing on what you can see, touch, hear, smell, and taste, you activate neural pathways that compete with the fear response.",
   },
   {
     question: "When should I use grounding techniques?",
     answer:
-      "Grounding is most effective during acute anxiety, panic attacks, dissociative episodes, PTSD flashbacks, and moments of overwhelming emotion. It is also useful as a preventive tool when you notice early signs of escalating distress. You can use grounding techniques anywhere &mdash; at work, in public, during a therapy session, or at home. They require no special equipment and can be practiced discreetly.",
+      "Grounding is most effective during acute anxiety, panic attacks, dissociative episodes, PTSD flashbacks, and overwhelming emotion. It also works preventively when you notice early signs of escalating distress. You can practice grounding anywhere with no special equipment, and the exercises can be done discreetly.",
   },
   {
     question: "Do grounding techniques work for PTSD?",
     answer:
-      "Yes. Grounding techniques are a standard component of trauma therapy protocols including Dialectical Behavior Therapy (DBT), Cognitive Processing Therapy (CPT), and Prolonged Exposure. They are particularly helpful for managing flashbacks and dissociative episodes, which are common in PTSD. While grounding does not address the underlying trauma, it provides an essential tool for managing acute trauma responses and maintaining safety in the present.",
+      "Yes. Grounding is a standard component of trauma therapy protocols including DBT, Cognitive Processing Therapy, and Prolonged Exposure. It is particularly helpful for managing flashbacks and dissociative episodes. While grounding does not address underlying trauma, it provides essential tools for managing acute responses.",
   },
   {
     question: "How long does grounding take to work?",
     answer:
-      "Most people notice a shift within 2&ndash;5 minutes of beginning a grounding exercise. The 5-4-3-2-1 method typically takes 3&ndash;5 minutes to complete. The effect is often gradual rather than sudden &mdash; you may notice your heart rate slowing, your muscles relaxing, and your awareness of surroundings becoming sharper as the exercise progresses. With regular practice, grounding becomes faster and more effective.",
+      "Most people notice a shift within 2\u20135 minutes. The 5-4-3-2-1 method takes 3\u20135 minutes to complete. Effects are often gradual \u2014 heart rate slowing, muscles relaxing, and sharper awareness of surroundings as the exercise progresses. With regular practice, grounding becomes faster and more effective.",
   },
 ];
 

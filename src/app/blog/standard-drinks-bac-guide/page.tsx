@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How many standard drinks are in a bottle of wine?",
     answer:
-      "A standard 750 mL bottle of wine at 12% ABV contains approximately five standard drinks. However, many wines today range from 13% to 15% ABV or higher, which increases that number. A bottle of 14% ABV wine contains closer to six standard drinks. This is why pouring wine at home or ordering a bottle at dinner can lead to consuming more alcohol than people realize. Use our standard drinks calculator to get a precise count based on the specific ABV of your wine.",
+      "A standard 750 mL bottle of wine at 12% ABV contains approximately five standard drinks. Many wines today range from 13\u201315% ABV, which increases that to six or more. This is why home pours and restaurant bottles often deliver more alcohol than expected. Use our standard drinks calculator for a precise count.",
   },
   {
     question: "How long does it take for one standard drink to leave your system?",
     answer:
-      "On average, the body metabolizes approximately one standard drink per hour, though this varies based on body weight, biological sex, liver function, food consumption, and individual metabolism. A person who has consumed four standard drinks will typically need about four to five hours for their BAC to return to zero. It is important to note that nothing speeds up this process &mdash; not coffee, cold showers, or exercise. Only time allows your body to metabolize alcohol.",
+      "The body metabolizes approximately one standard drink per hour, though this varies by weight, sex, and liver function. Four drinks typically require four to five hours to clear. Nothing speeds this process \u2014 not coffee, cold showers, or exercise. Only time allows your body to metabolize alcohol.",
   },
   {
     question: "Is there a safe level of alcohol consumption?",
     answer:
-      "This is an area of evolving research. The NIAAA defines low-risk drinking guidelines (no more than 4 drinks per day and 14 per week for men, no more than 3 per day and 7 per week for women), but emphasizes that these are not &quot;safe&quot; limits. Even within these guidelines, some people may experience negative effects. The World Health Organization has stated that no level of alcohol consumption is completely without risk. Individual factors such as family history, medications, and health conditions further influence personal risk. Speak with a healthcare provider to understand what level of consumption, if any, is appropriate for your situation.",
+      "The NIAAA defines low-risk guidelines but emphasizes these are not \u201csafe\u201d limits. The WHO states no level of alcohol is completely without risk. Individual factors like family history, medications, and health conditions influence personal risk. Speak with a healthcare provider about what level, if any, is appropriate for you.",
   },
   {
     question: "Why do women reach higher BAC levels than men?",
     answer:
-      "Women typically reach higher BAC levels than men after consuming the same amount of alcohol, even when body weight is similar. There are several biological reasons for this. Women generally have a higher proportion of body fat and lower proportion of body water than men. Since alcohol is water-soluble, it becomes more concentrated in a smaller volume of body water. Women also tend to produce less alcohol dehydrogenase, the stomach enzyme that begins breaking down alcohol before it enters the bloodstream. These differences mean the same number of drinks has a greater physiological impact, which is why the NIAAA sets different low-risk drinking thresholds for men and women.",
+      "Women generally have a higher proportion of body fat and lower body water than men, so alcohol becomes more concentrated. Women also produce less alcohol dehydrogenase, the enzyme that breaks down alcohol in the stomach. These biological differences mean the same number of drinks has greater impact, which is why NIAAA sets different thresholds for men and women.",
   },
 ];
 

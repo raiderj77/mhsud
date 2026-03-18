@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is anxiety normal for teenagers?",
     answer:
-      "Some anxiety is completely normal and even healthy during adolescence. Worrying before a test, feeling nervous about a first date, or being anxious about college applications are all age-appropriate responses. Anxiety becomes a concern when it is persistent, out of proportion to the situation, and interferes with daily functioning \u2014 school attendance, friendships, family life, or activities they used to enjoy. About 32% of adolescents meet criteria for an anxiety disorder, which goes well beyond normal worry.",
+      "Some anxiety is normal during adolescence \u2014 worrying before a test or feeling nervous about a first date are age-appropriate responses. Anxiety becomes a concern when it is persistent, disproportionate, and interferes with daily functioning like school attendance, friendships, or activities they used to enjoy. About 32% of adolescents meet criteria for an anxiety disorder.",
   },
   {
     question: "How much anxiety is too much for a teen?",
     answer:
-      "The line between normal worry and an anxiety disorder comes down to intensity, duration, and functional impact. If anxiety causes a teen to avoid school, drop activities, withdraw from friends, experience frequent physical symptoms (stomachaches, headaches, muscle tension), or if they cannot control their worry despite wanting to, the anxiety has likely crossed into clinical territory. A screening tool can help identify whether anxiety levels warrant professional evaluation.",
+      "The line between normal worry and an anxiety disorder comes down to intensity, duration, and functional impact. If anxiety causes a teen to avoid school, drop activities, withdraw from friends, or experience frequent physical symptoms like stomachaches and headaches, it has likely crossed into clinical territory. A screening tool can help identify whether professional evaluation is warranted.",
   },
   {
     question: "Does social media cause teen anxiety?",
     answer:
-      "The relationship between social media and teen anxiety is complex. Social media does not single-handedly cause anxiety disorders, but research consistently shows it can amplify existing vulnerabilities. Mechanisms include social comparison (especially curated highlight reels), fear of missing out (FOMO), cyberbullying, sleep disruption from late-night use, and reduced time for in-person connection. The APA recommends monitoring social media use and having open conversations about its effects rather than blanket bans.",
+      "Social media does not single-handedly cause anxiety disorders, but research shows it can amplify existing vulnerabilities through social comparison, FOMO, cyberbullying, sleep disruption from late-night use, and reduced in-person connection. The APA recommends monitoring social media use and having open conversations about its effects rather than blanket bans.",
   },
   {
     question: "What helps a teenager with anxiety?",
     answer:
-      "Cognitive-behavioral therapy (CBT), including gradual exposure to feared situations, is the most effective evidence-based approach for teen anxiety. Family involvement matters \u2014 parents can learn to avoid accommodating avoidance while providing emotional support. Lifestyle factors also help: regular physical activity, adequate sleep, limited caffeine, and mindfulness practice. In moderate to severe cases, medication (typically SSRIs) may be discussed alongside therapy. The most important first step is having an open conversation and seeking professional evaluation.",
+      "Cognitive-behavioral therapy (CBT), including gradual exposure to feared situations, is the most effective approach. Family involvement matters \u2014 parents can learn to avoid accommodating avoidance while providing support. Lifestyle factors help too: regular physical activity, adequate sleep, and limited caffeine. For moderate to severe cases, SSRIs may be discussed alongside therapy. The first step is an open conversation and professional evaluation.",
   },
 ];
 

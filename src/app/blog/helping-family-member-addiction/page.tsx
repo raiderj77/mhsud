@@ -29,23 +29,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Can I force someone to go to rehab?",
-    answer: "In most cases, no. Involuntary commitment laws vary by state, and even where they exist, they are used only in extreme circumstances involving immediate danger. Forced treatment also tends to be less effective than treatment a person enters voluntarily. What you can do is set clear boundaries, express your concern, provide information about treatment options, and let your loved one know you will support them when they are ready. Sometimes the natural consequences of substance use — not being shielded from them — are what eventually motivate a person to seek help.",
+    answer: "In most cases, no. Involuntary commitment laws vary by state and are reserved for extreme circumstances. Forced treatment also tends to be less effective than voluntary treatment. You can set boundaries, express concern, and let your loved one know support is available when they are ready.",
   },
   {
     question: "Am I enabling my loved one?",
-    answer: "Enabling means doing things that protect your loved one from the natural consequences of their substance use. Common examples include making excuses for their behavior, covering their financial obligations, calling in sick to work on their behalf, or minimizing the severity of the problem. If you find yourself repeatedly rescuing your loved one from situations caused by their use, you may be enabling. This does not mean you are a bad person — enabling usually comes from love and a desire to help. But recognizing the pattern is an important first step toward changing it.",
+    answer: "Enabling means protecting someone from the natural consequences of their substance use \u2014 making excuses, covering financial obligations, or minimizing the problem. If you repeatedly rescue your loved one from situations caused by their use, you may be enabling. Recognizing this pattern is an important first step toward changing it.",
   },
   {
     question: "What is codependency?",
-    answer: "Codependency is a pattern of behavior in which a person becomes excessively focused on a loved one&apos;s needs, problems, or well-being at the expense of their own. In families affected by addiction, codependency often develops as a coping mechanism. A codependent person may feel responsible for their loved one&apos;s emotions, cover up their behavior, suppress their own needs, or derive their sense of self-worth from being needed. Codependency is not a clinical diagnosis, but it describes a real and common pattern that can be addressed through therapy, support groups like Al-Anon or Nar-Anon, and self-education.",
+    answer: "Codependency is a pattern where a person becomes excessively focused on a loved one\u2019s needs at the expense of their own. In families affected by addiction, it often develops as a coping mechanism. It is not a clinical diagnosis, but it describes a real pattern addressable through therapy and support groups like Al-Anon.",
   },
   {
     question: "Should I go to Al-Anon?",
-    answer: "Al-Anon is designed for anyone whose life has been affected by someone else&apos;s drinking. You do not need a referral, and meetings are free. Many family members find that Al-Anon helps them understand their own patterns, set healthier boundaries, and connect with others who share similar experiences. You do not have to wait until things are &quot;bad enough&quot; to attend. If your loved one&apos;s alcohol use is causing you stress, worry, or conflict, Al-Anon may be a helpful resource. Nar-Anon offers similar support for families affected by drug use. You can reach Al-Anon at 1-888-425-2666 or visit al-anon.org.",
+    answer: "Al-Anon is free and open to anyone whose life has been affected by someone else\u2019s drinking. It helps family members understand their patterns, set healthier boundaries, and connect with others in similar situations. Nar-Anon offers similar support for families affected by drug use. You can reach Al-Anon at 1-888-425-2666.",
   },
   {
     question: "What if they don't want help?",
-    answer: "It is common for people struggling with addiction to resist help, especially in the early stages. This does not mean the situation is hopeless. You cannot force sobriety, but you can take steps that may influence the process over time: set and maintain clear boundaries, stop enabling behaviors, express your concern honestly and without judgment, take care of your own mental health, and let your loved one know that support is available when they are ready. Many people eventually seek help after experiencing natural consequences and seeing that their loved ones are serious about boundaries. In the meantime, focusing on your own well-being is not selfish — it is essential.",
+    answer: "Resistance to help is common in addiction and does not mean the situation is hopeless. You cannot force sobriety, but you can set boundaries, stop enabling, express concern without judgment, and let them know support is available when ready. Focusing on your own well-being in the meantime is essential, not selfish.",
   },
 ];
 
@@ -245,7 +245,18 @@ export default function HelpingFamilyMemberAddictionPage() {
           <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
             <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The information provided is intended to help families understand addiction and find support — it is not a substitute for professional evaluation or counseling.</p>
-            <p className="mt-2">If you or someone you know is struggling with substance use, call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7). If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline). For family support, contact <strong>Al-Anon: 1-888-425-2666</strong> or <strong>Nar-Anon: 1-800-477-6291</strong>.</p>
+          </div>
+
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Al-Anon</strong> &mdash; <strong>1-888-425-2666</strong> (family support for alcohol)</li>
+              <li><strong>Nar-Anon</strong> &mdash; <strong>1-800-477-6291</strong> (family support for drug use)</li>
+            </ul>
           </div>
 
           {/* CTA */}

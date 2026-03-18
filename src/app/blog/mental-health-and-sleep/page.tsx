@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How many hours of sleep do adults actually need?",
     answer:
-      "The American Academy of Sleep Medicine and the CDC recommend 7\u20139 hours for adults 18\u201360, and 7\u20138 hours for adults 61+. Fewer than 7 hours is associated with significantly elevated rates of depression, anxiety, obesity, cardiovascular disease, and impaired immune function. The belief that some people are \u201cshort sleepers\u201d who thrive on 4\u20135 hours is largely a myth \u2014 genuine short sleepers are genetically very rare.",
+      "The CDC recommends 7\u20139 hours for adults 18\u201360 and 7\u20138 hours for adults 61+. Fewer than 7 hours is associated with elevated rates of depression, anxiety, obesity, and cardiovascular disease. The belief that some people thrive on 4\u20135 hours is largely a myth \u2014 genuine short sleepers are genetically very rare.",
   },
   {
     question: "Does alcohol really help sleep?",
     answer:
-      "Alcohol helps with sleep onset \u2014 it has sedative properties that make falling asleep easier. However, it significantly worsens overall sleep quality. Alcohol suppresses REM sleep, causes fragmented sleep in the second half of the night as it metabolizes, and leads to next-day fatigue. Regular use as a sleep aid worsens sleep over time and carries significant addiction risk.",
+      "Alcohol helps with sleep onset due to its sedative properties but significantly worsens overall sleep quality. It suppresses REM sleep, fragments sleep in the second half of the night, and causes next-day fatigue. Regular use as a sleep aid worsens sleep over time and carries significant addiction risk.",
   },
   {
     question: "Can I catch up on sleep over the weekend?",
     answer:
-      "Partially. \u201cRecovery sleep\u201d on weekends does reduce some of the acute cognitive impairment from weekday sleep restriction. However, research shows it doesn\u2019t fully restore cognitive performance, and the weekend schedule shift (staying up later, sleeping later) disrupts the circadian system \u2014 a pattern called \u201csocial jetlag\u201d that is itself associated with worse mood and metabolic health.",
+      "Partially. Weekend recovery sleep reduces some acute cognitive impairment from weekday sleep restriction. However, it doesn\u2019t fully restore performance, and the schedule shift disrupts the circadian system \u2014 a pattern called \u201csocial jetlag\u201d that is itself associated with worse mood and metabolic health.",
   },
   {
     question: "What time should I go to bed for mental health?",
     answer:
-      "A consistent wake time is more important than bedtime. Waking at the same time every day \u2014 including weekends \u2014 is the single most powerful anchor for the circadian system. Going to bed when sleepy (rather than forcing sleep at a set time) combined with a consistent wake time produces the most stable sleep architecture. Morning light exposure (ideally outdoor) within 30\u201360 minutes of waking also powerfully anchors the circadian clock.",
+      "A consistent wake time matters more than bedtime. Waking at the same time daily \u2014 including weekends \u2014 is the most powerful circadian anchor. Go to bed when sleepy rather than forcing a set time. Morning light exposure within 30\u201360 minutes of waking further stabilizes the circadian clock and improves sleep quality.",
   },
 ];
 
@@ -211,6 +211,9 @@ export default function MentalHealthAndSleepPage() {
             <p>
               <strong>Sleep hygiene:</strong> Consistent wake time (the single most powerful anchor for the circadian system), limiting caffeine after noon, and managing light exposure.
             </p>
+            <p>
+              If you are unsure whether your sleep difficulties have reached a clinically significant level, the <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale</Link> provides a validated self-assessment that takes about 2 minutes. The <Link href="/sleep-and-mood-check" className="text-sage-600 dark:text-sage-400 underline">Sleep &amp; Mood Check</Link> can help you explore how your sleep and mental health may be interacting.
+            </p>
           </section>
 
           <AdSlot position="Blog In-Content 2" className="my-8" />
@@ -312,6 +315,10 @@ export default function MentalHealthAndSleepPage() {
               <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated PTSD symptom screening tool</p>
+              </Link>
+              <Link href="/athens-insomnia-scale" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Athens Insomnia Scale</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated 8-item insomnia self-assessment</p>
               </Link>
             </div>
           </section>

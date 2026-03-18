@@ -68,6 +68,24 @@ export default function SleepMoodPage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for informational and educational purposes only and does not constitute medical or mental health advice. Always consult a qualified mental health professional for diagnosis and treatment.
+            </p>
+          </div>
+
           <section>
             <h2>The sleep-mood connection: it goes both ways</h2>
             <p>
@@ -222,6 +240,7 @@ export default function SleepMoodPage() {
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Want to check how your sleep and mood connect?</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
             <Link href="/sleep-and-mood-check" className="btn-primary text-sm">Take the Sleep &amp; Mood Self-Check</Link>
+            <Link href="/athens-insomnia-scale" className="btn-primary text-sm">Athens Insomnia Scale</Link>
           </div>
 
           {/* Author Bio */}

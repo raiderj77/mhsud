@@ -42,12 +42,12 @@ const FAQ_DATA = [
   {
     question: "Can I use the PHQ-9 to diagnose myself with depression?",
     answer:
-      "No. The PHQ-9 is a screening tool, not a diagnostic instrument. A diagnosis of major depressive disorder requires a comprehensive clinical evaluation by a qualified mental health professional, taking into account your full history, symptoms, functioning, and context.",
+      "No. The PHQ-9 is a screening tool, not a diagnostic instrument. A diagnosis of major depressive disorder requires a comprehensive clinical evaluation by a qualified mental health professional who considers your full history, symptom duration, daily functioning, medical context, and whether another condition better explains the symptoms.",
   },
   {
     question: "How often should I take the PHQ-9?",
     answer:
-      "If you\u2019re not in treatment, there\u2019s no set schedule. Many people take it when they notice a change in how they\u2019ve been feeling. If you\u2019re in treatment, your provider may administer it monthly or at each session to track progress. Retaking it more frequently than every two weeks doesn\u2019t provide meaningful new information because the questions ask about the past two weeks.",
+      "If you\u2019re not in treatment, there\u2019s no set schedule \u2014 many people take it when they notice a change in how they\u2019ve been feeling. If you\u2019re in treatment, your provider may administer it monthly to track progress. Retaking it more frequently than every two weeks provides little new information, since the questions cover the past two weeks.",
   },
   {
     question: "Does a high PHQ-9 score mean I need medication?",
@@ -57,7 +57,7 @@ const FAQ_DATA = [
   {
     question: "What if my score seems inconsistent with how I feel?",
     answer:
-      "Screening tools are imperfect by design \u2014 they capture specific symptom patterns within a fixed timeframe. If your score seems lower than how you feel, or higher, that\u2019s worth discussing with a professional. Your lived experience is always more important than the number.",
+      "Screening tools are imperfect by design \u2014 they capture specific symptom patterns within a fixed two-week timeframe. If your score seems lower or higher than how you actually feel, that discrepancy is worth discussing with a mental health professional. Your lived experience and daily functioning are always more important than a single number.",
   },
 ];
 

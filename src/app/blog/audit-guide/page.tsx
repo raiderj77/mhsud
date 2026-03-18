@@ -30,10 +30,10 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   { question: "What counts as 'one drink' in the AUDIT?", answer: "A standard drink varies by country but generally contains about 14 grams of pure alcohol (US definition). This is roughly equivalent to 12 oz of regular beer (5% alcohol), 5 oz of wine (12% alcohol), or 1.5 oz of distilled spirits (40% alcohol). Many drinks served in bars and at home exceed these amounts." },
   { question: "Is it possible to score in the higher zones and not have an alcohol problem?", answer: "The AUDIT identifies patterns associated with risk — it doesn't diagnose disorders. It is possible for cultural drinking patterns, social context, or temporary changes in drinking to elevate a score. However, higher scores consistently correlate with increased risk in research, so professional follow-up is recommended regardless." },
-  { question: "Should I stop drinking if my score is high?", answer: "If you drink heavily, do not stop suddenly without medical guidance. Alcohol withdrawal can be medically dangerous and sometimes life-threatening. Talk to a healthcare provider about how to safely reduce your drinking if that is your goal." },
+  { question: "Should I stop drinking if my score is high?", answer: "If you drink heavily, do not stop suddenly without medical guidance. Alcohol withdrawal can be medically dangerous and sometimes life-threatening. Talk to a healthcare provider about how to safely reduce your drinking if that is your goal. Medical professionals can offer outpatient monitoring, medication-assisted tapering, or supervised detoxification when needed." },
   { question: "How is the AUDIT different from the CAGE questionnaire?", answer: "The CAGE is a 4-question screen focused on dependence-related experiences (Cutting down, Annoyance, Guilt, Eye-opener). The AUDIT is broader — it covers consumption patterns, dependence symptoms, and alcohol-related harm across 10 questions. The AUDIT is generally considered more sensitive for detecting hazardous drinking before dependence develops." },
   { question: "Why does the AUDIT ask about the past year instead of two weeks?", answer: "Alcohol-related patterns and consequences often develop over months, not weeks. The one-year timeframe captures episodic heavy drinking and consequences that might be missed in a shorter window. This is different from depression and anxiety screeners, which use two-week windows because mood symptoms can change more rapidly." },
-  { question: "Can I use my AUDIT score to show my doctor?", answer: "Absolutely. Bringing a completed AUDIT to an appointment can be a helpful way to start a conversation about alcohol. Many providers use the AUDIT themselves and will find it useful as a starting point for discussion." },
+  { question: "Can I use my AUDIT score to show my doctor?", answer: "Absolutely. Bringing a completed AUDIT to an appointment is a helpful way to start a conversation about alcohol. Many providers use the AUDIT themselves and find it useful. You might say: I took an alcohol screening and scored X, and I would like to discuss what that means for me." },
 ];
 
 export default function AUDITGuidePage() {
@@ -63,6 +63,13 @@ export default function AUDITGuidePage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          <div className="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 dark:border-amber-400 p-6 my-8 rounded-r not-prose">
+            <p className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Clinical Disclaimer</p>
+            <p className="text-amber-700 dark:text-amber-400 text-sm">
+              This content is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified mental health provider with any questions you may have regarding a medical or mental health condition.
+            </p>
+          </div>
+
           <section>
             <h2>What is the AUDIT?</h2>
             <p>
@@ -176,6 +183,15 @@ export default function AUDITGuidePage() {
               For Zone IV scores, professional evaluation is strongly encouraged. Effective, evidence-based treatments exist for alcohol use disorders, and seeking help is a sign of strength, not weakness.
             </p>
           </section>
+
+          <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 dark:border-red-400 p-6 my-8 rounded-r not-prose">
+            <p className="font-semibold text-red-800 dark:text-red-300 mb-2">Crisis Resources</p>
+            <ul className="text-red-700 dark:text-red-400 text-sm mt-2 space-y-1">
+              <li>&bull; Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline)</li>
+              <li>&bull; Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line)</li>
+              <li>&bull; Call SAMHSA at <strong>1-800-662-4357</strong></li>
+            </ul>
+          </div>
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">

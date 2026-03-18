@@ -33,17 +33,17 @@ const FAQ_DATA = [
   {
     question: "What is a normal DASS-21 score?",
     answer:
-      "A \u201cnormal\u201d DASS-21 score falls in the lowest severity band for each subscale: 0\u20139 for Depression, 0\u20137 for Anxiety, and 0\u201314 for Stress. These ranges indicate that symptoms in that dimension are within the typical range for the general population. However, \u201cnormal\u201d on the DASS-21 does not mean you cannot benefit from support \u2014 it simply means your current symptom level in that area is not elevated.",
+      "A normal DASS-21 score falls in the lowest severity band: 0\u20139 for Depression, 0\u20137 for Anxiety, and 0\u201314 for Stress. These ranges indicate symptoms are within the typical range for the general population. Normal does not mean you cannot benefit from support \u2014 it simply means your current symptom level in that area is not elevated.",
   },
   {
     question: "Is the DASS-21 the same as the PHQ-9?",
     answer:
-      "No. The PHQ-9 is a 9-item screener focused exclusively on depression, aligned with DSM diagnostic criteria. The DASS-21 measures three separate dimensions \u2014 depression, anxiety, and stress \u2014 simultaneously with 21 items. The PHQ-9 is more commonly used in clinical settings for depression screening, while the DASS-21 provides a broader emotional profile across all three domains.",
+      "No. The PHQ-9 is a 9-item screener focused exclusively on depression, aligned with DSM criteria. The DASS-21 measures three dimensions \u2014 depression, anxiety, and stress \u2014 simultaneously with 21 items. The PHQ-9 is more common in clinical depression screening, while the DASS-21 provides a broader emotional profile across all three domains.",
   },
   {
     question: "How often should I take the DASS-21?",
     answer:
-      "The DASS-21 asks about symptoms over the past week, so weekly or biweekly retesting is appropriate. Monthly check-ins are useful for general monitoring. Many people retake it before and after starting a new intervention \u2014 such as therapy, medication, or a lifestyle change \u2014 to track whether scores are shifting.",
+      "The DASS-21 asks about symptoms over the past week, so weekly or biweekly retesting is appropriate. Monthly check-ins work well for general monitoring. Many people retake it before and after starting a new intervention \u2014 such as therapy, medication, or a lifestyle change \u2014 to track whether scores are shifting. Consistent retesting reveals meaningful trends over time.",
   },
   {
     question: "Can the DASS-21 diagnose depression or anxiety?",

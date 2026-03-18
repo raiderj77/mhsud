@@ -52,7 +52,7 @@ const FAQ_DATA = [
   {
     question: "Is it safe to seek an ADHD diagnosis as an adult?",
     answer:
-      "Yes. Many adults are evaluated and diagnosed with ADHD each year. The evaluation process typically involves clinical interview, symptom history, and sometimes standardized testing. Your primary care physician, a psychiatrist, or a psychologist can conduct an evaluation.",
+      "Yes. Many adults are evaluated and diagnosed with ADHD each year. The evaluation process typically involves a clinical interview, detailed symptom history, and sometimes standardized neuropsychological testing. Your primary care physician, a psychiatrist, or a psychologist experienced in adult ADHD can conduct the evaluation and discuss next steps.",
   },
 ];
 

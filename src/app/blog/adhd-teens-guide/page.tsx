@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can ADHD develop in the teenage years?",
     answer:
-      "ADHD is a neurodevelopmental condition that is present from childhood, but it can appear to develop in the teenage years because symptoms were previously mild, compensated for, or misattributed. The increased demands of middle and high school \u2014 more complex assignments, less structure, greater need for self-management \u2014 often reveal ADHD that was manageable in elementary school. It is not that ADHD suddenly appeared; it is that the environment changed enough to make existing symptoms disruptive.",
+      "ADHD is present from childhood but can appear to develop in the teenage years because symptoms were previously mild or compensated for. The increased demands of middle and high school \u2014 more complex assignments, less structure, greater self-management \u2014 often reveal ADHD that was manageable earlier. The environment changed enough to make existing symptoms disruptive.",
   },
   {
     question: "How is ADHD different in teens vs young children?",
     answer:
-      "In young children, ADHD often presents as visible hyperactivity \u2014 running, climbing, inability to sit still. In teenagers, hyperactivity typically shifts inward: restlessness, fidgeting, feeling driven, difficulty relaxing. The dominant challenges in teens are executive function deficits \u2014 time management, planning, organization, task initiation, and emotional regulation. Teens with ADHD may also struggle with impulse control in social situations and have difficulty with motivation for tasks that are not immediately rewarding.",
+      "In young children, ADHD often presents as visible hyperactivity \u2014 running, climbing, inability to sit still. In teenagers, hyperactivity shifts inward: restlessness, fidgeting, and difficulty relaxing. The dominant teen challenges are executive function deficits \u2014 time management, planning, organization, and emotional regulation. Teens may also struggle with impulse control and motivation for non-rewarding tasks.",
   },
   {
     question: "Should I get my teenager tested for ADHD?",
     answer:
-      "Consider pursuing a professional evaluation if your teenager consistently struggles with organization, time management, task completion, emotional regulation, or focus in ways that interfere with school, relationships, or daily functioning \u2014 and these patterns have been present since childhood. A screening tool like the MindCheck Tools ADHD test for teens can help you identify whether patterns are consistent with ADHD, but only a qualified professional (psychologist, psychiatrist, developmental pediatrician, or neuropsychologist) can make an official evaluation.",
+      "Consider a professional evaluation if your teenager consistently struggles with organization, time management, emotional regulation, or focus in ways that interfere with school or relationships \u2014 and these patterns trace back to childhood. The MindCheck Tools ADHD test for teens can identify whether patterns are consistent with ADHD, but only a qualified professional can make an official evaluation.",
   },
   {
     question: "Can ADHD be managed without medication?",
     answer:
-      "Yes, though the most effective approach depends on severity. Evidence-based non-medication strategies include cognitive-behavioral therapy focused on executive function skills, organizational coaching, environmental modifications (reduced distractions, structured routines), regular exercise, adequate sleep, and school accommodations (504 plans or IEPs). For moderate to severe ADHD, research consistently shows that medication combined with behavioral strategies produces the best outcomes. The decision about medication should be made collaboratively between the teen, parents, and their healthcare provider.",
+      "Yes, though the best approach depends on severity. Non-medication strategies include cognitive-behavioral therapy for executive function skills, organizational coaching, environmental modifications, regular exercise, and school accommodations (504 plans or IEPs). For moderate to severe ADHD, research shows medication combined with behavioral strategies produces the best outcomes. This decision should be made collaboratively with a healthcare provider.",
   },
 ];
 

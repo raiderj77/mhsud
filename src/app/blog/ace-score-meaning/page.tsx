@@ -30,23 +30,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is a high ACE score?",
-    answer: "An ACE score of 4 or higher is generally considered high and has been associated with significantly increased risk for a range of health conditions, including heart disease, depression, substance use disorders, and suicide attempts. However, any ACE score above 0 may indicate exposure to adversity that could benefit from supportive attention. It is important to remember that the ACE score is a screening tool, not a diagnosis — it identifies potential risk, not certainty of outcome.",
+    answer: "An ACE score of 4 or higher is generally considered high and associated with significantly increased risk for heart disease, depression, substance use disorders, and suicide attempts. However, any score above 0 may indicate adversity worth exploring. The ACE score is a screening tool, not a diagnosis — it identifies potential risk, not certainty of outcome.",
   },
   {
     question: "Does a high ACE score mean I'll get sick?",
-    answer: "No. A high ACE score indicates increased statistical risk, but it does not determine your individual health outcome. Many people with high ACE scores lead healthy, fulfilling lives. Protective factors — such as supportive relationships, access to therapy, community connection, and healthy coping strategies — can significantly buffer the impact of adverse childhood experiences. Your ACE score describes what happened to you, not what will happen to you.",
+    answer: "No. A high ACE score indicates increased statistical risk but does not determine your individual health outcome. Many people with high scores lead healthy, fulfilling lives. Protective factors like supportive relationships, therapy, community connection, and healthy coping strategies significantly buffer the impact of adverse childhood experiences. Your score describes what happened to you, not what will happen.",
   },
   {
     question: "Can ACE impacts be reversed?",
-    answer: "While you cannot change what happened in childhood, the effects of adverse childhood experiences can be meaningfully addressed through evidence-based approaches. Trauma-focused therapy (such as EMDR, CPT, or somatic experiencing), supportive relationships, mindfulness practices, physical activity, and community connection have all been shown to help reduce the long-term health impacts associated with ACEs. The brain retains the capacity for healing and adaptation throughout life — a concept known as neuroplasticity.",
+    answer: "While you cannot change what happened in childhood, the effects of ACEs can be meaningfully addressed through evidence-based approaches. Trauma-focused therapy (EMDR, CPT, somatic experiencing), supportive relationships, mindfulness, physical activity, and community connection all help reduce long-term health impacts. The brain retains capacity for healing throughout life, a concept known as neuroplasticity.",
   },
   {
     question: "Should I take the ACE questionnaire?",
-    answer: "The ACE questionnaire can be a useful self-reflection tool for understanding how childhood experiences may be affecting your current health and well-being. It is a brief, 10-item screening that takes only a few minutes. However, if you are currently in crisis or find it distressing to reflect on childhood adversity, it may be best to complete the questionnaire with the support of a therapist or counselor. Your answers are processed entirely in your browser and are never stored or transmitted.",
+    answer: "The ACE questionnaire is a useful self-reflection tool for understanding how childhood experiences may affect your current health. It is a brief, 10-item screening that takes only a few minutes. If reflecting on childhood adversity feels distressing, consider completing it with a therapist. Your answers are processed entirely in your browser and are never stored or transmitted.",
   },
   {
     question: "What is trauma-informed care?",
-    answer: "Trauma-informed care is an approach to healthcare, education, and social services that recognizes the widespread impact of trauma and integrates that understanding into policies, procedures, and practices. Rather than asking 'What is wrong with you?' it asks 'What happened to you?' The core principles include safety, trustworthiness, peer support, collaboration, empowerment, and attention to cultural and gender considerations. Trauma-informed care does not require individuals to disclose their trauma — it creates environments where healing is supported regardless of whether a specific history is shared.",
+    answer: "Trauma-informed care recognizes the widespread impact of trauma and integrates that understanding into policies and practices. Rather than asking 'What is wrong with you?' it asks 'What happened to you?' Core principles include safety, trustworthiness, peer support, collaboration, and empowerment. It does not require trauma disclosure — it creates environments where healing is supported regardless of history.",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function ACEScoreMeaningPage() {
         {/* Trauma / Content Warning */}
         <div className="card p-5 bg-rose-50/50 dark:bg-rose-950/20 border-rose-200 dark:border-rose-800 not-prose text-sm text-neutral-600 dark:text-neutral-400 mb-10">
           <p className="font-semibold text-rose-800 dark:text-rose-400 mb-2">Content Warning</p>
-          <p>This article discusses childhood abuse, neglect, and household dysfunction. If you are currently in crisis or find this content distressing, please reach out for support. Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or call SAMHSA&apos;s National Helpline at <strong>1-800-662-4357</strong> (free, confidential, 24/7). You can return to this article whenever you feel ready.</p>
+          <p>This article discusses childhood abuse, neglect, and household dysfunction. If you are currently in crisis or find this content distressing, please reach out for support. Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or call SAMHSA&apos;s National Helpline at <strong>1-800-662-4357</strong> (free, confidential, 24/7). You can return to this article whenever you feel ready.</p>
         </div>
 
         <div className="prose-mh space-y-8">
@@ -278,7 +278,7 @@ export default function ACEScoreMeaningPage() {
           <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
             <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The ACE questionnaire is a screening tool, not a diagnostic instrument. A screening result may indicate the presence of risk factors, but only a qualified healthcare professional can provide a clinical evaluation.</p>
-            <p className="mt-2">If you or someone you know is struggling, call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7). If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline).</p>
+            <p className="mt-2">If you or someone you know is struggling, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7).</p>
           </div>
 
           {/* CTA */}

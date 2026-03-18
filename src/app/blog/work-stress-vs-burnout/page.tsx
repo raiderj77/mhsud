@@ -32,12 +32,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Am I burned out or just stressed?", answer: "Stress is typically tied to specific demands and resolves when those demands ease. Burnout is a state of chronic exhaustion, cynicism, and reduced effectiveness that persists even after a vacation or break. If rest doesn't restore you, burnout is more likely — but only a professional can make that determination in your specific context." },
-  { question: "Is burnout an official medical diagnosis?", answer: "Not exactly. The WHO included burnout in ICD-11 as an 'occupational phenomenon' — not a medical condition. It is defined by three dimensions: energy depletion or exhaustion, increased mental distance from one's job (cynicism), and reduced professional efficacy. Some clinicians may diagnose adjustment disorder or other conditions when burnout symptoms are severe." },
-  { question: "Can an online burnout quiz actually diagnose me?", answer: "No. Online self-checks — including ours — are reflection tools, not diagnostic instruments. They can help you notice patterns and start a conversation with a professional, but they cannot account for your medical history, life circumstances, or the full complexity of your situation. A score is a starting point, never a conclusion." },
-  { question: "What is the difference between burnout and depression?", answer: "Burnout and depression share symptoms like fatigue, difficulty concentrating, and low motivation. The key difference is scope: burnout is typically tied to work and may improve when work conditions change, while depression affects all areas of life regardless of circumstances. However, chronic burnout can develop into clinical depression, so the distinction matters less than getting help." },
-  { question: "Can you recover from burnout without quitting your job?", answer: "Yes, though it requires deliberate changes. Research supports strategies like setting firm boundaries, renegotiating workload, taking actual breaks (not working through lunch), using available mental health resources, and working with a therapist. Recovery timelines vary — mild burnout may improve in weeks, while severe burnout can take months even with intervention." },
-  { question: "When should I see a doctor about work stress or burnout?", answer: "Consider seeking professional help if: stress is affecting your sleep, appetite, or physical health; you feel emotionally numb or detached most of the time; you can't concentrate or make decisions; you've lost interest in things outside work; or you're using alcohol or other substances to cope. You don't need to be in crisis to deserve support." },
+  { question: "Am I burned out or just stressed?", answer: "Stress is tied to specific demands and resolves when those demands ease. Burnout is chronic exhaustion, cynicism, and reduced effectiveness that persists even after a break. If rest does not restore you, burnout is more likely, but only a professional can make that determination in your context." },
+  { question: "Is burnout an official medical diagnosis?", answer: "Not exactly. The WHO included burnout in ICD-11 as an occupational phenomenon, not a medical condition. It is defined by three dimensions: energy depletion, increased mental distance from work, and reduced professional efficacy. Some clinicians diagnose adjustment disorder when burnout symptoms are severe." },
+  { question: "Can an online burnout quiz actually diagnose me?", answer: "No. Online self-checks are reflection tools, not diagnostic instruments. They help you notice patterns and start a conversation with a professional, but cannot account for your medical history or life circumstances. A score is always a starting point, never a conclusion." },
+  { question: "What is the difference between burnout and depression?", answer: "Burnout and depression share symptoms like fatigue and low motivation. The key difference is scope: burnout is tied to work and may improve when conditions change, while depression affects all areas of life. However, chronic burnout can develop into clinical depression, making professional assessment important." },
+  { question: "Can you recover from burnout without quitting your job?", answer: "Yes, though it requires deliberate changes. Research supports setting firm boundaries, renegotiating workload, taking actual breaks, and working with a therapist. Recovery timelines vary: mild burnout may improve in weeks, while severe burnout can take months even with active intervention." },
+  { question: "When should I see a doctor about work stress or burnout?", answer: "Seek professional help if stress is affecting your sleep or physical health, you feel emotionally numb most of the time, you cannot concentrate or make decisions, or you are using alcohol or substances to cope. You do not need to be in crisis to deserve support." },
 ];
 
 export default function WorkStressBurnoutPage() {
@@ -216,6 +216,24 @@ export default function WorkStressBurnoutPage() {
               A therapist, counselor, or your primary care provider can help you determine whether what you&apos;re experiencing is situational stress, burnout, depression, or something else entirely — and can work with you on a plan that accounts for your specific circumstances, which no online tool can do.
             </p>
           </section>
+
+          {/* Clinical Disclaimer */}
+          <div className="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 dark:border-amber-400 p-6 my-8 rounded-r not-prose">
+            <p className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Clinical Disclaimer</p>
+            <p className="text-amber-700 dark:text-amber-400 text-sm">
+              This content is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified mental health provider with any questions you may have regarding a medical or mental health condition.
+            </p>
+          </div>
+
+          {/* Crisis Resources */}
+          <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 dark:border-red-400 p-6 my-8 rounded-r not-prose">
+            <p className="font-semibold text-red-800 dark:text-red-300 mb-2">Crisis Resources</p>
+            <ul className="text-red-700 dark:text-red-400 text-sm mt-2 space-y-1">
+              <li>&bull; Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline)</li>
+              <li>&bull; Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line)</li>
+              <li>&bull; Call SAMHSA at <strong>1-800-662-4357</strong></li>
+            </ul>
+          </div>
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">

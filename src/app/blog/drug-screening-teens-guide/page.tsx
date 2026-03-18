@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is the CRAFFT screening?",
     answer:
-      "The CRAFFT is a validated substance use screening tool designed specifically for adolescents aged 12\u201321. The name is an acronym for six key questions about Car, Relax, Alone, Forget, Friends, and Trouble \u2014 all related to substance use patterns and consequences. A score of 2 or higher suggests a pattern that warrants further conversation with a healthcare provider. It is widely used in pediatric and adolescent medicine and is recommended by the American Academy of Pediatrics.",
+      "The CRAFFT is a validated substance use screening tool for adolescents aged 12\u201321. It asks six questions about Car, Relax, Alone, Forget, Friends, and Trouble related to substance use. A score of 2 or higher suggests patterns warranting further evaluation. It is recommended by the American Academy of Pediatrics.",
   },
   {
     question: "How common is teen substance use?",
     answer:
-      "According to the CDC\u2019s Youth Risk Behavior Surveillance System (YRBSS), approximately 15% of high school students report using illicit drugs. Cannabis is the most commonly used substance after alcohol. Vaping and nicotine use have surged in recent years. The Monitoring the Future survey shows that while some substance use has declined, fentanyl contamination has made experimentation significantly more dangerous than in previous generations.",
+      "According to the CDC\u2019s YRBSS, approximately 15% of high school students report illicit drug use. Cannabis is the most common substance after alcohol, and vaping has surged. Fentanyl contamination of counterfeit pills has made experimentation significantly more dangerous than in previous generations.",
   },
   {
     question: "What should I do if the screening suggests a problem?",
     answer:
-      "A positive screening does not mean your teen has a substance use disorder \u2014 it means there is a pattern worth exploring further. Start with a calm, non-judgmental conversation. Express concern, not anger. Contact your teen\u2019s pediatrician for a professional evaluation. If substance use is confirmed, treatment options range from outpatient counseling to intensive programs depending on severity. The SAMHSA helpline (1-800-662-4357) provides free referrals 24/7. Early intervention dramatically improves outcomes.",
+      "A positive screening means there are patterns worth exploring, not necessarily a substance use disorder. Start with a calm, non-judgmental conversation. Contact your teen\u2019s pediatrician for evaluation. SAMHSA\u2019s helpline (1-800-662-4357) provides free referrals. Early intervention dramatically improves outcomes.",
   },
   {
     question: "How do I talk to my teenager about drug use?",
     answer:
-      "Use a motivational interviewing approach: ask open-ended questions, listen without judgment, and express curiosity rather than accusations. Avoid lecturing, which shuts down communication. Start with \u201cI\u2019ve noticed...\u201d or \u201cI\u2019m curious about...\u201d rather than \u201cAre you using drugs?\u201d Share factual information about risks without exaggeration (teens can spot dishonesty). Take a screening together to create a structured, less confrontational way to discuss patterns. Make it clear that your goal is safety, not punishment.",
+      "Use a motivational interviewing approach: ask open-ended questions, listen without judgment, and express curiosity rather than accusations. Start with \u201cI\u2019ve noticed...\u201d rather than \u201cAre you using drugs?\u201d Share factual information without exaggeration. Make it clear your goal is safety, not punishment.",
   },
 ];
 

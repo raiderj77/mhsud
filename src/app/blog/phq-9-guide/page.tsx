@@ -29,12 +29,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Is the PHQ-9 the same as a depression diagnosis?", answer: "No. The PHQ-9 is a screening tool that identifies possible depressive symptoms. A diagnosis of depression requires a comprehensive clinical evaluation by a qualified healthcare professional, including consideration of medical history, symptom duration, functional impact, and ruling out other causes." },
-  { question: "Can I use my PHQ-9 score to get medication?", answer: "A PHQ-9 score alone is not sufficient for prescribing medication. However, sharing your score with a healthcare provider can be a useful conversation starter and may help them understand how you've been feeling. Treatment decisions involve many factors beyond a screening score." },
-  { question: "Why do different sources show different PHQ-9 cutoff scores?", answer: "Research has examined various cutoff points for different purposes. A score of 10 is commonly used as a threshold for 'moderate' symptoms in research, but clinical practice considers the full picture — not just whether you're above or below a number. Context matters more than cutoffs." },
-  { question: "How often should I take the PHQ-9?", answer: "In clinical settings, the PHQ-9 is often administered every 2-4 weeks to monitor changes over time. For personal reflection, taking it periodically can help you notice patterns, but avoid obsessing over small score changes — natural fluctuation is normal." },
-  { question: "Is the PHQ-9 accurate for everyone?", answer: "The PHQ-9 has been validated across many populations, but no screening tool is equally accurate for all groups. Cultural factors, language, medical conditions, and life circumstances can all influence how people interpret and respond to the questions. This is one reason professional interpretation matters." },
-  { question: "What if my score is low but I still feel bad?", answer: "Screening tools capture a specific set of symptoms over a specific time period. It's entirely possible to score low on the PHQ-9 and still be struggling. If you feel something is wrong, trust that feeling and talk to a professional regardless of your score." },
+  { question: "Is the PHQ-9 the same as a depression diagnosis?", answer: "No. The PHQ-9 is a screening tool that identifies possible depressive symptoms. A diagnosis requires a comprehensive clinical evaluation by a qualified healthcare professional, including consideration of medical history, symptom duration, functional impact, and ruling out other potential causes of symptoms." },
+  { question: "Can I use my PHQ-9 score to get medication?", answer: "A PHQ-9 score alone is not sufficient for prescribing medication. However, sharing your score with a healthcare provider can be a useful conversation starter and may help them understand how you have been feeling. Treatment decisions involve many factors beyond a single screening score." },
+  { question: "Why do different sources show different PHQ-9 cutoff scores?", answer: "Research has examined various cutoff points for different purposes. A score of 10 is commonly used as the threshold for moderate symptoms, but clinical practice considers the full picture rather than whether you are above or below a single number. Context always matters more than cutoffs." },
+  { question: "How often should I take the PHQ-9?", answer: "In clinical settings, the PHQ-9 is often administered every two to four weeks to monitor changes over time. For personal reflection, taking it periodically can help you notice patterns. Avoid focusing on small score changes between administrations, as natural fluctuation is normal." },
+  { question: "Is the PHQ-9 accurate for everyone?", answer: "The PHQ-9 has been validated across many populations, but no screening tool is equally accurate for all groups. Cultural factors, language, medical conditions, and life circumstances can influence how people interpret and respond to the questions. This is one reason professional interpretation matters." },
+  { question: "What if my score is low but I still feel bad?", answer: "Screening tools capture a specific set of symptoms over a specific time period. It is entirely possible to score low on the PHQ-9 and still be struggling with your mental health. If you feel something is wrong, trust that feeling and talk to a professional regardless of your score." },
 ];
 
 export default function PHQ9GuidePage() {
@@ -176,6 +176,24 @@ export default function PHQ9GuidePage() {
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This content is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified mental health provider with any questions you may have regarding a medical or mental health condition.
+            </p>
+          </div>
+
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to take the PHQ-9?</h3>
@@ -216,8 +234,6 @@ export default function PHQ9GuidePage() {
               </Link>
             </div>
           </section>
-
-          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
         </div>
       </article>
     </>

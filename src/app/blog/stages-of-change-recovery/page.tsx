@@ -29,23 +29,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is relapse part of recovery?",
-    answer: "Yes. In the stages of change model, relapse is considered a normal part of the change process rather than a failure. Most people cycle through the stages several times before maintaining long-term change. Research shows that the average person makes multiple attempts before sustaining recovery. Each attempt builds self-knowledge, coping skills, and motivation that contribute to eventual success. If you experience a relapse, the most important step is to re-engage with the process rather than give up.",
+    answer: "Yes. In the stages of change model, relapse is a normal part of the change process rather than a failure. Most people cycle through the stages several times before maintaining long-term change. Each attempt builds self-knowledge, coping skills, and motivation. If you experience a relapse, the most important step is to re-engage with the process.",
   },
   {
     question: "What stage am I in?",
-    answer: "Your stage depends on your current relationship with change. If you don&apos;t think you have a problem, you may be in precontemplation. If you&apos;re weighing the pros and cons of changing, you may be in contemplation. If you&apos;re making a plan, you&apos;re likely in preparation. If you&apos;re actively making changes, you&apos;re in the action stage. If you&apos;ve been maintaining changes for six months or more, you&apos;re in maintenance. Our Readiness to Change self-check can help you identify where you are right now.",
+    answer: "Your stage depends on your current relationship with change. If you do not think there is a problem, you may be in precontemplation. Weighing pros and cons suggests contemplation. Making a plan indicates preparation. Actively changing means action. Maintaining changes for six months or more is maintenance. Our Readiness to Change self-check can help you identify your stage.",
   },
   {
     question: "Can you skip stages?",
-    answer: "Generally, no. The stages of change model describes a process that most people move through sequentially. Jumping from precontemplation directly to action, for example, often leads to changes that don&apos;t stick because the internal motivation and planning haven&apos;t been developed. However, the time spent in each stage varies widely from person to person. Some people move through contemplation quickly, while others remain there for months or years. The key is that each stage builds readiness for the next.",
+    answer: "Generally, no. Jumping from precontemplation directly to action often leads to changes that do not stick because internal motivation and planning have not developed. However, time spent in each stage varies widely. Some people move through contemplation quickly while others remain there for months or years. Each stage builds the readiness needed for the next.",
   },
   {
     question: "How long does each stage last?",
-    answer: "There is no fixed timeline for any stage. Some people spend years in precontemplation or contemplation before becoming ready for change. Others move through preparation and into action within weeks. Maintenance is generally considered to begin after six months of sustained change, but building a new lifestyle is an ongoing process. The model emphasizes that change happens at an individual pace and that pressuring someone to move faster than they are ready often backfires.",
+    answer: "There is no fixed timeline. Some people spend years in precontemplation or contemplation before becoming ready. Others move through preparation into action within weeks. Maintenance generally begins after six months of sustained change. The model emphasizes that change happens at an individual pace and pressuring someone to move faster often backfires.",
   },
   {
     question: "What is motivational interviewing?",
-    answer: "Motivational interviewing (MI) is a counseling approach developed by William Miller and Stephen Rollnick that helps people explore and resolve ambivalence about change. Rather than telling someone what to do, an MI practitioner asks open-ended questions, reflects back what they hear, and supports the person in finding their own reasons to change. MI is especially effective in the precontemplation and contemplation stages, where people are not yet ready for action but may benefit from exploring their feelings about their current situation.",
+    answer: "Motivational interviewing (MI) is a counseling approach developed by William Miller and Stephen Rollnick that helps people explore and resolve ambivalence about change. Rather than telling someone what to do, an MI practitioner asks open-ended questions and supports the person in finding their own reasons to change. MI is especially effective in the precontemplation and contemplation stages.",
   },
 ];
 
@@ -75,6 +75,24 @@ export default function StagesOfChangeRecoveryPage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for informational and educational purposes only and does not constitute medical or mental health advice. Always consult a qualified mental health professional for diagnosis and treatment.
+            </p>
+          </div>
+
           <section>
             <h2>Prochaska &amp; DiClemente&apos;s Transtheoretical Model</h2>
             <p>

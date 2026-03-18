@@ -37,22 +37,22 @@ const FAQ_DATA = [
   {
     question: "Is alcohol use disorder a choice?",
     answer:
-      "No. AUD is recognized as a medical condition by the American Medical Association, the American Society of Addiction Medicine, and the DSM-5. Research demonstrates measurable changes in brain structure and function associated with AUD. While initial drinking involves choice, the development of AUD involves neurobiological processes that reduce control over use.",
+      "No. AUD is recognized as a medical condition by the AMA, ASAM, and the DSM-5. Research shows measurable brain changes associated with AUD. While initial drinking involves choice, the development of AUD involves neurobiological processes that progressively reduce voluntary control over use.",
   },
   {
     question: "Can someone with AUD ever drink moderately again?",
     answer:
-      "For mild AUD, moderation may be a realistic goal for some people, and research on controlled drinking programs supports this for certain presentations. For moderate-to-severe AUD \u2014 particularly with significant physiological dependence \u2014 abstinence is typically the safer and more sustainable goal. This is an individual decision best made with professional guidance.",
+      "For mild AUD, moderation may be realistic for some people. For moderate-to-severe AUD with significant physiological dependence, abstinence is typically safer and more sustainable. This is an individual decision best made with professional guidance based on your specific clinical picture.",
   },
   {
     question: "How long does it take to recover from AUD?",
     answer:
-      "Recovery is not a fixed timeline. Early recovery (the first year) carries the highest relapse risk. Many people experience significant improvements in health, relationships, and functioning within months of reducing or stopping drinking. Long-term recovery is common \u2014 SAMHSA estimates that approximately 22 million Americans are in recovery from AUD and other substance use disorders.",
+      "Recovery has no fixed timeline. The first year carries the highest relapse risk, but many people see significant improvements within months of reducing or stopping drinking. Long-term recovery is common, and SAMHSA estimates approximately 22 million Americans are currently in recovery.",
   },
   {
     question: "Does AUD run in families?",
     answer:
-      "Yes. Genetic factors account for approximately 40\u201360% of AUD risk. Having a parent or sibling with AUD meaningfully increases vulnerability, though it does not determine outcome. Many people with strong family histories of AUD never develop the condition, and many people without family history do.",
+      "Yes. Genetic factors account for approximately 40\u201360% of AUD risk. Having a first-degree relative with AUD meaningfully increases vulnerability, though it does not determine outcome. Many people with strong family histories never develop AUD, and many without family history do.",
   },
 ];
 

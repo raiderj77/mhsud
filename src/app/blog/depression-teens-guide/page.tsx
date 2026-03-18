@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is depression in teenagers?",
     answer:
-      "According to the National Institute of Mental Health (NIMH), approximately 20% of adolescents experience a major depressive episode before reaching adulthood. In 2022, an estimated 3.7 million adolescents aged 12\u201317 had at least one major depressive episode. Rates are higher among girls and LGBTQ+ youth. Depression is one of the leading causes of disability among adolescents worldwide.",
+      "According to NIMH, approximately 20% of adolescents experience a major depressive episode before adulthood. In 2022, an estimated 3.7 million teens aged 12\u201317 had at least one episode. Rates are higher among girls and LGBTQ+ youth, making depression one of the leading causes of disability among adolescents.",
   },
   {
     question: "How is teen depression different from adult depression?",
     answer:
-      "Teen depression often presents differently than adult depression. While adults typically show sadness and low energy, teens are more likely to display irritability, anger, and hostility. Teens may also show academic decline, social withdrawal from peers, increased risk-taking behavior, and physical complaints like headaches or stomachaches. These differences can make teen depression harder to recognize.",
+      "Teens are more likely to display irritability, anger, and hostility rather than sadness. They may also show academic decline, social withdrawal from peers, risk-taking behavior, and physical complaints like headaches or stomachaches. These differences make teen depression harder to recognize than adult depression.",
   },
   {
     question: "Is my teenager depressed or just moody?",
     answer:
-      "Normal teen moodiness is temporary and situation-specific \u2014 a bad day, a fight with a friend, or hormone fluctuations. Depression persists for two weeks or more and affects multiple areas of functioning: school, friendships, family relationships, sleep, and appetite. Key red flags include withdrawal from activities they used to enjoy, persistent irritability or sadness, changes in sleep or appetite, and declining grades. A screening tool can help you identify patterns worth discussing with a provider.",
+      "Normal moodiness is temporary and situation-specific. Depression persists for two weeks or more and affects multiple areas: school, friendships, sleep, and appetite. Key red flags include withdrawal from activities they enjoyed, persistent irritability, sleep or appetite changes, and declining grades. A screening tool can help identify concerning patterns.",
   },
   {
     question: "What should I do if my teenager seems depressed?",
     answer:
-      "Start by having an open, non-judgmental conversation. Express concern without accusations. Listen more than you talk. Take a free depression screening together to create a shared starting point. Contact your teen\u2019s pediatrician or a mental health professional for evaluation. If your teen expresses thoughts of self-harm or suicide, take it seriously \u2014 call 988 (Suicide & Crisis Lifeline) or go to the nearest emergency room. Early intervention significantly improves outcomes.",
+      "Start with an open, non-judgmental conversation. Listen more than you talk. Take a free depression screening together as a starting point. Contact your teen\u2019s pediatrician for professional evaluation. If your teen expresses thoughts of self-harm, call 988 or go to the nearest emergency room immediately.",
   },
 ];
 

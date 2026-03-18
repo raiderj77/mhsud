@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is alcohol use higher in the military?",
     answer:
-      "Yes. Department of Defense surveys consistently show that approximately 30% of active-duty service members report binge drinking in the past month, compared to roughly 22% in the civilian population of the same age. Rates are highest among junior enlisted personnel, combat arms specialties, and those who have recently returned from deployment.",
+      "Yes. Department of Defense surveys consistently show approximately 30% of active-duty service members report binge drinking in the past month, compared to roughly 22% in the same-age civilian population. Rates are highest among junior enlisted personnel, combat arms specialties, and those recently returned from deployment.",
   },
   {
     question: "Will I lose my security clearance if I seek help?",
     answer:
-      "In most cases, voluntarily seeking help for alcohol use will not jeopardize your security clearance. The DOD has updated its adjudicative guidelines to recognize that self-referral for treatment is a mitigating factor, not a disqualifying one. Continued untreated alcohol problems are actually more likely to put a clearance at risk than seeking help. Confidential options like Military OneSource counseling do not appear in military records.",
+      "In most cases, voluntarily seeking help will not jeopardize your security clearance. The DOD recognizes self-referral for treatment as a mitigating factor, not a disqualifying one. Continued untreated alcohol problems are actually more likely to put a clearance at risk than seeking help. Confidential options like Military OneSource counseling do not appear in military records.",
   },
   {
     question: "What confidential options exist for military alcohol screening?",
     answer:
-      "Several options exist outside the chain of command. Military OneSource provides up to 12 free confidential counseling sessions with no reporting to command. TRICARE covers substance use treatment. Online self-screening tools like the one at MindCheck Tools are completely private \u2014 nothing is stored or reported. Chaplains provide absolute confidentiality. Some installations also offer anonymous self-referral programs.",
+      "Several options exist outside the chain of command. Military OneSource provides up to 12 free confidential counseling sessions with no reporting to command. TRICARE covers substance use treatment. Online screening tools like MindCheck Tools are completely private \u2014 nothing is stored or reported. Chaplains provide absolute confidentiality, and some installations offer anonymous self-referral programs.",
   },
   {
     question: "How does combat exposure relate to alcohol use?",
     answer:
-      "Combat exposure is one of the strongest predictors of problematic alcohol use in service members. Research shows that service members with combat exposure are 25\u201340% more likely to develop alcohol misuse than those without. This connection is mediated by PTSD \u2014 over 50% of those with combat-related PTSD also meet criteria for alcohol use disorder. Alcohol temporarily suppresses hyperarousal and intrusive memories, creating a cycle of self-medication that worsens both conditions over time.",
+      "Combat exposure is one of the strongest predictors of problematic alcohol use in service members \u2014 those with combat exposure are 25\u201340% more likely to develop alcohol misuse. Over 50% of those with combat-related PTSD also meet criteria for alcohol use disorder. Alcohol temporarily suppresses hyperarousal and intrusive memories, creating a self-medication cycle that worsens both conditions.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               Alcohol temporarily dampens the hyperarousal and intrusive symptoms of PTSD &mdash; which is why it feels like it &quot;works.&quot; But alcohol disrupts REM sleep, worsens nightmares over time, impairs emotional processing, and prevents the brain from integrating traumatic memories. The result is a cycle where PTSD symptoms worsen during sober periods, driving more drinking, which further impairs recovery.
             </p>
             <p>
-              Effective treatment requires addressing both conditions. Integrated treatment models &mdash; which treat PTSD and alcohol use disorder simultaneously rather than sequentially &mdash; show the best outcomes. If you are screening for alcohol use, consider also taking a <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">PTSD screening</Link> to understand the full picture.
+              Effective treatment requires addressing both conditions. Integrated treatment models &mdash; which treat PTSD and alcohol use disorder simultaneously rather than sequentially &mdash; show the best outcomes. If you are screening for alcohol use, consider also taking a <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PTSD screening</Link> to understand the full picture.
             </p>
           </section>
 

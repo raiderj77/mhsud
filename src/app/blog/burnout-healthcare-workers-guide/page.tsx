@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is burnout in healthcare workers?",
     answer:
-      "Medscape\u2019s annual physician survey consistently reports burnout rates of 42\u201353% among physicians. The American Nurses Association reports even higher rates among nurses, with some surveys showing 60%+ during and after the COVID-19 pandemic. Emergency medicine, critical care, and primary care have the highest rates.",
+      "Medscape\u2019s annual survey consistently reports burnout rates of 42\u201353% among physicians. The American Nurses Association reports even higher rates among nurses, with some surveys showing 60% or more during and after the COVID-19 pandemic. Emergency medicine, critical care, and primary care consistently have the highest rates across specialties.",
   },
   {
     question: "What makes healthcare burnout different from regular burnout?",
     answer:
-      "Healthcare burnout involves moral injury \u2014 the distress of knowing what patients need but being unable to provide it due to systemic constraints. It also carries unique risks: burnout in healthcare workers is associated with higher rates of medical errors, patient safety incidents, and provider suicide. The stakes are higher than in most professions.",
+      "Healthcare burnout involves moral injury \u2014 the distress of knowing what patients need but being unable to provide it due to systemic constraints. It also carries unique risks: higher rates of medical errors, patient safety incidents, and provider suicide. The life-and-death stakes make healthcare burnout distinctly more consequential than burnout in most other professions.",
   },
   {
     question: "Can healthcare burnout be fixed without leaving the profession?",
     answer:
-      "Yes, though it requires both individual strategies and systemic change. Individual approaches include therapy, peer support, boundary-setting, and self-care. But research consistently shows that organizational factors \u2014 staffing levels, administrative burden, autonomy, and leadership culture \u2014 are the primary drivers. Sustainable solutions must address both levels.",
+      "Yes, though it requires both individual strategies and systemic change. Individual approaches include therapy, peer support, and boundary-setting. However, research consistently shows that organizational factors \u2014 staffing levels, administrative burden, autonomy, and leadership culture \u2014 are the primary drivers. Sustainable solutions must address both individual and systemic levels.",
   },
   {
     question: "Is burnout a reason to see a therapist?",
     answer:
-      "Yes. Burnout is a significant risk factor for developing depression, anxiety, substance use, and suicidal ideation \u2014 particularly in healthcare settings. A therapist can help distinguish burnout from clinical depression, address moral injury, and develop sustainable coping strategies. Many employee assistance programs (EAPs) offer confidential sessions at no cost.",
+      "Yes. Burnout is a significant risk factor for depression, anxiety, substance use, and suicidal ideation \u2014 particularly in healthcare settings. A therapist can help distinguish burnout from clinical depression, address moral injury, and develop sustainable coping strategies. Many employee assistance programs offer confidential sessions at no cost.",
   },
 ];
 

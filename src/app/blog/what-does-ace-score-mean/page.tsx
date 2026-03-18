@@ -33,17 +33,17 @@ const FAQ_DATA = [
   {
     question: "Does a high ACE score mean I will develop health problems?",
     answer:
-      "No. The ACE Study findings are population-level associations \u2014 they describe elevated risk at a group level, not individual predictions. Many people with high ACE scores are healthy and thriving, particularly those who had access to protective factors during childhood or have received support in adulthood. The score is useful context, not a prognosis.",
+      "No. ACE Study findings describe elevated risk at a population level, not individual predictions. Many people with high ACE scores are healthy and thriving, especially those with access to protective factors during childhood or support in adulthood. Your score provides useful context for healthcare conversations, not a prognosis or guarantee of illness.",
   },
   {
     question: "Can ACE scores be reduced or reversed?",
     answer:
-      "The score itself reflects your childhood history and doesn\u2019t change. However, the health impacts associated with high ACE scores can be substantially mitigated through trauma-informed care, mental health treatment, supportive relationships, and lifestyle factors. Research on neuroplasticity shows that the brain continues to adapt and heal throughout the lifespan \u2014 adversity\u2019s effects are not permanent.",
+      "The score itself reflects childhood history and does not change. However, health impacts associated with high ACE scores can be substantially mitigated through trauma-informed care, mental health treatment, supportive relationships, and healthy lifestyle choices. Neuroplasticity research shows the brain continues to adapt and heal throughout the lifespan \u2014 adversity\u2019s effects are not permanent.",
   },
   {
     question: "Should I share my ACE score with my doctor?",
     answer:
-      "Yes \u2014 particularly if you scored 4 or higher. Many primary care providers now ask about ACE history because it contextualizes a wide range of health presentations. If your doctor doesn\u2019t ask, you can raise it: \u201cI learned about the ACE Study and scored [X]. Is that relevant to any of my current health concerns?\u201d",
+      "Yes, particularly if you scored 4 or higher. Many providers now ask about ACE history because it contextualizes a range of health presentations. If your doctor does not ask, you can raise it by saying you learned about the ACE Study, sharing your score, and asking whether it is relevant to your current health concerns.",
   },
   {
     question: "Is the ACE questionnaire the same as a trauma assessment?",

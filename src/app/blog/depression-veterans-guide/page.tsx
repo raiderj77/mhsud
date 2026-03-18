@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is depression in veterans?",
     answer:
-      "Depression affects an estimated 25% of veterans at some point after military service, compared to roughly 8% of the general adult population. Rates are even higher among post-9/11 veterans, those with combat exposure, and those with co-occurring PTSD or traumatic brain injury. Many cases go unrecognized because veterans are less likely to report emotional symptoms.",
+      "Depression affects an estimated 25% of veterans after service, compared to roughly 8% of the general population. Rates are higher among post-9/11 veterans, those with combat exposure, and those with co-occurring PTSD or traumatic brain injury. Many cases go unrecognized because veterans underreport emotional symptoms.",
   },
   {
     question: "Is veteran depression different from civilian depression?",
     answer:
-      "The core symptoms are the same, but veterans are more likely to present with anger, irritability, emotional numbness, hypervigilance, and substance use rather than sadness. Depression in veterans frequently co-occurs with PTSD, making it harder to distinguish. Military culture also shapes how veterans express and interpret distress, often leading them to minimize symptoms.",
+      "The core symptoms are the same, but veterans more often present with anger, irritability, emotional numbness, and substance use rather than sadness. Depression frequently co-occurs with PTSD, making it harder to distinguish. Military culture shapes how veterans express distress, often leading them to minimize symptoms.",
   },
   {
     question: "What VA resources are available for depression?",
     answer:
-      "The VA offers individual and group therapy, medication management, telehealth options, and the Veterans Crisis Line (dial 988, press 1). Community-based outpatient clinics, Vet Centers, and VA primary care all provide depression screening and treatment. Veterans can also access care through community care programs if VA wait times are too long.",
+      "The VA offers individual and group therapy, medication management, telehealth, and the Veterans Crisis Line (dial 988, press 1). Community-based outpatient clinics, Vet Centers, and VA primary care all provide depression screening. Veterans can also access community care programs if VA wait times are too long.",
   },
   {
     question: "Can depression screening help veterans who say they are fine?",
     answer:
-      "Yes. Structured screening tools like the PHQ-9 ask specific, behavioral questions that bypass the general &quot;how are you doing?&quot; conversation. Many veterans who would never say they are depressed will endorse specific symptoms like sleep problems, loss of interest, or fatigue when asked directly. A screening provides objective language for something that feels subjective.",
+      "Yes. Structured tools like the PHQ-9 ask specific behavioral questions that bypass general conversations. Many veterans who would never say they are depressed will endorse symptoms like sleep problems, loss of interest, or fatigue when asked directly. Screening provides objective language for subjective experiences.",
   },
 ];
 

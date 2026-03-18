@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can adults be diagnosed with ADHD for the first time?",
     answer:
-      "Yes. A significant proportion of adults with ADHD were never diagnosed as children \u2014 particularly women, people who performed well academically, and those whose ADHD was predominantly inattentive rather than hyperactive. A new diagnosis in adulthood is entirely valid. The DSM-5 requires evidence of symptoms before age 12, but that information can come from self-report, family recollection, or old records rather than a formal childhood diagnosis.",
+      "Yes. Many adults with ADHD were never diagnosed as children, particularly women and those with predominantly inattentive symptoms. The DSM-5 requires evidence of symptoms before age 12, but this can come from self-report or family recollection rather than a formal childhood diagnosis.",
   },
   {
     question: "Does ADHD medication make you a different person?",
     answer:
-      "A common fear and misconception. People with ADHD who respond well to medication typically describe feeling more like themselves \u2014 able to access their own capabilities more consistently \u2014 rather than feeling sedated, blunted, or different. The goal is not to change personality but to reduce the friction that ADHD creates between intention and execution.",
+      "No. People who respond well to ADHD medication typically describe feeling more like themselves, able to access their capabilities more consistently. The goal is not to change personality but to reduce the friction ADHD creates between intention and execution.",
   },
   {
     question: "Is ADHD overdiagnosed?",
     answer:
-      "ADHD is both overdiagnosed (in some settings without comprehensive evaluation, particularly in young boys) and underdiagnosed (particularly in girls, women, and adults who developed compensatory strategies). The solution to overdiagnosis is better, more comprehensive evaluation \u2014 not dismissing ADHD as a diagnosis. Underdiagnosis carries its own substantial costs in occupational failure, relationship difficulty, and co-occurring mental health conditions.",
+      "ADHD is both overdiagnosed in some settings and significantly underdiagnosed in girls, women, and adults with compensatory strategies. The solution is better, more comprehensive evaluation. Underdiagnosis carries substantial costs in occupational failure, relationship difficulty, and co-occurring conditions.",
   },
   {
     question: "Can you have ADHD without being hyperactive?",
     answer:
-      "Yes. The predominantly inattentive presentation (sometimes still informally called \u201cADD\u201d) involves the inattention, disorganization, and executive function difficulties of ADHD with little or no motor hyperactivity. This is a fully valid and impairing presentation that responds to the same treatments.",
+      "Yes. The predominantly inattentive presentation involves disorganization and executive function difficulties with little or no hyperactivity. Sometimes informally called ADD, this is a fully valid and impairing presentation that responds to the same treatments as other ADHD types.",
   },
 ];
 

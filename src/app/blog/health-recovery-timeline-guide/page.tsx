@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How long does it take for the liver to recover?",
     answer:
-      "The liver has a remarkable ability to regenerate. For people with fatty liver disease (the earliest stage of alcohol-related liver damage), significant improvement can occur within 2\u20134 weeks of abstinence, with full reversal often possible within 2\u20133 months. For more advanced liver disease, such as alcoholic hepatitis or early fibrosis, recovery may take 6\u201312 months or longer. Cirrhosis (severe scarring) is generally not fully reversible, though stopping alcohol prevents further damage and may improve function. A healthcare provider can assess liver health through blood tests and imaging.",
+      "For fatty liver disease, significant improvement can occur within 2\u20134 weeks of abstinence, with full reversal often possible within 2\u20133 months. More advanced liver disease may take 6\u201312 months. Cirrhosis is generally not fully reversible, though stopping alcohol prevents further damage and may improve function.",
   },
   {
     question: "Will my brain recover after quitting?",
     answer:
-      "Yes, in most cases. Research using brain imaging shows that cognitive function, memory, and brain volume begin improving within weeks of abstinence and continue for months to years. The brain\u2019s neuroplasticity allows it to form new neural connections and repair damage. Some cognitive improvements are noticeable within 2 weeks, with more substantial recovery at 3\u20136 months. However, the extent of recovery depends on factors including duration and severity of use, age, and overall health. Some long-term heavy users may experience persistent cognitive effects.",
+      "Yes, in most cases. Brain imaging shows cognitive function, memory, and brain volume begin improving within weeks and continue for months to years. Some improvements are noticeable within 2 weeks, with more substantial recovery at 3\u20136 months. The extent depends on duration and severity of use, age, and overall health.",
   },
   {
     question: "When will I start feeling better after quitting?",
     answer:
-      "Most people notice improvements in sleep quality, energy, and mental clarity within the first 1\u20132 weeks. However, the first 72 hours to one week can be the most physically uncomfortable due to withdrawal symptoms (which can be medically dangerous with alcohol and benzodiazepines \u2014 consult a healthcare provider before stopping). After the acute withdrawal phase, improvements tend to come in waves: better sleep by week 1\u20132, improved mood and digestion by week 2\u20134, and noticeable changes in skin, weight, and energy by month 1\u20132.",
+      "Most people notice improvements in sleep, energy, and mental clarity within 1\u20132 weeks. The first 72 hours can be physically uncomfortable due to withdrawal. After that, improvements come in waves: better sleep by week 1\u20132, improved mood by weeks 2\u20134, and noticeable skin and energy changes by month 1\u20132. Consult a provider before stopping.",
   },
   {
     question: "Do all health effects reverse?",
     answer:
-      "Not all health effects are fully reversible, but most improve significantly with sustained sobriety. Fatty liver disease, elevated blood pressure, sleep disruption, and immune suppression typically reverse with abstinence. Some conditions \u2014 such as alcohol-related neuropathy, cirrhosis, or certain types of brain damage from prolonged heavy use \u2014 may only partially improve. The earlier you stop, the more reversible the damage tends to be. Even in cases where full reversal is not possible, stopping use prevents further damage and allows whatever recovery is possible.",
+      "Not all effects are fully reversible, but most improve significantly with sustained sobriety. Fatty liver disease, blood pressure, sleep disruption, and immune suppression typically reverse with abstinence. Conditions like cirrhosis or neuropathy may only partially improve. The earlier you stop, the more reversible the damage tends to be.",
   },
 ];
 

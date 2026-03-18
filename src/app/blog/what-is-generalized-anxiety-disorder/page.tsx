@@ -37,22 +37,22 @@ const FAQ_DATA = [
   {
     question: "Can GAD go away on its own?",
     answer:
-      "Mild anxiety symptoms can improve with lifestyle changes and reduced stress. Clinical GAD, however, tends to follow a chronic, waxing-and-waning course without treatment (Kessler et al., 2002). Most people with untreated GAD continue to experience significant symptoms over time, though severity fluctuates. Treatment substantially improves outcomes.",
+      "Mild anxiety may improve with lifestyle changes. Clinical GAD, however, tends to follow a chronic waxing-and-waning course without treatment. Most people with untreated GAD continue experiencing significant symptoms over time, though severity fluctuates. Evidence-based treatment substantially improves long-term outcomes.",
   },
   {
     question: "Is GAD the same as being a worrier?",
     answer:
-      "Not exactly. Many people identify as \u201Cworriers\u201D without meeting criteria for GAD. The clinical distinction is the degree to which worry is excessive, difficult to control, and causing impairment. Someone who worries but functions well without significant distress likely doesn\u2019t meet GAD criteria.",
+      "Not exactly. Many people identify as worriers without meeting GAD criteria. The clinical distinction is whether worry is excessive, difficult to control, and causing impairment in daily functioning. Someone who worries but functions well without significant distress likely does not have GAD.",
   },
   {
     question: "Can children have GAD?",
     answer:
-      "Yes. GAD is one of the most common anxiety disorders in children and adolescents. In children, the DSM-5 requires only one associated symptom (vs. three for adults), and the worry often centers on school performance, punctuality, catastrophic events, and social acceptance.",
+      "Yes. GAD is one of the most common anxiety disorders in children and adolescents. The DSM-5 requires only one associated symptom in children versus three for adults. Worry in children often centers on school performance, punctuality, catastrophic events, and social acceptance.",
   },
   {
     question: "Is GAD a lifelong condition?",
     answer:
-      "Not necessarily. With effective treatment, many people experience significant or full remission. Long-term follow-up studies show that CBT effects are maintained years after treatment ends (Durham et al., 2003). Some people do experience recurrence, particularly during stressful periods \u2014 but having effective coping tools makes those episodes more manageable.",
+      "Not necessarily. With effective treatment, many people experience significant or full remission. Long-term studies show CBT effects are maintained years after treatment ends. Some people experience recurrence during stressful periods, but having effective coping tools makes those episodes more manageable.",
   },
 ];
 

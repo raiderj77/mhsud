@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Is there a clinical cutoff for the PSS like there is for the PHQ-9?",
     answer:
-      "No. Unlike the PHQ-9 or GAD-7, the PSS doesn\u2019t have a diagnostic cutoff because it doesn\u2019t screen for a specific clinical condition. The score ranges (low/moderate/high) are based on normative data \u2014 where you fall relative to the general population \u2014 rather than a threshold that indicates disorder. This is why the PSS is more useful as a wellness monitor and research tool than as a clinical screener.",
+      "No. Unlike the PHQ-9 or GAD-7, the PSS doesn\u2019t have a diagnostic cutoff because it doesn\u2019t screen for a specific clinical condition. The score ranges (low/moderate/high) are based on normative data \u2014 where you fall relative to the general population \u2014 rather than a disorder threshold. This makes the PSS more useful as a wellness monitor than a clinical screener.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function WhatDoesPssScoreMeanPage() {
               The PSS measures <strong>perceived stress</strong> &mdash; not life events or objective stressors, but your subjective appraisal of how uncontrollable, unpredictable, and overwhelming life has seemed in the past month. This distinction matters: two people facing identical circumstances can have very different PSS scores based on how they are experiencing those circumstances.
             </p>
             <p>
-              The most common version, the <strong>PSS-10</strong>, contains 10 items rated on a 5-point scale (0 = Never, 4 = Very Often). Four items are positively worded and reverse-scored before totaling.
+              The most common version, the <strong>PSS-10</strong>, contains 10 items rated on a 5-point scale (0 = Never, 4 = Very Often). Four items are positively worded and reverse-scored before totaling. If you want to explore how life events contribute to your stress level, the <Link href="/holmes-rahe-stress-inventory" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">Holmes-Rahe Stress Inventory</Link> offers a complementary perspective.
             </p>
           </section>
 
@@ -304,6 +304,7 @@ export default function WhatDoesPssScoreMeanPage() {
                 { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Depression/Anxiety/Stress" },
                 { href: "/phq-9-depression-test", label: "PHQ-9 Depression Self-Check" },
                 { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety Screening" },
+                { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe Stress Inventory" },
                 { href: "/work-stress-check", label: "Work Stress Check" },
               ].map((tool) => (
                 <Link key={tool.href} href={tool.href} className="block rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 hover:border-orange-300 dark:hover:border-orange-700 transition">

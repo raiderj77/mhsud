@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is BPD more common in women?",
     answer:
-      "Clinical data shows that approximately 75% of people receiving a BPD diagnosis are women. However, community-based epidemiological studies \u2014 which assess the general population rather than those seeking treatment \u2014 suggest that BPD occurs at roughly equal rates across genders. The discrepancy likely reflects diagnostic bias: women are more likely to seek treatment for emotional distress, and clinicians may apply the BPD label more readily to women while attributing similar symptoms in men to antisocial personality disorder, substance use disorders, or intermittent explosive disorder.",
+      "Clinical data shows approximately 75% of BPD diagnoses go to women. However, community-based studies suggest BPD occurs at roughly equal rates across genders. The discrepancy likely reflects diagnostic bias: women are more likely to seek treatment for emotional distress, and clinicians may apply the BPD label more readily to women while attributing similar symptoms in men to other conditions.",
   },
   {
     question: "Why are women more likely to be diagnosed with BPD?",
     answer:
-      "Several factors contribute to the gender skew in BPD diagnosis. Women with BPD are more likely to present with internalizing symptoms \u2014 self-harm, emotional distress, and help-seeking behavior \u2014 that bring them into clinical settings where BPD can be identified. Men with similar underlying features more often externalize through aggression, substance use, and antisocial behavior, leading to different diagnostic labels. Additionally, research suggests that some clinicians apply gendered stereotypes: the same symptoms (emotional reactivity, relationship instability) may be labeled BPD in women and something else in men. This represents a systemic bias, not a genuine gender difference in the condition itself.",
+      "Women with BPD are more likely to present with internalizing symptoms \u2014 self-harm, emotional distress, and help-seeking \u2014 that bring them into clinical settings. Men more often externalize through aggression and substance use, receiving different labels. Research suggests clinicians apply gendered stereotypes, labeling identical symptoms as BPD in women but something else in men. This reflects systemic bias.",
   },
   {
     question: "Does BPD affect women differently than men?",
     answer:
-      "While the core features of BPD are similar across genders, some research suggests differences in how the condition presents. Women with BPD are statistically more likely to experience co-occurring depression, anxiety, eating disorders, and PTSD. They are more likely to engage in self-harm. Men with BPD are more likely to have co-occurring substance use disorders and antisocial features, and are more likely to express emotional dysregulation through explosive anger. Hormonal fluctuations \u2014 particularly related to the menstrual cycle, pregnancy, and postpartum periods \u2014 can amplify emotional intensity for women with BPD, though this area needs more research.",
+      "While core BPD features are similar across genders, women are more likely to experience co-occurring depression, anxiety, eating disorders, and PTSD, and to engage in self-harm. Men with BPD more often have co-occurring substance use disorders and express dysregulation through explosive anger. Hormonal fluctuations related to the menstrual cycle and postpartum periods can amplify emotional intensity for women with BPD.",
   },
   {
     question: "What is the best treatment for BPD in women?",
     answer:
-      "Dialectical behavior therapy (DBT) is the most well-researched and effective treatment for BPD and was developed by Marsha Linehan, herself a woman with lived experience of BPD. DBT combines cognitive-behavioral techniques with mindfulness and acceptance-based strategies. It teaches skills in four areas: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Other evidence-based approaches include mentalization-based therapy (MBT), schema therapy, and transference-focused psychotherapy. Treatment should address co-occurring conditions (depression, anxiety, eating disorders, PTSD) that are common in women with BPD. Recovery is well-documented \u2014 longitudinal studies show significant improvement in the majority of people with appropriate treatment.",
+      "Dialectical behavior therapy (DBT) is the most researched treatment for BPD, teaching mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Other evidence-based approaches include mentalization-based therapy (MBT) and schema therapy. Treatment should address co-occurring conditions common in women with BPD. Recovery is well-documented \u2014 longitudinal studies show significant improvement with appropriate treatment.",
   },
 ];
 

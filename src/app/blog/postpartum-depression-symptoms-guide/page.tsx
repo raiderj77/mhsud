@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How long does postpartum depression last?",
     answer:
-      "Without support, postpartum depression can persist for months or even longer. With appropriate professional help, most people see meaningful improvement within several weeks to a few months. Early screening and intervention are associated with better outcomes. PPD does not resolve simply by waiting it out.",
+      "Without support, postpartum depression can persist for months or even longer. With appropriate professional help, most people see meaningful improvement within several weeks to a few months. Early screening and intervention are associated with significantly better outcomes. PPD does not resolve simply by waiting it out, so seeking help early matters.",
   },
   {
     question: "Can fathers get postpartum depression?",
     answer:
-      "Yes. Research estimates that approximately 8\u201310% of new fathers experience paternal postpartum depression, often in the first year after a child\u2019s birth. Risk factors include a partner with PPD, sleep deprivation, relationship stress, and a personal history of depression. Fathers should also be screened.",
+      "Yes. Research estimates that approximately 8\u201310% of new fathers experience paternal postpartum depression, often within the first year after a child\u2019s birth. Risk factors include having a partner with PPD, sleep deprivation, relationship stress, and a personal history of depression. Screening is recommended for fathers as well.",
   },
   {
     question: "Is postpartum depression different from baby blues?",
     answer:
-      "Yes. Baby blues are mild mood swings, tearfulness, and irritability that affect up to 80% of new mothers in the first two weeks after delivery and resolve on their own. Postpartum depression is more intense, lasts longer than two weeks, and interferes with daily functioning and the ability to care for yourself or your baby.",
+      "Yes. Baby blues are mild mood swings, tearfulness, and irritability affecting up to 80% of new mothers in the first two weeks after delivery, and they resolve on their own. Postpartum depression is more intense, persists longer than two weeks, and interferes with daily functioning and the ability to care for yourself or your baby.",
   },
   {
     question: "When should I talk to my doctor about postpartum depression?",
     answer:
-      "If your symptoms last longer than two weeks, feel like they are getting worse rather than better, or interfere with your ability to care for yourself or your baby, contact your healthcare provider. If you have any thoughts of harming yourself or your baby, seek help immediately by calling 988 or going to your nearest emergency room.",
+      "Contact your healthcare provider if symptoms last longer than two weeks, feel like they are getting worse rather than better, or interfere with your ability to care for yourself or your baby. If you have any thoughts of harming yourself or your baby, seek help immediately by calling 988 or going to your nearest emergency room.",
   },
 ];
 

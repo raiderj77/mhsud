@@ -33,12 +33,12 @@ const FAQ_DATA = [
   {
     question: "How much drinking is too much in college?",
     answer:
-      "NIAAA defines binge drinking as reaching a BAC of 0.08% \u2014 typically 4 drinks for women or 5 for men within about 2 hours. Heavy drinking is binge drinking on 5 or more days in a month. If drinking is causing academic problems, blackouts, risky behavior, or you cannot control how much you drink once you start, those are signs worth evaluating regardless of quantity.",
+      "NIAAA defines binge drinking as reaching a BAC of 0.08% \u2014 typically 4 drinks for women or 5 for men within about 2 hours. Heavy drinking is binge drinking on 5 or more days per month. If drinking causes academic problems, blackouts, risky behavior, or you cannot control how much you drink once you start, those signs are worth evaluating regardless of quantity.",
   },
   {
     question: "Is college binge drinking really that dangerous?",
     answer:
-      "Yes. NIAAA estimates that about 1,519 college students ages 18\u201324 die each year from alcohol-related injuries. Additionally, approximately 696,000 students are assaulted by another student who has been drinking, and 97,000 report alcohol-related sexual assault. Binge drinking also impairs academic performance, increases accident risk, and can accelerate the development of alcohol use disorder.",
+      "Yes. NIAAA estimates about 1,519 college students ages 18\u201324 die each year from alcohol-related injuries. Approximately 696,000 students are assaulted by a drinking peer, and 97,000 report alcohol-related sexual assault. Binge drinking also impairs academic performance, increases accident risk, and can accelerate the development of alcohol use disorder.",
   },
   {
     question: "Will my college find out if I take a screening?",

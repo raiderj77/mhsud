@@ -47,7 +47,7 @@ const FAQ_DATA = [
   {
     question: "Can I stop on my own without professional help?",
     answer:
-      "For alcohol specifically, abrupt cessation after heavy daily use carries medical risk \u2014 alcohol withdrawal can cause seizures and requires medical supervision in some cases. For opioids, cannabis, and other substances, medical withdrawal management varies by substance. A healthcare provider can help you determine the safest approach. Motivational interviewing research also shows that professional support, even brief and infrequent, significantly improves outcomes compared to attempting change alone.",
+      "If you\u2019ve been drinking heavily and regularly, stopping abruptly can carry medical risk \u2014 alcohol withdrawal can cause seizures and may require supervision. For other substances, withdrawal management varies. A healthcare provider can help determine the safest approach. Research shows that professional support significantly improves outcomes compared to attempting change alone.",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
               Each &quot;yes&quot; answer scores 1 point. The total ranges from 0&ndash;4.
             </p>
             <p>
-              The CAGE-AID is one of the briefest validated substance use screens available &mdash; the four questions can be answered in under a minute. This makes it practical for routine primary care screening, though its brevity means it captures less detail than the AUDIT or DAST-10.
+              The CAGE-AID is one of the briefest validated substance use screens available &mdash; the four questions can be answered in under a minute. You can <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">take the CAGE-AID screen here</Link>. Its brevity makes it practical for routine primary care screening, though it captures less detail than the AUDIT or DAST-10.
             </p>
           </section>
 

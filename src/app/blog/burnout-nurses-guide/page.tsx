@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is burnout among nurses?",
     answer:
-      "The American Nurses Foundation reported that over 60% of nurses experienced burnout in 2022\u20132023, with ICU and emergency department nurses reporting the highest rates. The COVID-19 pandemic intensified existing stressors \u2014 mandatory overtime, short staffing, moral distress, and personal exposure risk \u2014 but nursing burnout was widespread well before the pandemic.",
+      "The American Nurses Foundation reported that over 60% of nurses experienced burnout in 2022\u20132023, with ICU and emergency department nurses reporting the highest rates. The COVID-19 pandemic intensified existing stressors like mandatory overtime and short staffing, but nursing burnout was widespread well before the pandemic due to systemic issues.",
   },
   {
     question: "What is the difference between nurse burnout and compassion fatigue?",
     answer:
-      "Burnout results from chronic workplace stress \u2014 workload, staffing, administrative demands. Compassion fatigue is the emotional cost of absorbing patients\u2019 suffering \u2014 secondary traumatic stress. They frequently co-occur in nursing but require different responses. Burnout needs systemic and boundary interventions; compassion fatigue needs emotional processing and self-care.",
+      "Burnout results from chronic workplace stress \u2014 workload, staffing, and administrative demands. Compassion fatigue is the emotional cost of absorbing patients\u2019 suffering. They frequently co-occur in nursing but require different responses: burnout needs systemic and boundary interventions, while compassion fatigue needs emotional processing and dedicated self-care strategies.",
   },
   {
     question: "Should I leave nursing if I am burned out?",
     answer:
-      "Leaving is a valid option, but it is worth exploring other possibilities first: changing units or specialties, reducing hours, pursuing advanced practice roles, or transitioning to non-bedside positions (case management, education, informatics). Therapy and peer support can help clarify whether burnout is about nursing itself or about your current work environment.",
+      "Leaving is valid, but explore other options first: changing units or specialties, reducing hours, pursuing advanced practice roles, or transitioning to non-bedside positions like case management, education, or informatics. Therapy and peer support can help clarify whether burnout stems from nursing itself or your current work environment specifically.",
   },
   {
     question: "Can nurse managers prevent burnout on their unit?",
     answer:
-      "Research shows that nurse manager leadership style significantly impacts unit-level burnout. Managers who advocate for safe staffing, offer scheduling flexibility, recognize contributions, and create psychological safety for voicing concerns have units with measurably lower burnout rates. However, managers are also constrained by organizational resources and culture.",
+      "Research shows that nurse manager leadership style significantly impacts unit-level burnout. Managers who advocate for safe staffing, offer scheduling flexibility, recognize contributions, and create psychological safety for voicing concerns have units with measurably lower burnout rates. However, managers are also constrained by organizational resources and broader institutional culture.",
   },
 ];
 

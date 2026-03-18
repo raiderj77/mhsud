@@ -33,27 +33,27 @@ const FAQ_DATA = [
   {
     question: "Are cognitive distortions the same as lying to yourself?",
     answer:
-      "No. Cognitive distortions are not intentional deception — they are automatic thinking patterns that your brain defaults to, often outside your awareness. Everyone experiences them. They develop as mental shortcuts shaped by past experiences, stress, and emotional states. Recognizing them is not about blaming yourself for &quot;wrong&quot; thinking; it is about noticing patterns so you can evaluate your thoughts more accurately.",
+      "No. Cognitive distortions are automatic thinking patterns your brain defaults to, often outside your awareness. Everyone experiences them. They develop as mental shortcuts shaped by past experiences, stress, and emotional states. Recognizing them is not about blaming yourself for wrong thinking \u2014 it is about noticing patterns so you can evaluate your thoughts more accurately.",
   },
   {
     question: "Can cognitive distortions cause depression?",
     answer:
-      "Cognitive distortions do not directly cause depression, but research suggests they play a significant role in maintaining and worsening depressive symptoms. Aaron Beck&apos;s cognitive model of depression proposes that distorted thinking patterns reinforce negative beliefs about oneself, the world, and the future — a pattern he called the &quot;cognitive triad.&quot; Addressing these distortions through cognitive-behavioral therapy (CBT) is one of the most effective approaches for reducing depressive symptoms.",
+      "Cognitive distortions do not directly cause depression, but research suggests they play a significant role in maintaining and worsening depressive symptoms. Aaron Beck\u2019s cognitive model proposes that distorted thinking reinforces negative beliefs about oneself, the world, and the future. Addressing these distortions through CBT is one of the most effective approaches for reducing depressive symptoms.",
   },
   {
     question: "How do I stop thinking in cognitive distortions?",
     answer:
-      "You cannot eliminate cognitive distortions entirely — they are a normal part of human thinking. The goal is to become better at noticing them and choosing whether to accept the thought at face value or examine it more carefully. Techniques include keeping a thought record, asking yourself &quot;What is the evidence for and against this thought?&quot;, and practicing generating alternative explanations. Working with a therapist trained in CBT can accelerate this process significantly.",
+      "You cannot eliminate cognitive distortions entirely \u2014 they are a normal part of human thinking. The goal is becoming better at noticing them and choosing whether to accept the thought or examine it more carefully. Techniques include keeping a thought record, asking what evidence supports and contradicts the thought, and generating alternative explanations. A CBT therapist can accelerate this process.",
   },
   {
     question: "What is CBT?",
     answer:
-      "Cognitive-behavioral therapy (CBT) is a structured, evidence-based form of psychotherapy that focuses on the relationship between thoughts, feelings, and behaviors. Developed by Aaron Beck in the 1960s, CBT helps people identify and challenge unhelpful thinking patterns (like cognitive distortions) and develop more balanced ways of interpreting situations. It is one of the most extensively researched forms of therapy, with strong evidence for effectiveness in screening and addressing anxiety, depression, and many other conditions.",
+      "Cognitive-behavioral therapy (CBT) is a structured, evidence-based psychotherapy focusing on the relationship between thoughts, feelings, and behaviors. Developed by Aaron Beck in the 1960s, CBT helps people identify and challenge unhelpful thinking patterns and develop more balanced interpretations. It is one of the most extensively researched therapies, with strong evidence for anxiety, depression, and many other conditions.",
   },
   {
     question: "Do cognitive distortions go away?",
     answer:
-      "Cognitive distortions tend to decrease in frequency and intensity with practice, but they rarely disappear completely. Think of it like physical fitness — you build the skill of catching and reframing distorted thoughts over time, but the tendency toward certain patterns may resurface during stress, fatigue, or emotional difficulty. The goal is not perfection but greater awareness and flexibility in how you respond to your own thinking.",
+      "Cognitive distortions tend to decrease in frequency and intensity with practice, but they rarely disappear completely. You build the skill of catching and reframing distorted thoughts over time, though certain patterns may resurface during stress or emotional difficulty. The goal is not perfection but greater awareness and flexibility in how you respond to your own thinking.",
   },
 ];
 

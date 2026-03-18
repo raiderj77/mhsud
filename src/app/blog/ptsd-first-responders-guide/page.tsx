@@ -33,12 +33,12 @@ const FAQ_DATA = [
   {
     question: "How common is PTSD in first responders?",
     answer:
-      "PTSD rates in first responders significantly exceed the general population\u2019s 6\u20137% prevalence. Research estimates rates of 7\u201337% in firefighters, 11\u201332% in EMTs and paramedics, and 7\u201319% in law enforcement. The wide ranges reflect differences in exposure frequency, department culture, and available support systems across agencies.",
+      "PTSD rates in first responders significantly exceed the general population\u2019s 6\u20137% prevalence. Research estimates rates of 7\u201337% in firefighters, 11\u201332% in EMTs and paramedics, and 7\u201319% in law enforcement. The wide ranges reflect differences in exposure frequency, department culture, and available support systems.",
   },
   {
     question: "Why do first responders get PTSD if they are trained for emergencies?",
     answer:
-      "Training prepares first responders for the technical aspects of emergencies, but it cannot fully insulate the brain from the emotional impact of repeated trauma exposure. Cumulative trauma \u2014 responding to hundreds of critical incidents over a career \u2014 overwhelms the nervous system\u2019s capacity to process. Training does not make someone immune to being human.",
+      "Training prepares first responders for the technical aspects of emergencies, but it cannot fully insulate the brain from the emotional impact of repeated trauma exposure. Cumulative trauma from responding to hundreds of critical incidents over a career overwhelms the nervous system\u2019s processing capacity. Training does not make someone immune to being human.",
   },
   {
     question: "What is cumulative trauma?",
@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "Can first responders get help without it affecting their career?",
     answer:
-      "Confidential resources exist specifically for this concern. Many EAPs offer sessions that are not reported to employers. Peer support programs within departments provide informal support. Organizations like the Code Green Campaign and Safe Call Now offer anonymous help lines. Some states now have laws protecting first responders who seek mental health care from career consequences.",
+      "Yes. Confidential resources exist specifically for this concern. Many EAPs offer sessions not reported to employers. Peer support programs within departments provide informal support. Organizations like Code Green Campaign and Safe Call Now offer anonymous help lines. Some states now have laws protecting first responders who seek mental health care from career consequences.",
   },
 ];
 

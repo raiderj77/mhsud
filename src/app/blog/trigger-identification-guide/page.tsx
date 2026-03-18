@@ -33,17 +33,17 @@ const FAQ_DATA = [
   {
     question: "What are the most common relapse triggers?",
     answer:
-      "Marlatt and Gordon\u2019s research identified the most common triggers: negative emotional states (stress, anger, sadness, boredom) account for roughly 35% of relapse episodes, followed by social pressure (20%), interpersonal conflict (16%), and positive emotional states or celebrations (wanting to enhance a good time). Environmental cues \u2014 places, sounds, or smells associated with past use \u2014 are also powerful triggers.",
+      "Marlatt and Gordon\u2019s research found negative emotional states (stress, anger, boredom) account for roughly 35% of relapse episodes, followed by social pressure (20%), interpersonal conflict (16%), and positive emotional states like celebrations. Environmental cues such as places, sounds, or smells associated with past use are also powerful triggers.",
   },
   {
     question: "Can triggers go away over time?",
     answer:
-      "Triggers can weaken through a process called extinction \u2014 repeated exposure to a trigger without the substance response gradually reduces its power. However, some triggers (particularly strong emotional states and environmental cues) can re-emerge unexpectedly, even years into recovery. This is why ongoing awareness and coping strategies remain important long-term.",
+      "Triggers can weaken through extinction \u2014 repeated exposure without the substance response gradually reduces their power. However, some triggers, particularly strong emotional states and environmental cues, can re-emerge unexpectedly even years into recovery. This is why ongoing awareness and coping strategies remain important throughout long-term recovery.",
   },
   {
     question: "How is a trigger different from a craving?",
     answer:
-      "A trigger is the stimulus \u2014 the person, place, emotion, or situation that activates the desire to use. A craving is the response \u2014 the physical and psychological urge that follows the trigger. Trigger identification focuses on recognizing what sets off the chain reaction so you can intervene before cravings fully develop or escalate.",
+      "A trigger is the stimulus \u2014 the person, place, emotion, or situation that activates the desire to use. A craving is the response \u2014 the physical and psychological urge that follows. Trigger identification focuses on recognizing what sets off this chain reaction so you can intervene before cravings fully develop or escalate to substance use.",
   },
   {
     question: "Should I avoid all my triggers?",

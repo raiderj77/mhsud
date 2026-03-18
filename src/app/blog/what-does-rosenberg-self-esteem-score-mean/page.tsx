@@ -32,7 +32,7 @@ const FAQ_DATA = [
   {
     question: "Is low self-esteem a mental health disorder?",
     answer:
-      "Low self-esteem is not itself a diagnosable disorder in the DSM-5. It is, however, a core feature of several diagnosable conditions (depression, social anxiety) and a significant risk factor for others. When low self-esteem is causing distress or functional impairment \u2014 affecting relationships, work, or quality of life \u2014 it warrants clinical attention even if it doesn\u2019t fit a specific diagnosis.",
+      "Low self-esteem is not a diagnosable disorder in the DSM-5. It is, however, a core feature of several conditions (depression, social anxiety) and a significant risk factor for others. When low self-esteem causes distress or functional impairment \u2014 affecting relationships, work, or quality of life \u2014 it warrants clinical attention even without a specific diagnosis.",
   },
   {
     question: "Can self-esteem be too high?",

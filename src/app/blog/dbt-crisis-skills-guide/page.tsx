@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What is TIPP in DBT?",
     answer:
-      "TIPP stands for Temperature, Intense exercise, Paced breathing, and Progressive relaxation (sometimes called Paired muscle relaxation). These are four rapid physiological interventions designed to bring down extreme emotional arousal quickly. Temperature involves cold water or ice on the face to trigger the dive reflex. Intense exercise burns off adrenaline. Paced breathing activates the parasympathetic nervous system. Progressive relaxation releases muscle tension.",
+      "TIPP stands for Temperature, Intense exercise, Paced breathing, and Progressive relaxation. These four physiological interventions bring down extreme emotional arousal quickly. Temperature uses cold water on the face to trigger the dive reflex. Intense exercise burns off adrenaline. Paced breathing activates the parasympathetic nervous system. Progressive relaxation releases muscle tension.",
   },
   {
     question: "Are DBT crisis skills only for people with BPD?",
     answer:
-      "No. While DBT was originally developed by Marsha Linehan for borderline personality disorder, crisis survival skills are now used across a wide range of conditions including depression, anxiety disorders, PTSD, substance use disorders, and eating disorders. Anyone who experiences intense emotions that feel overwhelming can benefit from these skills. They are taught in many general therapy settings, not just specialized DBT programs.",
+      "No. While DBT was originally developed for borderline personality disorder, crisis survival skills are now used across depression, anxiety, PTSD, substance use disorders, and eating disorders. Anyone who experiences intense, overwhelming emotions can benefit from these skills. They are taught in many general therapy settings, not just specialized DBT programs.",
   },
   {
     question: "What is the difference between crisis skills and coping skills?",
     answer:
-      "Crisis skills are designed for acute, high-intensity distress &mdash; moments when emotions are so overwhelming that your ability to think clearly is impaired. They are short-term survival strategies, not long-term solutions. Coping skills are broader and include strategies for ongoing stress management, emotional regulation, and daily wellness. Crisis skills get you through the moment; coping skills help you build a more sustainable relationship with your emotions over time.",
+      "Crisis skills target acute, high-intensity distress when emotions are so overwhelming that clear thinking is impaired. They are short-term survival strategies, not long-term solutions. Coping skills are broader, covering ongoing stress management, emotional regulation, and daily wellness. Crisis skills get you through the moment; coping skills build a more sustainable relationship with your emotions.",
   },
   {
     question: "Can I learn DBT skills without a therapist?",
     answer:
-      "You can learn and practice individual DBT skills on your own through books, workbooks, and guided tools. Many people find self-study helpful for distress tolerance and mindfulness skills. However, the full DBT program &mdash; which includes individual therapy, skills group, phone coaching, and therapist consultation &mdash; is most effective with professional guidance, especially for complex conditions. Self-study is a reasonable starting point while you explore whether formal DBT is right for you.",
+      "You can learn and practice individual DBT skills on your own through books, workbooks, and guided tools. Many people find self-study helpful for distress tolerance and mindfulness. However, the full DBT program \u2014 individual therapy, skills group, phone coaching, and therapist consultation \u2014 is most effective with professional guidance for complex conditions. Self-study is a reasonable starting point.",
   },
 ];
 

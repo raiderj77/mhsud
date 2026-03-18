@@ -33,27 +33,27 @@ const FAQ_DATA = [
   {
     question: "Is being organized the same as having OCD?",
     answer:
-      "No. Enjoying organization or cleanliness is a personality preference. OCD involves unwanted, intrusive thoughts (obsessions) that cause significant distress and compulsive behaviors performed to reduce that distress. A person with contamination OCD doesn't clean because they enjoy it — they clean because the anxiety of not cleaning feels unbearable. The key difference is distress: OCD is driven by fear and anxiety, not satisfaction.",
+      "No. Enjoying organization is a personality preference. OCD involves unwanted intrusive thoughts that cause significant distress and compulsive behaviors performed to reduce that distress. The key difference is motivation: OCD is driven by fear and anxiety, not satisfaction or preference for tidiness.",
   },
   {
     question: "What are intrusive thoughts?",
     answer:
-      "Intrusive thoughts are unwanted, involuntary thoughts, images, or urges that pop into your mind. Research suggests that nearly everyone experiences intrusive thoughts from time to time. The difference in OCD is that these thoughts get 'stuck' — the person assigns excessive meaning to them, becomes deeply distressed, and feels compelled to perform rituals or mental acts to neutralize the anxiety. Having an intrusive thought does not mean you want to act on it.",
+      "Intrusive thoughts are unwanted, involuntary thoughts, images, or urges that pop into your mind. Nearly everyone experiences them. In OCD, these thoughts get stuck \u2014 the person assigns excessive meaning to them and feels compelled to perform rituals to neutralize the anxiety. Having an intrusive thought does not mean you want to act on it.",
   },
   {
     question: "Can OCD be cured?",
     answer:
-      "There is currently no cure for OCD, but it is highly treatable. Exposure and Response Prevention (ERP), a specialized form of cognitive-behavioral therapy, is considered the gold-standard treatment and can significantly reduce symptoms for most people. Many individuals with OCD achieve substantial improvement and are able to manage their symptoms effectively with proper treatment. Medication, particularly SSRIs, may also be recommended as part of a treatment plan.",
+      "There is no cure for OCD, but it is highly treatable. Exposure and Response Prevention (ERP) is the gold-standard treatment and significantly reduces symptoms for most people. Many individuals achieve substantial improvement with ERP, and SSRIs may also be recommended as part of a comprehensive treatment plan.",
   },
   {
     question: "What is ERP therapy?",
     answer:
-      "Exposure and Response Prevention (ERP) is a specialized form of cognitive-behavioral therapy designed specifically for OCD. It involves gradually exposing a person to the situations, thoughts, or images that trigger their obsessions (exposure) while helping them resist performing the compulsive behavior (response prevention). Over time, this process helps the brain learn that the feared outcome does not occur and that the anxiety naturally decreases without the compulsion. ERP is typically conducted with a therapist trained specifically in this approach.",
+      "Exposure and Response Prevention is a specialized CBT approach for OCD. It involves gradually exposing a person to obsession triggers while resisting the compulsive response. Over time, the brain learns the feared outcome does not occur and anxiety naturally decreases without the compulsion.",
   },
   {
     question: "Is OCD an anxiety disorder?",
     answer:
-      "OCD was historically classified as an anxiety disorder, but the DSM-5 (published in 2013) moved it into its own category called 'Obsessive-Compulsive and Related Disorders.' While anxiety is a central feature of OCD, the reclassification reflects the unique obsession-compulsion cycle that distinguishes OCD from other anxiety-related conditions. OCD shares features with anxiety disorders but also has distinct neurobiological and behavioral characteristics.",
+      "The DSM-5 moved OCD into its own category called Obsessive-Compulsive and Related Disorders. While anxiety remains central to OCD, the reclassification reflects its unique obsession-compulsion cycle and distinct neurobiological characteristics that separate it from other anxiety conditions.",
   },
 ];
 

@@ -30,11 +30,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Is loneliness a mental health condition?", answer: "Loneliness itself is not classified as a mental health disorder. It is a subjective emotional state — a feeling that your social connections are insufficient in quality or quantity. However, chronic loneliness is a significant risk factor for developing mental health conditions such as depression, anxiety, and substance use concerns. If loneliness persists for weeks or months and begins affecting your daily functioning, it may indicate an underlying issue worth exploring with a healthcare provider." },
-  { question: "Can loneliness cause physical illness?", answer: "Research strongly suggests it can. Chronic loneliness activates the body&apos;s stress response system, increasing inflammation and weakening immune function over time. Studies have linked prolonged loneliness to increased risk of cardiovascular disease, stroke, type 2 diabetes, and dementia. The US Surgeon General&apos;s 2023 advisory noted that the health effects of chronic loneliness are comparable to smoking up to 15 cigarettes per day." },
-  { question: "Why am I lonely even with friends?", answer: "Loneliness is about the quality and depth of connection, not the number of people around you. You can have an active social life and still feel lonely if those interactions lack emotional intimacy, mutual understanding, or genuine vulnerability. This is sometimes called &quot;emotional loneliness&quot; — you may have companions but feel like no one truly knows or understands you. It is a very common experience and does not mean something is wrong with you." },
-  { question: "How do I know if I&apos;m lonely or depressed?", answer: "There is significant overlap between loneliness and depression — both can involve sadness, withdrawal, low energy, and loss of interest. A key difference is that loneliness tends to improve when meaningful social connection is restored, while depression often persists regardless of social circumstances. If you feel persistently low, hopeless, or have lost interest in things you used to enjoy even when you are around people you care about, depression may be a factor. Screening tools like the PHQ-9 can help you reflect on depressive symptoms." },
-  { question: "What helps with chronic loneliness?", answer: "Research points to several evidence-based approaches: prioritizing the quality of relationships over quantity, engaging in structured social activities (classes, clubs, volunteer work), addressing social anxiety or negative thought patterns through therapy (especially cognitive behavioral therapy), and building community connections through shared purpose or interests. Small, consistent steps tend to be more effective than dramatic changes. If loneliness is severe or persistent, working with a therapist can help identify and address the barriers to connection." },
+  { question: "Is loneliness a mental health condition?", answer: "Loneliness is not classified as a mental health disorder \u2014 it is a subjective emotional state. However, chronic loneliness is a significant risk factor for depression, anxiety, and substance use concerns. If it persists for weeks or months and affects your daily functioning, it may indicate an underlying issue worth exploring with a provider." },
+  { question: "Can loneliness cause physical illness?", answer: "Research strongly suggests it can. Chronic loneliness activates the stress response, increasing inflammation and weakening immune function. Studies link prolonged loneliness to increased risk of cardiovascular disease, stroke, diabetes, and dementia. The Surgeon General\u2019s 2023 advisory compared its health effects to smoking 15 cigarettes per day." },
+  { question: "Why am I lonely even with friends?", answer: "Loneliness is about connection quality, not headcount. You can have an active social life and still feel lonely if interactions lack emotional intimacy or genuine vulnerability. This is called \u201cemotional loneliness\u201d \u2014 you may have companions but feel no one truly understands you. It is very common and does not mean something is wrong." },
+  { question: "How do I know if I&apos;m lonely or depressed?", answer: "Loneliness and depression overlap significantly \u2014 both involve sadness, withdrawal, and low energy. A key difference: loneliness tends to improve when meaningful connection is restored, while depression often persists regardless. If you feel persistently low even around people you care about, depression may be a factor. The PHQ-9 can help clarify." },
+  { question: "What helps with chronic loneliness?", answer: "Evidence-based approaches include prioritizing relationship quality over quantity, engaging in structured social activities like classes or volunteer work, addressing social anxiety through CBT, and building community connections through shared purpose. Small, consistent steps are more effective than dramatic changes. A therapist can help identify specific barriers to connection." },
 ];
 
 export default function LonelinessMentalHealthPage() {
@@ -216,9 +216,20 @@ export default function LonelinessMentalHealthPage() {
 
           {/* Clinical Disclaimer */}
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              <strong className="text-amber-700 dark:text-amber-400">Important:</strong> This article is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Screening tools may help you reflect on your experience but are not a clinical assessment. If you are concerned about your mental health, please consult a qualified healthcare provider. If you are in crisis, contact the <strong>988 Suicide and Crisis Lifeline</strong> (call or text 988) or the <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong>.
+              This article is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified mental health provider with any questions you may have regarding a medical or mental health condition.
             </p>
+          </div>
+
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
           </div>
 
           {/* CTA */}

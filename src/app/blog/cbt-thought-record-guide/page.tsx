@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How often should I fill out a thought record?",
     answer:
-      "Most CBT therapists recommend completing a thought record whenever you notice a strong negative emotion \u2014 especially in the early weeks of practice. This might mean one to three records per day. Over time, the process becomes more automatic and you may not need to write every one down. The goal is to internalize the skill of catching and challenging automatic thoughts so it becomes a mental habit.",
+      "Most CBT therapists recommend completing a thought record whenever you notice a strong negative emotion, especially in early weeks of practice \u2014 roughly one to three per day. Over time the process becomes more automatic. The goal is to internalize the skill of catching and challenging automatic thoughts so it becomes a mental habit.",
   },
   {
     question: "What is the difference between a thought record and a thought diary?",
     answer:
-      "The terms are often used interchangeably, but a thought diary is usually a simpler format \u2014 recording situations, thoughts, and emotions without the structured challenge columns. A thought record (sometimes called a dysfunctional thought record) includes the full process: identifying evidence for and against the thought, generating an alternative, and re-rating the emotion. The thought record is the more complete and clinically effective version.",
+      "A thought diary is a simpler format that records situations, thoughts, and emotions without structured challenge columns. A thought record includes the full process: identifying evidence for and against the thought, generating an alternative interpretation, and re-rating emotions. The thought record is the more complete and clinically effective version used in CBT.",
   },
   {
     question: "Do thought records work for anxiety?",
     answer:
-      "Yes. Thought records are highly effective for anxiety. Anxiety is driven by overestimation of threat and underestimation of coping ability \u2014 both of which are cognitive distortions that thought records are designed to address. Meta-analyses consistently show that CBT (which relies heavily on thought records) is the first-line evidence-based treatment for generalized anxiety disorder, social anxiety, panic disorder, and specific phobias.",
+      "Yes. Anxiety is driven by overestimation of threat and underestimation of coping ability \u2014 both cognitive distortions that thought records are designed to address. Meta-analyses consistently show CBT, which relies heavily on thought records, is the first-line evidence-based treatment for generalized anxiety disorder, social anxiety, panic disorder, and specific phobias.",
   },
   {
     question: "Can I do CBT on my own without a therapist?",
     answer:
-      "Self-guided CBT (including thought records) can be helpful for mild to moderate symptoms. Research supports bibliotherapy (workbook-based CBT) for depression and anxiety. However, a therapist provides accountability, helps identify blind spots in your thinking, and can tailor techniques to your specific patterns. If your symptoms are moderate to severe, or if you have been struggling for more than a few weeks, working with a trained CBT therapist is recommended.",
+      "Self-guided CBT including thought records can help with mild to moderate symptoms, and research supports workbook-based CBT for depression and anxiety. However, a therapist provides accountability, identifies blind spots, and tailors techniques to your patterns. If symptoms are moderate to severe or persist beyond a few weeks, working with a trained CBT therapist is recommended.",
   },
 ];
 

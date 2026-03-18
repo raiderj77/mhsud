@@ -38,17 +38,17 @@ const FAQ_DATA = [
   {
     question: "Is teacher burnout worse than in other professions?",
     answer:
-      "Research suggests that teachers experience burnout at rates comparable to or higher than healthcare workers and first responders. Teaching combines emotional labor, lack of autonomy, high public accountability, and relatively low compensation &mdash; a combination that creates particularly high burnout risk. The Gallup State of the American Workplace report has consistently ranked K-12 educators among the most burned-out occupational groups.",
+      "Research suggests teachers experience burnout at rates comparable to or higher than healthcare workers and first responders. Teaching combines emotional labor, lack of autonomy, high public accountability, and relatively low compensation \u2014 a combination that creates particularly high burnout risk. Gallup has consistently ranked K-12 educators among the most burned-out occupational groups.",
   },
   {
     question: "Can I recover from burnout and stay in teaching?",
     answer:
-      "Yes, many educators recover from burnout while remaining in the profession. Recovery often requires both individual strategies (boundary-setting, therapy, self-care) and structural changes (switching schools, grade levels, or roles). Some teachers find renewed engagement by moving into mentoring, curriculum development, or instructional coaching. The key is identifying which specific factors are driving your burnout.",
+      "Yes, many educators recover while remaining in the profession. Recovery often requires both individual strategies like boundary-setting and therapy, and structural changes such as switching schools, grade levels, or roles. Some teachers find renewed engagement in mentoring, curriculum development, or instructional coaching. The key is identifying which specific factors drive your burnout.",
   },
   {
     question: "What can school administrators do about teacher burnout?",
     answer:
-      "Administrators can reduce teacher burnout by protecting planning time, limiting non-instructional duties, providing meaningful professional development rather than compliance-driven training, creating systems for addressing student behavior that do not fall entirely on individual teachers, offering schedule flexibility where possible, and fostering a culture where asking for help is normalized rather than stigmatized.",
+      "Administrators can reduce burnout by protecting planning time, limiting non-instructional duties, providing meaningful professional development, creating systems for addressing student behavior that do not fall on individual teachers alone, offering schedule flexibility, and fostering a culture where asking for help is normalized rather than stigmatized.",
   },
 ];
 

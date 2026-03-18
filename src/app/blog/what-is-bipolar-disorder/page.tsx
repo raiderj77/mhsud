@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can bipolar disorder be mild?",
     answer:
-      "The severity of bipolar disorder varies substantially. Cyclothymic disorder represents a milder end of the spectrum. Even within bipolar I and II, some people have infrequent, shorter episodes with long periods of stability \u2014 while others have rapid cycling (four or more episodes per year) or continuous mood instability. Severity is not fixed; it can change across the lifespan and with treatment.",
+      "Yes. Cyclothymic disorder represents a milder end of the bipolar spectrum. Even within bipolar I and II, severity varies widely \u2014 some people have infrequent episodes with long stable periods, while others experience rapid cycling. Severity can change across the lifespan and with treatment.",
   },
   {
     question: "Is bipolar disorder lifelong?",
     answer:
-      "Bipolar disorder is considered a lifelong condition \u2014 it doesn\u2019t \u201cgo away.\u201d However, with effective treatment and lifestyle management, most people with bipolar disorder can achieve long periods of stability and lead full, meaningful lives. Medication adherence is one of the strongest predictors of long-term outcome.",
+      "Bipolar disorder is considered lifelong \u2014 it does not go away. However, with effective treatment and lifestyle management, most people achieve long periods of stability and lead full, meaningful lives. Medication adherence is one of the strongest predictors of positive long-term outcome.",
   },
   {
     question: "Is creativity linked to bipolar disorder?",
     answer:
-      "There is genuine research showing elevated rates of bipolar spectrum conditions among people in creative fields, and some evidence of a link between hypomania and enhanced creative productivity (Jamison, 1993). However, this association doesn\u2019t mean bipolar disorder is an asset or should go untreated \u2014 the depressive phase and the impaired judgment of full mania cause enormous suffering. Treatment that reduces episodes is not \u201cflattening\u201d creativity; it\u2019s preserving the ability to live and function.",
+      "Research shows elevated rates of bipolar spectrum conditions among creative professionals and some link between hypomania and creative productivity. However, the depressive phase and impaired judgment of mania cause enormous suffering. Treatment that reduces episodes preserves the ability to live and function, not flattens creativity.",
   },
   {
     question: "How is bipolar disorder different from borderline personality disorder?",
     answer:
-      "Both conditions involve mood instability and impulsivity, which is why they\u2019re frequently confused. Key differences: in bipolar disorder, mood episodes are sustained (days to months), tied to sleep and energy changes, and episodic against a relatively stable baseline. In borderline personality disorder (BPD), mood shifts are typically faster (hours), reactive to interpersonal triggers, and embedded in a chronic pattern of relationship instability and identity disturbance. Co-occurrence is possible and requires careful differential diagnosis.",
+      "Both involve mood instability and impulsivity. In bipolar disorder, mood episodes are sustained for days to months and tied to sleep and energy changes. In BPD, mood shifts are faster, reactive to interpersonal triggers, and embedded in chronic relationship instability. Co-occurrence requires careful differential diagnosis.",
   },
 ];
 

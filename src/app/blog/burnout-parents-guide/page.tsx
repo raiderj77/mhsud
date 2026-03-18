@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Is parental burnout a real condition?",
     answer:
-      "Yes. Parental burnout is a well-researched psychological condition described by researchers Isabelle Roskam and Moira Mikolajczak at the University of Louvain. It is distinct from occupational burnout and has its own validated assessment instrument, the Parental Burnout Assessment (PBA). Research published in Clinical Psychological Science and other peer-reviewed journals has established it as a measurable syndrome with three distinct dimensions: exhaustion in the parenting role, emotional distancing from children, and loss of parenting efficacy.",
+      "Yes. Parental burnout is a well-researched psychological condition identified by researchers Roskam and Mikolajczak at the University of Louvain. It has its own validated assessment instrument, the Parental Burnout Assessment (PBA), and is established as a measurable syndrome with three dimensions: exhaustion in the parenting role, emotional distancing from children, and loss of parenting efficacy.",
   },
   {
     question: "How is parental burnout different from regular parenting stress?",
     answer:
-      "All parents experience stress. Parental burnout is what happens when parenting demands chronically exceed a parent\u2019s resources. Regular stress is temporary and situation-specific \u2014 a difficult week, a sleep regression, a challenging school year. Parental burnout is persistent exhaustion, emotional numbness toward your children, and a feeling that you have lost yourself as a parent. The key distinction is duration and the presence of emotional distancing: burned-out parents feel they are running on empty with no recovery in sight.",
+      "Regular parenting stress is temporary and situation-specific \u2014 a difficult week or sleep regression. Parental burnout is persistent exhaustion, emotional numbness toward your children, and a feeling that you have lost yourself as a parent. The key distinction is duration and the presence of emotional distancing: burned-out parents feel they are running on empty with no recovery in sight.",
   },
   {
     question: "Does parental burnout mean I'm a bad parent?",
     answer:
-      "No. Parental burnout is not about being a bad parent \u2014 it is about unsustainable demands exceeding available resources. In fact, research suggests that parents who care deeply about doing a good job (high standards, perfectionism) are often more vulnerable to burnout precisely because they invest so much. Recognizing burnout is a sign of self-awareness, not failure. It means you are paying attention to your well-being, which ultimately benefits both you and your children.",
+      "No. Parental burnout is about unsustainable demands exceeding available resources, not personal failure. Research suggests that parents who care deeply about doing a good job are often more vulnerable precisely because they invest so much. Recognizing burnout is a sign of self-awareness that ultimately benefits both you and your children.",
   },
   {
     question: "Can parental burnout affect my children?",
     answer:
-      "Research indicates that parental burnout can affect children through increased parental neglect and conflict behaviors. Burned-out parents may become emotionally unavailable, more irritable, or inconsistent in their parenting. However, recognizing and addressing burnout early can prevent these effects. Seeking support is one of the most protective things you can do for your children. Children benefit most from parents who take care of their own mental health.",
+      "Research indicates that parental burnout can affect children through increased parental neglect and conflict behaviors. Burned-out parents may become emotionally unavailable, more irritable, or inconsistent. However, recognizing and addressing burnout early can prevent these effects. Seeking support is one of the most protective things you can do for your children.",
   },
 ];
 

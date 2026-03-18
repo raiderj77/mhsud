@@ -37,22 +37,22 @@ const FAQ_DATA = [
   {
     question: "Can I take both the PHQ-9 and GAD-7 on the same day?",
     answer:
-      "Yes \u2014 this is exactly how they\u2019re designed to be used. Clinicians routinely administer both in a single appointment. Taking them the same day gives you a snapshot of both dimensions at the same point in time.",
+      "Yes, this is exactly how they are designed to be used. Clinicians routinely administer both in a single appointment because taking them the same day gives you a snapshot of both depression and anxiety dimensions at the same point in time, producing a more complete clinical picture.",
   },
   {
     question: "If I score high on both, does that mean I have two separate diagnoses?",
     answer:
-      "Not necessarily. High scores on both tools reflect significant symptom burden across depression and anxiety domains \u2014 but whether that represents two separate conditions, one condition with features of both, or a different diagnosis entirely requires clinical evaluation. The scores guide evaluation; they don\u2019t produce diagnoses.",
+      "Not necessarily. High scores on both tools reflect significant symptom burden across depression and anxiety domains. Whether that represents two separate conditions, one condition with features of both, or something else entirely requires clinical evaluation. The scores guide further assessment but do not produce diagnoses on their own.",
   },
   {
     question: "My PHQ-9 is high but my GAD-7 is low. Is that unusual?",
     answer:
-      "No. Some people experience depression with relatively little overt anxiety \u2014 particularly melancholic presentations characterized more by emptiness and anhedonia than by agitation or worry. A primarily depressive picture with a lower anxiety score is a recognizable pattern.",
+      "No, this is not unusual. Some people experience depression with relatively little overt anxiety, particularly melancholic presentations characterized more by emptiness and loss of interest than by agitation or worry. A primarily depressive picture with a lower anxiety score is a well-recognized clinical pattern.",
   },
   {
     question: "How often should I retake these screens?",
     answer:
-      "There\u2019s no fixed schedule. Many people retake them when they notice a shift in how they\u2019re feeling, or before a clinical appointment. If you\u2019re in treatment, your provider may administer them monthly to track progress. Retaking more frequently than every two weeks doesn\u2019t yield meaningful new data since both tools assess the past two weeks.",
+      "There is no fixed schedule. Many people retake them when they notice a shift in how they are feeling, or before a clinical appointment. If you are in treatment, your provider may administer them monthly to track progress. Retaking more frequently than every two weeks does not yield meaningful new data since both tools assess that time window.",
   },
 ];
 

@@ -29,23 +29,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is the most common cause of relapse?",
-    answer: "Research suggests that unmanaged stress is one of the most common contributors to relapse. Stress activates emotional and mental patterns that may lead to cravings. Other common factors include exposure to people or environments associated with past use, untreated mental health concerns, isolation, and overconfidence in recovery. A relapse prevention plan helps you identify your personal risk factors before they escalate.",
+    answer: "Research suggests unmanaged stress is one of the most common contributors to relapse. Stress activates emotional and mental patterns that lead to cravings. Other common factors include exposure to people or environments associated with past use, untreated mental health concerns, isolation, and overconfidence in recovery. A prevention plan helps you identify these risks early.",
   },
   {
     question: "How do I know if I'm about to relapse?",
-    answer: "Relapse rarely happens without warning. Early signs often appear in the emotional stage — increased irritability, anxiety, isolation, poor sleep, skipping meals, or neglecting self-care. In the mental stage, you may notice romanticizing past use, bargaining with yourself, or spending time around people or places connected to substance use. Recognizing these patterns early is exactly what a prevention plan is designed to help you do.",
+    answer: "Relapse rarely happens without warning. Early signs appear in the emotional stage: increased irritability, anxiety, isolation, poor sleep, or neglecting self-care. In the mental stage, you may notice romanticizing past use or bargaining with yourself. Recognizing these patterns early is exactly what a prevention plan helps you do.",
   },
   {
     question: "What should I do if I relapse?",
-    answer: "A relapse does not erase your progress or mean that recovery has failed. The most important step is to reach out immediately — call your sponsor, therapist, a trusted friend, or SAMHSA's helpline at 1-800-662-4357. Remove yourself from the situation, be honest about what happened, and reconnect with your support network. Many people in long-term recovery have experienced setbacks along the way. What matters is getting back on track as quickly as possible.",
+    answer: "A relapse does not erase your progress or mean recovery has failed. Reach out immediately to your sponsor, therapist, a trusted friend, or SAMHSA at 1-800-662-4357. Remove yourself from the situation, be honest about what happened, and reconnect with your support network. What matters most is getting back on track quickly.",
   },
   {
     question: "How often should I update my prevention plan?",
-    answer: "Your relapse prevention plan should be a living document. Review it at least once a month, and update it any time your circumstances change — a new job, a relationship change, a move, increased stress, or a shift in your emotional health. As you learn more about your patterns in recovery, your plan should evolve to reflect that understanding. Many people find it helpful to review their plan with a therapist or sponsor regularly.",
+    answer: "Your plan should be a living document. Review it at least once a month, and update it when circumstances change \u2014 a new job, relationship change, move, or shift in emotional health. As you learn more about your patterns in recovery, your plan should evolve. Many people find it helpful to review their plan with a therapist or sponsor regularly.",
   },
   {
     question: "Does having a plan really help?",
-    answer: "Yes. Research consistently shows that structured relapse prevention planning is associated with better outcomes in recovery. The Gorski model and cognitive-behavioral relapse prevention approaches have strong evidence behind them. Having a written plan means you do not have to rely on willpower or clear thinking in a moment of crisis — you already have a set of actions to follow. It turns abstract intention into concrete steps.",
+    answer: "Yes. Research consistently shows that structured relapse prevention planning is associated with better recovery outcomes. The Gorski model and cognitive-behavioral approaches have strong evidence behind them. A written plan means you do not have to rely on willpower in a crisis \u2014 you already have concrete actions to follow.",
   },
 ];
 
@@ -75,6 +75,24 @@ export default function RelapsePreventionPlanGuidePage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for informational and educational purposes only and does not constitute medical or mental health advice. Always consult a qualified mental health professional for diagnosis and treatment.
+            </p>
+          </div>
+
           <section>
             <h2>What a relapse prevention plan is and why it matters</h2>
             <p>

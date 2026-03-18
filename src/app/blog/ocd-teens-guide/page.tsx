@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How common is OCD in teenagers?",
     answer:
-      "OCD affects approximately 1\u20132% of children and adolescents, making it one of the more common psychiatric conditions in youth. The average age of onset is 19, but symptoms frequently begin earlier \u2014 about half of all people with OCD develop symptoms before age 18. Boys tend to develop OCD earlier than girls. Because OCD is often hidden due to shame, actual prevalence may be higher than reported.",
+      "OCD affects approximately 1\u20132% of children and adolescents. About half of all people with OCD develop symptoms before age 18, with boys tending to develop it earlier than girls. Because teens often hide symptoms due to shame, actual prevalence may be higher than reported in studies.",
   },
   {
     question: "Is my teen\u2019s perfectionism actually OCD?",
     answer:
-      "Perfectionism alone is not OCD. The distinguishing factor is whether the perfectionism is driven by intrusive, unwanted thoughts (obsessions) and whether the teen performs repetitive behaviors or mental rituals (compulsions) to reduce the distress those thoughts cause. A teen who wants their essay to be excellent has high standards. A teen who rewrites the same sentence 30 times because they fear something terrible will happen if it is not \u201cjust right\u201d may have OCD. The key markers are distress, time consumption (typically 1+ hours daily), and inability to stop despite wanting to.",
+      "Perfectionism alone is not OCD. The key distinction is whether it is driven by intrusive, unwanted thoughts and whether the teen performs rituals to reduce distress. A teen who rewrites sentences 30 times fearing something terrible will happen may have OCD. Key markers are significant distress, time consumption exceeding one hour daily, and inability to stop.",
   },
   {
     question: "What is ERP and does it work for teen OCD?",
     answer:
-      "Exposure and Response Prevention (ERP) is the gold-standard treatment for OCD. It involves gradually and systematically exposing the person to situations that trigger obsessions while preventing the compulsive response. Over time, the brain learns that the feared outcome does not occur and that anxiety naturally decreases without rituals. ERP has strong research support for adolescents, with studies showing 60\u201380% of teens experience significant improvement. It can be challenging but is highly effective when delivered by a trained therapist.",
+      "Exposure and Response Prevention (ERP) is the gold-standard OCD treatment. It gradually exposes the person to obsession triggers while preventing the compulsive response, teaching the brain that feared outcomes do not occur. Studies show 60\u201380% of teens experience significant improvement with ERP when delivered by a trained therapist.",
   },
   {
     question: "Should parents accommodate OCD rituals?",
     answer:
-      "No, though this recommendation comes with compassion. Family accommodation \u2014 participating in rituals, providing excessive reassurance, or modifying family routines around OCD \u2014 is well-intentioned but reinforces the disorder. Research shows that higher family accommodation is associated with more severe OCD symptoms. Instead, parents should work with their teen\u2019s therapist to learn how to support without accommodating. This does not mean being harsh or dismissive. It means gently refusing to participate in compulsions while validating the teen\u2019s distress.",
+      "No, though this recommendation comes with compassion. Family accommodation, such as participating in rituals or providing excessive reassurance, is well-intentioned but reinforces the disorder. Research links higher accommodation with more severe symptoms. Parents should work with their teen\u2019s therapist to learn how to gently refuse compulsions while validating distress.",
   },
 ];
 

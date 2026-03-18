@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "What are healthy coping skills?",
     answer:
-      "Healthy coping skills are strategies that help you manage stress, cravings, and difficult emotions without causing additional harm. They fall into four main categories: behavioral (exercise, calling a friend, journaling), cognitive (reframing negative thoughts, thought records), mindfulness (deep breathing, grounding exercises, meditation), and social (attending support groups, reaching out to peers). The key distinction is that healthy coping addresses the underlying need rather than numbing or avoiding it.",
+      "Healthy coping skills help you manage stress, cravings, and difficult emotions without causing harm. They include behavioral strategies like exercise and journaling, cognitive techniques like reframing thoughts, mindfulness practices like deep breathing, and social supports like peer groups. The key is addressing the underlying need rather than numbing it.",
   },
   {
     question: "How many coping skills do I need?",
     answer:
-      "Research suggests having at least five to ten coping skills you can reliably access. The reason is variety: not every skill works in every situation. A breathing exercise may help with mild anxiety but may not be enough during an intense craving. Having a range of options across categories \u2014 behavioral, cognitive, mindfulness, and social \u2014 ensures you have something that fits the moment. The coping skills randomizer can help you discover new options when your current toolkit feels limited.",
+      "Research suggests maintaining at least five to ten coping skills. Not every skill works in every situation \u2014 a breathing exercise may help with mild anxiety but not an intense craving. Having options across behavioral, cognitive, mindfulness, and social categories ensures something fits the moment. The coping skills randomizer helps you discover new techniques.",
   },
   {
     question: "What is the difference between healthy and unhealthy coping?",
     answer:
-      "Healthy coping addresses the root cause of distress and leaves you in a better position afterward. Unhealthy or maladaptive coping provides temporary relief but creates additional problems. Substance use, emotional suppression, avoidance, overeating, and self-harm are all forms of maladaptive coping. The distinction is not always about the behavior itself \u2014 even exercise can become maladaptive if used compulsively to avoid emotions rather than to manage them.",
+      "Healthy coping addresses the root cause of distress and leaves you better off afterward. Unhealthy coping provides temporary relief but creates additional problems \u2014 substance use, emotional suppression, avoidance, and compulsive behaviors are common examples. The distinction is not always the behavior itself; even exercise becomes maladaptive if used compulsively to avoid emotions.",
   },
   {
     question: "Can coping skills replace therapy?",
     answer:
-      "Coping skills are an essential complement to therapy, but they are not a replacement for professional support. Therapy helps you understand the underlying patterns that drive your distress, process trauma, and develop personalized strategies with professional guidance. Coping skills give you practical tools for daily management. The two work together: therapy builds the foundation, and coping skills are the daily practice that maintains it. If you are in recovery, working with a qualified counselor or therapist is strongly recommended.",
+      "Coping skills complement therapy but do not replace professional support. Therapy helps you understand underlying patterns, process trauma, and develop personalized strategies with expert guidance. Coping skills provide practical daily management tools. The two work together \u2014 therapy builds the foundation, and coping skills maintain it. Professional support is strongly recommended in recovery.",
   },
 ];
 

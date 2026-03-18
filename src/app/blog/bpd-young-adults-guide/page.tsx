@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Can you develop BPD as a young adult?",
     answer:
-      "BPD does not suddenly appear in adulthood \u2014 but it is most commonly first recognized during late adolescence and early adulthood. Research indicates that BPD features often emerge between ages 14 and 25, a period when identity formation, emotional regulation, and relationship skills are rapidly developing. The condition likely has roots in temperament, early attachment experiences, and adverse childhood experiences, but its full clinical picture tends to become visible during the developmental demands of young adulthood. Many clinicians now support assessment and early intervention starting at age 12 with appropriate caution.",
+      "BPD does not suddenly appear but is most commonly first recognized during late adolescence and early adulthood. Research indicates features often emerge between ages 14 and 25, when identity formation and emotional regulation are developing. Clinicians now support early assessment starting at age 12 with appropriate caution.",
   },
   {
     question: "How is BPD different from normal young adult mood swings?",
     answer:
-      "Young adulthood naturally involves emotional intensity, identity exploration, and relationship turbulence. What distinguishes BPD from typical development is the severity, persistence, and functional impairment. In BPD, emotional reactions are disproportionate to the trigger, identity confusion goes beyond exploration into chronic emptiness, relationships follow a pattern of idealization and devaluation, and fear of abandonment drives behaviors that damage relationships. If emotional intensity is consistently causing significant problems in relationships, work or school, and self-image, a screening may be warranted.",
+      "The key distinction is severity, persistence, and functional impairment. In BPD, emotional reactions are disproportionate to triggers, identity confusion extends beyond exploration into chronic emptiness, and relationships follow patterns of idealization and devaluation. If emotional intensity consistently causes significant problems in relationships, work, or self-image, a screening may be warranted.",
   },
   {
     question: "Is it helpful to get a BPD assessment early?",
     answer:
-      "Yes. Research strongly supports early identification and intervention for BPD. A 2019 meta-analysis published in JAMA Psychiatry found that early intervention programs significantly improved outcomes for young people with emerging BPD features. Dialectical behavior therapy (DBT) and other evidence-based approaches are effective in young adults, and early treatment can prevent the development of chronic patterns. Contrary to older clinical beliefs, BPD is not a lifelong sentence \u2014 longitudinal studies show that the majority of people with BPD experience significant improvement over time, especially with appropriate support.",
+      "Yes. A 2019 JAMA Psychiatry meta-analysis found that early intervention significantly improved outcomes for young people with emerging BPD features. DBT and other evidence-based approaches are effective in young adults, and early treatment can prevent chronic patterns. Longitudinal studies show most people with BPD experience significant improvement over time.",
   },
   {
     question: "What is quiet BPD?",
     answer:
-      "Quiet BPD is an informal term (not a clinical diagnosis) describing a presentation where the person directs BPD symptoms inward rather than outward. Instead of explosive anger, there is intense self-criticism. Instead of visible relationship crises, there is silent withdrawal. Instead of outward impulsivity, there is emotional shutdown. People with quiet BPD may appear calm or even high-functioning externally while experiencing intense inner turmoil, chronic emptiness, and deep fear of abandonment. This presentation is often missed or attributed to depression or anxiety, which is why self-screening can be valuable.",
+      "Quiet BPD is an informal term describing a presentation where symptoms are directed inward rather than outward \u2014 intense self-criticism instead of explosive anger, silent withdrawal instead of visible crises, and emotional shutdown instead of impulsivity. People with quiet BPD may appear high-functioning while experiencing intense inner turmoil, making self-screening especially valuable.",
   },
 ];
 

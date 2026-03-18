@@ -42,7 +42,7 @@ const FAQ_DATA = [
   {
     question: "What is EMDR and why is it recommended for PTSD?",
     answer:
-      "EMDR (Eye Movement Desensitization and Reprocessing) is a structured therapy that uses bilateral stimulation (typically guided eye movements) while the person focuses on a traumatic memory. The mechanism is not fully understood, but it appears to facilitate memory reprocessing in a way that reduces the distress and vividness associated with traumatic memories. It is WHO-recommended and has a strong evidence base, particularly for single-incident trauma.",
+      "EMDR (Eye Movement Desensitization and Reprocessing) is a structured therapy using bilateral stimulation while the person focuses on a traumatic memory. The mechanism is not fully understood, but it appears to facilitate memory reprocessing that reduces distress and vividness. EMDR is WHO-recommended with a strong evidence base, particularly for single-incident trauma.",
   },
 ];
 

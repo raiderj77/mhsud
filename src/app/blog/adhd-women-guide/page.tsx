@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "Why is ADHD underdiagnosed in women?",
     answer:
-      "ADHD research historically focused on hyperactive boys, creating diagnostic criteria that miss the predominantly inattentive presentation more common in women. Women also develop sophisticated masking strategies \u2014 overcompensation, excessive planning, perfectionism \u2014 that hide symptoms. Additionally, clinicians often attribute ADHD symptoms in women to anxiety or depression, leading to misdiagnosis rather than missed diagnosis.",
+      "ADHD research historically focused on hyperactive boys, creating diagnostic criteria that miss the predominantly inattentive presentation more common in women. Women also develop sophisticated masking strategies \u2014 overcompensation, excessive planning, perfectionism \u2014 that hide symptoms. Additionally, clinicians often attribute ADHD symptoms in women to anxiety or depression, leading to misdiagnosis rather than recognition of ADHD as the underlying condition.",
   },
   {
     question: "Can ADHD symptoms get worse during perimenopause?",

@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "Does worry time actually reduce anxiety?",
     answer:
-      "Yes. Research by Borkovec and colleagues demonstrated that stimulus control for worry &mdash; the formal name for worry time &mdash; reduces generalized worry by 35&ndash;50% in controlled trials. By containing worry to a specific window, the brain learns that worry has a time and place, which reduces intrusive worrying during the rest of the day. Multiple studies have replicated these findings across clinical and non-clinical populations.",
+      "Yes. Research by Borkovec and colleagues showed stimulus control for worry reduces generalized anxiety by 35\u201350% in controlled trials. By containing worry to a specific window, the brain learns worry has a designated time, which reduces intrusive worrying during the rest of the day.",
   },
   {
     question: "How long should worry time last?",
     answer:
-      "Most clinicians recommend 15&ndash;30 minutes. Shorter sessions may not give you enough time to process worries meaningfully, while longer sessions can become rumination rather than productive problem-solving. Start with 15 minutes and adjust based on what feels sufficient. The key is consistency &mdash; same time, same place, every day &mdash; so your brain learns the routine.",
+      "Most clinicians recommend 15\u201330 minutes. Shorter sessions may not allow meaningful processing, while longer sessions risk becoming rumination. Start with 15 minutes and adjust as needed. Consistency is key \u2014 same time, same place, every day \u2014 so your brain learns the routine.",
   },
   {
     question: "What if I can't stop worrying outside of worry time?",
     answer:
-      "This is normal, especially in the first week or two. When a worry arises outside your scheduled window, acknowledge it briefly, write it down, and remind yourself you will address it during worry time. The act of writing it down reassures your brain that the worry will not be forgotten. With practice, postponing gets easier as your brain adapts to the new pattern.",
+      "This is normal, especially in the first two weeks. When a worry arises, acknowledge it briefly, write it down, and remind yourself you will address it during worry time. Writing it down reassures your brain the worry will not be forgotten. With practice, postponing becomes easier.",
   },
   {
     question: "Is worry time the same as journaling?",
     answer:
-      "Not exactly. Journaling is an open-ended reflective practice that can cover emotions, events, and goals. Worry time is a structured CBT technique with specific rules: a fixed daily window, active postponement of worries outside that window, and focused engagement during the session. Some people use writing during worry time, but the technique can also involve sitting and thinking through worries mentally.",
+      "Not exactly. Journaling is open-ended reflection covering emotions, events, and goals. Worry time is a structured CBT technique with specific rules: a fixed daily window, active postponement of worries outside it, and focused engagement during the session. Writing may be used, but is not required.",
   },
 ];
 

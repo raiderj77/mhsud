@@ -33,22 +33,22 @@ const FAQ_DATA = [
   {
     question: "How much stress is normal in college?",
     answer:
-      "Some stress in college is normal and even beneficial \u2014 it motivates studying, drives performance, and builds resilience. Stress becomes concerning when it persists for weeks beyond a specific stressor, interferes with daily functioning (sleep, eating, attending class, social relationships), produces physical symptoms, or leads to avoidance of previously manageable tasks. If stress is constant rather than situational, it may be crossing into a clinical concern.",
+      "Some college stress is normal and even beneficial for motivation and performance. Stress becomes concerning when it persists for weeks beyond a specific stressor, interferes with daily functioning like sleep or attending class, produces physical symptoms, or leads to avoidance of previously manageable tasks. Constant stress may indicate a clinical concern.",
   },
   {
     question: "Can stress cause physical symptoms?",
     answer:
-      "Yes. Chronic stress activates the hypothalamic-pituitary-adrenal (HPA) axis, producing sustained cortisol elevation that manifests as headaches, muscle tension, digestive problems, chest tightness, weakened immune function, fatigue, and sleep disruption. Many college students visit health centers for these physical symptoms without realizing stress is the underlying driver. Addressing the stress often resolves the physical complaints.",
+      "Yes. Chronic stress activates the HPA axis, producing sustained cortisol elevation that causes headaches, muscle tension, digestive problems, chest tightness, weakened immunity, fatigue, and sleep disruption. Many college students visit health centers for these symptoms without realizing stress is the driver. Addressing stress often resolves the physical complaints.",
   },
   {
     question: "What campus resources help with stress?",
     answer:
-      "Most colleges offer free or low-cost counseling through campus counseling centers, typically allowing 6\u201312 sessions per academic year. Other resources include peer counseling programs, stress management workshops, academic advising for course load adjustment, disability services for mental health accommodations, recreation centers, and crisis lines. Despite these resources, only about 11% of students who report significant stress actually use campus counseling services.",
+      "Most colleges offer free counseling through campus counseling centers, typically allowing 6\u201312 sessions per year. Other resources include peer counseling, stress management workshops, academic advising, disability services for mental health accommodations, and recreation centers. Despite availability, only about 11% of significantly stressed students use campus counseling.",
   },
   {
     question: "Is college stress worse than it used to be?",
     answer:
-      "Data suggests yes. The American College Health Association\u2019s National College Health Assessment shows steady increases in reported stress, anxiety, and depression among college students over the past two decades. Contributing factors include rising tuition and student debt, social media comparison, competitive job markets, the COVID-19 pandemic\u2019s lasting effects, and increased academic pressure. However, increased reporting may also reflect reduced stigma around discussing mental health.",
+      "Data suggests yes. The American College Health Association reports steady increases in student stress, anxiety, and depression over two decades. Contributing factors include rising tuition, social media comparison, competitive job markets, and pandemic effects. However, increased reporting may also reflect reduced stigma around discussing mental health.",
   },
 ];
 

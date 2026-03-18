@@ -37,12 +37,12 @@ const FAQ_DATA = [
   {
     question: "Will talking to my doctor about mental health affect my insurance?",
     answer:
-      "In most cases, no. For health insurance, mental health treatment is covered under the Affordable Care Act\u2019s mental health parity protections. For life insurance and disability insurance, mental health history can be relevant \u2014 these are underwritten differently than health insurance. If this is a concern, speaking with a mental health professional independently (outside your primary care record) is an option some people choose.",
+      "In most cases, no. Health insurance covers mental health treatment under the Affordable Care Act\u2019s parity protections. Life and disability insurance are underwritten differently, and mental health history can be relevant. If concerned, speaking with a mental health professional independently outside your primary care record is an option.",
   },
   {
     question: "Should I see a therapist or my primary care doctor first?",
     answer:
-      "Either is a valid starting point. Primary care doctors can prescribe medication and provide referrals. Therapists can provide immediate counseling and often have shorter wait times for initial appointments than psychiatrists. For most people, starting with whoever is most accessible gets care moving fastest.",
+      "Either is valid. Primary care doctors can prescribe medication and provide referrals. Therapists offer immediate counseling and often have shorter wait times than psychiatrists. For most people, starting with whoever is most accessible gets care moving fastest. Both can coordinate your treatment together.",
   },
   {
     question: "What if I cry during the appointment?",
@@ -52,7 +52,7 @@ const FAQ_DATA = [
   {
     question: "How do I know if a therapist is a good fit?",
     answer:
-      "Research consistently identifies the therapeutic relationship \u2014 how safe, understood, and respected you feel \u2014 as the strongest predictor of outcomes. If after 2\u20133 sessions you don\u2019t feel heard or the approach doesn\u2019t resonate, it\u2019s reasonable to try a different therapist. Finding the right fit is part of the process, not a failure.",
+      "The therapeutic relationship \u2014 how safe, understood, and respected you feel \u2014 is the strongest predictor of outcomes. If after 2\u20133 sessions you don\u2019t feel heard or the approach doesn\u2019t resonate, try a different therapist. Finding the right fit is part of the process, not a failure.",
   },
 ];
 

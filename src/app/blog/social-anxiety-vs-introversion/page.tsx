@@ -37,27 +37,27 @@ const FAQ_DATA = [
   {
     question: "Am I introverted or do I have social anxiety?",
     answer:
-      "The key difference is whether social situations cause you distress or simply drain your energy. Introverts prefer quieter environments and recharge through solitude, but they can enjoy socializing without significant fear or worry. Social anxiety, on the other hand, involves persistent fear of being judged, embarrassed, or humiliated in social situations — often accompanied by physical symptoms like blushing, trembling, or nausea. If social situations cause you significant distress or you avoid them out of fear rather than preference, a screening tool like the SPIN may help clarify your experience.",
+      "The key difference is whether social situations cause distress or simply drain your energy. Introverts prefer quieter environments but can enjoy socializing without significant fear. Social anxiety involves persistent fear of judgment, often with physical symptoms like blushing or trembling. If you avoid social situations out of fear rather than preference, a screening tool like the SPIN may help.",
   },
   {
     question: "Can introverts have social anxiety?",
     answer:
-      "Yes. Introversion and social anxiety are not mutually exclusive. You can be an introvert who also experiences social anxiety. In fact, research suggests that introverts may be somewhat more likely to develop social anxiety because they spend less time in social situations, which can reduce opportunities to build social confidence. However, many introverts never develop social anxiety, and many people with social anxiety are not introverts. The two are separate dimensions of human experience.",
+      "Yes. Introversion and social anxiety are not mutually exclusive. Research suggests introverts may be somewhat more likely to develop social anxiety because less social exposure can reduce opportunities to build confidence. However, many introverts never develop social anxiety, and many people with social anxiety are not introverts. The two exist on separate dimensions.",
   },
   {
     question: "Is social anxiety the same as being shy?",
     answer:
-      "Not exactly. Shyness is a common personality trait involving mild discomfort in social situations, especially with unfamiliar people. Social anxiety disorder is a clinical condition that involves intense, persistent fear of social situations that causes significant distress and functional impairment. While shyness and social anxiety exist on a spectrum, social anxiety disorder is more severe — it may prevent someone from attending school, holding a job, or forming relationships. Shy people typically warm up over time in social settings, while people with social anxiety may find their distress increases or remains high.",
+      "Not exactly. Shyness involves mild discomfort in social situations, especially with unfamiliar people. Social anxiety disorder is a clinical condition with intense, persistent fear that causes significant distress and functional impairment \u2014 it may prevent attending school, holding a job, or forming relationships. Shy people typically warm up over time, while social anxiety distress often persists.",
   },
   {
     question: "Can social anxiety be cured?",
     answer:
-      "Social anxiety disorder is highly treatable. Cognitive-behavioral therapy (CBT) is considered the gold-standard approach, with research showing significant improvement in the majority of people who complete a course of treatment. Exposure therapy, a component of CBT, helps people gradually face feared social situations in a structured way. Medications such as SSRIs may also be helpful. While some people achieve full remission, others learn to manage symptoms effectively so that social anxiety no longer controls their daily life. Early screening and intervention tend to produce better outcomes.",
+      "Social anxiety disorder is highly treatable. CBT is the gold-standard approach, with research showing significant improvement in most people who complete treatment. Exposure therapy helps people gradually face feared situations. Medications like SSRIs may also help. While some achieve full remission, others learn to manage symptoms effectively. Early screening tends to produce better outcomes.",
   },
   {
     question: "What is the SPIN test?",
     answer:
-      "The SPIN (Social Phobia Inventory) is a validated 17-item screening tool developed by researchers at Duke University. It measures the severity of social anxiety symptoms across three domains: fear, avoidance, and physiological distress. Each item is rated on a scale from 0 to 4, producing a total score between 0 and 68. The SPIN is widely used in both clinical practice and research to screen for social anxiety disorder. It is a screening instrument — not a diagnosis — and results may indicate the need for further evaluation by a qualified mental health professional.",
+      "The SPIN (Social Phobia Inventory) is a validated 17-item screening tool developed at Duke University. It measures social anxiety across three domains: fear, avoidance, and physiological distress, producing a score between 0 and 68. It is widely used in clinical practice and research. The SPIN is a screening instrument, not a diagnosis, and results may indicate need for professional evaluation.",
   },
 ];
 
@@ -84,6 +84,24 @@ export default function SocialAnxietyVsIntroversionPage() {
         </header>
 
         <div className="prose-mh space-y-8">
+          {/* Crisis Resources */}
+          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
+            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            </ul>
+          </div>
+
+          {/* Clinical Disclaimer */}
+          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              This article is for informational and educational purposes only and does not constitute medical or mental health advice. Always consult a qualified mental health professional for diagnosis and treatment.
+            </p>
+          </div>
+
           <section>
             <h2>What introversion actually is</h2>
             <p>
@@ -273,6 +291,10 @@ export default function SocialAnxietyVsIntroversionPage() {
               <Link href="/spin-social-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">SPIN Social Anxiety Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Free, private screening for social anxiety symptoms</p>
+              </Link>
+              <Link href="/social-anxiety-test-college" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Social Anxiety Test for College</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Social anxiety screening for college students</p>
               </Link>
               <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Self-Check</p>

@@ -33,17 +33,17 @@ const FAQ_DATA = [
   {
     question: "Does talking about mental health more openly actually reduce stigma?",
     answer:
-      "Yes \u2014 but with nuance. Disclosure and contact-based approaches are the most effective stigma reduction methods. However, the way mental health is discussed matters: media portrayals that sensationalize violence, use stigmatizing language, or focus on the most extreme cases can increase stigma even while raising awareness. Humanizing, recovery-focused narratives from real people are what produce measurable attitude change.",
+      "Yes, but how it is discussed matters. Contact-based approaches and personal disclosure are the most effective methods. Media portrayals that sensationalize violence or use stigmatizing language can actually increase stigma. Humanizing, recovery-focused narratives from real people produce the most measurable attitude change.",
   },
   {
     question: "Is stigma worse in some cultures than others?",
     answer:
-      "Yes. Stigma varies significantly across cultural contexts \u2014 shaped by values around independence, family honor, religious beliefs about mental illness, and the degree to which emotional expression is culturally encouraged or discouraged. This doesn\u2019t mean stigma is a fixed cultural feature \u2014 attitudes shift over time and through deliberate effort within every community.",
+      "Yes. Stigma varies significantly across cultural contexts, shaped by values around independence, family honor, religious beliefs about mental illness, and whether emotional expression is culturally encouraged. However, stigma is not a fixed cultural feature. Attitudes shift over time and through deliberate community effort.",
   },
   {
     question: "Can stigma cause physical harm?",
     answer:
-      "Yes. The chronic stress of discrimination and stigma \u2014 including anticipating being stigmatized \u2014 is associated with measurable physiological stress responses. The isolation produced by stigma removes social support that buffers mental health. And the delay in treatment caused by stigma means mental health conditions worsen, producing functional, relational, and sometimes physical health consequences. Stigma is not just feelings \u2014 it has measurable health costs.",
+      "Yes. The chronic stress of discrimination and anticipating stigma produces measurable physiological stress responses. Stigma-driven isolation removes protective social support, and treatment delays caused by stigma allow conditions to worsen, producing functional, relational, and physical health consequences. Stigma has measurable health costs beyond feelings alone.",
   },
 ];
 
