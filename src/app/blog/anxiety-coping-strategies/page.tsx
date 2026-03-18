@@ -117,7 +117,7 @@ export default function AnxietyCopingStrategiesPage() {
             interventions that can help reduce anxiety symptoms effectively.
           </p>
           <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
-            <span>Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.</span>
+            <span>Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).</span>
             <span>•</span>
             <span>Updated February 24, 2026</span>
           </div>

@@ -440,7 +440,7 @@ export function UCLAClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The UCLA Loneliness Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a mental health condition. An elevated score suggests significant loneliness that may benefit from professional support. Always consult a qualified healthcare professional for mental health concerns. Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.
+            The UCLA Loneliness Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a mental health condition. An elevated score suggests significant loneliness that may benefit from professional support. Always consult a qualified healthcare professional for mental health concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
         </div>
 
@@ -611,7 +611,7 @@ export function UCLAClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The UCLA Loneliness Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a mental health condition. An elevated score suggests significant loneliness that may benefit from professional support. Always consult a qualified healthcare professional for mental health concerns. Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.
+          The UCLA Loneliness Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a mental health condition. An elevated score suggests significant loneliness that may benefit from professional support. Always consult a qualified healthcare professional for mental health concerns. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
         </p>
       </div>
 

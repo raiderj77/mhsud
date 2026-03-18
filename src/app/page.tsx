@@ -636,7 +636,7 @@ export default function HomePage() {
           </h1>
           <p className="text-sm text-gray-500 mt-1 mb-4 text-center">Last updated: March 16, 2026</p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
-            Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See <a href='/about/jason-ramirez'>author credentials</a>.{" "}
+            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).{" "}
             <Link
               href="/about"
               className="underline hover:text-neutral-300 transition-colors"
