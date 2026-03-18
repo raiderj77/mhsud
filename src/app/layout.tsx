@@ -84,6 +84,20 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://adservice.google.com" />
 
         {/*
+          Preload critical heading font (Source Serif 4) so the real LCP element
+          (hero H1) renders before the Cookiebot dialog can claim LCP.
+          next/font already preloads these, but explicit hints with fetchpriority
+          ensure they win the resource priority race against third-party scripts.
+        */}
+        <link
+          rel="preload"
+          href="/_next/static/media/13971731025ec697-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/*
           Cookiebot consent management.
           data-blockingmode="auto" handles script blocking via Cookiebot's own mechanism,
           so afterInteractive is safe — Cookiebot still blocks other scripts until consent.
