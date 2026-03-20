@@ -1,38 +1,24 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
-import { DAST10Client } from "./DAST10Client";
+import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 const TOOL_URL = `${SITE_URL}/dast-10-drug-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/dast-10-drug-screening",
-  title: "DAST-10 Drug Screening Test | Free Self-Check",
+  title: "DAST-10 Drug Screening — Coming Soon",
   description:
-    "Take the free DAST-10 drug abuse screening test. 10 yes/no questions, 2 minutes. Private, instant results. Validated screening tool — not a diagnosis.",
+    "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
   keywords: [
-    "dast-10", "dast 10", "drug abuse screening test", "drug screening test",
-    "dast-10 test", "drug use screening", "substance abuse screening",
-    "drug abuse test", "dast-10 questionnaire", "drug self-assessment",
-    "online drug screening", "dast-10 score", "free drug screening test",
-    "substance use assessment", "drug abuse screening test 10",
+    "dast-10", "drug abuse screening test", "drug screening test",
+    "substance abuse screening", "drug use screening",
   ],
   openGraph: {
-    title: "DAST-10 Drug Screening Test | Free Self-Check",
-    description: "Take the free DAST-10 drug abuse screening test. 10 yes/no questions, 2 minutes. Private, instant results.",
+    title: "DAST-10 Drug Screening — Coming Soon",
+    description: "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission.",
     url: TOOL_URL,
     type: "website",
   },
 });
-
-const FAQ_DATA = [
-  { question: "What is the DAST-10?", answer: "The DAST-10 (Drug Abuse Screening Test) is a clinically validated 10-item yes/no questionnaire used by healthcare professionals to screen for drug use problems. It was developed by Dr. Harvey Skinner and is widely used in clinical, research, and primary care settings to identify individuals who may need further assessment for substance use concerns." },
-  { question: "How is the DAST-10 scored?", answer: "Each of the 10 questions is answered Yes (1 point) or No (0 points). The total score ranges from 0 to 10. A score of 0 suggests no problems reported, 1–2 indicates a low level, 3–5 indicates a moderate level, 6–8 indicates a substantial level, and 9–10 indicates a severe level of drug-related concerns." },
-  { question: "What does my DAST-10 score mean?", answer: "Your score reflects the degree to which drug use may be affecting your life based on your self-reported answers. Higher scores suggest a greater level of drug-related problems. However, this is a screening tool — it identifies potential concerns but cannot determine the nature or severity of a substance use disorder. Only a qualified professional can do that." },
-  { question: "Is the DAST-10 a diagnosis?", answer: "No. The DAST-10 is a screening instrument, not a diagnostic tool. It is designed to flag potential drug-related problems so that further evaluation can be pursued with a qualified healthcare professional. A positive screen does not mean you have a substance use disorder — it means a deeper conversation with a professional may be helpful." },
-  { question: "What should I do if I score high on the DAST-10?", answer: "A score of 3 or higher suggests that speaking with a healthcare provider or substance use professional may be beneficial. You can contact the SAMHSA National Helpline at 1-800-662-4357 for free, confidential treatment referrals available 24/7. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
-  { question: "How is the DAST-10 different from the AUDIT?", answer: "The DAST-10 screens specifically for drug use problems (excluding alcohol and tobacco), while the AUDIT (Alcohol Use Disorders Identification Test) screens specifically for alcohol-related concerns. They are complementary tools — a healthcare provider may use both to get a fuller picture of substance use patterns." },
-  { question: "Can I take the DAST-10 for someone else?", answer: "The DAST-10 is designed as a self-report instrument — it works best when the person answers about their own experiences. While you can review the questions to understand what the tool assesses, answering on behalf of someone else may not produce accurate results. If you are concerned about someone's drug use, consider encouraging them to take the screening themselves or to speak with a healthcare provider." },
-];
 
 export default function DAST10Page() {
   return (
@@ -41,57 +27,53 @@ export default function DAST10Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            toolPageJsonLd({
-              name: "DAST-10 Drug Screening Test",
-              description: "A free online implementation of the DAST-10 Drug Abuse Screening Test, a validated 10-item yes/no questionnaire used by clinicians to screen for drug use problems.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
-            })
-          ),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "DAST-10 Drug Screening Test", url: TOOL_URL },
+              { name: "DAST-10 Drug Screening", url: TOOL_URL },
             ])
           ),
         }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            medicalWebPageJsonLd({
-              name: "DAST-10 Drug Screening Test",
-              description: "A free online implementation of the DAST-10 Drug Abuse Screening Test, a validated 10-item yes/no questionnaire used by clinicians to screen for drug use problems.",
-              url: TOOL_URL,
-              lastReviewed: "2026-03-07",
-            })
-          ),
-        }}
-      />
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
+        <h1 className="text-3xl font-bold text-warm-900 dark:text-warm-100 mb-6 text-center">
+          DAST-10 Drug Screening — Coming Soon
+        </h1>
 
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <section className="sr-only">
-        <h2>What Is the DAST-10 Drug Screening?</h2>
-        <h2>How Is the DAST-10 Scored?</h2>
-        <h2>What Do My DAST-10 Results Mean?</h2>
-      </section>
-      <DAST10Client faqData={FAQ_DATA} />
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+          <p className="text-warm-700 dark:text-warm-300 leading-relaxed">
+            We are currently obtaining licensing permission to offer this screening tool. The Drug Abuse Screening Test (DAST-10) is a validated instrument for identifying drug use problems. We expect to have this tool available soon. In the meantime, please consult with a qualified mental health professional.
+          </p>
+        </div>
+
+        {/* Crisis Resources */}
+        <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
+          <h2 className="text-lg font-semibold text-red-900 dark:text-red-200 mb-4">
+            Crisis Resources
+          </h2>
+          <ul className="space-y-3 text-warm-700 dark:text-warm-300">
+            <li>
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
+              <a href="tel:988" className="text-blue-600 dark:text-blue-400 underline font-semibold">988</a>
+            </li>
+            <li>
+              <strong>Crisis Text Line:</strong> Text HOME to{" "}
+              <a href="sms:741741" className="text-blue-600 dark:text-blue-400 underline font-semibold">741741</a>
+            </li>
+            <li>
+              <strong>SAMHSA Helpline:</strong>{" "}
+              <a href="tel:1-800-662-4357" className="text-blue-600 dark:text-blue-400 underline font-semibold">1-800-662-4357</a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Medical Disclaimer */}
+        <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4">
+          <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
+            <strong>Important:</strong> This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment.
+          </p>
+        </div>
+      </main>
     </>
   );
 }
