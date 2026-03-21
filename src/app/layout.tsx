@@ -53,6 +53,9 @@ export const metadata: Metadata = {
       "x-default": "https://mindchecktools.com",
     },
   },
+  verification: {
+    google: "2ieYhzyPUNxUGKoS_QEQUvsuojYLusDJdHBsNIs6UCU",
+  },
   other: {
     "google-adsense-account": "ca-pub-7171402107622932",
     "msvalidate.01": "C4C9B6256BDEDED169E4DE01CA953390",
