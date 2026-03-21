@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { PHQ9Client } from "./PHQ9Client";
 
 const TOOL_URL = `${SITE_URL}/phq-9-depression-test`;
@@ -93,6 +94,14 @@ export default function PHQ9Page() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The PHQ-9 is a validated 9-question depression screening tool used by healthcare professionals worldwide."
+          who="Anyone wanting to understand their depression symptoms — results should always be reviewed with a qualified healthcare provider."
+          bottomLine="This 2-minute screening produces a standardized score you can share with your doctor or counselor — it is not a diagnosis."
+          lastUpdated="2026-03-20"
+        />
+      </div>
 <PHQ9Client faqData={FAQ_DATA} />
 
       {/* Internal Links */}

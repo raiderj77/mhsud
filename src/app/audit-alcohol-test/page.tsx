@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AUDITClient } from "./AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/audit-alcohol-test`;
@@ -50,6 +51,14 @@ export default function AUDITPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The AUDIT is a 10-question WHO-validated alcohol use screening tool used in clinical and primary care settings."
+          who="Anyone wanting to understand their relationship with alcohol using a clinically recognized instrument."
+          bottomLine="AUDIT scores help identify drinking patterns on a standardized scale — results are informational and not a clinical diagnosis."
+          lastUpdated="2026-03-20"
+        />
+      </div>
 <AUDITClient faqData={FAQ_DATA} />
     </>
   );

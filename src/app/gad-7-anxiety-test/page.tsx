@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { GAD7Client } from "./GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/gad-7-anxiety-test`;
@@ -91,6 +92,14 @@ export default function GAD7Page() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The GAD-7 is a clinically validated 7-question tool that measures generalized anxiety disorder severity."
+          who="Anyone experiencing worry, nervousness, or anxiety symptoms who wants a standardized self-assessment."
+          bottomLine="Your score indicates anxiety severity on a recognized clinical scale — always discuss results with a mental health professional."
+          lastUpdated="2026-03-20"
+        />
+      </div>
 <GAD7Client faqData={FAQ_DATA} />
     </>
   );
