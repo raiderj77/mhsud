@@ -8,6 +8,8 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import EmailCapture from "@/components/EmailCapture";
+
 
 interface Domain {
   name: string;
@@ -300,6 +302,17 @@ export function MentalLoadClient({ faqData }: Props) {
             suggestion="The most valuable thing you can do with these results is share them with the people you live with and talk about what you notice."
             reflectionPrompts={REFLECTION_PROMPTS["mental-load-calculator"]?.prompts ?? []}
           />
+
+          {/* Email Capture */}
+          <EmailCapture
+            headline="Get a private copy of your results"
+            subtext="We\u2019ll email you your score and what it means \u2014 your responses are never stored."
+            buttonText="Send Private Copy"
+            source="mindchecktools-results"
+            leadMagnet="screening-score-copy"
+            variant="inline"
+          />
+
 
           {/* Reflection Prompts */}
           {REFLECTION_PROMPTS["mental-load-calculator"] && (

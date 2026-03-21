@@ -7,6 +7,8 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import EmailCapture from "@/components/EmailCapture";
+
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -429,6 +431,17 @@ export function HALTClient({ faqData }: Props) {
                 suggestion={lowDimensions.length > 0 ? `Focus on addressing: ${lowDimensions.map(d => d.label).join(", ")}.` : "Your basic needs are met. Keep doing what you are doing."}
                 reflectionPrompts={REFLECTION_PROMPTS["halt-check-in"].prompts}
               />
+
+          {/* Email Capture */}
+          <EmailCapture
+            headline="Get a private copy of your results"
+            subtext="We\u2019ll email you your score and what it means \u2014 your responses are never stored."
+            buttonText="Send Private Copy"
+            source="mindchecktools-results"
+            leadMagnet="screening-score-copy"
+            variant="inline"
+          />
+
             </>
           )}
 

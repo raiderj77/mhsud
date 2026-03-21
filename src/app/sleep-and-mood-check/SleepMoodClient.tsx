@@ -8,6 +8,8 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import EmailCapture from "@/components/EmailCapture";
+
 
 const QUESTIONS = [
   { text: "I have difficulty falling asleep most nights.", domain: "Quality" },
@@ -314,6 +316,17 @@ export function SleepMoodClient({ faqData }: Props) {
               answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
             }))}
           />
+
+          {/* Email Capture */}
+          <EmailCapture
+            headline="Get a private copy of your results"
+            subtext="We\u2019ll email you your score and what it means \u2014 your responses are never stored."
+            buttonText="Send Private Copy"
+            source="mindchecktools-results"
+            leadMagnet="screening-score-copy"
+            variant="inline"
+          />
+
 
           {/* Reflection Prompts */}
           {REFLECTION_PROMPTS["sleep-and-mood-check"] && (
