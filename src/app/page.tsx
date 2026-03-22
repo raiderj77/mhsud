@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { createMetadata, breadcrumbJsonLd, faqJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, breadcrumbJsonLd, faqJsonLd, organizationJsonLd, websiteJsonLd, SITE_URL } from "@/lib/metadata";
 import { ToolGrid } from "@/components/ToolGrid";
 import type { ToolCategory, Tool, TargetedScreening } from "@/components/ToolGrid";
 
@@ -620,6 +620,18 @@ export default function HomePage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([{ name: "Home", url: SITE_URL }])
           ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationJsonLd()),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd()),
         }}
       />
 

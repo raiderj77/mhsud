@@ -80,6 +80,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     description: SITE_DESCRIPTION,
     sameAs: ["https://github.com/raiderj77/mhsud"],
     contactPoint: {
@@ -216,6 +217,22 @@ export function medicalWebPageJsonLd({
     medicalAudience: {
       "@type": "MedicalAudience",
       audienceType: "Patient",
+    },
+  };
+}
+
+/** JSON-LD for WebSite (homepage) */
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
     },
   };
 }
