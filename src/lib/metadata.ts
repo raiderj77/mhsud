@@ -21,7 +21,8 @@ export const DEFAULT_KEYWORDS = [
 
 /** Base metadata shared across all pages */
 export function createMetadata(overrides: Partial<Metadata> & { path?: string }): Metadata {
-  const { path = "", openGraph: ogOverrides, twitter: twOverrides, ...rest } = overrides;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { path = "", openGraph: ogOverrides, twitter: twOverrides, alternates: _altOverrides, ...rest } = overrides;
   const url = `${SITE_URL}${path}`;
 
   const defaultTitle = `${SITE_NAME} — Free, Private Mental Health Self-Checks`;
@@ -66,10 +67,10 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
         "max-snippet": -1,
       },
     },
-    alternates: {
-      canonical: url,
-    },
     ...rest,
+    alternates: {
+      canonical: path || "/",
+    },
   };
 }
 

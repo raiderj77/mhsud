@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools — Free, Private Mental Health Self-Checks" }],
   },
   alternates: {
-    canonical: "https://mindchecktools.com",
+    canonical: "/",
     languages: {
       "en": "https://mindchecktools.com",
       "x-default": "https://mindchecktools.com",
