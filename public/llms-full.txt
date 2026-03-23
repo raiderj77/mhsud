@@ -1,0 +1,278 @@
+# MindCheck Tools
+
+MindCheck Tools (https://mindchecktools.com) provides free, validated mental health and substance use screening tools. All tools are anonymous, clinically validated, and scored entirely in your browser — no data is stored or transmitted. Content is reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience. The site offers screening instruments for depression, anxiety, PTSD, ADHD, bipolar disorder, OCD, substance use, burnout, and more, along with recovery calculators, therapeutic exercises, and an educational blog.
+
+## Screening Tools
+
+### Core Validated Instruments
+- [PHQ-9 Depression Test](https://mindchecktools.com/phq-9-depression-test): 9-item validated depression screening; scores 0–27 across five severity levels
+- [GAD-7 Anxiety Test](https://mindchecktools.com/gad-7-anxiety-test): 7-item generalized anxiety screening; scores 0–21 across four severity levels
+- [AUDIT Alcohol Test](https://mindchecktools.com/audit-alcohol-test): 10-item WHO alcohol use disorder screening; scores 0–40
+- [AUDIT-C Alcohol Screen](https://mindchecktools.com/audit-c-alcohol-screen): 3-item brief alcohol consumption screening
+- [Mental Load Calculator](https://mindchecktools.com/mental-load-calculator): Measure invisible cognitive and emotional labor
+- [DAST-10 Drug Screening](https://mindchecktools.com/dast-10-drug-screening): 10-item drug abuse screening test; scores 0–10
+- [CAGE-AID Substance Screening](https://mindchecktools.com/cage-aid-substance-abuse-screening): 4-item alcohol and drug use screening
+- [DASS-21](https://mindchecktools.com/dass-21-depression-anxiety-stress): Depression, anxiety, and stress measured simultaneously across three subscales
+- [PCL-5 PTSD Screening](https://mindchecktools.com/pcl-5-ptsd-screening): 20-item PTSD symptom severity screening; scores 0–80
+- [PC-PTSD-5 Screening](https://mindchecktools.com/pc-ptsd-5-screening): 5-item primary care PTSD gateway screening
+- [ASRS ADHD Screening](https://mindchecktools.com/asrs-adhd-screening): WHO Adult ADHD Self-Report Scale v1.1
+- [MDQ Bipolar Screening](https://mindchecktools.com/mdq-bipolar-screening): Mood Disorder Questionnaire for bipolar spectrum screening
+- [OCI-R OCD Screening](https://mindchecktools.com/oci-r-ocd-screening): 18-item OCD symptom screening across six subscales; scores 0–72
+- [MSI-BPD Screening](https://mindchecktools.com/msi-bpd-screening): McLean Screening Instrument for borderline personality disorder; 10 yes/no items
+- [SPIN Social Anxiety Test](https://mindchecktools.com/spin-social-anxiety-test): Social Phobia Inventory; 17-item social anxiety screening
+- [SCOFF Eating Disorder Screening](https://mindchecktools.com/scoff-eating-disorder-screening): 5-item eating disorder screening
+- [AQ-10 Autism Screening](https://mindchecktools.com/aq-10-autism-screening): 10-item autism spectrum screening for adults
+- [CRAFFT Substance Screening](https://mindchecktools.com/crafft-substance-screening): 6-item substance use screening designed for adolescents
+- [WHO ASSIST Substance Screening](https://mindchecktools.com/who-assist-substance-screening): WHO Alcohol, Smoking and Substance Involvement Screening Test
+- [CES-D Depression Scale](https://mindchecktools.com/ces-d-depression-scale): 20-item Center for Epidemiologic Studies Depression Scale
+- [K6 Distress Scale](https://mindchecktools.com/k6-distress-scale): 6-item Kessler psychological distress screening
+- [PHQ-4 Quick Screen](https://mindchecktools.com/phq-4-anxiety-depression-screen): Ultra-brief 4-item anxiety and depression screening
+- [ACE Questionnaire](https://mindchecktools.com/ace-questionnaire): 10-item Adverse Childhood Experiences screening; scores 0–10
+- [WHO-5 Wellbeing Index](https://mindchecktools.com/who-5-wellbeing-index): 5-item general wellbeing screening from the WHO
+- [Holmes-Rahe Stress Inventory](https://mindchecktools.com/holmes-rahe-stress-inventory): Life event stress measurement based on 43 stressors
+- [Rosenberg Self-Esteem Scale](https://mindchecktools.com/rosenberg-self-esteem-scale): 10-item global self-esteem measure; scores 0–30
+- [UCLA Loneliness Scale](https://mindchecktools.com/ucla-loneliness-scale): 20-item loneliness and social isolation screening
+- [Athens Insomnia Scale](https://mindchecktools.com/athens-insomnia-scale): 8-item insomnia screening based on ICD-10 criteria
+- [Brief Resilience Scale](https://mindchecktools.com/brief-resilience-scale): 6-item measure of ability to bounce back from stress
+- [Big Five Personality Test](https://mindchecktools.com/big-five-personality-test): Measures openness, conscientiousness, extraversion, agreeableness, and neuroticism
+- [Attachment Style Quiz](https://mindchecktools.com/attachment-style-quiz): Self-assessment of secure, anxious, avoidant, or disorganized attachment patterns
+
+### Burnout and Workplace Screening
+- [Burnout Assessment Tool](https://mindchecktools.com/burnout-assessment-tool): Multi-dimensional burnout screening across exhaustion, cynicism, and efficacy
+- [Work Stress Check](https://mindchecktools.com/work-stress-check): Workplace stress self-assessment
+- [Compassion Fatigue Test](https://mindchecktools.com/compassion-fatigue-test): Screening for secondary traumatic stress in caregivers and helping professionals
+- [Caregiver Burnout Assessment](https://mindchecktools.com/caregiver-burnout-assessment): Burnout screening for family caregivers
+- [Burnout Test for Healthcare Workers](https://mindchecktools.com/burnout-test-for-healthcare-workers): Burnout screening tailored for healthcare professionals
+- [Burnout Test for Nurses](https://mindchecktools.com/burnout-test-for-nurses): Burnout screening tailored for nursing professionals
+- [Burnout Test for Teachers](https://mindchecktools.com/burnout-test-for-teachers): Burnout screening tailored for educators
+- [Burnout Test for Parents](https://mindchecktools.com/burnout-test-parents): Parental burnout self-assessment
+
+### Audience-Targeted Screening Variants
+- [Postpartum Depression Test](https://mindchecktools.com/postpartum-depression-test): Depression screening for the perinatal period
+- [Depression Test for Teens](https://mindchecktools.com/depression-test-for-teens): Depression screening adapted for adolescents
+- [Depression Test for Men](https://mindchecktools.com/depression-test-for-men): Depression screening addressing male-specific presentation
+- [Depression Test for Seniors](https://mindchecktools.com/depression-test-for-seniors): Depression screening for older adults
+- [Depression Test for New Moms](https://mindchecktools.com/depression-test-for-new-moms): Postpartum depression screening for new mothers
+- [Depression Screening for Veterans](https://mindchecktools.com/depression-screening-for-veterans): Depression screening for military veterans
+- [Depression Screening for Men](https://mindchecktools.com/depression-screening-for-men): Depression screening highlighting male symptom patterns
+- [Am I Depressed Quiz](https://mindchecktools.com/am-i-depressed-quiz): Conversational entry point for depression self-assessment
+- [Anxiety Test for Women](https://mindchecktools.com/anxiety-test-for-women): Anxiety screening addressing female-specific concerns
+- [Anxiety Test for Teens](https://mindchecktools.com/anxiety-test-for-teens): Anxiety screening adapted for adolescents
+- [Anxiety Test for Men](https://mindchecktools.com/anxiety-test-for-men): Anxiety screening addressing male-specific presentation
+- [ADHD Test for Adults](https://mindchecktools.com/adhd-test-adults): ADHD screening focused on adult symptom patterns
+- [ADHD Test for Women](https://mindchecktools.com/adhd-test-women): ADHD screening addressing female-specific presentation
+- [ADHD Test for Teens](https://mindchecktools.com/adhd-test-for-teens): ADHD screening adapted for adolescents
+- [PTSD Test for Veterans](https://mindchecktools.com/ptsd-test-veterans): PTSD screening for military veterans
+- [PTSD Test for First Responders](https://mindchecktools.com/ptsd-test-first-responders): PTSD screening for first responders
+- [Do I Have PTSD Quiz](https://mindchecktools.com/do-i-have-ptsd-quiz): Conversational entry point for PTSD self-assessment
+- [Bipolar Test for Young Adults](https://mindchecktools.com/bipolar-test-young-adults): Bipolar screening for young adults
+- [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): Borderline personality disorder screening for young adults
+- [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): BPD screening addressing female-specific presentation
+- [OCD Test for Teens](https://mindchecktools.com/ocd-test-teens): OCD screening adapted for adolescents
+- [Social Anxiety Test for College Students](https://mindchecktools.com/social-anxiety-test-college): Social anxiety screening for college students
+- [Stress Test for College Students](https://mindchecktools.com/stress-test-college-students): Stress screening for college students
+- [Alcohol Screening for College Students](https://mindchecktools.com/alcohol-screening-for-college-students): Alcohol use screening for college students
+- [Alcohol Screening for Women](https://mindchecktools.com/alcohol-screening-for-women): Alcohol use screening with female-specific thresholds
+- [Alcohol Screening for Military](https://mindchecktools.com/alcohol-screening-military): Alcohol use screening for military personnel
+- [Am I an Alcoholic Quiz](https://mindchecktools.com/am-i-an-alcoholic-quiz): Conversational entry point for alcohol use self-assessment
+- [Drug Screening for Teens](https://mindchecktools.com/drug-screening-teens): Substance use screening for adolescents
+- [Substance Abuse Test for Parents](https://mindchecktools.com/substance-abuse-test-parents): Substance use screening with parenting context
+- [Eating Disorder Test for Athletes](https://mindchecktools.com/eating-disorder-test-athletes): Eating disorder screening for athletes
+- [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): Loneliness screening for older adults
+- [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): Attachment style assessment for couples
+
+### Recovery and Substance Use Tools
+- [Sobriety Calculator](https://mindchecktools.com/sobriety-calculator): Track sobriety duration and milestones
+- [BAC Calculator](https://mindchecktools.com/bac-calculator): Estimate blood alcohol concentration based on drinks, weight, and time
+- [Standard Drinks Calculator](https://mindchecktools.com/standard-drinks-calculator): Calculate standard drink equivalents for different beverages
+- [Money Saved in Recovery Calculator](https://mindchecktools.com/money-saved-recovery-calculator): Calculate money saved since quitting alcohol or drugs
+- [Withdrawal Timeline](https://mindchecktools.com/withdrawal-timeline): Estimated substance withdrawal symptom timeline
+- [Health Recovery Timeline](https://mindchecktools.com/health-recovery-timeline): Physical health improvements after quitting substances
+- [Treatment Cost Estimator](https://mindchecktools.com/treatment-cost-estimator): Estimate costs of different addiction treatment options
+- [Daily Recovery Check-In](https://mindchecktools.com/daily-recovery-check-in): Daily structured check-in for people in recovery
+- [HALT Check-In](https://mindchecktools.com/halt-check-in): Hungry, Angry, Lonely, Tired — quick recovery check-in
+- [Readiness to Change](https://mindchecktools.com/readiness-to-change): Assess your stage of readiness for behavior change
+- [Relapse Prevention Plan](https://mindchecktools.com/relapse-prevention-plan): Build a structured relapse prevention plan with triggers and coping strategies
+- [Trigger Identification Worksheet](https://mindchecktools.com/trigger-identification-worksheet): Identify and categorize personal relapse triggers
+
+### Therapeutic and Wellness Tools
+- [CBT Thought Record](https://mindchecktools.com/cbt-thought-record): Structured cognitive behavioral therapy thought record
+- [Cognitive Distortion Identifier](https://mindchecktools.com/cognitive-distortion-identifier): Identify common thinking patterns that fuel anxiety and depression
+- [DBT Crisis Skills](https://mindchecktools.com/dbt-crisis-skills): Dialectical behavior therapy crisis survival skills
+- [Box Breathing Exercise](https://mindchecktools.com/box-breathing-exercise): Guided 4-4-4-4 breathing exercise for anxiety and stress reduction
+- [Five Senses Grounding](https://mindchecktools.com/five-senses-grounding): 5-4-3-2-1 sensory grounding exercise for anxiety and dissociation
+- [Urge Surfing Timer](https://mindchecktools.com/urge-surfing-timer): Guided urge surfing exercise for cravings and impulse management
+- [Coping Skills Randomizer](https://mindchecktools.com/coping-skills-randomizer): Random evidence-based coping skill suggestions
+- [Worry Time Scheduler](https://mindchecktools.com/worry-time-scheduler): Schedule structured worry time to reduce anxiety
+- [Values Card Sort](https://mindchecktools.com/values-card-sort): Identify your core personal values through card sorting
+- [Safety Plan](https://mindchecktools.com/safety-plan): Create a structured safety plan for crisis situations
+- [Sleep and Mood Check](https://mindchecktools.com/sleep-and-mood-check): Track the relationship between sleep quality and mood
+- [Grief Assessment](https://mindchecktools.com/grief-assessment): Structured grief self-assessment
+- [Family Impact Assessment](https://mindchecktools.com/family-impact-assessment): Assess how addiction or mental health issues affect the family
+
+### Score Interpretation Pages
+- [PHQ-9 Score Interpretation](https://mindchecktools.com/phq-9-score-interpretation): Detailed interpretation of PHQ-9 depression scores
+- [GAD-7 Score Interpretation](https://mindchecktools.com/gad-7-score-interpretation): Detailed interpretation of GAD-7 anxiety scores
+- [AUDIT Score Interpretation](https://mindchecktools.com/audit-score-interpretation): Detailed interpretation of AUDIT alcohol screening scores
+- [AUDIT-C Score Interpretation](https://mindchecktools.com/audit-c-score-interpretation): Detailed interpretation of AUDIT-C alcohol scores
+- [DAST-10 Score Interpretation](https://mindchecktools.com/dast-10-score-interpretation): Detailed interpretation of DAST-10 drug screening scores
+- [DASS-21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation): Detailed interpretation of DASS-21 depression, anxiety, and stress scores
+- [PCL-5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation): Detailed interpretation of PCL-5 PTSD screening scores
+- [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation): Detailed interpretation of ASRS ADHD screening scores
+- [MDQ Score Interpretation](https://mindchecktools.com/mdq-score-interpretation): Detailed interpretation of MDQ bipolar screening scores
+- [ACE Score Interpretation](https://mindchecktools.com/ace-score-interpretation): Detailed interpretation of ACE adverse childhood experiences scores
+
+## Blog (113 posts)
+
+### Score Guides
+- [What Does Your PHQ-9 Score Mean?](https://mindchecktools.com/blog/what-does-phq-9-score-mean): PHQ-9 scores range 0–27; learn what each severity level means and what to do next
+- [What Does Your GAD-7 Score Mean?](https://mindchecktools.com/blog/what-does-gad-7-score-mean): GAD-7 scores range 0–21; learn what minimal, mild, moderate, and severe mean
+- [What Does Your AUDIT Score Mean?](https://mindchecktools.com/blog/what-does-audit-score-mean): AUDIT scores range 0–40; learn what each risk zone means
+- [What Does Your PCL-5 Score Mean?](https://mindchecktools.com/blog/what-does-pcl-5-score-mean): PCL-5 scores range 0–80; learn what the clinical cutoff means
+- [What Does Your ASRS Score Mean?](https://mindchecktools.com/blog/what-does-asrs-score-mean): Learn what a positive ASRS ADHD screen means and what to do next
+- [What Does Your ACE Score Mean?](https://mindchecktools.com/blog/what-does-ace-score-mean): ACE scores range 0–10; learn how childhood adversity affects adult health
+- [What Does Your OCI-R Score Mean?](https://mindchecktools.com/blog/what-does-oci-r-score-mean): OCI-R scores range 0–72; learn what the clinical cutoff and subscales mean
+- [What Does Your PC-PTSD-5 Score Mean?](https://mindchecktools.com/blog/what-does-pc-ptsd-5-score-mean): PC-PTSD-5 scores range 0–5; learn what a positive screen means
+- [What Does Your CAGE-AID Score Mean?](https://mindchecktools.com/blog/what-does-cage-aid-score-mean): CAGE-AID scores range 0–4; a score of 2+ suggests possible substance use concern
+- [What Does Your PSS Score Mean?](https://mindchecktools.com/blog/what-does-pss-score-mean): PSS-10 scores range 0–40; learn what your perceived stress level indicates
+- [What Does Your Rosenberg Self-Esteem Score Mean?](https://mindchecktools.com/blog/what-does-rosenberg-self-esteem-score-mean): Rosenberg scores range 0–30; learn how self-esteem connects to mental health
+- [DASS-21 Score Guide](https://mindchecktools.com/blog/dass-21-score-guide): DASS-21 scores range 0–42 per subscale; learn severity levels for depression, anxiety, and stress
+- [PHQ-9 vs GAD-7: Which Should You Take?](https://mindchecktools.com/blog/phq-9-vs-gad-7): How the PHQ-9 and GAD-7 differ and when to take each
+
+### Tool and Screening Guides
+- [PHQ-9 Explained](https://mindchecktools.com/blog/phq-9-guide): How clinicians use the PHQ-9 depression questionnaire and what it cannot tell you
+- [What Is the PHQ-9?](https://mindchecktools.com/blog/what-is-phq-9-depression-screener): Complete guide to the PHQ-9 depression screener — how it works and who developed it
+- [GAD-7 Guide](https://mindchecktools.com/blog/gad-7-guide): What the GAD-7 anxiety scale measures and how doctors interpret scores
+- [AUDIT Guide](https://mindchecktools.com/blog/audit-guide): How the WHO AUDIT alcohol screening tool works and why clinicians use it
+- [DAST-10 Guide](https://mindchecktools.com/blog/dast-10-guide): How the DAST-10 drug screening is scored and what results mean
+- [PTSD Screening Guide](https://mindchecktools.com/blog/ptsd-screening-guide): When and why to get screened for PTSD, and how the PCL-5 and PC-PTSD-5 work
+- [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide): Complete guide to depression screening, USPSTF guidelines, and treatment options
+- [Understanding Your Screening Results](https://mindchecktools.com/blog/understanding-mental-health-screening-results): What screening results mean, what they do not mean, and practical next steps
+
+### Condition Explainers
+- [What Is Anxiety?](https://mindchecktools.com/blog/what-is-anxiety): Symptoms, types, and evidence-based treatment for anxiety disorders
+- [What Is Generalized Anxiety Disorder?](https://mindchecktools.com/blog/what-is-generalized-anxiety-disorder): Deep dive into GAD symptoms, causes, and treatments
+- [What Is Social Anxiety Disorder?](https://mindchecktools.com/blog/what-is-social-anxiety-disorder): How social anxiety differs from introversion and what treatments work
+- [What Is OCD?](https://mindchecktools.com/blog/what-is-ocd): OCD symptoms, misconceptions, and evidence-based treatment
+- [OCD Myths vs Reality](https://mindchecktools.com/blog/what-ocd-looks-like): What OCD actually looks like beyond the stereotypes
+- [What Is Bipolar Disorder?](https://mindchecktools.com/blog/what-is-bipolar-disorder): Types, symptoms, and treatment for bipolar I and II
+- [Bipolar vs Depression](https://mindchecktools.com/blog/bipolar-vs-depression): Key differences between bipolar disorder and depression
+- [What Is ADHD in Adults?](https://mindchecktools.com/blog/what-is-adhd-in-adults): Adult ADHD symptoms, why it is often missed, and effective treatment
+- [Adult ADHD Signs](https://mindchecktools.com/blog/adult-adhd-signs): Common signs of ADHD in adults that are often overlooked
+- [What Is Alcohol Use Disorder?](https://mindchecktools.com/blog/what-is-alcohol-use-disorder): AUD symptoms, risk factors, and evidence-based treatments
+- [What Are Substance Use Disorders?](https://mindchecktools.com/blog/what-are-substance-use-disorders): Signs, diagnosis, and treatment for substance use disorders
+- [Depression vs Anxiety](https://mindchecktools.com/blog/depression-vs-anxiety): How depression and anxiety overlap and how they differ
+- [Anxiety vs Panic Attacks](https://mindchecktools.com/blog/anxiety-vs-panic-attacks): How anxiety and panic attacks differ and what to do for each
+- [Social Anxiety vs Introversion](https://mindchecktools.com/blog/social-anxiety-vs-introversion): Understanding the difference between social anxiety and introversion
+- [Understanding BPD](https://mindchecktools.com/blog/bpd-symptoms-guide): Borderline personality disorder symptoms, DSM-5 criteria, screening, and treatment
+- [Postpartum Depression Symptoms](https://mindchecktools.com/blog/postpartum-depression-symptoms-guide): PPD signs, how it differs from baby blues, and when to get help
+- [Burnout Symptoms](https://mindchecktools.com/blog/burnout-symptoms-guide): WHO definition, Maslach dimensions, and how burnout differs from depression
+- [Attachment Styles Guide](https://mindchecktools.com/blog/attachment-styles-guide): The four attachment styles and how early bonds shape adult relationships
+- [Autism Screening for Adults](https://mindchecktools.com/blog/autism-screening-adults-guide): Signs of autism in adults, masking, and how the AQ-10 screening works
+- [Understanding Grief](https://mindchecktools.com/blog/grief-stages-guide): Stages of grief, prolonged grief disorder, and when to seek help
+- [Compassion Fatigue Guide](https://mindchecktools.com/blog/compassion-fatigue-guide): Signs, prevention, and recovery for caregivers and helpers
+- [Insomnia Screening Guide](https://mindchecktools.com/blog/insomnia-test-guide): Insomnia signs, the Athens Insomnia Scale, and CBT-I as first-line treatment
+- [Standard Drinks and BAC](https://mindchecktools.com/blog/standard-drinks-bac-guide): What a standard drink is, how BAC works, and NIAAA low-risk guidelines
+- [Eating Disorder Signs](https://mindchecktools.com/blog/eating-disorder-signs): Types, warning signs, and how the SCOFF screening works
+- [ACE Score Meaning](https://mindchecktools.com/blog/ace-score-meaning): What your ACE score means and why resilience matters more than the number
+- [Loneliness and Mental Health](https://mindchecktools.com/blog/loneliness-mental-health): How chronic loneliness affects mental and physical health
+- [Seasonal Affective Disorder](https://mindchecktools.com/blog/seasonal-affective-disorder): Understanding winter depression, light therapy, and when to seek help
+
+### Population-Specific Guides
+- [Depression in Older Adults](https://mindchecktools.com/blog/depression-seniors-guide): Signs that are often missed and why depression is not normal aging
+- [Depression in New Moms](https://mindchecktools.com/blog/depression-new-moms-guide): Beyond baby blues — signs, risk factors, and how screening helps
+- [Depression in Veterans](https://mindchecktools.com/blog/depression-veterans-guide): Why depression goes unrecognized in veterans and how to get support
+- [Depression in Men](https://mindchecktools.com/blog/depression-men-guide): Why male depression looks different and goes untreated
+- [Depression in Teenagers](https://mindchecktools.com/blog/depression-teens-guide): Signs parents should know and how teen depression differs from adult depression
+- [Anxiety in Women](https://mindchecktools.com/blog/anxiety-women-guide): Why women are affected more and what hormones, trauma, and mental load contribute
+- [Anxiety in Men](https://mindchecktools.com/blog/anxiety-men-guide): How male anxiety hides as anger, workaholism, and physical symptoms
+- [Anxiety in Teenagers](https://mindchecktools.com/blog/anxiety-teens-guide): How to recognize teen anxiety and what actually helps
+- [PTSD in Veterans](https://mindchecktools.com/blog/ptsd-veterans-guide): Signs, screening, and getting the right support after military service
+- [PTSD in First Responders](https://mindchecktools.com/blog/ptsd-first-responders-guide): The hidden cost of saving lives — cumulative trauma and confidential screening
+- [ADHD in Women](https://mindchecktools.com/blog/adhd-women-guide): Why ADHD goes undiagnosed in women and how hormones affect symptoms
+- [ADHD Test for Adults](https://mindchecktools.com/blog/adhd-adults-guide): How to know if you should get screened for adult ADHD
+- [ADHD in Teenagers](https://mindchecktools.com/blog/adhd-teens-guide): Signs, challenges, and how screening helps teens get support
+- [Bipolar in Young Adults](https://mindchecktools.com/blog/bipolar-young-adults-guide): Early signs and why bipolar is often misdiagnosed as depression
+- [OCD in Teenagers](https://mindchecktools.com/blog/ocd-teens-guide): What OCD looks like in teens and how ERP treatment works
+- [BPD in Young Adults](https://mindchecktools.com/blog/bpd-young-adults-guide): Early signs, getting assessed, and finding help
+- [BPD in Women](https://mindchecktools.com/blog/bpd-women-guide): Diagnosis, gender bias, and evidence-based treatment
+- [Social Anxiety in College](https://mindchecktools.com/blog/social-anxiety-college-guide): How to recognize it and find support on campus
+- [Alcohol Screening for College Students](https://mindchecktools.com/blog/alcohol-screening-college-guide): When social drinking becomes a problem
+- [Alcohol Use in the Military](https://mindchecktools.com/blog/alcohol-screening-military-guide): Culture, risk, and confidential screening options
+- [College Stress](https://mindchecktools.com/blog/stress-college-students-guide): When academic pressure becomes a mental health concern
+- [Loneliness in Older Adults](https://mindchecktools.com/blog/loneliness-seniors-guide): Why it matters for health and what to do about it
+- [Eating Disorders in Athletes](https://mindchecktools.com/blog/eating-disorder-athletes-guide): RED-S, sport-specific risks, and confidential screening
+- [Substance Use Screening for Parents](https://mindchecktools.com/blog/substance-abuse-parents-guide): Honest assessment without judgment
+- [Substance Use Screening for Teens](https://mindchecktools.com/blog/drug-screening-teens-guide): The CRAFFT screening tool and how to start a conversation
+
+### Burnout Guides
+- [Burnout in Healthcare Workers](https://mindchecktools.com/blog/burnout-healthcare-workers-guide): Signs, causes, moral injury, and what actually helps
+- [Nurse Burnout](https://mindchecktools.com/blog/burnout-nurses-guide): Why it happens, how it feels, and what to do about it
+- [Teacher Burnout](https://mindchecktools.com/blog/burnout-teachers-guide): Signs, causes, and strategies for educators
+- [Parental Burnout](https://mindchecktools.com/blog/burnout-parents-guide): When the demands of parenting become overwhelming
+- [Caregiver Burnout](https://mindchecktools.com/blog/caregiver-burnout-guide): Signs, prevention, and getting help for yourself
+- [Work Stress vs Burnout](https://mindchecktools.com/blog/work-stress-vs-burnout): How to tell the difference and what online quizzes cannot tell you
+
+### Recovery and Treatment
+- [Stages of Change in Recovery](https://mindchecktools.com/blog/stages-of-change-recovery): The 5 stages of change model for addiction recovery
+- [Quit Drinking Timeline](https://mindchecktools.com/blog/quit-drinking-timeline): Hour-by-hour timeline of what happens when you stop drinking
+- [Relapse Prevention Plan Guide](https://mindchecktools.com/blog/relapse-prevention-plan-guide): How to build a relapse prevention plan step by step
+- [Relapse Prevention Guide](https://mindchecktools.com/blog/relapse-prevention-guide): The three stages of relapse and how to intervene early
+- [Trigger Identification Guide](https://mindchecktools.com/blog/trigger-identification-guide): How to recognize and manage personal relapse triggers
+- [Sobriety Calculator Guide](https://mindchecktools.com/blog/sobriety-calculator-guide): Why tracking your sober days matters for recovery
+- [Withdrawal Symptoms Guide](https://mindchecktools.com/blog/withdrawal-symptoms-guide): What to expect by substance and when to seek medical help
+- [Money Saved in Recovery](https://mindchecktools.com/blog/money-saved-recovery-guide): How sobriety changes your finances
+- [Health Recovery Timeline](https://mindchecktools.com/blog/health-recovery-timeline-guide): What happens to your body after quitting substances
+- [Treatment Cost Guide](https://mindchecktools.com/blog/treatment-cost-guide): Addiction treatment costs, insurance, and how to pay
+- [HALT Check-In Guide](https://mindchecktools.com/blog/halt-checkin-guide): The recovery check-in that prevents relapse
+- [Daily Recovery Check-In Guide](https://mindchecktools.com/blog/daily-recovery-checkin-guide): Why structured self-reflection supports sobriety
+- [Readiness to Change Guide](https://mindchecktools.com/blog/readiness-to-change-guide): Assessing where you are in the change process
+- [How Addiction Affects Families](https://mindchecktools.com/blog/family-impact-addiction-guide): Understanding the ripple effects on every family member
+- [How to Help a Family Member With Addiction](https://mindchecktools.com/blog/helping-family-member-addiction): Boundaries, enabling, self-care, and support resources for families
+
+### Coping Skills and Therapeutic Techniques
+- [Coping Skills Guide](https://mindchecktools.com/blog/coping-skills-guide): Evidence-based coping techniques that actually work
+- [Anxiety Coping Strategies](https://mindchecktools.com/blog/anxiety-coping-strategies): Evidence-based techniques for managing anxiety symptoms
+- [DBT Skills for Beginners](https://mindchecktools.com/blog/dbt-skills-beginners): The 4 DBT skill modules explained in plain language
+- [DBT Crisis Survival Skills](https://mindchecktools.com/blog/dbt-crisis-skills-guide): What to do when you cannot think straight
+- [CBT Thought Records](https://mindchecktools.com/blog/cbt-thought-record-guide): How to challenge negative thinking patterns with the 7-column method
+- [Cognitive Distortions List](https://mindchecktools.com/blog/cognitive-distortions-list): 15 common thinking errors that fuel anxiety and depression
+- [Urge Surfing Guide](https://mindchecktools.com/blog/urge-surfing-guide): How to ride out cravings without giving in
+- [Values Clarification Guide](https://mindchecktools.com/blog/values-clarification-guide): How knowing what matters guides better decisions
+- [Box Breathing Guide](https://mindchecktools.com/blog/box-breathing-guide): A simple 4-4-4-4 technique for anxiety, stress, and panic
+- [Grounding Techniques Guide](https://mindchecktools.com/blog/grounding-techniques-guide): How the 5-4-3-2-1 method calms anxiety and dissociation
+- [Worry Time Guide](https://mindchecktools.com/blog/worry-time-guide): How scheduling your worries reduces anxiety
+- [Safety Planning Guide](https://mindchecktools.com/blog/safety-planning-guide): A step-by-step guide to creating your crisis plan
+
+### Help-Seeking and Wellness
+- [When Should I See a Therapist?](https://mindchecktools.com/blog/when-should-i-see-a-therapist): 10 signs it may be time to talk to a mental health professional
+- [How to Find a Therapist](https://mindchecktools.com/blog/how-to-find-a-therapist): Step-by-step guide to finding a therapist that fits your needs and budget
+- [How to Talk to Your Doctor About Mental Health](https://mindchecktools.com/blog/how-to-talk-to-doctor-about-mental-health): What to say, how to prepare, and how to use your screening results
+- [How to Support Someone With a Mental Health Condition](https://mindchecktools.com/blog/how-to-support-someone-with-mental-health-condition): What actually helps and what to avoid
+- [Mental Health and Sleep](https://mindchecktools.com/blog/mental-health-and-sleep): The bidirectional relationship between sleep and mental health
+- [Sleep and Mood](https://mindchecktools.com/blog/sleep-and-mood): How sleep affects mood and why poor sleep makes everything harder
+- [Mental Health Stigma](https://mindchecktools.com/blog/mental-health-stigma): What stigma is, why it persists, and what actually reduces it
+
+## About and Legal Pages
+
+- [About MindCheck Tools](https://mindchecktools.com/about): Mission, methodology, and clinical review process
+- [Jason Ramirez, CADC-II](https://mindchecktools.com/about/jason-ramirez): Certified Drug and Alcohol Counselor with 11 years of clinical experience — reviews all tools and content
+- [Privacy Policy](https://mindchecktools.com/privacy): All screening results processed client-side; no health data stored or transmitted
+- [Terms of Service](https://mindchecktools.com/terms): Terms governing use of MindCheck Tools
+- [Contact](https://mindchecktools.com/contact): Reach the MindCheck Tools team
+- [Crisis Resources](https://mindchecktools.com/crisis-resources): 988 Suicide & Crisis Lifeline, Crisis Text Line, SAMHSA Helpline
+
+## Attribution
+
+Content reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. All screening instruments are clinically validated and scored using published guidelines.
+
+## Crisis Resources
+
+If you are in crisis, please reach out:
+- **988 Suicide & Crisis Lifeline**: Call or text 988 (free, 24/7)
+- **Crisis Text Line**: Text HOME to 741741 (free, 24/7)
+- **SAMHSA National Helpline**: 1-800-662-4357 (free, 24/7, English and Spanish)
+
+## Disclaimer
+
+All screening tools on MindCheck Tools are for informational and educational purposes only. They are not diagnostic tools and should not be used as a substitute for professional evaluation, diagnosis, or treatment. If you are concerned about your mental health, please consult a qualified healthcare provider.
