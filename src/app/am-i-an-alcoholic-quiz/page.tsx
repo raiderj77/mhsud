@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/am-i-an-alcoholic-quiz`;
@@ -139,6 +140,14 @@ export default function AmIAnAlcoholicQuizPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The WHO AUDIT screening presented in a direct, accessible format to help you evaluate your relationship with alcohol."
+          who="Anyone asking themselves whether their drinking has become a problem and wanting an honest, evidence-based check."
+          bottomLine="Alcohol use disorder exists on a spectrum — your score shows where you fall on validated clinical measures. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Alcohol Self-Assessment Quiz?</h2>
         <h2>How Is the Alcohol Quiz Scored?</h2>

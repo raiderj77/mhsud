@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "./PCL5Client";
 
@@ -92,6 +93,25 @@ export default function PCL5Page() {
         <h2>What Do My PCL-5 Results Mean?</h2>
       </section>
       <PCL5Client faqData={FAQ_DATA} />
+
+      {/* Related Tools */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/pcl-5-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 Score Guide</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your PCL-5 PTSD score means</p>
+          </Link>
+          <Link href="/pc-ptsd-5-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PC-PTSD-5 Brief Screen</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Quick 5-question PTSD screening</p>
+          </Link>
+          <Link href="/ptsd-test-veterans" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PTSD Test for Veterans</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Veteran-focused PTSD screening with VA resources</p>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

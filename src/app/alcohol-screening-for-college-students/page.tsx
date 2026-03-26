@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/alcohol-screening-for-college-students`;
@@ -342,6 +343,14 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An AUDIT-based alcohol screening tailored for college students with campus-specific context and resources."
+          who="College students who want to evaluate their drinking patterns against evidence-based risk thresholds."
+          bottomLine="College drinking norms can mask risky patterns — your score reflects clinical risk levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the College Alcohol Screening?</h2>
         <h2>How Is the College Alcohol Screen Scored?</h2>

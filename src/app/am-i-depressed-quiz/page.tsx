@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
 
 const TOOL_URL = `${SITE_URL}/am-i-depressed-quiz`;
@@ -137,6 +138,14 @@ export default function AmIDepressedQuizPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A PHQ-9-based depression screening in accessible quiz format that measures symptom severity over the past two weeks."
+          who="Anyone wondering whether what they are feeling might be depression and wanting a quick validated check."
+          bottomLine="Depression is common and treatable — a high score means talking to a professional could help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Depression Self-Assessment Quiz?</h2>
         <h2>How Is the Depression Quiz Scored?</h2>

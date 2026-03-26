@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
 
 const TOOL_URL = `${SITE_URL}/ace-score-interpretation`;
@@ -56,6 +57,14 @@ export default function ACEScoreInterpretationPage() {
         }}
       />
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide that explains what ACE scores mean, how they relate to health outcomes, and what resilience factors can help."
+          who="Anyone who has completed the ACE questionnaire and wants to understand their score in context."
+          bottomLine="A high ACE score does not predict your future — resilience and protective factors matter. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <ScoreInterpretationLayout
         testName="ACE"
         testAbbreviation="ACE"

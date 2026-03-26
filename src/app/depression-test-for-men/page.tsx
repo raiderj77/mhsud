@@ -189,6 +189,7 @@ export default function DepressionTestForMenPage() {
         </div>
 
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
+          <Link href="/depression-screening-for-men" className="text-sky-600 dark:text-sky-400 hover:underline">Depression Screening for Men →</Link>
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">PHQ-9 Depression Test →</Link>
           <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline">GAD-7 Anxiety Test →</Link>
           <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline">AUDIT Alcohol Test →</Link>

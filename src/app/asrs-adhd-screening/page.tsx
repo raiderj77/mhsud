@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { ASRSClient } from "./ASRSClient";
 
@@ -92,6 +93,25 @@ export default function ASRSPage() {
         <h2>What Do My ASRS Results Mean?</h2>
       </section>
       <ASRSClient faqData={FAQ_DATA} />
+
+      {/* Related Tools */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/asrs-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ASRS Score Guide</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your ASRS ADHD score means</p>
+          </Link>
+          <Link href="/adhd-test-adults" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ADHD Test for Adults</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Adult-focused ADHD screening with context</p>
+          </Link>
+          <Link href="/adhd-test-women" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ADHD Test for Women</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">ADHD screening adapted for women</p>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

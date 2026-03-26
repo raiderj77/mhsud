@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/alcohol-screening-military`;
@@ -294,6 +295,14 @@ export default function AlcoholScreeningMilitaryPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An AUDIT-based alcohol screening with military-specific context, culture considerations, and veteran resources."
+          who="Active duty service members and veterans who want a private alcohol use assessment with relevant support resources."
+          bottomLine="Military culture can normalize heavy drinking — this screening uses clinical thresholds to assess risk. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is Military Alcohol Screening?</h2>
         <h2>How Is the Military Alcohol Screen Scored?</h2>

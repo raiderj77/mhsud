@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { ASRSClient } from "../asrs-adhd-screening/ASRSClient";
 
 const TOOL_URL = `${SITE_URL}/adhd-test-for-teens`;
@@ -130,6 +131,14 @@ export default function AdhdTestForTeensPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An ASRS-based ADHD screening adapted for teenagers that covers attention, impulsivity, and hyperactivity symptoms."
+          who="Teens or parents of teens who want to check whether ADHD symptoms warrant further professional evaluation."
+          bottomLine="Teen ADHD often looks different from the childhood presentation — share results with a healthcare provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Teen ADHD Screening?</h2>
         <h2>How Is the Teen ADHD Test Scored?</h2>

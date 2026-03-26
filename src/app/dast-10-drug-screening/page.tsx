@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 const TOOL_URL = `${SITE_URL}/dast-10-drug-screening`;
@@ -68,10 +69,27 @@ export default function DAST10Page() {
         </div>
 
         {/* Medical Disclaimer */}
-        <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4">
+        <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4 mb-8">
           <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
             <strong>Important:</strong> This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment.
           </p>
+        </div>
+
+        {/* Related Tools */}
+        <h2 className="text-xl font-semibold text-warm-900 dark:text-warm-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/dast-10-score-interpretation" className="block border border-warm-200 dark:border-warm-700 rounded-xl p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Score Guide</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">Understand what DAST-10 scores mean</p>
+          </Link>
+          <Link href="/cage-aid-substance-abuse-screening" className="block border border-warm-200 dark:border-warm-700 rounded-xl p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Screening</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">Alcohol and drug screening available now</p>
+          </Link>
+          <Link href="/who-assist-substance-screening" className="block border border-warm-200 dark:border-warm-700 rounded-xl p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO ASSIST</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">Comprehensive substance use screening</p>
+          </Link>
         </div>
       </main>
     </>

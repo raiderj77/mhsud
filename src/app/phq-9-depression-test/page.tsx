@@ -141,6 +141,10 @@ export default function PHQ9Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Am I Depressed? Quiz</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Guided depression self-check with context</p>
           </Link>
+          <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Talk to Your Doctor</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">How to start a conversation about mental health</p>
+          </Link>
         </div>
       </div>
     </>

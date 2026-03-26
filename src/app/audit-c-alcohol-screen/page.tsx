@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AUDITCClient } from "./AUDITCClient";
 
@@ -47,6 +48,25 @@ export default function AUDITCPage() {
         Last updated: March 16, 2026
       </p>
 <AUDITCClient faqData={FAQ_DATA} />
+
+      {/* Related Tools */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/audit-c-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT-C Score Guide</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your AUDIT-C score means</p>
+          </Link>
+          <Link href="/audit-alcohol-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Full AUDIT Test</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Complete 10-question WHO alcohol screening</p>
+          </Link>
+          <Link href="/alcohol-screening-for-women" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Alcohol Screening for Women</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Gender-specific alcohol screening with context</p>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

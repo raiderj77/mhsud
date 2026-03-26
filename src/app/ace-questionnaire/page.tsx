@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AceClient } from "./AceClient";
 
 const TOOL_URL = `${SITE_URL}/ace-questionnaire`;
@@ -98,12 +100,39 @@ export default function AcePage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A 10-question screening based on the CDC-Kaiser ACE Study that counts categories of adverse childhood experiences before age 18."
+          who="Adults who want to understand how childhood adversity may relate to their current health and wellbeing."
+          bottomLine="Your ACE score is one data point, not a destiny. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the ACE Questionnaire?</h2>
         <h2>How Is the ACE Score Calculated?</h2>
         <h2>What Do My ACE Results Mean?</h2>
       </section>
 <AceClient faqData={FAQ_DATA} />
+
+      {/* Related Tools */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/ace-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ACE Score Guide</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your ACE score means and resilience factors</p>
+          </Link>
+          <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Comprehensive PTSD symptom checklist</p>
+          </Link>
+          <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Test</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression symptoms</p>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
