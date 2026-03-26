@@ -130,7 +130,7 @@ export default function TreatmentCostGuidePage() {
               <li>Is medication-assisted treatment (MAT) covered?</li>
             </ul>
             <p>
-              Most treatment facilities have admissions staff who will verify your insurance benefits at no cost before you commit to treatment.
+              Most treatment facilities have admissions staff who will verify your insurance benefits at no cost before you commit to treatment. Understanding your Explanation of Benefits (EOB) after treatment is easier with a <a href="https://medicalbillreader.com" className="text-sage-600 dark:text-sage-400 underline">medical bill reader</a> that breaks down charges, adjustments, and what you actually owe.
             </p>
           </section>
 
