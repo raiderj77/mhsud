@@ -101,6 +101,27 @@ export default function GAD7Page() {
         />
       </div>
 <GAD7Client faqData={FAQ_DATA} />
+
+      {/* Clinical References */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-4">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Clinical References</h2>
+        <ul className="text-sm text-neutral-500 dark:text-neutral-400 space-y-2 list-disc pl-5">
+          <li>
+            Spitzer, R. L., Kroenke, K., Williams, J. B. W., &amp; Löwe, B. (2006). A brief measure for assessing generalized anxiety disorder: The GAD-7.{" "}
+            <em>Archives of Internal Medicine</em>, 166(10), 1092–1097.{" "}
+            <a href="https://doi.org/10.1001/archinte.166.10.1092" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 hover:underline">
+              doi:10.1001/archinte.166.10.1092
+            </a>
+          </li>
+          <li>
+            Löwe, B., Decker, O., Müller, S., Brähler, E., Schellberg, D., Herzog, W., &amp; Herzberg, P. Y. (2008). Validation and standardization of the Generalized Anxiety Disorder Screener (GAD-7) in the general population.{" "}
+            <em>Medical Care</em>, 46(3), 266–274.{" "}
+            <a href="https://doi.org/10.1097/MLR.0b013e318160d093" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 hover:underline">
+              doi:10.1097/MLR.0b013e318160d093
+            </a>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }

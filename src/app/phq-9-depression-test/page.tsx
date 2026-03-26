@@ -104,6 +104,27 @@ export default function PHQ9Page() {
       </div>
 <PHQ9Client faqData={FAQ_DATA} />
 
+      {/* Clinical References */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-2">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Clinical References</h2>
+        <ul className="text-sm text-neutral-500 dark:text-neutral-400 space-y-2 list-disc pl-5">
+          <li>
+            Kroenke, K., Spitzer, R. L., &amp; Williams, J. B. W. (2001). The PHQ-9: Validity of a brief depression severity measure.{" "}
+            <em>Journal of General Internal Medicine</em>, 16(9), 606–613.{" "}
+            <a href="https://doi.org/10.1046/j.1525-1497.2001.016009606.x" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 hover:underline">
+              doi:10.1046/j.1525-1497.2001.016009606.x
+            </a>
+          </li>
+          <li>
+            Kroenke, K., Spitzer, R. L., Williams, J. B. W., &amp; Löwe, B. (2010). The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales.{" "}
+            <em>General Hospital Psychiatry</em>, 32(4), 345–359.{" "}
+            <a href="https://doi.org/10.1016/j.genhosppsych.2010.03.006" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 hover:underline">
+              doi:10.1016/j.genhosppsych.2010.03.006
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* Internal Links */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
         <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
