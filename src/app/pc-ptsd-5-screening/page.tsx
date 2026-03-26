@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PcPtsd5Client } from "./PcPtsd5Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/pc-ptsd-5-screening`;
 
@@ -97,6 +98,15 @@ export default function PcPtsd5Page() {
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The PC-PTSD-5, a brief 5-item validated screening for PTSD used in primary care and VA settings."
+          who="Anyone who has experienced trauma and wants a quick initial screening for post-traumatic stress disorder."
+          bottomLine="The PC-PTSD-5 is designed to identify those who may benefit from further PTSD evaluation. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the PC-PTSD-5 Screening?</h2>
         <h2>How Is the PC-PTSD-5 Scored?</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { MDQClient } from "../mdq-bipolar-screening/MDQClient";
 
 const TOOL_URL = `${SITE_URL}/bipolar-test-young-adults`;
@@ -216,6 +217,14 @@ export default function BipolarTestYoungAdultsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An MDQ-based bipolar screening tailored for young adults, when bipolar disorder most commonly first appears."
+          who="Young adults experiencing mood swings, energy fluctuations, or impulsive behavior who want to screen for bipolar disorder."
+          bottomLine="Bipolar disorder often first appears in late teens to mid-twenties — early detection leads to better management. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is Bipolar Screening for Young Adults?</h2>
         <h2>How Is the Bipolar Screening Scored?</h2>

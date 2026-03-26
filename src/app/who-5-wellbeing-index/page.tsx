@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { Who5Client } from "./Who5Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/who-5-wellbeing-index`;
 
@@ -97,6 +98,15 @@ export default function Who5Page() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The WHO-5 Wellbeing Index, a 5-item screening from the World Health Organization that measures subjective psychological wellbeing."
+          who="Anyone who wants a brief, validated check on their overall mental wellbeing using a WHO standard tool."
+          bottomLine="The WHO-5 is positive-framed — a low score indicates reduced wellbeing that may warrant further screening. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the WHO-5 Wellbeing Index?</h2>
         <h2>How Is the WHO-5 Scored?</h2>

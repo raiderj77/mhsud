@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "../pcl-5-ptsd-screening/PCL5Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/ptsd-test-veterans`;
 
@@ -366,6 +367,15 @@ export default function PtsdTestVeteransPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A PCL-5-based PTSD screening with military-specific context, combat trauma considerations, and VA resources."
+          who="Veterans and active duty service members who want to screen for PTSD with relevant military support resources."
+          bottomLine="PTSD affects an estimated 11-20% of veterans — the VA offers free, confidential PTSD treatment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is PTSD Screening for Veterans?</h2>
         <h2>How Is the Veteran PTSD Test Scored?</h2>

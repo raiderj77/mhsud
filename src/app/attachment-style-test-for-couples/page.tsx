@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AttachmentStyleClient } from "../attachment-style-quiz/AttachmentStyleClient";
 
 const TOOL_URL = `${SITE_URL}/attachment-style-test-for-couples`;
@@ -236,6 +237,14 @@ export default function AttachmentStyleTestForCouplesPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An attachment style assessment designed for partners to take together, showing how their styles interact in the relationship."
+          who="Couples who want to understand how their attachment patterns may be creating friction or strengthening their bond."
+          bottomLine="Understanding each partner's attachment style can transform conflict into connection. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Couples Attachment Style Test?</h2>
         <h2>How Is the Attachment Style Test Scored?</h2>

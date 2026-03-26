@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AUDITCClient } from "./AUDITCClient";
 
 const TOOL_URL = `${SITE_URL}/audit-c-alcohol-screen`;
@@ -39,6 +40,14 @@ export default function AUDITCPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT-C Alcohol Screening Test", description: "A free online implementation of the AUDIT-C, a validated 3-question rapid alcohol screening tool derived from the WHO's AUDIT. Used in primary care for quick identification of hazardous drinking.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT-C Alcohol Screen", url: TOOL_URL }])) }} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The AUDIT-C, a 3-question brief alcohol screening used in primary care to identify hazardous drinking patterns."
+          who="Anyone who wants a quick validated check of their alcohol consumption against clinical risk thresholds."
+          bottomLine="The AUDIT-C is a brief initial screen — a positive result suggests taking the full AUDIT for a more detailed assessment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the AUDIT-C Alcohol Screen?</h2>
         <h2>How Is the AUDIT-C Scored?</h2>

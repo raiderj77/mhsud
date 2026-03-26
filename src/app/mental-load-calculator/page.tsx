@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { MentalLoadClient } from "./MentalLoadClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/mental-load-calculator`;
 
@@ -34,6 +35,15 @@ export default function MentalLoadPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A calculator that quantifies the invisible mental load of managing household tasks, schedules, and emotional labor."
+          who="Anyone who feels overwhelmed by household management and wants to see the actual scope of their mental load."
+          bottomLine="Making the mental load visible is the first step to redistributing it more equitably. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Mental Load Calculator?</h2>
         <h2>How Does the Mental Load Calculator Work?</h2>

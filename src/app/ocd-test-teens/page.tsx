@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { OCIRClient } from "../oci-r-ocd-screening/OCIRClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/ocd-test-teens`;
 
@@ -64,6 +65,15 @@ export default function OcdTestTeensPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An OCD screening adapted for teenagers that covers common adolescent obsession and compulsion themes."
+          who="Teens or parents of teens who are concerned about repetitive thoughts or behaviors that may indicate OCD."
+          bottomLine="Teen OCD often goes unrecognized because kids hide their rituals — early screening enables early treatment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Teen OCD Screening?</h2>
         <h2>How Is the Teen OCD Test Scored?</h2>

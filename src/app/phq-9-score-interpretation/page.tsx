@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/phq-9-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function PHQ9ScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining PHQ-9 depression scores, severity levels, clinical cutoffs, and recommended actions for each range."
+          who="Anyone who has completed the PHQ-9 and wants to understand what their depression score means clinically."
+          bottomLine="PHQ-9 scores range from minimal to severe depression — scores of 10 or above warrant professional follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="PHQ-9"

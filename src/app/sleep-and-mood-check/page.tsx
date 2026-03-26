@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SleepMoodClient } from "./SleepMoodClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/sleep-and-mood-check`;
 
@@ -34,6 +35,15 @@ export default function SleepMoodPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A tool that helps you track the relationship between your sleep quality and mood patterns over time."
+          who="Anyone who suspects their sleep is affecting their mental health and wants to track the connection."
+          bottomLine="Sleep and mood are deeply connected — tracking both helps identify patterns you can address. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Sleep and Mood Check?</h2>
         <h2>How Does the Sleep and Mood Check Work?</h2>

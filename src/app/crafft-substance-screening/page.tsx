@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { CrafftClient } from "./CrafftClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/crafft-substance-screening`;
 
@@ -111,6 +112,15 @@ export default function CrafftPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The CRAFFT, a 6-question substance use screening validated for adolescents and young adults under 21."
+          who="Teens and young adults who want to assess whether their substance use patterns may be risky."
+          bottomLine="The CRAFFT is the most widely recommended substance screening for youth — a score of 2 or more suggests further evaluation. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the CRAFFT Substance Screening?</h2>
         <h2>How Is the CRAFFT Scored?</h2>

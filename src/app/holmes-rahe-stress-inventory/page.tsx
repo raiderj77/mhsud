@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { HolmesRaheClient } from "./HolmesRaheClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/holmes-rahe-stress-inventory`;
 
@@ -98,6 +99,15 @@ export default function HolmesRahePage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Holmes-Rahe Stress Inventory, a validated tool that measures accumulated life change stress by summing Life Change Units from major events."
+          who="Anyone who has experienced multiple life changes recently and wants to understand their cumulative stress level."
+          bottomLine="High life-change scores are associated with increased illness risk — awareness helps you take preventive action. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Holmes-Rahe Stress Inventory?</h2>
         <h2>How Is the Holmes-Rahe Stress Inventory Scored?</h2>

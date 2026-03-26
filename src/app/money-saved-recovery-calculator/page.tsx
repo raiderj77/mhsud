@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { MoneySavedClient } from "./MoneySavedClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/money-saved-recovery-calculator`;
 
@@ -71,6 +72,15 @@ export default function MoneySavedPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A calculator that shows how much money you have saved by not spending on substances since your sobriety date."
+          who="Anyone in recovery who wants a concrete, motivating reminder of the financial benefit of their sobriety."
+          bottomLine="The financial savings of recovery are real and significant — let the numbers reinforce your commitment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Recovery Savings Calculator?</h2>
         <h2>How Does the Recovery Savings Calculator Work?</h2>

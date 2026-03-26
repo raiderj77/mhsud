@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { StandardDrinksClient } from "./StandardDrinksClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/standard-drinks-calculator`;
 
@@ -68,6 +69,15 @@ export default function StandardDrinksPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A calculator that converts your actual drinks into standard drink equivalents based on alcohol percentage and volume."
+          who="Anyone who wants to accurately count their alcohol consumption in standard drink units for health guidelines."
+          bottomLine="Most people underestimate their intake — one glass of wine or beer may equal more than one standard drink. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the Standard Drinks Calculator?</h2>

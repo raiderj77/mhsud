@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { MSIBPDClient } from "../msi-bpd-screening/MSIBPDClient";
 
 const TOOL_URL = `${SITE_URL}/bpd-test-for-women`;
@@ -266,6 +267,7 @@ export default function BpdTestForWomenPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A BPD screening with context on why borderline personality disorder is more frequently diagnosed in women." who="Women experiencing intense emotions, unstable relationships, or identity issues who want a validated BPD screening." bottomLine="BPD is highly treatable with DBT and other therapies — a screening is the first step toward support. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <section className="sr-only">
         <h2>What Is BPD Screening for Women?</h2>
         <h2>How Is the BPD Test Scored?</h2>

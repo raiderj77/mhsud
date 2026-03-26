@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { GAD7Client } from "../gad-7-anxiety-test/GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/anxiety-test-for-women`;
@@ -332,6 +333,14 @@ export default function AnxietyTestForWomenPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A GAD-7-based anxiety screening with context on how anxiety uniquely affects women, including hormonal and social factors."
+          who="Women experiencing anxiety symptoms who want a validated screening with gender-specific health context."
+          bottomLine="Women are twice as likely to be diagnosed with anxiety disorders — early screening leads to better outcomes. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is Anxiety Screening for Women?</h2>
         <h2>How Is the Anxiety Test Scored?</h2>

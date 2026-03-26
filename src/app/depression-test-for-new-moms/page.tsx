@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/depression-test-for-new-moms`;
 
@@ -268,6 +269,15 @@ export default function DepressionTestForNewMomsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Edinburgh Postnatal Depression Scale (EPDS), a validated screening specifically designed for postpartum depression."
+          who="New mothers experiencing mood changes, anxiety, or difficulty bonding who want to screen for postpartum depression."
+          bottomLine="Postpartum depression affects up to 1 in 5 mothers and is highly treatable — you are not failing as a parent. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Postpartum Depression Screening?</h2>
         <h2>How Is the Postpartum Depression Screen Scored?</h2>

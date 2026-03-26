@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { UrgeSurfingClient } from "./UrgeSurfingClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/urge-surfing-timer`;
 
@@ -72,6 +73,15 @@ export default function UrgeSurfingPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guided urge surfing timer based on mindfulness principles that helps you ride out cravings without acting on them."
+          who="Anyone in recovery experiencing cravings who wants a structured technique to wait them out."
+          bottomLine="Cravings typically peak and pass within 15-30 minutes — urge surfing teaches you to ride the wave. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Urge Surfing Timer?</h2>
         <h2>How Does Urge Surfing Work?</h2>

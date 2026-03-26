@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SCOFFClient } from "../scoff-eating-disorder-screening/SCOFFClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/eating-disorder-test-athletes`;
 
@@ -223,6 +224,15 @@ export default function EatingDisorderTestAthletesPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An eating disorder screening tailored for athletes that accounts for sport-specific risk factors like weight pressure and overtraining."
+          who="Athletes, coaches, or sports parents concerned about disordered eating patterns in competitive sports environments."
+          bottomLine="Athletes face unique eating disorder risks from sport culture — recognizing the signs early protects long-term health. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Athlete Eating Disorder Screening?</h2>
         <h2>How Is the Eating Disorder Test Scored?</h2>

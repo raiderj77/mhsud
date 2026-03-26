@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { BoxBreathingClient } from "./BoxBreathingClient";
 
 const TOOL_URL = `${SITE_URL}/box-breathing-exercise`;
@@ -90,6 +91,14 @@ export default function BoxBreathingPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guided box breathing timer with visual and audio cues that walks you through the 4-4-4-4 breathing technique."
+          who="Anyone experiencing stress or anxiety who wants an immediate, evidence-based calming exercise."
+          bottomLine="Box breathing activates the parasympathetic nervous system and can reduce acute stress in minutes. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Box Breathing Exercise?</h2>
         <h2>How Does Box Breathing Work?</h2>

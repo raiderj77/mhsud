@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { FamilyImpactClient } from "./FamilyImpactClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/family-impact-assessment`;
 
@@ -104,6 +105,15 @@ export default function FamilyImpactAssessmentPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An assessment that measures how a family member's substance use is affecting family members' wellbeing, relationships, and daily functioning."
+          who="Family members living with a loved one's addiction who want to understand and validate the impact on their own lives."
+          bottomLine="Addiction affects the whole family — your wellbeing matters too, and support is available for you. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Family Impact Assessment?</h2>
         <h2>How Does the Family Impact Assessment Work?</h2>

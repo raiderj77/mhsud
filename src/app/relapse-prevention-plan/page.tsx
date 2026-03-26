@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { RelapsePlanClient } from "./RelapsePlanClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/relapse-prevention-plan`;
 
@@ -68,6 +69,15 @@ export default function RelapsePlanPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A structured relapse prevention planning tool that helps you identify triggers, warning signs, and coping strategies."
+          who="Anyone in recovery from substance use who wants to build a personalized, written relapse prevention plan."
+          bottomLine="A written relapse prevention plan is one of the strongest tools in recovery — build yours now. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is a Relapse Prevention Plan?</h2>

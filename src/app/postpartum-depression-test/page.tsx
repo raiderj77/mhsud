@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/postpartum-depression-test`;
 
@@ -138,6 +139,15 @@ export default function PostpartumDepressionTestPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Edinburgh Postnatal Depression Scale (EPDS), a 10-item screening specifically validated for postpartum mood disorders."
+          who="New parents in the postpartum period who are experiencing mood changes, anxiety, or difficulty coping."
+          bottomLine="Postpartum depression is common, not a character flaw, and highly treatable with proper support. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Postpartum Depression Test?</h2>
         <h2>How Is the Postpartum Depression Test Scored?</h2>

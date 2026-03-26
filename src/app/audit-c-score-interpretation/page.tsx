@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/audit-c-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function AUDITCScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining AUDIT-C scores, gender-specific thresholds, and what positive and negative results mean."
+          who="Anyone who has completed the AUDIT-C screening and wants to understand their score and next steps."
+          bottomLine="AUDIT-C thresholds differ by gender — understand what your specific score indicates. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="AUDIT-C"

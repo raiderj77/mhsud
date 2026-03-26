@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/pcl-5-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function PCL5ScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining PCL-5 PTSD screening scores, symptom clusters, and clinical cutoff thresholds."
+          who="Anyone who has completed the PCL-5 and wants to understand what their score means across the four PTSD symptom clusters."
+          bottomLine="Your PCL-5 score reflects PTSD symptom severity — the four cluster scores show which symptoms are most active. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="PCL-5"

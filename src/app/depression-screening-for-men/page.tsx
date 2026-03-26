@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/depression-screening-for-men`;
 
@@ -230,6 +231,15 @@ export default function DepressionScreeningForMenPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A depression screening that highlights how depression often presents differently in men, including anger and risk-taking."
+          who="Men who may be experiencing depression but whose symptoms do not match the typical sad-and-tearful stereotype."
+          bottomLine="Male depression often looks like irritability, aggression, or withdrawal rather than sadness. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is Depression Screening for Men?</h2>
         <h2>How Is the Depression Screen Scored?</h2>

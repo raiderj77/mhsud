@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { DailyCheckInClient } from "./DailyCheckInClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/daily-recovery-check-in`;
 
@@ -72,6 +73,15 @@ export default function DailyCheckInPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A structured daily check-in tool for people in addiction recovery, tracking mood, cravings, sleep, and recovery activities."
+          who="Anyone in substance use recovery who wants a simple daily accountability and self-monitoring tool."
+          bottomLine="Daily check-ins help catch warning signs early — consistency matters more than perfection. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Daily Recovery Check-In?</h2>
         <h2>How Does the Recovery Check-In Work?</h2>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { K6Client } from "./K6Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/k6-distress-scale`;
 
@@ -98,6 +99,15 @@ export default function K6Page() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Kessler K6, a brief 6-item validated screening for serious psychological distress used in population health surveys worldwide."
+          who="Anyone who wants a quick general mental health check using the tool used in national health surveillance."
+          bottomLine="The K6 is a broad distress measure — a high score indicates you may benefit from professional support. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the K6 Distress Scale?</h2>
         <h2>How Is the K6 Distress Scale Scored?</h2>

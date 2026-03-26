@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { WorryTimeClient } from "./WorryTimeClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/worry-time-scheduler`;
 
@@ -90,6 +91,15 @@ export default function WorryTimeSchedulerPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A CBT-based worry scheduling tool that helps you contain worry by setting aside dedicated time for it rather than worrying all day."
+          who="Anyone with chronic worry or generalized anxiety who wants a structured technique to reduce anxious rumination."
+          bottomLine="Scheduled worry time paradoxically reduces total worry by giving your brain a designated outlet. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Worry Time Scheduler?</h2>
         <h2>How Does the Worry Time Scheduler Work?</h2>

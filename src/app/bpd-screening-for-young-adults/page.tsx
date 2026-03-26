@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { MSIBPDClient } from "../msi-bpd-screening/MSIBPDClient";
 
 const TOOL_URL = `${SITE_URL}/bpd-screening-for-young-adults`;
@@ -241,6 +242,7 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A borderline personality disorder screening adapted for young adults with age-appropriate context and resources." who="Young adults experiencing emotional instability, relationship difficulties, or identity confusion who want to screen for BPD." bottomLine="BPD is treatable, especially when identified early — share results with a mental health provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <section className="sr-only">
         <h2>What Is BPD Screening for Young Adults?</h2>
         <h2>How Is the BPD Screening Scored?</h2>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SpinClient } from "../spin-social-anxiety-test/SpinClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/social-anxiety-test-college`;
 
@@ -218,6 +219,15 @@ export default function SocialAnxietyTestCollegePage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A social anxiety screening tailored for college students covering classroom participation, campus social situations, and peer interaction."
+          who="College students who avoid social situations, dread class participation, or feel intense anxiety around peers."
+          bottomLine="Social anxiety is one of the most common issues among college students — and one of the most treatable. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the College Social Anxiety Screening?</h2>
         <h2>How Is the Social Anxiety Test Scored?</h2>

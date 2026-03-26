@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/gad-7-score-interpretation`;
 
@@ -64,6 +65,15 @@ export default function GAD7ScoreInterpretationPage() {
           </p>
         </div>
       </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining GAD-7 anxiety scores, severity levels, clinical cutoffs, and recommended next steps for each range."
+          who="Anyone who has completed the GAD-7 and wants to understand what their anxiety score means clinically."
+          bottomLine="A score of 10 or above on the GAD-7 indicates moderate anxiety warranting clinical follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="GAD-7"

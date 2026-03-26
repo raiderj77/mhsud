@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SobrietyClient } from "./SobrietyClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/sobriety-calculator`;
 
@@ -67,6 +68,15 @@ export default function SobrietyCalculatorPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A sobriety calculator that counts your clean days, weeks, months, and years from your sobriety date."
+          who="Anyone in recovery who wants to track their sobriety milestone and celebrate their progress."
+          bottomLine="Every day counts — whether it is day 1 or day 1,000, your recovery journey matters. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the Sobriety Calculator?</h2>

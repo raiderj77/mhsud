@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { GAD7Client } from "../gad-7-anxiety-test/GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/anxiety-test-for-teens`;
@@ -244,6 +245,14 @@ export default function AnxietyTestForTeensPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A GAD-7-based anxiety screening adapted for teenagers with age-appropriate language and context."
+          who="Teens or parents of teens who want to check whether anxiety symptoms are clinically significant."
+          bottomLine="Some anxiety is normal in adolescence — this screening helps distinguish typical stress from clinical levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Teen Anxiety Screening?</h2>
         <h2>How Is the Teen Anxiety Test Scored?</h2>

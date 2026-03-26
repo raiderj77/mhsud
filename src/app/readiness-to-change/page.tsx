@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ReadinessClient } from "./ReadinessClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/readiness-to-change`;
 
@@ -73,6 +74,15 @@ export default function ReadinessToChangePage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A readiness to change assessment based on the Stages of Change model that identifies where you are in the change process."
+          who="Anyone considering a behavioral change who wants to understand their current stage of motivation and readiness."
+          bottomLine="Knowing your stage of change helps you choose the right strategies — there is no wrong place to start. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Readiness to Change Assessment?</h2>
         <h2>How Is the Readiness to Change Assessment Scored?</h2>

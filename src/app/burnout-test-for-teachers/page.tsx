@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/burnout-test-for-teachers`;
 
@@ -64,6 +65,15 @@ export default function BurnoutTestForTeachersPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A burnout screening for educators covering classroom stress, administrative burden, and emotional exhaustion."
+          who="Teachers and educators who feel depleted and want to measure how their work stress compares to burnout thresholds."
+          bottomLine="Teacher burnout is a systemic issue — understanding your score is the first step toward sustainable change. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Teacher Burnout Screening?</h2>
         <h2>How Is the Teacher Burnout Test Scored?</h2>

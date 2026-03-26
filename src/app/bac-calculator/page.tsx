@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { BACClient } from "./BACClient";
 
 const TOOL_URL = `${SITE_URL}/bac-calculator`;
@@ -72,6 +73,14 @@ export default function BACCalculatorPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A blood alcohol content estimator that calculates approximate BAC based on drinks consumed, body weight, gender, and time elapsed."
+          who="Anyone who wants to estimate their current blood alcohol level to make informed decisions."
+          bottomLine="BAC calculators provide estimates only — actual impairment varies by individual and many other factors. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the BAC Calculator?</h2>
         <h2>How Is Blood Alcohol Content Calculated?</h2>

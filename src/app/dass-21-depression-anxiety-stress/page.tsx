@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { DASS21Client } from "./DASS21Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
 
@@ -84,6 +85,15 @@ export default function DASS21Page() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The DASS-21, a 21-item screening that simultaneously measures depression, anxiety, and stress severity on three separate scales."
+          who="Anyone who wants to assess depression, anxiety, and stress levels together using a single validated instrument."
+          bottomLine="The DASS-21 provides three separate scores — you may score differently on each subscale. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the DASS-21 Screening?</h2>

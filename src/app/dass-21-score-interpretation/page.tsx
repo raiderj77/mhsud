@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/dass-21-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function DASS21ScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining DASS-21 scores across all three subscales with severity levels and recommended next steps."
+          who="Anyone who has completed the DASS-21 and wants to understand their depression, anxiety, and stress scores."
+          bottomLine="DASS-21 severity levels range from normal to extremely severe on each subscale independently. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="DASS-21"

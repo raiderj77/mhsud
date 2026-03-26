@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/depression-test-for-seniors`;
 
@@ -168,6 +169,15 @@ export default function DepressionTestForSeniorsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Geriatric Depression Scale (GDS), a validated screening designed for older adults that accounts for age-related symptom differences."
+          who="Older adults or their family members who want to screen for depression using a tool designed for the senior population."
+          bottomLine="Depression in older adults is often mistaken for normal aging — it is not, and it is treatable. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Senior Depression Screening?</h2>
         <h2>How Is the Senior Depression Test Scored?</h2>

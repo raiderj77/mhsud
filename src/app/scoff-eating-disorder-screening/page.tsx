@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SCOFFClient } from "./SCOFFClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/scoff-eating-disorder-screening`;
 
@@ -69,6 +70,15 @@ export default function SCOFFPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The SCOFF, a 5-question eating disorder screening that identifies potential anorexia nervosa and bulimia nervosa."
+          who="Anyone concerned about their eating behaviors or relationship with food who wants a quick validated screening."
+          bottomLine="Two or more positive answers on the SCOFF suggest further evaluation for an eating disorder. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the SCOFF Eating Disorder Screening?</h2>

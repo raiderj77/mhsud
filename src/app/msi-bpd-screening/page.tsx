@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { MSIBPDClient } from "./MSIBPDClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/msi-bpd-screening`;
 
@@ -83,6 +84,15 @@ export default function MSIBPDPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The McLean Screening Instrument for BPD, a 10-item validated screening for borderline personality disorder."
+          who="Adults who experience emotional instability, relationship difficulties, or identity confusion and want to screen for BPD."
+          bottomLine="The MSI-BPD is a well-validated screening tool — a positive result indicates further evaluation by a specialist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the MSI-BPD Screening?</h2>

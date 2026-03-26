@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ThoughtRecordClient } from "./ThoughtRecordClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
@@ -91,6 +92,15 @@ export default function CbtThoughtRecordPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guided CBT thought record worksheet that walks you through identifying, challenging, and reframing negative thought patterns."
+          who="Anyone practicing cognitive behavioral therapy skills who wants a structured tool for examining unhelpful thoughts."
+          bottomLine="Thought records are a core CBT skill — regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is a CBT Thought Record?</h2>
         <h2>How Does the CBT Thought Record Work?</h2>

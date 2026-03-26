@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { HealthTimelineClient } from "./HealthTimelineClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/health-recovery-timeline`;
 
@@ -72,6 +73,15 @@ export default function HealthTimelinePage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A timeline showing the physical health improvements that occur at each stage of sobriety from 24 hours to 15 years."
+          who="Anyone in recovery from alcohol or substance use who wants to see the tangible health benefits of continued sobriety."
+          bottomLine="Your body begins healing within hours of stopping — every day sober brings measurable improvements. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Health Recovery Timeline?</h2>
         <h2>How Does the Health Recovery Timeline Work?</h2>

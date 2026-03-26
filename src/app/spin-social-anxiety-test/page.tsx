@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SpinClient } from "./SpinClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/spin-social-anxiety-test`;
 
@@ -98,6 +99,15 @@ export default function SpinPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The SPIN (Social Phobia Inventory), a 17-item validated screening for social anxiety disorder severity."
+          who="Anyone who experiences significant anxiety in social situations and wants to assess the severity of their social phobia."
+          bottomLine="The SPIN measures social anxiety across fear, avoidance, and physiological domains. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the SPIN Social Anxiety Test?</h2>
         <h2>How Is the SPIN Scored?</h2>

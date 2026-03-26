@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AISClient } from "./AISClient";
 
 const TOOL_URL = `${SITE_URL}/athens-insomnia-scale`;
@@ -98,6 +99,14 @@ export default function AISPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Athens Insomnia Scale, a validated 8-item screening that measures insomnia severity based on ICD-10 diagnostic criteria."
+          who="Anyone experiencing sleep difficulties who wants to assess whether their insomnia symptoms reach clinical levels."
+          bottomLine="Chronic insomnia affects both mental and physical health — discuss persistent sleep problems with your doctor. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the Athens Insomnia Scale?</h2>
         <h2>How Is the Athens Insomnia Scale Scored?</h2>

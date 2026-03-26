@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "../pcl-5-ptsd-screening/PCL5Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/ptsd-test-first-responders`;
 
@@ -323,6 +324,15 @@ export default function PTSDTestFirstRespondersPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A PCL-5-based PTSD screening tailored for first responders with context on cumulative trauma exposure in emergency services."
+          who="Police, firefighters, EMTs, and dispatchers who have experienced repeated traumatic incidents on the job."
+          bottomLine="First responders face cumulative trauma — screening is a professional responsibility, not a weakness. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is PTSD Screening for First Responders?</h2>
         <h2>How Is the First Responder PTSD Test Scored?</h2>

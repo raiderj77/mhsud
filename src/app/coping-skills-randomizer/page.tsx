@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { CopingSkillsClient } from "./CopingSkillsClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/coping-skills-randomizer`;
 
@@ -72,6 +73,15 @@ export default function CopingSkillsPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A tool that randomly suggests evidence-based coping skills from categories like grounding, self-soothing, distraction, and movement."
+          who="Anyone feeling overwhelmed who needs a quick coping strategy but cannot think of one in the moment."
+          bottomLine="Having a go-to list of coping skills builds resilience — save the ones that work for you. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Coping Skills Randomizer?</h2>
         <h2>How Does the Coping Skills Randomizer Work?</h2>

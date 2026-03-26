@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { DbtCrisisSkillsClient } from "./DbtCrisisSkillsClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/dbt-crisis-skills`;
 
@@ -90,6 +91,15 @@ export default function DbtCrisisSkillsPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guided DBT crisis survival skills tool with TIPP, STOP, and distress tolerance techniques for managing intense emotions."
+          who="Anyone in emotional crisis who needs structured, step-by-step DBT skills to get through the moment safely."
+          bottomLine="Crisis skills are for surviving the moment without making it worse — they are not long-term solutions. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Are DBT Crisis Skills?</h2>
         <h2>How Do DBT Crisis Skills Work?</h2>

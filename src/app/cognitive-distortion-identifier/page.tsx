@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { CognitiveDistortionClient } from "./CognitiveDistortionClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/cognitive-distortion-identifier`;
 
@@ -91,6 +92,15 @@ export default function CognitiveDistortionPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A tool that helps you identify common cognitive distortions like catastrophizing, all-or-nothing thinking, and mind reading in your own thought patterns."
+          who="Anyone working on CBT skills who wants to recognize which thinking traps they fall into most often."
+          bottomLine="Identifying cognitive distortions is the first step to challenging them — awareness creates space for change. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Cognitive Distortion Identifier?</h2>
         <h2>How Does the Cognitive Distortion Tool Work?</h2>

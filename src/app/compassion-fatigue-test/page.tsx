@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/compassion-fatigue-test`;
 
@@ -134,6 +135,15 @@ export default function CompassionFatigueTestPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A compassion fatigue screening that measures the emotional cost of caring for others in distress, combining burnout and secondary trauma."
+          who="Helping professionals, caregivers, and anyone in a caring role who feels emotionally drained by others' suffering."
+          bottomLine="Compassion fatigue is an occupational hazard of caring — early recognition prevents deeper burnout. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Compassion Fatigue Test?</h2>
         <h2>How Is the Compassion Fatigue Test Scored?</h2>

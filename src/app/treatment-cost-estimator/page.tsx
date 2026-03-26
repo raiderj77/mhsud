@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { TreatmentCostClient } from "./TreatmentCostClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/treatment-cost-estimator`;
 
@@ -68,6 +69,15 @@ export default function TreatmentCostPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An estimator that calculates approximate costs for different levels of mental health and substance use treatment."
+          who="Anyone considering treatment who needs a general sense of what different treatment options may cost."
+          bottomLine="Treatment costs vary widely — this provides estimates to help you plan, not exact quotes. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the Treatment Cost Estimator?</h2>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { AttachmentStyleClient } from "./AttachmentStyleClient";
 
 const TOOL_URL = `${SITE_URL}/attachment-style-quiz`;
@@ -84,6 +85,14 @@ export default function AttachmentStylePage() {
         }}
       />
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="An attachment style assessment that identifies your primary attachment pattern: secure, anxious, avoidant, or fearful-avoidant."
+          who="Anyone curious about how their attachment style may influence their relationships and emotional responses."
+          bottomLine="Attachment styles can shift with awareness and effort — understanding yours is the first step. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the ECR-R Attachment Style Quiz?</h2>
         <h2>How Is the ECR-R Scored?</h2>

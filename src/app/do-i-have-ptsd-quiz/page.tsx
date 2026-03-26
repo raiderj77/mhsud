@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "../pcl-5-ptsd-screening/PCL5Client";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/do-i-have-ptsd-quiz`;
 
@@ -137,6 +138,15 @@ export default function DoIHavePTSDQuizPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A PC-PTSD-5-based screening in accessible quiz format that assesses PTSD symptoms following a traumatic event."
+          who="Anyone who has experienced trauma and wonders whether their symptoms may be consistent with PTSD."
+          bottomLine="PTSD is treatable with evidence-based therapies — a positive screen means talking to a professional can help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the PTSD Self-Assessment Quiz?</h2>
         <h2>How Is the PTSD Quiz Scored?</h2>

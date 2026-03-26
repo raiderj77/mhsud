@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/mdq-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function MDQScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining MDQ bipolar screening scores, what a positive screen means, and recommended follow-up steps."
+          who="Anyone who has completed the MDQ and wants to understand their results in clinical context."
+          bottomLine="A positive MDQ screen does not confirm bipolar disorder — it indicates further evaluation is recommended. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="MDQ"

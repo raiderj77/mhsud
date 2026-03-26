@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { WithdrawalTimelineClient } from "./WithdrawalTimelineClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/withdrawal-timeline`;
 
@@ -68,6 +69,15 @@ export default function WithdrawalTimelinePage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A timeline showing expected withdrawal symptoms and their duration for alcohol, opioids, benzodiazepines, and stimulants."
+          who="Anyone considering stopping substance use who wants to understand what withdrawal may look like and how long it lasts."
+          bottomLine="Some withdrawals can be medically dangerous — always consult a healthcare provider before stopping abruptly. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <section className="sr-only">
         <h2>What Is the Withdrawal Timeline Tool?</h2>

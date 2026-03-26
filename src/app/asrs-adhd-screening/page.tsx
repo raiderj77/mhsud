@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
+import AnswerBlock from "@/components/AnswerBlock";
 import { ASRSClient } from "./ASRSClient";
 
 const TOOL_URL = `${SITE_URL}/asrs-adhd-screening`;
@@ -87,6 +88,14 @@ export default function ASRSPage() {
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The Adult Self-Report Scale (ASRS), a WHO-developed 18-question ADHD screening used in clinical practice worldwide."
+          who="Adults who want to take the standard clinical ADHD screening tool used by healthcare providers."
+          bottomLine="The ASRS is widely used in clinical settings — share your results with a healthcare provider for next steps. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
       <section className="sr-only">
         <h2>What Is the ASRS ADHD Screening?</h2>
         <h2>How Is the ASRS Scored?</h2>

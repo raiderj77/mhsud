@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/dast-10-score-interpretation`;
 
@@ -55,6 +56,15 @@ export default function DAST10ScoreInterpretationPage() {
           ),
         }}
       />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guide explaining DAST-10 drug screening scores, severity levels, and recommended intervention intensity for each range."
+          who="Anyone who has completed the DAST-10 and wants to understand what their score indicates clinically."
+          bottomLine="Your DAST-10 score maps to a recommended intervention level from brief counseling to intensive treatment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
 
       <ScoreInterpretationLayout
         testName="DAST-10"

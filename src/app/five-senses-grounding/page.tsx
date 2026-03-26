@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { GroundingClient } from "./GroundingClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/five-senses-grounding`;
 
@@ -90,6 +91,15 @@ export default function FiveSensesGroundingPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="A guided 5-4-3-2-1 grounding exercise that uses all five senses to bring you back to the present moment during anxiety or dissociation."
+          who="Anyone experiencing anxiety, panic, or dissociation who needs an immediate grounding technique."
+          bottomLine="The 5-senses technique works by redirecting attention from internal distress to external sensory reality. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the Five Senses Grounding Exercise?</h2>
         <h2>How Does Five Senses Grounding Work?</h2>

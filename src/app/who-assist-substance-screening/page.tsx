@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AssistClient } from "./AssistClient";
+import AnswerBlock from "@/components/AnswerBlock";
 
 const TOOL_URL = `${SITE_URL}/who-assist-substance-screening`;
 
@@ -97,6 +98,15 @@ export default function AssistPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AnswerBlock
+          what="The WHO ASSIST, a comprehensive substance screening covering tobacco, alcohol, cannabis, and eight other substance categories."
+          who="Anyone who uses any substances and wants a thorough, WHO-validated assessment of risk across all substance types."
+          bottomLine="The ASSIST scores each substance separately — you may have different risk levels for different substances. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          lastUpdated="2026-03-20"
+        />
+      </div>
+
       <section className="sr-only">
         <h2>What Is the WHO ASSIST Substance Screening?</h2>
         <h2>How Is the WHO ASSIST Scored?</h2>
