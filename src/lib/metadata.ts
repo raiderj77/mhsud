@@ -74,22 +74,42 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
   };
 }
 
-/** JSON-LD for organization (site-wide) */
+/** JSON-LD @graph for Organization + WebSite (site-wide) */
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    description: SITE_DESCRIPTION,
-    sameAs: ["https://github.com/raiderj77/mhsud"],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      url: `${SITE_URL}/contact`,
-      availableLanguage: "English",
-    },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/logo.png`,
+        },
+        sameAs: [],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: `${SITE_NAME} — Free Mental Health Screening Tools`,
+        description:
+          "Free, clinically-informed mental health and SUD screening tools. No account required.",
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 }
 
