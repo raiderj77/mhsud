@@ -1,0 +1,21 @@
+name: IndexNow Submit
+on:
+  push:
+    branches: [main]
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit to IndexNow
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "mindchecktools.com",
+              "key": "55d118ba976fb26d19c6f5c6f5b1816d",
+              "keyLocation": "https://mindchecktools.com/55d118ba976fb26d19c6f5c6f5b1816d.txt",
+              "urlList": ["https://mindchecktools.com/"]
+            }')
+          echo "IndexNow response: $RESPONSE"
+          exit 0
