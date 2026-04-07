@@ -725,6 +725,102 @@ export default function HomePage() {
         targetedScreenings={TARGETED_SCREENINGS}
       />
 
+      {/* GEO Content Sections */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+
+        <section>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            How do mental health screening tools work?
+          </h2>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            These tools use validated clinical questionnaires to help you identify and understand your symptoms. Results are for informational purposes only — not a diagnosis.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
+            Validated instruments like the PHQ-9 and GAD-7 are used by clinicians worldwide as a first step in mental health assessment. They have been tested in large clinical populations and shown to reliably identify symptom patterns that warrant further evaluation. The World Health Organization estimates that 1 in 4 people globally will be affected by a mental health condition at some point in their lives — screening tools help that first conversation happen sooner.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+            On MindCheck Tools, all scoring happens in your browser. No answers are transmitted to a server, stored, or shared.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            What is the difference between a screening tool and a diagnosis?
+          </h2>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            A screening tool identifies patterns that may suggest a condition. Only a licensed clinician can provide a diagnosis after a comprehensive evaluation.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
+            Screening results help you have more informed conversations with healthcare providers — they are a starting point, not a substitute for those conversations. Sharing your results with a doctor or therapist can help guide the assessment process and ensure you receive the right level of care. Research published in JAMA Psychiatry shows that early intervention reduces the duration of untreated depression by an average of 2 years.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+            According to the National Alliance on Mental Illness, 1 in 5 U.S. adults experiences a mental health condition each year — yet only 46% of those adults receive treatment. Accessible, free screening tools can help close that gap by lowering the barrier to that first step.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            Are these screening tools free and confidential?
+          </h2>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            Yes — all screening tools on MindCheck Tools are completely free. Your responses are processed in your browser and never stored or transmitted to any server.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+            No account is required, and no data is retained after you close the page. All scoring logic runs locally using client-side JavaScript. We have deliberately built our tools this way because mental health screening should be private by design, not just by policy.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            When should I seek immediate help?
+          </h2>
+          <p className="text-base font-semibold text-red-700 dark:text-red-400 leading-relaxed mb-4">
+            If you are experiencing thoughts of suicide or self-harm, please contact the 988 Suicide and Crisis Lifeline immediately by calling or texting 988.
+          </p>
+          <ul className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed space-y-2 mb-6">
+            <li>
+              <strong>988 Suicide and Crisis Lifeline</strong> — call or text{" "}
+              <a href="tel:988" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">988</a>
+              {" "}(free, 24/7)
+            </li>
+            <li>
+              <strong>Crisis Text Line</strong> — text HOME to{" "}
+              <a href="sms:741741" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">741741</a>
+              {" "}(free, 24/7)
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline</strong> —{" "}
+              <a href="tel:18006624357" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">1-800-662-4357</a>
+              {" "}(free, confidential, 24/7 treatment referrals)
+            </li>
+          </ul>
+          <div className="border-t border-neutral-200 dark:border-neutral-700 pt-6">
+            <h3 className="font-semibold text-neutral-700 dark:text-neutral-300 text-sm mb-3">Further reading</h3>
+            <ul className="text-sm space-y-1">
+              <li>
+                <a href="https://www.nimh.nih.gov" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
+                  National Institute of Mental Health (NIMH)
+                </a>
+                {" "}— nimh.nih.gov
+              </li>
+              <li>
+                <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
+                  SAMHSA National Helpline
+                </a>
+                {" "}— samhsa.gov
+              </li>
+              <li>
+                <a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
+                  WHO Mental Health Resources
+                </a>
+                {" "}— who.int/mental_health
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
       {/* Privacy Callout */}
       <section className="bg-sage-600 dark:bg-sage-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
