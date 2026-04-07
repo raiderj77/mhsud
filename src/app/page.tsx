@@ -625,13 +625,39 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationJsonLd()),
+          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: "2026-04-07" }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteJsonLd()),
+          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: "2026-04-07" }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "MindCheck Tools — Free Mental Health Screening",
+            url: SITE_URL,
+            applicationCategory: "HealthApplication",
+            operatingSystem: "All",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            dateModified: "2026-04-07",
+            description:
+              "Free, private mental health screening tools — PHQ-9, GAD-7, AUDIT and more. All scoring happens in your browser. No accounts, no data storage.",
+            provider: {
+              "@type": "Organization",
+              name: "MindCheck Tools",
+              url: SITE_URL,
+            },
+          }),
         }}
       />
 
@@ -774,24 +800,52 @@ export default function HomePage() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               faqJsonLd([
-                { question: "What is a mental health screening tool?", answer: "A mental health screening tool is a short questionnaire designed to identify possible symptoms of conditions like depression, anxiety, or substance use concerns. These tools are used by clinicians as a first step and are not a substitute for a professional evaluation." },
-                { question: "Are these screening tools free to use?", answer: "Yes. Every screening tool on MindCheck Tools is completely free with no signup, no login, and no paywall. You can take any screening as many times as you like at no cost." },
-                { question: "Are my answers private and anonymous?", answer: "Yes. All screening responses are scored entirely in your browser using client-side JavaScript. Your answers are never sent to a server, stored in a database, or shared with anyone. When you close the page, your data is gone." },
-                { question: "What is the difference between a screening and a diagnosis?", answer: "A screening identifies possible symptoms that may warrant further evaluation. A diagnosis is made by a qualified healthcare professional after a comprehensive clinical assessment. Screening tools like the PHQ-9 or GAD-7 are starting points, not final answers." },
-                { question: "How accurate are these self-assessment tools?", answer: "The validated screening tools on this site (PHQ-9, GAD-7, AUDIT, etc.) have been tested in clinical research and shown to have good sensitivity and specificity. However, no self-assessment is perfect. Results should be discussed with a healthcare provider for proper interpretation." },
-                { question: "What should I do after completing a screening?", answer: "If your results suggest elevated symptoms, consider speaking with a doctor, therapist, or counselor. You can also call the SAMHSA National Helpline at 1-800-662-4357 for free, confidential referrals. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
+                {
+                  question: "Are these mental health screening tools clinically validated?",
+                  answer: "The PHQ-9, GAD-7, AUDIT, and AUDIT-C are validated clinical instruments used by healthcare professionals worldwide. The screening questions and scoring are standardized and have not been modified. Results are for informational purposes only and are not a substitute for professional evaluation.",
+                },
+                {
+                  question: "What is the PHQ-9 used for?",
+                  answer: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question screening tool for depression severity. Scores range from 0 to 27, with higher scores indicating greater symptom severity. A score of 10 or above suggests moderate to severe depression and warrants professional evaluation. This tool does not provide a diagnosis.",
+                },
+                {
+                  question: "What is the difference between the AUDIT and AUDIT-C?",
+                  answer: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool that identifies hazardous, harmful, and dependent alcohol use. The AUDIT-C is a 3-question abbreviated version focused on consumption patterns. Both are validated by the World Health Organization and used in primary care settings.",
+                },
+                {
+                  question: "Who should use these mental health screening tools?",
+                  answer: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. If you are in crisis, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988.",
+                },
+                {
+                  question: "What should I do if my screening score is high?",
+                  answer: "A high score indicates that your symptoms may warrant professional evaluation — it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+                },
               ])
             ),
           }}
         />
         <div className="space-y-6">
           {[
-            { q: "What is a mental health screening tool?", a: "A mental health screening tool is a short questionnaire designed to identify possible symptoms of conditions like depression, anxiety, or substance use concerns. These tools are used by clinicians as a first step and are not a substitute for a professional evaluation." },
-            { q: "Are these screening tools free to use?", a: "Yes. Every screening tool on MindCheck Tools is completely free with no signup, no login, and no paywall. You can take any screening as many times as you like at no cost." },
-            { q: "Are my answers private and anonymous?", a: "Yes. All screening responses are scored entirely in your browser using client-side JavaScript. Your answers are never sent to a server, stored in a database, or shared with anyone. When you close the page, your data is gone." },
-            { q: "What is the difference between a screening and a diagnosis?", a: "A screening identifies possible symptoms that may warrant further evaluation. A diagnosis is made by a qualified healthcare professional after a comprehensive clinical assessment. Screening tools like the PHQ-9 or GAD-7 are starting points, not final answers." },
-            { q: "How accurate are these self-assessment tools?", a: "The validated screening tools on this site (PHQ-9, GAD-7, AUDIT, etc.) have been tested in clinical research and shown to have good sensitivity and specificity. However, no self-assessment is perfect. Results should be discussed with a healthcare provider for proper interpretation." },
-            { q: "What should I do after completing a screening?", a: "If your results suggest elevated symptoms, consider speaking with a doctor, therapist, or counselor. You can also call the SAMHSA National Helpline at 1-800-662-4357 for free, confidential referrals. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
+            {
+              q: "Are these mental health screening tools clinically validated?",
+              a: "The PHQ-9, GAD-7, AUDIT, and AUDIT-C are validated clinical instruments used by healthcare professionals worldwide. The screening questions and scoring are standardized and have not been modified. Results are for informational purposes only and are not a substitute for professional evaluation.",
+            },
+            {
+              q: "What is the PHQ-9 used for?",
+              a: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question screening tool for depression severity. Scores range from 0 to 27, with higher scores indicating greater symptom severity. A score of 10 or above suggests moderate to severe depression and warrants professional evaluation. This tool does not provide a diagnosis.",
+            },
+            {
+              q: "What is the difference between the AUDIT and AUDIT-C?",
+              a: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool that identifies hazardous, harmful, and dependent alcohol use. The AUDIT-C is a 3-question abbreviated version focused on consumption patterns. Both are validated by the World Health Organization and used in primary care settings.",
+            },
+            {
+              q: "Who should use these mental health screening tools?",
+              a: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. If you are in crisis, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988.",
+            },
+            {
+              q: "What should I do if my screening score is high?",
+              a: "A high score indicates that your symptoms may warrant professional evaluation — it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+            },
           ].map((faq) => (
             <div key={faq.q} className="card p-5 sm:p-6">
               <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
