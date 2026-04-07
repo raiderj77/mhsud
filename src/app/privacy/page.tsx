@@ -128,6 +128,17 @@ export default function PrivacyPage() {
             <p>
               Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
             </p>
+            <p>
+              You can opt out of personalized advertising by visiting{" "}
+              <a href="https://ads.google.com/settings" target="_blank" rel="noopener noreferrer">
+                Google Ad Settings
+              </a>{" "}
+              or the{" "}
+              <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">
+                Digital Advertising Alliance opt-out portal
+              </a>
+              .
+            </p>
           </section>
 
           <section>
