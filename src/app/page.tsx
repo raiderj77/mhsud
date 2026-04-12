@@ -664,7 +664,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide uppercase mb-5">
+          <div className="inline-flex items-center gap-2 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sage-500 animate-pulse" />
             Free &amp; Private
           </div>
@@ -672,12 +672,11 @@ export default function HomePage() {
             Mental health self-checks you can{" "}
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
-          <p className="text-sm text-gray-500 mt-1 mb-4 text-center">Last updated: March 16, 2026</p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).{" "}
             <Link
               href="/about"
-              className="underline hover:text-neutral-300 transition-colors"
+              className="underline hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
             >
               Learn more &rarr;
             </Link>
@@ -828,10 +827,10 @@ export default function HomePage() {
             <h2 className="font-serif text-2xl font-bold text-white mb-4">
               Your privacy is not negotiable
             </h2>
-            <p className="text-sage-100/80 leading-relaxed mb-3">
+            <p className="text-white/80 leading-relaxed mb-3">
               Every answer you give is processed entirely in your browser using client-side JavaScript. We have no server, no database, and no way to see your responses. When you close the page, your data is gone.
             </p>
-            <p className="text-sage-200/60 text-sm">
+            <p className="text-white/60 text-sm">
               We use analytics and may display ads — but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
             </p>
           </div>
