@@ -283,7 +283,7 @@ export function Footer() {
             If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) — available 24/7.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
-            This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} Your Friendly Developer. All rights reserved.
+            This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <FooterCookieButton />
