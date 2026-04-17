@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { DarkModeToggle } from "./ThemeProvider";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 
 /* ─── Tool data organized by category ─── */
 type Tool = { href: string; label: string; sub: string };
@@ -123,8 +124,19 @@ export function Navbar() {
   const [toolsOpen, setToolsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [hasScrolled, setHasScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const { isOnline } = useOnlineStatus();
+
+  // Add scroll shadow effect
+  useEffect(() => {
+    function handleScroll() {
+      setHasScrolled(window.scrollY > 0);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -167,14 +179,38 @@ export function Navbar() {
   const closeMobile = () => setMenuOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md border-b border-sand-200 dark:border-neutral-800">
+    <nav
+      className={`sticky top-0 z-50 bg-sand-50/95 dark:bg-night-900/95 backdrop-blur-md border-b
+        transition-shadow duration-300
+        ${hasScrolled ? "border-sand-200 dark:border-neutral-800 shadow-md" : "border-sand-100 dark:border-neutral-900"}`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sage-400 to-sage-600 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 group shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500 rounded-lg"
+            aria-label="MindCheck Tools - Home"
+          >
+            <div
+              className="w-8 h-8 rounded-full bg-gradient-to-br from-sage-400 to-sage-600 flex items-center justify-center
+                shadow-sm group-hover:shadow-md group-focus-visible:shadow-md transition-shadow"
+            >
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
               </svg>
             </div>
             <span className="font-serif font-bold text-lg text-neutral-800 dark:text-neutral-100 tracking-tight">
@@ -184,29 +220,81 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
+            {/* Offline indicator */}
+            {!isOnline && (
+              <div
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg
+                  bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
+                  text-crisis-700 dark:text-crisis-300 text-xs font-medium"
+                role="status"
+                aria-label="Offline - working without internet connection"
+              >
+                <span aria-hidden="true">⚠️</span>
+                <span className="hidden sm:inline">Offline</span>
+              </div>
+            )}
+
             {/* Tools dropdown trigger */}
             <button
               ref={buttonRef}
               onClick={() => setToolsOpen(!toolsOpen)}
-              className={`px-3 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${
-                toolsOpen
-                  ? "text-sage-700 dark:text-sage-400 bg-sage-50 dark:bg-sage-950/30"
-                  : "text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30"
-              }`}
+              className={`px-3 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                ${
+                  toolsOpen
+                    ? "text-sage-700 dark:text-sage-400 bg-sage-50 dark:bg-sage-950/30"
+                    : "text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30"
+                }`}
+              aria-expanded={toolsOpen}
+              aria-haspopup="true"
             >
               Tools
-              <svg className={`w-3.5 h-3.5 transition-transform ${toolsOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <svg
+                className={`w-3.5 h-3.5 transition-transform ${toolsOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
 
-            <Link href="/blog" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
+            <Link
+              href="/blog"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
+                text-neutral-600 dark:text-neutral-300
+                hover:text-sage-700 dark:hover:text-sage-400
+                hover:bg-sage-50 dark:hover:bg-sage-950/30
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                transition-colors"
+            >
               Blog
             </Link>
-            <Link href="/crisis-resources" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-crisis-600 dark:text-crisis-400 hover:bg-crisis-50 dark:hover:bg-crisis-950/30 transition-colors">
+            <Link
+              href="/crisis-resources"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
+                text-crisis-600 dark:text-crisis-400
+                hover:bg-crisis-50 dark:hover:bg-crisis-950/30
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crisis-600
+                transition-colors"
+            >
               Crisis Help
             </Link>
-            <Link href="/about" className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 transition-colors">
+            <Link
+              href="/about"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
+                text-neutral-600 dark:text-neutral-300
+                hover:text-sage-700 dark:hover:text-sage-400
+                hover:bg-sage-50 dark:hover:bg-sage-950/30
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                transition-colors"
+            >
               About
             </Link>
             <div className="ml-2 border-l border-sand-200 dark:border-neutral-700 pl-2">
@@ -216,19 +304,58 @@ export function Navbar() {
 
           {/* Mobile controls */}
           <div className="flex md:hidden items-center gap-1">
+            {!isOnline && (
+              <div
+                className="flex items-center gap-1 px-2 py-1 rounded-lg bg-crisis-100 dark:bg-crisis-950 text-crisis-700 dark:text-crisis-300"
+                title="Offline"
+                aria-label="Offline - working without internet connection"
+              >
+                <span className="text-sm" aria-hidden="true">
+                  ⚠️
+                </span>
+              </div>
+            )}
             <DarkModeToggle />
             <button
-              onClick={() => { setMenuOpen(!menuOpen); setToolsOpen(false); }}
-              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-sand-200 dark:hover:bg-night-700"
-              aria-label="Toggle menu"
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+                setToolsOpen(false);
+              }}
+              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg
+                hover:bg-sand-200 dark:hover:bg-night-700 transition-colors
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
             >
               {menuOpen ? (
-                <svg className="w-5 h-5 text-neutral-600 dark:text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-5 h-5 text-neutral-600 dark:text-neutral-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="w-5 h-5 text-neutral-600 dark:text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-5 h-5 text-neutral-600 dark:text-neutral-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
@@ -357,6 +484,7 @@ export function Navbar() {
 function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: () => void }) {
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const { isOnline } = useOnlineStatus();
 
   const matchesSearch = (tool: Tool) => {
     if (!search.trim()) return true;
@@ -369,19 +497,48 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
     .filter((cat) => cat.tools.length > 0);
 
   return (
-    <div className="md:hidden border-t border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 animate-fade-in max-h-[calc(100vh-3.5rem)] overflow-y-auto">
+    <div
+      className="md:hidden border-t border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 animate-fade-in max-h-[calc(100vh-3.5rem)] overflow-y-auto"
+      role="region"
+      aria-label="Mobile navigation menu"
+    >
       <div className="px-4 py-3">
+        {/* Offline banner */}
+        {!isOnline && (
+          <div
+            className="mb-3 p-3 rounded-lg bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
+              text-crisis-700 dark:text-crisis-300 text-sm"
+            role="alert"
+          >
+            <p className="font-semibold mb-1">You&apos;re offline</p>
+            <p className="text-xs opacity-90">Screening tools still work without internet.</p>
+          </div>
+        )}
+
         {/* Search */}
         <div className="relative mb-3">
-          <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <svg
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
           </svg>
           <input
-            type="text"
+            type="search"
             placeholder="Search tools..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-sm text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600
+              bg-sand-50 dark:bg-night-900 text-sm text-neutral-800 dark:text-neutral-200
+              placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
           />
         </div>
 
@@ -428,13 +585,37 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
 
         {/* Static nav links */}
         <div className="border-t border-sand-200 dark:border-neutral-700 mt-3 pt-3 space-y-0.5">
-          <Link href="/blog" onClick={onClose} className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors">
+          <Link
+            href="/blog"
+            onClick={onClose}
+            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+              text-neutral-700 dark:text-neutral-200
+              hover:bg-sage-50 dark:hover:bg-sage-950/20
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+              transition-colors"
+          >
             Blog &amp; Guides
           </Link>
-          <Link href="/about" onClick={onClose} className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors">
+          <Link
+            href="/about"
+            onClick={onClose}
+            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+              text-neutral-700 dark:text-neutral-200
+              hover:bg-sage-50 dark:hover:bg-sage-950/20
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+              transition-colors"
+          >
             About
           </Link>
-          <Link href="/crisis-resources" onClick={onClose} className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-crisis-600 dark:text-crisis-400 hover:bg-crisis-50 dark:hover:bg-crisis-950/30 transition-colors">
+          <Link
+            href="/crisis-resources"
+            onClick={onClose}
+            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+              text-crisis-600 dark:text-crisis-400
+              hover:bg-crisis-50 dark:hover:bg-crisis-950/30
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crisis-600
+              transition-colors"
+          >
             Crisis Help
           </Link>
         </div>

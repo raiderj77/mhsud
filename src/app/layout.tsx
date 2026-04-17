@@ -7,6 +7,9 @@ import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { SwUpdateNotification } from "@/components/SwUpdateNotification";
+import { OfflineIndicator } from "@/components/OfflineIndicator";
+import { AppInstallPrompt } from "@/components/AppInstallPrompt";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 const dmSans = DM_Sans({
@@ -25,6 +28,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   ...createMetadata({ path: "/" }),
+  manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
     apple: "/logo.png",
@@ -185,6 +189,26 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
+
+        {/* PWA Service Worker Registration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/service-worker.js').then(
+                    function(registration) {
+                      console.log('Service Worker registered successfully:', registration);
+                    },
+                    function(err) {
+                      console.log('Service Worker registration failed:', err);
+                    }
+                  );
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <ThemeProvider>
@@ -208,7 +232,10 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
+          <OfflineIndicator />
           <CrisisBanner />
+          <SwUpdateNotification />
+          <AppInstallPrompt />
           <Navbar />
           <main id="main-content" className="flex-1">
             {children}
