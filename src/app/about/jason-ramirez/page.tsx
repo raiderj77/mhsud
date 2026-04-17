@@ -20,8 +20,8 @@ function personJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Jason Ramirez, CADC-II",
-    jobTitle: "Certified Drug and Alcohol Counselor",
+    name: "Jason Ramirez",
+    jobTitle: "CADC-II Certified Drug and Alcohol Counselor",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Professional Certification",
@@ -31,8 +31,14 @@ function personJsonLd() {
     url: `${SITE_URL}/about/jason-ramirez`,
     worksFor: {
       "@type": "Organization",
-      name: SITE_NAME,
+      name: `${SITE_NAME} / Your Friendly Developer LLC`,
       url: SITE_URL,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Prunedale",
+      addressRegion: "CA",
+      addressCountry: "US",
     },
     description:
       "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance use and mental health counseling. Clinical reviewer for MindCheck Tools.",

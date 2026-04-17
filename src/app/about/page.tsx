@@ -1,18 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { SITE_AUTHOR } from "@/config/author";
 
 export const metadata: Metadata = createMetadata({
   path: "/about",
-  title: "About Us — Our Mission & Approach",
+  title: "About — Your Friendly Developer",
   description:
-    "MindCheck Tools provides free, private, evidence-based mental health self-checks. Learn about our mission, how our tools work, and why privacy and clinical accuracy matter to us.",
+    "The real story behind MindCheck Tools. Built by Jason Ramirez, a self-taught developer and CADC-II counselor from Prunedale, California.",
 });
+
+function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Jason Ramirez",
+    jobTitle: "CADC-II Certified Drug and Alcohol Counselor",
+    worksFor: {
+      "@type": "Organization",
+      name: "MindCheck Tools / Your Friendly Developer LLC",
+      url: SITE_URL,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Prunedale",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
+    url: `${SITE_URL}/about`,
+  };
+}
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -28,158 +52,116 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            About MindCheck Tools
+            About Your Friendly Developer
           </h1>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-2xl">
-            Free, private mental health self-checks — built with clinical care and radical transparency.
-          </p>
         </header>
 
         <div className="prose-mh space-y-8">
-          {/* Mission */}
           <section>
-            <h2>Why we built this</h2>
+            <p>Hi. I&apos;m Jason Ramirez. This is why I built this.</p>
             <p>
-              Millions of people search for mental health and substance use screening tools every month. What they typically find are outdated PDFs, cluttered quiz sites harvesting email addresses, or tools buried behind institutional logins.
+              I&apos;m not going to pretend this started with a vision board or a business plan. It started in a
+              storage shed in Salinas in 2013, when I was thirty-seven years old with nothing to my name and nowhere
+              to be.
             </p>
             <p>
-              We believe that the first step toward getting help — honestly reflecting on how you&apos;re feeling — should not require creating an account, handing over personal data, or wading through ads placed next to crisis hotline numbers.
+              I&apos;d been homeless for two years. Living out of my truck, sleeping in a shed behind my son&apos;s
+              grandmother&apos;s house. The last two years of my drinking and using looked like that. On September
+              27th, 2013, I got sober. Got a bed in a treatment facility. That&apos;s where my life actually started.
             </p>
             <p>
-              MindCheck Tools was created to offer a better experience: validated screening instruments presented clearly, with strong disclaimers, clinical context, and absolute privacy. Every answer you give stays in your browser. Period.
+              What nobody tells you about early recovery is how broke it is. Not just financially broke, though that
+              too. Broke in every way. No credit. No savings. No plan. No idea what retirement even meant for someone
+              like me. I was going to work until I died. That was the whole plan.
+            </p>
+            <p>Then I got my first laptop.</p>
+            <p>
+              I&apos;d been working at the treatment center where I got sober. Went from client to overnight staff when
+              my old counselor, who had become the director, offered me the job. He saw something in me I couldn&apos;t
+              see yet. I walked through that door feeling like a complete fraud. I walked through it anyway.
+            </p>
+            <p>
+              On my days off I started trying to figure out how to make money online. I tried probably a hundred
+              different things over the next thirteen years. None of them worked. Not because the ideas were bad,
+              because I&apos;m an addict, and addicts chase shiny objects. I&apos;d start something, get excited about
+              something else, abandon the first thing, chase the new thing. Repeat. For over a decade.
+            </p>
+            <p>
+              What finally changed it wasn&apos;t willpower. It was everything I&apos;d learned in recovery, and in
+              the mental health field working with clients, and fixing my own credit from scratch without anyone&apos;s
+              help, and figuring out the tax system after years of not filing, and slowly, painfully, teaching myself
+              SEO, then content strategy, then AI and LLM optimization, then UI design that actual humans enjoy using.
+            </p>
+            <p>
+              Thirteen years of self-education. Every skill on these sites I learned the hard way because I had to.
+            </p>
+            <p>
+              I built these tools because people like me needed them and couldn&apos;t afford them. People who are
+              starting over. People who are broke and scared and trying to figure out a system that was never explained
+              to them. People who need real information without the paywall, without the condescension, without the
+              assumption that they already know what they&apos;re doing.
+            </p>
+            <p>
+              I still work a full-time job. I&apos;m pursuing my Bachelor of Social Work with plans for my MSW. I take
+              photos. And when I get home or get done with school work, I come here. This is the other thing that turns
+              me on and settles me down at the same time. There&apos;s something about building something useful that
+              hits different when you spent years building nothing.
+            </p>
+            <p>
+              Your Friendly Developer is my LLC. I am the developer. This is my work.
+            </p>
+            <p>
+              If you&apos;re looking for the guy behind these sites, it&apos;s me. A CADC-II counselor, a self-taught
+              web builder, a recovering addict with over twelve years of sobriety, a guy who fixed his own credit and
+              figured out his own taxes and is still figuring out everything else one day at a time.
+            </p>
+            <p>I&apos;m not a corporation. I&apos;m not a content farm. I&apos;m one person who lived a lot of the things these tools are about.</p>
+            <p>That&apos;s why I built them.</p>
+          </section>
+
+          <section>
+            <h2>About MindCheck Tools</h2>
+            <p>
+              I spent years working in addiction counseling and mental health — first as a client, then as a certified
+              counselor. I hold my CADC-II credential and have worked with clients in inpatient treatment, outpatient
+              programs, and community mental health settings. I know what it feels like to sit across from someone in
+              the worst moment of their life. I know what it feels like to be that person.
+            </p>
+            <p>
+              I built MindCheck Tools because free, private, clinically-grounded mental health screening
+              shouldn&apos;t require an insurance card or a $200 copay to access. Every tool here is reviewed for
+              clinical accuracy. Every page has crisis resources. Every result comes with a reminder that this is a
+              starting point, not a diagnosis.
+            </p>
+            <p>
+              If you&apos;re struggling right now: <strong>988</strong> (call or text). Crisis Text Line: text{" "}
+              <strong>HOME to 741741</strong>. SAMHSA: <strong>1-800-662-4357</strong>. You don&apos;t have to figure
+              it out alone.
             </p>
           </section>
 
-          {/* Approach */}
           <section>
-            <h2>Our approach</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose my-6">
-              {[
-                {
-                  title: "Evidence-based tools",
-                  text: "Our core screeners — the PHQ-9, GAD-7, AUDIT, and AUDIT-C — are validated instruments used by clinicians worldwide. They are in the public domain or free to use without licensing fees.",
-                },
-                {
-                  title: "Privacy by architecture",
-                  text: "All scoring runs in client-side JavaScript. There is no server-side processing of your answers, no database, and no way for us to access your responses. This is a design choice, not just a policy.",
-                },
-                {
-                  title: "Education, not diagnosis",
-                  text: "Every tool includes prominent disclaimers, explains what scores can and cannot tell you, and encourages professional follow-up. We never use diagnostic labels in our results.",
-                },
-                {
-                  title: "Responsible advertising",
-                  text: "We keep ad density low and never place ads near crisis resources, emergency text, or acknowledgment checkboxes. Sustainability matters, but not at the cost of user trust.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="card p-5">
-                  <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2 text-base">{item.title}</h3>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed m-0">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Who reviews our content */}
-          <section>
-            <h2>Who reviews our content</h2>
-            <p>
-              All screening tools and educational content on MindCheck Tools are reviewed by{" "}
-              <strong>{SITE_AUTHOR.name}</strong>, a {SITE_AUTHOR.credentialFull} with{" "}
-              {SITE_AUTHOR.experience} in behavioral health, substance use treatment,
-              and clinical screening.
-            </p>
-            <p>
-              {SITE_AUTHOR.name} ensures that every tool uses the correct validated instrument
-              wording, that scoring algorithms match published clinical guidelines, and that
-              result interpretations include appropriate clinical context and limitations.
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              For clinical credentials and reviewed tools, see{" "}
+              <Link
+                href="/about/jason-ramirez"
+                className="text-sage-600 dark:text-sage-400 underline underline-offset-2 hover:text-sage-700 dark:hover:text-sage-300"
+              >
+                Jason Ramirez, CADC-II →
+              </Link>
             </p>
           </section>
 
-          {/* What we are not */}
           <section>
-            <h2>What we are not</h2>
-            <p>
-              MindCheck Tools is <strong>not a healthcare provider</strong>, not a crisis service, and not a substitute for professional evaluation or treatment. Our tools are screening instruments — they help you reflect on symptoms and decide whether to seek professional help. They do not diagnose conditions, prescribe treatments, or provide clinical advice.
-            </p>
-            <p>
-              If you are in crisis or immediate danger, please contact your local emergency number, call or text <strong>988</strong> (US Suicide &amp; Crisis Lifeline), or visit <strong>findahelpline.com</strong> for international resources.
-            </p>
-          </section>
-
-          {/* Tools */}
-          <section>
-            <h2>Our tools</h2>
-            <div className="not-prose space-y-3 my-6">
-              {[
-                {
-                  name: "PHQ-9 Depression Self-Check",
-                  href: "/phq-9-depression-test",
-                  detail: "9 questions · Scores 0–27 · Developed by Drs. Spitzer, Williams & Kroenke · Public domain",
-                },
-                {
-                  name: "GAD-7 Anxiety Self-Check",
-                  href: "/gad-7-anxiety-test",
-                  detail: "7 questions · Scores 0–21 · Developed by Drs. Spitzer, Kroenke, Williams & Löwe · Free to use",
-                },
-                {
-                  name: "AUDIT Alcohol Use Screen",
-                  href: "/audit-alcohol-test",
-                  detail: "10 questions · Scores 0–40 · Developed by the World Health Organization · Public domain",
-                },
-                {
-                  name: "AUDIT-C Quick Alcohol Screen",
-                  href: "/audit-c-alcohol-screen",
-                  detail: "3 questions · Scores 0–12 · Derived from the WHO AUDIT · Public domain",
-                },
-              ].map((tool) => (
-                <Link key={tool.href} href={tool.href} className="card p-4 block hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                  <p className="font-semibold text-sage-600 dark:text-sage-400 mb-1">{tool.name}</p>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.detail}</p>
-                </Link>
-              ))}
-            </div>
-            <p>
-              Additional tools — including original, non-proprietary self-reflection instruments for work stress, sleep, and substance use — are in development.
-            </p>
-          </section>
-
-          {/* For Clinicians */}
-          <section>
-            <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose">
-              <h2 className="font-serif text-xl font-semibold text-sage-700 dark:text-sage-400 mb-3">For clinicians and health educators</h2>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-                You are welcome to share MindCheck Tools with clients, patients, and students. Our tools use the official wording of public-domain instruments with proper attribution, include mandatory disclaimer acknowledgments, and process all data client-side.
-              </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-                We are not affiliated with the original instrument developers, and our tools are not intended to replace clinical administration of these screeners. They are designed as a low-barrier entry point for people who are not yet in care or who want to reflect privately before a conversation with a provider.
-              </p>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                Questions or feedback? Reach us at <strong>hello@mindchecktools.com</strong>.
+            <div className="card p-6 sm:p-8 not-prose border-neutral-200 dark:border-neutral-700">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Jason Ramirez
+                <br />
+                Your Friendly Developer LLC
+                <br />
+                Prunedale, California
               </p>
             </div>
-          </section>
-
-          {/* Open Source */}
-          <section>
-            <h2>Transparency</h2>
-            <p>
-              We believe in building trust through transparency. If you want to verify that our tools process data only in your browser, you are welcome to inspect the source code — all scoring logic runs in client-side JavaScript that is visible in your browser&apos;s developer tools. Our codebase is open source and available on GitHub.
-            </p>
-          </section>
-
-          {/* Contact */}
-          <section>
-            <h2>Contact us</h2>
-            <p>
-              For general inquiries: <strong>hello@mindchecktools.com</strong>
-            </p>
-            <p>
-              For privacy concerns: <strong>privacy@mindchecktools.com</strong>
-            </p>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
-              Please note: we cannot provide mental health advice, clinical recommendations, or crisis support via email. If you need immediate help, please use the crisis resources listed on our tools or call your local emergency number.
-            </p>
           </section>
         </div>
       </div>
