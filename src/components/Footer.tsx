@@ -297,15 +297,19 @@ export function Footer() {
             More Free Tools:{" "}
             <a href="https://fibertools.app" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FiberTools</a>
             {" · "}
-            <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Creator Revenue Calculator</a>
-            {" · "}
             <a href="https://flipmycase.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">FlipMyCase</a>
+            {" · "}
+            <a href="https://creatorrevenuecalculator.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Creator Revenue Calculator</a>
             {" · "}
             <a href="https://contractextract.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">ContractExtract</a>
             {" · "}
             <a href="https://medicalbillreader.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Medical Bill Reader</a>
             {" · "}
+            <a href="https://taxbreaktools.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">TaxBreakTools</a>
+            {" · "}
             <a href="https://524tracker.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">524Tracker</a>
+            {" · "}
+            <a href="https://aibusinessalternative.com" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">AI Business Alternative</a>
           </p>
         </div>
       </div>
