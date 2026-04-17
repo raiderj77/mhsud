@@ -48,7 +48,7 @@ export default function AttachmentStylePage() {
               description: "A free online implementation of the Experiences in Close Relationships - Revised (ECR-R), a validated 36-item attachment style questionnaire by Fraley, Waller, and Brennan (2000).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-16",
+              dateModified: "2026-04-14",
             })
           ),
         }}
@@ -93,6 +93,8 @@ export default function AttachmentStylePage() {
           lastUpdated="2026-03-20"
         />
       </div>
+      <p className="text-sm text-gray-500 mt-2 mb-0 text-center">Last reviewed: April 2026</p>
+
       <section className="sr-only">
         <h2>What Is the ECR-R Attachment Style Quiz?</h2>
         <h2>How Is the ECR-R Scored?</h2>

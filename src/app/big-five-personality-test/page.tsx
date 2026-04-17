@@ -48,7 +48,7 @@ export default function BigFivePersonalityTestPage() {
               description: "A free online implementation of the IPIP-NEO-50, a validated 50-item Big Five personality assessment based on Goldberg (1999) and Johnson (2014).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-16",
+              dateModified: "2026-04-14",
             })
           ),
         }}
@@ -93,6 +93,8 @@ export default function BigFivePersonalityTestPage() {
           lastUpdated="2026-03-20"
         />
       </div>
+      <p className="text-sm text-gray-500 mt-2 mb-0 text-center">Last reviewed: April 2026</p>
+
       <section className="sr-only">
         <h2>What Is the Big Five Personality Test?</h2>
         <h2>How Is the Big Five Test Scored?</h2>
