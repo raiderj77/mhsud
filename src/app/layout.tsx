@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { headers } from "next/headers";
 import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -77,6 +78,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Read the Sec-GPC header server-side. If present, skip loading Cookiebot entirely
+  // so the consent banner never renders — eliminating the flash-then-dismiss race.
+  // Client-side navigator.globalPrivacyControl (no header) still handled by gpc-auto-decline.
+  const gpcHeader = headers().get('sec-gpc') === '1';
+
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
@@ -102,47 +108,49 @@ export default function RootLayout({
         />
 
         {/*
-          Cookiebot consent management.
-          data-blockingmode="auto" handles script blocking via Cookiebot's own mechanism,
-          so afterInteractive is safe — Cookiebot still blocks other scripts until consent.
-          data-georegions handles EU/GB region-specific consent requirements.
+          Cookiebot consent management — skipped entirely when Sec-GPC header is present.
+          Skipping avoids the flash-then-dismiss race on GPC-enabled browsers: if Cookiebot
+          never loads, its banner never renders. The client-side gpc-auto-decline script
+          below handles the rarer case where navigator.globalPrivacyControl is set without
+          the request header (e.g. older GPC extensions that don't send Sec-GPC).
+          data-blockingmode="auto" handles script blocking; data-georegions gates EU/GB consent.
         */}
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-          data-blockingmode="auto"
-          data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
-          strategy="afterInteractive"
-        />
+        {!gpcHeader && (
+          <Script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+            data-blockingmode="auto"
+            data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
+            strategy="afterInteractive"
+          />
+        )}
 
         {/*
-          GPC (Global Privacy Control) auto-decline.
-          MODPA (effective April 1 2026) requires honoring the Sec-GPC header and
-          navigator.globalPrivacyControl browser signal as a universal opt-out.
-          When GPC is detected (via server-set empire_gpc cookie OR browser property),
-          we call Cookiebot.decline() once Cookiebot has loaded, suppressing all
-          non-essential cookies regardless of any prior consent state.
-          CookiebotOnLoad fires after Cookiebot has initialized and resolved consent.
+          GPC client-side fallback: covers navigator.globalPrivacyControl when no Sec-GPC
+          header was sent (e.g. older browser extensions). Only runs when Cookiebot loaded
+          (i.e. gpcHeader was false). CookiebotOnLoad fires after Cookiebot initializes.
         */}
-        <Script
-          id="gpc-auto-decline"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.addEventListener('CookiebotOnLoad', function () {
-                try {
-                  var gpcActive =
-                    !!navigator.globalPrivacyControl ||
-                    document.cookie.indexOf('empire_gpc=1') !== -1;
-                  if (gpcActive && window.Cookiebot) {
-                    window.Cookiebot.decline();
-                  }
-                } catch (e) {}
-              });
-            `,
-          }}
-        />
+        {!gpcHeader && (
+          <Script
+            id="gpc-auto-decline"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.addEventListener('CookiebotOnLoad', function () {
+                  try {
+                    var gpcActive =
+                      !!navigator.globalPrivacyControl ||
+                      document.cookie.indexOf('empire_gpc=1') !== -1;
+                    if (gpcActive && window.Cookiebot) {
+                      window.Cookiebot.decline();
+                    }
+                  } catch (e) {}
+                });
+              `,
+            }}
+          />
+        )}
 
         {/*
           FIX: gtag initialization with Consent Mode v2.
