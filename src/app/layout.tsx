@@ -117,6 +117,34 @@ export default function RootLayout({
         />
 
         {/*
+          GPC (Global Privacy Control) auto-decline.
+          MODPA (effective April 1 2026) requires honoring the Sec-GPC header and
+          navigator.globalPrivacyControl browser signal as a universal opt-out.
+          When GPC is detected (via server-set empire_gpc cookie OR browser property),
+          we call Cookiebot.decline() once Cookiebot has loaded, suppressing all
+          non-essential cookies regardless of any prior consent state.
+          CookiebotOnLoad fires after Cookiebot has initialized and resolved consent.
+        */}
+        <Script
+          id="gpc-auto-decline"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('CookiebotOnLoad', function () {
+                try {
+                  var gpcActive =
+                    !!navigator.globalPrivacyControl ||
+                    document.cookie.indexOf('empire_gpc=1') !== -1;
+                  if (gpcActive && window.Cookiebot) {
+                    window.Cookiebot.decline();
+                  }
+                } catch (e) {}
+              });
+            `,
+          }}
+        />
+
+        {/*
           FIX: gtag initialization with Consent Mode v2.
           The gtag/js script alone does NOT initialize tracking — the inline init is required.
           Consent defaults are set to 'denied' until Cookiebot grants permission (GDPR/CCPA compliant).

@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last Reviewed: March 2026
+            Effective Date: January 1, 2026 | Last Reviewed: April 2026
           </p>
         </header>
 
@@ -188,13 +188,31 @@ export default function PrivacyPage() {
               Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data — all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
             </p>
 
-            <h3>Maryland Online Data Privacy Act (MODPA — effective October 2025)</h3>
+            <h3>Maryland Online Data Privacy Act (MODPA — enforcement effective April 1, 2026)</h3>
             <p>
-              Maryland&apos;s MODPA prohibits the sale of health data and requires heightened protections for sensitive data. MindCheck Tools does not sell any personal data, including health data. Screening results are never collected, stored, or shared.
+              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary — not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
             </p>
-
             <p>
-              To exercise any of these rights, contact us at privacy@mindchecktools.com. We will respond within 30 days (GDPR). For California privacy rights, see the dedicated section below.
+              <strong>Your rights under MODPA:</strong>
+            </p>
+            <ul>
+              <li><strong>Right to access</strong> the personal data we hold about you</li>
+              <li><strong>Right to correct</strong> inaccurate personal data</li>
+              <li><strong>Right to delete</strong> your personal data</li>
+              <li><strong>Right to opt out</strong> of targeted advertising and profiling</li>
+              <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
+            </ul>
+            <p>
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection — you do not need to interact with a consent banner.
+            </p>
+            <p>
+              <strong>We do not sell sensitive personal data under any circumstance.</strong> Sensitive data under MODPA includes health information, precise geolocation, racial or ethnic origin, religious beliefs, sexual orientation, citizenship status, genetic or biometric data, and personal data of known minors under 18. No consent can override this prohibition.
+            </p>
+            <p>
+              To exercise your MODPA rights, contact us at <strong>privacy@mindchecktools.com</strong>. We respond within 45 days.
+            </p>
+            <p>
+              To exercise any GDPR rights, contact us at privacy@mindchecktools.com. We will respond within 30 days. For California privacy rights, see the dedicated section below.
             </p>
           </section>
 
@@ -297,7 +315,7 @@ export default function PrivacyPage() {
                 <tr><td>Oregon</td><td>OCPA</td><td>Jul 2024</td><td>Access, delete, correct, opt-out, portability</td></tr>
                 <tr><td>Tennessee</td><td>TIPA</td><td>Jul 2025</td><td>Access, delete, correct, opt-out</td></tr>
                 <tr><td>Minnesota</td><td>MNDPA</td><td>Jul 2025</td><td>Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td>Maryland</td><td>MODPA</td><td>Oct 2025</td><td>Access, delete, correct, opt-out; bans sale of sensitive data</td></tr>
+                <tr><td>Maryland</td><td>MODPA</td><td>Apr 2026</td><td>Access, delete, correct, opt-out, portability; bans sale of sensitive data; honors GPC</td></tr>
                 <tr><td>Indiana</td><td>IDCPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
                 <tr><td>Kentucky</td><td>KYCPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
                 <tr><td>Rhode Island</td><td>RIDPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
