@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { GAD7Client } from "./GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/gad-7-anxiety-test`;
@@ -99,6 +100,9 @@ export default function GAD7Page() {
           bottomLine="Your score indicates anxiety severity on a recognized clinical scale — always discuss results with a mental health professional."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 <GAD7Client faqData={FAQ_DATA} />
 

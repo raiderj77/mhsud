@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { GAD7Client } from "../gad-7-anxiety-test/GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/anxiety-test-for-men`;
@@ -138,6 +139,9 @@ export default function AnxietyTestForMenPage() {
           bottomLine="Anxiety in men often shows up as anger, restlessness, or physical symptoms rather than worry. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
       <section className="sr-only">
         <h2>What Is Anxiety Screening for Men?</h2>

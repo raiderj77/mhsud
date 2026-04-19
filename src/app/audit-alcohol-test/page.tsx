@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { AUDITClient } from "./AUDITClient";
 
 const TOOL_URL = `${SITE_URL}/audit-alcohol-test`;
@@ -59,6 +60,9 @@ export default function AUDITPage() {
           bottomLine="AUDIT scores help identify drinking patterns on a standardized scale — results are informational and not a clinical diagnosis."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 <AUDITClient faqData={FAQ_DATA} />
 

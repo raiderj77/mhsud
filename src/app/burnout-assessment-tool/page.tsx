@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "./BurnoutClient";
 
 const TOOL_URL = `${SITE_URL}/burnout-assessment-tool`;
@@ -91,6 +92,9 @@ export default function BurnoutAssessmentPage() {
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening that measures exhaustion, cynicism, and reduced professional efficacy across your work life." who="Working professionals who feel chronically depleted and want to assess whether they are experiencing clinical burnout." bottomLine="Burnout is a recognized occupational phenomenon — high scores indicate it is time to address workload and recovery. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+      </div>
       <section className="sr-only">
         <h2>What Is the Burnout Assessment Tool?</h2>
         <h2>How Is the Burnout Assessment Scored?</h2>

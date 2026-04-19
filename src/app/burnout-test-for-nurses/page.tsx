@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 
 const TOOL_URL = `${SITE_URL}/burnout-test-for-nurses`;
@@ -297,6 +298,9 @@ export default function BurnoutTestForNursesPage() {
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening specifically designed for nurses, addressing the unique stressors of bedside and clinical nursing." who="Nurses at any level who feel emotionally or physically exhausted and want to assess their burnout risk." bottomLine="Nursing burnout is widespread and not a personal failure — your results can guide a conversation with your supervisor or EAP. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+      </div>
       <section className="sr-only">
         <h2>What Is the Nurse Burnout Screening?</h2>
         <h2>How Is the Nurse Burnout Test Scored?</h2>

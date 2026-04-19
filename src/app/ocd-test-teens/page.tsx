@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { OCIRClient } from "../oci-r-ocd-screening/OCIRClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/ocd-test-teens`;
 
@@ -72,6 +73,9 @@ export default function OcdTestTeensPage() {
           bottomLine="Teen OCD often goes unrecognized because kids hide their rituals — early screening enables early treatment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
       <section className="sr-only">

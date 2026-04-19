@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/depression-test-for-new-moms`;
 
@@ -276,6 +277,9 @@ export default function DepressionTestForNewMomsPage() {
           bottomLine="Postpartum depression affects up to 1 in 5 mothers and is highly treatable — you are not failing as a parent. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
       <section className="sr-only">
