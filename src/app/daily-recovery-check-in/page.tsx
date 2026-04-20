@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { DailyCheckInClient } from "./DailyCheckInClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/daily-recovery-check-in`;
 
@@ -80,6 +81,9 @@ export default function DailyCheckInPage() {
           bottomLine="Daily check-ins help catch warning signs early — consistency matters more than perfection. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
       <section className="sr-only">

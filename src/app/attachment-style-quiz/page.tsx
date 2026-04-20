@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { AttachmentStyleClient } from "./AttachmentStyleClient";
 
 const TOOL_URL = `${SITE_URL}/attachment-style-quiz`;
@@ -92,6 +93,9 @@ export default function AttachmentStylePage() {
           bottomLine="Attachment styles can shift with awareness and effort — understanding yours is the first step. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
       <p className="text-sm text-gray-500 mt-2 mb-0 text-center">Last reviewed: April 2026</p>
 

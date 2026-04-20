@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { DASS21Client } from "./DASS21Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
 
@@ -92,6 +93,9 @@ export default function DASS21Page() {
           bottomLine="The DASS-21 provides three separate scores — you may score differently on each subscale. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
 

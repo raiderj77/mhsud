@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/asrs-score-interpretation`;
 
@@ -63,6 +64,9 @@ export default function ASRSScoreInterpretationPage() {
           bottomLine="Your ASRS score helps identify whether ADHD evaluation is warranted — it is not a diagnosis by itself. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
 

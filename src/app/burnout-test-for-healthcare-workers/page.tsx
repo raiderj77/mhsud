@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 
 const TOOL_URL = `${SITE_URL}/burnout-test-for-healthcare-workers`;
@@ -216,6 +217,9 @@ export default function BurnoutTestForHealthcareWorkersPage() {
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening tailored for healthcare professionals with context specific to clinical care environments." who="Doctors, nurses, therapists, and other healthcare workers experiencing exhaustion, compassion fatigue, or detachment." bottomLine="Healthcare worker burnout affects patient care — addressing your wellbeing is not selfish, it is essential. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+      </div>
       <section className="sr-only">
         <h2>What Is Healthcare Worker Burnout Screening?</h2>
         <h2>How Is the Burnout Test Scored?</h2>

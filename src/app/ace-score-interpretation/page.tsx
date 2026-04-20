@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { ScoreInterpretationLayout } from "@/components/ScoreInterpretationLayout";
 
 const TOOL_URL = `${SITE_URL}/ace-score-interpretation`;
@@ -64,6 +65,9 @@ export default function ACEScoreInterpretationPage() {
           bottomLine="A high ACE score does not predict your future — resilience and protective factors matter. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
       <ScoreInterpretationLayout
         testName="ACE"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { ASRSClient } from "../asrs-adhd-screening/ASRSClient";
 
 const TOOL_URL = `${SITE_URL}/adhd-test-women`;
@@ -247,6 +248,9 @@ export default function AdhdTestWomenPage() {
           bottomLine="ADHD in women is frequently missed because symptoms present differently — discuss results with your provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
       <section className="sr-only">
         <h2>What Is ADHD Screening for Women?</h2>

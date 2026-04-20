@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 import { BRSClient } from "./BRSClient";
 
 const TOOL_URL = `${SITE_URL}/brief-resilience-scale`;
@@ -100,6 +101,9 @@ export default function BRSPage() {
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="The Brief Resilience Scale (BRS), a 6-item validated tool that measures your ability to bounce back from stress and adversity." who="Anyone who wants to assess their resilience level and understand how well they recover from difficult experiences." bottomLine="Resilience is a skill that can be strengthened — your score reflects current capacity, not a fixed trait. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+      </div>
       <section className="sr-only">
         <h2>What Is the Brief Resilience Scale?</h2>
         <h2>How Is the Brief Resilience Scale Scored?</h2>
