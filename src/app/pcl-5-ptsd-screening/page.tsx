@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "./PCL5Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/pcl-5-ptsd-screening`;
 
@@ -84,10 +85,9 @@ export default function PCL5Page() {
           ),
         }}
       />
-
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+      </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="The PCL-5, a comprehensive 20-item PTSD screening that maps directly to DSM-5 diagnostic criteria."
