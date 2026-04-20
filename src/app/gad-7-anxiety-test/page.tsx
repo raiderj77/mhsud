@@ -90,9 +90,9 @@ export default function GAD7Page() {
         <h2>How Is the GAD-7 Scored?</h2>
         <h2>What Do My GAD-7 Results Mean?</h2>
       </section>
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+      </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="The GAD-7 is a clinically validated 7-question tool that measures generalized anxiety disorder severity."
