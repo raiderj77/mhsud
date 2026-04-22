@@ -103,7 +103,7 @@ export function AppInstallPrompt() {
 
   return (
     <div
-      className="fixed inset-x-0 top-0 z-40 animate-fade-in pt-safe md:bottom-auto md:pt-4 md:px-4"
+      className="fixed inset-x-0 bottom-0 z-50 animate-fade-in pb-safe px-4 py-3 md:bottom-4 md:left-auto md:right-4 md:max-w-md md:mx-0 md:px-0 md:py-0"
       role="region"
       aria-label="App installation prompt"
     >
