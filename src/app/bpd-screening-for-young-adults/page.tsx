@@ -61,7 +61,7 @@ export default function BpdScreeningForYoungAdultsPage() {
               description: "A free, private borderline personality disorder screening tool for young adults using the clinically validated MSI-BPD questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

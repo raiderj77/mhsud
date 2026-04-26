@@ -71,7 +71,7 @@ export default function CaregiverBurnoutAssessmentPage() {
                 "A free, private burnout assessment for family caregivers. Check for emotional exhaustion, compassion fatigue, and caregiver stress.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

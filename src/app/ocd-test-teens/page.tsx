@@ -29,7 +29,7 @@ const FAQ_DATA = [
 export default function OcdTestTeensPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "OCD Test for Teens — OCI-R Screening", description: "A free, private OCD screening tool for teenagers using the OCI-R.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "OCD Test for Teens — OCI-R Screening", description: "A free, private OCD screening tool for teenagers using the OCI-R.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "OCI-R OCD Screening", url: `${SITE_URL}/oci-r-ocd-screening` }, { name: "OCD Test for Teens", url: TOOL_URL }])) }} />
 

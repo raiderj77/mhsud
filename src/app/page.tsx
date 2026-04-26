@@ -625,13 +625,13 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: "2026-04-07" }),
+          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: new Date().toISOString().substring(0,10) }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: "2026-04-07" }),
+          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: new Date().toISOString().substring(0,10) }),
         }}
       />
       <script
@@ -649,7 +649,7 @@ export default function HomePage() {
               price: "0",
               priceCurrency: "USD",
             },
-            dateModified: "2026-04-07",
+            dateModified: new Date().toISOString().substring(0,10),
             description:
               "Free, private mental health screening tools — PHQ-9, GAD-7, AUDIT and more. All scoring happens in your browser. No accounts, no data storage.",
             provider: {

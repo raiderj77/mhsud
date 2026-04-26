@@ -75,7 +75,7 @@ export default function PTSDTestFirstRespondersPage() {
               description: "A free, private PTSD screening tool for police officers, firefighters, EMTs, and dispatchers using the clinically validated PCL-5.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

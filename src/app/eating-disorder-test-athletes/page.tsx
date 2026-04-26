@@ -75,7 +75,7 @@ export default function EatingDisorderTestAthletesPage() {
               description: "A free, private eating disorder screening tool for athletes using the clinically validated SCOFF questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

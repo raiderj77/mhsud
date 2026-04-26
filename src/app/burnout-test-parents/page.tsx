@@ -74,7 +74,7 @@ export default function BurnoutTestParentsPage() {
               description: "A free, private parental burnout assessment tool evaluating exhaustion, detachment, and overwhelm in parents.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

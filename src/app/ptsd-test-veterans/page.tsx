@@ -73,7 +73,7 @@ export default function PtsdTestVeteransPage() {
               description: "A free, private PTSD screening tool for veterans using the clinically validated PCL-5 questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

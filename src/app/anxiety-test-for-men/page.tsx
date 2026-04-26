@@ -63,7 +63,7 @@ const FAQ_DATA = [
 export default function AnxietyTestForMenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Men — GAD-7 Screening", description: "A free, private anxiety screening tool for men using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Men — GAD-7 Screening", description: "A free, private anxiety screening tool for men using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "GAD-7 Anxiety Test", url: `${SITE_URL}/gad-7-anxiety-test` }, { name: "Anxiety Test for Men", url: TOOL_URL }])) }} />
 

@@ -74,7 +74,7 @@ export default function LonelinessTestSeniorsPage() {
               description: "A free, private loneliness assessment tool for older adults using the UCLA Loneliness Scale.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

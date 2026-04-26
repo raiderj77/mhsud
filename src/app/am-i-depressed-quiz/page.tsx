@@ -76,7 +76,7 @@ export default function AmIDepressedQuizPage() {
                 "A free, private depression quiz using the clinically validated PHQ-9. 9 questions, instant results.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

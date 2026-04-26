@@ -63,7 +63,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               description: "A free, private alcohol screening tool for college students using the WHO's clinically validated AUDIT questionnaire. Assess drinking patterns honestly.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-01",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

@@ -49,7 +49,7 @@ export default function AttachmentStylePage() {
               description: "A free online implementation of the Experiences in Close Relationships - Revised (ECR-R), a validated 36-item attachment style questionnaire by Fraley, Waller, and Brennan (2000).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-04-14",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

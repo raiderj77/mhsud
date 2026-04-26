@@ -226,6 +226,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
 
+        {/* Person JSON-LD — YMYL credentialed reviewer (mindchecktools only) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Jason Ramirez, CADC-II",
+            "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)",
+            "worksFor": { "@type": "Organization", "name": "MindCheck Tools" },
+            "url": "https://mindchecktools.com/about/jason-ramirez",
+            "sameAs": [],
+          }) }}
+        />
+
         {/* PWA Service Worker Registration */}
         <script
           dangerouslySetInnerHTML={{

@@ -78,7 +78,7 @@ export default function AmIAnAlcoholicQuizPage() {
                 "A free, private alcohol quiz using the WHO AUDIT — the gold-standard alcohol screening tool. 10 questions, honest results.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

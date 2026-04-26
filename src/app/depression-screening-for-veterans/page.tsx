@@ -63,7 +63,7 @@ export default function DepressionScreeningForVeteransPage() {
               description: "A free, private depression screening tool for veterans using the clinically validated PHQ-9 questionnaire. Includes VA resources and veteran-specific mental health information.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-11",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

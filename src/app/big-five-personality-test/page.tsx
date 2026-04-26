@@ -49,7 +49,7 @@ export default function BigFivePersonalityTestPage() {
               description: "A free online implementation of the IPIP-NEO-50, a validated 50-item Big Five personality assessment based on Goldberg (1999) and Johnson (2014).",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-04-14",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

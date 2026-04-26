@@ -63,7 +63,7 @@ const FAQ_DATA = [
 export default function AdhdTestWomenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Women — ASRS Screening", description: "A free, private ADHD screening tool for women using the WHO Adult ADHD Self-Report Scale (ASRS).", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Women — ASRS Screening", description: "A free, private ADHD screening tool for women using the WHO Adult ADHD Self-Report Scale (ASRS).", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "ASRS ADHD Screening", url: `${SITE_URL}/asrs-adhd-screening` }, { name: "ADHD Test for Women", url: TOOL_URL }])) }} />
 

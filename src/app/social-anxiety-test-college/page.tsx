@@ -75,7 +75,7 @@ export default function SocialAnxietyTestCollegePage() {
               description: "A free, private social anxiety screening tool for college students using the clinically validated Social Phobia Inventory (SPIN).",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

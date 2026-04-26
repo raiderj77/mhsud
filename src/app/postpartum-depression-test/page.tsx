@@ -76,7 +76,7 @@ export default function PostpartumDepressionTestPage() {
                 "A free, private postpartum depression screening using the PHQ-9, validated for perinatal use.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

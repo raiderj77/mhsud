@@ -74,7 +74,7 @@ export default function DrugScreeningTeensPage() {
               description: "A free, private substance use screening tool for teens ages 12-21 using the clinically validated CRAFFT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

@@ -29,7 +29,7 @@ const FAQ_DATA = [
 export default function BurnoutTestForTeachersPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Burnout Test for Teachers — Self-Assessment", description: "A free, private burnout screening tool for teachers and educators.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-03-05" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Burnout Test for Teachers — Self-Assessment", description: "A free, private burnout screening tool for teachers and educators.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Burnout Assessment Tool", url: `${SITE_URL}/burnout-assessment-tool` }, { name: "Burnout Test for Teachers", url: TOOL_URL }])) }} />
 

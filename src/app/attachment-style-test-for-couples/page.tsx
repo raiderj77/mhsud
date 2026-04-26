@@ -61,7 +61,7 @@ export default function AttachmentStyleTestForCouplesPage() {
               description: "A free, private attachment style quiz for couples using the clinically validated ECR-R. Understand your relationship patterns, communication styles, and attachment compatibility.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

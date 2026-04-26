@@ -65,7 +65,7 @@ export default function BurnoutAssessmentPage() {
               description: "Free, clinically-informed burnout screening tool assessing emotional exhaustion, depersonalization, and reduced personal accomplishment. Immediate results with guidance.",
               url: TOOL_URL,
               datePublished: "2025-02-25",
-              dateModified: "2025-02-25",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

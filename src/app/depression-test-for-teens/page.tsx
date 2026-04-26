@@ -63,7 +63,7 @@ export default function DepressionTestForTeensPage() {
               description: "A free, private depression screening tool for teenagers using the clinically validated PHQ-9 questionnaire. Designed for adolescents ages 12 and older.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-01",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

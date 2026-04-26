@@ -61,7 +61,7 @@ export default function BpdTestForWomenPage() {
               description: "A free, private borderline personality disorder screening for women using the clinically validated MSI-BPD questionnaire. Includes information on how BPD presents uniquely in women.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

@@ -74,7 +74,7 @@ export default function StressTestCollegeStudentsPage() {
               description: "A free, private stress, anxiety, and depression screening tool for college students using the clinically validated DASS-21.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

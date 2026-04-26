@@ -48,7 +48,7 @@ export default function PHQ4Page() {
               description: "A free online implementation of the PHQ-4 Patient Health Questionnaire-4, the validated ultra-brief screening tool for anxiety and depression used in primary care worldwide.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

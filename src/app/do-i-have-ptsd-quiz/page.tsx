@@ -76,7 +76,7 @@ export default function DoIHavePTSDQuizPage() {
                 "A free, private PTSD quiz using the clinically validated PCL-5. 20 questions, instant results.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

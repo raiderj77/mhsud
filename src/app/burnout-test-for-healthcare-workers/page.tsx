@@ -74,7 +74,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
               description: "A free, private burnout screening tool for nurses, doctors, and healthcare staff assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

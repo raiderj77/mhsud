@@ -51,7 +51,7 @@ const FAQ_DATA = [
 export default function DepressionTestForMenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Men — PHQ-9 Screening", description: "A free, private depression screening tool for men using the clinically validated PHQ-9 questionnaire.", url: TOOL_URL, datePublished: "2026-03-08", dateModified: "2026-03-08" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Men — PHQ-9 Screening", description: "A free, private depression screening tool for men using the clinically validated PHQ-9 questionnaire.", url: TOOL_URL, datePublished: "2026-03-08", dateModified: new Date().toISOString().substring(0,10) })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "PHQ-9 Depression Test", url: `${SITE_URL}/phq-9-depression-test` }, { name: "Depression Test for Men", url: TOOL_URL }])) }} />
 

@@ -63,7 +63,7 @@ export default function BurnoutTestForNursesPage() {
               description: "A free, private burnout screening tool for nurses assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-11",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

@@ -75,7 +75,7 @@ export default function AlcoholScreeningMilitaryPage() {
               description: "A free, confidential alcohol screening tool for military service members and veterans using the clinically validated AUDIT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-11",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

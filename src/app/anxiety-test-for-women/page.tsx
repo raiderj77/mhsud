@@ -63,7 +63,7 @@ export default function AnxietyTestForWomenPage() {
               description: "A free, private anxiety screening tool for women using the clinically validated GAD-7 questionnaire. Includes information on hormonal and life-stage factors.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: "2026-03-11",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

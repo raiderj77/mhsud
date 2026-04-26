@@ -72,7 +72,7 @@ export default function CompassionFatigueTestPage() {
                 "A free, private compassion fatigue assessment for nurses, therapists, social workers, and caregivers.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

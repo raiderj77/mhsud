@@ -71,7 +71,7 @@ export default function GriefAssessmentPage() {
                 "A free, private grief assessment screening for complicated or prolonged grief using the PHQ-9.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-03-08",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}

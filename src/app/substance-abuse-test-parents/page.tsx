@@ -74,7 +74,7 @@ export default function SubstanceAbuseTestParentsPage() {
               description: "A free, private substance use screening tool for parents using the clinically validated CAGE-AID assessment.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-03-05",
+              dateModified: new Date().toISOString().substring(0,10),
             })
           ),
         }}
