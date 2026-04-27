@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -326,6 +327,7 @@ export function PHQ9Client({ faqData }: Props) {
                   <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
                     <strong>Important reminder:</strong> This score reflects your self-reported symptoms, not a clinical diagnosis. Many factors influence how you feel, and only a healthcare professional who knows your situation can properly interpret these results. This tool is for personal reflection and education only.
                   </p>
+                  <ResultDisclaimer />
                 </div>
               </div>
             </div>

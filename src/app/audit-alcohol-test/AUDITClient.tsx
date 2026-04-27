@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -336,6 +337,7 @@ export function AUDITClient({ faqData }: Props) {
                 <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
                   <strong>Important reminder:</strong> This score is not a diagnosis. It reflects your self-reported responses to a screening tool. Only a healthcare professional can properly assess alcohol-related concerns. This tool is for reflection and education only.
                 </p>
+                <ResultDisclaimer />
               </div>
             </div>
           </div>
