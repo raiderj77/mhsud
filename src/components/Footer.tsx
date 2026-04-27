@@ -116,6 +116,8 @@ const TARGETED_LINKS = [
 const INFO_LINKS = [
   { href: "/blog", label: "Blog & Guides" },
   { href: "/about", label: "About" },
+  { href: "/clinical-evidence", label: "Clinical Evidence" },
+  { href: "/methodology", label: "Methodology" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/cookies", label: "Cookie Policy" },
