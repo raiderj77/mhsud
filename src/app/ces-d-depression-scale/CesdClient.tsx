@@ -495,7 +495,7 @@ export function CesdClient({ faqData }: Props) {
         20 questions · ~5 minutes · Completely private · NIMH public domain instrument
       </p>
 
-      <AdSlot npa position="tool-top" />
+      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active mental-health questionnaire. */}
 
       {/* Progress — sticky */}
       <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">

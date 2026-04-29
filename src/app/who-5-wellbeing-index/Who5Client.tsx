@@ -207,7 +207,7 @@ export function Who5Client({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
+        <AdSlot npa position="results-top" />
 
         {/* PHQ-9 Suggestion */}
         {showPhq9Nudge && (
@@ -262,7 +262,7 @@ export function Who5Client({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot position="results-middle" />
+        <AdSlot npa position="results-middle" />
 
         {/* Score Guide */}
         <div className="mb-8">
@@ -469,7 +469,7 @@ export function Who5Client({ faqData }: Props) {
         5 questions · ~2 minutes · Completely private · WHO public domain instrument
       </p>
 
-      <AdSlot position="tool-top" />
+      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active wellbeing questionnaire. */}
 
       {/* Progress */}
       <div className="mb-6">

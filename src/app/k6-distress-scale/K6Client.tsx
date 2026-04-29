@@ -482,7 +482,7 @@ export function K6Client({ faqData }: Props) {
         6 questions · ~2 minutes · Completely private · Public domain instrument
       </p>
 
-      <AdSlot npa position="tool-top" />
+      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active distress questionnaire. */}
 
       {/* Stem */}
       <div className="mb-6 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">

@@ -536,7 +536,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           ~1 minute · Completely private · Public domain instrument
         </p>
 
-        <AdSlot npa position="tool-top" />
+        {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active PTSD screening. */}
 
         <div className="p-6 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl mb-8">
           <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
