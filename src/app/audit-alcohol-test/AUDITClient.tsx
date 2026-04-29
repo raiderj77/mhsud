@@ -234,6 +234,9 @@ export function AUDITClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
       </header>
 
+      {/* Reviewer Bio — visible before test so users see CADC-II credentials upfront */}
+      <ToolReviewerBio />
+
       {!accepted && (
         <DisclaimerGate
           toolName="AUDIT"
@@ -244,6 +247,12 @@ export function AUDITClient({ faqData }: Props) {
 
       {accepted && !showResults && (
         <div className="animate-fade-in">
+          {/* Privacy Trust Signal — visible immediately above first question */}
+          <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
+            <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
+            Your answers are scored locally in your browser and are never stored or shared.
+          </div>
+
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answers.filter((a) => a !== null).length} of 10 answered</span>
@@ -268,11 +277,13 @@ export function AUDITClient({ faqData }: Props) {
                       {answers[qi] !== null ? "✓" : qi + 1}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">{q.text}</p>
-                      <div className={`grid gap-2 ${q.options.length <= 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 sm:grid-cols-3"}`}>
+                      <p id={`audit-q-${qi}`} className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">{q.text}</p>
+                      <div role="radiogroup" aria-labelledby={`audit-q-${qi}`} className={`grid gap-2 ${q.options.length <= 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 sm:grid-cols-3"}`}>
                         {q.options.map((opt) => (
                           <button
                             key={opt.label}
+                            role="radio"
+                            aria-checked={answers[qi] === opt.value}
                             onClick={() => handleAnswer(qi, opt.value)}
                             className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${answers[qi] === opt.value ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold" : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:border-sage-300 dark:hover:border-sage-700"}`}
                           >
@@ -306,9 +317,15 @@ export function AUDITClient({ faqData }: Props) {
                   <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-2">
                     If you drink heavily and are considering reducing or stopping, <strong>please talk to a healthcare professional first.</strong> Alcohol withdrawal can be medically dangerous and may require supervised care.
                   </p>
-                  <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed">
+                  <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
                     Do not attempt to stop suddenly without medical guidance if you have been drinking heavily or frequently.
                   </p>
+                  <Link
+                    href="/crisis-resources"
+                    className="inline-block bg-crisis-600 hover:bg-crisis-700 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors"
+                  >
+                    View Crisis &amp; Support Resources →
+                  </Link>
                 </div>
               </div>
             </div>
@@ -331,7 +348,19 @@ export function AUDITClient({ faqData }: Props) {
             <div className="p-5 sm:p-6 space-y-4">
               <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
               <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"><strong>What you can consider next:</strong> {range.suggestion}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2"><strong>What you can consider next:</strong> {range.suggestion}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                  Learn more:{" "}
+                  <Link href="/blog/audit-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    How the AUDIT works
+                  </Link>{" "}·{" "}
+                  <Link href="/blog/what-does-audit-score-mean" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    What your score means
+                  </Link>{" "}·{" "}
+                  <Link href="/blog/quit-drinking-timeline" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    Quit-drinking timeline
+                  </Link>
+                </p>
               </div>
               <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
                 <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">

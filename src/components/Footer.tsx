@@ -129,7 +129,7 @@ const INFO_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-sand-200 dark:border-neutral-800 bg-sand-100 dark:bg-night-950 mt-20">
+    <footer className="no-print border-t border-sand-200 dark:border-neutral-800 bg-sand-100 dark:bg-night-950 mt-20">
       {/* 988 Crisis Lifeline Banner */}
       <div className="bg-crisis-50 dark:bg-crisis-950/40 border-b border-crisis-200 dark:border-crisis-800 py-3 px-4 text-center">
         <p className="text-sm text-crisis-700 dark:text-crisis-300">

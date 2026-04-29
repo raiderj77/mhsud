@@ -20,6 +20,13 @@ interface AdSlotProps {
   npa?: boolean;
 }
 
+const FORMAT_DIMS: Record<string, { minWidth: number; minHeight: number }> = {
+  auto:       { minWidth: 300, minHeight: 250 },
+  rectangle:  { minWidth: 300, minHeight: 250 },
+  vertical:   { minWidth: 160, minHeight: 600 },
+  horizontal: { minWidth: 320, minHeight: 50 },
+};
+
 export function AdSlot({
   position,
   className = "",
@@ -43,10 +50,12 @@ export function AdSlot({
     }
   }, []);
 
+  const dims = FORMAT_DIMS[adFormat] ?? FORMAT_DIMS.auto;
+
   return (
     <div
-      className={`my-6 min-h-[250px] ${className}`}
-      style={{ contain: "layout" }}
+      className={`my-6 no-print ${className}`}
+      style={{ contain: "layout", minWidth: dims.minWidth, minHeight: dims.minHeight }}
       data-ad-position={position}
       aria-label="Advertisement"
       role="complementary"

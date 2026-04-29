@@ -273,6 +273,11 @@
 /* Append this to the END of your globals.css file */
 
 @media print {
+  /* Hide anything tagged .no-print (Navbar, Footer, AdSlots, etc.) */
+  .no-print {
+    display: none !important;
+  }
+
   /* Hide everything except results */
   nav, footer, .sticky, [data-ad-position],
   .btn-primary, .btn-secondary, button,

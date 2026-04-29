@@ -180,7 +180,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 bg-sand-50/95 dark:bg-night-900/95 backdrop-blur-md border-b
+      className={`no-print sticky top-0 z-50 bg-sand-50/95 dark:bg-night-900/95 backdrop-blur-md border-b
         transition-shadow duration-300
         ${hasScrolled ? "border-sand-200 dark:border-neutral-800 shadow-md" : "border-sand-100 dark:border-neutral-900"}`}
       role="navigation"

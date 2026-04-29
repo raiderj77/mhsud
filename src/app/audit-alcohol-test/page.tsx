@@ -49,6 +49,7 @@ export default function AUDITPage() {
         <h2>What Is the AUDIT Alcohol Screening?</h2>
         <h2>How Is the AUDIT Scored?</h2>
         <h2>What Do My AUDIT Results Mean?</h2>
+        <p>AUDIT scores range from 0 to 40. Score 0–7: Zone I, lower risk. Score 8–15: Zone II, hazardous use. Score 16–19: Zone III, harmful use. Score 20–40: Zone IV, possible dependence.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />

@@ -89,6 +89,7 @@ export default function GAD7Page() {
         <h2>What Is the GAD-7 Anxiety Screening?</h2>
         <h2>How Is the GAD-7 Scored?</h2>
         <h2>What Do My GAD-7 Results Mean?</h2>
+        <p>GAD-7 scores range from 0 to 21. Score 0–4: minimal anxiety. Score 5–9: mild anxiety. Score 10–14: moderate anxiety. Score 15–21: severe anxiety.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />

@@ -169,6 +169,9 @@ export function PHQ9Client({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
       </header>
 
+      {/* Reviewer Bio — visible before test so users see CADC-II credentials upfront */}
+      <ToolReviewerBio />
+
       {/* Disclaimer Gate */}
       {!accepted && (
         <DisclaimerGate
@@ -181,6 +184,12 @@ export function PHQ9Client({ faqData }: Props) {
       {/* Questionnaire */}
       {accepted && !showResults && (
         <div className="animate-fade-in">
+          {/* Privacy Trust Signal — visible immediately above first question */}
+          <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
+            <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
+            Your answers are scored locally in your browser and are never stored or shared.
+          </div>
+
           {/* Progress */}
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
@@ -225,7 +234,7 @@ export function PHQ9Client({ faqData }: Props) {
                       {answers[qi] !== null ? "✓" : qi + 1}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">
+                      <p id={`phq9-q-${qi}`} className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">
                         {isQ9 && (
                           <span className="inline-block bg-warm-100 dark:bg-warm-950/40 text-warm-700 dark:text-warm-400 text-[11px] font-bold px-2 py-0.5 rounded mr-2 uppercase tracking-wide align-middle">
                             Sensitive
@@ -233,10 +242,12 @@ export function PHQ9Client({ faqData }: Props) {
                         )}
                         {q}
                       </p>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      <div role="radiogroup" aria-labelledby={`phq9-q-${qi}`} className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                         {OPTIONS.map((opt) => (
                           <button
                             key={opt.value}
+                            role="radio"
+                            aria-checked={answers[qi] === opt.value}
                             onClick={() => handleAnswer(qi, opt.value)}
                             className={`p-2.5 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                               answers[qi] === opt.value
@@ -298,6 +309,24 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           )}
 
+          {/* Severe-bracket crisis routing (YMYL safety) — placed above AdSlot and next steps */}
+          {range.key === "severe" && (
+            <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5" role="alert">
+              <h3 className="font-serif text-lg font-semibold text-crisis-800 dark:text-crisis-300 mb-2">
+                Your score suggests severe symptoms — support is available
+              </h3>
+              <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
+                A score of 20 or above on the PHQ-9 indicates severe depressive symptoms. Reaching out to a healthcare professional or a crisis service is strongly encouraged.
+              </p>
+              <Link
+                href="/crisis-resources"
+                className="inline-block bg-crisis-600 hover:bg-crisis-700 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors"
+              >
+                View Crisis &amp; Support Resources →
+              </Link>
+            </div>
+          )}
+
           {/* Printable Results Area */}
           <div ref={printRef} id="printable-results">
             {/* Score Card */}
@@ -319,8 +348,20 @@ export function PHQ9Client({ faqData }: Props) {
               <div className="p-5 sm:p-6 space-y-4">
                 <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
                 <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                  <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2">
                     <strong>What you can consider next:</strong> {range.suggestion}
+                  </p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                    Learn more:{" "}
+                    <Link href="/blog/phq-9-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                      How clinicians use the PHQ-9
+                    </Link>{" "}·{" "}
+                    <Link href="/blog/what-does-phq-9-score-mean" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                      What your score means
+                    </Link>{" "}·{" "}
+                    <Link href="/blog/depression-vs-anxiety" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                      Depression vs. anxiety
+                    </Link>
                   </p>
                 </div>
                 <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">

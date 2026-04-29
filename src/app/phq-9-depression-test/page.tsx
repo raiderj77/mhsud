@@ -91,6 +91,7 @@ export default function PHQ9Page() {
         <h2>What Is the PHQ-9 Depression Screening?</h2>
         <h2>How Is the PHQ-9 Scored?</h2>
         <h2>What Do My PHQ-9 Results Mean?</h2>
+        <p>PHQ-9 scores range from 0 to 27. Score 1–4: minimal depression. Score 5–9: mild depression. Score 10–14: moderate depression. Score 15–19: moderately severe depression. Score 20–27: severe depression.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
