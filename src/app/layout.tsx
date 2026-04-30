@@ -111,6 +111,28 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
+        {/* Consent Mode v2 defaults — must fire before Cookiebot and all analytics */}
+        <Script
+          id="consent-mode"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'functionality_storage': 'denied',
+                'personalization_storage': 'denied',
+                'security_storage': 'granted',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
+
         {/*
           Cookiebot consent management — skipped entirely when Sec-GPC header is present.
           Skipping avoids the flash-then-dismiss race on GPC-enabled browsers: if Cookiebot
@@ -126,7 +148,7 @@ export default function RootLayout({
             data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
             data-blockingmode="auto"
             data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
           />
         )}
 
@@ -156,40 +178,23 @@ export default function RootLayout({
           />
         )}
 
-        {/*
-          FIX: gtag initialization with Consent Mode v2.
-          The gtag/js script alone does NOT initialize tracking — the inline init is required.
-          Consent defaults are set to 'denied' until Cookiebot grants permission (GDPR/CCPA compliant).
-        */}
-        {/*
-          FIX: GTM deferred to lazyOnload — analytics does not need to block paint.
-          Consent Mode v2 defaults are still set before any tracking fires.
-        */}
+        {/* GA4 initialization — afterInteractive, consent defaults already established above */}
+        <Script
+          id="gtag-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
+        />
         <Script
           id="gtag-init"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied',
-                'functionality_storage': 'denied',
-                'personalization_storage': 'denied',
-                'wait_for_update': 500
-              });
               gtag('js', new Date());
               gtag('config', 'G-XKHQN1NJ2Z', { anonymize_ip: true });
             `,
           }}
-        />
-        <Script
-          id="gtag-script"
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
         />
 
         {/*
