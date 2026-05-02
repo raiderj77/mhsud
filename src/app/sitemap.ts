@@ -109,6 +109,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/adhd-test-for-teens`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-screening-for-men`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/alcohol-screening-for-women`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
+    // Hub pages
+    { url: `${SITE_URL}/maternal-mental-health`, lastModified: "2026-05-01T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     // Conversational / intent-based landing pages (low-competition keywords)
     { url: `${SITE_URL}/am-i-depressed-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/do-i-have-ptsd-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
