@@ -19,9 +19,9 @@ const FAQ_DATA = [
 
 export const metadata: Metadata = createMetadata({
   path: "/gad-7-score-interpretation",
-  title: "GAD-7 Score Interpretation: What Your Score Means",
+  title: "What Does My GAD-7 Score Mean? 0–21 Scale Explained",
   description:
-    "Understand your GAD-7 anxiety score. Learn what each range means, when to seek help, and how to talk to your doctor about anxiety screening results.",
+    "Your GAD-7 score falls on a 0–21 scale across 4 bands — minimal through severe. Each band reviewed by a CADC-II counselor. Find out what to do next.",
 });
 
 export default function GAD7ScoreInterpretationPage() {

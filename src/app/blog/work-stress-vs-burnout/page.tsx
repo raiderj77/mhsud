@@ -11,9 +11,9 @@ const POST_DATA = BLOG_POSTS.find((p) => p.slug === "work-stress-vs-burnout")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/work-stress-vs-burnout",
-  title: "Work Stress vs Burnout: How to Tell the Difference",
+  title: "Am I Burned Out or Just Stressed? What Most Tests Miss",
   description:
-    "Am I burned out or just stressed? Learn WHO-defined burnout signs vs normal work stress and when to see a professional.",
+    "Not all exhaustion is burnout. Learn the WHO-defined difference between burnout and work stress — plus what most burnout checklists fail to capture.",
   keywords: [
     "am i burned out or just stressed", "work stress vs burnout difference",
     "signs of burnout vs normal stress", "burnout self-assessment quiz accuracy",
