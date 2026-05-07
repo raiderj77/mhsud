@@ -49,7 +49,6 @@ Jason is a solo entrepreneur building 4 static tool websites toward $3,500/month
 - Average CTR for position 5: 6-8%
 - Average CTR for position 10: 2-3%
 - Average CTR for position 20+: <1%
-- BetterHelp affiliate: $100-150 per qualified referral
 - Typical time for new site to rank: 6-12 months
 - AdSense approval threshold: ~1,000-2,000 monthly pageviews (unofficial)
 - Ezoic approval: 10,000 monthly pageviews
