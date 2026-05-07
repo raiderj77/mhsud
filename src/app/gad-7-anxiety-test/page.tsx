@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -126,6 +127,25 @@ export default function GAD7Page() {
             </a>
           </li>
         </ul>
+      </div>
+
+      {/* Internal Links */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Screen</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Take the validated 9-question depression screening</p>
+          </Link>
+          <Link href="/phq-9-vs-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 vs. GAD-7</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Key differences between depression and anxiety screens</p>
+          </Link>
+          <Link href="/dass-21-vs-phq-9-and-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 vs. PHQ-9 &amp; GAD-7</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">How the DASS-21 compares to the PHQ-9/GAD-7 pair</p>
+          </Link>
+        </div>
       </div>
     </>
   );

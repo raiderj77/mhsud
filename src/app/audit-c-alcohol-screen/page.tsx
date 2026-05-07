@@ -78,6 +78,10 @@ export default function AUDITCPage() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Alcohol Screening for Women</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Gender-specific alcohol screening with context</p>
           </Link>
+          <Link href="/audit-vs-audit-c" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT vs. AUDIT-C</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Full 10-question vs. rapid 3-question screen</p>
+          </Link>
         </div>
       </div>
     </>

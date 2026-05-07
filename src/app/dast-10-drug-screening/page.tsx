@@ -90,6 +90,10 @@ export default function DAST10Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO ASSIST</p>
             <p className="text-xs text-warm-500 dark:text-warm-400">Comprehensive substance use screening</p>
           </Link>
+          <Link href="/audit-vs-dast-10" className="block border border-warm-200 dark:border-warm-700 rounded-xl p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT vs. DAST-10</p>
+            <p className="text-xs text-warm-500 dark:text-warm-400">Alcohol vs. drug screening tools compared</p>
+          </Link>
         </div>
       </main>
     </>
