@@ -150,6 +150,14 @@ export default function PHQ9Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Talk to Your Doctor</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">How to start a conversation about mental health</p>
           </Link>
+          <Link href="/phq-9-vs-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 vs. GAD-7</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Key differences between depression and anxiety screens</p>
+          </Link>
+          <Link href="/phq-2-to-phq-9-when-to-escalate" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-2 to PHQ-9 Escalation</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">When a 2-question screen triggers the full PHQ-9</p>
+          </Link>
         </div>
       </div>
     </>

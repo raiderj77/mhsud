@@ -125,6 +125,10 @@ export default function DASS21Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Test</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Focused anxiety screening tool</p>
           </Link>
+          <Link href="/dass-21-vs-phq-9-and-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 vs. PHQ-9 &amp; GAD-7</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">How the DASS-21 compares to the PHQ-9/GAD-7 pair</p>
+          </Link>
         </div>
       </div>
     </>
