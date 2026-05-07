@@ -132,9 +132,9 @@ export function GAD7Client({ faqData }: Props) {
           <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Validated</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Free to Use</span>
         </div>
-        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+        <h2 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
           GAD-7 Anxiety Self-Check
-        </h1>
+        </h2>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
           A validated screening questionnaire that helps you reflect on anxiety symptoms over the past two weeks. Your answers stay in your browser and are never stored.
         </p>
