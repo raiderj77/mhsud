@@ -19,9 +19,9 @@ const FAQ_DATA = [
 
 export const metadata: Metadata = createMetadata({
   path: "/asrs-score-interpretation",
-  title: "ASRS ADHD Score Interpretation: What It Means",
+  title: "What Does My ASRS Score Mean? Positive Screen Explained",
   description:
-    "Understand your ASRS ADHD screening results. Learn what a positive or negative screen means and when to seek a full evaluation.",
+    "A positive ASRS screen requires 4 of 6 Part A items. Understand what that means, how accurate the screen is, and when to seek a full ADHD evaluation.",
 });
 
 export default function ASRSScoreInterpretationPage() {

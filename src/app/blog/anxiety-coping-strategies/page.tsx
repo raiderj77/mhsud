@@ -11,9 +11,9 @@ const POST_DATA = BLOG_POSTS.find((p) => p.slug === "anxiety-coping-strategies")
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/anxiety-coping-strategies",
-  title: "Anxiety Coping Strategies: Evidence-Based Guide",
+  title: "Anxiety Coping Strategies: 7 Evidence-Based Techniques",
   description:
-    "Evidence-based anxiety coping strategies — CBT techniques, mindfulness, breathing exercises, and lifestyle changes. Free guide.",
+    "Covers 7 clinically supported techniques: CBT, mindfulness, breathing, and grounding — with research citations. Find which approach fits your symptoms.",
   keywords: [
     "anxiety coping strategies", "anxiety management techniques", "clinical anxiety treatment",
     "evidence-based anxiety relief", "cognitive behavioral therapy for anxiety",
