@@ -54,6 +54,16 @@ const FAQ_DATA = [
     answer:
       "Yes \u2014 very commonly. Research suggests that approximately 50% of people with major depression also have a co-occurring anxiety disorder (Kessler et al., 2003). If you scored in the mild-to-moderate range on the GAD-7, taking the PHQ-9 as well can give you a more complete picture to share with a healthcare provider.",
   },
+  {
+    question: "Is the GAD-7 valid for tracking anxiety over time?",
+    answer:
+      "Yes. The GAD-7 is frequently used in clinical settings to monitor treatment response. A decrease of 5 or more points is generally considered a clinically meaningful improvement. The two-week recall window means it can be re-administered every two to four weeks to track changes. If you are in therapy or taking medication for anxiety, sharing repeated GAD-7 scores with your provider gives them objective data alongside your subjective experience.",
+  },
+  {
+    question: "What does a GAD-7 score of 10 mean exactly?",
+    answer:
+      "A score of 10 is the standard clinical threshold used in most healthcare settings to indicate that further professional evaluation is warranted. At this level, anxiety symptoms are present on more than half the days across multiple domains \u2014 worry, restlessness, irritability, tension. It does not confirm a diagnosis of generalized anxiety disorder, but it is a meaningful signal that symptoms are affecting daily life and that a conversation with a healthcare provider is appropriate.",
+  },
 ];
 
 export default function WhatDoesGAD7ScoreMeanPage() {
@@ -98,7 +108,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               The seven items correspond to core diagnostic criteria for generalized anxiety disorder (GAD) as defined in the DSM-5. Your total score ranges from <strong>0 to 21</strong>.
             </p>
             <p>
-              The GAD-7 demonstrates strong psychometric validity: a sensitivity of 89% and specificity of 82% for generalized anxiety disorder at a cutoff of 10, and sensitivity/specificity above 80% for panic disorder, social anxiety disorder, and PTSD (Spitzer et al., 2006).
+              The GAD-7 demonstrates strong psychometric validity: a sensitivity of 89% and specificity of 82% for generalized anxiety disorder at a cutoff of 10, and sensitivity/specificity above 80% for panic disorder, social anxiety disorder, and PTSD (<a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Spitzer et al., 2006</a>).
             </p>
           </section>
 
@@ -273,7 +283,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               Sometimes — and sometimes it doesn&apos;t. Research shows that mild anxiety symptoms can resolve with lifestyle changes and supportive coping. But generalized anxiety disorder, when untreated, often follows a chronic, waxing-and-waning course (Kessler et al., 2002).
             </p>
             <p>
-              The encouraging news: anxiety disorders are among the most treatable mental health conditions. The National Institute of Mental Health estimates that effective treatment helps most people with anxiety disorders reduce their symptoms significantly (NIMH, 2023). Seeking support early generally leads to better outcomes than waiting.
+              The encouraging news: anxiety disorders are among the most treatable mental health conditions. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> notes that effective treatment helps most people with anxiety disorders reduce their symptoms significantly. Seeking support early generally leads to better outcomes than waiting.
             </p>
           </section>
 

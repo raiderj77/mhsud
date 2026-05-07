@@ -22,7 +22,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read",
     status: "published",
     publishedDate: "2025-01-15",
-    modifiedDate: "2026-03-08",
+    modifiedDate: "2026-05-06",
   },
   {
     slug: "gad-7-guide",
@@ -34,7 +34,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     status: "published",
     publishedDate: "2025-01-20",
-    modifiedDate: "2026-03-08",
+    modifiedDate: "2026-05-06",
   },
   {
     slug: "audit-guide",

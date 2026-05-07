@@ -117,6 +117,10 @@ export default function DASS21Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Score Guide</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your DASS-21 scores mean</p>
           </Link>
+          <Link href="/blog/dass-21-score-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Explained</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">How clinicians interpret DASS-21 depression, anxiety, and stress subscores</p>
+          </Link>
           <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Test</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Focused depression screening tool</p>

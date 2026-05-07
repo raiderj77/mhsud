@@ -81,7 +81,7 @@ export default function GAD7GuidePage() {
           <section>
             <h2>What is the GAD-7?</h2>
             <p>
-              The Generalized Anxiety Disorder-7 (GAD-7) is a 7-item self-report questionnaire developed by Drs. Robert L. Spitzer, Kurt Kroenke, Janet B.W. Williams, and Bernd Löwe. Published in 2006, it was designed to be a brief, practical screening tool for anxiety symptoms in primary care and other clinical settings.
+              The Generalized Anxiety Disorder-7 (GAD-7) is a 7-item self-report questionnaire developed by Drs. Robert L. Spitzer, Kurt Kroenke, Janet B.W. Williams, and Bernd Löwe. <a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Published in 2006</a> in the <em>Archives of Internal Medicine</em>, it was designed to be a brief, practical screening tool for anxiety symptoms in primary care and other clinical settings.
             </p>
             <p>
               Like the PHQ-9 for depression, the GAD-7 was made freely available for clinical and research use without licensing fees. This accessibility has made it one of the most widely used anxiety measures worldwide — it has been translated into dozens of languages and validated across many populations.
@@ -125,7 +125,7 @@ export default function GAD7GuidePage() {
               ))}
             </div>
             <p>
-              A score of 10 is often cited in research as a threshold for &quot;moderate&quot; anxiety, but this cutoff was derived for research purposes and should not be treated as a bright line. Someone scoring 9 may need support just as much as someone scoring 11. Clinical context always matters more than the number.
+              A score of 10 is often cited in research as a threshold for &quot;moderate&quot; anxiety. The original validation study reported 89% sensitivity and 82% specificity at this cutoff, and the <a href="https://pubmed.ncbi.nlm.nih.gov/18573025/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">2008 standardization study (Löwe et al.)</a> further confirmed these properties in a large general population sample. That said, this cutoff was derived for research purposes and should not be treated as a bright line — clinical context always matters more than the number.
             </p>
           </section>
 
@@ -173,7 +173,7 @@ export default function GAD7GuidePage() {
               For minimal or mild scores, awareness itself is valuable. Knowing what to watch for — and having a baseline — means you can notice if things shift over time.
             </p>
             <p>
-              For moderate or severe scores, reaching out to a healthcare provider is strongly encouraged. Anxiety is one of the most treatable mental health conditions, with strong evidence for both therapy (particularly CBT) and medication. Many people see significant improvement with the right support.
+              For moderate or severe scores, reaching out to a healthcare provider is strongly encouraged. Anxiety is one of the most treatable mental health conditions, with strong evidence for both therapy (particularly CBT) and medication. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive anxiety resources including treatment guidance and how to find professional support. Many people see significant improvement with the right support.
             </p>
             <p>
               You might approach a conversation with your provider by saying: &quot;I took an anxiety screening and scored [X]. I&apos;d like to talk about how I&apos;ve been feeling.&quot; Most providers will appreciate having this starting point.
