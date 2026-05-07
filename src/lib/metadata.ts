@@ -147,6 +147,7 @@ export function toolPageJsonLd({
       name: SITE_NAME,
       url: SITE_URL,
     },
+    reviewedBy: AUTHOR_SCHEMA,
   };
 }
 
