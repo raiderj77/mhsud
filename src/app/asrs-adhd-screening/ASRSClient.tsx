@@ -141,9 +141,9 @@ export function ASRSClient({ faqData }: Props) {
           <span className="badge bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400">WHO</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Free to Use</span>
         </div>
-        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+        <h2 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
           ASRS v1.1 Adult ADHD Self-Check
-        </h1>
+        </h2>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
           A WHO-developed screening tool that helps identify symptoms consistent with adult ADHD. This is the validated 6-item Part A screener used in clinical and research settings. Your answers stay in your browser and are never stored.
         </p>

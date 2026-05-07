@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { GAD7Client } from "../gad-7-anxiety-test/GAD7Client";
@@ -63,9 +63,10 @@ const FAQ_DATA = [
 export default function AnxietyTestForTeensPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-06" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "GAD-7 Anxiety Test", url: `${SITE_URL}/gad-7-anxiety-test` }, { name: "Anxiety Test for Teens", url: TOOL_URL }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, lastReviewed: "2026-05-06" })) }} />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
         <div className="flex flex-wrap gap-2 mb-4">
@@ -102,7 +103,7 @@ export default function AnxietyTestForTeensPage() {
           <div className="grid gap-4">
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">1 in 3 teens</p>
-              <p className="text-sm text-slate-700 dark:text-slate-300">will experience an anxiety disorder by age 18. It is the most common mental health condition in adolescents.<span className="text-slate-500 dark:text-slate-400"> — NIMH</span></p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">will experience an anxiety disorder by age 18. It is the most common mental health condition in adolescents. — <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH Anxiety Disorders</a></p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">80% untreated</p>
@@ -236,6 +237,63 @@ export default function AnxietyTestForTeensPage() {
             </div>
           </div>
         </div>
+
+        {/* Clinical validation and screening guidance */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Screening Guidelines: What the Research Says
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              In 2022, the U.S. Preventive Services Task Force (USPSTF) issued a Grade B recommendation
+              for anxiety screening in children and adolescents ages 8–18 without a prior diagnosis,
+              recognizing that early identification significantly improves long-term outcomes. The American
+              Academy of Pediatrics (AAP) similarly recommends routine mental health screening at well-child
+              visits. According to the{" "}
+              <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                National Institute of Mental Health
+              </a>
+              , anxiety disorders affect approximately 31.9% of adolescents aged 13–18, making them the
+              most common mental health conditions in this age group.
+            </p>
+            <p>
+              The GAD-7 has been validated for use in adolescents aged 13 and older and is used in
+              pediatric primary care settings for brief anxiety screening. One important nuance for teens:
+              GAD-7 scores can fluctuate more than adult scores because adolescent anxiety is shaped by
+              developmental factors — hormonal shifts, changing social dynamics, academic transitions —
+              that vary week to week. A single elevated score is a prompt for a conversation, not a
+              conclusion. The{" "}
+              <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                official GAD-7 instrument guidelines
+              </a>{" "}
+              recommend clinical follow-up for scores of 10 or above.
+            </p>
+            <p>
+              The{" "}
+              <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                World Health Organization estimates
+              </a>{" "}
+              that 50% of all mental health conditions begin by age 14 and 75% by age 24. Anxiety
+              untreated in adolescence significantly increases lifetime risk of anxiety and depression
+              in adulthood. For families seeking professional support,{" "}
+              <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                SAMHSA&apos;s mental health services locator
+              </a>{" "}
+              and the{" "}
+              <a href="https://www.cdc.gov/childrensmentalhealth/anxiety.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                CDC&apos;s children&apos;s mental health resources
+              </a>{" "}
+              offer guidance on finding qualified providers for teen anxiety.
+            </p>
+            <p>
+              This screening is designed to serve both audiences: teens taking it independently and
+              parents using it to better understand what their child may be experiencing. If you are a
+              parent, the score is a starting point for a compassionate conversation — not a label or
+              a verdict. If you are a teen: a high score is information, and information gives you
+              options. Most teens who receive appropriate treatment for anxiety improve significantly.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="screening">
@@ -262,6 +320,17 @@ export default function AnxietyTestForTeensPage() {
         <h2>How Is the Teen Anxiety Test Scored?</h2>
         <h2>What Do My Anxiety Results Mean?</h2>
       </section>
+<section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
+  <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
+  <div className="space-y-6">
+    {FAQ_DATA.map((item) => (
+      <div key={item.question}>
+        <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
+        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>
 <GAD7Client faqData={FAQ_DATA} />
       </div>
 
