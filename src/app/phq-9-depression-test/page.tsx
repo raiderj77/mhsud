@@ -87,6 +87,11 @@ export default function PHQ9Page() {
         }}
       />
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8">
+        <h1 className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">
+          PHQ-9 Depression Test
+        </h1>
+      </div>
       <section className="sr-only">
         <h2>What Is the PHQ-9 Depression Screening?</h2>
         <h2>How Is the PHQ-9 Scored?</h2>
@@ -107,6 +112,18 @@ export default function PHQ9Page() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
+      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
+        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          {FAQ_DATA.map((item) => (
+            <div key={item.question}>
+              <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
 <PHQ9Client faqData={FAQ_DATA} />
 
       {/* Clinical References */}
