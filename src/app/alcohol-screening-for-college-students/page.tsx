@@ -305,7 +305,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">Telehealth</p>
                 <p className="text-sm">
-                  BetterHelp, Talkspace, and similar platforms offer faster access than campus
+                  Online therapy platforms often offer faster access than campus
                   waitlists. Many student health insurance plans now cover telehealth mental
                   health — check your coverage before paying out of pocket.
                 </p>
