@@ -188,9 +188,9 @@ export function UCLAClient({ faqData }: Props) {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10" aria-live="polite">
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
           Your Loneliness Results
-        </h1>
+        </h2>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           UCLA Loneliness Scale (Version 3) &middot; {ITEMS.length} items &middot; Score 20&ndash;80
         </p>
@@ -514,9 +514,9 @@ export function UCLAClient({ faqData }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
         UCLA Loneliness Scale
-      </h1>
+      </h2>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A widely used measure of subjective loneliness and social isolation (Russell, 1996).
       </p>

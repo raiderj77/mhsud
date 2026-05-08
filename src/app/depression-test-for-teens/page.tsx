@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -49,6 +49,10 @@ const FAQ_DATA = [
     question: "Are there crisis resources specifically for teens?",
     answer: "Yes. Teens can contact the 988 Suicide and Crisis Lifeline (call or text 988), the Crisis Text Line (text HOME to 741741), or the Trevor Project (for LGBTQ+ youth: call 1-866-488-7386 or text START to 678-678). All of these services are free, confidential, and available 24/7.",
   },
+  {
+    question: "What is the PHQ-A and how does it relate to the PHQ-9?",
+    answer: "The PHQ-A (Patient Health Questionnaire for Adolescents) is an adaptation of the PHQ-9 developed specifically for teens, with language tailored to adolescent experiences and an additional question about school functioning. In most clinical settings, the standard PHQ-9 is considered valid for adolescents 12 and older and is the more widely used instrument. Both tools use the same 0–27 scoring range and the same severity thresholds: 1–4 minimal, 5–9 mild, 10–14 moderate, 15–19 moderately severe, 20–27 severe. A qualified clinician will interpret either tool in the context of a full clinical evaluation.",
+  },
 ];
 
 export default function DepressionTestForTeensPage() {
@@ -63,7 +67,7 @@ export default function DepressionTestForTeensPage() {
               description: "A free, private depression screening tool for teenagers using the clinically validated PHQ-9 questionnaire. Designed for adolescents ages 12 and older.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-06",
             })
           ),
         }}
@@ -81,6 +85,19 @@ export default function DepressionTestForTeensPage() {
               { name: "PHQ-9 Depression Test", url: `${SITE_URL}/phq-9-depression-test` },
               { name: "Depression Test for Teens", url: TOOL_URL },
             ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Depression Test for Teens — PHQ-9 Screening",
+              description: "A free, private depression screening tool for teenagers using the clinically validated PHQ-9 questionnaire. Designed for adolescents ages 12 and older.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-06",
+            })
           ),
         }}
       />
@@ -143,8 +160,7 @@ export default function DepressionTestForTeensPage() {
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">4.1 million</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 U.S. adolescents (ages 12–17) experienced at least one major depressive episode in 2023.
-                That&apos;s roughly <strong>1 in 6 teens</strong>.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                That&apos;s roughly <strong>1 in 6 teens</strong>. — <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH</a>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
@@ -159,8 +175,7 @@ export default function DepressionTestForTeensPage() {
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">2nd leading cause</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Suicide is the 2nd leading cause of death for young people ages 10–14 and 3rd for ages 15–24.
-                Early screening saves lives.
-                <span className="text-slate-500 dark:text-slate-400"> — CDC</span>
+                Early screening saves lives. — <a href="https://www.cdc.gov/suicide/facts/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">CDC</a>
               </p>
             </div>
           </div>
@@ -184,6 +199,91 @@ export default function DepressionTestForTeensPage() {
                 <p><strong>Your privacy:</strong> Everything happens in your browser. We don&apos;t see your answers, store your data, or share anything with anyone — not your school, not your parents, not anyone.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Clinical context: teen depression specifics */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            Understanding Depression in Teenagers
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              In 2022, the U.S. Preventive Services Task Force (USPSTF) issued a Grade B recommendation
+              for depression screening in adolescents aged 12 to 18 — the same level of evidence that
+              drives routine cholesterol or blood pressure screening in adults. The AAP and most major
+              pediatric organizations echo this guidance. According to the{" "}
+              <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                National Institute of Mental Health
+              </a>
+              , approximately 17% of U.S. adolescents experience at least one major depressive episode
+              before age 18, yet the majority never receive treatment. Early identification is the most
+              reliable way to improve that outcome.
+            </p>
+            <p>
+              Depression in adolescents often looks different from what adults picture. Where adults
+              commonly report persistent sadness or hopelessness, teens are more likely to show
+              irritability, anger, restlessness, or unexplained physical complaints. Academic decline
+              — dropping grades, missed assignments, withdrawal from previously enjoyed activities like
+              sports or art — is frequently the first signal parents notice. Sleep disturbance is nearly
+              universal, though it can manifest as sleeping far too much rather than too little. These
+              variations matter because adults in a teen&apos;s life may misread the signs as attitude
+              problems, laziness, or typical adolescent moodiness.
+            </p>
+            <p>
+              The PHQ-9 is the most widely used depression screening tool in clinical settings and has
+              been validated for use in adolescents ages 12 and older. The original validation study,
+              published in the{" "}
+              <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                Journal of General Internal Medicine (Kroenke et al., 2001)
+              </a>
+              , found 88% sensitivity and 88% specificity at a cutoff of 10 for detecting major depressive
+              disorder. The instrument is freely available via{" "}
+              <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                PHQscreeners.com
+              </a>
+              . Scores in teens should always be interpreted with professional guidance — developmental
+              context, stressors, and co-occurring conditions can all shape what a score means.
+            </p>
+            <p>
+              The{" "}
+              <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                World Health Organization identifies depression
+              </a>{" "}
+              as one of the leading causes of illness and disability among adolescents worldwide. Left
+              untreated, adolescent depression carries significant risks: worsening severity, academic
+              failure, relationship breakdown, and — most critically — suicidal ideation and behavior.
+            </p>
+          </div>
+        </div>
+
+        {/* Item 9 and suicide risk */}
+        <div className="mb-10 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+          <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+            Item 9: The Most Important Question on This Screening
+          </h2>
+          <div className="space-y-3 text-slate-700 dark:text-slate-300 text-sm">
+            <p>
+              The PHQ-9&apos;s final question asks about thoughts of self-harm or suicide. This is not
+              optional — it is clinically non-negotiable for any teen screening. According to the{" "}
+              <a href="https://www.cdc.gov/suicide/facts/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                CDC
+              </a>
+              , suicide is the 2nd leading cause of death among people aged 10–14 and 3rd for ages
+              15–24. Any answer other than &quot;not at all&quot; on item 9 is a clinical priority —
+              independent of the total score.
+            </p>
+            <p>
+              If you answered item 9 with anything other than &quot;not at all,&quot; please reach out
+              now. Call or text <strong>988</strong> (Suicide and Crisis Lifeline), text{" "}
+              <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or go to your
+              nearest emergency room. These conversations are confidential, and asking for help is the
+              right thing to do.{" "}
+              <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                SAMHSA&apos;s mental health resources
+              </a>{" "}
+              can also connect you with local support.
+            </p>
           </div>
         </div>
       </div>
@@ -218,6 +318,17 @@ export default function DepressionTestForTeensPage() {
         <h2>How Is the Teen Depression Test Scored?</h2>
         <h2>What Do My Depression Screening Results Mean?</h2>
       </section>
+<section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
+  <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
+  <div className="space-y-6">
+    {FAQ_DATA.map((item) => (
+      <div key={item.question}>
+        <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
+        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>
 <PHQ9Client faqData={FAQ_DATA} />
       </div>
 

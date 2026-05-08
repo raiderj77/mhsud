@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { UCLAClient } from "../ucla-loneliness-scale/UCLAClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -74,7 +74,7 @@ export default function LonelinessTestSeniorsPage() {
               description: "A free, private loneliness assessment tool for older adults using the UCLA Loneliness Scale.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-06",
             })
           ),
         }}
@@ -82,6 +82,19 @@ export default function LonelinessTestSeniorsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Loneliness Test for Seniors — Free Assessment",
+              description: "A free, private loneliness assessment tool for older adults using the UCLA Loneliness Scale.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-06",
+            })
+          ),
+        }}
       />
       <script
         type="application/ld+json"
@@ -156,16 +169,14 @@ export default function LonelinessTestSeniorsPage() {
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">25% socially isolated</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Approximately one in four adults aged 65 and older is considered socially
-                isolated. Up to 43% of older adults report feeling lonely regularly.
-                <span className="text-slate-500 dark:text-slate-400"> — National Academies of Sciences</span>
+                isolated. Up to 43% of older adults report feeling lonely regularly. — <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">15 cigarettes a day</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 The health impact of chronic loneliness has been compared to smoking 15
-                cigarettes a day. Social isolation increases the risk of premature death by 26%.
-                <span className="text-slate-500 dark:text-slate-400"> — U.S. Surgeon General</span>
+                cigarettes a day. Social isolation increases the risk of premature death by 26%. — <a href="https://pubmed.ncbi.nlm.nih.gov/25910392/" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">Holt-Lunstad et al.</a>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
@@ -173,8 +184,7 @@ export default function LonelinessTestSeniorsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Socially isolated older adults face a 50% increased risk of developing dementia
                 and a 29% increased risk of heart disease. Connection is not optional — it is
-                essential for health.
-                <span className="text-slate-500 dark:text-slate-400"> — CDC</span>
+                essential for health. — <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
               </p>
             </div>
           </div>
@@ -201,6 +211,69 @@ export default function LonelinessTestSeniorsPage() {
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to anyone — not your family, not your doctor, not anyone.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Surgeon General advisory and Holt-Lunstad evidence */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            The Science Behind Senior Loneliness
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              In 2023, the U.S. Surgeon General issued a formal Advisory on the Healing Effects of
+              Social Connection and Community — one of the first times the federal government elevated
+              loneliness to the status of a public health crisis. The advisory cited research showing
+              that social disconnection carries health risks equivalent to smoking 15 cigarettes per
+              day. This figure comes from the landmark meta-analyses by Julianne Holt-Lunstad and
+              colleagues, most notably the{" "}
+              <a href="https://pubmed.ncbi.nlm.nih.gov/25910392/" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
+                2015 study published in Perspectives on Psychological Science
+              </a>
+              , which pooled data from 70 studies involving over 3.4 million participants and found
+              that social isolation increased the risk of premature mortality by 26–29%.
+            </p>
+            <p>
+              For older adults specifically, the health consequences of loneliness are compounded by
+              age-related biological vulnerabilities. Chronic loneliness activates inflammatory
+              pathways, elevates cortisol, and dysregulates immune function — mechanisms that accelerate
+              cardiovascular disease, cognitive decline, and metabolic disorders. Per the{" "}
+              <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
+                CDC&apos;s research on older adult social isolation
+              </a>
+              , socially isolated older adults have a 50% increased risk of developing dementia and a
+              29% increased risk of heart disease. The{" "}
+              <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
+                World Health Organization
+              </a>{" "}
+              has called social isolation one of the most serious contributors to poor mental health in
+              older adults globally.
+            </p>
+            <p>
+              The UCLA Loneliness Scale used in this assessment was developed at the University of
+              California, Los Angeles and is one of the most widely validated tools for measuring
+              subjective loneliness across adult populations. Version 3 of the scale, which this tool
+              uses, contains 20 items and has demonstrated strong reliability and validity in research
+              with older adults. The scale distinguishes between objective social isolation (limited
+              social contact) and subjective loneliness (the felt sense of being disconnected) —
+              because these can occur independently. A person can be socially active and still feel
+              profoundly lonely, or live largely alone and feel genuinely connected.
+            </p>
+            <p>
+              Treatment for loneliness in older adults increasingly includes social prescribing —
+              structured referrals from healthcare providers to community resources, group activities,
+              and volunteer programs. The{" "}
+              <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
+                National Institute of Mental Health
+              </a>{" "}
+              notes that loneliness is one of the strongest modifiable risk factors for late-life
+              depression. Treating loneliness proactively — not waiting until a crisis — is the
+              evidence-based approach. For behavioral health resources and local services,{" "}
+              <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
+                SAMHSA&apos;s mental health locator
+              </a>{" "}
+              is a starting point.
+            </p>
           </div>
         </div>
       </div>
@@ -235,6 +308,17 @@ export default function LonelinessTestSeniorsPage() {
         <h2>How Is the Loneliness Test Scored?</h2>
         <h2>What Do My Loneliness Screening Results Mean?</h2>
       </section>
+<section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
+  <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
+  <div className="space-y-6">
+    {FAQ_DATA.map((item) => (
+      <div key={item.question}>
+        <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
+        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>
 <UCLAClient faqData={FAQ_DATA} />
       </div>
 

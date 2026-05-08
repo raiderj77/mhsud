@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { ASRSClient } from "../asrs-adhd-screening/ASRSClient";
@@ -64,9 +64,10 @@ const FAQ_DATA = [
 export default function AdhdTestAdultsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Adults — ASRS Screening", description: "A free, private ADHD screening tool for adults using the WHO Adult ADHD Self-Report Scale (ASRS).", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Adults — ASRS Screening", description: "A free, private ADHD screening tool for adults using the WHO Adult ADHD Self-Report Scale (ASRS).", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-06" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "ASRS ADHD Screening", url: `${SITE_URL}/asrs-adhd-screening` }, { name: "ADHD Test for Adults", url: TOOL_URL }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "ADHD Test for Adults — ASRS Screening", description: "A free, private ADHD screening tool for adults using the WHO Adult ADHD Self-Report Scale (ASRS).", url: TOOL_URL, lastReviewed: "2026-05-06" })) }} />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
         <div className="flex flex-wrap gap-2 mb-4">
@@ -101,7 +102,7 @@ export default function AdhdTestAdultsPage() {
           <div className="grid gap-4">
             <div className="bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-violet-700 dark:text-violet-300 mb-1">4.4% of adults</p>
-              <p className="text-sm text-slate-700 dark:text-slate-300">have ADHD, but the majority were never diagnosed as children. Many don&apos;t discover it until their 30s, 40s, or later.<span className="text-slate-500 dark:text-slate-400"> — WHO / NIMH</span></p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">have ADHD, but the majority were never diagnosed as children. Many don&apos;t discover it until their 30s, 40s, or later. — <a href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">NIMH</a></p>
             </div>
             <div className="bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-violet-700 dark:text-violet-300 mb-1">75% undiagnosed</p>
@@ -121,6 +122,65 @@ export default function AdhdTestAdultsPage() {
             <p>Many adults with undiagnosed ADHD develop anxiety and depression as secondary conditions — not because of a separate illness, but because years of struggling without understanding why takes a toll on self-esteem. The relief of finally getting a diagnosis is often described as life-changing: suddenly, decades of &quot;failures&quot; make sense.</p>
             <p>ADHD also has a significant connection to substance use. Adults with untreated ADHD are 2-3 times more likely to develop substance use problems, often because stimulants like caffeine, nicotine, or other substances temporarily improve focus and self-regulation. Understanding this link is important for both ADHD treatment and recovery.</p>
             <p>If this screening suggests ADHD may be present, the next step is a formal evaluation with a psychiatrist, psychologist, or neuropsychologist. Many adults describe the process of getting diagnosed as both validating and empowering — it opens the door to strategies and treatments that can genuinely change your life.</p>
+          </div>
+        </div>
+
+        {/* ASRS instrument and Kessler validation */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+            About the ASRS: WHO-Validated Screening Instrument
+          </h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The Adult ADHD Self-Report Scale (ASRS v1.1) was developed by the{" "}
+              <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">
+                World Health Organization
+              </a>{" "}
+              in collaboration with researchers led by Ronald Kessler at Harvard Medical School. The
+              pivotal validation study —{" "}
+              <a href="https://pubmed.ncbi.nlm.nih.gov/15841678/" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">
+                Kessler et al. (2005), published in Psychological Medicine
+              </a>{" "}
+              — found that the 6-item Part A screener correctly identified 68.7% of adults with ADHD,
+              with a sensitivity of 68.7% and specificity of 99.5% for adult ADHD diagnosis. This makes
+              it one of the most specific brief ADHD screening tools available. The full 18-item ASRS
+              provides additional symptom detail used in clinical evaluation.
+            </p>
+            <p>
+              A critical finding from the Kessler research: ADHD in adults is vastly underdiagnosed.
+              Prevalence estimates suggest 4–5% of adults globally meet diagnostic criteria, but the
+              majority remain undiagnosed. Per the{" "}
+              <a href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">
+                National Institute of Mental Health
+              </a>
+              , ADHD often persists from childhood into adulthood in approximately 60% of cases —
+              though many adults were never identified as children.
+            </p>
+            <p>
+              One of the most common misdiagnosis patterns: adults with ADHD being treated for anxiety
+              or depression while the underlying ADHD goes unaddressed. Inattention, emotional dysregulation,
+              and time blindness can all look like anxiety symptoms. The chronic failures and social
+              consequences of untreated ADHD can produce depressive symptoms. Comorbidity is the rule
+              rather than the exception — research indicates that 60–70% of adults with ADHD have at
+              least one other psychiatric condition. If you have been treated for anxiety or depression
+              without adequate response, ADHD evaluation may be warranted.{" "}
+              <a href="https://www.cdc.gov/ncbddd/adhd/data.html" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">
+                CDC surveillance data
+              </a>{" "}
+              confirm that ADHD remains significantly underdiagnosed in adults across all demographics,
+              with women and people of color disproportionately missed.
+            </p>
+            <p>
+              If you score positive on this screening, the next step is a comprehensive evaluation —
+              not just a second screening. A psychiatrist, psychologist, or neuropsychologist can
+              conduct a structured clinical interview, review your developmental and academic history,
+              and rule out other conditions. For those who have struggled for years without a clear
+              answer,{" "}
+              <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:underline">
+                SAMHSA&apos;s behavioral health treatment locator
+              </a>{" "}
+              can help identify providers with ADHD evaluation expertise in your area.
+            </p>
           </div>
         </div>
       </div>
@@ -149,6 +209,17 @@ export default function AdhdTestAdultsPage() {
         <h2>How Is the Adult ADHD Test Scored?</h2>
         <h2>What Do My ADHD Screening Results Mean?</h2>
       </section>
+<section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
+  <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
+  <div className="space-y-6">
+    {FAQ_DATA.map((item) => (
+      <div key={item.question}>
+        <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
+        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>
 <ASRSClient faqData={FAQ_DATA} />
       </div>
 
