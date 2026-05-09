@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
@@ -75,7 +75,20 @@ export default function AlcoholScreeningMilitaryPage() {
               description: "A free, confidential alcohol screening tool for military service members and veterans using the clinically validated AUDIT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Alcohol Use Screening for Military and Veterans",
+              description: "Free AUDIT alcohol screening for military service members and veterans with clinical context on post-deployment risk windows, self-medication cycles, and confidential treatment resources.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}
