@@ -288,6 +288,10 @@ export default function SocialAnxietyTestCollegePage() {
             <li>
               <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
             </li>
+            <li>
+              <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to{" "}
+              <a href="sms:741741" className="font-bold">741741</a>
+            </li>
           </ul>
         </div>
 

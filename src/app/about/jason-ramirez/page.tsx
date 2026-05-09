@@ -21,7 +21,16 @@ function personJsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Jason Ramirez",
-    jobTitle: "CADC-II Certified Drug and Alcohol Counselor",
+    jobTitle: "Certified Drug and Alcohol Counselor (CADC-II)",
+    knowsAbout: [
+      "Substance use disorder screening",
+      "Mental health assessment",
+      "PHQ-9 depression screening",
+      "GAD-7 anxiety screening",
+      "AUDIT alcohol screening",
+      "Co-occurring disorders",
+      "Addiction counseling",
+    ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Professional Certification",
