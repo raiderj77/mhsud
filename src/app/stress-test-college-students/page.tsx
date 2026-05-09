@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { DASS21Client } from "../dass-21-depression-anxiety-stress/DASS21Client";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -74,7 +74,20 @@ export default function StressTestCollegeStudentsPage() {
               description: "A free, private stress, anxiety, and depression screening tool for college students using the clinically validated DASS-21.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Stress Test for College Students",
+              description: "A clinically validated DASS-21-based screening for college students covering depression, anxiety, and stress related to academic pressure, financial precarity, and campus life transitions.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}
@@ -97,7 +110,6 @@ export default function StressTestCollegeStudentsPage() {
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
-        {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sage-100 text-sage-800 dark:bg-sage-900/40 dark:text-sage-300">
             Clinically Validated (DASS-21)
@@ -107,12 +119,10 @@ export default function StressTestCollegeStudentsPage() {
           </span>
         </div>
 
-        {/* H1 */}
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Stress Test for College Students
         </h1>
 
-        {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
             College is supposed to be the best years of your life — at least that&apos;s what
@@ -131,7 +141,6 @@ export default function StressTestCollegeStudentsPage() {
           </p>
         </div>
 
-        {/* Prominent CTA */}
         <div className="mb-10">
           <a
             href="#screening"
@@ -155,26 +164,50 @@ export default function StressTestCollegeStudentsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 More than 60% of college students report overwhelming anxiety, making it the most
                 common mental health concern on campuses nationwide.
-                <span className="text-slate-500 dark:text-slate-400"> — American College Health Association</span>
+                <span className="text-slate-500 dark:text-slate-400"> — American College Health Association (ACHA-NCHA)</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
-              <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">Counseling underused</p>
+              <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">2nd leading cause of death</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                Despite high rates of distress, only a fraction of struggling students access campus
-                counseling services. Stigma, lack of awareness, and wait times remain significant barriers.
-                <span className="text-slate-500 dark:text-slate-400"> — Healthy Minds Study</span>
+                Suicide is the second leading cause of death for people ages 15–24 in the United States. Early mental health screening during the college years is among the most evidence-backed prevention strategies available.
+                <span className="text-slate-500 dark:text-slate-400"> — CDC National Vital Statistics</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
-              <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">73% mental health crisis</p>
+              <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">73% report crisis</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 73% of college students report experiencing a mental health crisis during their
                 college years. This is not a niche problem — it is the college experience for
                 most students.
-                <span className="text-slate-500 dark:text-slate-400"> — Boston University Study</span>
+                <span className="text-slate-500 dark:text-slate-400"> — JED Foundation / Healthy Minds Study</span>
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Understanding College Stress */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Understanding Stress in the College Environment</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              College concentrates multiple major stressors into the same period of life in a way that is historically unusual. Academic pressure, financial precarity, identity development, relationship formation, and separation from family happen simultaneously — often beginning at age 18, a developmental window when the prefrontal cortex (responsible for regulating stress responses) is still maturing. The campus environment normalizes chronic sleep deprivation, irregular eating, and high-stimulation social demands in ways that would be recognized as unsustainable in any other context.
+            </p>
+            <p>
+              <strong>First-year transition stress</strong> is one of the most reliably documented risk periods. The ACHA-NCHA data consistently shows that first-year students report the highest rates of depression and anxiety of any class year, driven by loss of familiar social support, new academic expectations, and the disorientation of living away from home for the first time. The transition is real and the stress it produces is physiologically measurable — not a sign of weakness.
+            </p>
+            <p>
+              <strong>Junior-year stress</strong> represents a second peak that often catches students off-guard. The social scaffolding of the first two years — orientation programs, resident advisors, built-in roommate relationships — has dissolved. Career pressure intensifies. Students who successfully navigated their first two years sometimes find the third year harder because the structure that carried them is gone. This pattern is consistent enough that the JED Foundation has identified it as a distinct risk window in campus mental health programming.
+            </p>
+            <p>
+              <strong>Financial precarity</strong> is a stress driver that campus mental health resources frequently underaddress. Students managing food insecurity, part-time employment, student loan anxiety, and family financial obligations alongside full course loads carry a compound stress burden that is qualitatively different from academic pressure alone. Research published in the Journal of American College Health shows that financial stress is among the strongest predictors of academic discontinuation — stronger than academic performance itself.
+            </p>
+            <p>
+              <strong>Social isolation despite high contact</strong> is a paradox specific to campus life. Dormitories, dining halls, and classrooms create constant proximity to other people while providing little genuine connection. Social media amplifies the gap between apparent connection and actual loneliness. Students who appear socially active may be experiencing profound isolation — which is why loneliness is not well-predicted by dorm floor occupancy or party attendance. The DASS-21 captures the depressive dimension of this isolation (anhedonia, withdrawal, low mood) in ways that a general stress quiz does not.
+            </p>
+            <p>
+              <strong>Sleep deprivation as a campus norm</strong> deserves specific attention because it is both a stressor and a consequence of stress. Campus culture often treats chronic sleep deprivation as a badge of academic dedication. Clinically, sleeping fewer than 7 hours per night consistently elevates cortisol, impairs memory consolidation, reduces emotional regulation capacity, and amplifies the subjective severity of stressors. A student who is chronically sleep-deprived will report higher stress, anxiety, and depression on the DASS-21 — and those elevated scores are accurate, not artifacts.
+            </p>
           </div>
         </div>
 
@@ -199,6 +232,18 @@ export default function StressTestCollegeStudentsPage() {
             </div>
           </div>
         </div>
+
+        {/* Citations */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li><a href="https://www.cdc.gov/nchs/nvss/deaths.htm" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC — National Vital Statistics: Leading Causes of Death by Age Group</a></li>
+            <li><a href="https://www.nimh.nih.gov/health/statistics/mental-illness" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH — Mental Illness Statistics (young adult prevalence)</a></li>
+            <li><a href="https://www.samhsa.gov/mental-health/college-student-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA — College Student Mental Health Resources</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31948376/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Lovibond &amp; Lovibond — DASS-21 Validation Study (PubMed)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/28578295/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Eisenberg et al. — Mental health and academic outcomes in college (PubMed)</a></li>
+          </ul>
+        </div>
       </div>
 
       {/* The Screening Tool */}
@@ -212,18 +257,18 @@ export default function StressTestCollegeStudentsPage() {
           </p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: May 8, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="A stress assessment tailored for college students covering academic, social, financial, and identity-related stressors."
           who="College students who feel overwhelmed and want to evaluate whether their stress level has reached concerning thresholds."
           bottomLine="College stress is real and measurable — high scores mean it is time to use campus support resources. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          lastUpdated="2026-05-08"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
       </div>
 
       <section className="sr-only">
@@ -309,7 +354,7 @@ export default function StressTestCollegeStudentsPage() {
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+            Last reviewed: May 2026
           </p>
         </div>
 

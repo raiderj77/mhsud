@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { CAGEAIDClient } from "../cage-aid-substance-abuse-screening/CAGEAIDClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -74,7 +74,20 @@ export default function SubstanceAbuseTestParentsPage() {
               description: "A free, private substance use screening tool for parents using the clinically validated CAGE-AID assessment.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Substance Abuse Test for Parents",
+              description: "A CAGE-AID-based substance use screening for parents, addressing parental SUD, ACEs impact on children, co-parent concerns, stigma, and confidential treatment pathways.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}
@@ -205,6 +218,63 @@ export default function SubstanceAbuseTestParentsPage() {
         </div>
       </div>
 
+        {/* Understanding the Clinical Context */}
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">The ACEs Framework: Why Parental Substance Use Is a Child Health Issue</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The Adverse Childhood Experiences (ACEs) study — conducted by the CDC and Kaiser Permanente — is one of the largest investigations of childhood trauma and its long-term health consequences. Parental substance use is one of the ten original ACEs, alongside abuse, neglect, and household mental illness. Children who experience multiple ACEs face significantly elevated lifetime risk for depression, anxiety, substance use disorders, heart disease, and suicide attempts. The ACE framework is not meant to shame parents — it exists to quantify the stakes and make the case for early intervention.
+            </p>
+            <p>
+              The mechanism is not moral failure but neurobiological disruption. Chronic exposure to household instability activates a child&apos;s stress response system (the HPA axis) in ways that alter brain development, particularly in regions governing emotion regulation and impulse control. Children in households with active parental SUD often exist in a state of chronic low-grade vigilance — scanning for danger, managing a parent&apos;s moods, taking on adult responsibilities — that consumes developmental resources. Addressing parental substance use is one of the most impactful ACE-prevention interventions available.
+            </p>
+            <p>
+              SAMHSA estimates that <strong>1 in 8 children</strong> in the United States — approximately 8.7 million children — lives with at least one parent who has a substance use disorder. Most of those parents are not incapacitated. Many are holding jobs, managing households, and showing up in ways that make the problem hard to see from the outside. The CAGE-AID is specifically designed to identify the <em>pattern</em> of use — the psychological relationship to the substance — rather than requiring a particular quantity or frequency to trigger concern.
+            </p>
+          </div>
+        </div>
+
+        {/* Co-parent Concerns */}
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">If You&apos;re Concerned About a Co-Parent</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              This page is designed for two distinct situations: a parent assessing their <em>own</em> substance use, and a parent who is concerned about a partner or co-parent. The CAGE-AID questions are written for self-assessment — if you are evaluating a co-parent, you are observing behaviors rather than answering from lived experience, which means the results should be interpreted differently.
+            </p>
+            <p>
+              If you are worried about a co-parent, the most important clinical distinction is between substance use (drinking occasionally, using recreationally) and a substance use disorder (a pattern of use that is compulsive, continues despite consequences, and impairs functioning). Observable warning signs in a co-parent include: impaired judgment during caregiving, unpredictable mood or behavior related to substance access, missed school pickups or appointments, using substances in front of children, or prioritizing use over child safety. If any of these are present and the children are at immediate risk, contacting child protective services or a family law attorney is appropriate regardless of this screening.
+            </p>
+            <p>
+              For co-parents where the concern is present but not at crisis level, SAMHSA&apos;s National Helpline (1-800-662-4357) offers guidance on how to support someone seeking help, how to access family counseling, and how to protect children while maintaining the family unit where possible. Al-Anon Family Groups are also a specific resource for family members of people with alcohol use disorder.
+            </p>
+          </div>
+        </div>
+
+        {/* Stigma section */}
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">The Stigma Barrier — and Why Confidential Treatment Exists</h2>
+          <div className="space-y-3 text-slate-700 dark:text-slate-300">
+            <p>
+              Fear of judgment — from family, from employers, from child protective services — is the most frequently cited barrier to treatment among parents with substance use disorders. This fear is understandable but often overestimates the actual risk. Voluntarily entering treatment is documented by courts and CPS as evidence of responsible parenting, not grounds for intervention. The healthcare system has strong confidentiality protections for substance use treatment specifically: federal law (42 CFR Part 2) provides additional privacy protections for SUD treatment records beyond standard HIPAA, precisely because legislators recognized that stigma was preventing people from seeking help.
+            </p>
+            <p>
+              Confidential treatment pathways exist at every level of care: from a private conversation with your primary care physician (which is protected by doctor-patient confidentiality), to outpatient counseling, to telehealth programs that can be accessed from home. SAMHSA&apos;s treatment locator is available 24/7 at 1-800-662-4357. When you call, you can ask specifically about programs that accommodate parents — including childcare during sessions, evening and weekend availability, and family-inclusive treatment models. The help exists. The barriers are real but they are not insurmountable.
+            </p>
+          </div>
+        </div>
+
+        {/* Citations */}
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li><a href="https://www.samhsa.gov/data/sites/default/files/report_3223/ShortReport-3223.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA — Children Living with Parents Who Have a Substance Use Disorder</a></li>
+            <li><a href="https://www.cdc.gov/violenceprevention/aces/index.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC — Adverse Childhood Experiences (ACEs): Preventing Early Trauma</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/9635062/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Ewing (1984) — Detecting Alcoholism: The CAGE Questionnaire (PubMed)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/9734956/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Brown et al. — CAGE-AID: Validation for drug use screening (PubMed)</a></li>
+            <li><a href="https://www.nimh.nih.gov/health/topics/substance-use-and-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH — Substance Use and Co-Occurring Mental Disorders</a></li>
+          </ul>
+        </div>
+
       {/* The Screening Tool */}
       <div id="screening">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
@@ -216,18 +286,18 @@ export default function SubstanceAbuseTestParentsPage() {
           </p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: May 8, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="A substance use screening for parents that addresses the unique pressures, shame, and barriers to treatment that parents face."
           who="Parents who are worried about their substance use and want a private, judgment-free assessment."
           bottomLine="Being a good parent and having a substance use problem can coexist — getting help is the strongest parenting move. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          lastUpdated="2026-05-08"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
       </div>
 
       <section className="sr-only">
@@ -285,6 +355,9 @@ export default function SubstanceAbuseTestParentsPage() {
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
             </li>
             <li>
+              <strong>Crisis Text Line:</strong> Text HOME to <strong>741741</strong> — free, 24/7
+            </li>
+            <li>
               <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals and treatment locator, 24/7
             </li>
           </ul>
@@ -306,7 +379,7 @@ export default function SubstanceAbuseTestParentsPage() {
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+            Last reviewed: May 2026
           </p>
         </div>
 

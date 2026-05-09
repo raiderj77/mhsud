@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
@@ -74,7 +74,20 @@ export default function BurnoutTestForHealthcareWorkersPage() {
               description: "A free, private burnout screening tool for nurses, doctors, and healthcare staff assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Burnout Test for Healthcare Workers",
+              description: "A clinically informed burnout screening for physicians, nurses, therapists, EMTs, social workers, and medical residents covering all three Maslach burnout dimensions, moral injury, and post-pandemic workforce context.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}
@@ -97,7 +110,6 @@ export default function BurnoutTestForHealthcareWorkersPage() {
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
-        {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sage-100 text-sage-800 dark:bg-sage-900/40 dark:text-sage-300">
             Clinically Informed
@@ -107,12 +119,10 @@ export default function BurnoutTestForHealthcareWorkersPage() {
           </span>
         </div>
 
-        {/* H1 */}
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
           Burnout Test for Healthcare Workers
         </h1>
 
-        {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
             You went into healthcare to help people. You trained for years, took on debt, worked
@@ -132,7 +142,6 @@ export default function BurnoutTestForHealthcareWorkersPage() {
           </p>
         </div>
 
-        {/* Prominent CTA */}
         <div className="mb-10">
           <a
             href="#screening"
@@ -156,7 +165,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 More than half of healthcare workers report significant burnout symptoms post-pandemic.
                 In some specialties, rates exceed 60%. This is a workforce crisis, not a personal one.
-                <span className="text-slate-500 dark:text-slate-400"> — National Academy of Medicine</span>
+                <span className="text-slate-500 dark:text-slate-400"> — National Academy of Medicine (2022)</span>
               </p>
             </div>
             <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
@@ -180,6 +189,38 @@ export default function BurnoutTestForHealthcareWorkersPage() {
           </div>
         </div>
 
+        {/* The NAM Report */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">The National Academy of Medicine Report: What the Data Shows</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              The 2022 National Academy of Medicine report <em>Implementing High-Quality Primary Care</em> and the follow-up <em>Taking Action Against Clinician Burnout</em> represent the most comprehensive federal examination of healthcare worker mental health to date. The NAM identified burnout not as a workforce attitude problem but as a systems design failure — one that could be measured, attributed to specific organizational factors, and addressed through structural intervention. The core finding: the healthcare system is architected around patient throughput in ways that are fundamentally incompatible with clinician well-being.
+            </p>
+            <p>
+              The NAM data showed that physicians die by suicide at rates 1.4 times higher than the general population (men) and 2.27 times higher (women). These figures, drawn from AMA Masterfile mortality data, represent the endpoint of a long chain of unaddressed distress — and they underscore why burnout screening in healthcare is not a wellness initiative but a patient safety and workforce survival issue. The report specifically called for removal of licensing and credentialing barriers to seeking mental health treatment, which historically have deterred physicians and nurses from getting help due to fear of reporting requirements.
+            </p>
+            <p>
+              The CDC/NIOSH <em>Impact of COVID-19 on the Healthcare Workforce</em> survey, which followed more than 46,000 healthcare workers across all roles, found that burnout symptoms were not confined to clinical roles. Administrators, medical assistants, technicians, and support staff reported comparable rates of emotional exhaustion and intent to leave. This is a whole-workforce crisis — it is not limited to physicians and nurses who are most visible in the data.
+            </p>
+          </div>
+        </div>
+
+        {/* Moral Injury vs Burnout */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Moral Injury: The Construct Burnout Doesn&apos;t Fully Capture</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              Burnout and moral injury are frequently conflated in healthcare discussions, but they are distinct constructs that respond to different interventions. Burnout — as defined by the Maslach framework — is the result of chronic exposure to high demands with insufficient resources. The locus is organizational: too much work, too little support, insufficient autonomy. The symptoms are exhaustion, cynicism, and reduced efficacy.
+            </p>
+            <p>
+              Moral injury is the psychological wound caused by participating in, witnessing, or failing to prevent actions that violate one&apos;s moral code. In healthcare, the classic moral injury scenario is the clinician who knows what a patient needs — an additional day in the ICU, a specialist consultation, a medication that insurance will not cover — and is forced by system constraints to provide less. The distress is not from being overworked; it is from being complicit in a system that delivers inadequate care. This distinction matters clinically because moral injury does not respond to burnout prevention strategies like mindfulness, schedule optimization, or self-care. It requires addressing the ethical wound directly — through processing the specific incidents, finding meaning, and often engaging in systemic advocacy.
+            </p>
+            <p>
+              EMTs and emergency responders carry a specific moral injury burden related to mass casualty events, resource triage decisions, and the gap between pre-hospital interventions and definitive care outcomes. Social workers face moral injury from caseload constraints that prevent adequate service delivery. Medical residents face it from supervision structures that limit their ability to advocate for patients. Recognizing which construct applies to your distress — burnout, compassion fatigue, or moral injury — is the first step toward choosing the right response.
+            </p>
+          </div>
+        </div>
+
         {/* What To Expect */}
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
@@ -195,11 +236,22 @@ export default function BurnoutTestForHealthcareWorkersPage() {
                 <p><strong>Emotional exhaustion:</strong> Feeling drained, depleted, and like you have nothing left to give — compounded by shift work, patient deaths, and the relentless pace of healthcare.</p>
                 <p><strong>Depersonalization:</strong> Feeling detached from patients, treating them as cases rather than people, or developing a cynicism that doesn&apos;t feel like you.</p>
                 <p><strong>Reduced accomplishment:</strong> Feeling like your work doesn&apos;t matter, that the system swallows your effort, or that you&apos;ve lost the purpose that brought you to healthcare.</p>
-                <p><strong>Moral injury:</strong> The distress of knowing what patients need but being unable to provide it due to systemic constraints — a uniquely healthcare experience.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, licensing board, or anyone else.</p>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Citations */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li><a href="https://www.cdc.gov/niosh/docs/2023-114/default.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC/NIOSH — Impact of COVID-19 on the Healthcare Workforce (2023)</a></li>
+            <li><a href="https://www.samhsa.gov/workplace/resources" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA — Workplace Wellness and Clinician Mental Health Resources</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31157115/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Shanafelt &amp; Noseworthy — Executive Leadership and Physician Well-Being (PubMed)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/30379552/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Dutheil et al. — Suicide among physicians and healthcare workers: a systematic review (PubMed)</a></li>
+            <li><a href="https://www.nimh.nih.gov/health/topics/depression" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH — Depression (burnout-depression co-occurrence in clinicians)</a></li>
+          </ul>
         </div>
       </div>
 
@@ -214,11 +266,11 @@ export default function BurnoutTestForHealthcareWorkersPage() {
           </p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: May 8, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening tailored for healthcare professionals with context specific to clinical care environments." who="Doctors, nurses, therapists, and other healthcare workers experiencing exhaustion, compassion fatigue, or detachment." bottomLine="Healthcare worker burnout affects patient care — addressing your wellbeing is not selfish, it is essential. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening tailored for healthcare professionals with context specific to clinical care environments." who="Doctors, nurses, therapists, and other healthcare workers experiencing exhaustion, compassion fatigue, or detachment." bottomLine="Healthcare worker burnout affects patient care — addressing your wellbeing is not selfish, it is essential. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-05-08" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
       </div>
       <section className="sr-only">
         <h2>What Is Healthcare Worker Burnout Screening?</h2>
@@ -275,6 +327,9 @@ export default function BurnoutTestForHealthcareWorkersPage() {
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
             </li>
             <li>
+              <strong>Crisis Text Line:</strong> Text HOME to <strong>741741</strong> — free, 24/7
+            </li>
+            <li>
               <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
             </li>
             <li>
@@ -299,7 +354,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+            Last reviewed: May 2026
           </p>
         </div>
 
