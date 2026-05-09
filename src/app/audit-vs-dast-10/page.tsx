@@ -154,11 +154,13 @@ export default function AuditVsDast10Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              The{" "}
+              Use the{" "}
               <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">AUDIT</Link>{" "}
-              and{" "}
+              if you are screening for alcohol use; use the{" "}
               <Link href="/dast-10-drug-screening" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">DAST-10</Link>{" "}
-              are both substance use screening tools, but they screen for entirely different substances. The AUDIT screens for alcohol use disorders; the DAST-10 screens for drug use other than alcohol. Understanding the distinction is essential because the DAST-10 explicitly excludes alcohol — and the AUDIT does not cover drugs.
+              for drug use other than alcohol — they cover separate substance categories and are not interchangeable. The AUDIT is a 10-question WHO-validated alcohol screen; the DAST-10 is a 10-question screen for illicit and non-prescribed drug use. Note: the DAST-10 interactive tool is currently under licensing review — see the{" "}
+              <Link href="/dast-10-drug-screening" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">DAST-10 drug screening page</Link>{" "}
+              for availability — but the clinical comparison below remains accurate. This page is for anyone determining which screen fits their situation; the full comparison covers scoring, thresholds, and when both tools are needed together.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               Many people who struggle with substance use problems use both alcohol and drugs. In those cases, both tools are needed to get a complete picture.
