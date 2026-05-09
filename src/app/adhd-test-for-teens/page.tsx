@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { ASRSClient } from "../asrs-adhd-screening/ASRSClient";
@@ -35,12 +35,20 @@ const FAQ_DATA = [
     answer: "Absolutely. ADHD is not an intelligence issue — it's an attention and executive function issue. Many teens with ADHD are very bright but struggle with homework completion, test preparation, organization, and long-term projects. This gap between ability and performance is one of the hallmark signs of ADHD and is incredibly frustrating for the teen experiencing it.",
   },
   {
+    question: "Why are girls with ADHD so often missed?",
+    answer: "Girls with ADHD are significantly underdiagnosed compared to boys. Girls tend to present with predominantly inattentive symptoms rather than hyperactivity, which are less disruptive and easier for adults to overlook. Girls are also more likely to compensate — developing elaborate systems to mask their difficulties — which means the problem may not become visible until the compensatory strategies can no longer keep up with increasing demands. By the time many girls are identified, they have spent years feeling inadequate, anxious, or 'different' without understanding why.",
+  },
+  {
     question: "Is ADHD overdiagnosed in teens?",
     answer: "Research suggests ADHD is actually both overdiagnosed in some populations and underdiagnosed in others. Girls, teens of color, and teens with predominantly inattentive symptoms are frequently missed. A thorough evaluation by a qualified professional considers multiple sources of information and rules out other explanations for symptoms.",
   },
   {
     question: "What does ADHD treatment look like for teenagers?",
     answer: "Treatment typically includes behavioral strategies, academic accommodations (504 plan or IEP), and sometimes medication. Many teens benefit from organizational coaching, structured routines, and learning to use external tools like planners and timers. Medication (stimulant and non-stimulant options) is effective for about 70-80% of people with ADHD. Treatment should be individualized.",
+  },
+  {
+    question: "Can teen athletes take ADHD medication?",
+    answer: "Stimulant medications for ADHD (such as amphetamines and methylphenidate) are on the NCAA and World Anti-Doping Agency (WADA) controlled substance lists, but Therapeutic Use Exemptions (TUEs) are available for athletes with a documented ADHD diagnosis and legitimate prescription. The fear of stigma or disqualification should not prevent teens from getting evaluated and treated. An untreated ADHD diagnosis creates far greater performance and academic consequences than a properly documented TUE.",
   },
   {
     question: "Can teens grow out of ADHD?",
@@ -51,7 +59,8 @@ const FAQ_DATA = [
 export default function AdhdTestForTeensPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Teens — ASRS Screening", description: "A free, private ADHD screening tool for teenagers using the clinically validated ASRS.", url: TOOL_URL, datePublished: "2026-03-08", dateModified: new Date().toISOString().substring(0,10) })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "ADHD Test for Teens — ASRS Screening", description: "A free, private ADHD screening tool for teenagers using the clinically validated ASRS.", url: TOOL_URL, datePublished: "2026-03-08", dateModified: "2026-05-08" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "ADHD Test for Teens", description: "An ASRS-based ADHD screening for adolescents 13–19, covering inattention, hyperactivity, impulsivity, school accommodations, gender differences in diagnosis, and neurodevelopmental context.", url: TOOL_URL, lastReviewed: "2026-05-08" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "ASRS ADHD Screening", url: `${SITE_URL}/asrs-adhd-screening` }, { name: "ADHD Test for Teens", url: TOOL_URL }])) }} />
 
@@ -122,6 +131,55 @@ export default function AdhdTestForTeensPage() {
             <p>Teen ADHD is different from adult ADHD in important ways. Teens have far less autonomy over their environment — they cannot choose their schedule, their teachers, or their workload. They face constant external evaluation through grades and test scores. And their executive function skills are still developing, which means they are dealing with ADHD using a brain that has not yet fully matured in the areas ADHD affects most. This can make ADHD more impactful during adolescence than at any other life stage, and it is why early identification and support matter so much.</p>
           </div>
         </div>
+
+        {/* Girls and ADHD */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Girls and ADHD: A Persistent Diagnostic Gap</h2>
+          <div className="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              ADHD is diagnosed in boys at roughly twice the rate it is diagnosed in girls — but this gap does not reflect reality. It reflects a diagnostic bias. Boys are more likely to present with hyperactive-impulsive symptoms that disrupt classrooms and draw adult attention. Girls are more likely to present with predominantly inattentive symptoms: daydreaming, losing track of instructions, struggling to sustain focus, appearing &quot;spacey&quot; or disorganized. These symptoms are quieter, and they tend to be attributed to personality rather than neurology.
+            </p>
+            <p>
+              Girls with ADHD are also more likely to internalize their difficulties. They develop compensatory strategies — writing everything down obsessively, asking friends for help, spending twice as long on assignments to achieve the same result — that mask the underlying problem until the demands outpace the strategies. This often happens at major academic transition points: the jump from middle school to high school, the first year of college. By the time the unraveling is visible, years of unnecessary struggle have accumulated.
+            </p>
+            <p>
+              The consequences of missed diagnosis in girls are well-documented: higher rates of anxiety and depression as secondary conditions, lower academic attainment than their cognitive ability would predict, and a pattern of being told they are capable but underperforming — internalizing the failure as a character flaw rather than a treatable condition. The American Academy of Pediatrics (AAP) clinical guidelines specifically address underdiagnosis in girls and recommend evaluating ADHD in any adolescent presenting with unexplained academic difficulty, regardless of hyperactivity.
+            </p>
+          </div>
+        </div>
+
+        {/* School Accommodations */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">School Accommodations: 504 Plans vs. IEPs</h2>
+          <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+            <div className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+              <p>A formal ADHD diagnosis opens access to two types of school support, which serve different levels of need.</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-semibold text-slate-800 dark:text-slate-200">504 Plan</p>
+                  <p>A civil rights accommodation plan (Section 504 of the Rehabilitation Act) that removes barriers to accessing education. Common 504 accommodations for ADHD: extended test time, preferential seating, frequent check-ins, reduced homework load, breaks during testing, permission to use a fidget tool. Does not require special education eligibility.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-800 dark:text-slate-200">IEP (Individualized Education Program)</p>
+                  <p>Required when ADHD significantly impacts educational performance and the student needs specialized instruction — not just accommodations. IEPs are developed by a team including parents, teachers, and specialists. They carry legal obligations and are reviewed annually. IEPs provide more intensive support than 504 plans but require meeting IDEA eligibility criteria.</p>
+                </div>
+              </div>
+              <p>A screening result from this page can be the first step toward requesting a school evaluation, which is free and legally required to be completed within 60 days of a written request in most states.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Citations */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li><a href="https://www.cdc.gov/ncbddd/adhd/data.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC — ADHD Data &amp; Statistics in the United States</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/16951440/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Kessler et al. — ASRS v1.1 Validation Study (PubMed)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/29555900/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Quinn &amp; Madhoo — ADHD in girls and women: underrepresentation, diagnosis, and treatment (PubMed)</a></li>
+            <li><a href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH — Attention-Deficit/Hyperactivity Disorder (ADHD)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/21787449/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">AAP Clinical Practice Guideline — ADHD Diagnosis &amp; Evaluation in Children 4–18 (PubMed)</a></li>
+          </ul>
+        </div>
       </div>
 
       <div id="screening">
@@ -130,18 +188,18 @@ export default function AdhdTestForTeensPage() {
           <p className="text-slate-600 dark:text-slate-300 mb-4">Answer each question based on how you&apos;ve been feeling over the past six months.</p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: May 8, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="An ASRS-based ADHD screening adapted for teenagers that covers attention, impulsivity, and hyperactivity symptoms."
           who="Teens or parents of teens who want to check whether ADHD symptoms warrant further professional evaluation."
           bottomLine="Teen ADHD often looks different from the childhood presentation — share results with a healthcare provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          lastUpdated="2026-05-08"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
       </div>
       <section className="sr-only">
         <h2>What Is the Teen ADHD Screening?</h2>
@@ -174,6 +232,7 @@ export default function AdhdTestForTeensPage() {
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Crisis Resources</h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential</li>
+            <li><strong>Crisis Text Line:</strong> Text HOME to <strong>741741</strong> — free, 24/7</li>
             <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7</li>
           </ul>
         </div>
@@ -182,7 +241,7 @@ export default function AdhdTestForTeensPage() {
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).</p>
-          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: March 2026</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: May 2026</p>
         </div>
 
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
