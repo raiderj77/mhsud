@@ -97,6 +97,11 @@ export default function UCLAPage() {
         }}
       />
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8">
+        <h1 className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">
+          UCLA Loneliness Scale
+        </h1>
+      </div>
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
