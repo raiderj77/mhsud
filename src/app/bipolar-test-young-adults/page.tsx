@@ -7,25 +7,28 @@ import { MDQClient } from "../mdq-bipolar-screening/MDQClient";
 
 const TOOL_URL = `${SITE_URL}/bipolar-test-young-adults`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/bipolar-test-young-adults",
-  title: "Bipolar Test for Young Adults — Free MDQ Screen",
-  description:
-    "Free bipolar screening for young adults using the MDQ. Private, instant results. No signup.",
-  keywords: [
-    "bipolar test young adults", "bipolar screening young people", "mdq bipolar test",
-    "am i bipolar quiz", "bipolar disorder test", "young adult bipolar screening",
-    "bipolar test college students", "bipolar mood disorder quiz", "mood swings test young adults",
-    "bipolar self-assessment", "bipolar screening questionnaire", "mdq screening tool",
-    "bipolar symptoms young adults", "hypomania test", "free bipolar test",
-  ],
-  openGraph: {
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/bipolar-test-young-adults",
     title: "Bipolar Test for Young Adults — Free MDQ Screen",
-    description: "Free, private bipolar screening for young adults using the clinically validated MDQ. Instant results, no signup required.",
-    url: TOOL_URL,
-    type: "website",
-  },
-});
+    description:
+      "Free bipolar screening for young adults using the MDQ. Private, instant results. No signup.",
+    keywords: [
+      "bipolar test young adults", "bipolar screening young people", "mdq bipolar test",
+      "am i bipolar quiz", "bipolar disorder test", "young adult bipolar screening",
+      "bipolar test college students", "bipolar mood disorder quiz", "mood swings test young adults",
+      "bipolar self-assessment", "bipolar screening questionnaire", "mdq screening tool",
+      "bipolar symptoms young adults", "hypomania test", "free bipolar test",
+    ],
+    openGraph: {
+      title: "Bipolar Test for Young Adults — Free MDQ Screen",
+      description: "Free, private bipolar screening for young adults using the clinically validated MDQ. Instant results, no signup required.",
+      url: TOOL_URL,
+      type: "website",
+    },
+  }),
+  robots: { index: false, follow: false },
+};
 
 const FAQ_DATA = [
   {

@@ -7,13 +7,16 @@ import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/ocd-test-teens`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/ocd-test-teens",
-  title: "OCD Test for Teens — Free OCI-R Screening",
-  description: "Free OCD screening for teenagers using the OCI-R. Private, instant results. No signup required.",
-  keywords: ["ocd test for teens", "teen ocd screening", "ocd quiz teenagers", "adolescent ocd test", "ocd symptoms teens", "oci-r teens", "teen ocd signs", "ocd screening adolescents", "free ocd test teens"],
-  openGraph: { title: "OCD Test for Teens — Free OCI-R Screening", description: "Free, private OCD screening for teenagers using the OCI-R. Instant results, no signup.", url: TOOL_URL, type: "website" },
-});
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/ocd-test-teens",
+    title: "OCD Test for Teens — Free OCI-R Screening",
+    description: "Free OCD screening for teenagers using the OCI-R. Private, instant results. No signup required.",
+    keywords: ["ocd test for teens", "teen ocd screening", "ocd quiz teenagers", "adolescent ocd test", "ocd symptoms teens", "oci-r teens", "teen ocd signs", "ocd screening adolescents", "free ocd test teens"],
+    openGraph: { title: "OCD Test for Teens — Free OCI-R Screening", description: "Free, private OCD screening for teenagers using the OCI-R. Instant results, no signup.", url: TOOL_URL, type: "website" },
+  }),
+  robots: { index: false, follow: false },
+};
 
 const FAQ_DATA = [
   { question: "Is OCD common in teenagers?", answer: "Yes. OCD affects about 1-2% of children and adolescents, with the average age of onset around 10-12 years old. A second peak occurs during late adolescence. OCD is the fourth most common mental health condition in young people. Many teens suffer in silence for years before being diagnosed, with the average delay to treatment being 7-10 years." },

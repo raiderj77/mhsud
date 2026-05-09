@@ -4,22 +4,25 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 const TOOL_URL = `${SITE_URL}/dast-10-drug-screening`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/dast-10-drug-screening",
-  title: "DAST-10 Drug Screening — Coming Soon",
-  description:
-    "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
-  keywords: [
-    "dast-10", "drug abuse screening test", "drug screening test",
-    "substance abuse screening", "drug use screening",
-  ],
-  openGraph: {
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/dast-10-drug-screening",
     title: "DAST-10 Drug Screening — Coming Soon",
-    description: "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission.",
-    url: TOOL_URL,
-    type: "website",
-  },
-});
+    description:
+      "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
+    keywords: [
+      "dast-10", "drug abuse screening test", "drug screening test",
+      "substance abuse screening", "drug use screening",
+    ],
+    openGraph: {
+      title: "DAST-10 Drug Screening — Coming Soon",
+      description: "The DAST-10 drug screening tool is temporarily unavailable while we obtain licensing permission.",
+      url: TOOL_URL,
+      type: "website",
+    },
+  }),
+  robots: { index: false, follow: false },
+};
 
 export default function DAST10Page() {
   return (

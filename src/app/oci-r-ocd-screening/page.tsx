@@ -3,22 +3,25 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 const TOOL_URL = `${SITE_URL}/oci-r-ocd-screening`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/oci-r-ocd-screening",
-  title: "OCI-R OCD Screening — Coming Soon",
-  description:
-    "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
-  keywords: [
-    "oci-r", "ocd test", "ocd screening", "obsessive compulsive test",
-    "ocd assessment",
-  ],
-  openGraph: {
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/oci-r-ocd-screening",
     title: "OCI-R OCD Screening — Coming Soon",
-    description: "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission.",
-    url: TOOL_URL,
-    type: "website",
-  },
-});
+    description:
+      "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
+    keywords: [
+      "oci-r", "ocd test", "ocd screening", "obsessive compulsive test",
+      "ocd assessment",
+    ],
+    openGraph: {
+      title: "OCI-R OCD Screening — Coming Soon",
+      description: "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission.",
+      url: TOOL_URL,
+      type: "website",
+    },
+  }),
+  robots: { index: false, follow: false },
+};
 
 export default function OCIRPage() {
   return (

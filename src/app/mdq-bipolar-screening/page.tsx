@@ -4,22 +4,25 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 const TOOL_URL = `${SITE_URL}/mdq-bipolar-screening`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/mdq-bipolar-screening",
-  title: "MDQ Bipolar Screening — Coming Soon",
-  description:
-    "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
-  keywords: [
-    "mdq", "mood disorder questionnaire", "bipolar screening",
-    "bipolar test", "bipolar spectrum screening",
-  ],
-  openGraph: {
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/mdq-bipolar-screening",
     title: "MDQ Bipolar Screening — Coming Soon",
-    description: "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission.",
-    url: TOOL_URL,
-    type: "website",
-  },
-});
+    description:
+      "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
+    keywords: [
+      "mdq", "mood disorder questionnaire", "bipolar screening",
+      "bipolar test", "bipolar spectrum screening",
+    ],
+    openGraph: {
+      title: "MDQ Bipolar Screening — Coming Soon",
+      description: "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission.",
+      url: TOOL_URL,
+      type: "website",
+    },
+  }),
+  robots: { index: false, follow: false },
+};
 
 export default function MDQPage() {
   return (
