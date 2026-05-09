@@ -154,11 +154,11 @@ export default function AuditVsAuditCPage() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              The{" "}
-              <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">AUDIT</Link>{" "}
-              and{" "}
+              Use the{" "}
               <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">AUDIT-C</Link>{" "}
-              are both World Health Organization alcohol screening tools, but they serve different purposes. The AUDIT is the comprehensive 10-question standard; the AUDIT-C is a 3-question rapid screen derived from the first three AUDIT items. Understanding when each applies helps you know which result is more meaningful for your situation.
+              when you need a rapid 3-question alcohol screen that takes under one minute; use the full 10-question{" "}
+              <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">AUDIT</Link>{" "}
+              when the AUDIT-C is positive or when time allows a complete assessment. The AUDIT-C is designed for high-volume primary care and intake settings; the full AUDIT identifies harmful drinking patterns with greater precision. This page is for clinicians, patients, or researchers choosing between the two tools. The comparison below explains scoring, cutoffs, and when a positive AUDIT-C should trigger the full screen.
             </p>
           </div>
 

@@ -154,7 +154,7 @@ export default function Phq9VsGad7Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              The PHQ-9 and GAD-7 are the two most widely used brief mental health screening tools in primary care and behavioral health settings worldwide. They are often administered together, yet they measure different things. The <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> screens for depression; the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> screens for generalized anxiety disorder. Understanding what sets them apart helps you know which tool — or combination — is most relevant to your symptoms.
+              Use the <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> if you are screening for depression; use the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> if you are screening for anxiety. Because depression and anxiety co-occur in roughly 50% of cases, taking both tools is often the most clinically appropriate choice. This page is for anyone deciding which screening to take — or whether to take both. The comparison below covers scoring, clinical thresholds, and how the results relate to each other.
             </p>
           </div>
 

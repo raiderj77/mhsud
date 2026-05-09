@@ -154,13 +154,13 @@ export default function Dass21VsPhq9Gad7Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              If you have encountered multiple mental health screening options, you may have noticed that some resources recommend the{" "}
+              Use the{" "}
               <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">DASS-21</Link>{" "}
-              while others recommend the{" "}
+              when stress is part of the clinical picture and you want one instrument covering depression, anxiety, and stress together; use the{" "}
               <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link>{" "}
               and{" "}
               <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link>{" "}
-              pair. These are different tools with different strengths, and choosing between them depends on why you are screening and what setting you are in.
+              paired when you need stricter alignment with DSM diagnostic categories. The DASS-21 is common in research and stress-monitoring contexts; the PHQ-9 and GAD-7 pair is standard in primary care and outpatient behavioral health. This page is for anyone deciding between a combined stress-inclusive screen and the two-instrument clinical standard. The comparison below covers scoring, sensitivity, and practical tradeoffs.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               The key distinction: the DASS-21 measures depression, anxiety, and stress simultaneously in a single 21-item instrument. The PHQ-9 and GAD-7 are two separate instruments — one for depression, one for anxiety — that are often used together. Neither approach is universally better; the right choice depends on your clinical context and what information you need.

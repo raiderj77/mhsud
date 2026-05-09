@@ -154,9 +154,9 @@ export default function Phq2ToPhq9Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              You may have encountered the PHQ-2 at a primary care office, telehealth intake, or health screening event. It asks only two questions. If your score reaches 3 or higher, the recommended clinical response is to complete the full{" "}
-              <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link>.
-              {" "}This two-step protocol is how the PHQ family of instruments is designed to be used — the PHQ-2 as a rapid gate, the PHQ-9 as the comprehensive follow-up.
+              The PHQ-2 is a 2-question depression pre-screen; the{" "}
+              <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link>{" "}
+              is the 9-question full screen — and the clinical escalation threshold is a PHQ-2 score of 3 or higher. The PHQ-2 is used as a rapid gate in time-limited settings; a positive result (score ≥ 3) means completing the full PHQ-9 is the recommended next step. This page is for anyone who has taken the PHQ-2 and wants to understand whether and how to escalate. The explanation below covers why the two-step protocol exists, what the PHQ-9 adds, and how to interpret the combined results.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               Understanding this process helps you know what your PHQ-2 result means and what to do with it.
