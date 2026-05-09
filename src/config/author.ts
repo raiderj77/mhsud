@@ -15,6 +15,15 @@ export const AUTHOR_SCHEMA = {
   name: SITE_AUTHOR.name,
   jobTitle: SITE_AUTHOR.credentialFull,
   url: "https://mindchecktools.com/about/jason-ramirez",
+  knowsAbout: [
+    "Substance use disorder screening",
+    "Mental health assessment",
+    "PHQ-9 depression screening",
+    "GAD-7 anxiety screening",
+    "AUDIT alcohol screening",
+    "Co-occurring disorders",
+    "Addiction counseling",
+  ],
 };
 
 // For the homepage hero — credential only, no name

@@ -151,7 +151,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         <h2>How Is the Caregiver Burnout Assessment Scored?</h2>
         <h2>What Do My Caregiver Burnout Results Mean?</h2>
       </section>
-<BurnoutClient faqData={FAQ_DATA} />
+<div id="screening"><BurnoutClient faqData={FAQ_DATA} /></div>
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">
@@ -211,6 +211,10 @@ export default function CaregiverBurnoutAssessmentPage() {
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
               <strong>988</strong> — if you are in crisis
+            </li>
+            <li>
+              <strong>SAMHSA National Helpline:</strong>{" "}
+              <a href="tel:1-800-662-4357" className="font-bold">1-800-662-4357</a> — free referrals, 24/7
             </li>
             <li>
               <strong>Caregiver Action Network:</strong>{" "}
