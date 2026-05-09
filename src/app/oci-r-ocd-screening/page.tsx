@@ -5,16 +5,17 @@ const TOOL_URL = `${SITE_URL}/oci-r-ocd-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/oci-r-ocd-screening",
-  title: "OCI-R OCD Screening — Coming Soon",
+  title: "Obsessive-Compulsive Inventory–Revised (OCI-R) — Under Licensing Review",
   description:
-    "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
+    "The OCI-R OCD screening instrument is temporarily unavailable while we obtain commercial-use clearance. Please consult a qualified mental health professional.",
   keywords: [
     "oci-r", "ocd test", "ocd screening", "obsessive compulsive test",
     "ocd assessment",
   ],
+  robots: { index: false, follow: false },
   openGraph: {
-    title: "OCI-R OCD Screening — Coming Soon",
-    description: "The OCI-R OCD screening tool is temporarily unavailable while we obtain licensing permission.",
+    title: "Obsessive-Compulsive Inventory–Revised (OCI-R) — Under Licensing Review",
+    description: "The OCI-R OCD screening instrument is temporarily unavailable while we obtain commercial-use clearance.",
     url: TOOL_URL,
     type: "website",
   },
@@ -37,16 +38,15 @@ export default function OCIRPage() {
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
         <h1 className="text-3xl font-bold text-warm-900 dark:text-warm-100 mb-6 text-center">
-          OCI-R OCD Screening — Coming Soon
+          Obsessive-Compulsive Inventory–Revised (OCI-R) — Under Licensing Review
         </h1>
 
         <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
           <p className="text-warm-700 dark:text-warm-300 leading-relaxed">
-            We are currently obtaining licensing permission to offer this screening tool. The Obsessive-Compulsive Inventory-Revised (OCI-R) is a validated instrument for OCD symptom assessment. We expect to have this tool available soon. In the meantime, please consult with a qualified mental health professional.
+            The OCI-R is a copyrighted obsessive-compulsive symptom inventory. We are pursuing written commercial-use clearance from the rights holder before publishing this tool. In the meantime, if you are experiencing intrusive thoughts or compulsive behaviors that concern you, please speak with a licensed clinician. For related anxiety symptoms, our GAD-7 anxiety screening is available.
           </p>
         </div>
 
-        {/* Crisis Resources */}
         <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
           <h2 className="text-lg font-semibold text-red-900 dark:text-red-200 mb-4">
             Crisis Resources
@@ -67,7 +67,6 @@ export default function OCIRPage() {
           </ul>
         </div>
 
-        {/* Medical Disclaimer */}
         <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4">
           <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
             <strong>Important:</strong> This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment.

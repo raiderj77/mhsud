@@ -6,16 +6,17 @@ const TOOL_URL = `${SITE_URL}/mdq-bipolar-screening`;
 
 export const metadata: Metadata = createMetadata({
   path: "/mdq-bipolar-screening",
-  title: "MDQ Bipolar Screening — Coming Soon",
+  title: "Mood Disorder Questionnaire (MDQ) — Under Licensing Review",
   description:
-    "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission. Please consult a qualified mental health professional.",
+    "The MDQ bipolar screening instrument is temporarily unavailable while we obtain commercial-use clearance. Please consult a qualified mental health professional.",
   keywords: [
     "mdq", "mood disorder questionnaire", "bipolar screening",
     "bipolar test", "bipolar spectrum screening",
   ],
+  robots: { index: false, follow: false },
   openGraph: {
-    title: "MDQ Bipolar Screening — Coming Soon",
-    description: "The MDQ bipolar screening tool is temporarily unavailable while we obtain licensing permission.",
+    title: "Mood Disorder Questionnaire (MDQ) — Under Licensing Review",
+    description: "The MDQ bipolar screening instrument is temporarily unavailable while we obtain commercial-use clearance.",
     url: TOOL_URL,
     type: "website",
   },
@@ -38,16 +39,15 @@ export default function MDQPage() {
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
         <h1 className="text-3xl font-bold text-warm-900 dark:text-warm-100 mb-6 text-center">
-          MDQ Bipolar Screening — Coming Soon
+          Mood Disorder Questionnaire (MDQ) — Under Licensing Review
         </h1>
 
         <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
           <p className="text-warm-700 dark:text-warm-300 leading-relaxed">
-            We are currently obtaining licensing permission to offer this screening tool. The Mood Disorder Questionnaire (MDQ) is a validated instrument for bipolar spectrum disorder screening. We expect to have this tool available soon. In the meantime, please consult with a qualified mental health professional.
+            The MDQ is a copyrighted bipolar screening instrument. We are pursuing written commercial-use clearance from the rights holder before publishing this tool. In the meantime, if you are experiencing mood symptoms that concern you, please speak with a licensed clinician. The DASS-21 (depression, anxiety, stress) is available as a related screening tool.
           </p>
         </div>
 
-        {/* Crisis Resources */}
         <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
           <h2 className="text-lg font-semibold text-red-900 dark:text-red-200 mb-4">
             Crisis Resources
@@ -68,14 +68,12 @@ export default function MDQPage() {
           </ul>
         </div>
 
-        {/* Medical Disclaimer */}
         <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-800 rounded-xl p-4 mb-8">
           <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
             <strong>Important:</strong> This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment.
           </p>
         </div>
 
-        {/* Related Tools */}
         <h2 className="text-xl font-semibold text-warm-900 dark:text-warm-100 mb-4">Related Screening Tools &amp; Guides</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Link href="/mdq-score-interpretation" className="block border border-warm-200 dark:border-warm-700 rounded-xl p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
