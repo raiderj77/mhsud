@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { GAD7Client } from "../gad-7-anxiety-test/GAD7Client";
@@ -63,7 +63,20 @@ export default function AnxietyTestForWomenPage() {
               description: "A free, private anxiety screening tool for women using the clinically validated GAD-7 questionnaire. Includes information on hormonal and life-stage factors.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Anxiety Screening for Women",
+              description: "Free GAD-7 anxiety screening for women with clinical context on hormonal contributors, life-stage transitions, and the worry-rumination cycle.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}

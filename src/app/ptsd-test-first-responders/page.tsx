@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "../pcl-5-ptsd-screening/PCL5Client";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -75,7 +75,20 @@ export default function PTSDTestFirstRespondersPage() {
               description: "A free, private PTSD screening tool for police officers, firefighters, EMTs, and dispatchers using the clinically validated PCL-5.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "PTSD Screening for First Responders",
+              description: "Free PCL-5 PTSD screening for police, firefighters, EMTs, and dispatchers with clinical context on cumulative trauma, operational hypervigilance, and first responder-specific treatment resources.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}

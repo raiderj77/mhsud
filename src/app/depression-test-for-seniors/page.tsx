@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ9Client } from "../phq-9-depression-test/PHQ9Client";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -34,7 +34,20 @@ const FAQ_DATA = [
 export default function DepressionTestForSeniorsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Seniors — PHQ-9 Screening", description: "A free, private depression screening tool for older adults using the PHQ-9.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: new Date().toISOString().substring(0,10) })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Depression Test for Seniors — PHQ-9 Screening", description: "A free, private depression screening tool for older adults using the PHQ-9.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-08" })) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Depression Screening for Older Adults",
+              description: "Free PHQ-9 depression screening for adults 65 and older, with clinical context on late-life depression, vascular depression, and grief.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
+            })
+          ),
+        }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "PHQ-9 Depression Test", url: `${SITE_URL}/phq-9-depression-test` }, { name: "Depression Test for Seniors", url: TOOL_URL }])) }} />
 

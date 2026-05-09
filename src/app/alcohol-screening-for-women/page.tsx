@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { AUDITClient } from "../audit-alcohol-test/AUDITClient";
@@ -56,7 +56,20 @@ const FAQ_DATA = [
 export default function AlcoholScreeningForWomenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Alcohol Use Screening for Women — AUDIT", description: "A free, private alcohol screening tool for women using the WHO's clinically validated AUDIT questionnaire.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: new Date().toISOString().substring(0,10) })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Alcohol Use Screening for Women — AUDIT", description: "A free, private alcohol screening tool for women using the WHO's clinically validated AUDIT questionnaire.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: "2026-05-08" })) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Alcohol Use Screening for Women",
+              description: "Free AUDIT alcohol screening for women with clinical context on sex-based pharmacokinetics, telescoping progression, and gender-specific risk thresholds.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
+            })
+          ),
+        }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: `${SITE_URL}/audit-alcohol-test` }, { name: "Alcohol Use Screening for Women", url: TOOL_URL }])) }} />
 

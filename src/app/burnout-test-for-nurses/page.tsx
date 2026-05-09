@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
@@ -63,7 +63,20 @@ export default function BurnoutTestForNursesPage() {
               description: "A free, private burnout screening tool for nurses assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Burnout Screening for Nurses",
+              description: "Free burnout screening for nurses measuring emotional exhaustion, depersonalization, and reduced personal accomplishment, with clinical context on moral distress and systemic drivers of healthcare worker burnout.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}

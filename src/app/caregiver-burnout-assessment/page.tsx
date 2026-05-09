@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
@@ -71,7 +71,20 @@ export default function CaregiverBurnoutAssessmentPage() {
                 "A free, private burnout assessment for family caregivers. Check for emotional exhaustion, compassion fatigue, and caregiver stress.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-08",
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Caregiver Burnout Assessment",
+              description: "Free burnout assessment for family caregivers measuring emotional exhaustion, compassion fatigue, and the cumulative toll of sustained caregiving without adequate support or respite.",
+              url: TOOL_URL,
+              lastReviewed: "2026-05-08",
             })
           ),
         }}
