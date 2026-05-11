@@ -36,7 +36,11 @@ function personJsonLd() {
       credentialCategory: "Professional Certification",
       name: "CADC-II",
     },
-    sameAs: ["https://linkedin.com/in/jason-ramirez-cadc"],
+    sameAs: [
+      "https://npiregistry.cms.hhs.gov/provider-view/1689024218",
+      "https://ccappcredentialing.org/verify-credential/",
+      "https://linkedin.com/in/jason-ramirez-cadc",
+    ],
     url: `${SITE_URL}/about/jason-ramirez`,
     worksFor: {
       "@type": "Organization",
