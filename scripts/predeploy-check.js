@@ -4,7 +4,7 @@
  * Exit code 1 on failure, 0 on pass.
  */
 
-import { readFileSync, existsSync } from "fs";
+import { readFileSync, existsSync, readdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -176,6 +176,50 @@ check("Security headers", () => {
     } else {
       fail(`${header} missing from next.config`);
     }
+  }
+});
+
+// ---------------------------------------------------------------------------
+// 7. No dynamic dateModified in source files
+// ---------------------------------------------------------------------------
+check("Dynamic dateModified guard", () => {
+  function walkSync(dir) {
+    let results = [];
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = resolve(dir, entry.name);
+      if (entry.isDirectory()) {
+        results = results.concat(walkSync(full));
+      } else if (entry.isFile() && (entry.name.endsWith(".ts") || entry.name.endsWith(".tsx"))) {
+        results.push(full);
+      }
+    }
+    return results;
+  }
+
+  const files = walkSync(resolve(ROOT, "src"));
+  const hits = [];
+
+  for (const file of files) {
+    const lines = readFileSync(file, "utf-8").split("\n");
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (
+        (line.includes("dateModified") && line.includes("new Date(")) ||
+        line.includes("modifiedDate={new Date(")
+      ) {
+        const rel = file.slice(ROOT.length + 1).replace(/\\/g, "/");
+        hits.push(`${rel}:${i + 1}  ${line.trim()}`);
+      }
+    }
+  }
+
+  if (hits.length === 0) {
+    pass("No dynamic dateModified found");
+  } else {
+    for (const hit of hits) {
+      console.error(`  ${hit}`);
+    }
+    fail("Dynamic dateModified detected. Use static YYYY-MM-DD string. See CLAUDE.md.");
   }
 });
 
