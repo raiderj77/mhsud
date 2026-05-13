@@ -17,12 +17,12 @@ export const AUTHOR_SCHEMA = {
   url: "https://mindchecktools.com/about/jason-ramirez",
   knowsAbout: [
     "Substance use disorder screening",
-    "Mental health assessment",
-    "PHQ-9 depression screening",
-    "GAD-7 anxiety screening",
-    "AUDIT alcohol screening",
-    "Co-occurring disorders",
+    "Alcohol use disorder screening (AUDIT, AUDIT-C)",
+    "Drug use screening (DAST-10)",
+    "Co-occurring disorders screening",
     "Addiction counseling",
+    "Relapse prevention",
+    "SBIRT (Screening, Brief Intervention, Referral to Treatment)",
   ],
 };
 

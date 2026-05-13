@@ -24,12 +24,12 @@ function personJsonLd() {
     jobTitle: "Certified Drug and Alcohol Counselor (CADC-II)",
     knowsAbout: [
       "Substance use disorder screening",
-      "Mental health assessment",
-      "PHQ-9 depression screening",
-      "GAD-7 anxiety screening",
-      "AUDIT alcohol screening",
-      "Co-occurring disorders",
+      "Alcohol use disorder screening (AUDIT, AUDIT-C)",
+      "Drug use screening (DAST-10)",
+      "Co-occurring disorders screening",
       "Addiction counseling",
+      "Relapse prevention",
+      "SBIRT (Screening, Brief Intervention, Referral to Treatment)",
     ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
