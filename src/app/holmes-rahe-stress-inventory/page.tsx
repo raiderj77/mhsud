@@ -74,7 +74,7 @@ export default function HolmesRahePage() {
                 "A free online implementation of the Holmes-Rahe Social Readjustment Rating Scale (1967). 43-item life stress checklist where users check life events from the past 12 months. Each event has assigned Life Change Units (LCU). Three risk tiers: Low (0-149), Moderate (150-299), High (300+).",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

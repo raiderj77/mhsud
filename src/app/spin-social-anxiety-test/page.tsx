@@ -74,7 +74,7 @@ export default function SpinPage() {
                 "A free online implementation of the Social Phobia Inventory (SPIN), a 17-item measure of social anxiety developed by Connor et al. (2000). Scores 0-68 with three subscales: Fear, Avoidance, and Physiological. Clinical cutoff of 19+ for social anxiety disorder.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

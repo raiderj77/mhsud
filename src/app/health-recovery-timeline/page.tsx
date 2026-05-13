@@ -48,7 +48,7 @@ export default function HealthTimelinePage() {
               description: "An interactive visual timeline showing what happens to your body after you stop using alcohol, cigarettes, or opioids. Based on medical research. Shows which health milestones you have already reached.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

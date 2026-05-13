@@ -48,7 +48,7 @@ export default function CAGEAIDPage() {
               description: "A free online implementation of the CAGE-AID (CAGE Adapted to Include Drugs), a validated 4-item yes/no screening tool for both alcohol and drug use problems.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

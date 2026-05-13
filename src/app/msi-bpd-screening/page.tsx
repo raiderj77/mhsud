@@ -49,7 +49,7 @@ export default function MSIBPDPage() {
               description: "A free online implementation of the McLean Screening Instrument for Borderline Personality Disorder (MSI-BPD), a validated 10-item yes/no screening tool developed by Zanarini et al.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-12",
             })
           ),
         }}

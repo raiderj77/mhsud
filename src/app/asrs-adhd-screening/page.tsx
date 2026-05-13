@@ -49,7 +49,7 @@ export default function ASRSPage() {
               description: "A free online implementation of the ASRS v1.1 (Adult ADHD Self-Report Scale), a WHO-developed 6-item screening tool for adult ADHD.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

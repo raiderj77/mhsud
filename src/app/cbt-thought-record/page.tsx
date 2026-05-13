@@ -67,7 +67,7 @@ export default function CbtThoughtRecordPage() {
               description: "A free interactive 7-column CBT thought record worksheet. Record situations, automatic thoughts, emotions with intensity ratings, evidence for and against, balanced alternative thoughts, and re-rate emotions. Before/after emotion comparison. Save entries to browser for a private thought journal. Printable output. Based on the work of Aaron Beck, David Burns, and Christine Padesky.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

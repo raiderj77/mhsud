@@ -53,7 +53,7 @@ export default function GAD7Page() {
               description: "A free online implementation of the GAD-7 (Generalized Anxiety Disorder-7) questionnaire, a clinically validated screening tool for measuring anxiety severity.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}
@@ -98,7 +98,7 @@ export default function GAD7Page() {
         <p>GAD-7 scores range from 0 to 21. Score 0–4: minimal anxiety. Score 5–9: mild anxiety. Score 10–14: moderate anxiety. Score 15–21: severe anxiety.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock

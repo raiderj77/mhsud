@@ -49,7 +49,7 @@ export default function ReadinessToChangePage() {
               description: "A free educational assessment based on the Transtheoretical Model (Stages of Change) by Prochaska & DiClemente. 15 statements help identify your current stage of change: Precontemplation, Contemplation, Preparation, Action, or Maintenance. Includes stage-specific guidance and resources.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

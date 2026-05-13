@@ -48,7 +48,7 @@ export default function HALTPage() {
               description: "A free daily recovery check-in tool based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each dimension on a 1-5 scale and see your current vulnerability level with personalized coping suggestions.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

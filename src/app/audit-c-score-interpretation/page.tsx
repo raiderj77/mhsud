@@ -36,7 +36,7 @@ export default function AUDITCScoreInterpretationPage() {
               description: "Understand your AUDIT-C alcohol screening score. Learn what positive and negative screens mean, gender-specific thresholds, and when to talk to a provider.",
               url: TOOL_URL,
               datePublished: "2026-03-07",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

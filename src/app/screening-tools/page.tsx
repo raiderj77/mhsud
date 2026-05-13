@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/met
 
 const PAGE_PATH = "/screening-tools";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const TODAY = new Date().toISOString().substring(0, 10);
+const TODAY = "2026-05-12";
 
 export const metadata: Metadata = createMetadata({
   path: PAGE_PATH,

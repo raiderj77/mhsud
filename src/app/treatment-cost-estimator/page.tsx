@@ -48,7 +48,7 @@ export default function TreatmentCostPage() {
               description: "A free informational tool that provides estimated cost ranges for different types of substance abuse treatment including outpatient, IOP, residential rehab, medical detox, MAT, and sober living. Includes insurance coverage information and financial assistance options.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

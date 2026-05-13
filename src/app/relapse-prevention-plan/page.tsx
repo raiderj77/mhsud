@@ -48,7 +48,7 @@ export default function RelapsePlanPage() {
               description: "A free interactive worksheet for building a personalized relapse prevention plan. Identify triggers, warning signs, coping strategies, emergency contacts, safe activities, places to avoid, and a craving action plan. Generates a printable plan document.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

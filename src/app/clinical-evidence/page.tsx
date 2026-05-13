@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AUTHOR_SCHEMA } from "@/config/author";
 
 const PAGE_URL = `${SITE_URL}/clinical-evidence`;
-const TODAY = new Date().toISOString().substring(0, 10);
+const TODAY = "2026-05-12";
 
 export const metadata: Metadata = createMetadata({
   path: "/clinical-evidence",

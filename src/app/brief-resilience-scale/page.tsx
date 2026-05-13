@@ -74,7 +74,7 @@ export default function BRSPage() {
                 "A free online implementation of the Brief Resilience Scale (Smith et al., 2008), a 6-item measure of the ability to bounce back from stress. Mean score 1-5 with 3 reverse-scored items. Low resilience below 3.00, normal 3.00-4.30, high 4.31-5.00.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

@@ -48,7 +48,7 @@ export default function BACCalculatorPage() {
               description: "A free BAC calculator using the Widmark formula. Estimates blood alcohol content based on sex, weight, drinks consumed, and time elapsed. Includes effects at each BAC level and estimated time until sober.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}
@@ -71,7 +71,7 @@ export default function BACCalculatorPage() {
         }}
       />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock

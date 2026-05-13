@@ -48,7 +48,7 @@ export default function UrgeSurfingPage() {
               description: "A free guided mindfulness timer for riding out cravings using the urge surfing technique. Includes wave animation, box breathing cues, rotating mindfulness prompts, and a countdown timer. Based on Alan Marlatt's research in relapse prevention.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

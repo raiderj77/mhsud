@@ -48,7 +48,7 @@ export default function StandardDrinksPage() {
               description: "A free calculator that shows how many US standard drinks (14g pure alcohol) are in any beverage based on container size and alcohol percentage. Includes presets for common drinks showing that many contain more than one standard drink.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

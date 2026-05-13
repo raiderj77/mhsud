@@ -74,7 +74,7 @@ export default function AISPage() {
                 "A free online implementation of the Athens Insomnia Scale (Soldatos et al., 2000), an 8-item measure of insomnia severity based on ICD-10 criteria. Score 0-24 with cutoff of 6+ for insomnia (93% sensitivity, 85% specificity).",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

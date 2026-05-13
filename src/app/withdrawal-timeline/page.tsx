@@ -48,7 +48,7 @@ export default function WithdrawalTimelinePage() {
               description: "An informational tool showing detailed withdrawal timelines for alcohol, opioids, benzodiazepines, stimulants, methamphetamine, cannabis, and nicotine. Includes hour-by-hour and day-by-day symptom phases, severity ratings, safety warnings, and post-acute withdrawal information.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

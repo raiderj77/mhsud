@@ -36,7 +36,7 @@ export default function DASS21ScoreInterpretationPage() {
               description: "Understand your DASS-21 depression, anxiety, and stress scores. See what each subscale range means and when to seek professional support.",
               url: TOOL_URL,
               datePublished: "2026-03-07",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

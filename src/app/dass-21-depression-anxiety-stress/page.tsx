@@ -50,7 +50,7 @@ export default function DASS21Page() {
               description: "A free online implementation of the DASS-21 (Depression Anxiety Stress Scales), a validated 21-item screening tool that simultaneously measures depression, anxiety, and stress.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

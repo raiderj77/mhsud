@@ -83,7 +83,7 @@ export default function DoctorGuidePage() {
                 "Preparing to discuss mental health with a doctor or therapist? Get exact language, what to bring, and how to use screening results.",
               url: PAGE_URL,
               datePublished: "2026-03-07",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-03-08",
             })
           ),
         }}

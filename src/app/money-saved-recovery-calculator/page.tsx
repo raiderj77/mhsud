@@ -47,7 +47,7 @@ export default function MoneySavedPage() {
               description: "A free calculator that estimates how much money you have saved by not using alcohol, cigarettes, or other substances. Includes preset spending averages by substance type, savings projections, and fun comparisons.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

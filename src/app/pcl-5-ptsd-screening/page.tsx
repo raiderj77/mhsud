@@ -49,7 +49,7 @@ export default function PCL5Page() {
               description: "A free online implementation of the PCL-5 (PTSD Checklist for DSM-5), a validated 20-item PTSD screening measure developed by the National Center for PTSD.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}
@@ -86,7 +86,7 @@ export default function PCL5Page() {
         }}
       />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock

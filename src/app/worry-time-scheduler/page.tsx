@@ -66,7 +66,7 @@ export default function WorryTimeSchedulerPage() {
               description: "A free CBT worry postponement tool. Schedule a daily worry time, park worries throughout the day with a quick capture button, then process each worry in a guided session with structured prompts. Track worry patterns over time with stats. Based on the stimulus control and scheduled worry techniques from cognitive behavioral therapy for generalized anxiety disorder.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

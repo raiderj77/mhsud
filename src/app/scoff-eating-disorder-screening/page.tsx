@@ -49,7 +49,7 @@ export default function SCOFFPage() {
               description: "A free online implementation of the SCOFF questionnaire, a validated 5-item screening tool for eating disorders including anorexia, bulimia, and binge eating disorder.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

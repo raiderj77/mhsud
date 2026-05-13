@@ -67,7 +67,7 @@ export default function ValuesCardSortPage() {
               description: "A free interactive values card sort exercise. Sort 43 personal values into three categories (Very Important, Somewhat Important, Not Important), narrow to your top 5 core values, rank them in order of priority, and reflect on how you are living in alignment with your values. Includes guided reflection prompts. Used in Motivational Interviewing, recovery counseling, and personal development.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

@@ -36,7 +36,7 @@ export default function ASRSScoreInterpretationPage() {
               description: "Understand your ASRS ADHD screening results. Learn what a positive or negative screen means and when to seek a full evaluation.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

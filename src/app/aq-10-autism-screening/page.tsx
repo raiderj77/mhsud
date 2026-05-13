@@ -48,7 +48,7 @@ export default function AQ10Page() {
               description: "A free online implementation of the AQ-10 (Autism Spectrum Quotient - 10 item), a validated screening tool for autism spectrum traits in adults developed by Simon Baron-Cohen et al. at the Autism Research Centre, University of Cambridge.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

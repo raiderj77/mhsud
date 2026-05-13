@@ -36,7 +36,7 @@ export default function PCL5ScoreInterpretationPage() {
               description: "Understand your PCL-5 PTSD screening score. Learn what each range means, the clinical cutoff, and how to discuss results with your provider.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

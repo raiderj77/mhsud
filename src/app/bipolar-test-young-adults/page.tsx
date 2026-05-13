@@ -77,7 +77,7 @@ export default function BipolarTestYoungAdultsPage() {
               description: "A free, private bipolar screening tool for young adults using the clinically validated Mood Disorder Questionnaire (MDQ).",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().substring(0,10),
+              dateModified: "2026-05-12",
             })
           ),
         }}

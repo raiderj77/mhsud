@@ -48,7 +48,7 @@ export default function TriggerWorksheetPage() {
               description: "A free interactive worksheet for identifying personal addiction triggers across six categories: people, places, emotional, situational, time-based, and sensory. Generates a personalized trigger profile with category-specific coping strategy suggestions. Printable output.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

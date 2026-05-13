@@ -48,7 +48,7 @@ export default function CopingSkillsPage() {
               description: "A free tool that suggests random healthy coping skills when you are struggling. 51 evidence-based skills across 6 categories: Physical, Social, Creative, Mindfulness, Cognitive, and Sensory. Includes instructions for each skill, category filtering, and favorites.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

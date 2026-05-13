@@ -36,7 +36,7 @@ export default function GAD7ScoreInterpretationPage() {
               description: "Understand your GAD-7 anxiety score. Learn what each range means, when to seek help, and how to talk to your doctor about anxiety screening results.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

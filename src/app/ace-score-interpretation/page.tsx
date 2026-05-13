@@ -36,7 +36,7 @@ export default function ACEScoreInterpretationPage() {
               description: "Understand your ACE score from the Adverse Childhood Experiences questionnaire. Learn what each range means, protective factors, and why your score is not destiny.",
               url: TOOL_URL,
               datePublished: "2026-03-07",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

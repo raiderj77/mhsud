@@ -74,7 +74,7 @@ export default function UCLAPage() {
                 "A free online implementation of the UCLA Loneliness Scale Version 3 (Russell, 1996), a 20-item measure of subjective loneliness and social isolation. Score 20-80 with 9 reverse-scored items. Research cutoff of 44+ for elevated loneliness.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

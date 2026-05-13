@@ -50,7 +50,7 @@ export default function PHQ9Page() {
               description: "A free online implementation of the PHQ-9 Patient Health Questionnaire, the gold-standard 9-item depression screening tool used by clinicians worldwide.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}
@@ -99,7 +99,7 @@ export default function PHQ9Page() {
         <p>PHQ-9 scores range from 0 to 27. Score 1–4: minimal depression. Score 5–9: mild depression. Score 10–14: moderate depression. Score 15–19: moderately severe depression. Score 20–27: severe depression.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={new Date().toISOString().split("T")[0]} />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock

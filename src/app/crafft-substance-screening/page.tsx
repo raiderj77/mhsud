@@ -73,7 +73,7 @@ export default function CrafftPage() {
                 "A free online implementation of the CRAFFT 2.1+N, a validated substance use screening tool for adolescents ages 12-21. Part A opening questions gate Part B CRAFFT questions (Car, Relax, Alone, Forget, Friends/Family, Trouble). Score of 2+ is a positive screen. Includes nicotine screening question.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

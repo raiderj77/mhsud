@@ -75,7 +75,7 @@ export default function AcePage() {
                 "A free online implementation of the ACE (Adverse Childhood Experiences) Questionnaire based on the CDC-Kaiser Permanente ACE Study. 10 yes/no questions about childhood adversity across three categories: abuse, neglect, and household dysfunction. Score 0-10 with resilience framing and protective factors.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

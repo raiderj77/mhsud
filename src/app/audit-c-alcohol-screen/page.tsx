@@ -38,7 +38,7 @@ const FAQ_DATA = [
 export default function AUDITCPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT-C Alcohol Screening Test", description: "A free online implementation of the AUDIT-C, a validated 3-question rapid alcohol screening tool derived from the WHO's AUDIT. Used in primary care for quick identification of hazardous drinking.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: new Date().toISOString().split("T")[0] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT-C Alcohol Screening Test", description: "A free online implementation of the AUDIT-C, a validated 3-question rapid alcohol screening tool derived from the WHO's AUDIT. Used in primary care for quick identification of hazardous drinking.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: "2026-05-12" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT-C Alcohol Screen", url: TOOL_URL }])) }} />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">

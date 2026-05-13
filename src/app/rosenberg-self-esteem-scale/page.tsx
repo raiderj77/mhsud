@@ -74,7 +74,7 @@ export default function RSESPage() {
                 "A free online implementation of the Rosenberg Self-Esteem Scale (Rosenberg, 1965), a 10-item measure of global self-esteem. Score 0-30 with 5 reverse-scored items. Scores 15-25 normal range, below 15 suggests low self-esteem. Public domain.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

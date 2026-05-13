@@ -66,7 +66,7 @@ export default function FiveSensesGroundingPage() {
               description: "A free guided 5-4-3-2-1 sensory grounding tool for anxiety, panic attacks, and dissociation. Step-by-step exercise: name 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste. Includes text inputs for engagement, progress indicator, optional breathing pause between steps, and calming completion summary.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

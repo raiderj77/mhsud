@@ -74,7 +74,7 @@ export default function K6Page() {
                 "A free online implementation of the Kessler-6 (K6) Psychological Distress Scale, a 6-item measure of nonspecific psychological distress. Scores 0-24 with serious psychological distress threshold at 13+. Used in national health surveys (NSDUH, NHIS). Public domain.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

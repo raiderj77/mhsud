@@ -73,7 +73,7 @@ export default function PcPtsd5Page() {
                 "A free online implementation of the PC-PTSD-5 (Primary Care PTSD Screen for DSM-5), a 5-item yes/no PTSD screening tool developed by the National Center for PTSD at the U.S. Department of Veterans Affairs. Public domain instrument.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

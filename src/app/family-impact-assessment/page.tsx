@@ -80,7 +80,7 @@ export default function FamilyImpactAssessmentPage() {
                 "A free, private educational assessment for family members and loved ones concerned about someone's substance use. 18 questions across 7 domains: behavior changes, financial impact, relationship impact, impact on children, emotional toll, safety concerns, and enabling behaviors. Provides validation, psychoeducation, next steps (Al-Anon, Nar-Anon, family therapy), and self-care recommendations.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

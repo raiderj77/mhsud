@@ -74,7 +74,7 @@ export default function CesdPage() {
                 "A free online implementation of the CES-D (Center for Epidemiologic Studies Depression Scale), a 20-item self-report depression screening tool developed by NIMH. Scores 0-60 with clinical cutoff at 16. Includes 4 reverse-scored positive-affect items. Public domain.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

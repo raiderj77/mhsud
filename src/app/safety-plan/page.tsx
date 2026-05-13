@@ -65,7 +65,7 @@ export default function SafetyPlanPage() {
               description: "A free safety planning tool based on the Stanley-Brown Safety Planning Intervention. Create a personalized 6-step crisis safety plan: warning signs, internal coping strategies, people for distraction, people to ask for help, professional and crisis contacts (988 Lifeline, Crisis Text Line, Veterans Crisis Line), and making your environment safer. Printable output. Auto-saves in browser.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

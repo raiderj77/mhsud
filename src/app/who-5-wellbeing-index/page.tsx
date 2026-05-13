@@ -73,7 +73,7 @@ export default function Who5Page() {
                 "A free online implementation of the WHO-5 Well-Being Index, a 5-item positive wellbeing measure developed by the World Health Organization. Raw score 0-25, percentage score 0-100%. Scores below 50% suggest further evaluation; below 28% suggest depression screening.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

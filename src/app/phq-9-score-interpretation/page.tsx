@@ -36,7 +36,7 @@ export default function PHQ9ScoreInterpretationPage() {
               description: "Understand your PHQ-9 depression score. See what each range means, when to seek help, and how to discuss results with your doctor.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

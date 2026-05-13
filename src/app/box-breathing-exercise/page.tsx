@@ -66,7 +66,7 @@ export default function BoxBreathingPage() {
               description: "A free visual guided box breathing tool with animated square, multiple breathing patterns (3-3-3-3, 4-4-4-4, 5-5-5-5, custom), session timer, cycle counter, and optional ambient sound. Used for anxiety, stress management, and focus.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

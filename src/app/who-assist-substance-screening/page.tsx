@@ -73,7 +73,7 @@ export default function AssistPage() {
                 "A free online implementation of the WHO ASSIST (Alcohol, Smoking and Substance Involvement Screening Test) v3.1. Covers 10 substance categories with per-substance risk scores (0-39). Three risk levels: low, moderate (brief intervention), high (intensive treatment). Stepped wizard interface.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

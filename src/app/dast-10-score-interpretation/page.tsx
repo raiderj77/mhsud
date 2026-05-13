@@ -36,7 +36,7 @@ export default function DAST10ScoreInterpretationPage() {
               description: "Understand your DAST-10 drug screening score. Learn what each level means, which substances are covered, and when to seek professional support.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

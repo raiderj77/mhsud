@@ -67,7 +67,7 @@ export default function CognitiveDistortionPage() {
               description: "A free CBT-based educational tool for identifying cognitive distortions. Write a negative thought, identify which of 16 common thinking errors apply from a guided list with descriptions and examples, then practice reframing with balanced alternative prompts. Based on the work of Aaron Beck and David Burns.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

@@ -36,7 +36,7 @@ export default function AUDITScoreInterpretationPage() {
               description: "Understand your AUDIT alcohol screening score. Learn what each risk level means, when to seek help, and how to discuss your results with a healthcare provider.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}

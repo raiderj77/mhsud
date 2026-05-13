@@ -48,7 +48,7 @@ export default function DailyCheckInPage() {
               description: "A free daily wellness check for people in recovery. Track mood, craving level, sleep quality, stress, connection to others, and physical health on 1-10 scales. Includes gratitude and goal entries. Saves to browser localStorage for 7-day and 30-day trend tracking with streak counter.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: new Date().toISOString().split("T")[0],
+              dateModified: "2026-05-12",
             })
           ),
         }}
