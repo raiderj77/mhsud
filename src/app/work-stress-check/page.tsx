@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/work-stress-check",
   title: "Work Stress & Burnout Self-Check | Free & Private",
   description:
-    "Reflect on your work stress and burnout risk with this original 12-question self-check. 100% private, ~3 minutes. Not a clinical tool — for personal reflection only.",
+    "Reflect on your work stress and burnout risk with this original 12-question self-check. 100% private, ~3 minutes. Not a clinical tool - for personal reflection only.",
   keywords: [
     "work stress test", "burnout self-check", "job burnout questionnaire",
     "work stress assessment", "burnout risk check", "workplace stress test",
@@ -45,7 +45,7 @@ const FAQ_DATA = [
   {
     question: "What should I do if my results suggest high stress?",
     answer:
-      "Consider talking with a healthcare provider, therapist, or counselor — especially if stress is affecting your sleep, health, or relationships. Workplace stress is also worth discussing with a trusted manager or HR department when appropriate.",
+      "Consider talking with a healthcare provider, therapist, or counselor - especially if stress is affecting your sleep, health, or relationships. Workplace stress is also worth discussing with a trusted manager or HR department when appropriate.",
   },
   {
     question: "Can I show these results to my therapist?",
@@ -86,7 +86,7 @@ export default function WorkStressPage() {
             This 12-question self-check was designed to help you catch those patterns early. It covers the six domains most consistently linked to workplace burnout: demands, control, support, engagement, recovery, and physical impact. It takes about 3 minutes and your responses never leave your browser.
           </p>
           <p>
-            This is a reflection tool, not a clinical assessment. If your results raise concerns, the most useful next step is a conversation with a therapist, counselor, or your primary care provider — not more self-diagnosis.
+            This is a reflection tool, not a clinical assessment. If your results raise concerns, the most useful next step is a conversation with a therapist, counselor, or your primary care provider - not more self-diagnosis.
           </p>
         </div>
 
@@ -138,12 +138,12 @@ export default function WorkStressPage() {
         <div className="mb-8 space-y-3 text-slate-600 dark:text-slate-300">
           <p>Research on occupational stress consistently points to six areas that predict burnout risk:</p>
           <ul className="list-disc list-inside space-y-2 text-sm ml-2">
-            <li><strong>Demands</strong> — workload, time pressure, the gap between what is expected and what is humanly possible</li>
-            <li><strong>Control</strong> — your ability to influence how and when your work gets done</li>
-            <li><strong>Support</strong> — feedback, recognition, and backup from managers and coworkers</li>
-            <li><strong>Engagement</strong> — connection to the meaning and purpose of your work</li>
-            <li><strong>Recovery</strong> — your ability to mentally detach from work during non-work hours</li>
-            <li><strong>Impact</strong> — whether work stress is spilling into your physical health and personal life</li>
+            <li><strong>Demands</strong> - workload, time pressure, the gap between what is expected and what is humanly possible</li>
+            <li><strong>Control</strong> - your ability to influence how and when your work gets done</li>
+            <li><strong>Support</strong> - feedback, recognition, and backup from managers and coworkers</li>
+            <li><strong>Engagement</strong> - connection to the meaning and purpose of your work</li>
+            <li><strong>Recovery</strong> - your ability to mentally detach from work during non-work hours</li>
+            <li><strong>Impact</strong> - whether work stress is spilling into your physical health and personal life</li>
           </ul>
           <p>
             When multiple domains are strained simultaneously, the cumulative effect is what{" "}
@@ -171,7 +171,7 @@ export default function WorkStressPage() {
           <AnswerBlock
             what="A workplace stress assessment that measures job-related stressors, burnout risk, and work-life balance indicators across six domains."
             who="Working professionals who feel their job stress has become unmanageable and want to assess the severity."
-            bottomLine="Chronic work stress damages both mental and physical health — your score can guide a conversation with HR or a therapist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+            bottomLine="Chronic work stress damages both mental and physical health - your score can guide a conversation with HR or a therapist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
             lastUpdated="2026-05-14"
           />
         </div>
@@ -215,7 +215,7 @@ export default function WorkStressPage() {
               <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
                 1-800-662-4357
               </a>{" "}
-              — free, confidential, 24/7
+              - free, confidential, 24/7
             </li>
           </ul>
         </div>

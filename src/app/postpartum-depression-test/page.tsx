@@ -39,7 +39,7 @@ const FAQ_DATA = [
   {
     question: "What is the difference between baby blues and postpartum depression?",
     answer:
-      "Baby blues are extremely common — affecting up to 80% of new mothers — and typically involve mood swings, tearfulness, anxiety, and irritability in the first 1-2 weeks after birth. They resolve on their own as hormones stabilize. Postpartum depression (PPD) is more intense, lasts longer (beyond 2 weeks), and significantly interferes with daily functioning. PPD can develop any time in the first year after birth. If your symptoms are severe, persistent, or getting worse rather than better, please speak with your OB-GYN or midwife.",
+      "Baby blues are extremely common - affecting up to 80% of new mothers - and typically involve mood swings, tearfulness, anxiety, and irritability in the first 1-2 weeks after birth. They resolve on their own as hormones stabilize. Postpartum depression (PPD) is more intense, lasts longer (beyond 2 weeks), and significantly interferes with daily functioning. PPD can develop any time in the first year after birth. If your symptoms are severe, persistent, or getting worse rather than better, please speak with your OB-GYN or midwife.",
   },
   {
     question: "How common is postpartum depression?",
@@ -135,7 +135,7 @@ export default function PostpartumDepressionTestPage() {
 
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You were supposed to feel joy. And maybe you do, sometimes — but underneath it
+            You were supposed to feel joy. And maybe you do, sometimes - but underneath it
             there&apos;s something else. Exhaustion that goes beyond sleep deprivation.
             A sadness that does not lift. Feeling disconnected from your baby, or from
             yourself. Wondering if you made a terrible mistake. Feeling like you&apos;re
@@ -143,7 +143,7 @@ export default function PostpartumDepressionTestPage() {
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
             These feelings are not a reflection of your love for your child. They are symptoms
-            of a medical condition — postpartum depression — that affects{" "}
+            of a medical condition - postpartum depression - that affects{" "}
             <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               approximately 1 in 7 new mothers
             </a>
@@ -166,7 +166,7 @@ export default function PostpartumDepressionTestPage() {
           <p>
             Postpartum depression is not always crying every day. For many people it shows up as
             numbness: going through the motions of feeding and changing without feeling anything.
-            Or as rage — sudden, disproportionate anger at a partner or older child that feels
+            Or as rage - sudden, disproportionate anger at a partner or older child that feels
             frightening and foreign. Or as intrusive thoughts: brief, unwanted mental images of
             something bad happening to the baby. Intrusive thoughts are a symptom, not a sign you
             are dangerous. They are the brain misfiring under extreme stress.
@@ -328,25 +328,25 @@ export default function PostpartumDepressionTestPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — if you are having thoughts of harming yourself or your baby
+              <strong>988</strong> - if you are having thoughts of harming yourself or your baby
             </li>
             <li>
               <strong>Postpartum Support International:</strong>{" "}
-              <strong>1-800-944-4773</strong> — helpline, support groups, provider directory
+              <strong>1-800-944-4773</strong> - helpline, support groups, provider directory
             </li>
             <li>
               <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>
             </li>
             <li>
               <strong>SAMHSA National Helpline:</strong>{" "}
-              <strong>1-800-662-4357</strong> — free, confidential, 24/7
+              <strong>1-800-662-4357</strong> - free, confidential, 24/7
             </li>
           </ul>
         </div>
 
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening is for educational purposes only — it is not a diagnosis. Only a
+            This screening is for educational purposes only - it is not a diagnosis. Only a
             licensed healthcare professional can diagnose postpartum depression. If you are
             having thoughts of harming yourself or your baby, please seek immediate help.
             Your responses are processed entirely in your browser and are never stored or transmitted.

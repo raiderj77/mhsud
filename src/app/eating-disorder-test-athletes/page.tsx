@@ -9,7 +9,7 @@ const TOOL_URL = `${SITE_URL}/eating-disorder-test-athletes`;
 
 export const metadata: Metadata = createMetadata({
   path: "/eating-disorder-test-athletes",
-  title: "Eating Disorder Test for Athletes — Free Screen",
+  title: "Eating Disorder Test for Athletes - Free Screen",
   description:
     "Free eating disorder screening for athletes using the SCOFF. Private, instant results.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = createMetadata({
     "athlete mental health test", "male athlete eating disorder", "free eating disorder test athletes",
   ],
   openGraph: {
-    title: "Eating Disorder Test for Athletes — Free Screen",
+    title: "Eating Disorder Test for Athletes - Free Screen",
     description: "Free, private eating disorder screening for athletes using the clinically validated SCOFF questionnaire. Instant results.",
     url: TOOL_URL,
     type: "website",
@@ -42,7 +42,7 @@ const FAQ_DATA = [
   {
     question: "What is RED-S (Relative Energy Deficiency in Sport)?",
     answer:
-      "RED-S is a syndrome caused by insufficient energy intake relative to the energy expended in exercise. It affects virtually every system in the body — hormonal function, bone health, immunity, cardiovascular health, and mental health. RED-S replaced the older concept of the Female Athlete Triad and applies to all athletes regardless of gender. It can occur even without a formal eating disorder diagnosis.",
+      "RED-S is a syndrome caused by insufficient energy intake relative to the energy expended in exercise. It affects virtually every system in the body - hormonal function, bone health, immunity, cardiovascular health, and mental health. RED-S replaced the older concept of the Female Athlete Triad and applies to all athletes regardless of gender. It can occur even without a formal eating disorder diagnosis.",
   },
   {
     question: "Can an eating disorder actually affect my athletic performance?",
@@ -67,12 +67,12 @@ const FAQ_DATA = [
   {
     question: "Do male athletes get eating disorders too?",
     answer:
-      "Yes. Male athletes are significantly underrecognized and underdiagnosed. Eating disorders in male athletes may present differently — focusing on muscularity rather than thinness, or involving excessive protein intake, supplement abuse, or muscle dysmorphia. The stigma around eating disorders in men is a major barrier to recognition and treatment. An estimated 33% of athletes with eating disorders are male.",
+      "Yes. Male athletes are significantly underrecognized and underdiagnosed. Eating disorders in male athletes may present differently - focusing on muscularity rather than thinness, or involving excessive protein intake, supplement abuse, or muscle dysmorphia. The stigma around eating disorders in men is a major barrier to recognition and treatment. An estimated 33% of athletes with eating disorders are male.",
   },
   {
     question: "Where can athletes get help for eating disorders?",
     answer:
-      "Start with the National Alliance for Eating Disorders Helpline (1-866-662-1235) for free guidance and referrals. Look for professionals who specialize in both eating disorders and sports — a sports dietitian and a therapist experienced with athlete populations are ideal. Many college athletic departments have sports psychologists and dietitians available. The key is finding providers who understand that recovery does not mean giving up sport.",
+      "Start with the National Alliance for Eating Disorders Helpline (1-866-662-1235) for free guidance and referrals. Look for professionals who specialize in both eating disorders and sports - a sports dietitian and a therapist experienced with athlete populations are ideal. Many college athletic departments have sports psychologists and dietitians available. The key is finding providers who understand that recovery does not mean giving up sport.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function EatingDisorderTestAthletesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Eating Disorder Test for Athletes — Free Screen",
+              name: "Eating Disorder Test for Athletes - Free Screen",
               description: "A free, private eating disorder screening tool for athletes using the clinically validated SCOFF questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
@@ -98,7 +98,7 @@ export default function EatingDisorderTestAthletesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             medicalWebPageJsonLd({
-              name: "Eating Disorder Test for Athletes — Free Screen",
+              name: "Eating Disorder Test for Athletes - Free Screen",
               description: "A free, private eating disorder screening tool for athletes using the clinically validated SCOFF questionnaire. Covers sport-specific risk factors including RED-S, Female Athlete Triad, and athletic culture pressures.",
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
@@ -139,14 +139,14 @@ export default function EatingDisorderTestAthletesPage() {
 
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You have always been disciplined about your body. That&apos;s what athletes do —
+            You have always been disciplined about your body. That&apos;s what athletes do -
             you train harder, eat cleaner, push past limits that would stop most people. But
             somewhere along the way, the discipline became something else. Counting every
             calorie stopped being about performance and started being about control. Skipping
             meals before weigh-ins became skipping meals all the time. The voice in your head
             that used to say &quot;train harder&quot; now says &quot;you&apos;re not lean
             enough, not light enough, not good enough.&quot; And you keep going because
-            that&apos;s what athletes do — until your body starts breaking down in ways you
+            that&apos;s what athletes do - until your body starts breaking down in ways you
             cannot ignore.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
@@ -159,7 +159,7 @@ export default function EatingDisorderTestAthletesPage() {
             </a>
             . It is <strong>not a diagnosis</strong>, but it can help
             you honestly evaluate whether your relationship with food and your body has
-            crossed a line — and what to do about it without sacrificing the sport you love.
+            crossed a line - and what to do about it without sacrificing the sport you love.
           </p>
         </div>
 
@@ -171,7 +171,7 @@ export default function EatingDisorderTestAthletesPage() {
             Start the Eating Disorder Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private - nothing is stored or shared.
           </p>
         </div>
 
@@ -194,8 +194,8 @@ export default function EatingDisorderTestAthletesPage() {
               <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-300 mb-1">RED-S &amp; Female Athlete Triad</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Relative Energy Deficiency in Sport (RED-S) affects hormones, bone health,
-                immunity, cardiovascular function, and mental health. The Female Athlete Triad —
-                low energy availability, menstrual dysfunction, and bone loss — remains a
+                immunity, cardiovascular function, and mental health. The Female Athlete Triad -
+                low energy availability, menstrual dysfunction, and bone loss - remains a
                 critical concern. Both conditions can have lasting health consequences.{" "}
                 <a href="https://www.nimh.nih.gov/health/topics/eating-disorders" target="_blank" rel="noopener noreferrer" className="text-emerald-700 dark:text-emerald-400 hover:underline">NIMH: Eating Disorders</a>
               </p>
@@ -229,11 +229,11 @@ export default function EatingDisorderTestAthletesPage() {
                 as serious mental health conditions that require early identification and treatment.
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Aesthetic vs. weight-class vs. endurance sports:</strong> Different sports create different risk profiles. Aesthetic sports (gymnastics, figure skating, dance) emphasize appearance. Weight-class sports (wrestling, boxing, rowing) incentivize rapid weight manipulation. Endurance sports (distance running, cycling) reward low body weight. Each creates unique pressures, but the underlying dynamic is the same — your body becomes a variable to control.</p>
+                <p><strong>Aesthetic vs. weight-class vs. endurance sports:</strong> Different sports create different risk profiles. Aesthetic sports (gymnastics, figure skating, dance) emphasize appearance. Weight-class sports (wrestling, boxing, rowing) incentivize rapid weight manipulation. Endurance sports (distance running, cycling) reward low body weight. Each creates unique pressures, but the underlying dynamic is the same - your body becomes a variable to control.</p>
                 <p><strong>Performance pressure:</strong> Athletes often believe that thinner or lighter means faster or better. While body composition does affect performance in some sports, the pursuit of an &quot;ideal&quot; body often crosses into territory that actually degrades performance through fatigue, injury, and hormonal disruption.</p>
-                <p><strong>Coaching influence:</strong> Coaches who comment on athletes&apos; weight, body shape, or eating habits — even casually — can trigger or reinforce disordered eating. Research shows that a single comment from a coach about weight can be a precipitating factor. Good coaching focuses on performance behaviors, not body composition.</p>
+                <p><strong>Coaching influence:</strong> Coaches who comment on athletes&apos; weight, body shape, or eating habits - even casually - can trigger or reinforce disordered eating. Research shows that a single comment from a coach about weight can be a precipitating factor. Good coaching focuses on performance behaviors, not body composition.</p>
                 <p><strong>Body composition monitoring risks:</strong> Regular weigh-ins, body fat testing, and physique evaluations can become triggers for athletes predisposed to eating disorders. While some monitoring has a place in elite sport, it should always be conducted by qualified professionals with appropriate context and support.</p>
-                <p><strong>&quot;Clean eating&quot; becoming disordered:</strong> In athletic culture, obsessive focus on eating &quot;clean&quot; or &quot;pure&quot; foods can evolve into orthorexia — a fixation on food quality that becomes restrictive and anxiety-driven. When food rules create distress, social isolation, or nutritional deficiency, the eating pattern has become disordered regardless of how &quot;healthy&quot; it appears.</p>
+                <p><strong>&quot;Clean eating&quot; becoming disordered:</strong> In athletic culture, obsessive focus on eating &quot;clean&quot; or &quot;pure&quot; foods can evolve into orthorexia - a fixation on food quality that becomes restrictive and anxiety-driven. When food rules create distress, social isolation, or nutritional deficiency, the eating pattern has become disordered regardless of how &quot;healthy&quot; it appears.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your coach, teammates, or anyone else.</p>
               </div>
             </div>
@@ -247,7 +247,7 @@ export default function EatingDisorderTestAthletesPage() {
             <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               Evidence-based treatment
             </a>{" "}
-            often helps athletes return to sport at a higher performance level once the underlying energy deficit and psychological patterns are addressed. The goal of treatment is not less sport — it is sustainable sport.
+            often helps athletes return to sport at a higher performance level once the underlying energy deficit and psychological patterns are addressed. The goal of treatment is not less sport - it is sustainable sport.
           </p>
         </div>
       </div>
@@ -268,7 +268,7 @@ export default function EatingDisorderTestAthletesPage() {
           <AnswerBlock
             what="An eating disorder screening tailored for athletes that accounts for sport-specific risk factors like weight pressure and overtraining."
             who="Athletes, coaches, or sports parents concerned about disordered eating patterns in competitive sports environments."
-            bottomLine="Athletes face unique eating disorder risks from sport culture — recognizing the signs early protects long-term health. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+            bottomLine="Athletes face unique eating disorder risks from sport culture - recognizing the signs early protects long-term health. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
             lastUpdated="2026-05-14"
           />
         </div>
@@ -293,7 +293,7 @@ export default function EatingDisorderTestAthletesPage() {
             <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Call the eating disorders helpline</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                <strong>National Alliance for Eating Disorders: 1-866-662-1235</strong> — free,
+                <strong>National Alliance for Eating Disorders: 1-866-662-1235</strong> - free,
                 confidential guidance and referrals. They can help you find providers who
                 specialize in athletes, which is important because recovery in sport requires
                 understanding both the eating disorder and the athletic context.
@@ -314,7 +314,7 @@ export default function EatingDisorderTestAthletesPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 An athletic trainer, sports psychologist, or trusted teammate can be a good
                 starting point. Many college athletic departments have mental health resources
-                specifically for athletes. Recovery does not mean giving up your sport — many
+                specifically for athletes. Recovery does not mean giving up your sport - many
                 athletes compete at even higher levels after addressing disordered eating.
               </p>
             </div>
@@ -346,13 +346,13 @@ export default function EatingDisorderTestAthletesPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> - free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> - free referrals, 24/7
             </li>
             <li>
-              <strong>National Alliance for Eating Disorders:</strong> <strong>1-866-662-1235</strong> — free guidance and referrals
+              <strong>National Alliance for Eating Disorders:</strong> <strong>1-866-662-1235</strong> - free guidance and referrals
             </li>
             <li>
               <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong>
@@ -362,7 +362,7 @@ export default function EatingDisorderTestAthletesPage() {
 
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only - it is not a diagnosis. Only a qualified
             healthcare professional can assess eating disorders or related conditions. Your responses are
             processed entirely in your browser and are never stored or transmitted. Always consult a
             qualified healthcare professional for medical advice.

@@ -9,7 +9,7 @@ const TOOL_URL = `${SITE_URL}/drug-screening-teens`;
 
 export const metadata: Metadata = createMetadata({
   path: "/drug-screening-teens",
-  title: "Drug Screening for Teens — Free CRAFFT Test",
+  title: "Drug Screening for Teens - Free CRAFFT Test",
   description:
     "Free substance use screening for teens 12-21 using the CRAFFT. Private, instant results.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
     "teen substance use assessment", "adolescent crafft test",
   ],
   openGraph: {
-    title: "Drug Screening for Teens — Free CRAFFT Test",
+    title: "Drug Screening for Teens - Free CRAFFT Test",
     description: "Free, private substance use screening for teens ages 12-21 using the clinically validated CRAFFT. Instant results, no sign-up.",
     url: TOOL_URL,
     type: "website",
@@ -36,27 +36,27 @@ const FAQ_DATA = [
   {
     question: "Is experimenting with substances normal for teens?",
     answer:
-      "Many teens try alcohol or other substances at some point, and experimentation alone does not mean someone has a substance use disorder. However, the teen brain is still developing — particularly the areas responsible for decision-making, impulse control, and risk assessment — which makes early substance use riskier than it would be for adults. What matters is the pattern: how often, how much, and whether it is affecting your life. This screening helps you look at those patterns honestly.",
+      "Many teens try alcohol or other substances at some point, and experimentation alone does not mean someone has a substance use disorder. However, the teen brain is still developing - particularly the areas responsible for decision-making, impulse control, and risk assessment - which makes early substance use riskier than it would be for adults. What matters is the pattern: how often, how much, and whether it is affecting your life. This screening helps you look at those patterns honestly.",
   },
   {
     question: "What does the CRAFFT screen for?",
     answer:
-      "The CRAFFT is a clinically validated screening tool designed specifically for young people ages 12 to 21. It screens for risky substance use patterns including alcohol, marijuana, and other drugs. The name stands for Car, Relax, Alone, Forget, Friends, and Trouble — each representing a key risk behavior. It does not diagnose addiction; it identifies whether your substance use patterns may benefit from further evaluation.",
+      "The CRAFFT is a clinically validated screening tool designed specifically for young people ages 12 to 21. It screens for risky substance use patterns including alcohol, marijuana, and other drugs. The name stands for Car, Relax, Alone, Forget, Friends, and Trouble - each representing a key risk behavior. It does not diagnose addiction; it identifies whether your substance use patterns may benefit from further evaluation.",
   },
   {
     question: "Does a high score mean I am an addict?",
     answer:
-      "No. A high score on the CRAFFT does not mean you are addicted or that there is something wrong with you as a person. It means your pattern of substance use may be putting you at risk, and it would be worth talking to someone you trust — a counselor, doctor, or other trusted adult. Substance use exists on a spectrum, and catching concerning patterns early gives you the most options and the best outcomes.",
+      "No. A high score on the CRAFFT does not mean you are addicted or that there is something wrong with you as a person. It means your pattern of substance use may be putting you at risk, and it would be worth talking to someone you trust - a counselor, doctor, or other trusted adult. Substance use exists on a spectrum, and catching concerning patterns early gives you the most options and the best outcomes.",
   },
   {
     question: "Will my results be shared with anyone?",
     answer:
-      "No. This screening runs entirely in your browser. Nothing is stored, saved, or sent anywhere. No one — not your parents, school, or anyone else — can see your answers or results. This is a private check-in with yourself. What you do with the information is completely your choice.",
+      "No. This screening runs entirely in your browser. Nothing is stored, saved, or sent anywhere. No one - not your parents, school, or anyone else - can see your answers or results. This is a private check-in with yourself. What you do with the information is completely your choice.",
   },
   {
     question: "Should I tell my parents about my substance use?",
     answer:
-      "That depends on your situation and your relationship with your parents. If you feel safe talking to them, it can be a relief to have their support. If you are not ready, consider talking to another trusted adult — a school counselor, doctor, coach, relative, or therapist. You do not have to figure this out alone, and you get to choose who you talk to first.",
+      "That depends on your situation and your relationship with your parents. If you feel safe talking to them, it can be a relief to have their support. If you are not ready, consider talking to another trusted adult - a school counselor, doctor, coach, relative, or therapist. You do not have to figure this out alone, and you get to choose who you talk to first.",
   },
   {
     question: "What if I think I need help?",
@@ -66,12 +66,12 @@ const FAQ_DATA = [
   {
     question: "What does teen substance use treatment look like?",
     answer:
-      "Treatment for teens is different from adult treatment and is designed to be age-appropriate. It may include individual therapy, family therapy, group sessions with other teens, and education about the developing brain. Most teen treatment is outpatient, meaning you can continue going to school. The goal is not punishment — it is giving you tools and support to make choices that protect your future.",
+      "Treatment for teens is different from adult treatment and is designed to be age-appropriate. It may include individual therapy, family therapy, group sessions with other teens, and education about the developing brain. Most teen treatment is outpatient, meaning you can continue going to school. The goal is not punishment - it is giving you tools and support to make choices that protect your future.",
   },
   {
     question: "How does substance use affect the developing brain?",
     answer:
-      "The brain continues developing until approximately age 25, with the prefrontal cortex (responsible for judgment, planning, and impulse control) being the last area to mature. Substance use during this critical period can interfere with brain development, affect memory and learning, increase the risk of developing a substance use disorder later in life, and impact mental health. This is not meant to scare you — it is meant to help you make informed choices.",
+      "The brain continues developing until approximately age 25, with the prefrontal cortex (responsible for judgment, planning, and impulse control) being the last area to mature. Substance use during this critical period can interfere with brain development, affect memory and learning, increase the risk of developing a substance use disorder later in life, and impact mental health. This is not meant to scare you - it is meant to help you make informed choices.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function DrugScreeningTeensPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Drug Screening for Teens — Free CRAFFT Test",
+              name: "Drug Screening for Teens - Free CRAFFT Test",
               description: "A free, private substance use screening tool for teens ages 12-21 using the clinically validated CRAFFT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
@@ -97,7 +97,7 @@ export default function DrugScreeningTeensPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             medicalWebPageJsonLd({
-              name: "Drug Screening for Teens — Free CRAFFT Test",
+              name: "Drug Screening for Teens - Free CRAFFT Test",
               description: "A free, private substance use screening tool for teens ages 12-21 using the clinically validated CRAFFT questionnaire. Covers car safety, relaxation use, solo use, memory loss, peer influence, and trouble.",
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
@@ -138,16 +138,16 @@ export default function DrugScreeningTeensPage() {
 
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            If you&apos;re here, you&apos;re already doing something that takes courage — being
+            If you&apos;re here, you&apos;re already doing something that takes courage - being
             honest with yourself. Maybe you&apos;ve been using substances and wondering if it&apos;s
             becoming a problem. Maybe a friend or family member suggested you check in. Maybe
-            you&apos;re just curious. Whatever brought you here, there is no judgment — only
+            you&apos;re just curious. Whatever brought you here, there is no judgment - only
             information that can help you understand where you stand.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free, private screening uses the CRAFFT, a tool designed specifically for young
             people ages 12 to 21. It is used by doctors and counselors to understand substance
-            use patterns — not to label or punish. It is <strong>not a diagnosis</strong>, and
+            use patterns - not to label or punish. It is <strong>not a diagnosis</strong>, and
             no one will see your answers. Everything stays in your browser. This is just for you.
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function DrugScreeningTeensPage() {
             Start the CRAFFT Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private - nothing is stored or shared.
           </p>
         </div>
 
@@ -215,13 +215,13 @@ export default function DrugScreeningTeensPage() {
                 .
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>What it asks:</strong> Short, straightforward questions about your substance use and related behaviors — like riding in a car with someone who had been using, using substances to relax, or getting into trouble because of substance use.</p>
+                <p><strong>What it asks:</strong> Short, straightforward questions about your substance use and related behaviors - like riding in a car with someone who had been using, using substances to relax, or getting into trouble because of substance use.</p>
                 <p><strong>No trick questions:</strong> The CRAFFT is not trying to catch you or make you feel bad. It is designed to help you see patterns you might not have noticed.</p>
-                <p><strong>Risk factors it considers:</strong> Peer pressure, stress, trauma, mental health, and the natural risk-taking that comes with being young. These are not excuses — they are context that matters.</p>
+                <p><strong>Risk factors it considers:</strong> Peer pressure, stress, trauma, mental health, and the natural risk-taking that comes with being young. These are not excuses - they are context that matters.</p>
                 <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis. A high score does not make you a bad person or an &quot;addict.&quot; It means talking to someone could help. The{" "}
                   <a href="https://www.who.int/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">WHO notes</a>{" "}
                   that early identification is one of the most effective ways to address adolescent substance risk.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. No one — not your parents, school, doctor, or anyone else — can see your answers. This is 100% private.</p>
+                <p><strong>Your privacy:</strong> Everything happens in your browser. No one - not your parents, school, doctor, or anyone else - can see your answers. This is 100% private.</p>
               </div>
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function DrugScreeningTeensPage() {
           <AnswerBlock
             what="A CRAFFT-based substance screening designed for teens that assesses drug and alcohol use risk in adolescents."
             who="Teens or parents of teens who want to evaluate whether adolescent substance use has reached concerning levels."
-            bottomLine="Teen brains are especially vulnerable to substance effects — early screening enables early intervention. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+            bottomLine="Teen brains are especially vulnerable to substance effects - early screening enables early intervention. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
             lastUpdated="2026-05-14"
           />
         </div>
@@ -318,23 +318,23 @@ export default function DrugScreeningTeensPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> - free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> - free referrals, 24/7
             </li>
             <li>
-              <strong>Teen Line:</strong> <strong>1-800-852-8336</strong> — teen-to-teen support, 6 PM-10 PM PST
+              <strong>Teen Line:</strong> <strong>1-800-852-8336</strong> - teen-to-teen support, 6 PM-10 PM PST
             </li>
             <li>
-              <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> — free, 24/7
+              <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> - free, 24/7
             </li>
           </ul>
         </div>
 
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only - it is not a diagnosis. Only a qualified
             healthcare professional can assess substance use disorders. Your responses are processed entirely
             in your browser and are never stored or transmitted. Always consult a qualified healthcare
             professional for medical advice.
