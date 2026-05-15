@@ -7,6 +7,7 @@ export const SITE_AUTHOR = {
   experience: "11 years of clinical experience",
   role: "Clinical Reviewer",
   email: "hello@mindchecktools.com",
+  linkedin: "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
 } as const;
 
 // For structured data / JSON-LD
@@ -23,6 +24,10 @@ export const AUTHOR_SCHEMA = {
     "Addiction counseling",
     "Relapse prevention",
     "SBIRT (Screening, Brief Intervention, Referral to Treatment)",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
+    "https://mindchecktools.com/about/jason-ramirez",
   ],
 };
 
