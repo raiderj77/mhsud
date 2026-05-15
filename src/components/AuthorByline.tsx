@@ -21,7 +21,7 @@ export function AuthorByline({ publishedDate, modifiedDate }: AuthorBylineProps)
       <div className="flex flex-col gap-1">
         <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
           Reviewed by{" "}
-          <Link href="/about" className="underline hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
+          <Link href="/about/jason-ramirez" className="underline hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
             {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
           </Link>
         </p>

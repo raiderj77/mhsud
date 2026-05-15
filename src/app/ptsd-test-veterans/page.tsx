@@ -497,7 +497,7 @@ export default function PtsdTestVeteransPage() {
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+            Compiled by Jason Ramirez, CADC-II. Clinical content drawn from VA National Center for PTSD, NIMH, PubMed, and SAMHSA. For PTSD evaluation, consult a VA clinician, Vet Center counselor, or licensed therapist.
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
             Last reviewed: May 2026

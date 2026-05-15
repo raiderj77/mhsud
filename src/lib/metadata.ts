@@ -235,6 +235,10 @@ export function medicalWebPageJsonLd({
       name: SITE_AUTHOR.name,
       jobTitle: SITE_AUTHOR.credentialFull,
       description: SITE_AUTHOR.experience,
+      sameAs: [
+        "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
+        "https://mindchecktools.com/about/jason-ramirez",
+      ],
     },
     medicalAudience: {
       "@type": "MedicalAudience",
