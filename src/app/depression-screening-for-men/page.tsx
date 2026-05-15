@@ -7,24 +7,29 @@ import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/depression-screening-for-men`;
 
-export const metadata: Metadata = createMetadata({
-  path: "/depression-screening-for-men",
-  title: "Depression Screening for Men — Free PHQ-9",
-  description:
-    "Men are diagnosed with depression at half the rate of women — not because they experience it less, but because it looks different. Free validated PHQ-9 screening with context on how depression actually presents in men.",
-  keywords: [
-    "depression screening men", "depression test for men", "male depression symptoms",
-    "men and depression signs", "PHQ-9 men", "depression in men anger",
-    "male depression quiz", "men mental health screening", "free depression test men",
-    "depression symptoms men irritability", "men depression underdiagnosed",
-  ],
-  openGraph: {
+export const metadata: Metadata = {
+  ...createMetadata({
+    path: "/depression-screening-for-men",
     title: "Depression Screening for Men — Free PHQ-9",
-    description: "Free, private depression screening for men using the clinically validated PHQ-9. Instant results, no signup required.",
-    url: TOOL_URL,
-    type: "website",
+    description:
+      "Men are diagnosed with depression at half the rate of women — not because they experience it less, but because it looks different. Free validated PHQ-9 screening with context on how depression actually presents in men.",
+    keywords: [
+      "depression screening men", "depression test for men", "male depression symptoms",
+      "men and depression signs", "PHQ-9 men", "depression in men anger",
+      "male depression quiz", "men mental health screening", "free depression test men",
+      "depression symptoms men irritability", "men depression underdiagnosed",
+    ],
+    openGraph: {
+      title: "Depression Screening for Men — Free PHQ-9",
+      description: "Free, private depression screening for men using the clinically validated PHQ-9. Instant results, no signup required.",
+      url: TOOL_URL,
+      type: "website",
+    },
+  }),
+  alternates: {
+    canonical: "https://mindchecktools.com/depression-test-for-men",
   },
-});
+};
 
 const FAQ_DATA = [
   {
