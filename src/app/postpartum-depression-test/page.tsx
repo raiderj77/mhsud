@@ -222,21 +222,6 @@ export default function PostpartumDepressionTestPage() {
           </p>
         </div>
 
-        <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5 mb-8">
-          <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-2">
-            MindCheck Screening Data
-          </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-300">
-            Based on aggregate self-screening data from mindchecktools.com users between
-            [REPLACE: DATE_RANGE], approximately [REPLACE: X]% of postpartum respondents
-            scored at or above the PHQ-9 clinical threshold of 10, suggesting moderate to
-            severe depressive symptoms warranting professional follow-up.
-          </p>
-          <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">
-            Data reflects voluntary self-screening and is not a population-level prevalence estimate.
-          </p>
-        </div>
-
         <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
           Last updated: May 14, 2026
         </p>
