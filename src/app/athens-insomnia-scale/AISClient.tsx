@@ -525,7 +525,7 @@ export function AISClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The Athens Insomnia Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a sleep disorder. A score of 6 or higher suggests insomnia that may warrant professional evaluation. This tool does not screen for sleep apnea, restless leg syndrome, or other medical sleep conditions. Always consult a qualified healthcare professional for persistent sleep difficulties. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+            The Athens Insomnia Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a sleep disorder. A score of 6 or higher suggests insomnia that may warrant professional evaluation. This tool does not screen for sleep apnea, restless leg syndrome, or other medical sleep conditions. Always consult a qualified healthcare professional for persistent sleep difficulties. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
           </p>
         </div>
 
@@ -699,7 +699,7 @@ export function AISClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The Athens Insomnia Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a sleep disorder. A score of 6 or higher suggests insomnia that may warrant professional evaluation. This tool does not screen for sleep apnea, restless leg syndrome, or other medical sleep conditions. Always consult a qualified healthcare professional for persistent sleep difficulties. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).
+          The Athens Insomnia Scale is a screening tool for educational and self-reflection purposes. It is not a clinical assessment and cannot determine whether you have a sleep disorder. A score of 6 or higher suggests insomnia that may warrant professional evaluation. This tool does not screen for sleep apnea, restless leg syndrome, or other medical sleep conditions. Always consult a qualified healthcare professional for persistent sleep difficulties. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
         </p>
       </div>
 
