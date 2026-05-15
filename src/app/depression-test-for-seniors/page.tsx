@@ -226,7 +226,7 @@ export default function DepressionTestForSeniorsPage() {
         <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified healthcare professional can diagnose depression. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
-          <p className="text-sm text-slate-600 dark:text-slate-400">Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from CDC, NIMH, and SAMHSA. For depression evaluation, consult a licensed mental health professional or your primary care provider.</p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: March 2026</p>
         </div>
 

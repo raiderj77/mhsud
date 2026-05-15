@@ -240,7 +240,7 @@ export default function AdhdTestForTeensPage() {
         <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only — it is not a diagnosis. The ASRS was designed for adults; teens should discuss results with a healthcare provider. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
-          <p className="text-sm text-slate-600 dark:text-slate-400">Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH and CDC. For ADHD evaluation, consult a licensed psychologist or psychiatrist.</p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: May 2026</p>
         </div>
 
