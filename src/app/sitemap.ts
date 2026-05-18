@@ -2,6 +2,15 @@ import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 
+// Pages with robots: { index: false } — must not appear in sitemap (contradictory signal)
+const NOINDEX_SLUGS = new Set([
+  'dast-10-drug-screening',
+  'mdq-bipolar-screening',
+  'oci-r-ocd-screening',
+  'bipolar-test-young-adults',
+  'ocd-test-teens',
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastUpdated = "2026-03-27T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
@@ -151,5 +160,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...blogPages];
+  const indexablePages = staticPages.filter(
+    (p) => !NOINDEX_SLUGS.has(p.url.replace(`${SITE_URL}/`, ''))
+  );
+
+  return [...indexablePages, ...blogPages];
 }
