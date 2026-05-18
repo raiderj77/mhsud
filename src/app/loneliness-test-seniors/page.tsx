@@ -125,6 +125,10 @@ export default function LonelinessTestSeniorsPage() {
           Loneliness Test for Seniors
         </h1>
 
+        <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+          The UCLA Loneliness Scale measures subjective feelings of social isolation in adults over 65 through 20 items rated on a four-point frequency scale. Scores range from 20 to 80, with higher scores indicating greater perceived loneliness. The instrument distinguishes loneliness from objective social isolation, since some seniors with small networks still feel connected.
+        </p>
+
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">

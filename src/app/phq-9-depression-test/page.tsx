@@ -91,6 +91,17 @@ export default function PHQ9Page() {
         <h1 className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">
           PHQ-9 Depression Test
         </h1>
+        <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mt-4">
+          The PHQ-9 is a nine-item depression screening tool scored 0 to 27, used in primary care and VA mental health settings. Scores of 5 to 9 indicate mild symptoms, 10 to 14 moderate, 15 to 19 moderately severe, and 20 or higher severe depression. Item nine specifically screens for suicidal ideation.
+        </p>
+        <div className="card mt-6 p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20">
+          <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
+          <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+            <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
+            <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+            <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+          </ul>
+        </div>
       </div>
       <section className="sr-only">
         <h2>What Is the PHQ-9 Depression Screening?</h2>

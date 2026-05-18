@@ -124,6 +124,10 @@ export default function CaregiverBurnoutAssessmentPage() {
           Caregiver Burnout Assessment
         </h1>
 
+        <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+          Caregiver burnout assessment commonly uses the Zarit Burden Interview, a 22-item scale measuring physical, emotional, and financial strain from caregiving. Scores range 0 to 88, with 0-20 indicating little burden, 21-40 mild to moderate, 41-60 moderate to severe, and 61+ severe burden requiring intervention.
+        </p>
+
         {/* Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">

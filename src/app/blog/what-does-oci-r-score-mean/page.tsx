@@ -68,6 +68,9 @@ export default function WhatDoesOciRScoreMeanPage() {
             What Does Your OCI-R Score Mean?
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            The OCI-R (Obsessive-Compulsive Inventory Revised) is an 18-item self-report measure scored 0 to 72. A total score of 21 or higher suggests clinically significant OCD symptoms warranting professional evaluation. Six subscales measure washing, checking, ordering, obsessing, hoarding, and neutralizing. Subscale scores guide which symptom dimension is most active.
+          </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The OCI-R total score ranges from 0 to 72. A score of <strong>21 or higher</strong> is the validated clinical cutoff that distinguishes OCD from other anxiety disorders with reasonable accuracy. Below 21, OCD-related symptoms are present but at a level consistent with the general population. Scores of 40 or above indicate severe symptom burden. The OCI-R also produces six subscale scores that identify which OCD symptom dimensions are most prominent.
           </p>

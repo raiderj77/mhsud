@@ -128,6 +128,9 @@ export function MentalLoadClient({ faqData }: Props) {
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Conversation Starter</span>
         </div>
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Mental Load Calculator</h1>
+        <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-xl mb-3">
+          Mental load is the invisible cognitive work of planning, remembering, and managing a household or team. The Mental Load Calculator scores distribution across 23 weighted tasks, from meal planning to medical appointments. Output shows the imbalance percentage and which specific categories skew toward one person.
+        </p>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
           Who remembers, plans, and organizes in your household? This checklist helps you see how the invisible work of running a home is distributed — and start a conversation about it.
         </p>

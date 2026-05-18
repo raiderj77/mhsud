@@ -69,6 +69,9 @@ export default function Dass21ScoreGuidePage() {
             DASS-21 Score Guide: Understanding Your Depression, Anxiety, and Stress Scores
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            The DASS-21 (Depression Anxiety Stress Scales) is a 21-item self-report instrument with seven items per subscale. Raw scores are doubled to match the original 42-item scale. Depression cutoffs: 0-9 normal, 10-13 mild, 14-20 moderate, 21-27 severe, 28+ extremely severe. Anxiety and stress subscales use different thresholds.
+          </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The DASS-21 produces three separate scores &mdash; Depression (0&ndash;42), Anxiety (0&ndash;42), and Stress (0&ndash;42) &mdash; each classified into five severity levels from Normal to Extremely Severe. It is a screening tool, not a diagnostic instrument. Your scores indicate current symptom levels across these three emotional dimensions and can help guide conversations with a healthcare provider.
           </p>

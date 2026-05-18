@@ -69,6 +69,9 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             Alcohol Use in the Military: Culture, Risk, and Confidential Screening
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            Military and veteran alcohol screening typically uses the AUDIT-C, a three-item version of the AUDIT validated for primary care. A score of 4 or higher in men and 3 or higher in women indicates positive screening. The VA mandates annual screening for all enrolled veterans through this instrument.
+          </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Alcohol has been intertwined with military culture for centuries &mdash; from rum rations in the Royal Navy to beer at the enlisted club after a training exercise. But the line between cultural tradition and harmful drinking patterns is thinner than most service members realize. With binge drinking rates roughly 30% among active-duty personnel and a strong link between combat exposure and alcohol misuse, understanding when drinking crosses from social to problematic is critical &mdash; and confidential screening options now make it possible to check in without risking your career.
           </p>

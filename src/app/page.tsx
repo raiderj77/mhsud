@@ -672,6 +672,9 @@ export default function HomePage() {
             Mental health self-checks you can{" "}
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            MindCheck Tools provides free, evidence-based mental health and substance use screening instruments built on validated clinical scales. Every assessment uses the published scoring methodology, with results explained in plain language. The site is built and reviewed by a CADC-II credentialed counselor with eleven years of clinical experience.
+          </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
             Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).{" "}
             <Link

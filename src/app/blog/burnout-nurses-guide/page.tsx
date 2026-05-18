@@ -69,6 +69,9 @@ export default function BurnoutNursesGuidePage() {
             Nurse Burnout: Why It Happens, How It Feels, and What to Do About It
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+            Nurse burnout shows three measurable dimensions: emotional exhaustion, depersonalization, and reduced personal accomplishment. The Maslach Burnout Inventory for Human Services (MBI-HSS) is the gold-standard measure, with separate cutoffs for healthcare workers. Shift length, patient-to-nurse ratios, and moral injury exposure are the strongest predictors of clinical burnout severity.
+          </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Nursing is one of the most trusted and essential professions in healthcare. It is also one of the most emotionally and physically demanding. Burnout among nurses has reached levels that the World Health Organization and the U.S. Surgeon General have called a crisis &mdash; threatening not just nurse well-being but patient safety and healthcare system stability. If you are a nurse feeling exhausted, detached, or questioning whether you can keep going, this guide is for you.
           </p>
