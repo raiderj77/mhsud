@@ -9,7 +9,7 @@ export async function GET() {
 ## About
 MindCheck Tools provides validated, evidence-based mental health screening
 instruments as free, private web tools. All scoring happens client-side.
-Reviewed by a Certified Drug and Alcohol Counselor (CADC-II). See [reviewer credentials](https://mindchecktools.com/about/jason-ramirez).
+Substance use and addiction content reviewed by a Certified Drug and Alcohol Counselor (CADC-II). General mental health content is compiled from CDC, NIMH, SAMHSA, and peer-reviewed validated instruments. For clinical evaluation, consult a licensed mental health professional. See [reviewer credentials](https://mindchecktools.com/about/jason-ramirez).
 
 ---
 
