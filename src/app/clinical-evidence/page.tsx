@@ -43,7 +43,7 @@ type Instrument = {
   population: string;
   items: string;
   scoringRange: string;
-  threshold: string;
+  threshold?: string;
   sensitivity: string;
   specificity: string;
   license: string;
@@ -707,10 +707,12 @@ export default function ClinicalEvidencePage() {
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Population validated on</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.population}</dd>
                 </div>
+                {i.threshold && (
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Recommended threshold</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.threshold}</dd>
                 </div>
+                )}
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Sensitivity</dt>
