@@ -22,15 +22,13 @@ const SCREENING_TOOLS = [
   { heading: "Substance Use", links: [
     { href: "/audit-alcohol-test", label: "AUDIT Alcohol" },
     { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
-    { href: "/dast-10-drug-screening", label: "DAST-10 Drug Screen" },
-    { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
+{ href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
     { href: "/who-assist-substance-screening", label: "WHO ASSIST" },
     { href: "/crafft-substance-screening", label: "CRAFFT (Teens)" },
   ]},
   { heading: "Other Conditions", links: [
     { href: "/asrs-adhd-screening", label: "ASRS ADHD" },
-    { href: "/mdq-bipolar-screening", label: "MDQ Bipolar" },
-    { href: "/oci-r-ocd-screening", label: "OCI-R OCD" },
+{ href: "/oci-r-ocd-screening", label: "OCI-R OCD" },
     { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder" },
     { href: "/aq-10-autism-screening", label: "AQ-10 Autism" },
     { href: "/msi-bpd-screening", label: "MSI-BPD Borderline" },

@@ -127,11 +127,11 @@ export function MDQClient({ faqData }: Props) {
   }, []);
 
   const handleShare = useCallback(async (mode: "results" | "blank") => {
-    const url = "https://mindchecktools.com/mdq-bipolar-screening";
+    const url = "https://mindchecktools.com/bipolar-test-young-adults";
 
     if (mode === "blank") {
       const shareData = {
-        title: "MDQ Bipolar Screening Self-Check \u2014 Free & Private",
+        title: "MDQ Bipolar Screening Self-Check — Free & Private",
         text: "Take a free, private MDQ bipolar screening self-check. 15 items, 3 minutes. Your answers never leave your browser.",
         url,
       };
@@ -170,9 +170,9 @@ export function MDQClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\uD83D\uDD12", text: "100% Private" },
-            { icon: "\u23F1", text: "~3 Minutes" },
-            { icon: "\uD83D\uDCCB", text: "15 Items" },
+            { icon: "🔒", text: "100% Private" },
+            { icon: "⏱", text: "~3 Minutes" },
+            { icon: "📋", text: "15 Items" },
           ].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">
               {b.icon} {b.text}
@@ -247,7 +247,7 @@ export function MDQClient({ faqData }: Props) {
                         ? "bg-sage-500 text-white"
                         : "bg-sand-100 dark:bg-night-700 text-neutral-400"
                     }`}>
-                      {part1[qi] !== null ? "\u2713" : qi + 1}
+                      {part1[qi] !== null ? "✓" : qi + 1}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">
@@ -293,7 +293,7 @@ export function MDQClient({ faqData }: Props) {
                     ? "bg-sage-500 text-white"
                     : "bg-sand-100 dark:bg-night-700 text-neutral-400"
                 }`}>
-                  {part2 !== null ? "\u2713" : "14"}
+                  {part2 !== null ? "✓" : "14"}
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">
@@ -337,7 +337,7 @@ export function MDQClient({ faqData }: Props) {
                     ? "bg-sage-500 text-white"
                     : "bg-sand-100 dark:bg-night-700 text-neutral-400"
                 }`}>
-                  {part3 !== null ? "\u2713" : "15"}
+                  {part3 !== null ? "✓" : "15"}
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-[15px] font-medium text-neutral-800 dark:text-neutral-100 leading-relaxed mb-3">
@@ -382,7 +382,7 @@ export function MDQClient({ faqData }: Props) {
           {positiveScreen && (
             <div className="bg-warm-50 dark:bg-warm-950/30 border-2 border-warm-300 dark:border-warm-800 rounded-2xl p-5 sm:p-6 mb-5">
               <div className="flex gap-3 items-start">
-                <span className="text-xl">{"\u26A0\uFE0F"}</span>
+                <span className="text-xl">{"⚠️"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
                     Positive screen — professional evaluation recommended
@@ -437,7 +437,7 @@ export function MDQClient({ faqData }: Props) {
                       ? "bg-warm-500 text-white"
                       : "bg-sage-500 text-white"
                   }`}>
-                    {criterion1Met ? "!" : "\u2713"}
+                    {criterion1Met ? "!" : "✓"}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-semibold ${criterion1Met ? "text-warm-700 dark:text-warm-400" : "text-sage-700 dark:text-sage-400"}`}>
@@ -463,7 +463,7 @@ export function MDQClient({ faqData }: Props) {
                       ? "bg-warm-500 text-white"
                       : "bg-sage-500 text-white"
                   }`}>
-                    {criterion2Met ? "!" : "\u2713"}
+                    {criterion2Met ? "!" : "✓"}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-semibold ${criterion2Met ? "text-warm-700 dark:text-warm-400" : "text-sage-700 dark:text-sage-400"}`}>
@@ -489,7 +489,7 @@ export function MDQClient({ faqData }: Props) {
                       ? "bg-warm-500 text-white"
                       : "bg-sage-500 text-white"
                   }`}>
-                    {criterion3Met ? "!" : "\u2713"}
+                    {criterion3Met ? "!" : "✓"}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-semibold ${criterion3Met ? "text-warm-700 dark:text-warm-400" : "text-sage-700 dark:text-sage-400"}`}>
@@ -622,7 +622,7 @@ export function MDQClient({ faqData }: Props) {
             </div>
             {shareMessage && (
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">
-                {"\u2713"} {shareMessage}
+                {"✓"} {shareMessage}
               </p>
             )}
           </div>
@@ -630,7 +630,7 @@ export function MDQClient({ faqData }: Props) {
           {/* Download Reflection Summary */}
           <ReflectionSummary
             toolName="MDQ Bipolar Screening Self-Check"
-            toolUrl="https://mindchecktools.com/mdq-bipolar-screening"
+            toolUrl="https://mindchecktools.com/bipolar-test-young-adults"
             score={part1YesCount}
             severityLabel={positiveScreen ? "Positive Screen" : "Negative Screen"}
             scoreRange={positiveScreen ? "All 3 criteria met" : "Not all criteria met"}
@@ -724,8 +724,8 @@ export function MDQClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (

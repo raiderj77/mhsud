@@ -48,8 +48,7 @@ const CATEGORIES: Category[] = [
     tools: [
       { href: "/audit-alcohol-test", label: "AUDIT", sub: "WHO alcohol screen (10 items)" },
       { href: "/audit-c-alcohol-screen", label: "AUDIT-C", sub: "Brief alcohol screen" },
-      { href: "/dast-10-drug-screening", label: "DAST-10", sub: "Drug abuse screening" },
-      { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID", sub: "Alcohol & drug screen" },
+{ href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID", sub: "Alcohol & drug screen" },
       { href: "/who-assist-substance-screening", label: "WHO ASSIST", sub: "Comprehensive substance screen" },
       { href: "/crafft-substance-screening", label: "CRAFFT", sub: "Adolescent substance screen" },
     ],
@@ -60,8 +59,7 @@ const CATEGORIES: Category[] = [
     icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
     tools: [
       { href: "/asrs-adhd-screening", label: "ASRS", sub: "Adult ADHD screening" },
-      { href: "/mdq-bipolar-screening", label: "MDQ", sub: "Bipolar screening" },
-      { href: "/oci-r-ocd-screening", label: "OCI-R", sub: "OCD screening" },
+{ href: "/oci-r-ocd-screening", label: "OCI-R", sub: "OCD screening" },
       { href: "/scoff-eating-disorder-screening", label: "SCOFF", sub: "Eating disorder screen" },
       { href: "/aq-10-autism-screening", label: "AQ-10", sub: "Autism spectrum screen" },
       { href: "/msi-bpd-screening", label: "MSI-BPD", sub: "Borderline personality screen" },

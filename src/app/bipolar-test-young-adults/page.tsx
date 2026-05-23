@@ -3,7 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
-import { MDQClient } from "../mdq-bipolar-screening/MDQClient";
+import { MDQClient } from "./MDQClient";
 
 const TOOL_URL = `${SITE_URL}/bipolar-test-young-adults`;
 
@@ -92,7 +92,6 @@ export default function BipolarTestYoungAdultsPage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "MDQ Bipolar Screening", url: `${SITE_URL}/mdq-bipolar-screening` },
               { name: "Bipolar Test for Young Adults", url: TOOL_URL },
             ])
           ),
@@ -313,8 +312,8 @@ export default function BipolarTestYoungAdultsPage() {
 
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
-          <Link href="/mdq-bipolar-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
-            MDQ Bipolar Screening →
+          <Link href="/mdq-score-interpretation" className="text-sky-600 dark:text-sky-400 hover:underline">
+            MDQ Score Interpretation →
           </Link>
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             PHQ-9 Depression Test →

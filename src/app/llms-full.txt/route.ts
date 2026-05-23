@@ -37,10 +37,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - URL: https://mindchecktools.com/k6-distress-scale
 - 6-item nonspecific psychological distress measure used in national health surveys. Score 13+ = serious distress.
 
-### MDQ Bipolar Screening
-- URL: https://mindchecktools.com/mdq-bipolar-screening
-- 3-part Mood Disorder Questionnaire for bipolar spectrum disorders. Assesses symptoms, co-occurrence, and functional impact.
-
 ### PHQ-4 Quick Screen
 - URL: https://mindchecktools.com/phq-4-anxiety-depression-screen
 - 4-item ultra-brief combined anxiety and depression screener.
@@ -89,10 +85,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 ### AUDIT-C Quick Screen
 - URL: https://mindchecktools.com/audit-c-alcohol-screen
 - 3-item brief alcohol screen used in primary care. Faster version of the full AUDIT.
-
-### DAST-10 Drug Screening
-- URL: https://mindchecktools.com/dast-10-drug-screening
-- 10-item validated drug use screening test. Reflects on drug use patterns and impact.
 
 ### CAGE-AID Substance Use Screen
 - URL: https://mindchecktools.com/cage-aid-substance-abuse-screening

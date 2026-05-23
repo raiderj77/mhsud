@@ -4,8 +4,6 @@ import { BLOG_POSTS } from "@/lib/blog";
 
 // Pages with robots: { index: false } — must not appear in sitemap (contradictory signal)
 const NOINDEX_SLUGS = new Set([
-  'dast-10-drug-screening',
-  'mdq-bipolar-screening',
   'oci-r-ocd-screening',
   'bipolar-test-young-adults',
   'ocd-test-teens',
@@ -22,13 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/gad-7-anxiety-test`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-alcohol-test`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-c-alcohol-screen`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/dast-10-drug-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: `${SITE_URL}/cage-aid-substance-abuse-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
+{ url: `${SITE_URL}/cage-aid-substance-abuse-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/pcl-5-ptsd-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/pc-ptsd-5-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/asrs-adhd-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/mdq-bipolar-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/oci-r-ocd-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
+{ url: `${SITE_URL}/oci-r-ocd-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/dass-21-depression-anxiety-stress`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/who-5-wellbeing-index`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/k6-distress-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

@@ -96,8 +96,7 @@ const CATEGORIES: Category[] = [
       { name: "AUDIT Alcohol Use Disorders Identification Test", acronym: "AUDIT", href: "/audit-alcohol-test", scoreInterpHref: "/audit-score-interpretation", description: "Ten-item alcohol use screen developed by the World Health Organization.", population: "General adults", items: "10 items", time: "About 3 minutes" },
       { name: "AUDIT-C Quick Alcohol Screen", acronym: "AUDIT-C", href: "/audit-c-alcohol-screen", scoreInterpHref: "/audit-c-score-interpretation", description: "Three-item brief version of the AUDIT focused on consumption.", population: "General adults", items: "3 items", time: "Under 2 minutes" },
       { name: "CAGE-AID Substance Use Screen", acronym: "CAGE-AID", href: "/cage-aid-substance-abuse-screening", description: "Four-item screen for alcohol and other drug problems.", population: "General adults", items: "4 items", time: "Under 2 minutes" },
-      { name: "DAST-10 Drug Abuse Screening Test", acronym: "DAST-10", href: "/dast-10-drug-screening", scoreInterpHref: "/dast-10-score-interpretation", description: "Ten-item screen for non-medical drug use problems in the past 12 months.", population: "General adults", items: "10 items", time: "About 3 minutes" },
-      { name: "CRAFFT Substance Use Screen", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Adolescent substance use screen used in pediatric and school-based care.", population: "Adolescents 12 to 21", items: "6 to 9 items", time: "About 3 minutes" },
+{ name: "CRAFFT Substance Use Screen", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Adolescent substance use screen used in pediatric and school-based care.", population: "Adolescents 12 to 21", items: "6 to 9 items", time: "About 3 minutes" },
       { name: "WHO ASSIST Substance Use Screen", acronym: "ASSIST", href: "/who-assist-substance-screening", description: "World Health Organization screen across tobacco, alcohol, and other substances.", population: "General adults", items: "Up to 8 items per substance", time: "5 to 10 minutes" },
       { name: "Am I an Alcoholic Quiz", href: "/am-i-an-alcoholic-quiz", description: "Plain-language entry point built on the AUDIT framework.", population: "General adults", items: "10 items", time: "About 3 minutes" },
       { name: "Alcohol Screening for College Students", href: "/alcohol-screening-for-college-students", description: "AUDIT-based screen with examples specific to college drinking patterns.", population: "College students", items: "10 items", time: "About 3 minutes" },
@@ -145,8 +144,7 @@ const CATEGORIES: Category[] = [
     intro:
       "Bipolar spectrum screens focus on lifetime hypomanic or manic episodes. A positive screen is not a bipolar diagnosis and should be reviewed with a clinician.",
     tools: [
-      { name: "MDQ Mood Disorder Questionnaire", acronym: "MDQ", href: "/mdq-bipolar-screening", scoreInterpHref: "/mdq-score-interpretation", description: "Thirteen-item bipolar spectrum screen plus impairment and co-occurrence items.", population: "General adults", items: "15 items", time: "About 4 minutes" },
-      { name: "Bipolar Test for Young Adults", href: "/bipolar-test-young-adults", description: "MDQ-based screen with framing common to first-episode presentations in young adults.", population: "Young adults 18 to 25", items: "15 items", time: "About 4 minutes" },
+{ name: "Bipolar Test for Young Adults", href: "/bipolar-test-young-adults", description: "MDQ-based screen with framing common to first-episode presentations in young adults.", population: "Young adults 18 to 25", items: "15 items", time: "About 4 minutes" },
     ],
   },
   {

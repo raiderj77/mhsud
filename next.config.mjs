@@ -45,7 +45,7 @@ const nextConfig = {
       },
       {
         // Health content pages: no-referrer to prevent health URLs leaking to third parties
-        source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|dast-10-drug-screening|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|oci-r-ocd-screening|spin-social-anxiety-test|mdq-bipolar-screening|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator|maternal-mental-health)",
+        source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|oci-r-ocd-screening|spin-social-anxiety-test|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator|maternal-mental-health)",
         headers: [
           { key: "Referrer-Policy", value: "no-referrer" },
         ],
@@ -69,6 +69,8 @@ const nextConfig = {
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },
       { source: "/depression-test", destination: "/phq-9-depression-test", permanent: true },
       { source: "/anxiety-test", destination: "/gad-7-anxiety-test", permanent: true },
+      { source: "/dast-10-drug-screening", destination: "/audit-alcohol-test", permanent: true },
+      { source: "/mdq-bipolar-screening", destination: "/bipolar-test-young-adults", permanent: true },
     ];
   },
 };
