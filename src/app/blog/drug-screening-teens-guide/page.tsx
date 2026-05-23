@@ -245,10 +245,6 @@ export default function DrugScreeningTeensGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">What Are Substance Use Disorders?</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Signs, diagnosis, and treatment options</p>
               </Link>
-              <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Scoring Guide</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding DAST-10 scores and interpretation</p>
-              </Link>
             </div>
           </section>
         </div>

@@ -330,10 +330,6 @@ export default function PTSDScreeningGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ACE Score Meaning & Interpretation</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding adverse childhood experiences and their impact</p>
               </Link>
-              <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Scoring & Interpretation Guide</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the drug abuse screening test</p>
-              </Link>
             </div>
           </section>
         </div>

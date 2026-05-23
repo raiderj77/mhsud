@@ -110,7 +110,6 @@ MindCheck Tools (https://mindchecktools.com) provides free, validated mental hea
 - [GAD-7 Score Interpretation](https://mindchecktools.com/gad-7-score-interpretation): Detailed interpretation of GAD-7 anxiety scores
 - [AUDIT Score Interpretation](https://mindchecktools.com/audit-score-interpretation): Detailed interpretation of AUDIT alcohol screening scores
 - [AUDIT-C Score Interpretation](https://mindchecktools.com/audit-c-score-interpretation): Detailed interpretation of AUDIT-C alcohol scores
-- [DAST-10 Score Interpretation](https://mindchecktools.com/dast-10-score-interpretation): Detailed interpretation of DAST-10 drug screening scores
 - [DASS-21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation): Detailed interpretation of DASS-21 depression, anxiety, and stress scores
 - [PCL-5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation): Detailed interpretation of PCL-5 PTSD screening scores
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation): Detailed interpretation of ASRS ADHD screening scores
@@ -137,7 +136,6 @@ MindCheck Tools (https://mindchecktools.com) provides free, validated mental hea
 - [What Is the PHQ-9?](https://mindchecktools.com/blog/what-is-phq-9-depression-screener): Complete guide to the PHQ-9 depression screener — how it works and who developed it
 - [GAD-7 Guide](https://mindchecktools.com/blog/gad-7-guide): What the GAD-7 anxiety scale measures and how doctors interpret scores
 - [AUDIT Guide](https://mindchecktools.com/blog/audit-guide): How the WHO AUDIT alcohol screening tool works and why clinicians use it
-- [DAST-10 Guide](https://mindchecktools.com/blog/dast-10-guide): How the DAST-10 drug screening is scored and what results mean
 - [PTSD Screening Guide](https://mindchecktools.com/blog/ptsd-screening-guide): When and why to get screened for PTSD, and how the PCL-5 and PC-PTSD-5 work
 - [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide): Complete guide to depression screening, USPSTF guidelines, and treatment options
 - [Understanding Your Screening Results](https://mindchecktools.com/blog/understanding-mental-health-screening-results): What screening results mean, what they do not mean, and practical next steps

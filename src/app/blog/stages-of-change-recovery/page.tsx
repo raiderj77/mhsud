@@ -296,10 +296,6 @@ export default function StagesOfChangeRecoveryPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Relapse Prevention Plan Guide</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Build a practical plan for maintaining recovery</p>
               </Link>
-              <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Scoring &amp; Interpretation Guide</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding the drug abuse screening test</p>
-              </Link>
             </div>
           </section>
         </div>

@@ -307,10 +307,6 @@ export default function WhatDoesCageAidScoreMeanPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">What Does Your AUDIT Score Mean?</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Understanding alcohol screening score ranges</p>
               </Link>
-              <Link href="/blog/dast-10-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Understanding the DAST-10</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Scoring, interpretation, and what your results mean</p>
-              </Link>
             </div>
           </section>
         </div>

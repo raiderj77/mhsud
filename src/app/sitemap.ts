@@ -67,7 +67,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/phq-9-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/gad-7-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/audit-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/dast-10-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/pcl-5-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/asrs-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
 { url: `${SITE_URL}/dass-21-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

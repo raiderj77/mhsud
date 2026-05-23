@@ -109,17 +109,6 @@ export const BLOG_POSTS: BlogPost[] = [
     modifiedDate: "2026-03-08",
   },
   {
-    slug: "dast-10-guide",
-    title: "Understanding the DAST-10: Scoring, Interpretation & What Your Results Mean",
-    excerpt: "Learn how the DAST-10 drug screening is scored, what each severity level means, and how it compares to the CAGE-AID and AUDIT.",
-    category: "Tool Guide",
-    date: "2026-03-05",
-    readTime: "8 min read",
-    status: "published",
-    publishedDate: "2026-03-05",
-    modifiedDate: "2026-03-08",
-  },
-  {
     slug: "ptsd-screening-guide",
     title: "PTSD Screening: When and Why to Get Tested",
     excerpt: "Learn when to get screened for PTSD, how the PCL-5 and PC-PTSD-5 work, what different scores mean, and what treatment options are available.",
