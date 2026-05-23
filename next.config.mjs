@@ -74,6 +74,11 @@ const nextConfig = {
       { source: "/oci-r-ocd-screening", destination: "/blog/what-is-ocd", permanent: true },
       { source: "/ocd-test-teens", destination: "/blog/what-is-ocd", permanent: true },
       { source: "/bipolar-test-young-adults", destination: "/blog/what-is-bipolar-disorder", permanent: true },
+      { source: "/blog/what-does-oci-r-score-mean", destination: "/blog/what-is-ocd", permanent: true },
+      { source: "/mdq-score-interpretation", destination: "/blog/what-is-bipolar-disorder", permanent: true },
+      { source: "/audit-vs-dast-10", destination: "/audit-alcohol-test", permanent: true },
+      { source: "/dast-10-score-interpretation", destination: "/audit-alcohol-test", permanent: true },
+      { source: "/blog/dast-10-guide", destination: "/audit-alcohol-test", permanent: true },
     ];
   },
 };

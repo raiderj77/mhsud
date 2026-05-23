@@ -8,14 +8,11 @@
 - [GAD-7 Anxiety Test](https://mindchecktools.com/gad-7-anxiety-test): 7-item generalized anxiety screening; scores 0–21 across four severity levels
 - [AUDIT Alcohol Test](https://mindchecktools.com/audit-alcohol-test): 10-item WHO alcohol use disorder screening; scores 0–40
 - [AUDIT-C Alcohol Screen](https://mindchecktools.com/audit-c-alcohol-screen): 3-item brief alcohol consumption screening
-- [DAST-10 Drug Screening](https://mindchecktools.com/dast-10-drug-screening): 10-item drug abuse screening test; scores 0–10
 - [CAGE-AID Substance Screening](https://mindchecktools.com/cage-aid-substance-abuse-screening): 4-item alcohol and drug use screening
 - [DASS-21](https://mindchecktools.com/dass-21-depression-anxiety-stress): Depression, anxiety, and stress measured simultaneously across three subscales
 - [PCL-5 PTSD Screening](https://mindchecktools.com/pcl-5-ptsd-screening): 20-item PTSD symptom severity screening; scores 0–80
 - [PC-PTSD-5 Screening](https://mindchecktools.com/pc-ptsd-5-screening): 5-item primary care PTSD gateway screening
 - [ASRS ADHD Screening](https://mindchecktools.com/asrs-adhd-screening): WHO Adult ADHD Self-Report Scale v1.1
-- [MDQ Bipolar Screening](https://mindchecktools.com/mdq-bipolar-screening): Mood Disorder Questionnaire for bipolar spectrum screening
-- [OCI-R OCD Screening](https://mindchecktools.com/oci-r-ocd-screening): 18-item OCD symptom screening across six subscales; scores 0–72
 - [MSI-BPD Screening](https://mindchecktools.com/msi-bpd-screening): McLean Screening Instrument for borderline personality disorder; 10 yes/no items
 - [SPIN Social Anxiety Test](https://mindchecktools.com/spin-social-anxiety-test): Social Phobia Inventory; 17-item social anxiety screening
 - [SCOFF Eating Disorder Screening](https://mindchecktools.com/scoff-eating-disorder-screening): 5-item eating disorder screening
@@ -150,11 +147,9 @@
 - [GAD-7 Score Interpretation](https://mindchecktools.com/gad-7-score-interpretation): Detailed interpretation of GAD-7 anxiety scores
 - [AUDIT Score Interpretation](https://mindchecktools.com/audit-score-interpretation): Detailed interpretation of AUDIT alcohol screening scores
 - [AUDIT-C Score Interpretation](https://mindchecktools.com/audit-c-score-interpretation): Detailed interpretation of AUDIT-C alcohol scores
-- [DAST-10 Score Interpretation](https://mindchecktools.com/dast-10-score-interpretation): Detailed interpretation of DAST-10 drug screening scores
 - [DASS-21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation): Detailed interpretation of DASS-21 depression, anxiety, and stress scores
 - [PCL-5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation): Detailed interpretation of PCL-5 PTSD screening scores
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation): Detailed interpretation of ASRS ADHD screening scores
-- [MDQ Score Interpretation](https://mindchecktools.com/mdq-score-interpretation): Detailed interpretation of MDQ bipolar screening scores
 - [ACE Score Interpretation](https://mindchecktools.com/ace-score-interpretation): Detailed interpretation of ACE adverse childhood experiences scores
 
 ## Comparison / Decision Pages
@@ -163,8 +158,6 @@
 - [AUDIT vs AUDIT-C](https://mindchecktools.com/audit-vs-audit-c): When to use the full 10-item AUDIT versus the brief 3-item AUDIT-C
 - [DASS-21 vs PHQ-9 and GAD-7](https://mindchecktools.com/dass-21-vs-phq-9-and-gad-7): When the DASS-21 adds value over running the PHQ-9 and GAD-7 separately
 - [PHQ-2 to PHQ-9: When to Escalate](https://mindchecktools.com/phq-2-to-phq-9-when-to-escalate): When a positive PHQ-2 warrants completing the full PHQ-9
-- [AUDIT vs DAST-10](https://mindchecktools.com/audit-vs-dast-10): Which screening to use when the concern is alcohol use versus drug use
-
 ## Blog — Score Guides
 
 - [What Does Your PHQ-9 Score Mean?](https://mindchecktools.com/blog/what-does-phq-9-score-mean): PHQ-9 scores range 0–27; learn what each severity level means and what to do next
@@ -173,7 +166,6 @@
 - [What Does Your PCL-5 Score Mean?](https://mindchecktools.com/blog/what-does-pcl-5-score-mean): PCL-5 scores range 0–80; learn what the clinical cutoff means
 - [What Does Your ASRS Score Mean?](https://mindchecktools.com/blog/what-does-asrs-score-mean): Learn what a positive ASRS ADHD screen means and what to do next
 - [What Does Your ACE Score Mean?](https://mindchecktools.com/blog/what-does-ace-score-mean): ACE scores range 0–10; learn how childhood adversity affects adult health
-- [What Does Your OCI-R Score Mean?](https://mindchecktools.com/blog/what-does-oci-r-score-mean): OCI-R scores range 0–72; learn what the clinical cutoff and subscales mean
 - [What Does Your PC-PTSD-5 Score Mean?](https://mindchecktools.com/blog/what-does-pc-ptsd-5-score-mean): PC-PTSD-5 scores range 0–5; learn what a positive screen means
 - [What Does Your CAGE-AID Score Mean?](https://mindchecktools.com/blog/what-does-cage-aid-score-mean): CAGE-AID scores range 0–4; a score of 2+ suggests possible substance use concern
 - [What Does Your PSS Score Mean?](https://mindchecktools.com/blog/what-does-pss-score-mean): PSS-10 scores range 0–40; learn what your perceived stress level indicates
@@ -187,7 +179,6 @@
 - [What Is the PHQ-9?](https://mindchecktools.com/blog/what-is-phq-9-depression-screener): Complete guide to the PHQ-9 depression screener — how it works and who developed it
 - [GAD-7 Guide](https://mindchecktools.com/blog/gad-7-guide): What the GAD-7 anxiety scale measures and how doctors interpret scores
 - [AUDIT Guide](https://mindchecktools.com/blog/audit-guide): How the WHO AUDIT alcohol screening tool works and why clinicians use it
-- [DAST-10 Guide](https://mindchecktools.com/blog/dast-10-guide): How the DAST-10 drug screening is scored and what results mean
 - [PTSD Screening Guide](https://mindchecktools.com/blog/ptsd-screening-guide): When and why to get screened for PTSD, and how the PCL-5 and PC-PTSD-5 work
 - [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide): Complete guide to depression screening, USPSTF guidelines, and treatment options
 - [Understanding Your Screening Results](https://mindchecktools.com/blog/understanding-mental-health-screening-results): What screening results mean, what they do not mean, and practical next steps

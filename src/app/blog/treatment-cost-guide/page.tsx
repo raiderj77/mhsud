@@ -192,7 +192,7 @@ export default function TreatmentCostGuidePage() {
               <li>Consider starting with free resources (AA, NA, SMART Recovery) while exploring treatment options</li>
             </ul>
             <p>
-              If you are unsure whether your drinking or substance use warrants treatment, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10 drug screening</Link> can provide a structured assessment to share with a healthcare provider.
+              If you are unsure whether your drinking or substance use warrants treatment, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST drug screening</Link> can provide a structured assessment to share with a healthcare provider.
             </p>
           </section>
 
@@ -239,9 +239,9 @@ export default function TreatmentCostGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO-developed alcohol use screening assessment</p>
               </Link>
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated drug use screening assessment</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Drug Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO multi-substance drug use screening</p>
               </Link>
             </div>
           </section>

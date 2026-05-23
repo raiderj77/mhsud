@@ -505,7 +505,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Why Combined Screening Matters</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Research shows that polysubstance use — using more than one substance — is common and often underdetected. According to SAMHSA, many individuals who seek help for alcohol use also report drug use, and vice versa. A combined screening tool like the CAGE-AID helps ensure that substance use concerns are not overlooked simply because only one category was asked about. For a more detailed assessment of specific substances, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT</Link> (alcohol) and <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DAST-10</Link> (drugs) provide more granular evaluation.
+                  Research shows that polysubstance use — using more than one substance — is common and often underdetected. According to SAMHSA, many individuals who seek help for alcohol use also report drug use, and vice versa. A combined screening tool like the CAGE-AID helps ensure that substance use concerns are not overlooked simply because only one category was asked about. For a more detailed assessment of specific substances, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT</Link> (alcohol) and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">WHO-ASSIST</Link> (drugs) provide more granular evaluation.
                 </p>
               </div>
               <div>
@@ -574,7 +574,7 @@ export function CAGEAIDClient({ faqData }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "AUDIT Alcohol Use Screen", desc: "10-item WHO alcohol screening tool", href: "/audit-alcohol-test" },
-                { name: "DAST-10 Drug Screening", desc: "10-item validated drug use screener", href: "/dast-10-drug-screening" },
+                { name: "WHO-ASSIST Drug Screening", desc: "WHO-developed multi-substance use screener", href: "/who-assist-substance-screening" },
                 { name: "AUDIT-C Quick Screen", desc: "3-question brief alcohol screen", href: "/audit-c-alcohol-screen" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">

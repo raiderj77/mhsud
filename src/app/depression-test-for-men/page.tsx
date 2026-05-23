@@ -246,7 +246,7 @@ export default function DepressionTestForMenPage() {
                   alcohol screening
                 </Link>{" "}
                 and{" "}
-                <Link href="/dast-10-drug-screening" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <Link href="/who-assist-substance-screening" className="text-blue-600 dark:text-blue-400 hover:underline">
                   drug screening
                 </Link>{" "}
                 tools can help you understand where you stand.

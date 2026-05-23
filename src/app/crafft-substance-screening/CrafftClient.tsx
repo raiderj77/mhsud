@@ -398,9 +398,9 @@ export function CrafftClient({ faqData }: Props) {
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">AUDIT Alcohol Screen →</span>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Detailed alcohol use screening (adults)</p>
             </Link>
-            <Link href="/dast-10-drug-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
-              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">DAST-10 Drug Screen →</span>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">10-item drug screening (adults)</p>
+            <Link href="/who-assist-substance-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
+              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">WHO-ASSIST Drug Screen →</span>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">WHO multi-substance drug screening (adults)</p>
             </Link>
           </div>
         </div>

@@ -467,7 +467,7 @@ export function HealthTimelineClient({ faqData }: Props) {
               {[
                 { name: "Sobriety Calculator", desc: "Track days sober and recovery milestones", href: "/sobriety-calculator" },
                 { name: "Money Saved Calculator", desc: "See how much you've saved in recovery", href: "/money-saved-recovery-calculator" },
-                { name: "DAST-10 Drug Screening", desc: "10-item validated drug use screening", href: "/dast-10-drug-screening" },
+                { name: "WHO-ASSIST Drug Screening", desc: "WHO multi-substance drug use screening", href: "/who-assist-substance-screening" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>

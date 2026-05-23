@@ -213,7 +213,7 @@ export default function WhatIsOcdPage() {
               <li><strong>Not better explained</strong> by another condition or substance</li>
             </ol>
             <p>
-              The <Link href="/oci-r-ocd-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">OCI-R</Link> screens for OCD symptom severity across six dimensions. A score of 21 or higher is the validated threshold for distinguishing OCD from other anxiety presentations.
+              The OCI-R is a validated research instrument that screens for OCD symptom severity across six dimensions. It is used in clinical and research settings to assess symptom patterns.
             </p>
           </section>
 
@@ -283,12 +283,11 @@ export default function WhatIsOcdPage() {
 
           {/* CTA */}
           <div className="rounded-lg bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 p-6 text-center">
-            <h2 className="text-lg font-semibold text-sage-900 dark:text-sage-100 mb-2">Take a Free OCD Screening</h2>
+            <h2 className="text-lg font-semibold text-sage-900 dark:text-sage-100 mb-2">Check in on your mental health</h2>
             <p className="text-sm text-sage-700 dark:text-sage-400 mb-4">
-              The OCI-R is a validated 18-question screening tool for OCD symptom severity.
+              Free, private screenings for depression and anxiety. Results stay in your browser.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/oci-r-ocd-screening" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">OCI-R OCD Screening</Link>
               <Link href="/phq-9-depression-test" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">PHQ-9 Depression Check</Link>
               <Link href="/gad-7-anxiety-test" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">GAD-7 Anxiety Check</Link>
             </div>
@@ -317,7 +316,6 @@ export default function WhatIsOcdPage() {
             <h2>Related Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { href: "/oci-r-ocd-screening", label: "OCI-R OCD Screening" },
                 { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety Screening" },
                 { href: "/phq-9-depression-test", label: "PHQ-9 Depression Self-Check" },
                 { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Screening" },
@@ -334,7 +332,7 @@ export default function WhatIsOcdPage() {
             <h2>Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {BLOG_POSTS.filter((p) =>
-                ["what-does-oci-r-score-mean", "what-ocd-looks-like", "what-is-anxiety", "how-to-find-a-therapist"].includes(p.slug)
+                ["what-ocd-looks-like", "what-is-anxiety", "how-to-find-a-therapist"].includes(p.slug)
               ).map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="block rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 hover:border-orange-300 dark:hover:border-orange-700 transition">
                   <span className="font-medium text-neutral-900 dark:text-neutral-100">{post.title}</span>

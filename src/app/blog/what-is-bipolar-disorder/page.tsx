@@ -205,7 +205,7 @@ export default function WhatIsBipolarDisorderPage() {
               <li><strong>Screening tools for depression don&apos;t detect mania</strong> &mdash; the PHQ-9 and similar tools capture current depressive state but don&apos;t probe for bipolar history</li>
             </ol>
             <p>
-              The <Link href="/mdq-bipolar-screening" className="text-sage-600 dark:text-sage-400 underline">MDQ Bipolar Screening</Link> was designed specifically to address this gap &mdash; it asks about the full history of elevated mood symptoms in a systematic way.
+              The Mood Disorder Questionnaire (MDQ) was designed specifically to address this gap &mdash; it asks about the full history of elevated mood symptoms in a systematic way.
             </p>
           </section>
 
@@ -296,11 +296,11 @@ export default function WhatIsBipolarDisorderPage() {
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Wondering if bipolar disorder might apply to you?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The MDQ screening takes under 5 minutes. Free, private, and your answers never leave your browser.</p>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on your mental health</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings for depression, anxiety, and stress. Results stay in your browser.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/mdq-bipolar-screening" className="btn-primary text-sm">Take the MDQ Bipolar Screening</Link>
-              <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Depression Check</Link>
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
+              <Link href="/dass-21-depression-anxiety-stress" className="btn-primary text-sm">DASS-21 Assessment</Link>
             </div>
           </div>
 
@@ -327,9 +327,9 @@ export default function WhatIsBipolarDisorderPage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/mdq-bipolar-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">MDQ Bipolar Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated screening for bipolar spectrum disorders</p>
+              <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Depression, anxiety, and stress screening</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>

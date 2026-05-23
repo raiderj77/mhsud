@@ -58,7 +58,7 @@ const FAQ_DATA = [
   {
     question: "How is this different from the CAGE-AID or AUDIT screening tools?",
     answer:
-      "The CAGE-AID and AUDIT are validated screening tools designed for the person who may have a substance use issue to answer about their own use. This Family Impact Assessment is different: it is designed for family members and loved ones, and it evaluates the impact on you — not on the person using substances. Both types of tools have value, but they serve different purposes. If your loved one is open to taking a self-assessment, you might share our CAGE-AID, AUDIT, or DAST-10 tools with them.",
+      "The CAGE-AID and AUDIT are validated screening tools designed for the person who may have a substance use issue to answer about their own use. This Family Impact Assessment is different: it is designed for family members and loved ones, and it evaluates the impact on you — not on the person using substances. Both types of tools have value, but they serve different purposes. If your loved one is open to taking a self-assessment, you might share our CAGE-AID, AUDIT, or WHO-ASSIST tools with them.",
   },
   {
     question: "Is my data private?",

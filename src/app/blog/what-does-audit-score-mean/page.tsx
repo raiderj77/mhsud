@@ -350,9 +350,9 @@ export default function WhatDoesAUDITScoreMeanPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Substance Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">4-question alcohol and drug use screen</p>
               </Link>
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-question drug use screening tool</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Drug Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO multi-substance drug use screening</p>
               </Link>
             </div>
           </section>

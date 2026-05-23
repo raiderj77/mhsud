@@ -80,13 +80,13 @@ const STAGES: Record<Stage, StageInfo> = {
     meaning: "Being in Precontemplation does not mean you are in denial or that something is wrong with you. It means that right now, change is not on your radar. Many people stay in this stage for a long time before something shifts their perspective — a health scare, a relationship consequence, or simply new information.",
     nextSteps: [
       "There is no pressure to change right now. This tool is here whenever you are ready.",
-      "Consider taking a substance use screening (AUDIT, DAST-10, or CAGE-AID) just to get information — with no obligation to act on it.",
+      "Consider taking a substance use screening (AUDIT, WHO-ASSIST, or CAGE-AID) just to get information — with no obligation to act on it.",
       "If someone in your life has expressed concern, try listening to their perspective without arguing — just take it in.",
       "Read about the health effects of substance use on our Health Recovery Timeline — information alone can shift awareness over time.",
     ],
     resources: [
       { href: "/audit-alcohol-test", label: "AUDIT Alcohol Screen", desc: "Reflect on your relationship with alcohol" },
-      { href: "/dast-10-drug-screening", label: "DAST-10 Drug Screening", desc: "10-question drug use reflection" },
+      { href: "/who-assist-substance-screening", label: "WHO-ASSIST Drug Screening", desc: "WHO multi-substance drug use screening" },
       { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Screen", desc: "Quick 4-question substance use check" },
       { href: "/health-recovery-timeline", label: "Health Recovery Timeline", desc: "See what happens to your body when you quit" },
     ],

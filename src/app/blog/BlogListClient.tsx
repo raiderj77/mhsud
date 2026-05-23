@@ -116,14 +116,16 @@ export function BlogListClient({ posts, categories }: Props) {
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <div className="mt-3">
-                  <Link
-                    href={post.toolSlug}
-                    className="text-xs font-medium text-sage-600 dark:text-sage-400 hover:underline"
-                  >
-                    Related tool →
-                  </Link>
-                </div>
+                {post.toolSlug && (
+                  <div className="mt-3">
+                    <Link
+                      href={post.toolSlug}
+                      className="text-xs font-medium text-sage-600 dark:text-sage-400 hover:underline"
+                    >
+                      Related tool →
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </article>

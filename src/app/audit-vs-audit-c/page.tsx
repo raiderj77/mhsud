@@ -418,15 +418,6 @@ export default function AuditVsAuditCPage() {
                   Free, validated 3-question rapid screen for hazardous drinking. Takes about 1 minute.
                 </p>
               </li>
-              <li className="pt-3 border-t border-slate-200 dark:border-slate-700">
-                <Link href="/dast-10-drug-screening" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  DAST-10 — Drug Abuse Screening Test →
-                </Link>
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                  Free, validated 10-question screen for drug use other than alcohol. For a comparison with AUDIT, see{" "}
-                  <Link href="/audit-vs-dast-10" className="text-sky-600 dark:text-sky-400 hover:underline">AUDIT vs. DAST-10</Link>.
-                </p>
-              </li>
             </ul>
           </section>
 

@@ -159,7 +159,7 @@ export default function BipolarVsDepressionPage() {
           <section>
             <h2>The MDQ as a bipolar screening tool</h2>
             <p>
-              The <Link href="/mdq-bipolar-screening" className="text-sage-600 dark:text-sage-400 underline">Mood Disorder Questionnaire (MDQ)</Link> is one of the most widely used screening instruments for bipolar disorder. Developed by Dr. Robert Hirschfeld and colleagues, the MDQ asks about lifetime experiences of manic and hypomanic symptoms — the very symptoms that are most likely to go unreported in clinical settings.
+              The Mood Disorder Questionnaire (MDQ) is one of the most widely used screening instruments for bipolar disorder. Developed by Dr. Robert Hirschfeld and colleagues, the MDQ asks about lifetime experiences of manic and hypomanic symptoms — the very symptoms that are most likely to go unreported in clinical settings.
             </p>
             <p>
               The MDQ includes 13 yes/no items about specific experiences (such as periods of unusually elevated mood, decreased need for sleep, racing thoughts, and increased goal-directed activity), followed by questions about whether these experiences occurred at the same time and caused functional problems. A positive screening result may indicate the need for a comprehensive clinical evaluation — it is not a diagnosis.
@@ -178,7 +178,7 @@ export default function BipolarVsDepressionPage() {
               What the PHQ-9 does <em>not</em> ask about is any history of manic or hypomanic episodes. A person with bipolar disorder who is currently in a depressive episode will likely score high on the PHQ-9, and their results will look identical to those of someone with major depressive disorder. The PHQ-9 cannot distinguish between the two.
             </p>
             <p>
-              This is why using both the PHQ-9 and the MDQ together provides a more complete picture. The PHQ-9 captures the severity of current depressive symptoms, while the MDQ screens for a lifetime history of manic or hypomanic experiences. Together, they may help identify whether a depressive episode is part of a broader bipolar pattern.
+              This is why combining a depression screener like the PHQ-9 with a bipolar-specific clinical evaluation provides a more complete picture. The PHQ-9 captures the severity of current depressive symptoms, while a thorough history of manic or hypomanic experiences can help identify whether a depressive episode is part of a broader bipolar pattern.
             </p>
           </section>
 
@@ -223,11 +223,11 @@ export default function BipolarVsDepressionPage() {
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Have you been screened for bipolar disorder?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The MDQ takes about 3 minutes. Free, private, and your answers never leave your browser.</p>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on your mental health</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings. Results stay in your browser.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/mdq-bipolar-screening" className="btn-primary text-sm">Take the MDQ Bipolar Screening</Link>
-              <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Depression Check</Link>
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
+              <Link href="/dass-21-depression-anxiety-stress" className="btn-primary text-sm">DASS-21 Assessment</Link>
             </div>
           </div>
 
@@ -254,9 +254,9 @@ export default function BipolarVsDepressionPage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/mdq-bipolar-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">MDQ Bipolar Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Free, private screening for bipolar disorder symptoms</p>
+              <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Depression, anxiety, and stress screening</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>

@@ -43,7 +43,7 @@ type Instrument = {
   population: string;
   items: string;
   scoringRange: string;
-  threshold: string;
+  threshold?: string;
   sensitivity: string;
   specificity: string;
   license: string;
@@ -170,7 +170,6 @@ const INSTRUMENTS: Instrument[] = [
     slug: "dast-10",
     acronym: "DAST-10",
     fullName: "Drug Abuse Screening Test, 10-item short form",
-    liveOn: "/dast-10-drug-screening",
     year: 1982,
     authors: "Skinner HA",
     journal: "Addictive Behaviors",
@@ -179,7 +178,6 @@ const INSTRUMENTS: Instrument[] = [
     population: "256 clients seeking help for alcohol or drug problems (original 28-item DAST). The 10-item short form was derived from this instrument.",
     items: "10 in the short form (DAST-10); 28 in the original DAST",
     scoringRange: "0 to 10 (DAST-10)",
-    threshold: "1 to 2 = low level concern; 3 to 5 = moderate; 6 to 8 = substantial; 9 to 10 = severe.",
     sensitivity: "Reported across later validation studies; varies by population.",
     specificity: "Varies by population and threshold.",
     license: "Copyright H.A. Skinner / Centre for Addiction and Mental Health (CAMH); free for clinical use, permission required for commercial reuse.",
@@ -305,7 +303,6 @@ const INSTRUMENTS: Instrument[] = [
     slug: "mdq",
     acronym: "MDQ",
     fullName: "Mood Disorder Questionnaire",
-    liveOn: "/mdq-bipolar-screening",
     year: 2000,
     authors: "Hirschfeld RM, Williams JB, Spitzer RL, Calabrese JR, Flynn L, Keck PE Jr, Lewis L, McElroy SL, Post RM, Rapport DJ, Russell JM, Sachs GS, Zajecka J",
     journal: "American Journal of Psychiatry",
@@ -314,7 +311,6 @@ const INSTRUMENTS: Instrument[] = [
     population: "198 patients across 5 outpatient clinics.",
     items: "13 yes/no symptom items, plus a co-occurrence item and a functional impairment item.",
     scoringRange: "0 to 13 on the symptom items.",
-    threshold: "A positive screen is 7 or more symptom items, with co-occurrence, plus moderate or serious functional impairment.",
     sensitivity: "0.73 (per the original validation paper)",
     specificity: "0.90 (per the original validation paper)",
     license: "Free for clinical use.",
@@ -343,7 +339,6 @@ const INSTRUMENTS: Instrument[] = [
     slug: "oci-r",
     acronym: "OCI-R",
     fullName: "Obsessive-Compulsive Inventory, Revised",
-    liveOn: "/oci-r-ocd-screening",
     year: 2002,
     authors: "Foa EB, Huppert JD, Leiberg S, Langner R, Kichic R, Hajcak G, Salkovskis PM",
     journal: "Psychological Assessment",
@@ -352,7 +347,6 @@ const INSTRUMENTS: Instrument[] = [
     population: "215 patients with OCD plus comparison groups (PTSD, generalized anxiety disorder, social phobia, and non-anxious controls).",
     items: "18",
     scoringRange: "0 to 72",
-    threshold: "21 or higher commonly used as a clinical cut for OCD.",
     sensitivity: "ROC-derived values reported in the paper.",
     specificity: "ROC-derived values reported in the paper.",
     license: "Free for clinical and research use.",
@@ -713,10 +707,12 @@ export default function ClinicalEvidencePage() {
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Population validated on</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.population}</dd>
                 </div>
+                {i.threshold && (
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Recommended threshold</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.threshold}</dd>
                 </div>
+                )}
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Sensitivity</dt>

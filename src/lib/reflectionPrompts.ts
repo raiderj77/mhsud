@@ -114,21 +114,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "dast-10-drug-screening": {
-    toolName: "DAST-10 Drug Use Screening",
-    prompts: [
-      "What prompted you to take this drug use screening today — curiosity, concern, or something else?",
-      "Have you noticed any patterns in your drug use — particular times, places, or emotional states that trigger it?",
-      "How has drug use affected your daily responsibilities, relationships, or how you feel about yourself?",
-      "Is there someone you trust enough to have an honest conversation about your substance use?",
-      "If you imagined your life six months from now with different habits, what would you want it to look like?",
-    ],
-    faqEntries: [
-      { question: "What do my DAST-10 drug screening results mean?", answer: "The DAST-10 screens for problems related to drug use over the past 12 months. Higher scores suggest a greater degree of problems associated with drug use. This is not a clinical assessment — it helps you reflect on whether substance use is affecting your life in ways you may want to address." },
-      { question: "Should I see a counselor after a high DAST-10 score?", answer: "If your DAST-10 score falls in the moderate or substantial range, speaking with a substance use counselor can be a helpful next step. SAMHSA's helpline (1-800-662-4357) provides free, confidential referrals 24/7. Many people find that early conversations prevent problems from worsening." },
-    ],
-  },
-
   "cage-aid-substance-abuse-screening": {
     toolName: "CAGE-AID Substance Use Screening",
     prompts: [
@@ -219,40 +204,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What should I do after taking the ASRS ADHD screening?", answer: "The ASRS is a starting point for understanding whether ADHD symptoms may be affecting your life. If your results suggest elevated symptoms, consider scheduling an evaluation with a psychiatrist, psychologist, or primary care provider experienced with ADHD. Bring your screening results to give them context." },
       { question: "Can adults have ADHD even if they were never assessed as children?", answer: "Yes — many adults discover they have ADHD later in life, especially if their symptoms were misattributed to laziness, anxiety, or depression. Adult ADHD is underrecognized, and getting evaluated can lead to strategies, accommodations, or treatments that significantly improve daily functioning." },
-    ],
-  },
-
-  /* ─── Bipolar ────────────────────────────────────────────────── */
-
-  "mdq-bipolar-screening": {
-    toolName: "MDQ Bipolar Screening",
-    prompts: [
-      "Which experiences from the questionnaire — elevated mood, racing thoughts, decreased need for sleep — felt most familiar to you?",
-      "Have you noticed distinct periods when your mood, energy, or behavior was noticeably different from your usual baseline?",
-      "How have these mood shifts affected your relationships, work, or decision-making?",
-      "Has anyone close to you ever commented on sudden changes in your behavior or energy level?",
-      "What concerns or questions would you want to bring to a healthcare provider about your mood patterns?",
-    ],
-    faqEntries: [
-      { question: "What does a positive MDQ bipolar screening result mean?", answer: "A positive MDQ result means you endorsed several experiences associated with manic or hypomanic episodes and that these experiences caused some level of impairment. This does not mean you have bipolar disorder — only a comprehensive clinical evaluation can determine that. The MDQ helps identify people who may benefit from further assessment." },
-      { question: "Should I see a psychiatrist if my MDQ bipolar screening is positive?", answer: "If your MDQ results are positive, speaking with a psychiatrist or mental health professional experienced with mood disorders is a good next step. Bipolar disorder is often misidentified as depression alone, so an accurate evaluation can lead to more appropriate and effective support." },
-    ],
-  },
-
-  /* ─── OCD ────────────────────────────────────────────────────── */
-
-  "oci-r-ocd-screening": {
-    toolName: "OCI-R OCD Screening",
-    prompts: [
-      "Which types of obsessions or compulsions from the questionnaire feel most distressing or time-consuming in your daily life?",
-      "How much time do you estimate you spend on obsessive thoughts or compulsive behaviors each day?",
-      "Do these patterns interfere with your work, relationships, or activities you value?",
-      "Have your OCD-like symptoms changed in intensity over time — during stress, life changes, or particular situations?",
-      "What would it feel like to have more control over these intrusive thoughts or repetitive behaviors?",
-    ],
-    faqEntries: [
-      { question: "What does my OCI-R OCD screening score mean?", answer: "The OCI-R measures the severity of obsessive-compulsive symptoms across six categories: washing, checking, ordering, obsessing, hoarding, and neutralizing. A total score of 21 or above suggests clinically significant OCD symptoms. However, only a professional trained in OCD can provide a thorough evaluation." },
-      { question: "What type of therapy works best for OCD symptoms?", answer: "Exposure and Response Prevention (ERP) is considered the gold standard treatment for OCD and is a specific type of cognitive behavioral therapy. If your screening suggests elevated OCD symptoms, look for a therapist who specializes in ERP. The International OCD Foundation maintains a provider directory." },
     ],
   },
 

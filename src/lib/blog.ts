@@ -3,7 +3,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   category: string;
-  toolSlug: string;
+  toolSlug?: string;
   date: string;
   readTime: string;
   status: "published" | "draft";
@@ -109,18 +109,6 @@ export const BLOG_POSTS: BlogPost[] = [
     modifiedDate: "2026-03-08",
   },
   {
-    slug: "dast-10-guide",
-    title: "Understanding the DAST-10: Scoring, Interpretation & What Your Results Mean",
-    excerpt: "Learn how the DAST-10 drug screening is scored, what each severity level means, and how it compares to the CAGE-AID and AUDIT.",
-    category: "Tool Guide",
-    toolSlug: "/dast-10-drug-screening",
-    date: "2026-03-05",
-    readTime: "8 min read",
-    status: "published",
-    publishedDate: "2026-03-05",
-    modifiedDate: "2026-03-08",
-  },
-  {
     slug: "ptsd-screening-guide",
     title: "PTSD Screening: When and Why to Get Tested",
     excerpt: "Learn when to get screened for PTSD, how the PCL-5 and PC-PTSD-5 work, what different scores mean, and what treatment options are available.",
@@ -149,7 +137,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Bipolar Disorder vs Depression: Key Differences",
     excerpt: "Understand the key differences between bipolar disorder and depression, why misdiagnosis happens, and which screening tools can help.",
     category: "Education",
-    toolSlug: "/mdq-bipolar-screening",
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
@@ -159,9 +146,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "what-ocd-looks-like",
     title: "OCD Myths vs Reality: What OCD Really Looks Like",
-    excerpt: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and the OCI-R screening tool.",
+    excerpt: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and how to recognize OCD symptoms.",
     category: "Education",
-    toolSlug: "/oci-r-ocd-screening",
     date: "2026-03-05",
     readTime: "9 min read",
     status: "published",
@@ -473,7 +459,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "What Is Bipolar Disorder? Types, Symptoms, and Treatment",
     excerpt: "Bipolar disorder is widely misunderstood and frequently misdiagnosed. Learn what it actually is, how bipolar I and II differ, and what evidence-based treatment looks like.",
     category: "Education",
-    toolSlug: "/mdq-bipolar-screening",
     date: "2026-03-10",
     readTime: "14 min read",
     status: "published",
@@ -512,18 +497,6 @@ export const BLOG_POSTS: BlogPost[] = [
     toolSlug: "/ace-questionnaire",
     date: "2026-03-10",
     readTime: "12 min read",
-    status: "published",
-    publishedDate: "2026-03-10",
-    modifiedDate: "2026-03-10",
-  },
-  {
-    slug: "what-does-oci-r-score-mean",
-    title: "What Does Your OCI-R Score Mean?",
-    excerpt: "OCI-R scores range from 0\u201372 across six subscales. Learn what the total score and subscale scores mean, what the clinical cutoff is, and what to do with your results.",
-    category: "Education",
-    toolSlug: "/oci-r-ocd-screening",
-    date: "2026-03-10",
-    readTime: "10 min read",
     status: "published",
     publishedDate: "2026-03-10",
     modifiedDate: "2026-03-10",
@@ -569,7 +542,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "What Is OCD? Symptoms, Misconceptions, and Treatment",
     excerpt: "OCD is widely misunderstood. It is not about being neat or particular. Learn what obsessive-compulsive disorder actually is, how it works, and what effective treatment looks like.",
     category: "Education",
-    toolSlug: "/oci-r-ocd-screening",
     date: "2026-03-10",
     readTime: "14 min read",
     status: "published",
@@ -1109,7 +1081,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "OCD in Teenagers: What It Looks Like and How to Get Help",
     excerpt: "OCD often first appears in adolescence. Learn the real symptoms beyond stereotypes, how ERP treatment works, what parents should know, and how a free screening can help.",
     category: "Education",
-    toolSlug: "/ocd-test-teens",
     date: "2026-03-17",
     readTime: "10 min read",
     status: "published",
@@ -1239,9 +1210,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "bipolar-young-adults-guide",
     title: "Bipolar Disorder in Young Adults: Early Signs and Getting the Right Diagnosis",
-    excerpt: "Bipolar disorder most commonly first appears in late teens to mid-20s and is frequently misdiagnosed as depression. Learn the early signs and how the MDQ screening helps.",
+    excerpt: "Bipolar disorder most commonly first appears in late teens to mid-20s and is frequently misdiagnosed as depression. Learn the early signs and how to get the right evaluation.",
     category: "Education",
-    toolSlug: "/bipolar-test-young-adults",
     date: "2026-03-17",
     readTime: "10 min read",
     status: "published",

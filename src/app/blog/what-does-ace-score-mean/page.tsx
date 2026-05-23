@@ -227,7 +227,7 @@ export default function WhatDoesAceScoreMeanPage() {
               <strong>Anxiety:</strong> Childhood adversity disrupts the stress response system in ways that create lasting vulnerabilities to anxiety. The <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> screens for generalized anxiety.
             </p>
             <p>
-              <strong>Substance use:</strong> High ACE scores are strongly associated with substance use disorders &mdash; often as self-medication for the emotional pain and dysregulation that adversity created. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> and <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10</Link> screen for alcohol and drug use problems specifically.
+              <strong>Substance use:</strong> High ACE scores are strongly associated with substance use disorders &mdash; often as self-medication for the emotional pain and dysregulation that adversity created. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST</Link> screen for alcohol and drug use problems specifically.
             </p>
           </section>
 
