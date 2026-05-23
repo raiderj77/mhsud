@@ -562,8 +562,6 @@ const TARGETED_SCREENINGS: TargetedScreening[] = [
   { href: "/ptsd-test-first-responders", title: "PTSD Test for First Responders", description: "PCL-5 screening for police, firefighters, EMTs with cumulative trauma context.", badge: "First Responders" },
   { href: "/adhd-test-adults", title: "ADHD Test for Adults", description: "WHO ASRS screening with info on adult ADHD underdiagnosis, symptoms, and getting evaluated.", badge: "Adults" },
   { href: "/adhd-test-women", title: "ADHD Test for Women", description: "ASRS screening with info on masking, hormonal effects, and why women are diagnosed late.", badge: "Women" },
-  { href: "/ocd-test-teens", title: "OCD Test for Teens", description: "OCI-R screening with teen OCD info, common themes, and ERP treatment resources.", badge: "Teens" },
-  { href: "/bipolar-test-young-adults", title: "Bipolar Test for Young Adults", description: "MDQ screening with info on onset age, misdiagnosis as depression, and hypomania.", badge: "Young Adults" },
   { href: "/social-anxiety-test-college", title: "Social Anxiety Test for Students", description: "SPIN screening with college social anxiety info, academic impact, and campus resources.", badge: "College" },
   { href: "/alcohol-screening-for-college-students", title: "Alcohol Screening for College", description: "AUDIT screening with college drinking stats, binge drinking info, and campus resources.", badge: "College" },
   { href: "/alcohol-screening-military", title: "Alcohol Screening for Military", description: "AUDIT screening with military drinking culture context, career concerns, and VA resources.", badge: "Military" },

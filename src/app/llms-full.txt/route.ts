@@ -299,8 +299,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - [Am I an Alcoholic? Quiz](https://mindchecktools.com/am-i-an-alcoholic-quiz): Conversational entry point using AUDIT.
 
 ### Other Conditions
-- [OCD Test for Teens](https://mindchecktools.com/ocd-test-teens): OCI-R with teen OCD info and ERP treatment resources.
-- [Bipolar Test for Young Adults](https://mindchecktools.com/bipolar-test-young-adults): MDQ with onset age and misdiagnosis info.
 - [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): MSI-BPD with women-specific BPD presentation.
 - [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): MSI-BPD with adolescent/young adult onset context.
 - [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): ECR-R with couples dynamics and communication context.

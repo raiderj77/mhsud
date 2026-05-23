@@ -86,8 +86,6 @@ const TARGETED_LINKS = [
   { href: "/ptsd-test-first-responders", label: "PTSD: First Responders" },
   { href: "/adhd-test-adults", label: "ADHD: Adults" },
   { href: "/adhd-test-women", label: "ADHD: Women" },
-  { href: "/ocd-test-teens", label: "OCD: Teens" },
-  { href: "/bipolar-test-young-adults", label: "Bipolar: Young Adults" },
   { href: "/social-anxiety-test-college", label: "Social Anxiety: Students" },
   { href: "/alcohol-screening-for-college-students", label: "Alcohol: College" },
   { href: "/alcohol-screening-military", label: "Alcohol: Military" },

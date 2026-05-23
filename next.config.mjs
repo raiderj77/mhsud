@@ -70,8 +70,10 @@ const nextConfig = {
       { source: "/depression-test", destination: "/phq-9-depression-test", permanent: true },
       { source: "/anxiety-test", destination: "/gad-7-anxiety-test", permanent: true },
       { source: "/dast-10-drug-screening", destination: "/audit-alcohol-test", permanent: true },
-      { source: "/mdq-bipolar-screening", destination: "/bipolar-test-young-adults", permanent: true },
+      { source: "/mdq-bipolar-screening", destination: "/blog/what-is-bipolar-disorder", permanent: true },
       { source: "/oci-r-ocd-screening", destination: "/blog/what-is-ocd", permanent: true },
+      { source: "/ocd-test-teens", destination: "/blog/what-is-ocd", permanent: true },
+      { source: "/bipolar-test-young-adults", destination: "/blog/what-is-bipolar-disorder", permanent: true },
     ];
   },
 };

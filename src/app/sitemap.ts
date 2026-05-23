@@ -2,12 +2,6 @@ import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 
-// Pages with robots: { index: false } — must not appear in sitemap (contradictory signal)
-const NOINDEX_SLUGS = new Set([
-  'bipolar-test-young-adults',
-  'ocd-test-teens',
-]);
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastUpdated = "2026-03-27T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
@@ -93,14 +87,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/anxiety-test-for-men`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-test-for-seniors`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-test-for-new-moms`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: `${SITE_URL}/ocd-test-teens`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/burnout-test-for-teachers`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/burnout-test-for-healthcare-workers`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/stress-test-college-students`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/alcohol-screening-military`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/drug-screening-teens`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/substance-abuse-test-parents`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: `${SITE_URL}/bipolar-test-young-adults`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/social-anxiety-test-college`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/loneliness-test-seniors`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/ptsd-test-first-responders`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
@@ -154,9 +146,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  const indexablePages = staticPages.filter(
-    (p) => !NOINDEX_SLUGS.has(p.url.replace(`${SITE_URL}/`, ''))
-  );
-
-  return [...indexablePages, ...blogPages];
+  return [...staticPages, ...blogPages];
 }

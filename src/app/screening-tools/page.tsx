@@ -129,24 +129,6 @@ const CATEGORIES: Category[] = [
     ],
   },
   {
-    id: "ocd",
-    title: "OCD",
-    intro:
-      "Obsessive-compulsive symptom screens. OCD diagnosis requires a clinical interview that distinguishes OCD from related disorders.",
-    tools: [
-      { name: "OCD Test for Teens", href: "/ocd-test-teens", description: "Adolescent-framed OCD symptom screen.", population: "Adolescents 12 to 17", items: "18 items", time: "About 4 minutes" },
-    ],
-  },
-  {
-    id: "bipolar",
-    title: "Bipolar",
-    intro:
-      "Bipolar spectrum screens focus on lifetime hypomanic or manic episodes. A positive screen is not a bipolar diagnosis and should be reviewed with a clinician.",
-    tools: [
-{ name: "Bipolar Test for Young Adults", href: "/bipolar-test-young-adults", description: "MDQ-based screen with framing common to first-episode presentations in young adults.", population: "Young adults 18 to 25", items: "15 items", time: "About 4 minutes" },
-    ],
-  },
-  {
     id: "bpd",
     title: "Borderline personality",
     intro:
