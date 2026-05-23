@@ -326,7 +326,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - [DAST-10 Score Interpretation](https://mindchecktools.com/dast-10-score-interpretation)
 - [PCL-5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation)
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation)
-- [MDQ Score Interpretation](https://mindchecktools.com/mdq-score-interpretation)
 - [DASS-21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation)
 - [ACE Score Interpretation](https://mindchecktools.com/ace-score-interpretation)
 

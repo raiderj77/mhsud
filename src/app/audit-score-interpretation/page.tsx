@@ -137,7 +137,6 @@ export default function AUDITScoreInterpretationPage() {
         faqs={FAQ_DATA}
         relatedTools={[
           { name: "Take the AUDIT", description: "Free, private 10-question alcohol use self-check", href: "/audit-alcohol-test" },
-          { name: "DAST-10 Drug Screening", description: "10-question validated drug use screening tool", href: "/dast-10-drug-screening" },
           { name: "CAGE-AID Substance Screening", description: "Quick 4-question substance use screening", href: "/cage-aid-substance-test" },
         ]}
         sources={[

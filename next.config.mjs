@@ -76,6 +76,7 @@ const nextConfig = {
       { source: "/bipolar-test-young-adults", destination: "/blog/what-is-bipolar-disorder", permanent: true },
       { source: "/blog/what-does-oci-r-score-mean", destination: "/blog/what-is-ocd", permanent: true },
       { source: "/mdq-score-interpretation", destination: "/blog/what-is-bipolar-disorder", permanent: true },
+      { source: "/audit-vs-dast-10", destination: "/audit-alcohol-test", permanent: true },
     ];
   },
 };

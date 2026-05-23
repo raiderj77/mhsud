@@ -265,7 +265,6 @@ export default function PHQ9vsGAD7Page() {
               <li><Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link> — if you&apos;ve experienced trauma and recognize PTSD symptoms</li>
               <li><Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS</Link> — if attention, focus, and organization difficulties are prominent</li>
               <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> — if alcohol use and its effects are part of the picture</li>
-              <li><Link href="/mdq-bipolar-screening" className="text-sage-600 dark:text-sage-400 underline">MDQ</Link> — if your mood shifts dramatically between high and low periods</li>
             </ul>
           </section>
 

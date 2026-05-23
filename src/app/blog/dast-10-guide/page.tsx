@@ -73,9 +73,6 @@ export default function DAST10GuidePage() {
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             The DAST-10 is one of the most widely used drug screening tools in clinical settings. Here&apos;s what it measures, how scoring works, and what to do with your results.
           </p>
-          <div className="mt-6">
-            <Link href="/dast-10-drug-screening" className="btn-primary text-sm">Take the DAST-10 Self-Check &rarr;</Link>
-          </div>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -255,9 +252,12 @@ export default function DAST10GuidePage() {
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to take the DAST-10?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
-            <Link href="/dast-10-drug-screening" className="btn-primary text-sm">Take the DAST-10 Self-Check</Link>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Screen for substance use</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screening tools. Results stay in your browser.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/audit-alcohol-test" className="btn-primary text-sm">AUDIT Alcohol Screen</Link>
+              <Link href="/cage-aid-substance-abuse-screening" className="btn-secondary text-sm">CAGE-AID Substance Screen</Link>
+            </div>
           </div>
 
           <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
@@ -280,9 +280,9 @@ export default function DAST10GuidePage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-item validated drug abuse screening test</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Substance Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Multi-substance screening across alcohol, drugs, and tobacco</p>
               </Link>
               <Link href="/cage-aid-substance-abuse-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Substance Use Screen</p>

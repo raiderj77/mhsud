@@ -111,7 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/audit-vs-audit-c`, lastModified: "2026-05-14T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/dass-21-vs-phq-9-and-gad-7`, lastModified: "2026-05-14T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/phq-2-to-phq-9-when-to-escalate`, lastModified: "2026-05-14T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/audit-vs-dast-10`, lastModified: "2026-05-14T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     // Conversational / intent-based landing pages (low-competition keywords)
     { url: `${SITE_URL}/am-i-depressed-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/do-i-have-ptsd-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

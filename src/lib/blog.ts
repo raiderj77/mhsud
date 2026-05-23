@@ -3,7 +3,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   category: string;
-  toolSlug: string;
+  toolSlug?: string;
   date: string;
   readTime: string;
   status: "published" | "draft";
@@ -113,7 +113,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Understanding the DAST-10: Scoring, Interpretation & What Your Results Mean",
     excerpt: "Learn how the DAST-10 drug screening is scored, what each severity level means, and how it compares to the CAGE-AID and AUDIT.",
     category: "Tool Guide",
-    toolSlug: "/dast-10-drug-screening",
     date: "2026-03-05",
     readTime: "8 min read",
     status: "published",
@@ -1093,7 +1092,6 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "OCD in Teenagers: What It Looks Like and How to Get Help",
     excerpt: "OCD often first appears in adolescence. Learn the real symptoms beyond stereotypes, how ERP treatment works, what parents should know, and how a free screening can help.",
     category: "Education",
-    toolSlug: "/ocd-test-teens",
     date: "2026-03-17",
     readTime: "10 min read",
     status: "published",
@@ -1223,9 +1221,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "bipolar-young-adults-guide",
     title: "Bipolar Disorder in Young Adults: Early Signs and Getting the Right Diagnosis",
-    excerpt: "Bipolar disorder most commonly first appears in late teens to mid-20s and is frequently misdiagnosed as depression. Learn the early signs and how the MDQ screening helps.",
+    excerpt: "Bipolar disorder most commonly first appears in late teens to mid-20s and is frequently misdiagnosed as depression. Learn the early signs and how to get the right evaluation.",
     category: "Education",
-    toolSlug: "/bipolar-test-young-adults",
     date: "2026-03-17",
     readTime: "10 min read",
     status: "published",

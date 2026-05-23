@@ -87,10 +87,6 @@ export default function AUDITPage() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT vs. AUDIT-C</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Full 10-question vs. rapid 3-question screen</p>
           </Link>
-          <Link href="/audit-vs-dast-10" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT vs. DAST-10</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Alcohol vs. drug screening tools compared</p>
-          </Link>
         </div>
       </div>
     </>

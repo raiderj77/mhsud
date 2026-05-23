@@ -159,8 +159,6 @@
 - [AUDIT vs AUDIT-C](https://mindchecktools.com/audit-vs-audit-c): When to use the full 10-item AUDIT versus the brief 3-item AUDIT-C
 - [DASS-21 vs PHQ-9 and GAD-7](https://mindchecktools.com/dass-21-vs-phq-9-and-gad-7): When the DASS-21 adds value over running the PHQ-9 and GAD-7 separately
 - [PHQ-2 to PHQ-9: When to Escalate](https://mindchecktools.com/phq-2-to-phq-9-when-to-escalate): When a positive PHQ-2 warrants completing the full PHQ-9
-- [AUDIT vs DAST-10](https://mindchecktools.com/audit-vs-dast-10): Which screening to use when the concern is alcohol use versus drug use
-
 ## Blog — Score Guides
 
 - [What Does Your PHQ-9 Score Mean?](https://mindchecktools.com/blog/what-does-phq-9-score-mean): PHQ-9 scores range 0–27; learn what each severity level means and what to do next

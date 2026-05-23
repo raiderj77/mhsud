@@ -161,13 +161,13 @@ export default function UnderstandingScreeningResultsPage() {
                     <td className="py-2">&ge;14 positive screen</td>
                   </tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800">
-                    <td className="py-2 pr-4"><Link href="/mdq-bipolar-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">MDQ</Link></td>
+                    <td className="py-2 pr-4">MDQ</td>
                     <td className="py-2 pr-4">Bipolar spectrum</td>
                     <td className="py-2 pr-4">0&ndash;13 Part 1</td>
                     <td className="py-2">3-part criteria</td>
                   </tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800">
-                    <td className="py-2 pr-4"><Link href="/dast-10-drug-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DAST-10</Link></td>
+                    <td className="py-2 pr-4">DAST-10</td>
                     <td className="py-2 pr-4">Drug use problems</td>
                     <td className="py-2 pr-4">0&ndash;10</td>
                     <td className="py-2">&ge;3 moderate concern</td>
@@ -185,7 +185,7 @@ export default function UnderstandingScreeningResultsPage() {
                     <td className="py-2">Varies by scale</td>
                   </tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800">
-                    <td className="py-2 pr-4"><Link href="/oci-r-ocd-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">OCI-R</Link></td>
+                    <td className="py-2 pr-4">OCI-R</td>
                     <td className="py-2 pr-4">OCD symptom severity</td>
                     <td className="py-2 pr-4">0&ndash;72</td>
                     <td className="py-2">&ge;21 clinical range</td>

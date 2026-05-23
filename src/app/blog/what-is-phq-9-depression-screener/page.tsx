@@ -200,7 +200,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               <strong>It captures a two-week window.</strong> The PHQ-9 asks about &quot;the past two weeks.&quot; It won&apos;t reflect how you were feeling six months ago, even if that matters for your history.
             </p>
             <p>
-              <strong>It doesn&apos;t distinguish between unipolar and bipolar depression.</strong> Someone experiencing a depressive episode in the context of bipolar disorder will score similarly to someone with unipolar depression. This matters for treatment — antidepressants alone can precipitate mania in bipolar disorder. A tool like the <Link href="/mdq-bipolar-screening" className="text-sage-600 dark:text-sage-400 underline">MDQ Bipolar Screening</Link> provides a different lens.
+              <strong>It doesn&apos;t distinguish between unipolar and bipolar depression.</strong> Someone experiencing a depressive episode in the context of bipolar disorder will score similarly to someone with unipolar depression. This matters for treatment — antidepressants alone can precipitate mania in bipolar disorder. A tool like the MDQ provides a different lens.
             </p>
             <p>
               <strong>Item 9 requires context.</strong> Thoughts of self-harm or death (Question 9) scored above 0 always warrant clinical attention, regardless of total score. The PHQ-9 total score alone doesn&apos;t convey the urgency that any positive response to this item carries.
@@ -354,9 +354,9 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Depression, Anxiety &amp; Stress</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for all three in one sitting</p>
               </Link>
-              <Link href="/mdq-bipolar-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">MDQ Bipolar Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for bipolar disorder symptoms</p>
+              <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">PTSD symptoms often overlap with depression</p>
               </Link>
             </div>
           </section>
