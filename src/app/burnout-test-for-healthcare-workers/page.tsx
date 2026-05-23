@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
-import { AuthorByline } from "@/components/AuthorByline";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 
 const TOOL_URL = `${SITE_URL}/burnout-test-for-healthcare-workers`;
@@ -68,28 +67,30 @@ export default function BurnoutTestForHealthcareWorkersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            toolPageJsonLd({
+          __html: JSON.stringify({
+      ...toolPageJsonLd({
               name: "Burnout Test for Healthcare Workers — Free Assessment",
               description: "A free, private burnout screening tool for nurses, doctors, and healthcare staff assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
               dateModified: "2026-05-08",
-            })
-          ),
+            }),
+      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+    }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            medicalWebPageJsonLd({
+          __html: JSON.stringify({
+      ...medicalWebPageJsonLd({
               name: "Burnout Test for Healthcare Workers",
               description: "A clinically informed burnout screening for physicians, nurses, therapists, EMTs, social workers, and medical residents covering all three Maslach burnout dimensions, moral injury, and post-pandemic workforce context.",
               url: TOOL_URL,
               lastReviewed: "2026-05-08",
-            })
-          ),
+            }),
+      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+    }),
         }}
       />
       <script
@@ -270,7 +271,27 @@ export default function BurnoutTestForHealthcareWorkersPage() {
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening tailored for healthcare professionals with context specific to clinical care environments." who="Doctors, nurses, therapists, and other healthcare workers experiencing exhaustion, compassion fatigue, or detachment." bottomLine="Healthcare worker burnout affects patient care — addressing your wellbeing is not selfish, it is essential. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-05-08" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
+        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime="2025-01-01">
+          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime="2026-05-08">
+          {new Date("2026-05-08T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
       </div>
       <section className="sr-only">
         <h2>What Is Healthcare Worker Burnout Screening?</h2>

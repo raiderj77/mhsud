@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
-import { AuthorBio } from "@/components/AuthorBio";
-import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/what-does-gad-7-score-mean`;
@@ -59,7 +57,7 @@ const FAQ_DATA = [
 export default function WhatDoesGAD7ScoreMeanPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "What Does Your GAD-7 Score Mean?", description: "GAD-7 scores range from 0\u201321. Learn what minimal, mild, moderate, and severe anxiety scores mean and when to seek professional support.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "What Does Your GAD-7 Score Mean?", description: "GAD-7 scores range from 0\u201321. Learn what minimal, mild, moderate, and severe anxiety scores mean and when to seek professional support.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "What Does Your GAD-7 Score Mean?", url: ARTICLE_URL }])) }} />
 
@@ -72,7 +70,27 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             What Does Your GAD-7 Score Mean?
           </h1>
-          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime={POST_DATA.publishedDate}>
+          {new Date(POST_DATA.publishedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime={POST_DATA.modifiedDate}>
+          {new Date(POST_DATA.modifiedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             GAD-7 scores range from 0 to 21. Scores of 0–4 indicate minimal anxiety, 5–9 indicate mild anxiety, 10–14 indicate moderate anxiety, and 15–21 indicate severe anxiety. A score of 10 or higher is the standard clinical threshold for further evaluation of generalized anxiety disorder — though severity, duration, and impact on daily functioning all matter alongside the number.
           </p>
@@ -309,7 +327,24 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
+  <div className="flex gap-4 items-start">
+    <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">
+      <span className="text-sage-600 dark:text-sage-400 text-lg">&#x1F4BB;</span>
+    </div>
+    <div>
+      <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
+        MindCheck Tools &mdash; Your Friendly Developer LLC
+      </h3>
+      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
+        Publisher and maintainer of free, evidence-based mental health screening tools for adults.
+      </p>
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Content reviewed for clinical accuracy against authoritative sources including NIMH, APA, CDC, and WHO.
+      </p>
+    </div>
+  </div>
+</div>
 
           {/* FAQ */}
           <section className="not-prose mt-12">

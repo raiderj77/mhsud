@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
-import { AuthorByline } from "@/components/AuthorByline";
 import { GAD7Client } from "./GAD7Client";
 
 const TOOL_URL = `${SITE_URL}/gad-7-anxiety-test`;
@@ -47,15 +46,16 @@ export default function GAD7Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            toolPageJsonLd({
+          __html: JSON.stringify({
+      ...toolPageJsonLd({
               name: "GAD-7 Anxiety Test",
               description: "A free online implementation of the GAD-7 (Generalized Anxiety Disorder-7) questionnaire, a clinically validated screening tool for measuring anxiety severity.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
-            })
-          ),
+            }),
+      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+    }),
         }}
       />
       <script
@@ -76,14 +76,15 @@ export default function GAD7Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            medicalWebPageJsonLd({
+          __html: JSON.stringify({
+      ...medicalWebPageJsonLd({
               name: "GAD-7 Anxiety Test",
               description: "A free online implementation of the GAD-7 (Generalized Anxiety Disorder-7) questionnaire, a clinically validated screening tool for measuring anxiety severity.",
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
-            })
-          ),
+            }),
+      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+    }),
         }}
       />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8">
@@ -98,7 +99,27 @@ export default function GAD7Page() {
         <p>GAD-7 scores range from 0 to 21. Score 0–4: minimal anxiety. Score 5–9: mild anxiety. Score 10–14: moderate anxiety. Score 15–21: severe anxiety.</p>
       </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
+        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime="2025-01-01">
+          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime="2026-05-12">
+          {new Date("2026-05-12T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
@@ -109,7 +130,27 @@ export default function GAD7Page() {
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime="2025-01-01">
+          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime="2026-03-20">
+          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
       </div>
       <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
         <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>

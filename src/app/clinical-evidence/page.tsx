@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AUTHOR_SCHEMA } from "@/config/author";
 
 const PAGE_URL = `${SITE_URL}/clinical-evidence`;
 const TODAY = "2026-05-12";
@@ -517,7 +516,7 @@ function articleJsonLd() {
       "Per-instrument clinical evidence base for the validated screening tools used on MindCheck Tools, with PubMed citations.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
-    author: AUTHOR_SCHEMA,
+    author: { "@type": "Organization", name: "Your Friendly Developer LLC" },
     publisher: {
       "@type": "Organization",
       name: "MindCheck Tools",
@@ -582,7 +581,7 @@ export default function ClinicalEvidencePage() {
             Clinical Evidence: Source Studies for Every Screening Tool
           </h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
-            Last updated: {TODAY}. Reviewed by Jason Ramirez, CADC-II.
+            Last updated: {TODAY}. Reviewed for accuracy by the MindCheck Tools editorial team.
           </p>
         </header>
 
