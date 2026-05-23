@@ -37,10 +37,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - URL: https://mindchecktools.com/k6-distress-scale
 - 6-item nonspecific psychological distress measure used in national health surveys. Score 13+ = serious distress.
 
-### MDQ Bipolar Screening
-- URL: https://mindchecktools.com/mdq-bipolar-screening
-- 3-part Mood Disorder Questionnaire for bipolar spectrum disorders. Assesses symptoms, co-occurrence, and functional impact.
-
 ### PHQ-4 Quick Screen
 - URL: https://mindchecktools.com/phq-4-anxiety-depression-screen
 - 4-item ultra-brief combined anxiety and depression screener.
@@ -90,10 +86,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - URL: https://mindchecktools.com/audit-c-alcohol-screen
 - 3-item brief alcohol screen used in primary care. Faster version of the full AUDIT.
 
-### DAST-10 Drug Screening
-- URL: https://mindchecktools.com/dast-10-drug-screening
-- 10-item validated drug use screening test. Reflects on drug use patterns and impact.
-
 ### CAGE-AID Substance Use Screen
 - URL: https://mindchecktools.com/cage-aid-substance-abuse-screening
 - 4-item validated screen for both alcohol and drug use concerns.
@@ -121,10 +113,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 ### ASRS ADHD Screening
 - URL: https://mindchecktools.com/asrs-adhd-screening
 - 6-item WHO-developed Adult ADHD Self-Report Scale using research-validated thresholds.
-
-### OCI-R OCD Screening
-- URL: https://mindchecktools.com/oci-r-ocd-screening
-- 18-item OCD Inventory with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
 
 ### SCOFF Eating Disorder Screen
 - URL: https://mindchecktools.com/scoff-eating-disorder-screening
@@ -311,8 +299,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - [Am I an Alcoholic? Quiz](https://mindchecktools.com/am-i-an-alcoholic-quiz): Conversational entry point using AUDIT.
 
 ### Other Conditions
-- [OCD Test for Teens](https://mindchecktools.com/ocd-test-teens): OCI-R with teen OCD info and ERP treatment resources.
-- [Bipolar Test for Young Adults](https://mindchecktools.com/bipolar-test-young-adults): MDQ with onset age and misdiagnosis info.
 - [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): MSI-BPD with women-specific BPD presentation.
 - [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): MSI-BPD with adolescent/young adult onset context.
 - [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): ECR-R with couples dynamics and communication context.

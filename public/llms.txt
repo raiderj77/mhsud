@@ -53,7 +53,6 @@
 - [Depression Test for Teens](https://mindchecktools.com/depression-test-for-teens): Depression screening adapted for adolescents
 - [Anxiety Test for Teens](https://mindchecktools.com/anxiety-test-for-teens): Anxiety screening adapted for adolescents
 - [ADHD Test for Teens](https://mindchecktools.com/adhd-test-for-teens): ADHD screening adapted for adolescents
-- [OCD Test for Teens](https://mindchecktools.com/ocd-test-teens): OCD screening adapted for adolescents
 - [Drug Screening for Teens](https://mindchecktools.com/drug-screening-teens): Substance use screening for adolescents
 
 ### Perinatal
@@ -77,7 +76,6 @@
 
 ### Adults — Young Adults
 
-- [Bipolar Test for Young Adults](https://mindchecktools.com/bipolar-test-young-adults): Bipolar screening for young adults
 - [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): Borderline personality disorder screening for young adults
 
 ### Adults — Seniors
@@ -316,10 +314,6 @@ All tools and content are reviewed by a Certified Drug and Alcohol Counselor (CA
 ### Privacy Architecture
 
 All screening results are computed entirely in the user's browser. No responses, scores, or identifying information are stored, transmitted, or shared with third parties. Health data is never passed to advertising systems.
-
-### Instrument Licensing Note
-
-Three instruments — MDQ (Mood Disorder Questionnaire), OCI-R (Obsessive-Compulsive Inventory — Revised), and DAST-10 (Drug Abuse Screening Test) — are currently under licensing review and are not actively served as functioning screening tools. Informational pages describing these instruments remain accessible.
 
 ## Crisis Resources
 

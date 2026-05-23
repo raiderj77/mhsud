@@ -2,15 +2,6 @@ import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 
-// Pages with robots: { index: false } — must not appear in sitemap (contradictory signal)
-const NOINDEX_SLUGS = new Set([
-  'dast-10-drug-screening',
-  'mdq-bipolar-screening',
-  'oci-r-ocd-screening',
-  'bipolar-test-young-adults',
-  'ocd-test-teens',
-]);
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastUpdated = "2026-03-27T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
@@ -22,14 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/gad-7-anxiety-test`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-alcohol-test`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/audit-c-alcohol-screen`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/dast-10-drug-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: `${SITE_URL}/cage-aid-substance-abuse-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
+{ url: `${SITE_URL}/cage-aid-substance-abuse-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/pcl-5-ptsd-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/pc-ptsd-5-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/asrs-adhd-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/mdq-bipolar-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/oci-r-ocd-screening`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/dass-21-depression-anxiety-stress`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
+{ url: `${SITE_URL}/dass-21-depression-anxiety-stress`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.9 },
     { url: `${SITE_URL}/who-5-wellbeing-index`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/k6-distress-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/scoff-eating-disorder-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
@@ -99,14 +87,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/anxiety-test-for-men`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-test-for-seniors`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-test-for-new-moms`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: `${SITE_URL}/ocd-test-teens`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/burnout-test-for-teachers`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/burnout-test-for-healthcare-workers`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/stress-test-college-students`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/alcohol-screening-military`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/drug-screening-teens`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/substance-abuse-test-parents`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: `${SITE_URL}/bipolar-test-young-adults`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/social-anxiety-test-college`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/loneliness-test-seniors`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/ptsd-test-first-responders`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
@@ -160,9 +146,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  const indexablePages = staticPages.filter(
-    (p) => !NOINDEX_SLUGS.has(p.url.replace(`${SITE_URL}/`, ''))
-  );
-
-  return [...indexablePages, ...blogPages];
+  return [...staticPages, ...blogPages];
 }
