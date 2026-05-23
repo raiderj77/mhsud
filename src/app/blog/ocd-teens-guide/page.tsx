@@ -124,13 +124,10 @@ export default function OcdTeensGuidePage() {
           <section>
             <h2>How screening helps catch OCD early</h2>
             <p>
-              The <Link href="/ocd-test-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools OCD screening for teens</Link> is a free, private self-assessment that helps identify OCD symptom patterns. It takes just a few minutes, runs entirely in the browser, and no data is stored or shared.
-            </p>
-            <p>
               Early identification matters enormously with OCD. The mean delay from symptom onset to receiving appropriate treatment is 7&ndash;10 years. During that delay, OCD patterns become more entrenched, academic and social functioning deteriorate, and comorbid conditions like depression often develop. A screening tool cannot provide a clinical assessment, but it can prompt the conversation that leads to one.
             </p>
             <p>
-              The <Link href="/oci-r-ocd-screening" className="text-sage-600 dark:text-sage-400 underline">OCI-R screening</Link> is another validated tool available for older teens and adults. If anxiety is also present &mdash; which is common with OCD &mdash; the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> can help identify the broader anxiety picture.
+              If anxiety is also present &mdash; which is common with OCD &mdash; the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> can help identify the broader anxiety picture.
             </p>
           </section>
 
@@ -185,18 +182,18 @@ export default function OcdTeensGuidePage() {
               <li>Shows signs of depression alongside OCD symptoms</li>
             </ul>
             <p>
-              The <Link href="/ocd-test-teens" className="text-sage-600 dark:text-sage-400 underline">teen OCD screening</Link> provides a structured starting point you can bring to a provider. Remember: OCD is highly treatable with the right approach. The sooner treatment begins, the better the outcomes.
+              A clinical evaluation provides the best starting point. Remember: OCD is highly treatable with the right approach. The sooner treatment begins, the better the outcomes.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Screen for OCD symptoms</h3>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on anxiety and mood</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Takes under 5 minutes.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/ocd-test-teens" className="btn-primary text-sm">Take the Teen OCD Screening</Link>
-              <Link href="/oci-r-ocd-screening" className="btn-primary text-sm">OCI-R OCD Screening</Link>
+              <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">GAD-7 Anxiety Check</Link>
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
             </div>
           </div>
 
@@ -220,17 +217,13 @@ export default function OcdTeensGuidePage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/ocd-test-teens" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Teen OCD Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">OCD screening designed for adolescents</p>
-              </Link>
-              <Link href="/oci-r-ocd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">OCI-R OCD Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated OCD screening for adults and older teens</p>
-              </Link>
               <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Test</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Generalized anxiety screening</p>
+              </Link>
+              <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Depression symptom screening</p>
               </Link>
             </div>
           </section>
@@ -242,9 +235,9 @@ export default function OcdTeensGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">OCD Myths vs. Reality</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">What OCD really looks like beyond the stereotypes</p>
               </Link>
-              <Link href="/blog/what-does-oci-r-score-mean" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Understanding OCI-R Scores</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">What your OCI-R score means and next steps</p>
+              <Link href="/blog/what-is-ocd" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">What Is OCD?</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Symptoms, misconceptions, and treatment</p>
               </Link>
             </div>
           </section>

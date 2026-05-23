@@ -13,11 +13,11 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/what-ocd-looks-like",
   title: "OCD Myths vs Reality: What OCD Really Looks Like",
   description:
-    "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and the OCI-R screening tool.",
+    "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and how to recognize OCD symptoms.",
   keywords: [
     "what does OCD look like", "OCD myths vs reality", "OCD subtypes",
     "obsessive compulsive disorder signs", "OCD intrusive thoughts",
-    "ERP therapy OCD", "OCI-R screening", "pure O OCD",
+    "ERP therapy OCD", "pure O OCD",
     "OCD vs OCPD", "harm OCD", "contamination OCD",
     "scrupulosity OCD", "OCD anxiety cycle", "OCD compulsions",
     "OCD reassurance seeking",
@@ -60,7 +60,7 @@ const FAQ_DATA = [
 export default function WhatOCDLooksLikePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "OCD Myths vs Reality: What OCD Really Looks Like", description: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and the OCI-R screening tool.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "OCD Myths vs Reality: What OCD Really Looks Like", description: "What OCD actually looks like beyond the stereotypes. Learn about subtypes, the anxiety cycle, ERP treatment, and how to recognize OCD symptoms.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "What OCD Really Looks Like", url: ARTICLE_URL }])) }} />
 
@@ -77,11 +77,6 @@ export default function WhatOCDLooksLikePage() {
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             &quot;I&apos;m so OCD about my desk.&quot; You&apos;ve probably heard someone say this — or something like it. But obsessive-compulsive disorder is not a personality quirk or a preference for neatness. It&apos;s a chronic mental health condition that affects roughly 2&ndash;3% of the population and can be profoundly disabling when left untreated. Here&apos;s what OCD actually looks like, beyond the stereotypes.
           </p>
-          <div className="mt-6">
-            <Link href="/oci-r-ocd-screening" className="btn-primary text-sm">
-              Take the OCI-R OCD Self-Check &rarr;
-            </Link>
-          </div>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -181,9 +176,9 @@ export default function WhatOCDLooksLikePage() {
           </section>
 
           <section>
-            <h2>The OCI-R Screening Tool and Its 6 Subscales</h2>
+            <h2>OCD Symptom Dimensions</h2>
             <p>
-              The <Link href="/oci-r-ocd-screening" className="text-sage-600 dark:text-sage-400 underline">Obsessive-Compulsive Inventory &ndash; Revised (OCI-R)</Link> is a widely used, validated screening tool that measures OCD symptom severity across six subscales:
+              The Obsessive-Compulsive Inventory &ndash; Revised (OCI-R) is a widely used validated screening instrument that measures OCD symptom severity across six clinical dimensions:
             </p>
             <ol>
               <li><strong>Washing</strong> &mdash; contamination-related cleaning behaviors</li>
@@ -194,7 +189,7 @@ export default function WhatOCDLooksLikePage() {
               <li><strong>Neutralizing</strong> &mdash; mental or behavioral acts to undo thoughts</li>
             </ol>
             <p>
-              The OCI-R consists of 18 items and takes only a few minutes to complete. A total score of 21 or above may indicate symptoms consistent with OCD and suggests that a professional evaluation could be helpful. It is a screening tool, not a diagnostic instrument — a high score does not mean you have OCD, and a low score does not rule it out.
+              These dimensions reflect the range of OCD presentations. A professional trained in OCD can administer validated assessments and provide a thorough evaluation — OCD is highly treatable when properly identified.
             </p>
           </section>
 
@@ -245,9 +240,12 @@ export default function WhatOCDLooksLikePage() {
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your OCD symptoms</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The OCI-R is a clinically validated screening tool. Free, private, and takes about 3 minutes. Your answers never leave your browser.</p>
-            <Link href="/oci-r-ocd-screening" className="btn-primary text-sm">Take the OCI-R OCD Self-Check</Link>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on anxiety and mood</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings for anxiety and depression. Results stay in your browser.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">GAD-7 Anxiety Check</Link>
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
+            </div>
           </div>
 
           <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 dark:border-red-400 p-6 rounded-r">
@@ -286,13 +284,13 @@ export default function WhatOCDLooksLikePage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/oci-r-ocd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">OCI-R OCD Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">18-item clinically validated OCD symptom self-check</p>
-              </Link>
               <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Self-Check</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Clinically validated generalized anxiety screening tool</p>
+              </Link>
+              <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Check</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Clinically validated depression symptom screening</p>
               </Link>
             </div>
           </section>

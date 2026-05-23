@@ -8,14 +8,11 @@
 - [GAD-7 Anxiety Test](https://mindchecktools.com/gad-7-anxiety-test): 7-item generalized anxiety screening; scores 0–21 across four severity levels
 - [AUDIT Alcohol Test](https://mindchecktools.com/audit-alcohol-test): 10-item WHO alcohol use disorder screening; scores 0–40
 - [AUDIT-C Alcohol Screen](https://mindchecktools.com/audit-c-alcohol-screen): 3-item brief alcohol consumption screening
-- [DAST-10 Drug Screening](https://mindchecktools.com/dast-10-drug-screening): 10-item drug abuse screening test; scores 0–10
 - [CAGE-AID Substance Screening](https://mindchecktools.com/cage-aid-substance-abuse-screening): 4-item alcohol and drug use screening
 - [DASS-21](https://mindchecktools.com/dass-21-depression-anxiety-stress): Depression, anxiety, and stress measured simultaneously across three subscales
 - [PCL-5 PTSD Screening](https://mindchecktools.com/pcl-5-ptsd-screening): 20-item PTSD symptom severity screening; scores 0–80
 - [PC-PTSD-5 Screening](https://mindchecktools.com/pc-ptsd-5-screening): 5-item primary care PTSD gateway screening
 - [ASRS ADHD Screening](https://mindchecktools.com/asrs-adhd-screening): WHO Adult ADHD Self-Report Scale v1.1
-- [MDQ Bipolar Screening](https://mindchecktools.com/mdq-bipolar-screening): Mood Disorder Questionnaire for bipolar spectrum screening
-- [OCI-R OCD Screening](https://mindchecktools.com/oci-r-ocd-screening): 18-item OCD symptom screening across six subscales; scores 0–72
 - [MSI-BPD Screening](https://mindchecktools.com/msi-bpd-screening): McLean Screening Instrument for borderline personality disorder; 10 yes/no items
 - [SPIN Social Anxiety Test](https://mindchecktools.com/spin-social-anxiety-test): Social Phobia Inventory; 17-item social anxiety screening
 - [SCOFF Eating Disorder Screening](https://mindchecktools.com/scoff-eating-disorder-screening): 5-item eating disorder screening
@@ -154,7 +151,6 @@
 - [DASS-21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation): Detailed interpretation of DASS-21 depression, anxiety, and stress scores
 - [PCL-5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation): Detailed interpretation of PCL-5 PTSD screening scores
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation): Detailed interpretation of ASRS ADHD screening scores
-- [MDQ Score Interpretation](https://mindchecktools.com/mdq-score-interpretation): Detailed interpretation of MDQ bipolar screening scores
 - [ACE Score Interpretation](https://mindchecktools.com/ace-score-interpretation): Detailed interpretation of ACE adverse childhood experiences scores
 
 ## Comparison / Decision Pages
@@ -173,7 +169,6 @@
 - [What Does Your PCL-5 Score Mean?](https://mindchecktools.com/blog/what-does-pcl-5-score-mean): PCL-5 scores range 0–80; learn what the clinical cutoff means
 - [What Does Your ASRS Score Mean?](https://mindchecktools.com/blog/what-does-asrs-score-mean): Learn what a positive ASRS ADHD screen means and what to do next
 - [What Does Your ACE Score Mean?](https://mindchecktools.com/blog/what-does-ace-score-mean): ACE scores range 0–10; learn how childhood adversity affects adult health
-- [What Does Your OCI-R Score Mean?](https://mindchecktools.com/blog/what-does-oci-r-score-mean): OCI-R scores range 0–72; learn what the clinical cutoff and subscales mean
 - [What Does Your PC-PTSD-5 Score Mean?](https://mindchecktools.com/blog/what-does-pc-ptsd-5-score-mean): PC-PTSD-5 scores range 0–5; learn what a positive screen means
 - [What Does Your CAGE-AID Score Mean?](https://mindchecktools.com/blog/what-does-cage-aid-score-mean): CAGE-AID scores range 0–4; a score of 2+ suggests possible substance use concern
 - [What Does Your PSS Score Mean?](https://mindchecktools.com/blog/what-does-pss-score-mean): PSS-10 scores range 0–40; learn what your perceived stress level indicates

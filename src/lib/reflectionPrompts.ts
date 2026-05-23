@@ -222,40 +222,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  /* ─── Bipolar ────────────────────────────────────────────────── */
-
-  "mdq-bipolar-screening": {
-    toolName: "MDQ Bipolar Screening",
-    prompts: [
-      "Which experiences from the questionnaire — elevated mood, racing thoughts, decreased need for sleep — felt most familiar to you?",
-      "Have you noticed distinct periods when your mood, energy, or behavior was noticeably different from your usual baseline?",
-      "How have these mood shifts affected your relationships, work, or decision-making?",
-      "Has anyone close to you ever commented on sudden changes in your behavior or energy level?",
-      "What concerns or questions would you want to bring to a healthcare provider about your mood patterns?",
-    ],
-    faqEntries: [
-      { question: "What does a positive MDQ bipolar screening result mean?", answer: "A positive MDQ result means you endorsed several experiences associated with manic or hypomanic episodes and that these experiences caused some level of impairment. This does not mean you have bipolar disorder — only a comprehensive clinical evaluation can determine that. The MDQ helps identify people who may benefit from further assessment." },
-      { question: "Should I see a psychiatrist if my MDQ bipolar screening is positive?", answer: "If your MDQ results are positive, speaking with a psychiatrist or mental health professional experienced with mood disorders is a good next step. Bipolar disorder is often misidentified as depression alone, so an accurate evaluation can lead to more appropriate and effective support." },
-    ],
-  },
-
-  /* ─── OCD ────────────────────────────────────────────────────── */
-
-  "oci-r-ocd-screening": {
-    toolName: "OCI-R OCD Screening",
-    prompts: [
-      "Which types of obsessions or compulsions from the questionnaire feel most distressing or time-consuming in your daily life?",
-      "How much time do you estimate you spend on obsessive thoughts or compulsive behaviors each day?",
-      "Do these patterns interfere with your work, relationships, or activities you value?",
-      "Have your OCD-like symptoms changed in intensity over time — during stress, life changes, or particular situations?",
-      "What would it feel like to have more control over these intrusive thoughts or repetitive behaviors?",
-    ],
-    faqEntries: [
-      { question: "What does my OCI-R OCD screening score mean?", answer: "The OCI-R measures the severity of obsessive-compulsive symptoms across six categories: washing, checking, ordering, obsessing, hoarding, and neutralizing. A total score of 21 or above suggests clinically significant OCD symptoms. However, only a professional trained in OCD can provide a thorough evaluation." },
-      { question: "What type of therapy works best for OCD symptoms?", answer: "Exposure and Response Prevention (ERP) is considered the gold standard treatment for OCD and is a specific type of cognitive behavioral therapy. If your screening suggests elevated OCD symptoms, look for a therapist who specializes in ERP. The International OCD Foundation maintains a provider directory." },
-    ],
-  },
-
   /* ─── Multi-Condition ────────────────────────────────────────── */
 
   "dass-21-depression-anxiety-stress": {

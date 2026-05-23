@@ -70,8 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/dast-10-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/pcl-5-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/asrs-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/mdq-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/dass-21-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
+{ url: `${SITE_URL}/dass-21-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/ace-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/audit-c-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     // Targeted demographic screening pages

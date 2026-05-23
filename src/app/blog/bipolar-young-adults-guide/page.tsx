@@ -160,15 +160,15 @@ export default function BipolarYoungAdultsGuidePage() {
           <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
-            <h2>Screening for bipolar disorder: the MDQ and why it matters</h2>
+            <h2>Screening for bipolar disorder and why it matters</h2>
             <p>
-              The <Link href="/bipolar-test-young-adults" className="text-sage-600 dark:text-sage-400 underline">Mood Disorder Questionnaire (MDQ)</Link> is a screening tool specifically designed to identify bipolar spectrum patterns. Unlike depression screeners, the MDQ asks about lifetime experiences of elevated mood, increased energy, impulsive behavior, and other manic or hypomanic symptoms.
+              The Mood Disorder Questionnaire (MDQ) is a screening tool specifically designed to identify bipolar spectrum patterns. Unlike depression screeners, the MDQ asks about lifetime experiences of elevated mood, increased energy, impulsive behavior, and other manic or hypomanic symptoms.
             </p>
             <p>
               A positive MDQ result does not mean you have bipolar disorder. It means your symptom pattern is consistent with bipolar features and warrants further evaluation by a qualified mental health professional. This distinction is critical &mdash; bipolar disorder requires a thorough clinical assessment including detailed history, family history, and often longitudinal observation.
             </p>
             <p>
-              You can take the <Link href="/bipolar-test-young-adults" className="text-sage-600 dark:text-sage-400 underline">free, private bipolar screening for young adults</Link> here on MindCheck Tools. It runs entirely in your browser, requires no account, and your answers are never stored. If you are currently being treated for depression without improvement, this screening may help identify whether bipolar features could be part of the picture.
+              If you are currently being treated for depression without improvement, discussing a bipolar-specific evaluation with your provider may help identify whether bipolar features could be part of the picture.
             </p>
           </section>
 
@@ -197,7 +197,7 @@ export default function BipolarYoungAdultsGuidePage() {
               If the patterns described in this article resonate with your experience or that of someone you care about, here are concrete steps:
             </p>
             <ul>
-              <li>Take a <Link href="/bipolar-test-young-adults" className="text-sage-600 dark:text-sage-400 underline">private bipolar screening</Link> to get a structured picture of your symptom patterns</li>
+              <li>Talk with a mental health provider about a bipolar-specific evaluation to get a structured picture of your symptom patterns</li>
               <li>If you are currently being treated for depression, discuss bipolar screening with your provider &mdash; especially if treatment has not been fully effective</li>
               <li>If you are in college, contact your university counseling center and specifically request an evaluation that includes mood disorder screening</li>
               <li>Keep a mood journal tracking energy levels, sleep patterns, and mood shifts over several weeks &mdash; this longitudinal data is extremely valuable for assessment</li>
@@ -211,11 +211,11 @@ export default function BipolarYoungAdultsGuidePage() {
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a free, private bipolar screening</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Confidential. No account required. Results stay in your browser.</p>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on your mental health</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings. Results stay in your browser.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/bipolar-test-young-adults" className="btn-primary text-sm">Bipolar Screening for Young Adults</Link>
-              <Link href="/mdq-bipolar-screening" className="btn-primary text-sm">MDQ Bipolar Screening</Link>
+              <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
+              <Link href="/dass-21-depression-anxiety-stress" className="btn-primary text-sm">DASS-21 Assessment</Link>
             </div>
           </div>
 
@@ -239,9 +239,9 @@ export default function BipolarYoungAdultsGuidePage() {
           <section className="not-prose mt-10">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/mdq-bipolar-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">MDQ Bipolar Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Mood Disorder Questionnaire for bipolar patterns</p>
+              <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Depression, anxiety, and stress screening</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Test</p>
