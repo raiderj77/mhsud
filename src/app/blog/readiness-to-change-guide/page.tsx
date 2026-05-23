@@ -115,7 +115,7 @@ export default function ReadinessToChangeGuidePage() {
               <li>Feeling demoralized by past attempts at change</li>
             </ul>
             <p>
-              <strong>What helps at this stage:</strong> Confrontation and pressure typically increase resistance. What works is non-judgmental information, empathic listening, and gentle exploration of values. Motivational interviewing is specifically designed for this stage &mdash; it helps people examine the gap between their current behavior and their deeper values without feeling pushed. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10 drug screening</Link> can provide objective feedback that supports self-reflection without judgment.
+              <strong>What helps at this stage:</strong> Confrontation and pressure typically increase resistance. What works is non-judgmental information, empathic listening, and gentle exploration of values. Motivational interviewing is specifically designed for this stage &mdash; it helps people examine the gap between their current behavior and their deeper values without feeling pushed. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST drug screening</Link> can provide objective feedback that supports self-reflection without judgment.
             </p>
           </section>
 
@@ -252,9 +252,9 @@ export default function ReadinessToChangeGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO-developed alcohol use screening tool</p>
               </Link>
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-question drug use screening assessment</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Drug Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO multi-substance drug use screening</p>
               </Link>
               <Link href="/relapse-prevention-plan" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Relapse Prevention Plan</p>

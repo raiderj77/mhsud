@@ -426,7 +426,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
               <li><Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> — Track your recovery days and milestones</li>
               <li><Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">HALT Check-In</Link> — Daily recovery check-in for relapse prevention</li>
               <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">AUDIT Alcohol Screen</Link> — Reflect on your relationship with alcohol</li>
-              <li><Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">DAST-10 Drug Screening</Link> — Screen for drug use concerns</li>
+              <li><Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">WHO-ASSIST Drug Screening</Link> — Screen for drug use concerns</li>
             </ul>
           </div>
         </div>

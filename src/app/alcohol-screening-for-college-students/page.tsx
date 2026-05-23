@@ -226,7 +226,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               pattern both deserve clinical attention. The{" "}
               <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline">AUDIT-C</Link>{" "}
               screens for alcohol; the{" "}
-              DAST-10{" "}
+              <Link href="/who-assist-substance-screening" className="text-sky-600 dark:text-sky-400 hover:underline">WHO-ASSIST</Link>{" "}
               can help you assess your cannabis use pattern.
             </p>
           </div>

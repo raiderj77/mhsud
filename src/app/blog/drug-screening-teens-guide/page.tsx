@@ -182,7 +182,7 @@ export default function DrugScreeningTeensGuidePage() {
               <li><strong>Stay calm.</strong> Your reaction matters. Panic, anger, or overreaction will shut down communication.</li>
               <li><strong>Have a follow-up conversation.</strong> Ask your teen about their experience and what they think the results mean. Their perspective matters.</li>
               <li><strong>Contact your teen&apos;s pediatrician.</strong> Primary care providers routinely screen for substance use and can assess severity and recommend next steps.</li>
-              <li><strong>Consider additional screenings.</strong> The <Link href="/crafft-substance-screening" className="text-sage-600 dark:text-sage-400 underline">CRAFFT screening</Link>, <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10</Link>, and <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">CAGE-AID</Link> provide different perspectives on substance use patterns.</li>
+              <li><strong>Consider additional screenings.</strong> The <Link href="/crafft-substance-screening" className="text-sage-600 dark:text-sage-400 underline">CRAFFT screening</Link> and <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">CAGE-AID</Link> provide different perspectives on substance use patterns.</li>
               <li><strong>Call SAMHSA.</strong> The SAMHSA National Helpline (1-800-662-4357) is free, confidential, and available 24/7. They provide referrals to local treatment programs and support groups.</li>
               <li><strong>Address underlying issues.</strong> Substance use often co-occurs with depression, anxiety, trauma, or other mental health conditions. Treating only the substance use without addressing underlying factors is less effective.</li>
             </ul>
@@ -227,9 +227,9 @@ export default function DrugScreeningTeensGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CRAFFT Substance Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated adolescent substance use assessment</p>
               </Link>
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-question drug abuse screening test</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Drug Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO multi-substance drug use screening</p>
               </Link>
               <Link href="/cage-aid-substance-abuse-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CAGE-AID Screening</p>

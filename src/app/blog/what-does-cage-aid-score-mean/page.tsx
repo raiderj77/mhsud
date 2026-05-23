@@ -91,7 +91,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
               Each &quot;yes&quot; answer scores 1 point. The total ranges from 0&ndash;4.
             </p>
             <p>
-              The CAGE-AID is one of the briefest validated substance use screens available &mdash; the four questions can be answered in under a minute. You can <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">take the CAGE-AID screen here</Link>. Its brevity makes it practical for routine primary care screening, though it captures less detail than the AUDIT or DAST-10.
+              The CAGE-AID is one of the briefest validated substance use screens available &mdash; the four questions can be answered in under a minute. You can <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">take the CAGE-AID screen here</Link>. Its brevity makes it practical for routine primary care screening, though it captures less detail than the AUDIT or WHO-ASSIST.
             </p>
           </section>
 
@@ -142,8 +142,8 @@ export default function WhatDoesCageAidScoreMeanPage() {
 
           {/* Section 4 */}
           <section>
-            <h2>CAGE-AID vs. AUDIT vs. DAST-10: choosing the right tool</h2>
-            <p>The CAGE-AID, AUDIT, and DAST-10 all screen for substance use problems but serve different purposes:</p>
+            <h2>CAGE-AID vs. AUDIT vs. WHO-ASSIST: choosing the right tool</h2>
+            <p>The CAGE-AID, AUDIT, and WHO-ASSIST all screen for substance use problems but serve different purposes:</p>
             <div className="not-prose my-4 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -158,14 +158,14 @@ export default function WhatDoesCageAidScoreMeanPage() {
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">CAGE-AID</td><td className="py-2 pr-4">Alcohol + drugs</td><td className="py-2 pr-4">4</td><td className="py-2">Quick gateway screen; primary care</td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">AUDIT</td><td className="py-2 pr-4">Alcohol only</td><td className="py-2 pr-4">10</td><td className="py-2">Detailed alcohol screening</td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">AUDIT-C</td><td className="py-2 pr-4">Alcohol only</td><td className="py-2 pr-4">3</td><td className="py-2">Very brief alcohol screen</td></tr>
-                  <tr><td className="py-2 pr-4 font-medium">DAST-10</td><td className="py-2 pr-4">Drugs only</td><td className="py-2 pr-4">10</td><td className="py-2">Detailed drug screening</td></tr>
+                  <tr><td className="py-2 pr-4 font-medium"><Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST</Link></td><td className="py-2 pr-4">All substances</td><td className="py-2 pr-4">8</td><td className="py-2">Comprehensive multi-substance</td></tr>
                 </tbody>
               </table>
             </div>
             <p>If you screened positive on the CAGE-AID, more detailed follow-up tools can clarify which substance is involved and the severity of the pattern:</p>
             <ul>
               <li>Primarily alcohol concern &rarr; <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> for full picture</li>
-              <li>Primarily drug concern &rarr; <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10</Link> for full picture</li>
+              <li>Primarily drug concern &rarr; <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST</Link> for full picture</li>
               <li>Both &rarr; both tools</li>
             </ul>
           </section>
@@ -253,7 +253,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Each screening takes under 5 minutes. Free, private, and your answers never leave your browser.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/audit-alcohol-test" className="btn-primary text-sm">Take the AUDIT Alcohol Screening</Link>
-              <Link href="/dast-10-drug-screening" className="btn-primary text-sm">Take the DAST-10 Drug Screening</Link>
+              <Link href="/who-assist-substance-screening" className="btn-primary text-sm">Take the WHO-ASSIST Drug Screening</Link>
             </div>
           </div>
 
@@ -288,9 +288,9 @@ export default function WhatDoesCageAidScoreMeanPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT Alcohol Screening</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO 10-item alcohol use screening tool</p>
               </Link>
-              <Link href="/dast-10-drug-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DAST-10 Drug Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">10-item drug use severity screening</p>
+              <Link href="/who-assist-substance-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">WHO-ASSIST Drug Screening</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">WHO multi-substance drug use screening</p>
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>

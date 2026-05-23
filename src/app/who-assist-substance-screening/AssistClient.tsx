@@ -752,8 +752,8 @@ export function AssistClient({ faqData }: Props) {
               <Link href="/audit-alcohol-test" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors">
                 AUDIT Alcohol Screen →
               </Link>
-              <Link href="/dast-10-drug-screening" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors">
-                DAST-10 Drug Screen →
+              <Link href="/cage-aid-substance-abuse-screening" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors">
+                CAGE-AID Drug Screen →
               </Link>
             </div>
           </div>
@@ -772,8 +772,8 @@ export function AssistClient({ faqData }: Props) {
               <Link href="/audit-alcohol-test" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-amber-600 text-white hover:bg-amber-700 transition-colors">
                 AUDIT Alcohol Screen →
               </Link>
-              <Link href="/dast-10-drug-screening" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-amber-600 text-white hover:bg-amber-700 transition-colors">
-                DAST-10 Drug Screen →
+              <Link href="/cage-aid-substance-abuse-screening" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-amber-600 text-white hover:bg-amber-700 transition-colors">
+                CAGE-AID Drug Screen →
               </Link>
               <Link href="/cage-aid-substance-abuse-screening" className="inline-block px-4 py-2 rounded-lg text-sm font-semibold bg-amber-600 text-white hover:bg-amber-700 transition-colors">
                 CAGE-AID Screen →
@@ -839,9 +839,9 @@ export function AssistClient({ faqData }: Props) {
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">AUDIT Alcohol Screen →</span>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">10-item WHO alcohol use screening</p>
             </Link>
-            <Link href="/dast-10-drug-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
-              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">DAST-10 Drug Screen →</span>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">10-item drug abuse screening test</p>
+            <Link href="/cage-aid-substance-abuse-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
+              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">CAGE-AID Drug Screen →</span>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">4-question alcohol and drug use screen</p>
             </Link>
             <Link href="/cage-aid-substance-abuse-screening" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">CAGE-AID Screen →</span>
@@ -928,7 +928,7 @@ export function AssistClient({ faqData }: Props) {
           </p>
           <h2>ASSIST vs. Other Screening Tools</h2>
           <p>
-            The ASSIST fills a unique niche among substance use screening tools. The <Link href="/audit-alcohol-test">AUDIT</Link> is alcohol-specific and provides a more detailed picture of drinking patterns. The <Link href="/dast-10-drug-screening">DAST-10</Link> focuses on drug use but treats all drugs as a single category. The <Link href="/cage-aid-substance-abuse-screening">CAGE-AID</Link> is a quick 4-item screen but provides only a binary positive/negative result. The ASSIST is the only widely validated tool that provides substance-specific risk levels across all major substance categories in a single assessment.
+            The ASSIST fills a unique niche among substance use screening tools. The <Link href="/audit-alcohol-test">AUDIT</Link> is alcohol-specific and provides a more detailed picture of drinking patterns. The <Link href="/cage-aid-substance-abuse-screening">CAGE-AID</Link> is a quick 4-item combined screen but provides only a binary positive/negative result. The ASSIST is the only widely validated tool that provides substance-specific risk levels across all major substance categories in a single assessment.
           </p>
           <h2>When to Seek Help</h2>
           <p>

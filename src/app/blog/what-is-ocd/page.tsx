@@ -213,7 +213,7 @@ export default function WhatIsOcdPage() {
               <li><strong>Not better explained</strong> by another condition or substance</li>
             </ol>
             <p>
-              The OCI-R screens for OCD symptom severity across six dimensions. A score of 21 or higher is the validated threshold for distinguishing OCD from other anxiety presentations.
+              The OCI-R is a validated research instrument that screens for OCD symptom severity across six dimensions. It is used in clinical and research settings to assess symptom patterns.
             </p>
           </section>
 

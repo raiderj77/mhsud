@@ -204,9 +204,9 @@ export default function WhatAreSubstanceUseDisordersPage() {
                     <td className="py-2">Very brief</td>
                   </tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800">
-                    <td className="py-2 pr-4"><Link href="/dast-10-drug-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DAST-10</Link></td>
-                    <td className="py-2 pr-4">Drugs (not alcohol)</td>
-                    <td className="py-2 pr-4">10</td>
+                    <td className="py-2 pr-4"><Link href="/who-assist-substance-screening" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">WHO-ASSIST</Link></td>
+                    <td className="py-2 pr-4">Alcohol and drugs (all substances)</td>
+                    <td className="py-2 pr-4">8</td>
                     <td className="py-2">Comprehensive</td>
                   </tr>
                   <tr>
@@ -219,7 +219,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
               </table>
             </div>
             <p>
-              If you&rsquo;re unsure which substance is the primary concern, the CAGE-AID is the broadest starting point. If you have concerns about both alcohol and drugs, taking the AUDIT and DAST-10 separately gives the most complete picture.
+              If you&rsquo;re unsure which substance is the primary concern, the CAGE-AID is the broadest starting point. If you have concerns about both alcohol and drugs, taking the AUDIT and WHO-ASSIST together gives the most complete picture.
             </p>
           </section>
 
@@ -359,7 +359,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/audit-alcohol-test" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">AUDIT Alcohol Screening</Link>
-              <Link href="/dast-10-drug-screening" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">DAST-10 Drug Screening</Link>
+              <Link href="/who-assist-substance-screening" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">WHO-ASSIST Drug Screening</Link>
               <Link href="/cage-aid-substance-abuse-screening" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">CAGE-AID Screening</Link>
             </div>
           </div>
@@ -389,7 +389,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
               {[
                 { href: "/audit-alcohol-test", label: "AUDIT Alcohol Screening" },
                 { href: "/audit-c-alcohol-screen", label: "AUDIT-C Brief Alcohol Screen" },
-                { href: "/dast-10-drug-screening", label: "DAST-10 Drug Screening" },
+                { href: "/who-assist-substance-screening", label: "WHO-ASSIST Drug Screening" },
                 { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Screening" },
               ].map((tool) => (
                 <Link key={tool.href} href={tool.href} className="block rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 hover:border-orange-300 dark:hover:border-orange-700 transition">

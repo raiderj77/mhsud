@@ -172,7 +172,7 @@ export default function SobrietyCalculatorGuidePage() {
               <li>Your substance use is affecting your relationships, work, or ability to function</li>
             </ul>
             <p>
-              SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals 24/7. You can also use the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/dast-10-drug-screening" className="text-sage-600 dark:text-sage-400 underline">DAST-10 drug screening</Link> to get a structured picture of your use patterns.
+              SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals 24/7. You can also use the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST drug screening</Link> to get a structured picture of your use patterns.
             </p>
           </section>
 

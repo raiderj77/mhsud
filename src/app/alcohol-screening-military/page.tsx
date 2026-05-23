@@ -415,8 +415,8 @@ export default function AlcoholScreeningMilitaryPage() {
           <Link href="/ptsd-test-veterans" className="text-sky-600 dark:text-sky-400 hover:underline">
             PTSD Test for Veterans →
           </Link>
-          <Link href="/dast-10-drug-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
-            DAST-10 Drug Screening →
+          <Link href="/who-assist-substance-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
+            WHO-ASSIST Drug Screening →
           </Link>
         </div>
       </div>

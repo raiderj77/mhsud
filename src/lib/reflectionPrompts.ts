@@ -114,21 +114,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "dast-10-drug-screening": {
-    toolName: "DAST-10 Drug Use Screening",
-    prompts: [
-      "What prompted you to take this drug use screening today — curiosity, concern, or something else?",
-      "Have you noticed any patterns in your drug use — particular times, places, or emotional states that trigger it?",
-      "How has drug use affected your daily responsibilities, relationships, or how you feel about yourself?",
-      "Is there someone you trust enough to have an honest conversation about your substance use?",
-      "If you imagined your life six months from now with different habits, what would you want it to look like?",
-    ],
-    faqEntries: [
-      { question: "What do my DAST-10 drug screening results mean?", answer: "The DAST-10 screens for problems related to drug use over the past 12 months. Higher scores suggest a greater degree of problems associated with drug use. This is not a clinical assessment — it helps you reflect on whether substance use is affecting your life in ways you may want to address." },
-      { question: "Should I see a counselor after a high DAST-10 score?", answer: "If your DAST-10 score falls in the moderate or substantial range, speaking with a substance use counselor can be a helpful next step. SAMHSA's helpline (1-800-662-4357) provides free, confidential referrals 24/7. Many people find that early conversations prevent problems from worsening." },
-    ],
-  },
-
   "cage-aid-substance-abuse-screening": {
     toolName: "CAGE-AID Substance Use Screening",
     prompts: [
