@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AdSlot } from "@/components/AdSlot";
-import { AuthorBio } from "@/components/AuthorBio";
-import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/how-to-support-someone-with-mental-health-condition`;
@@ -54,7 +52,7 @@ const FAQ_DATA = [
 export default function HowToSupportSomeonePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How to Support Someone With a Mental Health Condition", description: "Supporting someone with depression, anxiety, PTSD, or another mental health condition. Here\u2019s what actually helps \u2014 and what to avoid.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "How to Support Someone With a Mental Health Condition", description: "Supporting someone with depression, anxiety, PTSD, or another mental health condition. Here\u2019s what actually helps \u2014 and what to avoid.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "How to Support Someone With a Mental Health Condition", url: ARTICLE_URL }])) }} />
 
@@ -67,7 +65,27 @@ export default function HowToSupportSomeonePage() {
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How to Support Someone With a Mental Health Condition
           </h1>
-          <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime={POST_DATA.publishedDate}>
+          {new Date(POST_DATA.publishedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime={POST_DATA.modifiedDate}>
+          {new Date(POST_DATA.modifiedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Supporting someone with a mental health condition means being present without trying to fix, listening without minimizing, and showing up consistently without taking over. The most helpful support is usually not grand gestures &mdash; it is sustained, low-pressure presence that communicates &ldquo;I&rsquo;m here and I&rsquo;m not going anywhere.&rdquo; Getting this right is genuinely difficult, and most people who care deeply still make mistakes. This guide covers what the research and clinical experience show actually helps.
           </p>
@@ -307,7 +325,24 @@ export default function HowToSupportSomeonePage() {
           </div>
 
           {/* Author Bio */}
-          <AuthorBio publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
+          <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
+  <div className="flex gap-4 items-start">
+    <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">
+      <span className="text-sage-600 dark:text-sage-400 text-lg">&#x1F4BB;</span>
+    </div>
+    <div>
+      <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
+        MindCheck Tools &mdash; Your Friendly Developer LLC
+      </h3>
+      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
+        Publisher and maintainer of free, evidence-based mental health screening tools for adults.
+      </p>
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Content reviewed for clinical accuracy against authoritative sources including NIMH, APA, CDC, and WHO.
+      </p>
+    </div>
+  </div>
+</div>
 
           {/* FAQ */}
           <section>

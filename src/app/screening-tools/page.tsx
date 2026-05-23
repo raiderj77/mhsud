@@ -251,22 +251,6 @@ const COPING_TOOLS = [
   { name: "Family Impact Assessment", href: "/family-impact-assessment", description: "Reflective check for how a substance use or mental health pattern is affecting family relationships." },
 ];
 
-function authorPersonJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Jason Ramirez",
-    jobTitle: "CADC-II Certified Drug and Alcohol Counselor",
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Professional Certification",
-      name: "CADC-II",
-    },
-    url: `${SITE_URL}/about/jason-ramirez`,
-    worksFor: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-  };
-}
-
 function articleJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -276,7 +260,7 @@ function articleJsonLd() {
       "Index of validated mental health screening tools available free on MindCheck Tools, organized by clinical category, with population, length, and links to score interpretation pages.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
-    author: authorPersonJsonLd(),
+    author: { "@type": "Organization", name: "Your Friendly Developer LLC" },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: PAGE_URL,
   };
@@ -343,7 +327,7 @@ export default function ScreeningToolsIndexPage() {
         All Free Mental Health Screening Tools and Self-Checks
       </h1>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-        Last updated: {TODAY}. Reviewed by Jason Ramirez, CADC-II.
+        Last updated: {TODAY}. Reviewed for accuracy by the MindCheck Tools editorial team.
       </p>
 
       <div
@@ -380,7 +364,7 @@ export default function ScreeningToolsIndexPage() {
           screening instruments plus practical calculators and coping skill
           tools. Every screener listed in this index is reproduced from a
           published, peer-reviewed instrument, scored according to the source
-          paper, and reviewed by a CADC-II clinical reviewer before going live.
+          paper, and reviewed for accuracy by the MindCheck Tools editorial team before going live.
         </p>
         <p>
           For the source study, validated population, sensitivity and
@@ -538,12 +522,7 @@ export default function ScreeningToolsIndexPage() {
           About this index
         </h2>
         <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-          Reviewed by{" "}
-          <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 hover:underline">
-            Jason Ramirez, CADC-II
-          </Link>
-          , a Certified Drug and Alcohol Counselor with 11 years of clinical
-          experience. For instrument source studies see the{" "}
+          Published and maintained by MindCheck Tools — Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
           <Link href="/clinical-evidence" className="text-sage-700 dark:text-sage-400 hover:underline">
             clinical evidence
           </Link>{" "}

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { DbtCrisisSkillsClient } from "./DbtCrisisSkillsClient";
 import AnswerBlock from "@/components/AnswerBlock";
-import { AuthorByline } from "@/components/AuthorByline";
 
 const TOOL_URL = `${SITE_URL}/dbt-crisis-skills`;
 
@@ -60,15 +59,16 @@ export default function DbtCrisisSkillsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            toolPageJsonLd({
+          __html: JSON.stringify({
+      ...toolPageJsonLd({
               name: "DBT Crisis Survival Skills Cards",
               description: "Free interactive DBT distress tolerance skills cards. 22 crisis survival skills organized by four acronyms: TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), STOP (Stop, Take a step back, Observe, Proceed mindfully), ACCEPTS (Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations), and IMPROVE (Imagery, Meaning, Prayer, Relaxation, One thing at a time, Vacation, Encouragement). Each card shows detailed instructions and concrete examples. Random skill button for crisis moments. Based on Dialectical Behavior Therapy by Dr. Marsha Linehan.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
-            })
-          ),
+            }),
+      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+    }),
         }}
       />
       <script
@@ -101,7 +101,27 @@ export default function DbtCrisisSkillsPage() {
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime="2025-01-01">
+          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime="2026-03-20">
+          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
       </div>
 
       <section className="sr-only">

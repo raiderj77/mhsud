@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AuthorByline } from "@/components/AuthorByline";
 import AnswerBlock from "@/components/AnswerBlock";
 
 const PAGE_URL = `${SITE_URL}/maternal-mental-health`;
@@ -380,7 +379,27 @@ export default function MaternalMentalHealthPage() {
 
           {/* Author Bio */}
           <div className="my-8">
-            <AuthorByline publishedDate="2026-05-01" modifiedDate="2026-05-01" />
+            <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
+  <div className="flex flex-col gap-1">
+    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+    </p>
+    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <span>
+        Published:{" "}
+        <time dateTime="2026-05-01">
+          {new Date("2026-05-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+      <span>
+        Last reviewed:{" "}
+        <time dateTime="2026-05-01">
+          {new Date("2026-05-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+      </span>
+    </div>
+  </div>
+</div>
           </div>
 
           {/* Crisis Resources at Bottom */}

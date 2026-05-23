@@ -639,10 +639,10 @@ export default function HomePage() {
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            MindCheck Tools provides free, evidence-based mental health and substance use screening instruments built on validated clinical scales. Every assessment uses the published scoring methodology, with results explained in plain language. The site is built and reviewed by a CADC-II credentialed counselor with eleven years of clinical experience.
+            MindCheck Tools provides free, evidence-based mental health and substance use screening instruments built on validated clinical scales. Every assessment uses the published scoring methodology, with results explained in plain language.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
-            Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).{" "}
+            Published and maintained by Your Friendly Developer LLC. Content reviewed for accuracy.{" "}
             <Link
               href="/about"
               className="underline hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
