@@ -220,17 +220,7 @@ const TOOLS: Tool[] = [
     status: "live",
     category: "Other Conditions",
   },
-  {
-    href: "/oci-r-ocd-screening",
-    title: "OCI-R OCD Screening",
-    description: "18-item validated OCD screening with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.",
-    badge: "Validated",
-    time: "~3 min",
-    questions: 18,
-    color: "sage",
-    status: "live",
-    category: "Other Conditions",
-  },
+
   {
     href: "/scoff-eating-disorder-screening",
     title: "SCOFF Eating Disorder Screen",

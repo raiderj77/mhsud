@@ -134,7 +134,6 @@ const CATEGORIES: Category[] = [
     intro:
       "Obsessive-compulsive symptom screens. OCD diagnosis requires a clinical interview that distinguishes OCD from related disorders.",
     tools: [
-      { name: "OCI-R Obsessive Compulsive Inventory Revised", acronym: "OCI-R", href: "/oci-r-ocd-screening", description: "Eighteen-item OCD symptom screen across six subscales.", population: "General adults", items: "18 items", time: "About 4 minutes" },
       { name: "OCD Test for Teens", href: "/ocd-test-teens", description: "Adolescent-framed OCD symptom screen.", population: "Adolescents 12 to 17", items: "18 items", time: "About 4 minutes" },
     ],
   },

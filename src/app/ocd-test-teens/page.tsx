@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { OCIRClient } from "../oci-r-ocd-screening/OCIRClient";
+import { OCIRClient } from "./OCIRClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
 
@@ -34,7 +34,7 @@ export default function OcdTestTeensPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "OCD Test for Teens — OCI-R Screening", description: "A free, private OCD screening tool for teenagers using the OCI-R.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-12" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "OCI-R OCD Screening", url: `${SITE_URL}/oci-r-ocd-screening` }, { name: "OCD Test for Teens", url: TOOL_URL }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "OCD Test for Teens", url: TOOL_URL }])) }} />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
         <div className="flex flex-wrap gap-2 mb-4">
@@ -105,7 +105,7 @@ export default function OcdTestTeensPage() {
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: March 2026</p>
         </div>
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
-          <Link href="/oci-r-ocd-screening" className="text-sky-600 dark:text-sky-400 hover:underline">OCI-R OCD Screening →</Link>
+          <Link href="/blog/what-is-ocd" className="text-sky-600 dark:text-sky-400 hover:underline">What Is OCD? →</Link>
           <Link href="/anxiety-test-for-teens" className="text-sky-600 dark:text-sky-400 hover:underline">Anxiety Test for Teens →</Link>
           <Link href="/depression-test-for-teens" className="text-sky-600 dark:text-sky-400 hover:underline">Depression Test for Teens →</Link>
         </div>

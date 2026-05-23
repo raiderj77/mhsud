@@ -28,7 +28,6 @@ const SCREENING_TOOLS = [
   ]},
   { heading: "Other Conditions", links: [
     { href: "/asrs-adhd-screening", label: "ASRS ADHD" },
-{ href: "/oci-r-ocd-screening", label: "OCI-R OCD" },
     { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder" },
     { href: "/aq-10-autism-screening", label: "AQ-10 Autism" },
     { href: "/msi-bpd-screening", label: "MSI-BPD Borderline" },

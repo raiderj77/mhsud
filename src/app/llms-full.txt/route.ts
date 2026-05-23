@@ -114,10 +114,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 - URL: https://mindchecktools.com/asrs-adhd-screening
 - 6-item WHO-developed Adult ADHD Self-Report Scale using research-validated thresholds.
 
-### OCI-R OCD Screening
-- URL: https://mindchecktools.com/oci-r-ocd-screening
-- 18-item OCD Inventory with 6 subscales: Hoarding, Checking, Ordering, Neutralizing, Washing, Obsessing.
-
 ### SCOFF Eating Disorder Screen
 - URL: https://mindchecktools.com/scoff-eating-disorder-screening
 - 5-item validated screener for anorexia, bulimia, and other eating disorders.

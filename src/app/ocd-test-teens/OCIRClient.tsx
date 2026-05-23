@@ -21,7 +21,7 @@ const QUESTIONS = [
   "I feel compelled to count while I am doing things.",
   "I find it difficult to touch an object when I know it has been touched by strangers or certain people.",
   "I find it difficult to control my own thoughts.",
-  "I collect things I don\u2019t need.",
+  "I collect things I don’t need.",
   "I repeatedly check doors, windows, drawers, etc.",
   "I get upset if others change the way I have arranged things.",
   "I feel I have to repeat certain numbers.",
@@ -134,11 +134,11 @@ export function OCIRClient({ faqData }: Props) {
   }, []);
 
   const handleShare = useCallback(async (mode: "results" | "blank") => {
-    const url = "https://mindchecktools.com/oci-r-ocd-screening";
+    const url = "https://mindchecktools.com/ocd-test-teens";
 
     if (mode === "blank") {
       const shareData = {
-        title: "OCI-R OCD Screening Self-Check \u2014 Free & Private",
+        title: "OCI-R OCD Screening Self-Check — Free & Private",
         text: "Take a free, private OCI-R OCD screening self-check. 18 questions, 3 minutes, 6 subscales. Your answers never leave your browser.",
         url,
       };
@@ -152,7 +152,7 @@ export function OCIRClient({ faqData }: Props) {
     }
 
     const subscaleSummary = SUBSCALES.map((s) => `${s.name}: ${s.items.reduce((sum, i) => sum + (answers[i] ?? 0), 0)}/12`).join(", ");
-    const summary = `OCI-R OCD Screening Results\nTotal Score: ${totalScore}/72 \u2014 ${range.level}\nSubscales: ${subscaleSummary}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `OCI-R OCD Screening Results\nTotal Score: ${totalScore}/72 — ${range.level}\nSubscales: ${subscaleSummary}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My OCI-R Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -182,9 +182,9 @@ export function OCIRClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\uD83D\uDD12", text: "100% Private" },
-            { icon: "\u23F1", text: "~3 Minutes" },
-            { icon: "\uD83D\uDCCB", text: "18 Questions" },
+            { icon: "🔒", text: "100% Private" },
+            { icon: "⏱", text: "~3 Minutes" },
+            { icon: "📋", text: "18 Questions" },
           ].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">
               {b.icon} {b.text}
@@ -254,7 +254,7 @@ export function OCIRClient({ faqData }: Props) {
                         ? "bg-sage-500 text-white"
                         : "bg-sand-100 dark:bg-night-700 text-neutral-400"
                     }`}>
-                      {answers[qi] !== null ? "\u2713" : qi + 1}
+                      {answers[qi] !== null ? "✓" : qi + 1}
                     </div>
                     <div className="flex-1 min-w-0">
                       {sub && (
@@ -307,7 +307,7 @@ export function OCIRClient({ faqData }: Props) {
           {totalScore >= 21 && (
             <div className={`${totalScore >= 41 ? "bg-crisis-50 dark:bg-crisis-950/30 border-crisis-300 dark:border-crisis-800" : "bg-warm-50 dark:bg-warm-950/30 border-warm-300 dark:border-warm-800"} border-2 rounded-2xl p-5 sm:p-6 mb-5`}>
               <div className="flex gap-3 items-start">
-                <span className="text-xl">{"\u26A0\uFE0F"}</span>
+                <span className="text-xl">{"⚠️"}</span>
                 <div>
                   <h3 className={`font-serif text-lg font-semibold ${totalScore >= 41 ? "text-crisis-800 dark:text-crisis-300" : "text-warm-800 dark:text-warm-300"} mb-2`}>
                     {totalScore >= 41 ? "Score suggests significant OCD symptoms" : "Score above clinical cutoff — evaluation recommended"}
@@ -466,7 +466,7 @@ export function OCIRClient({ faqData }: Props) {
             </div>
             {shareMessage && (
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">
-                {"\u2713"} {shareMessage}
+                {"✓"} {shareMessage}
               </p>
             )}
           </div>
@@ -474,7 +474,7 @@ export function OCIRClient({ faqData }: Props) {
           {/* Download Reflection Summary */}
           <ReflectionSummary
             toolName="OCI-R OCD Screening Self-Check"
-            toolUrl="https://mindchecktools.com/oci-r-ocd-screening"
+            toolUrl="https://mindchecktools.com/ocd-test-teens"
             score={totalScore}
             severityLabel={range.level}
             scoreRange={`${range.min}–${range.max}`}
@@ -524,7 +524,7 @@ export function OCIRClient({ faqData }: Props) {
                     }`}>
                       <div className={`w-3 h-3 rounded-full bg-gradient-to-br ${c.bar} flex-shrink-0`} />
                       <span className={`text-sm ${active ? `font-semibold ${c.text}` : "text-neutral-500 dark:text-neutral-400"}`}>
-                        {r.min}\u2013{r.max}: {r.level}
+                        {r.min}–{r.max}: {r.level}
                       </span>
                     </div>
                   );
@@ -544,9 +544,9 @@ export function OCIRClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "International OCD Foundation (IOCDF)", detail: "617-973-5801 \u2014 OCD specialist directory & resources", color: "text-sage-600 dark:text-sage-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "International OCD Foundation (IOCDF)", detail: "617-973-5801 — OCD specialist directory & resources", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
