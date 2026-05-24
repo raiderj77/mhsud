@@ -187,7 +187,7 @@ export default function StandardDrinksBacGuidePage() {
               It is important to understand that these are guidelines, not &quot;safe&quot; limits. About 2 in 100 people who drink within these limits still develop alcohol use disorder. The guidelines also do not apply to certain populations &mdash; including people who are pregnant, taking medications that interact with alcohol, have a history of alcohol use disorder, or have certain medical conditions.
             </p>
             <p>
-              Research from the NIAAA indicates that roughly 37% of people who exceed these limits will develop alcohol-related problems at some point. By contrast, only about 2% of people who stay within these limits develop such problems. The difference is substantial, which is why understanding what actually constitutes a standard drink matters so much.
+              About 37% of US adults drink within the low-risk limits. Of those who stay within them, only about 2% develop alcohol use disorder, compared with roughly 20% of those who exceed the limits (NIAAA, based on NESARC survey data).
             </p>
           </section>
 
