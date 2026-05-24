@@ -115,7 +115,7 @@ export default function HealthRecoveryTimelineGuidePage() {
               By 72 hours, the body has substantially completed its acute detoxification process. The liver is actively clearing stored toxins, and the digestive system begins to recover from alcohol&apos;s inflammatory effects on the stomach lining and intestines.
             </p>
             <p>
-              By the end of the first week, most people notice significant improvements in sleep quality. While alcohol may help you fall asleep faster, it severely disrupts REM sleep &mdash; the restorative phase critical for memory consolidation and emotional regulation. According to the National Institute on Alcohol Abuse and Alcoholism (NIAAA), sleep architecture typically begins normalizing within 5&ndash;7 days of abstinence.
+              By the end of the first week, most people notice significant improvements in sleep quality. While alcohol may help you fall asleep faster, it severely disrupts REM sleep &mdash; the restorative phase critical for memory consolidation and emotional regulation. Some sleep measures, such as time to fall asleep and early REM sleep, begin improving within the first week of abstinence, though full sleep recovery often takes considerably longer and varies between individuals.
             </p>
           </section>
 
@@ -170,7 +170,7 @@ export default function HealthRecoveryTimelineGuidePage() {
             <ul>
               <li><strong>Heart disease risk:</strong> Research published in the <em>European Heart Journal</em> indicates that cardiovascular risk begins declining within months of stopping heavy drinking, with significant reduction by the one-year mark.</li>
               <li><strong>Cancer risk:</strong> The International Agency for Research on Cancer (IARC) lists alcohol as a Group 1 carcinogen. While cancer risk reduction takes years to fully materialize, the process begins as soon as you stop drinking.</li>
-              <li><strong>Liver recovery:</strong> For those with fatty liver or early-stage liver disease, substantial healing has typically occurred. The liver can regenerate up to 75% of its mass.</li>
+              <li><strong>Liver recovery:</strong> For those with fatty liver or early-stage liver disease, substantial healing has typically occurred. With sustained abstinence, early alcohol-related fatty liver changes are substantially reversible, and even some liver fibrosis can improve over time.</li>
               <li><strong>Brain volume:</strong> MRI studies show measurable increases in brain volume and cortical thickness after one year of sobriety.</li>
             </ul>
             <p>

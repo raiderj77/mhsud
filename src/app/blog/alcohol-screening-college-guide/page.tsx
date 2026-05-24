@@ -132,7 +132,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
               One of the most consistent findings in college health research is that students significantly overestimate how much their peers drink. This &quot;social norms distortion&quot; makes heavy drinking seem more normal than it actually is, which in turn increases individual consumption.
             </p>
             <p>
-              The reality: about 33% of college students binge drink, which means the majority do not. Many students who appear to be drinking heavily are also struggling with it privately. Screening breaks through the distortion by measuring your actual patterns against clinical benchmarks rather than perceived peer norms.
+              About 29% of full-time college students reported past-month binge drinking in 2023, declining to 25% in 2024 (SAMHSA, National Survey on Drug Use and Health). Many students who appear to be drinking heavily are also struggling with it privately. Screening breaks through the distortion by measuring your actual patterns against clinical benchmarks rather than perceived peer norms.
             </p>
           </section>
 

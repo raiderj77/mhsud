@@ -79,7 +79,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            AUDIT scores range from 0 to 40. Scores of 0–7 indicate low-risk alcohol use, 8–15 indicate hazardous use, 16–19 indicate harmful use, and 20 or higher suggest possible alcohol dependence. Each zone corresponds to a different level of recommended follow-up — from simple education to structured professional support.
+            AUDIT scores range from 0 to 40. Scores of 0–7 indicate low-risk alcohol use, 8–15 indicate hazardous use, 16–19 indicate harmful use, and 20 or higher suggest possible alcohol dependence. Each zone corresponds to a different level of recommended follow-up, from simple education to structured professional support.
           </p>
         </header>
 
@@ -102,7 +102,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
               Questions 1–8 are scored 0–4. Questions 9–10 are scored 0, 2, or 4. Total scores range from <strong>0 to 40</strong>.
             </p>
             <p>
-              The AUDIT demonstrates sensitivity of 92% and specificity of 94% for hazardous drinking at a cutoff of 8 (Reinert &amp; Allen, 2007), making it one of the most psychometrically strong brief alcohol screening tools available.
+              The AUDIT demonstrates sensitivity of 92% and specificity of 94% for hazardous drinking at a cutoff of 8 (Saunders et al., 1993), making it one of the most psychometrically strong brief alcohol screening tools available.
             </p>
           </section>
 
@@ -139,10 +139,10 @@ export default function WhatDoesAUDITScoreMeanPage() {
               A score of 0–7 indicates <strong>low-risk alcohol use</strong>. Your drinking pattern, as measured by the AUDIT, is within ranges that research associates with minimal health risk.
             </p>
             <p>
-              &quot;Low risk&quot; doesn&apos;t mean &quot;zero risk&quot; — all alcohol use carries some physiological risk. But this score range suggests that the frequency, quantity, and consequences you reported don&apos;t indicate a clinical concern at this time.
+              &quot;Low risk&quot; doesn&apos;t mean &quot;zero risk.&quot; All alcohol use carries some physiological risk. But this score range suggests that the frequency, quantity, and consequences you reported don&apos;t indicate a clinical concern at this time.
             </p>
             <p>
-              If you scored here and feel like something about your drinking doesn&apos;t sit right with you, trust that instinct. Screening tools capture patterns, not every individual experience. The <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline">AUDIT-C</Link> — a three-question brief screen focusing on the consumption items — can give you a slightly different angle if you want to explore further.
+              If you scored here and feel like something about your drinking doesn&apos;t sit right with you, trust that instinct. Screening tools capture patterns, not every individual experience. The <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline">AUDIT-C</Link>, a three-question brief screen focusing on the consumption items, can give you a slightly different angle if you want to explore further.
             </p>
           </section>
 
@@ -152,10 +152,10 @@ export default function WhatDoesAUDITScoreMeanPage() {
           <section>
             <h2>What does an AUDIT score of 8–15 mean?</h2>
             <p>
-              A score of 8–15 indicates <strong>hazardous alcohol use</strong>. This means your drinking pattern is elevating your risk for future harm — physical, psychological, and social — even if significant harm hasn&apos;t occurred yet.
+              A score of 8–15 indicates <strong>hazardous alcohol use</strong>. This means your drinking pattern is elevating your risk for future harm (physical, psychological, and social) even if significant harm hasn&apos;t occurred yet.
             </p>
             <p>
-              Hazardous use is the zone where relatively brief interventions are most effective. Research on &quot;brief intervention&quot; — typically one to three structured counseling sessions focused on feedback, motivation, and setting goals — shows significant reduction in drinking behavior in hazardous drinkers (Kaner et al., 2018). This is the most evidence-supported intervention zone for the AUDIT.
+              Hazardous use is the zone where relatively brief interventions are most effective. Research on &quot;brief intervention,&quot; typically one to three structured counseling sessions focused on feedback, motivation, and setting goals, shows significant reduction in drinking behavior in hazardous drinkers (Kaner et al., 2018). This is the most evidence-supported intervention zone for the AUDIT.
             </p>
             <p>
               At this score range, you might recognize some patterns like:
@@ -167,7 +167,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
               <li>Having some &quot;morning after&quot; regrets about how much you drank</li>
             </ul>
             <p>
-              None of these experiences mean you&apos;re dependent on alcohol. They do mean this is a worthwhile moment to reflect — and that brief support can be meaningfully helpful.
+              None of these experiences mean you&apos;re dependent on alcohol. They do mean this is a worthwhile moment to reflect, and that brief support can be meaningfully helpful.
             </p>
             <p>
               <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">Take the AUDIT Alcohol Use Screen →</Link>
@@ -178,13 +178,13 @@ export default function WhatDoesAUDITScoreMeanPage() {
           <section>
             <h2>What does an AUDIT score of 16–19 mean?</h2>
             <p>
-              A score of 16–19 indicates <strong>harmful alcohol use</strong>. At this level, your drinking is likely already causing measurable harm — whether physical (liver strain, sleep disruption, cardiovascular risk), psychological (mood dysregulation, anxiety, memory effects), or social (relationship strain, work impact).
+              A score of 16–19 indicates <strong>harmful alcohol use</strong>. At this level, your drinking is likely already causing measurable harm, whether physical (liver strain, sleep disruption, cardiovascular risk), psychological (mood dysregulation, anxiety, memory effects), or social (relationship strain, work impact).
             </p>
             <p>
               The WHO distinguishes &quot;hazardous&quot; from &quot;harmful&quot; specifically on whether harm has already occurred. This score range suggests it has, or is very likely occurring.
             </p>
             <p>
-              A score in this range warrants a conversation with a healthcare provider or certified counselor. You don&apos;t need to wait until things feel &quot;bad enough&quot; — this score is the signal that now is the right time. Brief counseling, structured support, and sometimes medical assessment (particularly for anyone who has been drinking heavily for a period of time) can make a significant difference.
+              A score in this range warrants a conversation with a healthcare provider or certified counselor. You don&apos;t need to wait until things feel &quot;bad enough.&quot; This score is the signal that now is the right time. Brief counseling, structured support, and sometimes medical assessment (particularly for anyone who has been drinking heavily for a period of time) can make a significant difference.
             </p>
             <p>
               If you&apos;re currently thinking about cutting back, that&apos;s an enormously positive sign. Connecting with a professional can help you do that in a way that&apos;s both effective and safe.
@@ -200,7 +200,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
               A score of 20 or higher suggests <strong>possible alcohol dependence</strong>. Items in the AUDIT that address loss of control, inability to stop once started, morning drinking, blackouts, and withdrawal symptoms are weighted toward the higher end of the scale. Scoring in this range means several of those items scored meaningfully.
             </p>
             <p>
-              Alcohol dependence is a medical condition, not a character flaw. It involves physiological and psychological changes that make it genuinely difficult to reduce or stop drinking on your own — and attempting to do so abruptly can, in some cases, carry medical risk (withdrawal from alcohol can be medically serious, unlike withdrawal from most other substances).
+              Alcohol dependence is a medical condition, not a character flaw. It involves physiological and psychological changes that make it genuinely difficult to reduce or stop drinking on your own, and attempting to do so abruptly can, in some cases, carry medical risk (withdrawal from alcohol can be medically serious, unlike withdrawal from most other substances).
             </p>
             <p>
               If you scored in this range, please reach out to a healthcare provider before making significant changes to your drinking. A physician can assess whether medical support during reduction is appropriate. Counseling and evidence-based treatments like medication-assisted treatment are also highly effective.
@@ -222,8 +222,8 @@ export default function WhatDoesAUDITScoreMeanPage() {
                   </tr>
                 </thead>
                 <tbody className="text-neutral-600 dark:text-neutral-400">
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Men: 4 or higher</td><td className="py-2">Positive screen — suggests hazardous drinking</td></tr>
-                  <tr><td className="py-2 pr-4">Women: 3 or higher</td><td className="py-2">Positive screen — suggests hazardous drinking</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Men: 4 or higher</td><td className="py-2">Positive screen, suggests hazardous drinking</td></tr>
+                  <tr><td className="py-2 pr-4">Women: 3 or higher</td><td className="py-2">Positive screen, suggests hazardous drinking</td></tr>
                 </tbody>
               </table>
             </div>
@@ -244,7 +244,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
               <strong>Hazardous use</strong> means a pattern of drinking that increases the risk of harm. No harm has necessarily occurred yet, but the pattern is high-risk.
             </p>
             <p>
-              <strong>Harmful use</strong> means drinking that is actually causing damage — to physical health, mental health, or social functioning — even if the person does not feel dependent.
+              <strong>Harmful use</strong> means drinking that is actually causing damage to physical health, mental health, or social functioning, even if the person does not feel dependent.
             </p>
             <p>
               <strong>Alcohol dependence</strong> is a syndrome involving physiological adaptation (tolerance and potential withdrawal), loss of control over drinking, and a compulsion to use. It is a diagnosable medical condition.
@@ -258,10 +258,10 @@ export default function WhatDoesAUDITScoreMeanPage() {
           <section>
             <h2>How does alcohol use affect mental health?</h2>
             <p>
-              Alcohol and mental health have a complex, bidirectional relationship. Many people drink to manage anxiety, depression, or stress — but alcohol is a central nervous system depressant that reliably worsens anxiety and low mood over time, particularly during the day following heavy use.
+              Alcohol and mental health have a complex, bidirectional relationship. Many people drink to manage anxiety, depression, or stress, but alcohol is a central nervous system depressant that reliably worsens anxiety and low mood over time, particularly during the day following heavy use.
             </p>
             <p>
-              Research shows that approximately 37% of people with alcohol use disorder also have a co-occurring mental health condition (SAMHSA, 2020). If you&apos;ve been experiencing mood changes, anxiety, or sleep disruption, and you drink regularly, it can be valuable to look at both. Consider also taking the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link> or the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> for additional context.
+              Roughly one-third to one-half of people with alcohol use disorder also experience a co-occurring mental health condition such as an anxiety or mood disorder (SAMHSA). If you&apos;ve been experiencing mood changes, anxiety, or sleep disruption, and you drink regularly, it can be valuable to look at both. Consider also taking the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link> or the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> for additional context.
             </p>
           </section>
 
@@ -288,7 +288,7 @@ export default function WhatDoesAUDITScoreMeanPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The AUDIT is a screening tool — it may indicate the need for further assessment but does not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The AUDIT is a screening tool. It may indicate the need for further assessment but does not confirm or rule out any condition.
             </p>
           </div>
 
@@ -299,9 +299,9 @@ export default function WhatDoesAUDITScoreMeanPage() {
               If you are in crisis or struggling with substance use and need immediate support:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7 — substance use and mental health)</li>
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> (free, confidential, 24/7, substance use and mental health)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
             </ul>
           </div>
 

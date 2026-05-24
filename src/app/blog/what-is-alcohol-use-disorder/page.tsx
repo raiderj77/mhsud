@@ -152,7 +152,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               AUD has no single cause. It develops through a complex interaction of factors:
             </p>
             <p>
-              <strong>Genetic factors</strong> account for approximately 40&ndash;60% of the risk for AUD (NIAAA, 2021). Having a first-degree relative with AUD meaningfully increases risk.
+              Genetics account for roughly 50% of the risk for AUD, with twin studies estimating a range of 40&ndash;70% (NIAAA). Having a first-degree relative with AUD meaningfully increases risk.
             </p>
             <p>
               <strong>Neurobiological factors:</strong> Alcohol affects multiple neurotransmitter systems &mdash; GABA, glutamate, dopamine, and opioid pathways. With repeated heavy use, the brain adapts to alcohol&apos;s presence, leading to tolerance and withdrawal when use stops.
