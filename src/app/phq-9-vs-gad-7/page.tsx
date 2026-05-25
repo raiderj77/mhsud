@@ -364,6 +364,7 @@ export default function Phq9VsGad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When do clinicians use the PHQ-9 and GAD-7 together versus separately?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+              Clinicians typically use both tools together — at initial intake, during treatment monitoring, and at care transitions — because depression and anxiety are highly comorbid; either tool may be used alone when only one condition is the clinical focus.{" "}
               Clinical guidelines from organizations including the{" "}
               <a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">National Institute of Mental Health (NIMH)</a>{" "}
               and the{" "}

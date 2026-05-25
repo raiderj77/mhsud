@@ -211,6 +211,9 @@ export default function Dass21VsPhq9Gad7Page() {
           {/* Structural comparison */}
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How do the DASS-21 and PHQ-9/GAD-7 compare structurally?</h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+              The DASS-21 is a single 21-item instrument measuring depression, anxiety, and stress; the PHQ-9 and GAD-7 are two separate instruments totaling 16 items that measure depression and anxiety respectively, with no equivalent stress dimension.
+            </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -283,6 +286,9 @@ export default function Dass21VsPhq9Gad7Page() {
           {/* When to use each */}
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When should you choose the DASS-21 versus the PHQ-9 and GAD-7?</h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+              Choose the DASS-21 when stress is part of the clinical picture or a single unified instrument is preferred; choose the PHQ-9 and GAD-7 when DSM-aligned screening is needed for primary care, behavioral health workflows, or clinical records integration.
+            </p>
             <div className="space-y-4 mb-6">
               <div className="border-l-4 border-indigo-400 pl-4">
                 <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-1">Choose the DASS-21 when:</h3>
@@ -314,7 +320,7 @@ export default function Dass21VsPhq9Gad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How are the DASS-21 and PHQ-9/GAD-7 scored differently?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              The scoring systems are fundamentally different and cannot be compared directly:
+              The DASS-21 multiplies each raw subscale score by 2 before applying severity categories; the PHQ-9 and GAD-7 use raw item sums directly — so scores cannot be meaningfully compared across the two systems:
             </p>
             <div className="grid sm:grid-cols-2 gap-6 mb-4">
               <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg p-5">
