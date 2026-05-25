@@ -284,7 +284,7 @@ export default function AuditVsAuditCPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When should you use the AUDIT versus the AUDIT-C?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              The choice depends on the clinical context and the depth of information needed:
+              Use the AUDIT-C for rapid triage when time is limited; use the full AUDIT when the AUDIT-C is positive or when you need a complete picture of consumption, dependence signs, and alcohol-related harm.
             </p>
             <div className="space-y-4 mb-6">
               <div className="border-l-4 border-orange-400 pl-4">
@@ -316,7 +316,7 @@ export default function AuditVsAuditCPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">What do the AUDIT scores mean in each risk zone?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              The WHO AUDIT Manual provides specific guidance on matching clinical responses to each risk zone. Understanding these zones helps contextualize a score beyond a simple positive/negative result.
+              AUDIT total scores define four risk zones: 0–7 is low risk (Zone I), 8–15 is hazardous use (Zone II), 16–19 is harmful use (Zone III), and 20 or higher indicates possible alcohol dependence (Zone IV).
             </p>
             <div className="space-y-4 mb-4">
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
@@ -350,7 +350,7 @@ export default function AuditVsAuditCPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">What should you do if your AUDIT or AUDIT-C score is high?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              A high score on either tool is important information — and it is actionable. The appropriate next step depends on the severity of the score:
+              A high AUDIT or AUDIT-C score indicates that your drinking pattern warrants evaluation by a qualified healthcare provider — these are screening tools, not diagnostic instruments. The appropriate response varies by score zone:
             </p>
             <ul className="space-y-2 text-slate-600 dark:text-slate-400 mb-4 list-disc list-inside">
               <li><strong>AUDIT-C positive (≥4 men, ≥3 women):</strong> Consider taking the full AUDIT and speaking with a primary care provider about your drinking pattern.</li>
