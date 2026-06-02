@@ -47,12 +47,12 @@ const FAQ_DATA = [
   {
     question: "How long does it take to recover from AUD?",
     answer:
-      "Recovery has no fixed timeline. The first year carries the highest relapse risk, but many people see significant improvements within months of reducing or stopping drinking. Long-term recovery is common, and SAMHSA estimates approximately 22 million Americans are currently in recovery.",
+      "Recovery has no fixed timeline. The first year carries the highest relapse risk, but many people see significant improvements within months of reducing or stopping drinking. Long-term recovery is common, and SAMHSA estimated more than 20 million Americans were in recovery from a substance use disorder (SAMHSA, 2021).",
   },
   {
     question: "Does AUD run in families?",
     answer:
-      "Yes. Genetic factors account for approximately 40\u201360% of AUD risk. Having a first-degree relative with AUD meaningfully increases vulnerability, though it does not determine outcome. Many people with strong family histories never develop AUD, and many without family history do.",
+      "Yes. Genetic factors account for approximately 50% of AUD risk, with twin and adoption studies ranging roughly 40\u201360% (Verhulst, Neale & Kendler, 2015, Psychological Medicine). Having a first-degree relative with AUD meaningfully increases vulnerability, though it does not determine outcome. Many people with strong family histories never develop AUD, and many without family history do.",
   },
 ];
 
@@ -74,7 +74,9 @@ export default function WhatIsAlcoholUseDisorderPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Alcohol use disorder (AUD) is a medical condition characterized by an impaired ability to stop or control alcohol use despite adverse social, occupational, or health consequences. It exists on a spectrum from mild to severe and affects approximately 28.9 million Americans aged 12 and older &mdash; about 10.2% of the population (SAMHSA, 2023). AUD is not a moral failing or lack of willpower. It involves changes in brain chemistry and function that make controlling alcohol use genuinely difficult.
+            Alcohol use disorder (AUD) is a medical condition characterized by an impaired ability to stop or control alcohol use despite adverse social, occupational, or health consequences. It exists on a spectrum from mild to severe and affects approximately{" "}
+            <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics/alcohol-facts-and-statistics" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">27.9 million Americans aged 12 and older &mdash; about 9.7% of the population</a>
+            {" "}(2024 NSDUH). AUD is not a moral failing or lack of willpower. It involves changes in brain chemistry and function that make controlling alcohol use genuinely difficult.
           </p>
         </header>
 
@@ -93,7 +95,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               The term &ldquo;alcoholism&rdquo; is commonly used but is not a clinical diagnosis. The DSM-5 replaced the previous categories of &ldquo;alcohol abuse&rdquo; and &ldquo;alcohol dependence&rdquo; with a single diagnosis &mdash; <strong>alcohol use disorder</strong> &mdash; in 2013. This shift reflected research showing that these conditions exist on a continuum rather than as distinct categories.
             </p>
             <p>
-              AUD is diagnosed on a spectrum of severity:
+              AUD is diagnosed on a spectrum of severity (per DSM-5):
             </p>
             <ul>
               <li><strong>Mild AUD:</strong> 2&ndash;3 criteria met</li>
@@ -109,7 +111,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
           <section>
             <h2>DSM-5 Criteria for Alcohol Use Disorder</h2>
             <p>
-              AUD is diagnosed when at least 2 of the following 11 criteria are present within a 12-month period:
+              AUD is diagnosed when at least 2 of the following 11 criteria are present within a 12-month period (DSM-5, American Psychiatric Association):
             </p>
             <ol>
               <li>Drinking more or for longer than intended</li>
@@ -133,7 +135,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
           <section>
             <h2>How Is AUD Screened?</h2>
             <p>
-              The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT (Alcohol Use Disorders Identification Test)</Link> is the WHO&apos;s gold-standard screening tool for alcohol use problems. A score of 8 or higher indicates hazardous or harmful use; 20 or higher suggests possible dependence.
+              The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT (Alcohol Use Disorders Identification Test)</Link> is the WHO&apos;s gold-standard screening tool for alcohol use problems. A score of 8 or higher indicates hazardous or harmful use; 20 or higher suggests possible dependence (Babor et al., WHO AUDIT Manual, 2nd ed.).
             </p>
             <p>
               The <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline">AUDIT-C</Link> is a briefer 3-question version focused on consumption patterns. The <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">CAGE-AID</Link> is a simple 4-question screen used widely in clinical settings.
@@ -152,7 +154,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               AUD has no single cause. It develops through a complex interaction of factors:
             </p>
             <p>
-              Genetics account for roughly 50% of the risk for AUD, with twin studies estimating a range of 40&ndash;70% (NIAAA). Having a first-degree relative with AUD meaningfully increases risk.
+              Genetics account for approximately 50% of the risk for AUD, with twin and adoption studies ranging roughly 40&ndash;60% (Verhulst, Neale &amp; Kendler, 2015, Psychological Medicine). Having a first-degree relative with AUD meaningfully increases risk.
             </p>
             <p>
               <strong>Neurobiological factors:</strong> Alcohol affects multiple neurotransmitter systems &mdash; GABA, glutamate, dopamine, and opioid pathways. With repeated heavy use, the brain adapts to alcohol&apos;s presence, leading to tolerance and withdrawal when use stops.
@@ -161,7 +163,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <strong>Psychological factors:</strong> Anxiety, depression, PTSD, and trauma history all significantly increase risk. Many people with AUD describe initially using alcohol to manage emotional pain &mdash; a pattern that becomes self-reinforcing over time.
             </p>
             <p>
-              <strong>Environmental factors:</strong> Early initiation of drinking (before age 15), access to alcohol, peer drinking norms, and chronic stress all elevate risk.
+              <strong>Environmental factors:</strong> Early initiation of drinking (before age 15 carries roughly 4 times the AUD risk of starting at 21 or older; NIAAA), access to alcohol, peer drinking norms, and chronic stress all elevate risk.
             </p>
             <p>
               <strong>Social factors:</strong> Social isolation, lack of structured activity, and environments where heavy drinking is normalized.
@@ -248,7 +250,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <li><strong>Disulfiram (Antabuse)</strong> &mdash; creates an unpleasant physical reaction if alcohol is consumed. Effective for people with high motivation and external support.</li>
             </ul>
             <p>
-              Medications for AUD are significantly underutilized &mdash; only about 8% of people with AUD receive any pharmacological treatment (Mark et al., 2009).
+              Medications for AUD are significantly underutilized &mdash; fewer than 2% of people with AUD receive an FDA-approved medication for it, and only about 7&ndash;8% receive any treatment at all (NSDUH, 2019&ndash;2021).
             </p>
 
             <h3>Psychotherapy</h3>
@@ -268,7 +270,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
             </p>
             <ul>
               <li><strong>Outpatient counseling</strong> &mdash; weekly sessions while continuing daily life</li>
-              <li><strong>Intensive Outpatient Programs (IOP)</strong> &mdash; typically 9&ndash;12 hours/week of structured programming</li>
+              <li><strong>Intensive Outpatient Programs (IOP)</strong> &mdash; typically 9&ndash;12 hours/week of structured programming (per ASAM criteria)</li>
               <li><strong>Partial Hospitalization (PHP)</strong> &mdash; near-daily programming without overnight stay</li>
               <li><strong>Residential/inpatient treatment</strong> &mdash; 24/7 structured environment; appropriate for severe presentations or unsafe home environments</li>
             </ul>
