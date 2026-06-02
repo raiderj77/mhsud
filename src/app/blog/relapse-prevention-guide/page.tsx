@@ -38,17 +38,17 @@ const FAQ_DATA = [
   {
     question: "Does relapse mean treatment failed?",
     answer:
-      "No. NIDA compares addiction relapse rates (40\u201360%) to those of other chronic conditions like hypertension and asthma. Relapse signals that your treatment plan needs adjustment, not that recovery is impossible. Many people in long-term recovery experienced setbacks along the way. The key is reconnecting with your support system quickly.",
+      "No. NIDA compares addiction relapse rates (40\u201360%) to those of other chronic conditions like hypertension and asthma (NIDA Treatment and Recovery DrugFacts). Relapse signals that your treatment plan needs adjustment, not that recovery is impossible. Many people in long-term recovery experienced setbacks along the way. The key is reconnecting with your support system quickly.",
   },
   {
     question: "What is the most common cause of relapse?",
     answer:
-      "Research by Marlatt and Gordon identified negative emotional states as the leading trigger, accounting for roughly 35% of initial relapse episodes. Other common triggers include social pressure, interpersonal conflict, and environmental cues associated with past use. A written relapse prevention plan helps you prepare for your personal high-risk situations before they arise.",
+      "Research by Marlatt and Gordon identified negative emotional states as the leading trigger, accounting for roughly 35% of initial relapse episodes (Marlatt & Gordon, 1985, Relapse Prevention). Other common triggers include social pressure, interpersonal conflict, and environmental cues associated with past use. A written relapse prevention plan helps you prepare for your personal high-risk situations before they arise.",
   },
   {
     question: "How long does relapse risk last?",
     answer:
-      "Risk is highest in the first 90 days and remains elevated through the first year of recovery. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with therapy, mutual aid, and healthy routines provides a durable protective buffer against relapse at any stage of recovery.",
+      "Risk is highest in the first 90 days and remains elevated through the first year of recovery — consistent with NIDA's characterization of addiction as a chronic, relapsing condition. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with therapy, mutual aid, and healthy routines provides a durable protective buffer against relapse at any stage of recovery.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function RelapsePreventionGuidePage() {
           <section>
             <h2>The three stages of relapse</h2>
             <p>
-              Terence Gorski and Marlatt &amp; Gordon&apos;s research identified relapse as a gradual process with distinct stages. Recognizing the early stages is the foundation of prevention.
+              Terence Gorski and Marlatt &amp; Gordon&apos;s research identified relapse as a gradual process with distinct stages (Gorski &amp; Miller, 1986; Marlatt &amp; Gordon, 1985). Recognizing the early stages is the foundation of prevention.
             </p>
 
             <h3>Stage 1: Emotional relapse</h3>
@@ -134,7 +134,7 @@ export default function RelapsePreventionGuidePage() {
               <li><strong>Build a daily routine:</strong> Structure reduces the idle time and decision fatigue that leave room for cravings. The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link> anchors your day with a structured reflection.</li>
               <li><strong>Use the HALT check:</strong> Regularly ask yourself if you are Hungry, Angry, Lonely, or Tired &mdash; four states that increase vulnerability.</li>
               <li><strong>Maintain your support network:</strong> Isolation is one of the strongest predictors of relapse. Stay connected to your therapist, sponsor, support group, or trusted people.</li>
-              <li><strong>Practice urge surfing:</strong> When cravings arise, observe them without acting. Cravings peak and pass within 15&ndash;30 minutes.</li>
+              <li><strong>Practice urge surfing:</strong> When cravings arise, observe them without acting. In Marlatt&apos;s urge-surfing model (Mindfulness-Based Relapse Prevention), cravings are described as waves that typically peak and subside within 15&ndash;30 minutes when you observe them without acting on them.</li>
               <li><strong>Have a written plan:</strong> A <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan</Link> gives you specific steps for specific situations, decided in advance when you are thinking clearly.</li>
             </ul>
           </section>
@@ -145,7 +145,7 @@ export default function RelapsePreventionGuidePage() {
               The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools relapse prevention plan builder</Link> walks you through creating a personalized, written plan that includes your triggers, warning signs, coping strategies, and emergency contacts. It is free, private, and runs entirely in your browser.
             </p>
             <p>
-              A written plan is more effective than a mental one because it removes the need to think clearly in a crisis &mdash; the plan has already done the thinking for you. Research shows that people with written relapse prevention plans have significantly better outcomes than those without one.
+              A written plan removes the need to think clearly in a crisis &mdash; the plan has already done the thinking for you. Relapse-prevention planning is a core component of evidence-based treatment models including Cognitive Behavioral Therapy and Marlatt &amp; Gordon&apos;s Relapse Prevention Therapy.
             </p>
           </section>
 

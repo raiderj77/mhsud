@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "How many standard drinks are in a bottle of wine?",
     answer:
-      "A standard 750 mL bottle of wine at 12% ABV contains approximately five standard drinks. Many wines today range from 13\u201315% ABV, which increases that to six or more. This is why home pours and restaurant bottles often deliver more alcohol than expected. Use our standard drinks calculator for a precise count.",
+      "A standard 750 mL bottle of wine at 12% ABV contains approximately five standard drinks. Many wines today range from 13\u201315% ABV, which increases that to five to six. This is why home pours and restaurant bottles often deliver more alcohol than expected. Use our standard drinks calculator for a precise count.",
   },
   {
     question: "How long does it take for one standard drink to leave your system?",
@@ -91,7 +91,7 @@ export default function StandardDrinksBacGuidePage() {
             <h2>What Is a Standard Drink?</h2>
             <p>
               According to the{" "}
-              <a href="https://www.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">
+              <a href="https://www.rethinkingdrinking.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">
                 National Institute on Alcohol Abuse and Alcoholism (NIAAA)
               </a>
               , a standard drink in the United States contains approximately 14 grams (0.6 fluid ounces) of pure alcohol. This is the reference point used by researchers and healthcare providers to quantify alcohol consumption in a consistent, comparable way.
@@ -119,7 +119,7 @@ export default function StandardDrinksBacGuidePage() {
               One of the most common misconceptions about alcohol is that &quot;one drink&quot; always equals one standard drink. In reality, the drinks people pour at home, order at bars, or purchase at stores frequently contain significantly more alcohol than a single standard drink.
             </p>
             <p>
-              <strong>Craft beers</strong> are a prime example. While a standard beer is defined at 5% ABV, many popular craft beers range from 7% to 12% ABV. A 16-ounce pint of a 9% ABV IPA contains nearly three standard drinks &mdash; not one. Many people count this as a single beer without realizing the actual alcohol content.
+              <strong>Craft beers</strong> are a prime example. While a standard beer is defined at 5% ABV, many popular craft beers range from 7% to 12% ABV. A 16-ounce pint of a 9% ABV IPA contains about two and a half standard drinks &mdash; not one. Many people count this as a single beer without realizing the actual alcohol content.
             </p>
             <p>
               <strong>Wine pours</strong> at restaurants are often 6 to 8 ounces rather than the standard 5-ounce serving. A generous 8-ounce pour of 14% ABV wine contains nearly two standard drinks. At home, without a measured pour, servings tend to be even larger.
@@ -142,10 +142,15 @@ export default function StandardDrinksBacGuidePage() {
             <ul>
               <li><strong>0.02%:</strong> Mild relaxation, slight warmth, some loss of judgment. Most people feel slightly relaxed but show minimal outward impairment.</li>
               <li><strong>0.05%:</strong> Lowered alertness, impaired judgment, reduced inhibitions. Coordination begins to decline and reaction times slow.</li>
-              <li><strong>0.08%:</strong> The legal limit for driving in all 50 U.S. states. At this level, muscle coordination is significantly impaired, judgment is poor, and reaction time is substantially slowed.</li>
+              <li><strong>0.08%:</strong> The legal limit for driving in 49 states (Utah set its limit at 0.05% in 2018). At this level, muscle coordination is significantly impaired, judgment is poor, and reaction time is substantially slowed.</li>
               <li><strong>0.15%:</strong> Significant impairment in all areas. Balance, speech, and vision are noticeably affected. Risk of injury from falls and accidents is high.</li>
               <li><strong>0.30% and above:</strong> Life-threatening territory. Loss of consciousness, suppressed breathing, and risk of alcohol poisoning are serious concerns. This is a medical emergency.</li>
             </ul>
+            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+              BAC effect descriptions sourced from{" "}
+              <a href="https://www.nhtsa.gov/risky-driving/drunk-driving" target="_blank" rel="noopener noreferrer" className="underline">NHTSA impaired driving research</a>
+              {" "}and NIAAA alcohol pharmacology resources.
+            </p>
             <p>
               Our{" "}
               <Link href="/bac-calculator" className="text-sage-600 dark:text-sage-400 underline">BAC calculator</Link>{" "}
@@ -177,17 +182,19 @@ export default function StandardDrinksBacGuidePage() {
           <section>
             <h2>NIAAA Low-Risk Drinking Guidelines</h2>
             <p>
-              The NIAAA defines low-risk drinking limits that research suggests are associated with a lower probability of developing alcohol-related problems:
+              The{" "}
+              <a href="https://www.rethinkingdrinking.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIAAA</a>
+              {" "}defines low-risk drinking limits that research suggests are associated with a lower probability of developing alcohol-related problems:
             </p>
             <ul>
               <li><strong>For men:</strong> No more than 4 standard drinks on any single day <em>and</em> no more than 14 standard drinks per week</li>
               <li><strong>For women:</strong> No more than 3 standard drinks on any single day <em>and</em> no more than 7 standard drinks per week</li>
             </ul>
             <p>
-              It is important to understand that these are guidelines, not &quot;safe&quot; limits. About 2 in 100 people who drink within these limits still develop alcohol use disorder. The guidelines also do not apply to certain populations &mdash; including people who are pregnant, taking medications that interact with alcohol, have a history of alcohol use disorder, or have certain medical conditions.
+              It is important to understand that these are guidelines, not &quot;safe&quot; limits. About 2 in 100 people who drink within these limits still develop alcohol use disorder (NIAAA, Rethinking Drinking). The guidelines also do not apply to certain populations &mdash; including people who are pregnant, taking medications that interact with alcohol, have a history of alcohol use disorder, or have certain medical conditions.
             </p>
             <p>
-              About 37% of US adults drink within the low-risk limits. Of those who stay within them, only about 2% develop alcohol use disorder, compared with roughly 20% of those who exceed the limits (NIAAA, based on NESARC survey data).
+              That rate rises to about 1 in 4 among people whose drinking regularly exceeds these limits (NIAAA, Rethinking Drinking).
             </p>
           </section>
 
@@ -201,7 +208,7 @@ export default function StandardDrinksBacGuidePage() {
             <p>
               For a shorter initial screen, the{" "}
               <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline">AUDIT-C</Link>{" "}
-              uses just three questions focused on consumption patterns. A positive screen on the AUDIT-C (scores of 4 or higher for men, 3 or higher for women) suggests further evaluation may be helpful.
+              uses just three questions focused on consumption patterns. A positive screen on the AUDIT-C &mdash; scores of 4 or higher for men and 3 or higher for women (Bush et al., 1998, Arch Intern Med) &mdash; suggests further evaluation may be helpful.
             </p>
             <p>
               These screenings are not diagnostic tools. They indicate whether your drinking patterns may warrant a conversation with a healthcare provider who can offer personalized guidance. All screening results on MindCheck Tools are processed entirely in your browser and are never stored or transmitted.
