@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "Is addiction treatment worth the cost?",
     answer:
-      "Yes. NIDA estimates every dollar invested in treatment yields $4\u2013$7 in reduced crime costs, exceeding 12:1 when healthcare savings are included. The cost of untreated addiction in healthcare, legal fees, lost income, and relationship damage almost always exceeds treatment costs. Treatment also significantly reduces overdose risk.",
+      "Yes. NIDA estimates every dollar invested in treatment yields $4\u2013$7 in reduced crime costs, exceeding 12:1 when healthcare savings are included (NIDA, Principles of Drug Addiction Treatment, 3rd ed.). The cost of untreated addiction in healthcare, legal fees, lost income, and relationship damage almost always exceeds treatment costs. Treatment also significantly reduces overdose risk.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function TreatmentCostGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Cost is one of the most common barriers to seeking addiction treatment &mdash; and one of the most misunderstood. Treatment costs range from free to over $30,000, depending on the level of care, duration, and setting. But the cost of not treating a substance use disorder is almost always higher: the National Institute on Drug Abuse (NIDA) estimates that untreated addiction costs the United States over $600 billion annually in healthcare, criminal justice, and lost productivity.
+            Cost is one of the most common barriers to seeking addiction treatment &mdash; and one of the most misunderstood. Treatment costs range from free to over $30,000, depending on the level of care, duration, and setting. But the cost of not treating a substance use disorder is almost always higher: the National Institute on Drug Abuse (NIDA) estimates that substance use disorders cost the United States approximately $740 billion annually in healthcare, criminal justice, and lost productivity (NIDA, 2017 estimate).
           </p>
         </header>
 
@@ -96,7 +96,7 @@ export default function TreatmentCostGuidePage() {
           <section>
             <h2>Treatment costs by level of care</h2>
             <p>
-              Addiction treatment exists on a continuum of care, from outpatient counseling to full residential programs. Understanding the cost range for each level helps you evaluate options realistically. The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you explore these ranges based on your specific situation.
+              Addiction treatment exists on a continuum of care, from outpatient counseling to full residential programs. Costs vary significantly by provider, location, and program features; the figures below are broad market estimates. The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you explore these ranges based on your specific situation.
             </p>
             <ul>
               <li><strong>Outpatient treatment ($1,000&ndash;$10,000):</strong> Typically involves individual counseling, group therapy, and possibly medication management on a schedule of 1&ndash;3 sessions per week. You continue living at home and can often maintain work or school. This is the most affordable and flexible option, appropriate for mild to moderate substance use disorders.</li>
@@ -140,7 +140,7 @@ export default function TreatmentCostGuidePage() {
               Medicaid covers addiction treatment in all 50 states. In states that expanded Medicaid under the ACA, adults earning up to 138% of the federal poverty level qualify for coverage that includes substance use disorder services.
             </p>
             <p>
-              Even in states that did not expand Medicaid, state-funded treatment programs exist. Every state receives federal block grants from SAMHSA specifically for substance use treatment services. These programs serve people who are uninsured, underinsured, or unable to pay.
+              Even in states that did not expand Medicaid, state-funded treatment programs exist. Every state receives <a href="https://www.samhsa.gov/grants/block-grants/sabg" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">federal block grants from SAMHSA</a> specifically for substance use treatment services. These programs serve people who are uninsured, underinsured, or unable to pay.
             </p>
             <p>
               To find state-funded treatment options, call SAMHSA&apos;s National Helpline at 1-800-662-4357 or visit findtreatment.gov. The helpline is free, confidential, available 24/7, and available in English and Spanish.
@@ -169,13 +169,13 @@ export default function TreatmentCostGuidePage() {
               When evaluating treatment costs, it is important to weigh them against the cost of continued substance use. NIDA research shows that untreated substance use disorders generate enormous costs at both the individual and societal level:
             </p>
             <ul>
-              <li><strong>Healthcare:</strong> Alcohol-related emergency department visits cost an average of $3,000&ndash;$5,000 each. Chronic conditions caused by substance use (liver disease, cardiovascular disease, mental health disorders) generate ongoing costs.</li>
-              <li><strong>Legal system:</strong> A single DUI costs $10,000&ndash;$25,000 in fines, legal fees, and increased insurance premiums. Drug-related charges can be far higher.</li>
+              <li><strong>Healthcare:</strong> ED visits for alcohol and substance use disorders averaged approximately $520 per visit for treated-and-released cases in 2017 (<a href="https://hcup-us.ahrq.gov/reports/statbriefs/sb257-ED-Costs-Mental-Substance-Use-Disorders-2017.jsp" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">HCUP Statistical Brief #257</a>); visits requiring hospital admission carry substantially higher total costs. Chronic conditions caused by substance use (liver disease, cardiovascular disease, mental health disorders) generate ongoing costs.</li>
+              <li><strong>Legal system:</strong> Estimates suggest a single DUI can total $10,000&ndash;$25,000 in fines, legal fees, and increased insurance premiums, though actual costs vary widely by state and circumstances. Drug-related charges can be far higher.</li>
               <li><strong>Lost income:</strong> Substance use disorders reduce earning potential through missed work, job loss, and impaired career advancement.</li>
               <li><strong>Relationships:</strong> Divorce, family court, and custody proceedings are among the most expensive consequences of untreated addiction.</li>
             </ul>
             <p>
-              By contrast, NIDA estimates that every dollar invested in addiction treatment yields a return of $4&ndash;$7 in reduced drug-related crime alone. When healthcare savings are included, the return can exceed 12 to 1. The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you compare treatment costs against the cost of continued use.
+              By contrast, NIDA estimates that every dollar invested in addiction treatment yields a return of $4&ndash;$7 in reduced drug-related crime alone. When healthcare savings are included, the return can exceed 12 to 1 (NIDA, Principles of Drug Addiction Treatment, 3rd ed.). The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you compare treatment costs against the cost of continued use.
             </p>
           </section>
 
