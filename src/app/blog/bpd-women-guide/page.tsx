@@ -130,7 +130,7 @@ export default function BpdWomenGuidePage() {
           <section>
             <h2>Trauma history and BPD in women</h2>
             <p>
-              Research consistently identifies high rates of childhood trauma among people with BPD. Clinical-sample studies report that 40&ndash;71% of patients with BPD have histories of childhood sexual abuse, and rates of other forms of trauma (physical abuse, emotional abuse, neglect) are similarly elevated (Zanarini et al., 1997).
+              Research consistently identifies high rates of childhood trauma among people with BPD. In one large clinical sample, 91% of patients with BPD reported some form of childhood abuse and 92% reported childhood neglect (Zanarini et al., 1997). Reported rates of childhood sexual abuse specifically vary widely across individual studies.
             </p>
             <p>
               The relationship between trauma and BPD is complex. Trauma is neither necessary nor sufficient for BPD &mdash; not all women with BPD have trauma histories, and not all trauma survivors develop BPD. But for many women, BPD can be understood as a pattern of emotional and relational responses that developed in the context of environments that were unpredictable, invalidating, or unsafe.
@@ -148,9 +148,9 @@ export default function BpdWomenGuidePage() {
             <ul>
               <li><strong>Depression:</strong> Up to 83% of people with BPD meet criteria for major depressive disorder at some point (Zanarini et al., 1998; Shah &amp; Zanarini, 2018). Depression in BPD often has a distinctive quality &mdash; it tends to be reactive and tied to interpersonal events rather than the pervasive, situation-independent quality of standalone depression.</li>
               <li><strong>Anxiety disorders:</strong> Roughly 74&ndash;88% of people with BPD experience significant anxiety, including generalized anxiety disorder, social anxiety, and panic disorder (Zanarini et al., 1998; Shah &amp; Zanarini, 2018).</li>
-              <li><strong>Eating disorders:</strong> An estimated 34&ndash;50% of people with BPD have co-occurring eating disorders (Tomko et al., 2014). Both conditions involve impulsivity and difficulty with emotional regulation, and they can reinforce each other.</li>
+              <li><strong>Eating disorders:</strong> A 2025 meta-analysis estimates that roughly 30% of people with BPD have a co-occurring eating disorder (Paudex et al., 2025). Both conditions involve impulsivity and difficulty with emotional regulation, and they can reinforce each other.</li>
               <li><strong>PTSD:</strong> Given the high trauma rates, PTSD co-occurs with BPD in approximately 25&ndash;58% of patients in clinical samples (Pagura et al., 2010). Distinguishing between BPD and complex PTSD (C-PTSD) can be clinically challenging, as the conditions share features including emotional dysregulation, identity disturbance, and relationship difficulties.</li>
-              <li><strong>Substance use:</strong> Approximately 50&ndash;65% of people with BPD develop a co-occurring substance use disorder, and lifetime rates reach 78% in epidemiological samples (Zanarini et al., 1998; Tomko et al., 2014).</li>
+              <li><strong>Substance use:</strong> Substance use disorders are among the most common co-occurring conditions: in a national epidemiological sample, 78% of people with BPD had a lifetime substance use disorder (Tomko et al., 2014).</li>
             </ul>
             <p>
               These high comorbidity rates mean that effective assessment and treatment must address the full clinical picture, not just a single condition. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link> and the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> can help identify co-occurring symptoms.
