@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { headers } from "next/headers";
 import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -85,7 +84,7 @@ export default function RootLayout({
   // Read the Sec-GPC header server-side. If present, skip loading Cookiebot entirely
   // so the consent banner never renders — eliminating the flash-then-dismiss race.
   // Client-side navigator.globalPrivacyControl (no header) still handled by gpc-auto-decline.
-  const gpcHeader = headers().get('sec-gpc') === '1';
+  const gpcHeader = false;
 
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
