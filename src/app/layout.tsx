@@ -38,17 +38,17 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mindchecktools.com",
     siteName: "MindCheck Tools",
-    title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
+    title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
       "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools — Free, Private Mental Health Self-Checks" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
+    title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
       "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools — Free, Private Mental Health Self-Checks" }],
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   alternates: {
     canonical: "/",
@@ -81,27 +81,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Read the Sec-GPC header server-side. If present, skip loading Cookiebot entirely
-  // so the consent banner never renders — eliminating the flash-then-dismiss race.
-  // Client-side navigator.globalPrivacyControl (no header) still handled by gpc-auto-decline.
+  // GPC is handled client-side per-visitor by the gpc-auto-decline script below,
+  // which calls Cookiebot.decline() when navigator.globalPrivacyControl is set.
+  // Server-side header gating was removed because it cached one visitor GPC state
+  // into the static HTML and froze Cookiebot off for everyone. Keep this false.
   const gpcHeader = false;
 
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
-        {/* DNS preconnect for critical third-party origins — reduces connection latency */}
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
         <link rel="dns-prefetch" href="https://adservice.google.com" />
 
-        {/*
-          Preload critical heading font (Source Serif 4) so the real LCP element
-          (hero H1) renders before the Cookiebot dialog can claim LCP.
-          next/font already preloads these, but explicit hints with fetchpriority
-          ensure they win the resource priority race against third-party scripts.
-        */}
         <link
           rel="preload"
           href="/_next/static/media/13971731025ec697-s.p.woff2"
@@ -110,7 +104,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Consent Mode v2 defaults — must fire before Cookiebot and all analytics */}
+        {/* Consent Mode v2 defaults - must fire before Cookiebot and all analytics */}
         <Script
           id="consent-mode"
           strategy="beforeInteractive"
@@ -119,6 +113,16 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'granted',
+                'functionality_storage': 'granted',
+                'personalization_storage': 'denied',
+                'security_storage': 'granted'
+              });
+              gtag('consent', 'default', {
+                'region': ['GB','BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','HR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','IS','LI','NO'],
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
@@ -132,14 +136,7 @@ export default function RootLayout({
           }}
         />
 
-        {/*
-          Cookiebot consent management — skipped entirely when Sec-GPC header is present.
-          Skipping avoids the flash-then-dismiss race on GPC-enabled browsers: if Cookiebot
-          never loads, its banner never renders. The client-side gpc-auto-decline script
-          below handles the rarer case where navigator.globalPrivacyControl is set without
-          the request header (e.g. older GPC extensions that don't send Sec-GPC).
-          data-blockingmode="auto" handles script blocking; data-georegions gates EU/GB consent.
-        */}
+        {/* Cookiebot consent management. data-blockingmode auto handles script blocking; data-georegions gates EU/GB consent banner. */}
         {!gpcHeader && (
           <Script
             id="Cookiebot"
@@ -151,11 +148,7 @@ export default function RootLayout({
           />
         )}
 
-        {/*
-          GPC client-side fallback: covers navigator.globalPrivacyControl when no Sec-GPC
-          header was sent (e.g. older browser extensions). Only runs when Cookiebot loaded
-          (i.e. gpcHeader was false). CookiebotOnLoad fires after Cookiebot initializes.
-        */}
+        {/* GPC client-side fallback: declines via Cookiebot when navigator.globalPrivacyControl is set. */}
         {!gpcHeader && (
           <Script
             id="gpc-auto-decline"
@@ -177,7 +170,6 @@ export default function RootLayout({
           />
         )}
 
-        {/* GA4 initialization — afterInteractive, consent defaults already established above */}
         <Script
           id="gtag-script"
           strategy="afterInteractive"
@@ -196,12 +188,6 @@ export default function RootLayout({
           }}
         />
 
-        {/*
-          FIX: Google AdSense — using Next.js Script component (lazyOnload).
-          Previously used a bare <script> tag which bypassed Next.js script optimization
-          and blocked page rendering. lazyOnload defers until after page is interactive,
-          improving LCP and CLS Core Web Vitals scores.
-        */}
         <Script
           id="adsense-script"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
@@ -209,7 +195,6 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
 
-        {/* Microsoft Clarity */}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
@@ -224,13 +209,11 @@ export default function RootLayout({
           }}
         />
 
-        {/* Organization JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
 
-        {/* PWA Service Worker Registration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -253,7 +236,6 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <ThemeProvider>
           <ScrollToTop />
-          {/* Dark mode flash prevention */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
