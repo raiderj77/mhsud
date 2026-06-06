@@ -418,7 +418,6 @@ export default function SeasonalAffectiveDisorderPage() {
             </div>
           </section>
 
-          {/* Author Bio — standardized AuthorBio component for E-E-A-T consistency */}
           <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
   <div className="flex gap-4 items-start">
     <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">

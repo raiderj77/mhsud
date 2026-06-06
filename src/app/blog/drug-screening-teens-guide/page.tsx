@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/drug-screening-teens-guide",
   title: "Substance Use Screening for Teens: What Parents and Adolescents Should Know",
   description:
-    "About 15% of high school students report illicit drug use. Learn about the CRAFFT screening, common teen substances, risk factors, and how to start a conversation.",
+    "About 17% of high school students report current marijuana use (2023 YRBS). Learn about the CRAFFT screening, common teen substances, risk factors, and how to start a conversation.",
   keywords: [
     "teen drug screening",
     "teen substance use",
@@ -38,7 +38,7 @@ const FAQ_DATA = [
   {
     question: "How common is teen substance use?",
     answer:
-      "According to the CDC\u2019s YRBSS, approximately 15% of high school students report illicit drug use. Cannabis is the most common substance after alcohol, and vaping has surged. Fentanyl contamination of counterfeit pills has made experimentation significantly more dangerous than in previous generations.",
+      "According to the CDC\u2019s 2023 Youth Risk Behavior Survey (YRBS), approximately 17% of high school students report current marijuana use (past 30 days), and about 22% report current alcohol use. Cannabis is the most widely used illicit substance among adolescents. Fentanyl contamination of counterfeit pills has made experimentation significantly more dangerous than in previous generations.",
   },
   {
     question: "What should I do if the screening suggests a problem?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
 export default function DrugScreeningTeensGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Substance Use Screening for Teens: What Parents and Adolescents Should Know", description: "About 15% of high school students report illicit drug use. Learn about the CRAFFT screening, common teen substances, and how to start a conversation.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Substance Use Screening for Teens: What Parents and Adolescents Should Know", description: "About 17% of high school students report current marijuana use (2023 YRBS). Learn about the CRAFFT screening, common teen substances, and how to start a conversation.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Teen Substance Use Screening", url: ARTICLE_URL }])) }} />
 
@@ -70,7 +70,7 @@ export default function DrugScreeningTeensGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Approximately 15% of high school students report using illicit drugs, according to the CDC&apos;s Youth Risk Behavior Surveillance System. But substance use screening for adolescents is not about catching or punishing &mdash; it is about opening a conversation. The adolescent brain is uniquely vulnerable to the effects of substances because the prefrontal cortex, responsible for judgment and impulse control, does not fully develop until around age 25. Early identification through screening can change the trajectory of a young person&apos;s life.
+            About 17% of high school students report current marijuana use (past 30 days) and 22% report current alcohol use, according to the <a href="https://www.cdc.gov/yrbs/dstr/index.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">CDC&apos;s 2023 Youth Risk Behavior Survey (YRBS)</a>. But substance use screening for adolescents is not about catching or punishing &mdash; it is about opening a conversation. The adolescent brain is uniquely vulnerable to the effects of substances because the prefrontal cortex, responsible for judgment and impulse control, does not fully develop until around age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Early identification through screening can change the trajectory of a young person&apos;s life.
           </p>
         </header>
 
@@ -94,10 +94,10 @@ export default function DrugScreeningTeensGuidePage() {
           <section>
             <h2>Why adolescent substance use screening matters</h2>
             <p>
-              The adolescent brain is still under construction. The prefrontal cortex &mdash; the region responsible for decision-making, impulse control, risk assessment, and long-term planning &mdash; does not fully mature until approximately age 25. Meanwhile, the brain&apos;s reward system is already fully active, creating a neurological setup that makes teens more likely to seek novel experiences and less able to evaluate consequences.
+              The adolescent brain is still under construction. The prefrontal cortex &mdash; the region responsible for decision-making, impulse control, risk assessment, and long-term planning &mdash; does not fully mature until approximately age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Meanwhile, the brain&apos;s reward system is already fully active, creating a neurological setup that makes teens more likely to seek novel experiences and less able to evaluate consequences.
             </p>
             <p>
-              This is not a character flaw. It is developmental neuroscience. And it has a direct implication: adolescents who use substances are significantly more vulnerable to developing substance use disorders later in life. Research from the National Institute on Drug Abuse (NIDA) shows that the earlier substance use begins, the greater the risk of developing addiction. A person who first uses substances at age 13 is far more likely to develop a substance use disorder than someone who begins at 21.
+              This is not a character flaw. It is developmental neuroscience. And it has a direct implication: adolescents who use substances are significantly more vulnerable to developing substance use disorders later in life. Research from the <a href="https://nida.nih.gov/research-topics/adolescents-young-adults" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute on Drug Abuse (NIDA)</a> and national survey data show that the earlier substance use begins, the greater the risk of developing addiction. A person who first uses substances at age 13 is far more likely to develop a substance use disorder than someone who begins at 21.
             </p>
             <p>
               Screening provides a structured, evidence-based way to identify patterns before they escalate. The goal is not to label or shame &mdash; it is to start a conversation that could prevent years of struggle.
@@ -111,7 +111,7 @@ export default function DrugScreeningTeensGuidePage() {
             </p>
             <ul>
               <li><strong>Cannabis:</strong> The most commonly used illicit substance among adolescents. With legalization in many states, teens often perceive cannabis as low-risk. However, regular use during adolescence is associated with cognitive impairment, reduced academic performance, and increased risk of psychosis in genetically vulnerable individuals.</li>
-              <li><strong>Alcohol:</strong> Still the most widely used substance overall. About 29% of high school students report drinking alcohol, and 14% report binge drinking (YRBSS). Adolescent binge drinking is associated with lasting effects on brain development.</li>
+              <li><strong>Alcohol:</strong> Still the most widely used substance overall. About 22% of high school students reported current alcohol use in 2023 (<a href="https://www.cdc.gov/yrbs/dstr/index.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">2023 YRBS</a>). The YRBS binge drinking question was revised in 2021 and prior figures are not directly comparable. Adolescent alcohol use is associated with lasting effects on brain development.</li>
               <li><strong>Vaping and nicotine:</strong> E-cigarette use has surged among teens. Nicotine is highly addictive at any age, but adolescent brains are especially susceptible. Vaping can also serve as a gateway to other substance use.</li>
               <li><strong>Prescription drug misuse:</strong> Stimulants (Adderall, Ritalin), opioids, and benzodiazepines are misused by some teens &mdash; often obtained from family medicine cabinets or peers.</li>
               <li><strong>Fentanyl contamination:</strong> This is the most dangerous development in the current drug landscape. Counterfeit pills sold as Xanax, Percocet, or other medications increasingly contain fentanyl, a synthetic opioid that can be lethal in microscopic doses. Teens who think they are taking a prescription pill may unknowingly be taking fentanyl. This makes any experimentation with pills of unknown origin potentially fatal.</li>
@@ -126,19 +126,19 @@ export default function DrugScreeningTeensGuidePage() {
               Substance use in adolescents is driven by a combination of biological, psychological, and environmental factors:
             </p>
             <ul>
-              <li><strong>Family history:</strong> Genetic predisposition accounts for approximately 40&ndash;60% of addiction vulnerability. Having a parent or close relative with a substance use disorder significantly increases risk.</li>
+              <li><strong>Family history:</strong> Genetic predisposition accounts for approximately 40&ndash;60% of addiction vulnerability (Verhulst, Neale &amp; Kendler, 2015, <em>Psychological Medicine</em>). Having a parent or close relative with a substance use disorder significantly increases risk.</li>
               <li><strong>Trauma and adverse childhood experiences (ACEs):</strong> Teens with higher ACE scores are more likely to use substances as a coping mechanism for unresolved pain, anxiety, or emotional dysregulation.</li>
               <li><strong>Mental health co-occurrence:</strong> Depression, anxiety, ADHD, PTSD, and other mental health conditions frequently co-occur with substance use. Teens may self-medicate symptoms they do not have words for or access to treatment for.</li>
               <li><strong>Peer influence:</strong> Adolescents are highly attuned to social norms. If substance use is normalized in a teen&apos;s peer group, the pressure to participate is significant.</li>
               <li><strong>Lack of parental monitoring:</strong> Not overbearing control, but consistent awareness of where a teen is, who they are with, and what they are doing. Research consistently links appropriate parental monitoring with lower substance use rates.</li>
-              <li><strong>Early onset:</strong> Using any substance before age 14 is one of the strongest predictors of developing a substance use disorder later in life.</li>
+              <li><strong>Early onset:</strong> Using any substance before age 14 is one of the strongest predictors of developing a substance use disorder later in life (<a href="https://nida.nih.gov/research-topics/adolescents-young-adults" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIDA</a>; SAMHSA NSDUH data).</li>
             </ul>
           </section>
 
           <section>
             <h2>How the CRAFFT screening works</h2>
             <p>
-              The <Link href="/drug-screening-teens" className="text-sage-600 dark:text-sage-400 underline">CRAFFT screening on MindCheck Tools</Link> is based on the CRAFFT, a validated substance use screening tool designed specifically for adolescents aged 12&ndash;21. It is recommended by the American Academy of Pediatrics and is the most widely used adolescent substance use screening in clinical settings.
+              The <Link href="/drug-screening-teens" className="text-sage-600 dark:text-sage-400 underline">CRAFFT screening on MindCheck Tools</Link> is based on the CRAFFT, a validated substance use screening tool designed specifically for adolescents aged 12&ndash;21 (Knight et al., <em>Arch Pediatr Adolesc Med</em>, 2002). It is recommended by the <a href="https://brightfutures.aap.org" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">American Academy of Pediatrics (Bright Futures)</a> and is the most widely used adolescent substance use screening in clinical settings.
             </p>
             <p>
               CRAFFT stands for six key assessment areas:

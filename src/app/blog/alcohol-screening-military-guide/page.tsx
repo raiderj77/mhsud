@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/alcohol-screening-military-guide",
   title: "Alcohol Use in the Military: Culture, Risk, and Confidential Screening",
   description:
-    "Military binge drinking rates reach ~30%, driven by deployment stress, unit culture, and PTSD co-occurrence. Learn about confidential screening options and DOD policy changes.",
+    "More than one-third of active-duty service members report binge drinking (2018 DoD HRBS). Learn about PTSD co-occurrence, confidential screening options, and DOD policy changes.",
   keywords: [
     "military alcohol use",
     "alcohol screening military",
@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "Is alcohol use higher in the military?",
     answer:
-      "Yes. Department of Defense surveys consistently show approximately 30% of active-duty service members report binge drinking in the past month, compared to roughly 22% in the same-age civilian population. Rates are highest among junior enlisted personnel, combat arms specialties, and those recently returned from deployment.",
+      "Yes. The 2018 Department of Defense Health Related Behaviors Survey (HRBS) found that about one-third (34%) of active-duty service members report binge drinking in the past month, compared to roughly 22% in the general adult civilian population. Rates are highest among junior enlisted personnel, combat arms specialties, and those recently returned from deployment.",
   },
   {
     question: "Will I lose my security clearance if I seek help?",
@@ -48,14 +48,14 @@ const FAQ_DATA = [
   {
     question: "How does combat exposure relate to alcohol use?",
     answer:
-      "Combat exposure is one of the strongest predictors of problematic alcohol use in service members \u2014 those with combat exposure are 25\u201340% more likely to develop alcohol misuse. Over 50% of those with combat-related PTSD also meet criteria for alcohol use disorder. Alcohol temporarily suppresses hyperarousal and intrusive memories, creating a self-medication cycle that worsens both conditions.",
+      "Combat exposure is one of the strongest predictors of problematic alcohol use in service members. Among veterans seeking treatment for PTSD, roughly one-third to one-half also meet criteria for alcohol use disorder (VA National Center for PTSD; Norman et al., 2018, Psychol Addict Behav). Alcohol temporarily suppresses hyperarousal and intrusive memories, creating a self-medication cycle that worsens both conditions.",
   },
 ];
 
 export default function AlcoholScreeningMilitaryGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Alcohol Use in the Military: Culture, Risk, and Confidential Screening", description: "Military binge drinking rates reach ~30%. Learn about risk factors, confidential screening, and DOD policy changes.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Alcohol Use in the Military: Culture, Risk, and Confidential Screening", description: "More than one-third of active-duty service members report binge drinking (2018 DoD HRBS). Learn about risk factors, confidential screening, and DOD policy changes.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Alcohol Screening Military Guide", url: ARTICLE_URL }])) }} />
 
@@ -70,10 +70,10 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            Military and veteran alcohol screening typically uses the AUDIT-C, a three-item version of the AUDIT validated for primary care. A score of 4 or higher in men and 3 or higher in women indicates positive screening. The VA mandates annual screening for all enrolled veterans through this instrument.
+            Military and veteran alcohol screening typically uses the AUDIT-C, a three-item version of the AUDIT validated for primary care. A score of 4 or higher in men and 3 or higher in women indicates positive screening (Bush et al., 1998, <em>Arch Intern Med</em>). The VA mandates annual screening for all enrolled veterans through this instrument (VA/VHA).
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Alcohol has been intertwined with military culture for centuries &mdash; from rum rations in the Royal Navy to beer at the enlisted club after a training exercise. But the line between cultural tradition and harmful drinking patterns is thinner than most service members realize. With binge drinking rates roughly 30% among active-duty personnel and a strong link between combat exposure and alcohol misuse, understanding when drinking crosses from social to problematic is critical &mdash; and confidential screening options now make it possible to check in without risking your career.
+            Alcohol has been intertwined with military culture for centuries &mdash; from rum rations in the Royal Navy to beer at the enlisted club after a training exercise. But the line between cultural tradition and harmful drinking patterns is thinner than most service members realize. With binge drinking affecting more than one in three active-duty service members (2018 DoD Health Related Behaviors Survey) and a strong link between combat exposure and alcohol misuse, understanding when drinking crosses from social to problematic is critical &mdash; and confidential screening options now make it possible to check in without risking your career.
           </p>
         </header>
 
@@ -110,7 +110,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>How high are military drinking rates?</h2>
             <p>
-              Department of Defense Health Related Behaviors Survey data paints a clear picture. Approximately 30% of active-duty service members report binge drinking &mdash; defined as five or more drinks in a single session for men, four or more for women &mdash; within the past month. This exceeds comparable civilian rates of roughly 22% among adults of the same age.
+              The 2018 Department of Defense Health Related Behaviors Survey (HRBS) found that more than one-third (34%) of active-duty service members report binge drinking &mdash; defined as five or more drinks in a single session for men, four or more for women &mdash; within the past month. This exceeds the general adult civilian rate of roughly 22%.
             </p>
             <p>
               The rates are not uniform across the military. Risk factors for higher alcohol use include:
@@ -118,7 +118,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             <ul>
               <li><strong>Branch of service:</strong> The Marine Corps and Army report the highest rates of heavy drinking, followed by the Navy and Air Force</li>
               <li><strong>Rank:</strong> Junior enlisted personnel (E-1 to E-4) drink at significantly higher rates than officers or senior NCOs</li>
-              <li><strong>Combat exposure:</strong> Service members who have deployed to combat zones are 25&ndash;40% more likely to develop alcohol misuse than those who have not</li>
+              <li><strong>Combat exposure:</strong> Service members who have deployed to combat zones are significantly more likely to develop alcohol misuse &mdash; combat exposure is among the strongest predictors of problematic drinking in this population</li>
               <li><strong>Age:</strong> Younger service members (18&ndash;25) show the highest binge drinking rates, consistent with civilian trends but amplified by military culture</li>
               <li><strong>Gender:</strong> While men drink at higher overall rates, the gap narrows in military populations compared to civilian ones, and women service members face unique stigma barriers to seeking help</li>
             </ul>
@@ -132,7 +132,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               Several factors specific to military life elevate alcohol use risk beyond what the general population experiences:
             </p>
             <ul>
-              <li><strong>Combat exposure and PTSD:</strong> Over 50% of service members with combat-related PTSD also meet criteria for alcohol use disorder. Alcohol temporarily suppresses the hyperarousal, nightmares, and intrusive memories characteristic of PTSD &mdash; creating a self-medication cycle that is extraordinarily difficult to break without addressing both conditions simultaneously</li>
+              <li><strong>Combat exposure and PTSD:</strong> Combat-related PTSD and alcohol misuse frequently co-occur and reinforce each other. Alcohol temporarily suppresses the hyperarousal, nightmares, and intrusive memories characteristic of PTSD &mdash; creating a self-medication cycle that is extraordinarily difficult to break without addressing both conditions simultaneously</li>
               <li><strong>Deployment stress:</strong> Extended deployments involve prolonged separation from family, exposure to life-threatening situations, moral injury, boredom in between high-intensity operations, and loss of control over daily life. Alcohol often becomes the primary coping mechanism for these accumulated stressors</li>
               <li><strong>Transition stress:</strong> Leaving the military means losing structure, identity, mission, rank, and unit cohesion simultaneously. The transition to civilian life is consistently associated with increased alcohol use as veterans search for ways to fill the void and manage the disorientation</li>
               <li><strong>Geographic isolation:</strong> Many military installations are located in remote areas with limited recreational options. On-base clubs and off-base bars become the primary social venues, reinforcing drinking as the default leisure activity</li>
@@ -144,7 +144,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>The PTSD&ndash;alcohol connection in service members</h2>
             <p>
-              The co-occurrence of PTSD and alcohol misuse in military populations deserves special attention because it is so prevalent and so dangerous. Research consistently shows that more than 50% of veterans seeking treatment for PTSD also meet criteria for alcohol use disorder, and the two conditions reinforce each other.
+              The co-occurrence of PTSD and alcohol misuse in military populations deserves special attention because it is so prevalent and so dangerous. Among veterans seeking treatment for PTSD, research consistently finds that roughly one-third to one-half also meet criteria for alcohol use disorder (<a href="https://www.ptsd.va.gov/PTSD/understand/related/substance_misuse.asp" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">VA National Center for PTSD</a>; Norman et al., 2018, <em>Psychol Addict Behav</em>), and the two conditions reinforce each other.
             </p>
             <p>
               Alcohol temporarily dampens the hyperarousal and intrusive symptoms of PTSD &mdash; which is why it feels like it &quot;works.&quot; But alcohol disrupts REM sleep, worsens nightmares over time, impairs emotional processing, and prevents the brain from integrating traumatic memories. The result is a cycle where PTSD symptoms worsen during sober periods, driving more drinking, which further impairs recovery.

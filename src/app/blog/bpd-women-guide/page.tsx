@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Is BPD more common in women?",
     answer:
-      "Clinical data shows approximately 75% of BPD diagnoses go to women. However, community-based studies suggest BPD occurs at roughly equal rates across genders. The discrepancy likely reflects diagnostic bias: women are more likely to seek treatment for emotional distress, and clinicians may apply the BPD label more readily to women while attributing similar symptoms in men to other conditions.",
+      "Clinical data shows approximately 75% of BPD diagnoses go to women (DSM-5-TR, 2022). However, community-based studies suggest BPD occurs at roughly equal rates across genders (Grant et al., 2008). The discrepancy likely reflects diagnostic bias: women are more likely to seek treatment for emotional distress, and clinicians may apply the BPD label more readily to women while attributing similar symptoms in men to other conditions.",
   },
   {
     question: "Why are women more likely to be diagnosed with BPD?",
@@ -88,7 +88,7 @@ export default function BpdWomenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Approximately 75% of people who receive a borderline personality disorder (BPD) diagnosis are women. For decades, this statistic was taken at face value &mdash; BPD was considered a &quot;women&apos;s disorder.&quot; But community-based studies consistently show that BPD occurs at roughly equal rates across genders. The disparity is not in who has BPD, but in who gets identified, how symptoms are interpreted, and which diagnostic label clinicians apply. Understanding this gender bias is essential for women seeking accurate assessment and appropriate care.
+            Approximately 75% of people who receive a borderline personality disorder (BPD) diagnosis are women (American Psychiatric Association, DSM-5-TR, 2022). For decades, this statistic was taken at face value &mdash; BPD was considered a &quot;women&apos;s disorder.&quot; But community-based studies consistently show that BPD occurs at roughly equal rates across genders (Grant et al., 2008). The disparity is not in who has BPD, but in who gets identified, how symptoms are interpreted, and which diagnostic label clinicians apply. Understanding this gender bias is essential for women seeking accurate assessment and appropriate care.
           </p>
         </header>
 
@@ -130,7 +130,7 @@ export default function BpdWomenGuidePage() {
           <section>
             <h2>Trauma history and BPD in women</h2>
             <p>
-              Research consistently identifies high rates of childhood trauma among women with BPD. Studies report that 40&ndash;71% of women with BPD have histories of childhood sexual abuse, and rates of other forms of trauma (physical abuse, emotional abuse, neglect) are similarly elevated.
+              Research consistently identifies high rates of childhood trauma among people with BPD. In one large clinical sample, 91% of patients with BPD reported some form of childhood abuse and 92% reported childhood neglect (Zanarini et al., 1997). Reported rates of childhood sexual abuse specifically vary widely across individual studies.
             </p>
             <p>
               The relationship between trauma and BPD is complex. Trauma is neither necessary nor sufficient for BPD &mdash; not all women with BPD have trauma histories, and not all trauma survivors develop BPD. But for many women, BPD can be understood as a pattern of emotional and relational responses that developed in the context of environments that were unpredictable, invalidating, or unsafe.
@@ -146,11 +146,11 @@ export default function BpdWomenGuidePage() {
               BPD rarely occurs in isolation, and the rates of co-occurring conditions in women with BPD are strikingly high:
             </p>
             <ul>
-              <li><strong>Depression:</strong> 71&ndash;83% of women with BPD meet criteria for major depressive disorder at some point. Depression in BPD often has a distinctive quality &mdash; it tends to be reactive and tied to interpersonal events rather than the pervasive, situation-independent quality of standalone depression.</li>
-              <li><strong>Anxiety disorders:</strong> 74&ndash;90% of women with BPD experience significant anxiety, including generalized anxiety disorder, social anxiety, and panic disorder.</li>
-              <li><strong>Eating disorders:</strong> An estimated 25&ndash;50% of women with BPD have co-occurring eating disorders, most commonly bulimia nervosa. Both conditions involve impulsivity and difficulty with emotional regulation, and they can reinforce each other.</li>
-              <li><strong>PTSD:</strong> Given the high trauma rates, PTSD co-occurs with BPD in approximately 25&ndash;56% of women. Distinguishing between BPD and complex PTSD (C-PTSD) can be clinically challenging, as the conditions share features including emotional dysregulation, identity disturbance, and relationship difficulties.</li>
-              <li><strong>Substance use:</strong> Approximately 30&ndash;50% of women with BPD develop substance use concerns, often as a form of self-medication for emotional pain.</li>
+              <li><strong>Depression:</strong> Up to 83% of people with BPD meet criteria for major depressive disorder at some point (Zanarini et al., 1998; Shah &amp; Zanarini, 2018). Depression in BPD often has a distinctive quality &mdash; it tends to be reactive and tied to interpersonal events rather than the pervasive, situation-independent quality of standalone depression.</li>
+              <li><strong>Anxiety disorders:</strong> Roughly 74&ndash;88% of people with BPD experience significant anxiety, including generalized anxiety disorder, social anxiety, and panic disorder (Zanarini et al., 1998; Shah &amp; Zanarini, 2018).</li>
+              <li><strong>Eating disorders:</strong> A 2025 meta-analysis estimates that roughly 30% of people with BPD have a co-occurring eating disorder (Paudex et al., 2025). Both conditions involve impulsivity and difficulty with emotional regulation, and they can reinforce each other.</li>
+              <li><strong>PTSD:</strong> Given the high trauma rates, PTSD co-occurs with BPD in approximately 25&ndash;58% of patients in clinical samples (Pagura et al., 2010). Distinguishing between BPD and complex PTSD (C-PTSD) can be clinically challenging, as the conditions share features including emotional dysregulation, identity disturbance, and relationship difficulties.</li>
+              <li><strong>Substance use:</strong> Substance use disorders are among the most common co-occurring conditions: in a national epidemiological sample, 78% of people with BPD had a lifetime substance use disorder (Tomko et al., 2014).</li>
             </ul>
             <p>
               These high comorbidity rates mean that effective assessment and treatment must address the full clinical picture, not just a single condition. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link> and the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> can help identify co-occurring symptoms.
