@@ -132,6 +132,22 @@ export default function RootLayout({
                 'security_storage': 'granted',
                 'wait_for_update': 500
               });
+              // GPC override: runs before any analytics tag can initialize.
+              // Checks navigator.globalPrivacyControl (browser-native signal) AND the
+              // empire_gpc cookie set by middleware from the sec-gpc request header.
+              // Only overrides the signals that GPC requires; does not affect non-GPC visitors.
+              if (
+                navigator.globalPrivacyControl ||
+                document.cookie.indexOf('empire_gpc=1') !== -1
+              ) {
+                gtag('consent', 'update', {
+                  'ad_storage': 'denied',
+                  'ad_user_data': 'denied',
+                  'ad_personalization': 'denied',
+                  'analytics_storage': 'denied',
+                  'personalization_storage': 'denied',
+                });
+              }
             `,
           }}
         />
@@ -200,11 +216,16 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window,document,"clarity","script","vsqobt7va0");
+              if (
+                !navigator.globalPrivacyControl &&
+                document.cookie.indexOf('empire_gpc=1') === -1
+              ) {
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window,document,"clarity","script","vsqobt7va0");
+              }
             `,
           }}
         />
