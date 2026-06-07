@@ -112,7 +112,7 @@ export default function LonelinessSeniorsGuidePage() {
           <section>
             <h2>How serious is loneliness as a health risk?</h2>
             <p>
-              The health consequences of chronic loneliness are now well-documented and strikingly severe. Research published in leading medical journals associates prolonged social isolation and loneliness with:
+              The health consequences of chronic loneliness are now well-documented and strikingly severe. Research compiled in the U.S. Surgeon General&apos;s 2023 Advisory on social connection, drawing on meta-analyses by Valtorta et al. (2016) and Holt-Lunstad et al., associates prolonged social isolation and loneliness with:
             </p>
             <ul>
               <li><strong>29% increased risk of heart disease</strong> &mdash; chronic loneliness activates stress responses that elevate blood pressure, cortisol, and systemic inflammation</li>
