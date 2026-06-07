@@ -18,9 +18,9 @@ const FAQ_DATA = [
 
 export const metadata: Metadata = createMetadata({
   path: "/gad-7-score-interpretation",
-  title: "What Does My GAD-7 Score Mean? 0–21 Scale Explained",
+  title: "GAD-7 Score Chart: What Your 0-21 Result Means",
   description:
-    "Your GAD-7 score falls on a 0–21 scale across 4 bands — minimal through severe. Each band reviewed by a CADC-II counselor. Find out what to do next.",
+    "Your GAD-7 score falls on a 0-21 scale across 4 bands, minimal through severe. Learn what each range means and what to do next.",
 });
 
 export default function GAD7ScoreInterpretationPage() {
