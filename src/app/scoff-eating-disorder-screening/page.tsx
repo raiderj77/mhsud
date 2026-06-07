@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/scoff-eating-disorder-screening",
   title: "SCOFF Eating Disorder Screening",
   description:
-    "Take the free SCOFF eating disorder screening. 5 questions, instant results, clinically validated. Reviewed by a CADC-II counselor. Not a diagnosis.",
+    "Take the free SCOFF eating disorder screening. 5 questions, instant results, clinically validated. Not a diagnosis.",
   keywords: [
     "scoff", "eating disorder test", "eating disorder screening",
     "scoff questionnaire", "do i have an eating disorder", "eating disorder quiz",
