@@ -40,3 +40,6 @@ data_sources/config/
 data_sources/cache/
 content/drafts/
 content/review-required/
+
+# Claude Code local settings (auto-edited every session, should not be tracked)
+.claude/settings.local.json
