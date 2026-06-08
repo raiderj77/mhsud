@@ -143,7 +143,7 @@ export default function CaregiverBurnoutAssessmentPage() {
           </p>
           <p className="text-slate-600 dark:text-slate-300">
             This free assessment checks for emotional exhaustion, depersonalization, and
-            reduced personal accomplishment — the three core dimensions of burnout. Your
+            reduced personal accomplishment — the three core dimensions of burnout recognized by the <a href="https://www.nia.nih.gov/health/caregiving/caregiver-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a>. Your
             answers are scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>
@@ -256,11 +256,11 @@ export default function CaregiverBurnoutAssessmentPage() {
             </li>
             <li>
               <strong>Caregiver Action Network:</strong>{" "}
-              <strong>caregiveraction.org</strong> — education, peer support, and resources
+              <a href="https://www.caregiveraction.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">caregiveraction.org</a> — education, peer support, and resources
             </li>
             <li>
               <strong>ARCH National Respite Network:</strong>{" "}
-              <strong>archrespite.org</strong> — find respite care in your area
+              <a href="https://archrespite.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">archrespite.org</a> — find respite care in your area
             </li>
             <li>
               <strong>Eldercare Locator:</strong> <strong>1-800-677-1116</strong> — local services for older adults and their caregivers

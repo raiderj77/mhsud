@@ -86,7 +86,7 @@ export default function PHQ9GuidePage() {
           <section>
             <h2>What is the PHQ-9?</h2>
             <p>
-              The Patient Health Questionnaire-9 (PHQ-9) is a 9-item self-report questionnaire developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, with an educational grant from Pfizer Inc. It was designed as a brief, practical tool for detecting depressive symptoms in clinical settings — particularly primary care, where time is limited and mental health concerns often go unrecognized.
+              The Patient Health Questionnaire-9 (PHQ-9) is a 9-item self-report questionnaire developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, with an educational grant from Pfizer Inc. It was designed as a brief, practical tool for detecting depressive symptoms in clinical settings — particularly primary care, where time is limited and mental health concerns often go unrecognized. The instrument is <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">freely available in the public domain</a> at phqscreeners.com.
             </p>
             <p>
               The PHQ-9 was placed in the public domain by its authors, meaning anyone can use, reproduce, and distribute it without permission or licensing fees. This openness is one reason it has become the most widely used depression screener globally — it appears in research studies, clinical guidelines, employee health programs, and community health settings across dozens of countries.
@@ -134,7 +134,7 @@ export default function PHQ9GuidePage() {
               ))}
             </div>
             <p>
-              It&apos;s critical to understand that these ranges are research-derived guidelines — they are not diagnostic thresholds. A score of 10 does not mean you &quot;have depression,&quot; and a score of 4 does not mean you&apos;re fine. The score is one data point in a much larger clinical picture.
+              It&apos;s critical to understand that these ranges are research-derived guidelines — they are not diagnostic thresholds. A score of 10 does not mean you &quot;have depression,&quot; and a score of 4 does not mean you&apos;re fine. The score is one data point in a much larger clinical picture. The <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">original validation study (Kroenke et al., 2001)</a> reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff of 10, with subsequent meta-analyses broadly supporting these figures.
             </p>
           </section>
 
@@ -188,7 +188,7 @@ export default function PHQ9GuidePage() {
               For moderate scores and above, consider scheduling a conversation with a healthcare provider. You can share your score as a starting point — many providers appreciate having concrete information to work from. You might say something like: &quot;I took a depression screening and scored [X]. I&apos;d like to talk about how I&apos;ve been feeling.&quot;
             </p>
             <p>
-              Regardless of your score, if something feels wrong, trust your own experience. Screening tools are helpful, but they are never a substitute for your own self-knowledge or professional guidance.
+              Regardless of your score, if something feels wrong, trust your own experience. Screening tools are helpful, but they are never a substitute for your own self-knowledge or professional guidance. The <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive depression resources including treatment options and how to find professional support.
             </p>
           </section>
 
