@@ -52,6 +52,16 @@ const FAQ_DATA = [
     answer:
       "Yes. Many adults are evaluated and diagnosed with ADHD each year. The evaluation process typically involves a clinical interview, detailed symptom history, and sometimes standardized neuropsychological testing. Your primary care physician, a psychiatrist, or a psychologist experienced in adult ADHD can conduct the evaluation and discuss next steps.",
   },
+  {
+    question: "How accurate is the ASRS-v1.1 as an ADHD screening tool?",
+    answer:
+      "The ASRS-v1.1 has a sensitivity of 68.7% and a specificity of 99.5% at the standard 4-item positive threshold. This means it misses approximately 31% of adults with ADHD (false negatives) but rarely flags someone without ADHD as positive (false positives). The high specificity makes a positive screen clinically meaningful, while the lower sensitivity means a negative screen does not rule out ADHD — particularly for individuals with predominantly inattentive presentations.",
+  },
+  {
+    question: "What is the difference between inattentive and hyperactive ADHD in adults?",
+    answer:
+      "ADHD presents in three ways: predominantly inattentive, predominantly hyperactive-impulsive, and combined type. Adults with inattentive ADHD often struggle with sustained focus, organization, and follow-through, but may appear calm or quiet — making their symptoms easy to miss or attribute to anxiety or depression. Hyperactive-impulsive ADHD in adults typically presents as internal restlessness, impulsive decision-making, and difficulty waiting, rather than the visible physical hyperactivity seen in children. The ASRS screens for both dimensions, but a full evaluation is needed to determine presentation type.",
+  },
 ];
 
 export default function WhatDoesASRSScoreMeanPage() {
@@ -111,7 +121,7 @@ export default function WhatDoesASRSScoreMeanPage() {
               The <strong>Adult ADHD Self-Report Scale (ASRS-v1.1)</strong> was developed in conjunction with the World Health Organization (WHO) and the Workgroup on Adult ADHD, led by Dr. Ronald Kessler of Harvard Medical School. It was published in 2005 as a brief, validated screening tool for adult ADHD in primary care and research settings.
             </p>
             <p>
-              The ASRS consists of 6 questions drawn from the 18-symptom DSM-IV ADHD criteria. The 6 items were selected through item analysis as the strongest predictors of an ADHD diagnosis in adults (Kessler et al., 2005).
+              The ASRS consists of 6 questions drawn from the 18-symptom DSM-IV ADHD criteria. The 6 items were selected through item analysis as the strongest predictors of an ADHD diagnosis in adults (<a href="https://pubmed.ncbi.nlm.nih.gov/15832065/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Kessler et al., 2005</a>).
             </p>
             <p>
               Each question asks how often you have experienced a specific symptom over the past 6 months. Response options are: Never, Rarely, Sometimes, Often, Very Often.
@@ -146,7 +156,7 @@ export default function WhatDoesASRSScoreMeanPage() {
               A <strong>positive screen</strong> = 4 or more of the 6 questions rated in the shaded (positive) zone.
             </p>
             <p>
-              This scoring method was validated in a sample of 154 adults with DSM-IV ADHD diagnoses and 6,324 controls, producing a sensitivity of 68.7% and specificity of 99.5% at the 4-item threshold (Kessler et al., 2005).
+              This scoring method was validated in a sample of 154 adults with DSM-IV ADHD diagnoses and 6,324 controls, producing a sensitivity of 68.7% and specificity of 99.5% at the 4-item threshold (<a href="https://pubmed.ncbi.nlm.nih.gov/15832065/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Kessler et al., 2005</a>). The <a href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive ADHD information including evaluation processes and treatment options for adults.
             </p>
           </section>
 

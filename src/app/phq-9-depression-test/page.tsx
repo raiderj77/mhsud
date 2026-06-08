@@ -176,6 +176,65 @@ export default function PHQ9Page() {
         </div>
       </section>
 
+      {/* SSR Clinical Content — visible to all crawlers */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 space-y-6">
+        <section>
+          <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">What the PHQ-9 Measures</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
+            The PHQ-9 (Patient Health Questionnaire-9) was developed by Drs. Robert Spitzer, Janet Williams, and Kurt Kroenke and <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">released into the public domain</a> for unrestricted clinical and research use. Each of the nine questions corresponds to one DSM diagnostic criterion for major depressive disorder, asking how often you have experienced that symptom over the past two weeks.
+          </p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            The nine symptoms assessed are: depressed mood, loss of interest or pleasure, sleep disturbance, fatigue, appetite changes, feelings of worthlessness or guilt, difficulty concentrating, psychomotor changes, and thoughts of death or self-harm. The <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">original 2001 validation study</a> (Kroenke et al., <em>Journal of General Internal Medicine</em>) reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff score of 10.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">PHQ-9 Scoring Ranges</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
+            Total scores range from 0 to 27. Each item is scored 0 (not at all), 1 (several days), 2 (more than half the days), or 3 (nearly every day). The five severity ranges used in clinical practice are:
+          </p>
+          <div className="space-y-2">
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">0–4</span>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — few depressive symptoms; monitoring may be appropriate</span></div>
+            </div>
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">5–9</span>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — some symptoms; watchful waiting or lifestyle changes recommended</span></div>
+            </div>
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">10–14</span>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — clinically significant symptoms; treatment discussion recommended</span></div>
+            </div>
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">15–19</span>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderately severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — many symptoms at high frequency; active treatment typically needed</span></div>
+            </div>
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
+              <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">20–27</span>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — severe symptom burden; active treatment and close follow-up recommended</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">Question 9: Thoughts of Self-Harm</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            Question 9 asks about thoughts of being better off dead or of hurting yourself. Any positive response triggers additional clinical assessment for suicide risk. If you are experiencing thoughts of self-harm, please contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> (call or text <strong>988</strong>), text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or reach the <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">SAMHSA National Helpline</a> at 1-800-662-4357 (free, confidential, 24/7).
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">What Your Score Means and When to Seek Help</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
+            The PHQ-9 is a screening tool, not a diagnostic test. A score of 10 or higher is widely used as a clinical threshold to prompt further evaluation, but context always matters more than the number. Symptoms lasting two or more weeks, difficulty functioning at work or in relationships, or hopelessness at any score level are reasons to speak with a healthcare provider. The <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive depression information including treatment options and how to find professional support.
+          </p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            For a deeper explanation of how clinicians interpret PHQ-9 scores, what the instrument can and cannot tell you, and how to bring results to a healthcare appointment, see our <Link href="/blog/phq-9-guide" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 clinical guide</Link>.
+          </p>
+        </section>
+      </div>
+
 <PHQ9Client faqData={FAQ_DATA} />
 
       {/* Clinical References */}
