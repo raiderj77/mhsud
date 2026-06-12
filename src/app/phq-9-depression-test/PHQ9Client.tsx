@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -537,6 +538,13 @@ export function PHQ9Client({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          <TherapyCTA
+            show={
+              ["moderate", "mod-severe", "severe"].includes(range.key) &&
+              answers[8] === 0
+            }
+          />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
