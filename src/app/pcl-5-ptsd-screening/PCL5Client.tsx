@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -590,6 +591,8 @@ export function PCL5Client({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          <EmailCapture toolName="PCL-5" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

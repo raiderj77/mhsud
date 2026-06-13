@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -592,6 +593,8 @@ export function DASS21Client({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          <EmailCapture toolName="DASS-21" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
