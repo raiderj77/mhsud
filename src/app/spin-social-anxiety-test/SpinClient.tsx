@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -501,6 +502,8 @@ export function SpinClient({ faqData }: Props) {
             prompts={REFLECTION_PROMPTS["spin-social-anxiety-test"].prompts}
           />
         )}
+
+        <EmailCapture toolName="SPIN" />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
