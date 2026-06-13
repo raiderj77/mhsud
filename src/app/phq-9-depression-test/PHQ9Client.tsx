@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { TherapyCTA } from "@/components/TherapyCTA";
+import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -545,6 +546,8 @@ export function PHQ9Client({ faqData }: Props) {
               answers[8] === 0
             }
           />
+
+          <EmailCapture toolName="PHQ-9" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
