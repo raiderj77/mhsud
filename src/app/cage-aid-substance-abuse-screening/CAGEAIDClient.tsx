@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { EmailCapture } from "@/components/EmailCapture";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -481,6 +482,8 @@ export function CAGEAIDClient({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          <EmailCapture toolName="CAGE-AID" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

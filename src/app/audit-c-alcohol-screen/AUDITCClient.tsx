@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { EmailCapture } from "@/components/EmailCapture";
 
 
 interface Question {
@@ -358,6 +359,8 @@ export function AUDITCClient({ faqData }: Props) {
               prompts={REFLECTION_PROMPTS["audit-c-alcohol-screen"].prompts}
             />
           )}
+
+          <EmailCapture toolName="AUDIT-C" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

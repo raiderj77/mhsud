@@ -7,6 +7,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { EmailCapture } from "@/components/EmailCapture";
 
 
 /* ── Types ────────────────────────────────────────────── */
@@ -434,6 +435,8 @@ export function HALTClient({ faqData }: Props) {
 
             </>
           )}
+
+          <EmailCapture toolName="HALT" />
 
           <AdSlot position="halt-results" className="mt-6" />
         </div>
