@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -373,6 +374,8 @@ export function K6Client({ faqData }: Props) {
             prompts={REFLECTION_PROMPTS["k6-distress-scale"].prompts}
           />
         )}
+
+        <EmailCapture toolName="K6" />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -407,6 +408,8 @@ export function GAD7Client({ faqData }: Props) {
               prompts={REFLECTION_PROMPTS["gad-7-anxiety-test"].prompts}
             />
           )}
+
+          <EmailCapture toolName="GAD-7" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

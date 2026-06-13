@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { EmailCapture } from "@/components/EmailCapture";
 
 
 interface Question {
@@ -501,6 +502,8 @@ export function AUDITClient({ faqData }: Props) {
               prompts={REFLECTION_PROMPTS["audit-alcohol-test"].prompts}
             />
           )}
+
+          <EmailCapture toolName="AUDIT" />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

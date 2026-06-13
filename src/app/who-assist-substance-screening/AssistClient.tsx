@@ -7,6 +7,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { EmailCapture } from "@/components/EmailCapture";
 
 
 /* ================================================================== */
@@ -907,6 +908,8 @@ export function AssistClient({ faqData }: Props) {
             prompts={REFLECTION_PROMPTS["who-assist-substance-screening"].prompts}
           />
         )}
+
+        <EmailCapture toolName="ASSIST" />
 
         <AdSlot npa position="results-middle" />
 
