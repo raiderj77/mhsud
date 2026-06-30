@@ -96,8 +96,6 @@ export function PHQ9Client({ faqData }: Props) {
       if (resultsRef.current) {
         resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
     }, 100);
   }
 
@@ -258,7 +256,6 @@ export function PHQ9Client({ faqData }: Props) {
                             }`}
                           >
                             {opt.label}
-                            <span className="block text-[11px] text-neutral-500 dark:text-neutral-400 mt-0.5">({opt.value})</span>
                           </button>
                         ))}
                       </div>
@@ -561,6 +558,7 @@ export function PHQ9Client({ faqData }: Props) {
                 <div key={i} className="card overflow-hidden">
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === i ? null : i)}
+                    aria-expanded={expandedFaq === i}
                     className="w-full p-4 flex justify-between items-center text-left gap-3"
                   >
                     <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 flex-1">{faq.question}</span>
@@ -628,7 +626,6 @@ export function PHQ9Client({ faqData }: Props) {
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
               This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.
             </p>
-            <ToolReviewerBio />
           </footer>
         </div>
       )}
