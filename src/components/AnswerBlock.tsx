@@ -9,31 +9,31 @@ export default function AnswerBlock({ what, who, bottomLine, lastUpdated }: Answ
   return (
     <section
       aria-label="Quick Answer"
-      className="answer-block border-l-4 border-blue-600 bg-slate-50 dark:bg-slate-800/50 dark:border-blue-400 rounded-r-lg p-5 mb-8"
+      className="answer-block border-l-4 border-sage-600 bg-neutral-50 dark:bg-neutral-800/50 dark:border-sage-400 rounded-r-lg p-5 mb-8"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">
+          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
             What is this?
           </span>
-          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300 m-0">{what}</p>
+          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{what}</p>
         </div>
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">
+          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
             Who needs it?
           </span>
-          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300 m-0">{who}</p>
+          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{who}</p>
         </div>
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">
+          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
             Bottom line
           </span>
-          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300 m-0">{bottomLine}</p>
+          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{bottomLine}</p>
         </div>
       </div>
       <time
         dateTime={lastUpdated}
-        className="block text-right text-xs text-slate-400"
+        className="block text-right text-xs text-neutral-400"
       >
         Last updated:{' '}
         {new Date(lastUpdated).toLocaleDateString('en-US', {
