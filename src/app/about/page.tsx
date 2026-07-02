@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/about",
-  title: "About, Your Friendly Developer",
+  title: "About Jason Ramirez",
   description:
     "The real story behind MindCheck Tools. Built by Jason Ramirez, a self-taught developer and CADC-II counselor from Prunedale, California.",
 });
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            About Your Friendly Developer
+            About Jason Ramirez
           </h1>
         </header>
 
