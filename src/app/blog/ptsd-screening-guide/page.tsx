@@ -100,7 +100,7 @@ export default function PTSDScreeningGuidePage() {
               Post-traumatic stress disorder (PTSD) is a mental health condition that can develop after experiencing or witnessing a traumatic event. According to the DSM-5 (the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition), PTSD involves four clusters of symptoms that persist for more than one month and cause significant distress or impairment in daily functioning.
             </p>
             <p>
-              The DSM-5 criteria require exposure to actual or threatened death, serious injury, or sexual violence — either directly, by witnessing it, by learning about it happening to a close friend or family member, or through repeated professional exposure to traumatic details. PTSD is not a sign of weakness. It is a recognized clinical condition with well-established, evidence-based screening tools and treatments.
+              The DSM-5 criteria require exposure to actual or threatened death, serious injury, or sexual violence, either directly, by witnessing it, by learning about it happening to a close friend or family member, or through repeated professional exposure to traumatic details. PTSD is not a sign of weakness. It is a recognized clinical condition with well-established, evidence-based screening tools and treatments.
             </p>
             <p>
               The <a href="https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" target="_blank" rel="noopener noreferrer">National Institute of Mental Health (NIMH)</a> estimates that about 6% of the U.S. population will experience PTSD at some point in their lives. Women are approximately twice as likely as men to develop the condition.
@@ -113,12 +113,12 @@ export default function PTSDScreeningGuidePage() {
               Anyone who has experienced or witnessed a traumatic event can develop PTSD, but certain factors may increase risk:
             </p>
             <ul>
-              <li><strong>Direct exposure</strong> — experiencing the traumatic event firsthand</li>
-              <li><strong>Severity and duration</strong> — more intense or prolonged trauma increases risk</li>
-              <li><strong>Previous trauma</strong> — a history of prior traumatic experiences</li>
-              <li><strong>Lack of social support</strong> — limited support systems after the event</li>
-              <li><strong>Co-occurring conditions</strong> — existing anxiety, depression, or substance use</li>
-              <li><strong>Family history</strong> — a family history of mental health conditions</li>
+              <li><strong>Direct exposure</strong>, experiencing the traumatic event firsthand</li>
+              <li><strong>Severity and duration</strong>, more intense or prolonged trauma increases risk</li>
+              <li><strong>Previous trauma</strong>, a history of prior traumatic experiences</li>
+              <li><strong>Lack of social support</strong>, limited support systems after the event</li>
+              <li><strong>Co-occurring conditions</strong>, existing anxiety, depression, or substance use</li>
+              <li><strong>Family history</strong>, a family history of mental health conditions</li>
             </ul>
             <p>
               It is important to understand that experiencing trauma does not mean someone will develop PTSD. Most people who experience traumatic events do not develop the condition. Screening helps identify those whose symptoms may warrant further evaluation.
@@ -131,13 +131,13 @@ export default function PTSDScreeningGuidePage() {
               PTSD can result from many types of traumatic experiences. Some of the most commonly associated include:
             </p>
             <ul>
-              <li><strong>Combat exposure</strong> — military personnel and veterans who have experienced combat situations</li>
-              <li><strong>Sexual assault</strong> — one of the strongest predictors of PTSD, with high rates among survivors</li>
-              <li><strong>Serious accidents</strong> — motor vehicle crashes, workplace injuries, or other life-threatening accidents</li>
-              <li><strong>Natural disasters</strong> — earthquakes, hurricanes, floods, and other catastrophic events</li>
-              <li><strong>Childhood abuse</strong> — physical, sexual, or emotional abuse during childhood, which may also contribute to complex trauma responses</li>
-              <li><strong>Witnessing violence</strong> — seeing someone else harmed or killed, including domestic violence</li>
-              <li><strong>Medical trauma</strong> — life-threatening diagnoses, ICU stays, or traumatic medical procedures</li>
+              <li><strong>Combat exposure</strong>, military personnel and veterans who have experienced combat situations</li>
+              <li><strong>Sexual assault</strong>, one of the strongest predictors of PTSD, with high rates among survivors</li>
+              <li><strong>Serious accidents</strong>, motor vehicle crashes, workplace injuries, or other life-threatening accidents</li>
+              <li><strong>Natural disasters</strong>, earthquakes, hurricanes, floods, and other catastrophic events</li>
+              <li><strong>Childhood abuse</strong>, physical, sexual, or emotional abuse during childhood, which may also contribute to complex trauma responses</li>
+              <li><strong>Witnessing violence</strong>, seeing someone else harmed or killed, including domestic violence</li>
+              <li><strong>Medical trauma</strong>, life-threatening diagnoses, ICU stays, or traumatic medical procedures</li>
             </ul>
             <p>
               The type of trauma does not determine the validity of someone&apos;s experience. Any event that meets the DSM-5 criteria for a traumatic exposure can lead to PTSD symptoms.
@@ -149,13 +149,13 @@ export default function PTSDScreeningGuidePage() {
           <section>
             <h2>Normal stress response vs. PTSD</h2>
             <p>
-              After a traumatic event, it is normal to experience distressing reactions — difficulty sleeping, intrusive thoughts about what happened, heightened startle responses, and emotional numbness. For most people, these reactions gradually diminish over days to weeks as the brain processes the experience.
+              After a traumatic event, it is normal to experience distressing reactions, difficulty sleeping, intrusive thoughts about what happened, heightened startle responses, and emotional numbness. For most people, these reactions gradually diminish over days to weeks as the brain processes the experience.
             </p>
             <p>
               PTSD is distinguished from a normal stress response by its <strong>persistence</strong> and <strong>severity</strong>. When symptoms last longer than one month, do not improve on their own, and interfere with work, relationships, or daily functioning, they may indicate PTSD rather than a temporary stress reaction. This is the point at which screening becomes particularly important.
             </p>
             <p>
-              The <a href="https://www.ptsd.va.gov/" target="_blank" rel="noopener noreferrer">VA National Center for PTSD</a> notes that early identification — even before symptoms fully meet diagnostic criteria — can connect individuals with support that may prevent the condition from becoming chronic.
+              The <a href="https://www.ptsd.va.gov/" target="_blank" rel="noopener noreferrer">VA National Center for PTSD</a> notes that early identification, even before symptoms fully meet diagnostic criteria, can connect individuals with support that may prevent the condition from becoming chronic.
             </p>
           </section>
 
@@ -202,10 +202,10 @@ export default function PTSDScreeningGuidePage() {
               The Primary Care PTSD Screen for DSM-5 (PC-PTSD-5) is a 5-item screening tool designed for rapid use in primary care and other busy clinical settings. Developed by the VA, it asks five yes/no questions about key PTSD symptoms experienced in the past month.
             </p>
             <p>
-              A score of <strong>3 or higher</strong> (out of 5) is considered a positive screen, meaning further evaluation with a more comprehensive tool — such as the PCL-5 or a clinical interview — is recommended. The PC-PTSD-5 is not meant to assess severity; its purpose is to quickly identify individuals who may benefit from a deeper assessment.
+              A score of <strong>3 or higher</strong> (out of 5) is considered a positive screen, meaning further evaluation with a more comprehensive tool, such as the PCL-5 or a clinical interview, is recommended. The PC-PTSD-5 is not meant to assess severity; its purpose is to quickly identify individuals who may benefit from a deeper assessment.
             </p>
             <p>
-              The five questions cover nightmares, avoidance, hypervigilance, emotional numbness, and guilt — each representing a core symptom cluster. If you are unsure whether a full PCL-5 is appropriate, the PC-PTSD-5 is an efficient starting point.
+              The five questions cover nightmares, avoidance, hypervigilance, emotional numbness, and guilt, each representing a core symptom cluster. If you are unsure whether a full PCL-5 is appropriate, the PC-PTSD-5 is an efficient starting point.
             </p>
             <div className="mt-4">
               <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 font-semibold text-sm hover:underline">Take the PC-PTSD-5 Quick Screen &rarr;</Link>
@@ -233,7 +233,7 @@ export default function PTSDScreeningGuidePage() {
               ))}
             </div>
             <p>
-              To meet DSM-5 criteria for PTSD, an individual must have symptoms from each cluster lasting more than one month. However, you do not need to meet full diagnostic criteria for screening to be valuable — subclinical symptoms can still significantly affect quality of life.
+              To meet DSM-5 criteria for PTSD, an individual must have symptoms from each cluster lasting more than one month. However, you do not need to meet full diagnostic criteria for screening to be valuable, subclinical symptoms can still significantly affect quality of life.
             </p>
           </section>
 
@@ -243,12 +243,12 @@ export default function PTSDScreeningGuidePage() {
               PTSD has several evidence-based treatment approaches with strong research support. The three most widely recommended are:
             </p>
             <ul>
-              <li><strong>Cognitive Processing Therapy (CPT)</strong> — helps individuals identify and challenge unhelpful thoughts related to the trauma, typically delivered over 12 sessions</li>
-              <li><strong>Prolonged Exposure (PE)</strong> — involves gradually approaching trauma-related memories and situations in a safe, therapeutic context, reducing their power over time</li>
-              <li><strong>Eye Movement Desensitization and Reprocessing (EMDR)</strong> — uses bilateral stimulation (such as guided eye movements) while processing traumatic memories, helping the brain reprocess them more adaptively</li>
+              <li><strong>Cognitive Processing Therapy (CPT)</strong>, helps individuals identify and challenge unhelpful thoughts related to the trauma, typically delivered over 12 sessions</li>
+              <li><strong>Prolonged Exposure (PE)</strong>, involves gradually approaching trauma-related memories and situations in a safe, therapeutic context, reducing their power over time</li>
+              <li><strong>Eye Movement Desensitization and Reprocessing (EMDR)</strong>, uses bilateral stimulation (such as guided eye movements) while processing traumatic memories, helping the brain reprocess them more adaptively</li>
             </ul>
             <p>
-              Medications — particularly SSRIs like sertraline and paroxetine — are also FDA-approved for PTSD and may be used alone or in combination with therapy. The best treatment approach depends on individual circumstances, preferences, and clinical assessment.
+              Medications, particularly SSRIs like sertraline and paroxetine, are also FDA-approved for PTSD and may be used alone or in combination with therapy. The best treatment approach depends on individual circumstances, preferences, and clinical assessment.
             </p>
             <p>
               The key takeaway: effective treatments exist. A screening result is the first step toward accessing them.
@@ -261,7 +261,7 @@ export default function PTSDScreeningGuidePage() {
               Research consistently shows that early identification of PTSD symptoms leads to better outcomes. When PTSD goes unrecognized, it can become chronic and increasingly difficult to manage. Untreated PTSD is associated with higher rates of depression, substance use disorders, relationship difficulties, and physical health problems.
             </p>
             <p>
-              Screening does not commit you to anything. It provides information — information you can use to make informed decisions about whether to seek professional support. Many people find that simply understanding their symptoms through a validated framework reduces the confusion and self-blame that often accompany trauma.
+              Screening does not commit you to anything. It provides information, information you can use to make informed decisions about whether to seek professional support. Many people find that simply understanding their symptoms through a validated framework reduces the confusion and self-blame that often accompany trauma.
             </p>
           </section>
 
@@ -271,11 +271,11 @@ export default function PTSDScreeningGuidePage() {
               Despite the availability of effective screening tools and treatments, many people with PTSD symptoms do not seek help. Common barriers include:
             </p>
             <ul>
-              <li><strong>Stigma</strong> — concern about being judged or perceived as weak, particularly in military and first-responder communities</li>
-              <li><strong>Avoidance</strong> — the avoidance symptoms of PTSD itself can make it harder to seek help, as approaching the topic of trauma feels threatening</li>
-              <li><strong>Normalization</strong> — believing that symptoms are a normal part of life or that others have experienced worse</li>
-              <li><strong>Access</strong> — limited availability of mental health providers, cost of care, or transportation challenges</li>
-              <li><strong>Lack of awareness</strong> — not recognizing that symptoms may be connected to a past traumatic experience</li>
+              <li><strong>Stigma</strong>, concern about being judged or perceived as weak, particularly in military and first-responder communities</li>
+              <li><strong>Avoidance</strong>, the avoidance symptoms of PTSD itself can make it harder to seek help, as approaching the topic of trauma feels threatening</li>
+              <li><strong>Normalization</strong>, believing that symptoms are a normal part of life or that others have experienced worse</li>
+              <li><strong>Access</strong>, limited availability of mental health providers, cost of care, or transportation challenges</li>
+              <li><strong>Lack of awareness</strong>, not recognizing that symptoms may be connected to a past traumatic experience</li>
             </ul>
             <p>
               Self-administered screening tools can help overcome some of these barriers by providing a private, anonymous first step. Your answers are processed entirely in your browser and are never stored or transmitted.
@@ -296,9 +296,9 @@ export default function PTSDScreeningGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -316,7 +316,7 @@ export default function PTSDScreeningGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -27,9 +27,9 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   { question: "Can burnout cause physical symptoms?", answer: "Yes. Chronic workplace stress triggers sustained activation of the body\u2019s stress-response system, producing measurable physical effects. Common symptoms include persistent fatigue that sleep does not resolve, frequent headaches and muscle tension, gastrointestinal problems, weakened immune function, and changes in appetite or sleep patterns. Mention both physical and emotional symptoms to your healthcare provider." },
-  { question: "How is burnout different from depression?", answer: "The key distinction is context. Burnout is typically anchored to work \u2014 symptoms intensify during the workweek and may partially improve during extended time off. Depression is pervasive and affects how you feel about everything, not just your job. However, chronic unaddressed burnout can develop into clinical depression over time." },
+  { question: "How is burnout different from depression?", answer: "The key distinction is context. Burnout is typically anchored to work, symptoms intensify during the workweek and may partially improve during extended time off. Depression is pervasive and affects how you feel about everything, not just your job. However, chronic unaddressed burnout can develop into clinical depression over time." },
   { question: "Can you recover from burnout without quitting your job?", answer: "Yes, though it requires deliberate changes. Research supports setting firm boundaries around work hours, renegotiating workload expectations, taking real breaks, using available mental health resources like EAPs and therapy, and building recovery activities into your routine. Recovery is more feasible when your employer addresses systemic issues alongside individual coping." },
-  { question: "How long does it take to recover from burnout?", answer: "Recovery timelines vary depending on severity. Mild burnout may improve in a few weeks with boundary changes and rest. Moderate to severe burnout often takes several months, even with professional support and workplace changes. Full recovery involves rebuilding motivation, engagement, and professional competence \u2014 not just feeling less tired." },
+  { question: "How long does it take to recover from burnout?", answer: "Recovery timelines vary depending on severity. Mild burnout may improve in a few weeks with boundary changes and rest. Moderate to severe burnout often takes several months, even with professional support and workplace changes. Full recovery involves rebuilding motivation, engagement, and professional competence, not just feeling less tired." },
 ];
 
 export default function BurnoutSymptomsGuidePage() {
@@ -70,7 +70,7 @@ export default function BurnoutSymptomsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Burnout doesn&apos;t arrive all at once. It builds gradually &mdash; a slow erosion of energy, motivation, and purpose that many people don&apos;t recognize until they&apos;re deep in it. According to a 2023 Gallup survey, 77% of workers have experienced burnout at their current job. This guide explains what burnout actually is, what the warning signs look like, how it differs from depression, and what to do if you think you&apos;re heading in that direction.
+            Burnout doesn&apos;t arrive all at once. It builds gradually, a slow erosion of energy, motivation, and purpose that many people don&apos;t recognize until they&apos;re deep in it. According to a 2023 Gallup survey, 77% of workers have experienced burnout at their current job. This guide explains what burnout actually is, what the warning signs look like, how it differs from depression, and what to do if you think you&apos;re heading in that direction.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/burnout-assessment-tool" className="btn-primary text-sm">
@@ -86,13 +86,13 @@ export default function BurnoutSymptomsGuidePage() {
           <section>
             <h2>What is burnout? The WHO ICD-11 definition</h2>
             <p>
-              In 2019, the World Health Organization formally included burnout in the 11th Revision of the International Classification of Diseases (ICD-11). Importantly, burnout is classified as an &quot;occupational phenomenon&quot; &mdash; not a medical condition. The WHO defines it as a syndrome resulting from chronic workplace stress that has not been successfully managed.
+              In 2019, the World Health Organization formally included burnout in the 11th Revision of the International Classification of Diseases (ICD-11). Importantly, burnout is classified as an &quot;occupational phenomenon&quot;, not a medical condition. The WHO defines it as a syndrome resulting from chronic workplace stress that has not been successfully managed.
             </p>
             <p>
-              This classification matters because it frames burnout as context-specific. Unlike depression or anxiety disorders, burnout is explicitly tied to the work environment. It is not something that happens to you in isolation &mdash; it emerges from a mismatch between a person and their job. The WHO definition also means that burnout is not a formal medical or psychiatric diagnosis, which can make it harder to address through traditional healthcare channels.
+              This classification matters because it frames burnout as context-specific. Unlike depression or anxiety disorders, burnout is explicitly tied to the work environment. It is not something that happens to you in isolation, it emerges from a mismatch between a person and their job. The WHO definition also means that burnout is not a formal medical or psychiatric diagnosis, which can make it harder to address through traditional healthcare channels.
             </p>
             <p>
-              The ICD-11 description specifies three dimensions of burnout, which align closely with the Maslach Burnout Inventory (MBI) &mdash; the most widely used research instrument for measuring burnout, developed by Christina Maslach and Susan Jackson.
+              The ICD-11 description specifies three dimensions of burnout, which align closely with the Maslach Burnout Inventory (MBI), the most widely used research instrument for measuring burnout, developed by Christina Maslach and Susan Jackson.
             </p>
           </section>
 
@@ -102,10 +102,10 @@ export default function BurnoutSymptomsGuidePage() {
               Both the WHO and decades of research identify three core dimensions that define burnout. All three must be present for the experience to qualify as burnout rather than ordinary stress.
             </p>
             <p>
-              <strong>Emotional exhaustion</strong> is the most recognized dimension. It goes beyond feeling tired after a long day. Emotional exhaustion means feeling chronically drained &mdash; physically, emotionally, and cognitively &mdash; in a way that rest does not resolve. People experiencing emotional exhaustion often describe waking up already tired, even after adequate sleep. They feel depleted before the workday begins.
+              <strong>Emotional exhaustion</strong> is the most recognized dimension. It goes beyond feeling tired after a long day. Emotional exhaustion means feeling chronically drained, physically, emotionally, and cognitively, in a way that rest does not resolve. People experiencing emotional exhaustion often describe waking up already tired, even after adequate sleep. They feel depleted before the workday begins.
             </p>
             <p>
-              <strong>Depersonalization and cynicism</strong> refers to an increasing mental distance from your work, colleagues, or clients. You may notice yourself becoming cynical, sarcastic, or emotionally detached. Healthcare workers may begin referring to patients by their conditions rather than their names. Teachers may stop caring whether students learn. This dimension is the mind&apos;s way of protecting itself from further emotional depletion &mdash; but it comes at a significant cost to both the individual and those around them.
+              <strong>Depersonalization and cynicism</strong> refers to an increasing mental distance from your work, colleagues, or clients. You may notice yourself becoming cynical, sarcastic, or emotionally detached. Healthcare workers may begin referring to patients by their conditions rather than their names. Teachers may stop caring whether students learn. This dimension is the mind&apos;s way of protecting itself from further emotional depletion, but it comes at a significant cost to both the individual and those around them.
             </p>
             <p>
               <strong>Reduced personal accomplishment</strong> involves a declining sense of competence and effectiveness. Even when you are objectively performing well, burnout makes you feel like nothing you do matters or makes a difference. This dimension often creates a vicious cycle: feeling ineffective reduces motivation, which reduces effort, which produces poorer results, which confirms the feeling of ineffectiveness.
@@ -117,7 +117,7 @@ export default function BurnoutSymptomsGuidePage() {
           <section>
             <h2>Physical symptoms of burnout</h2>
             <p>
-              One reason burnout is hard to recognize is that people often attribute its physical symptoms to other causes. Chronic workplace stress produces measurable physiological effects through sustained activation of the hypothalamic-pituitary-adrenal (HPA) axis &mdash; the body&apos;s primary stress-response system.
+              One reason burnout is hard to recognize is that people often attribute its physical symptoms to other causes. Chronic workplace stress produces measurable physiological effects through sustained activation of the hypothalamic-pituitary-adrenal (HPA) axis, the body&apos;s primary stress-response system.
             </p>
             <p>
               <strong>Chronic fatigue</strong> is the hallmark physical symptom. Unlike ordinary tiredness, burnout-related fatigue persists regardless of how much sleep you get. Your body feels heavy. Simple tasks require disproportionate effort. Recovery time after work grows longer until there isn&apos;t enough evening or weekend to bounce back.
@@ -126,7 +126,7 @@ export default function BurnoutSymptomsGuidePage() {
               <strong>Sleep disruption</strong> is common, including difficulty falling asleep, staying asleep, or waking unrefreshed. Paradoxically, exhausted people with burnout often struggle with insomnia because their stress-response system remains activated even at rest.
             </p>
             <p>
-              <strong>Headaches and muscle tension</strong> &mdash; particularly in the neck, shoulders, and jaw &mdash; are frequently reported. <strong>Gastrointestinal issues</strong> including nausea, stomach pain, and changes in appetite are also common. <strong>Weakened immunity</strong> shows up as frequent colds, infections, or slow healing. Research has linked chronic occupational stress to elevated cortisol levels, systemic inflammation, and increased cardiovascular risk.
+              <strong>Headaches and muscle tension</strong>, particularly in the neck, shoulders, and jaw, are frequently reported. <strong>Gastrointestinal issues</strong> including nausea, stomach pain, and changes in appetite are also common. <strong>Weakened immunity</strong> shows up as frequent colds, infections, or slow healing. Research has linked chronic occupational stress to elevated cortisol levels, systemic inflammation, and increased cardiovascular risk.
             </p>
             <p>
               If you are experiencing persistent physical symptoms alongside work-related exhaustion, it is worth mentioning both to your healthcare provider. The connection between chronic stress and physical health is well-established.
@@ -136,16 +136,16 @@ export default function BurnoutSymptomsGuidePage() {
           <section>
             <h2>Emotional and behavioral warning signs</h2>
             <p>
-              The emotional symptoms of burnout extend well beyond feeling tired or frustrated. <strong>Detachment and cynicism</strong> may show up as dark humor about work, emotional numbness toward colleagues or clients, or a pervasive sense that nothing about your job matters. <strong>Feeling ineffective</strong> &mdash; questioning your competence, doubting your contributions, or feeling like an impostor &mdash; is a hallmark of the reduced accomplishment dimension.
+              The emotional symptoms of burnout extend well beyond feeling tired or frustrated. <strong>Detachment and cynicism</strong> may show up as dark humor about work, emotional numbness toward colleagues or clients, or a pervasive sense that nothing about your job matters. <strong>Feeling ineffective</strong>, questioning your competence, doubting your contributions, or feeling like an impostor, is a hallmark of the reduced accomplishment dimension.
             </p>
             <p>
-              <strong>Loss of motivation</strong> is common. Tasks that once engaged you now feel meaningless. You may dread Mondays with a visceral intensity. Irritability and a shortened temper often bleed into personal relationships &mdash; snapping at a partner or withdrawing from friends not because of anything they did, but because you have no emotional reserves left.
+              <strong>Loss of motivation</strong> is common. Tasks that once engaged you now feel meaningless. You may dread Mondays with a visceral intensity. Irritability and a shortened temper often bleed into personal relationships, snapping at a partner or withdrawing from friends not because of anything they did, but because you have no emotional reserves left.
             </p>
             <p>
-              Behaviorally, burnout tends to produce <strong>withdrawal</strong> &mdash; pulling back from social interaction, skipping meetings, avoiding collaboration. <strong>Reduced productivity</strong> follows, not from laziness but from genuine cognitive depletion. <strong>Neglecting responsibilities</strong> at work and home, increased use of alcohol or other substances to cope, and difficulty making even small decisions are all behavioral indicators that burnout may be progressing.
+              Behaviorally, burnout tends to produce <strong>withdrawal</strong>, pulling back from social interaction, skipping meetings, avoiding collaboration. <strong>Reduced productivity</strong> follows, not from laziness but from genuine cognitive depletion. <strong>Neglecting responsibilities</strong> at work and home, increased use of alcohol or other substances to cope, and difficulty making even small decisions are all behavioral indicators that burnout may be progressing.
             </p>
             <p>
-              If several of these patterns feel familiar, our free <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout self-assessment</Link> can help you reflect on where you stand &mdash; though it is a starting point for self-awareness, not a clinical evaluation.
+              If several of these patterns feel familiar, our free <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout self-assessment</Link> can help you reflect on where you stand, though it is a starting point for self-awareness, not a clinical evaluation.
             </p>
           </section>
 
@@ -154,10 +154,10 @@ export default function BurnoutSymptomsGuidePage() {
           <section>
             <h2>Burnout vs. depression: how to tell the difference</h2>
             <p>
-              Burnout and depression share many symptoms &mdash; fatigue, difficulty concentrating, loss of motivation, sleep disruption, and feelings of hopelessness. This overlap is one reason professional assessment matters, and why self-screening alone is never sufficient.
+              Burnout and depression share many symptoms, fatigue, difficulty concentrating, loss of motivation, sleep disruption, and feelings of hopelessness. This overlap is one reason professional assessment matters, and why self-screening alone is never sufficient.
             </p>
             <p>
-              The key distinction is scope. <strong>Burnout is context-specific</strong>: it is anchored to work and may partially improve during extended time off or when work conditions change. <strong>Depression is pervasive</strong> &mdash; it affects how you feel about everything, not just your job. A person with burnout may still enjoy hobbies, relationships, and activities outside work. A person with depression typically finds that pleasure and motivation diminish across all domains of life.
+              The key distinction is scope. <strong>Burnout is context-specific</strong>: it is anchored to work and may partially improve during extended time off or when work conditions change. <strong>Depression is pervasive</strong>, it affects how you feel about everything, not just your job. A person with burnout may still enjoy hobbies, relationships, and activities outside work. A person with depression typically finds that pleasure and motivation diminish across all domains of life.
             </p>
             <p>
               However, this distinction becomes less clear over time. Chronic, unaddressed burnout can develop into clinical depression. A 2021 meta-analysis published in <em>Annals of Medicine</em> found significant overlap between burnout and depressive symptoms, with prolonged burnout increasing the risk of developing major depressive disorder. At that point, the label matters less than getting professional support.
@@ -170,10 +170,10 @@ export default function BurnoutSymptomsGuidePage() {
           <section>
             <h2>Risk factors: who is most vulnerable?</h2>
             <p>
-              Burnout is not simply a matter of individual resilience or coping skills &mdash; it is fundamentally a problem of fit between a person and their work environment. Research by Maslach and Leiter identified six key areas of work-life mismatch that drive burnout:
+              Burnout is not simply a matter of individual resilience or coping skills, it is fundamentally a problem of fit between a person and their work environment. Research by Maslach and Leiter identified six key areas of work-life mismatch that drive burnout:
             </p>
             <p>
-              <strong>Workload</strong> &mdash; consistently too much work with too little time or too few resources. <strong>Lack of control</strong> &mdash; insufficient autonomy over how, when, or where you do your work. <strong>Insufficient reward</strong> &mdash; inadequate financial, social, or intrinsic recognition for effort. <strong>Breakdown of community</strong> &mdash; isolation, conflict, or lack of social support at work. <strong>Absence of fairness</strong> &mdash; inequity in workload, pay, promotions, or accountability. <strong>Value conflict</strong> &mdash; being required to do work that contradicts your personal values or professional ethics.
+              <strong>Workload</strong>, consistently too much work with too little time or too few resources. <strong>Lack of control</strong>, insufficient autonomy over how, when, or where you do your work. <strong>Insufficient reward</strong>, inadequate financial, social, or intrinsic recognition for effort. <strong>Breakdown of community</strong>, isolation, conflict, or lack of social support at work. <strong>Absence of fairness</strong>, inequity in workload, pay, promotions, or accountability. <strong>Value conflict</strong>, being required to do work that contradicts your personal values or professional ethics.
             </p>
             <p>
               Certain professions carry elevated risk. Healthcare workers, teachers, social workers, and first responders consistently show higher burnout rates due to high emotional demands combined with systemic under-resourcing. A 2022 Surgeon General advisory specifically identified healthcare worker burnout as a national crisis. But burnout can affect anyone in any field when these mismatches persist.
@@ -188,19 +188,19 @@ export default function BurnoutSymptomsGuidePage() {
               Recognizing burnout is the first step. Here are evidence-informed actions to consider:
             </p>
             <p>
-              <strong>Name it.</strong> Simply acknowledging that what you are experiencing may be burnout &mdash; rather than personal weakness or laziness &mdash; can reduce shame and open the door to constructive action. Our <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout assessment tool</Link> can help you structure that reflection.
+              <strong>Name it.</strong> Simply acknowledging that what you are experiencing may be burnout, rather than personal weakness or laziness, can reduce shame and open the door to constructive action. Our <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout assessment tool</Link> can help you structure that reflection.
             </p>
             <p>
-              <strong>Talk to someone.</strong> A therapist, counselor, or your primary care provider can help you determine whether you are dealing with burnout, depression, or both &mdash; and can work with you on a plan that accounts for your specific circumstances. Employee Assistance Programs (EAPs) often provide free, confidential sessions.
+              <strong>Talk to someone.</strong> A therapist, counselor, or your primary care provider can help you determine whether you are dealing with burnout, depression, or both, and can work with you on a plan that accounts for your specific circumstances. Employee Assistance Programs (EAPs) often provide free, confidential sessions.
             </p>
             <p>
-              <strong>Set boundaries.</strong> This does not mean doing less &mdash; it means being deliberate about when work ends. Stop checking email after hours. Take real lunch breaks. Use your vacation days. These are not luxuries; they are maintenance.
+              <strong>Set boundaries.</strong> This does not mean doing less, it means being deliberate about when work ends. Stop checking email after hours. Take real lunch breaks. Use your vacation days. These are not luxuries; they are maintenance.
             </p>
             <p>
               <strong>Address systemic issues where possible.</strong> Burnout is rarely solved by individual coping alone. If your workload is unsustainable, have a direct conversation with your manager. If the culture is toxic, document and escalate. Some situations can be improved from within; others require leaving. Both are valid.
             </p>
             <p>
-              <strong>Prioritize recovery activities.</strong> Exercise has strong evidence for reducing stress and improving mood. Social connection outside work, creative activities, and time in nature all support recovery. The key is that recovery requires activities that genuinely restore you &mdash; not passive scrolling or numbing out.
+              <strong>Prioritize recovery activities.</strong> Exercise has strong evidence for reducing stress and improving mood. Social connection outside work, creative activities, and time in nature all support recovery. The key is that recovery requires activities that genuinely restore you, not passive scrolling or numbing out.
             </p>
           </section>
 
@@ -208,7 +208,7 @@ export default function BurnoutSymptomsGuidePage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Burnout screening tools &mdash; including ours &mdash; are reflection aids, not diagnostic instruments. If you are experiencing persistent exhaustion, cynicism, or reduced effectiveness at work, please consult a qualified healthcare provider.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Burnout screening tools, including ours, are reflection aids, not diagnostic instruments. If you are experiencing persistent exhaustion, cynicism, or reduced effectiveness at work, please consult a qualified healthcare provider.
             </p>
           </div>
 
@@ -219,9 +219,9 @@ export default function BurnoutSymptomsGuidePage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -243,7 +243,7 @@ export default function BurnoutSymptomsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

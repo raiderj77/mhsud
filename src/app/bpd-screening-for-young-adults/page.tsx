@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/bpd-screening-for-young-adults`;
 
 export const metadata: Metadata = createMetadata({
   path: "/bpd-screening-for-young-adults",
-  title: "BPD Screening for Young Adults — Free MSI-BPD Test",
+  title: "BPD Screening for Young Adults, Free MSI-BPD Test",
   description:
     "Free borderline personality disorder screening for young adults using the MSI-BPD. Private, instant results. No signup.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "free bpd screening",
   ],
   openGraph: {
-    title: "BPD Screening for Young Adults — Free MSI-BPD Test",
+    title: "BPD Screening for Young Adults, Free MSI-BPD Test",
     description: "Free, private borderline personality disorder screening for young adults using the clinically validated MSI-BPD. Instant results, no sign-up.",
     url: TOOL_URL,
     type: "website",
@@ -32,7 +32,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is BPD just being emotional?",
-    answer: "No. BPD involves a specific, persistent pattern of instability in relationships, self-image, and emotions, combined with impulsivity. Everyone experiences strong emotions sometimes, but BPD is characterized by emotional responses that are more intense, longer-lasting, and harder to return from than what most people experience. The emotional pain is real and has a neurological basis — brain imaging studies show differences in the areas that regulate emotion in people with BPD. It is not a character flaw or a choice.",
+    answer: "No. BPD involves a specific, persistent pattern of instability in relationships, self-image, and emotions, combined with impulsivity. Everyone experiences strong emotions sometimes, but BPD is characterized by emotional responses that are more intense, longer-lasting, and harder to return from than what most people experience. The emotional pain is real and has a neurological basis, brain imaging studies show differences in the areas that regulate emotion in people with BPD. It is not a character flaw or a choice.",
   },
   {
     question: "How is BPD different from normal young adult struggles?",
@@ -40,7 +40,7 @@ const FAQ_DATA = [
   },
   {
     question: "What causes BPD in young people?",
-    answer: "BPD develops from a combination of factors, not a single cause. Genetic predisposition plays a role — BPD is approximately five times more common among first-degree biological relatives of those with the condition. Brain differences in the areas that regulate emotion and impulse control have been identified in research. Environmental factors matter too, including childhood adversity, trauma, neglect, and growing up in an emotionally invalidating environment. Most researchers describe it as a biologically sensitive temperament that interacts with environmental stressors. Understanding the causes is not about blame — it is about recognizing that BPD is a real condition with real, effective approaches for support.",
+    answer: "BPD develops from a combination of factors, not a single cause. Genetic predisposition plays a role, BPD is approximately five times more common among first-degree biological relatives of those with the condition. Brain differences in the areas that regulate emotion and impulse control have been identified in research. Environmental factors matter too, including childhood adversity, trauma, neglect, and growing up in an emotionally invalidating environment. Most researchers describe it as a biologically sensitive temperament that interacts with environmental stressors. Understanding the causes is not about blame, it is about recognizing that BPD is a real condition with real, effective approaches for support.",
   },
   {
     question: "What is DBT and does it work for young adults?",
@@ -56,7 +56,7 @@ export default function BpdScreeningForYoungAdultsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "BPD Screening for Young Adults — Free MSI-BPD Test",
+              name: "BPD Screening for Young Adults, Free MSI-BPD Test",
               description: "A free, private borderline personality disorder screening tool for young adults using the clinically validated MSI-BPD questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
@@ -103,11 +103,11 @@ export default function BpdScreeningForYoungAdultsPage() {
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
             If you&apos;re a young adult and your emotions feel bigger, faster, and harder to manage
-            than everyone else&apos;s — you&apos;re not imagining it. Maybe your relationships feel
+            than everyone else&apos;s, you&apos;re not imagining it. Maybe your relationships feel
             like they&apos;re always on the edge of falling apart. Maybe you go from feeling fine to
             completely overwhelmed in minutes. Maybe you&apos;re not sure who you really are underneath
             all the intensity. These experiences are real, they matter, and they deserve honest
-            exploration — not dismissal as &quot;just being young.&quot;
+            exploration, not dismissal as &quot;just being young.&quot;
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             Borderline personality disorder often first emerges in the late teens and early twenties,
@@ -115,7 +115,7 @@ export default function BpdScreeningForYoungAdultsPage() {
             who you are. This free, private screening uses the <strong>MSI-BPD</strong> (McLean
             Screening Instrument for Borderline Personality Disorder), a clinically validated tool
             designed to identify BPD patterns quickly and accurately. It is <strong>not a
-            diagnosis</strong> — it&apos;s a starting point for understanding yourself better. No one
+            diagnosis</strong>, it&apos;s a starting point for understanding yourself better. No one
             sees your results but you.
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function BpdScreeningForYoungAdultsPage() {
             Start the BPD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -144,9 +144,9 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 BPD symptoms typically first appear in adolescence or early adulthood, often during
                 major life transitions like starting college or gaining first independence. This is
-                when the emotional patterns become most visible — and when early support can make the
+                when the emotional patterns become most visible, and when early support can make the
                 biggest difference.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
@@ -154,9 +154,9 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 An estimated 1.4% of the adult U.S. population meets criteria for BPD, but rates are
                 higher in younger clinical populations. Many more experience significant borderline
-                traits without meeting full criteria — and they can still benefit from skills-based
+                traits without meeting full criteria, and they can still benefit from skills-based
                 support.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
@@ -165,8 +165,8 @@ export default function BpdScreeningForYoungAdultsPage() {
                 The emotional intensity and identity struggles of BPD overlap with normal adolescent
                 development, which frequently delays recognition and support. Young adults may spend
                 years believing they are simply &quot;too sensitive&quot; or &quot;too much&quot;
-                before learning there is a name for their experience — and effective help available.
-                <span className="text-slate-500 dark:text-slate-400"> — Journal of Personality Disorders</span>
+                before learning there is a name for their experience, and effective help available.
+                <span className="text-slate-500 dark:text-slate-400">, Journal of Personality Disorders</span>
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p>
                 Borderline personality disorder tends to emerge during late adolescence and early
                 adulthood for reasons that make developmental sense. This is the period when identity
-                formation is at its peak — you&apos;re separating from your family of origin,
+                formation is at its peak, you&apos;re separating from your family of origin,
                 building your own relationships, facing new academic and career pressures, and trying
                 to answer the fundamental question of who you are. For someone with a biological
                 predisposition to emotional sensitivity, these transitions can overwhelm the coping
@@ -206,11 +206,11 @@ export default function BpdScreeningForYoungAdultsPage() {
                 significant. In college, emotional dysregulation can make it difficult to maintain
                 consistent academic performance, navigate roommate conflicts, or manage the
                 unstructured time that university life requires. In relationships, the push-pull
-                pattern of BPD — desperately wanting closeness while fearing abandonment — can
+                pattern of BPD, desperately wanting closeness while fearing abandonment, can
                 create cycles of intensity that exhaust both partners. In early career settings,
                 difficulty with authority figures, sensitivity to perceived criticism, and identity
                 confusion about professional direction can make it hard to gain traction. These
-                struggles are not personal failures — they are the predictable effects of a
+                struggles are not personal failures, they are the predictable effects of a
                 condition that has not yet been identified and addressed.
               </p>
               <p>
@@ -219,7 +219,7 @@ export default function BpdScreeningForYoungAdultsPage() {
                 therapy (DBT) was developed specifically for BPD and teaches concrete skills for
                 managing intense emotions, tolerating distress, improving relationships, and staying
                 present. Research consistently shows that with appropriate support, the majority of
-                people with BPD experience significant improvement — many no longer meet diagnostic
+                people with BPD experience significant improvement, many no longer meet diagnostic
                 criteria after several years of consistent work. Early intervention means less time
                 spent struggling without understanding why, fewer accumulated consequences, and a
                 stronger foundation for the adult life you are building. Screening is not a
@@ -243,7 +243,7 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A borderline personality disorder screening adapted for young adults with age-appropriate context and resources." who="Young adults experiencing emotional instability, relationship difficulties, or identity confusion who want to screen for BPD." bottomLine="BPD is treatable, especially when identified early — share results with a mental health provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A borderline personality disorder screening adapted for young adults with age-appropriate context and resources." who="Young adults experiencing emotional instability, relationship difficulties, or identity confusion who want to screen for BPD." bottomLine="BPD is treatable, especially when identified early, share results with a mental health provider. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
@@ -288,7 +288,7 @@ export default function BpdScreeningForYoungAdultsPage() {
                 For at least two weeks, keep a simple log of your mood shifts, relationship conflicts,
                 and impulsive behaviors. Note what triggered each episode, how intense it was, and how
                 long it took to return to baseline. Patterns become clearer on paper than they are in
-                the moment — and this record will be valuable if you decide to talk to a professional.
+                the moment, and this record will be valuable if you decide to talk to a professional.
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
@@ -296,7 +296,7 @@ export default function BpdScreeningForYoungAdultsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Many college counseling centers can screen for BPD and provide referrals for further
                 assessment. If you are not in school, community mental health centers offer low-cost
-                assessments. You do not need to have a crisis to reach out — wanting to understand your
+                assessments. You do not need to have a crisis to reach out, wanting to understand your
                 emotional patterns better is reason enough.
               </p>
             </div>
@@ -304,8 +304,8 @@ export default function BpdScreeningForYoungAdultsPage() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Learn about DBT skills</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Even before a formal assessment, DBT skills can help with emotional regulation. The
-                four modules — mindfulness, distress tolerance, emotion regulation, and interpersonal
-                effectiveness — offer practical tools for managing intensity. Many free resources,
+                four modules, mindfulness, distress tolerance, emotion regulation, and interpersonal
+                effectiveness, offer practical tools for managing intensity. Many free resources,
                 workbooks, and online courses are available. Learning these skills is useful whether
                 or not you ultimately receive a BPD assessment.
               </p>
@@ -320,10 +320,10 @@ export default function BpdScreeningForYoungAdultsPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -331,7 +331,7 @@ export default function BpdScreeningForYoungAdultsPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess borderline personality disorder. Your responses are processed
             entirely in your browser and are never stored or transmitted. Always consult a qualified healthcare
             professional for medical advice.

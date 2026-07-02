@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/depression-test-for-teens",
   title: "Depression Test for Teens | Free PHQ-9 Screening",
   description:
-    "Free depression test designed for teens. Uses the clinically validated PHQ-9. Private, no sign-up, instant results. A starting point — not a diagnosis.",
+    "Free depression test designed for teens. Uses the clinically validated PHQ-9. Private, no sign-up, instant results. A starting point, not a diagnosis.",
   keywords: [
     "depression test for teens", "teen depression test", "teenage depression screening",
     "adolescent depression quiz", "depression quiz for teenagers", "am i depressed teen",
@@ -30,7 +30,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is this depression test appropriate for teenagers?",
-    answer: "Yes. The PHQ-9 is widely used with adolescents ages 12 and older in clinical settings. Research supports its validity as a depression screening tool for teens. However, it is a screening instrument — not a diagnosis. A qualified healthcare professional should evaluate any teen showing signs of depression.",
+    answer: "Yes. The PHQ-9 is widely used with adolescents ages 12 and older in clinical settings. Research supports its validity as a depression screening tool for teens. However, it is a screening instrument, not a diagnosis. A qualified healthcare professional should evaluate any teen showing signs of depression.",
   },
   {
     question: "How does depression in teens differ from adult depression?",
@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "Can a teen take this test on their own?",
-    answer: "Yes. This screening is designed to be self-administered. Teens can take it privately in their browser — no data is stored or transmitted. However, if results suggest moderate or higher depression, we strongly encourage involving a trusted adult or healthcare professional.",
+    answer: "Yes. This screening is designed to be self-administered. Teens can take it privately in their browser, no data is stored or transmitted. However, if results suggest moderate or higher depression, we strongly encourage involving a trusted adult or healthcare professional.",
   },
   {
     question: "Are there crisis resources specifically for teens?",
@@ -62,7 +62,7 @@ export default function DepressionTestForTeensPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Depression Test for Teens — PHQ-9 Screening",
+              name: "Depression Test for Teens, PHQ-9 Screening",
               description: "A free, private depression screening tool for teenagers using the clinically validated PHQ-9 questionnaire. Designed for adolescents ages 12 and older.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
@@ -93,7 +93,7 @@ export default function DepressionTestForTeensPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...medicalWebPageJsonLd({
-              name: "Depression Test for Teens — PHQ-9 Screening",
+              name: "Depression Test for Teens, PHQ-9 Screening",
               description: "A free, private depression screening tool for teenagers using the clinically validated PHQ-9 questionnaire. Designed for adolescents ages 12 and older.",
               url: TOOL_URL,
               lastReviewed: "2026-05-06",
@@ -122,7 +122,7 @@ export default function DepressionTestForTeensPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            Being a teenager is genuinely hard — and not in the way adults sometimes dismiss. The
+            Being a teenager is genuinely hard, and not in the way adults sometimes dismiss. The
             pressure of school, friendships that feel like everything, social media that never turns
             off, figuring out who you are while the world keeps demanding more. If you&apos;ve been
             feeling heavy, empty, or like nothing matters the way it used to, you&apos;re not being
@@ -131,7 +131,7 @@ export default function DepressionTestForTeensPage() {
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             If you&apos;re a parent reading this because you&apos;ve noticed changes in your
-            teen — more irritability, pulling away, dropping grades, sleeping all the time — trust
+            teen, more irritability, pulling away, dropping grades, sleeping all the time, trust
             that instinct. This free, private screening uses the PHQ-9, the same tool doctors use,
             to help you understand what&apos;s happening. It is <strong>not a diagnosis</strong>,
             but it can be the start of an important conversation.
@@ -147,7 +147,7 @@ export default function DepressionTestForTeensPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function DepressionTestForTeensPage() {
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">4.1 million</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 U.S. adolescents (ages 12–17) experienced at least one major depressive episode in 2023.
-                That&apos;s roughly <strong>1 in 6 teens</strong>. — <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH</a>
+                That&apos;s roughly <strong>1 in 6 teens</strong>., <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH</a>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
@@ -169,14 +169,14 @@ export default function DepressionTestForTeensPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Only about 40% of teens with major depression receive any treatment. The majority
                 go through it without professional support.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">2nd leading cause</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Suicide is the 2nd leading cause of death for young people ages 10–14 and 3rd for ages 15–24.
-                Early screening saves lives. — <a href="https://www.cdc.gov/suicide/facts/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">CDC</a>
+                Early screening saves lives., <a href="https://www.cdc.gov/suicide/facts/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">CDC</a>
               </p>
             </div>
           </div>
@@ -196,8 +196,8 @@ export default function DepressionTestForTeensPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>How it works:</strong> You&apos;ll answer 9 questions about how you&apos;ve been feeling over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day).</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 27. Higher scores suggest more significant symptoms. You&apos;ll see what your score means and what the clinical ranges are.</p>
-                <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis. A high score doesn&apos;t mean you definitely have depression — and a low score doesn&apos;t mean everything is fine if you&apos;re struggling. Either way, talking to someone you trust is always a good next step.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. We don&apos;t see your answers, store your data, or share anything with anyone — not your school, not your parents, not anyone.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis. A high score doesn&apos;t mean you definitely have depression, and a low score doesn&apos;t mean everything is fine if you&apos;re struggling. Either way, talking to someone you trust is always a good next step.</p>
+                <p><strong>Your privacy:</strong> Everything happens in your browser. We don&apos;t see your answers, store your data, or share anything with anyone, not your school, not your parents, not anyone.</p>
               </div>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function DepressionTestForTeensPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               In 2022, the U.S. Preventive Services Task Force (USPSTF) issued a Grade B recommendation
-              for depression screening in adolescents aged 12 to 18 — the same level of evidence that
+              for depression screening in adolescents aged 12 to 18, the same level of evidence that
               drives routine cholesterol or blood pressure screening in adults. The AAP and most major
               pediatric organizations echo this guidance. According to the{" "}
               <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
@@ -224,9 +224,8 @@ export default function DepressionTestForTeensPage() {
             <p>
               Depression in adolescents often looks different from what adults picture. Where adults
               commonly report persistent sadness or hopelessness, teens are more likely to show
-              irritability, anger, restlessness, or unexplained physical complaints. Academic decline
-              — dropping grades, missed assignments, withdrawal from previously enjoyed activities like
-              sports or art — is frequently the first signal parents notice. Sleep disturbance is nearly
+              irritability, anger, restlessness, or unexplained physical complaints. Academic decline, dropping grades, missed assignments, withdrawal from previously enjoyed activities like
+              sports or art, is frequently the first signal parents notice. Sleep disturbance is nearly
               universal, though it can manifest as sleeping far too much rather than too little. These
               variations matter because adults in a teen&apos;s life may misread the signs as attitude
               problems, laziness, or typical adolescent moodiness.
@@ -243,7 +242,7 @@ export default function DepressionTestForTeensPage() {
               <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
                 PHQscreeners.com
               </a>
-              . Scores in teens should always be interpreted with professional guidance — developmental
+              . Scores in teens should always be interpreted with professional guidance, developmental
               context, stressors, and co-occurring conditions can all shape what a score means.
             </p>
             <p>
@@ -253,7 +252,7 @@ export default function DepressionTestForTeensPage() {
               </a>{" "}
               as one of the leading causes of illness and disability among adolescents worldwide. Left
               untreated, adolescent depression carries significant risks: worsening severity, academic
-              failure, relationship breakdown, and — most critically — suicidal ideation and behavior.
+              failure, relationship breakdown, and, most critically, suicidal ideation and behavior.
             </p>
           </div>
         </div>
@@ -266,13 +265,12 @@ export default function DepressionTestForTeensPage() {
           <div className="space-y-3 text-slate-700 dark:text-slate-300 text-sm">
             <p>
               The PHQ-9&apos;s final question asks about thoughts of self-harm or suicide. This is not
-              optional — it is clinically non-negotiable for any teen screening. According to the{" "}
+              optional, it is clinically non-negotiable for any teen screening. According to the{" "}
               <a href="https://www.cdc.gov/suicide/facts/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
                 CDC
               </a>
               , suicide is the 2nd leading cause of death among people aged 10–14 and 3rd for ages
-              15–24. Any answer other than &quot;not at all&quot; on item 9 is a clinical priority —
-              independent of the total score.
+              15–24. Any answer other than &quot;not at all&quot; on item 9 is a clinical priority, independent of the total score.
             </p>
             <p>
               If you answered item 9 with anything other than &quot;not at all,&quot; please reach out
@@ -306,7 +304,7 @@ export default function DepressionTestForTeensPage() {
         <AnswerBlock
           what="A PHQ-A-based depression screening adapted for adolescents with age-appropriate language and teen-specific resources."
           who="Teens or parents of teens who want to check whether depressive symptoms warrant professional evaluation."
-          bottomLine="Teen depression is common and treatable — early screening can prevent years of suffering. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Teen depression is common and treatable, early screening can prevent years of suffering. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -394,10 +392,10 @@ export default function DepressionTestForTeensPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -405,7 +403,7 @@ export default function DepressionTestForTeensPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose depression. Your responses are processed entirely in your
             browser and are never stored or transmitted. Always consult a qualified healthcare professional
             for medical advice.

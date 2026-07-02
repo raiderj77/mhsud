@@ -195,7 +195,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "Attachment Style Quiz (ECR-R) \u2014 Free & Private",
+        title: "Attachment Style Quiz (ECR-R), Free & Private",
         text: "Take a free, private attachment style quiz based on the ECR-R. Your answers never leave your browser.",
         url,
       };
@@ -208,7 +208,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
       return;
     }
 
-    const summary = `Attachment Style Quiz (ECR-R) Results\nStyle: ${style.label}\nAnxiety: ${anxietyMean.toFixed(2)}/7 \u2014 Avoidance: ${avoidanceMean.toFixed(2)}/7\n\nThis is a self-reflection tool, not a diagnosis. Take the quiz: ${url}`;
+    const summary = `Attachment Style Quiz (ECR-R) Results\nStyle: ${style.label}\nAnxiety: ${anxietyMean.toFixed(2)}/7, Avoidance: ${avoidanceMean.toFixed(2)}/7\n\nThis is a self-reflection tool, not a diagnosis. Take the quiz: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Attachment Style Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -426,9 +426,9 @@ export function AttachmentStyleClient({ faqData }: Props) {
                     />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">
-                    <span>1 \u2014 Low</span>
+                    <span>1, Low</span>
                     <span className="text-[10px]">\u25BC 3.5 cutoff</span>
-                    <span>7 \u2014 High</span>
+                    <span>7, High</span>
                   </div>
                 </div>
                 <div>
@@ -445,9 +445,9 @@ export function AttachmentStyleClient({ faqData }: Props) {
                     />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">
-                    <span>1 \u2014 Low</span>
+                    <span>1, Low</span>
                     <span className="text-[10px]">\u25BC 3.5 cutoff</span>
-                    <span>7 \u2014 High</span>
+                    <span>7, High</span>
                   </div>
                 </div>
               </div>
@@ -462,7 +462,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
                 </div>
                 <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
                   <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
-                    <strong>Important reminder:</strong> Attachment styles are patterns, not fixed traits. They can shift over time through new experiences and personal growth. This tool is for self-reflection and education only \u2014 it is not a clinical assessment.
+                    <strong>Important reminder:</strong> Attachment styles are patterns, not fixed traits. They can shift over time through new experiences and personal growth. This tool is for self-reflection and education only, it is not a clinical assessment.
                   </p>
                 </div>
               </div>
@@ -470,7 +470,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>ECR-R Attachment Style Quiz from mindchecktools.com \u2014 {new Date().toLocaleDateString()}</p>
+              <p>ECR-R Attachment Style Quiz from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a self-reflection tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -528,13 +528,13 @@ export function AttachmentStyleClient({ faqData }: Props) {
             toolUrl="https://mindchecktools.com/attachment-style-quiz"
             score={Number(anxietyMean.toFixed(2))}
             severityLabel={style.label}
-            scoreRange={`Anxiety: ${anxietyMean.toFixed(2)}/7 \u2014 Avoidance: ${avoidanceMean.toFixed(2)}/7`}
+            scoreRange={`Anxiety: ${anxietyMean.toFixed(2)}/7, Avoidance: ${avoidanceMean.toFixed(2)}/7`}
             interpretation={style.description}
             suggestion={style.suggestion}
             reflectionPrompts={REFLECTION_PROMPTS["attachment-style-quiz"]?.prompts ?? []}
             responses={QUESTIONS.map((q, i) => ({
               question: q,
-              answer: `${answers[i]} \u2014 ${OPTIONS[(answers[i] ?? 1) - 1]?.label}${REVERSE_ITEMS.has(i) ? " (R)" : ""}`,
+              answer: `${answers[i]}, ${OPTIONS[(answers[i] ?? 1) - 1]?.label}${REVERSE_ITEMS.has(i) ? " (R)" : ""}`,
             }))}
           />
 
@@ -594,9 +594,9 @@ export function AttachmentStyleClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -657,7 +657,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
                   Brennan, K. A., Clark, C. L., &amp; Shaver, P. R. (1998). Self-report measurement of adult attachment: An integrative overview. In J. A. Simpson &amp; W. S. Rholes (Eds.), <em>Attachment theory and close relationships</em> (pp. 46\u201376). Guilford Press.
                 </li>
                 <li>
-                  Fraley, R. C. (2012). Information on the Experiences in Close Relationships\u2014Revised (ECR-R).{" "}
+                  Fraley, R. C. (2012). Information on the Experiences in Close Relationships, Revised (ECR-R).{" "}
                   <a href="https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">labs.psychology.illinois.edu</a>
                 </li>
               </ul>

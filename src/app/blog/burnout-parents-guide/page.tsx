@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "How is parental burnout different from regular parenting stress?",
     answer:
-      "Regular parenting stress is temporary and situation-specific \u2014 a difficult week or sleep regression. Parental burnout is persistent exhaustion, emotional numbness toward your children, and a feeling that you have lost yourself as a parent. The key distinction is duration and the presence of emotional distancing: burned-out parents feel they are running on empty with no recovery in sight.",
+      "Regular parenting stress is temporary and situation-specific, a difficult week or sleep regression. Parental burnout is persistent exhaustion, emotional numbness toward your children, and a feeling that you have lost yourself as a parent. The key distinction is duration and the presence of emotional distancing: burned-out parents feel they are running on empty with no recovery in sight.",
   },
   {
     question: "Does parental burnout mean I'm a bad parent?",
@@ -88,7 +88,7 @@ export default function BurnoutParentsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Most parents feel overwhelmed sometimes. But for an estimated 5&ndash;20% of parents, the demands of parenting become so chronically exhausting that they cross into something more serious: parental burnout. This is not the same as having a hard week or feeling tired after a sleepless night. Parental burnout is a distinct psychological syndrome &mdash; identified and validated by researchers Roskam and Mikolajczak in 2018 &mdash; that involves persistent exhaustion, emotional distancing from your children, and a loss of confidence in your role as a parent. If you are feeling this way, you are not a bad parent. You are a parent whose resources have been depleted beyond what is sustainable.
+            Most parents feel overwhelmed sometimes. But for an estimated 5&ndash;20% of parents, the demands of parenting become so chronically exhausting that they cross into something more serious: parental burnout. This is not the same as having a hard week or feeling tired after a sleepless night. Parental burnout is a distinct psychological syndrome, identified and validated by researchers Roskam and Mikolajczak in 2018, that involves persistent exhaustion, emotional distancing from your children, and a loss of confidence in your role as a parent. If you are feeling this way, you are not a bad parent. You are a parent whose resources have been depleted beyond what is sustainable.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function BurnoutParentsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ export default function BurnoutParentsGuidePage() {
             <ul>
               <li><strong>Exhaustion in the parenting role:</strong> A deep, pervasive fatigue connected to being a parent. Not just physical tiredness, but emotional and cognitive depletion that makes even routine parenting tasks feel overwhelming</li>
               <li><strong>Emotional distancing from children:</strong> A protective withdrawal where you go through the motions of parenting without feeling emotionally present. You may notice that you interact with your children on autopilot or feel numb when they need emotional connection</li>
-              <li><strong>Loss of parenting efficacy:</strong> A sense that you are no longer a good parent &mdash; that you have lost the ability to do the job well. This contrasts sharply with the parent you used to be or the parent you want to be</li>
+              <li><strong>Loss of parenting efficacy:</strong> A sense that you are no longer a good parent, that you have lost the ability to do the job well. This contrasts sharply with the parent you used to be or the parent you want to be</li>
             </ul>
             <p>
               These three dimensions parallel the Maslach model of occupational burnout (exhaustion, depersonalization, reduced accomplishment), but they are specific to the parenting context.
@@ -137,14 +137,14 @@ export default function BurnoutParentsGuidePage() {
               <li><strong>Children with special needs:</strong> Parents of children with disabilities, chronic illness, behavioral challenges, or neurodevelopmental conditions face additional demands that increase burnout vulnerability</li>
               <li><strong>Single parenting:</strong> Carrying the full weight of parenting responsibilities without a partner to share the load amplifies every other risk factor</li>
               <li><strong>Financial stress:</strong> Money stress adds a constant layer of anxiety to every parenting decision and limits access to support resources like childcare, therapy, and respite</li>
-              <li><strong>Mental load:</strong> The invisible cognitive labor of tracking appointments, managing schedules, anticipating needs, and keeping the household running falls disproportionately on one parent &mdash; usually mothers. The <Link href="/mental-load-calculator" className="text-sage-600 dark:text-sage-400 underline">mental load calculator</Link> can help you understand this invisible burden</li>
+              <li><strong>Mental load:</strong> The invisible cognitive labor of tracking appointments, managing schedules, anticipating needs, and keeping the household running falls disproportionately on one parent, usually mothers. The <Link href="/mental-load-calculator" className="text-sage-600 dark:text-sage-400 underline">mental load calculator</Link> can help you understand this invisible burden</li>
             </ul>
           </section>
 
           <section>
             <h2>How parental burnout differs from depression</h2>
             <p>
-              Parental burnout and depression share some symptoms &mdash; fatigue, emotional numbness, withdrawal &mdash; but they are not the same thing. Parental burnout is context-specific: the exhaustion and detachment are connected to the parenting role. A burned-out parent may function well at work and enjoy hobbies but feel depleted the moment they walk through the door at home.
+              Parental burnout and depression share some symptoms, fatigue, emotional numbness, withdrawal, but they are not the same thing. Parental burnout is context-specific: the exhaustion and detachment are connected to the parenting role. A burned-out parent may function well at work and enjoy hobbies but feel depleted the moment they walk through the door at home.
             </p>
             <p>
               Depression, by contrast, tends to affect all areas of life. Depressed parents may lose interest in work, relationships, and activities across the board, not just parenting.
@@ -160,7 +160,7 @@ export default function BurnoutParentsGuidePage() {
             <h2>Signs that you may be experiencing parental burnout</h2>
             <p>Common indicators include:</p>
             <ul>
-              <li>Feeling like you have nothing left to give your children by the end of the day &mdash; or by midmorning</li>
+              <li>Feeling like you have nothing left to give your children by the end of the day, or by midmorning</li>
               <li>Going through the motions of parenting without feeling connected</li>
               <li>Snapping at your children over small things and then feeling guilty</li>
               <li>Fantasizing about escaping your life or wishing you had not become a parent</li>
@@ -177,7 +177,7 @@ export default function BurnoutParentsGuidePage() {
             <ul>
               <li><strong>Lower the bar:</strong> Perfectionism is one of the strongest drivers of parental burnout. Good enough parenting is genuinely good enough. Your children need a present parent more than a perfect one</li>
               <li><strong>Redistribute the mental load:</strong> If you have a co-parent, explicitly name and divide the invisible labor. Use shared calendars, lists, and task ownership rather than defaulting to one person managing everything</li>
-              <li><strong>Build micro-breaks into your day:</strong> Even five minutes of solitude &mdash; a locked bathroom door, a walk to the mailbox, noise-canceling headphones during naptime &mdash; provides necessary recovery</li>
+              <li><strong>Build micro-breaks into your day:</strong> Even five minutes of solitude, a locked bathroom door, a walk to the mailbox, noise-canceling headphones during naptime, provides necessary recovery</li>
               <li><strong>Accept help without guilt:</strong> Let grandparents babysit. Accept the neighbor&apos;s offer to watch the kids. Use screen time when you need a break. These are not failures</li>
               <li><strong>Connect with other parents:</strong> Honest conversation with parents who understand can reduce the isolation that fuels burnout. Avoid social media comparisons that make things worse</li>
               <li><strong>Seek therapy:</strong> A therapist can help you identify which specific factors are driving your burnout and develop targeted strategies. Look for someone experienced with parental stress, family systems, or burnout</li>
@@ -219,7 +219,7 @@ export default function BurnoutParentsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

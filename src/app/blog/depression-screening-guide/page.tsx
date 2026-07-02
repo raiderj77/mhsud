@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/depression-screening-guide",
   title: "Depression Screening Guide: PHQ-9 & Next Steps",
   description:
-    "Complete depression screening guide — how the PHQ-9 works, USPSTF recommendations, and evidence-based next steps. Free resource.",
+    "Complete depression screening guide, how the PHQ-9 works, USPSTF recommendations, and evidence-based next steps. Free resource.",
   keywords: [
     "depression screening", "PHQ-9 assessment", "USPSTF depression guidelines", "clinical depression",
     "mental health screening", "depression symptoms", "suicide prevention resources", "mental health assessment",
@@ -91,7 +91,7 @@ export default function DepressionScreeningGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Depression touches roughly 21 million American adults each year, yet diagnosis often comes years after symptoms begin. This guide explores depression screening through a clinical lens—explaining how screening tools function, what results might suggest, and practical steps toward improved mental health based on current evidence.
+            Depression touches roughly 21 million American adults each year, yet diagnosis often comes years after symptoms begin. This guide explores depression screening through a clinical lens, explaining how screening tools function, what results might suggest, and practical steps toward improved mental health based on current evidence.
           </p>
           <div className="mt-6">
             <Link href="/phq-9-depression-test" className="btn-primary text-sm">
@@ -104,7 +104,7 @@ export default function DepressionScreeningGuidePage() {
           <section>
             <h2>Understanding Depression: More Than Just Sadness</h2>
             <p>
-              Depression touches lives in profound ways, affecting roughly <strong>280 million people worldwide</strong> according to World Health Organization estimates. In the United States alone, <strong>major depressive disorder impacts about 21 million adults each year</strong>, making it one of our most common mental health conditions. Yet despite its prevalence, depression often remains hidden—only about <strong>one in three people who need treatment actually receive it</strong>.
+              Depression touches lives in profound ways, affecting roughly <strong>280 million people worldwide</strong> according to World Health Organization estimates. In the United States alone, <strong>major depressive disorder impacts about 21 million adults each year</strong>, making it one of our most common mental health conditions. Yet despite its prevalence, depression often remains hidden, only about <strong>one in three people who need treatment actually receive it</strong>.
             </p>
             
             <h3>Clinical Depression vs. Normal Sadness</h3>
@@ -136,7 +136,7 @@ export default function DepressionScreeningGuidePage() {
             
             <h3>The Science Behind Depression</h3>
             <p>
-              Depression isn&apos;t just &quot;feeling sad&quot;—it involves tangible biological changes:
+              Depression isn&apos;t just &quot;feeling sad&quot;, it involves tangible biological changes:
             </p>
             <ul>
               <li><strong>Chemical shifts</strong> in neurotransmitters like serotonin and dopamine</li>
@@ -417,7 +417,7 @@ export default function DepressionScreeningGuidePage() {
           <section className="p-6 card bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
             <h3 className="text-amber-800 dark:text-amber-400 font-semibold mb-3">Clinical Disclaimer</h3>
             <p className="text-sm text-amber-700 dark:text-amber-300">
-              <strong>Important:</strong> This article provides educational information about depression screening and is not a substitute for professional medical advice, diagnosis, or treatment. Depression screening tools like the PHQ-9 are screening instruments only—they cannot provide a diagnosis. Only qualified healthcare professionals can diagnose depression and recommend appropriate treatment.
+              <strong>Important:</strong> This article provides educational information about depression screening and is not a substitute for professional medical advice, diagnosis, or treatment. Depression screening tools like the PHQ-9 are screening instruments only, they cannot provide a diagnosis. Only qualified healthcare professionals can diagnose depression and recommend appropriate treatment.
             </p>
             <div className="mt-4 space-y-2">
               <p className="text-sm text-amber-700 dark:text-amber-300">
@@ -435,7 +435,7 @@ export default function DepressionScreeningGuidePage() {
             </p>
           </section>
 
-          {/* Author Bio — standardized component for E-E-A-T consistency */}
+          {/* Author Bio, standardized component for E-E-A-T consistency */}
           <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
   <div className="flex gap-4 items-start">
     <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">
@@ -443,7 +443,7 @@ export default function DepressionScreeningGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -127,7 +127,7 @@ const TIERS: Tier[] = [
     borderLight: "border-red-200",
     borderDark: "dark:border-red-800",
     message:
-      "Your score suggests extremely severe social anxiety. Social situations are likely causing intense distress, and avoidance may be substantially limiting your life. Social anxiety disorder at this severity is treatable — many people experience significant improvement with evidence-based approaches like cognitive-behavioral therapy (CBT), exposure therapy, and/or medication. Please reach out to a mental health professional. The crisis resources listed below are also available if you need immediate support.",
+      "Your score suggests extremely severe social anxiety. Social situations are likely causing intense distress, and avoidance may be substantially limiting your life. Social anxiety disorder at this severity is treatable, many people experience significant improvement with evidence-based approaches like cognitive-behavioral therapy (CBT), exposure therapy, and/or medication. Please reach out to a mental health professional. The crisis resources listed below are also available if you need immediate support.",
   },
 ];
 
@@ -156,7 +156,7 @@ const SUBSCALE_META: Record<Subscale, {
     borderLight: "border-violet-200",
     borderDark: "dark:border-violet-800",
     guidance:
-      "Fear subscale items measure anxiety triggered by social situations — being judged, criticized, or the center of attention. High scores here suggest that the emotional experience of social anxiety is a primary concern. Cognitive-behavioral approaches that target anxious thoughts about social evaluation can be especially helpful.",
+      "Fear subscale items measure anxiety triggered by social situations, being judged, criticized, or the center of attention. High scores here suggest that the emotional experience of social anxiety is a primary concern. Cognitive-behavioral approaches that target anxious thoughts about social evaluation can be especially helpful.",
   },
   avoidance: {
     label: "Avoidance",
@@ -170,7 +170,7 @@ const SUBSCALE_META: Record<Subscale, {
     borderLight: "border-blue-200",
     borderDark: "dark:border-blue-800",
     guidance:
-      "Avoidance subscale items measure how much you stay away from social situations. While avoidance reduces anxiety in the short term, it maintains and often worsens social anxiety over time. Gradual exposure — slowly and repeatedly facing feared situations — is one of the most effective strategies for reducing avoidance.",
+      "Avoidance subscale items measure how much you stay away from social situations. While avoidance reduces anxiety in the short term, it maintains and often worsens social anxiety over time. Gradual exposure, slowly and repeatedly facing feared situations, is one of the most effective strategies for reducing avoidance.",
   },
   physiological: {
     label: "Physiological",
@@ -309,7 +309,7 @@ export function SpinClient({ faqData }: Props) {
               Consider Further Evaluation
             </h2>
             <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mb-3">
-              Your score of {totalScore} is above the clinical cutoff of 19 for social anxiety disorder. The SPIN is a screening tool, not a clinical assessment — but this result suggests that speaking with a healthcare provider or therapist could be helpful. Social anxiety disorder is one of the most treatable anxiety disorders.
+              Your score of {totalScore} is above the clinical cutoff of 19 for social anxiety disorder. The SPIN is a screening tool, not a clinical assessment, but this result suggests that speaking with a healthcare provider or therapist could be helpful. Social anxiety disorder is one of the most treatable anxiety disorders.
             </p>
             <div className="flex flex-wrap gap-2">
               <Link
@@ -428,7 +428,7 @@ export function SpinClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Connor, K. M., Davidson, J. R., Churchill, L. E., et al. (2000). Psychometric properties of the Social Phobia Inventory (SPIN).{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/10836122/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — SPIN Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/10836122/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, SPIN Validation</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Social Anxiety Disorder.{" "}
@@ -516,18 +516,18 @@ export function SpinClient({ faqData }: Props) {
           </p>
           <h2>Understanding Social Anxiety</h2>
           <p>
-            Social anxiety disorder (also called social phobia) is characterized by intense fear or anxiety about social situations where you might be scrutinized, judged, or embarrassed. It goes beyond normal shyness — it can significantly interfere with work, school, relationships, and daily activities. Social anxiety disorder affects approximately 7% of the U.S. population and is one of the most common anxiety disorders.
+            Social anxiety disorder (also called social phobia) is characterized by intense fear or anxiety about social situations where you might be scrutinized, judged, or embarrassed. It goes beyond normal shyness, it can significantly interfere with work, school, relationships, and daily activities. Social anxiety disorder affects approximately 7% of the U.S. population and is one of the most common anxiety disorders.
           </p>
           <p>
-            The three dimensions measured by the SPIN reflect different aspects of how social anxiety manifests. <strong>Fear</strong> is the emotional core — the anxiety and dread triggered by social or performance situations. <strong>Avoidance</strong> is the behavioral response — staying away from feared situations, which provides short-term relief but maintains the anxiety over time. <strong>Physiological symptoms</strong> like blushing, sweating, trembling, and heart palpitations can be especially distressing because they feel visible to others and can trigger a cycle of worry about the symptoms themselves.
+            The three dimensions measured by the SPIN reflect different aspects of how social anxiety manifests. <strong>Fear</strong> is the emotional core, the anxiety and dread triggered by social or performance situations. <strong>Avoidance</strong> is the behavioral response, staying away from feared situations, which provides short-term relief but maintains the anxiety over time. <strong>Physiological symptoms</strong> like blushing, sweating, trembling, and heart palpitations can be especially distressing because they feel visible to others and can trigger a cycle of worry about the symptoms themselves.
           </p>
           <h2>SPIN vs. Other Anxiety Measures</h2>
           <p>
-            The <Link href="/gad-7-anxiety-test">GAD-7</Link> measures generalized anxiety — persistent worry about many different things. The SPIN specifically measures social anxiety. Someone can have significant social anxiety but low generalized anxiety, or vice versa. The <Link href="/dass-21-depression-anxiety-stress">DASS-21</Link> provides a broader view of depression, anxiety, and stress. These tools complement each other and can be used together for a more complete picture.
+            The <Link href="/gad-7-anxiety-test">GAD-7</Link> measures generalized anxiety, persistent worry about many different things. The SPIN specifically measures social anxiety. Someone can have significant social anxiety but low generalized anxiety, or vice versa. The <Link href="/dass-21-depression-anxiety-stress">DASS-21</Link> provides a broader view of depression, anxiety, and stress. These tools complement each other and can be used together for a more complete picture.
           </p>
           <h2>Treatment for Social Anxiety</h2>
           <p>
-            Social anxiety disorder is one of the most treatable anxiety conditions. Cognitive-behavioral therapy (CBT) has the strongest evidence base and typically involves identifying and challenging anxious thoughts about social situations, combined with gradual exposure to feared situations. Exposure therapy — systematically and repeatedly facing avoided situations — helps the brain learn that the feared outcomes are unlikely or manageable. Medications including SSRIs (like sertraline, paroxetine) and SNRIs (like venlafaxine) are also effective. Many people benefit from a combination of therapy and medication.
+            Social anxiety disorder is one of the most treatable anxiety conditions. Cognitive-behavioral therapy (CBT) has the strongest evidence base and typically involves identifying and challenging anxious thoughts about social situations, combined with gradual exposure to feared situations. Exposure therapy, systematically and repeatedly facing avoided situations, helps the brain learn that the feared outcomes are unlikely or manageable. Medications including SSRIs (like sertraline, paroxetine) and SNRIs (like venlafaxine) are also effective. Many people benefit from a combination of therapy and medication.
           </p>
         </div>
 
@@ -625,7 +625,7 @@ export function SpinClient({ faqData }: Props) {
         </p>
       </div>
 
-      {/* Progress — sticky */}
+      {/* Progress, sticky */}
       <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
         <div className="flex justify-between text-xs font-semibold text-sage-600 dark:text-sage-400 mb-1">
           <span>{answeredCount} of {ITEMS.length} answered</span>

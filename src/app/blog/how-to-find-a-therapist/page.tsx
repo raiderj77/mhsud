@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/how-to-find-a-therapist",
   title: "How to Find a Therapist: A Step-by-Step Guide",
   description:
-    "Finding a therapist is harder than it should be. Here\u2019s a practical, step-by-step guide for finding one that fits your needs, budget, and insurance \u2014 without the runaround.",
+    "Finding a therapist is harder than it should be. Here\u2019s a practical, step-by-step guide for finding one that fits your needs, budget, and insurance, without the runaround.",
   keywords: [
     "how to find a therapist",
     "finding a therapist",
@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "What if I try a therapist and don\u2019t like them?",
     answer:
-      "This is normal. Research suggests it takes some people 2\u20133 tries to find a good fit. A first session that doesn\u2019t feel right doesn\u2019t mean therapy won\u2019t help \u2014 it may mean that particular therapist isn\u2019t the right match. It\u2019s completely acceptable to say so and try someone else.",
+      "This is normal. Research suggests it takes some people 2\u20133 tries to find a good fit. A first session that doesn\u2019t feel right doesn\u2019t mean therapy won\u2019t help, it may mean that particular therapist isn\u2019t the right match. It\u2019s completely acceptable to say so and try someone else.",
   },
   {
     question: "Should I see a therapist or a psychiatrist?",
@@ -88,7 +88,7 @@ export default function HowToFindATherapistPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Finding a therapist involves three main steps: clarifying what you&apos;re looking for, identifying candidates through directories or referrals, and vetting them through a brief consultation call. The process takes effort, but it&apos;s manageable. Most people who struggle to start therapy get stuck at the first step &mdash; not knowing where to begin &mdash; rather than at any inherent barrier to access.
+            Finding a therapist involves three main steps: clarifying what you&apos;re looking for, identifying candidates through directories or referrals, and vetting them through a brief consultation call. The process takes effort, but it&apos;s manageable. Most people who struggle to start therapy get stuck at the first step, not knowing where to begin, rather than at any inherent barrier to access.
           </p>
         </header>
 
@@ -97,7 +97,7 @@ export default function HowToFindATherapistPage() {
           <section>
             <h2>Step 1: Clarify what you&apos;re looking for</h2>
             <p>
-              Before opening a directory, it helps to answer three questions. You don&apos;t need to have perfect answers &mdash; even rough answers narrow your search significantly.
+              Before opening a directory, it helps to answer three questions. You don&apos;t need to have perfect answers, even rough answers narrow your search significantly.
             </p>
 
             <h3>What are you dealing with?</h3>
@@ -110,14 +110,14 @@ export default function HowToFindATherapistPage() {
               <li>ADHD or focus/productivity struggles</li>
               <li>Substance use or recovery</li>
               <li>Life transitions, grief, major decisions</li>
-              <li>&quot;I just feel off and want to talk to someone&quot; &mdash; this is entirely valid</li>
+              <li>&quot;I just feel off and want to talk to someone&quot;, this is entirely valid</li>
             </ul>
             <p>
               If you&apos;re not sure, taking a quick screening is useful before your first appointment. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> take two minutes each and give you language to describe what you&apos;re experiencing.
             </p>
 
             <h3>What type of therapy?</h3>
-            <p>You don&apos;t need to know this going in &mdash; most therapists will explain their approach and help you find the right fit. But if you&apos;ve done some reading, common options include:</p>
+            <p>You don&apos;t need to know this going in, most therapists will explain their approach and help you find the right fit. But if you&apos;ve done some reading, common options include:</p>
             <div className="not-prose my-4 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -154,10 +154,10 @@ export default function HowToFindATherapistPage() {
 
             <h3>Start with your insurance (if you have it)</h3>
             <p>
-              Call the member services number on the back of your insurance card and ask for a list of in-network therapists. Alternatively, log into your insurance company&apos;s website and use their provider directory &mdash; filter by specialty, location, and whether they&apos;re accepting new patients.
+              Call the member services number on the back of your insurance card and ask for a list of in-network therapists. Alternatively, log into your insurance company&apos;s website and use their provider directory, filter by specialty, location, and whether they&apos;re accepting new patients.
             </p>
             <p>
-              <strong>Insider tip:</strong> Call the insurance-listed therapists directly rather than booking through the portal. Provider directories are notoriously outdated &mdash; therapists move, retire, or stop accepting insurance without the records being updated. Calling confirms current availability and insurance status.
+              <strong>Insider tip:</strong> Call the insurance-listed therapists directly rather than booking through the portal. Provider directories are notoriously outdated, therapists move, retire, or stop accepting insurance without the records being updated. Calling confirms current availability and insurance status.
             </p>
 
             <h3>Psychology Today Directory</h3>
@@ -170,18 +170,18 @@ export default function HowToFindATherapistPage() {
 
             <h3>Specialized directories</h3>
             <ul>
-              <li><strong>International OCD Foundation</strong> &mdash; essential for finding ERP-trained therapists</li>
-              <li><strong>EMDRIA</strong> &mdash; for finding EMDR-trained clinicians for trauma</li>
-              <li><strong>SAMHSA&apos;s findtreatment.gov</strong> &mdash; database for substance use and mental health treatment programs</li>
-              <li><strong>Open Path Collective</strong> &mdash; network of therapists offering sessions for $30&ndash;$80 to those who qualify</li>
+              <li><strong>International OCD Foundation</strong>, essential for finding ERP-trained therapists</li>
+              <li><strong>EMDRIA</strong>, for finding EMDR-trained clinicians for trauma</li>
+              <li><strong>SAMHSA&apos;s findtreatment.gov</strong>, database for substance use and mental health treatment programs</li>
+              <li><strong>Open Path Collective</strong>, network of therapists offering sessions for $30&ndash;$80 to those who qualify</li>
             </ul>
 
             <h3>Ask for referrals</h3>
             <p>
-              Your primary care physician is a good starting point &mdash; they often have relationships with local therapists and can make a warm referral. Ask specifically: &quot;Can you refer me to someone who specializes in [depression/anxiety/trauma]?&quot;
+              Your primary care physician is a good starting point, they often have relationships with local therapists and can make a warm referral. Ask specifically: &quot;Can you refer me to someone who specializes in [depression/anxiety/trauma]?&quot;
             </p>
             <p>
-              Friends who have been in therapy can be valuable sources &mdash; not necessarily to see the same therapist, but to understand what the search process looked like.
+              Friends who have been in therapy can be valuable sources, not necessarily to see the same therapist, but to understand what the search process looked like.
             </p>
           </section>
 
@@ -200,12 +200,12 @@ export default function HowToFindATherapistPage() {
                   </tr>
                 </thead>
                 <tbody className="text-neutral-600 dark:text-neutral-400">
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">LCSW</td><td className="py-2">Licensed Clinical Social Worker &mdash; master&apos;s level, clinical training</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">LPC / LPCC</td><td className="py-2">Licensed Professional Counselor &mdash; master&apos;s level</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">LCSW</td><td className="py-2">Licensed Clinical Social Worker, master&apos;s level, clinical training</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">LPC / LPCC</td><td className="py-2">Licensed Professional Counselor, master&apos;s level</td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">LMFT</td><td className="py-2">Licensed Marriage and Family Therapist</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">PhD / PsyD</td><td className="py-2">Doctoral-level psychologist &mdash; can conduct testing; PsyD is practice-focused</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">MD (Psychiatrist)</td><td className="py-2">Medical doctor &mdash; prescribes medication; may or may not do therapy</td></tr>
-                  <tr><td className="py-2 pr-4 font-medium">CADC / LADC</td><td className="py-2">Certified/Licensed Alcohol and Drug Counselor &mdash; substance use specialist</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">PhD / PsyD</td><td className="py-2">Doctoral-level psychologist, can conduct testing; PsyD is practice-focused</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4 font-medium">MD (Psychiatrist)</td><td className="py-2">Medical doctor, prescribes medication; may or may not do therapy</td></tr>
+                  <tr><td className="py-2 pr-4 font-medium">CADC / LADC</td><td className="py-2">Certified/Licensed Alcohol and Drug Counselor, substance use specialist</td></tr>
                 </tbody>
               </table>
             </div>
@@ -213,7 +213,7 @@ export default function HowToFindATherapistPage() {
               All licensed therapists in the US must meet state licensing requirements including supervised practice hours. You can verify any therapist&apos;s license through your state&apos;s licensing board website.
             </p>
             <p>
-              <strong>Life coaches are not therapists</strong> &mdash; they are unregulated, have no clinical training requirement, and cannot assess or address mental health conditions. This distinction matters.
+              <strong>Life coaches are not therapists</strong>, they are unregulated, have no clinical training requirement, and cannot assess or address mental health conditions. This distinction matters.
             </p>
           </section>
 
@@ -228,12 +228,12 @@ export default function HowToFindATherapistPage() {
               <li>&quot;What&apos;s your general approach or theoretical orientation?&quot;</li>
               <li>&quot;Are you currently accepting new clients?&quot;</li>
               <li>&quot;What are your fees, and do you accept [your insurance / offer sliding scale]?&quot;</li>
-              <li>&quot;How long do you typically work with clients &mdash; brief work or longer-term?&quot;</li>
+              <li>&quot;How long do you typically work with clients, brief work or longer-term?&quot;</li>
             </ul>
 
             <h3>Trust your initial sense of fit</h3>
             <p>
-              Research consistently shows that the <strong>therapeutic alliance</strong> &mdash; the quality of the relationship between therapist and client &mdash; is one of the strongest predictors of outcome, across all treatment approaches (Wampold &amp; Imel, 2015). More than the specific technique used, feeling understood, respected, and heard by your therapist predicts whether therapy helps.
+              Research consistently shows that the <strong>therapeutic alliance</strong>, the quality of the relationship between therapist and client, is one of the strongest predictors of outcome, across all treatment approaches (Wampold &amp; Imel, 2015). More than the specific technique used, feeling understood, respected, and heard by your therapist predicts whether therapy helps.
             </p>
             <p>
               First sessions are a two-way evaluation. You are assessing whether this person can help you, not auditioning for their caseload.
@@ -246,7 +246,7 @@ export default function HowToFindATherapistPage() {
             <p>First sessions are assessment-focused. Your therapist will ask about:</p>
             <ul>
               <li>What brings you in now (the presenting concern)</li>
-              <li>History &mdash; when symptoms started, what has changed</li>
+              <li>History, when symptoms started, what has changed</li>
               <li>Personal and family history relevant to your concern</li>
               <li>What you&apos;re hoping to get from therapy</li>
             </ul>
@@ -271,7 +271,7 @@ export default function HowToFindATherapistPage() {
               <strong>Community mental health centers:</strong> Federally Qualified Health Centers (FQHCs) and community mental health centers provide therapy on a sliding scale based on income. Use SAMHSA&apos;s facility locator at findtreatment.gov to find one near you.
             </p>
             <p>
-              <strong>Training clinics:</strong> Graduate programs in psychology, counseling, and social work offer therapy provided by supervised graduate students &mdash; typically free or very low cost. Quality is generally good; sessions are supervised by licensed clinicians.
+              <strong>Training clinics:</strong> Graduate programs in psychology, counseling, and social work offer therapy provided by supervised graduate students, typically free or very low cost. Quality is generally good; sessions are supervised by licensed clinicians.
             </p>
             <p>
               <strong>Employee Assistance Programs (EAPs):</strong> Many employers offer free short-term counseling (typically 3&ndash;8 sessions) through an EAP. Check with HR.
@@ -281,7 +281,7 @@ export default function HowToFindATherapistPage() {
             </p>
           </section>
 
-          {/* Section 7 — intentionally lightweight to hit the ad placement */}
+          {/* Section 7, intentionally lightweight to hit the ad placement */}
           <section>
             <h2>Before your first appointment</h2>
             <p>
@@ -303,12 +303,12 @@ export default function HowToFindATherapistPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              If you are in crisis or having thoughts of self-harm, please reach out now &mdash; don&apos;t wait for a therapy appointment:
+              If you are in crisis or having thoughts of self-harm, please reach out now, don&apos;t wait for a therapy appointment:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -330,7 +330,7 @@ export default function HowToFindATherapistPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

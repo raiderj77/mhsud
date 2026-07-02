@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/am-i-depressed-quiz",
   title: "Am I Depressed? Free Quiz | PHQ-9 Depression Self-Check",
   description:
-    "Wondering 'am I depressed?' Take our free, private PHQ-9 quiz — the same tool used by doctors worldwide. 9 questions, instant results, no sign-up.",
+    "Wondering 'am I depressed?' Take our free, private PHQ-9 quiz, the same tool used by doctors worldwide. 9 questions, instant results, no sign-up.",
   keywords: [
     "am i depressed quiz", "am i depressed test", "do i have depression quiz",
     "depression quiz free", "am i depressed", "depression self test",
@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "How do I know if I'm depressed or just sad?",
     answer:
-      "Sadness is a normal emotion that typically passes within days and is usually linked to a specific event. Depression is a persistent pattern — lasting two weeks or more — that affects your mood, energy, sleep, appetite, concentration, and sense of self-worth. Depression can occur without an obvious cause and often doesn't lift on its own. If you've felt low, empty, or hopeless most of the day, nearly every day, for more than two weeks, it's worth speaking with a healthcare professional.",
+      "Sadness is a normal emotion that typically passes within days and is usually linked to a specific event. Depression is a persistent pattern, lasting two weeks or more, that affects your mood, energy, sleep, appetite, concentration, and sense of self-worth. Depression can occur without an obvious cause and often doesn't lift on its own. If you've felt low, empty, or hopeless most of the day, nearly every day, for more than two weeks, it's worth speaking with a healthcare professional.",
   },
   {
     question: "What does this quiz actually measure?",
@@ -53,7 +53,7 @@ const FAQ_DATA = [
   {
     question: "What should I do if my score suggests depression?",
     answer:
-      "If your score is 10 or above, consider scheduling an appointment with your primary care doctor or a mental health professional. Depression is one of the most treatable mental health conditions — effective options include therapy (especially CBT), medication, lifestyle changes, and support groups. If you are having thoughts of suicide or self-harm, please contact the 988 Suicide and Crisis Lifeline immediately by calling or texting 988.",
+      "If your score is 10 or above, consider scheduling an appointment with your primary care doctor or a mental health professional. Depression is one of the most treatable mental health conditions, effective options include therapy (especially CBT), medication, lifestyle changes, and support groups. If you are having thoughts of suicide or self-harm, please contact the 988 Suicide and Crisis Lifeline immediately by calling or texting 988.",
   },
   {
     question: "Is this quiz private?",
@@ -125,7 +125,7 @@ export default function AmIDepressedQuizPage() {
             just a rough patch, or is something actually wrong?</em>
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            This free quiz uses the <strong>PHQ-9</strong> — the same 9-question screening
+            This free quiz uses the <strong>PHQ-9</strong>, the same 9-question screening
             tool used by doctors in primary care offices around the world. It won&apos;t give
             you a diagnosis, but it will give you a clearer picture of what you&apos;re
             experiencing and whether it&apos;s worth talking to someone about.
@@ -143,7 +143,7 @@ export default function AmIDepressedQuizPage() {
         <AnswerBlock
           what="A PHQ-9-based depression screening in accessible quiz format that measures symptom severity over the past two weeks."
           who="Anyone wondering whether what they are feeling might be depression and wanting a quick validated check."
-          bottomLine="Depression is common and treatable — a high score means talking to a professional could help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Depression is common and treatable, a high score means talking to a professional could help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -254,7 +254,7 @@ export default function AmIDepressedQuizPage() {
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-3 italic">
             A clinical diagnosis of major depressive disorder requires at least 5 of these symptoms
-            present most of the day, nearly every day, for at least two weeks — and at least one
+            present most of the day, nearly every day, for at least two weeks, and at least one
             must be depressed mood or loss of interest.
           </p>
         </div>
@@ -287,13 +287,13 @@ export default function AmIDepressedQuizPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — free, 24/7, confidential
+              <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7
+              <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -301,7 +301,7 @@ export default function AmIDepressedQuizPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This quiz is for educational and informational purposes only — it is not a diagnosis.
+            This quiz is for educational and informational purposes only, it is not a diagnosis.
             Only a licensed healthcare professional can diagnose depression. Your responses are
             processed entirely in your browser and are never stored or transmitted.
           </p>

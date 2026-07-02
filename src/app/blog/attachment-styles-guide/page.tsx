@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/attachment-styles-guide",
   title: "Understanding Attachment Styles: How Early Bonds Shape Adult Relationships",
   description:
-    "Attachment styles affect how you connect in relationships. Learn the four styles \u2014 secure, anxious, avoidant, and disorganized \u2014 and how a self-assessment can help.",
+    "Attachment styles affect how you connect in relationships. Learn the four styles, secure, anxious, avoidant, and disorganized, and how a self-assessment can help.",
   keywords: [
     "attachment styles",
     "attachment style quiz",
@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Can your attachment style change?",
     answer:
-      "Yes. Attachment styles are relatively stable patterns, but they are not fixed traits. Through therapy \u2014 particularly emotionally focused therapy (EFT), schema therapy, or psychodynamic approaches \u2014 and through sustained secure relationships, people can develop what researchers call \u201Cearned security.\u201D This process typically takes time and intentional effort, but meaningful change is well-documented in the research.",
+      "Yes. Attachment styles are relatively stable patterns, but they are not fixed traits. Through therapy, particularly emotionally focused therapy (EFT), schema therapy, or psychodynamic approaches, and through sustained secure relationships, people can develop what researchers call \u201Cearned security.\u201D This process typically takes time and intentional effort, but meaningful change is well-documented in the research.",
   },
   {
     question: "What is the most common attachment style?",
@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "Is disorganized attachment the same as fearful-avoidant?",
     answer:
-      "Yes \u2014 they refer to the same pattern. \u201CDisorganized\u201D is the term used in developmental research (from Main and Solomon\u2019s work with infants), while \u201Cfearful-avoidant\u201D comes from Bartholomew and Horowitz\u2019s adult attachment model. Both describe a pattern of wanting closeness while simultaneously fearing it, often rooted in early experiences where a caregiver was both a source of comfort and fear.",
+      "Yes, they refer to the same pattern. \u201CDisorganized\u201D is the term used in developmental research (from Main and Solomon\u2019s work with infants), while \u201Cfearful-avoidant\u201D comes from Bartholomew and Horowitz\u2019s adult attachment model. Both describe a pattern of wanting closeness while simultaneously fearing it, often rooted in early experiences where a caregiver was both a source of comfort and fear.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function AttachmentStylesGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Attachment theory, developed by John Bowlby and Mary Ainsworth, describes how our earliest relationships with caregivers shape the way we connect with others throughout life. Your attachment style influences how you handle closeness, respond to conflict, and navigate emotional vulnerability in relationships. Understanding your style is a starting point for self-awareness &mdash; not a label or a limitation.
+            Attachment theory, developed by John Bowlby and Mary Ainsworth, describes how our earliest relationships with caregivers shape the way we connect with others throughout life. Your attachment style influences how you handle closeness, respond to conflict, and navigate emotional vulnerability in relationships. Understanding your style is a starting point for self-awareness, not a label or a limitation.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function AttachmentStylesGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -115,10 +115,10 @@ export default function AttachmentStylesGuidePage() {
           <section>
             <h2>What is attachment theory?</h2>
             <p>
-              Attachment theory emerged from the work of British psychiatrist John Bowlby in the 1960s and 1970s. Bowlby proposed that children have an innate need to form a close bond with at least one primary caregiver for healthy emotional development. This bond &mdash; the attachment relationship &mdash; creates an internal working model of how relationships function.
+              Attachment theory emerged from the work of British psychiatrist John Bowlby in the 1960s and 1970s. Bowlby proposed that children have an innate need to form a close bond with at least one primary caregiver for healthy emotional development. This bond, the attachment relationship, creates an internal working model of how relationships function.
             </p>
             <p>
-              Mary Ainsworth built on Bowlby&apos;s work with the &quot;Strange Situation&quot; experiment in the 1970s, observing how infants responded to brief separations from and reunions with their caregivers. Her research identified three distinct attachment patterns: secure, anxious-resistant, and anxious-avoidant. A fourth pattern &mdash; disorganized &mdash; was later identified by Mary Main and Judith Solomon in 1986.
+              Mary Ainsworth built on Bowlby&apos;s work with the &quot;Strange Situation&quot; experiment in the 1970s, observing how infants responded to brief separations from and reunions with their caregivers. Her research identified three distinct attachment patterns: secure, anxious-resistant, and anxious-avoidant. A fourth pattern, disorganized, was later identified by Mary Main and Judith Solomon in 1986.
             </p>
             <p>
               In the late 1980s, Hazan and Shaver extended attachment theory to adult romantic relationships, demonstrating that the same patterns observed in infant-caregiver bonds appear in how adults approach intimacy, conflict, and emotional closeness.
@@ -143,7 +143,7 @@ export default function AttachmentStylesGuidePage() {
 
             <h3>Anxious (preoccupied) attachment (~19% of adults)</h3>
             <p>
-              Anxious attachment develops when caregiving is inconsistent &mdash; sometimes responsive, sometimes unavailable. This pattern creates a heightened sensitivity to signs of rejection and a strong need for reassurance.
+              Anxious attachment develops when caregiving is inconsistent, sometimes responsive, sometimes unavailable. This pattern creates a heightened sensitivity to signs of rejection and a strong need for reassurance.
             </p>
             <ul>
               <li>Fear of abandonment or rejection</li>
@@ -169,14 +169,14 @@ export default function AttachmentStylesGuidePage() {
 
             <h3>Disorganized (fearful-avoidant) attachment (~5% of adults)</h3>
             <p>
-              Disorganized attachment arises when a caregiver is both a source of comfort and a source of fear &mdash; often in situations involving trauma, abuse, or a caregiver&apos;s own unresolved loss. This creates conflicting impulses: wanting closeness while being afraid of it.
+              Disorganized attachment arises when a caregiver is both a source of comfort and a source of fear, often in situations involving trauma, abuse, or a caregiver&apos;s own unresolved loss. This creates conflicting impulses: wanting closeness while being afraid of it.
             </p>
             <ul>
               <li>Contradictory desires for and fear of intimacy</li>
               <li>Oscillation between anxious and avoidant behaviors</li>
               <li>Difficulty regulating emotions in relationships</li>
               <li>Higher association with dissociation and mental health challenges</li>
-              <li>Push-pull dynamics &mdash; may sabotage relationships as they become close</li>
+              <li>Push-pull dynamics, may sabotage relationships as they become close</li>
               <li>Most strongly correlated with early trauma history</li>
             </ul>
           </section>
@@ -190,7 +190,7 @@ export default function AttachmentStylesGuidePage() {
               The <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools attachment style quiz</Link> is a free, private self-assessment that helps you identify which attachment pattern most closely describes your relational tendencies. Your answers are scored in your browser and never stored or transmitted.
             </p>
             <p>
-              Understanding your attachment style is not about labeling yourself or assigning blame. It is about recognizing patterns &mdash; why you react the way you do in certain relationship situations, what triggers your anxiety or withdrawal, and what you actually need from the people close to you.
+              Understanding your attachment style is not about labeling yourself or assigning blame. It is about recognizing patterns, why you react the way you do in certain relationship situations, what triggers your anxiety or withdrawal, and what you actually need from the people close to you.
             </p>
             <p>
               If you are in a relationship and want to explore how your patterns interact with your partner&apos;s, the <Link href="/attachment-style-test-for-couples" className="text-sage-600 dark:text-sage-400 underline">attachment style test for couples</Link> can provide additional insight.
@@ -204,7 +204,7 @@ export default function AttachmentStylesGuidePage() {
           <section>
             <h2>Can attachment styles change?</h2>
             <p>
-              Yes &mdash; and this is one of the most important findings in attachment research. Attachment styles are relatively stable over time but are <strong>not permanent traits</strong>. Change is possible through several pathways:
+              Yes, and this is one of the most important findings in attachment research. Attachment styles are relatively stable over time but are <strong>not permanent traits</strong>. Change is possible through several pathways:
             </p>
             <ul>
               <li><strong>Therapy:</strong> Emotionally focused therapy (EFT), schema therapy, psychodynamic therapy, and EMDR (for trauma-related attachment) all have evidence for shifting attachment patterns</li>
@@ -213,7 +213,7 @@ export default function AttachmentStylesGuidePage() {
               <li><strong>&quot;Earned security&quot;:</strong> People who had insecure childhoods but developed secure attachment through intentional work function similarly to those who were always securely attached</li>
             </ul>
             <p>
-              The <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">attachment style quiz</Link> can serve as a baseline &mdash; a snapshot of where you are now &mdash; that you can revisit over time as you work on your relational patterns.
+              The <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">attachment style quiz</Link> can serve as a baseline, a snapshot of where you are now, that you can revisit over time as you work on your relational patterns.
             </p>
           </section>
 
@@ -254,7 +254,7 @@ export default function AttachmentStylesGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

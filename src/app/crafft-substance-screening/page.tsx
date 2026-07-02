@@ -41,17 +41,17 @@ const FAQ_DATA = [
   {
     question: "What does a score of 2 or higher mean?",
     answer:
-      "A CRAFFT score of 2 or higher is considered a 'positive screen,' which means there may be a pattern of substance use that could benefit from a conversation with a trusted adult, school counselor, doctor, or other healthcare provider. It does not mean you have a substance use problem — it means that talking to someone could be helpful. Many young people who screen positive benefit from brief conversations about safety and decision-making.",
+      "A CRAFFT score of 2 or higher is considered a 'positive screen,' which means there may be a pattern of substance use that could benefit from a conversation with a trusted adult, school counselor, doctor, or other healthcare provider. It does not mean you have a substance use problem, it means that talking to someone could be helpful. Many young people who screen positive benefit from brief conversations about safety and decision-making.",
   },
   {
     question: "What is the '+N' in CRAFFT 2.1+N?",
     answer:
-      "The '+N' stands for Nicotine. Version 2.1+N of the CRAFFT added a question about nicotine and tobacco use (including e-cigarettes, vapes, and other products) to the opening questions. The nicotine question does not affect your CRAFFT score — it is included because nicotine use among young people has become a significant health concern, especially with the rise of vaping. If you answered yes to the nicotine question, your results will include information about nicotine and resources specific to quitting.",
+      "The '+N' stands for Nicotine. Version 2.1+N of the CRAFFT added a question about nicotine and tobacco use (including e-cigarettes, vapes, and other products) to the opening questions. The nicotine question does not affect your CRAFFT score, it is included because nicotine use among young people has become a significant health concern, especially with the rise of vaping. If you answered yes to the nicotine question, your results will include information about nicotine and resources specific to quitting.",
   },
   {
     question: "Will my parents or school find out my answers?",
     answer:
-      "No. This is an online self-screening tool that runs entirely in your web browser. Your answers are never sent to a server, saved in a database, or shared with anyone — not your parents, not your school, not us. When you close this page, your answers are gone. There is no login, no account, and no way for anyone to see what you entered.",
+      "No. This is an online self-screening tool that runs entirely in your web browser. Your answers are never sent to a server, saved in a database, or shared with anyone, not your parents, not your school, not us. When you close this page, your answers are gone. There is no login, no account, and no way for anyone to see what you entered.",
   },
   {
     question: "Is my data private?",
@@ -117,7 +117,7 @@ export default function CrafftPage() {
         <AnswerBlock
           what="The CRAFFT, a 6-question substance use screening validated for adolescents and young adults under 21."
           who="Teens and young adults who want to assess whether their substance use patterns may be risky."
-          bottomLine="The CRAFFT is the most widely recommended substance screening for youth — a score of 2 or more suggests further evaluation. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The CRAFFT is the most widely recommended substance screening for youth, a score of 2 or more suggests further evaluation. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Are cognitive distortions the same as lying to yourself?",
     answer:
-      "No. Cognitive distortions are automatic thinking patterns your brain defaults to, often outside your awareness. Everyone experiences them. They develop as mental shortcuts shaped by past experiences, stress, and emotional states. Recognizing them is not about blaming yourself for wrong thinking \u2014 it is about noticing patterns so you can evaluate your thoughts more accurately.",
+      "No. Cognitive distortions are automatic thinking patterns your brain defaults to, often outside your awareness. Everyone experiences them. They develop as mental shortcuts shaped by past experiences, stress, and emotional states. Recognizing them is not about blaming yourself for wrong thinking, it is about noticing patterns so you can evaluate your thoughts more accurately.",
   },
   {
     question: "Can cognitive distortions cause depression?",
@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "How do I stop thinking in cognitive distortions?",
     answer:
-      "You cannot eliminate cognitive distortions entirely \u2014 they are a normal part of human thinking. The goal is becoming better at noticing them and choosing whether to accept the thought or examine it more carefully. Techniques include keeping a thought record, asking what evidence supports and contradicts the thought, and generating alternative explanations. A CBT therapist can accelerate this process.",
+      "You cannot eliminate cognitive distortions entirely, they are a normal part of human thinking. The goal is becoming better at noticing them and choosing whether to accept the thought or examine it more carefully. Techniques include keeping a thought record, asking what evidence supports and contradicts the thought, and generating alternative explanations. A CBT therapist can accelerate this process.",
   },
   {
     question: "What is CBT?",
@@ -93,7 +93,7 @@ export default function CognitiveDistortionsListPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Your brain is wired to protect you — but sometimes that wiring misfires. Cognitive distortions are automatic thinking patterns that twist how you interpret reality, often making situations feel worse than they are. This guide covers 15 common distortions, with real-world examples and reframed alternatives to help you start noticing them in your own thinking.
+            Your brain is wired to protect you, but sometimes that wiring misfires. Cognitive distortions are automatic thinking patterns that twist how you interpret reality, often making situations feel worse than they are. This guide covers 15 common distortions, with real-world examples and reframed alternatives to help you start noticing them in your own thinking.
           </p>
           <div className="mt-6">
             <Link href="/cognitive-distortion-identifier" className="btn-primary text-sm">
@@ -116,7 +116,7 @@ export default function CognitiveDistortionsListPage() {
               Cognitive distortions are systematic errors in thinking that cause you to perceive reality inaccurately. The concept was developed by psychiatrist Aaron Beck in the 1960s as part of his pioneering work on{" "}
               <a href="https://beckinstitute.org/about/aaron-t-beck-md/" target="_blank" rel="noopener noreferrer">
                 cognitive-behavioral therapy (CBT)
-              </a>. Beck observed that his patients with depression and anxiety consistently interpreted events through distorted mental filters — and that these filters were predictable and categorizable.
+              </a>. Beck observed that his patients with depression and anxiety consistently interpreted events through distorted mental filters, and that these filters were predictable and categorizable.
             </p>
             <p>
               Later, psychologist David Burns popularized the concept in his 1980 book <em>Feeling Good</em>, expanding Beck&apos;s original categories into the list of common distortions widely used in clinical practice today.
@@ -129,7 +129,7 @@ export default function CognitiveDistortionsListPage() {
           <section>
             <h2>How Cognitive Distortions Develop</h2>
             <p>
-              Cognitive distortions are not signs of weakness or low intelligence. They develop through normal psychological processes, including early life experiences that shape core beliefs about yourself and the world, repeated exposure to stressful or threatening environments, evolutionary survival mechanisms that prioritize detecting threats over accuracy, and reinforcement — once a thinking pattern produces a strong emotional response, your brain tends to repeat it.
+              Cognitive distortions are not signs of weakness or low intelligence. They develop through normal psychological processes, including early life experiences that shape core beliefs about yourself and the world, repeated exposure to stressful or threatening environments, evolutionary survival mechanisms that prioritize detecting threats over accuracy, and reinforcement, once a thinking pattern produces a strong emotional response, your brain tends to repeat it.
             </p>
             <p>
               In other words, your brain defaults to these patterns because at some point they served a purpose. The problem is that they often outlive their usefulness and start creating distress where none is warranted.
@@ -139,7 +139,7 @@ export default function CognitiveDistortionsListPage() {
           <section>
             <h2>Why Our Brains Default to Distorted Thinking</h2>
             <p>
-              From an evolutionary perspective, the brain&apos;s negativity bias made sense. Overreacting to a rustling bush (even if it was just the wind) kept our ancestors alive. Underreacting to an actual predator did not. This means our brains are wired to err on the side of threat detection — to catastrophize, overgeneralize from bad experiences, and jump to negative conclusions.
+              From an evolutionary perspective, the brain&apos;s negativity bias made sense. Overreacting to a rustling bush (even if it was just the wind) kept our ancestors alive. Underreacting to an actual predator did not. This means our brains are wired to err on the side of threat detection, to catastrophize, overgeneralize from bad experiences, and jump to negative conclusions.
             </p>
             <p>
               In modern life, this same wiring gets applied to emails from your boss, social media interactions, and ambiguous text messages. The survival mechanism is the same; the context has changed dramatically.
@@ -172,7 +172,7 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Focusing exclusively on one negative detail while ignoring everything positive about a situation.
             </p>
-            <p><em>&quot;My manager gave me great feedback but mentioned one area to improve — clearly they think I am not good enough.&quot;</em></p>
+            <p><em>&quot;My manager gave me great feedback but mentioned one area to improve, clearly they think I am not good enough.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;They highlighted strengths and one growth area. That is balanced feedback, not criticism.&quot;</p>
 
             <h3>4. Disqualifying the Positive</h3>
@@ -189,12 +189,12 @@ export default function CognitiveDistortionsListPage() {
             <p>
               <strong>Mind Reading:</strong> Assuming you know what others are thinking.
             </p>
-            <p><em>&quot;My friend has not texted back — she is obviously angry at me.&quot;</em></p>
+            <p><em>&quot;My friend has not texted back, she is obviously angry at me.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;She might be busy. I do not have enough information to know why she has not responded.&quot;</p>
             <p>
               <strong>Fortune Telling:</strong> Predicting things will turn out badly.
             </p>
-            <p><em>&quot;There is no point in applying — I will definitely not get in.&quot;</em></p>
+            <p><em>&quot;There is no point in applying, I will definitely not get in.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;I cannot predict the outcome. The only way to find out is to try.&quot;</p>
 
             <AdSlot position="Blog In-Content 2" className="my-8" />
@@ -203,7 +203,7 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Exaggerating the importance of negative events (magnification) or shrinking the significance of positive ones (minimization).
             </p>
-            <p><em>&quot;That awkward thing I said at the party was humiliating — but the fact that everyone laughed at my jokes does not matter.&quot;</em></p>
+            <p><em>&quot;That awkward thing I said at the party was humiliating, but the fact that everyone laughed at my jokes does not matter.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;I had one awkward moment, but I also connected well with people. Both are real.&quot;</p>
 
             <h3>7. Emotional Reasoning</h3>
@@ -231,7 +231,7 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Blaming yourself for external events that are not entirely within your control.
             </p>
-            <p><em>&quot;My kid got a bad grade — I must be a terrible parent.&quot;</em></p>
+            <p><em>&quot;My kid got a bad grade, I must be a terrible parent.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;Many factors affect a child&apos;s performance. This is not entirely about my parenting.&quot;</p>
 
             <AdSlot position="Blog In-Content 3" className="my-8" />
@@ -240,7 +240,7 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Jumping to the worst-case scenario and treating it as the most likely outcome.
             </p>
-            <p><em>&quot;I have a headache — what if it is something serious? What if I cannot work?&quot;</em></p>
+            <p><em>&quot;I have a headache, what if it is something serious? What if I cannot work?&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;Headaches are common and usually benign. I can see a doctor if it persists, but jumping to the worst case is not warranted right now.&quot;</p>
 
             <h3>12. Blaming</h3>
@@ -254,7 +254,7 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Believing that everything should be fair, and feeling resentful when it is not.
             </p>
-            <p><em>&quot;I worked just as hard as they did — it is not fair that they got promoted and I did not.&quot;</em></p>
+            <p><em>&quot;I worked just as hard as they did, it is not fair that they got promoted and I did not.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;I can feel disappointed without assuming the process was unfair. Many factors go into these decisions.&quot;</p>
 
             <h3>14. Fallacy of Change</h3>
@@ -268,14 +268,14 @@ export default function CognitiveDistortionsListPage() {
             <p>
               Prioritizing being right over everything else, including the feelings of others and the relationship itself.
             </p>
-            <p><em>&quot;I do not care how they feel about it — I need to prove that I am right.&quot;</em></p>
+            <p><em>&quot;I do not care how they feel about it, I need to prove that I am right.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;Being right is less important than being kind. I can hold my perspective without needing to win the argument.&quot;</p>
           </section>
 
           <section>
             <h2>How Cognitive Distortions Connect to Anxiety and Depression</h2>
             <p>
-              Cognitive distortions are not just abstract thinking errors — they have real consequences for mental health. In anxiety, distortions like catastrophizing, fortune telling, and mind reading create a constant sense of threat. Your brain treats imagined worst-case scenarios as if they are happening right now, activating the stress response and keeping you in a state of heightened alertness.
+              Cognitive distortions are not just abstract thinking errors, they have real consequences for mental health. In anxiety, distortions like catastrophizing, fortune telling, and mind reading create a constant sense of threat. Your brain treats imagined worst-case scenarios as if they are happening right now, activating the stress response and keeping you in a state of heightened alertness.
             </p>
             <p>
               In depression, distortions like mental filtering, disqualifying the positive, and labeling reinforce feelings of hopelessness and worthlessness. When you systematically filter out evidence that contradicts your negative self-view, the depression deepens because the world genuinely <em>seems</em> as bleak as you feel.
@@ -288,7 +288,7 @@ export default function CognitiveDistortionsListPage() {
           <section>
             <h2>How CBT Addresses Cognitive Distortions</h2>
             <p>
-              Cognitive-behavioral therapy works by helping you become aware of your distorted thinking patterns, evaluate them against evidence, and practice generating more balanced alternatives. This is not about &quot;positive thinking&quot; — it is about <em>accurate</em> thinking.
+              Cognitive-behavioral therapy works by helping you become aware of your distorted thinking patterns, evaluate them against evidence, and practice generating more balanced alternatives. This is not about &quot;positive thinking&quot;, it is about <em>accurate</em> thinking.
             </p>
             <p>
               Common CBT techniques for working with cognitive distortions include thought records (writing down the situation, your automatic thought, the distortion type, and an alternative interpretation), behavioral experiments (testing whether your predictions actually come true), and Socratic questioning (a therapist guiding you to examine your beliefs through targeted questions rather than simply telling you what to think).
@@ -308,7 +308,7 @@ export default function CognitiveDistortionsListPage() {
               If reading through this list made you recognize patterns in your own thinking, you are not alone. Most people regularly engage in several of these distortions without realizing it. Our free <Link href="/cognitive-distortion-identifier" className="text-sage-600 dark:text-sage-400 underline">Cognitive Distortion Identifier</Link> can help you explore which patterns may show up most in your thinking.
             </p>
             <p>
-              The tool is not a clinical assessment — it is a self-reflection exercise designed to build awareness. All of your responses are processed in your browser and are never stored or sent to a server. It takes about five minutes and may give you a useful starting point for conversations with a therapist or for your own personal growth.
+              The tool is not a clinical assessment, it is a self-reflection exercise designed to build awareness. All of your responses are processed in your browser and are never stored or sent to a server. It takes about five minutes and may give you a useful starting point for conversations with a therapist or for your own personal growth.
             </p>
           </section>
 
@@ -340,7 +340,7 @@ export default function CognitiveDistortionsListPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

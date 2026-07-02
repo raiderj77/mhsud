@@ -88,7 +88,7 @@ export default function DepressionMenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Men are roughly half as likely as women to be diagnosed with depression, yet they are 3.5 times more likely to die by suicide (CDC). This is not because men experience less depression &mdash; it is because depression in men often looks different, gets labeled as something else, and goes unrecognized until it reaches a crisis point. Understanding how male depression actually presents is the first step toward closing this gap.
+            Men are roughly half as likely as women to be diagnosed with depression, yet they are 3.5 times more likely to die by suicide (CDC). This is not because men experience less depression, it is because depression in men often looks different, gets labeled as something else, and goes unrecognized until it reaches a crisis point. Understanding how male depression actually presents is the first step toward closing this gap.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function DepressionMenGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -115,7 +115,7 @@ export default function DepressionMenGuidePage() {
               Most people associate depression with sadness, crying, and withdrawal. While men can experience these symptoms, research consistently shows that male depression is more likely to present through what psychologists call &quot;externalizing&quot; symptoms:
             </p>
             <ul>
-              <li><strong>Anger and irritability:</strong> Snapping at family members, road rage, disproportionate frustration over minor issues. This is one of the most common &mdash; and most overlooked &mdash; depression symptoms in men</li>
+              <li><strong>Anger and irritability:</strong> Snapping at family members, road rage, disproportionate frustration over minor issues. This is one of the most common, and most overlooked, depression symptoms in men</li>
               <li><strong>Risk-taking behavior:</strong> Reckless driving, unsafe sexual behavior, gambling, or increased substance use as unconscious attempts to feel something or escape emotional pain</li>
               <li><strong>Substance use:</strong> Self-medicating with alcohol, drugs, or excessive caffeine. Many men increase their drinking before they recognize depression</li>
               <li><strong>Overwork:</strong> Working excessive hours, inability to disconnect, or burying themselves in tasks to avoid sitting with their thoughts</li>
@@ -128,10 +128,10 @@ export default function DepressionMenGuidePage() {
           <section>
             <h2>The &quot;masculine depression&quot; concept</h2>
             <p>
-              Researchers Michael Addis and James Mahalik published influential work showing that traditional masculine norms &mdash; emotional stoicism, self-reliance, dominance, and risk-taking &mdash; shape how men experience and express depressive symptoms. Their research found that men who strongly endorse these norms are less likely to recognize depression in themselves, less likely to seek help, and more likely to use alcohol and aggression as coping mechanisms.
+              Researchers Michael Addis and James Mahalik published influential work showing that traditional masculine norms, emotional stoicism, self-reliance, dominance, and risk-taking, shape how men experience and express depressive symptoms. Their research found that men who strongly endorse these norms are less likely to recognize depression in themselves, less likely to seek help, and more likely to use alcohol and aggression as coping mechanisms.
             </p>
             <p>
-              This does not mean masculinity causes depression. It means that cultural expectations about how men &quot;should&quot; handle distress create a filter that makes depression harder to see &mdash; both for the men experiencing it and for the people around them. When a man becomes irritable, starts drinking more, and works 70-hour weeks, the people around him may think he is stressed, going through a rough patch, or just being difficult. They rarely think &quot;depression.&quot;
+              This does not mean masculinity causes depression. It means that cultural expectations about how men &quot;should&quot; handle distress create a filter that makes depression harder to see, both for the men experiencing it and for the people around them. When a man becomes irritable, starts drinking more, and works 70-hour weeks, the people around him may think he is stressed, going through a rough patch, or just being difficult. They rarely think &quot;depression.&quot;
             </p>
             <p>
               Standard depression screening tools were originally developed and validated on populations that were predominantly female. The PHQ-9 captures core depression symptoms effectively, but some researchers argue that adding items for irritability, anger, and risk-taking would improve detection rates in men. That is why screening tools designed for male presentation patterns can be particularly useful.
@@ -143,12 +143,12 @@ export default function DepressionMenGuidePage() {
           <section>
             <h2>Why men do not seek help</h2>
             <p>
-              The gap between men&apos;s depression rates and help-seeking rates is not just about stigma &mdash; though stigma plays a significant role. Multiple barriers reinforce each other:
+              The gap between men&apos;s depression rates and help-seeking rates is not just about stigma, though stigma plays a significant role. Multiple barriers reinforce each other:
             </p>
             <ul>
               <li><strong>&quot;Man up&quot; culture:</strong> From childhood, many men are socialized to suppress emotions, solve problems independently, and view vulnerability as weakness. Seeking help for emotional distress feels like a fundamental violation of these norms</li>
               <li><strong>Failure to recognize it:</strong> Because male depression often presents as anger, fatigue, or physical symptoms rather than sadness, many men genuinely do not know they are depressed. They may describe themselves as &quot;stressed&quot; or &quot;burned out&quot; but never connect their experience to depression</li>
-              <li><strong>Lack of emotional vocabulary:</strong> Men are often less practiced at identifying and naming emotions. When asked &quot;how are you feeling?&quot; the honest answer may be &quot;I don&apos;t know&quot; &mdash; not because they are hiding something, but because they lack the framework to articulate internal experience</li>
+              <li><strong>Lack of emotional vocabulary:</strong> Men are often less practiced at identifying and naming emotions. When asked &quot;how are you feeling?&quot; the honest answer may be &quot;I don&apos;t know&quot;, not because they are hiding something, but because they lack the framework to articulate internal experience</li>
               <li><strong>Fear of professional consequences:</strong> Concerns about security clearances, professional reputation, or being seen as unreliable at work</li>
               <li><strong>Healthcare avoidance:</strong> Men are less likely to have a primary care provider, less likely to schedule routine appointments, and less likely to bring up emotional concerns in medical settings</li>
             </ul>
@@ -175,7 +175,7 @@ export default function DepressionMenGuidePage() {
               Screening is particularly valuable for men because it provides structured, specific questions that bypass the vague &quot;how are you feeling?&quot; conversation that most men struggle with. Instead of being asked to identify emotions, you are asked about concrete, observable behaviors: sleep changes, energy levels, concentration, interest in activities, irritability. Many men who would never describe themselves as &quot;depressed&quot; will recognize their experience in these specific questions.
             </p>
             <p>
-              A screening result also provides a concrete starting point for a conversation with a provider &mdash; something men can bring to an appointment rather than trying to find the words in the moment. The <Link href="/depression-test-for-men" className="text-sage-600 dark:text-sage-400 underline">men&apos;s depression screening</Link> is designed for exactly this purpose.
+              A screening result also provides a concrete starting point for a conversation with a provider, something men can bring to an appointment rather than trying to find the words in the moment. The <Link href="/depression-test-for-men" className="text-sage-600 dark:text-sage-400 underline">men&apos;s depression screening</Link> is designed for exactly this purpose.
             </p>
           </section>
 
@@ -191,7 +191,7 @@ export default function DepressionMenGuidePage() {
               <li><strong>Problem-solving approaches:</strong> Framing treatment as skill-building and problem-solving rather than emotional processing can reduce resistance</li>
             </ul>
             <p>
-              The most important step is the first one &mdash; acknowledging that something is wrong. A private screening can be that first step.
+              The most important step is the first one, acknowledging that something is wrong. A private screening can be that first step.
             </p>
           </section>
 
@@ -213,7 +213,7 @@ export default function DepressionMenGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

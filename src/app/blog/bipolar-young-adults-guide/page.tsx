@@ -88,7 +88,7 @@ export default function BipolarYoungAdultsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Bipolar disorder most commonly first appears in the late teens to mid-20s, with an average age of onset around 25. This means it often emerges during some of life&apos;s most demanding transitions &mdash; college, first jobs, forming adult relationships, and establishing independence. It is also one of the most frequently misdiagnosed mental health conditions, with many young adults spending years being treated for depression alone before the full picture becomes clear.
+            Bipolar disorder most commonly first appears in the late teens to mid-20s, with an average age of onset around 25. This means it often emerges during some of life&apos;s most demanding transitions, college, first jobs, forming adult relationships, and establishing independence. It is also one of the most frequently misdiagnosed mental health conditions, with many young adults spending years being treated for depression alone before the full picture becomes clear.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function BipolarYoungAdultsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ export default function BipolarYoungAdultsGuidePage() {
           <section>
             <h2>Why bipolar disorder peaks in young adulthood</h2>
             <p>
-              The late teens through mid-20s represent a period of significant brain development, particularly in the prefrontal cortex &mdash; the region responsible for impulse control, emotional regulation, and decision-making. This neurodevelopmental window, combined with the environmental stressors of early adulthood, creates conditions where bipolar disorder is most likely to first manifest.
+              The late teens through mid-20s represent a period of significant brain development, particularly in the prefrontal cortex, the region responsible for impulse control, emotional regulation, and decision-making. This neurodevelopmental window, combined with the environmental stressors of early adulthood, creates conditions where bipolar disorder is most likely to first manifest.
             </p>
             <p>
               Several factors converge during this period:
@@ -128,13 +128,13 @@ export default function BipolarYoungAdultsGuidePage() {
           <section>
             <h2>The misdiagnosis problem: when bipolar looks like depression</h2>
             <p>
-              The most common misidentification of bipolar disorder is as unipolar depression. This happens for understandable reasons: people with bipolar disorder spend significantly more time in depressive episodes than manic or hypomanic ones. Depressive episodes are painful and impairing, which makes them far more likely to drive help-seeking. Manic or hypomanic episodes, by contrast, often feel good &mdash; increased energy, confidence, productivity, and reduced need for sleep can feel like finally functioning at full capacity.
+              The most common misidentification of bipolar disorder is as unipolar depression. This happens for understandable reasons: people with bipolar disorder spend significantly more time in depressive episodes than manic or hypomanic ones. Depressive episodes are painful and impairing, which makes them far more likely to drive help-seeking. Manic or hypomanic episodes, by contrast, often feel good, increased energy, confidence, productivity, and reduced need for sleep can feel like finally functioning at full capacity.
             </p>
             <p>
               A young adult who presents to a college counseling center or primary care provider during a depressive episode may receive a depression screening (such as the PHQ-9), score high, and begin antidepressant treatment. Without specific questioning about past episodes of elevated mood or energy, the bipolar pattern goes unrecognized.
             </p>
             <p>
-              This misidentification carries real risks. Antidepressants prescribed without a mood stabilizer can trigger manic episodes in individuals with bipolar disorder. They may also accelerate mood cycling &mdash; producing more frequent and severe episodes over time. This is why accurate early screening matters so much.
+              This misidentification carries real risks. Antidepressants prescribed without a mood stabilizer can trigger manic episodes in individuals with bipolar disorder. They may also accelerate mood cycling, producing more frequent and severe episodes over time. This is why accurate early screening matters so much.
             </p>
           </section>
 
@@ -147,7 +147,7 @@ export default function BipolarYoungAdultsGuidePage() {
             </p>
             <ul>
               <li><strong>Depression that does not respond to antidepressants:</strong> If two or more antidepressant trials have failed to produce lasting improvement, bipolar disorder should be considered</li>
-              <li><strong>Periods of high energy and reduced sleep need:</strong> Not insomnia (wanting to sleep but unable to), but genuinely not needing sleep &mdash; feeling rested and energized after three or four hours</li>
+              <li><strong>Periods of high energy and reduced sleep need:</strong> Not insomnia (wanting to sleep but unable to), but genuinely not needing sleep, feeling rested and energized after three or four hours</li>
               <li><strong>Grandiose thinking or inflated self-confidence:</strong> Starting ambitious projects, making major life decisions, or taking on unrealistic commitments during periods of elevated mood</li>
               <li><strong>Impulsive behavior during elevated periods:</strong> Spending sprees, risky sexual behavior, substance use, or impulsive travel that is out of character</li>
               <li><strong>Rapid, pressured speech:</strong> Talking faster than usual, jumping between topics, feeling that thoughts are racing</li>
@@ -162,7 +162,7 @@ export default function BipolarYoungAdultsGuidePage() {
               The college years are both a peak period for bipolar onset and an environment that can mask its symptoms. Several features of college life make detection especially difficult:
             </p>
             <p>
-              <strong>Irregular sleep is normalized.</strong> All-night study sessions, inconsistent schedules, and social activities that extend into early morning hours mean that reduced sleep need &mdash; a hallmark of mania &mdash; may not stand out.
+              <strong>Irregular sleep is normalized.</strong> All-night study sessions, inconsistent schedules, and social activities that extend into early morning hours mean that reduced sleep need, a hallmark of mania, may not stand out.
             </p>
             <p>
               <strong>Substance use is common.</strong> Alcohol, stimulants (including prescription stimulants used non-medically), and other substances can trigger, mimic, or mask mood episodes. A manic episode may be attributed to stimulant use rather than an underlying mood disorder.
@@ -183,7 +183,7 @@ export default function BipolarYoungAdultsGuidePage() {
               The Mood Disorder Questionnaire (MDQ) is a screening tool specifically designed to identify bipolar spectrum patterns. Unlike depression screeners, the MDQ asks about lifetime experiences of elevated mood, increased energy, impulsive behavior, and other manic or hypomanic symptoms.
             </p>
             <p>
-              A positive MDQ result does not mean you have bipolar disorder. It means your symptom pattern is consistent with bipolar features and warrants further evaluation by a qualified mental health professional. This distinction is critical &mdash; bipolar disorder requires a thorough clinical assessment including detailed history, family history, and often longitudinal observation.
+              A positive MDQ result does not mean you have bipolar disorder. It means your symptom pattern is consistent with bipolar features and warrants further evaluation by a qualified mental health professional. This distinction is critical, bipolar disorder requires a thorough clinical assessment including detailed history, family history, and often longitudinal observation.
             </p>
             <p>
               If you are currently being treated for depression without improvement, discussing a bipolar-specific evaluation with your provider may help identify whether bipolar features could be part of the picture.
@@ -193,7 +193,7 @@ export default function BipolarYoungAdultsGuidePage() {
           <section>
             <h2>Why getting the right assessment early matters</h2>
             <p>
-              Early identification of bipolar disorder changes outcomes significantly. Research shows that the longer bipolar disorder goes unrecognized and untreated, the more severe episodes tend to become over time &mdash; a pattern called kindling. Early intervention can slow or prevent this progression.
+              Early identification of bipolar disorder changes outcomes significantly. Research shows that the longer bipolar disorder goes unrecognized and untreated, the more severe episodes tend to become over time, a pattern called kindling. Early intervention can slow or prevent this progression.
             </p>
             <p>
               The stakes of misidentification are concrete:
@@ -205,7 +205,7 @@ export default function BipolarYoungAdultsGuidePage() {
               <li><strong>Suicide risk:</strong> Bipolar disorder carries one of the highest suicide rates of any psychiatric condition, particularly during mixed episodes and depressive phases</li>
             </ul>
             <p>
-              Evidence-based treatments for bipolar disorder &mdash; including mood stabilizers (such as lithium and valproate), atypical antipsychotics, and psychotherapy (particularly CBT and interpersonal therapy) &mdash; are highly effective when started early. Many people with bipolar disorder live full, productive lives with appropriate ongoing care.
+              Evidence-based treatments for bipolar disorder, including mood stabilizers (such as lithium and valproate), atypical antipsychotics, and psychotherapy (particularly CBT and interpersonal therapy), are highly effective when started early. Many people with bipolar disorder live full, productive lives with appropriate ongoing care.
             </p>
           </section>
 
@@ -216,9 +216,9 @@ export default function BipolarYoungAdultsGuidePage() {
             </p>
             <ul>
               <li>Talk with a mental health provider about a bipolar-specific evaluation to get a structured picture of your symptom patterns</li>
-              <li>If you are currently being treated for depression, discuss bipolar screening with your provider &mdash; especially if treatment has not been fully effective</li>
+              <li>If you are currently being treated for depression, discuss bipolar screening with your provider, especially if treatment has not been fully effective</li>
               <li>If you are in college, contact your university counseling center and specifically request an evaluation that includes mood disorder screening</li>
-              <li>Keep a mood journal tracking energy levels, sleep patterns, and mood shifts over several weeks &mdash; this longitudinal data is extremely valuable for assessment</li>
+              <li>Keep a mood journal tracking energy levels, sleep patterns, and mood shifts over several weeks, this longitudinal data is extremely valuable for assessment</li>
               <li>If you have a family history of bipolar disorder, mention this to any clinician evaluating you for depression</li>
             </ul>
             <p>
@@ -244,7 +244,7 @@ export default function BipolarYoungAdultsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

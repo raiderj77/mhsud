@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/burnout-test-for-nurses",
   title: "Burnout Test for Nurses | Free Self-Assessment",
   description:
-    "Free burnout screening for nurses — assess emotional exhaustion, compassion fatigue, and depersonalization. Private, instant results.",
+    "Free burnout screening for nurses, assess emotional exhaustion, compassion fatigue, and depersonalization. Private, instant results.",
   keywords: [
     "burnout test for nurses", "nurse burnout assessment", "nursing burnout quiz",
     "compassion fatigue test nurses", "nurse burnout screening", "healthcare burnout test",
@@ -30,11 +30,11 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is the difference between burnout and compassion fatigue in nursing?",
-    answer: "Burnout develops gradually from chronic workplace stress — heavy patient loads, long shifts, and systemic issues. Compassion fatigue (sometimes called secondary traumatic stress) comes specifically from the emotional toll of caring for suffering patients. Nurses often experience both simultaneously. Burnout makes you feel depleted and cynical; compassion fatigue makes you feel emotionally numb to patients' pain.",
+    answer: "Burnout develops gradually from chronic workplace stress, heavy patient loads, long shifts, and systemic issues. Compassion fatigue (sometimes called secondary traumatic stress) comes specifically from the emotional toll of caring for suffering patients. Nurses often experience both simultaneously. Burnout makes you feel depleted and cynical; compassion fatigue makes you feel emotionally numb to patients' pain.",
   },
   {
     question: "How common is burnout among nurses?",
-    answer: "Nursing burnout rates are among the highest of any profession. Studies consistently report that 30–50% of nurses experience significant burnout symptoms at any given time. Following the COVID-19 pandemic, some surveys found burnout rates exceeding 60% among bedside nurses. Burnout is not a personal failing — it is a systemic issue.",
+    answer: "Nursing burnout rates are among the highest of any profession. Studies consistently report that 30–50% of nurses experience significant burnout symptoms at any given time. Following the COVID-19 pandemic, some surveys found burnout rates exceeding 60% among bedside nurses. Burnout is not a personal failing, it is a systemic issue.",
   },
   {
     question: "Can shift work make burnout worse?",
@@ -46,7 +46,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is nurse burnout something my employer should address?",
-    answer: "Yes. While individual coping strategies help, research consistently shows that burnout is primarily driven by systemic factors — staffing ratios, workload, leadership support, and organizational culture. Effective burnout reduction requires both individual self-care and institutional change. This screening can help you understand your personal experience, but advocating for better working conditions is equally important.",
+    answer: "Yes. While individual coping strategies help, research consistently shows that burnout is primarily driven by systemic factors, staffing ratios, workload, leadership support, and organizational culture. Effective burnout reduction requires both individual self-care and institutional change. This screening can help you understand your personal experience, but advocating for better working conditions is equally important.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function BurnoutTestForNursesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Burnout Test for Nurses — Self-Assessment",
+              name: "Burnout Test for Nurses, Self-Assessment",
               description: "A free, private burnout screening tool for nurses assessing emotional exhaustion, depersonalization, and reduced personal accomplishment.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
@@ -118,7 +118,7 @@ export default function BurnoutTestForNursesPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You became a nurse because you care. And you&apos;ve kept showing up — through
+            You became a nurse because you care. And you&apos;ve kept showing up, through
             short staffing, 12-hour shifts that turn into 14, patients who need more than
             you can give, and a system that keeps asking for more while giving you less. If
             you&apos;re reading this on a break you probably shouldn&apos;t be taking, or at
@@ -126,7 +126,7 @@ export default function BurnoutTestForNursesPage() {
             isn&apos;t right.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Burnout isn&apos;t weakness — it&apos;s what happens when good people are put in
+            Burnout isn&apos;t weakness, it&apos;s what happens when good people are put in
             unsustainable situations for too long. You&apos;re not failing at nursing.
             The system is failing you. This free, private screening can help you put words to
             what you&apos;re feeling and figure out what to do next. It is{" "}
@@ -144,7 +144,7 @@ export default function BurnoutTestForNursesPage() {
             Start the Burnout Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private — nothing is stored or shared.
+            Takes about 5 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -159,7 +159,7 @@ export default function BurnoutTestForNursesPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Studies consistently find that 30–50% of nurses experience significant burnout at any
                 given time. Post-pandemic surveys put that number above 60% for bedside nurses.
-                <span className="text-slate-500 dark:text-slate-400"> — National Academy of Medicine</span>
+                <span className="text-slate-500 dark:text-slate-400">, National Academy of Medicine</span>
               </p>
             </div>
             <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
@@ -167,16 +167,15 @@ export default function BurnoutTestForNursesPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 More than 100,000 registered nurses left the profession between 2020 and 2023,
                 citing burnout, stress, and unsustainable working conditions.
-                <span className="text-slate-500 dark:text-slate-400"> — NCSBN</span>
+                <span className="text-slate-500 dark:text-slate-400">, NCSBN</span>
               </p>
             </div>
             <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-rose-700 dark:text-rose-300 mb-1">Patient safety</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Research links nurse burnout to higher patient mortality, increased medical errors,
-                and more hospital-acquired infections. Taking care of yourself isn&apos;t selfish
-                — it&apos;s part of taking care of your patients.
-                <span className="text-slate-500 dark:text-slate-400"> — The Lancet</span>
+                and more hospital-acquired infections. Taking care of yourself isn&apos;t selfish, it&apos;s part of taking care of your patients.
+                <span className="text-slate-500 dark:text-slate-400">, The Lancet</span>
               </p>
             </div>
           </div>
@@ -194,10 +193,10 @@ export default function BurnoutTestForNursesPage() {
                 relevant for healthcare workers:
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Emotional exhaustion:</strong> Feeling drained, depleted, and like you have nothing left to give — the most recognized dimension of burnout.</p>
+                <p><strong>Emotional exhaustion:</strong> Feeling drained, depleted, and like you have nothing left to give, the most recognized dimension of burnout.</p>
                 <p><strong>Depersonalization:</strong> Feeling detached from patients, treating them as tasks rather than people, or developing a cynical attitude you didn&apos;t used to have.</p>
                 <p><strong>Reduced accomplishment:</strong> Feeling like your work doesn&apos;t matter, you&apos;re not making a difference, or you&apos;ve lost your sense of purpose.</p>
-                <p><strong>Your results:</strong> You&apos;ll see where you fall on each dimension and overall. There are no &quot;pass/fail&quot; answers — this is about understanding where you are right now.</p>
+                <p><strong>Your results:</strong> You&apos;ll see where you fall on each dimension and overall. There are no &quot;pass/fail&quot; answers, this is about understanding where you are right now.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, coworkers, or anyone else.</p>
               </div>
             </div>
@@ -220,11 +219,11 @@ export default function BurnoutTestForNursesPage() {
             </p>
             <p>
               Unlike burnout, which builds gradually from workload and exhaustion, moral distress
-              creates acute psychological wounds each time it occurs — and those wounds
+              creates acute psychological wounds each time it occurs, and those wounds
               accumulate. Research on the <strong>crescendo effect</strong> shows that moral
               distress compounds over a career: each new incident reactivates the residue from
               previous ones, lowering the threshold for the next episode. Nurses who leave the
-              profession frequently cite moral distress — not just exhaustion — as the deciding
+              profession frequently cite moral distress, not just exhaustion, as the deciding
               factor.
             </p>
           </div>
@@ -246,7 +245,7 @@ export default function BurnoutTestForNursesPage() {
                 <p className="text-sm">
                   Dreading the alarm clock. Crying in the car before or after shifts. Counting
                   down the hours from the moment you clock in. Feeling like you&apos;re running
-                  on empty but somehow keep showing up. Calling out more often — not because
+                  on empty but somehow keep showing up. Calling out more often, not because
                   you&apos;re sick, but because you genuinely cannot face another shift.
                 </p>
               </div>
@@ -265,7 +264,7 @@ export default function BurnoutTestForNursesPage() {
                   Questioning whether you make a difference. Feeling like &quot;anyone could do
                   this.&quot; Imposter syndrome despite years of experience. The &quot;making a
                   difference&quot; narrative that drew you to nursing now feels hollow. Wondering
-                  if you chose the wrong career — or if nursing chose to break you.
+                  if you chose the wrong career, or if nursing chose to break you.
                 </p>
               </div>
             </div>
@@ -279,8 +278,8 @@ export default function BurnoutTestForNursesPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              The wellness industry&apos;s answer to nursing burnout — yoga, meditation apps,
-              resilience training — puts the burden on individual nurses to cope with
+              The wellness industry&apos;s answer to nursing burnout, yoga, meditation apps,
+              resilience training, puts the burden on individual nurses to cope with
               fundamentally broken systems. These strategies help at the margins, but they cannot
               fix unsafe staffing ratios, mandatory overtime, or chronic underfunding. Research is
               unambiguous: burnout is primarily a workplace problem, not an individual one.
@@ -292,7 +291,7 @@ export default function BurnoutTestForNursesPage() {
               report lower burnout and better patient outcomes. Shared governance models that give
               nurses decision-making power over practice conditions improve retention. The
               evidence is clear: systemic changes work. Individual self-care helps you survive
-              while advocating for those changes — but it was never meant to be the solution.
+              while advocating for those changes, but it was never meant to be the solution.
             </p>
           </div>
         </div>
@@ -311,7 +310,7 @@ export default function BurnoutTestForNursesPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening specifically designed for nurses, addressing the unique stressors of bedside and clinical nursing." who="Nurses at any level who feel emotionally or physically exhausted and want to assess their burnout risk." bottomLine="Nursing burnout is widespread and not a personal failure — your results can guide a conversation with your supervisor or EAP. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening specifically designed for nurses, addressing the unique stressors of bedside and clinical nursing." who="Nurses at any level who feel emotionally or physically exhausted and want to assess their burnout risk." bottomLine="Nursing burnout is widespread and not a personal failure, your results can guide a conversation with your supervisor or EAP. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
@@ -354,8 +353,7 @@ export default function BurnoutTestForNursesPage() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Use your EAP</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Most hospitals and healthcare systems offer a free <strong>Employee Assistance
-                Program</strong> with confidential counseling sessions. Ask your HR department —
-                it&apos;s usually 3–8 free sessions, and your employer doesn&apos;t know what
+                Program</strong> with confidential counseling sessions. Ask your HR department, it&apos;s usually 3–8 free sessions, and your employer doesn&apos;t know what
                 you discuss. This exists specifically for situations like this.
               </p>
             </div>
@@ -372,7 +370,7 @@ export default function BurnoutTestForNursesPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 You can&apos;t fix the system overnight, but you can protect yourself. Say no to one
                 overtime shift. Take your full lunch break. Leave on time once. Small boundaries
-                aren&apos;t selfish — they&apos;re survival.
+                aren&apos;t selfish, they&apos;re survival.
               </p>
             </div>
           </div>
@@ -385,10 +383,10 @@ export default function BurnoutTestForNursesPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -396,7 +394,7 @@ export default function BurnoutTestForNursesPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess burnout or related conditions. Your responses are processed
             entirely in your browser and are never stored or transmitted. Always consult a qualified
             healthcare professional for medical advice.

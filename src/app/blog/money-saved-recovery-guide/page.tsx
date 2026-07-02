@@ -70,7 +70,7 @@ export default function MoneySavedRecoveryGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            One of the most immediate and tangible benefits of sobriety is financial. The average American household spends $500&ndash;$600 per month on alcohol, according to Bureau of Labor Statistics data &mdash; and that figure only captures what is spent at the register. When you add in DUIs, healthcare costs, lost productivity, and impulse spending, the true cost of drinking or substance use can be staggering. A recovery savings calculator makes these numbers visible, turning an abstract benefit into concrete motivation.
+            One of the most immediate and tangible benefits of sobriety is financial. The average American household spends $500&ndash;$600 per month on alcohol, according to Bureau of Labor Statistics data, and that figure only captures what is spent at the register. When you add in DUIs, healthcare costs, lost productivity, and impulse spending, the true cost of drinking or substance use can be staggering. A recovery savings calculator makes these numbers visible, turning an abstract benefit into concrete motivation.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function MoneySavedRecoveryGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -99,7 +99,7 @@ export default function MoneySavedRecoveryGuidePage() {
               The direct cost of alcohol is straightforward to calculate: the price of what you buy multiplied by how often you buy it. For a person who drinks two glasses of wine per night at home, that might be $200&ndash;$300 per month. For someone who frequents bars or drinks heavily, the figure can easily reach $800&ndash;$1,500 per month.
             </p>
             <p>
-              But the direct purchase price is only the beginning. The Bureau of Labor Statistics Consumer Expenditure Survey shows that alcohol represents one of the largest discretionary spending categories for American households. When you factor in related spending &mdash; rideshares after drinking, late-night food orders, hangover remedies, and increased tobacco use &mdash; the true monthly cost often doubles.
+              But the direct purchase price is only the beginning. The Bureau of Labor Statistics Consumer Expenditure Survey shows that alcohol represents one of the largest discretionary spending categories for American households. When you factor in related spending, rideshares after drinking, late-night food orders, hangover remedies, and increased tobacco use, the true monthly cost often doubles.
             </p>
             <p>
               The <Link href="/money-saved-recovery-calculator" className="text-sage-600 dark:text-sage-400 underline">money saved in recovery calculator</Link> helps you put a specific number on what sobriety is saving you. Enter your sobriety date, your estimated previous daily or weekly spending, and instantly see your total savings to date.
@@ -111,7 +111,7 @@ export default function MoneySavedRecoveryGuidePage() {
             <p>The true financial toll of substance use extends far beyond the purchase price. These hidden costs are often the ones that cause the most long-term financial damage:</p>
             <ul>
               <li><strong>DUI charges:</strong> A single DUI costs an average of $10,000&ndash;$25,000 when you include fines, legal fees, increased insurance premiums, ignition interlock devices, and potential lost income. Multiple offenses can exceed $50,000.</li>
-              <li><strong>Healthcare costs:</strong> Alcohol-related medical conditions &mdash; liver disease, cardiovascular problems, injuries from falls or accidents &mdash; generate significant out-of-pocket expenses even with insurance. The CDC estimates that excessive alcohol use costs the US $249 billion annually in healthcare spending.</li>
+              <li><strong>Healthcare costs:</strong> Alcohol-related medical conditions, liver disease, cardiovascular problems, injuries from falls or accidents, generate significant out-of-pocket expenses even with insurance. The CDC estimates that excessive alcohol use costs the US $249 billion annually in healthcare spending.</li>
               <li><strong>Lost productivity:</strong> Hangovers, sick days, reduced focus, and impaired decision-making at work all translate to lower earnings over time. One study estimated that alcohol-related productivity losses cost the US economy $179 billion per year.</li>
               <li><strong>Insurance premiums:</strong> DUIs and alcohol-related health conditions increase both auto and health insurance premiums, sometimes for years after the incident.</li>
               <li><strong>Relationship costs:</strong> Couples therapy, divorce proceedings, and the financial fallout of damaged relationships are rarely factored into the cost of drinking but can be among the largest expenses.</li>
@@ -127,7 +127,7 @@ export default function MoneySavedRecoveryGuidePage() {
               The concept is simple but powerful: take what you used to spend on alcohol or substances per day (or per week), multiply it by the number of days since your sobriety date, and you have your total savings. The <Link href="/money-saved-recovery-calculator" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools money saved in recovery calculator</Link> does this math automatically and displays your savings in real time.
             </p>
             <p>
-              What makes this tool useful is not the math itself &mdash; it is the visibility. Seeing a specific dollar amount grow over time provides a concrete, positive reinforcement for sobriety. Research on behavioral economics shows that making abstract benefits tangible significantly increases motivation for behavior change (Thaler &amp; Sunstein, 2008).
+              What makes this tool useful is not the math itself, it is the visibility. Seeing a specific dollar amount grow over time provides a concrete, positive reinforcement for sobriety. Research on behavioral economics shows that making abstract benefits tangible significantly increases motivation for behavior change (Thaler &amp; Sunstein, 2008).
             </p>
             <p>
               The calculator runs entirely in your browser. Your data is never stored or transmitted, and no account is required.
@@ -175,7 +175,7 @@ export default function MoneySavedRecoveryGuidePage() {
               If you are still weighing whether to pursue recovery, the financial perspective can be clarifying. The National Institute on Drug Abuse (NIDA) estimates that substance use disorders cost the United States over $600 billion annually in healthcare, criminal justice, and lost productivity. At the individual level, that translates to tens of thousands of dollars per year in direct and indirect costs.
             </p>
             <p>
-              Meanwhile, the cost of treatment &mdash; while significant &mdash; is typically a fraction of the cost of continued use. The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you understand what different levels of care cost and what financial assistance may be available.
+              Meanwhile, the cost of treatment, while significant, is typically a fraction of the cost of continued use. The <Link href="/treatment-cost-estimator" className="text-sage-600 dark:text-sage-400 underline">treatment cost estimator</Link> can help you understand what different levels of care cost and what financial assistance may be available.
             </p>
             <p>
               If you are concerned about your drinking patterns, a structured screening like the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> can provide useful information to share with a healthcare provider.

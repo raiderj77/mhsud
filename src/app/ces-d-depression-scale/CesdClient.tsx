@@ -90,7 +90,7 @@ const TIERS: Tier[] = [
     borderLight: "border-amber-200",
     borderDark: "dark:border-amber-800",
     message:
-      "Your score is at or above the clinical cutoff of 16, which suggests mild depressive symptoms that may warrant further evaluation. This does not mean you have clinical depression \u2014 but it is a signal to pay attention. Consider taking the PHQ-9 for a more specific depression screening, and consider speaking with a healthcare provider about how you have been feeling.",
+      "Your score is at or above the clinical cutoff of 16, which suggests mild depressive symptoms that may warrant further evaluation. This does not mean you have clinical depression, but it is a signal to pay attention. Consider taking the PHQ-9 for a more specific depression screening, and consider speaking with a healthcare provider about how you have been feeling.",
   },
   {
     label: "Moderate Symptoms",
@@ -116,7 +116,7 @@ const TIERS: Tier[] = [
     borderLight: "border-red-200",
     borderDark: "dark:border-red-800",
     message:
-      "Your score suggests severe depressive symptoms over the past week. Symptoms at this level can significantly impair daily life and may require professional support. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources listed below. You do not have to go through this alone \u2014 effective help is available.",
+      "Your score suggests severe depressive symptoms over the past week. Symptoms at this level can significantly impair daily life and may require professional support. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources listed below. You do not have to go through this alone, effective help is available.",
   },
 ];
 
@@ -317,7 +317,7 @@ export function CesdClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Radloff, L. S. (1977). The CES-D Scale: A self-report depression scale for research in the general population.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/1255891/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Original CES-D Paper</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/1255891/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Original CES-D Paper</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Depression.{" "}
@@ -405,7 +405,7 @@ export function CesdClient({ faqData }: Props) {
           </p>
           <h2>How Scoring and Interpretation Works</h2>
           <p>
-            The total score ranges from 0 to 60. A score of <strong>16 or higher</strong> is the traditionally used cutoff suggesting clinically significant depressive symptoms. This cutoff was established in Radloff&apos;s original 1977 validation study and has been replicated across many populations. However, a score above 16 does not confirm depression — it indicates that further evaluation by a qualified professional is recommended.
+            The total score ranges from 0 to 60. A score of <strong>16 or higher</strong> is the traditionally used cutoff suggesting clinically significant depressive symptoms. This cutoff was established in Radloff&apos;s original 1977 validation study and has been replicated across many populations. However, a score above 16 does not confirm depression, it indicates that further evaluation by a qualified professional is recommended.
           </p>
           <h2>When to Seek Help</h2>
           <p>
@@ -498,9 +498,9 @@ export function CesdClient({ faqData }: Props) {
         20 questions · ~5 minutes · Completely private · NIMH public domain instrument
       </p>
 
-      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active mental-health questionnaire. */}
+      {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active mental-health questionnaire. */}
 
-      {/* Progress — sticky */}
+      {/* Progress, sticky */}
       <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
         <div className="flex justify-between text-xs font-semibold text-sage-600 dark:text-sage-400 mb-1">
           <span>{answeredCount} of {ITEMS.length} answered</span>

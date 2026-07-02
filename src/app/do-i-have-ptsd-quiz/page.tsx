@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/do-i-have-ptsd-quiz",
   title: "Do I Have PTSD? Free Quiz | PCL-5 Trauma Screening",
   description:
-    "Wondering 'do I have PTSD?' Take our free, private PCL-5 quiz — the gold-standard PTSD screening tool used by the VA and clinicians worldwide. 20 questions, instant results.",
+    "Wondering 'do I have PTSD?' Take our free, private PCL-5 quiz, the gold-standard PTSD screening tool used by the VA and clinicians worldwide. 20 questions, instant results.",
   keywords: [
     "do i have ptsd quiz", "do i have ptsd test", "ptsd quiz free",
     "ptsd self test", "ptsd symptoms quiz", "am i traumatized quiz",
@@ -23,7 +23,7 @@ export const metadata: Metadata = createMetadata({
   openGraph: {
     title: "Do I Have PTSD? Free Quiz | PCL-5 Trauma Screening",
     description:
-      "Wondering if you have PTSD? Take our free, private PCL-5 quiz — the gold-standard used by the VA. 20 questions, instant results, no sign-up.",
+      "Wondering if you have PTSD? Take our free, private PCL-5 quiz, the gold-standard used by the VA. 20 questions, instant results, no sign-up.",
     url: TOOL_URL,
     type: "website",
   },
@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "What is PTSD and how does it develop?",
     answer:
-      "Post-Traumatic Stress Disorder (PTSD) is a mental health condition that can develop after experiencing or witnessing a traumatic event — such as combat, sexual assault, a serious accident, natural disaster, or the sudden death of a loved one. Not everyone who experiences trauma develops PTSD. Risk factors include the severity and duration of the trauma, lack of social support, prior trauma history, and biological factors. PTSD is not a sign of weakness — it is the brain's response to an overwhelming experience.",
+      "Post-Traumatic Stress Disorder (PTSD) is a mental health condition that can develop after experiencing or witnessing a traumatic event, such as combat, sexual assault, a serious accident, natural disaster, or the sudden death of a loved one. Not everyone who experiences trauma develops PTSD. Risk factors include the severity and duration of the trauma, lack of social support, prior trauma history, and biological factors. PTSD is not a sign of weakness, it is the brain's response to an overwhelming experience.",
   },
   {
     question: "What does this quiz measure?",
@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "Can I have PTSD from emotional abuse or neglect?",
     answer:
-      "Yes. While PTSD was originally associated with combat and acute physical trauma, research has established that emotional abuse, neglect, childhood adversity, and chronic interpersonal trauma can also cause PTSD — sometimes called Complex PTSD (C-PTSD). The PCL-5 measures symptoms regardless of the type of trauma. If your trauma was relational or prolonged, a clinician experienced in complex trauma is especially helpful.",
+      "Yes. While PTSD was originally associated with combat and acute physical trauma, research has established that emotional abuse, neglect, childhood adversity, and chronic interpersonal trauma can also cause PTSD, sometimes called Complex PTSD (C-PTSD). The PCL-5 measures symptoms regardless of the type of trauma. If your trauma was relational or prolonged, a clinician experienced in complex trauma is especially helpful.",
   },
   {
     question: "What should I do if my score is high?",
@@ -119,13 +119,13 @@ export default function DoIHavePTSDQuizPage() {
         {/* Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            Something happened — and it won&apos;t stay in the past. Maybe you find yourself
+            Something happened, and it won&apos;t stay in the past. Maybe you find yourself
             replaying it without wanting to. Maybe certain sounds, smells, or situations
             send you right back there. Maybe you&apos;ve been avoiding things that used to
             be normal, or feeling numb and disconnected from people you love.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            This free quiz uses the <strong>PCL-5</strong> — the gold-standard PTSD screening
+            This free quiz uses the <strong>PCL-5</strong>, the gold-standard PTSD screening
             tool developed by the National Center for PTSD at the U.S. Department of Veterans
             Affairs. It&apos;s used in VA hospitals, primary care offices, and research
             settings worldwide.
@@ -143,7 +143,7 @@ export default function DoIHavePTSDQuizPage() {
         <AnswerBlock
           what="A PC-PTSD-5-based screening in accessible quiz format that assesses PTSD symptoms following a traumatic event."
           who="Anyone who has experienced trauma and wonders whether their symptoms may be consistent with PTSD."
-          bottomLine="PTSD is treatable with evidence-based therapies — a positive screen means talking to a professional can help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="PTSD is treatable with evidence-based therapies, a positive screen means talking to a professional can help. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -248,10 +248,10 @@ export default function DoIHavePTSDQuizPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — free, 24/7, confidential
+              <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>Veterans Crisis Line:</strong> Call <strong>988, then press 1</strong> — or text 838255
+              <strong>Veterans Crisis Line:</strong> Call <strong>988, then press 1</strong>, or text 838255
             </li>
             <li>
               <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>
@@ -262,7 +262,7 @@ export default function DoIHavePTSDQuizPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This quiz is for educational and informational purposes only — it is not a diagnosis.
+            This quiz is for educational and informational purposes only, it is not a diagnosis.
             Only a licensed healthcare professional can diagnose PTSD. Your responses are
             processed entirely in your browser and are never stored or transmitted.
           </p>

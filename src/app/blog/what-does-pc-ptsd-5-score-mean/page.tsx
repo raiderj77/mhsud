@@ -30,12 +30,12 @@ const FAQ_DATA = [
   {
     question: "Can I have PTSD if I didn\u2019t experience combat or a major disaster?",
     answer:
-      "Yes. PTSD can develop after any traumatic experience \u2014 sexual assault, childhood abuse, motor vehicle accidents, medical emergencies, domestic violence, sudden loss, or witnessing harm to others. Combat is one cause among many. The most common causes of PTSD in the general population are sexual assault and childhood trauma.",
+      "Yes. PTSD can develop after any traumatic experience, sexual assault, childhood abuse, motor vehicle accidents, medical emergencies, domestic violence, sudden loss, or witnessing harm to others. Combat is one cause among many. The most common causes of PTSD in the general population are sexual assault and childhood trauma.",
   },
   {
     question: "I screened positive but it\u2019s been years since the trauma. Can PTSD really last that long?",
     answer:
-      "Yes. Without effective treatment, PTSD can persist for decades. The avoidance that is a core PTSD symptom also prevents natural resolution \u2014 by avoiding reminders, the nervous system never learns the trauma is over. Long-standing, chronic PTSD responds well to evidence-based treatment even after many years.",
+      "Yes. Without effective treatment, PTSD can persist for decades. The avoidance that is a core PTSD symptom also prevents natural resolution, by avoiding reminders, the nervous system never learns the trauma is over. Long-standing, chronic PTSD responds well to evidence-based treatment even after many years.",
   },
   {
     question: "What is EMDR and why is it recommended for PTSD?",
@@ -82,7 +82,7 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            PC-PTSD-5 scores range from 0 to 5. A score of <strong>3 or higher</strong> is the validated positive screen threshold &mdash; it indicates that PTSD-related symptoms are present at a level warranting further evaluation. A score of 0&ndash;2 suggests PTSD symptoms are below the clinical threshold. The PC-PTSD-5 is a brief five-item gateway screen, not a comprehensive assessment &mdash; a positive result is a starting point for further evaluation, not a diagnosis.
+            PC-PTSD-5 scores range from 0 to 5. A score of <strong>3 or higher</strong> is the validated positive screen threshold, it indicates that PTSD-related symptoms are present at a level warranting further evaluation. A score of 0&ndash;2 suggests PTSD symptoms are below the clinical threshold. The PC-PTSD-5 is a brief five-item gateway screen, not a comprehensive assessment, a positive result is a starting point for further evaluation, not a diagnosis.
           </p>
         </header>
 
@@ -91,10 +91,10 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
           <section>
             <h2>What is the PC-PTSD-5?</h2>
             <p>
-              The <strong>Primary Care PTSD Screen for DSM-5 (PC-PTSD-5)</strong> was developed by Drs. Prins, Bovin, and colleagues (2016) as an ultra-brief first-step screening tool for PTSD in primary care and other non-specialty settings. It was designed to be quick enough to administer routinely &mdash; the entire screen takes about 60 seconds.
+              The <strong>Primary Care PTSD Screen for DSM-5 (PC-PTSD-5)</strong> was developed by Drs. Prins, Bovin, and colleagues (2016) as an ultra-brief first-step screening tool for PTSD in primary care and other non-specialty settings. It was designed to be quick enough to administer routinely, the entire screen takes about 60 seconds.
             </p>
             <p>
-              The PC-PTSD-5 begins with a brief trauma exposure question: <em>&quot;Sometimes things happen to people that are unusually or especially frightening, horrible, or upsetting.&quot;</em> If the person endorses any such experience, five yes/no symptom questions follow &mdash; one each for the five core PTSD symptom areas (nightmare/intrusion, avoidance, hypervigilance, emotional numbing, and dissociation/guilt).
+              The PC-PTSD-5 begins with a brief trauma exposure question: <em>&quot;Sometimes things happen to people that are unusually or especially frightening, horrible, or upsetting.&quot;</em> If the person endorses any such experience, five yes/no symptom questions follow, one each for the five core PTSD symptom areas (nightmare/intrusion, avoidance, hypervigilance, emotional numbing, and dissociation/guilt).
             </p>
             <p>
               Each &quot;yes&quot; scores 1 point. Total score ranges from 0&ndash;5.
@@ -118,7 +118,7 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
                 </thead>
                 <tbody className="text-neutral-600 dark:text-neutral-400">
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">0&ndash;1</td><td className="py-2 pr-4">Below clinical threshold</td><td className="py-2">No action indicated unless clinical concern</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">2</td><td className="py-2 pr-4">Borderline &mdash; monitor</td><td className="py-2">Consider full PCL-5 if symptoms are distressing</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">2</td><td className="py-2 pr-4">Borderline, monitor</td><td className="py-2">Consider full PCL-5 if symptoms are distressing</td></tr>
                   <tr><td className="py-2 pr-4">3&ndash;5</td><td className="py-2 pr-4">Positive screen</td><td className="py-2">Full PCL-5 and/or clinical evaluation recommended</td></tr>
                 </tbody>
               </table>
@@ -127,9 +127,9 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
               At the validated cutoff of 3, the PC-PTSD-5 demonstrates:
             </p>
             <ul>
-              <li><strong>Sensitivity:</strong> 85% &mdash; correctly identifies 85% of people who meet PTSD criteria</li>
-              <li><strong>Specificity:</strong> 74% &mdash; correctly rules out 74% of people who don&apos;t meet PTSD criteria</li>
-              <li><strong>AUC:</strong> 0.90 &mdash; excellent overall discriminative ability (Prins et al., 2016)</li>
+              <li><strong>Sensitivity:</strong> 85%, correctly identifies 85% of people who meet PTSD criteria</li>
+              <li><strong>Specificity:</strong> 74%, correctly rules out 74% of people who don&apos;t meet PTSD criteria</li>
+              <li><strong>AUC:</strong> 0.90, excellent overall discriminative ability (Prins et al., 2016)</li>
             </ul>
             <p>
               A score of 2 sits in a borderline zone. If you scored 2 and find that trauma-related symptoms are affecting your daily life, proceeding to the full PCL-5 or seeking a clinical evaluation is reasonable.
@@ -141,19 +141,19 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
             <h2>What each question covers</h2>
             <p>Understanding what the five items capture helps contextualize your score:</p>
             <p>
-              <strong>Item 1 &mdash; Nightmares/Intrusions:</strong> Covers re-experiencing the traumatic event through nightmares or intrusive memories. This maps to the intrusion symptom cluster &mdash; the hallmark re-experiencing that distinguishes PTSD from general anxiety or depression.
+              <strong>Item 1, Nightmares/Intrusions:</strong> Covers re-experiencing the traumatic event through nightmares or intrusive memories. This maps to the intrusion symptom cluster, the hallmark re-experiencing that distinguishes PTSD from general anxiety or depression.
             </p>
             <p>
-              <strong>Item 2 &mdash; Avoidance:</strong> Covers active avoidance of situations, people, or thoughts that remind you of the trauma. Avoidance is both a core symptom and the primary mechanism that maintains PTSD over time &mdash; it prevents the trauma memory from being processed and extinguished.
+              <strong>Item 2, Avoidance:</strong> Covers active avoidance of situations, people, or thoughts that remind you of the trauma. Avoidance is both a core symptom and the primary mechanism that maintains PTSD over time, it prevents the trauma memory from being processed and extinguished.
             </p>
             <p>
-              <strong>Item 3 &mdash; Hypervigilance/Startle:</strong> Covers being on guard, easily startled, or feeling watchful for danger even in safe situations. This is the nervous system&apos;s threat-detection system stuck in the &quot;on&quot; position &mdash; a physiological response to surviving a dangerous experience.
+              <strong>Item 3, Hypervigilance/Startle:</strong> Covers being on guard, easily startled, or feeling watchful for danger even in safe situations. This is the nervous system&apos;s threat-detection system stuck in the &quot;on&quot; position, a physiological response to surviving a dangerous experience.
             </p>
             <p>
-              <strong>Item 4 &mdash; Emotional Numbing:</strong> Covers feeling emotionally numb, detached from others, or unable to have positive feelings. This sits in the negative alterations in mood and cognition cluster &mdash; the emotional dampening that often accompanies PTSD and is frequently mistaken for depression alone.
+              <strong>Item 4, Emotional Numbing:</strong> Covers feeling emotionally numb, detached from others, or unable to have positive feelings. This sits in the negative alterations in mood and cognition cluster, the emotional dampening that often accompanies PTSD and is frequently mistaken for depression alone.
             </p>
             <p>
-              <strong>Item 5 &mdash; Guilt/Dissociation:</strong> Covers blaming yourself or others for the traumatic event, or feeling detached from reality. Self-blame is an extremely common PTSD symptom &mdash; the mind&apos;s effort to create a sense of control (&quot;if it was my fault, I can prevent it next time&quot;) in the aftermath of an uncontrollable event.
+              <strong>Item 5, Guilt/Dissociation:</strong> Covers blaming yourself or others for the traumatic event, or feeling detached from reality. Self-blame is an extremely common PTSD symptom, the mind&apos;s effort to create a sense of control (&quot;if it was my fault, I can prevent it next time&quot;) in the aftermath of an uncontrollable event.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
               </table>
             </div>
             <p>
-              The PC-PTSD-5 is designed to cast a wide net quickly &mdash; to flag people who may have PTSD so they can be directed toward more comprehensive evaluation. It trades some specificity for brevity.
+              The PC-PTSD-5 is designed to cast a wide net quickly, to flag people who may have PTSD so they can be directed toward more comprehensive evaluation. It trades some specificity for brevity.
             </p>
             <p>
               The <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link> covers all 20 DSM-5 PTSD criteria in detail, produces a total severity score (0&ndash;80), and is better suited for tracking symptom change over time and treatment.
@@ -198,15 +198,15 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
             </p>
             <p>It does <strong>not</strong> mean:</p>
             <ul>
-              <li>You definitely have PTSD &mdash; diagnosis requires full clinical evaluation</li>
-              <li>Your symptoms won&apos;t improve &mdash; PTSD is highly treatable</li>
-              <li>Something is permanently wrong with you &mdash; PTSD is a normal nervous system response to abnormal experiences</li>
+              <li>You definitely have PTSD, diagnosis requires full clinical evaluation</li>
+              <li>Your symptoms won&apos;t improve, PTSD is highly treatable</li>
+              <li>Something is permanently wrong with you, PTSD is a normal nervous system response to abnormal experiences</li>
             </ul>
             <p>It <strong>does</strong> mean:</p>
             <ul>
               <li>Your symptoms are above a validated clinical threshold</li>
               <li>A mental health professional experienced in trauma can help clarify the picture</li>
-              <li>Evidence-based treatments &mdash; Prolonged Exposure, CPT, EMDR &mdash; are available and effective</li>
+              <li>Evidence-based treatments, Prolonged Exposure, CPT, EMDR, are available and effective</li>
             </ul>
           </section>
 
@@ -216,15 +216,15 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
           <section>
             <h2>When trauma history is present but the score is low</h2>
             <p>
-              A score below 3 does not mean trauma hasn&apos;t affected you. The PC-PTSD-5 specifically screens for PTSD criteria &mdash; other trauma responses, including depression, anxiety, substance use, somatic symptoms, and relationship difficulties, can be significant even when PTSD criteria aren&apos;t met.
+              A score below 3 does not mean trauma hasn&apos;t affected you. The PC-PTSD-5 specifically screens for PTSD criteria, other trauma responses, including depression, anxiety, substance use, somatic symptoms, and relationship difficulties, can be significant even when PTSD criteria aren&apos;t met.
             </p>
             <p>
-              If you have a significant trauma history and are struggling &mdash; even with a low PC-PTSD-5 score &mdash; a trauma-informed clinician can help assess the full picture. Consider also:
+              If you have a significant trauma history and are struggling, even with a low PC-PTSD-5 score, a trauma-informed clinician can help assess the full picture. Consider also:
             </p>
             <ul>
-              <li><Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link> &mdash; depression is common in the aftermath of trauma</li>
-              <li><Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Screening</Link> &mdash; anxiety frequently co-occurs with trauma exposure</li>
-              <li><Link href="/ace-questionnaire" className="text-sage-600 dark:text-sage-400 underline">ACE Questionnaire</Link> &mdash; if adverse childhood experiences are part of your history</li>
+              <li><Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link>, depression is common in the aftermath of trauma</li>
+              <li><Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Screening</Link>, anxiety frequently co-occurs with trauma exposure</li>
+              <li><Link href="/ace-questionnaire" className="text-sage-600 dark:text-sage-400 underline">ACE Questionnaire</Link>, if adverse childhood experiences are part of your history</li>
             </ul>
           </section>
 
@@ -232,10 +232,10 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
           <section>
             <h2>Next steps after a positive screen</h2>
             <ol>
-              <li><strong>Take the full PCL-5</strong> &mdash; the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5 PTSD Screening</Link> provides a more detailed symptom picture</li>
-              <li><strong>Talk to your primary care physician</strong> &mdash; share your score; many PCPs now have trauma-informed referral pathways</li>
-              <li><strong>Seek a trauma-informed mental health clinician</strong> &mdash; ideally one trained in Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), or EMDR</li>
-              <li><strong>Don&apos;t white-knuckle it alone</strong> &mdash; PTSD symptoms tend to worsen with avoidance and improve with appropriate treatment</li>
+              <li><strong>Take the full PCL-5</strong>, the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5 PTSD Screening</Link> provides a more detailed symptom picture</li>
+              <li><strong>Talk to your primary care physician</strong>, share your score; many PCPs now have trauma-informed referral pathways</li>
+              <li><strong>Seek a trauma-informed mental health clinician</strong>, ideally one trained in Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), or EMDR</li>
+              <li><strong>Don&apos;t white-knuckle it alone</strong>, PTSD symptoms tend to worsen with avoidance and improve with appropriate treatment</li>
             </ol>
           </section>
 
@@ -256,9 +256,9 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -280,7 +280,7 @@ export default function WhatDoesPcPtsd5ScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

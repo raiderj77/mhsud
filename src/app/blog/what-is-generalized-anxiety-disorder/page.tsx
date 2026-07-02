@@ -92,7 +92,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Generalized anxiety disorder (GAD) is a mental health condition characterized by persistent, excessive worry about multiple areas of daily life &mdash; work, health, finances, relationships, or everyday responsibilities &mdash; that is difficult to control and present more days than not for at least six months. GAD affects approximately 5.7% of US adults at some point in their lives and is one of the most common anxiety disorders seen in primary care settings (Kessler et al., 2005).
+            Generalized anxiety disorder (GAD) is a mental health condition characterized by persistent, excessive worry about multiple areas of daily life, work, health, finances, relationships, or everyday responsibilities, that is difficult to control and present more days than not for at least six months. GAD affects approximately 5.7% of US adults at some point in their lives and is one of the most common anxiety disorders seen in primary care settings (Kessler et al., 2005).
           </p>
         </header>
 
@@ -123,14 +123,14 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               <strong>GAD-type worry</strong> tends to be:
             </p>
             <ul>
-              <li>Widespread &mdash; jumping between topics and domains</li>
+              <li>Widespread, jumping between topics and domains</li>
               <li>Difficult to control even when you recognize it&apos;s excessive</li>
               <li>Persistent regardless of whether real problems are present</li>
               <li>Accompanied by physical symptoms (muscle tension, fatigue, sleep disruption)</li>
               <li>Causing meaningful impairment in daily functioning</li>
             </ul>
             <p>
-              The key clinical distinction is <strong>control and proportionality</strong>. The person with GAD typically knows their worry is excessive &mdash; they aren&apos;t misreading their circumstances &mdash; but they find it genuinely difficult to stop or redirect.
+              The key clinical distinction is <strong>control and proportionality</strong>. The person with GAD typically knows their worry is excessive, they aren&apos;t misreading their circumstances, but they find it genuinely difficult to stop or redirect.
             </p>
           </section>
 
@@ -146,7 +146,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               <li><strong>Difficulty concentrating</strong> or mind going blank</li>
               <li><strong>Irritability</strong></li>
               <li><strong>Muscle tension</strong></li>
-              <li><strong>Sleep disturbance</strong> &mdash; difficulty falling or staying asleep, or restless unsatisfying sleep</li>
+              <li><strong>Sleep disturbance</strong>, difficulty falling or staying asleep, or restless unsatisfying sleep</li>
             </ol>
             <p>
               The anxiety, worry, or physical symptoms must cause clinically significant distress or impairment in social, occupational, or other important areas of functioning.
@@ -158,12 +158,12 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
             </p>
             <ul>
               <li>Chronic muscle tension, particularly in the neck, shoulders, and jaw</li>
-              <li>Headaches &mdash; often tension-type</li>
-              <li>GI symptoms &mdash; nausea, irritable bowel, stomach upset</li>
+              <li>Headaches, often tension-type</li>
+              <li>GI symptoms, nausea, irritable bowel, stomach upset</li>
               <li>Fatigue that doesn&apos;t resolve with rest</li>
               <li>Heart palpitations</li>
               <li>Sweating and trembling during periods of heightened anxiety</li>
-              <li>Sleep difficulty &mdash; typically taking a long time to fall asleep due to worry</li>
+              <li>Sleep difficulty, typically taking a long time to fall asleep due to worry</li>
             </ul>
           </section>
 
@@ -177,14 +177,14 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               Risk factors include:
             </p>
             <ul>
-              <li><strong>Family history</strong> &mdash; GAD has a moderate genetic component</li>
-              <li><strong>Temperament</strong> &mdash; people with a history of behavioral inhibition or negative affectivity are at higher risk</li>
-              <li><strong>Chronic stress</strong> &mdash; ongoing life stressors without adequate coping or support</li>
-              <li><strong>Trauma history</strong> &mdash; adverse childhood experiences increase risk</li>
-              <li><strong>Other mental health conditions</strong> &mdash; GAD commonly co-occurs with depression, other anxiety disorders, and substance use disorders</li>
+              <li><strong>Family history</strong>, GAD has a moderate genetic component</li>
+              <li><strong>Temperament</strong>, people with a history of behavioral inhibition or negative affectivity are at higher risk</li>
+              <li><strong>Chronic stress</strong>, ongoing life stressors without adequate coping or support</li>
+              <li><strong>Trauma history</strong>, adverse childhood experiences increase risk</li>
+              <li><strong>Other mental health conditions</strong>, GAD commonly co-occurs with depression, other anxiety disorders, and substance use disorders</li>
             </ul>
             <p>
-              GAD often has an insidious onset &mdash; it frequently develops gradually rather than after a discrete triggering event.
+              GAD often has an insidious onset, it frequently develops gradually rather than after a discrete triggering event.
             </p>
           </section>
 
@@ -202,7 +202,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               <li>Only <strong>43.2%</strong> of people with GAD receive any treatment (ADAA, 2023)</li>
             </ul>
             <p>
-              GAD tends to be a chronic condition &mdash; without treatment, it typically waxes and wanes rather than fully resolving. With appropriate treatment, the majority of people experience significant improvement.
+              GAD tends to be a chronic condition, without treatment, it typically waxes and wanes rather than fully resolving. With appropriate treatment, the majority of people experience significant improvement.
             </p>
           </section>
 
@@ -223,7 +223,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               <li>Ruling out other mental health conditions that better explain the presentation</li>
             </ul>
             <p>
-              GAD is frequently missed in primary care because patients often present with physical complaints &mdash; fatigue, headaches, GI symptoms &mdash; rather than anxiety. If you&apos;ve had these symptoms evaluated medically without finding a clear cause, anxiety is worth exploring.
+              GAD is frequently missed in primary care because patients often present with physical complaints, fatigue, headaches, GI symptoms, rather than anxiety. If you&apos;ve had these symptoms evaluated medically without finding a clear cause, anxiety is worth exploring.
             </p>
           </section>
 
@@ -271,7 +271,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               <strong>Cognitive Behavioral Therapy (CBT)</strong> is the gold standard psychological treatment for GAD. It targets two core processes: the content of worrying thoughts (cognitive restructuring) and the behaviors that maintain anxiety, particularly avoidance and reassurance-seeking. Meta-analyses show effect sizes of 0.80&ndash;1.01 compared to control conditions (Cuijpers et al., 2014).
             </p>
             <p>
-              <strong>Acceptance and Commitment Therapy (ACT)</strong> focuses on changing the relationship to anxious thoughts rather than their content &mdash; learning to hold worry lightly rather than treating it as a command. Growing evidence base for anxiety disorders.
+              <strong>Acceptance and Commitment Therapy (ACT)</strong> focuses on changing the relationship to anxious thoughts rather than their content, learning to hold worry lightly rather than treating it as a command. Growing evidence base for anxiety disorders.
             </p>
             <p>
               <strong>Worry Postponement and Scheduled Worry Time:</strong> A specific behavioral technique where worry is deliberately postponed to a designated daily time window, breaking the pattern of continuous background worrying. Surprisingly well-supported in research.
@@ -290,10 +290,10 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
 
             <h3>Lifestyle</h3>
             <ul>
-              <li><strong>Regular aerobic exercise</strong> &mdash; reduces anxiety symptoms with effect sizes comparable to medication in some studies (Stonerock et al., 2015)</li>
-              <li><strong>Consistent sleep schedule</strong> &mdash; irregular sleep dramatically worsens anxiety</li>
-              <li><strong>Caffeine reduction</strong> &mdash; caffeine directly stimulates the physiological anxiety response</li>
-              <li><strong>Mindfulness-based practices</strong> &mdash; Mindfulness-Based Stress Reduction (MBSR) has a growing evidence base for anxiety</li>
+              <li><strong>Regular aerobic exercise</strong>, reduces anxiety symptoms with effect sizes comparable to medication in some studies (Stonerock et al., 2015)</li>
+              <li><strong>Consistent sleep schedule</strong>, irregular sleep dramatically worsens anxiety</li>
+              <li><strong>Caffeine reduction</strong>, caffeine directly stimulates the physiological anxiety response</li>
+              <li><strong>Mindfulness-based practices</strong>, Mindfulness-Based Stress Reduction (MBSR) has a growing evidence base for anxiety</li>
             </ul>
           </section>
 
@@ -303,13 +303,13 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
           <section>
             <h2>When to Seek Help</h2>
             <p>
-              If you recognize GAD symptoms in yourself &mdash; persistent worry that&apos;s hard to control, physical symptoms, significant impact on your daily life &mdash; a conversation with a mental health professional or your primary care physician is the right next step.
+              If you recognize GAD symptoms in yourself, persistent worry that&apos;s hard to control, physical symptoms, significant impact on your daily life, a conversation with a mental health professional or your primary care physician is the right next step.
             </p>
             <p>
               You don&apos;t need to have had GAD for years before seeking support. Early intervention is associated with better outcomes and prevents the secondary effects of chronic anxiety (avoidance patterns, social withdrawal, co-occurring depression).
             </p>
             <p>
-              Start by taking the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> &mdash; it takes two minutes and gives you a structured snapshot to bring to any clinical conversation.
+              Start by taking the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link>, it takes two minutes and gives you a structured snapshot to bring to any clinical conversation.
             </p>
           </section>
 
@@ -317,7 +317,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment &mdash; they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -328,9 +328,9 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -352,7 +352,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.
@@ -394,7 +394,7 @@ export default function WhatIsGeneralizedAnxietyDisorderPage() {
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression &mdash; commonly co-occurs with GAD</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression, commonly co-occurs with GAD</p>
               </Link>
               <Link href="/spin-social-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">SPIN Social Anxiety Test</p>

@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/audit-alcohol-test",
   title: "AUDIT Alcohol Use Screening Test",
   description:
-    "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, honest, no sign-up. Results in 3 minutes.",
+    "Take the free AUDIT alcohol screening test, the WHO's 10-question tool used by clinicians worldwide. Private, honest, no sign-up. Results in 3 minutes.",
   keywords: [
     "audit alcohol test", "alcohol screening test", "alcohol assessment",
     "alcohol use disorders identification test", "alcohol screening questionnaire",
@@ -21,7 +21,7 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     title: "AUDIT Alcohol Use Screening Test",
-    description: "Take the free AUDIT alcohol screening test — the WHO's 10-question tool used by clinicians worldwide. Private, no sign-up. Results in 3 minutes.",
+    description: "Take the free AUDIT alcohol screening test, the WHO's 10-question tool used by clinicians worldwide. Private, no sign-up. Results in 3 minutes.",
     url: TOOL_URL,
     type: "website",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   { question: "What is the AUDIT alcohol test?", answer: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool developed by the World Health Organization to identify hazardous and harmful alcohol use. It is widely used in primary care, emergency settings, and counseling to initiate conversations about alcohol use." },
   { question: "How is the AUDIT scored?", answer: "AUDIT scores range from 0–40. A score of 8 or above suggests hazardous alcohol use and warrants a brief intervention. Scores of 16 and above indicate harmful use, and scores of 20 or above may suggest alcohol dependence requiring further assessment." },
-  { question: "What is the difference between the AUDIT and AUDIT-C?", answer: "The AUDIT is the full 10-question assessment covering frequency, quantity, and consequences of drinking. The AUDIT-C is a shorter 3-question version using only the first three questions — it is faster but focuses solely on consumption rather than consequences or dependence." },
+  { question: "What is the difference between the AUDIT and AUDIT-C?", answer: "The AUDIT is the full 10-question assessment covering frequency, quantity, and consequences of drinking. The AUDIT-C is a shorter 3-question version using only the first three questions, it is faster but focuses solely on consumption rather than consequences or dependence." },
   { question: "Is the AUDIT test confidential?", answer: "Yes. This online version processes all your responses in your browser only. Nothing you enter is stored or transmitted to any server. Your results are completely private." },
   { question: "What should I do if I score high on the AUDIT?", answer: "A high AUDIT score is a signal worth taking seriously. Consider speaking with your primary care doctor or a licensed substance use counselor. Many people find that even a brief conversation with a professional leads to meaningful changes. You can also explore SAMHSA's National Helpline at 1-800-662-4357 for free, confidential support." },
   { question: "Can this tool diagnose an alcohol use disorder?", answer: "No. The AUDIT is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can diagnose an alcohol use disorder through a comprehensive evaluation." },
@@ -58,7 +58,7 @@ export default function AUDITPage() {
         <AnswerBlock
           what="The AUDIT is a 10-question WHO-validated alcohol use screening tool used in clinical and primary care settings."
           who="Anyone wanting to understand their relationship with alcohol using a clinically recognized instrument."
-          bottomLine="AUDIT scores help identify drinking patterns on a standardized scale — results are informational and not a clinical diagnosis."
+          bottomLine="AUDIT scores help identify drinking patterns on a standardized scale, results are informational and not a clinical diagnosis."
           lastUpdated="2026-03-20"
         />
       </div>

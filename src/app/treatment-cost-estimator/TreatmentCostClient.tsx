@@ -59,7 +59,7 @@ const TREATMENTS: TreatmentOption[] = [
     costHigh: 15000,
     costPer: "total (4-6 weeks)",
     duration: "20+ hours per week for 4-6 weeks",
-    description: "Day program with hospital-level services — 6-8 hours per day, 5-7 days per week. Return home or to sober living at night.",
+    description: "Day program with hospital-level services, 6-8 hours per day, 5-7 days per week. Return home or to sober living at night.",
     includes: ["Full-day programming", "Psychiatric evaluation", "Medication management", "Group and individual therapy", "Medical monitoring", "Meals during program hours"],
     intensity: "high",
   },
@@ -117,33 +117,33 @@ const TREATMENTS: TreatmentOption[] = [
   },
   {
     key: "mat-suboxone",
-    name: "MAT — Buprenorphine (Suboxone)",
+    name: "MAT, Buprenorphine (Suboxone)",
     shortName: "MAT: Suboxone",
     category: "MAT",
     costLow: 200,
     costHigh: 600,
     costPer: "per month",
-    duration: "Ongoing — months to years",
+    duration: "Ongoing, months to years",
     description: "Partial opioid agonist prescribed by qualified providers. Can be taken at home. Considered gold standard for opioid use disorder.",
     includes: ["Monthly prescriber visits", "Medication (buprenorphine/naloxone)", "Urine drug screens", "Counseling (often required)", "Dosage adjustments"],
     intensity: "low",
   },
   {
     key: "mat-methadone",
-    name: "MAT — Methadone",
+    name: "MAT, Methadone",
     shortName: "MAT: Methadone",
     category: "MAT",
     costLow: 100,
     costHigh: 400,
     costPer: "per month",
-    duration: "Ongoing — daily clinic visits initially",
+    duration: "Ongoing, daily clinic visits initially",
     description: "Full opioid agonist dispensed through licensed clinics. Requires daily visits initially, with take-home privileges earned over time.",
     includes: ["Daily clinic visits (initially)", "Medication dispensing", "Counseling services", "Drug testing", "Gradual take-home privileges"],
     intensity: "medium",
   },
   {
     key: "mat-vivitrol",
-    name: "MAT — Naltrexone (Vivitrol)",
+    name: "MAT, Naltrexone (Vivitrol)",
     shortName: "MAT: Vivitrol",
     category: "MAT",
     costLow: 1000,
@@ -312,7 +312,7 @@ export function TreatmentCostClient({ faqData }: Props) {
               <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Estimated Cost Range</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">{formatCost(selected.costLow)}</span>
-                <span className="text-neutral-500 dark:text-neutral-400 text-lg">—</span>
+                <span className="text-neutral-500 dark:text-neutral-400 text-lg">, </span>
                 <span className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">{formatCost(selected.costHigh)}</span>
               </div>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">{selected.costPer}</p>

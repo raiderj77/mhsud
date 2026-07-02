@@ -53,7 +53,7 @@ const CATEGORIES: Category[] = [
     ],
     copingStrategies: [
       "Set a clear boundary before interacting with this person.",
-      "Practice saying \u201Cno\u201D in advance \u2014 rehearse the exact words you will use.",
+      "Practice saying \u201Cno\u201D in advance, rehearse the exact words you will use.",
       "Bring a sober support person when you know you will see them.",
       "Have an exit plan ready: know how you will leave if a craving starts.",
       "Limit contact to phone or text instead of in-person meetings.",
@@ -83,14 +83,14 @@ const CATEGORIES: Category[] = [
       "Gas stations or convenience stores",
     ],
     copingStrategies: [
-      "Avoid this location entirely if possible \u2014 take a different route.",
+      "Avoid this location entirely if possible, take a different route.",
       "If you must go, bring a sober support person with you.",
       "Set a time limit: decide in advance how long you will stay and stick to it.",
       "Have a specific exit plan: know where the door is and have a ride ready.",
-      "Replace this location with a new one \u2014 find a new coffee shop, gym, or hangout.",
+      "Replace this location with a new one, find a new coffee shop, gym, or hangout.",
       "If you drive past it regularly, plan an alternate route even if it takes longer.",
       "Call someone from your support network before and after visiting this place.",
-      "Remind yourself why you stopped going there \u2014 write it on a card you carry.",
+      "Remind yourself why you stopped going there, write it on a card you carry.",
     ],
   },
   {
@@ -115,15 +115,15 @@ const CATEGORIES: Category[] = [
     ],
     copingStrategies: [
       "Do a HALT check-in: are you Hungry, Angry, Lonely, or Tired?",
-      "Use urge surfing: observe the emotion like a wave \u2014 it will rise, peak, and pass.",
+      "Use urge surfing: observe the emotion like a wave, it will rise, peak, and pass.",
       "Practice box breathing: 4 seconds in, hold 4, out 4, hold 4.",
       "Call someone from your support network and tell them how you feel.",
       "Write in a journal: name the emotion and describe it without judgment.",
-      "Go for a walk or do physical activity \u2014 movement changes brain chemistry.",
+      "Go for a walk or do physical activity, movement changes brain chemistry.",
       "Use the 5-4-3-2-1 grounding technique to bring yourself to the present moment.",
       "Remind yourself: the emotion is real, but the craving is not a command.",
       "Ask: what do I actually need right now? Often the answer is not a substance.",
-      "Do something kind for yourself \u2014 a warm drink, a shower, a favorite show.",
+      "Do something kind for yourself, a warm drink, a shower, a favorite show.",
     ],
   },
   {
@@ -150,13 +150,13 @@ const CATEGORIES: Category[] = [
       "Plan ahead: if you know this situation is coming, rehearse your response.",
       "Have a prepared phrase for being offered substances: \u201CNo thanks, I\u2019m good.\u201D",
       "Automate your money on paydays: set up auto-transfers to savings before you can spend.",
-      "Build structure into unstructured time \u2014 schedule activities in advance.",
+      "Build structure into unstructured time, schedule activities in advance.",
       "Call your sponsor or a support person before the situation, not just after.",
-      "Keep your relapse prevention plan accessible \u2014 on your phone or in your wallet.",
+      "Keep your relapse prevention plan accessible, on your phone or in your wallet.",
       "Identify one safe person you can text a code word when you feel triggered.",
       "Leave early. You do not owe anyone an explanation for protecting your recovery.",
       "After the situation passes, acknowledge that you got through it. That matters.",
-      "Debrief with your therapist or sponsor \u2014 what worked, what was hard, what to do differently next time.",
+      "Debrief with your therapist or sponsor, what worked, what was hard, what to do differently next time.",
     ],
   },
   {
@@ -178,7 +178,7 @@ const CATEGORIES: Category[] = [
       "Paydays",
     ],
     copingStrategies: [
-      "Schedule a specific activity during this time every week \u2014 fill the void before it appears.",
+      "Schedule a specific activity during this time every week, fill the void before it appears.",
       "Build a new routine: replace the old habit with a healthy one at the same time.",
       "Plan a support check-in call during your vulnerable times.",
       "Go to a meeting, group, or social activity during this time slot.",
@@ -208,7 +208,7 @@ const CATEGORIES: Category[] = [
     ],
     copingStrategies: [
       "Use the 5-4-3-2-1 grounding technique: name 5 things you see, 4 you hear, 3 you touch, 2 you smell, 1 you taste.",
-      "Change your environment immediately \u2014 walk to a different room or go outside.",
+      "Change your environment immediately, walk to a different room or go outside.",
       "Replace the sensory association: listen to new music, find new scents you enjoy.",
       "Mute, skip, or block alcohol and drug advertisements on social media and streaming services.",
       "Carry something with a strong, pleasant scent (essential oil, mint) to redirect your senses.",
@@ -578,18 +578,18 @@ export function TriggerWorksheetClient({ faqData }: Props) {
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           A <strong>trigger</strong> is any person, place, emotion, situation, time, or sensory experience
           that activates a craving or urge to use substances. Triggers work through <strong>conditioned
-          association</strong> — your brain has learned to link certain cues with the reward of using, so
+          association</strong>, your brain has learned to link certain cues with the reward of using, so
           encountering those cues produces an automatic urge, even if you consciously want to stay sober.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           Triggers are often divided into <strong>external triggers</strong> (people, places, situations,
           sensory cues) and <strong>internal triggers</strong> (emotions, physical states, thought patterns).
-          Research published in <em>Drug and Alcohol Dependence</em> found that internal triggers — especially
-          negative emotions like stress, anger, and loneliness — are the most common precursors to relapse,
+          Research published in <em>Drug and Alcohol Dependence</em> found that internal triggers, especially
+          negative emotions like stress, anger, and loneliness, are the most common precursors to relapse,
           accounting for the majority of relapse episodes.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          The critical insight is that <strong>you cannot eliminate all triggers</strong> — but you can
+          The critical insight is that <strong>you cannot eliminate all triggers</strong>, but you can
           identify them, prepare for them, and develop specific coping responses for each one. This is the
           foundation of evidence-based relapse prevention.
         </p>
@@ -619,7 +619,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           From Identification to Action
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Identifying your triggers is the first step — but the real value comes from <strong>building a
+          Identifying your triggers is the first step, but the real value comes from <strong>building a
           specific response plan for each one</strong>. This is what a relapse prevention plan does: it takes
           your trigger list and pairs each trigger with a concrete coping strategy, so that when the trigger
           appears, you already know what to do.
@@ -628,8 +628,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           Research by Marlatt and Gordon found that people who could identify their triggers and had
           pre-planned coping responses were significantly less likely to relapse than those who relied on
           willpower alone. The reason is simple: in the moment of a craving, your brain is flooded with
-          urges and it is difficult to think clearly. Having a written plan means you do not need to think —
-          you just follow the plan.
+          urges and it is difficult to think clearly. Having a written plan means you do not need to think, you just follow the plan.
         </p>
 
         {/* internal links */}
@@ -642,19 +641,19 @@ export function TriggerWorksheetClient({ faqData }: Props) {
               <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Relapse Prevention Plan
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Turn your triggers into a written action plan</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Turn your triggers into a written action plan</span>
             </li>
             <li>
               <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Urge Surfing Timer
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Ride out cravings with guided mindfulness</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Ride out cravings with guided mindfulness</span>
             </li>
             <li>
               <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 HALT Check-In
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Check if hunger, anger, loneliness, or tiredness is driving your craving</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Check if hunger, anger, loneliness, or tiredness is driving your craving</span>
             </li>
           </ul>
         </div>

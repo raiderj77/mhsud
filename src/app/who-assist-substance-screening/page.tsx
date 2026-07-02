@@ -41,12 +41,12 @@ const FAQ_DATA = [
   {
     question: "What do the risk levels mean?",
     answer:
-      "Low risk (0-3 for most substances, 0-10 for alcohol) means your current use pattern carries minimal risk and no intervention is needed. Moderate risk (4-26 for most substances, 11-26 for alcohol) means you are at risk of health and other problems from your current use pattern and a brief intervention is recommended — this typically involves information, advice, and follow-up with a healthcare provider. High risk (27+ for all substances) indicates a high risk of severe problems and possible dependence, and intensive assessment and treatment by a specialist is strongly recommended.",
+      "Low risk (0-3 for most substances, 0-10 for alcohol) means your current use pattern carries minimal risk and no intervention is needed. Moderate risk (4-26 for most substances, 11-26 for alcohol) means you are at risk of health and other problems from your current use pattern and a brief intervention is recommended, this typically involves information, advice, and follow-up with a healthcare provider. High risk (27+ for all substances) indicates a high risk of severe problems and possible dependence, and intensive assessment and treatment by a specialist is strongly recommended.",
   },
   {
     question: "Why are the alcohol risk cutoffs different?",
     answer:
-      "The WHO set different low-risk cutoffs for alcohol (0-10) compared to other substances (0-3) because alcohol is legal and widely consumed in most cultures. A person can score higher on alcohol questions simply because social drinking is normalized — scoring a 4 on alcohol does not carry the same clinical concern as scoring a 4 on cocaine or opioids. The higher threshold for alcohol ensures that the screening appropriately identifies people whose alcohol use has actually reached a concerning level, rather than flagging moderate social drinkers. The moderate and high risk thresholds are the same across all substances.",
+      "The WHO set different low-risk cutoffs for alcohol (0-10) compared to other substances (0-3) because alcohol is legal and widely consumed in most cultures. A person can score higher on alcohol questions simply because social drinking is normalized, scoring a 4 on alcohol does not carry the same clinical concern as scoring a 4 on cocaine or opioids. The higher threshold for alcohol ensures that the screening appropriately identifies people whose alcohol use has actually reached a concerning level, rather than flagging moderate social drinkers. The moderate and high risk thresholds are the same across all substances.",
   },
   {
     question: "How is the ASSIST different from the AUDIT or DAST-10?",
@@ -103,7 +103,7 @@ export default function AssistPage() {
         <AnswerBlock
           what="The WHO ASSIST, a comprehensive substance screening covering tobacco, alcohol, cannabis, and eight other substance categories."
           who="Anyone who uses any substances and wants a thorough, WHO-validated assessment of risk across all substance types."
-          bottomLine="The ASSIST scores each substance separately — you may have different risk levels for different substances. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The ASSIST scores each substance separately, you may have different risk levels for different substances. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

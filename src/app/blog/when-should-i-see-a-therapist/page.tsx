@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/when-should-i-see-a-therapist",
   title: "When Should I See a Therapist? 10 Signs",
   description:
-    "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional \u2014 and what to expect when you do.",
+    "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional, and what to expect when you do.",
   keywords: [
     "when to see a therapist",
     "do I need therapy",
@@ -62,7 +62,7 @@ const FAQ_DATA = [
 export default function WhenShouldISeeATherapistPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "When Should I See a Therapist? 10 Signs", description: "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional \u2014 and what to expect when you do.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "When Should I See a Therapist? 10 Signs", description: "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional, and what to expect when you do.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "When Should I See a Therapist?", url: ARTICLE_URL }])) }} />
 
@@ -97,7 +97,7 @@ export default function WhenShouldISeeATherapistPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            You should consider seeing a therapist when emotional distress is affecting your daily functioning, relationships, work, or quality of life — or when you feel stuck and self-directed coping hasn&apos;t helped. Therapy isn&apos;t only for crisis situations. Research consistently shows that early intervention produces better outcomes than waiting until symptoms become severe (Wang et al., 2005, <em>American Journal of Psychiatry</em>).
+            You should consider seeing a therapist when emotional distress is affecting your daily functioning, relationships, work, or quality of life, or when you feel stuck and self-directed coping hasn&apos;t helped. Therapy isn&apos;t only for crisis situations. Research consistently shows that early intervention produces better outcomes than waiting until symptoms become severe (Wang et al., 2005, <em>American Journal of Psychiatry</em>).
           </p>
         </header>
 
@@ -109,23 +109,23 @@ export default function WhenShouldISeeATherapistPage() {
               Most people wait too long.
             </p>
             <p>
-              Research from the Harvard Medical School found that the average delay between first experiencing mental health symptoms and seeking treatment is <strong>11 years</strong> (Wang et al., 2005). That&apos;s not because people don&apos;t want help — it&apos;s because most people aren&apos;t sure their situation is &quot;bad enough&quot; to warrant it.
+              Research from the Harvard Medical School found that the average delay between first experiencing mental health symptoms and seeking treatment is <strong>11 years</strong> (Wang et al., 2005). That&apos;s not because people don&apos;t want help, it&apos;s because most people aren&apos;t sure their situation is &quot;bad enough&quot; to warrant it.
             </p>
             <p>
-              The truth is that therapy isn&apos;t reserved for crisis. It&apos;s a space for anyone who wants support in navigating life — whether that&apos;s managing a specific challenge, processing a difficult experience, improving relationships, or simply understanding themselves better.
+              The truth is that therapy isn&apos;t reserved for crisis. It&apos;s a space for anyone who wants support in navigating life, whether that&apos;s managing a specific challenge, processing a difficult experience, improving relationships, or simply understanding themselves better.
             </p>
             <p>
               You don&apos;t need to be in crisis to benefit from therapy. You just need to be a person with a mind.
             </p>
           </section>
 
-          {/* Section 2 — Signs 1-3 */}
+          {/* Section 2, Signs 1-3 */}
           <section>
             <h2>10 signs it may be time to see a therapist</h2>
 
             <h3>1. You feel overwhelmed more often than not</h3>
             <p>
-              Everyone has difficult weeks. But if you&apos;ve been feeling overwhelmed, anxious, sad, or emotionally exhausted for two or more weeks — and it doesn&apos;t seem to be tied to a specific, passing event — that pattern is worth taking seriously.
+              Everyone has difficult weeks. But if you&apos;ve been feeling overwhelmed, anxious, sad, or emotionally exhausted for two or more weeks, and it doesn&apos;t seem to be tied to a specific, passing event, that pattern is worth taking seriously.
             </p>
             <p>
               Persistent overwhelm is one of the most common signals that emotions need more support than everyday coping provides. A therapist can help you understand what&apos;s driving it and build strategies to manage it more effectively.
@@ -136,26 +136,26 @@ export default function WhenShouldISeeATherapistPage() {
               Struggling to get out of bed. Dreading going to work. Withdrawing from people you care about. Losing interest in activities you used to enjoy.
             </p>
             <p>
-              When emotional states start shaping your behavior in ways that feel limiting or involuntary, that&apos;s a sign they&apos;re exceeding your current capacity to manage them alone. This isn&apos;t weakness — it&apos;s information. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> can help you understand whether the pattern you&apos;re experiencing aligns with recognized clinical thresholds.
+              When emotional states start shaping your behavior in ways that feel limiting or involuntary, that&apos;s a sign they&apos;re exceeding your current capacity to manage them alone. This isn&apos;t weakness, it&apos;s information. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 Depression Self-Check</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> can help you understand whether the pattern you&apos;re experiencing aligns with recognized clinical thresholds.
             </p>
 
             <h3>3. You&apos;re using substances more to cope</h3>
             <p>
-              Drinking more to relax, using substances to manage stress, sleep, or social situations — when the frequency or quantity creeps upward as a coping mechanism, that&apos;s a signal worth paying attention to.
+              Drinking more to relax, using substances to manage stress, sleep, or social situations, when the frequency or quantity creeps upward as a coping mechanism, that&apos;s a signal worth paying attention to.
             </p>
             <p>
               This isn&apos;t a judgment about substance use itself. It&apos;s about noticing whether a behavior is becoming load-bearing in a way that concerns you. A counselor can help you examine what&apos;s underneath it without shame or pressure. Consider also taking the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT Alcohol Use Screen</Link> for more clarity.
             </p>
           </section>
 
-          {/* Section 3 — Signs 4-5 */}
+          {/* Section 3, Signs 4-5 */}
           <section>
             <h3>4. You&apos;re experiencing physical symptoms without a clear cause</h3>
             <p>
               Stress and emotional distress don&apos;t stay neatly contained to the mind. They show up in the body: persistent headaches, GI problems, chronic fatigue, frequent illness, muscle tension, or unexplained pain.
             </p>
             <p>
-              When physical symptoms accompany emotional distress and a medical workup doesn&apos;t explain them, therapy — particularly cognitive behavioral approaches — has strong evidence for reducing somatic symptoms linked to stress and anxiety (Hofmann et al., 2012).
+              When physical symptoms accompany emotional distress and a medical workup doesn&apos;t explain them, therapy, particularly cognitive behavioral approaches, has strong evidence for reducing somatic symptoms linked to stress and anxiety (Hofmann et al., 2012).
             </p>
 
             <h3>5. Something traumatic has happened</h3>
@@ -163,17 +163,17 @@ export default function WhenShouldISeeATherapistPage() {
               You don&apos;t have to wait to see whether trauma &quot;sticks&quot; before reaching out for support. Early intervention after traumatic events is associated with reduced risk of developing PTSD (Kearns et al., 2012).
             </p>
             <p>
-              Trauma takes many forms — not just the dramatic, obvious kind. Grief, a difficult relationship ending, a medical diagnosis, job loss, childhood experiences — all of these can have lasting psychological impact. If something happened and you&apos;re not okay, that&apos;s enough reason to seek support.
+              Trauma takes many forms, not just the dramatic, obvious kind. Grief, a difficult relationship ending, a medical diagnosis, job loss, childhood experiences, all of these can have lasting psychological impact. If something happened and you&apos;re not okay, that&apos;s enough reason to seek support.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 1" className="my-8" />
 
-          {/* Section 4 — Signs 6-7 */}
+          {/* Section 4, Signs 6-7 */}
           <section>
             <h3>6. Your relationships feel harder than they should</h3>
             <p>
-              Recurring conflict with a partner, difficulty setting limits with family, isolation from friends, or feeling fundamentally misunderstood in close relationships — these are some of the most common reasons people seek therapy, and some of the areas where it produces the clearest results.
+              Recurring conflict with a partner, difficulty setting limits with family, isolation from friends, or feeling fundamentally misunderstood in close relationships, these are some of the most common reasons people seek therapy, and some of the areas where it produces the clearest results.
             </p>
             <p>
               Therapy provides a space to look at relational patterns with curiosity rather than shame, and to build skills that change how you show up in the relationships that matter most.
@@ -181,18 +181,18 @@ export default function WhenShouldISeeATherapistPage() {
 
             <h3>7. You&apos;re experiencing persistent grief or loss</h3>
             <p>
-              Grief follows a different timeline for everyone. If you&apos;re still struggling significantly months after a loss — whether that&apos;s a person, a relationship, a job, or an identity — and the grief isn&apos;t softening, complicated grief can benefit from professional support.
+              Grief follows a different timeline for everyone. If you&apos;re still struggling significantly months after a loss, whether that&apos;s a person, a relationship, a job, or an identity, and the grief isn&apos;t softening, complicated grief can benefit from professional support.
             </p>
             <p>
               Research shows that untreated complicated grief can persist for years and increases risk for depression, anxiety, and health complications (Shear et al., 2011). You don&apos;t have to grieve alone.
             </p>
           </section>
 
-          {/* Section 5 — Signs 8-10 */}
+          {/* Section 5, Signs 8-10 */}
           <section>
             <h3>8. You have thoughts that frighten you</h3>
             <p>
-              Intrusive thoughts, thoughts of self-harm, thoughts that feel out of character, persistent dark thoughts — any thought that scares you is worth bringing to a professional. Intrusive thoughts are extremely common and do not mean you will act on them. But they also deserve skilled attention, not isolation.
+              Intrusive thoughts, thoughts of self-harm, thoughts that feel out of character, persistent dark thoughts, any thought that scares you is worth bringing to a professional. Intrusive thoughts are extremely common and do not mean you will act on them. But they also deserve skilled attention, not isolation.
             </p>
             <p>
               If you are having thoughts of hurting yourself or others, please use the crisis resources at the bottom of this page right now.
@@ -200,7 +200,7 @@ export default function WhenShouldISeeATherapistPage() {
 
             <h3>9. You&apos;re struggling with something you&apos;ve been struggling with for a while</h3>
             <p>
-              If there&apos;s a pattern in your life — the same recurring relationship dynamic, the same self-sabotage, the same emotional response to certain triggers — that&apos;s been showing up for years without changing, therapy is specifically designed for exactly that.
+              If there&apos;s a pattern in your life, the same recurring relationship dynamic, the same self-sabotage, the same emotional response to certain triggers, that&apos;s been showing up for years without changing, therapy is specifically designed for exactly that.
             </p>
             <p>
               Patterns that feel hardwired often have understandable origins. A skilled therapist helps you see those origins clearly enough to make different choices.
@@ -208,7 +208,7 @@ export default function WhenShouldISeeATherapistPage() {
 
             <h3>10. You just have a sense that something isn&apos;t right</h3>
             <p>
-              Sometimes there&apos;s no clear symptom or crisis — just a persistent feeling that something is off, that you&apos;re not fully okay, that you want to understand yourself better.
+              Sometimes there&apos;s no clear symptom or crisis, just a persistent feeling that something is off, that you&apos;re not fully okay, that you want to understand yourself better.
             </p>
             <p>
               That&apos;s enough. You don&apos;t have to justify or prove a need for support. Curiosity about your own mind is one of the most valid reasons to seek therapy there is.
@@ -221,7 +221,7 @@ export default function WhenShouldISeeATherapistPage() {
           <section>
             <h2>&quot;But I don&apos;t think my problems are serious enough&quot;</h2>
             <p>
-              This is one of the most common reasons people delay seeking help. And it&apos;s understandable — nobody wants to feel like they&apos;re making a big deal out of nothing.
+              This is one of the most common reasons people delay seeking help. And it&apos;s understandable, nobody wants to feel like they&apos;re making a big deal out of nothing.
             </p>
             <p>
               Here&apos;s the reframe: therapy doesn&apos;t require your problems to meet a severity threshold. It&apos;s a service for human beings who want support. You wouldn&apos;t wait until a minor injury became serious before treating it. You don&apos;t have to wait until you&apos;re in crisis to take care of your mental health.
@@ -232,7 +232,7 @@ export default function WhenShouldISeeATherapistPage() {
           <section>
             <h2>What to expect when you first see a therapist</h2>
             <p>
-              The first session (often called an intake or initial assessment) is primarily about getting to know each other. Your therapist will ask about what brought you in, your background, what you&apos;re hoping to work on, and relevant history. You don&apos;t have to have polished answers — bringing what&apos;s true is enough.
+              The first session (often called an intake or initial assessment) is primarily about getting to know each other. Your therapist will ask about what brought you in, your background, what you&apos;re hoping to work on, and relevant history. You don&apos;t have to have polished answers, bringing what&apos;s true is enough.
             </p>
             <p>
               You won&apos;t be judged for what you share. The therapeutic relationship is built on confidentiality (with narrow legal exceptions your therapist will explain), non-judgment, and your goals.
@@ -251,7 +251,7 @@ export default function WhenShouldISeeATherapistPage() {
               <strong>Insurance:</strong> Check your insurance provider&apos;s directory for in-network mental health providers. Many insurers now include telehealth options.
             </p>
             <p>
-              <strong>Psychology Today Directory:</strong> <a href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">psychologytoday.com/us/therapists</a> — searchable by location, specialty, insurance, and approach.
+              <strong>Psychology Today Directory:</strong> <a href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">psychologytoday.com/us/therapists</a>, searchable by location, specialty, insurance, and approach.
             </p>
             <p>
               <strong>Open Path Collective:</strong> Reduced-cost therapy for individuals earning under $100K. Sessions typically $30–$80.
@@ -313,9 +313,9 @@ export default function WhenShouldISeeATherapistPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -338,7 +338,7 @@ export default function WhenShouldISeeATherapistPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

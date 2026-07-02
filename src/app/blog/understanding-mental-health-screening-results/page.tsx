@@ -31,12 +31,12 @@ const FAQ_DATA = [
   {
     question: "Can I use these results to self-diagnose?",
     answer:
-      "No. Screening results indicate your symptom pattern crosses a validated statistical threshold \u2014 they cannot diagnose a condition. Diagnosis requires comprehensive clinical evaluation considering your full history, context, and functioning. Self-diagnosis based on screening scores can lead to unnecessary alarm or false reassurance. A clinician provides the context screening tools cannot.",
+      "No. Screening results indicate your symptom pattern crosses a validated statistical threshold, they cannot diagnose a condition. Diagnosis requires comprehensive clinical evaluation considering your full history, context, and functioning. Self-diagnosis based on screening scores can lead to unnecessary alarm or false reassurance. A clinician provides the context screening tools cannot.",
   },
   {
     question: "I scored high on multiple screens. Does that mean I have multiple conditions?",
     answer:
-      "It means multiple symptom dimensions are elevated, which is worth discussing with a clinician. Mental health conditions frequently co-occur \u2014 depression with anxiety, PTSD with depression. But elevated scores across tools might also reflect interrelated symptoms or situational distress affecting all areas. A clinician can help determine what is driving the pattern.",
+      "It means multiple symptom dimensions are elevated, which is worth discussing with a clinician. Mental health conditions frequently co-occur, depression with anxiety, PTSD with depression. But elevated scores across tools might also reflect interrelated symptoms or situational distress affecting all areas. A clinician can help determine what is driving the pattern.",
   },
   {
     question: "Should I be worried about my results?",
@@ -88,7 +88,7 @@ export default function UnderstandingScreeningResultsPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Mental health screening tools &mdash; the PHQ-9, GAD-7, PCL-5, and others &mdash; are structured, validated questionnaires that assess how much distress you&rsquo;ve been experiencing across a set of symptoms. A screening result tells you where your symptom pattern falls relative to validated clinical thresholds. It is not a diagnosis, not a prediction, and not a verdict &mdash; it is information that can help you and a clinician understand what&rsquo;s happening and what to do next.
+            Mental health screening tools, the PHQ-9, GAD-7, PCL-5, and others, are structured, validated questionnaires that assess how much distress you&rsquo;ve been experiencing across a set of symptoms. A screening result tells you where your symptom pattern falls relative to validated clinical thresholds. It is not a diagnosis, not a prediction, and not a verdict, it is information that can help you and a clinician understand what&rsquo;s happening and what to do next.
           </p>
         </header>
 
@@ -114,7 +114,7 @@ export default function UnderstandingScreeningResultsPage() {
               <li>Accounts for co-occurring conditions</li>
             </ul>
             <p>
-              A positive screen &mdash; scoring above the validated cutoff on the PHQ-9, GAD-7, or any other tool &mdash; is not a diagnosis of depression, anxiety, or anything else. It is a signal that a professional evaluation would be worthwhile.
+              A positive screen, scoring above the validated cutoff on the PHQ-9, GAD-7, or any other tool, is not a diagnosis of depression, anxiety, or anything else. It is a signal that a professional evaluation would be worthwhile.
             </p>
             <p>
               This distinction matters in both directions: a high score doesn&rsquo;t mean you definitely have a condition, and a low score doesn&rsquo;t mean everything is fine if your experience tells you otherwise.
@@ -229,7 +229,7 @@ export default function UnderstandingScreeningResultsPage() {
           <section>
             <h2>Why Your Score Might Be Elevated Without a Diagnosis</h2>
             <p>
-              Mental health screening tools are calibrated to be sensitive &mdash; they err on the side of capturing people who might need support. This means false positives exist. Your score may be elevated because of:
+              Mental health screening tools are calibrated to be sensitive, they err on the side of capturing people who might need support. This means false positives exist. Your score may be elevated because of:
             </p>
             <p>
               <strong>Situational distress:</strong> A recent loss, a difficult life transition, acute work stress, or relationship difficulty can produce PHQ-9 or GAD-7 scores in clinical ranges that reflect real distress without indicating a chronic condition.
@@ -241,13 +241,13 @@ export default function UnderstandingScreeningResultsPage() {
               <strong>Medication side effects:</strong> Some medications produce anxiety, mood changes, or sleep disruption that elevates screening scores.
             </p>
             <p>
-              <strong>Normal grief:</strong> Bereavement can produce PHQ-9 scores in the moderate-to-severe range &mdash; not because the person has major depressive disorder, but because grief is painful.
+              <strong>Normal grief:</strong> Bereavement can produce PHQ-9 scores in the moderate-to-severe range, not because the person has major depressive disorder, but because grief is painful.
             </p>
             <p>
               <strong>How you answered:</strong> Screening tools ask about the past two weeks (PHQ-9, GAD-7) or past month (PCL-5). If those weeks were unusually difficult, your score reflects that period specifically.
             </p>
             <p>
-              None of this means a high score should be dismissed. It means context matters &mdash; which is exactly why clinical evaluation rather than self-diagnosis is the appropriate next step.
+              None of this means a high score should be dismissed. It means context matters, which is exactly why clinical evaluation rather than self-diagnosis is the appropriate next step.
             </p>
           </section>
 
@@ -261,16 +261,16 @@ export default function UnderstandingScreeningResultsPage() {
               <strong>Minimization:</strong> People who have adapted to chronic distress often underestimate their symptoms. If you&rsquo;ve felt like this for years, you may rate it as &ldquo;not at all&rdquo; when it&rsquo;s actually constant.
             </p>
             <p>
-              <strong>The tool doesn&rsquo;t cover your presentation:</strong> The PHQ-9 covers depression; if your primary struggle is social anxiety, a low PHQ-9 score doesn&rsquo;t mean you&rsquo;re fine &mdash; it means you need a different screen.
+              <strong>The tool doesn&rsquo;t cover your presentation:</strong> The PHQ-9 covers depression; if your primary struggle is social anxiety, a low PHQ-9 score doesn&rsquo;t mean you&rsquo;re fine, it means you need a different screen.
             </p>
             <p>
               <strong>Timing:</strong> You took the screen on a better day. Mental health conditions fluctuate.
             </p>
             <p>
-              <strong>Multiple mild elevations:</strong> You might score subclinical on three different tools &mdash; not above any single threshold &mdash; but the combination still reflects a meaningful burden.
+              <strong>Multiple mild elevations:</strong> You might score subclinical on three different tools, not above any single threshold, but the combination still reflects a meaningful burden.
             </p>
             <p>
-              If your score is low but your experience is telling you otherwise &mdash; trust your experience. Your own sense that something is wrong is clinically relevant information.
+              If your score is low but your experience is telling you otherwise, trust your experience. Your own sense that something is wrong is clinically relevant information.
             </p>
           </section>
 
@@ -281,7 +281,7 @@ export default function UnderstandingScreeningResultsPage() {
             <p>No clinical action is indicated based on the screening alone. If you&rsquo;re here because something feels off, consider:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Taking a different tool that might better capture your experience</li>
-              <li>Monitoring over time &mdash; retake the screen in 2&ndash;4 weeks</li>
+              <li>Monitoring over time, retake the screen in 2&ndash;4 weeks</li>
               <li>Talking to your primary care physician if you have ongoing concerns</li>
             </ul>
             <h3>Mild scores (just above threshold)</h3>
@@ -289,12 +289,12 @@ export default function UnderstandingScreeningResultsPage() {
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>Sleep:</strong> Prioritize it as a health behavior; sleep deprivation worsens every mental health condition</li>
               <li><strong>Exercise:</strong> 30 minutes of aerobic activity most days has effect sizes comparable to medication for mild presentations</li>
-              <li><strong>Social connection:</strong> Isolation is both a symptom and a cause &mdash; maintaining connection matters</li>
+              <li><strong>Social connection:</strong> Isolation is both a symptom and a cause, maintaining connection matters</li>
               <li><strong>Reduce alcohol:</strong> Alcohol reliably worsens depression and anxiety, especially the days following drinking</li>
               <li><strong>Consider talking to someone:</strong> Your primary care physician is a reasonable first call</li>
             </ul>
             <h3>Moderate scores</h3>
-            <p>At this level, professional support is recommended &mdash; not urgently, but meaningfully:</p>
+            <p>At this level, professional support is recommended, not urgently, but meaningfully:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Talk to your primary care physician; share your scores</li>
               <li>Consider a referral to a therapist or counselor</li>
@@ -314,12 +314,12 @@ export default function UnderstandingScreeningResultsPage() {
             <p>Your screening results are most useful when you bring them to a clinical appointment. They give a clinician a structured starting point and a quantified baseline.</p>
             <p>Helpful ways to use results:</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>&ldquo;I took the PHQ-9 online and scored 16 &mdash; I wanted to talk to you about it&rdquo;</li>
+              <li>&ldquo;I took the PHQ-9 online and scored 16, I wanted to talk to you about it&rdquo;</li>
               <li>Bringing printed or screenshot results to your appointment</li>
               <li>Taking multiple screens to give a fuller picture: PHQ-9 + GAD-7 + AUDIT together takes about 8 minutes and covers depression, anxiety, and alcohol use</li>
             </ul>
             <p>
-              The <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">how to talk to your doctor about mental health</Link> guide covers this in detail &mdash; including exactly what to say if you don&rsquo;t know where to start.
+              The <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">how to talk to your doctor about mental health</Link> guide covers this in detail, including exactly what to say if you don&rsquo;t know where to start.
             </p>
           </section>
 
@@ -327,7 +327,7 @@ export default function UnderstandingScreeningResultsPage() {
           <section>
             <h2>Retaking Screens Over Time</h2>
             <p>
-              Validated screening tools are excellent for tracking change over time &mdash; for monitoring whether you&rsquo;re improving, stable, or getting worse. Many people in treatment retake the PHQ-9 or GAD-7 every 2&ndash;4 weeks to track progress. A decrease of 5 points on the PHQ-9, or a drop of 4 points on the GAD-7, is generally considered a clinically meaningful improvement.
+              Validated screening tools are excellent for tracking change over time, for monitoring whether you&rsquo;re improving, stable, or getting worse. Many people in treatment retake the PHQ-9 or GAD-7 every 2&ndash;4 weeks to track progress. A decrease of 5 points on the PHQ-9, or a drop of 4 points on the GAD-7, is generally considered a clinically meaningful improvement.
             </p>
             <p>
               If you&rsquo;re not in treatment and you take a screen and score in clinical ranges, retaking it in a month is useful: is it getting better, staying the same, or getting worse? That trajectory informs urgency.
@@ -351,9 +351,9 @@ export default function UnderstandingScreeningResultsPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -378,7 +378,7 @@ export default function UnderstandingScreeningResultsPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

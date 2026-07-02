@@ -149,7 +149,7 @@ export function BoxBreathingClient({ faqData }: Props) {
     }, TICK_MS);
   }, []);
 
-  /* Phase progression logic — runs on phaseProgress changes */
+  /* Phase progression logic, runs on phaseProgress changes */
   useEffect(() => {
     if (appPhase !== "active") return;
 
@@ -653,11 +653,11 @@ export function BoxBreathingClient({ faqData }: Props) {
           How to Use This Box Breathing Tool
         </h2>
         <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li><strong>Choose your pattern</strong> — Beginner (3-3-3-3), Standard (4-4-4-4), Advanced (5-5-5-5), or set your own Custom timing.</li>
-          <li><strong>Pick a session length</strong> — 2, 5, or 10 minutes. Choose Unlimited if you want to go as long as you need.</li>
-          <li><strong>Optionally turn on ambient sound</strong> — A gentle tone rises and falls with your breathing to help you stay focused.</li>
+          <li><strong>Choose your pattern</strong>, Beginner (3-3-3-3), Standard (4-4-4-4), Advanced (5-5-5-5), or set your own Custom timing.</li>
+          <li><strong>Pick a session length</strong>, 2, 5, or 10 minutes. Choose Unlimited if you want to go as long as you need.</li>
+          <li><strong>Optionally turn on ambient sound</strong>, A gentle tone rises and falls with your breathing to help you stay focused.</li>
           <li><strong>Press Start</strong> and follow the animated square. The dot traces each side as you breathe in, hold, breathe out, and hold again.</li>
-          <li><strong>The inner square expands and contracts</strong> in sync with your breath — let it guide your inhales and exhales.</li>
+          <li><strong>The inner square expands and contracts</strong> in sync with your breath, let it guide your inhales and exhales.</li>
           <li><strong>Keep going</strong> until the timer ends or you feel calmer. You can pause or end the session at any time.</li>
         </ol>
       </section>
@@ -669,7 +669,7 @@ export function BoxBreathingClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
           <p>
-            Box breathing — also known as square breathing, four-square breathing, or tactical breathing — is a simple but powerful relaxation technique that involves breathing in a rhythmic pattern with equal intervals. The most common pattern is 4-4-4-4: breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, and hold again for 4 seconds. Each cycle traces the four sides of a square, which is where the name comes from.
+            Box breathing, also known as square breathing, four-square breathing, or tactical breathing, is a simple but powerful relaxation technique that involves breathing in a rhythmic pattern with equal intervals. The most common pattern is 4-4-4-4: breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, and hold again for 4 seconds. Each cycle traces the four sides of a square, which is where the name comes from.
           </p>
           <p>
             This technique is widely used by <strong>Navy SEALs, first responders, elite athletes, and therapists</strong> to manage stress in high-pressure situations. It works by activating the parasympathetic nervous system (your body&apos;s &quot;rest and digest&quot; response), which counteracts the fight-or-flight stress response. The deliberate, slow breathing pattern helps lower heart rate, reduce blood pressure, and calm racing thoughts.
@@ -694,7 +694,7 @@ export function BoxBreathingClient({ faqData }: Props) {
             Tips for Beginners
           </h3>
           <p>
-            If you find the 4-4-4-4 pattern uncomfortable, start with the 3-3-3-3 Beginner pattern and work your way up. Breathe through your nose if you can, but mouth breathing is fine too. Try to breathe into your belly (diaphragmatic breathing) rather than your chest — place a hand on your stomach and feel it rise and fall. There is no wrong way to do this. The goal is simply to slow down and create a steady, rhythmic pattern.
+            If you find the 4-4-4-4 pattern uncomfortable, start with the 3-3-3-3 Beginner pattern and work your way up. Breathe through your nose if you can, but mouth breathing is fine too. Try to breathe into your belly (diaphragmatic breathing) rather than your chest, place a hand on your stomach and feel it rise and fall. There is no wrong way to do this. The goal is simply to slow down and create a steady, rhythmic pattern.
           </p>
         </div>
       </section>
@@ -782,11 +782,11 @@ export function BoxBreathingClient({ faqData }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 text-sm">
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-              <p className="text-amber-700 dark:text-amber-300">Call or text 988 — 24/7, free & confidential</p>
+              <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
             </div>
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357 — Treatment referral & info</p>
+              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
             </div>
           </div>
         </div>
@@ -815,17 +815,17 @@ export function BoxBreathingClient({ faqData }: Props) {
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
             <a href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Harvard Health — Relaxation techniques: Breath control helps quell errant stress response
+              Harvard Health, Relaxation techniques: Breath control helps quell errant stress response
             </a>
           </li>
           <li>
             <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00874/full" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Frontiers in Psychology — The Effect of Diaphragmatic Breathing on Attention, Negative Affect and Stress (2017)
+              Frontiers in Psychology, The Effect of Diaphragmatic Breathing on Attention, Negative Affect and Stress (2017)
             </a>
           </li>
           <li>
             <a href="https://med.stanford.edu/news/all-news/2023/01/breathing-exercises.html" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Stanford Medicine — Brief structured breathing exercises enhance mood and reduce physiological arousal (2023)
+              Stanford Medicine, Brief structured breathing exercises enhance mood and reduce physiological arousal (2023)
             </a>
           </li>
         </ul>

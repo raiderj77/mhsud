@@ -28,7 +28,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is a high ACE score?",
-    answer: "An ACE score of 4 or higher is generally considered high and associated with significantly increased risk for heart disease, depression, substance use disorders, and suicide attempts. However, any score above 0 may indicate adversity worth exploring. The ACE score is a screening tool, not a diagnosis — it identifies potential risk, not certainty of outcome.",
+    answer: "An ACE score of 4 or higher is generally considered high and associated with significantly increased risk for heart disease, depression, substance use disorders, and suicide attempts. However, any score above 0 may indicate adversity worth exploring. The ACE score is a screening tool, not a diagnosis, it identifies potential risk, not certainty of outcome.",
   },
   {
     question: "Does a high ACE score mean I'll get sick?",
@@ -44,7 +44,7 @@ const FAQ_DATA = [
   },
   {
     question: "What is trauma-informed care?",
-    answer: "Trauma-informed care recognizes the widespread impact of trauma and integrates that understanding into policies and practices. Rather than asking 'What is wrong with you?' it asks 'What happened to you?' Core principles include safety, trustworthiness, peer support, collaboration, and empowerment. It does not require trauma disclosure — it creates environments where healing is supported regardless of history.",
+    answer: "Trauma-informed care recognizes the widespread impact of trauma and integrates that understanding into policies and practices. Rather than asking 'What is wrong with you?' it asks 'What happened to you?' Core principles include safety, trustworthiness, peer support, collaboration, and empowerment. It does not require trauma disclosure, it creates environments where healing is supported regardless of history.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function ACEScoreMeaningPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Adverse childhood experiences (ACEs) can shape long-term health outcomes — but they do not define your future. Here&apos;s what the research says, what your ACE score may indicate, and why resilience matters more than the number.
+            Adverse childhood experiences (ACEs) can shape long-term health outcomes, but they do not define your future. Here&apos;s what the research says, what your ACE score may indicate, and why resilience matters more than the number.
           </p>
           <div className="mt-6">
             <Link href="/ace-questionnaire" className="btn-primary text-sm">Take the ACE Self-Check &rarr;</Link>
@@ -110,22 +110,22 @@ export default function ACEScoreMeaningPage() {
             </p>
             <p><strong>Abuse (3 categories):</strong></p>
             <ul>
-              <li><strong>Physical abuse</strong> — being hit, beaten, kicked, or physically harmed by a parent or household adult</li>
-              <li><strong>Emotional abuse</strong> — being regularly put down, sworn at, humiliated, or made to feel afraid of physical harm</li>
-              <li><strong>Sexual abuse</strong> — any sexual contact or conduct with a household adult or person at least 5 years older</li>
+              <li><strong>Physical abuse</strong>, being hit, beaten, kicked, or physically harmed by a parent or household adult</li>
+              <li><strong>Emotional abuse</strong>, being regularly put down, sworn at, humiliated, or made to feel afraid of physical harm</li>
+              <li><strong>Sexual abuse</strong>, any sexual contact or conduct with a household adult or person at least 5 years older</li>
             </ul>
             <p><strong>Neglect (2 categories):</strong></p>
             <ul>
-              <li><strong>Physical neglect</strong> — not having enough to eat, having to wear dirty clothes, or lacking protection or adequate care</li>
-              <li><strong>Emotional neglect</strong> — feeling unloved, unsupported, or that family members did not look out for each other</li>
+              <li><strong>Physical neglect</strong>, not having enough to eat, having to wear dirty clothes, or lacking protection or adequate care</li>
+              <li><strong>Emotional neglect</strong>, feeling unloved, unsupported, or that family members did not look out for each other</li>
             </ul>
             <p><strong>Household dysfunction (5 categories):</strong></p>
             <ul>
-              <li><strong>Substance use in the household</strong> — living with someone who had a problem with alcohol or used substances</li>
-              <li><strong>Mental health challenges in the household</strong> — living with someone who experienced depression, mental health conditions, or who attempted suicide</li>
-              <li><strong>Witnessing domestic violence</strong> — seeing or hearing a mother or stepmother being physically harmed</li>
-              <li><strong>Parental separation or divorce</strong> — parents separating or divorcing during childhood</li>
-              <li><strong>Incarceration of a household member</strong> — a household member going to prison</li>
+              <li><strong>Substance use in the household</strong>, living with someone who had a problem with alcohol or used substances</li>
+              <li><strong>Mental health challenges in the household</strong>, living with someone who experienced depression, mental health conditions, or who attempted suicide</li>
+              <li><strong>Witnessing domestic violence</strong>, seeing or hearing a mother or stepmother being physically harmed</li>
+              <li><strong>Parental separation or divorce</strong>, parents separating or divorcing during childhood</li>
+              <li><strong>Incarceration of a household member</strong>, a household member going to prison</li>
             </ul>
             <p>
               Each category counts as one point, regardless of how many times the experience occurred. The total number of categories experienced (0 to 10) is your ACE score.
@@ -141,7 +141,7 @@ export default function ACEScoreMeaningPage() {
               The findings were striking. Nearly two-thirds of participants reported at least one ACE, and more than one in five reported three or more. The study revealed a powerful dose-response relationship: as the number of ACE categories increased, so did the risk for a wide range of health and social problems. This relationship held even after controlling for factors like age, sex, race, and education.
             </p>
             <p>
-              The study was groundbreaking because it connected childhood adversity — previously considered a social issue — directly to leading causes of death and disease in adults. It transformed how researchers and clinicians understand the relationship between early life experiences and long-term health.
+              The study was groundbreaking because it connected childhood adversity, previously considered a social issue, directly to leading causes of death and disease in adults. It transformed how researchers and clinicians understand the relationship between early life experiences and long-term health.
             </p>
           </section>
 
@@ -156,17 +156,17 @@ export default function ACEScoreMeaningPage() {
               It is important to understand what the ACE questionnaire does <em>not</em> capture. The original 10-item tool does not include experiences such as bullying, community violence, racism, poverty, foster care placement, or the death of a parent. Expanded ACE questionnaires exist that address some of these additional adversities, but the original 10 categories remain the most widely studied and validated.
             </p>
             <p>
-              Your ACE score reflects the <em>breadth</em> of adversity — how many different types of experiences you had — not the severity, frequency, or duration of any single experience. Two people with the same ACE score may have had very different childhoods.
+              Your ACE score reflects the <em>breadth</em> of adversity, how many different types of experiences you had, not the severity, frequency, or duration of any single experience. Two people with the same ACE score may have had very different childhoods.
             </p>
           </section>
 
           <section>
             <h2>How ACE Scores Relate to Health Outcomes</h2>
             <p>
-              The CDC-Kaiser study established a dose-response relationship between ACE scores and health outcomes. This means that as the number of ACE categories increases, the likelihood of experiencing certain health problems also increases — in a graded, step-by-step pattern.
+              The CDC-Kaiser study established a dose-response relationship between ACE scores and health outcomes. This means that as the number of ACE categories increases, the likelihood of experiencing certain health problems also increases, in a graded, step-by-step pattern.
             </p>
             <p>
-              This relationship is not about any single ACE causing a specific disease. Instead, chronic childhood adversity can affect brain development, immune function, hormonal systems, and the way the body responds to stress over time. Prolonged activation of the stress response — sometimes called toxic stress — can alter biological systems in ways that increase vulnerability to both physical and mental health conditions decades later.
+              This relationship is not about any single ACE causing a specific disease. Instead, chronic childhood adversity can affect brain development, immune function, hormonal systems, and the way the body responds to stress over time. Prolonged activation of the stress response, sometimes called toxic stress, can alter biological systems in ways that increase vulnerability to both physical and mental health conditions decades later.
             </p>
             <p>
               However, increased risk is not the same as certainty. Many people with high ACE scores do not develop the associated health conditions, and many people with low or zero ACE scores do. ACE scores identify patterns across populations, not predictions for individuals.
@@ -194,7 +194,7 @@ export default function ACEScoreMeaningPage() {
               ))}
             </div>
             <p>
-              These statistics describe population-level trends. They do not predict what will happen to any specific person. Many factors — including genetics, environment, relationships, and access to support — influence whether increased risk translates into actual health outcomes.
+              These statistics describe population-level trends. They do not predict what will happen to any specific person. Many factors, including genetics, environment, relationships, and access to support, influence whether increased risk translates into actual health outcomes.
             </p>
           </section>
 
@@ -203,16 +203,16 @@ export default function ACEScoreMeaningPage() {
           <section>
             <h2>ACE Scores Are NOT Destiny</h2>
             <p>
-              This is the most important section of this article. <strong>Your ACE score is not a life sentence.</strong> It describes what happened to you as a child — it does not determine what will happen to you as an adult.
+              This is the most important section of this article. <strong>Your ACE score is not a life sentence.</strong> It describes what happened to you as a child, it does not determine what will happen to you as an adult.
             </p>
             <p>
-              The ACE study was designed to identify risk factors across large populations. It was never intended to predict individual outcomes. Many people with high ACE scores live long, healthy, connected lives. Resilience — the ability to adapt and recover from adversity — is real, measurable, and buildable at any age.
+              The ACE study was designed to identify risk factors across large populations. It was never intended to predict individual outcomes. Many people with high ACE scores live long, healthy, connected lives. Resilience, the ability to adapt and recover from adversity, is real, measurable, and buildable at any age.
             </p>
             <p>
               Neuroscience research has shown that the brain retains significant capacity for change and healing throughout life, a property known as neuroplasticity. The effects of early adversity, while real, are not permanent or irreversible. With the right support and resources, people can and do recover.
             </p>
             <p>
-              If you have a high ACE score, the appropriate response is not fear — it is awareness. Awareness creates the opportunity to seek support, build protective factors, and make informed choices about your health and well-being.
+              If you have a high ACE score, the appropriate response is not fear, it is awareness. Awareness creates the opportunity to seek support, build protective factors, and make informed choices about your health and well-being.
             </p>
           </section>
 
@@ -222,12 +222,12 @@ export default function ACEScoreMeaningPage() {
               Research has identified several protective factors that can buffer the impact of adverse childhood experiences. These factors can be developed and strengthened at any stage of life:
             </p>
             <ul>
-              <li><strong>Supportive relationships</strong> — having at least one stable, caring adult during childhood is one of the most powerful protective factors. In adulthood, strong social connections continue to provide resilience</li>
-              <li><strong>Community connection</strong> — belonging to a community — whether through faith, cultural groups, volunteer work, or neighborhood ties — provides meaning, identity, and mutual support</li>
-              <li><strong>Therapy and counseling</strong> — evidence-based approaches such as trauma-focused cognitive behavioral therapy, EMDR, and somatic experiencing can help process and integrate adverse experiences</li>
-              <li><strong>Healthy coping strategies</strong> — regular physical activity, mindfulness and meditation, creative expression, and adequate sleep all support nervous system regulation and stress recovery</li>
-              <li><strong>Education and economic stability</strong> — access to education and stable employment provides resources and a sense of agency that supports well-being</li>
-              <li><strong>Self-compassion</strong> — understanding that childhood adversity was not your fault, and treating yourself with the same kindness you would offer a friend, is a foundational step in healing</li>
+              <li><strong>Supportive relationships</strong>, having at least one stable, caring adult during childhood is one of the most powerful protective factors. In adulthood, strong social connections continue to provide resilience</li>
+              <li><strong>Community connection</strong>, belonging to a community, whether through faith, cultural groups, volunteer work, or neighborhood ties, provides meaning, identity, and mutual support</li>
+              <li><strong>Therapy and counseling</strong>, evidence-based approaches such as trauma-focused cognitive behavioral therapy, EMDR, and somatic experiencing can help process and integrate adverse experiences</li>
+              <li><strong>Healthy coping strategies</strong>, regular physical activity, mindfulness and meditation, creative expression, and adequate sleep all support nervous system regulation and stress recovery</li>
+              <li><strong>Education and economic stability</strong>, access to education and stable employment provides resources and a sense of agency that supports well-being</li>
+              <li><strong>Self-compassion</strong>, understanding that childhood adversity was not your fault, and treating yourself with the same kindness you would offer a friend, is a foundational step in healing</li>
             </ul>
           </section>
 
@@ -240,7 +240,7 @@ export default function ACEScoreMeaningPage() {
               The core principles of trauma-informed care, as outlined by <a href="https://www.samhsa.gov/trauma-violence" target="_blank" rel="noopener noreferrer">SAMHSA</a>, include safety, trustworthiness and transparency, peer support, collaboration and mutuality, empowerment and choice, and cultural humility. These principles apply across healthcare settings, schools, workplaces, and social services.
             </p>
             <p>
-              Trauma-informed care does not require you to disclose your history. It creates environments where people with adverse experiences are more likely to feel safe, respected, and supported — whether or not they share their story. If you are seeking professional help, looking for providers or organizations that practice trauma-informed care can make a meaningful difference in your experience.
+              Trauma-informed care does not require you to disclose your history. It creates environments where people with adverse experiences are more likely to feel safe, respected, and supported, whether or not they share their story. If you are seeking professional help, looking for providers or organizations that practice trauma-informed care can make a meaningful difference in your experience.
             </p>
           </section>
 
@@ -250,12 +250,12 @@ export default function ACEScoreMeaningPage() {
               Research increasingly shows that the effects of adverse childhood experiences can be passed from one generation to the next. This is known as intergenerational or transgenerational trauma. It can occur through several pathways:
             </p>
             <ul>
-              <li><strong>Behavioral patterns</strong> — parents who experienced adversity may, without support, repeat patterns of stress, conflict, or disconnection in their own families</li>
-              <li><strong>Epigenetic changes</strong> — emerging research suggests that chronic stress can alter gene expression in ways that may be transmitted to offspring, potentially affecting stress response systems</li>
-              <li><strong>Environmental factors</strong> — poverty, housing instability, and community violence often persist across generations, creating ongoing exposure to adversity</li>
+              <li><strong>Behavioral patterns</strong>, parents who experienced adversity may, without support, repeat patterns of stress, conflict, or disconnection in their own families</li>
+              <li><strong>Epigenetic changes</strong>, emerging research suggests that chronic stress can alter gene expression in ways that may be transmitted to offspring, potentially affecting stress response systems</li>
+              <li><strong>Environmental factors</strong>, poverty, housing instability, and community violence often persist across generations, creating ongoing exposure to adversity</li>
             </ul>
             <p>
-              The good news is that intergenerational transmission of trauma is not inevitable. When a person addresses their own adverse experiences — through therapy, supportive relationships, or community resources — they can interrupt the cycle and create a different environment for the next generation. Healing is not only personal; it is generational.
+              The good news is that intergenerational transmission of trauma is not inevitable. When a person addresses their own adverse experiences, through therapy, supportive relationships, or community resources, they can interrupt the cycle and create a different environment for the next generation. Healing is not only personal; it is generational.
             </p>
           </section>
 
@@ -267,7 +267,7 @@ export default function ACEScoreMeaningPage() {
               The ACE questionnaire is a brief, 10-item self-report screening tool. Each question asks about a specific category of adverse experience that may have occurred before your 18th birthday. You answer yes or no to each question, and the total number of &quot;yes&quot; responses is your ACE score.
             </p>
             <p>
-              The questionnaire takes only a few minutes to complete. On this site, your answers are processed entirely in your browser — nothing is stored, transmitted, or recorded. You can take the screening privately and use the results to inform a conversation with a healthcare professional if you choose.
+              The questionnaire takes only a few minutes to complete. On this site, your answers are processed entirely in your browser, nothing is stored, transmitted, or recorded. You can take the screening privately and use the results to inform a conversation with a healthcare professional if you choose.
             </p>
             <p>
               It is worth noting that the ACE questionnaire is a screening tool, not a clinical assessment. It may indicate areas that could benefit from further exploration with a qualified professional. A screening result is a starting point, not a conclusion.
@@ -280,15 +280,15 @@ export default function ACEScoreMeaningPage() {
           <section>
             <h2>What to Do With Your Score</h2>
             <p>
-              If you have taken the ACE questionnaire, here are some constructive next steps — regardless of your score:
+              If you have taken the ACE questionnaire, here are some constructive next steps, regardless of your score:
             </p>
             <ul>
-              <li><strong>Practice self-compassion</strong> — whatever your score, acknowledge that childhood adversity was not your fault. Many people carry unnecessary shame about experiences that were beyond their control</li>
-              <li><strong>Consider professional support</strong> — if your score is 4 or higher, or if reflecting on these experiences brings up significant distress, connecting with a trauma-informed therapist can be valuable. You do not need a crisis to benefit from professional support</li>
-              <li><strong>Explore support groups</strong> — peer support from others with similar experiences can reduce isolation and provide practical strategies for healing. Many communities offer both in-person and online groups</li>
-              <li><strong>Screen for related concerns</strong> — adverse childhood experiences are associated with increased risk for PTSD, depression, and substance use. Taking additional screening tools like the <Link href="/pcl-5-ptsd-screening">PCL-5 PTSD screening</Link> can provide a more complete picture of your current well-being</li>
-              <li><strong>Build protective factors</strong> — invest in relationships, physical health, stress management, and community connection. These factors actively counteract the long-term effects of childhood adversity</li>
-              <li><strong>Share with a provider</strong> — if you feel comfortable, sharing your ACE score with your healthcare provider can help them understand your health history more fully and offer appropriate support</li>
+              <li><strong>Practice self-compassion</strong>, whatever your score, acknowledge that childhood adversity was not your fault. Many people carry unnecessary shame about experiences that were beyond their control</li>
+              <li><strong>Consider professional support</strong>, if your score is 4 or higher, or if reflecting on these experiences brings up significant distress, connecting with a trauma-informed therapist can be valuable. You do not need a crisis to benefit from professional support</li>
+              <li><strong>Explore support groups</strong>, peer support from others with similar experiences can reduce isolation and provide practical strategies for healing. Many communities offer both in-person and online groups</li>
+              <li><strong>Screen for related concerns</strong>, adverse childhood experiences are associated with increased risk for PTSD, depression, and substance use. Taking additional screening tools like the <Link href="/pcl-5-ptsd-screening">PCL-5 PTSD screening</Link> can provide a more complete picture of your current well-being</li>
+              <li><strong>Build protective factors</strong>, invest in relationships, physical health, stress management, and community connection. These factors actively counteract the long-term effects of childhood adversity</li>
+              <li><strong>Share with a provider</strong>, if you feel comfortable, sharing your ACE score with your healthcare provider can help them understand your health history more fully and offer appropriate support</li>
             </ul>
           </section>
 
@@ -313,7 +313,7 @@ export default function ACEScoreMeaningPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

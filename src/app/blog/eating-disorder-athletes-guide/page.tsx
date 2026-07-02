@@ -88,7 +88,7 @@ export default function EatingDisorderAthletesGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Athletes are 2&ndash;3 times more likely to develop eating disorders than the general population. The very traits that make someone a successful athlete &mdash; discipline, perfectionism, willingness to endure discomfort, and responsiveness to coaching &mdash; are the same traits that increase vulnerability to disordered eating. In competitive sports culture, behaviors that would raise immediate alarm in other contexts &mdash; rigid food rules, excessive exercise, obsessive body monitoring &mdash; are often praised as dedication.
+            Athletes are 2&ndash;3 times more likely to develop eating disorders than the general population. The very traits that make someone a successful athlete, discipline, perfectionism, willingness to endure discomfort, and responsiveness to coaching, are the same traits that increase vulnerability to disordered eating. In competitive sports culture, behaviors that would raise immediate alarm in other contexts, rigid food rules, excessive exercise, obsessive body monitoring, are often praised as dedication.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function EatingDisorderAthletesGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -116,12 +116,12 @@ export default function EatingDisorderAthletesGuidePage() {
             </p>
             <ul>
               <li><strong>Aesthetic sports:</strong> Gymnastics, figure skating, diving, dance, and cheerleading. These sports are judged partly on appearance, creating direct pressure to maintain a specific body type. Prevalence rates range from 13&ndash;47% depending on the study and competitive level</li>
-              <li><strong>Weight-class sports:</strong> Wrestling, boxing, judo, rowing, and mixed martial arts. Athletes routinely engage in &quot;cutting weight&quot; &mdash; rapid weight loss before competition through dehydration, food restriction, and purging. These practices normalize disordered eating behaviors and can trigger lasting eating disorders</li>
+              <li><strong>Weight-class sports:</strong> Wrestling, boxing, judo, rowing, and mixed martial arts. Athletes routinely engage in &quot;cutting weight&quot;, rapid weight loss before competition through dehydration, food restriction, and purging. These practices normalize disordered eating behaviors and can trigger lasting eating disorders</li>
               <li><strong>Endurance sports:</strong> Distance running, cycling, triathlon, and cross-country skiing. The emphasis on power-to-weight ratio and the belief that lighter means faster drives chronic under-fueling. Prevalence rates of 15&ndash;25% are consistently reported</li>
               <li><strong>Gravitational sports:</strong> High jump, pole vault, and ski jumping, where lower body weight provides a mechanical advantage</li>
             </ul>
             <p>
-              The common thread is any sport where leanness or low body weight is perceived &mdash; correctly or incorrectly &mdash; to enhance performance. This perception creates an environment where restricting food intake feels like a training strategy rather than a health risk.
+              The common thread is any sport where leanness or low body weight is perceived, correctly or incorrectly, to enhance performance. This perception creates an environment where restricting food intake feels like a training strategy rather than a health risk.
             </p>
           </section>
 
@@ -134,15 +134,15 @@ export default function EatingDisorderAthletesGuidePage() {
               RED-S affects virtually every system in the body:
             </p>
             <ul>
-              <li><strong>Bone health:</strong> Low energy availability reduces bone mineral density, increasing stress fracture risk &mdash; the most common warning sign that prompts medical evaluation</li>
-              <li><strong>Menstrual function:</strong> In female athletes, amenorrhea (loss of periods) or oligomenorrhea (irregular periods) signals insufficient energy to support reproductive function. This is not &quot;normal for athletes&quot; &mdash; it is a clinical red flag</li>
+              <li><strong>Bone health:</strong> Low energy availability reduces bone mineral density, increasing stress fracture risk, the most common warning sign that prompts medical evaluation</li>
+              <li><strong>Menstrual function:</strong> In female athletes, amenorrhea (loss of periods) or oligomenorrhea (irregular periods) signals insufficient energy to support reproductive function. This is not &quot;normal for athletes&quot;, it is a clinical red flag</li>
               <li><strong>Metabolic suppression:</strong> The body reduces metabolic rate to conserve energy, which paradoxically impairs training adaptation and performance</li>
               <li><strong>Immune function:</strong> Underfueled athletes get sick more often and take longer to recover</li>
               <li><strong>Cardiovascular health:</strong> Chronic energy deficiency can cause bradycardia (dangerously low heart rate), low blood pressure, and in severe cases, cardiac arrhythmias</li>
               <li><strong>Psychological effects:</strong> Depression, anxiety, irritability, impaired concentration, and disordered eating behaviors are both causes and consequences of RED-S</li>
             </ul>
             <p>
-              RED-S can occur even without a formal eating disorder. Any athlete who chronically under-eats relative to their training demands &mdash; whether intentionally or through inadequate nutritional knowledge &mdash; is at risk.
+              RED-S can occur even without a formal eating disorder. Any athlete who chronically under-eats relative to their training demands, whether intentionally or through inadequate nutritional knowledge, is at risk.
             </p>
           </section>
 
@@ -154,13 +154,13 @@ export default function EatingDisorderAthletesGuidePage() {
               Disordered eating in athletes often hides behind the language of performance. Behaviors that would raise concern in other contexts are frequently reframed as discipline, commitment, or competitive edge. Warning signs include:
             </p>
             <ul>
-              <li><strong>Rigid food rules</strong> that go beyond legitimate sports nutrition &mdash; eliminating entire food groups, refusing to eat anything not self-prepared, or anxiety around uncontrolled eating situations</li>
-              <li><strong>Excessive exercise beyond training requirements</strong> &mdash; secret extra workouts, inability to take rest days, exercising through injury</li>
-              <li><strong>Body checking behaviors</strong> &mdash; frequent weighing, pinching skin, measuring body parts, comparing physique to teammates</li>
-              <li><strong>Menstrual irregularity or loss</strong> in female athletes &mdash; this is never &quot;just because of training&quot;</li>
-              <li><strong>Recurrent stress fractures</strong> &mdash; may indicate chronic energy deficiency affecting bone density</li>
-              <li><strong>Declining performance paradoxically</strong> &mdash; training harder while eating less leads to performance decline, which is then attributed to not trying hard enough, prompting more restriction</li>
-              <li><strong>Social withdrawal</strong> around meals &mdash; avoiding team dinners, eating alone, making excuses to skip shared meals</li>
+              <li><strong>Rigid food rules</strong> that go beyond legitimate sports nutrition, eliminating entire food groups, refusing to eat anything not self-prepared, or anxiety around uncontrolled eating situations</li>
+              <li><strong>Excessive exercise beyond training requirements</strong>, secret extra workouts, inability to take rest days, exercising through injury</li>
+              <li><strong>Body checking behaviors</strong>, frequent weighing, pinching skin, measuring body parts, comparing physique to teammates</li>
+              <li><strong>Menstrual irregularity or loss</strong> in female athletes, this is never &quot;just because of training&quot;</li>
+              <li><strong>Recurrent stress fractures</strong>, may indicate chronic energy deficiency affecting bone density</li>
+              <li><strong>Declining performance paradoxically</strong>, training harder while eating less leads to performance decline, which is then attributed to not trying hard enough, prompting more restriction</li>
+              <li><strong>Social withdrawal</strong> around meals, avoiding team dinners, eating alone, making excuses to skip shared meals</li>
               <li><strong>Preoccupation with weight or body composition</strong> that extends beyond sport-relevant performance metrics</li>
               <li><strong>Using laxatives, diuretics, or diet pills</strong> to manage weight</li>
               <li><strong>Wearing baggy clothing</strong> to hide body changes or compensate for body dissatisfaction</li>
@@ -204,7 +204,7 @@ export default function EatingDisorderAthletesGuidePage() {
               The <Link href="/eating-disorder-test-athletes" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools eating disorder screening for athletes</Link> is a free, private assessment that accounts for the unique context of competitive sport. It takes under five minutes, runs entirely in your browser, and requires no account or login.
             </p>
             <p>
-              The screening helps identify patterns that competitive culture may normalize &mdash; rigid food rules, exercise beyond training, body preoccupation, and compensatory behaviors. Because sport culture makes it especially difficult to see your own behavior clearly, a structured screening provides an outside perspective grounded in clinical evidence rather than the distorted norms of your training environment.
+              The screening helps identify patterns that competitive culture may normalize, rigid food rules, exercise beyond training, body preoccupation, and compensatory behaviors. Because sport culture makes it especially difficult to see your own behavior clearly, a structured screening provides an outside perspective grounded in clinical evidence rather than the distorted norms of your training environment.
             </p>
             <p>
               If your screening results suggest concern, the next step is connecting with a healthcare provider who has experience working with athletes. Sports-specialized dietitians and therapists understand the intersection of performance goals and eating disorder risk in ways that general practitioners may not.
@@ -217,7 +217,7 @@ export default function EatingDisorderAthletesGuidePage() {
               If you are concerned about an athlete, the following guidelines reflect current best practices:
             </p>
             <ul>
-              <li><strong>Never comment on an athlete&apos;s weight, body shape, or food choices</strong> &mdash; even positively (&quot;you look lean&quot; reinforces the idea that appearance matters)</li>
+              <li><strong>Never comment on an athlete&apos;s weight, body shape, or food choices</strong>, even positively (&quot;you look lean&quot; reinforces the idea that appearance matters)</li>
               <li><strong>Focus on observable behaviors</strong> when expressing concern: declining performance, fatigue, frequent injuries, mood changes, social withdrawal around meals</li>
               <li><strong>Refer to the athletic trainer or team physician</strong> rather than attempting to counsel the athlete yourself</li>
               <li><strong>Eliminate team weigh-ins and body fat testing</strong> unless medically indicated and conducted by qualified professionals</li>
@@ -238,7 +238,7 @@ export default function EatingDisorderAthletesGuidePage() {
               <li>Stress fractures have occurred, especially more than once</li>
               <li>Performance is declining despite increased training</li>
               <li>Weight manipulation is occurring outside of structured sports nutrition guidance</li>
-              <li>Exercise feels compulsive rather than enjoyable &mdash; missing a workout causes intense distress</li>
+              <li>Exercise feels compulsive rather than enjoyable, missing a workout causes intense distress</li>
               <li>Thoughts about food, weight, or body shape are consuming significant mental energy</li>
             </ul>
             <p>
@@ -262,7 +262,7 @@ export default function EatingDisorderAthletesGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

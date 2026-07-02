@@ -33,17 +33,17 @@ const FAQ_DATA = [
   {
     question: "What is caregiver burnout?",
     answer:
-      "Caregiver burnout is a state of physical, emotional, and mental exhaustion that can develop when you spend a great deal of time caring for someone else — a parent with dementia, a spouse with a chronic illness, a child with special needs, or any loved one who requires ongoing support. It often develops gradually as the demands of caregiving outpace your ability to recover. Signs include chronic fatigue, resentment, withdrawal from your own life, and feeling like you have nothing left to give.",
+      "Caregiver burnout is a state of physical, emotional, and mental exhaustion that can develop when you spend a great deal of time caring for someone else, a parent with dementia, a spouse with a chronic illness, a child with special needs, or any loved one who requires ongoing support. It often develops gradually as the demands of caregiving outpace your ability to recover. Signs include chronic fatigue, resentment, withdrawal from your own life, and feeling like you have nothing left to give.",
   },
   {
     question: "How is caregiver burnout different from regular stress?",
     answer:
-      "Regular stress is temporary and usually resolves when the stressor is removed. Caregiver burnout is cumulative — it builds over months or years of sustained caregiving without adequate support or respite. Unlike work stress that ends when you leave the office, caregiving often has no clear boundaries. Burnout involves a deeper depletion: emotional numbness, loss of empathy, and a sense that you've lost yourself in the role.",
+      "Regular stress is temporary and usually resolves when the stressor is removed. Caregiver burnout is cumulative, it builds over months or years of sustained caregiving without adequate support or respite. Unlike work stress that ends when you leave the office, caregiving often has no clear boundaries. Burnout involves a deeper depletion: emotional numbness, loss of empathy, and a sense that you've lost yourself in the role.",
   },
   {
     question: "Is it normal to feel resentful or angry as a caregiver?",
     answer:
-      "Yes, and it's more common than most caregivers admit. Resentment and anger are natural responses to an unsustainable situation — not signs that you're a bad person or that you don't love the person you're caring for. These feelings are often signals that you need more support, respite, or help. Suppressing them without addressing the underlying situation tends to worsen burnout over time.",
+      "Yes, and it's more common than most caregivers admit. Resentment and anger are natural responses to an unsustainable situation, not signs that you're a bad person or that you don't love the person you're caring for. These feelings are often signals that you need more support, respite, or help. Suppressing them without addressing the underlying situation tends to worsen burnout over time.",
   },
   {
     question: "What can I do about caregiver burnout?",
@@ -53,7 +53,7 @@ const FAQ_DATA = [
   {
     question: "When should a caregiver seek professional help?",
     answer:
-      "Seek professional help if you are experiencing persistent depression or anxiety, thoughts of harming yourself or the person you care for, inability to perform basic self-care, or if your own health is deteriorating. These are signs that the caregiving situation has exceeded what one person can manage alone, and professional support — whether therapy, respite care, or a care team — is needed.",
+      "Seek professional help if you are experiencing persistent depression or anxiety, thoughts of harming yourself or the person you care for, inability to perform basic self-care, or if your own health is deteriorating. These are signs that the caregiving situation has exceeded what one person can manage alone, and professional support, whether therapy, respite care, or a care team, is needed.",
   },
 ];
 
@@ -132,7 +132,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         {/* Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You&apos;ve been showing up — for doctor&apos;s appointments, medication schedules,
+            You&apos;ve been showing up, for doctor&apos;s appointments, medication schedules,
             sleepless nights, difficult conversations. You&apos;ve rearranged your life around
             someone else&apos;s needs, often without anyone asking how <em>you</em> are doing.
           </p>
@@ -143,7 +143,7 @@ export default function CaregiverBurnoutAssessmentPage() {
           </p>
           <p className="text-slate-600 dark:text-slate-300">
             This free assessment checks for emotional exhaustion, depersonalization, and
-            reduced personal accomplishment — the three core dimensions of burnout recognized by the <a href="https://www.nia.nih.gov/health/caregiving/caregiver-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a>. Your
+            reduced personal accomplishment, the three core dimensions of burnout recognized by the <a href="https://www.nia.nih.gov/health/caregiving/caregiver-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a>. Your
             answers are scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         <AnswerBlock
           what="A burnout screening for caregivers that measures the unique physical, emotional, and social toll of caring for others."
           who="Family caregivers and professional caretakers who feel exhausted, isolated, or resentful and want to assess their burnout level."
-          bottomLine="Caregiver burnout is extremely common — you cannot pour from an empty cup. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Caregiver burnout is extremely common, you cannot pour from an empty cup. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -248,22 +248,22 @@ export default function CaregiverBurnoutAssessmentPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — if you are in crisis
+              <strong>988</strong>, if you are in crisis
             </li>
             <li>
               <strong>SAMHSA National Helpline:</strong>{" "}
-              <a href="tel:1-800-662-4357" className="font-bold">1-800-662-4357</a> — free referrals, 24/7
+              <a href="tel:1-800-662-4357" className="font-bold">1-800-662-4357</a>, free referrals, 24/7
             </li>
             <li>
               <strong>Caregiver Action Network:</strong>{" "}
-              <a href="https://www.caregiveraction.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">caregiveraction.org</a> — education, peer support, and resources
+              <a href="https://www.caregiveraction.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">caregiveraction.org</a>, education, peer support, and resources
             </li>
             <li>
               <strong>ARCH National Respite Network:</strong>{" "}
-              <a href="https://archrespite.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">archrespite.org</a> — find respite care in your area
+              <a href="https://archrespite.org" target="_blank" rel="noopener noreferrer" className="font-semibold underline">archrespite.org</a>, find respite care in your area
             </li>
             <li>
-              <strong>Eldercare Locator:</strong> <strong>1-800-677-1116</strong> — local services for older adults and their caregivers
+              <strong>Eldercare Locator:</strong> <strong>1-800-677-1116</strong>, local services for older adults and their caregivers
             </li>
           </ul>
         </div>
@@ -271,7 +271,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment is for educational purposes only — it is not a diagnosis. Only a
+            This assessment is for educational purposes only, it is not a diagnosis. Only a
             qualified healthcare professional can assess burnout or related conditions. Your
             responses are processed entirely in your browser and are never stored or transmitted.
           </p>

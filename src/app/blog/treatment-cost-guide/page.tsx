@@ -70,7 +70,7 @@ export default function TreatmentCostGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Cost is one of the most common barriers to seeking addiction treatment &mdash; and one of the most misunderstood. Treatment costs range from free to over $30,000, depending on the level of care, duration, and setting. But the cost of not treating a substance use disorder is almost always higher: the National Institute on Drug Abuse (NIDA) estimates that substance use disorders cost the United States approximately $740 billion annually in healthcare, criminal justice, and lost productivity (NIDA, 2017 estimate).
+            Cost is one of the most common barriers to seeking addiction treatment, and one of the most misunderstood. Treatment costs range from free to over $30,000, depending on the level of care, duration, and setting. But the cost of not treating a substance use disorder is almost always higher: the National Institute on Drug Abuse (NIDA) estimates that substance use disorders cost the United States approximately $740 billion annually in healthcare, criminal justice, and lost productivity (NIDA, 2017 estimate).
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function TreatmentCostGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 

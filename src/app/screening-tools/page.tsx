@@ -522,7 +522,7 @@ export default function ScreeningToolsIndexPage() {
           About this index
         </h2>
         <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-          Published and maintained by MindCheck Tools — Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
+          Published and maintained by MindCheck Tools, Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
           <Link href="/clinical-evidence" className="text-sage-700 dark:text-sage-400 hover:underline">
             clinical evidence
           </Link>{" "}

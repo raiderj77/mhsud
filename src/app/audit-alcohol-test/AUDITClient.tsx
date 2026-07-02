@@ -117,10 +117,10 @@ const QUESTIONS: Question[] = [
 ];
 
 const RANGES = [
-  { min: 0, max: 7, level: "Zone I — Lower Risk", key: "low", description: "Your responses fall in the lower-risk zone. In research, scores in this range are generally associated with lower risk from alcohol use.", suggestion: "Continue being mindful of your drinking habits. If your patterns change, consider checking in again." },
-  { min: 8, max: 15, level: "Zone II — Hazardous Use", key: "hazardous", description: "Your responses suggest a level of alcohol use that research associates with increased risk of harm. This does not mean you have a disorder, but it may be worth reflecting on.", suggestion: "Consider talking with a healthcare provider about your drinking patterns. Simple changes can reduce risk, and a professional can help you understand your options." },
-  { min: 16, max: 19, level: "Zone III — Harmful Use", key: "harmful", description: "Your responses suggest a level of alcohol use that research associates with likely harm to your health or well-being.", suggestion: "Speaking with a healthcare professional is strongly encouraged. They can provide a proper assessment and discuss options that fit your situation." },
-  { min: 20, max: 40, level: "Zone IV — Possible Dependence", key: "dependence", description: "Your responses fall in a range that research associates with possible alcohol dependence. A comprehensive professional assessment is recommended.", suggestion: "Please consider speaking with a healthcare professional as soon as possible. If you drink heavily and want to cut down or stop, do not do so suddenly without medical guidance — withdrawal can be medically serious." },
+  { min: 0, max: 7, level: "Zone I, Lower Risk", key: "low", description: "Your responses fall in the lower-risk zone. In research, scores in this range are generally associated with lower risk from alcohol use.", suggestion: "Continue being mindful of your drinking habits. If your patterns change, consider checking in again." },
+  { min: 8, max: 15, level: "Zone II, Hazardous Use", key: "hazardous", description: "Your responses suggest a level of alcohol use that research associates with increased risk of harm. This does not mean you have a disorder, but it may be worth reflecting on.", suggestion: "Consider talking with a healthcare provider about your drinking patterns. Simple changes can reduce risk, and a professional can help you understand your options." },
+  { min: 16, max: 19, level: "Zone III, Harmful Use", key: "harmful", description: "Your responses suggest a level of alcohol use that research associates with likely harm to your health or well-being.", suggestion: "Speaking with a healthcare professional is strongly encouraged. They can provide a proper assessment and discuss options that fit your situation." },
+  { min: 20, max: 40, level: "Zone IV, Possible Dependence", key: "dependence", description: "Your responses fall in a range that research associates with possible alcohol dependence. A comprehensive professional assessment is recommended.", suggestion: "Please consider speaking with a healthcare professional as soon as possible. If you drink heavily and want to cut down or stop, do not do so suddenly without medical guidance, withdrawal can be medically serious." },
 ];
 
 function getRange(score: number) {
@@ -193,7 +193,7 @@ export function AUDITClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/audit-alcohol-test";
     if (mode === "blank") {
       const shareData = {
-        title: "AUDIT Alcohol Use Screen — Free & Private",
+        title: "AUDIT Alcohol Use Screen, Free & Private",
         text: "Take a free, private AUDIT Alcohol Use Screen. Your answers never leave your browser.",
         url,
       };
@@ -205,7 +205,7 @@ export function AUDITClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `AUDIT Alcohol Use Screen Results\nScore: ${totalScore}/40 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `AUDIT Alcohol Use Screen Results\nScore: ${totalScore}/40, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My AUDIT Alcohol Use Screen Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -235,7 +235,7 @@ export function AUDITClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
       </header>
 
-      {/* Reviewer Bio — visible before test so users see CADC-II credentials upfront */}
+      {/* Reviewer Bio, visible before test so users see CADC-II credentials upfront */}
       <ToolReviewerBio />
 
       {!accepted && (
@@ -248,7 +248,7 @@ export function AUDITClient({ faqData }: Props) {
 
       {accepted && !showResults && (
         <div className="animate-fade-in">
-          {/* Privacy Trust Signal — visible immediately above first question */}
+          {/* Privacy Trust Signal, visible immediately above first question */}
           <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
             <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
             Your answers are scored locally in your browser and are never stored or shared.
@@ -257,7 +257,7 @@ export function AUDITClient({ faqData }: Props) {
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answers.filter((a) => a !== null).length} of 10 answered</span>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400">Take your time — be honest with yourself</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Take your time, be honest with yourself</span>
             </div>
             <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -336,13 +336,13 @@ export function AUDITClient({ faqData }: Props) {
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your AUDIT Score</p>
               <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 40 — {range.level}</p>
+              <p className={`text-sm font-semibold ${colors.text}`}>out of 40, {range.level}</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 40) * 100}%` }} />
                 </div>
                 <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                  <span>0 — Lower Risk</span><span>40 — Higher Risk</span>
+                  <span>0, Lower Risk</span><span>40, Higher Risk</span>
                 </div>
               </div>
             </div>
@@ -416,8 +416,8 @@ export function AUDITClient({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If you&apos;re concerned about your drinking, help is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 — free, confidential, 24/7 referrals", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free, confidential, 24/7 referrals", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -530,8 +530,8 @@ export function AUDITClient({ faqData }: Props) {
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
-                  World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test — Guidelines for Use in Primary Care (2nd ed.).{" "}
-                  <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — AUDIT Manual</a>
+                  World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test, Guidelines for Use in Primary Care (2nd ed.).{" "}
+                  <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO, AUDIT Manual</a>
                 </li>
                 <li>
                   National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Use Disorder.{" "}

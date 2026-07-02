@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "Can ACE scores be reduced or reversed?",
     answer:
-      "The score itself reflects childhood history and does not change. However, health impacts associated with high ACE scores can be substantially mitigated through trauma-informed care, mental health treatment, supportive relationships, and healthy lifestyle choices. Neuroplasticity research shows the brain continues to adapt and heal throughout the lifespan \u2014 adversity\u2019s effects are not permanent.",
+      "The score itself reflects childhood history and does not change. However, health impacts associated with high ACE scores can be substantially mitigated through trauma-informed care, mental health treatment, supportive relationships, and healthy lifestyle choices. Neuroplasticity research shows the brain continues to adapt and heal throughout the lifespan, adversity\u2019s effects are not permanent.",
   },
   {
     question: "Should I share my ACE score with my doctor?",
@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "Is the ACE questionnaire the same as a trauma assessment?",
     answer:
-      "No. The ACE questionnaire is a brief population-level screening tool. A clinical trauma assessment is a much more comprehensive process conducted by a trained clinician \u2014 exploring the nature, timing, and impact of adverse experiences in detail, assessing for trauma-related conditions, and informing a treatment plan.",
+      "No. The ACE questionnaire is a brief population-level screening tool. A clinical trauma assessment is a much more comprehensive process conducted by a trained clinician, exploring the nature, timing, and impact of adverse experiences in detail, assessing for trauma-related conditions, and informing a treatment plan.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function WhatDoesAceScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            ACE scores range from 0 to 10, with one point for each category of adverse childhood experience reported. A score of 0 means no adverse childhood experiences were reported. Scores of 4 or higher are associated with significantly elevated risk for a range of physical and mental health conditions in adulthood. An ACE score is not a diagnosis &mdash; it is a measure of cumulative childhood adversity that helps explain adult health patterns and guides clinical conversations about trauma history.
+            ACE scores range from 0 to 10, with one point for each category of adverse childhood experience reported. A score of 0 means no adverse childhood experiences were reported. Scores of 4 or higher are associated with significantly elevated risk for a range of physical and mental health conditions in adulthood. An ACE score is not a diagnosis, it is a measure of cumulative childhood adversity that helps explain adult health patterns and guides clinical conversations about trauma history.
           </p>
         </header>
 
@@ -97,7 +97,7 @@ export default function WhatDoesAceScoreMeanPage() {
           <section>
             <h2>What is the ACE questionnaire?</h2>
             <p>
-              The <strong>Adverse Childhood Experiences (ACE)</strong> questionnaire comes from the landmark ACE Study &mdash; a collaboration between the CDC and Kaiser Permanente conducted between 1995 and 1997. It is one of the largest investigations of childhood abuse and neglect and their relationship to adult health ever conducted, with over 17,000 participants.
+              The <strong>Adverse Childhood Experiences (ACE)</strong> questionnaire comes from the landmark ACE Study, a collaboration between the CDC and Kaiser Permanente conducted between 1995 and 1997. It is one of the largest investigations of childhood abuse and neglect and their relationship to adult health ever conducted, with over 17,000 participants.
             </p>
             <p>The questionnaire covers <strong>10 categories</strong> of adverse childhood experiences before age 18:</p>
             <p><strong>Abuse (3 categories):</strong></p>
@@ -120,7 +120,7 @@ export default function WhatDoesAceScoreMeanPage() {
               <li>Incarcerated household member</li>
             </ol>
             <p>
-              Each category is scored as present (1) or absent (0) &mdash; frequency within a category does not increase the score. The total ranges from 0&ndash;10.
+              Each category is scored as present (1) or absent (0), frequency within a category does not increase the score. The total ranges from 0&ndash;10.
             </p>
           </section>
 
@@ -146,10 +146,10 @@ export default function WhatDoesAceScoreMeanPage() {
               </table>
             </div>
             <p>
-              These distributions come from the original ACE Study sample (Felitti et al., 1998). The original study used a middle-class, largely white, insured population &mdash; rates of ACEs in general population and higher-adversity communities are likely higher.
+              These distributions come from the original ACE Study sample (Felitti et al., 1998). The original study used a middle-class, largely white, insured population, rates of ACEs in general population and higher-adversity communities are likely higher.
             </p>
             <p>
-              <strong>The ACE score is most meaningful as a cumulative measure</strong> &mdash; the research consistently shows that it&apos;s the pile-up of adverse experiences, not any single one, that drives the strongest health associations.
+              <strong>The ACE score is most meaningful as a cumulative measure</strong>, the research consistently shows that it&apos;s the pile-up of adverse experiences, not any single one, that drives the strongest health associations.
             </p>
           </section>
 
@@ -160,7 +160,7 @@ export default function WhatDoesAceScoreMeanPage() {
               A score of 0 means none of the 10 ACE categories were experienced before age 18. This is associated with the lowest risk profile across the health outcomes the ACE Study measured.
             </p>
             <p>
-              It does not mean childhood was without difficulty or that current mental health is unaffected by other factors. The ACE questionnaire covers a specific set of 10 adversity categories &mdash; other difficult childhood experiences (bullying, peer rejection, loss of a parent to illness, community violence) that aren&apos;t captured in the 10 categories can still affect adult wellbeing.
+              It does not mean childhood was without difficulty or that current mental health is unaffected by other factors. The ACE questionnaire covers a specific set of 10 adversity categories, other difficult childhood experiences (bullying, peer rejection, loss of a parent to illness, community violence) that aren&apos;t captured in the 10 categories can still affect adult wellbeing.
             </p>
           </section>
 
@@ -172,8 +172,8 @@ export default function WhatDoesAceScoreMeanPage() {
             <p>One to three ACEs is associated with gradually increasing risk for the health outcomes the study identified. At this level:</p>
             <ul>
               <li>Risk is elevated relative to a score of 0, but the relationship is not as steep as at 4+</li>
-              <li>Individual ACE types matter, not just the total &mdash; sexual abuse, in particular, carries significant trauma sequelae even as a single ACE</li>
-              <li>Many people with scores in this range are doing well and have no presenting concerns &mdash; the score reflects population-level risk, not individual destiny</li>
+              <li>Individual ACE types matter, not just the total, sexual abuse, in particular, carries significant trauma sequelae even as a single ACE</li>
+              <li>Many people with scores in this range are doing well and have no presenting concerns, the score reflects population-level risk, not individual destiny</li>
             </ul>
           </section>
 
@@ -203,7 +203,7 @@ export default function WhatDoesAceScoreMeanPage() {
               <li>Alcohol use disorder: 7.4&times; more likely</li>
             </ul>
             <p>
-              These are population-level associations, not individual predictions. Many people with high ACE scores lead healthy, resilient lives &mdash; particularly when they have had access to protective factors like supportive relationships, stable housing, and trauma-informed care.
+              These are population-level associations, not individual predictions. Many people with high ACE scores lead healthy, resilient lives, particularly when they have had access to protective factors like supportive relationships, stable housing, and trauma-informed care.
             </p>
           </section>
 
@@ -213,16 +213,16 @@ export default function WhatDoesAceScoreMeanPage() {
           <section>
             <h2>Why ACE scores affect adult health: the biology</h2>
             <p>
-              The ACE Study established the <em>what</em> &mdash; the association between childhood adversity and adult health outcomes. Subsequent research has clarified the <em>why.</em>
+              The ACE Study established the <em>what</em>, the association between childhood adversity and adult health outcomes. Subsequent research has clarified the <em>why.</em>
             </p>
             <p>
-              <strong>Toxic stress and the developing brain:</strong> When children experience chronic or severe stress without adequate adult buffering, the body&apos;s stress response system (the HPA axis, which regulates cortisol) becomes dysregulated. This has lasting effects on brain development &mdash; particularly the prefrontal cortex (executive function, decision-making) and the amygdala (threat detection and emotional regulation).
+              <strong>Toxic stress and the developing brain:</strong> When children experience chronic or severe stress without adequate adult buffering, the body&apos;s stress response system (the HPA axis, which regulates cortisol) becomes dysregulated. This has lasting effects on brain development, particularly the prefrontal cortex (executive function, decision-making) and the amygdala (threat detection and emotional regulation).
             </p>
             <p>
-              <strong>Epigenetic changes:</strong> Childhood adversity produces measurable changes in gene expression &mdash; not changes to the DNA sequence itself, but to how genes are switched on and off. Some of these epigenetic changes are associated with inflammatory processes that elevate long-term disease risk.
+              <strong>Epigenetic changes:</strong> Childhood adversity produces measurable changes in gene expression, not changes to the DNA sequence itself, but to how genes are switched on and off. Some of these epigenetic changes are associated with inflammatory processes that elevate long-term disease risk.
             </p>
             <p>
-              <strong>Behavioral pathways:</strong> Some of the health impact of ACEs operates through behavioral routes &mdash; people who experienced childhood adversity are more likely to smoke, use substances, and engage in other health-affecting behaviors, often as adaptive coping strategies for the distress those experiences created.
+              <strong>Behavioral pathways:</strong> Some of the health impact of ACEs operates through behavioral routes, people who experienced childhood adversity are more likely to smoke, use substances, and engage in other health-affecting behaviors, often as adaptive coping strategies for the distress those experiences created.
             </p>
             <p>
               Understanding these mechanisms is important because it removes moral judgment from the picture. Health-affecting behaviors in people with high ACE scores are often responses to adversity, not failures of willpower.
@@ -236,7 +236,7 @@ export default function WhatDoesAceScoreMeanPage() {
               High ACE scores are particularly associated with specific mental health presentations. If you scored 4 or higher, these are worth discussing with a clinician:
             </p>
             <p>
-              <strong>PTSD:</strong> Not all trauma produces PTSD, but childhood trauma &mdash; particularly abuse and household dysfunction &mdash; is one of the strongest predictors. The <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link> screens for PTSD symptoms.
+              <strong>PTSD:</strong> Not all trauma produces PTSD, but childhood trauma, particularly abuse and household dysfunction, is one of the strongest predictors. The <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link> screens for PTSD symptoms.
             </p>
             <p>
               <strong>Depression:</strong> The relationship between childhood adversity and depression is one of the most replicated findings in psychiatric epidemiology. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> can screen for current depressive symptoms.
@@ -245,31 +245,31 @@ export default function WhatDoesAceScoreMeanPage() {
               <strong>Anxiety:</strong> Childhood adversity disrupts the stress response system in ways that create lasting vulnerabilities to anxiety. The <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> screens for generalized anxiety.
             </p>
             <p>
-              <strong>Substance use:</strong> High ACE scores are strongly associated with substance use disorders &mdash; often as self-medication for the emotional pain and dysregulation that adversity created. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST</Link> screen for alcohol and drug use problems specifically.
+              <strong>Substance use:</strong> High ACE scores are strongly associated with substance use disorders, often as self-medication for the emotional pain and dysregulation that adversity created. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST</Link> screen for alcohol and drug use problems specifically.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
-          {/* Section 8 — Resilience */}
+          {/* Section 8, Resilience */}
           <section>
             <h2>Resilience: what ACE scores don&apos;t capture</h2>
             <p>
-              The ACE questionnaire measures adversity &mdash; it does not measure protective factors. Research on resilience consistently shows that certain factors buffer the impact of childhood adversity significantly:
+              The ACE questionnaire measures adversity, it does not measure protective factors. Research on resilience consistently shows that certain factors buffer the impact of childhood adversity significantly:
             </p>
             <ul>
-              <li><strong>At least one stable, caring adult relationship</strong> &mdash; a parent, grandparent, teacher, or mentor who provided consistent support</li>
+              <li><strong>At least one stable, caring adult relationship</strong>, a parent, grandparent, teacher, or mentor who provided consistent support</li>
               <li><strong>Safe, stable housing</strong> during childhood</li>
               <li><strong>Community and school environments</strong> that provided structure and belonging</li>
               <li><strong>Access to mental health support</strong> at critical developmental moments</li>
-              <li><strong>Temperament and coping style</strong> &mdash; some children show greater neurobiological resilience to stress</li>
+              <li><strong>Temperament and coping style</strong>, some children show greater neurobiological resilience to stress</li>
             </ul>
             <p>
-              A high ACE score in the presence of strong protective factors may have far less health impact than the same score without those buffers. And protective factors can be cultivated in adulthood &mdash; therapy, stable relationships, and community connection all continue to buffer adversity&apos;s effects across the lifespan.
+              A high ACE score in the presence of strong protective factors may have far less health impact than the same score without those buffers. And protective factors can be cultivated in adulthood, therapy, stable relationships, and community connection all continue to buffer adversity&apos;s effects across the lifespan.
             </p>
           </section>
 
-          {/* Section 9 — What to do */}
+          {/* Section 9, What to do */}
           <section>
             <h2>What to do with your ACE score</h2>
             <p>
@@ -279,7 +279,7 @@ export default function WhatDoesAceScoreMeanPage() {
               <strong>Score of 4+:</strong> Share this with your primary care physician and/or a mental health clinician. This information is relevant to your physical and mental health care. Many healthcare providers now routinely screen for ACEs precisely because this knowledge changes how care is delivered.
             </p>
             <p>
-              <strong>If memories or feelings came up:</strong> Taking the ACE questionnaire sometimes surfaces difficult memories. If you found it distressing, please reach out for support &mdash; you don&apos;t have to process this alone.
+              <strong>If memories or feelings came up:</strong> Taking the ACE questionnaire sometimes surfaces difficult memories. If you found it distressing, please reach out for support, you don&apos;t have to process this alone.
             </p>
           </section>
 
@@ -298,9 +298,9 @@ export default function WhatDoesAceScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -323,7 +323,7 @@ export default function WhatDoesAceScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

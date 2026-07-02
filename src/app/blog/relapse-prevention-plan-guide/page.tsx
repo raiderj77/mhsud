@@ -41,11 +41,11 @@ const FAQ_DATA = [
   },
   {
     question: "How often should I update my prevention plan?",
-    answer: "Your plan should be a living document. Review it at least once a month, and update it when circumstances change \u2014 a new job, relationship change, move, or shift in emotional health. As you learn more about your patterns in recovery, your plan should evolve. Many people find it helpful to review their plan with a therapist or sponsor regularly.",
+    answer: "Your plan should be a living document. Review it at least once a month, and update it when circumstances change, a new job, relationship change, move, or shift in emotional health. As you learn more about your patterns in recovery, your plan should evolve. Many people find it helpful to review their plan with a therapist or sponsor regularly.",
   },
   {
     question: "Does having a plan really help?",
-    answer: "Yes. Research consistently shows that structured relapse prevention planning is associated with better recovery outcomes. The Gorski model and cognitive-behavioral approaches have strong evidence behind them. A written plan means you do not have to rely on willpower in a crisis \u2014 you already have concrete actions to follow.",
+    answer: "Yes. Research consistently shows that structured relapse prevention planning is associated with better recovery outcomes. The Gorski model and cognitive-behavioral approaches have strong evidence behind them. A written plan means you do not have to rely on willpower in a crisis, you already have concrete actions to follow.",
   },
 ];
 
@@ -79,9 +79,9 @@ export default function RelapsePreventionPlanGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,13 +96,13 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>What a relapse prevention plan is and why it matters</h2>
             <p>
-              A relapse prevention plan is a written, personalized document that outlines your triggers, warning signs, coping strategies, emergency contacts, and action steps for staying on track in recovery. Think of it as a safety net you build while you are thinking clearly — so it is ready when you are not.
+              A relapse prevention plan is a written, personalized document that outlines your triggers, warning signs, coping strategies, emergency contacts, and action steps for staying on track in recovery. Think of it as a safety net you build while you are thinking clearly, so it is ready when you are not.
             </p>
             <p>
               The concept was formalized by Terence Gorski, whose research on relapse prevention in the 1980s and 1990s established that relapse is not a random event. It follows a predictable pattern of stages, and each stage offers an opportunity to intervene. A good prevention plan maps directly to these stages, giving you specific actions for each one.
             </p>
             <p>
-              Without a plan, recovery relies heavily on willpower and in-the-moment decision-making — both of which are compromised during stress, emotional distress, or cravings. With a plan, you have already decided what to do. You just have to follow the steps.
+              Without a plan, recovery relies heavily on willpower and in-the-moment decision-making, both of which are compromised during stress, emotional distress, or cravings. With a plan, you have already decided what to do. You just have to follow the steps.
             </p>
           </section>
 
@@ -112,13 +112,13 @@ export default function RelapsePreventionPlanGuidePage() {
               According to the Gorski model, relapse unfolds in three stages. Understanding these stages is critical because the earlier you recognize where you are, the easier it is to course-correct.
             </p>
             <p>
-              <strong>Emotional relapse</strong> is the earliest stage. You may not be thinking about using at all, but your emotions and behaviors are setting you up for vulnerability. Signs include bottling up feelings, isolating from others, skipping meetings or therapy, neglecting sleep and nutrition, and increased irritability or anxiety. At this stage, intervention is about self-care — eating well, sleeping enough, staying connected, and being honest about how you feel.
+              <strong>Emotional relapse</strong> is the earliest stage. You may not be thinking about using at all, but your emotions and behaviors are setting you up for vulnerability. Signs include bottling up feelings, isolating from others, skipping meetings or therapy, neglecting sleep and nutrition, and increased irritability or anxiety. At this stage, intervention is about self-care, eating well, sleeping enough, staying connected, and being honest about how you feel.
             </p>
             <p>
-              <strong>Mental relapse</strong> is the internal tug-of-war. Part of you wants to stay in recovery, and part of you is thinking about using. You may find yourself romanticizing past use, remembering the highs while minimizing the consequences. You might start bargaining — &quot;just once,&quot; &quot;I can control it now,&quot; &quot;no one will know.&quot; You may seek out people or places associated with past use. This is the critical intervention window. Use your plan, call someone, and change your environment.
+              <strong>Mental relapse</strong> is the internal tug-of-war. Part of you wants to stay in recovery, and part of you is thinking about using. You may find yourself romanticizing past use, remembering the highs while minimizing the consequences. You might start bargaining, &quot;just once,&quot; &quot;I can control it now,&quot; &quot;no one will know.&quot; You may seek out people or places associated with past use. This is the critical intervention window. Use your plan, call someone, and change your environment.
             </p>
             <p>
-              <strong>Behavioral relapse</strong> is the act of using. Once this stage begins, the priority shifts to harm reduction and getting back into your support system as quickly as possible. A single episode does not erase your recovery — but it does require immediate, honest action.
+              <strong>Behavioral relapse</strong> is the act of using. Once this stage begins, the priority shifts to harm reduction and getting back into your support system as quickly as possible. A single episode does not erase your recovery, but it does require immediate, honest action.
             </p>
           </section>
 
@@ -133,28 +133,28 @@ export default function RelapsePreventionPlanGuidePage() {
               Consider these categories when building your list:
             </p>
             <ul>
-              <li><strong>People</strong> — individuals you used with, people who create stress or conflict, or those who minimize your recovery</li>
-              <li><strong>Places</strong> — bars, certain neighborhoods, a friend&apos;s house, or any location strongly associated with past use</li>
-              <li><strong>Emotions</strong> — anger, loneliness, boredom, shame, anxiety, or even excitement and celebration</li>
-              <li><strong>Situations</strong> — financial stress, relationship conflict, job loss, social pressure, or major life transitions</li>
-              <li><strong>Times</strong> — weekends, evenings, holidays, anniversaries, or pay day</li>
-              <li><strong>Sensory cues</strong> — specific smells, songs, or visual reminders connected to past use</li>
+              <li><strong>People</strong>, individuals you used with, people who create stress or conflict, or those who minimize your recovery</li>
+              <li><strong>Places</strong>, bars, certain neighborhoods, a friend&apos;s house, or any location strongly associated with past use</li>
+              <li><strong>Emotions</strong>, anger, loneliness, boredom, shame, anxiety, or even excitement and celebration</li>
+              <li><strong>Situations</strong>, financial stress, relationship conflict, job loss, social pressure, or major life transitions</li>
+              <li><strong>Times</strong>, weekends, evenings, holidays, anniversaries, or pay day</li>
+              <li><strong>Sensory cues</strong>, specific smells, songs, or visual reminders connected to past use</li>
             </ul>
             <p>
-              Write these down honestly. The goal is not to avoid every trigger forever — that is not realistic. The goal is to know what your triggers are so you are not blindsided by them.
+              Write these down honestly. The goal is not to avoid every trigger forever, that is not realistic. The goal is to know what your triggers are so you are not blindsided by them.
             </p>
           </section>
 
           <section>
             <h2>Creating your warning signs list</h2>
             <p>
-              Warning signs are the internal and external changes that indicate you may be moving through the stages of relapse. They are different from triggers — triggers are external events, while warning signs are your responses to those events.
+              Warning signs are the internal and external changes that indicate you may be moving through the stages of relapse. They are different from triggers, triggers are external events, while warning signs are your responses to those events.
             </p>
             <p>
               Common warning signs include withdrawing from friends and family, skipping recovery meetings, increased secrecy, returning to old routines associated with use, sudden mood swings, rationalizing or minimizing past consequences, poor self-care, and increased conflict in relationships.
             </p>
             <p>
-              Ask people you trust — a sponsor, therapist, close friend, or family member — what changes they noticed in you before a past relapse or during difficult periods. Often, others can see patterns that are invisible to us from the inside.
+              Ask people you trust, a sponsor, therapist, close friend, or family member, what changes they noticed in you before a past relapse or during difficult periods. Often, others can see patterns that are invisible to us from the inside.
             </p>
           </section>
 
@@ -164,11 +164,11 @@ export default function RelapsePreventionPlanGuidePage() {
               Your coping toolkit is the collection of healthy actions you can take when you notice a trigger or warning sign. Effective toolkits include a mix of strategies for different situations:
             </p>
             <ul>
-              <li><strong>Physical</strong> — walking, exercise, deep breathing, progressive muscle relaxation</li>
-              <li><strong>Social</strong> — calling a sponsor, attending a meeting, texting a sober friend</li>
-              <li><strong>Cognitive</strong> — journaling, playing the tape forward (imagining the full consequences of using), challenging distorted thoughts</li>
-              <li><strong>Behavioral</strong> — changing your environment, leaving a triggering situation, engaging in a safe activity</li>
-              <li><strong>Emotional</strong> — naming the feeling, sitting with discomfort without acting on it (urge surfing), self-compassion exercises</li>
+              <li><strong>Physical</strong>, walking, exercise, deep breathing, progressive muscle relaxation</li>
+              <li><strong>Social</strong>, calling a sponsor, attending a meeting, texting a sober friend</li>
+              <li><strong>Cognitive</strong>, journaling, playing the tape forward (imagining the full consequences of using), challenging distorted thoughts</li>
+              <li><strong>Behavioral</strong>, changing your environment, leaving a triggering situation, engaging in a safe activity</li>
+              <li><strong>Emotional</strong>, naming the feeling, sitting with discomfort without acting on it (urge surfing), self-compassion exercises</li>
             </ul>
             <p>
               The key is to write these down in advance. During a craving, your ability to brainstorm new coping strategies is significantly reduced. A pre-written list removes the need to think creatively under pressure.
@@ -180,7 +180,7 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>Emergency contacts and your support network</h2>
             <p>
-              Every relapse prevention plan should include a list of people you can call when you are struggling. This is not a general contact list — it is a specific, prioritized list of people who understand your situation and are willing to help.
+              Every relapse prevention plan should include a list of people you can call when you are struggling. This is not a general contact list, it is a specific, prioritized list of people who understand your situation and are willing to help.
             </p>
             <p>
               Include your sponsor (if applicable), your therapist or counselor, two or three trusted friends or family members, and crisis resources. Keep SAMHSA&apos;s National Helpline (<strong>1-800-662-4357</strong>) and the 988 Suicide &amp; Crisis Lifeline on your list. These are free, confidential, and available 24/7. You can also visit <a href="https://www.samhsa.gov" target="_blank" rel="noopener noreferrer">samhsa.gov</a> to find local treatment services.
@@ -193,10 +193,10 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>The HALT check-in as a daily prevention tool</h2>
             <p>
-              HALT stands for Hungry, Angry, Lonely, Tired — four basic states that significantly increase vulnerability to relapse. The <Link href="/halt-check-in">HALT check-in</Link> is a simple daily practice: pause and ask yourself whether you are experiencing any of these four states, then take action to address them before they escalate.
+              HALT stands for Hungry, Angry, Lonely, Tired, four basic states that significantly increase vulnerability to relapse. The <Link href="/halt-check-in">HALT check-in</Link> is a simple daily practice: pause and ask yourself whether you are experiencing any of these four states, then take action to address them before they escalate.
             </p>
             <p>
-              It sounds almost too simple to be effective, but that is exactly why it works. Most relapses do not begin with a dramatic event. They begin with accumulated neglect of basic needs — skipping meals, not sleeping enough, avoiding human connection, or pushing through exhaustion without rest. The HALT check-in catches these patterns early.
+              It sounds almost too simple to be effective, but that is exactly why it works. Most relapses do not begin with a dramatic event. They begin with accumulated neglect of basic needs, skipping meals, not sleeping enough, avoiding human connection, or pushing through exhaustion without rest. The HALT check-in catches these patterns early.
             </p>
             <p>
               Many people in recovery do a HALT check-in every morning and again in the late afternoon. It takes less than a minute and can be the difference between a manageable day and a dangerous one.
@@ -209,7 +209,7 @@ export default function RelapsePreventionPlanGuidePage() {
               Boredom and unstructured time are among the most underestimated risk factors in recovery. A relapse prevention plan should include a list of safe, enjoyable activities you can turn to when you need to fill time or redirect your energy.
             </p>
             <p>
-              These might include exercise, cooking, reading, attending a recovery meeting, volunteering, creative hobbies, spending time outdoors, or calling a friend. The goal is not to keep yourself so busy that you never have a quiet moment — it is to have options readily available when idle time starts to feel dangerous.
+              These might include exercise, cooking, reading, attending a recovery meeting, volunteering, creative hobbies, spending time outdoors, or calling a friend. The goal is not to keep yourself so busy that you never have a quiet moment, it is to have options readily available when idle time starts to feel dangerous.
             </p>
             <p>
               Healthy routines around sleep, meals, and daily structure also serve as protective factors. When the basics are in place, you are better equipped to handle whatever the day brings.
@@ -219,16 +219,16 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>What to do when a craving hits</h2>
             <p>
-              Cravings are a normal part of recovery. They are uncomfortable, but they are temporary — most cravings peak and pass within 15 to 30 minutes if you do not act on them. Here are three evidence-based strategies:
+              Cravings are a normal part of recovery. They are uncomfortable, but they are temporary, most cravings peak and pass within 15 to 30 minutes if you do not act on them. Here are three evidence-based strategies:
             </p>
             <p>
-              <strong>Play the tape forward.</strong> When a craving hits, your brain focuses on the relief of using. Deliberately think past that moment — what happens an hour later? The next morning? What are the consequences for your relationships, your health, your recovery? Playing the full tape often reduces the appeal significantly.
+              <strong>Play the tape forward.</strong> When a craving hits, your brain focuses on the relief of using. Deliberately think past that moment, what happens an hour later? The next morning? What are the consequences for your relationships, your health, your recovery? Playing the full tape often reduces the appeal significantly.
             </p>
             <p>
-              <strong>Urge surfing.</strong> Developed by psychologist Alan Marlatt, urge surfing involves observing the craving without acting on it. Notice where you feel it in your body, watch its intensity rise and fall, and remind yourself that it will pass. You are not fighting the wave — you are riding it.
+              <strong>Urge surfing.</strong> Developed by psychologist Alan Marlatt, urge surfing involves observing the craving without acting on it. Notice where you feel it in your body, watch its intensity rise and fall, and remind yourself that it will pass. You are not fighting the wave, you are riding it.
             </p>
             <p>
-              <strong>Call someone.</strong> Pick up the phone and tell someone what you are experiencing. This is not weakness — it is one of the most effective relapse prevention strategies available. Connection breaks the isolation that cravings thrive on.
+              <strong>Call someone.</strong> Pick up the phone and tell someone what you are experiencing. This is not weakness, it is one of the most effective relapse prevention strategies available. Connection breaks the isolation that cravings thrive on.
             </p>
           </section>
 
@@ -240,7 +240,7 @@ export default function RelapsePreventionPlanGuidePage() {
               If a relapse occurs, the single most important thing to understand is this: a relapse is not a failure. It does not mean recovery is over, and it does not erase the progress you have made. Addiction is a chronic condition, and setbacks are part of many people&apos;s recovery journeys.
             </p>
             <p>
-              What matters is what you do next. Stop using immediately. Remove yourself from the situation. Call someone from your support network — your sponsor, therapist, or a crisis line. Be honest about what happened. Do not let shame keep you silent, because silence is where relapse grows.
+              What matters is what you do next. Stop using immediately. Remove yourself from the situation. Call someone from your support network, your sponsor, therapist, or a crisis line. Be honest about what happened. Do not let shame keep you silent, because silence is where relapse grows.
             </p>
             <p>
               After stabilizing, review your prevention plan with a professional. What warning signs did you miss? What triggers were you not prepared for? What will you do differently? Use the experience as data, not as evidence of failure. Many people in long-term recovery will tell you that a setback taught them something essential about their own patterns.
@@ -250,7 +250,7 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>Using the Relapse Prevention Plan Builder tool</h2>
             <p>
-              Our <Link href="/relapse-prevention-plan">Relapse Prevention Plan Builder</Link> walks you through each of these components in a structured, guided format. It helps you identify your triggers, list your warning signs, build your coping toolkit, record your emergency contacts, and create a complete written plan — all in your browser, with nothing stored on our servers.
+              Our <Link href="/relapse-prevention-plan">Relapse Prevention Plan Builder</Link> walks you through each of these components in a structured, guided format. It helps you identify your triggers, list your warning signs, build your coping toolkit, record your emergency contacts, and create a complete written plan, all in your browser, with nothing stored on our servers.
             </p>
             <p>
               Having a written plan matters. Research on relapse prevention consistently shows that structured, documented plans are more effective than mental notes or vague intentions. The act of writing forces clarity, and the finished document gives you something concrete to refer back to when things get hard.
@@ -260,10 +260,10 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>The role of ongoing support</h2>
             <p>
-              A relapse prevention plan is not a substitute for professional support — it is a complement to it. Ongoing therapy, recovery meetings, sponsorship, and peer support all strengthen the foundation that your plan is built on.
+              A relapse prevention plan is not a substitute for professional support, it is a complement to it. Ongoing therapy, recovery meetings, sponsorship, and peer support all strengthen the foundation that your plan is built on.
             </p>
             <p>
-              Cognitive-behavioral therapy (CBT) and other evidence-based approaches can help you develop deeper skills for managing triggers and cravings. Recovery communities — whether 12-step, SMART Recovery, Refuge Recovery, or others — provide accountability, connection, and shared experience. A sponsor or mentor offers one-on-one guidance from someone who understands the recovery journey firsthand.
+              Cognitive-behavioral therapy (CBT) and other evidence-based approaches can help you develop deeper skills for managing triggers and cravings. Recovery communities, whether 12-step, SMART Recovery, Refuge Recovery, or others, provide accountability, connection, and shared experience. A sponsor or mentor offers one-on-one guidance from someone who understands the recovery journey firsthand.
             </p>
             <p>
               Recovery is not something you do alone. Your plan is a tool, and your support network is the team that helps you use it.

@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "Can box breathing help with panic attacks?",
     answer:
-      "Yes. Box breathing can help during a panic attack, though it works best when practiced regularly beforehand. During a panic attack, the breath-holding phases may feel uncomfortable. If so, simplify to slow inhale (4 seconds) and extended exhale (6&ndash;8 seconds) without holds. The key mechanism &mdash; slowing the breathing rate &mdash; still activates the parasympathetic response.",
+      "Yes. Box breathing can help during a panic attack, though it works best when practiced regularly beforehand. During a panic attack, the breath-holding phases may feel uncomfortable. If so, simplify to slow inhale (4 seconds) and extended exhale (6&ndash;8 seconds) without holds. The key mechanism, slowing the breathing rate, still activates the parasympathetic response.",
   },
   {
     question: "Is box breathing the same as 4-7-8 breathing?",
@@ -88,7 +88,7 @@ export default function BoxBreathingGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Box breathing is a controlled breathing pattern that uses four equal phases &mdash; inhale for 4 seconds, hold for 4, exhale for 4, hold for 4 &mdash; to activate your body&apos;s natural calming response. Used by Navy SEALs under the name &quot;tactical breathing,&quot; it is one of the simplest and most effective techniques for reducing anxiety, managing stress, and interrupting panic in real time. You can learn it in minutes and practice it anywhere.
+            Box breathing is a controlled breathing pattern that uses four equal phases, inhale for 4 seconds, hold for 4, exhale for 4, hold for 4, to activate your body&apos;s natural calming response. Used by Navy SEALs under the name &quot;tactical breathing,&quot; it is one of the simplest and most effective techniques for reducing anxiety, managing stress, and interrupting panic in real time. You can learn it in minutes and practice it anywhere.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function BoxBreathingGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -127,13 +127,13 @@ export default function BoxBreathingGuidePage() {
           <section>
             <h2>The science: how slow breathing calms the nervous system</h2>
             <p>
-              Box breathing works by directly engaging the parasympathetic nervous system &mdash; the branch of your autonomic nervous system responsible for &quot;rest and digest&quot; functions. The primary pathway is the vagus nerve, which runs from the brainstem to the abdomen and acts as a brake on the stress response.
+              Box breathing works by directly engaging the parasympathetic nervous system, the branch of your autonomic nervous system responsible for &quot;rest and digest&quot; functions. The primary pathway is the vagus nerve, which runs from the brainstem to the abdomen and acts as a brake on the stress response.
             </p>
             <p>
               When you breathe slowly and rhythmically, you stimulate vagal afferent fibers in the lungs and diaphragm. This sends signals to the brainstem that reduce sympathetic (fight-or-flight) activation. Heart rate slows, blood pressure decreases, and cortisol production is dampened. A 2017 study by Ma et al. published in <em>Frontiers in Psychology</em> found that diaphragmatic breathing significantly reduced cortisol levels and increased sustained attention in healthy adults.
             </p>
             <p>
-              The hold phases in box breathing add an additional benefit. Breath retention increases carbon dioxide levels slightly, which stimulates the vagus nerve more strongly and promotes vasodilation (widening of blood vessels). The overall effect is a measurable increase in heart rate variability (HRV) &mdash; a key marker of stress resilience and emotional regulation capacity.
+              The hold phases in box breathing add an additional benefit. Breath retention increases carbon dioxide levels slightly, which stimulates the vagus nerve more strongly and promotes vasodilation (widening of blood vessels). The overall effect is a measurable increase in heart rate variability (HRV), a key marker of stress resilience and emotional regulation capacity.
             </p>
           </section>
 
@@ -145,13 +145,13 @@ export default function BoxBreathingGuidePage() {
               Here is the step-by-step process. You can practice sitting, standing, or lying down.
             </p>
             <p>
-              <strong>Step 1: Inhale (4 seconds).</strong> Breathe in slowly through your nose for a count of 4. Focus on filling your lungs from the bottom up &mdash; your belly should expand before your chest rises. This is diaphragmatic breathing, which maximizes vagal stimulation.
+              <strong>Step 1: Inhale (4 seconds).</strong> Breathe in slowly through your nose for a count of 4. Focus on filling your lungs from the bottom up, your belly should expand before your chest rises. This is diaphragmatic breathing, which maximizes vagal stimulation.
             </p>
             <p>
-              <strong>Step 2: Hold (4 seconds).</strong> Gently hold your breath for a count of 4. Keep your body relaxed &mdash; do not clamp your throat or tense your shoulders. This pause allows oxygen exchange in the alveoli and mildly increases CO2, which further stimulates the vagus nerve.
+              <strong>Step 2: Hold (4 seconds).</strong> Gently hold your breath for a count of 4. Keep your body relaxed, do not clamp your throat or tense your shoulders. This pause allows oxygen exchange in the alveoli and mildly increases CO2, which further stimulates the vagus nerve.
             </p>
             <p>
-              <strong>Step 3: Exhale (4 seconds).</strong> Release the breath slowly and evenly through your mouth or nose for a count of 4. A controlled exhale is the most important phase &mdash; it is during exhalation that parasympathetic activation is strongest.
+              <strong>Step 3: Exhale (4 seconds).</strong> Release the breath slowly and evenly through your mouth or nose for a count of 4. A controlled exhale is the most important phase, it is during exhalation that parasympathetic activation is strongest.
             </p>
             <p>
               <strong>Step 4: Hold (4 seconds).</strong> After exhaling completely, hold for another count of 4 before beginning the next cycle. This second hold completes the &quot;box&quot; and gives your system a moment of stillness before the next inhale.
@@ -242,7 +242,7 @@ export default function BoxBreathingGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -70,7 +70,7 @@ export default function GriefStagesGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Grief is one of the most universal human experiences &mdash; and one of the most misunderstood. Whether you are mourning the death of a loved one, processing an anticipated loss, or struggling with a grief that others do not recognize, understanding what grief looks like and when it may warrant professional support can be a vital first step. This guide covers the stages of grief, modern research models, prolonged grief disorder, and how to know when it is time to seek help.
+            Grief is one of the most universal human experiences, and one of the most misunderstood. Whether you are mourning the death of a loved one, processing an anticipated loss, or struggling with a grief that others do not recognize, understanding what grief looks like and when it may warrant professional support can be a vital first step. This guide covers the stages of grief, modern research models, prolonged grief disorder, and how to know when it is time to seek help.
           </p>
           <div className="mt-6">
             <Link href="/grief-assessment" className="btn-primary text-sm">
@@ -81,9 +81,9 @@ export default function GriefStagesGuidePage() {
 
         <div className="prose-mh space-y-8">
           <section>
-            <h2>How common is grief &mdash; and how many people are affected?</h2>
+            <h2>How common is grief, and how many people are affected?</h2>
             <p>
-              Approximately 2.5 million people die in the United States each year, and research suggests that each death directly affects an average of five close individuals &mdash; family members, partners, and close friends. That means roughly 12.5 million Americans enter acute bereavement in any given year. For most, grief follows a painful but ultimately adaptive course. For approximately 7 to 10 percent of bereaved individuals, however, grief becomes persistent and debilitating &mdash; a condition now formally recognized as prolonged grief disorder.
+              Approximately 2.5 million people die in the United States each year, and research suggests that each death directly affects an average of five close individuals, family members, partners, and close friends. That means roughly 12.5 million Americans enter acute bereavement in any given year. For most, grief follows a painful but ultimately adaptive course. For approximately 7 to 10 percent of bereaved individuals, however, grief becomes persistent and debilitating, a condition now formally recognized as prolonged grief disorder.
             </p>
             <p>
               These numbers underscore an important reality: grief is not rare, and struggling with it is not a sign of weakness. It is a predictable consequence of forming meaningful attachments to other people.
@@ -98,10 +98,10 @@ export default function GriefStagesGuidePage() {
             <div className="not-prose my-6 space-y-2">
               {[
                 { stage: "Denial", detail: "An initial sense of disbelief or numbness. The loss feels unreal. This response serves as a temporary defense mechanism that helps buffer the immediate shock." },
-                { stage: "Anger", detail: "As denial fades, frustration and helplessness may surface as anger &mdash; directed at the situation, at others, at oneself, or even at the person who died. This is a normal part of processing pain." },
+                { stage: "Anger", detail: "As denial fades, frustration and helplessness may surface as anger, directed at the situation, at others, at oneself, or even at the person who died. This is a normal part of processing pain." },
                 { stage: "Bargaining", detail: "A period of dwelling on &quot;what if&quot; and &quot;if only&quot; statements. Bereaved individuals may replay events and imagine ways the outcome could have been different." },
                 { stage: "Depression", detail: "Deep sadness as the full weight of the loss settles in. Withdrawal, crying, sleep changes, and difficulty concentrating are common. This is not clinical depression but a natural response to significant loss." },
-                { stage: "Acceptance", detail: "Not &quot;being okay&quot; with the loss, but gradually acknowledging the reality of it and finding ways to move forward. Acceptance does not mean the grief disappears &mdash; it means learning to live with it." },
+                { stage: "Acceptance", detail: "Not &quot;being okay&quot; with the loss, but gradually acknowledging the reality of it and finding ways to move forward. Acceptance does not mean the grief disappears, it means learning to live with it." },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 card">
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-4 flex-shrink-0">{i + 1}</span>
@@ -128,17 +128,17 @@ export default function GriefStagesGuidePage() {
               <strong>The Dual Process Model</strong> (Stroebe &amp; Schut, 1999) describes grief as an oscillation between two orientations: loss-oriented coping (confronting the emotional pain of the loss, yearning for the deceased, processing the death) and restoration-oriented coping (attending to the practical changes that follow loss, building a new identity, engaging with the world). Healthy grieving involves moving back and forth between these two orientations rather than staying stuck in either one.
             </p>
             <p>
-              <strong>Continuing Bonds theory</strong> challenges the older assumption that &quot;successful&quot; grief requires severing emotional ties with the deceased. Research now shows that maintaining an ongoing internal relationship with the person who died &mdash; through memories, rituals, conversations, or a sense of their continued presence &mdash; is common, healthy, and often comforting. Grief does not require letting go; it requires finding a new way to hold on.
+              <strong>Continuing Bonds theory</strong> challenges the older assumption that &quot;successful&quot; grief requires severing emotional ties with the deceased. Research now shows that maintaining an ongoing internal relationship with the person who died, through memories, rituals, conversations, or a sense of their continued presence, is common, healthy, and often comforting. Grief does not require letting go; it requires finding a new way to hold on.
             </p>
             <p>
-              These models help explain why grief looks so different from person to person and why well-meaning advice like &quot;you need to move on&quot; can feel so dismissive. Grief is not a problem to solve &mdash; it is a process to live through.
+              These models help explain why grief looks so different from person to person and why well-meaning advice like &quot;you need to move on&quot; can feel so dismissive. Grief is not a problem to solve, it is a process to live through.
             </p>
           </section>
 
           <section>
             <h2>Physical and emotional symptoms of grief</h2>
             <p>
-              Grief is not just an emotional experience &mdash; it has significant physical manifestations that many people do not expect.
+              Grief is not just an emotional experience, it has significant physical manifestations that many people do not expect.
             </p>
             <p>
               <strong>Physical symptoms</strong> commonly include sleep disruption (insomnia or sleeping too much), appetite changes (loss of appetite or overeating), profound fatigue, headaches, muscle tension, digestive problems, and a weakened immune system. Research has shown that bereaved individuals have higher rates of illness and medical visits in the months following a significant loss. The stress hormones released during acute grief can affect cardiovascular health, which is why the risk of heart attack increases in the weeks after losing a spouse.
@@ -147,7 +147,7 @@ export default function GriefStagesGuidePage() {
               <strong>Emotional symptoms</strong> can include profound sadness, numbness or emotional flatness, guilt (especially &quot;survivor&apos;s guilt&quot; or guilt about things left unsaid), anger, anxiety about the future or about one&apos;s own mortality, difficulty concentrating, and a sense that life has lost its meaning. These responses are all within the range of normal grief. They become concerning when they persist at high intensity for 12 months or more without any gradual improvement.
             </p>
             <p>
-              If you are noticing symptoms that overlap with depression &mdash; persistent hopelessness, loss of interest in everything, difficulty functioning at work or in daily life &mdash; a screening tool like the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link> can help you reflect on whether additional support may be warranted. Grief and depression can coexist, and recognizing that overlap is important.
+              If you are noticing symptoms that overlap with depression, persistent hopelessness, loss of interest in everything, difficulty functioning at work or in daily life, a screening tool like the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link> can help you reflect on whether additional support may be warranted. Grief and depression can coexist, and recognizing that overlap is important.
             </p>
           </section>
 
@@ -159,13 +159,13 @@ export default function GriefStagesGuidePage() {
               Not all grief follows the expected pattern of mourning after a death. Several types of grief are commonly experienced but less frequently discussed:
             </p>
             <p>
-              <strong>Anticipatory grief</strong> occurs before the actual loss &mdash; when a loved one has a terminal illness, for example. You may begin grieving while the person is still alive, which can bring guilt and confusion alongside the sadness. Anticipatory grief is real grief, and it deserves the same support and compassion.
+              <strong>Anticipatory grief</strong> occurs before the actual loss, when a loved one has a terminal illness, for example. You may begin grieving while the person is still alive, which can bring guilt and confusion alongside the sadness. Anticipatory grief is real grief, and it deserves the same support and compassion.
             </p>
             <p>
-              <strong>Disenfranchised grief</strong> refers to losses that society does not fully acknowledge or validate &mdash; the death of an ex-partner, a miscarriage, the loss of a pet, the death of someone you knew only online, or the grief that accompanies estrangement from a living family member. When grief is not socially recognized, bereaved individuals often feel they have no right to mourn, which can intensify the pain and delay processing.
+              <strong>Disenfranchised grief</strong> refers to losses that society does not fully acknowledge or validate, the death of an ex-partner, a miscarriage, the loss of a pet, the death of someone you knew only online, or the grief that accompanies estrangement from a living family member. When grief is not socially recognized, bereaved individuals often feel they have no right to mourn, which can intensify the pain and delay processing.
             </p>
             <p>
-              <strong>Ambiguous loss</strong> describes situations where the loss lacks clarity or closure &mdash; a missing person, a loved one with severe dementia who is physically present but psychologically absent, or the loss of a relationship without a clear ending. Ambiguous loss is particularly challenging because it resists the resolution that other forms of grief eventually allow.
+              <strong>Ambiguous loss</strong> describes situations where the loss lacks clarity or closure, a missing person, a loved one with severe dementia who is physically present but psychologically absent, or the loss of a relationship without a clear ending. Ambiguous loss is particularly challenging because it resists the resolution that other forms of grief eventually allow.
             </p>
           </section>
 
@@ -190,7 +190,7 @@ export default function GriefStagesGuidePage() {
           <section>
             <h2>When to seek professional help for grief</h2>
             <p>
-              Grief is not inherently something that requires professional intervention &mdash; most people process loss with the support of family, friends, community, and time. However, there are situations where professional help can make a significant difference:
+              Grief is not inherently something that requires professional intervention, most people process loss with the support of family, friends, community, and time. However, there are situations where professional help can make a significant difference:
             </p>
             <p>
               You may benefit from grief counseling or therapy if your grief symptoms remain at the same intensity for many months without any gradual easing, if you are unable to carry out daily responsibilities, if you are relying on alcohol or other substances to manage the pain, if you are experiencing persistent thoughts that life is not worth living, if you feel &quot;stuck&quot; and unable to process the loss, or if people close to you are expressing concern about how you are coping.
@@ -235,7 +235,7 @@ export default function GriefStagesGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

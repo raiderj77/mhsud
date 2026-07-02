@@ -109,7 +109,7 @@ export function ASRSClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "ASRS Adult ADHD Self-Check \u2014 Free & Private",
+        title: "ASRS Adult ADHD Self-Check, Free & Private",
         text: "Take a free, private ASRS adult ADHD screening self-check. WHO-developed. Your answers never leave your browser.",
         url,
       };
@@ -123,7 +123,7 @@ export function ASRSClient({ faqData }: Props) {
     }
 
     const result = screenPositive ? "Positive Screen" : "Negative Screen";
-    const summary = `ASRS Self-Check Results\n${positiveCount} of 6 positive responses \u2014 ${result}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `ASRS Self-Check Results\n${positiveCount} of 6 positive responses, ${result}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My ASRS Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -165,7 +165,7 @@ export function ASRSClient({ faqData }: Props) {
       {!accepted && (
         <DisclaimerGate
           toolName="ASRS v1.1"
-          toolDescription="This self-check uses the Adult ADHD Self-Report Scale (ASRS v1.1) Part A, a screening tool developed by the World Health Organization (WHO). ADHD can only be identified through a comprehensive professional evaluation — this tool helps determine whether such an evaluation may be beneficial."
+          toolDescription="This self-check uses the Adult ADHD Self-Report Scale (ASRS v1.1) Part A, a screening tool developed by the World Health Organization (WHO). ADHD can only be identified through a comprehensive professional evaluation, this tool helps determine whether such an evaluation may be beneficial."
           onAccept={() => setAccepted(true)}
         />
       )}
@@ -270,10 +270,10 @@ export function ASRSClient({ faqData }: Props) {
                 <span className="text-xl">{"\u26A0\uFE0F"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
-                    Positive screen — further evaluation recommended
+                    Positive screen, further evaluation recommended
                   </h3>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed mb-3">
-                    Your responses are consistent with adult ADHD symptoms. This does not mean you have ADHD — only a comprehensive professional evaluation can determine that. ADHD evaluation typically involves a detailed clinical interview, developmental history, and assessment of how symptoms affect multiple areas of your life.
+                    Your responses are consistent with adult ADHD symptoms. This does not mean you have ADHD, only a comprehensive professional evaluation can determine that. ADHD evaluation typically involves a detailed clinical interview, developmental history, and assessment of how symptoms affect multiple areas of your life.
                   </p>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed">
                     Consider speaking with your primary care provider or a mental health professional who has experience with adult ADHD. They can help determine whether a full evaluation is appropriate.
@@ -293,7 +293,7 @@ export function ASRSClient({ faqData }: Props) {
                   {positiveCount}<span className="text-2xl font-semibold">/6</span>
                 </p>
                 <p className={`text-sm font-semibold ${screenPositive ? "text-warm-700 dark:text-warm-400" : "text-sage-700 dark:text-sage-400"}`}>
-                  positive responses — {screenPositive ? "Positive Screen" : "Negative Screen"}
+                  positive responses, {screenPositive ? "Positive Screen" : "Negative Screen"}
                 </p>
                 <div className="mt-6">
                   <div className="flex gap-1.5 justify-center">
@@ -341,7 +341,7 @@ export function ASRSClient({ faqData }: Props) {
                 </div>
                 <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
                   <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
-                    <strong>Important reminder:</strong> ADHD can only be properly identified through a comprehensive professional evaluation that includes a detailed clinical interview, developmental history, and functional assessment. This screening tool is for personal reflection and education only — it cannot confirm or rule out ADHD.
+                    <strong>Important reminder:</strong> ADHD can only be properly identified through a comprehensive professional evaluation that includes a detailed clinical interview, developmental history, and functional assessment. This screening tool is for personal reflection and education only, it cannot confirm or rule out ADHD.
                   </p>
                 </div>
               </div>
@@ -384,7 +384,7 @@ export function ASRSClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>ASRS v1.1 Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>ASRS v1.1 Self-Check from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -486,7 +486,7 @@ export function ASRSClient({ faqData }: Props) {
             {showScoring && (
               <div className="px-5 pb-5 space-y-3 animate-fade-in">
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                  The ASRS uses a unique scoring method. Unlike tools that simply add up points, the ASRS counts how many of your responses fall in the &quot;positive&quot; range — and the threshold differs by question:
+                  The ASRS uses a unique scoring method. Unlike tools that simply add up points, the ASRS counts how many of your responses fall in the &quot;positive&quot; range, and the threshold differs by question:
                 </p>
                 <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4 space-y-2">
                   <div className="flex items-start gap-2">
@@ -512,7 +512,7 @@ export function ASRSClient({ faqData }: Props) {
                   }`}>
                     <div className="w-3 h-3 rounded-full bg-gradient-to-br from-warm-400 to-warm-600 flex-shrink-0" />
                     <span className={`text-sm ${screenPositive ? "font-semibold text-warm-700 dark:text-warm-400" : "text-neutral-500 dark:text-neutral-400"}`}>
-                      4\u20136 positive: Positive screen — further evaluation recommended
+                      4\u20136 positive: Positive screen, further evaluation recommended
                     </span>
                   </div>
                 </div>
@@ -531,8 +531,8 @@ export function ASRSClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -561,25 +561,25 @@ export function ASRSClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">What Is Adult ADHD?</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with daily functioning. While often associated with children, ADHD frequently persists into adulthood. Research estimates that approximately 2.5\u20134% of adults worldwide have ADHD, though many remain unidentified. In adults, symptoms may look different than in children — hyperactivity often manifests as internal restlessness rather than obvious physical activity, and inattention may present as difficulty with organization, time management, and follow-through on tasks.
+                  Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with daily functioning. While often associated with children, ADHD frequently persists into adulthood. Research estimates that approximately 2.5\u20134% of adults worldwide have ADHD, though many remain unidentified. In adults, symptoms may look different than in children, hyperactivity often manifests as internal restlessness rather than obvious physical activity, and inattention may present as difficulty with organization, time management, and follow-through on tasks.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Why ADHD Is Often Missed in Adults</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Adult ADHD is frequently underrecognized for several reasons. Many adults developed coping strategies during childhood and adolescence that masked their symptoms enough to avoid identification. Others were identified with other conditions — such as anxiety, depression, or learning difficulties — without ADHD being recognized as an underlying factor. Women and girls are particularly underidentified, as they are more likely to present with the inattentive type of ADHD rather than the more visibly disruptive hyperactive-impulsive type. Additionally, ADHD was historically considered a childhood condition, so many adults were simply never evaluated.
+                  Adult ADHD is frequently underrecognized for several reasons. Many adults developed coping strategies during childhood and adolescence that masked their symptoms enough to avoid identification. Others were identified with other conditions, such as anxiety, depression, or learning difficulties, without ADHD being recognized as an underlying factor. Women and girls are particularly underidentified, as they are more likely to present with the inattentive type of ADHD rather than the more visibly disruptive hyperactive-impulsive type. Additionally, ADHD was historically considered a childhood condition, so many adults were simply never evaluated.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">What the ASRS Measures</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  The ASRS v1.1 Part A screener asks about six symptoms that are the most predictive of adult ADHD based on WHO research. These include difficulty with task completion, organization, memory, procrastination, physical restlessness, and feeling driven or compelled. The scoring uses research-validated thresholds rather than a simple sum, because the clinical significance of each symptom varies. A positive screen indicates that a comprehensive evaluation may be beneficial — it is the starting point of a conversation, not a conclusion.
+                  The ASRS v1.1 Part A screener asks about six symptoms that are the most predictive of adult ADHD based on WHO research. These include difficulty with task completion, organization, memory, procrastination, physical restlessness, and feeling driven or compelled. The scoring uses research-validated thresholds rather than a simple sum, because the clinical significance of each symptom varies. A positive screen indicates that a comprehensive evaluation may be beneficial, it is the starting point of a conversation, not a conclusion.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">The Importance of Comprehensive Evaluation</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  ADHD cannot be identified through a screening tool alone. A proper evaluation typically involves a detailed clinical interview covering current symptoms and childhood history, standardized rating scales, assessment of functional impairment across multiple settings (work, home, relationships), and ruling out other conditions that can mimic ADHD symptoms. Many professionals with experience in adult ADHD — including psychiatrists, psychologists, and some primary care providers — can conduct this evaluation. If you screen positive, your primary care provider is often a good first point of contact.
+                  ADHD cannot be identified through a screening tool alone. A proper evaluation typically involves a detailed clinical interview covering current symptoms and childhood history, standardized rating scales, assessment of functional impairment across multiple settings (work, home, relationships), and ruling out other conditions that can mimic ADHD symptoms. Many professionals with experience in adult ADHD, including psychiatrists, psychologists, and some primary care providers, can conduct this evaluation. If you screen positive, your primary care provider is often a good first point of contact.
                 </p>
               </div>
               <ToolReviewerBio />
@@ -622,7 +622,7 @@ export function ASRSClient({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Kessler, R. C., Adler, L., Ames, M., et al. (2005). The World Health Organization Adult ADHD Self-Report Scale (ASRS).{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/15841682/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — ASRS Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/15841682/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, ASRS Validation</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Attention-Deficit/Hyperactivity Disorder.{" "}

@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "What is the difference between nurse burnout and compassion fatigue?",
     answer:
-      "Burnout results from chronic workplace stress \u2014 workload, staffing, and administrative demands. Compassion fatigue is the emotional cost of absorbing patients\u2019 suffering. They frequently co-occur in nursing but require different responses: burnout needs systemic and boundary interventions, while compassion fatigue needs emotional processing and dedicated self-care strategies.",
+      "Burnout results from chronic workplace stress, workload, staffing, and administrative demands. Compassion fatigue is the emotional cost of absorbing patients\u2019 suffering. They frequently co-occur in nursing but require different responses: burnout needs systemic and boundary interventions, while compassion fatigue needs emotional processing and dedicated self-care strategies.",
   },
   {
     question: "Should I leave nursing if I am burned out?",
@@ -91,7 +91,7 @@ export default function BurnoutNursesGuidePage() {
             Nurse burnout shows three measurable dimensions: emotional exhaustion, depersonalization, and reduced personal accomplishment. The Maslach Burnout Inventory for Human Services (MBI-HSS) is the gold-standard measure, with separate cutoffs for healthcare workers. Shift length, patient-to-nurse ratios, and moral injury exposure are the strongest predictors of clinical burnout severity.
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Nursing is one of the most trusted and essential professions in healthcare. It is also one of the most emotionally and physically demanding. Burnout among nurses has reached levels that the World Health Organization and the U.S. Surgeon General have called a crisis &mdash; threatening not just nurse well-being but patient safety and healthcare system stability. If you are a nurse feeling exhausted, detached, or questioning whether you can keep going, this guide is for you.
+            Nursing is one of the most trusted and essential professions in healthcare. It is also one of the most emotionally and physically demanding. Burnout among nurses has reached levels that the World Health Organization and the U.S. Surgeon General have called a crisis, threatening not just nurse well-being but patient safety and healthcare system stability. If you are a nurse feeling exhausted, detached, or questioning whether you can keep going, this guide is for you.
           </p>
         </header>
 
@@ -99,9 +99,9 @@ export default function BurnoutNursesGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -138,7 +138,7 @@ export default function BurnoutNursesGuidePage() {
               <li>Calling in sick more frequently or dreading going to work</li>
               <li>Increased errors, near-misses, or difficulty concentrating during tasks</li>
               <li>Cynicism about the healthcare system, coworkers, or your own purpose</li>
-              <li>Bringing work stress home &mdash; snapping at family, withdrawing from relationships</li>
+              <li>Bringing work stress home, snapping at family, withdrawing from relationships</li>
               <li>Using alcohol or substances to decompress after shifts</li>
               <li>Seriously considering leaving nursing</li>
             </ul>
@@ -147,7 +147,7 @@ export default function BurnoutNursesGuidePage() {
           <section>
             <h2>How the MindCheck Tools burnout screening for nurses helps</h2>
             <p>
-              The <Link href="/burnout-test-for-nurses" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout test for nurses</Link> is a free, private screening that measures burnout across emotional exhaustion, depersonalization, and reduced personal accomplishment. It takes under five minutes and runs entirely in your browser &mdash; no login, no data stored.
+              The <Link href="/burnout-test-for-nurses" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout test for nurses</Link> is a free, private screening that measures burnout across emotional exhaustion, depersonalization, and reduced personal accomplishment. It takes under five minutes and runs entirely in your browser, no login, no data stored.
             </p>
             <p>
               Naming burnout is the first step toward addressing it. The screening gives you a structured picture of where you stand, which you can bring to your EAP, a therapist, or a trusted colleague. If you are also concerned about compassion fatigue specifically, the <Link href="/compassion-fatigue-test" className="text-sage-600 dark:text-sage-400 underline">compassion fatigue test</Link> focuses on that dimension.
@@ -159,7 +159,7 @@ export default function BurnoutNursesGuidePage() {
           <section>
             <h2>Strategies for managing nurse burnout</h2>
             <ul>
-              <li><strong>Use your EAP:</strong> Sessions are confidential and typically free &mdash; your employer does not learn specifics</li>
+              <li><strong>Use your EAP:</strong> Sessions are confidential and typically free, your employer does not learn specifics</li>
               <li><strong>Set boundaries around overtime:</strong> Saying no to extra shifts is not selfish; it is sustainable</li>
               <li><strong>Connect with peers:</strong> Peer support programs and debriefing after difficult cases reduce isolation</li>
               <li><strong>Protect sleep:</strong> Shift work disrupts circadian rhythms; consistent sleep hygiene is critical</li>
@@ -199,7 +199,7 @@ export default function BurnoutNursesGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -33,12 +33,12 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2>Not medical advice — critical disclaimer</h2>
+            <h2>Not medical advice, critical disclaimer</h2>
             <p>
               <strong>MindCheck Tools does not provide medical advice, diagnoses, or treatment recommendations.</strong> All tools, questionnaires, screeners, checklists, and content on this Site are provided for educational and self-reflection purposes only.
             </p>
             <p>
-              The self-check tools on this Site — including the PHQ-9, GAD-7, AUDIT, AUDIT-C, and all original tools — are screening instruments. A screening result is not the same as a clinical diagnosis. Only a qualified healthcare professional (such as a physician, psychiatrist, psychologist, or licensed clinical social worker) can diagnose a mental health condition or substance use disorder.
+              The self-check tools on this Site, including the PHQ-9, GAD-7, AUDIT, AUDIT-C, and all original tools, are screening instruments. A screening result is not the same as a clinical diagnosis. Only a qualified healthcare professional (such as a physician, psychiatrist, psychologist, or licensed clinical social worker) can diagnose a mental health condition or substance use disorder.
             </p>
             <p>
               <strong>Do not rely on any information on this Site as a substitute for professional medical advice, diagnosis, or treatment.</strong> Always seek the advice of your physician or other qualified healthcare provider with any questions you may have regarding a medical or mental health condition. Never disregard professional medical advice or delay in seeking it because of something you have read or scored on this Site.
@@ -55,7 +55,7 @@ export default function TermsPage() {
           <section>
             <h2>Emergency situations</h2>
             <p>
-              <strong>If you are experiencing a medical or mental health emergency — including thoughts of harming yourself or others — please call your local emergency number (911 in the US) or go to your nearest emergency room immediately.</strong>
+              <strong>If you are experiencing a medical or mental health emergency, including thoughts of harming yourself or others, please call your local emergency number (911 in the US) or go to your nearest emergency room immediately.</strong>
             </p>
             <p>
               MindCheck Tools is not equipped to handle emergencies. Our <Link href="/crisis-resources">crisis resources page</Link> lists helplines and services, but we are not a crisis service and cannot provide immediate help.
@@ -88,7 +88,7 @@ export default function TermsPage() {
           <section>
             <h2>Intellectual property</h2>
             <p>
-              The PHQ-9, GAD-7, and AUDIT/AUDIT-C instruments are in the public domain and may be used freely. All original content on this Site — including original tools (Work Stress &amp; Burnout, Mental Load Calculator, Sleep &amp; Mood Reflection), article text, page designs, and visual elements — is the property of MindCheck Tools and is protected by applicable intellectual property laws.
+              The PHQ-9, GAD-7, and AUDIT/AUDIT-C instruments are in the public domain and may be used freely. All original content on this Site, including original tools (Work Stress &amp; Burnout, Mental Load Calculator, Sleep &amp; Mood Reflection), article text, page designs, and visual elements, is the property of MindCheck Tools and is protected by applicable intellectual property laws.
             </p>
             <p>
               You may use our tools for personal, educational, or clinical purposes. You may not reproduce, redistribute, or commercially use our original content without written permission.

@@ -36,17 +36,17 @@ const FAQ_DATA = [
   {
     question: "How many coping skills do I need?",
     answer:
-      "Research suggests maintaining at least five to ten coping skills. Not every skill works in every situation \u2014 a breathing exercise may help with mild anxiety but not an intense craving. Having options across behavioral, cognitive, mindfulness, and social categories ensures something fits the moment. The coping skills randomizer helps you discover new techniques.",
+      "Research suggests maintaining at least five to ten coping skills. Not every skill works in every situation, a breathing exercise may help with mild anxiety but not an intense craving. Having options across behavioral, cognitive, mindfulness, and social categories ensures something fits the moment. The coping skills randomizer helps you discover new techniques.",
   },
   {
     question: "What is the difference between healthy and unhealthy coping?",
     answer:
-      "Healthy coping addresses the root cause of distress and leaves you better off afterward. Unhealthy coping provides temporary relief but creates additional problems \u2014 substance use, emotional suppression, avoidance, and compulsive behaviors are common examples. The distinction is not always the behavior itself; even exercise becomes maladaptive if used compulsively to avoid emotions.",
+      "Healthy coping addresses the root cause of distress and leaves you better off afterward. Unhealthy coping provides temporary relief but creates additional problems, substance use, emotional suppression, avoidance, and compulsive behaviors are common examples. The distinction is not always the behavior itself; even exercise becomes maladaptive if used compulsively to avoid emotions.",
   },
   {
     question: "Can coping skills replace therapy?",
     answer:
-      "Coping skills complement therapy but do not replace professional support. Therapy helps you understand underlying patterns, process trauma, and develop personalized strategies with expert guidance. Coping skills provide practical daily management tools. The two work together \u2014 therapy builds the foundation, and coping skills maintain it. Professional support is strongly recommended in recovery.",
+      "Coping skills complement therapy but do not replace professional support. Therapy helps you understand underlying patterns, process trauma, and develop personalized strategies with expert guidance. Coping skills provide practical daily management tools. The two work together, therapy builds the foundation, and coping skills maintain it. Professional support is strongly recommended in recovery.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function CopingSkillsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Coping skills are the bridge between recognizing a trigger and responding to it without using. When a craving hits or emotions spike, your ability to reach for a healthy strategy instead of a substance can determine whether recovery holds or falters. The good news is that coping skills are learnable, practicable, and backed by decades of clinical research &mdash; and you do not need to remember them all on your own. The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> gives you a skill when you cannot think clearly.
+            Coping skills are the bridge between recognizing a trigger and responding to it without using. When a craving hits or emotions spike, your ability to reach for a healthy strategy instead of a substance can determine whether recovery holds or falters. The good news is that coping skills are learnable, practicable, and backed by decades of clinical research, and you do not need to remember them all on your own. The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> gives you a skill when you cannot think clearly.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function CopingSkillsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -114,7 +114,7 @@ export default function CopingSkillsGuidePage() {
           <section>
             <h2>Why coping skills matter in recovery</h2>
             <p>
-              During active addiction, substances serve as the primary coping mechanism for stress, emotional pain, boredom, and social pressure. When that mechanism is removed in recovery, a gap opens. Without alternative strategies, the brain defaults to what it knows &mdash; and what it knows is substance use.
+              During active addiction, substances serve as the primary coping mechanism for stress, emotional pain, boredom, and social pressure. When that mechanism is removed in recovery, a gap opens. Without alternative strategies, the brain defaults to what it knows, and what it knows is substance use.
             </p>
             <p>
               Alan Marlatt&apos;s coping skills training research, developed alongside his relapse prevention model, demonstrated that people who learn and practice specific coping strategies have significantly better recovery outcomes than those who rely on willpower alone. The key finding: coping is a skill, not a trait. It can be taught, practiced, and strengthened over time.
@@ -133,7 +133,7 @@ export default function CopingSkillsGuidePage() {
               <li><strong>Physical exercise:</strong> Walking, running, lifting weights, or any movement that raises your heart rate. Exercise releases endorphins, reduces cortisol, and provides a natural mood boost. Even a 10-minute walk can reduce craving intensity.</li>
               <li><strong>Calling someone:</strong> Reaching out to a sponsor, therapist, friend, or family member. The act of verbalizing what you are experiencing often reduces its intensity and breaks the isolation that fuels cravings.</li>
               <li><strong>Journaling:</strong> Writing about what you are feeling, what triggered it, and what you need. This externalizes the internal experience and creates distance between the emotion and the urge to act on it.</li>
-              <li><strong>Engaging in a task:</strong> Cleaning, cooking, organizing, building something &mdash; any absorbing activity that requires focus and provides a sense of accomplishment.</li>
+              <li><strong>Engaging in a task:</strong> Cleaning, cooking, organizing, building something, any absorbing activity that requires focus and provides a sense of accomplishment.</li>
               <li><strong>Changing your environment:</strong> Physically leaving a high-risk situation or location. Sometimes the simplest and most effective coping skill is removing yourself from the trigger.</li>
             </ul>
           </section>
@@ -149,7 +149,7 @@ export default function CopingSkillsGuidePage() {
               <li><strong>Cognitive reframing:</strong> Identifying a negative or distorted thought and examining whether it is accurate. For example, changing &quot;I will always feel this way&quot; to &quot;This craving is temporary and will pass.&quot;</li>
               <li><strong>Thought records:</strong> A structured CBT exercise where you write down the situation, the automatic thought, the emotion it triggered, evidence for and against the thought, and a more balanced alternative. The <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">CBT thought record tool</Link> walks you through this process.</li>
               <li><strong>Challenging cognitive distortions:</strong> Learning to recognize patterns like all-or-nothing thinking, catastrophizing, and emotional reasoning that distort your perception of reality and amplify distress.</li>
-              <li><strong>Playing the tape forward:</strong> When romanticizing substance use, mentally &quot;playing the tape forward&quot; to the consequences &mdash; the hangover, the guilt, the damaged relationships, the setback to recovery.</li>
+              <li><strong>Playing the tape forward:</strong> When romanticizing substance use, mentally &quot;playing the tape forward&quot; to the consequences, the hangover, the guilt, the damaged relationships, the setback to recovery.</li>
               <li><strong>Self-compassion:</strong> Treating yourself with the same kindness you would offer a friend who was struggling. Self-criticism increases shame, and shame is a major relapse trigger.</li>
             </ul>
           </section>
@@ -157,13 +157,13 @@ export default function CopingSkillsGuidePage() {
           <section>
             <h2>Mindfulness coping skills: staying present</h2>
             <p>
-              Mindfulness-based coping strategies help you observe cravings and difficult emotions without reacting to them. The core principle is that cravings are temporary &mdash; they rise, peak, and pass, typically within 15 to 30 minutes:
+              Mindfulness-based coping strategies help you observe cravings and difficult emotions without reacting to them. The core principle is that cravings are temporary, they rise, peak, and pass, typically within 15 to 30 minutes:
             </p>
             <ul>
               <li><strong>Deep breathing:</strong> Slow, controlled breathing activates the parasympathetic nervous system, reducing the fight-or-flight response that often accompanies cravings. The <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing exercise</Link> provides a guided technique.</li>
               <li><strong>Grounding (5-4-3-2-1):</strong> Name five things you can see, four you can touch, three you can hear, two you can smell, and one you can taste. This anchors you in the present moment and interrupts the craving cycle.</li>
-              <li><strong>Urge surfing:</strong> Rather than fighting a craving, observe it like a wave &mdash; notice where you feel it in your body, describe its intensity, and watch it rise and fall. The <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 underline">urge surfing timer</Link> guides you through this process.</li>
-              <li><strong>Body scan meditation:</strong> Systematically noticing physical sensations throughout your body, which builds interoceptive awareness &mdash; the ability to recognize what your body is telling you.</li>
+              <li><strong>Urge surfing:</strong> Rather than fighting a craving, observe it like a wave, notice where you feel it in your body, describe its intensity, and watch it rise and fall. The <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 underline">urge surfing timer</Link> guides you through this process.</li>
+              <li><strong>Body scan meditation:</strong> Systematically noticing physical sensations throughout your body, which builds interoceptive awareness, the ability to recognize what your body is telling you.</li>
             </ul>
           </section>
 
@@ -192,13 +192,13 @@ export default function CopingSkillsGuidePage() {
             </p>
             <ul>
               <li><strong>Avoidance:</strong> Refusing to think about, talk about, or confront difficult situations. This delays resolution and often makes the problem worse.</li>
-              <li><strong>Emotional suppression:</strong> Pushing down feelings rather than processing them. Suppressed emotions do not disappear &mdash; they build pressure until they emerge in unhealthy ways.</li>
+              <li><strong>Emotional suppression:</strong> Pushing down feelings rather than processing them. Suppressed emotions do not disappear, they build pressure until they emerge in unhealthy ways.</li>
               <li><strong>Substance use:</strong> The most obvious maladaptive coping strategy, and often the one that brought you to recovery in the first place.</li>
               <li><strong>Compulsive behaviors:</strong> Overeating, excessive shopping, gambling, or compulsive internet use can become substitute addictions if used as primary coping mechanisms.</li>
               <li><strong>Isolation:</strong> Withdrawing from others may feel like self-protection, but it removes the social support that buffers against relapse.</li>
             </ul>
             <p>
-              The goal is not to never use avoidance or distraction &mdash; sometimes short-term distraction is a valid strategy. The problem is when maladaptive patterns become your default, replacing healthy coping rather than supplementing it.
+              The goal is not to never use avoidance or distraction, sometimes short-term distraction is a valid strategy. The problem is when maladaptive patterns become your default, replacing healthy coping rather than supplementing it.
             </p>
           </section>
 
@@ -207,13 +207,13 @@ export default function CopingSkillsGuidePage() {
           <section>
             <h2>Using the coping skills randomizer</h2>
             <p>
-              One of the biggest challenges with coping skills is accessing them in the moment. When you are in distress &mdash; flooded with emotion, craving intensely, or feeling overwhelmed &mdash; the prefrontal cortex is impaired, making it harder to recall what you have learned. You know you have coping skills, but you cannot think of a single one.
+              One of the biggest challenges with coping skills is accessing them in the moment. When you are in distress, flooded with emotion, craving intensely, or feeling overwhelmed, the prefrontal cortex is impaired, making it harder to recall what you have learned. You know you have coping skills, but you cannot think of a single one.
             </p>
             <p>
-              The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> is designed for exactly this situation. It gives you a specific, evidence-based coping skill at the push of a button &mdash; removing the need to search your memory when your brain is least capable of doing so. Each suggested skill includes a brief explanation and instructions for how to use it.
+              The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> is designed for exactly this situation. It gives you a specific, evidence-based coping skill at the push of a button, removing the need to search your memory when your brain is least capable of doing so. Each suggested skill includes a brief explanation and instructions for how to use it.
             </p>
             <p>
-              The randomizer draws from all four categories &mdash; behavioral, cognitive, mindfulness, and social &mdash; so you are exposed to a range of strategies over time. Many people find that trying skills they would not have chosen on their own leads to discovering new techniques that become reliable parts of their toolkit.
+              The randomizer draws from all four categories, behavioral, cognitive, mindfulness, and social, so you are exposed to a range of strategies over time. Many people find that trying skills they would not have chosen on their own leads to discovering new techniques that become reliable parts of their toolkit.
             </p>
           </section>
 
@@ -235,7 +235,7 @@ export default function CopingSkillsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

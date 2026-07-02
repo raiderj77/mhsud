@@ -32,7 +32,7 @@ export function EmailCapture({ toolName }: Props) {
         Get occasional mental health resources
       </h2>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
-        We send a small number of emails on mental health topics — coping strategies,
+        We send a small number of emails on mental health topics, coping strategies,
         when to seek help, and how to use screening tools effectively. No results, no diagnosis,
         no spam.
       </p>
@@ -68,7 +68,7 @@ export function EmailCapture({ toolName }: Props) {
 
           {status === "error" && (
             <p className="text-xs text-crisis-600 dark:text-crisis-400 mt-2">
-              Something went wrong — please try again.
+              Something went wrong, please try again.
             </p>
           )}
 

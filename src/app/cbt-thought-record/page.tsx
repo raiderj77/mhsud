@@ -34,11 +34,11 @@ const FAQ_DATA = [
   },
   {
     question: "How often should I complete a thought record?",
-    answer: "During active CBT treatment, therapists typically recommend completing at least one thought record per day, especially when you notice strong negative emotions. Even 2-3 per week can build the cognitive restructuring skill over time. The key is consistency — regular practice trains your brain to automatically question distorted thoughts. Many people find it helpful to set a daily time (like the evening) to reflect on the most distressing moment of their day and work through it. Over time, you will start catching and challenging negative thoughts in real time without needing to write them down.",
+    answer: "During active CBT treatment, therapists typically recommend completing at least one thought record per day, especially when you notice strong negative emotions. Even 2-3 per week can build the cognitive restructuring skill over time. The key is consistency, regular practice trains your brain to automatically question distorted thoughts. Many people find it helpful to set a daily time (like the evening) to reflect on the most distressing moment of their day and work through it. Over time, you will start catching and challenging negative thoughts in real time without needing to write them down.",
   },
   {
     question: "What if my emotions do not change after completing a thought record?",
-    answer: "It is completely normal for emotion ratings to not change dramatically, especially in the beginning. The goal is not to eliminate negative emotions — it is to make your thinking more accurate and reduce the intensity somewhat. Even a 10-point reduction (e.g., anxiety from 80 to 70) is meaningful. If you consistently find no change, it may mean the balanced thought does not feel convincing yet, which is common. Try asking: 'What would I tell a friend in this situation?' or 'What will I think about this in a year?' If emotions remain very intense, this is worth discussing with a therapist who can help you develop the skill further.",
+    answer: "It is completely normal for emotion ratings to not change dramatically, especially in the beginning. The goal is not to eliminate negative emotions, it is to make your thinking more accurate and reduce the intensity somewhat. Even a 10-point reduction (e.g., anxiety from 80 to 70) is meaningful. If you consistently find no change, it may mean the balanced thought does not feel convincing yet, which is common. Try asking: 'What would I tell a friend in this situation?' or 'What will I think about this in a year?' If emotions remain very intense, this is worth discussing with a therapist who can help you develop the skill further.",
   },
   {
     question: "What is the difference between a thought and an emotion?",
@@ -97,7 +97,7 @@ export default function CbtThoughtRecordPage() {
         <AnswerBlock
           what="A guided CBT thought record worksheet that walks you through identifying, challenging, and reframing negative thought patterns."
           who="Anyone practicing cognitive behavioral therapy skills who wants a structured tool for examining unhelpful thoughts."
-          bottomLine="Thought records are a core CBT skill — regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Thought records are a core CBT skill, regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

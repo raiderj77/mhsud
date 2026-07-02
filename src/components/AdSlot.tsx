@@ -46,7 +46,7 @@ export function AdSlot({
         pushed.current = true;
       }
     } catch {
-      // AdSense not loaded — silently skip
+      // AdSense not loaded, silently skip
     }
   }, []);
 

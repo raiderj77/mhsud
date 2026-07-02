@@ -4,7 +4,7 @@ import Link from "next/link";
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "Offline — MindCheck Tools",
+  title: "Offline, MindCheck Tools",
   robots: "noindex, nofollow",
 };
 
@@ -36,7 +36,7 @@ export default function OfflinePage() {
 
         {/* Subheading */}
         <p className="text-lg text-sage-700 dark:text-sage-300 mb-6">
-          It looks like you&apos;ve lost your internet connection. But don&apos;t worry — you can still use our screening tools offline!
+          It looks like you&apos;ve lost your internet connection. But don&apos;t worry, you can still use our screening tools offline!
         </p>
 
         {/* Info Box */}

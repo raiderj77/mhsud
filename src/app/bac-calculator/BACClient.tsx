@@ -111,14 +111,14 @@ export function BACClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/bac-calculator";
     if (mode === "blank") {
       if (navigator.share) {
-        try { await navigator.share({ title: "BAC Calculator \u2014 Free & Private", text: "Estimate your blood alcohol content. See BAC level, effects, and time until sober.", url }); return; } catch { /* cancelled */ }
+        try { await navigator.share({ title: "BAC Calculator, Free & Private", text: "Estimate your blood alcohol content. See BAC level, effects, and time until sober.", url }); return; } catch { /* cancelled */ }
       }
       await navigator.clipboard.writeText(url);
       setShareMessage("Link copied!");
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `BAC Calculator\nEstimated BAC: ${bac.toFixed(3)}% \u2014 ${effects.level}\nEst. time until sober: ${soberHours.toFixed(1)} hours\n\nThis is an ESTIMATE only. Never drive after drinking.\nCalculate yours: ${url}`;
+    const summary = `BAC Calculator\nEstimated BAC: ${bac.toFixed(3)}%, ${effects.level}\nEst. time until sober: ${soberHours.toFixed(1)} hours\n\nThis is an ESTIMATE only. Never drive after drinking.\nCalculate yours: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "BAC Estimate", text: summary }); return; } catch { /* cancelled */ }
     }
@@ -158,7 +158,7 @@ export function BACClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
-      {/* Safety Warning — Always Visible */}
+      {/* Safety Warning, Always Visible */}
       <div className="bg-crisis-50 dark:bg-crisis-950/20 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 mb-6">
         <div className="flex gap-3 items-start">
           <span className="text-xl">{"\u26A0\uFE0F"}</span>
@@ -452,7 +452,7 @@ export function BACClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>BAC Calculator from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>BAC Calculator from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>ESTIMATE ONLY. Never drive after drinking. Not medical advice.</p>
             </div>
           </div>
@@ -523,9 +523,9 @@ export function BACClient({ faqData }: Props) {
             <div className="space-y-2.5">
               {[
                 { label: "Emergency Services", detail: "Call 911 for alcohol poisoning or medical emergencies", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "Poison Control (US)", detail: "1-800-222-1222 \u2014 free, confidential, 24/7", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free treatment referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-warm-600 dark:text-warm-400" },
+                { label: "Poison Control (US)", detail: "1-800-222-1222, free, confidential, 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free treatment referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-warm-600 dark:text-warm-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
                   <p className={`text-sm font-semibold ${r.color}`}>{r.label}</p>
@@ -552,13 +552,13 @@ export function BACClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">What Is a Standard Drink?</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  In the United States, one standard drink contains approximately <strong>14 grams of pure alcohol</strong>. This equals 12 ounces of regular beer (5% ABV), 5 ounces of wine (12% ABV), or 1.5 ounces of distilled spirits (40% ABV / 80 proof). Many drinks contain more than one standard drink — a large restaurant pour of wine may be 8-10 ounces (1.6-2 standard drinks), a pint of craft beer at 7% ABV is about 1.5 standard drinks, and a strong cocktail can contain 2-3 standard drinks. Accurately counting standard drinks is essential for estimating BAC.
+                  In the United States, one standard drink contains approximately <strong>14 grams of pure alcohol</strong>. This equals 12 ounces of regular beer (5% ABV), 5 ounces of wine (12% ABV), or 1.5 ounces of distilled spirits (40% ABV / 80 proof). Many drinks contain more than one standard drink, a large restaurant pour of wine may be 8-10 ounces (1.6-2 standard drinks), a pint of craft beer at 7% ABV is about 1.5 standard drinks, and a strong cocktail can contain 2-3 standard drinks. Accurately counting standard drinks is essential for estimating BAC.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">How the Body Processes Alcohol</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  After consumption, alcohol is absorbed through the stomach and small intestine into the bloodstream. The liver metabolizes approximately <strong>90-98% of alcohol</strong> using the enzyme alcohol dehydrogenase, at a roughly constant rate of about 0.015% BAC per hour (approximately one standard drink per hour). This rate cannot be accelerated by coffee, cold showers, exercise, or food — once alcohol is in your bloodstream, only time will lower your BAC. Eating before or while drinking slows <em>absorption</em> (how quickly BAC rises), but does not speed <em>metabolism</em> (how quickly it falls).
+                  After consumption, alcohol is absorbed through the stomach and small intestine into the bloodstream. The liver metabolizes approximately <strong>90-98% of alcohol</strong> using the enzyme alcohol dehydrogenase, at a roughly constant rate of about 0.015% BAC per hour (approximately one standard drink per hour). This rate cannot be accelerated by coffee, cold showers, exercise, or food, once alcohol is in your bloodstream, only time will lower your BAC. Eating before or while drinking slows <em>absorption</em> (how quickly BAC rises), but does not speed <em>metabolism</em> (how quickly it falls).
                 </p>
               </div>
               <div>

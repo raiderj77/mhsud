@@ -38,7 +38,7 @@ const FAQ_DATA = [
   {
     question: "How long does it take for one standard drink to leave your system?",
     answer:
-      "The body metabolizes approximately one standard drink per hour, though this varies by weight, sex, and liver function. Four drinks typically require four to five hours to clear. Nothing speeds this process \u2014 not coffee, cold showers, or exercise. Only time allows your body to metabolize alcohol.",
+      "The body metabolizes approximately one standard drink per hour, though this varies by weight, sex, and liver function. Four drinks typically require four to five hours to clear. Nothing speeds this process, not coffee, cold showers, or exercise. Only time allows your body to metabolize alcohol.",
   },
   {
     question: "Is there a safe level of alcohol consumption?",
@@ -70,7 +70,7 @@ export default function StandardDrinksBacGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            A standard drink contains 14 grams of pure alcohol &mdash; but most people significantly underestimate how much alcohol is in the beverages they consume. Understanding standard drink sizes and blood alcohol concentration (BAC) can help you make more informed decisions about alcohol use and recognize when drinking patterns may be moving into higher-risk territory.
+            A standard drink contains 14 grams of pure alcohol, but most people significantly underestimate how much alcohol is in the beverages they consume. Understanding standard drink sizes and blood alcohol concentration (BAC) can help you make more informed decisions about alcohol use and recognize when drinking patterns may be moving into higher-risk territory.
           </p>
           <div className="mt-6 flex gap-3">
             <Link href="/standard-drinks-calculator" className="btn-primary text-sm">Standard Drinks Calculator</Link>
@@ -119,7 +119,7 @@ export default function StandardDrinksBacGuidePage() {
               One of the most common misconceptions about alcohol is that &quot;one drink&quot; always equals one standard drink. In reality, the drinks people pour at home, order at bars, or purchase at stores frequently contain significantly more alcohol than a single standard drink.
             </p>
             <p>
-              <strong>Craft beers</strong> are a prime example. While a standard beer is defined at 5% ABV, many popular craft beers range from 7% to 12% ABV. A 16-ounce pint of a 9% ABV IPA contains about two and a half standard drinks &mdash; not one. Many people count this as a single beer without realizing the actual alcohol content.
+              <strong>Craft beers</strong> are a prime example. While a standard beer is defined at 5% ABV, many popular craft beers range from 7% to 12% ABV. A 16-ounce pint of a 9% ABV IPA contains about two and a half standard drinks, not one. Many people count this as a single beer without realizing the actual alcohol content.
             </p>
             <p>
               <strong>Wine pours</strong> at restaurants are often 6 to 8 ounces rather than the standard 5-ounce serving. A generous 8-ounce pour of 14% ABV wine contains nearly two standard drinks. At home, without a measured pour, servings tend to be even larger.
@@ -134,7 +134,7 @@ export default function StandardDrinksBacGuidePage() {
           <section>
             <h2>Understanding Blood Alcohol Concentration (BAC)</h2>
             <p>
-              Blood alcohol concentration (BAC) measures the percentage of alcohol in your bloodstream. It is the standard metric used by law enforcement, healthcare providers, and researchers to quantify intoxication. BAC is expressed as a percentage &mdash; for example, a BAC of 0.08% means there are 0.08 grams of alcohol per 100 milliliters of blood.
+              Blood alcohol concentration (BAC) measures the percentage of alcohol in your bloodstream. It is the standard metric used by law enforcement, healthcare providers, and researchers to quantify intoxication. BAC is expressed as a percentage, for example, a BAC of 0.08% means there are 0.08 grams of alcohol per 100 milliliters of blood.
             </p>
             <p>
               BAC levels produce predictable physiological and cognitive effects at different thresholds:
@@ -168,7 +168,7 @@ export default function StandardDrinksBacGuidePage() {
             <ul>
               <li><strong>Body weight:</strong> A person who weighs more generally has more body water to dilute alcohol, resulting in a lower BAC compared to a lighter person drinking the same amount.</li>
               <li><strong>Biological sex:</strong> Women typically reach higher BAC levels than men after consuming the same amount of alcohol, even at similar body weights. This is due to differences in body composition and enzyme activity (see FAQ below for details).</li>
-              <li><strong>Food consumption:</strong> Drinking on an empty stomach allows alcohol to be absorbed much more rapidly. Food &mdash; especially protein and fat &mdash; slows absorption and reduces peak BAC.</li>
+              <li><strong>Food consumption:</strong> Drinking on an empty stomach allows alcohol to be absorbed much more rapidly. Food, especially protein and fat, slows absorption and reduces peak BAC.</li>
               <li><strong>Rate of drinking:</strong> Consuming multiple drinks quickly overwhelms the liver&apos;s ability to metabolize alcohol (roughly one standard drink per hour), causing BAC to rise rapidly.</li>
               <li><strong>Medications:</strong> Many common medications interact with alcohol, either intensifying its effects or slowing its metabolism. Always check medication labels and consult with a pharmacist or healthcare provider.</li>
             </ul>
@@ -191,7 +191,7 @@ export default function StandardDrinksBacGuidePage() {
               <li><strong>For women:</strong> No more than 3 standard drinks on any single day <em>and</em> no more than 7 standard drinks per week</li>
             </ul>
             <p>
-              It is important to understand that these are guidelines, not &quot;safe&quot; limits. About 2 in 100 people who drink within these limits still develop alcohol use disorder (NIAAA, Rethinking Drinking). The guidelines also do not apply to certain populations &mdash; including people who are pregnant, taking medications that interact with alcohol, have a history of alcohol use disorder, or have certain medical conditions.
+              It is important to understand that these are guidelines, not &quot;safe&quot; limits. About 2 in 100 people who drink within these limits still develop alcohol use disorder (NIAAA, Rethinking Drinking). The guidelines also do not apply to certain populations, including people who are pregnant, taking medications that interact with alcohol, have a history of alcohol use disorder, or have certain medical conditions.
             </p>
             <p>
               That rate rises to about 1 in 4 among people whose drinking regularly exceeds these limits (NIAAA, Rethinking Drinking).
@@ -208,7 +208,7 @@ export default function StandardDrinksBacGuidePage() {
             <p>
               For a shorter initial screen, the{" "}
               <Link href="/audit-c-alcohol-screen" className="text-sage-600 dark:text-sage-400 underline">AUDIT-C</Link>{" "}
-              uses just three questions focused on consumption patterns. A positive screen on the AUDIT-C &mdash; scores of 4 or higher for men and 3 or higher for women (Bush et al., 1998, Arch Intern Med) &mdash; suggests further evaluation may be helpful.
+              uses just three questions focused on consumption patterns. A positive screen on the AUDIT-C, scores of 4 or higher for men and 3 or higher for women (Bush et al., 1998, Arch Intern Med), suggests further evaluation may be helpful.
             </p>
             <p>
               These screenings are not diagnostic tools. They indicate whether your drinking patterns may warrant a conversation with a healthcare provider who can offer personalized guidance. All screening results on MindCheck Tools are processed entirely in your browser and are never stored or transmitted.

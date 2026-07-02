@@ -61,7 +61,7 @@ const TIERS: Tier[] = [
     borderLight: "border-red-200",
     borderDark: "dark:border-red-800",
     message:
-      "Your score suggests low resilience \u2014 you may find it difficult to bounce back from stressful events, setbacks, or adversity. This does not mean you are weak or that things will always feel this hard. Resilience is not a fixed trait; it can be developed and strengthened over time. Low resilience is associated with higher levels of stress, depression, and anxiety. Consider speaking with a therapist or counselor who can help you build coping strategies and identify what may be making recovery from stress more difficult for you right now.",
+      "Your score suggests low resilience, you may find it difficult to bounce back from stressful events, setbacks, or adversity. This does not mean you are weak or that things will always feel this hard. Resilience is not a fixed trait; it can be developed and strengthened over time. Low resilience is associated with higher levels of stress, depression, and anxiety. Consider speaking with a therapist or counselor who can help you build coping strategies and identify what may be making recovery from stress more difficult for you right now.",
   },
   {
     label: "Normal Resilience",
@@ -74,7 +74,7 @@ const TIERS: Tier[] = [
     borderLight: "border-green-200",
     borderDark: "dark:border-green-800",
     message:
-      "Your score falls within the normal range of resilience. You appear to have a typical ability to bounce back from stress and adversity. This means you can generally recover from difficult experiences, though some setbacks may take longer than others. Normal resilience does not mean you never struggle \u2014 it means you have a reasonable capacity to recover when you do. If you notice your ability to cope declining during a particularly stressful period, you can retake this screening at any time.",
+      "Your score falls within the normal range of resilience. You appear to have a typical ability to bounce back from stress and adversity. This means you can generally recover from difficult experiences, though some setbacks may take longer than others. Normal resilience does not mean you never struggle, it means you have a reasonable capacity to recover when you do. If you notice your ability to cope declining during a particularly stressful period, you can retake this screening at any time.",
   },
   {
     label: "High Resilience",
@@ -283,7 +283,7 @@ export function BRSClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Smith, B. W., Dalen, J., Wiggins, K., et al. (2008). The Brief Resilience Scale: assessing the ability to bounce back.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/18696313/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — BRS Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/18696313/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, BRS Validation</a>
               </li>
               <li>
                 American Psychological Association. Resilience.{" "}
@@ -358,7 +358,7 @@ export function BRSClient({ faqData }: Props) {
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
           <h2>About the Brief Resilience Scale</h2>
           <p>
-            The Brief Resilience Scale (BRS) was developed by Bruce W. Smith, Jeanne Dalen, Kathryn Wiggins, and colleagues and published in 2008 in the <em>International Journal of Behavioral Medicine</em>. It was created to fill a gap in resilience measurement: while many scales measured protective factors, resources, or health outcomes, none directly assessed the core concept of resilience itself &mdash; the ability to bounce back or recover from stress.
+            The Brief Resilience Scale (BRS) was developed by Bruce W. Smith, Jeanne Dalen, Kathryn Wiggins, and colleagues and published in 2008 in the <em>International Journal of Behavioral Medicine</em>. It was created to fill a gap in resilience measurement: while many scales measured protective factors, resources, or health outcomes, none directly assessed the core concept of resilience itself, the ability to bounce back or recover from stress.
           </p>
           <p>
             The BRS was validated across four samples: two undergraduate student samples, a sample of cardiac rehabilitation patients, and a sample of women with fibromyalgia. It showed good internal consistency (Cronbach&rsquo;s alpha 0.80&ndash;0.91), test-retest reliability, and convergent validity with measures of optimism, social support, and coping. It was also negatively associated with anxiety, depression, negative affect, and physical symptoms.
@@ -372,7 +372,7 @@ export function BRSClient({ faqData }: Props) {
           </p>
           <h2>Resilience and Mental Health</h2>
           <p>
-            Research has consistently linked higher resilience to better mental health outcomes. People with higher BRS scores tend to have lower rates of <Link href="/phq-9-depression-test">depression</Link>, <Link href="/gad-7-anxiety-test">anxiety</Link>, and PTSD following stressful events. They also report higher life satisfaction, better physical health, and more effective coping strategies. However, resilience does not make you immune to stress or suffering &mdash; it means you are better able to recover when difficult things happen.
+            Research has consistently linked higher resilience to better mental health outcomes. People with higher BRS scores tend to have lower rates of <Link href="/phq-9-depression-test">depression</Link>, <Link href="/gad-7-anxiety-test">anxiety</Link>, and PTSD following stressful events. They also report higher life satisfaction, better physical health, and more effective coping strategies. However, resilience does not make you immune to stress or suffering, it means you are better able to recover when difficult things happen.
           </p>
           <p>
             Low resilience, on the other hand, is associated with higher vulnerability to stress-related conditions. If your BRS score suggests low resilience, it may be worth exploring whether depression, anxiety, or chronic stress are contributing factors. The <Link href="/k6-distress-scale">K6 Distress Scale</Link> or <Link href="/who-5-wellbeing-index">WHO-5 Well-Being Index</Link> can provide additional perspective.

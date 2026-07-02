@@ -35,7 +35,7 @@ const FAQ_DATA = [
   {
     question: "Is a PHQ-9 score of 10 considered high?",
     answer:
-      "A score of 10 is the most widely used clinical threshold for further evaluation. It indicates moderate depressive symptoms and is the point at which clinicians typically conduct a more thorough assessment. It is not automatically a diagnosis \u2014 it\u2019s a signal that warrants professional attention.",
+      "A score of 10 is the most widely used clinical threshold for further evaluation. It indicates moderate depressive symptoms and is the point at which clinicians typically conduct a more thorough assessment. It is not automatically a diagnosis, it\u2019s a signal that warrants professional attention.",
   },
   {
     question: "Can I use the PHQ-9 to diagnose myself with depression?",
@@ -45,7 +45,7 @@ const FAQ_DATA = [
   {
     question: "How often should I take the PHQ-9?",
     answer:
-      "If you\u2019re not in treatment, there\u2019s no set schedule \u2014 many people take it when they notice a change in how they\u2019ve been feeling. If you\u2019re in treatment, your provider may administer it monthly to track progress. Retaking it more frequently than every two weeks provides little new information, since the questions cover the past two weeks.",
+      "If you\u2019re not in treatment, there\u2019s no set schedule, many people take it when they notice a change in how they\u2019ve been feeling. If you\u2019re in treatment, your provider may administer it monthly to track progress. Retaking it more frequently than every two weeks provides little new information, since the questions cover the past two weeks.",
   },
   {
     question: "Does a high PHQ-9 score mean I need medication?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
   {
     question: "What if my score seems inconsistent with how I feel?",
     answer:
-      "Screening tools are imperfect by design \u2014 they capture specific symptom patterns within a fixed two-week timeframe. If your score seems lower or higher than how you actually feel, that discrepancy is worth discussing with a mental health professional. Your lived experience and daily functioning are always more important than a single number.",
+      "Screening tools are imperfect by design, they capture specific symptom patterns within a fixed two-week timeframe. If your score seems lower or higher than how you actually feel, that discrepancy is worth discussing with a mental health professional. Your lived experience and daily functioning are always more important than a single number.",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            PHQ-9 scores run from 0 to 27. Scores of 0–4 indicate minimal depressive symptoms, 5–9 indicate mild symptoms, 10–14 indicate moderate symptoms, 15–19 indicate moderately severe symptoms, and 20–27 indicate severe symptoms. A score of 10 or higher is typically used as a clinical threshold for further evaluation, though what matters most is the full picture — not a single number.
+            PHQ-9 scores run from 0 to 27. Scores of 0–4 indicate minimal depressive symptoms, 5–9 indicate mild symptoms, 10–14 indicate moderate symptoms, 15–19 indicate moderately severe symptoms, and 20–27 indicate severe symptoms. A score of 10 or higher is typically used as a clinical threshold for further evaluation, though what matters most is the full picture, not a single number.
           </p>
         </header>
 
@@ -121,7 +121,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               The nine questions correspond to the diagnostic criteria for major depressive disorder as defined in the DSM-5. Your total score is the sum of all nine responses, ranging from <strong>0 to 27</strong>.
             </p>
             <p>
-              The PHQ-9 has demonstrated strong psychometric properties: a sensitivity of 88% and specificity of 88% for major depression at a cutoff score of 10 (Kroenke et al., 2001). This means it correctly identifies about 88% of people with depression — making it one of the most validated brief screening tools available.
+              The PHQ-9 has demonstrated strong psychometric properties: a sensitivity of 88% and specificity of 88% for major depression at a cutoff score of 10 (Kroenke et al., 2001). This means it correctly identifies about 88% of people with depression, making it one of the most validated brief screening tools available.
             </p>
           </section>
 
@@ -158,7 +158,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               A score of 0–4 indicates <strong>minimal depressive symptoms</strong>. Most people in this range experience few or no significant depressive symptoms in the past two weeks.
             </p>
             <p>
-              This doesn&apos;t mean everything is perfect — it means the specific symptoms the PHQ-9 measures are not showing up in a pattern that suggests clinical concern. If you scored here but still feel something is &quot;off,&quot; trust that instinct. The PHQ-9 captures nine specific symptoms; it doesn&apos;t capture every dimension of emotional wellbeing.
+              This doesn&apos;t mean everything is perfect, it means the specific symptoms the PHQ-9 measures are not showing up in a pattern that suggests clinical concern. If you scored here but still feel something is &quot;off,&quot; trust that instinct. The PHQ-9 captures nine specific symptoms; it doesn&apos;t capture every dimension of emotional wellbeing.
             </p>
             <p>
               A score in this range with no other concerns generally doesn&apos;t require any follow-up. However, if you&apos;re going through a stressful period and want additional support, that&apos;s always a valid reason to speak with a counselor.
@@ -174,10 +174,10 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               A score of 5–9 indicates <strong>mild depressive symptoms</strong>. You&apos;re experiencing some of the symptoms the PHQ-9 measures, but not at a frequency or intensity that reaches a clinical threshold.
             </p>
             <p>
-              Clinically, scores in this range are often managed with what&apos;s called &quot;watchful waiting&quot; — monitoring symptoms over time to see whether they resolve on their own or progress. Research shows that mild symptoms sometimes respond well to lifestyle changes like improved sleep, regular physical activity, and stronger social support (Gelenberg, 2010).
+              Clinically, scores in this range are often managed with what&apos;s called &quot;watchful waiting&quot;, monitoring symptoms over time to see whether they resolve on their own or progress. Research shows that mild symptoms sometimes respond well to lifestyle changes like improved sleep, regular physical activity, and stronger social support (Gelenberg, 2010).
             </p>
             <p>
-              This doesn&apos;t mean you should dismiss how you&apos;re feeling. Mild symptoms can be significant disruptions to daily life, and early support can prevent symptoms from worsening. Talking to a therapist or counselor — even briefly — is a completely reasonable step at any score level.
+              This doesn&apos;t mean you should dismiss how you&apos;re feeling. Mild symptoms can be significant disruptions to daily life, and early support can prevent symptoms from worsening. Talking to a therapist or counselor, even briefly, is a completely reasonable step at any score level.
             </p>
             <p>
               <strong>Questions to ask yourself at this range:</strong>
@@ -202,7 +202,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               At this level, the symptoms you&apos;re experiencing are likely affecting multiple areas of your life. This might look like difficulty concentrating at work, withdrawal from activities you used to enjoy, disrupted sleep, low energy, or persistent feelings of sadness or hopelessness.
             </p>
             <p>
-              A score in this range does not mean you have a diagnosis. What it means is that your symptom pattern is worth exploring with a professional. A clinician will consider your full history, context, and functioning — not just the PHQ-9 number.
+              A score in this range does not mean you have a diagnosis. What it means is that your symptom pattern is worth exploring with a professional. A clinician will consider your full history, context, and functioning, not just the PHQ-9 number.
             </p>
             <p>
               <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">Take the PHQ-9 depression self-check →</Link>
@@ -218,7 +218,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               A score of 15–19 indicates <strong>moderately severe depressive symptoms</strong>. At this level, symptoms are likely causing significant impairment in your day-to-day functioning.
             </p>
             <p>
-              Research indicates that individuals scoring in this range have a high probability of meeting criteria for major depressive disorder on structured clinical interview (Kroenke et al., 2001). This is the range where active professional evaluation — not just consideration — is strongly recommended.
+              Research indicates that individuals scoring in this range have a high probability of meeting criteria for major depressive disorder on structured clinical interview (Kroenke et al., 2001). This is the range where active professional evaluation, not just consideration, is strongly recommended.
             </p>
             <p>
               Treatment at this level typically involves psychotherapy, medication, or a combination of both. Multiple meta-analyses confirm that both cognitive behavioral therapy (CBT) and antidepressant medication are effective for moderate-to-severe depression (Cuijpers et al., 2019). A mental health professional can help you understand which approach, or combination, makes the most sense for you.
@@ -235,10 +235,10 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               A score of 20–27 indicates <strong>severe depressive symptoms</strong>. This range reflects a high frequency and intensity of depressive symptoms across nearly all nine domains measured.
             </p>
             <p>
-              If you are in this range, please reach out for support today. This does not mean you&apos;re in crisis, but it does mean that connecting with a professional is urgent — not something to put off.
+              If you are in this range, please reach out for support today. This does not mean you&apos;re in crisis, but it does mean that connecting with a professional is urgent, not something to put off.
             </p>
             <p>
-              If you are experiencing thoughts of self-harm or suicide — particularly if you scored a 2 or 3 on Question 9 of the PHQ-9, which asks about such thoughts — please use the crisis resources below immediately.
+              If you are experiencing thoughts of self-harm or suicide, particularly if you scored a 2 or 3 on Question 9 of the PHQ-9, which asks about such thoughts, please use the crisis resources below immediately.
             </p>
           </section>
 
@@ -254,7 +254,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               Any score above 0 on this item warrants immediate clinical attention, regardless of your total score. Research shows that even a score of 1 on this item (several days) is a clinically significant signal (Kroenke et al., 2001; Simon et al., 2013).
             </p>
             <p>
-              This question does not exist to alarm you — it exists to identify when additional support is most needed. If you scored anything other than 0 on Question 9, please talk to a mental health professional or use the crisis resources below.
+              This question does not exist to alarm you, it exists to identify when additional support is most needed. If you scored anything other than 0 on Question 9, please talk to a mental health professional or use the crisis resources below.
             </p>
           </section>
 
@@ -262,7 +262,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
           <section>
             <h2>Can your PHQ-9 score change over time?</h2>
             <p>
-              Yes — and that&apos;s an important part of how the tool is used clinically. The PHQ-9 is often administered repeatedly over time to track symptom changes, particularly when someone is in treatment. A reduction of 5 or more points is generally considered a clinically meaningful improvement (L&ouml;we et al., 2004).
+              Yes, and that&apos;s an important part of how the tool is used clinically. The PHQ-9 is often administered repeatedly over time to track symptom changes, particularly when someone is in treatment. A reduction of 5 or more points is generally considered a clinically meaningful improvement (L&ouml;we et al., 2004).
             </p>
             <p>
               This means your score today is a snapshot, not a sentence. Symptoms can improve with treatment, lifestyle changes, social support, and time. Many people who score in moderate or severe ranges at one point score in minimal or mild ranges after receiving appropriate care.
@@ -276,13 +276,13 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
           <section>
             <h2>What should you do after getting your PHQ-9 score?</h2>
             <p>
-              <strong>If you scored 0–4:</strong> No action is required. If you took the screen because you were feeling off, consider what&apos;s changed recently and whether talking to someone might help — even informally.
+              <strong>If you scored 0–4:</strong> No action is required. If you took the screen because you were feeling off, consider what&apos;s changed recently and whether talking to someone might help, even informally.
             </p>
             <p>
               <strong>If you scored 5–9:</strong> Monitor your symptoms over the coming weeks. If they persist or worsen, reach out to a counselor or your primary care physician.
             </p>
             <p>
-              <strong>If you scored 10–14:</strong> Schedule a conversation with a mental health professional or your primary care doctor. Bring your score with you — it&apos;s useful context for them.
+              <strong>If you scored 10–14:</strong> Schedule a conversation with a mental health professional or your primary care doctor. Bring your score with you, it&apos;s useful context for them.
             </p>
             <p>
               <strong>If you scored 15–19:</strong> Reach out to a mental health professional this week. This range warrants prompt, not delayed, attention.
@@ -296,13 +296,13 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
           <section>
             <h2>The PHQ-9 is a tool, not a verdict</h2>
             <p>
-              It&apos;s worth saying clearly: no number defines you, and no screening score determines your future. The PHQ-9 was designed as a starting point — a way to put language and structure around experiences that can feel difficult to articulate.
+              It&apos;s worth saying clearly: no number defines you, and no screening score determines your future. The PHQ-9 was designed as a starting point, a way to put language and structure around experiences that can feel difficult to articulate.
             </p>
             <p>
               Whatever your score, you&apos;re doing something valuable by taking your mental health seriously. Use the result as information, not a label, and let it guide you toward the support that&apos;s right for you.
             </p>
             <p>
-              You might also find it useful to take the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link> — depression and anxiety frequently co-occur, and understanding both can give you and your care team a more complete picture.
+              You might also find it useful to take the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 Anxiety Self-Check</Link>, depression and anxiety frequently co-occur, and understanding both can give you and your care team a more complete picture.
             </p>
           </section>
 
@@ -310,7 +310,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The PHQ-9 is a screening tool — it may indicate the need for further assessment but does not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The PHQ-9 is a screening tool, it may indicate the need for further assessment but does not confirm or rule out any condition.
             </p>
           </div>
 
@@ -321,9 +321,9 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -345,7 +345,7 @@ export default function WhatDoesPHQ9ScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -53,7 +53,7 @@ const EMPTY_PLAN: PlanData = {
   safeActivities: ["", "", "", "", ""],
   placesToAvoid: ["", "", ""],
   cravingSteps: [
-    "Recognize it is a craving — temporary, not a command",
+    "Recognize it is a craving, temporary, not a command",
     "Wait 30 minutes before making any decision",
     "",
     "",
@@ -170,7 +170,7 @@ export function RelapsePlanClient({ faqData }: Props) {
 
   const handleShare = useCallback(async () => {
     const url = "https://mindchecktools.com/relapse-prevention-plan";
-    const text = "Build your own relapse prevention plan — identify triggers, warning signs, coping strategies, emergency contacts, and a craving action plan. Free and private.";
+    const text = "Build your own relapse prevention plan, identify triggers, warning signs, coping strategies, emergency contacts, and a craving action plan. Free and private.";
     if (navigator.share) {
       try { await navigator.share({ title: "Relapse Prevention Plan Builder", text, url }); return; } catch { /* cancelled */ }
     }
@@ -180,7 +180,7 @@ export function RelapsePlanClient({ faqData }: Props) {
   }, []);
 
   const handleReset = () => {
-    if (confirm("This will clear your entire plan. Your data is not saved anywhere — once cleared, it cannot be recovered. Continue?")) {
+    if (confirm("This will clear your entire plan. Your data is not saved anywhere, once cleared, it cannot be recovered. Continue?")) {
       setPlan(EMPTY_PLAN);
       setShowPlan(false);
     }
@@ -198,7 +198,7 @@ export function RelapsePlanClient({ faqData }: Props) {
           Relapse Prevention Plan Builder
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Build a personalized relapse prevention plan you can print and keep. Fill in each section below — your answers stay in your browser and are never stored.
+          Build a personalized relapse prevention plan you can print and keep. Fill in each section below, your answers stay in your browser and are never stored.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -503,7 +503,7 @@ export function RelapsePlanClient({ faqData }: Props) {
 
             {/* Crisis Resources in plan */}
             <div className="mt-6 pt-4 border-t border-sand-200 dark:border-neutral-700">
-              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Crisis Resources — Always Available</p>
+              <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">Crisis Resources, Always Available</p>
               <div className="text-sm text-neutral-600 dark:text-neutral-300 space-y-0.5">
                 <p><strong>SAMHSA:</strong> 1-800-662-4357 (24/7, free, confidential)</p>
                 <p><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988</p>
@@ -551,7 +551,7 @@ export function RelapsePlanClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <p>
-              In moments of crisis — when cravings are intense, emotions are overwhelming, or triggers are present — your ability to think clearly and make good decisions is significantly impaired. This is exactly when you need a plan the most, and exactly when you are least able to create one on the spot.
+              In moments of crisis, when cravings are intense, emotions are overwhelming, or triggers are present, your ability to think clearly and make good decisions is significantly impaired. This is exactly when you need a plan the most, and exactly when you are least able to create one on the spot.
             </p>
             <p>
               A written relapse prevention plan acts as your <strong>future self&apos;s instruction manual</strong>. You are creating it now, when you are thinking clearly, for the version of yourself that will be struggling later. Research consistently shows that people who have a written, personalized relapse prevention plan have significantly better outcomes than those who rely on willpower and memory alone.
@@ -568,7 +568,7 @@ export function RelapsePlanClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <p>
-              Relapse is not a single event — it is a process that unfolds in three stages, each of which offers an opportunity to intervene:
+              Relapse is not a single event, it is a process that unfolds in three stages, each of which offers an opportunity to intervene:
             </p>
             <p>
               <strong>Emotional Relapse:</strong> You are not thinking about using, but your behaviors and emotions are setting you up for it. Signs include bottling up emotions, isolating, skipping meetings, poor self-care, and not asking for help. This is the easiest stage to intervene.
@@ -580,7 +580,7 @@ export function RelapsePlanClient({ faqData }: Props) {
               <strong>Physical Relapse:</strong> This is the act of using. Once mental relapse is not addressed, the window of opportunity to intervene narrows significantly.
             </p>
             <p>
-              Your warning signs section maps to these stages. Learn to recognize emotional and mental relapse early — that is where your plan has the most power. The <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">HALT Check-In</Link> is a quick daily tool for catching early warning signs, and the <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> can help you track your recovery milestones.
+              Your warning signs section maps to these stages. Learn to recognize emotional and mental relapse early, that is where your plan has the most power. The <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">HALT Check-In</Link> is a quick daily tool for catching early warning signs, and the <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> can help you track your recovery milestones.
             </p>
           </div>
         </div>

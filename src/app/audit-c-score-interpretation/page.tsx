@@ -7,13 +7,13 @@ import { AuthorByline } from "@/components/AuthorByline";
 const TOOL_URL = `${SITE_URL}/audit-c-score-interpretation`;
 
 const FAQ_DATA = [
-  { question: "What does an AUDIT-C score of 4 mean?", answer: "An AUDIT-C score of 4 is considered a positive screen for unhealthy alcohol use in men (the threshold is 3 for women). This does not mean you have an alcohol use disorder \u2014 it means your drinking pattern may carry health risks that are worth discussing with a healthcare provider. Many people who screen positive on the AUDIT-C are drinking at levels that could be reduced with brief intervention or a simple conversation with their doctor." },
+  { question: "What does an AUDIT-C score of 4 mean?", answer: "An AUDIT-C score of 4 is considered a positive screen for unhealthy alcohol use in men (the threshold is 3 for women). This does not mean you have an alcohol use disorder, it means your drinking pattern may carry health risks that are worth discussing with a healthcare provider. Many people who screen positive on the AUDIT-C are drinking at levels that could be reduced with brief intervention or a simple conversation with their doctor." },
   { question: "Why are AUDIT-C thresholds different for men and women?", answer: "Biological differences in how men and women metabolize alcohol account for the different thresholds. Women generally have lower body water content and produce less of the enzyme alcohol dehydrogenase, which means the same amount of alcohol produces higher blood alcohol concentrations and greater organ exposure in women. Research has established that a cutoff of 3 for women and 4 for men provides the best balance of sensitivity and specificity for identifying unhealthy drinking patterns." },
   { question: "What is the difference between the AUDIT-C and the full AUDIT?", answer: "The AUDIT-C consists of the first three questions of the full 10-question AUDIT (Alcohol Use Disorders Identification Test) developed by the World Health Organization. It focuses specifically on consumption patterns: how often you drink, how many drinks on a typical occasion, and how often you have six or more drinks. The full AUDIT adds seven questions about dependence symptoms and alcohol-related harm. The AUDIT-C is widely used as a brief initial screen, with the full AUDIT recommended for more detailed assessment." },
   { question: "Can I have a normal AUDIT-C score and still drink too much?", answer: "Yes. The AUDIT-C is a screening tool with known limitations. It may not capture binge drinking episodes that happen infrequently, drinking patterns that have recently changed, or the use of alcohol alongside medications or substances that interact with it. If you have concerns about your relationship with alcohol, those concerns are valid regardless of your screening score. Speaking with a healthcare provider can provide more personalized guidance." },
-  { question: "Does a positive AUDIT-C screen mean I am an alcoholic?", answer: "No. A positive AUDIT-C screen indicates that your drinking pattern may carry health risks \u2014 it is not a label or a determination of any condition. Many people who screen positive are engaging in hazardous or harmful drinking that falls short of a clinical alcohol use disorder. The AUDIT-C identifies a spectrum of risk, and the appropriate next step varies widely. For some, a brief conversation about drinking goals is sufficient. For others, further evaluation may be recommended." },
+  { question: "Does a positive AUDIT-C screen mean I am an alcoholic?", answer: "No. A positive AUDIT-C screen indicates that your drinking pattern may carry health risks, it is not a label or a determination of any condition. Many people who screen positive are engaging in hazardous or harmful drinking that falls short of a clinical alcohol use disorder. The AUDIT-C identifies a spectrum of risk, and the appropriate next step varies widely. For some, a brief conversation about drinking goals is sufficient. For others, further evaluation may be recommended." },
   { question: "What is considered one standard drink?", answer: "In the United States, one standard drink contains approximately 14 grams (0.6 ounces) of pure alcohol. This is roughly equivalent to: 12 ounces of regular beer (5% alcohol), 5 ounces of wine (12% alcohol), or 1.5 ounces of distilled spirits (40% alcohol). Craft beers, large pours of wine, and mixed cocktails often contain more than one standard drink, which means people frequently underestimate their consumption without realizing it." },
-  { question: "How is the AUDIT-C used in healthcare settings?", answer: "The AUDIT-C is one of the most widely used alcohol screening tools in primary care, emergency departments, and military healthcare systems. It is typically administered as part of routine health screenings. When a patient screens positive, providers may conduct a brief intervention \u2014 a short, evidence-based conversation about drinking patterns and goals \u2014 or recommend a full AUDIT assessment. Research shows that screening and brief intervention (SBI) can reduce alcohol consumption by 13\u201334% in people who drink at hazardous levels." },
+  { question: "How is the AUDIT-C used in healthcare settings?", answer: "The AUDIT-C is one of the most widely used alcohol screening tools in primary care, emergency departments, and military healthcare systems. It is typically administered as part of routine health screenings. When a patient screens positive, providers may conduct a brief intervention, a short, evidence-based conversation about drinking patterns and goals, or recommend a full AUDIT assessment. Research shows that screening and brief intervention (SBI) can reduce alcohol consumption by 13\u201334% in people who drink at hazardous levels." },
   { question: "What does an AUDIT-C score of 0 mean?", answer: "An AUDIT-C score of 0 indicates that you reported no alcohol consumption. This could mean you abstain from alcohol entirely, or that you have not consumed alcohol during the time period referenced by the questions. A score of 0 requires no follow-up related to alcohol use." },
 ];
 
@@ -61,7 +61,7 @@ export default function AUDITCScoreInterpretationPage() {
         <AnswerBlock
           what="A guide explaining AUDIT-C scores, gender-specific thresholds, and what positive and negative results mean."
           who="Anyone who has completed the AUDIT-C screening and wants to understand their score and next steps."
-          bottomLine="AUDIT-C thresholds differ by gender — understand what your specific score indicates. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="AUDIT-C thresholds differ by gender, understand what your specific score indicates. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -76,9 +76,9 @@ export default function AUDITCScoreInterpretationPage() {
         toolPageHref="/audit-c-alcohol-screen"
         lastUpdated="March 7, 2026"
         intro={[
-          "The AUDIT-C (Alcohol Use Disorders Identification Test \u2014 Consumption) is a brief three-question alcohol screening tool derived from the full 10-question AUDIT developed by the World Health Organization. It is one of the most widely validated and commonly used alcohol screening instruments in primary care, emergency departments, and population health settings worldwide.",
+          "The AUDIT-C (Alcohol Use Disorders Identification Test, Consumption) is a brief three-question alcohol screening tool derived from the full 10-question AUDIT developed by the World Health Organization. It is one of the most widely validated and commonly used alcohol screening instruments in primary care, emergency departments, and population health settings worldwide.",
           "The three questions ask about: (1) how often you have a drink containing alcohol, (2) how many standard drinks you have on a typical drinking day, and (3) how often you have six or more drinks on one occasion. Each question is scored from 0 to 4, producing a total score between 0 and 12. The AUDIT-C uses different thresholds for men and women to account for biological differences in alcohol metabolism.",
-          "A positive AUDIT-C screen does not mean you have an alcohol use disorder. It indicates that your pattern of alcohol consumption may carry health risks and that a conversation with a healthcare provider could be helpful. Many people who screen positive benefit from a brief intervention \u2014 a short, non-judgmental discussion about drinking patterns and personal goals.",
+          "A positive AUDIT-C screen does not mean you have an alcohol use disorder. It indicates that your pattern of alcohol consumption may carry health risks and that a conversation with a healthcare provider could be helpful. Many people who screen positive benefit from a brief intervention, a short, non-judgmental discussion about drinking patterns and personal goals.",
         ]}
         scoreRanges={[
           { range: "0", label: "Abstinent", meaning: "No alcohol consumption reported", nextStep: "No follow-up needed related to alcohol use", colorClass: "bg-sage-50/50 dark:bg-sage-950/20", textColorClass: "text-sage-700 dark:text-sage-400" },
@@ -87,7 +87,7 @@ export default function AUDITCScoreInterpretationPage() {
           { range: "7\u201312", label: "Higher Risk", meaning: "Heavy alcohol consumption that is strongly associated with health consequences", nextStep: "Speaking with a healthcare professional is strongly encouraged; further assessment may be appropriate", colorClass: "bg-orange-50/50 dark:bg-orange-950/20", textColorClass: "text-orange-700 dark:text-orange-400" },
         ]}
         cannotTellYou={[
-          "The AUDIT-C is a screening tool \u2014 not a clinical assessment. A three-question screen cannot determine whether someone has an alcohol use disorder, alcohol dependence, or any specific condition. It identifies patterns of consumption that may carry risk, but the meaning of that risk depends on your full health context, medications, family history, and individual circumstances.",
+          "The AUDIT-C is a screening tool, not a clinical assessment. A three-question screen cannot determine whether someone has an alcohol use disorder, alcohol dependence, or any specific condition. It identifies patterns of consumption that may carry risk, but the meaning of that risk depends on your full health context, medications, family history, and individual circumstances.",
           "Your score also reflects a snapshot of your recent drinking pattern. Alcohol use can fluctuate based on social circumstances, stress, holidays, life changes, and many other factors. A single screening score does not capture the full picture of your relationship with alcohol over time. If your score does not feel representative of your typical pattern, retaking the screening at a different time can provide additional context.",
         ]}
         scoreBands={[
@@ -108,33 +108,33 @@ export default function AUDITCScoreInterpretationPage() {
           {
             heading: "AUDIT-C Score 3+ (Women) or 4+ (Men): Positive Screen",
             paragraphs: [
-              "A positive AUDIT-C screen means your reported alcohol consumption exceeds the thresholds that research has identified as carrying increased health risk. This is the most common result seen in screening programs and encompasses a wide range of drinking patterns \u2014 from slightly above the threshold to heavy daily consumption.",
+              "A positive AUDIT-C screen means your reported alcohol consumption exceeds the thresholds that research has identified as carrying increased health risk. This is the most common result seen in screening programs and encompasses a wide range of drinking patterns, from slightly above the threshold to heavy daily consumption.",
               "At this level, a brief intervention is the evidence-based recommendation. Brief intervention is a structured, non-judgmental conversation (typically 5\u201315 minutes) in which a healthcare provider discusses your drinking pattern, provides information about health risks, and helps you set personal goals if you choose to make changes. Research consistently shows that brief intervention reduces alcohol consumption by 13\u201334% in people drinking at hazardous levels.",
-              "A positive screen does not mean you need to stop drinking entirely or that you have a clinical condition. It means the conversation is worth having. Many people find that simply becoming aware of how much they are actually drinking \u2014 especially when they learn what counts as a standard drink \u2014 leads to natural, self-directed adjustments.",
+              "A positive screen does not mean you need to stop drinking entirely or that you have a clinical condition. It means the conversation is worth having. Many people find that simply becoming aware of how much they are actually drinking, especially when they learn what counts as a standard drink, leads to natural, self-directed adjustments.",
             ],
           },
           {
             heading: "AUDIT-C Score 7\u201312: Heavy Alcohol Consumption",
             paragraphs: [
               "Scores in the 7\u201312 range indicate heavy alcohol consumption that is strongly associated with health consequences including liver disease, cardiovascular problems, increased cancer risk, mental health effects, and impaired functioning in work and relationships. At this level, the full 10-question AUDIT is often recommended for a more comprehensive assessment of alcohol-related harm and dependence symptoms.",
-              "If you scored in this range, speaking with a healthcare provider is strongly encouraged. Effective support exists across a spectrum \u2014 from outpatient counseling and medication-assisted treatment to intensive programs. The right approach depends on your individual situation, and a provider can help you explore options without judgment. If you are experiencing withdrawal symptoms when you stop drinking (tremors, sweating, anxiety, insomnia), please seek medical attention, as alcohol withdrawal can be medically serious.",
+              "If you scored in this range, speaking with a healthcare provider is strongly encouraged. Effective support exists across a spectrum, from outpatient counseling and medication-assisted treatment to intensive programs. The right approach depends on your individual situation, and a provider can help you explore options without judgment. If you are experiencing withdrawal symptoms when you stop drinking (tremors, sweating, anxiety, insomnia), please seek medical attention, as alcohol withdrawal can be medically serious.",
             ],
           },
           {
             heading: "Understanding Gender-Specific Thresholds",
             paragraphs: [
               "The AUDIT-C uses different cutoff scores for men and women because of well-documented biological differences in alcohol metabolism. Women generally have a higher proportion of body fat and lower proportion of body water than men of similar weight, which results in higher blood alcohol concentrations from the same amount of alcohol. Women also tend to produce less alcohol dehydrogenase, the enzyme that breaks down alcohol in the stomach and liver.",
-              "These biological differences mean that women experience alcohol-related health consequences at lower levels of consumption and after shorter periods of heavy drinking compared to men. The different thresholds are not a social judgment \u2014 they reflect physiological reality and help ensure the screening tool is equally accurate for both groups.",
+              "These biological differences mean that women experience alcohol-related health consequences at lower levels of consumption and after shorter periods of heavy drinking compared to men. The different thresholds are not a social judgment, they reflect physiological reality and help ensure the screening tool is equally accurate for both groups.",
             ],
           },
         ]}
         factorsAffecting={[
-          "Social context \u2014 people tend to underestimate consumption in social settings where heavy drinking is normalized",
-          "Pour size awareness \u2014 many drinks served at bars, restaurants, and homes exceed standard drink sizes (e.g., a large wine pour may be 8\u201310 oz rather than 5 oz)",
-          "Recall accuracy \u2014 estimating \u201ctypical\u201d consumption can be difficult when drinking patterns are variable",
-          "Recent changes \u2014 the AUDIT-C reflects recent patterns; if your drinking has recently increased or decreased, the score may not reflect your long-term pattern",
-          "Craft and high-ABV beverages \u2014 craft beers (7\u201312% ABV) and cocktails with multiple spirits contain significantly more alcohol per serving than standard drinks",
-          "Medications and health conditions \u2014 these do not change your score but can significantly change the health impact of the same consumption level",
+          "Social context, people tend to underestimate consumption in social settings where heavy drinking is normalized",
+          "Pour size awareness, many drinks served at bars, restaurants, and homes exceed standard drink sizes (e.g., a large wine pour may be 8\u201310 oz rather than 5 oz)",
+          "Recall accuracy, estimating \u201ctypical\u201d consumption can be difficult when drinking patterns are variable",
+          "Recent changes, the AUDIT-C reflects recent patterns; if your drinking has recently increased or decreased, the score may not reflect your long-term pattern",
+          "Craft and high-ABV beverages, craft beers (7\u201312% ABV) and cocktails with multiple spirits contain significantly more alcohol per serving than standard drinks",
+          "Medications and health conditions, these do not change your score but can significantly change the health impact of the same consumption level",
         ]}
         doctorConversation={[
           "Alcohol use is one of the most common topics in primary care, and healthcare providers are trained to discuss it without judgment. Many offices already use the AUDIT-C as part of routine health screenings, so your doctor is likely familiar with the scoring system.",
@@ -150,8 +150,8 @@ export default function AUDITCScoreInterpretationPage() {
         sources={[
           { text: "Bush, K., et al. (1998). The AUDIT alcohol consumption questions (AUDIT-C): An effective brief screening test for problem drinking. Archives of Internal Medicine, 158(16), 1789\u20131795.", url: "https://pubmed.ncbi.nlm.nih.gov/9738608/" },
           { text: "Bradley, K. A., et al. (2007). AUDIT-C as a brief screen for alcohol misuse in primary care. Alcoholism: Clinical and Experimental Research, 31(7), 1208\u20131217.", url: "https://pubmed.ncbi.nlm.nih.gov/17451397/" },
-          { text: "NIAAA \u2014 Drinking Levels Defined.", url: "https://www.niaaa.nih.gov/alcohol-health/overview-alcohol-consumption/moderate-binge-drinking" },
-          { text: "SAMHSA \u2014 Screening, Brief Intervention, and Referral to Treatment (SBIRT).", url: "https://www.samhsa.gov/sbirt" },
+          { text: "NIAAA, Drinking Levels Defined.", url: "https://www.niaaa.nih.gov/alcohol-health/overview-alcohol-consumption/moderate-binge-drinking" },
+          { text: "SAMHSA, Screening, Brief Intervention, and Referral to Treatment (SBIRT).", url: "https://www.samhsa.gov/sbirt" },
         ]}
       />
     </>

@@ -38,7 +38,7 @@ const FAQ_DATA = [
 export default function PHQ9GuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire", description: "A plain-language guide to the PHQ-9 depression screener — what it measures, how it's scored, and what it can't tell you.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire", description: "A plain-language guide to the PHQ-9 depression screener, what it measures, how it's scored, and what it can't tell you.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "PHQ-9 Guide", url: ARTICLE_URL }])) }} />
 
@@ -86,10 +86,10 @@ export default function PHQ9GuidePage() {
           <section>
             <h2>What is the PHQ-9?</h2>
             <p>
-              The Patient Health Questionnaire-9 (PHQ-9) is a 9-item self-report questionnaire developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, with an educational grant from Pfizer Inc. It was designed as a brief, practical tool for detecting depressive symptoms in clinical settings — particularly primary care, where time is limited and mental health concerns often go unrecognized. The instrument is <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">freely available in the public domain</a> at phqscreeners.com.
+              The Patient Health Questionnaire-9 (PHQ-9) is a 9-item self-report questionnaire developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, with an educational grant from Pfizer Inc. It was designed as a brief, practical tool for detecting depressive symptoms in clinical settings, particularly primary care, where time is limited and mental health concerns often go unrecognized. The instrument is <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">freely available in the public domain</a> at phqscreeners.com.
             </p>
             <p>
-              The PHQ-9 was placed in the public domain by its authors, meaning anyone can use, reproduce, and distribute it without permission or licensing fees. This openness is one reason it has become the most widely used depression screener globally — it appears in research studies, clinical guidelines, employee health programs, and community health settings across dozens of countries.
+              The PHQ-9 was placed in the public domain by its authors, meaning anyone can use, reproduce, and distribute it without permission or licensing fees. This openness is one reason it has become the most widely used depression screener globally, it appears in research studies, clinical guidelines, employee health programs, and community health settings across dozens of countries.
             </p>
           </section>
 
@@ -105,7 +105,7 @@ export default function PHQ9GuidePage() {
               For each item, you indicate how often you&apos;ve been bothered by that symptom over the past two weeks, using a 0–3 scale: not at all (0), several days (1), more than half the days (2), or nearly every day (3).
             </p>
             <p>
-              The two-week timeframe is important — it aligns with how depression is clinically defined and helps distinguish persistent patterns from brief, situational low mood.
+              The two-week timeframe is important, it aligns with how depression is clinically defined and helps distinguish persistent patterns from brief, situational low mood.
             </p>
           </section>
 
@@ -128,26 +128,26 @@ export default function PHQ9GuidePage() {
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">{r.range}</span>
                   <div>
                     <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.level}</span>
-                    <span className="text-sm text-neutral-500 dark:text-neutral-400"> — {r.note}</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">, {r.note}</span>
                   </div>
                 </div>
               ))}
             </div>
             <p>
-              It&apos;s critical to understand that these ranges are research-derived guidelines — they are not diagnostic thresholds. A score of 10 does not mean you &quot;have depression,&quot; and a score of 4 does not mean you&apos;re fine. The score is one data point in a much larger clinical picture. The <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">original validation study (Kroenke et al., 2001)</a> reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff of 10, with subsequent meta-analyses broadly supporting these figures.
+              It&apos;s critical to understand that these ranges are research-derived guidelines, they are not diagnostic thresholds. A score of 10 does not mean you &quot;have depression,&quot; and a score of 4 does not mean you&apos;re fine. The score is one data point in a much larger clinical picture. The <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">original validation study (Kroenke et al., 2001)</a> reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff of 10, with subsequent meta-analyses broadly supporting these figures.
             </p>
           </section>
 
           <section>
             <h2>How do clinicians actually use it?</h2>
             <p>
-              In practice, healthcare providers use the PHQ-9 in several ways. As an initial screen, it helps flag patients who may benefit from a more thorough evaluation. Many primary care clinics administer the PHQ-9 routinely — sometimes to every patient at annual visits, sometimes when a provider suspects depressive symptoms.
+              In practice, healthcare providers use the PHQ-9 in several ways. As an initial screen, it helps flag patients who may benefit from a more thorough evaluation. Many primary care clinics administer the PHQ-9 routinely, sometimes to every patient at annual visits, sometimes when a provider suspects depressive symptoms.
             </p>
             <p>
               Providers also use it for monitoring over time. A patient in treatment might complete the PHQ-9 every few weeks, and the provider tracks whether the score is trending down (improvement), staying flat (possible need to adjust treatment), or increasing (worsening).
             </p>
             <p>
-              Importantly, no competent clinician diagnoses depression based solely on a PHQ-9 score. The score prompts a conversation — about how long symptoms have lasted, what might be contributing, how daily life is affected, and what the patient wants to do about it. The diagnosis comes from that conversation, not from the number.
+              Importantly, no competent clinician diagnoses depression based solely on a PHQ-9 score. The score prompts a conversation, about how long symptoms have lasted, what might be contributing, how daily life is affected, and what the patient wants to do about it. The diagnosis comes from that conversation, not from the number.
             </p>
           </section>
 
@@ -156,10 +156,10 @@ export default function PHQ9GuidePage() {
           <section>
             <h2>What the PHQ-9 cannot tell you</h2>
             <p>
-              Understanding the limitations of the PHQ-9 is just as important as understanding what it measures. The PHQ-9 cannot diagnose depression or any other condition. It cannot determine the cause of your symptoms — depressive symptoms can result from grief, medical conditions, medication side effects, substance use, life stress, sleep deprivation, and many other factors.
+              Understanding the limitations of the PHQ-9 is just as important as understanding what it measures. The PHQ-9 cannot diagnose depression or any other condition. It cannot determine the cause of your symptoms, depressive symptoms can result from grief, medical conditions, medication side effects, substance use, life stress, sleep deprivation, and many other factors.
             </p>
             <p>
-              It cannot capture the full complexity of your emotional experience. Nine questions over a two-week window are inherently limited. It also cannot account for cultural differences in how people experience and express distress — someone might be deeply struggling but not endorse the specific symptoms as worded.
+              It cannot capture the full complexity of your emotional experience. Nine questions over a two-week window are inherently limited. It also cannot account for cultural differences in how people experience and express distress, someone might be deeply struggling but not endorse the specific symptoms as worded.
             </p>
             <p>
               Finally, it&apos;s a self-report tool, which means it depends entirely on your honesty and self-awareness. Minimizing symptoms (whether consciously or not) will produce a lower score that doesn&apos;t reflect reality. Conversely, a particularly bad day might inflate your score beyond your typical experience.
@@ -172,7 +172,7 @@ export default function PHQ9GuidePage() {
               The final PHQ-9 item asks about &quot;thoughts that you would be better off dead or of hurting yourself in some way.&quot; This question deserves special attention.
             </p>
             <p>
-              Endorsing this item at any level does not necessarily mean you are suicidal — these thoughts exist on a spectrum. But it is always worth taking seriously. In clinical settings, any positive response to question 9 triggers additional assessment for suicide risk.
+              Endorsing this item at any level does not necessarily mean you are suicidal, these thoughts exist on a spectrum. But it is always worth taking seriously. In clinical settings, any positive response to question 9 triggers additional assessment for suicide risk.
             </p>
             <p>
               If you are experiencing thoughts of self-harm, please reach out for support. In the US, you can call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line). Visit <strong>findahelpline.com</strong> for international resources.
@@ -182,10 +182,10 @@ export default function PHQ9GuidePage() {
           <section>
             <h2>What to do with your score</h2>
             <p>
-              If you take the PHQ-9 on our site or anywhere else, here are reasonable next steps depending on your results. For minimal or mild scores, simply being aware of your mental health is valuable — you can check in periodically and notice if things change.
+              If you take the PHQ-9 on our site or anywhere else, here are reasonable next steps depending on your results. For minimal or mild scores, simply being aware of your mental health is valuable, you can check in periodically and notice if things change.
             </p>
             <p>
-              For moderate scores and above, consider scheduling a conversation with a healthcare provider. You can share your score as a starting point — many providers appreciate having concrete information to work from. You might say something like: &quot;I took a depression screening and scored [X]. I&apos;d like to talk about how I&apos;ve been feeling.&quot;
+              For moderate scores and above, consider scheduling a conversation with a healthcare provider. You can share your score as a starting point, many providers appreciate having concrete information to work from. You might say something like: &quot;I took a depression screening and scored [X]. I&apos;d like to talk about how I&apos;ve been feeling.&quot;
             </p>
             <p>
               Regardless of your score, if something feels wrong, trust your own experience. Screening tools are helpful, but they are never a substitute for your own self-knowledge or professional guidance. The <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive depression resources including treatment options and how to find professional support.
@@ -206,9 +206,9 @@ export default function PHQ9GuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -227,7 +227,7 @@ export default function PHQ9GuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

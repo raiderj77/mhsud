@@ -14,7 +14,7 @@ const DURATIONS = [5, 10, 15, 20, 30]; // minutes
 const PROMPTS = [
   "Notice the urge without judgment.",
   "Where do you feel it in your body?",
-  "The urge is peaking — it will pass.",
+  "The urge is peaking, it will pass.",
   "You are not your craving.",
   "Observe the sensation. Don\u2019t push it away.",
   "This feeling is temporary.",
@@ -206,7 +206,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
         Urge Surfing Timer
       </h1>
       <p className="text-neutral-500 dark:text-neutral-400 text-center max-w-xl mx-auto mb-8 leading-relaxed">
-        Cravings are like waves — they rise, peak, and fall. This guided timer helps you ride the wave using
+        Cravings are like waves, they rise, peak, and fall. This guided timer helps you ride the wave using
         mindfulness and breathing, based on{" "}
         <span className="font-medium text-neutral-700 dark:text-neutral-300">Alan Marlatt&rsquo;s urge surfing technique</span>.
         Most cravings pass within 15&ndash;30 minutes.
@@ -399,7 +399,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6 max-w-md mx-auto">
             <p className="text-sm text-amber-800 dark:text-amber-200 leading-relaxed">
-              <span className="font-semibold">Remember:</span> The craving peaked and passed — just like a wave.
+              <span className="font-semibold">Remember:</span> The craving peaked and passed, just like a wave.
               The more you practice this, the easier it gets. You are building new neural pathways every session.
             </p>
           </div>
@@ -429,12 +429,12 @@ export function UrgeSurfingClient({ faqData }: Props) {
           Urge surfing is a mindfulness-based technique developed by <strong>Alan Marlatt, PhD</strong>, a
           pioneering researcher in addiction psychology at the University of Washington. The core idea is
           simple but powerful: instead of fighting a craving (which often makes it stronger) or giving in to it,
-          you <em>observe</em> it — like watching a wave in the ocean.
+          you <em>observe</em> it, like watching a wave in the ocean.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           A craving, like a wave, has a natural arc. It builds, reaches a peak, and then subsides. By paying
-          attention to the physical sensations and thoughts that come with a craving — without judging them or
-          acting on them — you allow the wave to pass on its own. This is the essence of urge surfing: riding
+          attention to the physical sensations and thoughts that come with a craving, without judging them or
+          acting on them, you allow the wave to pass on its own. This is the essence of urge surfing: riding
           the wave rather than being pulled under by it.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
@@ -447,16 +447,16 @@ export function UrgeSurfingClient({ faqData }: Props) {
           The Science Behind Cravings
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Cravings are neurological events. When you encounter a trigger — a place, a person, a feeling, a
-          memory — your brain releases dopamine in anticipation of the substance or behavior. This creates the
+          Cravings are neurological events. When you encounter a trigger, a place, a person, a feeling, a
+          memory, your brain releases dopamine in anticipation of the substance or behavior. This creates the
           intense urge to use. But here is the critical fact: <strong>your brain cannot sustain a craving at
           peak intensity</strong>. The dopamine surge is temporary.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           Research consistently shows that most cravings peak within <strong>15 to 30 minutes</strong> and then
-          naturally decline — even without intervention. A study published in <em>Addictive Behaviors</em>
+          naturally decline, even without intervention. A study published in <em>Addictive Behaviors</em>
           found that the average craving duration was approximately 11 minutes, with intensity peaking around
-          the halfway point. By simply waiting — and observing — you outlast the craving.
+          the halfway point. By simply waiting, and observing, you outlast the craving.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
           Each time you ride out a craving without acting on it, you weaken the neural pathway that connects
@@ -486,19 +486,19 @@ export function UrgeSurfingClient({ faqData }: Props) {
               <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 HALT Check-In
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Check if Hunger, Anger, Loneliness, or Tiredness is driving your craving</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Check if Hunger, Anger, Loneliness, or Tiredness is driving your craving</span>
             </li>
             <li>
               <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Relapse Prevention Plan
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Build a written plan with triggers, coping strategies, and emergency contacts</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Build a written plan with triggers, coping strategies, and emergency contacts</span>
             </li>
             <li>
               <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Sobriety Calculator
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Track your progress and celebrate milestones</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Track your progress and celebrate milestones</span>
             </li>
           </ul>
         </div>
@@ -549,7 +549,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
           <p className="leading-relaxed">
             This tool is for educational and self-help purposes only. It is not a substitute for professional
             counseling, therapy, or medical advice. If you are struggling with substance use, please reach out
-            to a qualified professional. Urge surfing is a coping technique — it does not replace comprehensive
+            to a qualified professional. Urge surfing is a coping technique, it does not replace comprehensive
             recovery support.
           </p>
           <ToolReviewerBio />

@@ -36,12 +36,12 @@ const FAQ_DATA = [
   {
     question: "Can depression start months after delivery?",
     answer:
-      "Yes. While the DSM-5 specifies onset during pregnancy or within four weeks of delivery, clinicians and researchers recognize that perinatal depression can develop anytime within the first year postpartum. Some women experience a delayed onset at 3, 6, or even 9 months \u2014 often triggered by return to work, weaning, sleep deprivation, or relationship stress.",
+      "Yes. While the DSM-5 specifies onset during pregnancy or within four weeks of delivery, clinicians and researchers recognize that perinatal depression can develop anytime within the first year postpartum. Some women experience a delayed onset at 3, 6, or even 9 months, often triggered by return to work, weaning, sleep deprivation, or relationship stress.",
   },
   {
     question: "Does depression mean I do not love my baby?",
     answer:
-      "No. Depression is a medical condition that affects how your brain regulates mood and emotion \u2014 it does not reflect your love for your child. Many mothers with depression feel intense guilt about difficulty bonding, which is itself a symptom of the condition. Treatment restores the capacity for connection that depression temporarily disrupts.",
+      "No. Depression is a medical condition that affects how your brain regulates mood and emotion, it does not reflect your love for your child. Many mothers with depression feel intense guilt about difficulty bonding, which is itself a symptom of the condition. Treatment restores the capacity for connection that depression temporarily disrupts.",
   },
   {
     question: "Is it safe to take medication while breastfeeding?",
@@ -88,7 +88,7 @@ export default function DepressionNewMomsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Having a baby is supposed to be joyful. But for many new mothers, the reality includes exhaustion, overwhelm, and emotions that do not match the picture they expected. If you are feeling persistently sad, anxious, disconnected from your baby, or struggling to function &mdash; and it has lasted longer than two weeks &mdash; what you are experiencing may be more than the normal adjustment of early motherhood. You are not failing. You may be dealing with a treatable medical condition.
+            Having a baby is supposed to be joyful. But for many new mothers, the reality includes exhaustion, overwhelm, and emotions that do not match the picture they expected. If you are feeling persistently sad, anxious, disconnected from your baby, or struggling to function, and it has lasted longer than two weeks, what you are experiencing may be more than the normal adjustment of early motherhood. You are not failing. You may be dealing with a treatable medical condition.
           </p>
         </header>
 
@@ -96,10 +96,10 @@ export default function DepressionNewMomsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>Postpartum Support International</strong> &mdash; <strong>1-800-944-4773</strong> (call or text)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Postpartum Support International</strong>, <strong>1-800-944-4773</strong> (call or text)</li>
             </ul>
           </div>
 
@@ -195,7 +195,7 @@ export default function DepressionNewMomsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

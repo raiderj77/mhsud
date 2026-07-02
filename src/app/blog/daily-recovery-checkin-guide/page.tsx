@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "When is the best time to do a recovery check-in?",
     answer:
-      "Both morning and evening check-ins have value. Morning check-ins set intentions \u2014 what you are committed to, challenges you anticipate, and what you are grateful for. Evening check-ins provide reflection on how the day went, what cravings arose, and what you want to adjust. If you only do one, choose whichever time you are most likely to do consistently.",
+      "Both morning and evening check-ins have value. Morning check-ins set intentions, what you are committed to, challenges you anticipate, and what you are grateful for. Evening check-ins provide reflection on how the day went, what cravings arose, and what you want to adjust. If you only do one, choose whichever time you are most likely to do consistently.",
   },
   {
     question: "What should I include in a daily check-in?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "How does self-monitoring help recovery?",
     answer:
-      "Self-monitoring \u2014 regularly tracking your behavior, thoughts, and feelings \u2014 is one of the most well-supported behavior change techniques. Burke et al. (2011) found it to be the single most effective component of behavioral interventions. In recovery, it increases awareness of patterns, creates daily accountability, and provides early warning signs when things are heading in a risky direction.",
+      "Self-monitoring, regularly tracking your behavior, thoughts, and feelings, is one of the most well-supported behavior change techniques. Burke et al. (2011) found it to be the single most effective component of behavioral interventions. In recovery, it increases awareness of patterns, creates daily accountability, and provides early warning signs when things are heading in a risky direction.",
   },
   {
     question: "Do I need to do this forever?",
@@ -70,7 +70,7 @@ export default function DailyRecoveryCheckinGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            A daily check-in is a structured moment to pause and assess how you are doing &mdash; your mood, your cravings, your gratitude, and your intentions. It takes less than five minutes, but the research on self-monitoring suggests it may be one of the most impactful things you can do for your recovery each day. The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in tool</Link> provides a guided template that makes this practice simple and consistent.
+            A daily check-in is a structured moment to pause and assess how you are doing, your mood, your cravings, your gratitude, and your intentions. It takes less than five minutes, but the research on self-monitoring suggests it may be one of the most impactful things you can do for your recovery each day. The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in tool</Link> provides a guided template that makes this practice simple and consistent.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function DailyRecoveryCheckinGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,13 +96,13 @@ export default function DailyRecoveryCheckinGuidePage() {
           <section>
             <h2>The research behind self-monitoring</h2>
             <p>
-              Self-monitoring &mdash; the practice of systematically tracking your own behavior, thoughts, and feelings &mdash; is one of the most well-supported strategies in behavioral science. A comprehensive meta-analysis by Burke et al. (2011) found that self-monitoring is the single most effective component of behavioral interventions across a wide range of health behaviors, including substance use.
+              Self-monitoring, the practice of systematically tracking your own behavior, thoughts, and feelings, is one of the most well-supported strategies in behavioral science. A comprehensive meta-analysis by Burke et al. (2011) found that self-monitoring is the single most effective component of behavioral interventions across a wide range of health behaviors, including substance use.
             </p>
             <p>
-              The mechanism is straightforward: awareness precedes change. When you regularly check in with yourself, you notice patterns that would otherwise remain invisible. You see that your cravings spike on certain days, that poor sleep predicts difficult mornings, that isolation precedes your hardest moments. This awareness transforms recovery from a reactive process &mdash; responding to crises as they arise &mdash; to a proactive one, where you can anticipate and prepare for challenges before they escalate.
+              The mechanism is straightforward: awareness precedes change. When you regularly check in with yourself, you notice patterns that would otherwise remain invisible. You see that your cravings spike on certain days, that poor sleep predicts difficult mornings, that isolation precedes your hardest moments. This awareness transforms recovery from a reactive process, responding to crises as they arise, to a proactive one, where you can anticipate and prepare for challenges before they escalate.
             </p>
             <p>
-              Daily check-ins also create a form of self-accountability. When you commit to answering honest questions about your state each day, you are less able to drift into denial or minimization &mdash; two patterns that commonly precede relapse.
+              Daily check-ins also create a form of self-accountability. When you commit to answering honest questions about your state each day, you are less able to drift into denial or minimization, two patterns that commonly precede relapse.
             </p>
           </section>
 
@@ -112,11 +112,11 @@ export default function DailyRecoveryCheckinGuidePage() {
               An effective daily check-in does not need to be long or complicated. The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in tool</Link> covers five core areas that research and clinical practice have identified as most important:
             </p>
             <ul>
-              <li><strong>Mood:</strong> How are you feeling emotionally right now? Not a general &quot;fine,&quot; but a specific label &mdash; anxious, hopeful, irritable, calm, sad, grateful. Emotional granularity (the ability to name your emotions specifically) is associated with better emotional regulation and lower relapse risk.</li>
+              <li><strong>Mood:</strong> How are you feeling emotionally right now? Not a general &quot;fine,&quot; but a specific label, anxious, hopeful, irritable, calm, sad, grateful. Emotional granularity (the ability to name your emotions specifically) is associated with better emotional regulation and lower relapse risk.</li>
               <li><strong>Sleep quality:</strong> How well did you sleep last night? Sleep disruption is one of the most reliable predictors of increased craving intensity and emotional reactivity. Tracking it daily helps you see the pattern before it becomes a crisis.</li>
-              <li><strong>Craving intensity:</strong> On a scale of 0 to 10, how strong are your urges today? Tracking craving intensity over time reveals patterns &mdash; when cravings tend to peak, what triggers them, and whether they are trending up or down.</li>
+              <li><strong>Craving intensity:</strong> On a scale of 0 to 10, how strong are your urges today? Tracking craving intensity over time reveals patterns, when cravings tend to peak, what triggers them, and whether they are trending up or down.</li>
               <li><strong>Gratitude:</strong> What is one thing you appreciate today? Gratitude practice has demonstrated effects on mood, stress, and overall well-being. In recovery, it counters the negativity bias that can make sobriety feel like deprivation rather than liberation.</li>
-              <li><strong>One recovery action:</strong> What is one specific thing you are doing for your recovery today? This creates a daily commitment that is concrete and actionable &mdash; attending a meeting, calling your sponsor, exercising, practicing a coping skill.</li>
+              <li><strong>One recovery action:</strong> What is one specific thing you are doing for your recovery today? This creates a daily commitment that is concrete and actionable, attending a meeting, calling your sponsor, exercising, practicing a coping skill.</li>
             </ul>
           </section>
 
@@ -129,11 +129,11 @@ export default function DailyRecoveryCheckinGuidePage() {
             </p>
             <h3>Morning check-ins</h3>
             <p>
-              A morning check-in sets the tone for the day. It is forward-looking: How am I feeling right now? What challenges might I face today? What am I committed to doing for my recovery? What am I grateful for? Morning check-ins are particularly valuable because they create intentionality &mdash; you start the day with a plan rather than drifting into reactive mode.
+              A morning check-in sets the tone for the day. It is forward-looking: How am I feeling right now? What challenges might I face today? What am I committed to doing for my recovery? What am I grateful for? Morning check-ins are particularly valuable because they create intentionality, you start the day with a plan rather than drifting into reactive mode.
             </p>
             <h3>Evening check-ins</h3>
             <p>
-              An evening check-in is reflective. It looks back at the day: How did it go? What cravings or triggers came up? How did I handle them? What went well? What do I want to do differently tomorrow? Evening check-ins are where pattern recognition happens &mdash; over time, your responses create a record that reveals your personal rhythm of vulnerability and strength.
+              An evening check-in is reflective. It looks back at the day: How did it go? What cravings or triggers came up? How did I handle them? What went well? What do I want to do differently tomorrow? Evening check-ins are where pattern recognition happens, over time, your responses create a record that reveals your personal rhythm of vulnerability and strength.
             </p>
             <p>
               If you are only going to do one, choose the time of day when you are most likely to be consistent. Consistency matters more than timing. A check-in you do every day at 9 PM is more valuable than a morning check-in you skip three days a week.
@@ -152,9 +152,9 @@ export default function DailyRecoveryCheckinGuidePage() {
               Some practical strategies for maintaining consistency:
             </p>
             <ul>
-              <li><strong>Anchor it to an existing habit:</strong> Do your check-in right after brushing your teeth, right after your morning coffee, or right before bed &mdash; linking it to something you already do every day.</li>
+              <li><strong>Anchor it to an existing habit:</strong> Do your check-in right after brushing your teeth, right after your morning coffee, or right before bed, linking it to something you already do every day.</li>
               <li><strong>Keep it brief:</strong> A check-in that takes two minutes is more sustainable than one that takes twenty. You can always go deeper on days when you have more time or need more reflection.</li>
-              <li><strong>Use a tool:</strong> The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link> provides structure so you do not have to decide what to reflect on each day &mdash; the template is ready.</li>
+              <li><strong>Use a tool:</strong> The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link> provides structure so you do not have to decide what to reflect on each day, the template is ready.</li>
               <li><strong>Track your streak gently:</strong> Notice how many consecutive days you have checked in, but do not treat a broken streak as failure. The <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline">sobriety calculator</Link> can help you track broader recovery milestones alongside daily practices.</li>
             </ul>
           </section>
@@ -173,20 +173,20 @@ export default function DailyRecoveryCheckinGuidePage() {
               <li>If you notice patterns in your triggers, revisit your <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan</Link> to update it with what you have learned.</li>
             </ul>
             <p>
-              The check-in is not the whole recovery plan &mdash; it is the daily practice that keeps you aware of where you are so you can use the right tools at the right time.
+              The check-in is not the whole recovery plan, it is the daily practice that keeps you aware of where you are so you can use the right tools at the right time.
             </p>
           </section>
 
           <section>
             <h2>Beyond early recovery: evolving your practice</h2>
             <p>
-              Daily check-ins are most critical in the first year of recovery, when self-awareness is still developing and relapse risk is highest. But many people in long-term recovery continue some form of structured self-reflection indefinitely &mdash; adjusting the format as their needs change.
+              Daily check-ins are most critical in the first year of recovery, when self-awareness is still developing and relapse risk is highest. But many people in long-term recovery continue some form of structured self-reflection indefinitely, adjusting the format as their needs change.
             </p>
             <p>
               In early recovery, a check-in might focus heavily on cravings, triggers, and daily survival. Over time, the focus may shift toward emotional growth, relationship quality, purpose, and life satisfaction. The practice evolves, but the principle remains the same: regular, honest self-reflection supports sustained well-being.
             </p>
             <p>
-              Some people transition from daily to weekly check-ins after the first year. Others keep the daily practice but simplify it to just three questions: How am I feeling? What am I grateful for? What am I doing for my recovery today? There is no single right approach &mdash; the best check-in is the one you actually do.
+              Some people transition from daily to weekly check-ins after the first year. Others keep the daily practice but simplify it to just three questions: How am I feeling? What am I grateful for? What am I doing for my recovery today? There is no single right approach, the best check-in is the one you actually do.
             </p>
           </section>
 

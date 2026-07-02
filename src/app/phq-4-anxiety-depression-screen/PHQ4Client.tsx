@@ -83,7 +83,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
 
       {/* Clinical Disclaimer Banner */}
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6 text-sm text-amber-800 dark:text-amber-300">
-        <strong>Educational tool only.</strong> This is a screening instrument — not a diagnosis.
+        <strong>Educational tool only.</strong> This is a screening instrument, not a diagnosis.
         Answers are scored in your browser and never stored or transmitted.
       </div>
 
@@ -246,7 +246,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li>
             <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-            <strong>988</strong> — free, 24/7, confidential
+            <strong>988</strong>, free, 24/7, confidential
           </li>
           <li>
             <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>
@@ -263,7 +263,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
       {/* Clinical Disclaimer */}
       <div className="mb-6">
         <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-          This screening tool is for educational purposes only — it is not a diagnosis. Only a
+          This screening tool is for educational purposes only, it is not a diagnosis. Only a
           licensed healthcare professional can diagnose anxiety or depression. Your responses are
           processed entirely in your browser and are never stored or transmitted.
         </p>

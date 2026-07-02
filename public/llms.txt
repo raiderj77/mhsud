@@ -1,6 +1,6 @@
 # MindCheck Tools
 
-> Free, validated mental health and substance use screening tools. All tools are anonymous, clinically validated, and scored entirely in your browser — no data is stored or transmitted. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
+> Free, validated mental health and substance use screening tools. All tools are anonymous, clinically validated, and scored entirely in your browser, no data is stored or transmitted. Reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience.
 
 ## Core Screening Tools
 
@@ -58,24 +58,24 @@
 - [Postpartum Depression Test](https://mindchecktools.com/postpartum-depression-test): Depression screening for the perinatal period
 - [Depression Test for New Moms](https://mindchecktools.com/depression-test-for-new-moms): Postpartum depression screening for new mothers
 
-### Adults — Women
+### Adults, Women
 
 - [Anxiety Test for Women](https://mindchecktools.com/anxiety-test-for-women): Anxiety screening addressing female-specific concerns
 - [ADHD Test for Women](https://mindchecktools.com/adhd-test-women): ADHD screening addressing female-specific presentation
 - [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): BPD screening addressing female-specific presentation
 - [Alcohol Screening for Women](https://mindchecktools.com/alcohol-screening-for-women): Alcohol use screening with female-specific thresholds
 
-### Adults — Men
+### Adults, Men
 
 - [Depression Test for Men](https://mindchecktools.com/depression-test-for-men): Depression screening addressing male-specific presentation
 - [Depression Screening for Men](https://mindchecktools.com/depression-screening-for-men): Depression screening highlighting male symptom patterns
 - [Anxiety Test for Men](https://mindchecktools.com/anxiety-test-for-men): Anxiety screening addressing male-specific presentation
 
-### Adults — Young Adults
+### Adults, Young Adults
 
 - [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): Borderline personality disorder screening for young adults
 
-### Adults — Seniors
+### Adults, Seniors
 
 - [Depression Test for Seniors](https://mindchecktools.com/depression-test-for-seniors): Depression screening for older adults
 - [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): Loneliness screening for older adults
@@ -97,7 +97,7 @@
 
 - [Substance Abuse Test for Parents](https://mindchecktools.com/substance-abuse-test-parents): Substance use screening with parenting context
 
-### Adults — General
+### Adults, General
 
 - [ADHD Test for Adults](https://mindchecktools.com/adhd-test-adults): ADHD screening focused on adult symptom patterns
 - [Am I Depressed Quiz](https://mindchecktools.com/am-i-depressed-quiz): Conversational entry point for depression self-assessment
@@ -119,7 +119,7 @@
 - [Health Recovery Timeline](https://mindchecktools.com/health-recovery-timeline): Physical health improvements after quitting substances
 - [Treatment Cost Estimator](https://mindchecktools.com/treatment-cost-estimator): Estimate costs of different addiction treatment options
 - [Daily Recovery Check-In](https://mindchecktools.com/daily-recovery-check-in): Daily structured check-in for people in recovery
-- [HALT Check-In](https://mindchecktools.com/halt-check-in): Hungry, Angry, Lonely, Tired — quick recovery check-in
+- [HALT Check-In](https://mindchecktools.com/halt-check-in): Hungry, Angry, Lonely, Tired, quick recovery check-in
 - [Readiness to Change](https://mindchecktools.com/readiness-to-change): Assess your stage of readiness for behavior change
 - [Relapse Prevention Plan](https://mindchecktools.com/relapse-prevention-plan): Build a structured relapse prevention plan with triggers and coping strategies
 - [Trigger Identification Worksheet](https://mindchecktools.com/trigger-identification-worksheet): Identify and categorize personal relapse triggers
@@ -158,7 +158,7 @@
 - [AUDIT vs AUDIT-C](https://mindchecktools.com/audit-vs-audit-c): When to use the full 10-item AUDIT versus the brief 3-item AUDIT-C
 - [DASS-21 vs PHQ-9 and GAD-7](https://mindchecktools.com/dass-21-vs-phq-9-and-gad-7): When the DASS-21 adds value over running the PHQ-9 and GAD-7 separately
 - [PHQ-2 to PHQ-9: When to Escalate](https://mindchecktools.com/phq-2-to-phq-9-when-to-escalate): When a positive PHQ-2 warrants completing the full PHQ-9
-## Blog — Score Guides
+## Blog, Score Guides
 
 - [What Does Your PHQ-9 Score Mean?](https://mindchecktools.com/blog/what-does-phq-9-score-mean): PHQ-9 scores range 0–27; learn what each severity level means and what to do next
 - [What Does Your GAD-7 Score Mean?](https://mindchecktools.com/blog/what-does-gad-7-score-mean): GAD-7 scores range 0–21; learn what minimal, mild, moderate, and severe mean
@@ -173,17 +173,17 @@
 - [DASS-21 Score Guide](https://mindchecktools.com/blog/dass-21-score-guide): DASS-21 scores range 0–42 per subscale; learn severity levels for depression, anxiety, and stress
 - [PHQ-9 vs GAD-7: Which Should You Take?](https://mindchecktools.com/blog/phq-9-vs-gad-7): How the PHQ-9 and GAD-7 differ and when to take each
 
-## Blog — Tool Guides
+## Blog, Tool Guides
 
 - [PHQ-9 Explained](https://mindchecktools.com/blog/phq-9-guide): How clinicians use the PHQ-9 depression questionnaire and what it cannot tell you
-- [What Is the PHQ-9?](https://mindchecktools.com/blog/what-is-phq-9-depression-screener): Complete guide to the PHQ-9 depression screener — how it works and who developed it
+- [What Is the PHQ-9?](https://mindchecktools.com/blog/what-is-phq-9-depression-screener): Complete guide to the PHQ-9 depression screener, how it works and who developed it
 - [GAD-7 Guide](https://mindchecktools.com/blog/gad-7-guide): What the GAD-7 anxiety scale measures and how doctors interpret scores
 - [AUDIT Guide](https://mindchecktools.com/blog/audit-guide): How the WHO AUDIT alcohol screening tool works and why clinicians use it
 - [PTSD Screening Guide](https://mindchecktools.com/blog/ptsd-screening-guide): When and why to get screened for PTSD, and how the PCL-5 and PC-PTSD-5 work
 - [Depression Screening Guide](https://mindchecktools.com/blog/depression-screening-guide): Complete guide to depression screening, USPSTF guidelines, and treatment options
 - [Understanding Your Screening Results](https://mindchecktools.com/blog/understanding-mental-health-screening-results): What screening results mean, what they do not mean, and practical next steps
 
-## Blog — Condition and Population Guides
+## Blog, Condition and Population Guides
 
 - [What Is Anxiety?](https://mindchecktools.com/blog/what-is-anxiety): Symptoms, types, and evidence-based treatment for anxiety disorders
 - [What Is Generalized Anxiety Disorder?](https://mindchecktools.com/blog/what-is-generalized-anxiety-disorder): Deep dive into GAD symptoms, causes, and treatments
@@ -213,13 +213,13 @@
 - [Loneliness and Mental Health](https://mindchecktools.com/blog/loneliness-mental-health): How chronic loneliness affects mental and physical health
 - [Seasonal Affective Disorder](https://mindchecktools.com/blog/seasonal-affective-disorder): Understanding winter depression, light therapy, and when to seek help
 - [Depression in Older Adults](https://mindchecktools.com/blog/depression-seniors-guide): Signs that are often missed and why depression is not normal aging
-- [Depression in New Moms](https://mindchecktools.com/blog/depression-new-moms-guide): Beyond baby blues — signs, risk factors, and how screening helps
+- [Depression in New Moms](https://mindchecktools.com/blog/depression-new-moms-guide): Beyond baby blues, signs, risk factors, and how screening helps
 - [Depression in Veterans](https://mindchecktools.com/blog/depression-veterans-guide): Why depression goes unrecognized in veterans and how to get support
 - [Depression in Men](https://mindchecktools.com/blog/depression-men-guide): Why male depression looks different and goes untreated
 - [Anxiety in Women](https://mindchecktools.com/blog/anxiety-women-guide): Why women are affected more and what hormones, trauma, and mental load contribute
 - [Anxiety in Men](https://mindchecktools.com/blog/anxiety-men-guide): How male anxiety hides as anger, workaholism, and physical symptoms
 - [PTSD in Veterans](https://mindchecktools.com/blog/ptsd-veterans-guide): Signs, screening, and getting the right support after military service
-- [PTSD in First Responders](https://mindchecktools.com/blog/ptsd-first-responders-guide): The hidden cost of saving lives — cumulative trauma and confidential screening
+- [PTSD in First Responders](https://mindchecktools.com/blog/ptsd-first-responders-guide): The hidden cost of saving lives, cumulative trauma and confidential screening
 - [ADHD in Women](https://mindchecktools.com/blog/adhd-women-guide): Why ADHD goes undiagnosed in women and how hormones affect symptoms
 - [ADHD Test for Adults](https://mindchecktools.com/blog/adhd-adults-guide): How to know if you should get screened for adult ADHD
 - [Bipolar in Young Adults](https://mindchecktools.com/blog/bipolar-young-adults-guide): Early signs and why bipolar is often misdiagnosed as depression
@@ -238,7 +238,7 @@
 - [Eating Disorders in Athletes](https://mindchecktools.com/blog/eating-disorder-athletes-guide): RED-S, sport-specific risks, and confidential screening
 - [Substance Use Screening for Parents](https://mindchecktools.com/blog/substance-abuse-parents-guide): Honest assessment without judgment
 
-## Blog — Burnout Population Guides
+## Blog, Burnout Population Guides
 
 - [Burnout in Healthcare Workers](https://mindchecktools.com/blog/burnout-healthcare-workers-guide): Signs, causes, moral injury, and what actually helps
 - [Nurse Burnout](https://mindchecktools.com/blog/burnout-nurses-guide): Why it happens, how it feels, and what to do about it
@@ -246,7 +246,7 @@
 - [Parental Burnout](https://mindchecktools.com/blog/burnout-parents-guide): When the demands of parenting become overwhelming
 - [Caregiver Burnout](https://mindchecktools.com/blog/caregiver-burnout-guide): Signs, prevention, and getting help for yourself
 
-## Blog — Recovery and Treatment
+## Blog, Recovery and Treatment
 
 - [Stages of Change in Recovery](https://mindchecktools.com/blog/stages-of-change-recovery): The 5 stages of change model for addiction recovery
 - [Quit Drinking Timeline](https://mindchecktools.com/blog/quit-drinking-timeline): Hour-by-hour timeline of what happens when you stop drinking
@@ -267,7 +267,7 @@
 - [Cognitive Distortions List](https://mindchecktools.com/blog/cognitive-distortions-list): 15 common thinking errors that fuel anxiety and depression
 - [Anxiety Coping Strategies](https://mindchecktools.com/blog/anxiety-coping-strategies): Evidence-based techniques for managing anxiety symptoms
 
-## Blog — Therapeutic Techniques
+## Blog, Therapeutic Techniques
 
 - [CBT Thought Records](https://mindchecktools.com/blog/cbt-thought-record-guide): How to challenge negative thinking patterns with the 7-column method
 - [Urge Surfing Guide](https://mindchecktools.com/blog/urge-surfing-guide): How to ride out cravings without giving in
@@ -278,7 +278,7 @@
 - [DBT Crisis Survival Skills](https://mindchecktools.com/blog/dbt-crisis-skills-guide): What to do when you cannot think straight
 - [Safety Planning Guide](https://mindchecktools.com/blog/safety-planning-guide): A step-by-step guide to creating your crisis plan
 
-## Blog — Help-Seeking and Wellness
+## Blog, Help-Seeking and Wellness
 
 - [When Should I See a Therapist?](https://mindchecktools.com/blog/when-should-i-see-a-therapist): 10 signs it may be time to talk to a mental health professional
 - [How to Find a Therapist](https://mindchecktools.com/blog/how-to-find-a-therapist): Step-by-step guide to finding a therapist that fits your needs and budget
@@ -293,14 +293,14 @@
 ## About
 
 - [About MindCheck Tools](https://mindchecktools.com/about): Mission, methodology, and clinical review process
-- [Jason Ramirez, CADC-II](https://mindchecktools.com/about/jason-ramirez): Certified Drug and Alcohol Counselor with 11 years of clinical experience — reviews all tools and content
+- [Jason Ramirez, CADC-II](https://mindchecktools.com/about/jason-ramirez): Certified Drug and Alcohol Counselor with 11 years of clinical experience, reviews all tools and content
 - [Privacy Policy](https://mindchecktools.com/privacy): All screening results processed client-side; no health data stored or transmitted
 - [Contact](https://mindchecktools.com/contact): Reach the MindCheck Tools team
 - [Crisis Resources](https://mindchecktools.com/crisis-resources): 988 Suicide & Crisis Lifeline, Crisis Text Line, SAMHSA Helpline
 
 ### Clinical Review
 
-All tools and content are reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in mental health and substance use treatment. Validated instruments are presented as standardized — questions and scoring are never modified.
+All tools and content are reviewed by a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in mental health and substance use treatment. Validated instruments are presented as standardized, questions and scoring are never modified.
 
 ### Privacy Architecture
 

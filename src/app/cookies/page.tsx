@@ -4,7 +4,7 @@ import { CookieSettingsButton } from "./CookieSettingsButton";
 
 export const metadata: Metadata = createMetadata({
   path: "/cookies",
-  title: "Cookie Policy — What Cookies We Use and Why",
+  title: "Cookie Policy, What Cookies We Use and Why",
   description:
     "MindCheck Tools cookie policy. Details on analytics and advertising cookies, how to manage your preferences, and your rights under GDPR and CCPA.",
   keywords: [
@@ -33,7 +33,7 @@ const COOKIE_TABLE = [
     category: "Advertising",
     consent: "Required",
     cookies: [
-      { name: "Various", purpose: "Ad network cookies for serving and measuring ads. Not currently active.", duration: "Varies", provider: "TBD — will be disclosed when ads are enabled" },
+      { name: "Various", purpose: "Ad network cookies for serving and measuring ads. Not currently active.", duration: "Varies", provider: "TBD, will be disclosed when ads are enabled" },
     ],
   },
 ];
@@ -121,7 +121,7 @@ export default function CookiePolicyPage() {
               We use Google Analytics (GA4, measurement ID: G-XKHQN1NJ2Z) with Google Consent Mode v2. This means:
             </p>
             <p>
-              If you <strong>accept</strong> analytics cookies, Google Analytics operates normally — setting cookies to distinguish users and sessions, and collecting anonymized usage data (pages visited, traffic sources, geographic region).
+              If you <strong>accept</strong> analytics cookies, Google Analytics operates normally, setting cookies to distinguish users and sessions, and collecting anonymized usage data (pages visited, traffic sources, geographic region).
             </p>
             <p>
               If you <strong>decline</strong> analytics cookies, no Google Analytics cookies are set on your device. Google may still receive cookieless pings that allow it to model aggregate traffic data, but no individual user data is collected or stored.
@@ -147,7 +147,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              We will update this policy whenever we add or change cookies — particularly when advertising cookies become active. The &quot;Last updated&quot; date at the top reflects the most recent revision.
+              We will update this policy whenever we add or change cookies, particularly when advertising cookies become active. The &quot;Last updated&quot; date at the top reflects the most recent revision.
             </p>
           </section>
 

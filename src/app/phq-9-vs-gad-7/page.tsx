@@ -35,12 +35,12 @@ const FAQ_DATA = [
   {
     question: "What is the difference between depression and anxiety?",
     answer:
-      "Depression and anxiety are distinct but related conditions. Depression is primarily characterized by persistent low mood, loss of interest or pleasure, fatigue, and feelings of worthlessness or hopelessness. Anxiety is characterized by excessive worry, fear, nervousness, and physical symptoms like muscle tension, racing heart, and restlessness. Both can disrupt sleep, concentration, and daily functioning. Depression and anxiety frequently co-occur — estimates suggest 45–60% of people with major depression also meet criteria for an anxiety disorder.",
+      "Depression and anxiety are distinct but related conditions. Depression is primarily characterized by persistent low mood, loss of interest or pleasure, fatigue, and feelings of worthlessness or hopelessness. Anxiety is characterized by excessive worry, fear, nervousness, and physical symptoms like muscle tension, racing heart, and restlessness. Both can disrupt sleep, concentration, and daily functioning. Depression and anxiety frequently co-occur, estimates suggest 45–60% of people with major depression also meet criteria for an anxiety disorder.",
   },
   {
     question: "Can depression and anxiety occur together?",
     answer:
-      "Yes. Comorbid depression and anxiety is common. Research published in journals including JAMA Psychiatry and the Journal of Affective Disorders consistently shows that 45–60% of people with major depressive disorder also have a diagnosable anxiety disorder. This is one reason clinicians often administer both the PHQ-9 and GAD-7 together — to get a fuller picture of a patient's mental health status in a single brief administration.",
+      "Yes. Comorbid depression and anxiety is common. Research published in journals including JAMA Psychiatry and the Journal of Affective Disorders consistently shows that 45–60% of people with major depressive disorder also have a diagnosable anxiety disorder. This is one reason clinicians often administer both the PHQ-9 and GAD-7 together, to get a fuller picture of a patient's mental health status in a single brief administration.",
   },
   {
     question: "How long does each screening take?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
   {
     question: "What should I do if I score high on both the PHQ-9 and GAD-7?",
     answer:
-      "A high score on both tools — for example, PHQ-9 ≥10 and GAD-7 ≥10 — suggests significant depressive and anxiety symptoms are both present. This is common and does not mean something is 'more wrong' with you; comorbidity is the norm rather than the exception. You should speak with a healthcare provider as soon as possible. A clinician can conduct a full evaluation, determine which symptoms are primary, and develop a treatment plan. These screening results are a starting point for conversation, not a diagnosis.",
+      "A high score on both tools, for example, PHQ-9 ≥10 and GAD-7 ≥10, suggests significant depressive and anxiety symptoms are both present. This is common and does not mean something is 'more wrong' with you; comorbidity is the norm rather than the exception. You should speak with a healthcare provider as soon as possible. A clinician can conduct a full evaluation, determine which symptoms are primary, and develop a treatment plan. These screening results are a starting point for conversation, not a diagnosis.",
   },
   {
     question: "Do healthcare providers typically use the PHQ-9 and GAD-7 together?",
@@ -65,7 +65,7 @@ const FAQ_DATA = [
   {
     question: "Can I use the PHQ-9 or GAD-7 without a doctor?",
     answer:
-      "You can take either screening tool on your own — both are in the public domain and freely available. Self-screening can help you recognize patterns in your symptoms and decide whether to seek professional evaluation. However, these tools are not diagnostic instruments. A score above a clinical threshold means your symptoms warrant professional evaluation, not that you have been diagnosed with a specific condition. Always discuss results with a qualified healthcare provider.",
+      "You can take either screening tool on your own, both are in the public domain and freely available. Self-screening can help you recognize patterns in your symptoms and decide whether to seek professional evaluation. However, these tools are not diagnostic instruments. A score above a clinical threshold means your symptoms warrant professional evaluation, not that you have been diagnosed with a specific condition. Always discuss results with a qualified healthcare provider.",
   },
   {
     question: "What do the different severity levels mean on each tool?",
@@ -84,7 +84,7 @@ export default function Phq9VsGad7Page() {
             articleJsonLd({
               title: "PHQ-9 vs. GAD-7: Key Differences, Scoring, and When to Use Each",
               description:
-                "A comprehensive comparison of the PHQ-9 depression screen and the GAD-7 anxiety screen — what each measures, how they differ, and when to use them.",
+                "A comprehensive comparison of the PHQ-9 depression screen and the GAD-7 anxiety screen, what each measures, how they differ, and when to use them.",
               url: PAGE_URL,
               datePublished: "2026-05-06",
               dateModified: "2026-05-06",
@@ -117,9 +117,9 @@ export default function Phq9VsGad7Page() {
           <div className="max-w-2xl mx-auto">
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1 text-sm">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>
@@ -153,13 +153,13 @@ export default function Phq9VsGad7Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              Use the <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> if you are screening for depression; use the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> if you are screening for anxiety. Because depression and anxiety co-occur in roughly 50% of cases, taking both tools is often the most clinically appropriate choice. This page is for anyone deciding which screening to take — or whether to take both. The comparison below covers scoring, clinical thresholds, and how the results relate to each other.
+              Use the <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> if you are screening for depression; use the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> if you are screening for anxiety. Because depression and anxiety co-occur in roughly 50% of cases, taking both tools is often the most clinically appropriate choice. This page is for anyone deciding which screening to take, or whether to take both. The comparison below covers scoring, clinical thresholds, and how the results relate to each other.
             </p>
           </div>
 
           <AnswerBlock
             what="A side-by-side comparison of the PHQ-9 (Patient Health Questionnaire-9) and GAD-7 (Generalized Anxiety Disorder-7), including what each tool measures, how they are scored, and when clinicians use each one."
-            who="Anyone trying to decide whether to take the PHQ-9, the GAD-7, or both — and anyone who has received scores on both tools and wants to understand what they mean."
+            who="Anyone trying to decide whether to take the PHQ-9, the GAD-7, or both, and anyone who has received scores on both tools and wants to understand what they mean."
             bottomLine="The PHQ-9 measures depressive symptoms; the GAD-7 measures anxiety symptoms. Both are validated, 5-minute screens. Many clinicians use both together because depression and anxiety frequently co-occur."
             lastUpdated="2026-05-06"
           />
@@ -184,7 +184,7 @@ export default function Phq9VsGad7Page() {
               <li>Poor appetite or overeating</li>
               <li>Feeling bad about yourself or that you are a failure</li>
               <li>Trouble concentrating on things</li>
-              <li>Moving or speaking more slowly — or being fidgety/restless</li>
+              <li>Moving or speaking more slowly, or being fidgety/restless</li>
               <li>Thoughts that you would be better off dead or of hurting yourself</li>
             </ul>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -219,7 +219,7 @@ export default function Phq9VsGad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How are the PHQ-9 and GAD-7 different?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              Despite their structural similarities — both use a 0–3 frequency scale and are anchored to the past two weeks — the PHQ-9 and GAD-7 target fundamentally different constructs and symptom domains.
+              Despite their structural similarities, both use a 0–3 frequency scale and are anchored to the past two weeks, the PHQ-9 and GAD-7 target fundamentally different constructs and symptom domains.
             </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
@@ -275,7 +275,7 @@ export default function Phq9VsGad7Page() {
               </table>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              One structural difference worth noting: the PHQ-9 includes question 9, which directly asks about thoughts of self-harm or suicide. This item is flagged separately by clinicians regardless of total score. The GAD-7 does not include a suicidality item — a clinician administering only the GAD-7 would use a separate suicide risk assessment if indicated.
+              One structural difference worth noting: the PHQ-9 includes question 9, which directly asks about thoughts of self-harm or suicide. This item is flagged separately by clinicians regardless of total score. The GAD-7 does not include a suicidality item, a clinician administering only the GAD-7 would use a separate suicide risk assessment if indicated.
             </p>
           </section>
 
@@ -283,21 +283,21 @@ export default function Phq9VsGad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Can you take both the PHQ-9 and GAD-7 at the same time?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Yes — and this is exactly how they are most often used in clinical practice. Many primary care offices, behavioral health programs, and telehealth platforms include both tools on intake forms because depression and anxiety are highly comorbid. The combined PHQ-9 + GAD-7 administration takes under 5 minutes and provides a comprehensive baseline across both symptom domains.
+              Yes, and this is exactly how they are most often used in clinical practice. Many primary care offices, behavioral health programs, and telehealth platforms include both tools on intake forms because depression and anxiety are highly comorbid. The combined PHQ-9 + GAD-7 administration takes under 5 minutes and provides a comprehensive baseline across both symptom domains.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
               The{" "}
               <a href="https://www.phqscreeners.com/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">PHQ Screeners website</a>{" "}
-              (the official source maintained by Pfizer) offers both tools as a combined packet. The PHQ-4, a 4-item ultra-brief screener, draws its 4 items directly from the first 2 questions of each tool for the fastest possible triage — positive results on the PHQ-4 are followed up with the full PHQ-9 and/or GAD-7.
+              (the official source maintained by Pfizer) offers both tools as a combined packet. The PHQ-4, a 4-item ultra-brief screener, draws its 4 items directly from the first 2 questions of each tool for the fastest possible triage, positive results on the PHQ-4 are followed up with the full PHQ-9 and/or GAD-7.
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Taking both tools together is particularly valuable because overlapping symptoms — sleep disruption, difficulty concentrating, fatigue, and irritability — appear in both depression and anxiety. The full PHQ-9 and GAD-7 allow a trained clinician to differentiate the pattern and weight of symptoms more accurately than either tool alone.
+              Taking both tools together is particularly valuable because overlapping symptoms, sleep disruption, difficulty concentrating, fatigue, and irritability, appear in both depression and anxiety. The full PHQ-9 and GAD-7 allow a trained clinician to differentiate the pattern and weight of symptoms more accurately than either tool alone.
             </p>
           </section>
 
           {/* Which tool is right */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Which tool should I take — PHQ-9 or GAD-7?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Which tool should I take, PHQ-9 or GAD-7?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
               The short answer: if you are uncertain, take both. They take under 5 minutes combined. However, your symptom pattern can help guide the choice:
             </p>
@@ -356,7 +356,7 @@ export default function Phq9VsGad7Page() {
               </div>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Scores in the mild range (PHQ-9: 5–9; GAD-7: 5–9) may warrant watchful waiting and lifestyle interventions. Scores in the moderate range or above warrant clinical evaluation. All results should be interpreted alongside other clinical information — a high score alone does not constitute a diagnosis.
+              Scores in the mild range (PHQ-9: 5–9; GAD-7: 5–9) may warrant watchful waiting and lifestyle interventions. Scores in the moderate range or above warrant clinical evaluation. All results should be interpreted alongside other clinical information, a high score alone does not constitute a diagnosis.
             </p>
           </section>
 
@@ -364,7 +364,7 @@ export default function Phq9VsGad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When do clinicians use the PHQ-9 and GAD-7 together versus separately?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Clinicians typically use both tools together — at initial intake, during treatment monitoring, and at care transitions — because depression and anxiety are highly comorbid; either tool may be used alone when only one condition is the clinical focus.{" "}
+              Clinicians typically use both tools together, at initial intake, during treatment monitoring, and at care transitions, because depression and anxiety are highly comorbid; either tool may be used alone when only one condition is the clinical focus.{" "}
               Clinical guidelines from organizations including the{" "}
               <a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">National Institute of Mental Health (NIMH)</a>{" "}
               and the{" "}
@@ -372,7 +372,7 @@ export default function Phq9VsGad7Page() {
               support routine screening for both depression and anxiety in primary care. The USPSTF recommends screening for depression in adults and anxiety in adults 64 and younger.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              In practice, clinicians typically use both tools together during initial intake, periodic monitoring (e.g., every 4–8 weeks during treatment), and at treatment transitions. Using both allows clinicians to track whether interventions are improving depression, anxiety, or both — and to adjust treatment accordingly.
+              In practice, clinicians typically use both tools together during initial intake, periodic monitoring (e.g., every 4–8 weeks during treatment), and at treatment transitions. Using both allows clinicians to track whether interventions are improving depression, anxiety, or both, and to adjust treatment accordingly.
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               In settings where time is extremely limited, the PHQ-4 serves as a 2-minute triage tool. Any positive PHQ-4 result is then followed up with the full PHQ-9 and/or GAD-7 to establish a more precise symptom profile before clinical decision-making.
@@ -385,8 +385,8 @@ export default function Phq9VsGad7Page() {
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
               <li>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. <em>J Gen Intern Med.</em> 2001;16(9):606–613.</li>
               <li>Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for assessing generalized anxiety disorder. <em>Arch Intern Med.</em> 2006;166(10):1092–1097.</li>
-              <li><a href="https://www.phqscreeners.com/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">PHQscreeners.com</a> — Official PHQ and GAD instruments, scoring, and instructions.</li>
-              <li><a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">SAMHSA.gov</a> — National Helpline and behavioral health screening resources.</li>
+              <li><a href="https://www.phqscreeners.com/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">PHQscreeners.com</a>, Official PHQ and GAD instruments, scoring, and instructions.</li>
+              <li><a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">SAMHSA.gov</a>, National Helpline and behavioral health screening resources.</li>
               <li>U.S. Preventive Services Task Force. Screening for Anxiety in Adults (2023). <a href="https://www.uspreventiveservicestaskforce.org/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">uspreventiveservicestaskforce.org</a></li>
             </ul>
           </section>
@@ -431,7 +431,7 @@ export default function Phq9VsGad7Page() {
               </li>
               <li className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  DASS-21 — Depression, Anxiety &amp; Stress →
+                  DASS-21, Depression, Anxiety &amp; Stress →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                   Measures depression, anxiety, and stress simultaneously across 21 items.
@@ -472,9 +472,9 @@ export default function Phq9VsGad7Page() {
           >
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>

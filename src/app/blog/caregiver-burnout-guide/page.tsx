@@ -88,7 +88,7 @@ export default function CaregiverBurnoutGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            An estimated 53 million Americans serve as unpaid caregivers for a family member or loved one, according to AARP. They manage medications, coordinate medical appointments, provide hands-on physical care, handle finances, and offer emotional support &mdash; often while maintaining their own jobs and families. Caregiver burnout is not a sign of weakness or insufficient love. It is the predictable result of sustained, often round-the-clock demands with inadequate support. If you are a caregiver who feels depleted, this guide is for you.
+            An estimated 53 million Americans serve as unpaid caregivers for a family member or loved one, according to AARP. They manage medications, coordinate medical appointments, provide hands-on physical care, handle finances, and offer emotional support, often while maintaining their own jobs and families. Caregiver burnout is not a sign of weakness or insufficient love. It is the predictable result of sustained, often round-the-clock demands with inadequate support. If you are a caregiver who feels depleted, this guide is for you.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function CaregiverBurnoutGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,10 +117,10 @@ export default function CaregiverBurnoutGuidePage() {
             <ul>
               <li><strong>24/7 responsibility:</strong> Unlike a job, caregiving has no clock-out time. Many caregivers are on call around the clock, disrupting sleep, personal time, and the ability to fully disengage</li>
               <li><strong>Role confusion:</strong> When you become a caregiver for a parent, spouse, or sibling, the original relationship changes. You are simultaneously a family member and a care provider, which creates emotional complexity that professional caregivers do not face</li>
-              <li><strong>Anticipatory grief:</strong> Many caregivers are caring for someone with a progressive or terminal condition. They are grieving the person&apos;s decline while simultaneously providing care &mdash; a dual burden that is emotionally devastating</li>
+              <li><strong>Anticipatory grief:</strong> Many caregivers are caring for someone with a progressive or terminal condition. They are grieving the person&apos;s decline while simultaneously providing care, a dual burden that is emotionally devastating</li>
               <li><strong>Financial strain:</strong> Caregiving often requires reducing work hours or leaving employment entirely. The average caregiver spends approximately $7,200 per year out of pocket on caregiving-related expenses, according to AARP research</li>
               <li><strong>Social isolation:</strong> Caregiving responsibilities shrink social circles. Friends may stop calling, invitations decline, and the caregiver&apos;s world narrows to the care recipient&apos;s needs</li>
-              <li><strong>Lack of respite:</strong> Many caregivers have no backup &mdash; no one to step in so they can take a break, attend to their own health, or simply rest</li>
+              <li><strong>Lack of respite:</strong> Many caregivers have no backup, no one to step in so they can take a break, attend to their own health, or simply rest</li>
             </ul>
           </section>
 
@@ -140,7 +140,7 @@ export default function CaregiverBurnoutGuidePage() {
               <li>Increased cardiovascular risk from sustained elevated cortisol</li>
             </ul>
             <p>
-              The familiar advice to &quot;take care of yourself so you can take care of others&quot; is not a platitude in this context &mdash; it is a medical reality. Caregiver health directly affects the quality of care you can provide.
+              The familiar advice to &quot;take care of yourself so you can take care of others&quot; is not a platitude in this context, it is a medical reality. Caregiver health directly affects the quality of care you can provide.
             </p>
           </section>
 
@@ -151,11 +151,11 @@ export default function CaregiverBurnoutGuidePage() {
               <li>Persistent exhaustion that does not improve with rest</li>
               <li>Feeling resentful toward the person you are caring for</li>
               <li>Withdrawing from friends, family, and activities you once enjoyed</li>
-              <li>Neglecting your own health &mdash; skipping medications, missing appointments</li>
+              <li>Neglecting your own health, skipping medications, missing appointments</li>
               <li>Feeling hopeless or trapped with no end in sight</li>
               <li>Increased irritability, impatience, or emotional outbursts</li>
               <li>Using alcohol, food, or other substances to cope</li>
-              <li>Feeling that caregiving is all you are &mdash; loss of personal identity</li>
+              <li>Feeling that caregiving is all you are, loss of personal identity</li>
               <li>Difficulty concentrating or making decisions</li>
             </ul>
             <p>
@@ -166,7 +166,7 @@ export default function CaregiverBurnoutGuidePage() {
           <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
-            <h2>Getting actual support &mdash; not just coping better</h2>
+            <h2>Getting actual support, not just coping better</h2>
             <p>
               Caregiver burnout is not primarily a coping skills problem. It is a resource problem. While individual coping strategies matter, the most effective interventions provide actual, practical support:
             </p>
@@ -174,7 +174,7 @@ export default function CaregiverBurnoutGuidePage() {
               <li><strong>Respite care:</strong> The ARCH National Respite Network (archrespite.org) maintains a state-by-state locator for respite services. Respite can be in-home, at adult day centers, or short-term residential. Some programs are free or sliding scale</li>
               <li><strong>Area Agencies on Aging:</strong> Your local Area Agency on Aging (eldercare.acl.gov, or call 1-800-677-1116) can connect you with caregiver support services, meal delivery, transportation, and respite programs in your community</li>
               <li><strong>Support groups:</strong> Organizations like the Caregiver Action Network and the Family Caregiver Alliance offer both in-person and online support groups specifically for family caregivers</li>
-              <li><strong>Family meetings:</strong> If other family members are not sharing the caregiving load, a structured family meeting &mdash; sometimes facilitated by a social worker or mediator &mdash; can help redistribute responsibilities</li>
+              <li><strong>Family meetings:</strong> If other family members are not sharing the caregiving load, a structured family meeting, sometimes facilitated by a social worker or mediator, can help redistribute responsibilities</li>
               <li><strong>FMLA and workplace accommodations:</strong> The Family and Medical Leave Act may provide job-protected leave for caregiving. Talk to your HR department about flexible scheduling options</li>
               <li><strong>Therapy:</strong> A therapist experienced with caregiver issues can help you process grief, set boundaries, manage guilt, and make difficult decisions about the level of care you can sustainably provide</li>
             </ul>
@@ -230,7 +230,7 @@ export default function CaregiverBurnoutGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -327,22 +327,22 @@ export default function PtsdTestVeteransPage() {
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Headaches</td>
-                    <td className="text-center py-2 px-4">&#x2014;</td>
+                    <td className="text-center py-2 px-4">, </td>
                     <td className="text-center py-2 pl-4">&#x2713;</td>
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Emotional numbing</td>
                     <td className="text-center py-2 px-4">&#x2713;</td>
-                    <td className="text-center py-2 pl-4">&#x2014;</td>
+                    <td className="text-center py-2 pl-4">, </td>
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Flashbacks</td>
                     <td className="text-center py-2 px-4">&#x2713;</td>
-                    <td className="text-center py-2 pl-4">&#x2014;</td>
+                    <td className="text-center py-2 pl-4">, </td>
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">Light/noise sensitivity</td>
-                    <td className="text-center py-2 px-4">&#x2014;</td>
+                    <td className="text-center py-2 px-4">, </td>
                     <td className="text-center py-2 pl-4">&#x2713;</td>
                   </tr>
                 </tbody>

@@ -22,10 +22,10 @@ interface Cluster {
 }
 
 const CLUSTERS: Cluster[] = [
-  { key: "B", label: "Cluster B \u2014 Intrusion", sublabel: "Re-experiencing the event", items: [0, 1, 2, 3, 4] },
-  { key: "C", label: "Cluster C \u2014 Avoidance", sublabel: "Avoiding reminders", items: [5, 6] },
-  { key: "D", label: "Cluster D \u2014 Cognition & Mood", sublabel: "Negative thoughts and feelings", items: [7, 8, 9, 10, 11, 12, 13] },
-  { key: "E", label: "Cluster E \u2014 Arousal & Reactivity", sublabel: "Feeling on edge", items: [14, 15, 16, 17, 18, 19] },
+  { key: "B", label: "Cluster B, Intrusion", sublabel: "Re-experiencing the event", items: [0, 1, 2, 3, 4] },
+  { key: "C", label: "Cluster C, Avoidance", sublabel: "Avoiding reminders", items: [5, 6] },
+  { key: "D", label: "Cluster D, Cognition & Mood", sublabel: "Negative thoughts and feelings", items: [7, 8, 9, 10, 11, 12, 13] },
+  { key: "E", label: "Cluster E, Arousal & Reactivity", sublabel: "Feeling on edge", items: [14, 15, 16, 17, 18, 19] },
 ];
 
 const QUESTIONS = [
@@ -158,7 +158,7 @@ export function PCL5Client({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "PCL-5 PTSD Self-Check \u2014 Free & Private",
+        title: "PCL-5 PTSD Self-Check, Free & Private",
         text: "Take a free, private PCL-5 PTSD screening self-check. Your answers never leave your browser.",
         url,
       };
@@ -171,7 +171,7 @@ export function PCL5Client({ faqData }: Props) {
       return;
     }
 
-    const summary = `PCL-5 Self-Check Results\nScore: ${totalScore}/80 \u2014 ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `PCL-5 Self-Check Results\nScore: ${totalScore}/80, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My PCL-5 Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -335,14 +335,14 @@ export function PCL5Client({ faqData }: Props) {
                     Your score suggests probable PTSD
                   </h3>
                   <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
-                    Your total score of {totalScore} meets or exceeds the clinically significant cutoff of 33. This does not confirm PTSD, but it strongly suggests that a professional evaluation would be beneficial. You do not have to manage these symptoms alone — effective, evidence-based support is available.
+                    Your total score of {totalScore} meets or exceeds the clinically significant cutoff of 33. This does not confirm PTSD, but it strongly suggests that a professional evaluation would be beneficial. You do not have to manage these symptoms alone, effective, evidence-based support is available.
                   </p>
                   <div className="bg-crisis-100/50 dark:bg-crisis-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-crisis-700 dark:text-crisis-400 mb-1">Resources:</p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>Veterans:</strong> Veterans Crisis Line — Call <strong>1-800-273-8255 (Press 1)</strong> or text <strong>838255</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>Veterans:</strong> Veterans Crisis Line, Call <strong>1-800-273-8255 (Press 1)</strong> or text <strong>838255</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>International:</strong> Visit <strong>findahelpline.com</strong> for your country</p>
                   </div>
                 </div>
@@ -357,15 +357,15 @@ export function PCL5Client({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your PCL-5 Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 80 — {range.level}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 80, {range.level}</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 80) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Minimal</span>
+                    <span>0, Minimal</span>
                     <span className="text-center">33 cutoff</span>
-                    <span>80 — Severe</span>
+                    <span>80, Severe</span>
                   </div>
                   {/* Cutoff marker */}
                   <div className="relative h-0">
@@ -382,7 +382,7 @@ export function PCL5Client({ faqData }: Props) {
                 </div>
                 <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4">
                   <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
-                    <strong>Important reminder:</strong> This score reflects your self-reported symptoms, not a clinical assessment. The PCL-5 is a screening tool — only a qualified mental health professional can properly evaluate PTSD through a comprehensive clinical interview. This tool is for personal reflection and education only.
+                    <strong>Important reminder:</strong> This score reflects your self-reported symptoms, not a clinical assessment. The PCL-5 is a screening tool, only a qualified mental health professional can properly evaluate PTSD through a comprehensive clinical interview. This tool is for personal reflection and education only.
                   </p>
                   <ResultDisclaimer />
                 </div>
@@ -447,7 +447,7 @@ export function PCL5Client({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>PCL-5 Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>PCL-5 Self-Check from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -572,9 +572,9 @@ export function PCL5Client({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "Veterans Crisis Line (US)", detail: "1-800-273-8255 (Press 1) or text 838255 \u2014 24/7", color: "text-blue-600 dark:text-blue-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "Veterans Crisis Line (US)", detail: "1-800-273-8255 (Press 1) or text 838255, 24/7", color: "text-blue-600 dark:text-blue-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -617,7 +617,7 @@ export function PCL5Client({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">The Importance of Professional Evaluation</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  The PCL-5 is a screening tool, not a clinical assessment. A score of 33 or above suggests probable PTSD, but only a qualified mental health professional can make a proper evaluation through a comprehensive clinical interview that considers your full history, the nature of the traumatic event, and the duration and severity of your symptoms. Many conditions can produce overlapping symptoms — depression, anxiety, grief, and adjustment disorders may present similarly. Professional evaluation ensures you receive the most appropriate support.
+                  The PCL-5 is a screening tool, not a clinical assessment. A score of 33 or above suggests probable PTSD, but only a qualified mental health professional can make a proper evaluation through a comprehensive clinical interview that considers your full history, the nature of the traumatic event, and the duration and severity of your symptoms. Many conditions can produce overlapping symptoms, depression, anxiety, grief, and adjustment disorders may present similarly. Professional evaluation ensures you receive the most appropriate support.
                 </p>
               </div>
               <div>

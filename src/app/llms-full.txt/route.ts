@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const content = `# MindCheck Tools — Complete Reference
+  const content = `# MindCheck Tools, Complete Reference
 
 > Free, private mental health and substance use self-checks.
 > All scoring happens in your browser. No accounts, no data collection.

@@ -33,15 +33,15 @@ const FAQ_DATA = [
   },
   {
     question: "When should I use the 5-4-3-2-1 technique?",
-    answer: "Use it whenever you feel overwhelmed, anxious, panicky, or disconnected from reality. Common situations include during or before a panic attack, after a triggering memory or flashback, when you feel dissociated or 'spaced out,' during intense cravings in recovery, before a stressful event like a presentation or exam, or any time racing thoughts feel unmanageable. You can also use it as a daily mindfulness practice — it does not have to be reserved for crisis moments.",
+    answer: "Use it whenever you feel overwhelmed, anxious, panicky, or disconnected from reality. Common situations include during or before a panic attack, after a triggering memory or flashback, when you feel dissociated or 'spaced out,' during intense cravings in recovery, before a stressful event like a presentation or exam, or any time racing thoughts feel unmanageable. You can also use it as a daily mindfulness practice, it does not have to be reserved for crisis moments.",
   },
   {
     question: "Does the 5-4-3-2-1 grounding technique actually work?",
-    answer: "Yes, grounding techniques are well-supported by clinical evidence. They are a core component of dialectical behavior therapy (DBT) distress tolerance skills and are widely used in trauma therapy, anxiety treatment, and addiction recovery. The technique works by activating the prefrontal cortex (rational thinking) and reducing amygdala activation (fear response). Research on mindfulness-based interventions consistently shows that redirecting attention to sensory experience reduces physiological stress markers including heart rate and cortisol levels. However, grounding is a coping tool — not a treatment for anxiety disorders. If you experience frequent, severe anxiety, please consult a mental health professional.",
+    answer: "Yes, grounding techniques are well-supported by clinical evidence. They are a core component of dialectical behavior therapy (DBT) distress tolerance skills and are widely used in trauma therapy, anxiety treatment, and addiction recovery. The technique works by activating the prefrontal cortex (rational thinking) and reducing amygdala activation (fear response). Research on mindfulness-based interventions consistently shows that redirecting attention to sensory experience reduces physiological stress markers including heart rate and cortisol levels. However, grounding is a coping tool, not a treatment for anxiety disorders. If you experience frequent, severe anxiety, please consult a mental health professional.",
   },
   {
     question: "What if I cannot smell or taste anything?",
-    answer: "That is completely normal, especially for smell and taste. For smell, try noticing the air itself — does the room smell like anything at all? Is there a faint scent from your clothes, your skin, or a nearby object? For taste, you can notice the taste already in your mouth — perhaps toothpaste, coffee, or just the neutral taste of saliva. If you truly cannot identify anything, it is okay to name something you remember tasting or smelling recently. The goal is engagement, not perfection.",
+    answer: "That is completely normal, especially for smell and taste. For smell, try noticing the air itself, does the room smell like anything at all? Is there a faint scent from your clothes, your skin, or a nearby object? For taste, you can notice the taste already in your mouth, perhaps toothpaste, coffee, or just the neutral taste of saliva. If you truly cannot identify anything, it is okay to name something you remember tasting or smelling recently. The goal is engagement, not perfection.",
   },
   {
     question: "Can children use the 5-4-3-2-1 technique?",
@@ -49,7 +49,7 @@ const FAQ_DATA = [
   },
   {
     question: "How is this different from box breathing or meditation?",
-    answer: "Box breathing focuses specifically on controlling your breath in a timed pattern (breathe in, hold, breathe out, hold). Meditation typically involves observing thoughts without judgment or focusing on a single point of attention. The 5-4-3-2-1 grounding technique is different because it actively engages all five senses and asks you to interact with your physical environment. This makes it particularly effective for dissociation and panic, where you need to feel reconnected to reality — not just calm. Many people find it helpful to use grounding techniques and breathing exercises together. For example, you might start with box breathing to slow your heart rate, then move to 5-4-3-2-1 grounding to reconnect with the present.",
+    answer: "Box breathing focuses specifically on controlling your breath in a timed pattern (breathe in, hold, breathe out, hold). Meditation typically involves observing thoughts without judgment or focusing on a single point of attention. The 5-4-3-2-1 grounding technique is different because it actively engages all five senses and asks you to interact with your physical environment. This makes it particularly effective for dissociation and panic, where you need to feel reconnected to reality, not just calm. Many people find it helpful to use grounding techniques and breathing exercises together. For example, you might start with box breathing to slow your heart rate, then move to 5-4-3-2-1 grounding to reconnect with the present.",
   },
 ];
 

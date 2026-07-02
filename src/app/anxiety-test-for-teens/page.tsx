@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/anxiety-test-for-teens`;
 
 export const metadata: Metadata = createMetadata({
   path: "/anxiety-test-for-teens",
-  title: "Anxiety Test for Teens — Free GAD-7 Screening",
+  title: "Anxiety Test for Teens, Free GAD-7 Screening",
   description: "Free teen anxiety screening using the validated GAD-7. Private, instant results. No signup.",
   keywords: [
     "anxiety test for teens", "teen anxiety screening", "teenage anxiety quiz",
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "teen mental health screening", "anxiety self-assessment teens",
   ],
   openGraph: {
-    title: "Anxiety Test for Teens — Free GAD-7 Screening",
+    title: "Anxiety Test for Teens, Free GAD-7 Screening",
     description: "Free, private anxiety screening for teens using the validated GAD-7. Instant results, no signup required.",
     url: TOOL_URL,
     type: "website",
@@ -27,11 +27,11 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is anxiety normal for teenagers?",
-    answer: "Some anxiety is a normal part of adolescence — worrying before a test, feeling nervous at a party, or stressing about the future are common experiences. However, when anxiety becomes constant, overwhelming, or starts interfering with school, friendships, sleep, or daily activities, it may be more than normal stress. About 1 in 3 teenagers will meet criteria for an anxiety disorder by age 18. The difference between normal worry and an anxiety disorder is intensity, duration, and impact on functioning.",
+    answer: "Some anxiety is a normal part of adolescence, worrying before a test, feeling nervous at a party, or stressing about the future are common experiences. However, when anxiety becomes constant, overwhelming, or starts interfering with school, friendships, sleep, or daily activities, it may be more than normal stress. About 1 in 3 teenagers will meet criteria for an anxiety disorder by age 18. The difference between normal worry and an anxiety disorder is intensity, duration, and impact on functioning.",
   },
   {
     question: "How is teen anxiety different from adult anxiety?",
-    answer: "Teen anxiety often shows up differently than in adults. Teens may experience more physical symptoms (stomachaches, headaches, muscle tension), school avoidance or refusal, intense social fears, perfectionism, reassurance-seeking, irritability, or difficulty sleeping. Social media and constant digital connectivity add unique stressors that previous generations did not face. Teens may also have difficulty naming what they feel as 'anxiety' — they may just say they feel 'stressed' or 'overwhelmed.'",
+    answer: "Teen anxiety often shows up differently than in adults. Teens may experience more physical symptoms (stomachaches, headaches, muscle tension), school avoidance or refusal, intense social fears, perfectionism, reassurance-seeking, irritability, or difficulty sleeping. Social media and constant digital connectivity add unique stressors that previous generations did not face. Teens may also have difficulty naming what they feel as 'anxiety', they may just say they feel 'stressed' or 'overwhelmed.'",
   },
   {
     question: "What causes anxiety in teenagers?",
@@ -47,7 +47,7 @@ const FAQ_DATA = [
   },
   {
     question: "What if my score is high?",
-    answer: "A high score suggests you may be experiencing significant anxiety symptoms. This is not a diagnosis, but it is a signal worth taking seriously. Next steps: talk to a trusted adult, contact your school counselor, or ask a parent to help you schedule an appointment with a therapist or your doctor. If you are in crisis, text HOME to 741741 (Crisis Text Line) or call/text 988. Remember: anxiety is one of the most treatable mental health conditions — most teens improve significantly with the right support.",
+    answer: "A high score suggests you may be experiencing significant anxiety symptoms. This is not a diagnosis, but it is a signal worth taking seriously. Next steps: talk to a trusted adult, contact your school counselor, or ask a parent to help you schedule an appointment with a therapist or your doctor. If you are in crisis, text HOME to 741741 (Crisis Text Line) or call/text 988. Remember: anxiety is one of the most treatable mental health conditions, most teens improve significantly with the right support.",
   },
   {
     question: "Where can teens get help for anxiety?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is this screening confidential?",
-    answer: "Yes, completely. This screening runs entirely in your browser — no data is stored on any server, no one can see your answers, and nothing is transmitted to your school, parents, or anyone else. Your results are only visible to you on your screen. If you clear your browser or close the page, the results are gone.",
+    answer: "Yes, completely. This screening runs entirely in your browser, no data is stored on any server, no one can see your answers, and nothing is transmitted to your school, parents, or anyone else. Your results are only visible to you on your screen. If you clear your browser or close the page, the results are gone.",
   },
 ];
 
@@ -63,13 +63,13 @@ export default function AnxietyTestForTeensPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      ...toolPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-06" }),
+      ...toolPageJsonLd({ name: "Anxiety Test for Teens, GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-06" }),
       reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "GAD-7 Anxiety Test", url: `${SITE_URL}/gad-7-anxiety-test` }, { name: "Anxiety Test for Teens", url: TOOL_URL }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      ...medicalWebPageJsonLd({ name: "Anxiety Test for Teens — GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, lastReviewed: "2026-05-06" }),
+      ...medicalWebPageJsonLd({ name: "Anxiety Test for Teens, GAD-7 Screening", description: "A free, private anxiety screening tool for teenagers using the clinically validated GAD-7.", url: TOOL_URL, lastReviewed: "2026-05-06" }),
       reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
     }) }} />
 
@@ -83,24 +83,24 @@ export default function AnxietyTestForTeensPage() {
 
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            If your brain feels like it never shuts off — always worrying about school, friendships,
-            the future, what people think, what you said wrong, what might go wrong — you&apos;re not
+            If your brain feels like it never shuts off, always worrying about school, friendships,
+            the future, what people think, what you said wrong, what might go wrong, you&apos;re not
             overreacting. Anxiety is the most common mental health challenge for teens, affecting
-            roughly 1 in 3 adolescents. And it&apos;s not just &quot;stress&quot; — it can feel like
+            roughly 1 in 3 adolescents. And it&apos;s not just &quot;stress&quot;, it can feel like
             your chest is tight, your stomach is in knots, and your mind is racing even when nothing
             specific is wrong.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free screening uses the <strong>GAD-7</strong>, the same tool therapists and doctors
             use, to help you understand what you&apos;re experiencing. It is <strong>not a
-            diagnosis</strong>, but it can give you words for what you&apos;re feeling — and that
+            diagnosis</strong>, but it can give you words for what you&apos;re feeling, and that
             matters.
           </p>
         </div>
 
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-sky-600 text-white font-semibold text-base hover:bg-sky-700 transition-colors shadow-sm">Start the Anxiety Screening</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 2 minutes. Completely private — nothing is stored or shared.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 2 minutes. Completely private, nothing is stored or shared.</p>
         </div>
 
         <div className="mb-10">
@@ -108,15 +108,15 @@ export default function AnxietyTestForTeensPage() {
           <div className="grid gap-4">
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">1 in 3 teens</p>
-              <p className="text-sm text-slate-700 dark:text-slate-300">will experience an anxiety disorder by age 18. It is the most common mental health condition in adolescents. — <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH Anxiety Disorders</a></p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">will experience an anxiety disorder by age 18. It is the most common mental health condition in adolescents., <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">NIMH Anxiety Disorders</a></p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">80% untreated</p>
-              <p className="text-sm text-slate-700 dark:text-slate-300">The majority of teens with anxiety disorders never receive treatment, despite anxiety being one of the most treatable conditions.<span className="text-slate-500 dark:text-slate-400"> — Anxiety &amp; Depression Association of America</span></p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">The majority of teens with anxiety disorders never receive treatment, despite anxiety being one of the most treatable conditions.<span className="text-slate-500 dark:text-slate-400">, Anxiety &amp; Depression Association of America</span></p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">Highly treatable</p>
-              <p className="text-sm text-slate-700 dark:text-slate-300">CBT (cognitive behavioral therapy) is effective for 60-80% of teens with anxiety. Most teens improve significantly within 8-16 sessions.<span className="text-slate-500 dark:text-slate-400"> — APA</span></p>
+              <p className="text-sm text-slate-700 dark:text-slate-300">CBT (cognitive behavioral therapy) is effective for 60-80% of teens with anxiety. Most teens improve significantly within 8-16 sessions.<span className="text-slate-500 dark:text-slate-400">, APA</span></p>
             </div>
           </div>
         </div>
@@ -124,9 +124,9 @@ export default function AnxietyTestForTeensPage() {
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Understanding Anxiety in Teens</h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
-            <p>Teenage anxiety is not the same as being a &quot;worrier.&quot; It is a real, physiological response — your nervous system firing threat signals even when there is no immediate danger. For many teens, this shows up as constant worry, physical symptoms like headaches and stomachaches, difficulty sleeping, irritability, trouble concentrating, avoidance of social situations, or panic attacks.</p>
+            <p>Teenage anxiety is not the same as being a &quot;worrier.&quot; It is a real, physiological response, your nervous system firing threat signals even when there is no immediate danger. For many teens, this shows up as constant worry, physical symptoms like headaches and stomachaches, difficulty sleeping, irritability, trouble concentrating, avoidance of social situations, or panic attacks.</p>
             <p>Social media adds a dimension of anxiety that no previous generation has faced. The constant comparison, fear of missing out, cyberbullying, and pressure to present a perfect life online can significantly amplify anxiety symptoms. Research shows a correlation between heavy social media use and increased anxiety in adolescents.</p>
-            <p>Academic pressure is another major driver. The emphasis on grades, test scores, college admissions, and extracurricular activities creates an environment where many teens feel they can never do enough. Perfectionism — the belief that anything less than perfect is failure — is closely linked to anxiety and is increasingly common among high-achieving teens.</p>
+            <p>Academic pressure is another major driver. The emphasis on grades, test scores, college admissions, and extracurricular activities creates an environment where many teens feel they can never do enough. Perfectionism, the belief that anything less than perfect is failure, is closely linked to anxiety and is increasingly common among high-achieving teens.</p>
             <p>The good news: anxiety is one of the most treatable mental health conditions. CBT, in particular, has strong evidence for helping teens identify anxious thoughts, challenge them, and gradually face feared situations. Many teens see significant improvement. The first step is recognizing that what you are feeling has a name and that help is available.</p>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function AnxietyTestForTeensPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Your brain is still developing its prefrontal cortex — the part responsible for
+              Your brain is still developing its prefrontal cortex, the part responsible for
               evaluating information rationally and regulating emotions. At the same time, the
               dopamine-seeking reward system is fully active. Social media algorithms are
               designed to exploit exactly this combination: they feed you content that triggers
@@ -147,13 +147,12 @@ export default function AnxietyTestForTeensPage() {
               an adult&apos;s.
             </p>
             <p>
-              The &quot;highlight reel&quot; effect — seeing everyone else&apos;s best moments
-              while experiencing your own unfiltered reality — creates a distorted sense of what
+              The &quot;highlight reel&quot; effect, seeing everyone else&apos;s best moments
+              while experiencing your own unfiltered reality, creates a distorted sense of what
               is normal. Research shows that teens who spend more than 3 hours daily on social
               media have double the risk of anxiety and depression symptoms. Notification anxiety
               (the stress of constant alerts), sleep disruption from late-night scrolling, and
-              cyberbullying compound the effect. Reducing screen time — even by 30 minutes a day
-              — has measurable benefits.
+              cyberbullying compound the effect. Reducing screen time, even by 30 minutes a day, has measurable benefits.
             </p>
           </div>
         </div>
@@ -196,7 +195,7 @@ export default function AnxietyTestForTeensPage() {
                   </tr>
                   <tr>
                     <td className="py-3 pr-4">&quot;Attitude problem&quot; or anger</td>
-                    <td className="py-3">Fight response to overwhelming anxiety — irritability is anxiety&apos;s bodyguard</td>
+                    <td className="py-3">Fight response to overwhelming anxiety, irritability is anxiety&apos;s bodyguard</td>
                   </tr>
                 </tbody>
               </table>
@@ -211,7 +210,7 @@ export default function AnxietyTestForTeensPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Telling someone you&apos;re struggling is hard — especially when &quot;I&apos;m
+              Telling someone you&apos;re struggling is hard, especially when &quot;I&apos;m
               fine&quot; has been your default for months. You don&apos;t need to have it all
               figured out before you say something. Here are some ways to start:
             </p>
@@ -219,7 +218,7 @@ export default function AnxietyTestForTeensPage() {
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-1">To a parent</h3>
                 <p className="text-sm">
-                  &quot;I&apos;ve been feeling really anxious lately — not just normal stressed,
+                  &quot;I&apos;ve been feeling really anxious lately, not just normal stressed,
                   but like it&apos;s hard to function. I think I might need to talk to someone
                   about it.&quot;
                 </p>
@@ -235,8 +234,7 @@ export default function AnxietyTestForTeensPage() {
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-1">If talking feels impossible</h3>
                 <p className="text-sm">
                   Write it down. Show them this page. Text HOME to 741741 (Crisis Text Line) and
-                  talk to a trained counselor first. You don&apos;t have to get the words perfect
-                  — you just have to get them out.
+                  talk to a trained counselor first. You don&apos;t have to get the words perfect, you just have to get them out.
                 </p>
               </div>
             </div>
@@ -265,8 +263,7 @@ export default function AnxietyTestForTeensPage() {
               The GAD-7 has been validated for use in adolescents aged 13 and older and is used in
               pediatric primary care settings for brief anxiety screening. One important nuance for teens:
               GAD-7 scores can fluctuate more than adult scores because adolescent anxiety is shaped by
-              developmental factors — hormonal shifts, changing social dynamics, academic transitions —
-              that vary week to week. A single elevated score is a prompt for a conversation, not a
+              developmental factors, hormonal shifts, changing social dynamics, academic transitions, that vary week to week. A single elevated score is a prompt for a conversation, not a
               conclusion. The{" "}
               <a href="https://www.phqscreeners.com" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
                 official GAD-7 instrument guidelines
@@ -293,7 +290,7 @@ export default function AnxietyTestForTeensPage() {
             <p>
               This screening is designed to serve both audiences: teens taking it independently and
               parents using it to better understand what their child may be experiencing. If you are a
-              parent, the score is a starting point for a compassionate conversation — not a label or
+              parent, the score is a starting point for a compassionate conversation, not a label or
               a verdict. If you are a teen: a high score is information, and information gives you
               options. Most teens who receive appropriate treatment for anxiety improve significantly.
             </p>
@@ -313,7 +310,7 @@ export default function AnxietyTestForTeensPage() {
         <AnswerBlock
           what="A GAD-7-based anxiety screening adapted for teenagers with age-appropriate language and context."
           who="Teens or parents of teens who want to check whether anxiety symptoms are clinically significant."
-          bottomLine="Some anxiety is normal in adolescence — this screening helps distinguish typical stress from clinical levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Some anxiety is normal in adolescence, this screening helps distinguish typical stress from clinical levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -377,13 +374,13 @@ export default function AnxietyTestForTeensPage() {
         <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Crisis Resources</h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential</li>
+            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential</li>
             <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong></li>
-            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7</li>
+            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7</li>
           </ul>
         </div>
 
-        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified healthcare professional can assess anxiety disorders. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
+        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified healthcare professional can assess anxiety disorders. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, CDC, and WHO. For anxiety evaluation, consult a licensed mental health professional.</p>

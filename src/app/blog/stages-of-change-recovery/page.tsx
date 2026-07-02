@@ -67,7 +67,7 @@ export default function StagesOfChangeRecoveryPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Recovery is not a single decision — it is a process that unfolds over time. The stages of change model helps you understand where you are, what helps at each point, and why setbacks are a normal part of the journey.
+            Recovery is not a single decision, it is a process that unfolds over time. The stages of change model helps you understand where you are, what helps at each point, and why setbacks are a normal part of the journey.
           </p>
           <div className="mt-6">
             <Link href="/readiness-to-change" className="btn-primary text-sm">Take the Readiness to Change Self-Check &rarr;</Link>
@@ -79,9 +79,9 @@ export default function StagesOfChangeRecoveryPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,13 +96,13 @@ export default function StagesOfChangeRecoveryPage() {
           <section>
             <h2>Prochaska &amp; DiClemente&apos;s Transtheoretical Model</h2>
             <p>
-              In the early 1980s, psychologists James Prochaska and Carlo DiClemente studied how people successfully change addictive behaviors. They noticed that change did not happen all at once. Instead, people moved through a predictable series of stages — sometimes forward, sometimes backward, but always in a recognizable pattern.
+              In the early 1980s, psychologists James Prochaska and Carlo DiClemente studied how people successfully change addictive behaviors. They noticed that change did not happen all at once. Instead, people moved through a predictable series of stages, sometimes forward, sometimes backward, but always in a recognizable pattern.
             </p>
             <p>
-              Their research became the Transtheoretical Model of Change, commonly known as the stages of change model. It has since become one of the most widely used frameworks in addiction counseling, public health, and behavioral medicine. The model applies not only to substance use but to any significant behavior change — from quitting smoking to starting an exercise routine.
+              Their research became the Transtheoretical Model of Change, commonly known as the stages of change model. It has since become one of the most widely used frameworks in addiction counseling, public health, and behavioral medicine. The model applies not only to substance use but to any significant behavior change, from quitting smoking to starting an exercise routine.
             </p>
             <p>
-              What makes this model powerful is that it meets people where they are. Rather than assuming everyone is ready to take action, it recognizes that readiness itself develops over time — and that different kinds of support are helpful at different points in the process.
+              What makes this model powerful is that it meets people where they are. Rather than assuming everyone is ready to take action, it recognizes that readiness itself develops over time, and that different kinds of support are helpful at different points in the process.
             </p>
           </section>
 
@@ -114,15 +114,15 @@ export default function StagesOfChangeRecoveryPage() {
 
             <h3>1. Precontemplation: &quot;I don&apos;t have a problem&quot;</h3>
             <p>
-              In precontemplation, a person does not believe their substance use is a problem — or may not have considered it at all. They are not thinking about change because, from their perspective, there is nothing to change. Friends, family, or colleagues may see the issue clearly, but the person themselves does not.
+              In precontemplation, a person does not believe their substance use is a problem, or may not have considered it at all. They are not thinking about change because, from their perspective, there is nothing to change. Friends, family, or colleagues may see the issue clearly, but the person themselves does not.
             </p>
             <p>
-              This stage often feels like denial from the outside. On the inside, it may feel like confusion about why others are concerned, frustration with people who &quot;won&apos;t leave it alone,&quot; or genuine unawareness that use has escalated. A person in precontemplation might say, &quot;I only drink on weekends&quot; or &quot;Everyone I know uses — it&apos;s not a big deal.&quot;
+              This stage often feels like denial from the outside. On the inside, it may feel like confusion about why others are concerned, frustration with people who &quot;won&apos;t leave it alone,&quot; or genuine unawareness that use has escalated. A person in precontemplation might say, &quot;I only drink on weekends&quot; or &quot;Everyone I know uses, it&apos;s not a big deal.&quot;
             </p>
 
             <h3>2. Contemplation: &quot;Maybe I should change&quot;</h3>
             <p>
-              Contemplation begins when a person starts to recognize that their substance use may be causing problems. They are not ready to act, but they are thinking about it. This stage is characterized by ambivalence — weighing the benefits of change against the comfort of the status quo.
+              Contemplation begins when a person starts to recognize that their substance use may be causing problems. They are not ready to act, but they are thinking about it. This stage is characterized by ambivalence, weighing the benefits of change against the comfort of the status quo.
             </p>
             <p>
               Someone in contemplation might think, &quot;I know my drinking is affecting my relationship, but I&apos;m not sure I can stop&quot; or &quot;I&apos;ve been spending too much on substances, but they help me cope with stress.&quot; This internal back-and-forth can last weeks, months, or even years.
@@ -142,10 +142,10 @@ export default function StagesOfChangeRecoveryPage() {
           <section>
             <h3>4. Action: &quot;I&apos;m doing it&quot;</h3>
             <p>
-              The action stage is when a person is actively modifying their behavior. They have stopped or significantly reduced their substance use and are implementing new strategies — attending counseling, using coping skills, avoiding triggers, and building a recovery-supportive lifestyle.
+              The action stage is when a person is actively modifying their behavior. They have stopped or significantly reduced their substance use and are implementing new strategies, attending counseling, using coping skills, avoiding triggers, and building a recovery-supportive lifestyle.
             </p>
             <p>
-              Action is the most visible stage, but it is not the beginning of change — it is built on the foundation laid in the earlier stages. This phase is often intense. It requires significant effort, energy, and support. New routines are fragile, and the risk of returning to old patterns is high. The action stage is generally considered to last from the point of initial change up to about six months.
+              Action is the most visible stage, but it is not the beginning of change, it is built on the foundation laid in the earlier stages. This phase is often intense. It requires significant effort, energy, and support. New routines are fragile, and the risk of returning to old patterns is high. The action stage is generally considered to last from the point of initial change up to about six months.
             </p>
 
             <h3>5. Maintenance: &quot;I&apos;m keeping it going&quot;</h3>
@@ -163,10 +163,10 @@ export default function StagesOfChangeRecoveryPage() {
               One of the most important contributions of the stages of change model is its treatment of relapse. Rather than viewing a return to substance use as a failure, the model recognizes relapse as a common and often expected part of the change process. Research consistently shows that most people cycle through the stages multiple times before achieving lasting change.
             </p>
             <p>
-              When relapse occurs, a person typically returns to an earlier stage — often contemplation or preparation — rather than starting from zero. The skills, insights, and self-knowledge gained in previous attempts are not lost. Each cycle through the stages builds a stronger foundation for the next attempt.
+              When relapse occurs, a person typically returns to an earlier stage, often contemplation or preparation, rather than starting from zero. The skills, insights, and self-knowledge gained in previous attempts are not lost. Each cycle through the stages builds a stronger foundation for the next attempt.
             </p>
             <p>
-              This perspective is clinically important because shame and self-blame after relapse are among the biggest barriers to re-engaging with recovery. Understanding that setbacks are part of the process — not evidence of personal weakness — can make the difference between giving up and trying again.
+              This perspective is clinically important because shame and self-blame after relapse are among the biggest barriers to re-engaging with recovery. Understanding that setbacks are part of the process, not evidence of personal weakness, can make the difference between giving up and trying again.
             </p>
           </section>
 
@@ -194,17 +194,17 @@ export default function StagesOfChangeRecoveryPage() {
               ))}
             </div>
             <p>
-              Motivational interviewing is particularly effective in the early stages because it does not pressure people to change before they are ready. Instead, it helps them discover their own motivation — which is far more sustainable than externally imposed demands.
+              Motivational interviewing is particularly effective in the early stages because it does not pressure people to change before they are ready. Instead, it helps them discover their own motivation, which is far more sustainable than externally imposed demands.
             </p>
           </section>
 
           <section>
             <h2>Why Understanding Your Stage Matters</h2>
             <p>
-              Knowing where you are in the stages of change can reduce frustration and guide your next step. If you are in contemplation, you do not need to have all the answers — you just need to keep exploring. If you are in preparation, the most helpful thing may be making a concrete plan rather than gathering more information.
+              Knowing where you are in the stages of change can reduce frustration and guide your next step. If you are in contemplation, you do not need to have all the answers, you just need to keep exploring. If you are in preparation, the most helpful thing may be making a concrete plan rather than gathering more information.
             </p>
             <p>
-              Understanding your stage also helps the people around you provide better support. A family member who recognizes that their loved one is in precontemplation can focus on maintaining the relationship rather than pushing for immediate action — which often pushes the person further away.
+              Understanding your stage also helps the people around you provide better support. A family member who recognizes that their loved one is in precontemplation can focus on maintaining the relationship rather than pushing for immediate action, which often pushes the person further away.
             </p>
           </section>
 
@@ -214,7 +214,7 @@ export default function StagesOfChangeRecoveryPage() {
               Our <Link href="/readiness-to-change">Readiness to Change self-check</Link> is based on this model. It asks questions designed to help you identify which stage you may currently be in. Your results can indicate whether you are still exploring the idea of change, actively preparing, or already taking steps.
             </p>
             <p>
-              The screening does not tell you what to do — it helps you understand where you are so you can seek the kind of support that matches your readiness. Someone in contemplation benefits from different resources than someone in action, and the tool helps clarify that distinction.
+              The screening does not tell you what to do, it helps you understand where you are so you can seek the kind of support that matches your readiness. Someone in contemplation benefits from different resources than someone in action, and the tool helps clarify that distinction.
             </p>
           </section>
 
@@ -236,17 +236,17 @@ export default function StagesOfChangeRecoveryPage() {
               Perhaps the most important thing to understand about the stages of change model is that recovery is not a straight line. People move forward and backward through the stages, sometimes multiple times. Someone might progress from contemplation to action, experience a setback, return to contemplation, and eventually move through to maintenance.
             </p>
             <p>
-              This non-linear pattern is normal, not pathological. Each pass through the stages builds resilience, self-awareness, and practical skills. The person who has cycled through the stages three times is not weaker than someone who moved through once — they may simply be facing more complex circumstances, deeper-rooted patterns, or fewer external supports.
+              This non-linear pattern is normal, not pathological. Each pass through the stages builds resilience, self-awareness, and practical skills. The person who has cycled through the stages three times is not weaker than someone who moved through once, they may simply be facing more complex circumstances, deeper-rooted patterns, or fewer external supports.
             </p>
             <p>
-              Recovery is a process of learning what works for you as an individual. The stages of change model provides a map — but every person&apos;s journey through that map is unique. What matters most is continuing to engage with the process, seeking support when you need it, and recognizing that every step forward counts, even if the path is not straight.
+              Recovery is a process of learning what works for you as an individual. The stages of change model provides a map, but every person&apos;s journey through that map is unique. What matters most is continuing to engage with the process, seeking support when you need it, and recognizing that every step forward counts, even if the path is not straight.
             </p>
           </section>
 
           {/* Disclaimer */}
           <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
             <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
-            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The stages of change model is a framework for understanding behavior change — it is not a substitute for professional evaluation. Always consult a qualified healthcare professional for concerns about substance use.</p>
+            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The stages of change model is a framework for understanding behavior change, it is not a substitute for professional evaluation. Always consult a qualified healthcare professional for concerns about substance use.</p>
             <p className="mt-2">If you or someone you know is struggling with substance use, call SAMHSA&apos;s National Helpline: <strong>1-800-662-4357</strong> (free, confidential, 24/7). If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline).</p>
           </div>
 

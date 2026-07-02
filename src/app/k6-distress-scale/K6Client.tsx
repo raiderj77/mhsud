@@ -89,7 +89,7 @@ const TIERS: Tier[] = [
     borderLight: "border-red-200",
     borderDark: "dark:border-red-800",
     message:
-      "Your score of 13 or higher meets the threshold for serious psychological distress (SPD) \u2014 the same cutoff used in national health surveys by SAMHSA and the CDC. This does not mean you have a specific mental health condition, but it does mean you are experiencing a significant level of emotional difficulty that warrants professional attention. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources listed below.",
+      "Your score of 13 or higher meets the threshold for serious psychological distress (SPD), the same cutoff used in national health surveys by SAMHSA and the CDC. This does not mean you have a specific mental health condition, but it does mean you are experiencing a significant level of emotional difficulty that warrants professional attention. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources listed below.",
   },
 ];
 
@@ -296,7 +296,7 @@ export function K6Client({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Kessler, R. C., Andrews, G., Colpe, L. J., et al. (2002). Short screening scales to monitor population prevalences and trends in non-specific psychological distress.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/12214795/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — K6 Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/12214795/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, K6 Validation</a>
               </li>
               <li>
                 SAMHSA. Mental Health.{" "}
@@ -381,14 +381,14 @@ export function K6Client({ faqData }: Props) {
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
           <h2>What Is the K6 Distress Scale?</h2>
           <p>
-            The Kessler Psychological Distress Scale (K6) is a 6-item screening tool developed by Ronald Kessler and colleagues at Harvard Medical School in collaboration with the World Health Organization. It was designed as a brief, efficient measure of nonspecific psychological distress \u2014 meaning it detects general emotional difficulty without identifying a specific condition like depression or anxiety.
+            The Kessler Psychological Distress Scale (K6) is a 6-item screening tool developed by Ronald Kessler and colleagues at Harvard Medical School in collaboration with the World Health Organization. It was designed as a brief, efficient measure of nonspecific psychological distress, meaning it detects general emotional difficulty without identifying a specific condition like depression or anxiety.
           </p>
           <p>
             The K6 is used in major national health surveys including the National Survey on Drug Use and Health (NSDUH) conducted by SAMHSA, the National Health Interview Survey (NHIS), and the Behavioral Risk Factor Surveillance System (BRFSS). In these surveys, a score of 13 or higher is used to identify <strong>serious psychological distress (SPD)</strong>, a classification that helps track mental health trends at the population level.
           </p>
           <h2>What &ldquo;Nonspecific Distress&rdquo; Means</h2>
           <p>
-            The K6 intentionally measures general distress rather than a specific disorder. The six items cover nervousness, hopelessness, restlessness, depression, effort, and worthlessness \u2014 symptoms that are common across many mental health conditions including major depression, generalized anxiety disorder, panic disorder, and adjustment disorders. A high K6 score tells you that something is wrong, but it does not tell you exactly what. That is why follow-up with more specific tools (like the <Link href="/phq-9-depression-test">PHQ-9</Link> or <Link href="/gad-7-anxiety-test">GAD-7</Link>) or a professional evaluation is recommended for scores in the moderate or serious range.
+            The K6 intentionally measures general distress rather than a specific disorder. The six items cover nervousness, hopelessness, restlessness, depression, effort, and worthlessness, symptoms that are common across many mental health conditions including major depression, generalized anxiety disorder, panic disorder, and adjustment disorders. A high K6 score tells you that something is wrong, but it does not tell you exactly what. That is why follow-up with more specific tools (like the <Link href="/phq-9-depression-test">PHQ-9</Link> or <Link href="/gad-7-anxiety-test">GAD-7</Link>) or a professional evaluation is recommended for scores in the moderate or serious range.
           </p>
           <h2>K6 vs. K10</h2>
           <p>
@@ -485,7 +485,7 @@ export function K6Client({ faqData }: Props) {
         6 questions · ~2 minutes · Completely private · Public domain instrument
       </p>
 
-      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active distress questionnaire. */}
+      {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active distress questionnaire. */}
 
       {/* Stem */}
       <div className="mb-6 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">

@@ -104,7 +104,7 @@ export default function AISPage() {
         <AnswerBlock
           what="The Athens Insomnia Scale, a validated 8-item screening that measures insomnia severity based on ICD-10 diagnostic criteria."
           who="Anyone experiencing sleep difficulties who wants to assess whether their insomnia symptoms reach clinical levels."
-          bottomLine="Chronic insomnia affects both mental and physical health — discuss persistent sleep problems with your doctor. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Chronic insomnia affects both mental and physical health, discuss persistent sleep problems with your doctor. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

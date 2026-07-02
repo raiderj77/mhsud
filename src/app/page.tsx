@@ -6,9 +6,9 @@ import type { ToolCategory, Tool, TargetedScreening } from "@/components/ToolGri
 
 export const metadata: Metadata = createMetadata({
   path: "/",
-  title: "MindCheck Tools — Free, Private Mental Health Self-Checks",
+  title: "MindCheck Tools, Free, Private Mental Health Self-Checks",
   description:
-    "Free, private mental health self-checks — PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
+    "Free, private mental health self-checks, PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
 });
 
 const TOOL_CATEGORIES: ToolCategory[] = [
@@ -537,7 +537,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Evidence-Based",
-    text: "Our core tools use validated, public-domain instruments trusted by clinicians worldwide — the PHQ-9, GAD-7, and AUDIT.",
+    text: "Our core tools use validated, public-domain instruments trusted by clinicians worldwide, the PHQ-9, GAD-7, and AUDIT.",
   },
   {
     icon: (
@@ -546,7 +546,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Education, Not Diagnosis",
-    text: "Every result includes clear context about what the score means and — importantly — what it cannot tell you. We always encourage professional follow-up.",
+    text: "Every result includes clear context about what the score means and, importantly, what it cannot tell you. We always encourage professional follow-up.",
   },
 ];
 
@@ -557,7 +557,7 @@ const TARGETED_SCREENINGS: TargetedScreening[] = [
   { href: "/depression-screening-for-veterans", title: "Depression Test for Veterans", description: "PHQ-9 screening with veteran-specific context on PTSD, transition, and VA resources.", badge: "Veterans" },
   { href: "/anxiety-test-for-women", title: "Anxiety Test for Women", description: "GAD-7 screening plus context on hormonal factors, life stages, and women\u2019s mental health.", badge: "Women" },
   { href: "/anxiety-test-for-teens", title: "Anxiety Test for Teens", description: "GAD-7 screening with teen anxiety stats, social media impact, and youth crisis resources.", badge: "Teens" },
-  { href: "/anxiety-test-for-men", title: "Anxiety Test for Men", description: "GAD-7 screening with info on how anxiety manifests differently in men — anger, physical symptoms.", badge: "Men" },
+  { href: "/anxiety-test-for-men", title: "Anxiety Test for Men", description: "GAD-7 screening with info on how anxiety manifests differently in men, anger, physical symptoms.", badge: "Men" },
   { href: "/ptsd-test-veterans", title: "PTSD Test for Veterans", description: "PCL-5 screening with combat PTSD stats, VA treatment info, and Veterans Crisis Line.", badge: "Veterans" },
   { href: "/ptsd-test-first-responders", title: "PTSD Test for First Responders", description: "PCL-5 screening for police, firefighters, EMTs with cumulative trauma context.", badge: "First Responders" },
   { href: "/adhd-test-adults", title: "ADHD Test for Adults", description: "WHO ASRS screening with info on adult ADHD underdiagnosis, symptoms, and getting evaluated.", badge: "Adults" },
@@ -606,7 +606,7 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "MindCheck Tools — Free Mental Health Screening",
+            name: "MindCheck Tools, Free Mental Health Screening",
             url: SITE_URL,
             applicationCategory: "HealthApplication",
             operatingSystem: "All",
@@ -617,7 +617,7 @@ export default function HomePage() {
             },
             dateModified: "2026-05-12",
             description:
-              "Free, private mental health screening tools — PHQ-9, GAD-7, AUDIT and more. All scoring happens in your browser. No accounts, no data storage.",
+              "Free, private mental health screening tools, PHQ-9, GAD-7, AUDIT and more. All scoring happens in your browser. No accounts, no data storage.",
             provider: {
               "@type": "Organization",
               name: "MindCheck Tools",
@@ -651,7 +651,7 @@ export default function HomePage() {
             </Link>
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
-            Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no login, no judgment — your answers are scored locally and never stored.
+            Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no login, no judgment, your answers are scored locally and never stored.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/phq-9-depression-test" className="btn-primary text-base">
@@ -701,10 +701,10 @@ export default function HomePage() {
             How do mental health screening tools work?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            These tools use validated clinical questionnaires to help you identify and understand your symptoms. Results are for informational purposes only — not a diagnosis.
+            These tools use validated clinical questionnaires to help you identify and understand your symptoms. Results are for informational purposes only, not a diagnosis.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
-            Validated instruments like the PHQ-9 and GAD-7 are used by clinicians worldwide as a first step in mental health assessment. They have been tested in large clinical populations and shown to reliably identify symptom patterns that warrant further evaluation. The World Health Organization estimates that 1 in 4 people globally will be affected by a mental health condition at some point in their lives — screening tools help that first conversation happen sooner.
+            Validated instruments like the PHQ-9 and GAD-7 are used by clinicians worldwide as a first step in mental health assessment. They have been tested in large clinical populations and shown to reliably identify symptom patterns that warrant further evaluation. The World Health Organization estimates that 1 in 4 people globally will be affected by a mental health condition at some point in their lives, screening tools help that first conversation happen sooner.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
             On MindCheck Tools, all scoring happens in your browser. No answers are transmitted to a server, stored, or shared.
@@ -719,10 +719,10 @@ export default function HomePage() {
             A screening tool identifies patterns that may suggest a condition. Only a licensed clinician can provide a diagnosis after a comprehensive evaluation.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
-            Screening results help you have more informed conversations with healthcare providers — they are a starting point, not a substitute for those conversations. Sharing your results with a doctor or therapist can help guide the assessment process and ensure you receive the right level of care. Research published in JAMA Psychiatry shows that early intervention reduces the duration of untreated depression by an average of 2 years.
+            Screening results help you have more informed conversations with healthcare providers, they are a starting point, not a substitute for those conversations. Sharing your results with a doctor or therapist can help guide the assessment process and ensure you receive the right level of care. Research published in JAMA Psychiatry shows that early intervention reduces the duration of untreated depression by an average of 2 years.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            According to the National Alliance on Mental Illness, 1 in 5 U.S. adults experiences a mental health condition each year — yet only 46% of those adults receive treatment. Accessible, free screening tools can help close that gap by lowering the barrier to that first step.
+            According to the National Alliance on Mental Illness, 1 in 5 U.S. adults experiences a mental health condition each year, yet only 46% of those adults receive treatment. Accessible, free screening tools can help close that gap by lowering the barrier to that first step.
           </p>
         </section>
 
@@ -731,7 +731,7 @@ export default function HomePage() {
             Are these screening tools free and confidential?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            Yes — all screening tools on MindCheck Tools are completely free. Your responses are processed in your browser and never stored or transmitted to any server.
+            Yes, all screening tools on MindCheck Tools are completely free. Your responses are processed in your browser and never stored or transmitted to any server.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
             No account is required, and no data is retained after you close the page. All scoring logic runs locally using client-side JavaScript. We have deliberately built our tools this way because mental health screening should be private by design, not just by policy.
@@ -747,17 +747,17 @@ export default function HomePage() {
           </p>
           <ul className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed space-y-2 mb-6">
             <li>
-              <strong>988 Suicide and Crisis Lifeline</strong> — call or text{" "}
+              <strong>988 Suicide and Crisis Lifeline</strong>, call or text{" "}
               <a href="tel:988" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">988</a>
               {" "}(free, 24/7)
             </li>
             <li>
-              <strong>Crisis Text Line</strong> — text HOME to{" "}
+              <strong>Crisis Text Line</strong>, text HOME to{" "}
               <a href="sms:741741" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">741741</a>
               {" "}(free, 24/7)
             </li>
             <li>
-              <strong>SAMHSA National Helpline</strong> —{" "}
+              <strong>SAMHSA National Helpline</strong>, {" "}
               <a href="tel:18006624357" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">1-800-662-4357</a>
               {" "}(free, confidential, 24/7 treatment referrals)
             </li>
@@ -769,19 +769,19 @@ export default function HomePage() {
                 <a href="https://www.nimh.nih.gov" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
                   National Institute of Mental Health (NIMH)
                 </a>
-                {" "}— nimh.nih.gov
+                {" "}, nimh.nih.gov
               </li>
               <li>
                 <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
                   SAMHSA National Helpline
                 </a>
-                {" "}— samhsa.gov
+                {" "}, samhsa.gov
               </li>
               <li>
                 <a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="nofollow noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">
                   WHO Mental Health Resources
                 </a>
-                {" "}— who.int/mental_health
+                {" "}, who.int/mental_health
               </li>
             </ul>
           </div>
@@ -800,7 +800,7 @@ export default function HomePage() {
               Every answer you give is processed entirely in your browser using client-side JavaScript. We have no server, no database, and no way to see your responses. When you close the page, your data is gone.
             </p>
             <p className="text-white/60 text-sm">
-              We use analytics and may display ads — but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
+              We use analytics and may display ads, but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
             </p>
           </div>
         </div>
@@ -837,7 +837,7 @@ export default function HomePage() {
             {
               title: "DBT Skills for Everyday Life: A Beginner's Guide",
               slug: "dbt-skills-beginners",
-              excerpt: "The 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — explained simply.",
+              excerpt: "The 4 DBT skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, explained simply.",
             },
           ].map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
@@ -882,7 +882,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What should I do if my screening score is high?",
-                  answer: "A high score indicates that your symptoms may warrant professional evaluation — it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+                  answer: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
                 },
               ])
             ),
@@ -908,7 +908,7 @@ export default function HomePage() {
             },
             {
               q: "What should I do if my screening score is high?",
-              a: "A high score indicates that your symptoms may warrant professional evaluation — it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+              a: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
             },
           ].map((faq) => (
             <div key={faq.q} className="card p-5 sm:p-6">

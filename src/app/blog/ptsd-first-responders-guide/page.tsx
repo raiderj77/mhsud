@@ -88,7 +88,7 @@ export default function PtsdFirstRespondersGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Firefighters, EMTs, paramedics, and law enforcement officers are trained to run toward danger. What they are rarely trained for is the cumulative psychological cost of doing so thousands of times over a career. Research shows first responders experience PTSD at rates two to five times higher than the general population &mdash; and in some years, more first responders die by suicide than in the line of duty.
+            Firefighters, EMTs, paramedics, and law enforcement officers are trained to run toward danger. What they are rarely trained for is the cumulative psychological cost of doing so thousands of times over a career. Research shows first responders experience PTSD at rates two to five times higher than the general population, and in some years, more first responders die by suicide than in the line of duty.
           </p>
         </header>
 
@@ -96,10 +96,10 @@ export default function PtsdFirstRespondersGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>Safe Call Now</strong> &mdash; <strong>1-206-459-3020</strong> (first responder crisis line, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Safe Call Now</strong>, <strong>1-206-459-3020</strong> (first responder crisis line, 24/7)</li>
             </ul>
           </div>
 
@@ -113,7 +113,7 @@ export default function PtsdFirstRespondersGuidePage() {
           <section>
             <h2>Why first responders are uniquely vulnerable to PTSD</h2>
             <p>
-              Most people will experience one or two potentially traumatic events in their lifetime. First responders may encounter hundreds. A career firefighter may respond to thousands of calls over 25 years &mdash; structure fires, vehicle extrications, cardiac arrests, drownings, child fatalities, and mass casualty incidents. Each call adds to the cumulative load.
+              Most people will experience one or two potentially traumatic events in their lifetime. First responders may encounter hundreds. A career firefighter may respond to thousands of calls over 25 years, structure fires, vehicle extrications, cardiac arrests, drownings, child fatalities, and mass casualty incidents. Each call adds to the cumulative load.
             </p>
             <p>
               The PTSD rates across first responder disciplines tell a stark story:
@@ -131,10 +131,10 @@ export default function PtsdFirstRespondersGuidePage() {
           <section>
             <h2>How cumulative trauma differs from single-event PTSD</h2>
             <p>
-              Most public understanding of PTSD centers on a single traumatic event &mdash; a car accident, an assault, a natural disaster. First responder PTSD often does not work this way. Instead, it develops through cumulative trauma: the gradual, compounding effect of repeated exposure to human suffering.
+              Most public understanding of PTSD centers on a single traumatic event, a car accident, an assault, a natural disaster. First responder PTSD often does not work this way. Instead, it develops through cumulative trauma: the gradual, compounding effect of repeated exposure to human suffering.
             </p>
             <p>
-              With cumulative trauma, there may not be one defining incident. A paramedic might not be able to point to &quot;the call&quot; that broke them. Instead, it is call number 500 &mdash; a routine cardiac arrest &mdash; that suddenly overwhelms a system that has been absorbing trauma for years. This can be confusing: &quot;Why is this call affecting me when I have handled much worse?&quot;
+              With cumulative trauma, there may not be one defining incident. A paramedic might not be able to point to &quot;the call&quot; that broke them. Instead, it is call number 500, a routine cardiac arrest, that suddenly overwhelms a system that has been absorbing trauma for years. This can be confusing: &quot;Why is this call affecting me when I have handled much worse?&quot;
             </p>
             <p>
               The answer is that the nervous system has reached its capacity. Each critical incident, no matter how well-managed in the moment, deposits stress into a finite reservoir. When that reservoir overflows, even a seemingly minor call can trigger a full PTSD response.
@@ -162,13 +162,13 @@ export default function PtsdFirstRespondersGuidePage() {
           <section>
             <h2>The connection between PTSD, sleep, and substance use</h2>
             <p>
-              First responders face compounding risk factors beyond trauma exposure. Shift work &mdash; particularly 24-hour shifts common in fire and EMS &mdash; disrupts circadian rhythms and sleep architecture. Sleep deprivation independently increases vulnerability to PTSD and impairs the brain&apos;s ability to process traumatic memories.
+              First responders face compounding risk factors beyond trauma exposure. Shift work, particularly 24-hour shifts common in fire and EMS, disrupts circadian rhythms and sleep architecture. Sleep deprivation independently increases vulnerability to PTSD and impairs the brain&apos;s ability to process traumatic memories.
             </p>
             <p>
               Substance use is another critical concern. Studies show that first responders use alcohol at higher rates than the general population, often as a coping mechanism for sleep disruption and traumatic stress. This self-medication creates a cycle: alcohol disrupts sleep quality, worsened sleep increases PTSD vulnerability, and increased PTSD symptoms drive more alcohol use.
             </p>
             <p>
-              Suicide among first responders has received overdue attention in recent years. The Ruderman Family Foundation reported that in multiple recent years, more police officers and firefighters died by suicide than in the line of duty. This underscores that PTSD and mental health in first responders is not a secondary concern &mdash; it is a survival issue.
+              Suicide among first responders has received overdue attention in recent years. The Ruderman Family Foundation reported that in multiple recent years, more police officers and firefighters died by suicide than in the line of duty. This underscores that PTSD and mental health in first responders is not a secondary concern, it is a survival issue.
             </p>
           </section>
 
@@ -208,7 +208,7 @@ export default function PtsdFirstRespondersGuidePage() {
               Individual coping strategies are necessary but insufficient. Departments and agencies have a responsibility to create environments where seeking help is normalized and supported:
             </p>
             <ul>
-              <li>Implement routine, voluntary mental health check-ins &mdash; not just after critical incidents but as ongoing practice</li>
+              <li>Implement routine, voluntary mental health check-ins, not just after critical incidents but as ongoing practice</li>
               <li>Train leadership to recognize signs of PTSD and cumulative stress in their teams</li>
               <li>Remove or reduce career penalties associated with mental health help-seeking</li>
               <li>Invest in peer support training and dedicated peer support teams</li>
@@ -238,7 +238,7 @@ export default function PtsdFirstRespondersGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.
