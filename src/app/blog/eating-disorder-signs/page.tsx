@@ -98,10 +98,10 @@ export default function EatingDisorderSignsPage() {
               <strong>Binge eating disorder (BED)</strong> is the most common eating disorder in the United States. It involves recurring episodes of eating large quantities of food in a short period while feeling a loss of control. Unlike bulimia, BED does not involve regular compensatory behaviors. It is associated with significant emotional distress, including shame, guilt, and depression.
             </p>
             <p>
-              <strong>Avoidant/restrictive food intake disorder (ARFID)</strong> involves significant restriction of food intake — not driven by body image concerns, but by sensory sensitivity, fear of choking or vomiting, or a general lack of interest in eating. ARFID can lead to nutritional deficiencies and impaired growth in children.
+              <strong>Avoidant/restrictive food intake disorder (ARFID)</strong> involves significant restriction of food intake, not driven by body image concerns, but by sensory sensitivity, fear of choking or vomiting, or a general lack of interest in eating. ARFID can lead to nutritional deficiencies and impaired growth in children.
             </p>
             <p>
-              <strong>Other specified feeding or eating disorder (OSFED)</strong> includes clinically significant eating disorder presentations that do not meet the full criteria for anorexia, bulimia, or BED. OSFED is not a &quot;less serious&quot; category — it can be equally dangerous and equally deserving of treatment.
+              <strong>Other specified feeding or eating disorder (OSFED)</strong> includes clinically significant eating disorder presentations that do not meet the full criteria for anorexia, bulimia, or BED. OSFED is not a &quot;less serious&quot; category, it can be equally dangerous and equally deserving of treatment.
             </p>
           </section>
 
@@ -110,7 +110,7 @@ export default function EatingDisorderSignsPage() {
           <section>
             <h2>How Common Are Eating Disorders?</h2>
             <p>
-              Eating disorders are far more prevalent than many people realize. Research estimates that approximately 9% of the U.S. population — roughly 28.8 million Americans — will have an eating disorder at some point in their lifetime. These conditions contribute to an estimated 10,200 deaths per year in the United States, making them among the most lethal mental health conditions.
+              Eating disorders are far more prevalent than many people realize. Research estimates that approximately 9% of the U.S. population, roughly 28.8 million Americans, will have an eating disorder at some point in their lifetime. These conditions contribute to an estimated 10,200 deaths per year in the United States, making them among the most lethal mental health conditions.
             </p>
             <p>
               Eating disorders have the highest mortality rate of any mental illness after opioid use disorder. This statistic underscores why early screening and intervention are so important. The sooner someone receives appropriate support, the better their chances of recovery.
@@ -139,7 +139,7 @@ export default function EatingDisorderSignsPage() {
           <section>
             <h2>Who Is at Risk?</h2>
             <p>
-              One of the most harmful myths about eating disorders is that they only affect young, white women. In reality, eating disorders occur across all demographics — every age, gender, race, ethnicity, body size, and socioeconomic background.
+              One of the most harmful myths about eating disorders is that they only affect young, white women. In reality, eating disorders occur across all demographics, every age, gender, race, ethnicity, body size, and socioeconomic background.
             </p>
             <p>
               Research shows that people of color are at least as likely to develop eating disorders as white individuals, yet they are significantly less likely to be screened, diagnosed, or referred for treatment. Men account for an estimated one-third of eating disorder cases but are frequently overlooked due to persistent stereotypes. Eating disorders also affect older adults, children, LGBTQ+ individuals, and people in larger bodies who may not &quot;look like&quot; they have an eating disorder.
@@ -170,7 +170,7 @@ export default function EatingDisorderSignsPage() {
               Eating disorders rarely occur in isolation. They frequently co-occur with other mental health conditions, which can complicate both recognition and recovery. Common comorbidities include <Link href="/phq-9-depression-test">depression</Link>, anxiety disorders, obsessive-compulsive disorder (OCD), post-traumatic stress disorder (PTSD), and substance use disorders.
             </p>
             <p>
-              Research suggests that up to 50% of people with eating disorders also meet criteria for a mood disorder, and approximately 25-50% have co-occurring substance use concerns. These overlapping conditions can reinforce each other — for example, someone may restrict food to manage anxiety or binge eat to cope with depression. Effective treatment addresses the full picture, not just the eating behaviors.
+              Research suggests that up to 50% of people with eating disorders also meet criteria for a mood disorder, and approximately 25-50% have co-occurring substance use concerns. These overlapping conditions can reinforce each other, for example, someone may restrict food to manage anxiety or binge eat to cope with depression. Effective treatment addresses the full picture, not just the eating behaviors.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ export default function EatingDisorderSignsPage() {
               The SCOFF questionnaire is a brief, five-question screening tool developed to help identify people who may have an eating disorder. The name is an acronym based on the five questions, which ask about making yourself <strong>S</strong>ick (vomiting), losing <strong>C</strong>ontrol over eating, losing more than <strong>O</strong>ne stone (14 pounds) in a three-month period, believing you are <strong>F</strong>at when others say you are thin, and whether <strong>F</strong>ood dominates your life.
             </p>
             <p>
-              A score of 2 or more &quot;yes&quot; answers may indicate a possible eating disorder and suggests further evaluation is warranted. The SCOFF is a screening tool — not a clinical assessment. It cannot tell you whether you have an eating disorder, but it can help you recognize patterns worth discussing with a healthcare provider.
+              A score of 2 or more &quot;yes&quot; answers may indicate a possible eating disorder and suggests further evaluation is warranted. The SCOFF is a screening tool, not a clinical assessment. It cannot tell you whether you have an eating disorder, but it can help you recognize patterns worth discussing with a healthcare provider.
             </p>
             <p>
               You can take the <Link href="/scoff-eating-disorder-screening">SCOFF screening self-check</Link> on our site. It is free, private, and your answers never leave your browser.
@@ -193,24 +193,24 @@ export default function EatingDisorderSignsPage() {
               Early intervention significantly improves outcomes for eating disorders. Research consistently shows that the shorter the duration of illness before treatment begins, the better the prognosis. Conversely, the longer an eating disorder goes untreated, the more entrenched the behaviors become and the greater the risk of serious medical complications.
             </p>
             <p>
-              Given that eating disorders carry the highest mortality rate of any mental illness after opioid use disorder, there is an urgent need for accessible screening and education. Many people live with eating disorders for years before receiving help — sometimes because they do not recognize their own symptoms, and sometimes because healthcare providers fail to screen for these conditions, especially in populations that do not fit the stereotype.
+              Given that eating disorders carry the highest mortality rate of any mental illness after opioid use disorder, there is an urgent need for accessible screening and education. Many people live with eating disorders for years before receiving help, sometimes because they do not recognize their own symptoms, and sometimes because healthcare providers fail to screen for these conditions, especially in populations that do not fit the stereotype.
             </p>
           </section>
 
           <section>
             <h2>Recovery Is Possible</h2>
             <p>
-              It is important to emphasize that recovery from an eating disorder is achievable. With evidence-based treatment, many people go on to live full, healthy lives. Recovery is not always linear — setbacks are a normal part of the process — but sustained improvement is the rule, not the exception, when appropriate support is in place.
+              It is important to emphasize that recovery from an eating disorder is achievable. With evidence-based treatment, many people go on to live full, healthy lives. Recovery is not always linear, setbacks are a normal part of the process, but sustained improvement is the rule, not the exception, when appropriate support is in place.
             </p>
           </section>
 
           <section>
             <h2>Treatment Options</h2>
             <p>
-              Effective eating disorder treatment typically involves a multidisciplinary approach. <strong>Therapy</strong> — including cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT), and family-based treatment (FBT) — is the cornerstone of most treatment plans. <strong>Nutritional counseling</strong> helps rebuild a healthy relationship with food and address nutritional deficiencies.
+              Effective eating disorder treatment typically involves a multidisciplinary approach. <strong>Therapy</strong>, including cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT), and family-based treatment (FBT), is the cornerstone of most treatment plans. <strong>Nutritional counseling</strong> helps rebuild a healthy relationship with food and address nutritional deficiencies.
             </p>
             <p>
-              <strong>Medical monitoring</strong> is essential, especially for individuals with severe symptoms or medical complications. <strong>Medication</strong> may be used to address co-occurring conditions such as depression or anxiety. In more severe cases, higher levels of care — including intensive outpatient programs, residential treatment, or inpatient hospitalization — may be necessary.
+              <strong>Medical monitoring</strong> is essential, especially for individuals with severe symptoms or medical complications. <strong>Medication</strong> may be used to address co-occurring conditions such as depression or anxiety. In more severe cases, higher levels of care, including intensive outpatient programs, residential treatment, or inpatient hospitalization, may be necessary.
             </p>
             <p>
               If you or someone you know may be struggling with disordered eating, reaching out to a healthcare provider or helpline is a strong first step. The{" "}
@@ -237,10 +237,10 @@ export default function EatingDisorderSignsPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>National Alliance for Eating Disorders</strong> &mdash; <strong>1-866-662-1235</strong></li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>National Alliance for Eating Disorders</strong>, <strong>1-866-662-1235</strong></li>
             </ul>
           </div>
 
@@ -260,7 +260,7 @@ export default function EatingDisorderSignsPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

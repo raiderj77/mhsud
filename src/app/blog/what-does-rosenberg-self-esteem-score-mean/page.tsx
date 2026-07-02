@@ -30,12 +30,12 @@ const FAQ_DATA = [
   {
     question: "Is low self-esteem a mental health disorder?",
     answer:
-      "Low self-esteem is not a diagnosable disorder in the DSM-5. It is, however, a core feature of several conditions (depression, social anxiety) and a significant risk factor for others. When low self-esteem causes distress or functional impairment \u2014 affecting relationships, work, or quality of life \u2014 it warrants clinical attention even without a specific diagnosis.",
+      "Low self-esteem is not a diagnosable disorder in the DSM-5. It is, however, a core feature of several conditions (depression, social anxiety) and a significant risk factor for others. When low self-esteem causes distress or functional impairment, affecting relationships, work, or quality of life, it warrants clinical attention even without a specific diagnosis.",
   },
   {
     question: "Can self-esteem be too high?",
     answer:
-      "Inflated or fragile self-esteem \u2014 self-worth that is grandiose, requires constant external validation, or responds to challenge with aggression or defensiveness \u2014 is associated with problems. True stable high self-esteem that isn\u2019t contingent on external validation or comparison is generally adaptive. The RSE doesn\u2019t distinguish these; very high scores are worth reflecting on qualitatively.",
+      "Inflated or fragile self-esteem, self-worth that is grandiose, requires constant external validation, or responds to challenge with aggression or defensiveness, is associated with problems. True stable high self-esteem that isn\u2019t contingent on external validation or comparison is generally adaptive. The RSE doesn\u2019t distinguish these; very high scores are worth reflecting on qualitatively.",
   },
   {
     question: "Does self-esteem change across the lifespan?",
@@ -45,7 +45,7 @@ const FAQ_DATA = [
   {
     question: "My self-esteem score is low but I don\u2019t feel depressed. What should I do?",
     answer:
-      "Low self-esteem without depression still warrants attention \u2014 it affects quality of life, relationship patterns, and occupational functioning, and creates vulnerability for future depression. A therapist can help explore where the self-esteem patterns developed and begin shifting them. Self-compassion practices (Neff, 2011) are also evidence-based and can be self-directed as a starting point.",
+      "Low self-esteem without depression still warrants attention, it affects quality of life, relationship patterns, and occupational functioning, and creates vulnerability for future depression. A therapist can help explore where the self-esteem patterns developed and begin shifting them. Self-compassion practices (Neff, 2011) are also evidence-based and can be self-directed as a starting point.",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Rosenberg Self-Esteem Scale scores range from 0 to 30. Scores of <strong>15&ndash;25</strong> indicate normal self-esteem. Scores below 15 suggest low self-esteem that may benefit from support. Scores above 25 indicate high self-esteem. The scale measures global self-worth &mdash; your overall sense of value as a person &mdash; and is widely used in both research and clinical contexts to understand how self-esteem relates to mental health and wellbeing.
+            Rosenberg Self-Esteem Scale scores range from 0 to 30. Scores of <strong>15&ndash;25</strong> indicate normal self-esteem. Scores below 15 suggest low self-esteem that may benefit from support. Scores above 25 indicate high self-esteem. The scale measures global self-worth, your overall sense of value as a person, and is widely used in both research and clinical contexts to understand how self-esteem relates to mental health and wellbeing.
           </p>
         </header>
 
@@ -96,13 +96,13 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
           <section>
             <h2>What Is the Rosenberg Self-Esteem Scale?</h2>
             <p>
-              The <strong>Rosenberg Self-Esteem Scale (RSE or RSES)</strong> was developed by sociologist Dr. Morris Rosenberg (1965) and is one of the most widely used self-esteem measures in the world &mdash; cited in over 30,000 published research studies.
+              The <strong>Rosenberg Self-Esteem Scale (RSE or RSES)</strong> was developed by sociologist Dr. Morris Rosenberg (1965) and is one of the most widely used self-esteem measures in the world, cited in over 30,000 published research studies.
             </p>
             <p>
               The scale consists of 10 items, each rated on a 4-point scale from Strongly Disagree (0) to Strongly Agree (3). Five items are positively worded (&ldquo;I feel that I have a number of good qualities&rdquo;) and five are negatively worded (&ldquo;I feel that I do not have much to be proud of&rdquo;), with the negative items reverse-scored before totaling.
             </p>
             <p>
-              The RSE measures <strong>global self-esteem</strong> &mdash; a person&rsquo;s overall sense of their own value and worth &mdash; rather than domain-specific self-confidence (athletic ability, academic performance, social skills). It captures the underlying appraisal of &ldquo;am I a worthwhile person?&rdquo; rather than &ldquo;am I good at specific things?&rdquo;
+              The RSE measures <strong>global self-esteem</strong>, a person&rsquo;s overall sense of their own value and worth, rather than domain-specific self-confidence (athletic ability, academic performance, social skills). It captures the underlying appraisal of &ldquo;am I a worthwhile person?&rdquo; rather than &ldquo;am I good at specific things?&rdquo;
             </p>
           </section>
 
@@ -149,7 +149,7 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
               This range indicates self-esteem within the typical range for adults. People in this range generally hold a reasonably positive view of themselves, can acknowledge both strengths and limitations, and don&rsquo;t experience pervasive feelings of worthlessness or inferiority.
             </p>
             <p>
-              Self-esteem in this range is not uniform or static &mdash; it fluctuates with circumstances, interpersonal feedback, and life events. Normal self-esteem doesn&rsquo;t mean an absence of self-doubt; it means that the underlying sense of personal worth is present even when specific areas of life are difficult.
+              Self-esteem in this range is not uniform or static, it fluctuates with circumstances, interpersonal feedback, and life events. Normal self-esteem doesn&rsquo;t mean an absence of self-doubt; it means that the underlying sense of personal worth is present even when specific areas of life are difficult.
             </p>
           </section>
 
@@ -159,17 +159,17 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
           <section>
             <h2>Score of 0&ndash;14: Low Self-Esteem</h2>
             <p>
-              A score below 15 places you below the normative range for adults. This indicates a pattern of negative self-evaluation &mdash; a global sense that you lack worth, ability, or value relative to others.
+              A score below 15 places you below the normative range for adults. This indicates a pattern of negative self-evaluation, a global sense that you lack worth, ability, or value relative to others.
             </p>
             <p>Low self-esteem at this level is clinically significant not because low self-esteem is itself a diagnosable condition, but because it is:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>A <strong>core feature</strong> of major depressive disorder (DSM-5 criterion: feelings of worthlessness or excessive guilt)</li>
               <li>A <strong>risk factor</strong> for depression, anxiety, and eating disorders</li>
-              <li>A <strong>consequence</strong> of depression, anxiety, and trauma &mdash; conditions that consistently erode the sense of self-worth</li>
+              <li>A <strong>consequence</strong> of depression, anxiety, and trauma, conditions that consistently erode the sense of self-worth</li>
               <li>Associated with <strong>poorer treatment outcomes</strong> when not addressed alongside other mental health concerns</li>
             </ul>
             <p>
-              Low self-esteem is not a personality flaw or a fixed trait. It reflects a pattern of self-evaluation that developed in response to experiences &mdash; and it responds well to intervention.
+              Low self-esteem is not a personality flaw or a fixed trait. It reflects a pattern of self-evaluation that developed in response to experiences, and it responds well to intervention.
             </p>
             <h3>Low Self-Esteem and Depression: The Relationship</h3>
             <p>The relationship between low self-esteem and depression is bidirectional:</p>
@@ -178,13 +178,13 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
               <li><strong>Low self-esteem is a vulnerability for depression:</strong> People with chronically low self-esteem are more susceptible to depressive episodes, particularly after life setbacks</li>
             </ul>
             <p>
-              This creates a cycle that therapy is well-positioned to interrupt. If your RSE score is low, taking the <Link href="/phq-9-depression-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">PHQ-9</Link> is a useful next step &mdash; the two often co-occur, and knowing both scores helps focus clinical attention.
+              This creates a cycle that therapy is well-positioned to interrupt. If your RSE score is low, taking the <Link href="/phq-9-depression-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">PHQ-9</Link> is a useful next step, the two often co-occur, and knowing both scores helps focus clinical attention.
             </p>
             <h3>What Low Self-Esteem Feels Like</h3>
             <p>Beyond the numerical score, low self-esteem often manifests as:</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Chronic self-criticism &mdash; an inner voice that is reliably harsh, dismissive, or contemptuous</li>
-              <li>Difficulty accepting positive feedback &mdash; attributing compliments to luck or others&rsquo; error</li>
+              <li>Chronic self-criticism, an inner voice that is reliably harsh, dismissive, or contemptuous</li>
+              <li>Difficulty accepting positive feedback, attributing compliments to luck or others&rsquo; error</li>
               <li>Comparison with others that almost always goes against you</li>
               <li>Avoiding challenges for fear of confirming inadequacy</li>
               <li>Apologizing excessively or shrinking in social and professional contexts</li>
@@ -204,10 +204,10 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
               <strong>Secure high self-esteem:</strong> A stable, non-defensive sense of self-worth that doesn&rsquo;t require external validation and isn&rsquo;t threatened by criticism or failure. Associated with good outcomes.
             </p>
             <p>
-              <strong>Fragile or defensive high self-esteem:</strong> High self-esteem scores that mask underlying insecurity &mdash; maintained through external validation, grandiosity, or defensiveness when challenged. Associated with narcissistic traits and heightened sensitivity to criticism.
+              <strong>Fragile or defensive high self-esteem:</strong> High self-esteem scores that mask underlying insecurity, maintained through external validation, grandiosity, or defensiveness when challenged. Associated with narcissistic traits and heightened sensitivity to criticism.
             </p>
             <p>
-              If your high score feels fragile &mdash; easily destabilized by others&rsquo; opinions, requiring constant external validation to maintain &mdash; this is worth exploring with a therapist.
+              If your high score feels fragile, easily destabilized by others&rsquo; opinions, requiring constant external validation to maintain, this is worth exploring with a therapist.
             </p>
           </section>
 
@@ -223,7 +223,7 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
               <strong>Depression:</strong> Low self-esteem is both a symptom and a risk factor. Nearly all people with clinical depression experience a reduced sense of self-worth during episodes.
             </p>
             <p>
-              <strong>Anxiety:</strong> Particularly social anxiety &mdash; which is fundamentally organized around the fear of negative evaluation by others &mdash; is closely tied to low self-esteem and negative self-perception.
+              <strong>Anxiety:</strong> Particularly social anxiety, which is fundamentally organized around the fear of negative evaluation by others, is closely tied to low self-esteem and negative self-perception.
             </p>
             <p>
               <strong>Trauma and PTSD:</strong> Adverse experiences, particularly interpersonal trauma, often produce lasting damage to self-esteem. The shame and self-blame that frequently accompany trauma directly erode the sense of personal worth.
@@ -243,14 +243,14 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
           <section>
             <h2>Can Self-Esteem Improve?</h2>
             <p>
-              Yes. Self-esteem is not fixed. It developed through experiences and relationships &mdash; and it can shift through new experiences and relationships, including therapeutic ones.
+              Yes. Self-esteem is not fixed. It developed through experiences and relationships, and it can shift through new experiences and relationships, including therapeutic ones.
             </p>
             <p>Evidence-based approaches that improve self-esteem:</p>
             <p>
               <strong>Cognitive Behavioral Therapy (CBT):</strong> Specifically targets the negative self-evaluative beliefs (&ldquo;I&rsquo;m worthless,&rdquo; &ldquo;I&rsquo;m fundamentally flawed&rdquo;) that maintain low self-esteem. Cognitive restructuring and behavioral experiments (doing things to test negative predictions) are particularly effective.
             </p>
             <p>
-              <strong>Self-Compassion Training:</strong> Dr. Kristin Neff&rsquo;s work on self-compassion offers an alternative to building self-esteem through comparison and achievement &mdash; instead, treating yourself with the same kindness you&rsquo;d offer a good friend. Research shows self-compassion is more robust and less contingent than self-esteem.
+              <strong>Self-Compassion Training:</strong> Dr. Kristin Neff&rsquo;s work on self-compassion offers an alternative to building self-esteem through comparison and achievement, instead, treating yourself with the same kindness you&rsquo;d offer a good friend. Research shows self-compassion is more robust and less contingent than self-esteem.
             </p>
             <p>
               <strong>Interpersonal Therapy (IPT):</strong> By improving the quality of key relationships and communication, IPT often produces improvements in self-esteem as a secondary outcome.
@@ -277,9 +277,9 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -304,7 +304,7 @@ export default function WhatDoesRosenbergSelfEsteemScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

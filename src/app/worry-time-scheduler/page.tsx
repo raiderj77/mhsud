@@ -33,19 +33,19 @@ const FAQ_DATA = [
   },
   {
     question: "How long should my worry time session be?",
-    answer: "Most CBT protocols recommend 15-30 minutes. Start with 15 minutes and increase if you find you consistently need more time. The key is having a fixed endpoint — worry time should not extend indefinitely. If you finish early, that is a good sign. If you do not get through all worries, prioritize the most pressing ones and save the rest for tomorrow. Over time, many people find they need less worry time as their anxiety decreases.",
+    answer: "Most CBT protocols recommend 15-30 minutes. Start with 15 minutes and increase if you find you consistently need more time. The key is having a fixed endpoint, worry time should not extend indefinitely. If you finish early, that is a good sign. If you do not get through all worries, prioritize the most pressing ones and save the rest for tomorrow. Over time, many people find they need less worry time as their anxiety decreases.",
   },
   {
     question: "What if I cannot stop worrying outside of worry time?",
-    answer: "This is completely normal, especially when starting out. The goal is not perfection — it is practice. When a worry pops up, acknowledge it, write it down quickly (so your brain knows it will not be forgotten), and gently redirect your attention. Some people find it helpful to say to themselves: 'I see this worry. I have written it down. I will give it my full attention at [scheduled time].' If a worry feels truly urgent (involving immediate safety), address it right away. Otherwise, the act of postponing gets easier with practice.",
+    answer: "This is completely normal, especially when starting out. The goal is not perfection, it is practice. When a worry pops up, acknowledge it, write it down quickly (so your brain knows it will not be forgotten), and gently redirect your attention. Some people find it helpful to say to themselves: 'I see this worry. I have written it down. I will give it my full attention at [scheduled time].' If a worry feels truly urgent (involving immediate safety), address it right away. Otherwise, the act of postponing gets easier with practice.",
   },
   {
     question: "When is the best time to schedule worry time?",
-    answer: "Choose a time that works consistently for your schedule, but avoid right before bed (worrying before sleep can cause insomnia) and the very start of your day (it may set a negative tone). Late afternoon or early evening works well for many people — it is late enough that you have collected the day's worries but early enough that you have time to decompress afterward. The most important factor is consistency: the same time each day helps your brain learn that worries have a designated time and place.",
+    answer: "Choose a time that works consistently for your schedule, but avoid right before bed (worrying before sleep can cause insomnia) and the very start of your day (it may set a negative tone). Late afternoon or early evening works well for many people, it is late enough that you have collected the day's worries but early enough that you have time to decompress afterward. The most important factor is consistency: the same time each day helps your brain learn that worries have a designated time and place.",
   },
   {
     question: "Is worry time the same as rumination?",
-    answer: "No — and this is a critical distinction. Rumination is passive, repetitive, unproductive thinking that goes in circles. Worry time is structured and goal-oriented. During worry time, you actively engage with each worry: Is it solvable? If yes, plan a concrete next step. If no, practice acceptance and letting go. The guided prompts in this tool help ensure your worry time stays productive rather than becoming rumination. If you find yourself going in circles on a worry, that is a signal to move on to the next one.",
+    answer: "No, and this is a critical distinction. Rumination is passive, repetitive, unproductive thinking that goes in circles. Worry time is structured and goal-oriented. During worry time, you actively engage with each worry: Is it solvable? If yes, plan a concrete next step. If no, practice acceptance and letting go. The guided prompts in this tool help ensure your worry time stays productive rather than becoming rumination. If you find yourself going in circles on a worry, that is a signal to move on to the next one.",
   },
   {
     question: "Are my worries stored privately?",

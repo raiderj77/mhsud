@@ -40,7 +40,7 @@ const FAQ_DATA = [
   {
     question: "Which comes first, depression or anxiety?",
     answer:
-      "Research suggests anxiety disorders more frequently precede depression. Chronic anxiety can be emotionally exhausting and eventually contribute to depressive symptoms. However, this pattern varies individually \u2014 either can appear first, and sometimes they develop simultaneously. Screening for both provides the clearest picture.",
+      "Research suggests anxiety disorders more frequently precede depression. Chronic anxiety can be emotionally exhausting and eventually contribute to depressive symptoms. However, this pattern varies individually, either can appear first, and sometimes they develop simultaneously. Screening for both provides the clearest picture.",
   },
   {
     question: "Is it possible to have anxiety symptoms without an anxiety disorder?",
@@ -92,7 +92,7 @@ export default function DepressionVsAnxietyPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Depression and anxiety are distinct conditions with different core features, but they overlap substantially in symptoms and frequently occur together. Depression is primarily characterized by persistent low mood, loss of pleasure, and low energy. Anxiety is primarily characterized by excessive worry, fear, and heightened arousal. When both are present — which happens in roughly 50% of cases — the combined impact on functioning is typically greater than either alone.
+            Depression and anxiety are distinct conditions with different core features, but they overlap substantially in symptoms and frequently occur together. Depression is primarily characterized by persistent low mood, loss of pleasure, and low energy. Anxiety is primarily characterized by excessive worry, fear, and heightened arousal. When both are present, which happens in roughly 50% of cases, the combined impact on functioning is typically greater than either alone.
           </p>
         </header>
 
@@ -100,10 +100,10 @@ export default function DepressionVsAnxietyPage() {
           <section>
             <h2>Why this distinction matters</h2>
             <p>
-              Many people experience both low mood and worry and aren&apos;t sure which — if either — they might be dealing with. The terms &quot;depressed&quot; and &quot;anxious&quot; are used casually in everyday language, which can make it hard to know when experiences cross into clinical territory.
+              Many people experience both low mood and worry and aren&apos;t sure which, if either, they might be dealing with. The terms &quot;depressed&quot; and &quot;anxious&quot; are used casually in everyday language, which can make it hard to know when experiences cross into clinical territory.
             </p>
             <p>
-              Understanding the difference matters because depression and anxiety have different core features even when they share symptoms. Treatment approaches differ — particularly when it comes to medication. Knowing which condition is driving your experience can help you seek the right support more efficiently, and recognizing co-occurrence helps you and your care team develop a more complete treatment plan.
+              Understanding the difference matters because depression and anxiety have different core features even when they share symptoms. Treatment approaches differ, particularly when it comes to medication. Knowing which condition is driving your experience can help you seek the right support more efficiently, and recognizing co-occurrence helps you and your care team develop a more complete treatment plan.
             </p>
           </section>
 
@@ -127,14 +127,14 @@ export default function DepressionVsAnxietyPage() {
               <li>Recurrent thoughts of death or suicide</li>
             </ol>
             <p>
-              Depression tends to have a <strong>slowing, withdrawing quality</strong> — it pulls energy inward and downward. Many people describe it as heaviness, numbness, or a fog.
+              Depression tends to have a <strong>slowing, withdrawing quality</strong>, it pulls energy inward and downward. Many people describe it as heaviness, numbness, or a fog.
             </p>
           </section>
 
           <section>
             <h2>What is anxiety?</h2>
             <p>
-              <strong>Generalized anxiety disorder (GAD)</strong> — the most common anxiety disorder — is characterized by excessive, difficult-to-control worry about multiple areas of life, occurring more days than not for at least six months, accompanied by physical and cognitive symptoms.
+              <strong>Generalized anxiety disorder (GAD)</strong>, the most common anxiety disorder, is characterized by excessive, difficult-to-control worry about multiple areas of life, occurring more days than not for at least six months, accompanied by physical and cognitive symptoms.
             </p>
             <p>
               The core diagnostic criteria (DSM-5) include worry plus three or more of:
@@ -148,7 +148,7 @@ export default function DepressionVsAnxietyPage() {
               <li>Sleep disturbance</li>
             </ol>
             <p>
-              Anxiety tends to have an <strong>activating, vigilant quality</strong> — the nervous system is in a heightened state, scanning for threat. Many people describe it as feeling &quot;wired but tired,&quot; or like their brain won&apos;t slow down.
+              Anxiety tends to have an <strong>activating, vigilant quality</strong>, the nervous system is in a heightened state, scanning for threat. Many people describe it as feeling &quot;wired but tired,&quot; or like their brain won&apos;t slow down.
             </p>
           </section>
 
@@ -182,7 +182,7 @@ export default function DepressionVsAnxietyPage() {
               </table>
             </div>
             <p>
-              <strong>Key distinction:</strong> Depression is more about the past and present — dwelling, emptiness, absence of positive emotion. Anxiety is more about the future — anticipating danger, &quot;what if&quot; thinking, inability to relax.
+              <strong>Key distinction:</strong> Depression is more about the past and present, dwelling, emptiness, absence of positive emotion. Anxiety is more about the future, anticipating danger, &quot;what if&quot; thinking, inability to relax.
             </p>
           </section>
 
@@ -198,7 +198,7 @@ export default function DepressionVsAnxietyPage() {
               <li>Social withdrawal driven by both loss of interest (depression) and avoidance of feared situations (anxiety)</li>
             </ul>
             <p>
-              This overlap is why many people find it difficult to tell which is &quot;driving&quot; their experience — and why screening for both, rather than one, is clinically valuable.
+              This overlap is why many people find it difficult to tell which is &quot;driving&quot; their experience, and why screening for both, rather than one, is clinically valuable.
             </p>
           </section>
 
@@ -261,7 +261,7 @@ export default function DepressionVsAnxietyPage() {
               <strong>Cognitive Behavioral Therapy (CBT)</strong> is the most extensively studied and most effective psychotherapy for both depression and anxiety. It works by identifying and changing patterns of thinking and behavior that maintain symptoms (Hofmann et al., 2012).
             </p>
             <p>
-              For anxiety specifically, CBT typically includes exposure-based techniques — gradually facing feared situations rather than avoiding them. For depression, behavioral activation is often central — systematically re-engaging with activities that were sources of meaning or pleasure.
+              For anxiety specifically, CBT typically includes exposure-based techniques, gradually facing feared situations rather than avoiding them. For depression, behavioral activation is often central, systematically re-engaging with activities that were sources of meaning or pleasure.
             </p>
 
             <h3>Medication</h3>
@@ -269,7 +269,7 @@ export default function DepressionVsAnxietyPage() {
               <strong>SSRIs (selective serotonin reuptake inhibitors)</strong> are first-line medication for both major depression and generalized anxiety disorder. This includes medications like sertraline, escitalopram, and fluoxetine. This overlap is one reason medication management may be somewhat simpler when both conditions are present.
             </p>
             <p>
-              Medication decisions depend on many factors beyond just the condition — including your medical history, other medications, pregnancy status, and personal preferences. This is a conversation to have with a psychiatrist or your primary care physician.
+              Medication decisions depend on many factors beyond just the condition, including your medical history, other medications, pregnancy status, and personal preferences. This is a conversation to have with a psychiatrist or your primary care physician.
             </p>
 
             <h3>Lifestyle factors</h3>
@@ -277,11 +277,11 @@ export default function DepressionVsAnxietyPage() {
               Both depression and anxiety respond to the same lifestyle interventions:
             </p>
             <ul>
-              <li><strong>Regular aerobic exercise</strong> — meta-analyses demonstrate effect sizes comparable to antidepressants for mild-to-moderate depression (Schuch et al., 2016)</li>
-              <li><strong>Sleep consistency</strong> — irregular sleep worsens both conditions</li>
-              <li><strong>Social connection</strong> — isolation amplifies both</li>
-              <li><strong>Reduced alcohol use</strong> — alcohol disrupts sleep architecture and worsens both mood and anxiety over time</li>
-              <li><strong>Stress reduction practices</strong> (mindfulness, yoga, etc.) — strong evidence for anxiety, moderate for depression</li>
+              <li><strong>Regular aerobic exercise</strong>, meta-analyses demonstrate effect sizes comparable to antidepressants for mild-to-moderate depression (Schuch et al., 2016)</li>
+              <li><strong>Sleep consistency</strong>, irregular sleep worsens both conditions</li>
+              <li><strong>Social connection</strong>, isolation amplifies both</li>
+              <li><strong>Reduced alcohol use</strong>, alcohol disrupts sleep architecture and worsens both mood and anxiety over time</li>
+              <li><strong>Stress reduction practices</strong> (mindfulness, yoga, etc.), strong evidence for anxiety, moderate for depression</li>
             </ul>
           </section>
 
@@ -290,7 +290,7 @@ export default function DepressionVsAnxietyPage() {
           <section>
             <h2>When should you get screened?</h2>
             <p>
-              You don&apos;t need to know which condition you might have before seeking screening or support. If you&apos;ve been feeling persistently off — whether that&apos;s sad, worried, empty, exhausted, or something you can&apos;t quite name — taking both the PHQ-9 and GAD-7 together takes less than 10 minutes and can give you useful, structured information to bring to a healthcare provider.
+              You don&apos;t need to know which condition you might have before seeking screening or support. If you&apos;ve been feeling persistently off, whether that&apos;s sad, worried, empty, exhausted, or something you can&apos;t quite name, taking both the PHQ-9 and GAD-7 together takes less than 10 minutes and can give you useful, structured information to bring to a healthcare provider.
             </p>
           </section>
 
@@ -298,7 +298,7 @@ export default function DepressionVsAnxietyPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment — they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -309,9 +309,9 @@ export default function DepressionVsAnxietyPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -334,7 +334,7 @@ export default function DepressionVsAnxietyPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -16,7 +16,7 @@ const MILESTONES = [
   { days: 7, label: "1 Week", icon: "\uD83C\uDF1F", message: "One full week. Your body is already beginning to heal." },
   { days: 30, label: "30 Days", icon: "\uD83C\uDFC5", message: "One month strong. New habits are taking root." },
   { days: 60, label: "60 Days", icon: "\uD83D\uDCAA", message: "Two months of choosing yourself. That takes real courage." },
-  { days: 90, label: "90 Days", icon: "\uD83C\uDFC6", message: "90 days — a cornerstone of recovery. Be proud of how far you've come." },
+  { days: 90, label: "90 Days", icon: "\uD83C\uDFC6", message: "90 days, a cornerstone of recovery. Be proud of how far you've come." },
   { days: 183, label: "6 Months", icon: "\uD83C\uDF89", message: "Half a year. You are building a life you don't need to escape from." },
   { days: 365, label: "1 Year", icon: "\uD83C\uDF96\uFE0F", message: "One full year. This is a monumental achievement in recovery." },
   { days: 548, label: "18 Months", icon: "\uD83D\uDE80", message: "18 months of resilience, growth, and daily courage." },
@@ -28,12 +28,12 @@ const MILESTONES = [
 function getMotivationalMessage(days: number): string {
   if (days === 0) return "Today is Day 1. The most courageous day of all.";
   if (days <= 7) return "Every hour matters right now. You are stronger than you know.";
-  if (days <= 30) return "The early days are the hardest. Keep going — it gets better.";
+  if (days <= 30) return "The early days are the hardest. Keep going, it gets better.";
   if (days <= 90) return "You're building momentum. New patterns are replacing old ones.";
   if (days <= 183) return "Your recovery is becoming your lifestyle. That's powerful.";
   if (days <= 365) return "You're approaching a full year. What an incredible journey.";
   if (days <= 730) return "Your recovery is an example of what's possible.";
-  return "Your sustained recovery is a gift — to yourself and to those around you.";
+  return "Your sustained recovery is a gift, to yourself and to those around you.";
 }
 
 function daysBetween(start: Date, end: Date): number {
@@ -128,7 +128,7 @@ export function SobrietyClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/sobriety-calculator";
     if (mode === "blank") {
       if (navigator.share) {
-        try { await navigator.share({ title: "Sobriety Calculator \u2014 Free & Private", text: "Track your sobriety with a free, private day counter. See milestones, countdowns, and money saved.", url }); return; } catch { /* cancelled */ }
+        try { await navigator.share({ title: "Sobriety Calculator, Free & Private", text: "Track your sobriety with a free, private day counter. See milestones, countdowns, and money saved.", url }); return; } catch { /* cancelled */ }
       }
       await navigator.clipboard.writeText(url);
       setShareMessage("Link copied!");
@@ -136,7 +136,7 @@ export function SobrietyClient({ faqData }: Props) {
       return;
     }
     const latest = earnedMilestones.length > 0 ? earnedMilestones[earnedMilestones.length - 1].label : "Starting out";
-    const summary = `Sobriety Calculator\n${totalDays} days sober \u2014 Latest milestone: ${latest}${moneySaved > 0 ? `\nEstimated savings: $${moneySaved.toLocaleString()}` : ""}\n\nTrack yours: ${url}`;
+    const summary = `Sobriety Calculator\n${totalDays} days sober, Latest milestone: ${latest}${moneySaved > 0 ? `\nEstimated savings: $${moneySaved.toLocaleString()}` : ""}\n\nTrack yours: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: `${totalDays} Days Sober`, text: summary }); return; } catch { /* cancelled */ }
     }
@@ -158,7 +158,7 @@ export function SobrietyClient({ faqData }: Props) {
           Sobriety Calculator
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Enter your clean date and see how far you&apos;ve come. Track milestones, count your days, and estimate money saved. Your date is stored in your browser only — completely private.
+          Enter your clean date and see how far you&apos;ve come. Track milestones, count your days, and estimate money saved. Your date is stored in your browser only, completely private.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -265,7 +265,7 @@ export function SobrietyClient({ faqData }: Props) {
             <div className="hidden print:block text-center text-xs text-neutral-400 pb-4 border-t border-neutral-200 pt-3 mx-6">
               <p className="font-semibold text-sm text-neutral-600 mb-1">Sobriety Certificate</p>
               <p>{totalDays.toLocaleString()} days sober since {startDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
-              <p>Generated at mindchecktools.com/sobriety-calculator — {new Date().toLocaleDateString()}</p>
+              <p>Generated at mindchecktools.com/sobriety-calculator, {new Date().toLocaleDateString()}</p>
             </div>
           </div>
 
@@ -297,7 +297,7 @@ export function SobrietyClient({ faqData }: Props) {
                     Next milestone: {nextMilestone.label}
                   </p>
                   <p className="text-xs text-warm-600 dark:text-warm-500">
-                    {daysToNext} day{daysToNext !== 1 ? "s" : ""} to go — you&apos;re {Math.round((totalDays / nextMilestone.days) * 100)}% there
+                    {daysToNext} day{daysToNext !== 1 ? "s" : ""} to go, you&apos;re {Math.round((totalDays / nextMilestone.days) * 100)}% there
                   </p>
                   <div className="mt-2 h-1.5 bg-warm-200 dark:bg-warm-800 rounded-full overflow-hidden w-48">
                     <div
@@ -432,8 +432,8 @@ export function SobrietyClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -462,19 +462,19 @@ export function SobrietyClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Milestones and What They Mean</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Recovery milestones are more than numbers — they represent real changes happening in your body, brain, and life. In the <strong>first 30 days</strong>, your body is actively healing from the physical effects of substance use. Sleep patterns begin normalizing, appetite returns, and energy levels stabilize. By <strong>90 days</strong>, many people report clearer thinking, improved emotional regulation, and stronger relationships. The <strong>one-year mark</strong> is significant because it means you&apos;ve navigated every season, holiday, and anniversary without your substance — proving to yourself that recovery works across all of life&apos;s circumstances.
+                  Recovery milestones are more than numbers, they represent real changes happening in your body, brain, and life. In the <strong>first 30 days</strong>, your body is actively healing from the physical effects of substance use. Sleep patterns begin normalizing, appetite returns, and energy levels stabilize. By <strong>90 days</strong>, many people report clearer thinking, improved emotional regulation, and stronger relationships. The <strong>one-year mark</strong> is significant because it means you&apos;ve navigated every season, holiday, and anniversary without your substance, proving to yourself that recovery works across all of life&apos;s circumstances.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">The Science of Habit Change</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Research on habit formation shows that <strong>self-monitoring</strong> — tracking your own behavior — is one of the most effective strategies for maintaining change. A 2016 review published in <em>Health Psychology Review</em> found that self-monitoring was the single most effective behavior change technique across multiple health behaviors. Counting days provides concrete, undeniable evidence of progress. On difficult days, seeing &ldquo;287 days&rdquo; is a powerful reminder that you have 287 reasons not to go back.
+                  Research on habit formation shows that <strong>self-monitoring</strong>, tracking your own behavior, is one of the most effective strategies for maintaining change. A 2016 review published in <em>Health Psychology Review</em> found that self-monitoring was the single most effective behavior change technique across multiple health behaviors. Counting days provides concrete, undeniable evidence of progress. On difficult days, seeing &ldquo;287 days&rdquo; is a powerful reminder that you have 287 reasons not to go back.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Relapse Is Part of Recovery</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  If you experience a relapse, it does not erase your progress. The National Institute on Drug Abuse (NIDA) recognizes substance use disorders as <strong>chronic conditions</strong> with relapse rates (40-60%) comparable to type 1 diabetes, hypertension, and asthma. Relapse is a signal to adjust your approach — not a sign of failure. Every period of sobriety strengthens recovery skills and builds resilience. If you need to reset your counter, do so without shame. The <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">CAGE-AID screening</Link> and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">WHO-ASSIST drug screening</Link> can help you reflect on your substance use at any point in your journey.
+                  If you experience a relapse, it does not erase your progress. The National Institute on Drug Abuse (NIDA) recognizes substance use disorders as <strong>chronic conditions</strong> with relapse rates (40-60%) comparable to type 1 diabetes, hypertension, and asthma. Relapse is a signal to adjust your approach, not a sign of failure. Every period of sobriety strengthens recovery skills and builds resilience. If you need to reset your counter, do so without shame. The <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">CAGE-AID screening</Link> and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">WHO-ASSIST drug screening</Link> can help you reflect on your substance use at any point in your journey.
                 </p>
               </div>
               <ToolReviewerBio />

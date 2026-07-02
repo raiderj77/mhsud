@@ -137,7 +137,7 @@ export function HolmesRaheClient({ faqData }: Props) {
   };
 
   const tierMessage = {
-    low: "Your total Life Change Units are below 150, which research associates with a relatively low susceptibility to stress-related health changes. This does not mean you are free from stress — only that your recent life changes fall in the lower range of the scale.",
+    low: "Your total Life Change Units are below 150, which research associates with a relatively low susceptibility to stress-related health changes. This does not mean you are free from stress, only that your recent life changes fall in the lower range of the scale.",
     moderate:
       "Your total Life Change Units fall between 150 and 299. Research associates this range with about a 50% chance of a major health change in the next two years. This is a statistical association, not a prediction for any individual. Coping strategies, social support, and self-care can all influence outcomes.",
     high: "Your total Life Change Units are 300 or above. Research associates this range with about an 80% chance of a major health change in the next two years. This is a population-level statistic, not a certainty for you as an individual. Speaking with a healthcare professional about stress management may be helpful.",
@@ -273,7 +273,7 @@ export function HolmesRaheClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Holmes, T. H., &amp; Rahe, R. H. (1967). The Social Readjustment Rating Scale.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/6059863/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Original Holmes-Rahe Paper</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/6059863/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Original Holmes-Rahe Paper</a>
               </li>
               <li>
                 American Psychological Association. Stress.{" "}
@@ -415,8 +415,7 @@ export function HolmesRaheClient({ faqData }: Props) {
           <h2>Why Positive Events Count</h2>
           <p>
             One of the key insights of the Holmes-Rahe research is that
-            <em> any</em> significant life change — positive or negative —
-            requires adaptation and uses physiological resources. Marriage,
+            <em> any</em> significant life change, positive or negative, requires adaptation and uses physiological resources. Marriage,
             retirement, pregnancy, and personal achievements all appear on the
             scale because they demand readjustment. The total stress load
             reflects not just negative events but the overall amount of change a
@@ -540,7 +539,7 @@ export function HolmesRaheClient({ faqData }: Props) {
           Check all events that have happened to you in the{" "}
           <strong>past 12 months</strong>. Each event has a Life Change Unit
           (LCU) value. Your total score is the sum of all checked events. You do
-          not need to check every item — only those that apply.
+          not need to check every item, only those that apply.
         </p>
       </div>
 

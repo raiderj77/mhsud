@@ -36,17 +36,17 @@ const FAQ_DATA = [
   {
     question: "What makes healthcare burnout different from regular burnout?",
     answer:
-      "Healthcare burnout involves moral injury \u2014 the distress of knowing what patients need but being unable to provide it due to systemic constraints. It also carries unique risks: higher rates of medical errors, patient safety incidents, and provider suicide. The life-and-death stakes make healthcare burnout distinctly more consequential than burnout in most other professions.",
+      "Healthcare burnout involves moral injury, the distress of knowing what patients need but being unable to provide it due to systemic constraints. It also carries unique risks: higher rates of medical errors, patient safety incidents, and provider suicide. The life-and-death stakes make healthcare burnout distinctly more consequential than burnout in most other professions.",
   },
   {
     question: "Can healthcare burnout be fixed without leaving the profession?",
     answer:
-      "Yes, though it requires both individual strategies and systemic change. Individual approaches include therapy, peer support, and boundary-setting. However, research consistently shows that organizational factors \u2014 staffing levels, administrative burden, autonomy, and leadership culture \u2014 are the primary drivers. Sustainable solutions must address both individual and systemic levels.",
+      "Yes, though it requires both individual strategies and systemic change. Individual approaches include therapy, peer support, and boundary-setting. However, research consistently shows that organizational factors, staffing levels, administrative burden, autonomy, and leadership culture, are the primary drivers. Sustainable solutions must address both individual and systemic levels.",
   },
   {
     question: "Is burnout a reason to see a therapist?",
     answer:
-      "Yes. Burnout is a significant risk factor for depression, anxiety, substance use, and suicidal ideation \u2014 particularly in healthcare settings. A therapist can help distinguish burnout from clinical depression, address moral injury, and develop sustainable coping strategies. Many employee assistance programs offer confidential sessions at no cost.",
+      "Yes. Burnout is a significant risk factor for depression, anxiety, substance use, and suicidal ideation, particularly in healthcare settings. A therapist can help distinguish burnout from clinical depression, address moral injury, and develop sustainable coping strategies. Many employee assistance programs offer confidential sessions at no cost.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function BurnoutHealthcareWorkersGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Healthcare workers entered their profession to help people. But the systems they work within &mdash; chronic understaffing, administrative overload, emotional weight, and moral compromise &mdash; are producing burnout at crisis levels. The 2022 U.S. Surgeon General Advisory on healthcare worker burnout called it an &quot;urgent public health issue.&quot; If you are a healthcare worker feeling depleted, you are not alone, and this is not a personal failing.
+            Healthcare workers entered their profession to help people. But the systems they work within, chronic understaffing, administrative overload, emotional weight, and moral compromise, are producing burnout at crisis levels. The 2022 U.S. Surgeon General Advisory on healthcare worker burnout called it an &quot;urgent public health issue.&quot; If you are a healthcare worker feeling depleted, you are not alone, and this is not a personal failing.
           </p>
         </header>
 
@@ -96,10 +96,10 @@ export default function BurnoutHealthcareWorkersGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>Dr. Lorna Breen Heroes&apos; Foundation</strong> &mdash; Resources for healthcare professionals at <strong>drlornabreen.org</strong></li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Dr. Lorna Breen Heroes&apos; Foundation</strong>, Resources for healthcare professionals at <strong>drlornabreen.org</strong></li>
             </ul>
           </div>
 
@@ -113,10 +113,10 @@ export default function BurnoutHealthcareWorkersGuidePage() {
           <section>
             <h2>What makes healthcare burnout unique?</h2>
             <p>
-              Healthcare burnout shares the three Maslach dimensions with burnout in other professions &mdash; emotional exhaustion, depersonalization, and reduced personal accomplishment &mdash; but it carries additional layers:
+              Healthcare burnout shares the three Maslach dimensions with burnout in other professions, emotional exhaustion, depersonalization, and reduced personal accomplishment, but it carries additional layers:
             </p>
             <ul>
-              <li><strong>Moral injury:</strong> The distress of being unable to provide the care you know patients need due to systemic constraints &mdash; insufficient time, resources, or staffing</li>
+              <li><strong>Moral injury:</strong> The distress of being unable to provide the care you know patients need due to systemic constraints, insufficient time, resources, or staffing</li>
               <li><strong>Life-and-death stakes:</strong> Mistakes carry severe consequences, creating a constant low-grade hypervigilance</li>
               <li><strong>Compassion fatigue:</strong> Absorbing the suffering of patients and families takes a cumulative emotional toll</li>
               <li><strong>Culture of self-sacrifice:</strong> Healthcare normalizes working through exhaustion, skipping meals, and suppressing personal needs</li>
@@ -149,7 +149,7 @@ export default function BurnoutHealthcareWorkersGuidePage() {
               The <Link href="/burnout-test-for-healthcare-workers" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout screening for healthcare workers</Link> is a free, private self-assessment that measures burnout across the three Maslach dimensions. It takes under five minutes, runs entirely in your browser, and requires no account or login.
             </p>
             <p>
-              A burnout screening gives you a structured snapshot &mdash; objective data that cuts through the &quot;everyone feels this way&quot; normalization common in healthcare culture. You can bring your results to a therapist, your EAP, or a trusted colleague as a conversation starter.
+              A burnout screening gives you a structured snapshot, objective data that cuts through the &quot;everyone feels this way&quot; normalization common in healthcare culture. You can bring your results to a therapist, your EAP, or a trusted colleague as a conversation starter.
             </p>
             <p>
               If you are also experiencing symptoms of depression or anxiety alongside burnout, the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> provide focused screenings for those dimensions. Burnout can mask or co-occur with clinical depression, and distinguishing between them is important for getting the right support.
@@ -161,10 +161,10 @@ export default function BurnoutHealthcareWorkersGuidePage() {
             <p><strong>What individuals can do:</strong></p>
             <ul>
               <li>Set boundaries around shifts, on-call time, and after-hours communication</li>
-              <li>Use your EAP &mdash; sessions are confidential and typically free</li>
+              <li>Use your EAP, sessions are confidential and typically free</li>
               <li>Join peer support programs (Schwartz Rounds, Balint groups, peer support networks)</li>
               <li>Protect basic self-care: sleep, nutrition, movement, and days off</li>
-              <li>Name what you are experiencing &mdash; burnout thrives in silence</li>
+              <li>Name what you are experiencing, burnout thrives in silence</li>
             </ul>
             <p><strong>What organizations must address:</strong></p>
             <ul>
@@ -192,7 +192,7 @@ export default function BurnoutHealthcareWorkersGuidePage() {
               <li>You have considered leaving the profession without a clear next step</li>
             </ul>
             <p>
-              The <Link href="/burnout-test-for-healthcare-workers" className="text-sage-600 dark:text-sage-400 underline">burnout screening</Link> is a useful first step to bring to that conversation. You do not need to have all the answers &mdash; you just need to show up.
+              The <Link href="/burnout-test-for-healthcare-workers" className="text-sage-600 dark:text-sage-400 underline">burnout screening</Link> is a useful first step to bring to that conversation. You do not need to have all the answers, you just need to show up.
             </p>
           </section>
 
@@ -212,7 +212,7 @@ export default function BurnoutHealthcareWorkersGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

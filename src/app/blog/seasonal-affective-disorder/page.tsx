@@ -35,7 +35,7 @@ const FAQ_DATA = [
   {
     question: "Do light therapy boxes really work?",
     answer:
-      "Research supports light therapy as an effective SAD treatment. Studies show that 10,000 lux light therapy used for 20\u201330 minutes daily in the early morning can significantly improve seasonal depression symptoms. Effectiveness varies between individuals, and quality matters \u2014 a proper SAD light should produce 10,000 lux and be used at the right time of day.",
+      "Research supports light therapy as an effective SAD treatment. Studies show that 10,000 lux light therapy used for 20\u201330 minutes daily in the early morning can significantly improve seasonal depression symptoms. Effectiveness varies between individuals, and quality matters, a proper SAD light should produce 10,000 lux and be used at the right time of day.",
   },
   {
     question: "Can vitamin D prevent or treat SAD?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
       "The relationship between vitamin D and seasonal depression is complex. Low vitamin D levels may contribute to depression in some people, and supplementation has been studied as a SAD treatment. However, the evidence is mixed. Rather than relying solely on vitamin D, talking to a healthcare provider about comprehensive screening and treatment is recommended.",
   },
   {
-    question: "When should I start light therapy — in fall or winter?",
+    question: "When should I start light therapy, in fall or winter?",
     answer:
       "If you have a clear pattern of depression starting in fall, beginning light therapy before symptoms become severe may be more effective than waiting until winter. Some people start treatment in late September or early October. If your depression has already started, beginning light therapy sooner is generally better than delaying.",
   },
@@ -69,7 +69,7 @@ export default function SeasonalAffectiveDisorderPage() {
             articleJsonLd({
               title: "Seasonal Affective Disorder (SAD): Understanding Winter Depression and Light Therapy",
               description:
-                "Evidence-based clinical guide to seasonal affective disorder — what it is, why it happens, light therapy, and treatment options.",
+                "Evidence-based clinical guide to seasonal affective disorder, what it is, why it happens, light therapy, and treatment options.",
               url: ARTICLE_URL,
               datePublished: POST_DATA.publishedDate,
               dateModified: POST_DATA.modifiedDate,
@@ -129,7 +129,7 @@ export default function SeasonalAffectiveDisorderPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            For millions of people, fall and winter bring more than just cold weather — they bring mood changes,
+            For millions of people, fall and winter bring more than just cold weather, they bring mood changes,
             fatigue, and social withdrawal. If this pattern sounds familiar, you may be experiencing seasonal affective
             disorder. This guide explains what SAD is, why it happens, and what evidence-based treatments can help.
           </p>
@@ -155,9 +155,9 @@ export default function SeasonalAffectiveDisorderPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -171,7 +171,7 @@ export default function SeasonalAffectiveDisorderPage() {
             </p>
             <p>
               This isn&apos;t about disliking cold weather. For people with SAD, the change in seasons brings a profound
-              shift—loss of motivation, trouble getting out of bed, appetite changes, and emotional withdrawal that
+              shift, loss of motivation, trouble getting out of bed, appetite changes, and emotional withdrawal that
               significantly impacts daily life. It feels different from ordinary seasonal preferences.
             </p>
             <p>
@@ -188,7 +188,7 @@ export default function SeasonalAffectiveDisorderPage() {
               interconnected factors:
             </p>
             <p>
-              <strong>Reduced light exposure:</strong> The most prominent theory involves the circadian rhythm — your
+              <strong>Reduced light exposure:</strong> The most prominent theory involves the circadian rhythm, your
               body&apos;s internal 24-hour clock. In winter, shortened daylight means less bright light exposure,
               especially in the morning. This disruption can affect the timing of melatonin (a hormone that promotes
               sleep) and serotonin (a neurotransmitter linked to mood). A landmark study published in{" "}
@@ -228,7 +228,7 @@ export default function SeasonalAffectiveDisorderPage() {
               <li>Significant changes in sleep (often oversleeping and hypersomnia)</li>
               <li>Changes in appetite, particularly increased cravings for carbohydrates and sweets</li>
               <li>Fatigue and low energy, even after adequate sleep</li>
-              <li>Psychomotor changes — moving more slowly or being restless and agitated</li>
+              <li>Psychomotor changes, moving more slowly or being restless and agitated</li>
               <li>Difficulty concentrating or making decisions</li>
               <li>Feelings of worthlessness or guilt</li>
               <li>Recurrent thoughts of death or suicide</li>
@@ -239,7 +239,7 @@ export default function SeasonalAffectiveDisorderPage() {
               lengthen in spring. Some people experience a pattern in summer, though this is less common.
             </p>
             <p>
-              Importantly, the depression must cause clinically significant distress or impairment — it should interfere
+              Importantly, the depression must cause clinically significant distress or impairment, it should interfere
               with work, relationships, self-care, or other important areas of life. Occasional low mood or preference for
               warmer weather does not constitute SAD.
             </p>
@@ -253,7 +253,7 @@ export default function SeasonalAffectiveDisorderPage() {
               morning, helps reset the circadian rhythm and may increase serotonin availability.
             </p>
             <p>
-              <strong>How it works:</strong> A light therapy box produces light at an intensity of 10,000 lux — roughly 25
+              <strong>How it works:</strong> A light therapy box produces light at an intensity of 10,000 lux, roughly 25
               times brighter than typical indoor lighting. You position yourself about 16–24 inches from the light and let
               it shine into your eyes (though you don&apos;t stare directly at the light). Sessions typically last 20–30 minutes
               and are most effective when done early in the morning, ideally within 30 minutes of waking.
@@ -266,7 +266,7 @@ export default function SeasonalAffectiveDisorderPage() {
             </p>
             <p>
               <strong>Response timeline:</strong> Some people notice improvement within 3–5 days, while others take 3–4
-              weeks. Consistency matters — using light therapy sporadically is less effective than daily use. Many people
+              weeks. Consistency matters, using light therapy sporadically is less effective than daily use. Many people
               find benefits start in 1–2 weeks and continue to improve over a month of regular use.
             </p>
             <p>
@@ -311,7 +311,7 @@ export default function SeasonalAffectiveDisorderPage() {
             <p>
               <strong>Vitamin D supplementation:</strong> Some research suggests vitamin D may play a role in seasonal mood
               changes. While vitamin D levels are worth checking, evidence for supplementation as a standalone SAD treatment
-              is mixed. If you have low vitamin D, supplementation may help — but it&apos;s not a substitute for light
+              is mixed. If you have low vitamin D, supplementation may help, but it&apos;s not a substitute for light
               therapy or other evidence-based treatments.
             </p>
           </section>
@@ -342,7 +342,7 @@ export default function SeasonalAffectiveDisorderPage() {
             <p>
               <strong>Schedule an appointment:</strong> See your primary care doctor or a mental health professional. Bring
               your mood journal. Describe when symptoms start and end, how severe they are, and how they affect your daily
-              life. Be honest about any thoughts of self-harm — this is crucial information.
+              life. Be honest about any thoughts of self-harm, this is crucial information.
             </p>
             <p>
               <strong>Get a professional evaluation:</strong> A healthcare provider can assess whether your symptoms may
@@ -365,7 +365,7 @@ export default function SeasonalAffectiveDisorderPage() {
           <section>
             <h2>Key Takeaways</h2>
             <p>
-              Seasonal affective disorder may indicate a real, treatable form of depression — not a character flaw or
+              Seasonal affective disorder may indicate a real, treatable form of depression, not a character flaw or
               weakness. If you experience a recurring pattern of depression during certain seasons, you deserve support and
               professional evaluation. Light therapy, cognitive-behavioral therapy, and sometimes medication are effective,
               evidence-based treatments.
@@ -408,7 +408,7 @@ export default function SeasonalAffectiveDisorderPage() {
               </p>
               <p>
                 Terman, M., &amp; Terman, J. S. (2005). Light therapy for seasonal and non-seasonal depression: Efficacy,
-                protocol, safety, and side effects. <em>CNS &amp; Neurological Disorders — Drug Targets</em>, 4(3),
+                protocol, safety, and side effects. <em>CNS &amp; Neurological Disorders, Drug Targets</em>, 4(3),
                 289–308.
               </p>
               <p>
@@ -425,7 +425,7 @@ export default function SeasonalAffectiveDisorderPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

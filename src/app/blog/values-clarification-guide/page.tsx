@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "Can your values change over time?",
     answer:
-      "Yes. Values evolve with life experience and changing circumstances. What mattered most at 20 may shift by 40. Major life events like becoming a parent, experiencing illness, or entering recovery often prompt reassessment. Periodic values clarification \u2014 yearly or after major changes \u2014 helps ensure daily actions align with what currently matters most.",
+      "Yes. Values evolve with life experience and changing circumstances. What mattered most at 20 may shift by 40. Major life events like becoming a parent, experiencing illness, or entering recovery often prompt reassessment. Periodic values clarification, yearly or after major changes, helps ensure daily actions align with what currently matters most.",
   },
   {
     question: "What is a values card sort?",
@@ -88,7 +88,7 @@ export default function ValuesClarificationGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Most people can list what they want &mdash; a better job, less stress, stronger relationships. But fewer people can articulate why those things matter to them, or what underlying values drive those desires. Values clarification is the process of identifying what truly matters to you &mdash; not what you think should matter, but what actually does &mdash; and using that knowledge to guide decisions, set priorities, and live with greater intention.
+            Most people can list what they want, a better job, less stress, stronger relationships. But fewer people can articulate why those things matter to them, or what underlying values drive those desires. Values clarification is the process of identifying what truly matters to you, not what you think should matter, but what actually does, and using that knowledge to guide decisions, set priorities, and live with greater intention.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function ValuesClarificationGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,10 +117,10 @@ export default function ValuesClarificationGuidePage() {
               Values clarification is a structured process for identifying, examining, and prioritizing your core personal values. It originated in humanistic psychology through the work of Carl Rogers and Abraham Maslow in the mid-20th century, who emphasized that psychological well-being depends on living in alignment with your authentic self.
             </p>
             <p>
-              The concept was formalized as a therapeutic technique by Louis Raths, Merrill Harmin, and Sidney Simon in the 1960s, and later became a central component of Acceptance and Commitment Therapy (ACT), developed by Steven Hayes in the 1980s. In ACT, values are considered the foundation for meaningful action &mdash; the &quot;why&quot; behind the &quot;what&quot; of behavior change.
+              The concept was formalized as a therapeutic technique by Louis Raths, Merrill Harmin, and Sidney Simon in the 1960s, and later became a central component of Acceptance and Commitment Therapy (ACT), developed by Steven Hayes in the 1980s. In ACT, values are considered the foundation for meaningful action, the &quot;why&quot; behind the &quot;what&quot; of behavior change.
             </p>
             <p>
-              Unlike goal-setting (which focuses on specific outcomes), values clarification focuses on ongoing directions. A value like &quot;connection&quot; is not something you achieve and check off &mdash; it is a quality you bring to relationships throughout your life. This distinction is what makes values so powerful for sustained motivation and psychological flexibility.
+              Unlike goal-setting (which focuses on specific outcomes), values clarification focuses on ongoing directions. A value like &quot;connection&quot; is not something you achieve and check off, it is a quality you bring to relationships throughout your life. This distinction is what makes values so powerful for sustained motivation and psychological flexibility.
             </p>
           </section>
 
@@ -147,7 +147,7 @@ export default function ValuesClarificationGuidePage() {
               Values clarification is particularly powerful in addiction recovery because it reframes the entire project of recovery from something negative (what you are giving up) to something positive (what you are moving toward).
             </p>
             <p>
-              When recovery is defined solely by abstinence, motivation can feel fragile &mdash; especially when cravings are strong or life gets difficult. But when recovery is anchored to values like family, integrity, health, or personal growth, it becomes about building a meaningful life rather than just avoiding a substance.
+              When recovery is defined solely by abstinence, motivation can feel fragile, especially when cravings are strong or life gets difficult. But when recovery is anchored to values like family, integrity, health, or personal growth, it becomes about building a meaningful life rather than just avoiding a substance.
             </p>
             <p>
               ACT-based approaches to addiction treatment use values as the motivational foundation. Research by Wilson and Murrell (2004) demonstrated that values-based interventions increase treatment engagement and reduce dropout rates in substance use programs. When clients connect their recovery efforts to their deepest values, they are more likely to persist through discomfort.
@@ -169,7 +169,7 @@ export default function ValuesClarificationGuidePage() {
               The <Link href="/values-card-sort" className="text-sage-600 dark:text-sage-400 underline">values card sort tool</Link> provides this exercise in a digital format. You sort values by dragging them into categories, and the tool summarizes your top values at the end. The exercise typically takes 10&ndash;15 minutes and can be revisited whenever you want to check in with your priorities.
             </p>
             <p>
-              After completing the card sort, the next step is to assess how well your daily life aligns with your stated values. If you ranked &quot;health&quot; as a top value but spend zero time on physical activity, that gap is worth exploring &mdash; not with judgment, but with curiosity about what is getting in the way.
+              After completing the card sort, the next step is to assess how well your daily life aligns with your stated values. If you ranked &quot;health&quot; as a top value but spend zero time on physical activity, that gap is worth exploring, not with judgment, but with curiosity about what is getting in the way.
             </p>
           </section>
 
@@ -178,7 +178,7 @@ export default function ValuesClarificationGuidePage() {
           <section>
             <h2>Values and psychological flexibility</h2>
             <p>
-              In ACT, values are one of six core processes that together create psychological flexibility &mdash; the ability to be present, open to your experience, and engaged in valued action even in the face of difficult thoughts and feelings.
+              In ACT, values are one of six core processes that together create psychological flexibility, the ability to be present, open to your experience, and engaged in valued action even in the face of difficult thoughts and feelings.
             </p>
             <p>
               Psychological inflexibility (being rigid, avoidant, or disconnected from values) is associated with a wide range of mental health difficulties, including depression, anxiety, substance use, and chronic pain. Research by Kashdan and Rottenberg (2010) found that psychological flexibility is a stronger predictor of well-being than the absence of negative emotions.
@@ -242,7 +242,7 @@ export default function ValuesClarificationGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

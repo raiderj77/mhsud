@@ -76,13 +76,13 @@ const STAGES: Record<Stage, StageInfo> = {
     bgDark: "dark:bg-slate-900/30",
     textLight: "text-slate-700",
     textDark: "dark:text-slate-300",
-    description: "In this stage, you may not see your substance use as a problem — or you may feel that the costs of changing outweigh the benefits. You might feel defensive when others bring it up, or you may simply not have thought about it much.",
-    meaning: "Being in Precontemplation does not mean you are in denial or that something is wrong with you. It means that right now, change is not on your radar. Many people stay in this stage for a long time before something shifts their perspective — a health scare, a relationship consequence, or simply new information.",
+    description: "In this stage, you may not see your substance use as a problem, or you may feel that the costs of changing outweigh the benefits. You might feel defensive when others bring it up, or you may simply not have thought about it much.",
+    meaning: "Being in Precontemplation does not mean you are in denial or that something is wrong with you. It means that right now, change is not on your radar. Many people stay in this stage for a long time before something shifts their perspective, a health scare, a relationship consequence, or simply new information.",
     nextSteps: [
       "There is no pressure to change right now. This tool is here whenever you are ready.",
-      "Consider taking a substance use screening (AUDIT, WHO-ASSIST, or CAGE-AID) just to get information — with no obligation to act on it.",
-      "If someone in your life has expressed concern, try listening to their perspective without arguing — just take it in.",
-      "Read about the health effects of substance use on our Health Recovery Timeline — information alone can shift awareness over time.",
+      "Consider taking a substance use screening (AUDIT, WHO-ASSIST, or CAGE-AID) just to get information, with no obligation to act on it.",
+      "If someone in your life has expressed concern, try listening to their perspective without arguing, just take it in.",
+      "Read about the health effects of substance use on our Health Recovery Timeline, information alone can shift awareness over time.",
     ],
     resources: [
       { href: "/audit-alcohol-test", label: "AUDIT Alcohol Screen", desc: "Reflect on your relationship with alcohol" },
@@ -99,12 +99,12 @@ const STAGES: Record<Stage, StageInfo> = {
     bgDark: "dark:bg-amber-900/20",
     textLight: "text-amber-700",
     textDark: "dark:text-amber-300",
-    description: "You are aware that your substance use may be a problem and you are weighing the pros and cons of making a change. You may feel ambivalent — part of you wants to change, and part of you does not. This is completely normal.",
-    meaning: "Contemplation is a critical stage. You are no longer unaware — you are actively thinking about your situation. Ambivalence (wanting to change and not wanting to at the same time) is the hallmark of this stage. The goal is not to force a decision but to explore your feelings honestly.",
+    description: "You are aware that your substance use may be a problem and you are weighing the pros and cons of making a change. You may feel ambivalent, part of you wants to change, and part of you does not. This is completely normal.",
+    meaning: "Contemplation is a critical stage. You are no longer unaware, you are actively thinking about your situation. Ambivalence (wanting to change and not wanting to at the same time) is the hallmark of this stage. The goal is not to force a decision but to explore your feelings honestly.",
     nextSteps: [
       "Write a pros-and-cons list: what are the benefits of changing vs. the benefits of staying the same?",
-      "Talk to a counselor or therapist — even one session can help clarify your thinking. Motivational interviewing is especially effective in this stage.",
-      "Explore what treatment options and costs look like — having information reduces the fear of the unknown.",
+      "Talk to a counselor or therapist, even one session can help clarify your thinking. Motivational interviewing is especially effective in this stage.",
+      "Explore what treatment options and costs look like, having information reduces the fear of the unknown.",
       "Look at our Health Recovery Timeline to see the concrete health benefits of change at different time points.",
     ],
     resources: [
@@ -122,9 +122,9 @@ const STAGES: Record<Stage, StageInfo> = {
     textLight: "text-blue-700",
     textDark: "dark:text-blue-300",
     description: "You have decided to make a change and are getting ready. You may be setting a quit date, gathering resources, telling trusted people, or taking small steps like cutting back. You are moving from thinking to planning.",
-    meaning: "Preparation is the bridge between deciding and doing. Research shows that people who spend time in this stage — building a plan, gathering support, and setting themselves up for success — are more likely to sustain change than those who jump into action without preparation.",
+    meaning: "Preparation is the bridge between deciding and doing. Research shows that people who spend time in this stage, building a plan, gathering support, and setting themselves up for success, are more likely to sustain change than those who jump into action without preparation.",
     nextSteps: [
-      "Build a relapse prevention plan — identify your triggers, warning signs, coping strategies, and emergency contacts.",
+      "Build a relapse prevention plan, identify your triggers, warning signs, coping strategies, and emergency contacts.",
       "Set a specific date to begin. Write it down. Tell someone you trust.",
       "Remove substances and paraphernalia from your home if possible.",
       "Learn the HALT technique (Hungry, Angry, Lonely, Tired) so you can recognize vulnerability before it hits.",
@@ -146,13 +146,13 @@ const STAGES: Record<Stage, StageInfo> = {
     textLight: "text-green-700",
     textDark: "dark:text-green-300",
     description: "You are actively changing your behavior. You may have recently quit or significantly reduced your use. You are modifying your routines, environment, and relationships to support your new direction. This stage requires the most energy and commitment.",
-    meaning: "Action is the most visible stage — but it is not the only one that matters. The work you did in Contemplation and Preparation brought you here. The Action stage typically lasts from the first day of change through about six months. During this time, cravings and challenges are most intense, and having tools and support readily available is critical.",
+    meaning: "Action is the most visible stage, but it is not the only one that matters. The work you did in Contemplation and Preparation brought you here. The Action stage typically lasts from the first day of change through about six months. During this time, cravings and challenges are most intense, and having tools and support readily available is critical.",
     nextSteps: [
-      "Use the Urge Surfing Timer when cravings hit — most pass within 15 to 30 minutes.",
+      "Use the Urge Surfing Timer when cravings hit, most pass within 15 to 30 minutes.",
       "Track your progress with the Sobriety Calculator to stay motivated with milestones.",
       "Do a HALT Check-In daily to catch vulnerability early.",
       "Review your relapse prevention plan regularly and update it as you learn what works.",
-      "Celebrate your wins — every day in recovery is an accomplishment.",
+      "Celebrate your wins, every day in recovery is an accomplishment.",
     ],
     resources: [
       { href: "/urge-surfing-timer", label: "Urge Surfing Timer", desc: "Ride out cravings with guided mindfulness" },
@@ -170,13 +170,13 @@ const STAGES: Record<Stage, StageInfo> = {
     textLight: "text-violet-700",
     textDark: "dark:text-violet-300",
     description: "You have sustained your changes for six months or more. You have developed new habits, coping skills, and routines. Your focus now is on maintaining your gains and preventing relapse. The challenge in this stage is staying vigilant without becoming complacent.",
-    meaning: "Maintenance is not just \"keeping going\" — it is an active stage that requires ongoing attention. Triggers can resurface, especially during times of stress, life transitions, or celebration. The skills you have built are strong, but they need regular practice. Many people in long-term recovery find that helping others strengthens their own commitment.",
+    meaning: "Maintenance is not just \"keeping going\", it is an active stage that requires ongoing attention. Triggers can resurface, especially during times of stress, life transitions, or celebration. The skills you have built are strong, but they need regular practice. Many people in long-term recovery find that helping others strengthens their own commitment.",
     nextSteps: [
-      "Continue tracking your milestones — the Sobriety Calculator shows how far you have come.",
+      "Continue tracking your milestones, the Sobriety Calculator shows how far you have come.",
       "Keep doing daily check-ins (HALT) to catch early warning signs before they escalate.",
-      "Review and update your relapse prevention plan periodically — your triggers and coping strategies evolve.",
-      "See how much you have saved financially with the Money Saved Calculator — a tangible reminder of progress.",
-      "Consider supporting others in earlier stages — teaching reinforces your own learning.",
+      "Review and update your relapse prevention plan periodically, your triggers and coping strategies evolve.",
+      "See how much you have saved financially with the Money Saved Calculator, a tangible reminder of progress.",
+      "Consider supporting others in earlier stages, teaching reinforces your own learning.",
     ],
     resources: [
       { href: "/sobriety-calculator", label: "Sobriety Calculator", desc: "Celebrate milestones and track progress" },
@@ -259,7 +259,7 @@ export function ReadinessClient({ faqData }: Props) {
 
   const handleShare = async () => {
     const info = STAGES[primaryStage];
-    const text = `I took the Readiness to Change Assessment on MindCheck Tools. My primary stage: ${info.label} — ${info.short}.`;
+    const text = `I took the Readiness to Change Assessment on MindCheck Tools. My primary stage: ${info.label}, ${info.short}.`;
     if (navigator.share) {
       try { await navigator.share({ title: "Readiness to Change Assessment", text, url: window.location.href }); } catch {}
     } else {
@@ -377,7 +377,7 @@ export function ReadinessClient({ faqData }: Props) {
             Rate Each Statement
           </h2>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-            Read each statement and select how much you agree or disagree. There are no right or wrong answers — answer honestly based on where you are right now.
+            Read each statement and select how much you agree or disagree. There are no right or wrong answers, answer honestly based on where you are right now.
           </p>
 
           <div className="space-y-6">
@@ -462,7 +462,7 @@ export function ReadinessClient({ faqData }: Props) {
             <div className="mb-6">
               {renderWheel()}
               <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-2">
-                The Stages of Change cycle — your current stage is highlighted
+                The Stages of Change cycle, your current stage is highlighted
               </p>
             </div>
 
@@ -590,7 +590,7 @@ export function ReadinessClient({ faqData }: Props) {
             <p className="leading-relaxed">
               This assessment is a self-reflection tool, not a clinical evaluation. Your stage of change
               may shift from day to day, and that is normal. Use these results as a starting point for
-              conversation with a counselor, sponsor, or trusted person in your life — not as a definitive label.
+              conversation with a counselor, sponsor, or trusted person in your life, not as a definitive label.
             </p>
           </div>
         </div>
@@ -607,11 +607,11 @@ export function ReadinessClient({ faqData }: Props) {
           The <strong>Stages of Change model</strong> (also called the <strong>Transtheoretical Model</strong>) was
           developed by <strong>James Prochaska, PhD</strong>, and <strong>Carlo DiClemente, PhD</strong>, beginning
           in the late 1970s. Their research revealed that people who successfully change addictive behaviors move
-          through a predictable series of stages — and that understanding which stage a person is in helps
+          through a predictable series of stages, and that understanding which stage a person is in helps
           determine what kind of support will be most effective.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          The model has since been applied far beyond addiction — to diet, exercise, medication adherence,
+          The model has since been applied far beyond addiction, to diet, exercise, medication adherence,
           therapy engagement, and more. It is one of the most influential frameworks in behavioral health
           and is the foundation of <strong>motivational interviewing</strong>, a counseling approach used
           worldwide.
@@ -649,7 +649,7 @@ export function ReadinessClient({ faqData }: Props) {
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           This is why the model is often depicted as a <strong>spiral</strong> rather than a straight line.
           Each time you move through the stages, you bring new knowledge, skills, and self-awareness.
-          A relapse after six months of sobriety is not the same as never having tried — you carry everything
+          A relapse after six months of sobriety is not the same as never having tried, you carry everything
           you learned forward.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
@@ -669,19 +669,19 @@ export function ReadinessClient({ faqData }: Props) {
               <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Relapse Prevention Plan
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Build a written plan with triggers, coping strategies, and emergency contacts</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Build a written plan with triggers, coping strategies, and emergency contacts</span>
             </li>
             <li>
               <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Urge Surfing Timer
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Ride out cravings with guided mindfulness and breathing</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Ride out cravings with guided mindfulness and breathing</span>
             </li>
             <li>
               <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 HALT Check-In
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Daily check-in for Hungry, Angry, Lonely, Tired</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Daily check-in for Hungry, Angry, Lonely, Tired</span>
             </li>
           </ul>
         </div>
@@ -721,7 +721,7 @@ export function ReadinessClient({ faqData }: Props) {
           <p className="leading-relaxed">
             This is an original educational tool inspired by the Transtheoretical Model. It is not a
             validated clinical instrument and should not be used as a substitute for professional assessment.
-            Your results reflect your self-reported responses at this moment — they are a starting point
+            Your results reflect your self-reported responses at this moment, they are a starting point
             for reflection, not a definitive evaluation. Always consult a qualified healthcare professional
             or counselor for personalized guidance.
           </p>

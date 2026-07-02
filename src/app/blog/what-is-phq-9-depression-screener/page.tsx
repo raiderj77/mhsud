@@ -92,7 +92,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            The PHQ-9 (Patient Health Questionnaire-9) is a nine-question, validated depression screening tool used by healthcare providers worldwide. It measures the frequency of nine depressive symptoms over the past two weeks, producing a total score from 0 to 27 that corresponds to five severity levels — from minimal (0–4) to severe (20–27). It cannot diagnose depression, but it is one of the most accurate brief tools for identifying who needs further evaluation.
+            The PHQ-9 (Patient Health Questionnaire-9) is a nine-question, validated depression screening tool used by healthcare providers worldwide. It measures the frequency of nine depressive symptoms over the past two weeks, producing a total score from 0 to 27 that corresponds to five severity levels, from minimal (0–4) to severe (20–27). It cannot diagnose depression, but it is one of the most accurate brief tools for identifying who needs further evaluation.
           </p>
         </header>
 
@@ -104,7 +104,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               The PHQ-9 was developed in the late 1990s by Drs. <strong>Kurt Kroenke</strong> and <strong>Robert Spitzer</strong> of Columbia University, along with Dr. Janet Williams. It was published in the <em>Journal of General Internal Medicine</em> in 2001, alongside the validation study that established its clinical accuracy.
             </p>
             <p>
-              It emerged from a need for a brief, reliable depression screen that could be used in primary care settings — places where mental health concerns often go undetected because visits are short and the focus is typically physical health. The goal was a tool that patients could complete themselves in a few minutes and that would give clinicians actionable information quickly.
+              It emerged from a need for a brief, reliable depression screen that could be used in primary care settings, places where mental health concerns often go undetected because visits are short and the focus is typically physical health. The goal was a tool that patients could complete themselves in a few minutes and that would give clinicians actionable information quickly.
             </p>
             <p>
               The PHQ-9 is now one of the most cited instruments in mental health research, having appeared in over 10,000 published studies. It is used in more than 80 countries and has been validated across diverse populations, languages, and clinical settings (Kroenke et al., 2010).
@@ -126,7 +126,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               <li><strong>Trouble falling or staying asleep</strong>, or sleeping too much</li>
               <li><strong>Feeling tired or having little energy</strong></li>
               <li><strong>Poor appetite or overeating</strong></li>
-              <li><strong>Feeling bad about yourself</strong> — feeling like a failure or letting yourself or your family down</li>
+              <li><strong>Feeling bad about yourself</strong>, feeling like a failure or letting yourself or your family down</li>
               <li><strong>Trouble concentrating</strong> on things like reading or watching TV</li>
               <li><strong>Moving or speaking so slowly</strong> that others could notice, or being fidgety or restless</li>
               <li><strong>Thoughts that you would be better off dead</strong> or thoughts of hurting yourself</li>
@@ -143,7 +143,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               These symptoms were selected because they map to the clinical definition of major depressive disorder. According to the DSM-5, a diagnosis of MDD requires five or more of these symptoms present most of the time for at least two weeks, with at least one being either depressed mood or anhedonia (loss of pleasure).
             </p>
             <p>
-              The PHQ-9 doesn&apos;t make that diagnostic determination — that requires clinical judgment and a full assessment. But by measuring all nine, the screen gives clinicians (and individuals) a systematic look at the full symptom picture rather than relying on what happens to come up in conversation.
+              The PHQ-9 doesn&apos;t make that diagnostic determination, that requires clinical judgment and a full assessment. But by measuring all nine, the screen gives clinicians (and individuals) a systematic look at the full symptom picture rather than relying on what happens to come up in conversation.
             </p>
           </section>
 
@@ -176,7 +176,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               These figures are at the standard cutoff of 10. They mean that, at that threshold, the tool correctly identifies approximately 88% of people who have depression and correctly identifies approximately 88% of people who don&apos;t.
             </p>
             <p>
-              No screening tool is 100% accurate. The PHQ-9 has a false positive and false negative rate, which is exactly why it&apos;s described as a screening tool that informs — not replaces — clinical evaluation.
+              No screening tool is 100% accurate. The PHQ-9 has a false positive and false negative rate, which is exactly why it&apos;s described as a screening tool that informs, not replaces, clinical evaluation.
             </p>
           </section>
 
@@ -218,7 +218,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               <strong>It captures a two-week window.</strong> The PHQ-9 asks about &quot;the past two weeks.&quot; It won&apos;t reflect how you were feeling six months ago, even if that matters for your history.
             </p>
             <p>
-              <strong>It doesn&apos;t distinguish between unipolar and bipolar depression.</strong> Someone experiencing a depressive episode in the context of bipolar disorder will score similarly to someone with unipolar depression. This matters for treatment — antidepressants alone can precipitate mania in bipolar disorder. A tool like the MDQ provides a different lens.
+              <strong>It doesn&apos;t distinguish between unipolar and bipolar depression.</strong> Someone experiencing a depressive episode in the context of bipolar disorder will score similarly to someone with unipolar depression. This matters for treatment, antidepressants alone can precipitate mania in bipolar disorder. A tool like the MDQ provides a different lens.
             </p>
             <p>
               <strong>Item 9 requires context.</strong> Thoughts of self-harm or death (Question 9) scored above 0 always warrant clinical attention, regardless of total score. The PHQ-9 total score alone doesn&apos;t convey the urgency that any positive response to this item carries.
@@ -232,7 +232,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
           <section>
             <h2>How is the PHQ-9 different from the PHQ-2?</h2>
             <p>
-              The <strong>PHQ-2</strong> consists only of the first two questions of the PHQ-9 — the ones about depressed mood and anhedonia. It&apos;s used as an ultra-brief initial gateway screen in settings where time is extremely limited.
+              The <strong>PHQ-2</strong> consists only of the first two questions of the PHQ-9, the ones about depressed mood and anhedonia. It&apos;s used as an ultra-brief initial gateway screen in settings where time is extremely limited.
             </p>
             <p>
               A PHQ-2 score of 3 or higher triggers the full PHQ-9 administration. The PHQ-2 has a sensitivity of 83% and specificity of 92% for major depression (Kroenke et al., 2003), making it a useful first step but less comprehensive than the full PHQ-9.
@@ -310,7 +310,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The PHQ-9 is a screening tool — it may indicate the need for further assessment but does not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The PHQ-9 is a screening tool, it may indicate the need for further assessment but does not confirm or rule out any condition.
             </p>
           </div>
 
@@ -321,9 +321,9 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -345,7 +345,7 @@ export default function WhatIsPHQ9DepressionScreenerPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

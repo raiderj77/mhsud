@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/loneliness-test-seniors`;
 
 export const metadata: Metadata = createMetadata({
   path: "/loneliness-test-seniors",
-  title: "Loneliness Test for Seniors — Free Assessment",
+  title: "Loneliness Test for Seniors, Free Assessment",
   description:
     "Free loneliness assessment for older adults using the UCLA scale. Private, instant results.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "elderly loneliness assessment", "social isolation older adults", "free loneliness test seniors",
   ],
   openGraph: {
-    title: "Loneliness Test for Seniors — Free Assessment",
+    title: "Loneliness Test for Seniors, Free Assessment",
     description: "Free, private loneliness assessment for older adults using the UCLA Loneliness Scale. Instant results, no signup required.",
     url: TOOL_URL,
     type: "website",
@@ -33,19 +33,19 @@ const FAQ_DATA = [
   },
   {
     question: "How common is loneliness among older adults?",
-    answer: "Approximately 25% of adults aged 65 and older are considered socially isolated, and up to 43% of older adults report feeling lonely on a regular basis. These numbers increased significantly during the COVID-19 pandemic and have not fully returned to pre-pandemic levels. Loneliness can affect anyone regardless of living situation — even people in assisted living or with nearby family.",
+    answer: "Approximately 25% of adults aged 65 and older are considered socially isolated, and up to 43% of older adults report feeling lonely on a regular basis. These numbers increased significantly during the COVID-19 pandemic and have not fully returned to pre-pandemic levels. Loneliness can affect anyone regardless of living situation, even people in assisted living or with nearby family.",
   },
   {
     question: "Is there a connection between loneliness and physical illness?",
-    answer: "Yes. Research consistently links chronic loneliness to increased inflammation, weakened immune function, higher blood pressure, increased risk of heart disease, and accelerated cognitive decline. Socially isolated older adults have a 50% increased risk of developing dementia and a 29% increased risk of heart disease. Loneliness is not just an emotional issue — it is a medical one.",
+    answer: "Yes. Research consistently links chronic loneliness to increased inflammation, weakened immune function, higher blood pressure, increased risk of heart disease, and accelerated cognitive decline. Socially isolated older adults have a 50% increased risk of developing dementia and a 29% increased risk of heart disease. Loneliness is not just an emotional issue, it is a medical one.",
   },
   {
     question: "How is loneliness different from depression?",
-    answer: "Loneliness is the distress caused by a gap between desired and actual social connection. Depression is a clinical mood disorder involving persistent sadness, loss of interest, and other symptoms. They frequently overlap — loneliness is a risk factor for depression, and depression can increase social withdrawal, creating a cycle. However, they are distinct conditions and may require different approaches.",
+    answer: "Loneliness is the distress caused by a gap between desired and actual social connection. Depression is a clinical mood disorder involving persistent sadness, loss of interest, and other symptoms. They frequently overlap, loneliness is a risk factor for depression, and depression can increase social withdrawal, creating a cycle. However, they are distinct conditions and may require different approaches.",
   },
   {
     question: "How can seniors combat loneliness?",
-    answer: "Start with small, consistent social contacts rather than trying to build an entire social life at once. Options include senior centers, faith communities, volunteer work, phone or video calls with family, walking groups, classes at community colleges, and intergenerational programs. Even brief daily interactions — chatting with a neighbor, calling a friend — can significantly reduce loneliness.",
+    answer: "Start with small, consistent social contacts rather than trying to build an entire social life at once. Options include senior centers, faith communities, volunteer work, phone or video calls with family, walking groups, classes at community colleges, and intergenerational programs. Even brief daily interactions, chatting with a neighbor, calling a friend, can significantly reduce loneliness.",
   },
   {
     question: "Are there community programs that help with senior loneliness?",
@@ -53,11 +53,11 @@ const FAQ_DATA = [
   },
   {
     question: "Can technology help reduce loneliness in older adults?",
-    answer: "Technology can be a valuable tool for maintaining connections, especially for seniors with mobility limitations. Video calls, social media, online communities, and even simple phone calls help maintain relationships. However, technology works best as a supplement to — not a replacement for — in-person interaction. Many libraries and senior centers offer free technology training.",
+    answer: "Technology can be a valuable tool for maintaining connections, especially for seniors with mobility limitations. Video calls, social media, online communities, and even simple phone calls help maintain relationships. However, technology works best as a supplement to, not a replacement for, in-person interaction. Many libraries and senior centers offer free technology training.",
   },
   {
     question: "Should I talk to my doctor about loneliness?",
-    answer: "Yes. Healthcare providers increasingly screen for social isolation because of its significant health impacts. Your doctor can assess whether loneliness is contributing to other health issues, screen for related depression, and connect you with community resources. There is no shame in discussing loneliness — it is a health concern, not a personal failure.",
+    answer: "Yes. Healthcare providers increasingly screen for social isolation because of its significant health impacts. Your doctor can assess whether loneliness is contributing to other health issues, screen for related depression, and connect you with community resources. There is no shame in discussing loneliness, it is a health concern, not a personal failure.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function LonelinessTestSeniorsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Loneliness Test for Seniors — Free Assessment",
+              name: "Loneliness Test for Seniors, Free Assessment",
               description: "A free, private loneliness assessment tool for older adults using the UCLA Loneliness Scale.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
@@ -88,7 +88,7 @@ export default function LonelinessTestSeniorsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...medicalWebPageJsonLd({
-              name: "Loneliness Test for Seniors — Free Assessment",
+              name: "Loneliness Test for Seniors, Free Assessment",
               description: "A free, private loneliness assessment tool for older adults using the UCLA Loneliness Scale.",
               url: TOOL_URL,
               lastReviewed: "2026-05-06",
@@ -133,7 +133,7 @@ export default function LonelinessTestSeniorsPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            The house used to be full of noise — conversations, laughter, the everyday sounds
+            The house used to be full of noise, conversations, laughter, the everyday sounds
             of a life shared with others. Now the silence has a weight to it. Maybe you lost
             a spouse and the evenings feel endless. Maybe your children moved far away and
             phone calls, however well-meaning, cannot fill the space. Maybe your friends have
@@ -142,7 +142,7 @@ export default function LonelinessTestSeniorsPage() {
             something millions of older adults face, and it deserves attention.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Loneliness is not just an emotion — it is a health condition as serious as smoking
+            Loneliness is not just an emotion, it is a health condition as serious as smoking
             or obesity. Research shows it increases the risk of heart disease, dementia, and
             depression. This free, private assessment uses the <strong>UCLA Loneliness
             Scale</strong>, a trusted tool used by researchers and healthcare providers
@@ -160,7 +160,7 @@ export default function LonelinessTestSeniorsPage() {
             Start the Loneliness Assessment
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private — nothing is stored or shared.
+            Takes about 5 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -174,22 +174,22 @@ export default function LonelinessTestSeniorsPage() {
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">25% socially isolated</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Approximately one in four adults aged 65 and older is considered socially
-                isolated. Up to 43% of older adults report feeling lonely regularly. — <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
+                isolated. Up to 43% of older adults report feeling lonely regularly., <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">15 cigarettes a day</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 The health impact of chronic loneliness has been compared to smoking 15
-                cigarettes a day. Social isolation increases the risk of premature death by 26%. — <a href="https://pubmed.ncbi.nlm.nih.gov/25910392/" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">Holt-Lunstad et al.</a>
+                cigarettes a day. Social isolation increases the risk of premature death by 26%., <a href="https://pubmed.ncbi.nlm.nih.gov/25910392/" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">Holt-Lunstad et al.</a>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">50% higher dementia risk</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Socially isolated older adults face a 50% increased risk of developing dementia
-                and a 29% increased risk of heart disease. Connection is not optional — it is
-                essential for health. — <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
+                and a 29% increased risk of heart disease. Connection is not optional, it is
+                essential for health., <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">CDC</a>
               </p>
             </div>
           </div>
@@ -210,10 +210,10 @@ export default function LonelinessTestSeniorsPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>Retirement transition:</strong> Retirement removes a major source of daily social interaction, structure, and identity. Many people are unprepared for how isolating this transition can be, even when they looked forward to it. Building new routines and social connections takes intentional effort.</p>
                 <p><strong>Loss of spouse and friends:</strong> Grief and loneliness often overlap but are distinct experiences. Losing a life partner changes every aspect of daily life. As friends pass away or become less mobile, the social network that once sustained you shrinks in ways that are difficult to rebuild.</p>
-                <p><strong>Mobility limitations:</strong> Physical health challenges can make it harder to leave home, drive, or participate in activities you once enjoyed. Transportation barriers are one of the most common — and most solvable — contributors to senior isolation.</p>
+                <p><strong>Mobility limitations:</strong> Physical health challenges can make it harder to leave home, drive, or participate in activities you once enjoyed. Transportation barriers are one of the most common, and most solvable, contributors to senior isolation.</p>
                 <p><strong>Technology and connection:</strong> Video calls, social media, and online communities can supplement in-person interaction, especially for those with limited mobility. Many libraries and senior centers offer free technology classes designed specifically for older adults.</p>
                 <p><strong>Community programs:</strong> Senior centers, faith communities, volunteer programs, Meals on Wheels, and friendly visitor services all provide opportunities for meaningful connection. The Eldercare Locator (1-800-677-1116) can help you find local resources.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to anyone — not your family, not your doctor, not anyone.</p>
+                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to anyone, not your family, not your doctor, not anyone.</p>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function LonelinessTestSeniorsPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               In 2023, the U.S. Surgeon General issued a formal Advisory on the Healing Effects of
-              Social Connection and Community — one of the first times the federal government elevated
+              Social Connection and Community, one of the first times the federal government elevated
               loneliness to the status of a public health crisis. The advisory cited research showing
               that social disconnection carries health risks equivalent to smoking 15 cigarettes per
               day. This figure comes from the landmark meta-analyses by Julianne Holt-Lunstad and
@@ -241,7 +241,7 @@ export default function LonelinessTestSeniorsPage() {
             <p>
               For older adults specifically, the health consequences of loneliness are compounded by
               age-related biological vulnerabilities. Chronic loneliness activates inflammatory
-              pathways, elevates cortisol, and dysregulates immune function — mechanisms that accelerate
+              pathways, elevates cortisol, and dysregulates immune function, mechanisms that accelerate
               cardiovascular disease, cognitive decline, and metabolic disorders. Per the{" "}
               <a href="https://www.cdc.gov/aging/publications/features/lonely-older-adults.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
                 CDC&apos;s research on older adult social isolation
@@ -260,19 +260,17 @@ export default function LonelinessTestSeniorsPage() {
               subjective loneliness across adult populations. Version 3 of the scale, which this tool
               uses, contains 20 items and has demonstrated strong reliability and validity in research
               with older adults. The scale distinguishes between objective social isolation (limited
-              social contact) and subjective loneliness (the felt sense of being disconnected) —
-              because these can occur independently. A person can be socially active and still feel
+              social contact) and subjective loneliness (the felt sense of being disconnected), because these can occur independently. A person can be socially active and still feel
               profoundly lonely, or live largely alone and feel genuinely connected.
             </p>
             <p>
-              Treatment for loneliness in older adults increasingly includes social prescribing —
-              structured referrals from healthcare providers to community resources, group activities,
+              Treatment for loneliness in older adults increasingly includes social prescribing, structured referrals from healthcare providers to community resources, group activities,
               and volunteer programs. The{" "}
               <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
                 National Institute of Mental Health
               </a>{" "}
               notes that loneliness is one of the strongest modifiable risk factors for late-life
-              depression. Treating loneliness proactively — not waiting until a crisis — is the
+              depression. Treating loneliness proactively, not waiting until a crisis, is the
               evidence-based approach. For behavioral health resources and local services,{" "}
               <a href="https://www.samhsa.gov/mental-health" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">
                 SAMHSA&apos;s mental health locator
@@ -300,7 +298,7 @@ export default function LonelinessTestSeniorsPage() {
         <AnswerBlock
           what="A loneliness assessment adapted for older adults that measures social isolation and its impact on health and wellbeing."
           who="Seniors or their family members who are concerned about social isolation and its health effects."
-          bottomLine="Loneliness in older adults is a serious health risk comparable to smoking — connection is medicine. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Loneliness in older adults is a serious health risk comparable to smoking, connection is medicine. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -357,7 +355,7 @@ export default function LonelinessTestSeniorsPage() {
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Call the Eldercare Locator</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                <strong>1-800-677-1116</strong> — a free service that connects older adults with
+                <strong>1-800-677-1116</strong>, a free service that connects older adults with
                 local resources including senior centers, meal programs, transportation services,
                 and social activities. They can help you find what&apos;s available in your
                 community. Available Monday through Friday, 9 a.m. to 8 p.m. ET.
@@ -368,7 +366,7 @@ export default function LonelinessTestSeniorsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 <strong>AARP</strong> offers community connection programs, volunteer opportunities,
                 and local events designed to bring older adults together. Even starting with one
-                weekly activity — a walking group, a book club, a volunteer shift — can make
+                weekly activity, a walking group, a book club, a volunteer shift, can make
                 a meaningful difference.
               </p>
             </div>
@@ -391,13 +389,13 @@ export default function LonelinessTestSeniorsPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
             <li>
-              <strong>Eldercare Locator:</strong> <strong>1-800-677-1116</strong> — connects older adults with local services and support
+              <strong>Eldercare Locator:</strong> <strong>1-800-677-1116</strong>, connects older adults with local services and support
             </li>
           </ul>
         </div>
@@ -405,7 +403,7 @@ export default function LonelinessTestSeniorsPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This assessment tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess loneliness-related health conditions. Your responses are
             processed entirely in your browser and are never stored or transmitted. Always consult a
             qualified healthcare professional for medical advice.

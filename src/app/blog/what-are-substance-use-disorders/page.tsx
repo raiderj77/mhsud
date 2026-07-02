@@ -44,12 +44,12 @@ const FAQ_DATA = [
   {
     question: "What\u2019s the difference between physical dependence and addiction?",
     answer:
-      "Physical dependence refers to tolerance and withdrawal, which can occur with medications used exactly as prescribed. A patient on long-term opioids may develop physical dependence without having SUD. Substance use disorder requires the broader pattern of impaired control, social impairment, risky use, and craving \u2014 not just physical dependence alone.",
+      "Physical dependence refers to tolerance and withdrawal, which can occur with medications used exactly as prescribed. A patient on long-term opioids may develop physical dependence without having SUD. Substance use disorder requires the broader pattern of impaired control, social impairment, risky use, and craving, not just physical dependence alone.",
   },
   {
     question: "How do I help someone I care about who has SUD?",
     answer:
-      "CRAFT (Community Reinforcement and Family Training) is the most evidence-based approach for family members \u2014 significantly more effective than confrontation or ultimatums at encouraging a loved one into treatment. SAMHSA\u2019s helpline (1-800-662-4357) provides free, confidential referrals for family support services and treatment programs available 24 hours a day.",
+      "CRAFT (Community Reinforcement and Family Training) is the most evidence-based approach for family members, significantly more effective than confrontation or ultimatums at encouraging a loved one into treatment. SAMHSA\u2019s helpline (1-800-662-4357) provides free, confidential referrals for family support services and treatment programs available 24 hours a day.",
   },
 ];
 
@@ -71,25 +71,25 @@ export default function WhatAreSubstanceUseDisordersPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Substance use disorder (SUD) is a medical condition characterized by a problematic pattern of substance use &mdash; alcohol, drugs, or misused medications &mdash; causing clinically significant impairment or distress. It is diagnosed when at least two of eleven criteria are present within a 12-month period, and it ranges in severity from mild to severe. Substance use disorder is not a moral failing, a character weakness, or a choice. It is a chronic brain condition that responds to evidence-based treatment.
+            Substance use disorder (SUD) is a medical condition characterized by a problematic pattern of substance use, alcohol, drugs, or misused medications, causing clinically significant impairment or distress. It is diagnosed when at least two of eleven criteria are present within a 12-month period, and it ranges in severity from mild to severe. Substance use disorder is not a moral failing, a character weakness, or a choice. It is a chronic brain condition that responds to evidence-based treatment.
           </p>
         </header>
 
         <div className="prose-mh space-y-8">
           {/* Section 1 */}
           <section>
-            <h2>The Language Has Changed &mdash; And It Matters</h2>
+            <h2>The Language Has Changed, And It Matters</h2>
             <p>
               The language used to describe problematic substance use has shifted significantly in clinical practice, and for good reason.
             </p>
             <p>
-              <strong>&ldquo;Addiction&rdquo;</strong> is a common term but carries significant stigma &mdash; it is often used to imply that the person is fundamentally flawed or chose their condition. In clinical settings, <strong>substance use disorder (SUD)</strong> is the preferred term. It is medical, precise, and non-judgmental.
+              <strong>&ldquo;Addiction&rdquo;</strong> is a common term but carries significant stigma, it is often used to imply that the person is fundamentally flawed or chose their condition. In clinical settings, <strong>substance use disorder (SUD)</strong> is the preferred term. It is medical, precise, and non-judgmental.
             </p>
             <p>
-              <strong>&ldquo;Substance abuse&rdquo;</strong> is now considered outdated and stigmatizing in clinical contexts &mdash; it implies that the person is doing something wrong rather than struggling with a medical condition.
+              <strong>&ldquo;Substance abuse&rdquo;</strong> is now considered outdated and stigmatizing in clinical contexts, it implies that the person is doing something wrong rather than struggling with a medical condition.
             </p>
             <p>
-              <strong>&ldquo;Dependence&rdquo;</strong> specifically refers to the physiological adaptation to a substance &mdash; tolerance and withdrawal &mdash; which can occur with many medications even when used exactly as prescribed, without any problematic relationship with the substance.
+              <strong>&ldquo;Dependence&rdquo;</strong> specifically refers to the physiological adaptation to a substance, tolerance and withdrawal, which can occur with many medications even when used exactly as prescribed, without any problematic relationship with the substance.
             </p>
             <p>
               Language matters because stigma is one of the strongest barriers to treatment-seeking. People who believe they are &ldquo;addicts&rdquo; with a character flaw are less likely to seek help than people who understand they have a treatable medical condition.
@@ -101,13 +101,13 @@ export default function WhatAreSubstanceUseDisordersPage() {
             <h2>What Substances Can Cause SUD?</h2>
             <p>Substance use disorder can involve any substance with abuse potential. The DSM-5 recognizes SUDs for the following substance classes:</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Alcohol</strong> &mdash; the most prevalent SUD in the US; affects approximately 14.5 million adults annually (SAMHSA, 2023)</li>
-              <li><strong>Cannabis</strong> &mdash; increasingly relevant as potency and prevalence have risen</li>
-              <li><strong>Stimulants</strong> &mdash; cocaine, methamphetamine, prescription amphetamines</li>
-              <li><strong>Opioids</strong> &mdash; heroin, fentanyl, prescription opioids (oxycodone, hydrocodone, morphine)</li>
-              <li><strong>Sedatives, hypnotics, and anxiolytics</strong> &mdash; prescription benzodiazepines (Xanax, Valium, Ativan), Z-drugs (Ambien), barbiturates</li>
+              <li><strong>Alcohol</strong>, the most prevalent SUD in the US; affects approximately 14.5 million adults annually (SAMHSA, 2023)</li>
+              <li><strong>Cannabis</strong>, increasingly relevant as potency and prevalence have risen</li>
+              <li><strong>Stimulants</strong>, cocaine, methamphetamine, prescription amphetamines</li>
+              <li><strong>Opioids</strong>, heroin, fentanyl, prescription opioids (oxycodone, hydrocodone, morphine)</li>
+              <li><strong>Sedatives, hypnotics, and anxiolytics</strong>, prescription benzodiazepines (Xanax, Valium, Ativan), Z-drugs (Ambien), barbiturates</li>
               <li><strong>Tobacco/nicotine</strong></li>
-              <li><strong>Hallucinogens</strong> &mdash; LSD, psilocybin, PCP</li>
+              <li><strong>Hallucinogens</strong>, LSD, psilocybin, PCP</li>
               <li><strong>Inhalants</strong></li>
               <li><strong>Caffeine</strong> (mild, rarely clinically significant)</li>
             </ul>
@@ -118,14 +118,14 @@ export default function WhatAreSubstanceUseDisordersPage() {
           <section>
             <h2>The DSM-5 Criteria: How SUD Is Diagnosed</h2>
             <p>
-              The DSM-5 replaced the previous &ldquo;abuse/dependence&rdquo; binary with a single diagnosis &mdash; substance use disorder &mdash; rated mild, moderate, or severe based on how many of 11 criteria are met in a 12-month period.
+              The DSM-5 replaced the previous &ldquo;abuse/dependence&rdquo; binary with a single diagnosis, substance use disorder, rated mild, moderate, or severe based on how many of 11 criteria are met in a 12-month period.
             </p>
             <p><strong>Impaired control (4 criteria):</strong></p>
             <ol className="list-decimal pl-5 space-y-2">
               <li>Using more of the substance or for longer than intended</li>
               <li>Persistent desire or unsuccessful efforts to cut down or control use</li>
               <li>Spending a great deal of time obtaining, using, or recovering from the substance</li>
-              <li>Craving &mdash; a strong desire or urge to use</li>
+              <li>Craving, a strong desire or urge to use</li>
             </ol>
             <p><strong>Social impairment (3 criteria):</strong></p>
             <ol className="list-decimal pl-5 space-y-2" start={5}>
@@ -140,8 +140,8 @@ export default function WhatAreSubstanceUseDisordersPage() {
             </ol>
             <p><strong>Pharmacological criteria (2 criteria):</strong></p>
             <ol className="list-decimal pl-5 space-y-2" start={10}>
-              <li><strong>Tolerance</strong> &mdash; needing more of the substance to achieve the same effect, or noticeably reduced effect with the same amount</li>
-              <li><strong>Withdrawal</strong> &mdash; characteristic withdrawal symptoms, or using to relieve or avoid withdrawal</li>
+              <li><strong>Tolerance</strong>, needing more of the substance to achieve the same effect, or noticeably reduced effect with the same amount</li>
+              <li><strong>Withdrawal</strong>, characteristic withdrawal symptoms, or using to relieve or avoid withdrawal</li>
             </ol>
             <p><strong>Severity ratings:</strong></p>
             <ul className="list-disc pl-5 space-y-2">
@@ -157,7 +157,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
           <section>
             <h2>Early Warning Signs of Developing SUD</h2>
             <p>
-              Substance use disorder rarely develops overnight. There is typically a progression from use to problematic use to disorder. Early warning signs &mdash; before full SUD criteria are met &mdash; are worth recognizing:
+              Substance use disorder rarely develops overnight. There is typically a progression from use to problematic use to disorder. Early warning signs, before full SUD criteria are met, are worth recognizing:
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Using more than you planned, more often than intended</li>
@@ -166,11 +166,11 @@ export default function WhatAreSubstanceUseDisordersPage() {
               <li>Using in situations where you previously wouldn&rsquo;t have (alone, early in the day, at work)</li>
               <li>Finding that activities you previously enjoyed feel less appealing without the substance</li>
               <li>Noticing that you need more to get the same effect</li>
-              <li>Using to manage emotions &mdash; to relax, to cope with stress, to feel normal</li>
+              <li>Using to manage emotions, to relax, to cope with stress, to feel normal</li>
               <li>Others expressing concern that you dismiss or minimize</li>
             </ul>
             <p>
-              These are not diagnostic criteria &mdash; they are signals that a pattern is developing. The earlier intervention occurs in this trajectory, the easier change is.
+              These are not diagnostic criteria, they are signals that a pattern is developing. The earlier intervention occurs in this trajectory, the easier change is.
             </p>
           </section>
 
@@ -232,19 +232,19 @@ export default function WhatAreSubstanceUseDisordersPage() {
               Understanding the neuroscience removes the moral framing that stigmatizes SUD and clarifies why willpower alone is usually insufficient for sustained recovery.
             </p>
             <p>
-              <strong>The reward pathway:</strong> All addictive substances directly or indirectly activate the brain&rsquo;s mesolimbic dopamine system &mdash; the &ldquo;reward circuit.&rdquo; This system evolved to reinforce survival behaviors (eating, sex, social bonding). Addictive substances hijack this system, producing dopamine releases 2&ndash;10 times greater than natural rewards.
+              <strong>The reward pathway:</strong> All addictive substances directly or indirectly activate the brain&rsquo;s mesolimbic dopamine system, the &ldquo;reward circuit.&rdquo; This system evolved to reinforce survival behaviors (eating, sex, social bonding). Addictive substances hijack this system, producing dopamine releases 2&ndash;10 times greater than natural rewards.
             </p>
             <p>
-              <strong>Sensitization and tolerance:</strong> With repeated exposure, the reward system adapts. Tolerance develops &mdash; more of the substance is needed to produce the same effect. Natural rewards (food, social connection, achievement) become comparatively less rewarding. The brain&rsquo;s baseline dopamine tone shifts.
+              <strong>Sensitization and tolerance:</strong> With repeated exposure, the reward system adapts. Tolerance develops, more of the substance is needed to produce the same effect. Natural rewards (food, social connection, achievement) become comparatively less rewarding. The brain&rsquo;s baseline dopamine tone shifts.
             </p>
             <p>
-              <strong>The prefrontal cortex:</strong> Chronic heavy substance use produces measurable changes in prefrontal cortex function &mdash; the brain region responsible for judgment, impulse control, decision-making, and weighing long-term consequences against short-term reward. This is the neurological basis for the compulsive use that characterizes severe SUD: the decision-making machinery is impaired.
+              <strong>The prefrontal cortex:</strong> Chronic heavy substance use produces measurable changes in prefrontal cortex function, the brain region responsible for judgment, impulse control, decision-making, and weighing long-term consequences against short-term reward. This is the neurological basis for the compulsive use that characterizes severe SUD: the decision-making machinery is impaired.
             </p>
             <p>
-              <strong>Stress systems:</strong> Substance use activates stress pathways. In withdrawal, these stress systems are dysregulated &mdash; producing anxiety, irritability, and dysphoria that the substance temporarily relieves. This negative reinforcement loop (&ldquo;using to feel normal&rdquo;) is as powerful as the positive reinforcement of pleasure.
+              <strong>Stress systems:</strong> Substance use activates stress pathways. In withdrawal, these stress systems are dysregulated, producing anxiety, irritability, and dysphoria that the substance temporarily relieves. This negative reinforcement loop (&ldquo;using to feel normal&rdquo;) is as powerful as the positive reinforcement of pleasure.
             </p>
             <p>
-              This neurobiology explains why recovery is a process, not a decision. The brain changes that develop over years of heavy use don&rsquo;t reverse immediately. They do reverse &mdash; neuroplasticity means the brain continues to adapt &mdash; but it takes time and support.
+              This neurobiology explains why recovery is a process, not a decision. The brain changes that develop over years of heavy use don&rsquo;t reverse immediately. They do reverse, neuroplasticity means the brain continues to adapt, but it takes time and support.
             </p>
           </section>
 
@@ -258,10 +258,10 @@ export default function WhatAreSubstanceUseDisordersPage() {
             </ul>
             <p>Common patterns:</p>
             <p>
-              <strong>Depression and alcohol:</strong> Alcohol is a CNS depressant that reliably worsens depression &mdash; particularly the days following drinking. Depression also increases risk of heavy drinking. Each makes the other harder to treat if addressed alone.
+              <strong>Depression and alcohol:</strong> Alcohol is a CNS depressant that reliably worsens depression, particularly the days following drinking. Depression also increases risk of heavy drinking. Each makes the other harder to treat if addressed alone.
             </p>
             <p>
-              <strong>Anxiety and alcohol/benzodiazepines:</strong> Alcohol and benzos provide acute anxiety relief &mdash; making them appealing self-medication tools &mdash; but worsen anxiety through rebound effects and worsen long-term anxiety course.
+              <strong>Anxiety and alcohol/benzodiazepines:</strong> Alcohol and benzos provide acute anxiety relief, making them appealing self-medication tools, but worsen anxiety through rebound effects and worsen long-term anxiety course.
             </p>
             <p>
               <strong>PTSD and opioids/alcohol:</strong> Trauma survivors use substances to manage hyperarousal, nightmares, and emotional dysphoria at high rates. PTSD and SUD require integrated treatment addressing both.
@@ -270,7 +270,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
               <strong>ADHD and stimulants/cannabis:</strong> Undiagnosed or undertreated ADHD creates dopamine dysregulation that drives self-medication with stimulants, cannabis, or other substances.
             </p>
             <p>
-              Effective treatment addresses both the SUD and co-occurring mental health conditions &mdash; treating them separately produces worse outcomes than integrated care.
+              Effective treatment addresses both the SUD and co-occurring mental health conditions, treating them separately produces worse outcomes than integrated care.
             </p>
           </section>
 
@@ -280,7 +280,7 @@ export default function WhatAreSubstanceUseDisordersPage() {
           <section>
             <h2>Treatment for Substance Use Disorders</h2>
             <p>
-              Substance use disorder is highly treatable. Long-term remission rates &mdash; defined as no SUD criteria in the past year &mdash; reach approximately 50% at 3 years post-treatment and continue to improve with time (NESARC, Kelly et al.).
+              Substance use disorder is highly treatable. Long-term remission rates, defined as no SUD criteria in the past year, reach approximately 50% at 3 years post-treatment and continue to improve with time (NESARC, Kelly et al.).
             </p>
 
             <h3>Behavioral Treatments</h3>
@@ -297,36 +297,36 @@ export default function WhatAreSubstanceUseDisordersPage() {
               <strong>12-Step Facilitation:</strong> Structured introduction to 12-step programs (AA, NA) and their community and accountability structures. The social support component of peer recovery communities is a powerful recovery resource.
             </p>
             <p>
-              <strong>CRAFT (Community Reinforcement and Family Training):</strong> A highly evidence-based program for family members of people with SUD &mdash; teaches engagement strategies that are more effective than confrontation or enabling.
+              <strong>CRAFT (Community Reinforcement and Family Training):</strong> A highly evidence-based program for family members of people with SUD, teaches engagement strategies that are more effective than confrontation or enabling.
             </p>
 
             <h3>Medications</h3>
             <p><strong>Alcohol use disorder:</strong></p>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Naltrexone</strong> &mdash; reduces craving and the rewarding effects of alcohol; available oral or monthly injectable (Vivitrol)</li>
-              <li><strong>Acamprosate</strong> &mdash; reduces protracted withdrawal symptoms; supports abstinence</li>
-              <li><strong>Disulfiram</strong> &mdash; produces aversive reaction if alcohol is consumed; used for motivated patients with good social support</li>
-              <li><strong>Gabapentin</strong> &mdash; emerging evidence for alcohol withdrawal and craving management</li>
+              <li><strong>Naltrexone</strong>, reduces craving and the rewarding effects of alcohol; available oral or monthly injectable (Vivitrol)</li>
+              <li><strong>Acamprosate</strong>, reduces protracted withdrawal symptoms; supports abstinence</li>
+              <li><strong>Disulfiram</strong>, produces aversive reaction if alcohol is consumed; used for motivated patients with good social support</li>
+              <li><strong>Gabapentin</strong>, emerging evidence for alcohol withdrawal and craving management</li>
             </ul>
             <p><strong>Opioid use disorder:</strong></p>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Buprenorphine</strong> (Suboxone, Subutex) &mdash; partial opioid agonist; reduces craving and withdrawal; dramatically reduces overdose risk</li>
-              <li><strong>Methadone</strong> &mdash; full opioid agonist dispensed in licensed clinics; gold standard for severe OUD</li>
-              <li><strong>Naltrexone</strong> &mdash; blocks opioid effects; effective for motivated patients after detox</li>
+              <li><strong>Buprenorphine</strong> (Suboxone, Subutex), partial opioid agonist; reduces craving and withdrawal; dramatically reduces overdose risk</li>
+              <li><strong>Methadone</strong>, full opioid agonist dispensed in licensed clinics; gold standard for severe OUD</li>
+              <li><strong>Naltrexone</strong>, blocks opioid effects; effective for motivated patients after detox</li>
             </ul>
             <p><strong>Nicotine use disorder:</strong></p>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Varenicline (Chantix)</strong> &mdash; most effective single pharmacotherapy for smoking cessation</li>
-              <li><strong>Bupropion</strong> &mdash; effective and FDA-approved</li>
-              <li><strong>NRT (nicotine replacement therapy)</strong> &mdash; patches, gum, lozenge</li>
+              <li><strong>Varenicline (Chantix)</strong>, most effective single pharmacotherapy for smoking cessation</li>
+              <li><strong>Bupropion</strong>, effective and FDA-approved</li>
+              <li><strong>NRT (nicotine replacement therapy)</strong>, patches, gum, lozenge</li>
             </ul>
             <p>
-              Medications for SUD are not &ldquo;replacing one addiction with another&rdquo; &mdash; this is a persistent stigma-driven misconception. Medications like buprenorphine for OUD restore normal function, prevent overdose death, and are associated with dramatically better long-term outcomes.
+              Medications for SUD are not &ldquo;replacing one addiction with another&rdquo;, this is a persistent stigma-driven misconception. Medications like buprenorphine for OUD restore normal function, prevent overdose death, and are associated with dramatically better long-term outcomes.
             </p>
 
             <h3>Recovery Support</h3>
             <p>
-              Recovery is a long-term process, not a single treatment episode. Ongoing support structures &mdash; peer recovery communities, recovery housing, sober support networks, continuing care &mdash; are as important as formal treatment in sustained recovery.
+              Recovery is a long-term process, not a single treatment episode. Ongoing support structures, peer recovery communities, recovery housing, sober support networks, continuing care, are as important as formal treatment in sustained recovery.
             </p>
           </section>
 
@@ -345,9 +345,9 @@ export default function WhatAreSubstanceUseDisordersPage() {
               If you or someone you know is in crisis related to substance use:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7 &mdash; treatment referral)</li>
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7, treatment referral)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
             </ul>
           </div>
 

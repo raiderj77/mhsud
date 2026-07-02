@@ -1,4 +1,4 @@
-// Centralized author configuration — update in ONE place, used everywhere
+// Centralized author configuration, update in ONE place, used everywhere
 
 export const SITE_AUTHOR = {
   name: "Jason Ramirez",
@@ -31,6 +31,6 @@ export const AUTHOR_SCHEMA = {
   ],
 };
 
-// For the homepage hero — credential only, no name
+// For the homepage hero, credential only, no name
 export const HERO_CREDENTIAL_LINE =
   `Reviewed by a ${SITE_AUTHOR.credentialFull} with ${SITE_AUTHOR.experience}.`;

@@ -63,7 +63,7 @@ const TIERS: Tier[] = [
     borderLight: "border-green-200",
     borderDark: "dark:border-green-800",
     message:
-      "Your responses suggest a high level of overall wellbeing over the past two weeks. You have been feeling generally cheerful, rested, engaged, and at ease. This is a positive sign. Continue the habits and routines that support your wellbeing, and remember that periodic check-ins — even when things feel good — can help you notice changes early.",
+      "Your responses suggest a high level of overall wellbeing over the past two weeks. You have been feeling generally cheerful, rested, engaged, and at ease. This is a positive sign. Continue the habits and routines that support your wellbeing, and remember that periodic check-ins, even when things feel good, can help you notice changes early.",
   },
   {
     label: "Moderate Wellbeing",
@@ -91,7 +91,7 @@ const TIERS: Tier[] = [
     borderLight: "border-amber-200",
     borderDark: "dark:border-amber-800",
     message:
-      "Your responses suggest a low level of wellbeing over the past two weeks. A WHO-5 percentage score below 50% may indicate that further evaluation is appropriate. This does not mean something is wrong with you — but it does suggest that your current quality of life could benefit from attention. Consider taking a depression screening like the PHQ-9 and speaking with a healthcare provider.",
+      "Your responses suggest a low level of wellbeing over the past two weeks. A WHO-5 percentage score below 50% may indicate that further evaluation is appropriate. This does not mean something is wrong with you, but it does suggest that your current quality of life could benefit from attention. Consider taking a depression screening like the PHQ-9 and speaking with a healthcare provider.",
   },
   {
     label: "Very Low Wellbeing",
@@ -105,7 +105,7 @@ const TIERS: Tier[] = [
     borderLight: "border-red-200",
     borderDark: "dark:border-red-800",
     message:
-      "Your responses suggest a very low level of wellbeing over the past two weeks. A WHO-5 percentage score below 28% is associated with a higher likelihood of depression. This is a strong signal to seek further evaluation — we recommend taking the PHQ-9 depression screening and speaking with a qualified healthcare professional. Support is available, and you do not have to feel this way.",
+      "Your responses suggest a very low level of wellbeing over the past two weeks. A WHO-5 percentage score below 28% is associated with a higher likelihood of depression. This is a strong signal to seek further evaluation, we recommend taking the PHQ-9 depression screening and speaking with a qualified healthcare professional. Support is available, and you do not have to feel this way.",
   },
 ];
 
@@ -288,11 +288,11 @@ export function Who5Client({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 World Health Organization. WHO-5 Well-Being Index.{" "}
-                <a href="https://www.who.int/mental_health/media/en/76.pdf" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — WHO-5 Index</a>
+                <a href="https://www.who.int/mental_health/media/en/76.pdf" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO, WHO-5 Index</a>
               </li>
               <li>
                 Topp, C. W., Østergaard, S. D., Søndergaard, S., &amp; Bech, P. (2015). The WHO-5 Well-Being Index: a systematic review of the literature.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/25831962/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — WHO-5 Systematic Review</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25831962/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, WHO-5 Systematic Review</a>
               </li>
             </ul>
           </div>
@@ -370,7 +370,7 @@ export function Who5Client({ faqData }: Props) {
             The WHO-5 Well-Being Index is a short, self-reported measure of current mental wellbeing developed by the World Health Organization in 1998. It is one of the most widely used measures of subjective wellbeing in the world, translated into more than 30 languages, and has been validated in numerous studies across diverse populations.
           </p>
           <p>
-            Unlike depression screeners (such as the <Link href="/phq-9-depression-test">PHQ-9</Link>) that ask about negative symptoms, the WHO-5 uses <strong>positively worded</strong> statements. This makes it less stigmatizing and well-suited for general wellbeing monitoring — in primary care, workplace settings, research, and personal use. A low WHO-5 score does not mean you are depressed, but research has shown it is a reliable indicator that further evaluation may be beneficial.
+            Unlike depression screeners (such as the <Link href="/phq-9-depression-test">PHQ-9</Link>) that ask about negative symptoms, the WHO-5 uses <strong>positively worded</strong> statements. This makes it less stigmatizing and well-suited for general wellbeing monitoring, in primary care, workplace settings, research, and personal use. A low WHO-5 score does not mean you are depressed, but research has shown it is a reliable indicator that further evaluation may be beneficial.
           </p>
           <h2>How the WHO-5 Is Scored</h2>
           <p>
@@ -383,7 +383,7 @@ export function Who5Client({ faqData }: Props) {
           </ul>
           <h2>WHO-5 vs. Depression Screeners</h2>
           <p>
-            The WHO-5 is not a depression screener — it is a <strong>wellbeing measure</strong>. Depression screeners like the PHQ-9 ask about specific symptoms of depression (sadness, loss of interest, sleep changes, etc.). The WHO-5 asks about positive experiences (cheerfulness, calm, energy, rest, engagement). A low WHO-5 score signals reduced wellbeing, which may be caused by depression, anxiety, stress, burnout, physical illness, life circumstances, or other factors. If your WHO-5 score is low, a depression-specific screen can help clarify whether depression may be a contributing factor.
+            The WHO-5 is not a depression screener, it is a <strong>wellbeing measure</strong>. Depression screeners like the PHQ-9 ask about specific symptoms of depression (sadness, loss of interest, sleep changes, etc.). The WHO-5 asks about positive experiences (cheerfulness, calm, energy, rest, engagement). A low WHO-5 score signals reduced wellbeing, which may be caused by depression, anxiety, stress, burnout, physical illness, life circumstances, or other factors. If your WHO-5 score is low, a depression-specific screen can help clarify whether depression may be a contributing factor.
           </p>
         </div>
 
@@ -472,7 +472,7 @@ export function Who5Client({ faqData }: Props) {
         5 questions · ~2 minutes · Completely private · WHO public domain instrument
       </p>
 
-      {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active wellbeing questionnaire. */}
+      {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active wellbeing questionnaire. */}
 
       {/* Progress */}
       <div className="mb-6">

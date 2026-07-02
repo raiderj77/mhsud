@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'MindCheck Tools — Free Mental Health Screening Tools — PHQ-9, GAD-7 & More'
+export const alt = 'MindCheck Tools, Free Mental Health Screening Tools, PHQ-9, GAD-7 & More'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -24,7 +24,7 @@ export default async function Image() {
           MindCheck Tools
         </div>
         <div style={{ fontSize: 32, color: '#818cf8', marginTop: 24, textAlign: 'center' }}>
-          Free Mental Health Screening Tools — PHQ-9, GAD-7 & More
+          Free Mental Health Screening Tools, PHQ-9, GAD-7 & More
         </div>
       </div>
     ),

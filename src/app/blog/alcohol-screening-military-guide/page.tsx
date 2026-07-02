@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "What confidential options exist for military alcohol screening?",
     answer:
-      "Several options exist outside the chain of command. Military OneSource provides up to 12 free confidential counseling sessions with no reporting to command. TRICARE covers substance use treatment. Online screening tools like MindCheck Tools are completely private \u2014 nothing is stored or reported. Chaplains provide absolute confidentiality, and some installations offer anonymous self-referral programs.",
+      "Several options exist outside the chain of command. Military OneSource provides up to 12 free confidential counseling sessions with no reporting to command. TRICARE covers substance use treatment. Online screening tools like MindCheck Tools are completely private, nothing is stored or reported. Chaplains provide absolute confidentiality, and some installations offer anonymous self-referral programs.",
   },
   {
     question: "How does combat exposure relate to alcohol use?",
@@ -73,7 +73,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             Military and veteran alcohol screening typically uses the AUDIT-C, a three-item version of the AUDIT validated for primary care. A score of 4 or higher in men and 3 or higher in women indicates positive screening (Bush et al., 1998, <em>Arch Intern Med</em>). The VA mandates annual screening for all enrolled veterans through this instrument (VA/VHA).
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Alcohol has been intertwined with military culture for centuries &mdash; from rum rations in the Royal Navy to beer at the enlisted club after a training exercise. But the line between cultural tradition and harmful drinking patterns is thinner than most service members realize. With binge drinking affecting more than one in three active-duty service members (2018 DoD Health Related Behaviors Survey) and a strong link between combat exposure and alcohol misuse, understanding when drinking crosses from social to problematic is critical &mdash; and confidential screening options now make it possible to check in without risking your career.
+            Alcohol has been intertwined with military culture for centuries, from rum rations in the Royal Navy to beer at the enlisted club after a training exercise. But the line between cultural tradition and harmful drinking patterns is thinner than most service members realize. With binge drinking affecting more than one in three active-duty service members (2018 DoD Health Related Behaviors Survey) and a strong link between combat exposure and alcohol misuse, understanding when drinking crosses from social to problematic is critical, and confidential screening options now make it possible to check in without risking your career.
           </p>
         </header>
 
@@ -81,9 +81,9 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (press 1 for Veterans, US 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (press 1 for Veterans, US 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -97,7 +97,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>The historical relationship between alcohol and military culture</h2>
             <p>
-              Alcohol has served specific functions in military life for hundreds of years. Historically, it was issued as rations &mdash; believed to boost morale, calm nerves, and build camaraderie. While formal alcohol rations ended decades ago, the cultural infrastructure remains deeply embedded in military life.
+              Alcohol has served specific functions in military life for hundreds of years. Historically, it was issued as rations, believed to boost morale, calm nerves, and build camaraderie. While formal alcohol rations ended decades ago, the cultural infrastructure remains deeply embedded in military life.
             </p>
             <p>
               On-base clubs, unit celebrations, homecoming events, promotion ceremonies, and deployment returns are all occasions where heavy drinking is not just accepted but expected. The phrase &quot;work hard, play hard&quot; defines a culture where blowing off steam through alcohol is normalized as a reward for intense service demands.
@@ -110,7 +110,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>How high are military drinking rates?</h2>
             <p>
-              The 2018 Department of Defense Health Related Behaviors Survey (HRBS) found that more than one-third (34%) of active-duty service members report binge drinking &mdash; defined as five or more drinks in a single session for men, four or more for women &mdash; within the past month. This exceeds the general adult civilian rate of roughly 22%.
+              The 2018 Department of Defense Health Related Behaviors Survey (HRBS) found that more than one-third (34%) of active-duty service members report binge drinking, defined as five or more drinks in a single session for men, four or more for women, within the past month. This exceeds the general adult civilian rate of roughly 22%.
             </p>
             <p>
               The rates are not uniform across the military. Risk factors for higher alcohol use include:
@@ -118,7 +118,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             <ul>
               <li><strong>Branch of service:</strong> The Marine Corps and Army report the highest rates of heavy drinking, followed by the Navy and Air Force</li>
               <li><strong>Rank:</strong> Junior enlisted personnel (E-1 to E-4) drink at significantly higher rates than officers or senior NCOs</li>
-              <li><strong>Combat exposure:</strong> Service members who have deployed to combat zones are significantly more likely to develop alcohol misuse &mdash; combat exposure is among the strongest predictors of problematic drinking in this population</li>
+              <li><strong>Combat exposure:</strong> Service members who have deployed to combat zones are significantly more likely to develop alcohol misuse, combat exposure is among the strongest predictors of problematic drinking in this population</li>
               <li><strong>Age:</strong> Younger service members (18&ndash;25) show the highest binge drinking rates, consistent with civilian trends but amplified by military culture</li>
               <li><strong>Gender:</strong> While men drink at higher overall rates, the gap narrows in military populations compared to civilian ones, and women service members face unique stigma barriers to seeking help</li>
             </ul>
@@ -132,7 +132,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               Several factors specific to military life elevate alcohol use risk beyond what the general population experiences:
             </p>
             <ul>
-              <li><strong>Combat exposure and PTSD:</strong> Combat-related PTSD and alcohol misuse frequently co-occur and reinforce each other. Alcohol temporarily suppresses the hyperarousal, nightmares, and intrusive memories characteristic of PTSD &mdash; creating a self-medication cycle that is extraordinarily difficult to break without addressing both conditions simultaneously</li>
+              <li><strong>Combat exposure and PTSD:</strong> Combat-related PTSD and alcohol misuse frequently co-occur and reinforce each other. Alcohol temporarily suppresses the hyperarousal, nightmares, and intrusive memories characteristic of PTSD, creating a self-medication cycle that is extraordinarily difficult to break without addressing both conditions simultaneously</li>
               <li><strong>Deployment stress:</strong> Extended deployments involve prolonged separation from family, exposure to life-threatening situations, moral injury, boredom in between high-intensity operations, and loss of control over daily life. Alcohol often becomes the primary coping mechanism for these accumulated stressors</li>
               <li><strong>Transition stress:</strong> Leaving the military means losing structure, identity, mission, rank, and unit cohesion simultaneously. The transition to civilian life is consistently associated with increased alcohol use as veterans search for ways to fill the void and manage the disorientation</li>
               <li><strong>Geographic isolation:</strong> Many military installations are located in remote areas with limited recreational options. On-base clubs and off-base bars become the primary social venues, reinforcing drinking as the default leisure activity</li>
@@ -147,10 +147,10 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               The co-occurrence of PTSD and alcohol misuse in military populations deserves special attention because it is so prevalent and so dangerous. Among veterans seeking treatment for PTSD, research consistently finds that roughly one-third to one-half also meet criteria for alcohol use disorder (<a href="https://www.ptsd.va.gov/PTSD/understand/related/substance_misuse.asp" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">VA National Center for PTSD</a>; Norman et al., 2018, <em>Psychol Addict Behav</em>), and the two conditions reinforce each other.
             </p>
             <p>
-              Alcohol temporarily dampens the hyperarousal and intrusive symptoms of PTSD &mdash; which is why it feels like it &quot;works.&quot; But alcohol disrupts REM sleep, worsens nightmares over time, impairs emotional processing, and prevents the brain from integrating traumatic memories. The result is a cycle where PTSD symptoms worsen during sober periods, driving more drinking, which further impairs recovery.
+              Alcohol temporarily dampens the hyperarousal and intrusive symptoms of PTSD, which is why it feels like it &quot;works.&quot; But alcohol disrupts REM sleep, worsens nightmares over time, impairs emotional processing, and prevents the brain from integrating traumatic memories. The result is a cycle where PTSD symptoms worsen during sober periods, driving more drinking, which further impairs recovery.
             </p>
             <p>
-              Effective treatment requires addressing both conditions. Integrated treatment models &mdash; which treat PTSD and alcohol use disorder simultaneously rather than sequentially &mdash; show the best outcomes. If you are screening for alcohol use, consider also taking a <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PTSD screening</Link> to understand the full picture.
+              Effective treatment requires addressing both conditions. Integrated treatment models, which treat PTSD and alcohol use disorder simultaneously rather than sequentially, show the best outcomes. If you are screening for alcohol use, consider also taking a <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PTSD screening</Link> to understand the full picture.
             </p>
           </section>
 
@@ -163,7 +163,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             </p>
             <ul>
               <li><strong>Career consequences:</strong> Fear of mandatory reporting to the chain of command, adverse fitness reports, and impact on promotions or duty assignments</li>
-              <li><strong>Security clearance:</strong> Many service members believe that any substance use treatment will automatically result in clearance revocation. This is largely a myth &mdash; self-referral is considered a mitigating factor &mdash; but the perception persists</li>
+              <li><strong>Security clearance:</strong> Many service members believe that any substance use treatment will automatically result in clearance revocation. This is largely a myth, self-referral is considered a mitigating factor, but the perception persists</li>
               <li><strong>Command notification:</strong> Some treatment pathways do require command notification, creating justified concern about confidentiality. Understanding which options do and do not involve notification is critical</li>
               <li><strong>Stigma:</strong> Military culture equates asking for help with weakness. The same resilience that keeps service members functioning under extreme stress becomes a barrier to acknowledging a problem</li>
               <li><strong>Normalization:</strong> When heavy drinking is the cultural norm, it is hard to see your own drinking as problematic. &quot;Everyone drinks like this&quot; is the most common rationalization</li>
@@ -173,14 +173,14 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>Confidential screening options that protect your career</h2>
             <p>
-              The <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools military alcohol screening</Link> is a free, private assessment that runs entirely in your browser. No data is stored, no account is needed, and no one &mdash; including your command &mdash; sees your answers or results. It takes under five minutes and provides a structured look at your drinking patterns.
+              The <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools military alcohol screening</Link> is a free, private assessment that runs entirely in your browser. No data is stored, no account is needed, and no one, including your command, sees your answers or results. It takes under five minutes and provides a structured look at your drinking patterns.
             </p>
             <p>
               Beyond online self-screening, other confidential options include:
             </p>
             <ul>
               <li><strong>Military OneSource:</strong> Up to 12 free confidential counseling sessions with no reporting to command. Available to active duty, Guard, Reserve, and family members</li>
-              <li><strong>Chaplains:</strong> Military chaplains provide absolute confidentiality &mdash; they cannot be compelled to report what you share</li>
+              <li><strong>Chaplains:</strong> Military chaplains provide absolute confidentiality, they cannot be compelled to report what you share</li>
               <li><strong>TRICARE:</strong> Covers substance use treatment, including residential programs, outpatient counseling, and medication-assisted treatment</li>
               <li><strong>Vet Centers:</strong> For veterans, community-based readjustment counseling with no VA enrollment required</li>
               <li><strong>Self-referral programs:</strong> Many installations offer anonymous self-referral to substance abuse counseling without command notification</li>
@@ -215,7 +215,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               <li>Share specific observations rather than labels: behaviors you have noticed, not conclusions about their character</li>
               <li>Mention confidential resources by name so they know options exist outside the chain of command</li>
               <li>Normalize the conversation: &quot;A lot of people in your situation deal with this&quot;</li>
-              <li>Offer to help with the practical steps &mdash; finding a provider, making a call, sharing a screening tool</li>
+              <li>Offer to help with the practical steps, finding a provider, making a call, sharing a screening tool</li>
             </ul>
             <p>
               SAMHSA&apos;s National Helpline (1-800-662-4357) is available 24/7, free, and confidential. It serves active duty, veterans, and family members with referrals to local treatment resources.
@@ -223,7 +223,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           </section>
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your drinking patterns &mdash; privately and confidentially</h3>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your drinking patterns, privately and confidentially</h3>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Nothing is stored or reported.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/alcohol-screening-military" className="btn-primary text-sm">Military Alcohol Screening</Link>

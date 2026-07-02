@@ -77,7 +77,7 @@ const TIERS: Tier[] = [
     borderLight: "border-green-200",
     borderDark: "dark:border-green-800",
     message:
-      "Your score falls within the normal range of self-esteem. This suggests you generally have a balanced and healthy view of yourself and your worth. You likely recognize both your strengths and your limitations without an overly negative or inflated self-evaluation. Normal self-esteem does not mean you never have doubts \u2014 everyone does at times. If you notice changes in how you feel about yourself, you can retake this screening at any time.",
+      "Your score falls within the normal range of self-esteem. This suggests you generally have a balanced and healthy view of yourself and your worth. You likely recognize both your strengths and your limitations without an overly negative or inflated self-evaluation. Normal self-esteem does not mean you never have doubts, everyone does at times. If you notice changes in how you feel about yourself, you can retake this screening at any time.",
   },
   {
     label: "High Self-Esteem",
@@ -284,7 +284,7 @@ export function RSESClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 American Psychological Association. Rosenberg Self-Esteem Scale.{" "}
-                <a href="https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/self-esteem" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">APA — Rosenberg Self-Esteem Scale</a>
+                <a href="https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/self-esteem" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">APA, Rosenberg Self-Esteem Scale</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Mental Health Information.{" "}
@@ -362,7 +362,7 @@ export function RSESClient({ faqData }: Props) {
             The Rosenberg Self-Esteem Scale (RSES) was developed by sociologist Morris Rosenberg and published in his 1965 book <em>Society and the Adolescent Self-Image</em>. It was originally designed for a large-scale study of over 5,000 high school students in New York State and has since become the most widely used measure of global self-esteem in social science research.
           </p>
           <p>
-            The scale measures what Rosenberg called &ldquo;global self-esteem&rdquo; &mdash; your overall evaluation of your own worth as a person. It does not measure specific domains of self-esteem (like academic performance or appearance) but rather your general feeling about yourself. The 10 items include 5 positively worded statements and 5 negatively worded statements, which are reverse-scored to reduce response bias.
+            The scale measures what Rosenberg called &ldquo;global self-esteem&rdquo;, your overall evaluation of your own worth as a person. It does not measure specific domains of self-esteem (like academic performance or appearance) but rather your general feeling about yourself. The 10 items include 5 positively worded statements and 5 negatively worded statements, which are reverse-scored to reduce response bias.
           </p>
           <h2>How Self-Esteem Relates to Mental Health</h2>
           <p>

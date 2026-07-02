@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/about",
-  title: "About — Your Friendly Developer",
+  title: "About, Your Friendly Developer",
   description:
     "The real story behind MindCheck Tools. Built by Jason Ramirez, a self-taught developer and CADC-II counselor from Prunedale, California.",
 });
@@ -122,7 +122,7 @@ export default function AboutPage() {
           <section>
             <h2>About MindCheck Tools</h2>
             <p>
-              I spent years working in addiction counseling and mental health — first as a client, then as a certified
+              I spent years working in addiction counseling and mental health, first as a client, then as a certified
               counselor. I hold my CADC-II credential and have worked with clients in inpatient treatment, outpatient
               programs, and community mental health settings. I know what it feels like to sit across from someone in
               the worst moment of their life. I know what it feels like to be that person.

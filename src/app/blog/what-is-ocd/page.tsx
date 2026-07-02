@@ -89,7 +89,7 @@ export default function WhatIsOcdPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Obsessive-compulsive disorder (OCD) is a mental health condition characterized by intrusive, unwanted thoughts (obsessions) that cause significant distress, and repetitive behaviors or mental acts (compulsions) performed to reduce that distress. OCD affects approximately 1.2% of US adults annually (NIMH, 2023). It is frequently misunderstood, often misdiagnosed, and one of the most treatable conditions in psychiatry when the correct intervention &mdash; Exposure and Response Prevention &mdash; is applied.
+            Obsessive-compulsive disorder (OCD) is a mental health condition characterized by intrusive, unwanted thoughts (obsessions) that cause significant distress, and repetitive behaviors or mental acts (compulsions) performed to reduce that distress. OCD affects approximately 1.2% of US adults annually (NIMH, 2023). It is frequently misunderstood, often misdiagnosed, and one of the most treatable conditions in psychiatry when the correct intervention, Exposure and Response Prevention, is applied.
           </p>
         </header>
 
@@ -98,7 +98,7 @@ export default function WhatIsOcdPage() {
           <section>
             <h2>What OCD Is Not</h2>
             <p>
-              Before defining OCD, it&rsquo;s worth clearing up the most pervasive misconceptions &mdash; because misunderstanding OCD causes real harm by delaying appropriate treatment.
+              Before defining OCD, it&rsquo;s worth clearing up the most pervasive misconceptions, because misunderstanding OCD causes real harm by delaying appropriate treatment.
             </p>
             <p>
               <strong>&ldquo;I&rsquo;m so OCD about my desk being neat.&rdquo;</strong> No. Preferring order and tidiness is a personality trait, not a disorder. OCD is not characterized by preference for neatness. Many people with OCD have no organizing compulsions at all.
@@ -126,13 +126,13 @@ export default function WhatIsOcdPage() {
           <section>
             <h2>The OCD Cycle: How It Actually Works</h2>
             <p>OCD operates through a specific, self-reinforcing cycle:</p>
-            <p><strong>1. Trigger:</strong> An internal thought, image, or impulse arises &mdash; or an external situation triggers one.</p>
+            <p><strong>1. Trigger:</strong> An internal thought, image, or impulse arises, or an external situation triggers one.</p>
             <p><strong>2. Obsession:</strong> The thought is interpreted as meaningful, dangerous, or revealing of something terrible. The person cannot dismiss it the way most people dismiss passing thoughts.</p>
             <p><strong>3. Anxiety:</strong> The interpretation of the thought as threatening produces intense anxiety, shame, or disgust.</p>
-            <p><strong>4. Compulsion:</strong> To reduce the anxiety, the person performs a behavior (washing, checking, arranging) or mental act (counting, praying, mentally reviewing, thought-suppression). This works &mdash; anxiety decreases temporarily.</p>
+            <p><strong>4. Compulsion:</strong> To reduce the anxiety, the person performs a behavior (washing, checking, arranging) or mental act (counting, praying, mentally reviewing, thought-suppression). This works, anxiety decreases temporarily.</p>
             <p><strong>5. Reinforcement:</strong> The relief from the compulsion teaches the brain that the compulsion was necessary. The intrusive thought returns with more urgency. The cycle tightens.</p>
             <p>
-              The compulsion is the key: it provides short-term relief but maintains and strengthens the OCD long-term. This is why effective OCD treatment &mdash; Exposure and Response Prevention &mdash; focuses specifically on breaking the compulsion, not just managing the obsession.
+              The compulsion is the key: it provides short-term relief but maintains and strengthens the OCD long-term. This is why effective OCD treatment, Exposure and Response Prevention, focuses specifically on breaking the compulsion, not just managing the obsession.
             </p>
           </section>
 
@@ -144,15 +144,15 @@ export default function WhatIsOcdPage() {
             </p>
             <h3>Contamination OCD</h3>
             <p>
-              Fear of contamination &mdash; by germs, chemicals, disease, or &ldquo;moral&rdquo; contamination &mdash; driving compulsive washing, cleaning, or avoidance. This is the most publicly recognized OCD presentation, but it&rsquo;s only one of many.
+              Fear of contamination, by germs, chemicals, disease, or &ldquo;moral&rdquo; contamination, driving compulsive washing, cleaning, or avoidance. This is the most publicly recognized OCD presentation, but it&rsquo;s only one of many.
             </p>
             <h3>Harm OCD</h3>
             <p>
-              Intrusive thoughts about harming oneself or others &mdash; not desired thoughts, but ego-dystonic thoughts the person finds horrifying. Compulsions include checking that harm didn&rsquo;t occur, seeking reassurance, and mental review. <strong>Important:</strong> Intrusive harm thoughts in OCD are not impulses the person wants to act on. People with harm OCD are not dangerous &mdash; they are typically deeply caring people who are horrified by the thoughts precisely because harming others is contrary to their values.
+              Intrusive thoughts about harming oneself or others, not desired thoughts, but ego-dystonic thoughts the person finds horrifying. Compulsions include checking that harm didn&rsquo;t occur, seeking reassurance, and mental review. <strong>Important:</strong> Intrusive harm thoughts in OCD are not impulses the person wants to act on. People with harm OCD are not dangerous, they are typically deeply caring people who are horrified by the thoughts precisely because harming others is contrary to their values.
             </p>
             <h3>Symmetry and Ordering OCD</h3>
             <p>
-              A compulsive need for objects to be arranged symmetrically, perfectly, or &ldquo;just right&rdquo; &mdash; often accompanied by a vague sense that something bad will happen if things aren&rsquo;t arranged correctly, or simply an intolerable feeling of incompleteness that only resolves when everything is &ldquo;right.&rdquo;
+              A compulsive need for objects to be arranged symmetrically, perfectly, or &ldquo;just right&rdquo;, often accompanied by a vague sense that something bad will happen if things aren&rsquo;t arranged correctly, or simply an intolerable feeling of incompleteness that only resolves when everything is &ldquo;right.&rdquo;
             </p>
             <h3>Checking OCD</h3>
             <p>
@@ -163,15 +163,15 @@ export default function WhatIsOcdPage() {
               &ldquo;Pure O&rdquo; is an informal term for OCD presentations dominated by obsessions with less visible behavioral compulsions. Common content: sexual thoughts that feel repugnant, blasphemous thoughts for religious people, intrusive doubts about one&rsquo;s sexual orientation or identity, or harm thoughts as described above. Mental compulsions (reviewing, neutralizing, analyzing) replace overt behavioral ones.
             </p>
             <p>
-              The &ldquo;Pure O&rdquo; label is somewhat misleading &mdash; virtually all OCD involves compulsions, but they may be entirely mental rather than behavioral.
+              The &ldquo;Pure O&rdquo; label is somewhat misleading, virtually all OCD involves compulsions, but they may be entirely mental rather than behavioral.
             </p>
             <h3>Relationship OCD (ROCD)</h3>
             <p>
-              Persistent, intrusive doubting about romantic relationships &mdash; &ldquo;Do I really love them? Are they really the right person? What if I don&rsquo;t feel enough?&rdquo; &mdash; driving reassurance-seeking, comparison, and mental review. ROCD causes significant distress and relationship impairment.
+              Persistent, intrusive doubting about romantic relationships, &ldquo;Do I really love them? Are they really the right person? What if I don&rsquo;t feel enough?&rdquo;, driving reassurance-seeking, comparison, and mental review. ROCD causes significant distress and relationship impairment.
             </p>
             <h3>Scrupulosity</h3>
             <p>
-              OCD focused on religion, morality, or ethics &mdash; fear of sinning, doing something immoral, or being a fundamentally bad person. Common in religious contexts but also occurs in secular form as hypermorality.
+              OCD focused on religion, morality, or ethics, fear of sinning, doing something immoral, or being a fundamentally bad person. Common in religious contexts but also occurs in secular form as hypermorality.
             </p>
           </section>
 
@@ -181,7 +181,7 @@ export default function WhatIsOcdPage() {
           <section>
             <h2>Intrusive Thoughts: What Everyone Has, What OCD Does Differently</h2>
             <p>
-              Intrusive thoughts &mdash; unwanted, distressing thoughts about harm, sexuality, contamination, or taboo subjects &mdash; are a <strong>universal human experience</strong>. Research by Rachman and de Silva (1978) found that approximately 94% of people report having intrusive thoughts with content similar to clinical OCD obsessions.
+              Intrusive thoughts, unwanted, distressing thoughts about harm, sexuality, contamination, or taboo subjects, are a <strong>universal human experience</strong>. Research by Rachman and de Silva (1978) found that approximately 94% of people report having intrusive thoughts with content similar to clinical OCD obsessions.
             </p>
             <p>What distinguishes OCD from the normal experience of intrusive thoughts:</p>
             <div className="overflow-x-auto">
@@ -213,7 +213,7 @@ export default function WhatIsOcdPage() {
               </table>
             </div>
             <p>
-              The thought is not the problem &mdash; it&rsquo;s what happens next. In OCD, intrusive thoughts are fused with identity (&ldquo;this thought reveals who I really am&rdquo;) and treated as requiring an urgent response. In people without OCD, the same thought passes without meaningful impact.
+              The thought is not the problem, it&rsquo;s what happens next. In OCD, intrusive thoughts are fused with identity (&ldquo;this thought reveals who I really am&rdquo;) and treated as requiring an urgent response. In people without OCD, the same thought passes without meaningful impact.
             </p>
             <p>
               This distinction is crucial because people with harm OCD or sexual intrusive thoughts often feel profound shame and fear that having the thought means they want to act on it. They don&rsquo;t. The horror the thought provokes is itself evidence of how contrary it is to their actual values.
@@ -225,8 +225,8 @@ export default function WhatIsOcdPage() {
             <h2>OCD Diagnosis: What It Requires</h2>
             <p>DSM-5 criteria for OCD require:</p>
             <ol className="list-decimal pl-5 space-y-2">
-              <li><strong>Obsessions</strong> &mdash; recurrent, persistent thoughts, urges, or images that are experienced as intrusive and unwanted, and cause marked anxiety</li>
-              <li><strong>Compulsions</strong> &mdash; repetitive behaviors or mental acts performed in response to obsessions, aimed at reducing anxiety or preventing a feared outcome</li>
+              <li><strong>Obsessions</strong>, recurrent, persistent thoughts, urges, or images that are experienced as intrusive and unwanted, and cause marked anxiety</li>
+              <li><strong>Compulsions</strong>, repetitive behaviors or mental acts performed in response to obsessions, aimed at reducing anxiety or preventing a feared outcome</li>
               <li><strong>Time:</strong> Obsessions and compulsions take more than 1 hour per day, OR cause significant distress or functional impairment</li>
               <li><strong>Not better explained</strong> by another condition or substance</li>
             </ol>
@@ -241,24 +241,24 @@ export default function WhatIsOcdPage() {
           <section>
             <h2>What Makes OCD Treatment Different</h2>
             <p>
-              OCD requires specialized treatment &mdash; not just general CBT or anxiety management. Understanding why explains the treatment approach.
+              OCD requires specialized treatment, not just general CBT or anxiety management. Understanding why explains the treatment approach.
             </p>
             <p><strong>Why general anxiety management doesn&rsquo;t work for OCD (and can make it worse):</strong></p>
             <p>
-              Standard anxiety management &mdash; relaxation, distraction, cognitive reassurance &mdash; functions as a compulsion in OCD. It reduces anxiety in the moment, which reinforces the OCD cycle. Breathing exercises and relaxation don&rsquo;t teach the brain that the obsessional thought is harmless &mdash; they just provide another avenue of relief that maintains the disorder.
+              Standard anxiety management, relaxation, distraction, cognitive reassurance, functions as a compulsion in OCD. It reduces anxiety in the moment, which reinforces the OCD cycle. Breathing exercises and relaxation don&rsquo;t teach the brain that the obsessional thought is harmless, they just provide another avenue of relief that maintains the disorder.
             </p>
-            <p><strong>Exposure and Response Prevention (ERP) &mdash; the gold standard:</strong></p>
+            <p><strong>Exposure and Response Prevention (ERP), the gold standard:</strong></p>
             <p>
-              ERP works by systematically confronting feared triggers (exposure) while deliberately refraining from compulsions (response prevention). Over repeated trials, the anxiety naturally decreases through habituation &mdash; and the brain learns that the feared outcome doesn&rsquo;t occur and that the anxiety is tolerable without the compulsion.
+              ERP works by systematically confronting feared triggers (exposure) while deliberately refraining from compulsions (response prevention). Over repeated trials, the anxiety naturally decreases through habituation, and the brain learns that the feared outcome doesn&rsquo;t occur and that the anxiety is tolerable without the compulsion.
             </p>
             <p>
-              ERP is uncomfortable by design &mdash; it requires tolerating the anxiety rather than neutralizing it. This is the mechanism of change. A therapist trained in ERP guides this process carefully, starting from less distressing situations and building up.
+              ERP is uncomfortable by design, it requires tolerating the anxiety rather than neutralizing it. This is the mechanism of change. A therapist trained in ERP guides this process carefully, starting from less distressing situations and building up.
             </p>
             <p>
               <strong>The key message:</strong> If you&rsquo;ve been in therapy for OCD but the therapist hasn&rsquo;t used ERP, or if the work has focused primarily on understanding why you have the thoughts rather than practicing tolerating them, it may not have been OCD-specific treatment. Finding an ERP-trained therapist is essential.
             </p>
             <p>
-              The International OCD Foundation maintains a therapist directory at <strong>iocdf.org</strong> &mdash; this is the most reliable way to find clinicians with verified OCD specialization.
+              The International OCD Foundation maintains a therapist directory at <strong>iocdf.org</strong>, this is the most reliable way to find clinicians with verified OCD specialization.
             </p>
           </section>
 
@@ -272,7 +272,7 @@ export default function WhatIsOcdPage() {
               <li><strong>Clomipramine (Anafranil):</strong> A tricyclic antidepressant with the longest evidence base for OCD; effective but more side effects</li>
             </ul>
             <p>
-              Medication typically reduces symptom severity by approximately 40&ndash;60% &mdash; meaningful but partial. Most clinicians recommend ERP alongside medication rather than medication alone for OCD.
+              Medication typically reduces symptom severity by approximately 40&ndash;60%, meaningful but partial. Most clinicians recommend ERP alongside medication rather than medication alone for OCD.
             </p>
           </section>
 
@@ -293,9 +293,9 @@ export default function WhatIsOcdPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -319,7 +319,7 @@ export default function WhatIsOcdPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

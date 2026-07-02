@@ -35,11 +35,11 @@ const DIMENSIONS: DimensionConfig[] = [
     icon: "H",
     copingSuggestions: [
       "Eat a balanced meal or snack right now",
-      "Drink a full glass of water — thirst often feels like hunger",
-      "Think about when you last ate — if it has been more than 4 hours, eat something",
+      "Drink a full glass of water, thirst often feels like hunger",
+      "Think about when you last ate, if it has been more than 4 hours, eat something",
       "Keep easy, healthy snacks available (nuts, fruit, granola bars)",
     ],
-    encouragement: "Your physical needs are met — that is a strong foundation for your recovery today.",
+    encouragement: "Your physical needs are met, that is a strong foundation for your recovery today.",
   },
   {
     key: "angry",
@@ -50,11 +50,11 @@ const DIMENSIONS: DimensionConfig[] = [
     icon: "A",
     copingSuggestions: [
       "Call your sponsor or a supportive person and talk it through",
-      "Write in a journal — get the feelings out of your head and onto paper",
+      "Write in a journal, get the feelings out of your head and onto paper",
       "Take a 10-minute walk to physically move through the emotion",
       "Try a breathing exercise: breathe in for 4, hold for 4, out for 4",
     ],
-    encouragement: "You are in a peaceful place emotionally — that takes real work in recovery. Well done.",
+    encouragement: "You are in a peaceful place emotionally, that takes real work in recovery. Well done.",
   },
   {
     key: "lonely",
@@ -64,12 +64,12 @@ const DIMENSIONS: DimensionConfig[] = [
     highLabel: "Well-connected",
     icon: "L",
     copingSuggestions: [
-      "Reach out to someone right now — a text or call counts",
+      "Reach out to someone right now, a text or call counts",
       "Attend a meeting (in person or online) today",
       "Go to a public place like a coffee shop or library",
-      "Remember: feeling lonely does not mean you are alone — connection is a phone call away",
+      "Remember: feeling lonely does not mean you are alone, connection is a phone call away",
     ],
-    encouragement: "You are feeling connected to others — that social support is one of the strongest protectors in recovery.",
+    encouragement: "You are feeling connected to others, that social support is one of the strongest protectors in recovery.",
   },
   {
     key: "tired",
@@ -79,19 +79,19 @@ const DIMENSIONS: DimensionConfig[] = [
     highLabel: "Well-rested",
     icon: "T",
     copingSuggestions: [
-      "Take a 20-minute nap if possible — even a short rest helps",
+      "Take a 20-minute nap if possible, even a short rest helps",
       "Plan to go to bed early tonight",
-      "Reduce caffeine after noon — it may be disrupting your sleep",
-      "Step outside for fresh air and sunlight — it naturally boosts alertness",
+      "Reduce caffeine after noon, it may be disrupting your sleep",
+      "Step outside for fresh air and sunlight, it naturally boosts alertness",
     ],
-    encouragement: "You are well-rested — good sleep is one of the most underrated tools in recovery.",
+    encouragement: "You are well-rested, good sleep is one of the most underrated tools in recovery.",
   },
 ];
 
 type VulnLevel = "low" | "moderate" | "elevated" | "high";
 
 function getVulnerabilityLevel(total: number): { level: VulnLevel; label: string; description: string } {
-  if (total >= 17) return { level: "low", label: "Low Vulnerability", description: "You are in a solid place right now. Keep doing what you are doing — your basic needs are met and your recovery foundation is strong today." };
+  if (total >= 17) return { level: "low", label: "Low Vulnerability", description: "You are in a solid place right now. Keep doing what you are doing, your basic needs are met and your recovery foundation is strong today." };
   if (total >= 13) return { level: "moderate", label: "Moderate Vulnerability", description: "Some areas need attention. Address the low-scoring dimensions before they build up. Small actions now can prevent bigger struggles later." };
   if (total >= 9) return { level: "elevated", label: "Elevated Vulnerability", description: "Several vulnerability factors are present. This is a signal to slow down, take care of your basic needs, and reach out to your support system. Now is not the time to test your willpower." };
   return { level: "high", label: "High Vulnerability", description: "Multiple HALT factors are active. Please take immediate action: eat something, rest if you can, and call someone you trust. If you are experiencing cravings or thoughts of using, contact SAMHSA at 1-800-662-4357 or call/text 988." };
@@ -253,7 +253,7 @@ export function HALTClient({ faqData }: Props) {
           HALT Check-In
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          <strong>H</strong>ungry. <strong>A</strong>ngry. <strong>L</strong>onely. <strong>T</strong>ired. These four states are the most common relapse triggers. Rate each one right now — it takes less than a minute.
+          <strong>H</strong>ungry. <strong>A</strong>ngry. <strong>L</strong>onely. <strong>T</strong>ired. These four states are the most common relapse triggers. Rate each one right now, it takes less than a minute.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -357,7 +357,7 @@ export function HALTClient({ faqData }: Props) {
                     <div className="flex items-center gap-2 mb-2">
                       <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-warm-200 dark:bg-warm-800 text-warm-700 dark:text-warm-300 text-xs font-bold">{dim.icon}</span>
                       <p className="font-semibold text-warm-800 dark:text-warm-200">
-                        {dim.label} — {scores[dim.key]}/5
+                        {dim.label}, {scores[dim.key]}/5
                       </p>
                     </div>
                     <p className="text-xs text-warm-600 dark:text-warm-400 mb-3">Try one of these right now:</p>
@@ -385,7 +385,7 @@ export function HALTClient({ faqData }: Props) {
                     <div className="flex items-center gap-2 mb-1">
                       <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-sage-200 dark:bg-sage-800 text-sage-700 dark:text-sage-300 text-xs font-bold">{dim.icon}</span>
                       <p className="font-semibold text-sage-800 dark:text-sage-200">
-                        {dim.label} — {scores[dim.key]}/5
+                        {dim.label}, {scores[dim.key]}/5
                       </p>
                     </div>
                     <p className="text-sm text-neutral-600 dark:text-neutral-300 ml-9">{dim.encouragement}</p>
@@ -450,13 +450,13 @@ export function HALTClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <p>
-              HALT is one of the most widely recognized acronyms in addiction recovery. It stands for <strong>Hungry, Angry, Lonely, Tired</strong> — four basic physical and emotional states that significantly increase the risk of relapse. The concept is used across 12-step programs, SMART Recovery, and many other recovery frameworks.
+              HALT is one of the most widely recognized acronyms in addiction recovery. It stands for <strong>Hungry, Angry, Lonely, Tired</strong>, four basic physical and emotional states that significantly increase the risk of relapse. The concept is used across 12-step programs, SMART Recovery, and many other recovery frameworks.
             </p>
             <p>
-              The idea behind HALT is simple but powerful: when your basic needs are not met, your ability to cope with cravings, stress, and difficult emotions is compromised. Most people in recovery did not relapse because they suddenly decided to use — they relapsed because they were running on empty and did not recognize it in time.
+              The idea behind HALT is simple but powerful: when your basic needs are not met, your ability to cope with cravings, stress, and difficult emotions is compromised. Most people in recovery did not relapse because they suddenly decided to use, they relapsed because they were running on empty and did not recognize it in time.
             </p>
             <p>
-              Research supports this. Studies on self-regulation show that willpower and emotional control are <strong>finite resources</strong> that depend on physical health, emotional balance, and social connection. When one or more HALT factors are present, the cognitive resources needed to maintain recovery are depleted — making it harder to resist impulsive decisions.
+              Research supports this. Studies on self-regulation show that willpower and emotional control are <strong>finite resources</strong> that depend on physical health, emotional balance, and social connection. When one or more HALT factors are present, the cognitive resources needed to maintain recovery are depleted, making it harder to resist impulsive decisions.
             </p>
           </div>
         </div>
@@ -472,7 +472,7 @@ export function HALTClient({ faqData }: Props) {
             <ul className="list-disc pl-5 space-y-2 text-neutral-600 dark:text-neutral-300">
               <li><strong>Morning check-in:</strong> Start your day by honestly assessing each HALT dimension. Address any needs before they build up.</li>
               <li><strong>Craving response:</strong> When you notice cravings, immediately run through HALT. Often, the craving is actually your body telling you it needs food, rest, or connection.</li>
-              <li><strong>Before decisions:</strong> Before making any significant decision — especially ones related to recovery — check your HALT status. Decisions made while hungry, angry, lonely, or tired tend to be decisions you regret.</li>
+              <li><strong>Before decisions:</strong> Before making any significant decision, especially ones related to recovery, check your HALT status. Decisions made while hungry, angry, lonely, or tired tend to be decisions you regret.</li>
               <li><strong>Evening reflection:</strong> At the end of each day, reflect on how HALT factors influenced your mood and behavior. Over time, patterns become clear.</li>
             </ul>
             <p>
@@ -487,16 +487,16 @@ export function HALTClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <p>
-              <strong>Hungry:</strong> Low blood sugar impairs judgment, increases irritability, and makes emotional regulation harder. Many people in early recovery are still learning to eat regularly — substance use often disrupted normal eating patterns.
+              <strong>Hungry:</strong> Low blood sugar impairs judgment, increases irritability, and makes emotional regulation harder. Many people in early recovery are still learning to eat regularly, substance use often disrupted normal eating patterns.
             </p>
             <p>
               <strong>Angry:</strong> Unprocessed anger and resentment create emotional pressure that substances once relieved. Learning to identify, express, and process anger in healthy ways is one of the most important recovery skills.
             </p>
             <p>
-              <strong>Lonely:</strong> Isolation is one of the strongest predictors of relapse. Recovery requires connection — whether through meetings, a sponsor, sober friends, family, or community. Even brief social interaction can reduce the urge to use.
+              <strong>Lonely:</strong> Isolation is one of the strongest predictors of relapse. Recovery requires connection, whether through meetings, a sponsor, sober friends, family, or community. Even brief social interaction can reduce the urge to use.
             </p>
             <p>
-              <strong>Tired:</strong> Sleep deprivation reduces willpower, emotional regulation, and impulse control. It also increases anxiety and depression. In early recovery, disrupted sleep is common — making rest an especially important area to monitor.
+              <strong>Tired:</strong> Sleep deprivation reduces willpower, emotional regulation, and impulse control. It also increases anxiety and depression. In early recovery, disrupted sleep is common, making rest an especially important area to monitor.
             </p>
           </div>
         </div>
@@ -511,11 +511,11 @@ export function HALTClient({ faqData }: Props) {
             <ul className="list-disc pl-5 space-y-2 text-neutral-600 dark:text-neutral-300">
               <li><strong>If Hungry:</strong> Eat something nutritious. Keep easy, healthy snacks available. In recovery, regular meals help stabilize mood and energy.</li>
               <li><strong>If Angry:</strong> Name the feeling out loud. Call a sponsor, trusted friend, or counselor. Write about it. Physical activity like walking can help discharge the energy.</li>
-              <li><strong>If Lonely:</strong> Reach out to someone — even a brief text or phone call. Attend a meeting, visit a coffee shop, or spend time in a public space. Connection does not have to be deep to be helpful.</li>
+              <li><strong>If Lonely:</strong> Reach out to someone, even a brief text or phone call. Attend a meeting, visit a coffee shop, or spend time in a public space. Connection does not have to be deep to be helpful.</li>
               <li><strong>If Tired:</strong> Rest if you can. If not, reduce your commitments for the day and avoid making important decisions. Even a 20-minute nap or quiet break can help restore capacity.</li>
             </ul>
             <p>
-              The goal is not perfection — it is awareness. By regularly checking in with HALT, you build the habit of noticing what you need before a craving or emotional crisis takes over.
+              The goal is not perfection, it is awareness. By regularly checking in with HALT, you build the habit of noticing what you need before a craving or emotional crisis takes over.
             </p>
           </div>
         </div>
@@ -550,7 +550,7 @@ export function HALTClient({ faqData }: Props) {
             experiencing cravings, please reach out to a qualified professional.
           </p>
           <p>
-            All responses are processed entirely in your browser. Nothing is stored, transmitted, or accessible to anyone — including us.
+            All responses are processed entirely in your browser. Nothing is stored, transmitted, or accessible to anyone, including us.
           </p>
           <ToolReviewerBio />
         </div>

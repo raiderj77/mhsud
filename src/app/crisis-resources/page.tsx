@@ -3,7 +3,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/crisis-resources",
-  title: "Crisis Resources — Immediate Help for Mental Health & Substance Use",
+  title: "Crisis Resources, Immediate Help for Mental Health & Substance Use",
   description:
     "If you or someone you know is in crisis, help is available now. Free, confidential crisis hotlines and resources for mental health emergencies, suicidal thoughts, substance use, and more.",
   keywords: [
@@ -106,7 +106,7 @@ export default function CrisisResourcesPage() {
             <div>
               <h2 className="font-serif text-xl font-semibold text-crisis-800 dark:text-crisis-300 mb-2">In immediate danger?</h2>
               <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-2">
-                If you or someone near you is in immediate physical danger — from self-harm, overdose, violence, or a medical emergency — <strong>call your local emergency number now</strong> (911 in the US, 999 in the UK, 112 in the EU, 000 in Australia).
+                If you or someone near you is in immediate physical danger, from self-harm, overdose, violence, or a medical emergency, <strong>call your local emergency number now</strong> (911 in the US, 999 in the UK, 112 in the EU, 000 in Australia).
               </p>
               <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed">
                 Emergency services can dispatch help to your location. You do not need to handle a crisis alone.
@@ -143,13 +143,13 @@ export default function CrisisResourcesPage() {
             <div className="card p-5">
               <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Crisis hotlines</h3>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                For immediate crisis situations — suicidal thoughts, active self-harm, panic, or acute emotional distress. Staffed by trained crisis counselors available 24/7.
+                For immediate crisis situations, suicidal thoughts, active self-harm, panic, or acute emotional distress. Staffed by trained crisis counselors available 24/7.
               </p>
             </div>
             <div className="card p-5">
               <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Warm lines</h3>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                For non-emergency emotional support — when you&apos;re struggling but not in immediate danger. Think of these as a step before crisis. Hours vary by provider. Search &quot;warm line&quot; + your state for local options.
+                For non-emergency emotional support, when you&apos;re struggling but not in immediate danger. Think of these as a step before crisis. Hours vary by provider. Search &quot;warm line&quot; + your state for local options.
               </p>
             </div>
             <div className="card p-5">
@@ -161,7 +161,7 @@ export default function CrisisResourcesPage() {
             <div className="card p-5">
               <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Emergency rooms</h3>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                When there is immediate physical danger — overdose, severe withdrawal symptoms, active suicidal behavior, or any situation where someone&apos;s life may be at risk. ERs are equipped for medical stabilization.
+                When there is immediate physical danger, overdose, severe withdrawal symptoms, active suicidal behavior, or any situation where someone&apos;s life may be at risk. ERs are equipped for medical stabilization.
               </p>
             </div>
           </div>
@@ -178,14 +178,14 @@ export default function CrisisResourcesPage() {
                 <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 w-28 flex-shrink-0 uppercase tracking-wide">{r.country}</span>
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.name}</span>
-                  <span className="text-sm text-neutral-500 dark:text-neutral-400"> — {r.detail}</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-400">, {r.detail}</span>
                 </div>
                 <span className="text-sm font-bold text-sage-600 dark:text-sage-400 whitespace-nowrap">{r.contact}</span>
               </div>
             ))}
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4 leading-relaxed">
-            This is not a comprehensive list. For crisis resources in your specific country and language, visit <strong>findahelpline.com</strong> — a search engine for crisis lines worldwide.
+            This is not a comprehensive list. For crisis resources in your specific country and language, visit <strong>findahelpline.com</strong>, a search engine for crisis lines worldwide.
           </p>
         </section>
 

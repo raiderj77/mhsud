@@ -40,7 +40,7 @@ const FAQ_DATA = [
   {
     question: "I\u2019ve always been disorganized and distractible. Does that mean I have ADHD?",
     answer:
-      "Not necessarily \u2014 but it might be worth exploring. ADHD is diagnosed when symptoms cause clinically significant impairment across multiple settings and aren\u2019t better explained by another condition. Chronic difficulty with attention and organization that has affected your work, relationships, or quality of life since childhood is worth bringing to a professional.",
+      "Not necessarily, but it might be worth exploring. ADHD is diagnosed when symptoms cause clinically significant impairment across multiple settings and aren\u2019t better explained by another condition. Chronic difficulty with attention and organization that has affected your work, relationships, or quality of life since childhood is worth bringing to a professional.",
   },
   {
     question: "Can women have ADHD?",
@@ -55,12 +55,12 @@ const FAQ_DATA = [
   {
     question: "How accurate is the ASRS-v1.1 as an ADHD screening tool?",
     answer:
-      "The ASRS-v1.1 has a sensitivity of 68.7% and a specificity of 99.5% at the standard 4-item positive threshold. This means it misses approximately 31% of adults with ADHD (false negatives) but rarely flags someone without ADHD as positive (false positives). The high specificity makes a positive screen clinically meaningful, while the lower sensitivity means a negative screen does not rule out ADHD — particularly for individuals with predominantly inattentive presentations.",
+      "The ASRS-v1.1 has a sensitivity of 68.7% and a specificity of 99.5% at the standard 4-item positive threshold. This means it misses approximately 31% of adults with ADHD (false negatives) but rarely flags someone without ADHD as positive (false positives). The high specificity makes a positive screen clinically meaningful, while the lower sensitivity means a negative screen does not rule out ADHD, particularly for individuals with predominantly inattentive presentations.",
   },
   {
     question: "What is the difference between inattentive and hyperactive ADHD in adults?",
     answer:
-      "ADHD presents in three ways: predominantly inattentive, predominantly hyperactive-impulsive, and combined type. Adults with inattentive ADHD often struggle with sustained focus, organization, and follow-through, but may appear calm or quiet — making their symptoms easy to miss or attribute to anxiety or depression. Hyperactive-impulsive ADHD in adults typically presents as internal restlessness, impulsive decision-making, and difficulty waiting, rather than the visible physical hyperactivity seen in children. The ASRS screens for both dimensions, but a full evaluation is needed to determine presentation type.",
+      "ADHD presents in three ways: predominantly inattentive, predominantly hyperactive-impulsive, and combined type. Adults with inattentive ADHD often struggle with sustained focus, organization, and follow-through, but may appear calm or quiet, making their symptoms easy to miss or attribute to anxiety or depression. Hyperactive-impulsive ADHD in adults typically presents as internal restlessness, impulsive decision-making, and difficulty waiting, rather than the visible physical hyperactivity seen in children. The ASRS screens for both dimensions, but a full evaluation is needed to determine presentation type.",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function WhatDoesASRSScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            The ASRS-v1.1 uses a positive/negative screen format rather than a numerical total. A positive screen &mdash; scoring in the darkly shaded zone on 4 or more of the 6 questions &mdash; suggests that ADHD symptoms are consistent with what clinicians see in adults diagnosed with the condition, and that a full evaluation is warranted. A negative screen does not rule out ADHD.
+            The ASRS-v1.1 uses a positive/negative screen format rather than a numerical total. A positive screen, scoring in the darkly shaded zone on 4 or more of the 6 questions, suggests that ADHD symptoms are consistent with what clinicians see in adults diagnosed with the condition, and that a full evaluation is warranted. A negative screen does not rule out ADHD.
           </p>
         </header>
 
@@ -132,7 +132,7 @@ export default function WhatDoesASRSScoreMeanPage() {
           <section>
             <h2>How ASRS Scoring Works</h2>
             <p>
-              The ASRS does not produce a simple total score. Instead, each question has a <strong>shaded threshold</strong> that varies by item &mdash; some questions are positive at &ldquo;Often,&rdquo; others at &ldquo;Sometimes.&rdquo; This reflects the fact that different ADHD symptoms have different base rates in the general population.
+              The ASRS does not produce a simple total score. Instead, each question has a <strong>shaded threshold</strong> that varies by item, some questions are positive at &ldquo;Often,&rdquo; others at &ldquo;Sometimes.&rdquo; This reflects the fact that different ADHD symptoms have different base rates in the general population.
             </p>
             <div className="not-prose my-4 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -164,7 +164,7 @@ export default function WhatDoesASRSScoreMeanPage() {
           <section>
             <h2>What Does a Positive ASRS Screen Mean?</h2>
             <p>
-              A positive screen means your symptom pattern on these 6 items is consistent with what clinicians typically observe in adults with ADHD. The specificity of 99.5% at the 4-item threshold is notably high &mdash; meaning very few people without ADHD screen positive.
+              A positive screen means your symptom pattern on these 6 items is consistent with what clinicians typically observe in adults with ADHD. The specificity of 99.5% at the 4-item threshold is notably high, meaning very few people without ADHD screen positive.
             </p>
             <p>
               A positive screen is not a diagnosis. ADHD in adults requires:
@@ -176,7 +176,7 @@ export default function WhatDoesASRSScoreMeanPage() {
               <li>Symptoms not better explained by another condition (anxiety, mood disorder, substance use)</li>
             </ul>
             <p>
-              Many adults who screen positive have been managing undiagnosed ADHD for decades. Getting an evaluation can be genuinely clarifying &mdash; and effective treatment, whether behavioral, pharmacological, or both, has strong evidence for improving quality of life.
+              Many adults who screen positive have been managing undiagnosed ADHD for decades. Getting an evaluation can be genuinely clarifying, and effective treatment, whether behavioral, pharmacological, or both, has strong evidence for improving quality of life.
             </p>
           </section>
 
@@ -186,7 +186,7 @@ export default function WhatDoesASRSScoreMeanPage() {
           <section>
             <h2>What Does a Negative ASRS Screen Mean?</h2>
             <p>
-              A negative screen &mdash; fewer than 4 items in the shaded zone &mdash; means your responses don&apos;t match the typical ADHD pattern on these 6 items. However, the ASRS has a sensitivity of only 68.7%, meaning roughly 30% of people with ADHD will screen negative on this tool.
+              A negative screen, fewer than 4 items in the shaded zone, means your responses don&apos;t match the typical ADHD pattern on these 6 items. However, the ASRS has a sensitivity of only 68.7%, meaning roughly 30% of people with ADHD will screen negative on this tool.
             </p>
             <p>
               If you screened negative but suspect ADHD, a clinical evaluation is still worth pursuing if:
@@ -209,15 +209,15 @@ export default function WhatDoesASRSScoreMeanPage() {
               Adult ADHD often looks different from the hyperactive child stereotype most people picture. In adults, ADHD frequently presents as:
             </p>
             <ul>
-              <li><strong>Chronic disorganization</strong> &mdash; difficulty maintaining systems, losing track of tasks and belongings</li>
-              <li><strong>Time blindness</strong> &mdash; poor sense of time passing; frequently late or missing deadlines</li>
-              <li><strong>Difficulty initiating tasks</strong> &mdash; especially tasks that feel boring or overwhelming, despite wanting to start</li>
-              <li><strong>Hyperfocus</strong> &mdash; paradoxically, intense focus on high-interest activities for hours at a time</li>
-              <li><strong>Emotional dysregulation</strong> &mdash; intense emotional reactions, low frustration tolerance, rejection sensitivity</li>
-              <li><strong>Restlessness</strong> &mdash; in adults, often internal rather than physical hyperactivity</li>
+              <li><strong>Chronic disorganization</strong>, difficulty maintaining systems, losing track of tasks and belongings</li>
+              <li><strong>Time blindness</strong>, poor sense of time passing; frequently late or missing deadlines</li>
+              <li><strong>Difficulty initiating tasks</strong>, especially tasks that feel boring or overwhelming, despite wanting to start</li>
+              <li><strong>Hyperfocus</strong>, paradoxically, intense focus on high-interest activities for hours at a time</li>
+              <li><strong>Emotional dysregulation</strong>, intense emotional reactions, low frustration tolerance, rejection sensitivity</li>
+              <li><strong>Restlessness</strong>, in adults, often internal rather than physical hyperactivity</li>
             </ul>
             <p>
-              These presentations are frequently missed or misattributed to anxiety, depression, or personality factors &mdash; which is why adult ADHD remains significantly underdiagnosed, particularly in women (Quinn &amp; Madhoo, 2014).
+              These presentations are frequently missed or misattributed to anxiety, depression, or personality factors, which is why adult ADHD remains significantly underdiagnosed, particularly in women (Quinn &amp; Madhoo, 2014).
             </p>
           </section>
 
@@ -236,7 +236,7 @@ export default function WhatDoesASRSScoreMeanPage() {
               <li><strong>Sleep disorders:</strong> chronic insomnia and delayed sleep phase are common</li>
             </ul>
             <p>
-              This overlap matters for interpretation. If you&apos;ve screened positive for ADHD symptoms AND scored in the clinical range on the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> or <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link>, bringing both sets of results to a clinician gives them a more complete picture. Untreated anxiety can mimic ADHD, and untreated ADHD can worsen anxiety and depression &mdash; accurate diagnosis requires teasing these apart.
+              This overlap matters for interpretation. If you&apos;ve screened positive for ADHD symptoms AND scored in the clinical range on the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> or <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link>, bringing both sets of results to a clinician gives them a more complete picture. Untreated anxiety can mimic ADHD, and untreated ADHD can worsen anxiety and depression, accurate diagnosis requires teasing these apart.
             </p>
           </section>
 
@@ -253,7 +253,7 @@ export default function WhatDoesASRSScoreMeanPage() {
               <strong>Cognitive Behavioral Therapy (CBT) for ADHD:</strong> Adapted CBT targeting organizational skills, time management, and emotional regulation has strong evidence as a standalone and adjunct treatment (Solanto et al., 2010).
             </p>
             <p>
-              <strong>Coaching and skills training:</strong> ADHD coaching focuses on practical systems &mdash; task management, habit formation, environment design &mdash; and can be highly effective alongside other treatments.
+              <strong>Coaching and skills training:</strong> ADHD coaching focuses on practical systems, task management, habit formation, environment design, and can be highly effective alongside other treatments.
             </p>
             <p>
               <strong>Lifestyle factors:</strong> Sleep consistency, regular aerobic exercise (shown to improve executive function), and reducing alcohol use all have meaningful impact on ADHD symptom severity.
@@ -266,7 +266,7 @@ export default function WhatDoesASRSScoreMeanPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment &mdash; they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -277,9 +277,9 @@ export default function WhatDoesASRSScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -302,7 +302,7 @@ export default function WhatDoesASRSScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.
@@ -340,11 +340,11 @@ export default function WhatDoesASRSScoreMeanPage() {
               </Link>
               <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Self-Check</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression &mdash; commonly co-occurs with ADHD</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression, commonly co-occurs with ADHD</p>
               </Link>
               <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Self-Check</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for anxiety &mdash; frequently overlaps with ADHD</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for anxiety, frequently overlaps with ADHD</p>
               </Link>
               <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Depression, Anxiety &amp; Stress</p>

@@ -99,7 +99,7 @@ export function MentalLoadClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/mental-load-calculator";
     if (mode === "blank") {
       const shareData = {
-        title: "Mental Load Calculator — Free & Private",
+        title: "Mental Load Calculator, Free & Private",
         text: "Take a free, private Mental Load Calculator. Your answers never leave your browser.",
         url,
       };
@@ -111,7 +111,7 @@ export function MentalLoadClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `Mental Load Calculator Results\nLoad: ${loadPct}% — ${lc.label}\n\nThis is a reflection tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `Mental Load Calculator Results\nLoad: ${loadPct}%, ${lc.label}\n\nThis is a reflection tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Mental Load Calculator Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -132,7 +132,7 @@ export function MentalLoadClient({ faqData }: Props) {
           Mental load is the invisible cognitive work of planning, remembering, and managing a household or team. The Mental Load Calculator scores distribution across 23 weighted tasks, from meal planning to medical appointments. Output shows the imbalance percentage and which specific categories skew toward one person.
         </p>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Who remembers, plans, and organizes in your household? This checklist helps you see how the invisible work of running a home is distributed — and start a conversation about it.
+          Who remembers, plans, and organizes in your household? This checklist helps you see how the invisible work of running a home is distributed, and start a conversation about it.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "24 Items" }].map((b) => (
@@ -200,7 +200,7 @@ export function MentalLoadClient({ faqData }: Props) {
             <div className={`${lc.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${lc.text} mb-2`}>Your Mental Load</p>
               <p className={`font-serif text-6xl font-bold ${lc.text} leading-none mb-2`}>{loadPct}%</p>
-              <p className={`text-sm font-semibold ${lc.text}`}>of applicable tasks — {lc.label}</p>
+              <p className={`text-sm font-semibold ${lc.text}`}>of applicable tasks, {lc.label}</p>
               <p className={`text-xs ${lc.text} mt-2 opacity-80`}>&quot;Mostly me&quot; responsibility reported</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
@@ -209,9 +209,9 @@ export function MentalLoadClient({ faqData }: Props) {
               </div>
             </div>
             <div className="p-5 sm:p-6 space-y-4">
-              {loadPct >= 75 && <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">You reported carrying most of the planning, remembering, and organizing across many areas of your household. This level of cognitive labor — even when tasks themselves are &quot;small&quot; — can contribute to stress and burnout over time.</p>}
+              {loadPct >= 75 && <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">You reported carrying most of the planning, remembering, and organizing across many areas of your household. This level of cognitive labor, even when tasks themselves are &quot;small&quot;, can contribute to stress and burnout over time.</p>}
               {loadPct >= 50 && loadPct < 75 && <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">You reported carrying a moderate share of the household&apos;s mental load. Some areas appear more balanced than others, which may be worth exploring together with your household members.</p>}
-              {loadPct < 50 && <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">Your responses suggest a relatively balanced distribution of household cognitive labor, or that many tasks are shared. This is worth celebrating — and maintaining.</p>}
+              {loadPct < 50 && <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">Your responses suggest a relatively balanced distribution of household cognitive labor, or that many tasks are shared. This is worth celebrating, and maintaining.</p>}
               <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"><strong>This is a conversation starter,</strong> not a verdict. The most valuable thing you can do with these results is share them with the people you live with and talk about what you notice.</p>
               </div>
@@ -240,7 +240,7 @@ export function MentalLoadClient({ faqData }: Props) {
 
           <div className="bg-warm-50 dark:bg-warm-950/20 border border-warm-200 dark:border-warm-900 rounded-xl p-4 mb-5">
             <p className="text-xs text-warm-700 dark:text-warm-400 leading-relaxed">
-              <strong>Remember:</strong> This reflects your perception. Your household members may see things differently — and that&apos;s okay. The point is to start talking about it, not to prove who does more.
+              <strong>Remember:</strong> This reflects your perception. Your household members may see things differently, and that&apos;s okay. The point is to start talking about it, not to prove who does more.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export function MentalLoadClient({ faqData }: Props) {
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Understanding Mental Load</h2>
             <div className="prose prose-neutral dark:prose-invert max-w-none text-sm leading-relaxed space-y-3">
               <p>
-                Mental load — sometimes called &quot;cognitive labor&quot; or &quot;invisible labor&quot; — refers to the ongoing
+                Mental load, sometimes called &quot;cognitive labor&quot; or &quot;invisible labor&quot;, refers to the ongoing
                 work of managing, planning, and organizing household life. It goes beyond completing tasks: it includes
                 remembering appointments, noticing when supplies run low, tracking school deadlines, coordinating
                 schedules, and anticipating what needs to happen next. Research by sociologist Allison Daminger (2019)
@@ -329,8 +329,7 @@ export function MentalLoadClient({ faqData }: Props) {
                 and monitoring the results.
               </p>
               <p>
-                Studies consistently show that mental load falls disproportionately on one partner in a household —
-                most often women, even in dual-income families. A 2019 study published in the <em>American Sociological
+                Studies consistently show that mental load falls disproportionately on one partner in a household, most often women, even in dual-income families. A 2019 study published in the <em>American Sociological
                 Review</em> found that mothers are more likely to perform the anticipation and monitoring stages of
                 household management, while fathers are more often involved only when directly asked. This imbalance
                 can persist even when physical tasks are shared equally.
@@ -340,7 +339,7 @@ export function MentalLoadClient({ faqData }: Props) {
                 Carrying a disproportionate mental load is associated with higher rates of stress, anxiety, and
                 burnout. Research published in <em>Sex Roles</em> (2021) found a significant link between unequal
                 cognitive labor and reduced relationship satisfaction. The person carrying more mental load often
-                reports feeling overwhelmed, underappreciated, and emotionally exhausted — symptoms that overlap
+                reports feeling overwhelmed, underappreciated, and emotionally exhausted, symptoms that overlap
                 with clinical burnout.
               </p>
               <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mt-4 mb-2">Strategies for Rebalancing</h3>
@@ -349,10 +348,10 @@ export function MentalLoadClient({ faqData }: Props) {
                 household cognitive labor into concrete domains. From there, evidence-based strategies include:
               </p>
               <ul className="list-disc pl-5 space-y-1">
-                <li><strong>Full ownership transfer</strong> — assign entire domains (not individual tasks) so both partners carry the planning and follow-through</li>
-                <li><strong>Regular check-ins</strong> — schedule brief weekly conversations to review what each person is carrying</li>
-                <li><strong>Externalize systems</strong> — shared calendars, grocery lists, and task apps reduce the need for one person to remember everything</li>
-                <li><strong>Let go of gatekeeping</strong> — allow your partner to manage tasks their way, even if the approach differs from yours</li>
+                <li><strong>Full ownership transfer</strong>, assign entire domains (not individual tasks) so both partners carry the planning and follow-through</li>
+                <li><strong>Regular check-ins</strong>, schedule brief weekly conversations to review what each person is carrying</li>
+                <li><strong>Externalize systems</strong>, shared calendars, grocery lists, and task apps reduce the need for one person to remember everything</li>
+                <li><strong>Let go of gatekeeping</strong>, allow your partner to manage tasks their way, even if the approach differs from yours</li>
               </ul>
               <p>
                 If mental load is contributing to persistent stress, low mood, or relationship conflict, consider
@@ -399,9 +398,9 @@ export function MentalLoadClient({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If mental load is affecting your well-being, help is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">

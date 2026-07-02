@@ -73,6 +73,6 @@ A: No, it's essential to use the PHQ-9 with the guidance of a licensed mental he
 The PHQ-9 is an essential tool for individuals, healthcare providers, and researchers to understand and tackle depression symptoms. If you're experiencing depression or know someone who is, don't hesitate to seek professional help.
 
 **Crisis Resources (24/7):**
-- **Call or text 988** — Suicide & Crisis Lifeline
-- **Text 741741** — Crisis Text Line
-- **Call 1-800-662-4357** — SAMHSA National Helpline (substance use & mental health)
+- **Call or text 988**, Suicide & Crisis Lifeline
+- **Text 741741**, Crisis Text Line
+- **Call 1-800-662-4357**, SAMHSA National Helpline (substance use & mental health)

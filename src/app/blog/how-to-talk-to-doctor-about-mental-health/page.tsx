@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/how-to-talk-to-doctor-about-mental-health",
   title: "How to Talk to Your Doctor About Mental Health",
   description:
-    "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect \u2014 including how to use your screening results.",
+    "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect, including how to use your screening results.",
   keywords: [
     "how to talk to doctor about mental health",
     "telling doctor about depression anxiety",
@@ -45,19 +45,19 @@ const FAQ_DATA = [
   {
     question: "What if I cry during the appointment?",
     answer:
-      "That\u2019s okay. Mental health conversations are emotional. Doctors see this regularly. You don\u2019t need to hold it together to be taken seriously \u2014 in fact, visible distress often helps convey the impact your symptoms are having.",
+      "That\u2019s okay. Mental health conversations are emotional. Doctors see this regularly. You don\u2019t need to hold it together to be taken seriously, in fact, visible distress often helps convey the impact your symptoms are having.",
   },
   {
     question: "How do I know if a therapist is a good fit?",
     answer:
-      "The therapeutic relationship \u2014 how safe, understood, and respected you feel \u2014 is the strongest predictor of outcomes. If after 2\u20133 sessions you don\u2019t feel heard or the approach doesn\u2019t resonate, try a different therapist. Finding the right fit is part of the process, not a failure.",
+      "The therapeutic relationship, how safe, understood, and respected you feel, is the strongest predictor of outcomes. If after 2\u20133 sessions you don\u2019t feel heard or the approach doesn\u2019t resonate, try a different therapist. Finding the right fit is part of the process, not a failure.",
   },
 ];
 
 export default function HowToTalkToDoctorAboutMentalHealthPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "How to Talk to Your Doctor About Mental Health", description: "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect \u2014 including how to use your screening results.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "How to Talk to Your Doctor About Mental Health", description: "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect, including how to use your screening results.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "How to Talk to Your Doctor About Mental Health", url: ARTICLE_URL }])) }} />
 
@@ -92,7 +92,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            The most effective way to bring up mental health with your doctor is directly and specifically: state what you&apos;ve been experiencing, how long it&apos;s been happening, and how it&apos;s affecting your daily life. You don&apos;t need the right words or a perfect explanation. Bringing a completed screening tool like the PHQ-9 or GAD-7 with you is one of the most practical things you can do — it gives your doctor structured, specific information in a format they&apos;re trained to use.
+            The most effective way to bring up mental health with your doctor is directly and specifically: state what you&apos;ve been experiencing, how long it&apos;s been happening, and how it&apos;s affecting your daily life. You don&apos;t need the right words or a perfect explanation. Bringing a completed screening tool like the PHQ-9 or GAD-7 with you is one of the most practical things you can do, it gives your doctor structured, specific information in a format they&apos;re trained to use.
           </p>
         </header>
 
@@ -101,17 +101,17 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
           <section>
             <h2>Why this conversation feels hard</h2>
             <p>
-              Most people delay talking to their doctor about mental health — sometimes for years. The reasons are understandable:
+              Most people delay talking to their doctor about mental health, sometimes for years. The reasons are understandable:
             </p>
             <ul>
-              <li><strong>Stigma</strong> — even internal stigma, the sense that you should be able to handle this on your own</li>
-              <li><strong>Uncertainty</strong> — not knowing if what you&apos;re experiencing is &quot;bad enough&quot; to bring up</li>
-              <li><strong>Appointment pressure</strong> — feeling like there&apos;s no time in a 15-minute primary care visit</li>
-              <li><strong>Fear of judgment</strong> — worry about how the doctor will respond or what it might mean</li>
-              <li><strong>Not knowing what to say</strong> — the experience of depression or anxiety can be hard to put into words</li>
+              <li><strong>Stigma</strong>, even internal stigma, the sense that you should be able to handle this on your own</li>
+              <li><strong>Uncertainty</strong>, not knowing if what you&apos;re experiencing is &quot;bad enough&quot; to bring up</li>
+              <li><strong>Appointment pressure</strong>, feeling like there&apos;s no time in a 15-minute primary care visit</li>
+              <li><strong>Fear of judgment</strong>, worry about how the doctor will respond or what it might mean</li>
+              <li><strong>Not knowing what to say</strong>, the experience of depression or anxiety can be hard to put into words</li>
             </ul>
             <p>
-              All of these are valid. And all of them are worth pushing through — because research consistently shows that the treatment gap for mental health conditions is primarily a help-seeking gap, not a treatment availability gap. The people who connect with care tend to improve. The people who don&apos;t connect, don&apos;t (Wang et al., 2005).
+              All of these are valid. And all of them are worth pushing through, because research consistently shows that the treatment gap for mental health conditions is primarily a help-seeking gap, not a treatment availability gap. The people who connect with care tend to improve. The people who don&apos;t connect, don&apos;t (Wang et al., 2005).
             </p>
           </section>
 
@@ -121,12 +121,12 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
 
             <h3>1. Complete a validated screening tool</h3>
             <p>
-              The most useful thing you can bring to a doctor&apos;s appointment is a completed, scored screening tool. Primary care physicians are trained to use these results — they&apos;re not just for your own information.
+              The most useful thing you can bring to a doctor&apos;s appointment is a completed, scored screening tool. Primary care physicians are trained to use these results, they&apos;re not just for your own information.
             </p>
             <ul>
-              <li><Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> — if you&apos;ve been experiencing low mood, loss of interest, or low energy</li>
-              <li><Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> — if you&apos;ve been experiencing persistent worry or tension</li>
-              <li><strong>Both together</strong> — if you&apos;re experiencing a mix, or aren&apos;t sure which fits better</li>
+              <li><Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link>, if you&apos;ve been experiencing low mood, loss of interest, or low energy</li>
+              <li><Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link>, if you&apos;ve been experiencing persistent worry or tension</li>
+              <li><strong>Both together</strong>, if you&apos;re experiencing a mix, or aren&apos;t sure which fits better</li>
             </ul>
             <p>
               Take the screen the morning of your appointment or the day before. Print or screenshot your score and the date you took it.
@@ -137,12 +137,12 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               Before your appointment, jot down:
             </p>
             <ol>
-              <li><strong>The main symptom or experience</strong> — in your own words, not clinical language. &quot;I&apos;ve been feeling like I&apos;m going through the motions&quot; or &quot;I can&apos;t stop worrying about everything&quot; is perfectly sufficient.</li>
-              <li><strong>How long it&apos;s been going on</strong> — even a rough estimate. &quot;About two months&quot; or &quot;since the fall&quot; is useful.</li>
-              <li><strong>How it&apos;s affecting your life</strong> — one or two specific examples. &quot;I&apos;ve been calling in sick more&quot; or &quot;I&apos;ve stopped seeing friends&quot; gives your doctor something concrete.</li>
+              <li><strong>The main symptom or experience</strong>, in your own words, not clinical language. &quot;I&apos;ve been feeling like I&apos;m going through the motions&quot; or &quot;I can&apos;t stop worrying about everything&quot; is perfectly sufficient.</li>
+              <li><strong>How long it&apos;s been going on</strong>, even a rough estimate. &quot;About two months&quot; or &quot;since the fall&quot; is useful.</li>
+              <li><strong>How it&apos;s affecting your life</strong>, one or two specific examples. &quot;I&apos;ve been calling in sick more&quot; or &quot;I&apos;ve stopped seeing friends&quot; gives your doctor something concrete.</li>
             </ol>
             <p>
-              That&apos;s it. You don&apos;t need a comprehensive symptom history — just a starting point.
+              That&apos;s it. You don&apos;t need a comprehensive symptom history, just a starting point.
             </p>
 
             <h3>3. Decide what you&apos;re hoping for</h3>
@@ -175,14 +175,14 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
             </p>
             <p>
               <strong>If you&apos;re not sure what it is:</strong><br />
-              &quot;I&apos;ve been feeling off for a few months — more down, less interested in things, low energy. I&apos;m not sure if it&apos;s depression but I wanted to bring it up.&quot;
+              &quot;I&apos;ve been feeling off for a few months, more down, less interested in things, low energy. I&apos;m not sure if it&apos;s depression but I wanted to bring it up.&quot;
             </p>
             <p>
               <strong>If you&apos;ve been avoiding it:</strong><br />
               &quot;I&apos;ve been putting this off, but I&apos;ve been dealing with anxiety that&apos;s getting in the way of my daily life.&quot;
             </p>
             <p>
-              None of these require you to have a diagnosis or a clean narrative. You&apos;re describing an experience and asking for help — that&apos;s all that&apos;s needed.
+              None of these require you to have a diagnosis or a clean narrative. You&apos;re describing an experience and asking for help, that&apos;s all that&apos;s needed.
             </p>
           </section>
 
@@ -198,14 +198,14 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               <li>Your doctor asking follow-up questions about your symptoms, timing, and functioning</li>
               <li>Review of your screening score if you brought one</li>
               <li>Assessment for any medical causes (thyroid issues, anemia, and other conditions can mimic mood and anxiety symptoms)</li>
-              <li>Discussion of options — which might include a referral to mental health services, medication, lifestyle recommendations, or a follow-up appointment</li>
+              <li>Discussion of options, which might include a referral to mental health services, medication, lifestyle recommendations, or a follow-up appointment</li>
             </ul>
             <p>
               <strong>What it probably won&apos;t include:</strong>
             </p>
             <ul>
               <li>A formal diagnosis in the first visit (diagnoses typically require a more thorough evaluation)</li>
-              <li>An immediate solution — it may take a few appointments to find the right path forward</li>
+              <li>An immediate solution, it may take a few appointments to find the right path forward</li>
             </ul>
             <p>
               <strong>If your doctor dismisses your concerns:</strong>
@@ -214,7 +214,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               It happens, and it&apos;s not okay. If you feel your concerns weren&apos;t taken seriously, you have options:
             </p>
             <ul>
-              <li>Ask directly: &quot;I want to make sure I&apos;m being clear — this has been affecting my daily life significantly. Can we discuss next steps?&quot;</li>
+              <li>Ask directly: &quot;I want to make sure I&apos;m being clear, this has been affecting my daily life significantly. Can we discuss next steps?&quot;</li>
               <li>Request a referral: &quot;Can you refer me to a mental health professional?&quot;</li>
               <li>See a different provider: You are allowed to seek a second opinion or switch doctors.</li>
             </ul>
@@ -229,7 +229,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
 
             <h3>&quot;I&apos;m worried about what going on my record means.&quot;</h3>
             <p>
-              Medical records are private under HIPAA and cannot be shared without your authorization with employers, family members, or most third parties. The exceptions are narrow (certain safety-sensitive jobs, insurance underwriting in some states). Discussing mental health with your doctor is documented as part of your medical care — the same as any other health concern.
+              Medical records are private under HIPAA and cannot be shared without your authorization with employers, family members, or most third parties. The exceptions are narrow (certain safety-sensitive jobs, insurance underwriting in some states). Discussing mental health with your doctor is documented as part of your medical care, the same as any other health concern.
             </p>
 
             <h3>&quot;I&apos;m worried my doctor will push medication immediately.&quot;</h3>
@@ -239,7 +239,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
 
             <h3>&quot;I&apos;ve felt dismissed before.&quot;</h3>
             <p>
-              Coming prepared — with a screening score, specific symptoms, and the duration — makes it harder to dismiss. If dismissal happens again, that&apos;s information about this particular provider, not about the validity of your experience. A mental health specialist (therapist, psychologist, psychiatrist) may be a more appropriate first point of contact for your concerns.
+              Coming prepared, with a screening score, specific symptoms, and the duration, makes it harder to dismiss. If dismissal happens again, that&apos;s information about this particular provider, not about the validity of your experience. A mental health specialist (therapist, psychologist, psychiatrist) may be a more appropriate first point of contact for your concerns.
             </p>
 
             <h3>&quot;I don&apos;t have a regular doctor.&quot;</h3>
@@ -247,11 +247,11 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               Options include:
             </p>
             <ul>
-              <li><strong>Urgent care clinics</strong> — can provide referrals and initial evaluation</li>
-              <li><strong>Community mental health centers</strong> — often provide evaluation and treatment regardless of insurance</li>
-              <li><strong>Federally Qualified Health Centers (FQHCs)</strong> — sliding scale fees based on income</li>
-              <li><strong>Telehealth platforms</strong> — many offer same-week appointments with licensed prescribers and therapists</li>
-              <li><strong>SAMHSA treatment locator</strong> — <a href="https://findtreatment.gov" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">findtreatment.gov</a> to find local mental health services</li>
+              <li><strong>Urgent care clinics</strong>, can provide referrals and initial evaluation</li>
+              <li><strong>Community mental health centers</strong>, often provide evaluation and treatment regardless of insurance</li>
+              <li><strong>Federally Qualified Health Centers (FQHCs)</strong>, sliding scale fees based on income</li>
+              <li><strong>Telehealth platforms</strong>, many offer same-week appointments with licensed prescribers and therapists</li>
+              <li><strong>SAMHSA treatment locator</strong>, <a href="https://findtreatment.gov" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">findtreatment.gov</a> to find local mental health services</li>
             </ul>
           </section>
 
@@ -267,7 +267,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               <em>&quot;I completed a PHQ-9 before coming in today. My score was [X]. I understand that&apos;s in the [minimal/mild/moderate/severe] range. I wanted to discuss what that means and what options exist.&quot;</em>
             </p>
             <p>
-              Most primary care physicians will recognize the tool immediately. The score gives your doctor a starting point that&apos;s more precise than symptom descriptions alone — and it signals that you&apos;ve been taking your mental health seriously, which often shifts the tone of the conversation.
+              Most primary care physicians will recognize the tool immediately. The score gives your doctor a starting point that&apos;s more precise than symptom descriptions alone, and it signals that you&apos;ve been taking your mental health seriously, which often shifts the tone of the conversation.
             </p>
           </section>
 
@@ -308,9 +308,9 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -332,7 +332,7 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

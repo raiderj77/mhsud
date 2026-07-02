@@ -47,7 +47,7 @@ function scoreItem(qi: number, value: number): number {
 
 const RANGES = [
   { min: 0, max: 5, level: "Negative Screen", key: "negative", description: "Your responses do not suggest a high level of autism spectrum traits at this time. Scores below 6 are below the referral threshold recommended by NICE guidelines.", suggestion: "If you still have questions or relate to autistic experiences, your score does not rule anything out. Many autistic people score below the threshold due to masking or other factors. Consider speaking with a professional if you have ongoing questions about your neurology." },
-  { min: 6, max: 10, level: "Positive Screen", key: "positive", description: "Your responses suggest the presence of autism spectrum traits at a level where further professional evaluation may be helpful. A positive screen does not mean you are autistic \u2014 it means a comprehensive assessment by a qualified specialist is recommended.", suggestion: "Consider speaking with your primary care provider about a referral for autism assessment. The Autism Society helpline (1-800-328-8476) can help connect you with resources and specialists in your area. The SAMHSA helpline (1-800-662-4357) can also provide referrals." },
+  { min: 6, max: 10, level: "Positive Screen", key: "positive", description: "Your responses suggest the presence of autism spectrum traits at a level where further professional evaluation may be helpful. A positive screen does not mean you are autistic, it means a comprehensive assessment by a qualified specialist is recommended.", suggestion: "Consider speaking with your primary care provider about a referral for autism assessment. The Autism Society helpline (1-800-328-8476) can help connect you with resources and specialists in your area. The SAMHSA helpline (1-800-662-4357) can also provide referrals." },
 ];
 
 function getRange(score: number) {
@@ -124,7 +124,7 @@ export function AQ10Client({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "AQ-10 Autism Spectrum Screening \u2014 Free & Private",
+        title: "AQ-10 Autism Spectrum Screening, Free & Private",
         text: "Take a free, private AQ-10 autism spectrum screening. 10 questions, 2 minutes. Your answers never leave your browser.",
         url,
       };
@@ -137,7 +137,7 @@ export function AQ10Client({ faqData }: Props) {
       return;
     }
 
-    const summary = `AQ-10 Autism Spectrum Screening Results\nScore: ${totalScore}/10 \u2014 ${range.level}\n\nThis is a screening tool, not an assessment. Take the self-check: ${url}`;
+    const summary = `AQ-10 Autism Spectrum Screening Results\nScore: ${totalScore}/10, ${range.level}\n\nThis is a screening tool, not an assessment. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My AQ-10 Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -275,17 +275,17 @@ export function AQ10Client({ faqData }: Props) {
                 <span className="text-xl">{"\u26A0\uFE0F"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
-                    Positive screen — further evaluation may be helpful
+                    Positive screen, further evaluation may be helpful
                   </h3>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed mb-3">
-                    Your responses suggest the presence of autism spectrum traits at a level where a comprehensive evaluation by a specialist may be valuable. Autism is a neurodevelopmental difference, not an illness. A positive screen does not mean you are autistic — it means a fuller conversation with a qualified professional is recommended.
+                    Your responses suggest the presence of autism spectrum traits at a level where a comprehensive evaluation by a specialist may be valuable. Autism is a neurodevelopmental difference, not an illness. A positive screen does not mean you are autistic, it means a fuller conversation with a qualified professional is recommended.
                   </p>
                   <div className="bg-warm-100/50 dark:bg-warm-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-warm-700 dark:text-warm-400 mb-1">Resources:</p>
                     <p className="text-sm text-warm-700 dark:text-warm-400"><strong>Autism Society Helpline:</strong> Call <strong>1-800-328-8476</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong> (free, 24/7)</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, 24/7)</p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
                   </div>
                 </div>
               </div>
@@ -306,14 +306,14 @@ export function AQ10Client({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your AQ-10 Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 10 — {range.level}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 10, {range.level}</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 10) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Below threshold</span>
-                    <span>10 — All traits present</span>
+                    <span>0, Below threshold</span>
+                    <span>10, All traits present</span>
                   </div>
                   {/* Cutoff indicator */}
                   <div className="relative mt-1">
@@ -372,7 +372,7 @@ export function AQ10Client({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>AQ-10 Autism Spectrum Screening from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>AQ-10 Autism Spectrum Screening from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not an assessment. Consult a qualified specialist.</p>
             </div>
           </div>
@@ -508,9 +508,9 @@ export function AQ10Client({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "Autism Society Helpline (US)", detail: "1-800-328-8476 \u2014 information, resources, and referrals", color: "text-sage-600 dark:text-sage-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "Autism Society Helpline (US)", detail: "1-800-328-8476, information, resources, and referrals", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -539,13 +539,13 @@ export function AQ10Client({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">What Is Autism?</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Autism is a neurodevelopmental difference that affects how a person experiences and interacts with the world. It involves differences in social communication, sensory processing, and patterns of thinking and behavior. Autism is a <strong>spectrum</strong> — no two autistic people are exactly alike. Some autistic individuals may need significant support in daily life, while others live independently, hold careers, and may not be identified until adulthood. The neurodiversity perspective recognizes autism as a natural form of human variation rather than a deficiency to be fixed.
+                  Autism is a neurodevelopmental difference that affects how a person experiences and interacts with the world. It involves differences in social communication, sensory processing, and patterns of thinking and behavior. Autism is a <strong>spectrum</strong>, no two autistic people are exactly alike. Some autistic individuals may need significant support in daily life, while others live independently, hold careers, and may not be identified until adulthood. The neurodiversity perspective recognizes autism as a natural form of human variation rather than a deficiency to be fixed.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Late-Identified Adults</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  A growing number of adults are learning they are autistic later in life — often in their 30s, 40s, or beyond. This is especially common among <strong>women, nonbinary individuals, and people of color</strong>, who were historically underrepresented in autism research and clinical practice. Many late-identified adults developed <strong>masking</strong> strategies — consciously or unconsciously suppressing autistic behaviors to meet social expectations. While masking can help with social navigation, it often comes at a significant cost to mental health, contributing to burnout, anxiety, and depression. Recognizing and understanding one&apos;s autistic traits can be a powerful step toward self-acceptance and improved wellbeing.
+                  A growing number of adults are learning they are autistic later in life, often in their 30s, 40s, or beyond. This is especially common among <strong>women, nonbinary individuals, and people of color</strong>, who were historically underrepresented in autism research and clinical practice. Many late-identified adults developed <strong>masking</strong> strategies, consciously or unconsciously suppressing autistic behaviors to meet social expectations. While masking can help with social navigation, it often comes at a significant cost to mental health, contributing to burnout, anxiety, and depression. Recognizing and understanding one&apos;s autistic traits can be a powerful step toward self-acceptance and improved wellbeing.
                 </p>
               </div>
               <div>
@@ -557,7 +557,7 @@ export function AQ10Client({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">The Value of Understanding Yourself</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Whether or not a screening leads to a formal assessment, exploring the question &ldquo;could I be autistic?&rdquo; can be meaningful. Many people find that learning about autism helps explain lifelong patterns — social difficulties, sensory sensitivities, intense interests, or a persistent sense of being &ldquo;different.&rdquo; A comprehensive evaluation by a qualified specialist is the only way to confirm autism, but <strong>understanding yourself better is always worthwhile</strong>. If the AQ-10 resonates with your experiences, consider exploring further through the <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">ASRS ADHD screening</Link> (given the high overlap between autism and ADHD) or the <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> to check for co-occurring anxiety, depression, or stress.
+                  Whether or not a screening leads to a formal assessment, exploring the question &ldquo;could I be autistic?&rdquo; can be meaningful. Many people find that learning about autism helps explain lifelong patterns, social difficulties, sensory sensitivities, intense interests, or a persistent sense of being &ldquo;different.&rdquo; A comprehensive evaluation by a qualified specialist is the only way to confirm autism, but <strong>understanding yourself better is always worthwhile</strong>. If the AQ-10 resonates with your experiences, consider exploring further through the <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">ASRS ADHD screening</Link> (given the high overlap between autism and ADHD) or the <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> to check for co-occurring anxiety, depression, or stress.
                 </p>
               </div>
               <ToolReviewerBio />
@@ -600,7 +600,7 @@ export function AQ10Client({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Allison, C., Auyeung, B., &amp; Baron-Cohen, S. (2012). Toward brief &ldquo;Red Flags&rdquo; for autism screening: The Short Autism Spectrum Quotient.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/22265366/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — AQ-10 Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/22265366/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, AQ-10 Validation</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Autism Spectrum Disorder.{" "}

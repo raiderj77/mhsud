@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "Is teacher burnout worse than in other professions?",
     answer:
-      "Research suggests teachers experience burnout at rates comparable to or higher than healthcare workers and first responders. Teaching combines emotional labor, lack of autonomy, high public accountability, and relatively low compensation \u2014 a combination that creates particularly high burnout risk. Gallup has consistently ranked K-12 educators among the most burned-out occupational groups.",
+      "Research suggests teachers experience burnout at rates comparable to or higher than healthcare workers and first responders. Teaching combines emotional labor, lack of autonomy, high public accountability, and relatively low compensation, a combination that creates particularly high burnout risk. Gallup has consistently ranked K-12 educators among the most burned-out occupational groups.",
   },
   {
     question: "Can I recover from burnout and stay in teaching?",
@@ -88,7 +88,7 @@ export default function BurnoutTeachersGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Teaching has always been demanding. But in recent years, educators across the country have reported levels of exhaustion, frustration, and emotional depletion that go far beyond normal job stress. National Education Association surveys found that more than 55% of educators are now considering leaving the profession earlier than planned. This is not a personal failing &mdash; it is a systemic crisis. If you are a teacher feeling burned out, this guide explains why it is happening and what you can do about it.
+            Teaching has always been demanding. But in recent years, educators across the country have reported levels of exhaustion, frustration, and emotional depletion that go far beyond normal job stress. National Education Association surveys found that more than 55% of educators are now considering leaving the profession earlier than planned. This is not a personal failing, it is a systemic crisis. If you are a teacher feeling burned out, this guide explains why it is happening and what you can do about it.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function BurnoutTeachersGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,11 +117,11 @@ export default function BurnoutTeachersGuidePage() {
             <ul>
               <li><strong>Lack of autonomy:</strong> Teachers are often required to follow scripted curricula, standardized testing mandates, and administrative directives with little input into the decisions that shape their daily work</li>
               <li><strong>Behavior management without support:</strong> Managing classroom behavior is emotionally draining, especially when administrators do not provide adequate support systems or consequences</li>
-              <li><strong>Emotional labor with students:</strong> Teachers serve as de facto counselors, mentors, and sometimes the most stable adults in students&apos; lives &mdash; a role that carries enormous emotional weight</li>
+              <li><strong>Emotional labor with students:</strong> Teachers serve as de facto counselors, mentors, and sometimes the most stable adults in students&apos; lives, a role that carries enormous emotional weight</li>
               <li><strong>Lack of administrative support:</strong> When teachers feel unsupported by school leadership, burnout accelerates. Top-down mandates without resources to implement them create chronic frustration</li>
               <li><strong>Low pay relative to demands:</strong> Teachers earn significantly less than other professionals with comparable education levels. The Economic Policy Institute found that teachers earn about 26% less than comparable workers</li>
               <li><strong>Politicization of education:</strong> Curriculum battles, book bans, and public criticism of teachers have created a hostile environment in many communities</li>
-              <li><strong>Expanding responsibilities:</strong> Teachers are increasingly expected to handle social-emotional learning, trauma-informed care, technology integration, individualized education plans, and parent communication &mdash; all without additional time or compensation</li>
+              <li><strong>Expanding responsibilities:</strong> Teachers are increasingly expected to handle social-emotional learning, trauma-informed care, technology integration, individualized education plans, and parent communication, all without additional time or compensation</li>
             </ul>
           </section>
 
@@ -133,7 +133,7 @@ export default function BurnoutTeachersGuidePage() {
               One of the most persistent misconceptions about teaching is that summers off make up for the stress of the school year. This misunderstanding minimizes the reality of teacher burnout in several ways.
             </p>
             <p>
-              First, teachers work 10 to 12 months of emotional and cognitive depletion. The school year is not simply long hours &mdash; it is sustained emotional labor, hypervigilance for student safety, and constant cognitive switching between instruction, behavior management, assessment, and communication. This kind of work produces cumulative fatigue that two months cannot fully reverse.
+              First, teachers work 10 to 12 months of emotional and cognitive depletion. The school year is not simply long hours, it is sustained emotional labor, hypervigilance for student safety, and constant cognitive switching between instruction, behavior management, assessment, and communication. This kind of work produces cumulative fatigue that two months cannot fully reverse.
             </p>
             <p>
               Second, many teachers spend summers completing required professional development, attending trainings, planning curriculum, working second jobs to supplement their income, or managing summer school. The idea of a full two-month break is a myth for most educators.
@@ -149,12 +149,12 @@ export default function BurnoutTeachersGuidePage() {
             <ul>
               <li>Sunday evening dread that starts earlier and earlier in the weekend</li>
               <li>Feeling emotionally disconnected from students you once cared deeply about</li>
-              <li>Loss of creativity in lesson planning &mdash; defaulting to worksheets or busy work</li>
+              <li>Loss of creativity in lesson planning, defaulting to worksheets or busy work</li>
               <li>Persistent fatigue that weekends and breaks do not resolve</li>
               <li>Increased irritability with students, parents, or colleagues</li>
               <li>Counting the days until the next break, retirement, or the end of your career</li>
               <li>Physical symptoms: headaches, insomnia, frequent illness, digestive issues</li>
-              <li>Cynicism about education as a whole &mdash; feeling that nothing you do matters</li>
+              <li>Cynicism about education as a whole, feeling that nothing you do matters</li>
               <li>Guilt about not being the teacher you want to be, combined with inability to do more</li>
             </ul>
             <p>
@@ -175,7 +175,7 @@ export default function BurnoutTeachersGuidePage() {
               <li><strong>Use available mental health resources:</strong> Many districts offer Employee Assistance Programs (EAPs) with free confidential counseling sessions</li>
               <li><strong>Advocate through your union or professional organization:</strong> Collective action on class sizes, planning time, and workload has more impact than individual complaints</li>
               <li><strong>Consider a lateral move:</strong> Switching grade levels, subjects, schools, or moving into instructional coaching, curriculum development, or school counseling can restore engagement</li>
-              <li><strong>Practice self-compassion:</strong> You cannot pour from an empty cup. Acknowledging your limits is not giving up &mdash; it is self-preservation</li>
+              <li><strong>Practice self-compassion:</strong> You cannot pour from an empty cup. Acknowledging your limits is not giving up, it is self-preservation</li>
               <li><strong>Explore therapy:</strong> A therapist who understands occupational burnout can help you develop coping strategies specific to your situation</li>
             </ul>
           </section>
@@ -213,7 +213,7 @@ export default function BurnoutTeachersGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

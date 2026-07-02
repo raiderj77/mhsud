@@ -31,17 +31,17 @@ const FAQ_DATA = [
   {
     question: "Is social anxiety common in college?",
     answer:
-      "Yes. Social anxiety disorder is one of the most prevalent mental health conditions on college campuses, estimated to affect 10\u201315% of college students. Many more experience subclinical social anxiety that still significantly impacts their academic and social experience. The college environment \u2014 with constant social evaluation, class participation, and new relationship demands \u2014 can intensify symptoms.",
+      "Yes. Social anxiety disorder is one of the most prevalent mental health conditions on college campuses, estimated to affect 10\u201315% of college students. Many more experience subclinical social anxiety that still significantly impacts their academic and social experience. The college environment, with constant social evaluation, class participation, and new relationship demands, can intensify symptoms.",
   },
   {
     question: "How is social anxiety different from being introverted?",
     answer:
-      "Introversion is a personality preference for less stimulation \u2014 introverts recharge through solitude but can enjoy social interaction. Social anxiety involves fear and avoidance driven by the expectation of negative judgment. The key difference: introverts choose solitude because they prefer it; people with social anxiety avoid situations because they fear them.",
+      "Introversion is a personality preference for less stimulation, introverts recharge through solitude but can enjoy social interaction. Social anxiety involves fear and avoidance driven by the expectation of negative judgment. The key difference: introverts choose solitude because they prefer it; people with social anxiety avoid situations because they fear them.",
   },
   {
     question: "Can social anxiety affect my grades?",
     answer:
-      "Yes. Social anxiety commonly leads to avoiding class participation, skipping classes with oral components, declining group projects, not visiting office hours, and avoiding study groups. Research shows that social anxiety is associated with lower GPA, longer time to degree, and higher dropout rates \u2014 not because of ability, but because of avoidance.",
+      "Yes. Social anxiety commonly leads to avoiding class participation, skipping classes with oral components, declining group projects, not visiting office hours, and avoiding study groups. Research shows that social anxiety is associated with lower GPA, longer time to degree, and higher dropout rates, not because of ability, but because of avoidance.",
   },
   {
     question: "Does my college offer help for social anxiety?",
@@ -88,7 +88,7 @@ export default function SocialAnxietyCollegeGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            College is full of situations that social anxiety feeds on: meeting new people, speaking in class, navigating dining halls, attending parties, and being constantly evaluated. If you are a college student who avoids these situations not because you are uninterested but because the fear of judgment feels overwhelming, you may be dealing with more than normal nervousness. Social anxiety disorder affects an estimated 10&ndash;15% of college students &mdash; making it one of the most common mental health conditions on campus.
+            College is full of situations that social anxiety feeds on: meeting new people, speaking in class, navigating dining halls, attending parties, and being constantly evaluated. If you are a college student who avoids these situations not because you are uninterested but because the fear of judgment feels overwhelming, you may be dealing with more than normal nervousness. Social anxiety disorder affects an estimated 10&ndash;15% of college students, making it one of the most common mental health conditions on campus.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function SocialAnxietyCollegeGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -134,7 +134,7 @@ export default function SocialAnxietyCollegeGuidePage() {
               <li><strong>Constant evaluation:</strong> Academic performance, social standing, and identity are all under evaluation simultaneously</li>
               <li><strong>Social media comparison:</strong> Everyone else appears to be thriving socially, creating a distorted reference point</li>
               <li><strong>Roommate proximity:</strong> No private space to decompress, with constant potential for social interaction</li>
-              <li><strong>Alcohol as social lubricant:</strong> The campus drinking culture can lead to using alcohol to manage social anxiety &mdash; a pattern that quickly becomes its own problem</li>
+              <li><strong>Alcohol as social lubricant:</strong> The campus drinking culture can lead to using alcohol to manage social anxiety, a pattern that quickly becomes its own problem</li>
             </ul>
           </section>
 
@@ -157,7 +157,7 @@ export default function SocialAnxietyCollegeGuidePage() {
             <h2>Evidence-based approaches that help</h2>
             <ul>
               <li><strong>Cognitive Behavioral Therapy (CBT):</strong> The gold-standard treatment for social anxiety. Many campus counseling centers offer CBT-based individual or group therapy specifically for social anxiety.</li>
-              <li><strong>Exposure therapy:</strong> Gradual, structured practice with feared social situations &mdash; the behavioral component of CBT that produces the most durable change.</li>
+              <li><strong>Exposure therapy:</strong> Gradual, structured practice with feared social situations, the behavioral component of CBT that produces the most durable change.</li>
               <li><strong>Campus support groups:</strong> Anxiety support groups normalize the experience and provide a low-pressure social environment to practice.</li>
               <li><strong>Academic accommodations:</strong> Disability services can provide alternative participation methods, extended time for oral presentations, or reduced-distraction testing environments.</li>
             </ul>
@@ -194,7 +194,7 @@ export default function SocialAnxietyCollegeGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

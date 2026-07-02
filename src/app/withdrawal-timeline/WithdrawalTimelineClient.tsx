@@ -46,7 +46,7 @@ const SUBSTANCES: Substance[] = [
     phases: [
       { name: "Early Symptoms", timeframe: "6-12 hours", symptoms: ["Anxiety and nervousness", "Tremors (shaky hands)", "Nausea and vomiting", "Sweating and clammy skin", "Rapid heart rate", "Insomnia", "Headache"], severity: "moderate" },
       { name: "Hallucination Risk", timeframe: "12-24 hours", symptoms: ["Visual hallucinations may begin", "Auditory hallucinations (hearing things)", "Tactile hallucinations (skin crawling)", "Increasing anxiety and agitation", "Continued tremors and sweating"], severity: "severe" },
-      { name: "Seizure Risk Period", timeframe: "24-48 hours", symptoms: ["RISK OF SEIZURES — most dangerous period begins", "Grand mal seizures possible", "Severe tremors", "Elevated blood pressure and heart rate", "Profuse sweating", "Extreme agitation"], severity: "dangerous" },
+      { name: "Seizure Risk Period", timeframe: "24-48 hours", symptoms: ["RISK OF SEIZURES, most dangerous period begins", "Grand mal seizures possible", "Severe tremors", "Elevated blood pressure and heart rate", "Profuse sweating", "Extreme agitation"], severity: "dangerous" },
       { name: "Delirium Tremens (DTs) Risk", timeframe: "48-72 hours", symptoms: ["Delirium tremens may develop (fatal without treatment)", "Severe confusion and disorientation", "High fever", "Seizures", "Rapid, irregular heartbeat", "Extreme agitation and hallucinations"], severity: "dangerous" },
       { name: "Acute Resolution", timeframe: "3-7 days", symptoms: ["Symptoms begin to subside gradually", "Sleep may slowly improve", "Tremors reducing", "Appetite returning", "Anxiety and irritability persisting but improving"], severity: "moderate" },
     ],
@@ -64,8 +64,8 @@ const SUBSTANCES: Substance[] = [
       { name: "Peak Symptoms", timeframe: "36-72 hours", symptoms: ["Most intense period of withdrawal", "Severe abdominal cramping", "Intense cravings", "Continued vomiting and diarrhea (risk of dehydration)", "Severe insomnia", "Extreme irritability and agitation"], severity: "severe" },
       { name: "Acute Resolution", timeframe: "3-7 days", symptoms: ["Physical symptoms begin to subside", "Appetite slowly returning", "Cramping and diarrhea reducing", "Fatigue and weakness", "Cravings persisting but becoming manageable"], severity: "moderate" },
     ],
-    paws: "Post-acute withdrawal from opioids can include depression, anxiety, sleep disturbances, low energy, irritability, and intermittent cravings. These symptoms can persist for weeks to months and are a major factor in relapse. PAWS symptoms tend to come in waves — you may feel good for days, then have a difficult stretch.",
-    mat: "FDA-approved MAT for opioid use disorder includes methadone (full agonist, dispensed through clinics), buprenorphine/naloxone (Suboxone — partial agonist, can be prescribed by qualified providers), and naltrexone (Vivitrol — opioid blocker, monthly injection). MAT is considered the gold standard and significantly reduces overdose death risk.",
+    paws: "Post-acute withdrawal from opioids can include depression, anxiety, sleep disturbances, low energy, irritability, and intermittent cravings. These symptoms can persist for weeks to months and are a major factor in relapse. PAWS symptoms tend to come in waves, you may feel good for days, then have a difficult stretch.",
+    mat: "FDA-approved MAT for opioid use disorder includes methadone (full agonist, dispensed through clinics), buprenorphine/naloxone (Suboxone, partial agonist, can be prescribed by qualified providers), and naltrexone (Vivitrol, opioid blocker, monthly injection). MAT is considered the gold standard and significantly reduces overdose death risk.",
   },
   {
     key: "opioids-rx",
@@ -89,7 +89,7 @@ const SUBSTANCES: Substance[] = [
     dangerWarning: "Benzodiazepine withdrawal can be LIFE-THREATENING. Seizures can occur even weeks after stopping. NEVER stop benzodiazepines abruptly. A slow medical taper under professional supervision is essential. Abrupt discontinuation after prolonged use can cause fatal seizures.",
     phases: [
       { name: "Early Rebound", timeframe: "1-4 days", symptoms: ["Rebound anxiety (often worse than original anxiety)", "Insomnia returning or worsening", "Restlessness and irritability", "Increased heart rate", "Muscle tension and stiffness", "Difficulty concentrating"], severity: "moderate" },
-      { name: "Acute Withdrawal", timeframe: "5-14 days", symptoms: ["Intensifying anxiety and panic attacks", "Tremors and muscle twitching", "SEIZURE RISK — medical emergency possible", "Nausea, vomiting, weight loss", "Headaches and muscle pain", "Perceptual disturbances (light, sound sensitivity)", "Depersonalization or derealization"], severity: "dangerous" },
+      { name: "Acute Withdrawal", timeframe: "5-14 days", symptoms: ["Intensifying anxiety and panic attacks", "Tremors and muscle twitching", "SEIZURE RISK, medical emergency possible", "Nausea, vomiting, weight loss", "Headaches and muscle pain", "Perceptual disturbances (light, sound sensitivity)", "Depersonalization or derealization"], severity: "dangerous" },
       { name: "Peak / Protracted Acute", timeframe: "2-4 weeks", symptoms: ["Highest seizure risk continues", "Panic attacks", "Hypersensitivity to stimuli (light, sound, touch)", "Cognitive difficulties (memory, concentration)", "Depression and mood instability", "Insomnia may be severe", "Muscle pain and stiffness"], severity: "dangerous" },
       { name: "Gradual Resolution", timeframe: "1-3 months", symptoms: ["Symptoms slowly improving week by week", "Anxiety remaining elevated but manageable", "Cognitive function gradually returning", "Sleep slowly normalizing", "Intermittent symptom flare-ups", "Windows of feeling normal becoming more frequent"], severity: "moderate" },
     ],
@@ -146,7 +146,7 @@ const SUBSTANCES: Substance[] = [
       { name: "Resolution", timeframe: "1-4 weeks", symptoms: ["Physical withdrawal largely resolved", "Cravings now situational (triggered by habits, not chemistry)", "Energy levels normalized", "Breathing noticeably improved", "Weight stabilization beginning", "Psychological cravings still occurring but manageable"], severity: "mild" },
     ],
     paws: "Nicotine PAWS primarily involves psychological and habitual cravings that can persist for months. Weight gain concerns are common (average 5-10 lbs). Situational triggers (after meals, with coffee, while driving) can provoke strong cravings long after physical withdrawal is over. These fade with time and new habit formation.",
-    mat: "FDA-approved nicotine cessation medications include nicotine replacement therapy (patches, gum, lozenges, inhalers, nasal spray), varenicline (Chantix — reduces cravings and the rewarding effects of nicotine), and bupropion (Wellbutrin — an antidepressant that reduces cravings). Combining behavioral support with medication approximately doubles quit rates.",
+    mat: "FDA-approved nicotine cessation medications include nicotine replacement therapy (patches, gum, lozenges, inhalers, nasal spray), varenicline (Chantix, reduces cravings and the rewarding effects of nicotine), and bupropion (Wellbutrin, an antidepressant that reduces cravings). Combining behavioral support with medication approximately doubles quit rates.",
   },
 ];
 
@@ -167,7 +167,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/withdrawal-timeline";
     if (mode === "blank" || !substance) {
       if (navigator.share) {
-        try { await navigator.share({ title: "Withdrawal Timeline Tool", text: "See detailed withdrawal timelines by substance — hour by hour and day by day. Free and private.", url }); return; } catch { /* cancelled */ }
+        try { await navigator.share({ title: "Withdrawal Timeline Tool", text: "See detailed withdrawal timelines by substance, hour by hour and day by day. Free and private.", url }); return; } catch { /* cancelled */ }
       }
       await navigator.clipboard.writeText(url);
       setShareMessage("Link copied!");
@@ -195,7 +195,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
           Withdrawal Timeline
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Select a substance to see a detailed, phase-by-phase timeline of what to expect during withdrawal — from the first hours through post-acute symptoms.
+          Select a substance to see a detailed, phase-by-phase timeline of what to expect during withdrawal, from the first hours through post-acute symptoms.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -215,7 +215,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
       <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-2xl p-5 mb-6">
         <p className="font-semibold text-crisis-700 dark:text-crisis-400 mb-2">Important Medical Notice</p>
         <p className="text-sm text-crisis-600 dark:text-crisis-400 leading-relaxed">
-          This tool is <strong>informational only</strong>. Always consult a medical professional before stopping any substance. Withdrawal from <strong>alcohol and benzodiazepines can be life-threatening</strong> — never stop these substances abruptly without medical supervision. If you are experiencing a medical emergency, call <strong>911</strong> immediately.
+          This tool is <strong>informational only</strong>. Always consult a medical professional before stopping any substance. Withdrawal from <strong>alcohol and benzodiazepines can be life-threatening</strong>, never stop these substances abruptly without medical supervision. If you are experiencing a medical emergency, call <strong>911</strong> immediately.
         </p>
       </div>
 
@@ -269,7 +269,7 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
               {substance.name} Withdrawal Timeline
             </h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-              {substance.phases.length} phases from onset through resolution. Individual experiences vary — this is a general guide based on medical literature.
+              {substance.phases.length} phases from onset through resolution. Individual experiences vary, this is a general guide based on medical literature.
             </p>
 
             {/* Severity Legend */}
@@ -385,13 +385,13 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <p>
-              Withdrawal occurs when the body has adapted to the regular presence of a substance and then that substance is reduced or removed. The brain and body have adjusted their chemistry to function with the substance present — when it is taken away, a period of readjustment produces the symptoms we call withdrawal.
+              Withdrawal occurs when the body has adapted to the regular presence of a substance and then that substance is reduced or removed. The brain and body have adjusted their chemistry to function with the substance present, when it is taken away, a period of readjustment produces the symptoms we call withdrawal.
             </p>
             <p>
-              The severity and duration of withdrawal depend on several factors: the substance used, how long it was used, the amount typically consumed, the method of use, individual physiology, and whether other substances are also being used. No two people experience identical withdrawal — the timelines above represent general medical guidelines, not exact predictions.
+              The severity and duration of withdrawal depend on several factors: the substance used, how long it was used, the amount typically consumed, the method of use, individual physiology, and whether other substances are also being used. No two people experience identical withdrawal, the timelines above represent general medical guidelines, not exact predictions.
             </p>
             <p>
-              The single most important thing to understand about withdrawal is that <strong>it is temporary</strong>. While the acute phase can be extremely uncomfortable — and in some cases dangerous — it does end. The body is remarkably capable of healing and recalibrating, given time and proper support.
+              The single most important thing to understand about withdrawal is that <strong>it is temporary</strong>. While the acute phase can be extremely uncomfortable, and in some cases dangerous, it does end. The body is remarkably capable of healing and recalibrating, given time and proper support.
             </p>
           </div>
         </div>
@@ -422,11 +422,11 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
           </h2>
           <div className="prose-custom">
             <ul className="list-disc pl-5 space-y-2 text-neutral-600 dark:text-neutral-300">
-              <li><Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Health Recovery Timeline</Link> — See what happens to your body as it heals after quitting</li>
-              <li><Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> — Track your recovery days and milestones</li>
-              <li><Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">HALT Check-In</Link> — Daily recovery check-in for relapse prevention</li>
-              <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">AUDIT Alcohol Screen</Link> — Reflect on your relationship with alcohol</li>
-              <li><Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">WHO-ASSIST Drug Screening</Link> — Screen for drug use concerns</li>
+              <li><Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Health Recovery Timeline</Link>, See what happens to your body as it heals after quitting</li>
+              <li><Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link>, Track your recovery days and milestones</li>
+              <li><Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">HALT Check-In</Link>, Daily recovery check-in for relapse prevention</li>
+              <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">AUDIT Alcohol Screen</Link>, Reflect on your relationship with alcohol</li>
+              <li><Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">WHO-ASSIST Drug Screening</Link>, Screen for drug use concerns</li>
             </ul>
           </div>
         </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/alcohol-screening-for-college-students",
   title: "Alcohol Screening for College Students | Free AUDIT",
   description:
-    "Free alcohol screening for college students — WHO AUDIT tool. 10 questions, private results, no sign-up. Understand your drinking patterns.",
+    "Free alcohol screening for college students, WHO AUDIT tool. 10 questions, private results, no sign-up. Understand your drinking patterns.",
   keywords: [
     "alcohol screening college students", "college drinking test", "alcohol test for students",
     "binge drinking quiz", "college alcohol assessment", "audit test college",
@@ -31,7 +31,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "How much drinking is considered 'normal' in college?",
-    answer: "While drinking is common on college campuses, 'normal' does not mean safe. According to the NIAAA, about 53% of full-time college students ages 18–22 drink alcohol, and about 33% engage in binge drinking. The AUDIT helps you evaluate your own patterns against clinical thresholds — not peer behavior — because what is common is not necessarily what is healthy.",
+    answer: "While drinking is common on college campuses, 'normal' does not mean safe. According to the NIAAA, about 53% of full-time college students ages 18–22 drink alcohol, and about 33% engage in binge drinking. The AUDIT helps you evaluate your own patterns against clinical thresholds, not peer behavior, because what is common is not necessarily what is healthy.",
   },
   {
     question: "What counts as binge drinking?",
@@ -39,10 +39,10 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results be shared with my school?",
-    answer: "No. This tool runs entirely in your browser. Nothing you enter is stored, transmitted, or shared with any server, school, or third party. Your results are completely private — when you close this page, your responses are gone.",
+    answer: "No. This tool runs entirely in your browser. Nothing you enter is stored, transmitted, or shared with any server, school, or third party. Your results are completely private, when you close this page, your responses are gone.",
   },
   {
-    question: "I only drink on weekends — can that still be a problem?",
+    question: "I only drink on weekends, can that still be a problem?",
     answer: "Yes. The pattern of drinking matters as much as the frequency. Weekend-only drinking that involves binge episodes (4–5+ drinks in a sitting) carries significant health and safety risks, including alcohol poisoning, injury, impaired judgment, and academic consequences. The AUDIT evaluates both frequency and quantity.",
   },
   {
@@ -59,7 +59,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Alcohol Screening for College Students — AUDIT",
+              name: "Alcohol Screening for College Students, AUDIT",
               description: "A free, private alcohol screening tool for college students using the WHO's clinically validated AUDIT questionnaire. Assess drinking patterns honestly.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
@@ -104,7 +104,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            Let&apos;s be honest — in college, drinking is everywhere. The pregames, the parties,
+            Let&apos;s be honest, in college, drinking is everywhere. The pregames, the parties,
             the tailgates, the &quot;just one more.&quot; Everyone around you seems fine, so it&apos;s
             easy to think your drinking is fine too. But if you&apos;re here, some part of you is
             wondering. Maybe you blacked out and don&apos;t want to admit it. Maybe you&apos;re
@@ -112,8 +112,8 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             Asking that question takes more courage than most people realize. This screening
-            uses the <strong>AUDIT</strong> — the World Health Organization&apos;s gold-standard
-            alcohol assessment — to give you an honest, private look at your drinking patterns.
+            uses the <strong>AUDIT</strong>, the World Health Organization&apos;s gold-standard
+            alcohol assessment, to give you an honest, private look at your drinking patterns.
             No judgment, no lectures, no one watching. It is <strong>not a diagnosis</strong>,
             just a clear-eyed check-in with yourself.
           </p>
@@ -128,7 +128,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared with your school.
+            Takes about 3 minutes. Completely private, nothing is stored or shared with your school.
           </p>
         </div>
 
@@ -143,24 +143,24 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 An estimated 1,519 college students ages 18–24 die each year from alcohol-related
                 unintentional injuries, including motor vehicle crashes.
-                <span className="text-slate-500 dark:text-slate-400"> — NIAAA</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIAAA</span>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">1 in 3 binge drink</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                About 33% of full-time college students engage in binge drinking — but students
+                About 33% of full-time college students engage in binge drinking, but students
                 consistently <em>overestimate</em> how much their peers drink, which makes heavy
                 drinking feel more normal than it is.
-                <span className="text-slate-500 dark:text-slate-400"> — NIAAA/SAMHSA</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIAAA/SAMHSA</span>
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 mb-1">1 in 4 affected academically</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                25% of college students report academic consequences from drinking — missed classes,
+                25% of college students report academic consequences from drinking, missed classes,
                 falling behind, lower grades. The impact goes beyond the party.
-                <span className="text-slate-500 dark:text-slate-400"> — NIAAA</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIAAA</span>
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>How it works:</strong> You&apos;ll answer 10 questions about your drinking frequency, quantity, and any consequences you&apos;ve experienced. The questions cover the past year of your drinking.</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 40. Scores of 8 or above suggest hazardous or harmful drinking patterns. You&apos;ll see exactly what your score means and what the clinical thresholds are.</p>
-                <p><strong>Be honest:</strong> This only works if you&apos;re honest with yourself. Nobody else sees your answers. There&apos;s no &quot;right&quot; answer — just your actual experience.</p>
+                <p><strong>Be honest:</strong> This only works if you&apos;re honest with yourself. Nobody else sees your answers. There&apos;s no &quot;right&quot; answer, just your actual experience.</p>
                 <p><strong>Your privacy:</strong> This runs entirely in your browser. Nothing is stored, sent to a server, or shared with your school, parents, or anyone else. When you close the page, it&apos;s gone.</p>
               </div>
             </div>
@@ -194,14 +194,14 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Cannabis is widely used by college students for anxiety management — and the short-term
+              Cannabis is widely used by college students for anxiety management, and the short-term
               effect is real. Cannabis acutely reduces anxiety for many people. This is why it feels
               like a solution.
             </p>
             <p>The longer-term picture is more complicated:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                Regular cannabis use is associated with <strong>worsened anxiety over time</strong> — not
+                Regular cannabis use is associated with <strong>worsened anxiety over time</strong>, not
                 improved. The relief is real; the rebound and tolerance progression erode it.
               </li>
               <li>
@@ -217,7 +217,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               </li>
               <li>
                 High-potency cannabis and concentrates are associated with <strong>cannabis-induced
-                anxiety and panic</strong> — the substance that was being used to manage anxiety can
+                anxiety and panic</strong>, the substance that was being used to manage anxiety can
                 trigger it at higher doses.
               </li>
             </ul>
@@ -244,13 +244,13 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             </p>
             <p>
               By either definition, binge drinking is the dominant pattern in college drinking
-              culture — not daily dependence. The AUDIT and AUDIT-C are calibrated to detect both
+              culture, not daily dependence. The AUDIT and AUDIT-C are calibrated to detect both
               patterns, but scores can be elevated by infrequent heavy drinking even without daily use.
             </p>
             <p>What the research shows about college binge drinking:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>
-                Acute risks — impaired judgment, accidents, sexual assault, alcohol poisoning — are
+                Acute risks, impaired judgment, accidents, sexual assault, alcohol poisoning, are
                 concentrated in binge episodes, not moderate regular drinking
               </li>
               <li>
@@ -263,7 +263,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             </ul>
             <p>
               If your AUDIT score is elevated primarily because of weekend binge patterns rather than
-              daily use, that&apos;s still clinically relevant — it just points to a different kind of
+              daily use, that&apos;s still clinically relevant, it just points to a different kind of
               conversation.
             </p>
           </div>
@@ -282,7 +282,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">Campus counseling centers</p>
                 <p className="text-sm">
-                  Free to enrolled students. Wait times vary — access early in the semester, not at
+                  Free to enrolled students. Wait times vary, access early in the semester, not at
                   finals. Most campuses now offer same-day crisis triage even when scheduled
                   appointments are backed up.
                 </p>
@@ -290,7 +290,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">Open Path Collective</p>
                 <p className="text-sm">
-                  openpathcollective.org — Reduced-cost therapy at $30–$80 per session for
+                  openpathcollective.org, Reduced-cost therapy at $30–$80 per session for
                   income-qualifying individuals. Legitimate licensed therapists, not interns.
                 </p>
               </div>
@@ -307,13 +307,13 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
                 <p className="text-sm">
                   Online therapy platforms often offer faster access than campus
                   waitlists. Many student health insurance plans now cover telehealth mental
-                  health — check your coverage before paying out of pocket.
+                  health, check your coverage before paying out of pocket.
                 </p>
               </div>
               <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">The JED Foundation</p>
                 <p className="text-sm">
-                  jedfoundation.org — Specific mental health resources for college students and young
+                  jedfoundation.org, Specific mental health resources for college students and young
                   adults, including a treatment finder and crisis support.
                 </p>
               </div>
@@ -322,7 +322,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
                 <p className="text-sm">
                   Documented anxiety disorders may qualify for extended test time, reduced-distraction
                   testing environments, and attendance flexibility through disability services.
-                  Documentation from a clinician is required — worth pursuing if anxiety is affecting
+                  Documentation from a clinician is required, worth pursuing if anxiety is affecting
                   academic performance.
                 </p>
               </div>
@@ -348,7 +348,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         <AnswerBlock
           what="An AUDIT-based alcohol screening tailored for college students with campus-specific context and resources."
           who="College students who want to evaluate their drinking patterns against evidence-based risk thresholds."
-          bottomLine="College drinking norms can mask risky patterns — your score reflects clinical risk levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="College drinking norms can mask risky patterns, your score reflects clinical risk levels. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -373,7 +373,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Your campus counseling center</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                Most colleges offer free, confidential counseling — and you don&apos;t need to be in
+                Most colleges offer free, confidential counseling, and you don&apos;t need to be in
                 crisis to use it. Even one session can help you think through your relationship with
                 alcohol. Check your school&apos;s student health services website.
               </p>
@@ -382,14 +382,14 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Talk to someone you trust</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 An RA, a friend, a professor, a family member. You don&apos;t have to have all the
-                answers — just saying &quot;I&apos;m worried about my drinking&quot; out loud
+                answers, just saying &quot;I&apos;m worried about my drinking&quot; out loud
                 can be a powerful first step.
               </p>
             </div>
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Free confidential help</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free,
+                <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free,
                 confidential, 24/7 treatment referrals and information. They can help you find
                 local resources, including programs specifically for young adults.
               </p>
@@ -404,10 +404,10 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -415,7 +415,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose an alcohol use disorder. Your responses are processed
             entirely in your browser and are never stored or transmitted. Always consult a qualified
             healthcare professional for medical advice.

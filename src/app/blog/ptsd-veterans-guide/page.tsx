@@ -88,7 +88,7 @@ export default function PtsdVeteransGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            The U.S. Department of Veterans Affairs estimates that 11&ndash;20% of veterans who served in Operations Iraqi Freedom and Enduring Freedom experience PTSD in a given year. For Vietnam-era veterans, lifetime rates reach approximately 30%. These numbers represent real people &mdash; service members who put themselves in harm&apos;s way and are now navigating the invisible aftermath of that service.
+            The U.S. Department of Veterans Affairs estimates that 11&ndash;20% of veterans who served in Operations Iraqi Freedom and Enduring Freedom experience PTSD in a given year. For Vietnam-era veterans, lifetime rates reach approximately 30%. These numbers represent real people, service members who put themselves in harm&apos;s way and are now navigating the invisible aftermath of that service.
           </p>
         </header>
 
@@ -96,10 +96,10 @@ export default function PtsdVeteransGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Veterans Crisis Line</strong> &mdash; Call <strong>988, press 1</strong> (dedicated veteran support)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Veterans Crisis Line</strong>, Call <strong>988, press 1</strong> (dedicated veteran support)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -113,7 +113,7 @@ export default function PtsdVeteransGuidePage() {
           <section>
             <h2>Why PTSD is so common among veterans</h2>
             <p>
-              Military service exposes individuals to experiences that most civilians will never encounter. The nature of modern warfare &mdash; urban combat, improvised explosive devices (IEDs), multiple deployments, and the blurring of &quot;front lines&quot; &mdash; creates sustained, unpredictable threat environments that can overwhelm the brain&apos;s capacity to process trauma.
+              Military service exposes individuals to experiences that most civilians will never encounter. The nature of modern warfare, urban combat, improvised explosive devices (IEDs), multiple deployments, and the blurring of &quot;front lines&quot;, creates sustained, unpredictable threat environments that can overwhelm the brain&apos;s capacity to process trauma.
             </p>
             <p>
               Combat exposure is the most recognized cause, but it is far from the only one. PTSD in veterans can stem from multiple sources:
@@ -121,7 +121,7 @@ export default function PtsdVeteransGuidePage() {
             <ul>
               <li><strong>Direct combat:</strong> Engaging in firefights, witnessing death or severe injury of fellow service members or civilians</li>
               <li><strong>Military sexual trauma (MST):</strong> The VA reports that roughly 1 in 3 women and 1 in 50 men using VA healthcare experienced MST</li>
-              <li><strong>Moral injury:</strong> The lasting distress from actions that violate one&apos;s moral code &mdash; being ordered to do something that feels wrong, or being unable to prevent harm</li>
+              <li><strong>Moral injury:</strong> The lasting distress from actions that violate one&apos;s moral code, being ordered to do something that feels wrong, or being unable to prevent harm</li>
               <li><strong>Traumatic brain injury (TBI) overlap:</strong> IED blasts cause both TBI and PTSD, and their symptoms frequently overlap, complicating assessment</li>
               <li><strong>Witnessing atrocities:</strong> Exposure to mass casualties, civilian suffering, or the aftermath of violence</li>
             </ul>
@@ -132,7 +132,7 @@ export default function PtsdVeteransGuidePage() {
             <p>
               PTSD symptoms in veterans typically fall into four clusters, consistent with current clinical understanding. However, the way these symptoms present often reflects military-specific experiences:
             </p>
-            <p><strong>Re-experiencing:</strong> Flashbacks triggered by sounds (fireworks, helicopters, car backfires), nightmares that replay combat scenarios, intrusive memories that arrive without warning. These are not simply &quot;bad memories&quot; &mdash; the brain is re-living the event as though it is happening now.</p>
+            <p><strong>Re-experiencing:</strong> Flashbacks triggered by sounds (fireworks, helicopters, car backfires), nightmares that replay combat scenarios, intrusive memories that arrive without warning. These are not simply &quot;bad memories&quot;, the brain is re-living the event as though it is happening now.</p>
             <p><strong>Avoidance:</strong> Avoiding crowded places, driving (especially after IED exposure), conversations about service, news coverage of conflict, or anything that triggers memories. Some veterans isolate entirely, withdrawing from family and social life.</p>
             <p><strong>Negative changes in thinking and mood:</strong> Persistent guilt (&quot;I should have done more&quot;), emotional numbness, loss of interest in previously enjoyed activities, difficulty feeling positive emotions, and distorted self-blame for events beyond one&apos;s control.</p>
             <p><strong>Hyperarousal:</strong> Being constantly on edge, scanning for threats in civilian environments, difficulty sleeping, exaggerated startle responses, irritability, and angry outbursts. Many veterans describe never being able to fully &quot;stand down.&quot;</p>
@@ -146,10 +146,10 @@ export default function PtsdVeteransGuidePage() {
               One of the most misunderstood aspects of veteran PTSD is delayed onset. While many service members experience symptoms during or shortly after deployment, a significant number do not develop noticeable symptoms until months or years after leaving the military.
             </p>
             <p>
-              During active service, the structure of military life &mdash; mission focus, unit cohesion, physical routine, and a shared sense of purpose &mdash; can effectively contain trauma responses. When that structure is removed at separation, the underlying trauma may surface. Major life transitions such as retirement, divorce, the death of a fellow veteran, or health problems can also trigger delayed symptoms.
+              During active service, the structure of military life, mission focus, unit cohesion, physical routine, and a shared sense of purpose, can effectively contain trauma responses. When that structure is removed at separation, the underlying trauma may surface. Major life transitions such as retirement, divorce, the death of a fellow veteran, or health problems can also trigger delayed symptoms.
             </p>
             <p>
-              This delayed presentation can be confusing. Veterans may wonder why they are struggling now when they &quot;handled it fine&quot; for years. Understanding that delayed onset is a well-documented pattern &mdash; not a sign of weakness or failure &mdash; is an important step toward seeking help.
+              This delayed presentation can be confusing. Veterans may wonder why they are struggling now when they &quot;handled it fine&quot; for years. Understanding that delayed onset is a well-documented pattern, not a sign of weakness or failure, is an important step toward seeking help.
             </p>
           </section>
 
@@ -162,7 +162,7 @@ export default function PtsdVeteransGuidePage() {
               <li><strong>Stigma:</strong> Military culture prizes toughness and self-reliance. Seeking mental health care is often perceived as &quot;weakness,&quot; even though PTSD is a neurobiological response, not a character flaw</li>
               <li><strong>Career concerns:</strong> Active-duty service members may fear that a PTSD screening will affect their security clearance, career advancement, or unit standing</li>
               <li><strong>Distrust of the VA system:</strong> Long wait times, bureaucratic processes, and negative experiences create reluctance to engage with VA mental health services</li>
-              <li><strong>Minimization:</strong> &quot;Other people had it worse&quot; is one of the most common barriers &mdash; veterans compare their experiences to others and dismiss their own suffering</li>
+              <li><strong>Minimization:</strong> &quot;Other people had it worse&quot; is one of the most common barriers, veterans compare their experiences to others and dismiss their own suffering</li>
               <li><strong>Lack of awareness:</strong> Some veterans do not recognize their symptoms as PTSD, attributing hypervigilance, insomnia, or irritability to their personality rather than their service</li>
             </ul>
           </section>
@@ -173,7 +173,7 @@ export default function PtsdVeteransGuidePage() {
               The <Link href="/ptsd-test-veterans" className="text-sage-600 dark:text-sage-400 underline">PCL-5 (PTSD Checklist for DSM-5)</Link> is the standard PTSD screening instrument used by the VA and Department of Defense. It is a 20-item self-report measure that assesses the severity of PTSD symptoms across all four symptom clusters.
             </p>
             <p>
-              A PCL-5 screening is not an assessment &mdash; it is a structured way to identify whether your symptoms warrant further evaluation by a mental health professional. The tool measures symptom severity over the past month, giving you and your provider a concrete starting point for conversation.
+              A PCL-5 screening is not an assessment, it is a structured way to identify whether your symptoms warrant further evaluation by a mental health professional. The tool measures symptom severity over the past month, giving you and your provider a concrete starting point for conversation.
             </p>
             <p>
               You can take the <Link href="/ptsd-test-veterans" className="text-sage-600 dark:text-sage-400 underline">free, private PTSD screening for veterans</Link> here on MindCheck Tools. It runs entirely in your browser, requires no account, and your answers are never stored. If your results suggest elevated PTSD symptoms, the tool provides guidance on next steps, including how to connect with VA mental health services.
@@ -236,7 +236,7 @@ export default function PtsdVeteransGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -118,7 +118,7 @@ const DISTORTIONS: Distortion[] = [
   {
     id: "blaming",
     name: "Blaming",
-    description: "Holding other people entirely responsible for your emotional pain, or the opposite — blaming yourself for everyone else's problems.",
+    description: "Holding other people entirely responsible for your emotional pain, or the opposite, blaming yourself for everyone else's problems.",
     example: '"It\'s my partner\'s fault I\'m unhappy. If they changed, I\'d feel better."',
     reframePrompt: "What part of this is within your control? Can you take responsibility for your own feelings without taking on everyone else's?",
     reframeExample: '"My partner\'s behavior affects me, but my happiness is also influenced by my own choices and perspective."',
@@ -420,7 +420,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                 Now, how might you rethink this?
               </label>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
-                Using the reframing prompts above, write a more balanced version of your original thought. It doesn&apos;t have to be positive — just more accurate and fair.
+                Using the reframing prompts above, write a more balanced version of your original thought. It doesn&apos;t have to be positive, just more accurate and fair.
               </p>
               <textarea
                 id="balanced-thought"
@@ -516,11 +516,11 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           How to Use This Tool
         </h2>
         <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li><strong>Write your thought</strong> — Enter a negative or distressing thought exactly as it sounds in your head. Don&apos;t soften or edit it.</li>
-          <li><strong>Identify distortions</strong> — Read through the 16 common cognitive distortions. Select every one that might apply to your thought. Most thoughts involve 2-4 distortions.</li>
-          <li><strong>Expand examples</strong> — Click &quot;Show example&quot; on any card to see how that distortion sounds in real life.</li>
-          <li><strong>Reframe your thought</strong> — For each distortion you selected, the tool provides a reframing question and an example of a balanced alternative. Use these prompts to write your own balanced thought.</li>
-          <li><strong>Review your work</strong> — The summary shows your original thought, the distortions you found, and your new balanced perspective side by side.</li>
+          <li><strong>Write your thought</strong>, Enter a negative or distressing thought exactly as it sounds in your head. Don&apos;t soften or edit it.</li>
+          <li><strong>Identify distortions</strong>, Read through the 16 common cognitive distortions. Select every one that might apply to your thought. Most thoughts involve 2-4 distortions.</li>
+          <li><strong>Expand examples</strong>, Click &quot;Show example&quot; on any card to see how that distortion sounds in real life.</li>
+          <li><strong>Reframe your thought</strong>, For each distortion you selected, the tool provides a reframing question and an example of a balanced alternative. Use these prompts to write your own balanced thought.</li>
+          <li><strong>Review your work</strong>, The summary shows your original thought, the distortions you found, and your new balanced perspective side by side.</li>
         </ol>
       </section>
 
@@ -531,27 +531,27 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
           <p>
-            Cognitive distortions are <strong>systematic errors in thinking</strong> that cause you to perceive reality inaccurately. They were first identified and catalogued by psychiatrist <strong>Aaron Beck</strong> in the 1960s as part of his development of cognitive therapy, and later expanded by psychologist <strong>David Burns</strong> in his influential book <em>Feeling Good: The New Mood Therapy</em> (1980). Cognitive distortions are not a sign of weakness or mental illness — everyone experiences them. They become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety, depression, and low self-esteem.
+            Cognitive distortions are <strong>systematic errors in thinking</strong> that cause you to perceive reality inaccurately. They were first identified and catalogued by psychiatrist <strong>Aaron Beck</strong> in the 1960s as part of his development of cognitive therapy, and later expanded by psychologist <strong>David Burns</strong> in his influential book <em>Feeling Good: The New Mood Therapy</em> (1980). Cognitive distortions are not a sign of weakness or mental illness, everyone experiences them. They become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety, depression, and low self-esteem.
           </p>
           <p>
             The core idea behind <strong>cognitive behavioral therapy (CBT)</strong> is that your thoughts influence your emotions, which in turn influence your behavior. When your thinking is distorted, your emotions and actions follow suit. For example, if you automatically think &quot;I always fail at everything&quot; (overgeneralization), you are likely to feel hopeless and avoid trying new things. By learning to recognize these thinking patterns, you can interrupt the cycle and replace distorted thoughts with more balanced, accurate ones.
           </p>
           <p>
-            This tool is based on the CBT thought record technique, which is one of the most evidence-based exercises in psychotherapy. A 2012 meta-analysis published in <em>Cognitive Therapy and Research</em> found that identifying and challenging cognitive distortions was associated with significant reductions in depression and anxiety symptoms. Importantly, you do not need to replace negative thoughts with positive ones — the goal is <strong>accuracy and balance</strong>, not forced positivity.
+            This tool is based on the CBT thought record technique, which is one of the most evidence-based exercises in psychotherapy. A 2012 meta-analysis published in <em>Cognitive Therapy and Research</em> found that identifying and challenging cognitive distortions was associated with significant reductions in depression and anxiety symptoms. Importantly, you do not need to replace negative thoughts with positive ones, the goal is <strong>accuracy and balance</strong>, not forced positivity.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
             How Cognitive Distortions Relate to Mental Health
           </h3>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Depression</strong> — often involves all-or-nothing thinking, labeling, mental filter, and disqualifying the positive</li>
-            <li><strong>Anxiety</strong> — often involves catastrophizing, fortune telling, and magnification</li>
-            <li><strong>Low self-esteem</strong> — often involves labeling, should statements, and personalization</li>
-            <li><strong>Relationship conflict</strong> — often involves mind reading, blaming, and always being right</li>
-            <li><strong>Addiction and recovery</strong> — often involves emotional reasoning, all-or-nothing thinking, and fortune telling</li>
+            <li><strong>Depression</strong>, often involves all-or-nothing thinking, labeling, mental filter, and disqualifying the positive</li>
+            <li><strong>Anxiety</strong>, often involves catastrophizing, fortune telling, and magnification</li>
+            <li><strong>Low self-esteem</strong>, often involves labeling, should statements, and personalization</li>
+            <li><strong>Relationship conflict</strong>, often involves mind reading, blaming, and always being right</li>
+            <li><strong>Addiction and recovery</strong>, often involves emotional reasoning, all-or-nothing thinking, and fortune telling</li>
           </ul>
           <p>
-            Learning to spot these patterns is a skill that improves with practice. The more you use tools like this, the more naturally you will begin to catch distorted thoughts in real time — before they spiral into overwhelming emotions.
+            Learning to spot these patterns is a skill that improves with practice. The more you use tools like this, the more naturally you will begin to catch distorted thoughts in real time, before they spiral into overwhelming emotions.
           </p>
         </div>
       </section>
@@ -636,11 +636,11 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 text-sm">
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-              <p className="text-amber-700 dark:text-amber-300">Call or text 988 — 24/7, free & confidential</p>
+              <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
             </div>
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357 — Treatment referral & info</p>
+              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
             </div>
           </div>
         </div>
@@ -668,17 +668,17 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
             <a href="https://beckinstitute.org/about/aaron-t-beck-md/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Beck Institute — Aaron T. Beck, MD: Founder of Cognitive Therapy
+              Beck Institute, Aaron T. Beck, MD: Founder of Cognitive Therapy
             </a>
           </li>
           <li>
             <a href="https://feelinggood.com/about/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              David Burns, MD — Feeling Good: The New Mood Therapy
+              David Burns, MD, Feeling Good: The New Mood Therapy
             </a>
           </li>
           <li>
             <a href="https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              American Psychological Association — What Is Cognitive Behavioral Therapy?
+              American Psychological Association, What Is Cognitive Behavioral Therapy?
             </a>
           </li>
         </ul>

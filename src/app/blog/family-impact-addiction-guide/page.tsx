@@ -70,7 +70,7 @@ export default function FamilyImpactAddictionGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Addiction is often called a family disease, and for good reason. When one person struggles with substance use, the effects ripple outward to touch every family member &mdash; spouses, parents, children, and siblings. Relationships shift, roles change, trust erodes, and the emotional toll can be devastating. Understanding these ripple effects is the first step toward healing &mdash; not just for the person using, but for the entire family system. The <Link href="/family-impact-assessment" className="text-sage-600 dark:text-sage-400 underline">family impact assessment</Link> helps families see how they have been affected.
+            Addiction is often called a family disease, and for good reason. When one person struggles with substance use, the effects ripple outward to touch every family member, spouses, parents, children, and siblings. Relationships shift, roles change, trust erodes, and the emotional toll can be devastating. Understanding these ripple effects is the first step toward healing, not just for the person using, but for the entire family system. The <Link href="/family-impact-assessment" className="text-sage-600 dark:text-sage-400 underline">family impact assessment</Link> helps families see how they have been affected.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function FamilyImpactAddictionGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -100,9 +100,9 @@ export default function FamilyImpactAddictionGuidePage() {
             </p>
             <ul>
               <li><strong>The Hero:</strong> Often the oldest child, the hero overachieves to compensate for the family&apos;s dysfunction. They maintain high grades, excel at work, and present a &quot;normal&quot; face to the outside world. Internally, they carry enormous pressure and often struggle with perfectionism and anxiety into adulthood.</li>
-              <li><strong>The Scapegoat:</strong> This family member acts out &mdash; getting in trouble at school, displaying defiance, or engaging in risky behavior. The scapegoat draws attention away from the addiction and toward themselves, which paradoxically protects the family from confronting the real problem.</li>
+              <li><strong>The Scapegoat:</strong> This family member acts out, getting in trouble at school, displaying defiance, or engaging in risky behavior. The scapegoat draws attention away from the addiction and toward themselves, which paradoxically protects the family from confronting the real problem.</li>
               <li><strong>The Lost Child:</strong> The lost child copes by disappearing. They withdraw into their room, avoid family conflict, and become as invisible as possible. While this strategy reduces their exposure to chaos, it also leads to chronic loneliness, difficulty forming relationships, and a deep sense of being overlooked.</li>
-              <li><strong>The Mascot:</strong> Often the youngest child, the mascot uses humor and charm to defuse tension. They become the &quot;class clown&quot; &mdash; entertaining the family to distract from the pain. Beneath the humor, they often carry unprocessed anxiety and fear.</li>
+              <li><strong>The Mascot:</strong> Often the youngest child, the mascot uses humor and charm to defuse tension. They become the &quot;class clown&quot;, entertaining the family to distract from the pain. Beneath the humor, they often carry unprocessed anxiety and fear.</li>
             </ul>
             <p>
               These roles are survival strategies, not character flaws. They develop because the family needs them to function. But they persist long after they are needed and can create problems in adult relationships, work, and self-identity.
@@ -114,17 +114,17 @@ export default function FamilyImpactAddictionGuidePage() {
           <section>
             <h2>Codependency: when helping becomes harmful</h2>
             <p>
-              Codependency describes a pattern where a family member &mdash; most often a spouse or parent &mdash; becomes so focused on the person with the addiction that they lose sight of their own needs, identity, and well-being. Common codependency patterns include:
+              Codependency describes a pattern where a family member, most often a spouse or parent, becomes so focused on the person with the addiction that they lose sight of their own needs, identity, and well-being. Common codependency patterns include:
             </p>
             <ul>
               <li><strong>Enabling:</strong> Making excuses for the person&apos;s behavior, covering up consequences, paying bills or bailing them out, calling in sick for them, or minimizing the severity of the problem.</li>
               <li><strong>Caretaking at personal expense:</strong> Neglecting your own health, relationships, career, and emotional needs to manage the crisis of another person&apos;s addiction.</li>
               <li><strong>People-pleasing:</strong> Avoiding conflict at all costs, saying yes when you mean no, and suppressing your own feelings to keep the peace.</li>
-              <li><strong>Control:</strong> Attempting to manage the person&apos;s substance use through monitoring, restricting access, or issuing ultimatums &mdash; strategies that rarely work and often escalate conflict.</li>
+              <li><strong>Control:</strong> Attempting to manage the person&apos;s substance use through monitoring, restricting access, or issuing ultimatums, strategies that rarely work and often escalate conflict.</li>
               <li><strong>Low self-worth tied to caretaking:</strong> Deriving your sense of purpose and identity from being needed, which creates a painful dynamic where the addiction&apos;s continuation serves your emotional needs as well.</li>
             </ul>
             <p>
-              Codependency is not a formal clinical diagnosis, but the patterns it describes are real and can cause significant harm. Breaking these patterns typically requires professional support and community &mdash; programs like Al-Anon and CoDA (Co-Dependents Anonymous) provide both.
+              Codependency is not a formal clinical diagnosis, but the patterns it describes are real and can cause significant harm. Breaking these patterns typically requires professional support and community, programs like Al-Anon and CoDA (Co-Dependents Anonymous) provide both.
             </p>
           </section>
 
@@ -134,10 +134,10 @@ export default function FamilyImpactAddictionGuidePage() {
               Children who grow up in homes affected by addiction face unique challenges that can have lasting effects into adulthood. The Adverse Childhood Experiences (ACE) study established a clear connection between household substance use and negative outcomes across the lifespan:
             </p>
             <ul>
-              <li><strong>Emotional instability:</strong> Children experience unpredictable emotional environments &mdash; a parent who is loving one moment and absent or volatile the next. This unpredictability undermines the sense of safety that children need to develop secure attachment.</li>
-              <li><strong>Parentification:</strong> Children may take on adult responsibilities &mdash; caring for younger siblings, managing household tasks, or emotionally supporting a non-using parent. This premature responsibility robs them of their childhood and creates patterns of caretaking that persist into adulthood.</li>
+              <li><strong>Emotional instability:</strong> Children experience unpredictable emotional environments, a parent who is loving one moment and absent or volatile the next. This unpredictability undermines the sense of safety that children need to develop secure attachment.</li>
+              <li><strong>Parentification:</strong> Children may take on adult responsibilities, caring for younger siblings, managing household tasks, or emotionally supporting a non-using parent. This premature responsibility robs them of their childhood and creates patterns of caretaking that persist into adulthood.</li>
               <li><strong>Secrecy and shame:</strong> Families affected by addiction often operate under an unspoken rule: &quot;Don&apos;t talk about it.&quot; Children learn to keep secrets, which breeds shame and makes it difficult to seek help or form trusting relationships.</li>
-              <li><strong>Increased risk:</strong> Children of parents with substance use disorders are statistically more likely to develop substance use problems themselves &mdash; not because of a single &quot;addiction gene,&quot; but because of a combination of genetic predisposition, learned behavior, and environmental stress.</li>
+              <li><strong>Increased risk:</strong> Children of parents with substance use disorders are statistically more likely to develop substance use problems themselves, not because of a single &quot;addiction gene,&quot; but because of a combination of genetic predisposition, learned behavior, and environmental stress.</li>
             </ul>
             <p>
               The <Link href="/ace-questionnaire" className="text-sage-600 dark:text-sage-400 underline">ACE questionnaire</Link> helps adults understand how childhood experiences may be affecting their current health and well-being.
@@ -154,7 +154,7 @@ export default function FamilyImpactAddictionGuidePage() {
             <ul>
               <li><strong>Financial strain:</strong> Money spent on substances, lost income from job instability, legal costs, medical bills, and the financial consequences of impaired decision-making can devastate a family&apos;s economic stability.</li>
               <li><strong>Erosion of trust:</strong> Repeated broken promises, lying about use, and unpredictable behavior destroy the trust that relationships require. Rebuilding trust is often one of the longest and most difficult aspects of family recovery.</li>
-              <li><strong>Communication breakdown:</strong> Families affected by addiction often develop dysfunctional communication patterns &mdash; avoidance, blame, manipulation, and conflict &mdash; that persist even after the substance use stops.</li>
+              <li><strong>Communication breakdown:</strong> Families affected by addiction often develop dysfunctional communication patterns, avoidance, blame, manipulation, and conflict, that persist even after the substance use stops.</li>
               <li><strong>Mental health impact:</strong> Family members frequently develop their own mental health challenges in response to the stress of living with addiction, including anxiety, depression, and trauma symptoms. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screener</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screener</Link> can help family members assess their own mental health needs.</li>
             </ul>
           </section>
@@ -166,7 +166,7 @@ export default function FamilyImpactAddictionGuidePage() {
             </p>
             <ul>
               <li><strong>Support</strong> means encouraging recovery efforts while allowing the person to experience the natural consequences of their choices. It includes attending your own therapy, setting clear boundaries, expressing love without rescuing, and taking care of your own well-being.</li>
-              <li><strong>Enabling</strong> means shielding the person from the consequences of their use &mdash; making excuses, covering financially, minimizing the problem, or avoiding difficult conversations. Enabling is usually motivated by love and fear, but it removes the natural feedback that can motivate change.</li>
+              <li><strong>Enabling</strong> means shielding the person from the consequences of their use, making excuses, covering financially, minimizing the problem, or avoiding difficult conversations. Enabling is usually motivated by love and fear, but it removes the natural feedback that can motivate change.</li>
             </ul>
             <p>
               Setting boundaries is not about punishment or control. It is about defining what you are and are not willing to accept, and then following through consistently. Boundaries protect your well-being and create clarity for everyone involved. The <Link href="/family-impact-assessment" className="text-sage-600 dark:text-sage-400 underline">family impact assessment</Link> can help you see how your family system has been affected and where boundary work may be needed.
@@ -178,7 +178,7 @@ export default function FamilyImpactAddictionGuidePage() {
           <section>
             <h2>Family recovery is possible</h2>
             <p>
-              The damage that addiction causes to families is real, but it is not permanent. Family recovery is a process &mdash; one that often runs parallel to but is distinct from the individual&apos;s recovery. Families have their own healing to do, regardless of whether the person with the addiction is in recovery or not.
+              The damage that addiction causes to families is real, but it is not permanent. Family recovery is a process, one that often runs parallel to but is distinct from the individual&apos;s recovery. Families have their own healing to do, regardless of whether the person with the addiction is in recovery or not.
             </p>
             <p>
               Resources for family recovery include:
@@ -187,7 +187,7 @@ export default function FamilyImpactAddictionGuidePage() {
               <li><strong>Al-Anon and Nar-Anon:</strong> Free mutual support groups for family members and friends of people with substance use problems. These groups provide community, shared experience, and practical tools for coping and healing.</li>
               <li><strong>Family therapy:</strong> Modalities like the Community Reinforcement and Family Training (CRAFT) approach, Behavioral Couples Therapy, and Multidimensional Family Therapy have strong research support. Family therapy addresses the systemic issues that individual therapy cannot.</li>
               <li><strong>Individual therapy for family members:</strong> Processing your own grief, anger, trauma, and codependency patterns with a qualified therapist is essential. Your healing is not dependent on the other person&apos;s recovery.</li>
-              <li><strong>Education:</strong> Understanding addiction as a chronic condition &mdash; not a moral failing &mdash; changes how families respond to it. Knowledge reduces shame and increases compassion, both of which support healthier family dynamics.</li>
+              <li><strong>Education:</strong> Understanding addiction as a chronic condition, not a moral failing, changes how families respond to it. Knowledge reduces shame and increases compassion, both of which support healthier family dynamics.</li>
             </ul>
             <p>
               The <Link href="/family-impact-assessment" className="text-sage-600 dark:text-sage-400 underline">family impact assessment tool</Link> provides a starting point for understanding how your family has been affected and what areas might benefit from attention and support.

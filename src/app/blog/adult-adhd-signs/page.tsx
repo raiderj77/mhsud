@@ -27,10 +27,10 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Can adults develop ADHD?", answer: "ADHD is a neurodevelopmental condition that begins in childhood \u2014 adults do not develop it out of nowhere. However, many adults have had ADHD their entire lives without knowing it. Symptoms often become more noticeable when external structures like school schedules are removed. A comprehensive evaluation can determine whether ADHD was always present or another condition is responsible." },
+  { question: "Can adults develop ADHD?", answer: "ADHD is a neurodevelopmental condition that begins in childhood, adults do not develop it out of nowhere. However, many adults have had ADHD their entire lives without knowing it. Symptoms often become more noticeable when external structures like school schedules are removed. A comprehensive evaluation can determine whether ADHD was always present or another condition is responsible." },
   { question: "Why wasn't I diagnosed as a child?", answer: "If you were primarily inattentive rather than hyperactive, your symptoms may not have been disruptive enough to draw attention. Girls and women are historically underdiagnosed because diagnostic criteria were based on hyperactive boys. High-achieving students often develop coping strategies that mask symptoms, and families without mental health resources are less likely to pursue evaluations." },
-  { question: "Is ADHD the same as being lazy?", answer: "No. ADHD involves differences in brain structure and function, particularly in areas regulating attention and executive function. People with ADHD often work harder than peers to keep up with everyday tasks. What looks like laziness is frequently executive dysfunction \u2014 the inability to initiate or sustain effort on tasks, even when the person genuinely wants to." },
-  { question: "Can ADHD cause anxiety?", answer: "ADHD and anxiety frequently co-occur \u2014 roughly 50% of adults with ADHD also have an anxiety disorder. The chronic stress of managing ADHD symptoms (missed deadlines, social difficulties, underperformance) can generate anxiety over time. Some neurological features of ADHD may also overlap with anxiety symptoms. A thorough evaluation can determine whether anxiety is separate or secondary to untreated ADHD." },
+  { question: "Is ADHD the same as being lazy?", answer: "No. ADHD involves differences in brain structure and function, particularly in areas regulating attention and executive function. People with ADHD often work harder than peers to keep up with everyday tasks. What looks like laziness is frequently executive dysfunction, the inability to initiate or sustain effort on tasks, even when the person genuinely wants to." },
+  { question: "Can ADHD cause anxiety?", answer: "ADHD and anxiety frequently co-occur, roughly 50% of adults with ADHD also have an anxiety disorder. The chronic stress of managing ADHD symptoms (missed deadlines, social difficulties, underperformance) can generate anxiety over time. Some neurological features of ADHD may also overlap with anxiety symptoms. A thorough evaluation can determine whether anxiety is separate or secondary to untreated ADHD." },
   { question: "How do I get tested for ADHD as an adult?", answer: "Start by talking to your primary care provider or a mental health professional experienced with adult ADHD. A comprehensive evaluation typically includes a clinical interview about current symptoms and childhood history, standardized screening tools like the ASRS, and assessment for conditions that mimic ADHD. The process may take one to several sessions depending on the provider." },
 ];
 
@@ -85,10 +85,10 @@ export default function AdultAdhdSignsPage() {
           <section>
             <h2>How common is ADHD in adults?</h2>
             <p>
-              According to research from the National Institute of Mental Health (<a href="https://www.nimh.nih.gov/health/statistics/attention-deficit-hyperactivity-disorder-adhd" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>), approximately 4.4% of U.S. adults — roughly 11 million people — meet the criteria for ADHD in any given year. Other estimates suggest the number could be higher, since many adults with the condition have never been evaluated.
+              According to research from the National Institute of Mental Health (<a href="https://www.nimh.nih.gov/health/statistics/attention-deficit-hyperactivity-disorder-adhd" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>), approximately 4.4% of U.S. adults, roughly 11 million people, meet the criteria for ADHD in any given year. Other estimates suggest the number could be higher, since many adults with the condition have never been evaluated.
             </p>
             <p>
-              ADHD was long considered a childhood condition that people &quot;grew out of.&quot; We now know this is incorrect. While some hyperactive symptoms may decrease with age, the core features of ADHD — difficulty sustaining attention, problems with executive function, and impulsivity — persist into adulthood for the majority of people who had the condition as children. Up to 60-70% of children with ADHD continue to experience clinically significant symptoms as adults.
+              ADHD was long considered a childhood condition that people &quot;grew out of.&quot; We now know this is incorrect. While some hyperactive symptoms may decrease with age, the core features of ADHD, difficulty sustaining attention, problems with executive function, and impulsivity, persist into adulthood for the majority of people who had the condition as children. Up to 60-70% of children with ADHD continue to experience clinically significant symptoms as adults.
             </p>
           </section>
 
@@ -98,10 +98,10 @@ export default function AdultAdhdSignsPage() {
               Several factors contribute to widespread underdiagnosis of ADHD in adults:
             </p>
             <p>
-              <strong>Women and girls are systematically missed.</strong> The original diagnostic criteria for ADHD were developed based on studies of hyperactive boys. Girls with ADHD are more likely to present with inattentive symptoms — daydreaming, disorganization, forgetfulness — rather than the disruptive, hyperactive behavior that prompts teacher referrals. Many women are not identified until their thirties or forties, often after a child receives a screening.
+              <strong>Women and girls are systematically missed.</strong> The original diagnostic criteria for ADHD were developed based on studies of hyperactive boys. Girls with ADHD are more likely to present with inattentive symptoms, daydreaming, disorganization, forgetfulness, rather than the disruptive, hyperactive behavior that prompts teacher referrals. Many women are not identified until their thirties or forties, often after a child receives a screening.
             </p>
             <p>
-              <strong>High-achievers mask their symptoms.</strong> Intelligence and strong coping strategies can compensate for ADHD challenges for years. A person may perform well academically while expending enormous, unsustainable effort behind the scenes. The facade often cracks during major life transitions — college, a demanding job, parenthood — when external demands exceed their compensatory capacity.
+              <strong>High-achievers mask their symptoms.</strong> Intelligence and strong coping strategies can compensate for ADHD challenges for years. A person may perform well academically while expending enormous, unsustainable effort behind the scenes. The facade often cracks during major life transitions, college, a demanding job, parenthood, when external demands exceed their compensatory capacity.
             </p>
             <p>
               <strong>Racial and ethnic minorities face additional barriers.</strong> Research shows that Black and Latino individuals are significantly less likely to receive an ADHD screening compared to white individuals, even when symptom levels are similar. Cultural stigma around mental health, language barriers, and lack of access to knowledgeable providers all contribute to this disparity.
@@ -116,10 +116,10 @@ export default function AdultAdhdSignsPage() {
           <section>
             <h2>How ADHD presents differently in adults vs. children</h2>
             <p>
-              If you picture ADHD as a hyperactive child bouncing off the walls, you may not recognize it in yourself. In adults, hyperactivity often transforms into internal restlessness — a constant feeling of needing to be doing something, difficulty relaxing, or a racing mind. Impulsivity may show up not as blurting out answers in class but as impulsive spending, quitting jobs abruptly, or making rash decisions in relationships.
+              If you picture ADHD as a hyperactive child bouncing off the walls, you may not recognize it in yourself. In adults, hyperactivity often transforms into internal restlessness, a constant feeling of needing to be doing something, difficulty relaxing, or a racing mind. Impulsivity may show up not as blurting out answers in class but as impulsive spending, quitting jobs abruptly, or making rash decisions in relationships.
             </p>
             <p>
-              Inattention in adults tends to manifest as chronic difficulty finishing projects, frequently losing important items, missing deadlines, and struggling to follow through on commitments. The external structure that school provides — bells, schedules, teachers monitoring progress — is largely absent in adult life, which means ADHD symptoms that were once managed by environment become fully exposed.
+              Inattention in adults tends to manifest as chronic difficulty finishing projects, frequently losing important items, missing deadlines, and struggling to follow through on commitments. The external structure that school provides, bells, schedules, teachers monitoring progress, is largely absent in adult life, which means ADHD symptoms that were once managed by environment become fully exposed.
             </p>
           </section>
 
@@ -148,18 +148,18 @@ export default function AdultAdhdSignsPage() {
           <section>
             <h2>Common signs of ADHD in adults</h2>
             <p>
-              The following signs do not confirm ADHD — they may indicate that further screening is worthwhile. Many of these are experienced by everyone occasionally. The difference with ADHD is that these patterns are chronic, pervasive, and significantly impair daily functioning.
+              The following signs do not confirm ADHD, they may indicate that further screening is worthwhile. Many of these are experienced by everyone occasionally. The difference with ADHD is that these patterns are chronic, pervasive, and significantly impair daily functioning.
             </p>
             <div className="not-prose my-6 space-y-2">
               {[
-                { sign: "Chronic lateness and poor time estimation — consistently underestimating how long things take" },
-                { sign: "Difficulty organizing tasks, spaces, and priorities — your desk, inbox, and to-do list feel perpetually chaotic" },
-                { sign: "Frequently losing important items — keys, wallet, phone, documents, sometimes multiple times a day" },
-                { sign: "Trouble finishing projects — starting with enthusiasm but losing steam before completion" },
-                { sign: "Impulsive decisions — spending money you hadn't planned to, saying things you regret, making major life changes on a whim" },
-                { sign: "Emotional dysregulation — intense reactions to frustration, rejection sensitivity, mood shifts that seem disproportionate to the situation" },
-                { sign: "Relationship difficulties — partners or friends feel neglected, forgotten, or frustrated by your inconsistency" },
-                { sign: "Job-hopping or underperformance — changing jobs frequently out of boredom or being fired for careless mistakes despite being capable" },
+                { sign: "Chronic lateness and poor time estimation, consistently underestimating how long things take" },
+                { sign: "Difficulty organizing tasks, spaces, and priorities, your desk, inbox, and to-do list feel perpetually chaotic" },
+                { sign: "Frequently losing important items, keys, wallet, phone, documents, sometimes multiple times a day" },
+                { sign: "Trouble finishing projects, starting with enthusiasm but losing steam before completion" },
+                { sign: "Impulsive decisions, spending money you hadn't planned to, saying things you regret, making major life changes on a whim" },
+                { sign: "Emotional dysregulation, intense reactions to frustration, rejection sensitivity, mood shifts that seem disproportionate to the situation" },
+                { sign: "Relationship difficulties, partners or friends feel neglected, forgotten, or frustrated by your inconsistency" },
+                { sign: "Job-hopping or underperformance, changing jobs frequently out of boredom or being fired for careless mistakes despite being capable" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 card">
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-4 flex-shrink-0">{i + 1}</span>
@@ -168,7 +168,7 @@ export default function AdultAdhdSignsPage() {
               ))}
             </div>
             <p>
-              If you recognize yourself in several of these patterns — especially if they have been present since childhood and occur across multiple settings (work, home, relationships) — an ADHD screening may be a useful next step.
+              If you recognize yourself in several of these patterns, especially if they have been present since childhood and occur across multiple settings (work, home, relationships), an ADHD screening may be a useful next step.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ export default function AdultAdhdSignsPage() {
               Everyone loses their keys sometimes. Everyone has days where they cannot focus. The distinction between normal distraction and ADHD comes down to severity, consistency, and impairment. A person without ADHD may occasionally struggle with focus during a stressful week. A person with ADHD struggles with focus as a baseline, across virtually all areas of life, regardless of external circumstances.
             </p>
             <p>
-              Another key difference is effort. People with ADHD are often trying extraordinarily hard to stay organized, pay attention, and follow through — and still falling short. The gap between effort and outcome is a hallmark of the condition. If you are working twice as hard as your peers to achieve the same results, and this has been true for as long as you can remember, that pattern deserves exploration.
+              Another key difference is effort. People with ADHD are often trying extraordinarily hard to stay organized, pay attention, and follow through, and still falling short. The gap between effort and outcome is a hallmark of the condition. If you are working twice as hard as your peers to achieve the same results, and this has been true for as long as you can remember, that pattern deserves exploration.
             </p>
           </section>
 
@@ -196,7 +196,7 @@ export default function AdultAdhdSignsPage() {
               <strong>Depression</strong> co-occurs in approximately 30-40% of adults with ADHD. Years of underperformance, relationship problems, and feeling &quot;different&quot; contribute to low self-esteem and depressive episodes. Our <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline">DASS-21 screening</Link> can help you reflect on whether depression, anxiety, or stress symptoms are present alongside attention difficulties.
             </p>
             <p>
-              <strong>Substance use</strong> is more common among adults with ADHD. Some individuals use alcohol, cannabis, or stimulants as a form of self-medication — attempting to manage restlessness, quiet a racing mind, or cope with the emotional weight of the condition. This does not mean ADHD causes addiction, but the risk is elevated, particularly when ADHD is untreated.
+              <strong>Substance use</strong> is more common among adults with ADHD. Some individuals use alcohol, cannabis, or stimulants as a form of self-medication, attempting to manage restlessness, quiet a racing mind, or cope with the emotional weight of the condition. This does not mean ADHD causes addiction, but the risk is elevated, particularly when ADHD is untreated.
             </p>
           </section>
 
@@ -206,7 +206,7 @@ export default function AdultAdhdSignsPage() {
               The Adult ADHD Self-Report Scale (ASRS) is a screening instrument developed by the World Health Organization (<a href="https://www.hcp.med.harvard.edu/ncs/asrs.php" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">WHO</a>) in collaboration with researchers at Harvard Medical School. It consists of 18 questions based directly on the DSM diagnostic criteria for ADHD, adapted for adult experiences.
             </p>
             <p>
-              The ASRS is not a diagnostic tool — no self-report questionnaire can replace a clinical evaluation. What it does is help you determine whether your symptoms are consistent with ADHD and whether pursuing a comprehensive evaluation is warranted. It takes approximately five minutes to complete and is widely used by clinicians as a first step in the assessment process.
+              The ASRS is not a diagnostic tool, no self-report questionnaire can replace a clinical evaluation. What it does is help you determine whether your symptoms are consistent with ADHD and whether pursuing a comprehensive evaluation is warranted. It takes approximately five minutes to complete and is widely used by clinicians as a first step in the assessment process.
             </p>
             <p>
               You can take our free <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS ADHD screening</Link> right now. Your answers are scored entirely in your browser and are never stored or transmitted.
@@ -218,7 +218,7 @@ export default function AdultAdhdSignsPage() {
           <section>
             <h2>Getting a comprehensive evaluation</h2>
             <p>
-              If screening results suggest ADHD may be present, the next step is a comprehensive evaluation by a qualified professional — typically a psychiatrist, psychologist, or neuropsychologist with experience in adult ADHD. The evaluation process generally includes:
+              If screening results suggest ADHD may be present, the next step is a comprehensive evaluation by a qualified professional, typically a psychiatrist, psychologist, or neuropsychologist with experience in adult ADHD. The evaluation process generally includes:
             </p>
             <p>
               A detailed clinical interview covering your current symptoms, how they affect daily life, and your developmental history. The clinician will want to establish that symptoms were present before age twelve, even if they were not formally identified. Collateral information from a parent, sibling, or long-term partner can be helpful for establishing childhood patterns. Standardized rating scales like the ASRS are often used as part of the assessment. The evaluator will also screen for other conditions that can mimic ADHD, such as anxiety, depression, sleep disorders, thyroid dysfunction, or trauma responses.
@@ -234,16 +234,16 @@ export default function AdultAdhdSignsPage() {
               ADHD is one of the most treatable neurodevelopmental conditions. Effective management typically involves a combination of approaches:
             </p>
             <p>
-              <strong>Medication</strong> — Stimulant medications (such as methylphenidate and amphetamine-based formulations) are the most extensively studied and are effective for approximately 70-80% of adults with ADHD. Non-stimulant options (such as atomoxetine and certain antidepressants) are available for those who cannot tolerate stimulants. Medication does not cure ADHD but can significantly reduce core symptoms.
+              <strong>Medication</strong>, Stimulant medications (such as methylphenidate and amphetamine-based formulations) are the most extensively studied and are effective for approximately 70-80% of adults with ADHD. Non-stimulant options (such as atomoxetine and certain antidepressants) are available for those who cannot tolerate stimulants. Medication does not cure ADHD but can significantly reduce core symptoms.
             </p>
             <p>
-              <strong>Therapy</strong> — Cognitive behavioral therapy (CBT) adapted for ADHD helps address the practical and emotional consequences of the condition — negative self-talk, avoidance patterns, and difficulty with planning and follow-through. Unlike medication, therapy builds skills that persist even after treatment ends.
+              <strong>Therapy</strong>, Cognitive behavioral therapy (CBT) adapted for ADHD helps address the practical and emotional consequences of the condition, negative self-talk, avoidance patterns, and difficulty with planning and follow-through. Unlike medication, therapy builds skills that persist even after treatment ends.
             </p>
             <p>
-              <strong>Coaching</strong> — ADHD coaching focuses specifically on executive function skills: time management, organization, prioritization, and accountability. Coaches are not therapists, but they can be a valuable complement to clinical treatment.
+              <strong>Coaching</strong>, ADHD coaching focuses specifically on executive function skills: time management, organization, prioritization, and accountability. Coaches are not therapists, but they can be a valuable complement to clinical treatment.
             </p>
             <p>
-              <strong>Lifestyle strategies</strong> — Regular exercise has strong evidence for reducing ADHD symptoms. Consistent sleep schedules, external reminders and systems (timers, apps, visual cues), breaking tasks into smaller steps, and reducing environmental distractions all help manage daily functioning.
+              <strong>Lifestyle strategies</strong>, Regular exercise has strong evidence for reducing ADHD symptoms. Consistent sleep schedules, external reminders and systems (timers, apps, visual cues), breaking tasks into smaller steps, and reducing environmental distractions all help manage daily functioning.
             </p>
             <p>
               The most effective approach for most adults is a combination of medication and behavioral strategies, tailored to individual needs and preferences.
@@ -281,7 +281,7 @@ export default function AdultAdhdSignsPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

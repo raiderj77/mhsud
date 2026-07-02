@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/what-does-audit-score-mean",
   title: "What Does Your AUDIT Score Mean?",
   description:
-    "AUDIT scores range from 0\u201340. Learn what each score zone means \u2014 from low risk to possible dependence \u2014 and what steps to take based on your results.",
+    "AUDIT scores range from 0\u201340. Learn what each score zone means, from low risk to possible dependence, and what steps to take based on your results.",
   keywords: [
     "AUDIT score meaning",
     "AUDIT alcohol test results",
@@ -37,17 +37,17 @@ const FAQ_DATA = [
   {
     question: "Is an AUDIT score of 8 serious?",
     answer:
-      "A score of 8 is the threshold for \u201Chazardous use\u201D \u2014 meaning your drinking pattern carries elevated risk. It\u2019s a meaningful signal worth paying attention to, but it\u2019s also the zone where brief support is most effective. This score range doesn\u2019t suggest dependence; it suggests a pattern worth addressing.",
+      "A score of 8 is the threshold for \u201Chazardous use\u201D, meaning your drinking pattern carries elevated risk. It\u2019s a meaningful signal worth paying attention to, but it\u2019s also the zone where brief support is most effective. This score range doesn\u2019t suggest dependence; it suggests a pattern worth addressing.",
   },
   {
     question: "Can I use the AUDIT to tell if I\u2019m an alcoholic?",
     answer:
-      "The AUDIT screens for alcohol use patterns across a spectrum \u2014 from hazardous to possible dependence. It doesn\u2019t diagnose \u201Calcoholism\u201D or alcohol use disorder. A formal diagnosis requires a clinical evaluation using standardized criteria (DSM-5 or ICD-11). The AUDIT is a useful starting point for that conversation.",
+      "The AUDIT screens for alcohol use patterns across a spectrum, from hazardous to possible dependence. It doesn\u2019t diagnose \u201Calcoholism\u201D or alcohol use disorder. A formal diagnosis requires a clinical evaluation using standardized criteria (DSM-5 or ICD-11). The AUDIT is a useful starting point for that conversation.",
   },
   {
     question: "Is it safe to stop drinking on my own if I score high?",
     answer:
-      "If you\u2019ve been drinking heavily and regularly for an extended period, stopping abruptly can carry medical risks in some cases. Alcohol withdrawal can be serious \u2014 unlike withdrawal from most substances. If you\u2019re considering stopping, please speak with a healthcare provider first. They can assess your situation and recommend the safest approach.",
+      "If you\u2019ve been drinking heavily and regularly for an extended period, stopping abruptly can carry medical risks in some cases. Alcohol withdrawal can be serious, unlike withdrawal from most substances. If you\u2019re considering stopping, please speak with a healthcare provider first. They can assess your situation and recommend the safest approach.",
   },
   {
     question: "Can my AUDIT score change?",

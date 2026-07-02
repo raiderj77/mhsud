@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/met
 
 export const metadata: Metadata = createMetadata({
   path: "/about/jason-ramirez",
-  title: "Jason Ramirez, CADC-II — Clinical Reviewer",
+  title: "Jason Ramirez, CADC-II, Clinical Reviewer",
   description:
     "Jason Ramirez is a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience who reviews all screening tools and educational content on MindCheck Tools.",
   keywords: [

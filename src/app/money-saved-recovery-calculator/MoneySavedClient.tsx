@@ -142,7 +142,7 @@ export function MoneySavedClient({ faqData }: Props) {
           Money Saved in Recovery
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          See the financial impact of your recovery. Enter your substance, what you used to spend, and how long you&apos;ve been sober. All calculations happen in your browser — nothing is stored or sent anywhere.
+          See the financial impact of your recovery. Enter your substance, what you used to spend, and how long you&apos;ve been sober. All calculations happen in your browser, nothing is stored or sent anywhere.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -183,7 +183,7 @@ export function MoneySavedClient({ faqData }: Props) {
             {/* Spending */}
             <div>
               <label htmlFor="amount" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                How much did you spend? (optional — defaults to average)
+                How much did you spend? (optional, defaults to average)
               </label>
               <div className="flex gap-2">
                 <div className="relative flex-1">
@@ -297,7 +297,7 @@ export function MoneySavedClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 pb-4 border-t border-neutral-200 pt-3 mx-6">
-              <p>Money Saved in Recovery — mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>Money Saved in Recovery, mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>Estimates are approximate and for motivational purposes only.</p>
             </div>
           </div>
@@ -418,8 +418,8 @@ export function MoneySavedClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">

@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "How much drinking is too much in college?",
     answer:
-      "NIAAA defines binge drinking as reaching a BAC of 0.08% \u2014 typically 4 drinks for women or 5 for men within about 2 hours. Heavy drinking is binge drinking on 5 or more days per month. If drinking causes academic problems, blackouts, risky behavior, or you cannot control how much you drink once you start, those signs are worth evaluating regardless of quantity.",
+      "NIAAA defines binge drinking as reaching a BAC of 0.08%, typically 4 drinks for women or 5 for men within about 2 hours. Heavy drinking is binge drinking on 5 or more days per month. If drinking causes academic problems, blackouts, risky behavior, or you cannot control how much you drink once you start, those signs are worth evaluating regardless of quantity.",
   },
   {
     question: "Is college binge drinking really that dangerous?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Will my college find out if I take a screening?",
     answer:
-      "The MindCheck Tools alcohol screening is completely private \u2014 it runs in your browser, requires no login, and no data is stored or transmitted. If you use your campus counseling center, those conversations are also confidential under FERPA and professional ethics rules, with very limited exceptions for imminent danger.",
+      "The MindCheck Tools alcohol screening is completely private, it runs in your browser, requires no login, and no data is stored or transmitted. If you use your campus counseling center, those conversations are also confidential under FERPA and professional ethics rules, with very limited exceptions for imminent danger.",
   },
   {
     question: "Is it normal to drink a lot in college?",
@@ -70,7 +70,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            In college, drinking is often treated as a rite of passage. But the line between social drinking and problematic drinking can blur quickly &mdash; especially in an environment where heavy drinking is normalized and consequences are easy to dismiss. About one-third of college students report binge drinking in the past month (NIAAA), and many do not recognize when their relationship with alcohol has shifted from recreational to concerning. A screening is a private, honest starting point.
+            In college, drinking is often treated as a rite of passage. But the line between social drinking and problematic drinking can blur quickly, especially in an environment where heavy drinking is normalized and consequences are easy to dismiss. About one-third of college students report binge drinking in the past month (NIAAA), and many do not recognize when their relationship with alcohol has shifted from recreational to concerning. A screening is a private, honest starting point.
           </p>
         </header>
 
@@ -78,9 +78,9 @@ export default function AlcoholScreeningCollegeGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -119,7 +119,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
               The <Link href="/alcohol-screening-for-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools alcohol screening for college students</Link> is a free, private assessment based on validated clinical questions. It takes under five minutes, runs entirely in your browser, and no one sees your results but you.
             </p>
             <p>
-              The screening is not about labeling you or telling you what to do. It gives you a structured, honest picture of your drinking patterns &mdash; something that is difficult to see clearly when heavy drinking is normalized around you. You can use your results as a private reflection tool or bring them to a campus counselor.
+              The screening is not about labeling you or telling you what to do. It gives you a structured, honest picture of your drinking patterns, something that is difficult to see clearly when heavy drinking is normalized around you. You can use your results as a private reflection tool or bring them to a campus counselor.
             </p>
             <p>
               For a more detailed clinical assessment, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> provides the full WHO 10-item assessment used in clinical settings worldwide. The <Link href="/alcohol-screening-for-college-students" className="text-sage-600 dark:text-sage-400 underline">college-specific screening</Link> contextualizes questions for the campus environment.
@@ -149,7 +149,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
               <li>You are concerned about a friend&apos;s drinking</li>
             </ul>
             <p>
-              Campus counseling services are confidential. Many also offer BASICS (Brief Alcohol Screening and Intervention for College Students) &mdash; a motivational interviewing-based program specifically designed for college students.
+              Campus counseling services are confidential. Many also offer BASICS (Brief Alcohol Screening and Intervention for College Students), a motivational interviewing-based program specifically designed for college students.
             </p>
           </section>
 

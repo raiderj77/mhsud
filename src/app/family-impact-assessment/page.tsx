@@ -38,27 +38,27 @@ const FAQ_DATA = [
   {
     question: "Who is this assessment for?",
     answer:
-      "This assessment is for anyone who is concerned about a family member's, partner's, or close friend's substance use — including alcohol, drugs, or prescription medications. It does not evaluate your loved one. Instead, it helps you reflect on how their substance use is affecting your life across seven key areas: behavior changes you have noticed, financial impact, relationship impact, impact on children or dependents, emotional toll, safety concerns, and enabling behaviors. The goal is to give you clarity and point you toward appropriate support for yourself.",
+      "This assessment is for anyone who is concerned about a family member's, partner's, or close friend's substance use, including alcohol, drugs, or prescription medications. It does not evaluate your loved one. Instead, it helps you reflect on how their substance use is affecting your life across seven key areas: behavior changes you have noticed, financial impact, relationship impact, impact on children or dependents, emotional toll, safety concerns, and enabling behaviors. The goal is to give you clarity and point you toward appropriate support for yourself.",
   },
   {
     question: "Does a high score mean my loved one is an addict?",
     answer:
-      "No. This assessment does not screen, evaluate, or label your loved one. It measures the impact on you and your family. A high score means that substance use — regardless of whether your loved one meets clinical criteria for a substance use disorder — is significantly affecting your quality of life, your relationships, and your wellbeing. What matters is that you are experiencing real harm, and you deserve support. Only a qualified professional can assess your loved one's substance use.",
+      "No. This assessment does not screen, evaluate, or label your loved one. It measures the impact on you and your family. A high score means that substance use, regardless of whether your loved one meets clinical criteria for a substance use disorder, is significantly affecting your quality of life, your relationships, and your wellbeing. What matters is that you are experiencing real harm, and you deserve support. Only a qualified professional can assess your loved one's substance use.",
   },
   {
     question: "What are enabling behaviors, and why does this assessment include them?",
     answer:
-      "Enabling behaviors are things family members do — often out of love, fear, or habit — that unintentionally make it easier for a loved one to continue using substances. Examples include making excuses for their behavior, covering their financial obligations, or avoiding the topic to keep the peace. This assessment includes enabling questions not to blame you, but to build your awareness. Recognizing enabling patterns is the first step toward setting healthy boundaries, which research consistently shows helps both the family member and the person with substance use issues.",
+      "Enabling behaviors are things family members do, often out of love, fear, or habit, that unintentionally make it easier for a loved one to continue using substances. Examples include making excuses for their behavior, covering their financial obligations, or avoiding the topic to keep the peace. This assessment includes enabling questions not to blame you, but to build your awareness. Recognizing enabling patterns is the first step toward setting healthy boundaries, which research consistently shows helps both the family member and the person with substance use issues.",
   },
   {
     question: "What should I do if I have safety concerns?",
     answer:
-      "If you or anyone in your household is in immediate danger, call 911. If the danger is not immediate but you have ongoing safety concerns — such as verbal aggression, threatening behavior, or erratic actions while using — you should develop a safety plan. The National Domestic Violence Hotline (1-800-799-7233) can help you create one. You can also reach the 988 Suicide and Crisis Lifeline by calling or texting 988 if your loved one is threatening self-harm. Safety always comes first, and seeking help is not a betrayal — it is an act of care for everyone involved.",
+      "If you or anyone in your household is in immediate danger, call 911. If the danger is not immediate but you have ongoing safety concerns, such as verbal aggression, threatening behavior, or erratic actions while using, you should develop a safety plan. The National Domestic Violence Hotline (1-800-799-7233) can help you create one. You can also reach the 988 Suicide and Crisis Lifeline by calling or texting 988 if your loved one is threatening self-harm. Safety always comes first, and seeking help is not a betrayal, it is an act of care for everyone involved.",
   },
   {
     question: "How is this different from the CAGE-AID or AUDIT screening tools?",
     answer:
-      "The CAGE-AID and AUDIT are validated screening tools designed for the person who may have a substance use issue to answer about their own use. This Family Impact Assessment is different: it is designed for family members and loved ones, and it evaluates the impact on you — not on the person using substances. Both types of tools have value, but they serve different purposes. If your loved one is open to taking a self-assessment, you might share our CAGE-AID, AUDIT, or WHO-ASSIST tools with them.",
+      "The CAGE-AID and AUDIT are validated screening tools designed for the person who may have a substance use issue to answer about their own use. This Family Impact Assessment is different: it is designed for family members and loved ones, and it evaluates the impact on you, not on the person using substances. Both types of tools have value, but they serve different purposes. If your loved one is open to taking a self-assessment, you might share our CAGE-AID, AUDIT, or WHO-ASSIST tools with them.",
   },
   {
     question: "Is my data private?",
@@ -110,7 +110,7 @@ export default function FamilyImpactAssessmentPage() {
         <AnswerBlock
           what="An assessment that measures how a family member's substance use is affecting family members' wellbeing, relationships, and daily functioning."
           who="Family members living with a loved one's addiction who want to understand and validate the impact on their own lives."
-          bottomLine="Addiction affects the whole family — your wellbeing matters too, and support is available for you. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Addiction affects the whole family, your wellbeing matters too, and support is available for you. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

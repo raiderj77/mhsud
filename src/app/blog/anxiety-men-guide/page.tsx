@@ -41,12 +41,12 @@ const FAQ_DATA = [
   {
     question: "Can anxiety cause physical symptoms like chest pain?",
     answer:
-      "Yes. Anxiety activates the sympathetic nervous system, producing real physical symptoms including chest tightness, rapid heartbeat, shortness of breath, gastrointestinal distress, muscle tension, headaches, dizziness, and sweating. These symptoms are not imagined &mdash; they reflect genuine physiological changes. However, chest pain should always be medically evaluated to rule out cardiac causes before attributing it to anxiety.",
+      "Yes. Anxiety activates the sympathetic nervous system, producing real physical symptoms including chest tightness, rapid heartbeat, shortness of breath, gastrointestinal distress, muscle tension, headaches, dizziness, and sweating. These symptoms are not imagined, they reflect genuine physiological changes. However, chest pain should always be medically evaluated to rule out cardiac causes before attributing it to anxiety.",
   },
   {
     question: "What should I do if I think I have anxiety?",
     answer:
-      "Start with a free, private screening to understand the severity of what you are experiencing. If your results suggest moderate or higher anxiety, consider talking to a healthcare provider. Effective treatments include cognitive behavioral therapy (CBT), medication when appropriate, exercise, and stress management techniques. Many men find that naming the problem &mdash; recognizing it as anxiety rather than just &quot;stress&quot; &mdash; is the most important first step.",
+      "Start with a free, private screening to understand the severity of what you are experiencing. If your results suggest moderate or higher anxiety, consider talking to a healthcare provider. Effective treatments include cognitive behavioral therapy (CBT), medication when appropriate, exercise, and stress management techniques. Many men find that naming the problem, recognizing it as anxiety rather than just &quot;stress&quot;, is the most important first step.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function AnxietyMenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Anxiety is one of the most common mental health conditions in the world, yet men rarely use the word &quot;anxiety&quot; to describe what they are experiencing. Instead, they say they are &quot;stressed,&quot; &quot;on edge,&quot; or &quot;just dealing with a lot.&quot; The symptoms are real &mdash; the irritability, the chest tightness, the inability to turn off their brain at night &mdash; but the label feels wrong. This disconnect between experience and language is one of the reasons anxiety in men goes unrecognized, and one of the reasons structured screening can help.
+            Anxiety is one of the most common mental health conditions in the world, yet men rarely use the word &quot;anxiety&quot; to describe what they are experiencing. Instead, they say they are &quot;stressed,&quot; &quot;on edge,&quot; or &quot;just dealing with a lot.&quot; The symptoms are real, the irritability, the chest tightness, the inability to turn off their brain at night, but the label feels wrong. This disconnect between experience and language is one of the reasons anxiety in men goes unrecognized, and one of the reasons structured screening can help.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AnxietyMenGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ export default function AnxietyMenGuidePage() {
           <section>
             <h2>How anxiety actually looks in men</h2>
             <p>
-              The textbook picture of anxiety &mdash; excessive worry, nervousness, avoidance &mdash; does describe what some men experience. But many men with anxiety present with symptoms that look nothing like the stereotype:
+              The textbook picture of anxiety, excessive worry, nervousness, avoidance, does describe what some men experience. But many men with anxiety present with symptoms that look nothing like the stereotype:
             </p>
             <ul>
               <li><strong>Irritability and anger outbursts:</strong> A short fuse, snapping at family members, road rage, or disproportionate frustration. Anxiety creates a state of constant internal threat detection that makes everything feel more aggravating</li>
@@ -121,17 +121,17 @@ export default function AnxietyMenGuidePage() {
               <li><strong>Physical symptoms:</strong> Chest tightness, rapid heartbeat, shortness of breath, GI problems (stomach pain, nausea, IBS), muscle tension in the jaw, neck, or shoulders, headaches, and dizziness. Many men see a cardiologist or gastroenterologist before they see a mental health provider</li>
               <li><strong>Substance use:</strong> Using alcohol to &quot;take the edge off,&quot; relying on substances to sleep, or increasing consumption when stress escalates. Alcohol temporarily reduces anxiety but worsens it as the effect wears off</li>
               <li><strong>Control behaviors:</strong> Becoming more rigid about routines, schedules, or decision-making. Micromanaging at work or home as a way to manage the feeling that things could go wrong at any moment</li>
-              <li><strong>Avoidance disguised as independence:</strong> Declining social invitations, avoiding new situations, or preferring to be alone &mdash; framed as preference rather than anxiety</li>
+              <li><strong>Avoidance disguised as independence:</strong> Declining social invitations, avoiding new situations, or preferring to be alone, framed as preference rather than anxiety</li>
             </ul>
           </section>
 
           <section>
             <h2>Why men call it &quot;stress&quot; instead of anxiety</h2>
             <p>
-              Language matters. Most men are more comfortable saying they are stressed than saying they are anxious. &quot;Stress&quot; implies an external cause &mdash; work demands, financial pressure, family responsibilities &mdash; and positions the man as someone coping with difficult circumstances. &quot;Anxiety&quot; implies an internal experience, a vulnerability, something potentially wrong with them.
+              Language matters. Most men are more comfortable saying they are stressed than saying they are anxious. &quot;Stress&quot; implies an external cause, work demands, financial pressure, family responsibilities, and positions the man as someone coping with difficult circumstances. &quot;Anxiety&quot; implies an internal experience, a vulnerability, something potentially wrong with them.
             </p>
             <p>
-              This distinction is not just semantic. It shapes how men understand their own experience and whether they seek help. A man who believes he is &quot;just stressed&quot; will try to solve the external problem &mdash; work harder, earn more, fix the situation. A man who recognizes that he has anxiety can also address the internal experience &mdash; the cognitive patterns, the physical tension, the avoidance behaviors that stress alone does not explain.
+              This distinction is not just semantic. It shapes how men understand their own experience and whether they seek help. A man who believes he is &quot;just stressed&quot; will try to solve the external problem, work harder, earn more, fix the situation. A man who recognizes that he has anxiety can also address the internal experience, the cognitive patterns, the physical tension, the avoidance behaviors that stress alone does not explain.
             </p>
             <p>
               Cultural expectations reinforce this framing. Men are socialized to be problem-solvers and managers of difficulty, not people who experience emotional vulnerability. Admitting to anxiety can feel like admitting to a fundamental inadequacy rather than recognizing a common, treatable condition that affects millions of men.
@@ -146,9 +146,9 @@ export default function AnxietyMenGuidePage() {
               Anxiety and alcohol use frequently co-occur in men, creating a cycle that is difficult to break without addressing both issues. The pattern typically follows a predictable sequence:
             </p>
             <ul>
-              <li>Anxiety creates discomfort &mdash; racing thoughts, physical tension, difficulty sleeping</li>
-              <li>Alcohol provides temporary relief &mdash; it slows the nervous system and reduces acute anxiety</li>
-              <li>As the alcohol wears off, anxiety rebounds &mdash; often worse than before (a phenomenon called &quot;hangxiety&quot;)</li>
+              <li>Anxiety creates discomfort, racing thoughts, physical tension, difficulty sleeping</li>
+              <li>Alcohol provides temporary relief, it slows the nervous system and reduces acute anxiety</li>
+              <li>As the alcohol wears off, anxiety rebounds, often worse than before (a phenomenon called &quot;hangxiety&quot;)</li>
               <li>The rebound anxiety drives more drinking, and tolerance builds over time</li>
               <li>Eventually, alcohol withdrawal itself produces anxiety, creating a physical dependency that overlaps with the original anxiety disorder</li>
             </ul>
@@ -160,7 +160,7 @@ export default function AnxietyMenGuidePage() {
           <section>
             <h2>Physical symptoms that men take to the wrong doctor</h2>
             <p>
-              Anxiety produces real, measurable physiological changes. When the sympathetic nervous system activates, it triggers a cascade of physical responses designed for actual threat &mdash; increased heart rate, diverted blood flow, muscle tension, digestive changes. In chronic anxiety, this system stays activated, producing persistent physical symptoms:
+              Anxiety produces real, measurable physiological changes. When the sympathetic nervous system activates, it triggers a cascade of physical responses designed for actual threat, increased heart rate, diverted blood flow, muscle tension, digestive changes. In chronic anxiety, this system stays activated, producing persistent physical symptoms:
             </p>
             <ul>
               <li><strong>Chest pain and palpitations:</strong> Often the symptom that sends men to the emergency room. Cardiac causes should always be ruled out, but anxiety is one of the most common causes of non-cardiac chest pain</li>
@@ -222,7 +222,7 @@ export default function AnxietyMenGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

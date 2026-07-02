@@ -71,7 +71,7 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
       >
         <div className="px-5 pb-5">
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 leading-relaxed">
-            Take a moment to consider these questions. There are no right or wrong answers — they are meant to help you make sense of your results.
+            Take a moment to consider these questions. There are no right or wrong answers, they are meant to help you make sense of your results.
           </p>
 
           <ol className="space-y-3">

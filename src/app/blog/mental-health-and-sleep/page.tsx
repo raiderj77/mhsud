@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "How many hours of sleep do adults actually need?",
     answer:
-      "The CDC recommends 7\u20139 hours for adults 18\u201360 and 7\u20138 hours for adults 61+. Fewer than 7 hours is associated with elevated rates of depression, anxiety, obesity, and cardiovascular disease. The belief that some people thrive on 4\u20135 hours is largely a myth \u2014 genuine short sleepers are genetically very rare.",
+      "The CDC recommends 7\u20139 hours for adults 18\u201360 and 7\u20138 hours for adults 61+. Fewer than 7 hours is associated with elevated rates of depression, anxiety, obesity, and cardiovascular disease. The belief that some people thrive on 4\u20135 hours is largely a myth, genuine short sleepers are genetically very rare.",
   },
   {
     question: "Does alcohol really help sleep?",
@@ -41,12 +41,12 @@ const FAQ_DATA = [
   {
     question: "Can I catch up on sleep over the weekend?",
     answer:
-      "Partially. Weekend recovery sleep reduces some acute cognitive impairment from weekday sleep restriction. However, it doesn\u2019t fully restore performance, and the schedule shift disrupts the circadian system \u2014 a pattern called \u201csocial jetlag\u201d that is itself associated with worse mood and metabolic health.",
+      "Partially. Weekend recovery sleep reduces some acute cognitive impairment from weekday sleep restriction. However, it doesn\u2019t fully restore performance, and the schedule shift disrupts the circadian system, a pattern called \u201csocial jetlag\u201d that is itself associated with worse mood and metabolic health.",
   },
   {
     question: "What time should I go to bed for mental health?",
     answer:
-      "A consistent wake time matters more than bedtime. Waking at the same time daily \u2014 including weekends \u2014 is the most powerful circadian anchor. Go to bed when sleepy rather than forcing a set time. Morning light exposure within 30\u201360 minutes of waking further stabilizes the circadian clock and improves sleep quality.",
+      "A consistent wake time matters more than bedtime. Waking at the same time daily, including weekends, is the most powerful circadian anchor. Go to bed when sleepy rather than forcing a set time. Morning light exposure within 30\u201360 minutes of waking further stabilizes the circadian clock and improves sleep quality.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function MentalHealthAndSleepPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Sleep and mental health have a bidirectional relationship &mdash; each powerfully affects the other. Poor sleep worsens symptoms of depression, anxiety, PTSD, bipolar disorder, ADHD, and substance use disorders. Mental health conditions, in turn, are among the leading causes of chronic insomnia. Understanding this relationship matters because sleep is often the highest-leverage, most underaddressed intervention available to people struggling with their mental health.
+            Sleep and mental health have a bidirectional relationship, each powerfully affects the other. Poor sleep worsens symptoms of depression, anxiety, PTSD, bipolar disorder, ADHD, and substance use disorders. Mental health conditions, in turn, are among the leading causes of chronic insomnia. Understanding this relationship matters because sleep is often the highest-leverage, most underaddressed intervention available to people struggling with their mental health.
           </p>
         </header>
 
@@ -100,7 +100,7 @@ export default function MentalHealthAndSleepPage() {
               For a long time, clinicians treated mental health and sleep problems as a hierarchy: treat the depression, and the insomnia will follow. Research over the past two decades has dismantled this assumption.
             </p>
             <p>
-              Sleep problems in people with depression or anxiety are <strong>not merely symptoms</strong> &mdash; they are independent maintaining factors. Studies show that people with depression who also have insomnia are more likely to relapse, less likely to respond to antidepressants, and more likely to experience suicidal ideation than those whose sleep is treated alongside their depression (Pigeon et al., 2008).
+              Sleep problems in people with depression or anxiety are <strong>not merely symptoms</strong>, they are independent maintaining factors. Studies show that people with depression who also have insomnia are more likely to relapse, less likely to respond to antidepressants, and more likely to experience suicidal ideation than those whose sleep is treated alongside their depression (Pigeon et al., 2008).
             </p>
             <p>
               This means sleep is a treatment target in its own right, not just a downstream symptom.
@@ -110,28 +110,28 @@ export default function MentalHealthAndSleepPage() {
           {/* Section 2 */}
           <section>
             <h2>How mental health affects sleep</h2>
-            <p>Most mental health conditions disrupt sleep &mdash; but in different ways.</p>
+            <p>Most mental health conditions disrupt sleep, but in different ways.</p>
 
             <h3>Depression and sleep</h3>
             <p>Depression is associated with characteristic sleep changes:</p>
             <ul>
-              <li><strong>Insomnia</strong> &mdash; particularly early morning awakening (waking 2&ndash;3 hours before the intended time and unable to return to sleep)</li>
-              <li><strong>Hypersomnia</strong> &mdash; oversleeping, difficulty getting out of bed, unrefreshing sleep; more common in atypical depression and bipolar depression</li>
-              <li><strong>Reduced slow-wave sleep</strong> &mdash; the deepest, most restorative phase of sleep</li>
-              <li><strong>Earlier REM onset</strong> &mdash; dreaming sleep begins unusually early, compressing restorative deep sleep</li>
-              <li><strong>Increased REM intensity</strong> &mdash; more vivid, emotionally charged dreams</li>
+              <li><strong>Insomnia</strong>, particularly early morning awakening (waking 2&ndash;3 hours before the intended time and unable to return to sleep)</li>
+              <li><strong>Hypersomnia</strong>, oversleeping, difficulty getting out of bed, unrefreshing sleep; more common in atypical depression and bipolar depression</li>
+              <li><strong>Reduced slow-wave sleep</strong>, the deepest, most restorative phase of sleep</li>
+              <li><strong>Earlier REM onset</strong>, dreaming sleep begins unusually early, compressing restorative deep sleep</li>
+              <li><strong>Increased REM intensity</strong>, more vivid, emotionally charged dreams</li>
             </ul>
             <p>
-              Approximately <strong>75% of people with depression</strong> report insomnia symptoms (Ford &amp; Kamerow, 1989). More telling: insomnia significantly predicts new onset depression &mdash; people with chronic insomnia have <strong>2&ndash;3&times; the risk</strong> of developing depression over time.
+              Approximately <strong>75% of people with depression</strong> report insomnia symptoms (Ford &amp; Kamerow, 1989). More telling: insomnia significantly predicts new onset depression, people with chronic insomnia have <strong>2&ndash;3&times; the risk</strong> of developing depression over time.
             </p>
 
             <h3>Anxiety and sleep</h3>
-            <p>Anxiety&apos;s hallmark relationship with sleep is difficulty falling asleep &mdash; driven by racing, ruminative thoughts at bedtime. Specific patterns include:</p>
+            <p>Anxiety&apos;s hallmark relationship with sleep is difficulty falling asleep, driven by racing, ruminative thoughts at bedtime. Specific patterns include:</p>
             <ul>
-              <li><strong>Sleep onset insomnia</strong> &mdash; taking more than 30 minutes to fall asleep due to worry or physiological arousal</li>
+              <li><strong>Sleep onset insomnia</strong>, taking more than 30 minutes to fall asleep due to worry or physiological arousal</li>
               <li><strong>Night awakenings</strong> with difficulty returning to sleep</li>
-              <li><strong>Conditioned arousal</strong> &mdash; the bed becomes associated with alertness and worry rather than sleep</li>
-              <li><strong>Nighttime amplification</strong> &mdash; intrusive thoughts and worries feel worse when there are no daytime distractions</li>
+              <li><strong>Conditioned arousal</strong>, the bed becomes associated with alertness and worry rather than sleep</li>
+              <li><strong>Nighttime amplification</strong>, intrusive thoughts and worries feel worse when there are no daytime distractions</li>
             </ul>
             <p>
               The hyperarousal that characterizes anxiety disorders extends into the night, keeping the nervous system too activated for sleep to begin.
@@ -140,13 +140,13 @@ export default function MentalHealthAndSleepPage() {
             <h3>PTSD and sleep</h3>
             <p>PTSD has among the most severe sleep disturbances of any mental health condition:</p>
             <ul>
-              <li><strong>Nightmares</strong> &mdash; distressing, vivid nightmares replaying trauma or trauma-themed content; a core diagnostic criterion</li>
-              <li><strong>Hyperarousal at night</strong> &mdash; the startle response doesn&apos;t turn off; sounds trigger awakening</li>
-              <li><strong>Sleep avoidance</strong> &mdash; some people with PTSD deliberately stay awake to avoid nightmares</li>
-              <li><strong>Insomnia of all types</strong> &mdash; difficulty falling asleep, staying asleep, and non-restorative sleep</li>
+              <li><strong>Nightmares</strong>, distressing, vivid nightmares replaying trauma or trauma-themed content; a core diagnostic criterion</li>
+              <li><strong>Hyperarousal at night</strong>, the startle response doesn&apos;t turn off; sounds trigger awakening</li>
+              <li><strong>Sleep avoidance</strong>, some people with PTSD deliberately stay awake to avoid nightmares</li>
+              <li><strong>Insomnia of all types</strong>, difficulty falling asleep, staying asleep, and non-restorative sleep</li>
             </ul>
             <p>
-              Sleep disturbance in PTSD is now treated as a primary symptom rather than secondary, particularly given the evidence for <strong>Imagery Rehearsal Therapy (IRT)</strong> &mdash; a specific intervention for trauma nightmares.
+              Sleep disturbance in PTSD is now treated as a primary symptom rather than secondary, particularly given the evidence for <strong>Imagery Rehearsal Therapy (IRT)</strong>, a specific intervention for trauma nightmares.
             </p>
           </section>
 
@@ -154,12 +154,12 @@ export default function MentalHealthAndSleepPage() {
           <section>
             <h3>Bipolar disorder and sleep</h3>
             <p>
-              The relationship between sleep and bipolar disorder is exceptionally important because sleep disruption is not just a symptom &mdash; it is one of the most reliable <strong>triggers</strong> of mood episodes.
+              The relationship between sleep and bipolar disorder is exceptionally important because sleep disruption is not just a symptom, it is one of the most reliable <strong>triggers</strong> of mood episodes.
             </p>
             <ul>
-              <li><strong>Mania:</strong> Characterized by dramatically reduced need for sleep; the person sleeps very little and doesn&apos;t feel tired. Mania is also triggered by sleep deprivation &mdash; the relationship runs in both directions.</li>
+              <li><strong>Mania:</strong> Characterized by dramatically reduced need for sleep; the person sleeps very little and doesn&apos;t feel tired. Mania is also triggered by sleep deprivation, the relationship runs in both directions.</li>
               <li><strong>Depression:</strong> Hypersomnia is common in bipolar depression; patients may sleep 10&ndash;12+ hours and still feel exhausted</li>
-              <li><strong>Circadian disruption:</strong> People with bipolar disorder show fundamental dysregulation of circadian rhythms &mdash; the biological clock controlling sleep-wake cycles and many other physiological processes</li>
+              <li><strong>Circadian disruption:</strong> People with bipolar disorder show fundamental dysregulation of circadian rhythms, the biological clock controlling sleep-wake cycles and many other physiological processes</li>
             </ul>
             <p>
               Sleep consistency is considered one of the highest clinical priorities in bipolar management. A single night of significant sleep deprivation can trigger a manic episode in vulnerable individuals.
@@ -168,13 +168,13 @@ export default function MentalHealthAndSleepPage() {
             <h3>ADHD and sleep</h3>
             <p>ADHD is associated with multiple sleep disturbances that are often underrecognized:</p>
             <ul>
-              <li><strong>Delayed sleep phase</strong> &mdash; difficulty falling asleep before 1&ndash;2am, difficulty waking in the morning; highly prevalent</li>
-              <li><strong>Difficulty &quot;shutting off&quot;</strong> &mdash; the racing, hyperactive mind continues at night</li>
-              <li><strong>Restless sleep</strong> &mdash; frequent movement, non-restorative rest</li>
+              <li><strong>Delayed sleep phase</strong>, difficulty falling asleep before 1&ndash;2am, difficulty waking in the morning; highly prevalent</li>
+              <li><strong>Difficulty &quot;shutting off&quot;</strong>, the racing, hyperactive mind continues at night</li>
+              <li><strong>Restless sleep</strong>, frequent movement, non-restorative rest</li>
               <li><strong>Increased risk of sleep apnea and restless leg syndrome</strong></li>
             </ul>
             <p>
-              Sleep deprivation dramatically worsens ADHD symptoms &mdash; attention, impulse control, and emotional regulation all deteriorate. This creates a self-perpetuating cycle: ADHD impairs sleep &rarr; poor sleep worsens ADHD &rarr; worsened ADHD creates more sleep problems.
+              Sleep deprivation dramatically worsens ADHD symptoms, attention, impulse control, and emotional regulation all deteriorate. This creates a self-perpetuating cycle: ADHD impairs sleep &rarr; poor sleep worsens ADHD &rarr; worsened ADHD creates more sleep problems.
             </p>
           </section>
 
@@ -188,8 +188,8 @@ export default function MentalHealthAndSleepPage() {
             </p>
             <p><strong>After one night of poor sleep:</strong></p>
             <ul>
-              <li>Increased emotional reactivity &mdash; the amygdala (brain&apos;s threat response center) becomes 60% more reactive to negative stimuli (Yoo et al., 2007)</li>
-              <li>Reduced prefrontal cortex regulation &mdash; the brain region that modulates emotional responses is less effective</li>
+              <li>Increased emotional reactivity, the amygdala (brain&apos;s threat response center) becomes 60% more reactive to negative stimuli (Yoo et al., 2007)</li>
+              <li>Reduced prefrontal cortex regulation, the brain region that modulates emotional responses is less effective</li>
               <li>Increased anxiety, irritability, and low frustration tolerance</li>
               <li>Impaired working memory and attention</li>
             </ul>
@@ -198,10 +198,10 @@ export default function MentalHealthAndSleepPage() {
               <li>Cumulative cognitive impairment equivalent to total sleep deprivation</li>
               <li>Significantly elevated rates of depression and anxiety</li>
               <li>Disrupted stress hormone regulation (elevated cortisol)</li>
-              <li>Impaired emotional memory processing &mdash; poor sleep prevents the brain from consolidating and resolving emotional experiences from the day</li>
+              <li>Impaired emotional memory processing, poor sleep prevents the brain from consolidating and resolving emotional experiences from the day</li>
             </ul>
             <p>
-              <strong>The sleep-emotion link:</strong> During REM sleep, the brain processes emotionally significant memories and strips away the emotional charge &mdash; a mechanism that helps regulate mood over time. Disrupting REM sleep (through alcohol, sleep deprivation, or certain medications) impairs this process.
+              <strong>The sleep-emotion link:</strong> During REM sleep, the brain processes emotionally significant memories and strips away the emotional charge, a mechanism that helps regulate mood over time. Disrupting REM sleep (through alcohol, sleep deprivation, or certain medications) impairs this process.
             </p>
           </section>
 
@@ -211,7 +211,7 @@ export default function MentalHealthAndSleepPage() {
 
             <h3>Cognitive Behavioral Therapy for Insomnia (CBT-I)</h3>
             <p>
-              CBT-I is the <strong>first-line treatment</strong> for chronic insomnia &mdash; ahead of sleep medication in clinical guidelines from the American College of Physicians and the American Academy of Sleep Medicine. It produces durable improvement that persists after treatment ends, unlike sleep medication, which loses effectiveness with ongoing use.
+              CBT-I is the <strong>first-line treatment</strong> for chronic insomnia, ahead of sleep medication in clinical guidelines from the American College of Physicians and the American Academy of Sleep Medicine. It produces durable improvement that persists after treatment ends, unlike sleep medication, which loses effectiveness with ongoing use.
             </p>
             <p>CBT-I components include:</p>
             <p>
@@ -252,13 +252,13 @@ export default function MentalHealthAndSleepPage() {
           <section>
             <h3>Sleep medication</h3>
             <p>
-              Sleep medication (benzodiazepines, Z-drugs like zolpidem, melatonin receptor agonists) can be appropriate for short-term use &mdash; particularly during acute crises when sleep deprivation is itself a risk factor. However:
+              Sleep medication (benzodiazepines, Z-drugs like zolpidem, melatonin receptor agonists) can be appropriate for short-term use, particularly during acute crises when sleep deprivation is itself a risk factor. However:
             </p>
             <ul>
               <li>Tolerance and dependence develop with regular benzodiazepine and Z-drug use</li>
               <li>These medications suppress REM sleep, potentially interfering with emotional processing</li>
               <li>Abrupt discontinuation after regular use can cause rebound insomnia and anxiety</li>
-              <li><strong>Alcohol</strong> is widely used as a sleep aid but worsens sleep architecture &mdash; suppressing REM sleep and causing fragmented second-half sleep</li>
+              <li><strong>Alcohol</strong> is widely used as a sleep aid but worsens sleep architecture, suppressing REM sleep and causing fragmented second-half sleep</li>
             </ul>
             <p>
               Medication should generally be paired with CBT-I rather than used as a standalone long-term solution.
@@ -282,9 +282,9 @@ export default function MentalHealthAndSleepPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -307,7 +307,7 @@ export default function MentalHealthAndSleepPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

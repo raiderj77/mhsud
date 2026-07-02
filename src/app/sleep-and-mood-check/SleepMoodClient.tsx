@@ -32,7 +32,7 @@ const OPTIONS = [
 
 const RANGES = [
   { min: 0, max: 7, level: "Lower Concern", key: "low", description: "Your responses suggest relatively fewer sleep and mood concerns in the past two weeks.", suggestion: "Continue maintaining good sleep habits. If anything changes, check in again." },
-  { min: 8, max: 14, level: "Moderate Concern", key: "moderate", description: "Your responses suggest some sleep and mood patterns that may be worth paying attention to.", suggestion: "Consider whether small changes to your sleep routine might help. If patterns persist, talking with a healthcare provider is a good idea — especially if mood and energy are consistently affected." },
+  { min: 8, max: 14, level: "Moderate Concern", key: "moderate", description: "Your responses suggest some sleep and mood patterns that may be worth paying attention to.", suggestion: "Consider whether small changes to your sleep routine might help. If patterns persist, talking with a healthcare provider is a good idea, especially if mood and energy are consistently affected." },
   { min: 15, max: 22, level: "Notable Concern", key: "notable", description: "Your responses suggest notable sleep difficulties and mood impact across several areas.", suggestion: "Speaking with a healthcare provider is encouraged. Persistent sleep problems can worsen mood and functioning, and effective treatments exist. Consider also taking the PHQ-9 or GAD-7 to reflect on mood and anxiety specifically." },
   { min: 23, max: 30, level: "Significant Concern", key: "significant", description: "Your responses suggest significant sleep disruption with widespread impact on mood, energy, and daily functioning.", suggestion: "Please talk with a healthcare provider. Sleep problems at this level are worth evaluating for underlying causes (medical, psychological, or environmental). You don't have to manage this alone." },
 ];
@@ -105,7 +105,7 @@ export function SleepMoodClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/sleep-and-mood-check";
     if (mode === "blank") {
       const shareData = {
-        title: "Sleep & Mood Reflection — Free & Private",
+        title: "Sleep & Mood Reflection, Free & Private",
         text: "Take a free, private Sleep & Mood Reflection. Your answers never leave your browser.",
         url,
       };
@@ -117,7 +117,7 @@ export function SleepMoodClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `Sleep & Mood Reflection Results\nScore: ${totalScore}/30 — ${range.level}\n\nThis is a reflection tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `Sleep & Mood Reflection Results\nScore: ${totalScore}/30, ${range.level}\n\nThis is a reflection tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Sleep & Mood Reflection Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -135,7 +135,7 @@ export function SleepMoodClient({ faqData }: Props) {
         </div>
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Sleep &amp; Mood Reflection</h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          How is your sleep affecting your mood, energy, and daily life? 10 original questions to help you see the connection — completely private.
+          How is your sleep affecting your mood, energy, and daily life? 10 original questions to help you see the connection, completely private.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~2 Minutes" }, { icon: "🌙", text: "10 Questions" }].map((b) => (
@@ -208,7 +208,7 @@ export function SleepMoodClient({ faqData }: Props) {
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your Sleep &amp; Mood Score</p>
               <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 30 — {range.level}</p>
+              <p className={`text-sm font-semibold ${colors.text}`}>out of 30, {range.level}</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 30) * 100}%` }} />
@@ -368,9 +368,9 @@ export function SleepMoodClient({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If sleep or mood concerns are affecting your life, help is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">

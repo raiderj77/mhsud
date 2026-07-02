@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/halt-checkin-guide",
   title: "HALT: The Recovery Check-In That Prevents Relapse",
   description:
-    "HALT stands for Hungry, Angry, Lonely, Tired — four vulnerability states that increase relapse risk. Learn how this simple check-in works.",
+    "HALT stands for Hungry, Angry, Lonely, Tired, four vulnerability states that increase relapse risk. Learn how this simple check-in works.",
   keywords: [
     "HALT recovery",
     "HALT check-in",
@@ -33,29 +33,29 @@ const FAQ_DATA = [
   {
     question: "What does HALT stand for?",
     answer:
-      "HALT stands for Hungry, Angry, Lonely, and Tired \u2014 four physical and emotional states that increase vulnerability to relapse. When you feel a craving, pause and check whether you are experiencing one of these states. Addressing the underlying need often reduces the urge significantly.",
+      "HALT stands for Hungry, Angry, Lonely, and Tired, four physical and emotional states that increase vulnerability to relapse. When you feel a craving, pause and check whether you are experiencing one of these states. Addressing the underlying need often reduces the urge significantly.",
   },
   {
     question: "How does HALT prevent relapse?",
     answer:
-      "HALT builds interoceptive awareness \u2014 the ability to recognize your body\u2019s internal signals. Many people in early recovery confuse cravings with unmet basic needs. The HALT checklist helps you identify the real need in the moment, and addressing it often resolves the craving on its own.",
+      "HALT builds interoceptive awareness, the ability to recognize your body\u2019s internal signals. Many people in early recovery confuse cravings with unmet basic needs. The HALT checklist helps you identify the real need in the moment, and addressing it often resolves the craving on its own.",
   },
   {
     question: "When should I do a HALT check-in?",
     answer:
-      "Use HALT whenever you feel a craving, urge, or unexplained mood shift. Many people also do preventive check-ins at set times \u2014 morning, midday, and evening \u2014 to catch vulnerability states before they escalate. The MindCheck Tools HALT check-in provides a quick, structured way to practice daily.",
+      "Use HALT whenever you feel a craving, urge, or unexplained mood shift. Many people also do preventive check-ins at set times, morning, midday, and evening, to catch vulnerability states before they escalate. The MindCheck Tools HALT check-in provides a quick, structured way to practice daily.",
   },
   {
     question: "Is HALT evidence-based?",
     answer:
-      "HALT originated in 12-step recovery culture and is widely used in clinical settings. While not a formally validated instrument, its principles align with Marlatt and Gordon\u2019s relapse prevention model, which identifies negative emotional states and interpersonal conflict as the highest-risk relapse categories \u2014 directly mapping to HALT states.",
+      "HALT originated in 12-step recovery culture and is widely used in clinical settings. While not a formally validated instrument, its principles align with Marlatt and Gordon\u2019s relapse prevention model, which identifies negative emotional states and interpersonal conflict as the highest-risk relapse categories, directly mapping to HALT states.",
   },
 ];
 
 export default function HaltCheckinGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "HALT: The Recovery Check-In That Prevents Relapse", description: "HALT stands for Hungry, Angry, Lonely, Tired — four vulnerability states that increase relapse risk. Learn how this simple check-in works.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "HALT: The Recovery Check-In That Prevents Relapse", description: "HALT stands for Hungry, Angry, Lonely, Tired, four vulnerability states that increase relapse risk. Learn how this simple check-in works.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "HALT Check-In Guide", url: ARTICLE_URL }])) }} />
 
@@ -70,7 +70,7 @@ export default function HaltCheckinGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            HALT is one of the simplest and most practical tools in recovery. The acronym stands for Hungry, Angry, Lonely, Tired &mdash; four basic states that increase vulnerability to relapse. When a craving hits, the practice is straightforward: pause and ask yourself, &quot;Am I hungry, angry, lonely, or tired right now?&quot; Then address the actual need. It sounds almost too simple to work &mdash; but decades of clinical use and supporting research suggest it is one of the most effective daily practices in recovery.
+            HALT is one of the simplest and most practical tools in recovery. The acronym stands for Hungry, Angry, Lonely, Tired, four basic states that increase vulnerability to relapse. When a craving hits, the practice is straightforward: pause and ask yourself, &quot;Am I hungry, angry, lonely, or tired right now?&quot; Then address the actual need. It sounds almost too simple to work, but decades of clinical use and supporting research suggest it is one of the most effective daily practices in recovery.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function HaltCheckinGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@ export default function HaltCheckinGuidePage() {
           <section>
             <h2>Where HALT comes from</h2>
             <p>
-              HALT originated in Alcoholics Anonymous and the broader 12-step recovery community, where it has been taught as a practical relapse prevention technique for decades. The exact origin is difficult to trace &mdash; like many recovery concepts, it emerged organically from the collective wisdom of people living in recovery.
+              HALT originated in Alcoholics Anonymous and the broader 12-step recovery community, where it has been taught as a practical relapse prevention technique for decades. The exact origin is difficult to trace, like many recovery concepts, it emerged organically from the collective wisdom of people living in recovery.
             </p>
             <p>
               The framework gained clinical credibility through its alignment with Marlatt and Gordon&apos;s relapse prevention model, published in the 1980s, which identified negative emotional states, interpersonal conflict, and social pressure as the three highest-risk categories for relapse. Each of the four HALT states maps directly to these evidence-based risk categories.
@@ -113,7 +113,7 @@ export default function HaltCheckinGuidePage() {
             </p>
             <ul>
               <li><strong>Decision fatigue:</strong> Low blood sugar impairs the prefrontal cortex, the brain region responsible for impulse control, planning, and rational decision-making. This is the same region that helps you resist cravings.</li>
-              <li><strong>Mood disruption:</strong> Hunger triggers irritability, anxiety, and difficulty concentrating &mdash; states that can easily be misinterpreted as cravings or emotional distress.</li>
+              <li><strong>Mood disruption:</strong> Hunger triggers irritability, anxiety, and difficulty concentrating, states that can easily be misinterpreted as cravings or emotional distress.</li>
               <li><strong>Habitual association:</strong> For many people in recovery, hunger was historically addressed with substances rather than food. The brain may default to these old patterns when hungry.</li>
             </ul>
             <p>
@@ -144,7 +144,7 @@ export default function HaltCheckinGuidePage() {
           <section>
             <h2>Lonely: isolation as a relapse pathway</h2>
             <p>
-              Loneliness is arguably the most dangerous HALT state for long-term recovery. Social isolation is consistently identified as one of the strongest predictors of relapse, and it is also one of the most common experiences in early recovery &mdash; especially when sobriety requires distancing from old social circles centered around substance use.
+              Loneliness is arguably the most dangerous HALT state for long-term recovery. Social isolation is consistently identified as one of the strongest predictors of relapse, and it is also one of the most common experiences in early recovery, especially when sobriety requires distancing from old social circles centered around substance use.
             </p>
             <p>
               The connection between loneliness and relapse is well-documented:
@@ -172,12 +172,12 @@ export default function HaltCheckinGuidePage() {
             </p>
             <ul>
               <li><strong>Impaired impulse control:</strong> Sleep deprivation reduces activity in the prefrontal cortex by up to 60%, severely compromising the ability to resist urges and make sound decisions.</li>
-              <li><strong>Heightened emotional reactivity:</strong> Tired people are more emotionally reactive and less able to regulate emotions &mdash; a combination that makes cravings harder to manage.</li>
+              <li><strong>Heightened emotional reactivity:</strong> Tired people are more emotionally reactive and less able to regulate emotions, a combination that makes cravings harder to manage.</li>
               <li><strong>Increased stress hormones:</strong> Lack of sleep elevates cortisol levels, creating a physiological stress state that the brain may interpret as a signal to seek relief through substances.</li>
-              <li><strong>Cognitive distortion:</strong> Fatigue promotes black-and-white thinking, catastrophizing, and hopelessness &mdash; thought patterns that increase relapse risk.</li>
+              <li><strong>Cognitive distortion:</strong> Fatigue promotes black-and-white thinking, catastrophizing, and hopelessness, thought patterns that increase relapse risk.</li>
             </ul>
             <p>
-              Sleep hygiene practices &mdash; consistent bedtime, avoiding screens before sleep, limiting caffeine, and creating a restful environment &mdash; are essential recovery practices, not luxuries. If sleep problems persist beyond the first few weeks of sobriety, consulting a healthcare provider is important.
+              Sleep hygiene practices, consistent bedtime, avoiding screens before sleep, limiting caffeine, and creating a restful environment, are essential recovery practices, not luxuries. If sleep problems persist beyond the first few weeks of sobriety, consulting a healthcare provider is important.
             </p>
           </section>
 
@@ -187,7 +187,7 @@ export default function HaltCheckinGuidePage() {
               The power of HALT is in its simplicity. Here is how to use it effectively:
             </p>
             <ul>
-              <li><strong>Schedule regular check-ins:</strong> Do not wait for a craving to use HALT. Check in with yourself at set times &mdash; morning, midday, and evening &mdash; to catch vulnerability states before they escalate.</li>
+              <li><strong>Schedule regular check-ins:</strong> Do not wait for a craving to use HALT. Check in with yourself at set times, morning, midday, and evening, to catch vulnerability states before they escalate.</li>
               <li><strong>Use it reactively when needed:</strong> When a craving, urge, or sudden mood shift occurs, immediately pause and run through the four letters. Am I Hungry? Angry? Lonely? Tired?</li>
               <li><strong>Address the need, not the craving:</strong> If you identify a HALT state, address that specific need directly. Eat something. Call someone. Talk about what is bothering you. Take a nap or go to bed early.</li>
               <li><strong>Notice patterns:</strong> Over time, you may notice that certain HALT states are more common triggers for you personally. This awareness helps you build targeted prevention strategies.</li>

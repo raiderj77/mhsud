@@ -38,17 +38,17 @@ const FAQ_DATA = [
   {
     question: "Can triggers go away over time?",
     answer:
-      "Triggers can weaken through extinction \u2014 repeated exposure without the substance response gradually reduces their power. However, some triggers, particularly strong emotional states and environmental cues, can re-emerge unexpectedly even years into recovery. This is why ongoing awareness and coping strategies remain important throughout long-term recovery.",
+      "Triggers can weaken through extinction, repeated exposure without the substance response gradually reduces their power. However, some triggers, particularly strong emotional states and environmental cues, can re-emerge unexpectedly even years into recovery. This is why ongoing awareness and coping strategies remain important throughout long-term recovery.",
   },
   {
     question: "How is a trigger different from a craving?",
     answer:
-      "A trigger is the stimulus \u2014 the person, place, emotion, or situation that activates the desire to use. A craving is the response \u2014 the physical and psychological urge that follows. Trigger identification focuses on recognizing what sets off this chain reaction so you can intervene before cravings fully develop or escalate to substance use.",
+      "A trigger is the stimulus, the person, place, emotion, or situation that activates the desire to use. A craving is the response, the physical and psychological urge that follows. Trigger identification focuses on recognizing what sets off this chain reaction so you can intervene before cravings fully develop or escalate to substance use.",
   },
   {
     question: "Should I avoid all my triggers?",
     answer:
-      "Avoidance is appropriate for some triggers (keeping substances out of your home, avoiding certain people), but it is not possible or healthy to avoid all triggers indefinitely. Effective recovery involves both avoidance of high-risk situations when possible and developing coping skills for triggers you cannot avoid \u2014 like stress, negative emotions, or social situations.",
+      "Avoidance is appropriate for some triggers (keeping substances out of your home, avoiding certain people), but it is not possible or healthy to avoid all triggers indefinitely. Effective recovery involves both avoidance of high-risk situations when possible and developing coping skills for triggers you cannot avoid, like stress, negative emotions, or social situations.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function TriggerIdentificationGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            A trigger is anything that activates the urge to use a substance &mdash; a person, place, emotion, time of day, or sensory cue connected to past use. Triggers are deeply personal and often operate below conscious awareness. Learning to identify your specific triggers is one of the most practical skills in recovery, because you cannot manage what you have not named.
+            A trigger is anything that activates the urge to use a substance, a person, place, emotion, time of day, or sensory cue connected to past use. Triggers are deeply personal and often operate below conscious awareness. Learning to identify your specific triggers is one of the most practical skills in recovery, because you cannot manage what you have not named.
           </p>
         </header>
 
@@ -78,9 +78,9 @@ export default function TriggerIdentificationGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -134,7 +134,7 @@ export default function TriggerIdentificationGuidePage() {
               The <Link href="/trigger-identification-worksheet" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools trigger identification worksheet</Link> guides you through a structured process of naming your triggers across all four categories, rating their intensity, and planning specific coping responses for each one. It is free, private, and runs entirely in your browser.
             </p>
             <p>
-              The value of writing triggers down (rather than just thinking about them) is supported by research on implementation intentions &mdash; specific &quot;if-then&quot; plans are significantly more effective than general intentions. The worksheet helps you create these: &quot;If I encounter [trigger], then I will [specific coping response].&quot;
+              The value of writing triggers down (rather than just thinking about them) is supported by research on implementation intentions, specific &quot;if-then&quot; plans are significantly more effective than general intentions. The worksheet helps you create these: &quot;If I encounter [trigger], then I will [specific coping response].&quot;
             </p>
             <p>
               Once you have mapped your triggers, you can incorporate them into a <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan</Link> for a comprehensive safety net.

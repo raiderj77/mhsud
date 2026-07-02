@@ -129,7 +129,7 @@ export function HealthTimelineClient({ faqData }: Props) {
     }
     if (!timeline) return;
     const passed = timeline.milestones.filter((m) => daysSober >= m.days).length;
-    const summary = `Health Recovery Timeline (${timeline.label})\n${Math.round(daysSober)} days \u2014 ${passed} of ${timeline.milestones.length} milestones reached\n\nSee yours: ${url}`;
+    const summary = `Health Recovery Timeline (${timeline.label})\n${Math.round(daysSober)} days, ${passed} of ${timeline.milestones.length} milestones reached\n\nSee yours: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Recovery Timeline", text: summary }); return; } catch { /* cancelled */ }
     }
@@ -178,7 +178,7 @@ export function HealthTimelineClient({ faqData }: Props) {
           <div>
             <p className="text-sm font-semibold text-crisis-700 dark:text-crisis-400 mb-1">Important Medical Warning</p>
             <p className="text-xs text-crisis-600 dark:text-crisis-400 leading-relaxed">
-              This timeline shows general health improvements based on medical research. <strong>Individual experiences vary.</strong> Withdrawal from certain substances — especially <strong>alcohol and benzodiazepines</strong> — can be medically dangerous and potentially fatal. <strong>Always consult a healthcare provider before stopping any substance.</strong> If you need help finding treatment, call SAMHSA at <strong>1-800-662-4357</strong> (free, 24/7).
+              This timeline shows general health improvements based on medical research. <strong>Individual experiences vary.</strong> Withdrawal from certain substances, especially <strong>alcohol and benzodiazepines</strong>, can be medically dangerous and potentially fatal. <strong>Always consult a healthcare provider before stopping any substance.</strong> If you need help finding treatment, call SAMHSA at <strong>1-800-662-4357</strong> (free, 24/7).
             </p>
           </div>
         </div>
@@ -235,7 +235,7 @@ export function HealthTimelineClient({ faqData }: Props) {
           <div className="card overflow-hidden mb-6">
             <div className="bg-gradient-to-br from-sage-50 to-sage-100 dark:from-sage-950/30 dark:to-sage-900/20 p-6 text-center">
               <p className="text-xs font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-2">
-                {timeline.label} — Recovery Progress
+                {timeline.label}, Recovery Progress
               </p>
               <p className="font-serif text-5xl font-bold text-sage-700 dark:text-sage-400 leading-none mb-1">
                 {Math.round(daysSober).toLocaleString()}
@@ -260,7 +260,7 @@ export function HealthTimelineClient({ faqData }: Props) {
 
                 return (
                   <div key={i}>
-                    {/* "You are here" marker — before this milestone */}
+                    {/* "You are here" marker, before this milestone */}
                     {isYouAreHere && (
                       <div ref={youAreHereRef} className="relative flex items-center gap-4 py-3 ml-[-4px]">
                         <div className="relative z-10 w-7 h-7 rounded-full bg-warm-500 border-4 border-warm-200 dark:border-warm-800 flex items-center justify-center animate-pulse">
@@ -268,7 +268,7 @@ export function HealthTimelineClient({ faqData }: Props) {
                         </div>
                         <div className="bg-warm-50 dark:bg-warm-950/30 border border-warm-300 dark:border-warm-800 rounded-xl px-4 py-2">
                           <p className="text-sm font-bold text-warm-700 dark:text-warm-400">
-                            You are here — {formatCountdown(m.days - daysSober)} until next milestone
+                            You are here, {formatCountdown(m.days - daysSober)} until next milestone
                           </p>
                         </div>
                       </div>
@@ -326,7 +326,7 @@ export function HealthTimelineClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>Health Recovery Timeline ({timeline.label}) from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>Health Recovery Timeline ({timeline.label}) from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>Based on general medical research. Individual experiences vary. Not medical advice.</p>
             </div>
           </div>
@@ -382,8 +382,8 @@ export function HealthTimelineClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -424,7 +424,7 @@ export function HealthTimelineClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Important Limitations</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  These timelines are based on averages from published medical research and represent general patterns. Your experience may differ based on your age, duration of use, overall health, genetics, and other factors. Some effects of long-term heavy substance use may not be fully reversible. This tool is not a substitute for medical care — if you are in early recovery or considering stopping, <strong>please work with a healthcare provider</strong> who can monitor your health and manage any withdrawal safely.
+                  These timelines are based on averages from published medical research and represent general patterns. Your experience may differ based on your age, duration of use, overall health, genetics, and other factors. Some effects of long-term heavy substance use may not be fully reversible. This tool is not a substitute for medical care, if you are in early recovery or considering stopping, <strong>please work with a healthcare provider</strong> who can monitor your health and manage any withdrawal safely.
                 </p>
               </div>
               <ToolReviewerBio />

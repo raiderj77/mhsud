@@ -41,12 +41,12 @@ const FAQ_DATA = [
   {
     question: "What does an elevated loneliness score mean?",
     answer:
-      "An elevated score on the UCLA Loneliness Scale means you are experiencing a higher-than-typical level of subjective loneliness. Loneliness is the feeling that your social connections are not meeting your needs — it is about perceived quality of relationships, not just quantity. You can feel lonely in a crowd or while in a relationship. Research has linked chronic loneliness to increased risk of depression, anxiety, cardiovascular disease, cognitive decline, and weakened immune function. An elevated score does not mean something is wrong with you, but it may be worth exploring what is contributing to these feelings, whether through self-reflection, social changes, or speaking with a therapist.",
+      "An elevated score on the UCLA Loneliness Scale means you are experiencing a higher-than-typical level of subjective loneliness. Loneliness is the feeling that your social connections are not meeting your needs, it is about perceived quality of relationships, not just quantity. You can feel lonely in a crowd or while in a relationship. Research has linked chronic loneliness to increased risk of depression, anxiety, cardiovascular disease, cognitive decline, and weakened immune function. An elevated score does not mean something is wrong with you, but it may be worth exploring what is contributing to these feelings, whether through self-reflection, social changes, or speaking with a therapist.",
   },
   {
     question: "Is loneliness the same as being alone?",
     answer:
-      "No. Loneliness and being alone (solitude) are different things. Solitude is an objective state — you are physically by yourself. Loneliness is a subjective emotional experience — the feeling that your social needs are not being met. Some people enjoy solitude and do not feel lonely. Others feel deeply lonely despite being surrounded by people. The UCLA Loneliness Scale measures subjective loneliness, not how much time you spend alone. Research consistently shows that the quality of social connections matters more than the quantity.",
+      "No. Loneliness and being alone (solitude) are different things. Solitude is an objective state, you are physically by yourself. Loneliness is a subjective emotional experience, the feeling that your social needs are not being met. Some people enjoy solitude and do not feel lonely. Others feel deeply lonely despite being surrounded by people. The UCLA Loneliness Scale measures subjective loneliness, not how much time you spend alone. Research consistently shows that the quality of social connections matters more than the quantity.",
   },
   {
     question: "How is loneliness related to depression and anxiety?",
@@ -109,7 +109,7 @@ export default function UCLAPage() {
         <AnswerBlock
           what="The UCLA Loneliness Scale, a 20-item validated measure of subjective loneliness and social isolation."
           who="Anyone who feels disconnected or isolated and wants to measure their loneliness using a validated research tool."
-          bottomLine="Loneliness is a health risk factor as serious as smoking — recognizing it is the first step to addressing it. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Loneliness is a health risk factor as serious as smoking, recognizing it is the first step to addressing it. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/anxiety-coping-strategies",
   title: "Anxiety Coping Strategies: 7 Evidence-Based Techniques",
   description:
-    "Covers 7 clinically supported techniques: CBT, mindfulness, breathing, and grounding — with research citations. Find which approach fits your symptoms.",
+    "Covers 7 clinically supported techniques: CBT, mindfulness, breathing, and grounding, with research citations. Find which approach fits your symptoms.",
   keywords: [
     "anxiety coping strategies", "anxiety management techniques", "clinical anxiety treatment",
     "evidence-based anxiety relief", "cognitive behavioral therapy for anxiety",
@@ -46,12 +46,12 @@ const FAQ_DATA = [
   {
     question: "What if coping strategies make my anxiety worse?",
     answer:
-      "Some individuals with severe anxiety may experience initial discomfort when confronting anxious thoughts. This is sometimes called the anxiety paradox — trying to control anxiety can temporarily increase it. If strategies consistently worsen your symptoms, professional guidance may be needed. A licensed therapist can help implement techniques at an appropriate pace and address underlying contributing factors.",
+      "Some individuals with severe anxiety may experience initial discomfort when confronting anxious thoughts. This is sometimes called the anxiety paradox, trying to control anxiety can temporarily increase it. If strategies consistently worsen your symptoms, professional guidance may be needed. A licensed therapist can help implement techniques at an appropriate pace and address underlying contributing factors.",
   },
   {
     question: "Are there specific strategies for panic attacks?",
     answer:
-      "Yes. The 5-4-3-2-1 grounding technique, diaphragmatic breathing, and temperature changes (like holding ice) can interrupt panic cycles. Research shows interoceptive exposure — safely recreating physical sensations of panic — can reduce panic attack frequency by up to 80% when professionally guided. For recurrent panic attacks, CBT specifically for panic disorder is the gold standard treatment.",
+      "Yes. The 5-4-3-2-1 grounding technique, diaphragmatic breathing, and temperature changes (like holding ice) can interrupt panic cycles. Research shows interoceptive exposure, safely recreating physical sensations of panic, can reduce panic attack frequency by up to 80% when professionally guided. For recurrent panic attacks, CBT specifically for panic disorder is the gold standard treatment.",
   },
   {
     question: "How do I know when to seek professional help for anxiety?",
@@ -296,7 +296,7 @@ export default function AnxietyCopingStrategiesPage() {
           <h3>Acceptance and Commitment Therapy (ACT) Techniques</h3>
 
           <p>
-            ACT emphasizes psychological flexibility—the ability to stay present with difficult emotions 
+            ACT emphasizes psychological flexibility, the ability to stay present with difficult emotions 
             while pursuing valued actions. A meta-analysis in 
             <a href="https://pubmed.ncbi.nlm.nih.gov/32014019/" target="_blank" rel="noopener noreferrer">
               <em> Journal of Contextual Behavioral Science</em>
@@ -547,7 +547,7 @@ export default function AnxietyCopingStrategiesPage() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-                  MindCheck Tools &mdash; Your Friendly Developer LLC
+                  MindCheck Tools, Your Friendly Developer LLC
                 </h3>
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
                   Publisher and maintainer of free, evidence-based mental health screening tools for adults.

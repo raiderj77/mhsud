@@ -16,7 +16,7 @@ const FAQ_DATA = [
   {
     question: "What should I say to my doctor about depression?",
     answer:
-      "You can start with something like: 'I have been feeling down and low-energy for the past few weeks, and it is affecting my ability to function at work and at home. I took a PHQ-9 online and scored [X]. I would like to talk about what that means and what I can do.' Your doctor will ask follow-up questions from there — you do not need to have a perfect explanation prepared.",
+      "You can start with something like: 'I have been feeling down and low-energy for the past few weeks, and it is affecting my ability to function at work and at home. I took a PHQ-9 online and scored [X]. I would like to talk about what that means and what I can do.' Your doctor will ask follow-up questions from there, you do not need to have a perfect explanation prepared.",
   },
   {
     question: "How do I bring up anxiety with my doctor?",
@@ -26,7 +26,7 @@ const FAQ_DATA = [
   {
     question: "Can I share my screening results with my doctor?",
     answer:
-      "Yes — many doctors already use screening tools like the PHQ-9 and GAD-7 in their practice. Bringing your self-check results gives them a concrete starting point. You can download a reflection summary from any tool on this site to bring to your appointment.",
+      "Yes, many doctors already use screening tools like the PHQ-9 and GAD-7 in their practice. Bringing your self-check results gives them a concrete starting point. You can download a reflection summary from any tool on this site to bring to your appointment.",
   },
   {
     question: "What if my doctor dismisses my mental health concerns?",
@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "Do I need a referral to see a therapist?",
     answer:
-      "In most US states, you do not need a referral to see a therapist — you can contact a therapist directly. Some insurance plans may require a referral for coverage purposes, so check with your provider. Psychology Today, the SAMHSA treatment locator (findtreatment.gov), and your insurance directory are good places to search.",
+      "In most US states, you do not need a referral to see a therapist, you can contact a therapist directly. Some insurance plans may require a referral for coverage purposes, so check with your provider. Psychology Today, the SAMHSA treatment locator (findtreatment.gov), and your insurance directory are good places to search.",
   },
   {
     question: "What happens at a first therapy appointment?",
@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "Is what I tell my doctor about mental health confidential?",
     answer:
-      "Yes — doctor-patient confidentiality protects what you share in a medical appointment. There are narrow exceptions: if there is an imminent risk to your life or someone else's, or in cases of suspected child or elder abuse. Outside those situations, your doctor cannot share your mental health information without your written consent.",
+      "Yes, doctor-patient confidentiality protects what you share in a medical appointment. There are narrow exceptions: if there is an imminent risk to your life or someone else's, or in cases of suspected child or elder abuse. Outside those situations, your doctor cannot share your mental health information without your written consent.",
   },
 ];
 
@@ -60,7 +60,7 @@ const HOW_TO_STEPS = [
   "Download your reflection summary from the tool page to bring to the appointment",
   "Write down your main symptoms, how long they have lasted, and how they affect your daily life",
   "List any current medications, supplements, and recent life changes",
-  "Prepare one or two sentences to start the conversation — see the scripts below",
+  "Prepare one or two sentences to start the conversation, see the scripts below",
 ];
 
 export const metadata: Metadata = createMetadata({
@@ -141,7 +141,7 @@ export default function DoctorGuidePage() {
         <div className="prose-mh space-y-10">
           {/* Intro */}
           <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
-            If you have taken a mental health screening and are wondering what to do next, you are already further along than most people get. The hardest part is often not the appointment itself — it is deciding to bring it up. This page gives you the words, the preparation steps, and the context so you can walk in feeling ready.
+            If you have taken a mental health screening and are wondering what to do next, you are already further along than most people get. The hardest part is often not the appointment itself, it is deciding to bring it up. This page gives you the words, the preparation steps, and the context so you can walk in feeling ready.
           </p>
 
           {/* Section 1: Before Your Appointment */}
@@ -150,7 +150,7 @@ export default function DoctorGuidePage() {
               Before Your Appointment: How to Prepare
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-              Preparation reduces anxiety about the conversation and helps your provider give you better care. You do not need to have everything figured out — the goal is to give your doctor enough context to help you.
+              Preparation reduces anxiety about the conversation and helps your provider give you better care. You do not need to have everything figured out, the goal is to give your doctor enough context to help you.
             </p>
 
             <div className="card p-5 sm:p-6 mb-4">
@@ -183,13 +183,13 @@ export default function DoctorGuidePage() {
               Exact Language You Can Use With Your Doctor
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-              You do not need to have it all figured out. Here are words that work — feel free to use them exactly as written, or adapt them to your situation.
+              You do not need to have it all figured out. Here are words that work, feel free to use them exactly as written, or adapt them to your situation.
             </p>
 
             <div className="space-y-4">
               <blockquote className="border-l-4 border-sage-300 dark:border-sage-700 pl-4 py-2 bg-sage-50/30 dark:bg-sage-950/10 rounded-r-lg">
                 <p className="text-[15px] text-neutral-700 dark:text-neutral-200 italic leading-relaxed">
-                  &ldquo;I have been feeling down and having trouble with sleep and energy for about three weeks. It is affecting my work and relationships. I took a PHQ-9 online and scored [X] — I would like to discuss what that means for me.&rdquo;
+                  &ldquo;I have been feeling down and having trouble with sleep and energy for about three weeks. It is affecting my work and relationships. I took a PHQ-9 online and scored [X], I would like to discuss what that means for me.&rdquo;
                 </p>
               </blockquote>
 
@@ -231,13 +231,13 @@ export default function DoctorGuidePage() {
               What to Expect at the Appointment
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              Your doctor may ask follow-up questions about your symptoms, how long they have lasted, and how they affect your daily life. This is normal and part of understanding your situation — it does not mean they doubt you.
+              Your doctor may ask follow-up questions about your symptoms, how long they have lasted, and how they affect your daily life. This is normal and part of understanding your situation, it does not mean they doubt you.
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              They may administer a formal screening tool during the visit. If you already took the PHQ-9 or GAD-7, let them know — they may still want you to complete it in their office for documentation purposes, and that is fine.
+              They may administer a formal screening tool during the visit. If you already took the PHQ-9 or GAD-7, let them know, they may still want you to complete it in their office for documentation purposes, and that is fine.
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              Your doctor may refer you to a specialist — a psychiatrist, psychologist, or therapist. This is a positive outcome, not a negative one. It means they are connecting you with someone who has specific expertise in the area you need support with.
+              Your doctor may refer you to a specialist, a psychiatrist, psychologist, or therapist. This is a positive outcome, not a negative one. It means they are connecting you with someone who has specific expertise in the area you need support with.
             </p>
             <div className="card p-4 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
               <p className="text-sm text-sage-700 dark:text-sage-400 leading-relaxed">
@@ -252,13 +252,13 @@ export default function DoctorGuidePage() {
               If You Are Nervous or Have Had Bad Experiences
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              It is completely normal to feel anxious about discussing mental health — especially if you have had negative experiences with healthcare in the past. Here are some things that may help:
+              It is completely normal to feel anxious about discussing mental health, especially if you have had negative experiences with healthcare in the past. Here are some things that may help:
             </p>
             <ul className="space-y-2 mb-4">
               {[
-                "It is okay to say: \"I have had a hard time talking about this before\" — this tells your provider to be especially thoughtful.",
+                "It is okay to say: \"I have had a hard time talking about this before\", this tells your provider to be especially thoughtful.",
                 "You can request a longer appointment specifically for mental health concerns. Many offices offer 30- or 45-minute appointments.",
-                "You can bring someone with you for support — a partner, friend, or family member — if that would make you feel more comfortable.",
+                "You can bring someone with you for support, a partner, friend, or family member, if that would make you feel more comfortable.",
                 "Telehealth appointments are an option if in-person visits feel too overwhelming. Many providers now offer video visits for mental health.",
                 "If your provider is not receptive, that reflects on them, not on you. You have the right to seek a second opinion or request a different provider.",
               ].map((item, i) => (
@@ -276,13 +276,13 @@ export default function DoctorGuidePage() {
               Talking to a Therapist for the First Time
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              Seeing a therapist is different from a doctor visit. While a primary care doctor can prescribe medication and evaluate your overall health, a therapist provides ongoing support through conversation-based treatment (psychotherapy). You do not need a referral in most states — you can contact a therapist directly.
+              Seeing a therapist is different from a doctor visit. While a primary care doctor can prescribe medication and evaluate your overall health, a therapist provides ongoing support through conversation-based treatment (psychotherapy). You do not need a referral in most states, you can contact a therapist directly.
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
               The first session is typically an intake. Your therapist will ask about what brought you in, your background, and what you hope to get out of therapy. You do not need to share your entire life story in the first meeting. Many people start with: &ldquo;I have been struggling with [symptom] and I want to learn how to manage it better.&rdquo;
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              It is okay if the first therapist is not the right fit. Research consistently shows that the therapeutic relationship — feeling safe, understood, and respected — is the most important factor in therapy outcomes. If something feels off after 2–3 sessions, it is completely appropriate to try someone else.
+              It is okay if the first therapist is not the right fit. Research consistently shows that the therapeutic relationship, feeling safe, understood, and respected, is the most important factor in therapy outcomes. If something feels off after 2–3 sessions, it is completely appropriate to try someone else.
             </p>
             <div className="card p-4 bg-sand-50 dark:bg-night-700">
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
@@ -299,7 +299,7 @@ export default function DoctorGuidePage() {
               After the Appointment: Tracking Your Progress
             </h2>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-              One appointment is a beginning, not a conclusion. Tracking how you feel over time helps you — and your provider — understand what is working and what might need to change.
+              One appointment is a beginning, not a conclusion. Tracking how you feel over time helps you, and your provider, understand what is working and what might need to change.
             </p>
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
               Retaking screening tools periodically is one of the simplest ways to monitor progress. The{" "}
@@ -364,7 +364,7 @@ export default function DoctorGuidePage() {
             <div className="space-y-2.5">
               {[
                 { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -379,7 +379,7 @@ export default function DoctorGuidePage() {
         {/* Footer */}
         <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 mt-10 text-center">
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-            This guide is for educational purposes only. It is not medical advice or a substitute for professional care. The suggestions on this page are intended to help you prepare for a conversation with a healthcare provider — they are not clinical recommendations.
+            This guide is for educational purposes only. It is not medical advice or a substitute for professional care. The suggestions on this page are intended to help you prepare for a conversation with a healthcare provider, they are not clinical recommendations.
           </p>
           <ToolReviewerBio />
         </footer>

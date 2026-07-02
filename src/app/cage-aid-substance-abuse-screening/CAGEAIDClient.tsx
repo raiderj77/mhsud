@@ -29,7 +29,7 @@ const OPTIONS = [
 
 const RANGES = [
   { min: 0, max: 1, level: "Negative Screen", key: "negative", description: "Your responses do not indicate a clinically significant level of substance use concerns at this time.", suggestion: "Continue to be mindful of your relationship with alcohol and drugs. If your situation changes, consider checking in again." },
-  { min: 2, max: 4, level: "Positive Screen", key: "positive", description: "Your responses suggest that further evaluation for substance use concerns may be beneficial. A positive screen does not mean you have a substance use disorder — it means a deeper conversation with a healthcare professional is recommended.", suggestion: "Consider speaking with a healthcare provider or substance use counselor about your results. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7." },
+  { min: 2, max: 4, level: "Positive Screen", key: "positive", description: "Your responses suggest that further evaluation for substance use concerns may be beneficial. A positive screen does not mean you have a substance use disorder, it means a deeper conversation with a healthcare professional is recommended.", suggestion: "Consider speaking with a healthcare provider or substance use counselor about your results. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7." },
 ];
 
 function getRange(score: number) {
@@ -107,7 +107,7 @@ export function CAGEAIDClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "CAGE-AID Substance Use Self-Check \u2014 Free & Private",
+        title: "CAGE-AID Substance Use Self-Check, Free & Private",
         text: "Take a free, private CAGE-AID substance use self-check. Screens for both alcohol and drug use. Your answers never leave your browser.",
         url,
       };
@@ -120,7 +120,7 @@ export function CAGEAIDClient({ faqData }: Props) {
       return;
     }
 
-    const summary = `CAGE-AID Self-Check Results\nScore: ${totalScore}/4 \u2014 ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `CAGE-AID Self-Check Results\nScore: ${totalScore}/4, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My CAGE-AID Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -265,16 +265,16 @@ export function CAGEAIDClient({ faqData }: Props) {
                 <span className="text-xl">{"\u26A0\uFE0F"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
-                    Positive screen — further evaluation recommended
+                    Positive screen, further evaluation recommended
                   </h3>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed mb-3">
                     Your responses suggest that further evaluation for substance use concerns may be beneficial. A positive screen does not mean you have a substance use disorder, but it does suggest a conversation with a qualified healthcare professional could be helpful.
                   </p>
                   <div className="bg-warm-100/50 dark:bg-warm-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-warm-700 dark:text-warm-400 mb-1">Resources:</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
                     <p className="text-sm text-warm-700 dark:text-warm-400"><strong>International:</strong> Visit <strong>findahelpline.com</strong> for your country</p>
                   </div>
                 </div>
@@ -289,14 +289,14 @@ export function CAGEAIDClient({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your CAGE-AID Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 4 — {range.level}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 4, {range.level}</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 4) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Negative</span>
-                    <span>4 — Positive</span>
+                    <span>0, Negative</span>
+                    <span>4, Positive</span>
                   </div>
                 </div>
               </div>
@@ -339,7 +339,7 @@ export function CAGEAIDClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>CAGE-AID Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>CAGE-AID Self-Check from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -450,7 +450,7 @@ export function CAGEAIDClient({ faqData }: Props) {
                   );
                 })}
                 <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed pt-2">
-                  The cutoff score of 2 is based on published research. It should not be treated as a diagnostic threshold — it is a flag for further evaluation.
+                  The cutoff score of 2 is based on published research. It should not be treated as a diagnostic threshold, it is a flag for further evaluation.
                 </p>
               </div>
             )}
@@ -464,8 +464,8 @@ export function CAGEAIDClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -508,7 +508,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Why Combined Screening Matters</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Research shows that polysubstance use — using more than one substance — is common and often underdetected. According to SAMHSA, many individuals who seek help for alcohol use also report drug use, and vice versa. A combined screening tool like the CAGE-AID helps ensure that substance use concerns are not overlooked simply because only one category was asked about. For a more detailed assessment of specific substances, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT</Link> (alcohol) and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">WHO-ASSIST</Link> (drugs) provide more granular evaluation.
+                  Research shows that polysubstance use, using more than one substance, is common and often underdetected. According to SAMHSA, many individuals who seek help for alcohol use also report drug use, and vice versa. A combined screening tool like the CAGE-AID helps ensure that substance use concerns are not overlooked simply because only one category was asked about. For a more detailed assessment of specific substances, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">AUDIT</Link> (alcohol) and <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">WHO-ASSIST</Link> (drugs) provide more granular evaluation.
                 </p>
               </div>
               <div>
@@ -557,7 +557,7 @@ export function CAGEAIDClient({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Brown, R. L., &amp; Rounds, L. A. (1995). Conjoint screening questionnaires for alcohol and other drug abuse: criterion validity in a primary care practice.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/7726686/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — CAGE-AID Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/7726686/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, CAGE-AID Validation</a>
                 </li>
                 <li>
                   SAMHSA National Helpline.{" "}

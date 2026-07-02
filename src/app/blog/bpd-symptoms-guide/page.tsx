@@ -25,8 +25,8 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   { question: "Is BPD curable?", answer: "BPD is not typically described as curable, but it is very treatable. Research published in the American Journal of Psychiatry found that nearly 85% of people with BPD achieved remission within 10 years, meaning they no longer met diagnostic criteria. With evidence-based treatment like dialectical behavior therapy (DBT), many people see meaningful improvement within one to two years." },
-  { question: "What causes borderline personality disorder?", answer: "There is no single cause. BPD develops from a combination of genetic vulnerability, brain differences in emotion regulation areas, and environmental factors \u2014 particularly invalidating or traumatic childhood experiences. Not everyone with childhood adversity develops BPD, and not everyone with BPD has trauma history, but biological sensitivity combined with environmental stress is the most common pathway." },
-  { question: "How is BPD different from bipolar disorder?", answer: "BPD mood shifts are typically rapid \u2014 lasting hours \u2014 and are usually triggered by interpersonal events like perceived rejection. Bipolar mood episodes last days to months and often occur without a clear external trigger. Bipolar mania involves elevated energy and reduced sleep need, which are not characteristic of BPD. The two conditions can co-occur, making professional assessment important." },
+  { question: "What causes borderline personality disorder?", answer: "There is no single cause. BPD develops from a combination of genetic vulnerability, brain differences in emotion regulation areas, and environmental factors, particularly invalidating or traumatic childhood experiences. Not everyone with childhood adversity develops BPD, and not everyone with BPD has trauma history, but biological sensitivity combined with environmental stress is the most common pathway." },
+  { question: "How is BPD different from bipolar disorder?", answer: "BPD mood shifts are typically rapid, lasting hours, and are usually triggered by interpersonal events like perceived rejection. Bipolar mood episodes last days to months and often occur without a clear external trigger. Bipolar mania involves elevated energy and reduced sleep need, which are not characteristic of BPD. The two conditions can co-occur, making professional assessment important." },
   { question: "Can men have borderline personality disorder?", answer: "Yes. BPD affects all genders. Approximately 75% of those diagnosed are women, but researchers believe this reflects diagnostic bias rather than actual prevalence. Men with BPD are more likely to be misidentified with antisocial personality disorder or substance use disorders. Community-based studies have found roughly equal rates of BPD across genders." },
 ];
 
@@ -68,7 +68,7 @@ export default function BpdSymptomsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Borderline personality disorder (BPD) is one of the most misunderstood and stigmatized conditions in mental health. People with BPD are often mislabeled as &quot;manipulative&quot; or &quot;attention-seeking&quot; &mdash; language that causes real harm and discourages people from seeking help. The reality is that BPD is a treatable condition rooted in emotional sensitivity, and recovery is not only possible but common. This guide explains what BPD actually is, how it is identified, and what effective treatment looks like.
+            Borderline personality disorder (BPD) is one of the most misunderstood and stigmatized conditions in mental health. People with BPD are often mislabeled as &quot;manipulative&quot; or &quot;attention-seeking&quot;, language that causes real harm and discourages people from seeking help. The reality is that BPD is a treatable condition rooted in emotional sensitivity, and recovery is not only possible but common. This guide explains what BPD actually is, how it is identified, and what effective treatment looks like.
           </p>
           <div className="mt-6">
             <Link href="/msi-bpd-screening" className="btn-primary text-sm">
@@ -87,14 +87,14 @@ export default function BpdSymptomsGuidePage() {
               BPD typically emerges in adolescence or early adulthood. About 75% of those who receive a BPD diagnosis are women, although growing evidence suggests this gender gap reflects referral and diagnostic bias rather than actual differences in prevalence. Men with BPD symptoms are more likely to receive alternative diagnoses such as antisocial personality disorder or substance use disorders.
             </p>
             <p>
-              The name &quot;borderline&quot; is a historical artifact &mdash; it originally referred to the perceived boundary between neurosis and psychosis. The term is widely considered outdated and misleading, but it persists in clinical use. What matters more than the name is understanding what the condition actually involves and how it can be addressed.
+              The name &quot;borderline&quot; is a historical artifact, it originally referred to the perceived boundary between neurosis and psychosis. The term is widely considered outdated and misleading, but it persists in clinical use. What matters more than the name is understanding what the condition actually involves and how it can be addressed.
             </p>
           </section>
 
           <section>
             <h2>How is BPD identified? The DSM-5 criteria</h2>
             <p>
-              The Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) lists nine criteria for BPD. A person must meet at least five of the nine to receive a clinical identification. Only a qualified mental health professional can make this determination &mdash; no self-screening tool can replace a comprehensive evaluation.
+              The Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) lists nine criteria for BPD. A person must meet at least five of the nine to receive a clinical identification. Only a qualified mental health professional can make this determination, no self-screening tool can replace a comprehensive evaluation.
             </p>
             <p>
               The nine DSM-5 criteria are:
@@ -130,10 +130,10 @@ export default function BpdSymptomsGuidePage() {
               BPD and bipolar disorder are frequently confused because both involve emotional instability, but the patterns are quite different. Understanding these differences matters because the conditions require different approaches.
             </p>
             <p>
-              In BPD, emotional shifts are typically <strong>rapid</strong> &mdash; changing within hours, sometimes within minutes &mdash; and are usually <strong>triggered by interpersonal events</strong> such as perceived rejection, criticism, or abandonment. The emotional response may be intense, but it is often clearly connected to a relational event.
+              In BPD, emotional shifts are typically <strong>rapid</strong>, changing within hours, sometimes within minutes, and are usually <strong>triggered by interpersonal events</strong> such as perceived rejection, criticism, or abandonment. The emotional response may be intense, but it is often clearly connected to a relational event.
             </p>
             <p>
-              In bipolar disorder, mood episodes (mania or depression) tend to last <strong>days, weeks, or even months</strong>. Manic episodes involve elevated energy, reduced need for sleep, grandiosity, and increased goal-directed activity &mdash; symptoms that are not characteristic of BPD. Bipolar episodes often occur without a clear external trigger.
+              In bipolar disorder, mood episodes (mania or depression) tend to last <strong>days, weeks, or even months</strong>. Manic episodes involve elevated energy, reduced need for sleep, grandiosity, and increased goal-directed activity, symptoms that are not characteristic of BPD. Bipolar episodes often occur without a clear external trigger.
             </p>
             <p>
               The two conditions can co-occur, which complicates identification. If you are unsure which pattern best describes your experience, a qualified mental health professional can help distinguish between them. Our <Link href="/msi-bpd-screening" className="text-sage-600 dark:text-sage-400 underline">MSI-BPD Screening</Link> can help you determine whether further evaluation for BPD may be warranted, while our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> screens specifically for depressive symptoms.
@@ -149,7 +149,7 @@ export default function BpdSymptomsGuidePage() {
               A score of 7 or higher on the MSI-BPD suggests that further professional evaluation may be appropriate. The tool has demonstrated good sensitivity (correctly identifying people who have BPD) and specificity (correctly ruling out those who do not).
             </p>
             <p>
-              It is critical to understand that the MSI-BPD is a <strong>screening tool, not a diagnostic instrument</strong>. A positive screen does not mean you have BPD &mdash; it means the pattern of your responses warrants a closer look by a qualified professional. You can take the <Link href="/msi-bpd-screening" className="text-sage-600 dark:text-sage-400 underline">MSI-BPD screening</Link> on our site. It runs entirely in your browser, and your answers are never stored or transmitted.
+              It is critical to understand that the MSI-BPD is a <strong>screening tool, not a diagnostic instrument</strong>. A positive screen does not mean you have BPD, it means the pattern of your responses warrants a closer look by a qualified professional. You can take the <Link href="/msi-bpd-screening" className="text-sage-600 dark:text-sage-400 underline">MSI-BPD screening</Link> on our site. It runs entirely in your browser, and your answers are never stored or transmitted.
             </p>
           </section>
 
@@ -158,10 +158,10 @@ export default function BpdSymptomsGuidePage() {
           <section>
             <h2>Understanding the stigma around BPD</h2>
             <p>
-              BPD carries more stigma than almost any other mental health condition &mdash; and that stigma comes not only from the general public but sometimes from mental health professionals themselves. People with BPD have historically been labeled &quot;difficult,&quot; &quot;manipulative,&quot; or &quot;untreatable.&quot; These characterizations are not only inaccurate but actively harmful, discouraging people from seeking help and reducing the quality of care they receive.
+              BPD carries more stigma than almost any other mental health condition, and that stigma comes not only from the general public but sometimes from mental health professionals themselves. People with BPD have historically been labeled &quot;difficult,&quot; &quot;manipulative,&quot; or &quot;untreatable.&quot; These characterizations are not only inaccurate but actively harmful, discouraging people from seeking help and reducing the quality of care they receive.
             </p>
             <p>
-              Research increasingly shows that BPD often develops in the context of <strong>invalidating environments</strong> &mdash; settings where a person&apos;s emotional responses were consistently dismissed, minimized, or punished during childhood. Childhood trauma, neglect, and emotional abuse are common (though not universal) in the histories of people with BPD. The condition reflects an interaction between biological sensitivity and environmental experience, not a character defect.
+              Research increasingly shows that BPD often develops in the context of <strong>invalidating environments</strong>, settings where a person&apos;s emotional responses were consistently dismissed, minimized, or punished during childhood. Childhood trauma, neglect, and emotional abuse are common (though not universal) in the histories of people with BPD. The condition reflects an interaction between biological sensitivity and environmental experience, not a character defect.
             </p>
             <p>
               Understanding this context is essential to reducing stigma. People with BPD are not choosing to be in pain. They developed patterns of coping with overwhelming emotions in environments that did not teach them healthier alternatives. With the right support and treatment, those patterns can change.
@@ -174,7 +174,7 @@ export default function BpdSymptomsGuidePage() {
               One of the most important facts about BPD is that <strong>treatment works</strong>. Dialectical behavior therapy (DBT), developed by psychologist Marsha Linehan at the University of Washington, is the gold standard treatment for BPD and has the strongest evidence base. DBT teaches four core skill modules: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.
             </p>
             <p>
-              DBT was specifically designed for people who experience emotions intensely &mdash; a hallmark of BPD. It balances acceptance (&quot;your emotions are valid&quot;) with change (&quot;you can learn new ways to respond to them&quot;). Research consistently shows that DBT reduces self-harm, suicidal behavior, emergency department visits, and hospitalization while improving overall functioning and quality of life.
+              DBT was specifically designed for people who experience emotions intensely, a hallmark of BPD. It balances acceptance (&quot;your emotions are valid&quot;) with change (&quot;you can learn new ways to respond to them&quot;). Research consistently shows that DBT reduces self-harm, suicidal behavior, emergency department visits, and hospitalization while improving overall functioning and quality of life.
             </p>
             <p>
               Other evidence-based treatments for BPD include mentalization-based therapy (MBT), transference-focused psychotherapy (TFP), and schema-focused therapy. Each takes a somewhat different approach, but all have demonstrated effectiveness in clinical trials. You can learn more about DBT skills in our <Link href="/blog/dbt-skills-beginners" className="text-sage-600 dark:text-sage-400 underline">DBT Skills for Beginners guide</Link>.
@@ -184,7 +184,7 @@ export default function BpdSymptomsGuidePage() {
           <section>
             <h2>Recovery is possible</h2>
             <p>
-              Perhaps the most important message about BPD is that <strong>recovery is not only possible but common</strong>. Longitudinal studies tracking people with BPD over 10 to 16 years have found that the majority achieve remission &mdash; meaning they no longer meet the diagnostic criteria. Research published in the <em>American Journal of Psychiatry</em> found remission rates of approximately 85% at 10-year follow-up.
+              Perhaps the most important message about BPD is that <strong>recovery is not only possible but common</strong>. Longitudinal studies tracking people with BPD over 10 to 16 years have found that the majority achieve remission, meaning they no longer meet the diagnostic criteria. Research published in the <em>American Journal of Psychiatry</em> found remission rates of approximately 85% at 10-year follow-up.
             </p>
             <p>
               Recovery does not necessarily mean that all emotional sensitivity disappears. Many people continue to experience intense emotions but develop the skills and self-awareness to manage them effectively. The pattern of crisis, instability, and impulsive behavior that defines BPD can and does change with time, support, and treatment.
@@ -232,7 +232,7 @@ export default function BpdSymptomsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

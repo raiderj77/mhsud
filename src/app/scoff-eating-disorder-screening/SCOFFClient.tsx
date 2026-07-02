@@ -29,7 +29,7 @@ const OPTIONS = [
 
 const RANGES = [
   { min: 0, max: 1, level: "Negative Screen", key: "negative", description: "Your responses do not suggest the presence of an eating disorder at this time. Scores of 0-1 are below the clinical screening threshold.", suggestion: "Continue to be mindful of your eating habits and relationship with food. If your situation changes or you develop concerns about eating, consider checking in again or speaking with a healthcare provider." },
-  { min: 2, max: 5, level: "Positive Screen", key: "positive", description: "Your responses suggest that further evaluation for a possible eating disorder may be beneficial. A positive screen does not mean you have an eating disorder \u2014 it means a conversation with a qualified healthcare professional is recommended.", suggestion: "Consider speaking with a healthcare provider or eating disorder specialist. The National Alliance for Eating Disorders Helpline (1-866-662-1235) and the SAMHSA helpline (1-800-662-4357) can help connect you with support." },
+  { min: 2, max: 5, level: "Positive Screen", key: "positive", description: "Your responses suggest that further evaluation for a possible eating disorder may be beneficial. A positive screen does not mean you have an eating disorder, it means a conversation with a qualified healthcare professional is recommended.", suggestion: "Consider speaking with a healthcare provider or eating disorder specialist. The National Alliance for Eating Disorders Helpline (1-866-662-1235) and the SAMHSA helpline (1-800-662-4357) can help connect you with support." },
 ];
 
 function getRange(score: number) {
@@ -106,7 +106,7 @@ export function SCOFFClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "SCOFF Eating Disorder Screening \u2014 Free & Private",
+        title: "SCOFF Eating Disorder Screening, Free & Private",
         text: "Take a free, private SCOFF eating disorder screening. 5 questions, 1 minute. Your answers never leave your browser.",
         url,
       };
@@ -119,7 +119,7 @@ export function SCOFFClient({ faqData }: Props) {
       return;
     }
 
-    const summary = `SCOFF Eating Disorder Screening Results\nScore: ${totalScore}/5 \u2014 ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `SCOFF Eating Disorder Screening Results\nScore: ${totalScore}/5, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My SCOFF Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -262,17 +262,17 @@ export function SCOFFClient({ faqData }: Props) {
                 <span className="text-xl">{"\u26A0\uFE0F"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
-                    Positive screen — further evaluation recommended
+                    Positive screen, further evaluation recommended
                   </h3>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed mb-3">
-                    Your responses suggest that further evaluation for a possible eating disorder may be beneficial. A positive screen does not mean you have an eating disorder — it means a deeper conversation with a qualified healthcare professional is recommended.
+                    Your responses suggest that further evaluation for a possible eating disorder may be beneficial. A positive screen does not mean you have an eating disorder, it means a deeper conversation with a qualified healthcare professional is recommended.
                   </p>
                   <div className="bg-warm-100/50 dark:bg-warm-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-warm-700 dark:text-warm-400 mb-1">Resources:</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>Eating Disorders:</strong> National Alliance for Eating Disorders — Call <strong>1-866-662-1235</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong> (free, 24/7)</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>Eating Disorders:</strong> National Alliance for Eating Disorders, Call <strong>1-866-662-1235</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, 24/7)</p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
                   </div>
                 </div>
               </div>
@@ -286,14 +286,14 @@ export function SCOFFClient({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your SCOFF Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 5 — {range.level}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 5, {range.level}</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 5) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Negative</span>
-                    <span>5 — Positive</span>
+                    <span>0, Negative</span>
+                    <span>5, Positive</span>
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export function SCOFFClient({ faqData }: Props) {
                 {/* Sensitivity/Specificity Note */}
                 <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-xl p-4">
                   <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
-                    <strong>About accuracy:</strong> The SCOFF has a sensitivity of approximately 84.6% and specificity of approximately 89.6% (Morgan et al., 1999). This means it correctly identifies most people with eating disorders, but a positive screen does not confirm an eating disorder — and a negative screen does not entirely rule one out. Professional evaluation is always recommended if you have concerns about your eating.
+                    <strong>About accuracy:</strong> The SCOFF has a sensitivity of approximately 84.6% and specificity of approximately 89.6% (Morgan et al., 1999). This means it correctly identifies most people with eating disorders, but a positive screen does not confirm an eating disorder, and a negative screen does not entirely rule one out. Professional evaluation is always recommended if you have concerns about your eating.
                   </p>
                 </div>
 
@@ -344,7 +344,7 @@ export function SCOFFClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>SCOFF Eating Disorder Screening from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>SCOFF Eating Disorder Screening from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -469,9 +469,9 @@ export function SCOFFClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "National Alliance for Eating Disorders (US)", detail: "1-866-662-1235 \u2014 eating disorder helpline", color: "text-sage-600 dark:text-sage-400" },
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "National Alliance for Eating Disorders (US)", detail: "1-866-662-1235, eating disorder helpline", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -512,7 +512,7 @@ export function SCOFFClient({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Why Screening Matters</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Many people with eating disorders do not seek help on their own, often due to shame, denial, or not recognizing their behaviors as problematic. Brief screening tools like the SCOFF can help identify individuals who may benefit from professional evaluation. Early identification is important because eating disorders are treatable — <strong>recovery is possible</strong> — and outcomes improve with earlier intervention. Effective approaches include cognitive-behavioral therapy, family-based approaches, and nutritional counseling, often combined. The <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">PHQ-9</Link> may also be useful, as depression and anxiety frequently co-occur with eating disorders.
+                  Many people with eating disorders do not seek help on their own, often due to shame, denial, or not recognizing their behaviors as problematic. Brief screening tools like the SCOFF can help identify individuals who may benefit from professional evaluation. Early identification is important because eating disorders are treatable, <strong>recovery is possible</strong>, and outcomes improve with earlier intervention. Effective approaches include cognitive-behavioral therapy, family-based approaches, and nutritional counseling, often combined. The <Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">DASS-21</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-700 dark:hover:text-sage-300">PHQ-9</Link> may also be useful, as depression and anxiety frequently co-occur with eating disorders.
                 </p>
               </div>
               <ToolReviewerBio />
@@ -555,7 +555,7 @@ export function SCOFFClient({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Morgan, J. F., Reid, F., &amp; Lacey, J. H. (1999). The SCOFF questionnaire: assessment of a new screening tool for eating disorders.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/10604269/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — SCOFF Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/10604269/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, SCOFF Validation</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Eating Disorders.{" "}

@@ -181,7 +181,7 @@ export function BurnoutClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/burnout-assessment-tool";
     if (mode === "blank") {
       const shareData = {
-        title: "Burnout Assessment — Free & Private",
+        title: "Burnout Assessment, Free & Private",
         text: "Take a free, private Burnout Assessment. Your answers never leave your browser.",
         url,
       };
@@ -193,7 +193,7 @@ export function BurnoutClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `Burnout Assessment Results\nScore: ${totalScore}/90 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `Burnout Assessment Results\nScore: ${totalScore}/90, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Burnout Assessment Results", text: summary }); return; } catch { /* user cancelled */ }
     }

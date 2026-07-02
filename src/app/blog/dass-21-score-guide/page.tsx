@@ -31,17 +31,17 @@ const FAQ_DATA = [
   {
     question: "What is a normal DASS-21 score?",
     answer:
-      "A normal DASS-21 score falls in the lowest severity band: 0\u20139 for Depression, 0\u20137 for Anxiety, and 0\u201314 for Stress. These ranges indicate symptoms are within the typical range for the general population. Normal does not mean you cannot benefit from support \u2014 it simply means your current symptom level in that area is not elevated.",
+      "A normal DASS-21 score falls in the lowest severity band: 0\u20139 for Depression, 0\u20137 for Anxiety, and 0\u201314 for Stress. These ranges indicate symptoms are within the typical range for the general population. Normal does not mean you cannot benefit from support, it simply means your current symptom level in that area is not elevated.",
   },
   {
     question: "Is the DASS-21 the same as the PHQ-9?",
     answer:
-      "No. The PHQ-9 is a 9-item screener focused exclusively on depression, aligned with DSM criteria. The DASS-21 measures three dimensions \u2014 depression, anxiety, and stress \u2014 simultaneously with 21 items. The PHQ-9 is more common in clinical depression screening, while the DASS-21 provides a broader emotional profile across all three domains.",
+      "No. The PHQ-9 is a 9-item screener focused exclusively on depression, aligned with DSM criteria. The DASS-21 measures three dimensions, depression, anxiety, and stress, simultaneously with 21 items. The PHQ-9 is more common in clinical depression screening, while the DASS-21 provides a broader emotional profile across all three domains.",
   },
   {
     question: "How often should I take the DASS-21?",
     answer:
-      "The DASS-21 asks about symptoms over the past week, so weekly or biweekly retesting is appropriate. Monthly check-ins work well for general monitoring. Many people retake it before and after starting a new intervention \u2014 such as therapy, medication, or a lifestyle change \u2014 to track whether scores are shifting. Consistent retesting reveals meaningful trends over time.",
+      "The DASS-21 asks about symptoms over the past week, so weekly or biweekly retesting is appropriate. Monthly check-ins work well for general monitoring. Many people retake it before and after starting a new intervention, such as therapy, medication, or a lifestyle change, to track whether scores are shifting. Consistent retesting reveals meaningful trends over time.",
   },
   {
     question: "Can the DASS-21 diagnose depression or anxiety?",
@@ -91,7 +91,7 @@ export default function Dass21ScoreGuidePage() {
             The DASS-21 (Depression Anxiety Stress Scales) is a 21-item self-report instrument with seven items per subscale. Raw scores are doubled to match the original 42-item scale. Depression cutoffs: 0-9 normal, 10-13 mild, 14-20 moderate, 21-27 severe, 28+ extremely severe. Anxiety and stress subscales use different thresholds.
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            The DASS-21 produces three separate scores &mdash; Depression (0&ndash;42), Anxiety (0&ndash;42), and Stress (0&ndash;42) &mdash; each classified into five severity levels from Normal to Extremely Severe. It is a screening tool, not a diagnostic instrument. Your scores indicate current symptom levels across these three emotional dimensions and can help guide conversations with a healthcare provider.
+            The DASS-21 produces three separate scores, Depression (0&ndash;42), Anxiety (0&ndash;42), and Stress (0&ndash;42), each classified into five severity levels from Normal to Extremely Severe. It is a screening tool, not a diagnostic instrument. Your scores indicate current symptom levels across these three emotional dimensions and can help guide conversations with a healthcare provider.
           </p>
         </header>
 
@@ -100,10 +100,10 @@ export default function Dass21ScoreGuidePage() {
           <section>
             <h2>What Is the DASS-21?</h2>
             <p>
-              The <strong>Depression Anxiety Stress Scales &mdash; 21 Items (DASS-21)</strong> is a self-report screening tool developed by Lovibond &amp; Lovibond (1995) at the University of New South Wales, Australia. It is a shortened version of the original 42-item DASS, designed to measure three related but distinct negative emotional states: depression, anxiety, and stress.
+              The <strong>Depression Anxiety Stress Scales, 21 Items (DASS-21)</strong> is a self-report screening tool developed by Lovibond &amp; Lovibond (1995) at the University of New South Wales, Australia. It is a shortened version of the original 42-item DASS, designed to measure three related but distinct negative emotional states: depression, anxiety, and stress.
             </p>
             <p>
-              The DASS-21 contains 21 items &mdash; seven for each subscale. Each item is rated on a 4-point scale (0 = Did not apply to me at all, 3 = Applied to me very much or most of the time) based on the past week. Because the DASS-21 is the short form, <strong>each subscale score is multiplied by 2</strong> to allow comparison with the full 42-item DASS norms. This means final subscale scores range from 0 to 42.
+              The DASS-21 contains 21 items, seven for each subscale. Each item is rated on a 4-point scale (0 = Did not apply to me at all, 3 = Applied to me very much or most of the time) based on the past week. Because the DASS-21 is the short form, <strong>each subscale score is multiplied by 2</strong> to allow comparison with the full 42-item DASS norms. This means final subscale scores range from 0 to 42.
             </p>
             <p>
               Unlike single-dimension tools such as the <Link href="/phq-9-depression-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">PHQ-9</Link> (depression only) or the <Link href="/gad-7-anxiety-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">GAD-7</Link> (anxiety only), the DASS-21 provides a profile across all three dimensions simultaneously. This can be especially useful when you&apos;re unsure which emotional state is most prominent.
@@ -238,10 +238,10 @@ export default function Dass21ScoreGuidePage() {
               <strong>Anxiety:</strong> Measures autonomic arousal (dry mouth, breathing difficulty, trembling, heart racing), skeletal muscle effects, situational anxiety, and subjective experience of anxious affect. This subscale emphasizes the physical and physiological symptoms of anxiety more than cognitive worry.
             </p>
             <p>
-              <strong>Stress:</strong> Measures difficulty relaxing, nervous arousal, being easily agitated or irritable, over-reactivity, and impatience. This subscale captures a state of chronic non-specific arousal &mdash; the feeling of being wound up and unable to settle.
+              <strong>Stress:</strong> Measures difficulty relaxing, nervous arousal, being easily agitated or irritable, over-reactivity, and impatience. This subscale captures a state of chronic non-specific arousal, the feeling of being wound up and unable to settle.
             </p>
             <p>
-              Understanding which subscale is elevated can help you and your healthcare provider focus on the most relevant area. It&apos;s common for two or even all three subscales to be elevated simultaneously &mdash; depression, anxiety, and stress frequently co-occur.
+              Understanding which subscale is elevated can help you and your healthcare provider focus on the most relevant area. It&apos;s common for two or even all three subscales to be elevated simultaneously, depression, anxiety, and stress frequently co-occur.
             </p>
           </section>
 
@@ -252,7 +252,7 @@ export default function Dass21ScoreGuidePage() {
               Each of the 21 items is rated from 0 (Did not apply to me at all) to 3 (Applied to me very much or most of the time), based on the past week. The seven items for each subscale are summed, then <strong>the sum is multiplied by 2</strong> to produce the final score. This doubling allows direct comparison with the norms established for the full 42-item DASS.
             </p>
             <p>
-              For example, if your raw Depression subscale sum is 8 (out of a possible 21), your final Depression score is 16 &mdash; which falls in the moderate range. You can take the <Link href="/dass-21-depression-anxiety-stress" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DASS-21 screening</Link> on this site to have the scoring calculated automatically.
+              For example, if your raw Depression subscale sum is 8 (out of a possible 21), your final Depression score is 16, which falls in the moderate range. You can take the <Link href="/dass-21-depression-anxiety-stress" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DASS-21 screening</Link> on this site to have the scoring calculated automatically.
             </p>
           </section>
 
@@ -265,7 +265,7 @@ export default function Dass21ScoreGuidePage() {
               The <Link href="/phq-9-depression-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">GAD-7</Link> are the most widely used clinical screening tools for depression and anxiety, respectively. They are brief, well-validated, and closely aligned with DSM diagnostic criteria. If a clinician needs to screen for one specific condition, these tools are the standard.
             </p>
             <p>
-              The DASS-21 offers a different advantage: <strong>it screens three dimensions at once</strong>. This is valuable when you&apos;re not sure what you&apos;re experiencing &mdash; when the emotional distress is diffuse and hard to categorize. It&apos;s also useful for tracking how depression, anxiety, and stress change relative to each other over time.
+              The DASS-21 offers a different advantage: <strong>it screens three dimensions at once</strong>. This is valuable when you&apos;re not sure what you&apos;re experiencing, when the emotional distress is diffuse and hard to categorize. It&apos;s also useful for tracking how depression, anxiety, and stress change relative to each other over time.
             </p>
             <p>
               Neither approach is superior. The PHQ-9 and GAD-7 are more specific; the DASS-21 is broader. Many people find it helpful to start with the DASS-21 for an overall picture, then follow up with the PHQ-9 or GAD-7 if a particular subscale is elevated.
@@ -276,13 +276,13 @@ export default function Dass21ScoreGuidePage() {
           <section>
             <h2>What to Do With Your DASS-21 Results</h2>
             <p>
-              <strong>Normal scores across all three subscales:</strong> Your current symptom levels are within the typical range. This doesn&apos;t mean life feels easy &mdash; just that the specific symptoms measured by the DASS-21 aren&apos;t elevated. If something still feels off, consider screening with a tool that measures a different dimension, such as the <Link href="/dass-21-depression-anxiety-stress" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DASS-21</Link> stress subscale or a burnout-specific measure.
+              <strong>Normal scores across all three subscales:</strong> Your current symptom levels are within the typical range. This doesn&apos;t mean life feels easy, just that the specific symptoms measured by the DASS-21 aren&apos;t elevated. If something still feels off, consider screening with a tool that measures a different dimension, such as the <Link href="/dass-21-depression-anxiety-stress" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">DASS-21</Link> stress subscale or a burnout-specific measure.
             </p>
             <p>
-              <strong>Mild elevation in one or more subscales:</strong> Mild scores suggest symptoms are present but not significantly impairing function. Lifestyle factors &mdash; sleep, physical activity, social connection, workload &mdash; are the first-line response. Retaking the DASS-21 in 2&ndash;4 weeks can help determine whether the elevation is situational or persistent.
+              <strong>Mild elevation in one or more subscales:</strong> Mild scores suggest symptoms are present but not significantly impairing function. Lifestyle factors, sleep, physical activity, social connection, workload, are the first-line response. Retaking the DASS-21 in 2&ndash;4 weeks can help determine whether the elevation is situational or persistent.
             </p>
             <p>
-              <strong>Moderate to severe elevation:</strong> Scores in the moderate, severe, or extremely severe range indicate symptom levels that may be impacting daily functioning, relationships, or work. Consulting a healthcare provider or mental health professional is recommended. Bring your DASS-21 results to the appointment &mdash; they provide a concrete starting point for conversation.
+              <strong>Moderate to severe elevation:</strong> Scores in the moderate, severe, or extremely severe range indicate symptom levels that may be impacting daily functioning, relationships, or work. Consulting a healthcare provider or mental health professional is recommended. Bring your DASS-21 results to the appointment, they provide a concrete starting point for conversation.
             </p>
             <p>
               <strong>Extremely severe scores:</strong> Scores in the extremely severe range reflect significant distress. This is not a diagnosis, but it is a strong signal that professional evaluation is warranted. If you are experiencing thoughts of self-harm, please contact a crisis resource immediately.
@@ -329,7 +329,7 @@ export default function Dass21ScoreGuidePage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm text-amber-900 dark:text-amber-200 font-semibold mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment. The DASS-21 is a research and screening instrument &mdash; it does not diagnose depression, anxiety, or any clinical condition.
+              This screening tool is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment. The DASS-21 is a research and screening instrument, it does not diagnose depression, anxiety, or any clinical condition.
             </p>
           </div>
 
@@ -340,9 +340,9 @@ export default function Dass21ScoreGuidePage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -350,7 +350,7 @@ export default function Dass21ScoreGuidePage() {
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h2 className="text-lg font-semibold text-sage-900 dark:text-sage-100 mb-2">Take a Free DASS-21 Screening</h2>
             <p className="text-sm text-sage-700 dark:text-sage-400 mb-4">
-              Use our free, confidential screening tools to check your depression, anxiety, and stress levels &mdash; all in one assessment.
+              Use our free, confidential screening tools to check your depression, anxiety, and stress levels, all in one assessment.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/dass-21-depression-anxiety-stress" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">DASS-21 Screening</Link>
@@ -367,7 +367,7 @@ export default function Dass21ScoreGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

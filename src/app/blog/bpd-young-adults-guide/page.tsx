@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "What is quiet BPD?",
     answer:
-      "Quiet BPD is an informal term describing a presentation where symptoms are directed inward rather than outward \u2014 intense self-criticism instead of explosive anger, silent withdrawal instead of visible crises, and emotional shutdown instead of impulsivity. People with quiet BPD may appear high-functioning while experiencing intense inner turmoil, making self-screening especially valuable.",
+      "Quiet BPD is an informal term describing a presentation where symptoms are directed inward rather than outward, intense self-criticism instead of explosive anger, silent withdrawal instead of visible crises, and emotional shutdown instead of impulsivity. People with quiet BPD may appear high-functioning while experiencing intense inner turmoil, making self-screening especially valuable.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function BpdYoungAdultsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Borderline personality disorder (BPD) most commonly emerges during late adolescence and early adulthood &mdash; precisely the period when intense emotions, identity exploration, and relationship turbulence are also part of normal development. This overlap makes BPD uniquely difficult to recognize in young adults. But early identification matters. Research consistently shows that early intervention improves long-term outcomes, and BPD is far more treatable than its reputation suggests. If you are a young adult experiencing emotional intensity that feels beyond what your peers go through, this guide can help you understand what to look for and how to take the next step.
+            Borderline personality disorder (BPD) most commonly emerges during late adolescence and early adulthood, precisely the period when intense emotions, identity exploration, and relationship turbulence are also part of normal development. This overlap makes BPD uniquely difficult to recognize in young adults. But early identification matters. Research consistently shows that early intervention improves long-term outcomes, and BPD is far more treatable than its reputation suggests. If you are a young adult experiencing emotional intensity that feels beyond what your peers go through, this guide can help you understand what to look for and how to take the next step.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function BpdYoungAdultsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,26 +112,26 @@ export default function BpdYoungAdultsGuidePage() {
           <section>
             <h2>When does BPD typically first appear</h2>
             <p>
-              BPD features most commonly become recognizable between the ages of 14 and 25. This is not coincidental &mdash; it aligns with a critical developmental period when the brain&apos;s emotional regulation systems, identity formation processes, and attachment patterns are being tested and refined through increasingly complex social demands.
+              BPD features most commonly become recognizable between the ages of 14 and 25. This is not coincidental, it aligns with a critical developmental period when the brain&apos;s emotional regulation systems, identity formation processes, and attachment patterns are being tested and refined through increasingly complex social demands.
             </p>
             <p>
               For many young adults, BPD first becomes visible during the transition to college or independent living. The sudden loss of family structure, the pressure to form new relationships, academic demands, and the freedom to make autonomous decisions can amplify traits that were manageable in a more controlled environment.
             </p>
             <p>
-              Clinicians historically avoided applying the BPD label to anyone under 18, but this position has shifted significantly. Research now supports identifying BPD features in adolescents as young as 12, with the understanding that early identification enables early intervention &mdash; and early intervention dramatically improves outcomes.
+              Clinicians historically avoided applying the BPD label to anyone under 18, but this position has shifted significantly. Research now supports identifying BPD features in adolescents as young as 12, with the understanding that early identification enables early intervention, and early intervention dramatically improves outcomes.
             </p>
           </section>
 
           <section>
             <h2>Early signs of BPD in young adults</h2>
             <p>
-              BPD in young adults often first manifests through patterns that may initially be attributed to the stresses of growing up. The key distinction is not whether these experiences occur &mdash; many young adults encounter them &mdash; but whether they are persistent, intense, and causing significant impairment.
+              BPD in young adults often first manifests through patterns that may initially be attributed to the stresses of growing up. The key distinction is not whether these experiences occur, many young adults encounter them, but whether they are persistent, intense, and causing significant impairment.
             </p>
             <ul>
-              <li><strong>Intense relationship instability:</strong> Friendships and romantic relationships cycle rapidly between closeness and conflict. You may idealize someone one week and feel they have betrayed you the next. Relationships feel all-or-nothing &mdash; there is little middle ground.</li>
+              <li><strong>Intense relationship instability:</strong> Friendships and romantic relationships cycle rapidly between closeness and conflict. You may idealize someone one week and feel they have betrayed you the next. Relationships feel all-or-nothing, there is little middle ground.</li>
               <li><strong>Identity confusion beyond normal exploration:</strong> Changing majors, friend groups, values, appearance, career goals, and even personality traits frequently and dramatically. Normal identity exploration feels like trying things on. BPD-related identity confusion feels like having no stable self to return to.</li>
               <li><strong>Chronic emptiness:</strong> A persistent inner void that is distinct from boredom or sadness. Many young adults with BPD describe feeling hollow or like they do not exist as a real, coherent person.</li>
-              <li><strong>Fear of abandonment:</strong> Intense anxiety about being left, rejected, or forgotten &mdash; even in the absence of evidence. This fear may drive frantic efforts to prevent perceived abandonment, including clingy behavior, testing relationships, or preemptive withdrawal.</li>
+              <li><strong>Fear of abandonment:</strong> Intense anxiety about being left, rejected, or forgotten, even in the absence of evidence. This fear may drive frantic efforts to prevent perceived abandonment, including clingy behavior, testing relationships, or preemptive withdrawal.</li>
               <li><strong>Emotional intensity that exceeds the situation:</strong> Small slights feel catastrophic. A cancelled plan may trigger a level of distress that seems disproportionate. Emotional reactions are fast, intense, and slow to resolve.</li>
               <li><strong>Self-harm or suicidal ideation:</strong> Self-injury (cutting, burning, hitting) and recurring thoughts about suicide are common in young adults with BPD. These behaviors often serve as attempts to regulate overwhelming emotions rather than a desire to die.</li>
             </ul>
@@ -145,32 +145,32 @@ export default function BpdYoungAdultsGuidePage() {
           <section>
             <h2>BPD versus normal developmental intensity</h2>
             <p>
-              Young adulthood is inherently an emotionally intense period. The question is not whether you experience intense emotions, identity questions, or relationship difficulties &mdash; almost everyone does at this age. The question is whether these experiences consistently impair your ability to function.
+              Young adulthood is inherently an emotionally intense period. The question is not whether you experience intense emotions, identity questions, or relationship difficulties, almost everyone does at this age. The question is whether these experiences consistently impair your ability to function.
             </p>
             <p>
-              Typical young adult development involves trying on identities, experiencing heartbreak, navigating social complexity, and learning emotional regulation through experience. These processes involve discomfort and sometimes significant distress, but they are generally bounded &mdash; you recover, you learn, you move forward.
+              Typical young adult development involves trying on identities, experiencing heartbreak, navigating social complexity, and learning emotional regulation through experience. These processes involve discomfort and sometimes significant distress, but they are generally bounded, you recover, you learn, you move forward.
             </p>
             <p>
               BPD-related patterns are distinguished by:
             </p>
             <ul>
               <li><strong>Severity:</strong> The emotional pain is consistently more intense than what your peers seem to experience in similar situations.</li>
-              <li><strong>Persistence:</strong> Patterns repeat across different relationships, settings, and years &mdash; they are not situation-specific.</li>
+              <li><strong>Persistence:</strong> Patterns repeat across different relationships, settings, and years, they are not situation-specific.</li>
               <li><strong>Functional impairment:</strong> The patterns interfere with academic performance, employment, friendships, and your ability to live independently.</li>
-              <li><strong>Internal suffering:</strong> You are not just going through a rough patch &mdash; you are experiencing chronic inner pain that does not resolve with time or circumstances.</li>
+              <li><strong>Internal suffering:</strong> You are not just going through a rough patch, you are experiencing chronic inner pain that does not resolve with time or circumstances.</li>
             </ul>
           </section>
 
           <section>
             <h2>Understanding quiet BPD in young adults</h2>
             <p>
-              Not all BPD looks dramatic from the outside. &quot;Quiet BPD&quot; is an informal term describing a presentation where the core features of BPD &mdash; emotional instability, identity disturbance, fear of abandonment, emptiness &mdash; are directed inward rather than outward.
+              Not all BPD looks dramatic from the outside. &quot;Quiet BPD&quot; is an informal term describing a presentation where the core features of BPD, emotional instability, identity disturbance, fear of abandonment, emptiness, are directed inward rather than outward.
             </p>
             <p>
               Young adults with quiet BPD may appear calm, high-functioning, or even reserved. Internally, they experience the same intensity as those with more visible presentations. Instead of explosive anger, they turn rage against themselves. Instead of visible relationship crises, they withdraw silently. Instead of dramatic impulsivity, they shut down emotionally.
             </p>
             <p>
-              This presentation is often attributed to depression, anxiety, or introversion &mdash; and while those conditions may co-occur, the underlying BPD pattern goes unrecognized. If you relate to the emotional experiences described in this guide but do not see yourself as &quot;dramatic&quot; or &quot;attention-seeking,&quot; quiet BPD may be worth exploring. The <Link href="/bpd-screening-for-young-adults" className="text-sage-600 dark:text-sage-400 underline">BPD screening for young adults</Link> includes patterns relevant to both overt and internalizing presentations.
+              This presentation is often attributed to depression, anxiety, or introversion, and while those conditions may co-occur, the underlying BPD pattern goes unrecognized. If you relate to the emotional experiences described in this guide but do not see yourself as &quot;dramatic&quot; or &quot;attention-seeking,&quot; quiet BPD may be worth exploring. The <Link href="/bpd-screening-for-young-adults" className="text-sage-600 dark:text-sage-400 underline">BPD screening for young adults</Link> includes patterns relevant to both overt and internalizing presentations.
             </p>
           </section>
 
@@ -179,7 +179,7 @@ export default function BpdYoungAdultsGuidePage() {
           <section>
             <h2>BPD stigma and the reality of recovery</h2>
             <p>
-              BPD carries significant stigma &mdash; even within the mental health profession. Young adults may encounter dismissive attitudes, be told they are &quot;just being dramatic,&quot; or be discouraged from seeking assessment. Some clinicians still hold outdated beliefs that BPD is untreatable.
+              BPD carries significant stigma, even within the mental health profession. Young adults may encounter dismissive attitudes, be told they are &quot;just being dramatic,&quot; or be discouraged from seeking assessment. Some clinicians still hold outdated beliefs that BPD is untreatable.
             </p>
             <p>
               The evidence says otherwise. Longitudinal research, including the McLean Study of Adult Development (MSAD), shows that:
@@ -232,7 +232,7 @@ export default function BpdYoungAdultsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

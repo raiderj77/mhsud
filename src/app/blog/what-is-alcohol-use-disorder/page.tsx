@@ -75,7 +75,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Alcohol use disorder (AUD) is a medical condition characterized by an impaired ability to stop or control alcohol use despite adverse social, occupational, or health consequences. It exists on a spectrum from mild to severe and affects approximately{" "}
-            <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics/alcohol-facts-and-statistics" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">27.9 million Americans aged 12 and older &mdash; about 9.7% of the population</a>
+            <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics/alcohol-facts-and-statistics" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">27.9 million Americans aged 12 and older, about 9.7% of the population</a>
             {" "}(2024 NSDUH). AUD is not a moral failing or lack of willpower. It involves changes in brain chemistry and function that make controlling alcohol use genuinely difficult.
           </p>
         </header>
@@ -92,7 +92,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
           <section>
             <h2>AUD vs. &ldquo;Alcoholism&rdquo;: What&apos;s the Difference?</h2>
             <p>
-              The term &ldquo;alcoholism&rdquo; is commonly used but is not a clinical diagnosis. The DSM-5 replaced the previous categories of &ldquo;alcohol abuse&rdquo; and &ldquo;alcohol dependence&rdquo; with a single diagnosis &mdash; <strong>alcohol use disorder</strong> &mdash; in 2013. This shift reflected research showing that these conditions exist on a continuum rather than as distinct categories.
+              The term &ldquo;alcoholism&rdquo; is commonly used but is not a clinical diagnosis. The DSM-5 replaced the previous categories of &ldquo;alcohol abuse&rdquo; and &ldquo;alcohol dependence&rdquo; with a single diagnosis, <strong>alcohol use disorder</strong>, in 2013. This shift reflected research showing that these conditions exist on a continuum rather than as distinct categories.
             </p>
             <p>
               AUD is diagnosed on a spectrum of severity (per DSM-5):
@@ -103,7 +103,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <li><strong>Severe AUD:</strong> 6 or more criteria met</li>
             </ul>
             <p>
-              This spectrum model means that AUD includes a wide range of experiences &mdash; from someone whose drinking is causing early-stage problems at work or in relationships, to someone with decades of heavy use and physical dependence.
+              This spectrum model means that AUD includes a wide range of experiences, from someone whose drinking is causing early-stage problems at work or in relationships, to someone with decades of heavy use and physical dependence.
             </p>
           </section>
 
@@ -117,17 +117,17 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <li>Drinking more or for longer than intended</li>
               <li>Persistent desire or unsuccessful efforts to cut down or control drinking</li>
               <li>Spending a lot of time obtaining, using, or recovering from alcohol</li>
-              <li>Craving &mdash; a strong desire or urge to drink</li>
+              <li>Craving, a strong desire or urge to drink</li>
               <li>Failure to fulfill major role obligations at work, school, or home due to drinking</li>
               <li>Continued drinking despite persistent social or interpersonal problems caused by alcohol</li>
               <li>Giving up or reducing important activities because of drinking</li>
               <li>Using alcohol in physically hazardous situations</li>
               <li>Continued drinking despite knowing it&apos;s worsening a physical or psychological problem</li>
-              <li><strong>Tolerance</strong> &mdash; needing significantly more to achieve the same effect</li>
-              <li><strong>Withdrawal</strong> &mdash; experiencing withdrawal symptoms or drinking to avoid them</li>
+              <li><strong>Tolerance</strong>, needing significantly more to achieve the same effect</li>
+              <li><strong>Withdrawal</strong>, experiencing withdrawal symptoms or drinking to avoid them</li>
             </ol>
             <p>
-              Tolerance and withdrawal (criteria 10&ndash;11) specifically indicate physiological dependence &mdash; a more severe presentation that typically warrants medical supervision during any reduction in drinking.
+              Tolerance and withdrawal (criteria 10&ndash;11) specifically indicate physiological dependence, a more severe presentation that typically warrants medical supervision during any reduction in drinking.
             </p>
           </section>
 
@@ -157,10 +157,10 @@ export default function WhatIsAlcoholUseDisorderPage() {
               Genetics account for approximately 50% of the risk for AUD, with twin and adoption studies ranging roughly 40&ndash;60% (Verhulst, Neale &amp; Kendler, 2015, Psychological Medicine). Having a first-degree relative with AUD meaningfully increases risk.
             </p>
             <p>
-              <strong>Neurobiological factors:</strong> Alcohol affects multiple neurotransmitter systems &mdash; GABA, glutamate, dopamine, and opioid pathways. With repeated heavy use, the brain adapts to alcohol&apos;s presence, leading to tolerance and withdrawal when use stops.
+              <strong>Neurobiological factors:</strong> Alcohol affects multiple neurotransmitter systems, GABA, glutamate, dopamine, and opioid pathways. With repeated heavy use, the brain adapts to alcohol&apos;s presence, leading to tolerance and withdrawal when use stops.
             </p>
             <p>
-              <strong>Psychological factors:</strong> Anxiety, depression, PTSD, and trauma history all significantly increase risk. Many people with AUD describe initially using alcohol to manage emotional pain &mdash; a pattern that becomes self-reinforcing over time.
+              <strong>Psychological factors:</strong> Anxiety, depression, PTSD, and trauma history all significantly increase risk. Many people with AUD describe initially using alcohol to manage emotional pain, a pattern that becomes self-reinforcing over time.
             </p>
             <p>
               <strong>Environmental factors:</strong> Early initiation of drinking (before age 15 carries roughly 4 times the AUD risk of starting at 21 or older; NIAAA), access to alcohol, peer drinking norms, and chronic stress all elevate risk.
@@ -169,7 +169,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <strong>Social factors:</strong> Social isolation, lack of structured activity, and environments where heavy drinking is normalized.
             </p>
             <p>
-              None of these factors cause AUD on their own. They interact &mdash; and the presence of multiple risk factors substantially increases vulnerability.
+              None of these factors cause AUD on their own. They interact, and the presence of multiple risk factors substantially increases vulnerability.
             </p>
           </section>
 
@@ -198,7 +198,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               </table>
             </div>
             <p>
-              This co-occurrence runs in both directions. Mental health conditions increase risk for AUD (self-medication), and heavy alcohol use worsens depression, anxiety, and PTSD symptoms &mdash; creating a reinforcing cycle that makes both conditions harder to treat.
+              This co-occurrence runs in both directions. Mental health conditions increase risk for AUD (self-medication), and heavy alcohol use worsens depression, anxiety, and PTSD symptoms, creating a reinforcing cycle that makes both conditions harder to treat.
             </p>
             <p>
               Effective treatment addresses both simultaneously. Treating only the AUD without addressing underlying mental health conditions leads to higher relapse rates (Quello et al., 2005).
@@ -224,7 +224,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <li>Your tolerance has noticeably increased over time</li>
             </ul>
             <p>
-              The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> can help you look at your pattern more systematically. A score in the hazardous or harmful range is worth taking seriously &mdash; not as a verdict, but as information.
+              The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> can help you look at your pattern more systematically. A score in the hazardous or harmful range is worth taking seriously, not as a verdict, but as information.
             </p>
           </section>
 
@@ -237,7 +237,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
 
             <h3>Medical Detox</h3>
             <p>
-              For people with significant physical dependence, medically supervised withdrawal is the essential first step. Alcohol withdrawal can be medically serious &mdash; unlike withdrawal from most other substances, it can cause seizures and, in severe cases, be life-threatening. Please consult a healthcare provider before significantly reducing or stopping heavy, long-term alcohol use.
+              For people with significant physical dependence, medically supervised withdrawal is the essential first step. Alcohol withdrawal can be medically serious, unlike withdrawal from most other substances, it can cause seizures and, in severe cases, be life-threatening. Please consult a healthcare provider before significantly reducing or stopping heavy, long-term alcohol use.
             </p>
 
             <h3>Medications</h3>
@@ -245,12 +245,12 @@ export default function WhatIsAlcoholUseDisorderPage() {
               Three medications are FDA-approved for AUD:
             </p>
             <ul>
-              <li><strong>Naltrexone</strong> &mdash; reduces cravings and the rewarding effects of alcohol. Available as a daily pill or monthly injection (Vivitrol). Strong evidence base.</li>
-              <li><strong>Acamprosate</strong> &mdash; reduces withdrawal-related discomfort and protects sobriety. Typically started after detox.</li>
-              <li><strong>Disulfiram (Antabuse)</strong> &mdash; creates an unpleasant physical reaction if alcohol is consumed. Effective for people with high motivation and external support.</li>
+              <li><strong>Naltrexone</strong>, reduces cravings and the rewarding effects of alcohol. Available as a daily pill or monthly injection (Vivitrol). Strong evidence base.</li>
+              <li><strong>Acamprosate</strong>, reduces withdrawal-related discomfort and protects sobriety. Typically started after detox.</li>
+              <li><strong>Disulfiram (Antabuse)</strong>, creates an unpleasant physical reaction if alcohol is consumed. Effective for people with high motivation and external support.</li>
             </ul>
             <p>
-              Medications for AUD are significantly underutilized &mdash; fewer than 2% of people with AUD receive an FDA-approved medication for it, and only about 7&ndash;8% receive any treatment at all (NSDUH, 2019&ndash;2021).
+              Medications for AUD are significantly underutilized, fewer than 2% of people with AUD receive an FDA-approved medication for it, and only about 7&ndash;8% receive any treatment at all (NSDUH, 2019&ndash;2021).
             </p>
 
             <h3>Psychotherapy</h3>
@@ -258,10 +258,10 @@ export default function WhatIsAlcoholUseDisorderPage() {
               <strong>Cognitive Behavioral Therapy (CBT)</strong> for substance use disorders targets triggers, coping skills, and relapse prevention. Well-established evidence base.
             </p>
             <p>
-              <strong>Motivational Enhancement Therapy (MET)</strong> is particularly effective for people ambivalent about change &mdash; it meets people where they are rather than requiring readiness to stop.
+              <strong>Motivational Enhancement Therapy (MET)</strong> is particularly effective for people ambivalent about change, it meets people where they are rather than requiring readiness to stop.
             </p>
             <p>
-              <strong>12-Step facilitation and peer support</strong> (AA, SMART Recovery) &mdash; strong evidence for peer support as an ongoing recovery resource, particularly for maintaining long-term sobriety.
+              <strong>12-Step facilitation and peer support</strong> (AA, SMART Recovery), strong evidence for peer support as an ongoing recovery resource, particularly for maintaining long-term sobriety.
             </p>
 
             <h3>Level of Care</h3>
@@ -269,13 +269,13 @@ export default function WhatIsAlcoholUseDisorderPage() {
               AUD treatment occurs across a spectrum of intensity:
             </p>
             <ul>
-              <li><strong>Outpatient counseling</strong> &mdash; weekly sessions while continuing daily life</li>
-              <li><strong>Intensive Outpatient Programs (IOP)</strong> &mdash; typically 9&ndash;12 hours/week of structured programming (per ASAM criteria)</li>
-              <li><strong>Partial Hospitalization (PHP)</strong> &mdash; near-daily programming without overnight stay</li>
-              <li><strong>Residential/inpatient treatment</strong> &mdash; 24/7 structured environment; appropriate for severe presentations or unsafe home environments</li>
+              <li><strong>Outpatient counseling</strong>, weekly sessions while continuing daily life</li>
+              <li><strong>Intensive Outpatient Programs (IOP)</strong>, typically 9&ndash;12 hours/week of structured programming (per ASAM criteria)</li>
+              <li><strong>Partial Hospitalization (PHP)</strong>, near-daily programming without overnight stay</li>
+              <li><strong>Residential/inpatient treatment</strong>, 24/7 structured environment; appropriate for severe presentations or unsafe home environments</li>
             </ul>
             <p>
-              The right level of care depends on your specific situation &mdash; a counselor or physician can help you determine what makes sense.
+              The right level of care depends on your specific situation, a counselor or physician can help you determine what makes sense.
             </p>
           </section>
 
@@ -285,7 +285,7 @@ export default function WhatIsAlcoholUseDisorderPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment &mdash; they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -296,9 +296,9 @@ export default function WhatIsAlcoholUseDisorderPage() {
               If you are in crisis or struggling with substance use and need immediate support:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7 treatment referral)</li>
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7 treatment referral)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
             </ul>
           </div>
 

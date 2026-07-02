@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Is social anxiety disorder the same as being introverted?",
     answer:
-      "No. Introversion is a preference for less stimulation \u2014 introverts can enjoy socializing but find it draining. Social anxiety involves fear and avoidance driven by anticipation of negative evaluation. Many introverts have no social anxiety, and many people with social anxiety wish they could engage more but find it too frightening.",
+      "No. Introversion is a preference for less stimulation, introverts can enjoy socializing but find it draining. Social anxiety involves fear and avoidance driven by anticipation of negative evaluation. Many introverts have no social anxiety, and many people with social anxiety wish they could engage more but find it too frightening.",
   },
   {
     question: "Can social anxiety develop in adulthood?",
@@ -88,7 +88,7 @@ export default function WhatIsSocialAnxietyDisorderPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Social anxiety disorder (also called social phobia) is a marked, persistent fear of social or performance situations in which the person may be scrutinized by others. The fear centers on acting in a way that will be humiliating, embarrassing, or lead to rejection. Social anxiety disorder affects approximately 7.1% of US adults annually &mdash; making it the third most common mental health condition in the United States &mdash; and the average onset is age 13. It is highly treatable but significantly undertreated, with most people waiting over a decade before seeking help.
+            Social anxiety disorder (also called social phobia) is a marked, persistent fear of social or performance situations in which the person may be scrutinized by others. The fear centers on acting in a way that will be humiliating, embarrassing, or lead to rejection. Social anxiety disorder affects approximately 7.1% of US adults annually, making it the third most common mental health condition in the United States, and the average onset is age 13. It is highly treatable but significantly undertreated, with most people waiting over a decade before seeking help.
           </p>
         </header>
 
@@ -98,17 +98,17 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <h2>Social Anxiety vs. Shyness vs. Introversion</h2>
             <p>These three terms are often conflated, but they describe meaningfully different experiences.</p>
             <p>
-              <strong>Introversion</strong> is a personality trait &mdash; a preference for less stimulating environments and a tendency to recharge through solitude rather than social interaction. Introverts are not anxious about social situations; they simply prefer fewer of them. Introversion is not a problem requiring treatment.
+              <strong>Introversion</strong> is a personality trait, a preference for less stimulating environments and a tendency to recharge through solitude rather than social interaction. Introverts are not anxious about social situations; they simply prefer fewer of them. Introversion is not a problem requiring treatment.
             </p>
             <p>
-              <strong>Shyness</strong> is a temperamental tendency toward inhibition and discomfort in new social situations &mdash; common, widely distributed, and not inherently impairing. Most shy people function well, form relationships, and navigate social demands without significant limitation.
+              <strong>Shyness</strong> is a temperamental tendency toward inhibition and discomfort in new social situations, common, widely distributed, and not inherently impairing. Most shy people function well, form relationships, and navigate social demands without significant limitation.
             </p>
             <p><strong>Social anxiety disorder</strong> is a clinical condition defined by:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Fear that is out of proportion to the actual social situation</li>
               <li>Recognition (usually) that the fear is excessive, but inability to control it through reasoning</li>
-              <li>Significant distress or functional impairment &mdash; avoided promotions, limited relationships, restricted activities</li>
-              <li>Persistence &mdash; the pattern has been present for six months or more</li>
+              <li>Significant distress or functional impairment, avoided promotions, limited relationships, restricted activities</li>
+              <li>Persistence, the pattern has been present for six months or more</li>
             </ul>
             <p>
               The diagnostic threshold is impairment and distress. Many shy or introverted people never develop social anxiety disorder. Many people with social anxiety disorder wish they could engage more socially but find it impossible without overwhelming fear.
@@ -121,18 +121,18 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <p>The clinical criteria describe the what; the subjective experience is worth understanding in full.</p>
             <p><strong>Before the situation (anticipatory anxiety):</strong></p>
             <p>
-              People with social anxiety often begin dreading a social event days or weeks in advance. The mind generates detailed worst-case scenarios &mdash; what could go wrong, how they might embarrass themselves, how others might judge them. By the time the event arrives, the person is already exhausted from rehearsed worry.
+              People with social anxiety often begin dreading a social event days or weeks in advance. The mind generates detailed worst-case scenarios, what could go wrong, how they might embarrass themselves, how others might judge them. By the time the event arrives, the person is already exhausted from rehearsed worry.
             </p>
             <p><strong>During the situation:</strong></p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Self-focused attention &mdash; mental resources shift from engaging with others to monitoring one&rsquo;s own performance (&ldquo;Am I saying the right thing? Does my face look weird? Can they tell I&rsquo;m nervous?&rdquo;)</li>
+              <li>Self-focused attention, mental resources shift from engaging with others to monitoring one&rsquo;s own performance (&ldquo;Am I saying the right thing? Does my face look weird? Can they tell I&rsquo;m nervous?&rdquo;)</li>
               <li>Physical symptoms that are often feared themselves: blushing, sweating, trembling, voice shaking, heart racing, difficulty finding words</li>
               <li>The fear of others noticing these symptoms creates a second layer of anxiety on top of the first</li>
-              <li>Post-event processing &mdash; replaying the interaction afterward, cataloguing everything that went wrong</li>
+              <li>Post-event processing, replaying the interaction afterward, cataloguing everything that went wrong</li>
             </ul>
             <p><strong>The core fear:</strong></p>
             <p>
-              Social anxiety centers on the fear of <strong>negative evaluation</strong> &mdash; being judged, dismissed, humiliated, or rejected by others. This fear is not about the social situation itself but about what others will think. A person with social anxiety may be comfortable with close friends but terrified of acquaintances; comfortable in familiar contexts but panicked in new ones.
+              Social anxiety centers on the fear of <strong>negative evaluation</strong>, being judged, dismissed, humiliated, or rejected by others. This fear is not about the social situation itself but about what others will think. A person with social anxiety may be comfortable with close friends but terrified of acquaintances; comfortable in familiar contexts but panicked in new ones.
             </p>
           </section>
 
@@ -141,10 +141,10 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <h2>Types of Social Anxiety Presentations</h2>
             <p>Social anxiety disorder exists on a spectrum, from situation-specific to generalized:</p>
             <p>
-              <strong>Performance-specific social anxiety:</strong> Fear limited to performance situations &mdash; public speaking, eating in front of others, writing while observed. Outside these specific situations, the person functions with little difficulty.
+              <strong>Performance-specific social anxiety:</strong> Fear limited to performance situations, public speaking, eating in front of others, writing while observed. Outside these specific situations, the person functions with little difficulty.
             </p>
             <p>
-              <strong>Generalized social anxiety disorder:</strong> Fear extends across most social interactions &mdash; meeting new people, conversations with acquaintances, asserting oneself, being the center of attention, initiating contact. This is the more common and more impairing presentation.
+              <strong>Generalized social anxiety disorder:</strong> Fear extends across most social interactions, meeting new people, conversations with acquaintances, asserting oneself, being the center of attention, initiating contact. This is the more common and more impairing presentation.
             </p>
             <p>
               <strong>Selective mutism:</strong> An extreme presentation, most common in children, involving inability to speak in specific social situations despite speaking normally in others.
@@ -205,7 +205,7 @@ export default function WhatIsSocialAnxietyDisorderPage() {
               </table>
             </div>
             <p>
-              The common thread across all of these: the belief that others are watching, evaluating, and likely to judge negatively &mdash; and that this judgment would be catastrophic.
+              The common thread across all of these: the belief that others are watching, evaluating, and likely to judge negatively, and that this judgment would be catastrophic.
             </p>
           </section>
 
@@ -214,7 +214,7 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <h2>What Causes Social Anxiety Disorder?</h2>
             <p>Social anxiety disorder develops through a combination of factors:</p>
             <p>
-              <strong>Biological:</strong> Heritability is estimated at approximately 30&ndash;40% (Stein et al., 2017). Neurobiological differences in amygdala reactivity &mdash; the threat-detection center &mdash; mean that social cues are processed as more threatening. The autonomic nervous system activates more readily in social evaluative contexts.
+              <strong>Biological:</strong> Heritability is estimated at approximately 30&ndash;40% (Stein et al., 2017). Neurobiological differences in amygdala reactivity, the threat-detection center, mean that social cues are processed as more threatening. The autonomic nervous system activates more readily in social evaluative contexts.
             </p>
             <p><strong>Developmental:</strong> Early experiences shape social anxiety risk. Relevant factors include:</p>
             <ul className="list-disc pl-5 space-y-2">
@@ -244,7 +244,7 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>Major depression:</strong> Approximately 40% co-occurrence; isolation, missed opportunities, and chronic self-criticism all contribute</li>
               <li><strong>Other anxiety disorders:</strong> GAD, panic disorder, and specific phobia are frequently comorbid</li>
-              <li><strong>Alcohol use disorder:</strong> Alcohol is a powerful acute anxiolytic that is heavily used for social lubrication by people with social anxiety &mdash; at significant long-term cost. The co-occurrence rate is approximately 20%</li>
+              <li><strong>Alcohol use disorder:</strong> Alcohol is a powerful acute anxiolytic that is heavily used for social lubrication by people with social anxiety, at significant long-term cost. The co-occurrence rate is approximately 20%</li>
               <li><strong>ADHD:</strong> The impulsive statements, conversational difficulties, and social mistakes that ADHD can produce create real social consequences that then generate secondary social anxiety</li>
               <li><strong>Avoidant personality disorder:</strong> Overlapping significantly with generalized social anxiety disorder; often distinguished by severity and pervasiveness</li>
             </ul>
@@ -258,13 +258,13 @@ export default function WhatIsSocialAnxietyDisorderPage() {
             <h2>The Alcohol Connection: Self-Medication and Risk</h2>
             <p>Social anxiety and alcohol use have a particularly important relationship worth addressing directly.</p>
             <p>
-              Alcohol acutely reduces social anxiety &mdash; it lowers physiological arousal, reduces self-monitoring, and makes social interaction feel more manageable. For someone with significant social anxiety, it can feel like a solution.
+              Alcohol acutely reduces social anxiety, it lowers physiological arousal, reduces self-monitoring, and makes social interaction feel more manageable. For someone with significant social anxiety, it can feel like a solution.
             </p>
             <p>
-              The problem: alcohol-assisted social interaction prevents the learning that social situations are manageable without it. Over time, the person may find they cannot function socially without drinking &mdash; a pattern that can evolve into alcohol use disorder. Research shows that people with social anxiety who drink regularly to manage social situations have significantly elevated rates of alcohol dependence (Buckner et al., 2008).
+              The problem: alcohol-assisted social interaction prevents the learning that social situations are manageable without it. Over time, the person may find they cannot function socially without drinking, a pattern that can evolve into alcohol use disorder. Research shows that people with social anxiety who drink regularly to manage social situations have significantly elevated rates of alcohol dependence (Buckner et al., 2008).
             </p>
             <p>
-              If you&rsquo;ve been relying on alcohol to get through social situations, this is worth discussing with a clinician &mdash; both the anxiety and the drinking pattern deserve attention.
+              If you&rsquo;ve been relying on alcohol to get through social situations, this is worth discussing with a clinician, both the anxiety and the drinking pattern deserve attention.
             </p>
           </section>
 
@@ -281,16 +281,16 @@ export default function WhatIsSocialAnxietyDisorderPage() {
               <strong>Cognitive restructuring:</strong> Identifying and challenging the negative predictions (&ldquo;everyone will think I&rsquo;m boring&rdquo;) and post-event rumination that maintain the disorder. Behavioral experiments test these predictions against actual evidence.
             </p>
             <p>
-              <strong>Exposure:</strong> Systematic, graduated exposure to feared social situations &mdash; from less to more difficult &mdash; allows the anxiety response to extinguish through habituation. Crucially, exposure without safety behaviors is required for the learning to occur.
+              <strong>Exposure:</strong> Systematic, graduated exposure to feared social situations, from less to more difficult, allows the anxiety response to extinguish through habituation. Crucially, exposure without safety behaviors is required for the learning to occur.
             </p>
             <p>
               <strong>Attention retraining:</strong> Shifting attention from self-focused monitoring to externally focused engagement with others and the situation. This is one of the most powerful interventions for social anxiety specifically.
             </p>
             <p>
-              <strong>Video feedback:</strong> Showing people a video of themselves in a social situation consistently produces dramatic reductions in self-perceived performance deficits &mdash; people are almost always significantly less noticeably anxious than they believe.
+              <strong>Video feedback:</strong> Showing people a video of themselves in a social situation consistently produces dramatic reductions in self-perceived performance deficits, people are almost always significantly less noticeably anxious than they believe.
             </p>
             <p>
-              Meta-analytic effect sizes for CBT in social anxiety disorder are approximately 0.7&ndash;1.0 &mdash; large and clinically meaningful (Mayo-Wilson et al., 2014).
+              Meta-analytic effect sizes for CBT in social anxiety disorder are approximately 0.7&ndash;1.0, large and clinically meaningful (Mayo-Wilson et al., 2014).
             </p>
 
             <h3>Medication</h3>
@@ -331,9 +331,9 @@ export default function WhatIsSocialAnxietyDisorderPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -358,7 +358,7 @@ export default function WhatIsSocialAnxietyDisorderPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

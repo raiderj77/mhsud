@@ -33,7 +33,7 @@ const FAQ_DATA = [
   },
   {
     question: "Am I enabling my loved one?",
-    answer: "Enabling means protecting someone from the natural consequences of their substance use \u2014 making excuses, covering financial obligations, or minimizing the problem. If you repeatedly rescue your loved one from situations caused by their use, you may be enabling. Recognizing this pattern is an important first step toward changing it.",
+    answer: "Enabling means protecting someone from the natural consequences of their substance use, making excuses, covering financial obligations, or minimizing the problem. If you repeatedly rescue your loved one from situations caused by their use, you may be enabling. Recognizing this pattern is an important first step toward changing it.",
   },
   {
     question: "What is codependency?",
@@ -67,7 +67,7 @@ export default function HelpingFamilyMemberAddictionPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Watching someone you love struggle with addiction is one of the most painful experiences a family can face. You want to help, but you may not know how — or whether the things you are doing are actually making things worse. This guide offers practical, evidence-based guidance for families navigating this difficult situation.
+            Watching someone you love struggle with addiction is one of the most painful experiences a family can face. You want to help, but you may not know how, or whether the things you are doing are actually making things worse. This guide offers practical, evidence-based guidance for families navigating this difficult situation.
           </p>
           <div className="mt-6">
             <Link href="/family-impact-assessment" className="btn-primary text-sm">Take the Family Impact Assessment &rarr;</Link>
@@ -78,13 +78,13 @@ export default function HelpingFamilyMemberAddictionPage() {
           <section>
             <h2>Understanding Addiction as a Chronic Brain Condition</h2>
             <p>
-              One of the most important things a family can understand is that addiction is not a moral failing. It is a chronic condition that affects the brain&apos;s reward system, decision-making, and impulse control. The National Institute on Drug Abuse and <a href="https://www.samhsa.gov/families" target="_blank" rel="noopener noreferrer">SAMHSA</a> both classify substance use disorders as treatable medical conditions — not character defects.
+              One of the most important things a family can understand is that addiction is not a moral failing. It is a chronic condition that affects the brain&apos;s reward system, decision-making, and impulse control. The National Institute on Drug Abuse and <a href="https://www.samhsa.gov/families" target="_blank" rel="noopener noreferrer">SAMHSA</a> both classify substance use disorders as treatable medical conditions, not character defects.
             </p>
             <p>
-              This distinction matters because it changes how you respond. If you view addiction as a choice, you are more likely to use shame, anger, or punishment — approaches that research consistently shows are ineffective and often counterproductive. If you understand addiction as a condition that alters brain chemistry and behavior, you can approach your loved one with compassion while still holding firm boundaries.
+              This distinction matters because it changes how you respond. If you view addiction as a choice, you are more likely to use shame, anger, or punishment, approaches that research consistently shows are ineffective and often counterproductive. If you understand addiction as a condition that alters brain chemistry and behavior, you can approach your loved one with compassion while still holding firm boundaries.
             </p>
             <p>
-              Addiction often develops through a combination of genetic vulnerability, environmental factors, trauma, and mental health conditions. Your loved one did not choose to become addicted any more than someone chooses to develop diabetes. But like diabetes, addiction requires ongoing management — and the person living with it must ultimately be the one to engage in their own recovery.
+              Addiction often develops through a combination of genetic vulnerability, environmental factors, trauma, and mental health conditions. Your loved one did not choose to become addicted any more than someone chooses to develop diabetes. But like diabetes, addiction requires ongoing management, and the person living with it must ultimately be the one to engage in their own recovery.
             </p>
           </section>
 
@@ -101,7 +101,7 @@ export default function HelpingFamilyMemberAddictionPage() {
           <section>
             <h2>The Difference Between Helping and Enabling</h2>
             <p>
-              This is one of the most critical distinctions for families to understand. Helping means doing something for someone that they genuinely cannot do for themselves. Enabling means doing something for someone that they could and should do for themselves — effectively shielding them from the consequences of their substance use.
+              This is one of the most critical distinctions for families to understand. Helping means doing something for someone that they genuinely cannot do for themselves. Enabling means doing something for someone that they could and should do for themselves, effectively shielding them from the consequences of their substance use.
             </p>
             <p>
               The line between helping and enabling can be blurry, especially when you love someone. Most enabling comes from a place of genuine care. But enabling keeps the cycle of addiction going by removing the natural consequences that might otherwise motivate change.
@@ -112,14 +112,14 @@ export default function HelpingFamilyMemberAddictionPage() {
               Enabling takes many forms, and it often feels like the right thing to do in the moment. Common examples include:
             </p>
             <ul>
-              <li><strong>Making excuses</strong> — calling their employer to say they are sick when they are actually hung over or using, or explaining away their behavior to other family members.</li>
-              <li><strong>Bailing them out</strong> — paying their rent, covering legal fees, or handling responsibilities they have neglected because of their use.</li>
-              <li><strong>Avoiding the topic</strong> — not bringing up concerns about their substance use because you fear conflict or do not want to &quot;rock the boat.&quot;</li>
-              <li><strong>Giving money</strong> — providing cash that you suspect may be used to buy substances, or continuing to financially support a lifestyle that revolves around use.</li>
-              <li><strong>Minimizing the problem</strong> — telling yourself or others that it is not that bad, that they are just going through a phase, or that everyone drinks or uses that much.</li>
+              <li><strong>Making excuses</strong>, calling their employer to say they are sick when they are actually hung over or using, or explaining away their behavior to other family members.</li>
+              <li><strong>Bailing them out</strong>, paying their rent, covering legal fees, or handling responsibilities they have neglected because of their use.</li>
+              <li><strong>Avoiding the topic</strong>, not bringing up concerns about their substance use because you fear conflict or do not want to &quot;rock the boat.&quot;</li>
+              <li><strong>Giving money</strong>, providing cash that you suspect may be used to buy substances, or continuing to financially support a lifestyle that revolves around use.</li>
+              <li><strong>Minimizing the problem</strong>, telling yourself or others that it is not that bad, that they are just going through a phase, or that everyone drinks or uses that much.</li>
             </ul>
             <p>
-              Recognizing enabling patterns in yourself is not about blame — it is about awareness. Once you see the pattern, you can begin to make different choices.
+              Recognizing enabling patterns in yourself is not about blame, it is about awareness. Once you see the pattern, you can begin to make different choices.
             </p>
           </section>
 
@@ -128,13 +128,13 @@ export default function HelpingFamilyMemberAddictionPage() {
           <section>
             <h2>Setting Boundaries with Compassion</h2>
             <p>
-              Boundaries are not about punishing your loved one. They are about defining what you will and will not accept in your own life. A boundary is something you set for yourself — not something you impose on someone else. For example, &quot;I will not lend you money&quot; is a boundary. &quot;You need to stop drinking&quot; is a demand.
+              Boundaries are not about punishing your loved one. They are about defining what you will and will not accept in your own life. A boundary is something you set for yourself, not something you impose on someone else. For example, &quot;I will not lend you money&quot; is a boundary. &quot;You need to stop drinking&quot; is a demand.
             </p>
             <p>
-              Effective boundaries are clear, consistent, and communicated with care. They might sound like: &quot;I love you, and I will not have alcohol in our home.&quot; Or: &quot;I care about you deeply, and I am not willing to cover your rent when you spend your paycheck on substances.&quot; The key is to follow through. A boundary you do not enforce is not a boundary — it is a suggestion.
+              Effective boundaries are clear, consistent, and communicated with care. They might sound like: &quot;I love you, and I will not have alcohol in our home.&quot; Or: &quot;I care about you deeply, and I am not willing to cover your rent when you spend your paycheck on substances.&quot; The key is to follow through. A boundary you do not enforce is not a boundary, it is a suggestion.
             </p>
             <p>
-              Setting boundaries often feels uncomfortable, especially if you are used to accommodating your loved one&apos;s behavior. You may feel guilty, selfish, or afraid that they will be angry. These feelings are normal. Boundaries are an act of love — both for your loved one and for yourself.
+              Setting boundaries often feels uncomfortable, especially if you are used to accommodating your loved one&apos;s behavior. You may feel guilty, selfish, or afraid that they will be angry. These feelings are normal. Boundaries are an act of love, both for your loved one and for yourself.
             </p>
           </section>
 
@@ -180,26 +180,26 @@ export default function HelpingFamilyMemberAddictionPage() {
           <section>
             <h2>Taking Care of Yourself First</h2>
             <p>
-              Living with a loved one&apos;s addiction takes an enormous toll on your own mental and physical health. Anxiety, depression, sleep problems, relationship strain, and emotional exhaustion are all common among family members. You cannot pour from an empty cup — taking care of yourself is not selfish, it is necessary.
+              Living with a loved one&apos;s addiction takes an enormous toll on your own mental and physical health. Anxiety, depression, sleep problems, relationship strain, and emotional exhaustion are all common among family members. You cannot pour from an empty cup, taking care of yourself is not selfish, it is necessary.
             </p>
             <p>
               Support resources for family members include:
             </p>
             <ul>
-              <li><strong><a href="https://al-anon.org" target="_blank" rel="noopener noreferrer">Al-Anon</a></strong> — support groups for families and friends of people with alcohol problems. Call <strong>1-888-425-2666</strong> or visit al-anon.org.</li>
-              <li><strong><a href="https://www.nar-anon.org" target="_blank" rel="noopener noreferrer">Nar-Anon</a></strong> — support groups for families and friends of people affected by drug use. Call <strong>1-800-477-6291</strong> or visit nar-anon.org.</li>
-              <li><strong>Individual therapy</strong> — working with a therapist who specializes in family systems or codependency can help you process your emotions and develop healthier patterns.</li>
-              <li><strong>Support groups</strong> — both in-person and online groups provide connection with others who understand what you are going through.</li>
+              <li><strong><a href="https://al-anon.org" target="_blank" rel="noopener noreferrer">Al-Anon</a></strong>, support groups for families and friends of people with alcohol problems. Call <strong>1-888-425-2666</strong> or visit al-anon.org.</li>
+              <li><strong><a href="https://www.nar-anon.org" target="_blank" rel="noopener noreferrer">Nar-Anon</a></strong>, support groups for families and friends of people affected by drug use. Call <strong>1-800-477-6291</strong> or visit nar-anon.org.</li>
+              <li><strong>Individual therapy</strong>, working with a therapist who specializes in family systems or codependency can help you process your emotions and develop healthier patterns.</li>
+              <li><strong>Support groups</strong>, both in-person and online groups provide connection with others who understand what you are going through.</li>
             </ul>
             <p>
-              You deserve support just as much as your loved one does. Seeking help for yourself is one of the most powerful things you can do — both for your own well-being and for the health of your family system.
+              You deserve support just as much as your loved one does. Seeking help for yourself is one of the most powerful things you can do, both for your own well-being and for the health of your family system.
             </p>
           </section>
 
           <section>
             <h2>The Family Impact Assessment Tool</h2>
             <p>
-              Our <Link href="/family-impact-assessment">Family Impact Assessment</Link> is a free, private screening designed to help you understand how a loved one&apos;s substance use may be affecting your family. It is not a diagnosis — it is a starting point for reflection. The screening looks at areas like emotional well-being, relationship quality, financial stress, and daily functioning.
+              Our <Link href="/family-impact-assessment">Family Impact Assessment</Link> is a free, private screening designed to help you understand how a loved one&apos;s substance use may be affecting your family. It is not a diagnosis, it is a starting point for reflection. The screening looks at areas like emotional well-being, relationship quality, financial stress, and daily functioning.
             </p>
             <p>
               All responses are processed in your browser and never stored or transmitted. The results may indicate areas where additional support could be helpful, and they can serve as a conversation starter with a therapist or counselor.
@@ -212,7 +212,7 @@ export default function HelpingFamilyMemberAddictionPage() {
               Sometimes the situation requires professional help beyond what a family can provide on its own. Consider reaching out to a professional interventionist, addiction counselor, or treatment facility if your loved one&apos;s substance use is escalating, they are in physical danger, they have co-occurring mental health conditions, or previous conversations have not led to change.
             </p>
             <p>
-              A professional interventionist can help the family plan and carry out a structured conversation that maximizes the chance of your loved one accepting help. This is different from the confrontational interventions sometimes shown on television — modern, evidence-based interventions are grounded in compassion and preparation.
+              A professional interventionist can help the family plan and carry out a structured conversation that maximizes the chance of your loved one accepting help. This is different from the confrontational interventions sometimes shown on television, modern, evidence-based interventions are grounded in compassion and preparation.
             </p>
           </section>
 
@@ -225,10 +225,10 @@ export default function HelpingFamilyMemberAddictionPage() {
             </p>
             <div className="not-prose my-6 space-y-2">
               {[
-                { name: "SAMHSA National Helpline", detail: "1-800-662-4357 — Free, confidential, 24/7 information and referrals", url: "https://www.samhsa.gov/find-help/national-helpline" },
-                { name: "988 Suicide & Crisis Lifeline", detail: "Call or text 988 — 24/7 crisis support", url: "https://988lifeline.org" },
-                { name: "Al-Anon Family Groups", detail: "1-888-425-2666 — Support for families affected by alcohol", url: "https://al-anon.org" },
-                { name: "Nar-Anon Family Groups", detail: "1-800-477-6291 — Support for families affected by drug use", url: "https://www.nar-anon.org" },
+                { name: "SAMHSA National Helpline", detail: "1-800-662-4357, Free, confidential, 24/7 information and referrals", url: "https://www.samhsa.gov/find-help/national-helpline" },
+                { name: "988 Suicide & Crisis Lifeline", detail: "Call or text 988, 24/7 crisis support", url: "https://988lifeline.org" },
+                { name: "Al-Anon Family Groups", detail: "1-888-425-2666, Support for families affected by alcohol", url: "https://al-anon.org" },
+                { name: "Nar-Anon Family Groups", detail: "1-800-477-6291, Support for families affected by drug use", url: "https://www.nar-anon.org" },
                 { name: "SAMHSA Family Resources", detail: "Guides, toolkits, and information for families", url: "https://www.samhsa.gov/families" },
               ].map((r) => (
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 card hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
@@ -244,18 +244,18 @@ export default function HelpingFamilyMemberAddictionPage() {
           {/* Disclaimer */}
           <div className="card p-5 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 not-prose text-sm text-neutral-600 dark:text-neutral-400">
             <p className="font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
-            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The information provided is intended to help families understand addiction and find support — it is not a substitute for professional evaluation or counseling.</p>
+            <p>This article is for educational purposes only. It is not a diagnosis or treatment recommendation. The information provided is intended to help families understand addiction and find support, it is not a substitute for professional evaluation or counseling.</p>
           </div>
 
           {/* Crisis Resources */}
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>Al-Anon</strong> &mdash; <strong>1-888-425-2666</strong> (family support for alcohol)</li>
-              <li><strong>Nar-Anon</strong> &mdash; <strong>1-800-477-6291</strong> (family support for drug use)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Al-Anon</strong>, <strong>1-888-425-2666</strong> (family support for alcohol)</li>
+              <li><strong>Nar-Anon</strong>, <strong>1-800-477-6291</strong> (family support for drug use)</li>
             </ul>
           </div>
 

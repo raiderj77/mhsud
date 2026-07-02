@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/privacy",
-  title: "Privacy Policy — How We Protect Your Data",
+  title: "Privacy Policy, How We Protect Your Data",
   description:
     "Your screening answers never leave your browser. No accounts, no login. Ads never access your responses. Full transparency.",
 });
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <section>
             <h2>What data do we collect from the self-check tools?</h2>
             <p>
-              <strong>None.</strong> All scoring and result calculations happen entirely in your browser using client-side JavaScript. Your responses to any questionnaire on this site — including the PHQ-9, GAD-7, AUDIT, and AUDIT-C — are processed locally on your device. No answer data is ever sent to our servers or any third-party server.
+              <strong>None.</strong> All scoring and result calculations happen entirely in your browser using client-side JavaScript. Your responses to any questionnaire on this site, including the PHQ-9, GAD-7, AUDIT, and AUDIT-C, are processed locally on your device. No answer data is ever sent to our servers or any third-party server.
             </p>
             <p>
               We have deliberately built our tools this way because we believe that mental health screening should be private. There is no technical mechanism on this site that captures, logs, or transmits your questionnaire responses.
@@ -65,9 +65,9 @@ export default function PrivacyPage() {
               The following third-party services may set cookies on this site:
             </p>
             <ul>
-              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d) — our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
-              <li><strong>Google Analytics (GA4)</strong> — anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
-              <li><strong>Google AdSense</strong> — advertising. On health screening pages, we use non-personalized ads that do not use behavioral targeting or health-related data for ad selection. Ads are never placed adjacent to crisis resources.</li>
+              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d), our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
+              <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
+              <li><strong>Google AdSense</strong>, advertising. On health screening pages, we use non-personalized ads that do not use behavioral targeting or health-related data for ad selection. Ads are never placed adjacent to crisis resources.</li>
             </ul>
             <p>
               You can manage your cookie preferences at any time through the Cookiebot consent banner or your browser settings.
@@ -180,17 +180,17 @@ export default function PrivacyPage() {
               Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
             </p>
             <p>
-              <strong>GDPR Article 9 — Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR, requiring explicit consent for processing. Because all screening results on MindCheck Tools are processed entirely in your browser and never transmitted to our servers, we do not process health data as a data controller. No health-related data is shared with third parties, including advertising systems.
+              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR, requiring explicit consent for processing. Because all screening results on MindCheck Tools are processed entirely in your browser and never transmitted to our servers, we do not process health data as a data controller. No health-related data is shared with third parties, including advertising systems.
             </p>
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
             <p>
-              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data — all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
+              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data, all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
             </p>
 
-            <h3>Maryland Online Data Privacy Act (MODPA — enforcement effective April 1, 2026)</h3>
+            <h3>Maryland Online Data Privacy Act (MODPA, enforcement effective April 1, 2026)</h3>
             <p>
-              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary — not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
+              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary, not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
             </p>
             <p>
               <strong>Your rights under MODPA:</strong>
@@ -203,7 +203,7 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection — you do not need to interact with a consent banner.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection, you do not need to interact with a consent banner.
             </p>
             <p>
               <strong>We do not sell sensitive personal data under any circumstance.</strong> Sensitive data under MODPA includes health information, precise geolocation, racial or ethnic origin, religious beliefs, sexual orientation, citizenship status, genetic or biometric data, and personal data of known minors under 18. No consent can override this prohibition.
@@ -284,7 +284,7 @@ export default function PrivacyPage() {
             <h3>Data Retention</h3>
             <p>
               Analytics data is retained for 26 months and then deleted. We do not retain mental health
-              screening responses — all processing is client-side only. Server logs are retained for
+              screening responses, all processing is client-side only. Server logs are retained for
               90 days for security purposes.
             </p>
           </section>
@@ -338,7 +338,7 @@ export default function PrivacyPage() {
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              If we make material changes to this privacy policy — particularly if we begin collecting any data we do not currently collect — we will update the &quot;Last updated&quot; date at the top of this page. For significant changes, we will also add a notice on the homepage.
+              If we make material changes to this privacy policy, particularly if we begin collecting any data we do not currently collect, we will update the &quot;Last updated&quot; date at the top of this page. For significant changes, we will also add a notice on the homepage.
             </p>
           </section>
 

@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Is depression a normal part of aging?",
     answer:
-      "No. Depression is not a normal or inevitable part of getting older. While older adults face genuine challenges \u2014 loss, health decline, retirement, isolation \u2014 persistent depression is a treatable medical condition, not an expected consequence of aging. The misconception that it is normal leads to significant undertreatment in this population.",
+      "No. Depression is not a normal or inevitable part of getting older. While older adults face genuine challenges, loss, health decline, retirement, isolation, persistent depression is a treatable medical condition, not an expected consequence of aging. The misconception that it is normal leads to significant undertreatment in this population.",
   },
   {
     question: "How common is depression in older adults?",
@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "Can depression cause memory problems in older adults?",
     answer:
-      "Yes. Depression can produce significant cognitive symptoms \u2014 difficulty concentrating, slowed thinking, and memory problems \u2014 sometimes called \u201Cpseudodementia.\u201D This is one reason depression in seniors is often mistaken for early dementia. The key difference: depression-related cognitive symptoms typically improve with treatment, while dementia does not.",
+      "Yes. Depression can produce significant cognitive symptoms, difficulty concentrating, slowed thinking, and memory problems, sometimes called \u201Cpseudodementia.\u201D This is one reason depression in seniors is often mistaken for early dementia. The key difference: depression-related cognitive symptoms typically improve with treatment, while dementia does not.",
   },
   {
     question: "How is depression in seniors treated?",
@@ -88,7 +88,7 @@ export default function DepressionSeniorsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Depression affects millions of older adults, but it is one of the most underdiagnosed conditions in this age group. Older adults are less likely to report feeling &quot;sad&quot; and more likely to present with physical complaints, withdrawal, or cognitive changes that get attributed to aging or medical conditions. This means depression in seniors often goes unrecognized and untreated &mdash; even though it responds well to intervention at any age.
+            Depression affects millions of older adults, but it is one of the most underdiagnosed conditions in this age group. Older adults are less likely to report feeling &quot;sad&quot; and more likely to present with physical complaints, withdrawal, or cognitive changes that get attributed to aging or medical conditions. This means depression in seniors often goes unrecognized and untreated, even though it responds well to intervention at any age.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function DepressionSeniorsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -114,14 +114,14 @@ export default function DepressionSeniorsGuidePage() {
             <p>Depression in seniors often does not match the textbook picture of persistent sadness and tearfulness. Instead, it frequently presents as:</p>
             <ul>
               <li><strong>Physical complaints:</strong> Unexplained pain, fatigue, digestive issues, or worsening of existing conditions</li>
-              <li><strong>Cognitive changes:</strong> Memory problems, difficulty concentrating, or slowed thinking &mdash; sometimes mistaken for dementia</li>
+              <li><strong>Cognitive changes:</strong> Memory problems, difficulty concentrating, or slowed thinking, sometimes mistaken for dementia</li>
               <li><strong>Withdrawal:</strong> Declining social invitations, giving up hobbies, reduced interest in activities they previously enjoyed</li>
               <li><strong>Irritability and agitation:</strong> Rather than sadness, some older adults become more irritable, anxious, or restless</li>
               <li><strong>Neglecting self-care:</strong> Skipping medications, poor hygiene, not eating properly</li>
               <li><strong>Preoccupation with death:</strong> Not necessarily suicidal ideation, but increased talk about death, dying, or being a burden</li>
             </ul>
             <p>
-              These presentations are easily attributed to &quot;just getting older,&quot; medical conditions, or grief &mdash; all of which may be present but do not rule out co-occurring depression.
+              These presentations are easily attributed to &quot;just getting older,&quot; medical conditions, or grief, all of which may be present but do not rule out co-occurring depression.
             </p>
           </section>
 
@@ -147,7 +147,7 @@ export default function DepressionSeniorsGuidePage() {
               The <Link href="/depression-test-for-seniors" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for seniors</Link> is a free, private self-assessment adapted for older adults. It takes under five minutes, runs entirely in your browser, and requires no account.
             </p>
             <p>
-              A screening provides a structured starting point &mdash; something concrete to bring to a doctor&apos;s appointment or share with a family member who has noticed changes. Many older adults resist the idea of depression because of generational stigma; a screening result can reframe the conversation from &quot;are you depressed?&quot; to &quot;your responses suggest it may be worth discussing this with your doctor.&quot;
+              A screening provides a structured starting point, something concrete to bring to a doctor&apos;s appointment or share with a family member who has noticed changes. Many older adults resist the idea of depression because of generational stigma; a screening result can reframe the conversation from &quot;are you depressed?&quot; to &quot;your responses suggest it may be worth discussing this with your doctor.&quot;
             </p>
             <p>
               For family members concerned about an older loved one, the <Link href="/depression-test-for-seniors" className="text-sage-600 dark:text-sage-400 underline">screening</Link> can also be completed together as a guided conversation rather than a solo exercise.
@@ -157,13 +157,13 @@ export default function DepressionSeniorsGuidePage() {
           <section>
             <h2>Depression vs. dementia: an important distinction</h2>
             <p>
-              Depression and dementia can look remarkably similar in older adults &mdash; both involve memory problems, concentration difficulties, apathy, and withdrawal. However, there are key differences:
+              Depression and dementia can look remarkably similar in older adults, both involve memory problems, concentration difficulties, apathy, and withdrawal. However, there are key differences:
             </p>
             <ul>
               <li>Depression-related cognitive changes tend to come on more quickly (weeks to months vs. years)</li>
               <li>Depressed individuals are often distressed by their memory problems; those with dementia may be less aware</li>
               <li>Depression-related cognitive symptoms improve with treatment; dementia does not</li>
-              <li>Depression and dementia can co-occur &mdash; depression is common in early-stage dementia</li>
+              <li>Depression and dementia can co-occur, depression is common in early-stage dementia</li>
             </ul>
             <p>
               A healthcare provider can help distinguish between the two. The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> provides additional context if a more detailed depression screening is needed.
@@ -204,7 +204,7 @@ export default function DepressionSeniorsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

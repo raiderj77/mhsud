@@ -39,7 +39,7 @@ const FAQ_DATA = [
   {
     question: "What's the difference between compassion fatigue and burnout?",
     answer:
-      "Burnout develops from chronic workplace stress — overwork, lack of control, insufficient reward. Compassion fatigue is specifically caused by the emotional cost of empathizing with others' suffering. You can experience both simultaneously. Burnout tends to develop slowly; compassion fatigue can develop more rapidly after exposure to traumatic material. Both are serious and both are treatable.",
+      "Burnout develops from chronic workplace stress, overwork, lack of control, insufficient reward. Compassion fatigue is specifically caused by the emotional cost of empathizing with others' suffering. You can experience both simultaneously. Burnout tends to develop slowly; compassion fatigue can develop more rapidly after exposure to traumatic material. Both are serious and both are treatable.",
   },
   {
     question: "Who is most at risk for compassion fatigue?",
@@ -121,7 +121,7 @@ export default function CompassionFatigueTestPage() {
             you&apos;re tired in a way that a weekend off doesn&apos;t fix.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Compassion fatigue is the occupational hazard of empathy — and it&apos;s
+            Compassion fatigue is the occupational hazard of empathy, and it&apos;s
             especially common among nurses, therapists, social workers, first responders,
             and family caregivers. It&apos;s not weakness. It&apos;s what happens when you
             absorb others&apos; pain without enough recovery.
@@ -140,7 +140,7 @@ export default function CompassionFatigueTestPage() {
         <AnswerBlock
           what="A compassion fatigue screening that measures the emotional cost of caring for others in distress, combining burnout and secondary trauma."
           who="Helping professionals, caregivers, and anyone in a caring role who feels emotionally drained by others' suffering."
-          bottomLine="Compassion fatigue is an occupational hazard of caring — early recognition prevents deeper burnout. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Compassion fatigue is an occupational hazard of caring, early recognition prevents deeper burnout. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -248,11 +248,11 @@ export default function CompassionFatigueTestPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — free, 24/7, confidential
+              <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
               <strong>SAMHSA National Helpline:</strong>{" "}
-              <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -260,7 +260,7 @@ export default function CompassionFatigueTestPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment is for educational purposes only — it is not a diagnosis. Only a
+            This assessment is for educational purposes only, it is not a diagnosis. Only a
             qualified healthcare professional can assess compassion fatigue or related conditions.
             Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>

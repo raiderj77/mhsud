@@ -96,9 +96,9 @@ export default function DepressionTeensGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you or your teen are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ export default function DepressionTeensGuidePage() {
             <ul>
               <li><strong>Irritability and anger:</strong> Instead of sadness, teens often become hostile, argumentative, or easily frustrated. This is one of the most consistent differences between adolescent and adult depression.</li>
               <li><strong>Academic decline:</strong> A sudden drop in grades, loss of interest in schoolwork, or increased absences can signal depression rather than laziness or defiance.</li>
-              <li><strong>Social withdrawal from peers:</strong> Pulling away from friends &mdash; not just family &mdash; is a significant red flag. Teens are developmentally wired to connect with peers, so isolating from them suggests something deeper.</li>
+              <li><strong>Social withdrawal from peers:</strong> Pulling away from friends, not just family, is a significant red flag. Teens are developmentally wired to connect with peers, so isolating from them suggests something deeper.</li>
               <li><strong>Sleep changes:</strong> Sleeping far more than usual (hypersomnia) or struggling with insomnia. While teenagers naturally shift toward later sleep schedules, dramatic changes in sleep patterns deserve attention.</li>
               <li><strong>Physical complaints:</strong> Frequent stomachaches, headaches, or other somatic symptoms without a clear medical cause are common in depressed teens.</li>
               <li><strong>Risky behavior:</strong> Reckless driving, substance use, unsafe sexual activity, or self-harm may represent a teen&apos;s attempt to cope with or escape from emotional pain.</li>
@@ -138,7 +138,7 @@ export default function DepressionTeensGuidePage() {
               <li><strong>Bullying:</strong> Both in-person bullying and cyberbullying are strongly associated with depression, anxiety, and suicidal ideation in adolescents. Victims of bullying are 2&ndash;9 times more likely to consider suicide.</li>
               <li><strong>Social media and screen time:</strong> While the relationship is complex and still being studied, heavy social media use is associated with increased rates of depression and anxiety in teens, particularly among girls. Social comparison, cyberbullying, sleep disruption, and reduced in-person connection all play a role.</li>
               <li><strong>Identity development stress:</strong> Adolescence involves forming identity around gender, sexuality, values, and independence. Conflict or lack of support during this process increases vulnerability.</li>
-              <li><strong>LGBTQ+ identity:</strong> LGBTQ+ youth are approximately three times more likely to experience depression than their heterosexual peers, primarily due to minority stress &mdash; stigma, discrimination, family rejection, and victimization. The depression itself is not caused by identity but by how that identity is received.</li>
+              <li><strong>LGBTQ+ identity:</strong> LGBTQ+ youth are approximately three times more likely to experience depression than their heterosexual peers, primarily due to minority stress, stigma, discrimination, family rejection, and victimization. The depression itself is not caused by identity but by how that identity is received.</li>
               <li><strong>Chronic illness or disability:</strong> Managing an ongoing health condition during adolescence adds stress, social challenges, and identity concerns that elevate depression risk.</li>
             </ul>
           </section>
@@ -148,7 +148,7 @@ export default function DepressionTeensGuidePage() {
           <section>
             <h2>The stakes are higher than most people realize</h2>
             <p>
-              Suicide is the second leading cause of death among people aged 10&ndash;24 in the United States, according to the CDC. This is not a statistic meant to frighten &mdash; it is a reason to take teen depression seriously and act on warning signs rather than waiting to see if they pass.
+              Suicide is the second leading cause of death among people aged 10&ndash;24 in the United States, according to the CDC. This is not a statistic meant to frighten, it is a reason to take teen depression seriously and act on warning signs rather than waiting to see if they pass.
             </p>
             <p>
               Warning signs that a teen may be thinking about suicide include:
@@ -156,14 +156,14 @@ export default function DepressionTeensGuidePage() {
             <ul>
               <li>Talking about wanting to die, being a burden, or having no reason to live</li>
               <li>Giving away valued possessions</li>
-              <li>Withdrawing from everyone &mdash; friends, family, activities</li>
+              <li>Withdrawing from everyone, friends, family, activities</li>
               <li>Sudden calmness after a period of depression (may indicate a decision has been made)</li>
               <li>Increased substance use</li>
               <li>Searching online for methods of self-harm</li>
               <li>Previous suicide attempts (the strongest single predictor of future attempts)</li>
             </ul>
             <p>
-              If you observe these signs, do not hesitate to ask directly: &quot;Are you thinking about hurting yourself?&quot; Research consistently shows that asking does not plant the idea &mdash; it opens a door. If the answer is yes, call 988, go to the nearest emergency room, or contact a crisis service immediately. You can also use the <Link href="/safety-plan" className="text-sage-600 dark:text-sage-400 underline">Safety Plan tool</Link> to create a structured crisis plan together.
+              If you observe these signs, do not hesitate to ask directly: &quot;Are you thinking about hurting yourself?&quot; Research consistently shows that asking does not plant the idea, it opens a door. If the answer is yes, call 988, go to the nearest emergency room, or contact a crisis service immediately. You can also use the <Link href="/safety-plan" className="text-sage-600 dark:text-sage-400 underline">Safety Plan tool</Link> to create a structured crisis plan together.
             </p>
           </section>
 
@@ -173,7 +173,7 @@ export default function DepressionTeensGuidePage() {
               The <Link href="/depression-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for teens</Link> is a free, private self-assessment that helps identify patterns of depressive symptoms. It takes just a few minutes, runs entirely in the browser, and no data is stored or shared.
             </p>
             <p>
-              A screening is not a substitute for professional evaluation. What it does is provide a structured starting point &mdash; a way to move beyond &quot;I think something might be wrong&quot; to &quot;here are the specific patterns I&apos;m noticing.&quot; You can take the screening together with your teen or have them take it privately and discuss the results afterward.
+              A screening is not a substitute for professional evaluation. What it does is provide a structured starting point, a way to move beyond &quot;I think something might be wrong&quot; to &quot;here are the specific patterns I&apos;m noticing.&quot; You can take the screening together with your teen or have them take it privately and discuss the results afterward.
             </p>
             <p>
               If the screening suggests elevated symptoms, bring the results to your teen&apos;s pediatrician or a mental health professional. Having data to share makes the conversation easier and helps the provider understand the situation more quickly.
@@ -191,13 +191,13 @@ export default function DepressionTeensGuidePage() {
               If you are reading this article, you are already doing something important: paying attention. Here are concrete steps you can take:
             </p>
             <ul>
-              <li><strong>Start with a conversation, not a confrontation.</strong> Say &quot;I&apos;ve noticed you seem more stressed/irritable/withdrawn lately. I&apos;m not mad &mdash; I&apos;m concerned. Can we talk about it?&quot;</li>
+              <li><strong>Start with a conversation, not a confrontation.</strong> Say &quot;I&apos;ve noticed you seem more stressed/irritable/withdrawn lately. I&apos;m not mad, I&apos;m concerned. Can we talk about it?&quot;</li>
               <li><strong>Listen more than you solve.</strong> Teens need to feel heard before they are ready for solutions. Resist the urge to immediately fix things.</li>
               <li><strong>Take a screening together.</strong> The <Link href="/depression-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">teen depression screening</Link> can create a shared language for what your teen is experiencing.</li>
               <li><strong>Contact your teen&apos;s pediatrician.</strong> Describe the symptoms you have observed. Primary care providers screen for depression routinely and can refer to specialists.</li>
               <li><strong>Do not minimize or dismiss.</strong> Phrases like &quot;everyone goes through this&quot; or &quot;you have nothing to be depressed about&quot; shut down communication. Depression is not a choice or a phase.</li>
               <li><strong>Monitor, but respect privacy.</strong> Check in regularly without being invasive. Let your teen know you are available without demanding they share everything.</li>
-              <li><strong>Take care of yourself.</strong> Parenting a teen who may be depressed is emotionally demanding. Your own well-being matters &mdash; both for your sake and for your ability to support your child.</li>
+              <li><strong>Take care of yourself.</strong> Parenting a teen who may be depressed is emotionally demanding. Your own well-being matters, both for your sake and for your ability to support your child.</li>
             </ul>
           </section>
 
@@ -208,13 +208,13 @@ export default function DepressionTeensGuidePage() {
             </p>
             <ul>
               <li><strong>Cognitive-behavioral therapy (CBT):</strong> Helps teens identify and challenge negative thought patterns. CBT is one of the most well-studied and effective approaches for adolescent depression.</li>
-              <li><strong>Interpersonal therapy for adolescents (IPT-A):</strong> Focuses on improving relationships and communication skills &mdash; areas central to adolescent development.</li>
+              <li><strong>Interpersonal therapy for adolescents (IPT-A):</strong> Focuses on improving relationships and communication skills, areas central to adolescent development.</li>
               <li><strong>Family involvement:</strong> Depression affects the whole family. Family therapy or parent coaching can improve communication, reduce conflict, and create a more supportive home environment.</li>
               <li><strong>Medication:</strong> In moderate to severe cases, a provider may discuss SSRIs. These are most effective when combined with therapy rather than used alone.</li>
               <li><strong>Lifestyle factors:</strong> Regular physical activity, adequate sleep, social connection, and reduced social media use all support recovery alongside professional care.</li>
             </ul>
             <p>
-              Early intervention makes a significant difference. The sooner depression is identified and addressed, the better the outcomes &mdash; both in the short term and for long-term mental health.
+              Early intervention makes a significant difference. The sooner depression is identified and addressed, the better the outcomes, both in the short term and for long-term mental health.
             </p>
           </section>
 
@@ -236,7 +236,7 @@ export default function DepressionTeensGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -88,7 +88,7 @@ export default function WhatIsAdhdInAdultsPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Attention-Deficit/Hyperactivity Disorder (ADHD) in adults is a neurodevelopmental condition characterized by persistent patterns of inattention, impulsivity, and &mdash; in some presentations &mdash; hyperactivity, causing significant impairment across multiple areas of life. Contrary to the common assumption that children &quot;grow out of it,&quot; approximately 60% of children with ADHD continue to meet diagnostic criteria in adulthood. An estimated 4.4% of US adults have ADHD (Kessler et al., 2006), with many more undiagnosed.
+            Attention-Deficit/Hyperactivity Disorder (ADHD) in adults is a neurodevelopmental condition characterized by persistent patterns of inattention, impulsivity, and, in some presentations, hyperactivity, causing significant impairment across multiple areas of life. Contrary to the common assumption that children &quot;grow out of it,&quot; approximately 60% of children with ADHD continue to meet diagnostic criteria in adulthood. An estimated 4.4% of US adults have ADHD (Kessler et al., 2006), with many more undiagnosed.
           </p>
         </header>
 
@@ -97,19 +97,19 @@ export default function WhatIsAdhdInAdultsPage() {
           <section>
             <h2>Why adult ADHD is so often missed</h2>
             <p>
-              Adult ADHD is dramatically underdiagnosed &mdash; and the reasons are revealing:
+              Adult ADHD is dramatically underdiagnosed, and the reasons are revealing:
             </p>
             <p>
-              <strong>It doesn&apos;t look like childhood ADHD.</strong> The hyperactive child bouncing off walls is the cultural image. Adult ADHD rarely looks that way. Hyperactivity often &quot;internalizes&quot; in adulthood &mdash; it becomes restlessness, difficulty sitting through meetings, a constantly racing mind, or the inability to read without re-reading the same sentence three times.
+              <strong>It doesn&apos;t look like childhood ADHD.</strong> The hyperactive child bouncing off walls is the cultural image. Adult ADHD rarely looks that way. Hyperactivity often &quot;internalizes&quot; in adulthood, it becomes restlessness, difficulty sitting through meetings, a constantly racing mind, or the inability to read without re-reading the same sentence three times.
             </p>
             <p>
-              <strong>Compensation masks it.</strong> Many adults with ADHD develop elaborate workarounds &mdash; rigid routines, over-reliance on lists and calendars, choosing careers that fit their cognitive style. They manage well enough that neither they nor their clinicians look closer. The cracks often appear during major life transitions: a new job, a first child, university, or a promotion that removes structure.
+              <strong>Compensation masks it.</strong> Many adults with ADHD develop elaborate workarounds, rigid routines, over-reliance on lists and calendars, choosing careers that fit their cognitive style. They manage well enough that neither they nor their clinicians look closer. The cracks often appear during major life transitions: a new job, a first child, university, or a promotion that removes structure.
             </p>
             <p>
-              <strong>It co-occurs with depression and anxiety.</strong> The downstream consequences of ADHD &mdash; chronic underperformance, relationship friction, self-criticism &mdash; often produce clinical depression and anxiety. These presenting symptoms get treated, while the underlying ADHD is missed.
+              <strong>It co-occurs with depression and anxiety.</strong> The downstream consequences of ADHD, chronic underperformance, relationship friction, self-criticism, often produce clinical depression and anxiety. These presenting symptoms get treated, while the underlying ADHD is missed.
             </p>
             <p>
-              <strong>The diagnostic bar has historically been set by boys.</strong> ADHD research was historically male-dominated. Girls and women with ADHD often present with predominantly inattentive profiles &mdash; daydreaming, disorganization, emotional dysregulation &mdash; which are less disruptive in classroom settings and more easily attributed to personality.
+              <strong>The diagnostic bar has historically been set by boys.</strong> ADHD research was historically male-dominated. Girls and women with ADHD often present with predominantly inattentive profiles, daydreaming, disorganization, emotional dysregulation, which are less disruptive in classroom settings and more easily attributed to personality.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function WhatIsAdhdInAdultsPage() {
             <p>This is the most common adult presentation and the most frequently missed. Symptoms include:</p>
             <ul>
               <li>Difficulty sustaining attention on tasks that require mental effort</li>
-              <li>Frequently losing things (keys, phone, documents &mdash; daily)</li>
+              <li>Frequently losing things (keys, phone, documents, daily)</li>
               <li>Easily distracted by external stimuli or unrelated thoughts</li>
               <li>Difficulty following through on tasks even when they begin well</li>
               <li>Appearing not to listen even when spoken to directly</li>
@@ -157,15 +157,15 @@ export default function WhatIsAdhdInAdultsPage() {
               Clinical criteria describe symptoms, but they don&apos;t capture the daily reality. People with adult ADHD often describe:
             </p>
             <ul>
-              <li><strong>&quot;I can hyperfocus on interesting things for hours but can&apos;t do a boring task for ten minutes&quot;</strong> &mdash; interest-based attention, not effort-based</li>
-              <li><strong>&quot;I know exactly what I need to do. I just can&apos;t make myself start&quot;</strong> &mdash; task initiation failure, sometimes called ADHD paralysis</li>
-              <li><strong>&quot;I have a dozen tabs open in my brain at all times&quot;</strong> &mdash; cognitive overload and difficulty filtering relevant from irrelevant</li>
-              <li><strong>&quot;I&apos;m always late, even when I care&quot;</strong> &mdash; time blindness, a poorly recognized but central feature of ADHD</li>
-              <li><strong>&quot;I feel everything too intensely&quot;</strong> &mdash; emotional dysregulation, now recognized as a prominent adult ADHD feature</li>
-              <li><strong>&quot;My house is a disaster zone and I can&apos;t explain why&quot;</strong> &mdash; executive function deficits affecting planning, sequencing, and initiation</li>
+              <li><strong>&quot;I can hyperfocus on interesting things for hours but can&apos;t do a boring task for ten minutes&quot;</strong>, interest-based attention, not effort-based</li>
+              <li><strong>&quot;I know exactly what I need to do. I just can&apos;t make myself start&quot;</strong>, task initiation failure, sometimes called ADHD paralysis</li>
+              <li><strong>&quot;I have a dozen tabs open in my brain at all times&quot;</strong>, cognitive overload and difficulty filtering relevant from irrelevant</li>
+              <li><strong>&quot;I&apos;m always late, even when I care&quot;</strong>, time blindness, a poorly recognized but central feature of ADHD</li>
+              <li><strong>&quot;I feel everything too intensely&quot;</strong>, emotional dysregulation, now recognized as a prominent adult ADHD feature</li>
+              <li><strong>&quot;My house is a disaster zone and I can&apos;t explain why&quot;</strong>, executive function deficits affecting planning, sequencing, and initiation</li>
             </ul>
             <p>
-              <strong>Time blindness</strong> deserves particular mention. ADHD is fundamentally a disorder of time &mdash; people with ADHD often experience time as binary (now and not now) rather than as a continuous spectrum. This explains chronic lateness, missed deadlines, and difficulty estimating how long tasks will take &mdash; behaviors that look like carelessness but are neurological in origin.
+              <strong>Time blindness</strong> deserves particular mention. ADHD is fundamentally a disorder of time, people with ADHD often experience time as binary (now and not now) rather than as a continuous spectrum. This explains chronic lateness, missed deadlines, and difficulty estimating how long tasks will take, behaviors that look like carelessness but are neurological in origin.
             </p>
           </section>
 
@@ -184,8 +184,8 @@ export default function WhatIsAdhdInAdultsPage() {
             </p>
             <ul>
               <li>Clinical interview covering current symptoms, history, and functioning across domains (work, relationships, self-care)</li>
-              <li>Developmental history &mdash; symptoms must have been present before age 12 (DSM-5 criterion)</li>
-              <li>Collateral information &mdash; input from a partner, family member, or old report cards</li>
+              <li>Developmental history, symptoms must have been present before age 12 (DSM-5 criterion)</li>
+              <li>Collateral information, input from a partner, family member, or old report cards</li>
               <li>Cognitive and neuropsychological testing in complex cases</li>
               <li>Rule-out evaluation for co-occurring conditions</li>
             </ul>
@@ -217,7 +217,7 @@ export default function WhatIsAdhdInAdultsPage() {
               </table>
             </div>
             <p>
-              The high co-occurrence with substance use is clinically important. Nicotine, cannabis, and stimulants are used for self-regulation by many undiagnosed adults with ADHD &mdash; temporarily providing the dopaminergic stimulation that ADHD brains struggle to generate endogenously.
+              The high co-occurrence with substance use is clinically important. Nicotine, cannabis, and stimulants are used for self-regulation by many undiagnosed adults with ADHD, temporarily providing the dopaminergic stimulation that ADHD brains struggle to generate endogenously.
             </p>
             <p>
               If depression or anxiety symptoms are prominent alongside potential ADHD symptoms, the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> can map that picture before a clinical appointment.
@@ -226,7 +226,7 @@ export default function WhatIsAdhdInAdultsPage() {
 
           <AdSlot position="Blog In-Content 2" className="my-8" />
 
-          {/* Section 6 — Medication */}
+          {/* Section 6, Medication */}
           <section>
             <h2>Evidence-based treatment for adult ADHD</h2>
 
@@ -238,33 +238,33 @@ export default function WhatIsAdhdInAdultsPage() {
               <strong>Stimulants (first line):</strong>
             </p>
             <ul>
-              <li><strong>Methylphenidate</strong> (Ritalin, Concerta) &mdash; well-studied, effective in approximately 70% of people with ADHD</li>
-              <li><strong>Amphetamine-based</strong> (Adderall, Vyvanse) &mdash; similar efficacy; some individuals respond better to one class than the other</li>
+              <li><strong>Methylphenidate</strong> (Ritalin, Concerta), well-studied, effective in approximately 70% of people with ADHD</li>
+              <li><strong>Amphetamine-based</strong> (Adderall, Vyvanse), similar efficacy; some individuals respond better to one class than the other</li>
             </ul>
             <p>
-              Both classes work by increasing dopamine and norepinephrine availability in the prefrontal cortex &mdash; the brain region most implicated in executive function.
+              Both classes work by increasing dopamine and norepinephrine availability in the prefrontal cortex, the brain region most implicated in executive function.
             </p>
             <p>
               <strong>Non-stimulants (when stimulants aren&apos;t appropriate):</strong>
             </p>
             <ul>
-              <li>Atomoxetine (Strattera) &mdash; slower onset but 24-hour coverage; useful when stimulants are contraindicated or cause problematic side effects</li>
-              <li>Bupropion &mdash; off-label but commonly used; helpful when ADHD co-occurs with depression</li>
-              <li>Guanfacine and clonidine &mdash; alpha-2 agonists used particularly for emotional dysregulation and impulsivity</li>
+              <li>Atomoxetine (Strattera), slower onset but 24-hour coverage; useful when stimulants are contraindicated or cause problematic side effects</li>
+              <li>Bupropion, off-label but commonly used; helpful when ADHD co-occurs with depression</li>
+              <li>Guanfacine and clonidine, alpha-2 agonists used particularly for emotional dysregulation and impulsivity</li>
             </ul>
             <p>
-              <strong>A note on medication concerns:</strong> Stimulant medications for ADHD are Schedule II controlled substances. They have real abuse potential &mdash; but in people with ADHD, properly prescribed stimulants have been shown to <em>reduce</em> rates of substance use rather than increase them, likely because they address the underlying neurological deficit driving self-medication (Wilens et al., 2003).
+              <strong>A note on medication concerns:</strong> Stimulant medications for ADHD are Schedule II controlled substances. They have real abuse potential, but in people with ADHD, properly prescribed stimulants have been shown to <em>reduce</em> rates of substance use rather than increase them, likely because they address the underlying neurological deficit driving self-medication (Wilens et al., 2003).
             </p>
           </section>
 
-          {/* Section 7 — Psychotherapy & Lifestyle */}
+          {/* Section 7, Psychotherapy & Lifestyle */}
           <section>
             <h3>Psychotherapy</h3>
             <p>
-              <strong>Cognitive Behavioral Therapy adapted for ADHD:</strong> Unlike standard CBT, ADHD-specific CBT focuses heavily on practical skill-building &mdash; time management systems, task initiation strategies, organizational scaffolding &mdash; alongside cognitive work on negative beliefs about self. Solanto et al. (2010) demonstrated significant improvement over support group control conditions.
+              <strong>Cognitive Behavioral Therapy adapted for ADHD:</strong> Unlike standard CBT, ADHD-specific CBT focuses heavily on practical skill-building, time management systems, task initiation strategies, organizational scaffolding, alongside cognitive work on negative beliefs about self. Solanto et al. (2010) demonstrated significant improvement over support group control conditions.
             </p>
             <p>
-              <strong>Coaching:</strong> ADHD coaching is a structured, goal-directed approach focused on building systems and accountability for daily functioning. It&apos;s not therapy &mdash; coaches don&apos;t address underlying emotional issues &mdash; but it&apos;s highly effective for the practical demands of daily life.
+              <strong>Coaching:</strong> ADHD coaching is a structured, goal-directed approach focused on building systems and accountability for daily functioning. It&apos;s not therapy, coaches don&apos;t address underlying emotional issues, but it&apos;s highly effective for the practical demands of daily life.
             </p>
             <p>
               <strong>DBT skills:</strong> Particularly the distress tolerance and emotion regulation modules, which address the emotional dysregulation that&apos;s often the most impairing feature of adult ADHD.
@@ -272,8 +272,8 @@ export default function WhatIsAdhdInAdultsPage() {
 
             <h3>Lifestyle</h3>
             <ul>
-              <li><strong>Exercise:</strong> Produces acute, significant improvements in attention and executive function &mdash; acts as a natural dopamine agonist. Many people with ADHD use exercise strategically before demanding cognitive tasks.</li>
-              <li><strong>Sleep:</strong> Sleep deprivation dramatically worsens ADHD symptoms. Adults with ADHD disproportionately experience delayed sleep phase &mdash; going to bed late and waking late. Addressing this is often a high-leverage intervention.</li>
+              <li><strong>Exercise:</strong> Produces acute, significant improvements in attention and executive function, acts as a natural dopamine agonist. Many people with ADHD use exercise strategically before demanding cognitive tasks.</li>
+              <li><strong>Sleep:</strong> Sleep deprivation dramatically worsens ADHD symptoms. Adults with ADHD disproportionately experience delayed sleep phase, going to bed late and waking late. Addressing this is often a high-leverage intervention.</li>
               <li><strong>Structure and routines:</strong> External structure compensates for the internal executive function deficits that ADHD creates. Consistent routines, alarms, and environmental design (out of sight = out of mind) are evidence-based behavioral tools.</li>
             </ul>
           </section>
@@ -295,9 +295,9 @@ export default function WhatIsAdhdInAdultsPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -320,7 +320,7 @@ export default function WhatIsAdhdInAdultsPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

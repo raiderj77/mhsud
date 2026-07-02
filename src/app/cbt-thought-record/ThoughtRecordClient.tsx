@@ -477,7 +477,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               <h2 className="text-lg font-serif font-bold text-neutral-800 dark:text-neutral-100 mb-1">6. Balanced / Alternative Thought</h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">
                 Based on the evidence for and against, what is a more balanced, accurate way to see this situation?
-                It doesn&apos;t have to be positive — just more fair and realistic.
+                It doesn&apos;t have to be positive, just more fair and realistic.
               </p>
             </div>
 
@@ -713,13 +713,13 @@ export function ThoughtRecordClient({ faqData }: Props) {
             How to Use This Tool
           </h2>
           <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <li><strong>Describe the situation</strong> — What triggered the negative feeling? Be specific about when, where, and what happened.</li>
-            <li><strong>Capture the automatic thought</strong> — Write exactly what went through your mind. Rate how much you believe it (0-100%).</li>
-            <li><strong>Name your emotions</strong> — Identify each emotion and rate its intensity. Most situations involve multiple emotions.</li>
-            <li><strong>List evidence for the thought</strong> — What objective facts support this thought? Stick to facts, not interpretations.</li>
-            <li><strong>List evidence against the thought</strong> — What contradicts it? What would you tell a friend thinking this?</li>
-            <li><strong>Write a balanced thought</strong> — Considering all the evidence, what is a more accurate, fair perspective?</li>
-            <li><strong>Re-rate your emotions</strong> — After reframing, how intense are your emotions now? Most people see a noticeable decrease.</li>
+            <li><strong>Describe the situation</strong>, What triggered the negative feeling? Be specific about when, where, and what happened.</li>
+            <li><strong>Capture the automatic thought</strong>, Write exactly what went through your mind. Rate how much you believe it (0-100%).</li>
+            <li><strong>Name your emotions</strong>, Identify each emotion and rate its intensity. Most situations involve multiple emotions.</li>
+            <li><strong>List evidence for the thought</strong>, What objective facts support this thought? Stick to facts, not interpretations.</li>
+            <li><strong>List evidence against the thought</strong>, What contradicts it? What would you tell a friend thinking this?</li>
+            <li><strong>Write a balanced thought</strong>, Considering all the evidence, what is a more accurate, fair perspective?</li>
+            <li><strong>Re-rate your emotions</strong>, After reframing, how intense are your emotions now? Most people see a noticeable decrease.</li>
           </ol>
         </section>
 
@@ -730,26 +730,26 @@ export function ThoughtRecordClient({ faqData }: Props) {
           </h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
             <p>
-              A thought record (also called a dysfunctional thought record or thought diary) is one of the foundational tools of <strong>cognitive behavioral therapy (CBT)</strong>. Developed by psychiatrist <strong>Aaron Beck</strong> in the 1960s and refined by psychologist <strong>David Burns</strong> and therapist <strong>Christine Padesky</strong>, the thought record is designed to help you examine your automatic thoughts — the quick, often unconscious interpretations your mind makes in response to events — and evaluate whether they are accurate and helpful.
+              A thought record (also called a dysfunctional thought record or thought diary) is one of the foundational tools of <strong>cognitive behavioral therapy (CBT)</strong>. Developed by psychiatrist <strong>Aaron Beck</strong> in the 1960s and refined by psychologist <strong>David Burns</strong> and therapist <strong>Christine Padesky</strong>, the thought record is designed to help you examine your automatic thoughts, the quick, often unconscious interpretations your mind makes in response to events, and evaluate whether they are accurate and helpful.
             </p>
             <p>
-              The core insight behind CBT is that <strong>situations do not directly cause emotions</strong>. Instead, it is your <em>interpretation</em> of the situation — your automatic thought — that determines how you feel. Two people can experience the same event and feel completely different emotions depending on how they interpret it. The thought record makes this process visible by breaking it into structured columns, allowing you to see the connection between situations, thoughts, and emotions clearly.
+              The core insight behind CBT is that <strong>situations do not directly cause emotions</strong>. Instead, it is your <em>interpretation</em> of the situation, your automatic thought, that determines how you feel. Two people can experience the same event and feel completely different emotions depending on how they interpret it. The thought record makes this process visible by breaking it into structured columns, allowing you to see the connection between situations, thoughts, and emotions clearly.
             </p>
             <p>
-              Research strongly supports the effectiveness of thought records. A 2012 meta-analysis in <em>Cognitive Therapy and Research</em> found that completing thought records was associated with significant reductions in depression and anxiety. A 2015 study in <em>Behaviour Research and Therapy</em> found that the evidence-weighing columns (4 and 5) were the most therapeutically active components — they force you to step outside your automatic thinking pattern and consider the situation from a more objective perspective.
+              Research strongly supports the effectiveness of thought records. A 2012 meta-analysis in <em>Cognitive Therapy and Research</em> found that completing thought records was associated with significant reductions in depression and anxiety. A 2015 study in <em>Behaviour Research and Therapy</em> found that the evidence-weighing columns (4 and 5) were the most therapeutically active components, they force you to step outside your automatic thinking pattern and consider the situation from a more objective perspective.
             </p>
 
             <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
               Why Thought Records Work
             </h3>
             <ul className="list-disc list-inside space-y-1">
-              <li><strong>They slow down your thinking</strong> — Writing forces you to examine thoughts you would normally accept without question.</li>
-              <li><strong>They separate facts from feelings</strong> — The evidence columns teach you to distinguish between objective reality and emotional interpretation.</li>
-              <li><strong>They build a new habit</strong> — Over time, you start automatically questioning distorted thoughts before they spiral.</li>
-              <li><strong>They create a written record</strong> — Reviewing past entries shows you patterns in your thinking and progress over time.</li>
+              <li><strong>They slow down your thinking</strong>, Writing forces you to examine thoughts you would normally accept without question.</li>
+              <li><strong>They separate facts from feelings</strong>, The evidence columns teach you to distinguish between objective reality and emotional interpretation.</li>
+              <li><strong>They build a new habit</strong>, Over time, you start automatically questioning distorted thoughts before they spiral.</li>
+              <li><strong>They create a written record</strong>, Reviewing past entries shows you patterns in your thinking and progress over time.</li>
             </ul>
             <p>
-              This tool works best when used regularly — therapists typically recommend completing at least one thought record per day during active CBT treatment. Even 2-3 per week can build the cognitive restructuring skill over time.
+              This tool works best when used regularly, therapists typically recommend completing at least one thought record per day during active CBT treatment. Even 2-3 per week can build the cognitive restructuring skill over time.
             </p>
           </div>
         </section>
@@ -819,11 +819,11 @@ export function ThoughtRecordClient({ faqData }: Props) {
             <div className="flex flex-col sm:flex-row gap-3 text-sm">
               <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
                 <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-                <p className="text-amber-700 dark:text-amber-300">Call or text 988 — 24/7, free & confidential</p>
+                <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
               </div>
               <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
                 <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-                <p className="text-amber-700 dark:text-amber-300">1-800-662-4357 — Treatment referral & info</p>
+                <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
               </div>
             </div>
           </div>
@@ -848,17 +848,17 @@ export function ThoughtRecordClient({ faqData }: Props) {
           <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
             <li>
               <a href="https://beckinstitute.org/about/aaron-t-beck-md/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Beck Institute — Aaron T. Beck, MD: Founder of Cognitive Therapy
+                Beck Institute, Aaron T. Beck, MD: Founder of Cognitive Therapy
               </a>
             </li>
             <li>
               <a href="https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                American Psychological Association — What Is Cognitive Behavioral Therapy?
+                American Psychological Association, What Is Cognitive Behavioral Therapy?
               </a>
             </li>
             <li>
               <a href="https://www.padesky.com/clinical-corner/publications/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Christine Padesky, PhD — CBT Clinical Resources
+                Christine Padesky, PhD, CBT Clinical Resources
               </a>
             </li>
           </ul>

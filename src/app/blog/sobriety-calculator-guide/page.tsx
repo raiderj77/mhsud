@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "Why does counting sober days help recovery?",
     answer:
-      "Tracking sobriety provides concrete, visible evidence of progress that counteracts the distorted thinking common in early recovery \u2014 specifically the belief that nothing is changing. Research on goal-setting shows that measurable progress markers increase motivation and self-efficacy. Milestones also serve as natural reflection points to assess how far you have come.",
+      "Tracking sobriety provides concrete, visible evidence of progress that counteracts the distorted thinking common in early recovery, specifically the belief that nothing is changing. Research on goal-setting shows that measurable progress markers increase motivation and self-efficacy. Milestones also serve as natural reflection points to assess how far you have come.",
   },
   {
     question: "What if I relapse and my counter resets?",
@@ -70,7 +70,7 @@ export default function SobrietyCalculatorGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Recovery from alcohol or substance use is measured in days lived differently. A sobriety calculator is a simple tool that counts the time since your last use &mdash; turning an abstract commitment into something concrete and visible. Whether you are on day one or day one thousand, tracking your progress reinforces the reality that change is happening, even when it does not feel like it.
+            Recovery from alcohol or substance use is measured in days lived differently. A sobriety calculator is a simple tool that counts the time since your last use, turning an abstract commitment into something concrete and visible. Whether you are on day one or day one thousand, tracking your progress reinforces the reality that change is happening, even when it does not feel like it.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function SobrietyCalculatorGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@ export default function SobrietyCalculatorGuidePage() {
           <section>
             <h2>What is a sobriety calculator?</h2>
             <p>
-              A sobriety calculator is a tool that takes a single input &mdash; your sobriety or quit date &mdash; and calculates the exact number of days, weeks, months, and years since that date. It transforms an internal commitment into an external, measurable number.
+              A sobriety calculator is a tool that takes a single input, your sobriety or quit date, and calculates the exact number of days, weeks, months, and years since that date. It transforms an internal commitment into an external, measurable number.
             </p>
             <p>
               The concept is rooted in recovery culture, where &quot;counting days&quot; has been a cornerstone of programs like Alcoholics Anonymous since the 1930s. Modern research supports the practice: goal-tracking and visible progress markers are consistently associated with higher motivation and better adherence to behavior change (Harkin et al., 2016).
@@ -108,7 +108,7 @@ export default function SobrietyCalculatorGuidePage() {
             <p>Counting sober days serves several psychological functions in recovery:</p>
             <ul>
               <li><strong>Concrete evidence of progress:</strong> Early recovery often feels like nothing is changing. A number that increases every day provides objective proof that it is.</li>
-              <li><strong>Accountability anchor:</strong> Knowing your count creates a small but meaningful barrier to impulsive use &mdash; the thought of resetting to zero carries real weight.</li>
+              <li><strong>Accountability anchor:</strong> Knowing your count creates a small but meaningful barrier to impulsive use, the thought of resetting to zero carries real weight.</li>
               <li><strong>Milestone motivation:</strong> Reaching 30, 60, 90 days, or a year creates natural moments to reflect, celebrate, and recommit.</li>
               <li><strong>Identity reinforcement:</strong> Over time, the accumulating days help shift self-perception from &quot;someone trying to quit&quot; to &quot;someone living in recovery.&quot;</li>
               <li><strong>Communication tool:</strong> Sharing milestones with a sponsor, therapist, or support group strengthens social bonds and accountability.</li>
@@ -151,13 +151,13 @@ export default function SobrietyCalculatorGuidePage() {
           <section>
             <h2>What if you relapse?</h2>
             <p>
-              Relapse is common in recovery &mdash; the National Institute on Drug Abuse (NIDA) estimates that 40&ndash;60% of people in recovery experience relapse at some point, comparable to relapse rates for other chronic conditions like hypertension or asthma.
+              Relapse is common in recovery, the National Institute on Drug Abuse (NIDA) estimates that 40&ndash;60% of people in recovery experience relapse at some point, comparable to relapse rates for other chronic conditions like hypertension or asthma.
             </p>
             <p>
               If your counter resets, that does not erase the growth, skills, and self-knowledge you built during your sober time. A relapse is information, not a verdict. It tells you something about your triggers, your support needs, or your current coping strategies that can be addressed.
             </p>
             <p>
-              The most important thing after a relapse is reconnecting with your support system &mdash; whether that is a therapist, sponsor, support group, or trusted person in your life. The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan builder</Link> can help you prepare for high-risk situations.
+              The most important thing after a relapse is reconnecting with your support system, whether that is a therapist, sponsor, support group, or trusted person in your life. The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan builder</Link> can help you prepare for high-risk situations.
             </p>
           </section>
 

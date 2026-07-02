@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "What is the K6?",
     answer:
-      "The K6 (Kessler Psychological Distress Scale) is a 6-item screening tool developed by Ronald Kessler and colleagues at Harvard Medical School in collaboration with the World Health Organization. It measures nonspecific psychological distress — a general indicator of emotional difficulty that spans anxiety, depression, and other forms of mental distress. It is one of the most widely used brief mental health screening instruments in the world, included in major national surveys like the NSDUH and NHIS.",
+      "The K6 (Kessler Psychological Distress Scale) is a 6-item screening tool developed by Ronald Kessler and colleagues at Harvard Medical School in collaboration with the World Health Organization. It measures nonspecific psychological distress, a general indicator of emotional difficulty that spans anxiety, depression, and other forms of mental distress. It is one of the most widely used brief mental health screening instruments in the world, included in major national surveys like the NSDUH and NHIS.",
   },
   {
     question: "How is the K6 scored?",
@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "What does 'serious psychological distress' mean?",
     answer:
-      "Serious psychological distress (SPD) is a classification used in national health surveys to identify people experiencing a level of emotional difficulty that is likely to impair functioning and may indicate the presence of a mental health condition. It does not correspond to any single disorder — it is a general indicator that something significant is affecting your mental health. In the NSDUH, approximately 5-6% of U.S. adults meet the SPD threshold in any given year. A K6 score of 13 or higher warrants follow-up with a more specific screening tool or a healthcare provider.",
+      "Serious psychological distress (SPD) is a classification used in national health surveys to identify people experiencing a level of emotional difficulty that is likely to impair functioning and may indicate the presence of a mental health condition. It does not correspond to any single disorder, it is a general indicator that something significant is affecting your mental health. In the NSDUH, approximately 5-6% of U.S. adults meet the SPD threshold in any given year. A K6 score of 13 or higher warrants follow-up with a more specific screening tool or a healthcare provider.",
   },
   {
     question: "What is the difference between the K6 and the K10?",
@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "How is the K6 different from the PHQ-9 or GAD-7?",
     answer:
-      "The K6 measures general psychological distress — it picks up on a range of negative emotional experiences without identifying a specific condition. The PHQ-9 specifically screens for depression based on DSM-5 criteria, and the GAD-7 specifically screens for generalized anxiety. The K6 is often used as a first-step screener: if the score is elevated, more specific tools like the PHQ-9 or GAD-7 can help pinpoint what type of distress is most prominent. They complement each other well.",
+      "The K6 measures general psychological distress, it picks up on a range of negative emotional experiences without identifying a specific condition. The PHQ-9 specifically screens for depression based on DSM-5 criteria, and the GAD-7 specifically screens for generalized anxiety. The K6 is often used as a first-step screener: if the score is elevated, more specific tools like the PHQ-9 or GAD-7 can help pinpoint what type of distress is most prominent. They complement each other well.",
   },
   {
     question: "Is my data private?",
@@ -104,7 +104,7 @@ export default function K6Page() {
         <AnswerBlock
           what="The Kessler K6, a brief 6-item validated screening for serious psychological distress used in population health surveys worldwide."
           who="Anyone who wants a quick general mental health check using the tool used in national health surveillance."
-          bottomLine="The K6 is a broad distress measure — a high score indicates you may benefit from professional support. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The K6 is a broad distress measure, a high score indicates you may benefit from professional support. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

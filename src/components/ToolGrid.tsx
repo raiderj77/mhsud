@@ -138,7 +138,7 @@ export function ToolGrid({
               type="search"
               role="searchbox"
               aria-label="Search tools by name, description, or category"
-              placeholder="Search tools — depression, anxiety, alcohol, burnout..."
+              placeholder="Search tools, depression, anxiety, alcohol, burnout..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-11 pr-10 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 dark:placeholder:text-neutral-500 text-base focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors"

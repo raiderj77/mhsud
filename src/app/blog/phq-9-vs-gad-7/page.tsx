@@ -92,7 +92,7 @@ export default function PHQ9vsGAD7Page() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Take the PHQ-9 if you&apos;re primarily experiencing low mood, loss of interest, low energy, or feelings of worthlessness. Take the GAD-7 if you&apos;re primarily experiencing persistent worry, restlessness, or tension that&apos;s hard to control. If you&apos;re unsure — or experiencing both — take both. The two tools together take under 10 minutes and give a more complete picture than either alone, which is why clinicians routinely administer them as a pair.
+            Take the PHQ-9 if you&apos;re primarily experiencing low mood, loss of interest, low energy, or feelings of worthlessness. Take the GAD-7 if you&apos;re primarily experiencing persistent worry, restlessness, or tension that&apos;s hard to control. If you&apos;re unsure, or experiencing both, take both. The two tools together take under 10 minutes and give a more complete picture than either alone, which is why clinicians routinely administer them as a pair.
           </p>
         </header>
 
@@ -101,7 +101,7 @@ export default function PHQ9vsGAD7Page() {
           <section>
             <h2>What each tool is designed for</h2>
             <p>
-              The PHQ-9 and GAD-7 were developed by the same research team (Drs. Kroenke and Spitzer at Columbia University) specifically to work alongside each other in primary care settings. They share a similar format — past two weeks, 0–3 frequency rating — which makes them easy to compare directly.
+              The PHQ-9 and GAD-7 were developed by the same research team (Drs. Kroenke and Spitzer at Columbia University) specifically to work alongside each other in primary care settings. They share a similar format, past two weeks, 0–3 frequency rating, which makes them easy to compare directly.
             </p>
             <p>
               <strong>PHQ-9 (Patient Health Questionnaire-9)</strong>
@@ -125,7 +125,7 @@ export default function PHQ9vsGAD7Page() {
           <section>
             <h2>How they differ: symptom by symptom</h2>
             <p>
-              The tools share some overlapping symptoms — both include fatigue and difficulty concentrating — but their core items are distinct.
+              The tools share some overlapping symptoms, both include fatigue and difficulty concentrating, but their core items are distinct.
             </p>
             <div className="not-prose my-4 overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -137,24 +137,24 @@ export default function PHQ9vsGAD7Page() {
                   </tr>
                 </thead>
                 <tbody className="text-neutral-600 dark:text-neutral-400">
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Depressed mood / hopelessness</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Loss of interest or pleasure</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Depressed mood / hopelessness</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Loss of interest or pleasure</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Sleep disturbance</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">&#10003;</td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Fatigue / low energy</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">&#10003;</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Appetite changes</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Feelings of worthlessness / guilt</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Appetite changes</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Feelings of worthlessness / guilt</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Difficulty concentrating</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">&#10003;</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Psychomotor changes</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Thoughts of self-harm</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">—</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Excessive worry, hard to control</td><td className="py-2 pr-4">—</td><td className="py-2">&#10003;</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Restlessness / on edge</td><td className="py-2 pr-4">—</td><td className="py-2">&#10003;</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Irritability</td><td className="py-2 pr-4">—</td><td className="py-2">&#10003;</td></tr>
-                  <tr><td className="py-2 pr-4">Muscle tension</td><td className="py-2 pr-4">—</td><td className="py-2">&#10003;</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Psychomotor changes</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Thoughts of self-harm</td><td className="py-2 pr-4">&#10003;</td><td className="py-2">, </td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Excessive worry, hard to control</td><td className="py-2 pr-4">, </td><td className="py-2">&#10003;</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Restlessness / on edge</td><td className="py-2 pr-4">, </td><td className="py-2">&#10003;</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">Irritability</td><td className="py-2 pr-4">, </td><td className="py-2">&#10003;</td></tr>
+                  <tr><td className="py-2 pr-4">Muscle tension</td><td className="py-2 pr-4">, </td><td className="py-2">&#10003;</td></tr>
                 </tbody>
               </table>
             </div>
             <p>
-              The PHQ-9&apos;s unique items center on <strong>mood, anhedonia, and self-perception</strong> — the inward, withdrawing quality of depression. The GAD-7&apos;s unique items center on <strong>worry, arousal, and tension</strong> — the forward-scanning, vigilant quality of anxiety.
+              The PHQ-9&apos;s unique items center on <strong>mood, anhedonia, and self-perception</strong>, the inward, withdrawing quality of depression. The GAD-7&apos;s unique items center on <strong>worry, arousal, and tension</strong>, the forward-scanning, vigilant quality of anxiety.
             </p>
           </section>
 
@@ -191,7 +191,7 @@ export default function PHQ9vsGAD7Page() {
             </p>
             <ul>
               <li>Worry that feels excessive and difficult to switch off</li>
-              <li>Restlessness — a sense of being unable to settle or relax</li>
+              <li>Restlessness, a sense of being unable to settle or relax</li>
               <li>Physical tension, particularly in your muscles, neck, or jaw</li>
               <li>A sense of dread or anticipation of things going wrong</li>
               <li>Irritability that feels tied to being constantly on alert</li>
@@ -210,15 +210,15 @@ export default function PHQ9vsGAD7Page() {
           <section>
             <h2>Why taking both is usually best</h2>
             <p>
-              Depression and anxiety co-occur in approximately 50% of cases (Kessler et al., 2003). More importantly, many people can&apos;t easily separate what they&apos;re feeling into &quot;this is depression&quot; and &quot;this is anxiety&quot; — and they shouldn&apos;t have to.
+              Depression and anxiety co-occur in approximately 50% of cases (Kessler et al., 2003). More importantly, many people can&apos;t easily separate what they&apos;re feeling into &quot;this is depression&quot; and &quot;this is anxiety&quot;, and they shouldn&apos;t have to.
             </p>
             <p>
               Taking both tools together gives you and any clinician you speak with:
             </p>
             <ol>
-              <li><strong>A clearer map of your symptoms</strong> — which dimension is higher, which is lower, whether both are elevated</li>
-              <li><strong>Better treatment targeting</strong> — the relative severity of depression vs. anxiety informs both therapy approach and medication selection</li>
-              <li><strong>A baseline to track</strong> — if you&apos;re beginning treatment, having both scores lets you measure change in both dimensions over time</li>
+              <li><strong>A clearer map of your symptoms</strong>, which dimension is higher, which is lower, whether both are elevated</li>
+              <li><strong>Better treatment targeting</strong>, the relative severity of depression vs. anxiety informs both therapy approach and medication selection</li>
+              <li><strong>A baseline to track</strong>, if you&apos;re beginning treatment, having both scores lets you measure change in both dimensions over time</li>
             </ol>
             <p>
               The combined administration takes about 8–10 minutes. Many primary care practices and mental health settings administer both as a standard intake package. You can replicate that process here in a few minutes.
@@ -261,7 +261,7 @@ export default function PHQ9vsGAD7Page() {
             </p>
             <ul>
               <li><strong>Timing matters:</strong> Both tools ask about the past two weeks. A difficult period before that window won&apos;t be captured.</li>
-              <li><strong>Somatic presentation:</strong> Some people experience emotional distress primarily through physical symptoms — pain, fatigue, GI issues — that screening questions may undercount.</li>
+              <li><strong>Somatic presentation:</strong> Some people experience emotional distress primarily through physical symptoms, pain, fatigue, GI issues, that screening questions may undercount.</li>
               <li><strong>Atypical presentations:</strong> Some forms of depression involve more irritability and agitation than sadness; these can look more like anxiety on screening tools.</li>
               <li><strong>Situational context:</strong> Major life stressors can produce elevated scores that don&apos;t represent a clinical disorder.</li>
             </ul>
@@ -279,10 +279,10 @@ export default function PHQ9vsGAD7Page() {
               Depending on what you&apos;re experiencing, other tools on MindCheck may give you a more complete picture:
             </p>
             <ul>
-              <li><Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline">DASS-21</Link> — screens depression, anxiety, and stress together in one assessment</li>
-              <li><Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link> — if you&apos;ve experienced trauma and recognize PTSD symptoms</li>
-              <li><Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS</Link> — if attention, focus, and organization difficulties are prominent</li>
-              <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link> — if alcohol use and its effects are part of the picture</li>
+              <li><Link href="/dass-21-depression-anxiety-stress" className="text-sage-600 dark:text-sage-400 underline">DASS-21</Link>, screens depression, anxiety, and stress together in one assessment</li>
+              <li><Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5</Link>, if you&apos;ve experienced trauma and recognize PTSD symptoms</li>
+              <li><Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS</Link>, if attention, focus, and organization difficulties are prominent</li>
+              <li><Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT</Link>, if alcohol use and its effects are part of the picture</li>
             </ul>
           </section>
 
@@ -290,7 +290,7 @@ export default function PHQ9vsGAD7Page() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment — they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -301,9 +301,9 @@ export default function PHQ9vsGAD7Page() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -326,7 +326,7 @@ export default function PHQ9vsGAD7Page() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

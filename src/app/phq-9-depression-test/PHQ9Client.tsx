@@ -21,9 +21,9 @@ const QUESTIONS = [
   "Trouble falling or staying asleep, or sleeping too much",
   "Feeling tired or having little energy",
   "Poor appetite or overeating",
-  "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+  "Feeling bad about yourself, or that you are a failure or have let yourself or your family down",
   "Trouble concentrating on things, such as reading the newspaper or watching television",
-  "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
+  "Moving or speaking so slowly that other people could have noticed? Or the opposite, being so fidgety or restless that you have been moving around a lot more than usual",
   "Thoughts that you would be better off dead or of hurting yourself in some way",
 ];
 
@@ -118,7 +118,7 @@ export function PHQ9Client({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "PHQ-9 Depression Self-Check — Free & Private",
+        title: "PHQ-9 Depression Self-Check, Free & Private",
         text: "Take a free, private PHQ-9 depression self-check. Your answers never leave your browser.",
         url,
       };
@@ -131,8 +131,8 @@ export function PHQ9Client({ faqData }: Props) {
       return;
     }
 
-    // Share results summary (no individual answers — privacy first)
-    const summary = `PHQ-9 Self-Check Results\nScore: ${totalScore}/27 — ${range.level} symptom level\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    // Share results summary (no individual answers, privacy first)
+    const summary = `PHQ-9 Self-Check Results\nScore: ${totalScore}/27, ${range.level} symptom level\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My PHQ-9 Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -169,7 +169,7 @@ export function PHQ9Client({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
       </header>
 
-      {/* Reviewer Bio — visible before test so users see CADC-II credentials upfront */}
+      {/* Reviewer Bio, visible before test so users see CADC-II credentials upfront */}
       <ToolReviewerBio />
 
       {/* Disclaimer Gate */}
@@ -184,7 +184,7 @@ export function PHQ9Client({ faqData }: Props) {
       {/* Questionnaire */}
       {accepted && !showResults && (
         <div className="animate-fade-in">
-          {/* Privacy Trust Signal — visible immediately above first question */}
+          {/* Privacy Trust Signal, visible immediately above first question */}
           <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
             <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
             Your answers are scored locally in your browser and are never stored or shared.
@@ -298,9 +298,9 @@ export function PHQ9Client({ faqData }: Props) {
                   </p>
                   <div className="bg-crisis-100/50 dark:bg-crisis-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-crisis-700 dark:text-crisis-400 mb-1">Resources:</p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong></p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>International:</strong> Visit <strong>findahelpline.com</strong> for your country</p>
                   </div>
                 </div>
@@ -308,11 +308,11 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           )}
 
-          {/* Severe-bracket crisis routing (YMYL safety) — placed above AdSlot and next steps */}
+          {/* Severe-bracket crisis routing (YMYL safety), placed above AdSlot and next steps */}
           {range.key === "severe" && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5" role="alert">
               <h3 className="font-serif text-lg font-semibold text-crisis-800 dark:text-crisis-300 mb-2">
-                Your score suggests severe symptoms — support is available
+                Your score suggests severe symptoms, support is available
               </h3>
               <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
                 A score of 20 or above on the PHQ-9 indicates severe depressive symptoms. Reaching out to a healthcare professional or a crisis service is strongly encouraged.
@@ -333,14 +333,14 @@ export function PHQ9Client({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your PHQ-9 Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 27 — {range.level} symptom level</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 27, {range.level} symptom level</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 27) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Minimal</span>
-                    <span>27 — Severe</span>
+                    <span>0, Minimal</span>
+                    <span>27, Severe</span>
                   </div>
                 </div>
               </div>
@@ -393,7 +393,7 @@ export function PHQ9Client({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>PHQ-9 Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>PHQ-9 Self-Check from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -518,9 +518,9 @@ export function PHQ9Client({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -585,7 +585,7 @@ export function PHQ9Client({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Kroenke, K., Spitzer, R. L., &amp; Williams, J. B. (2001). The PHQ-9: validity of a brief depression severity measure.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Validation Study</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/11556941/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Validation Study</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Depression.{" "}

@@ -9,7 +9,7 @@ export const metadata: Metadata = createMetadata({
   path: "/msi-bpd-screening",
   title: "MSI-BPD Borderline Personality Screen",
   description:
-    "Take the free MSI-BPD borderline personality disorder screening. 10 yes/no questions, 2 minutes. Private, instant results. Not a diagnosis — a starting point.",
+    "Take the free MSI-BPD borderline personality disorder screening. 10 yes/no questions, 2 minutes. Private, instant results. Not a diagnosis, a starting point.",
   keywords: [
     "msi-bpd", "msi-bpd test", "borderline personality disorder test",
     "bpd screening", "bpd test", "borderline personality disorder screening",
@@ -90,7 +90,7 @@ export default function MSIBPDPage() {
         <AnswerBlock
           what="The McLean Screening Instrument for BPD, a 10-item validated screening for borderline personality disorder."
           who="Adults who experience emotional instability, relationship difficulties, or identity confusion and want to screen for BPD."
-          bottomLine="The MSI-BPD is a well-validated screening tool — a positive result indicates further evaluation by a specialist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The MSI-BPD is a well-validated screening tool, a positive result indicates further evaluation by a specialist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

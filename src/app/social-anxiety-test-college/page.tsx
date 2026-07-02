@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/social-anxiety-test-college`;
 
 export const metadata: Metadata = createMetadata({
   path: "/social-anxiety-test-college",
-  title: "Social Anxiety Test for Students — Free SPIN",
+  title: "Social Anxiety Test for Students, Free SPIN",
   description:
     "Free social anxiety screening for college students using the SPIN. Private, instant results.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
     "free social anxiety test",
   ],
   openGraph: {
-    title: "Social Anxiety Test for Students — Free SPIN",
+    title: "Social Anxiety Test for Students, Free SPIN",
     description: "Free, private social anxiety screening for college students using the clinically validated SPIN. Instant results, no signup required.",
     url: TOOL_URL,
     type: "website",
@@ -30,11 +30,11 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is social anxiety the same as being shy?",
-    answer: "No. Shyness is a personality trait — it may cause mild discomfort in social situations but does not significantly impair daily life. Social anxiety disorder (SAD) involves intense, persistent fear of being judged, embarrassed, or humiliated in social situations. It causes avoidance behaviors that interfere with academics, relationships, and daily functioning. Many shy people function well socially; people with SAD often cannot.",
+    answer: "No. Shyness is a personality trait, it may cause mild discomfort in social situations but does not significantly impair daily life. Social anxiety disorder (SAD) involves intense, persistent fear of being judged, embarrassed, or humiliated in social situations. It causes avoidance behaviors that interfere with academics, relationships, and daily functioning. Many shy people function well socially; people with SAD often cannot.",
   },
   {
     question: "Why is social anxiety so common in college?",
-    answer: "College is a perfect storm for social anxiety. You are surrounded by new people, expected to participate in class discussions, navigate group projects, attend social events, and build a new social network — all while being evaluated constantly. The pressure to fit in, combined with the loss of familiar support systems from home, can trigger or worsen social anxiety symptoms.",
+    answer: "College is a perfect storm for social anxiety. You are surrounded by new people, expected to participate in class discussions, navigate group projects, attend social events, and build a new social network, all while being evaluated constantly. The pressure to fit in, combined with the loss of familiar support systems from home, can trigger or worsen social anxiety symptoms.",
   },
   {
     question: "Can social anxiety affect my grades?",
@@ -42,15 +42,15 @@ const FAQ_DATA = [
   },
   {
     question: "How can I participate in class if I have social anxiety?",
-    answer: "Start small. Prepare one question or comment before class so you are not improvising. Sit near the front where you are less aware of others watching. Email your professor about your anxiety — most are understanding and may offer alternatives. Some students find that participating early in a discussion, before anxiety builds, is easier than waiting. Campus counseling centers can also teach specific coping strategies.",
+    answer: "Start small. Prepare one question or comment before class so you are not improvising. Sit near the front where you are less aware of others watching. Email your professor about your anxiety, most are understanding and may offer alternatives. Some students find that participating early in a discussion, before anxiety builds, is easier than waiting. Campus counseling centers can also teach specific coping strategies.",
   },
   {
     question: "Do treatments for social anxiety actually work?",
-    answer: "Yes. Cognitive behavioral therapy (CBT) is highly effective for social anxiety, with research showing significant improvement in 50-75% of people. Exposure therapy — gradually facing feared situations in a structured way — is a core component. Medications like SSRIs can also help. Many students see meaningful improvement within one semester of treatment.",
+    answer: "Yes. Cognitive behavioral therapy (CBT) is highly effective for social anxiety, with research showing significant improvement in 50-75% of people. Exposure therapy, gradually facing feared situations in a structured way, is a core component. Medications like SSRIs can also help. Many students see meaningful improvement within one semester of treatment.",
   },
   {
     question: "Should I tell my professors about my social anxiety?",
-    answer: "You are not required to, but it can help. Many professors will offer accommodations like alternative participation methods, advance notice of being called on, or the option to present to a smaller group. Your campus disability services office can also arrange formal accommodations. You do not need to share your full diagnosis — a brief explanation is sufficient.",
+    answer: "You are not required to, but it can help. Many professors will offer accommodations like alternative participation methods, advance notice of being called on, or the option to present to a smaller group. Your campus disability services office can also arrange formal accommodations. You do not need to share your full diagnosis, a brief explanation is sufficient.",
   },
   {
     question: "Where can college students get help for social anxiety?",
@@ -58,7 +58,7 @@ const FAQ_DATA = [
   },
   {
     question: "Can I overcome social anxiety?",
-    answer: "Yes. Social anxiety is one of the most treatable mental health conditions. With proper support — therapy, gradual exposure, and sometimes medication — most people experience significant improvement. It does not mean you will become an extrovert, but you can reach a point where anxiety no longer controls your decisions or limits your life.",
+    answer: "Yes. Social anxiety is one of the most treatable mental health conditions. With proper support, therapy, gradual exposure, and sometimes medication, most people experience significant improvement. It does not mean you will become an extrovert, but you can reach a point where anxiety no longer controls your decisions or limits your life.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function SocialAnxietyTestCollegePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Social Anxiety Test for Students — Free SPIN",
+              name: "Social Anxiety Test for Students, Free SPIN",
               description: "A free, private social anxiety screening tool for college students using the clinically validated Social Phobia Inventory (SPIN).",
               url: TOOL_URL,
               datePublished: "2026-03-05",
@@ -125,7 +125,7 @@ export default function SocialAnxietyTestCollegePage() {
             else feels impossible for you.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Social anxiety isn&apos;t shyness and it isn&apos;t introversion — it&apos;s a
+            Social anxiety isn&apos;t shyness and it isn&apos;t introversion, it&apos;s a
             real condition that affects 12-15% of college students and can quietly derail your
             academic and social life if left unaddressed. This free, private screening uses
             the <strong>SPIN (Social Phobia Inventory)</strong>, a validated clinical tool.
@@ -143,7 +143,7 @@ export default function SocialAnxietyTestCollegePage() {
             Start the Social Anxiety Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private — nothing is stored or shared.
+            Takes about 5 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export default function SocialAnxietyTestCollegePage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Social anxiety disorder affects an estimated 12–15% of college students, making
                 it one of the most common mental health conditions on campus.
-                <span className="text-slate-500 dark:text-slate-400"> — Journal of American College Health</span>
+                <span className="text-slate-500 dark:text-slate-400">, Journal of American College Health</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
@@ -167,7 +167,7 @@ export default function SocialAnxietyTestCollegePage() {
                 Students with social anxiety are more likely to avoid class participation, drop
                 courses with presentation requirements, struggle with group projects, and
                 underperform relative to their actual ability.
-                <span className="text-slate-500 dark:text-slate-400"> — Anxiety and Depression Association of America</span>
+                <span className="text-slate-500 dark:text-slate-400">, Anxiety and Depression Association of America</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
@@ -176,7 +176,7 @@ export default function SocialAnxietyTestCollegePage() {
                 Social anxiety creates a self-reinforcing cycle: avoiding feared situations provides
                 short-term relief but increases long-term anxiety. The fewer social experiences you
                 have, the more threatening they feel.
-                <span className="text-slate-500 dark:text-slate-400"> — Cognitive Behaviour Therapy</span>
+                <span className="text-slate-500 dark:text-slate-400">, Cognitive Behaviour Therapy</span>
               </p>
             </div>
           </div>
@@ -196,10 +196,10 @@ export default function SocialAnxietyTestCollegePage() {
               </p>
               <div className="space-y-2 text-sm">
                 <p><strong>Shyness vs. social anxiety disorder:</strong> Shyness is a temperament trait. Social anxiety disorder is a clinical condition involving intense fear of judgment that significantly impairs daily functioning. This screening helps distinguish between normal nervousness and something that may need professional attention.</p>
-                <p><strong>Making friends and dating:</strong> Social anxiety does not mean you do not want connection — it means the process of connecting feels threatening. Many students with SAD desperately want friendships and relationships but feel paralyzed by the fear of rejection or embarrassment.</p>
-                <p><strong>Class participation:</strong> For students with social anxiety, mandatory participation can feel like torture rather than engagement. The fear of saying something wrong in front of peers can be intense enough to cause physical symptoms — racing heart, sweating, trembling, or going blank.</p>
-                <p><strong>Exposure therapy works:</strong> The gold-standard treatment involves gradually, systematically facing feared social situations. This does not mean being thrown into your worst nightmare — it means building confidence through small, manageable steps with professional guidance.</p>
-                <p><strong>Campus resources:</strong> Most colleges offer free counseling, social anxiety support groups, and disability accommodations. You are paying for these services through your tuition — use them.</p>
+                <p><strong>Making friends and dating:</strong> Social anxiety does not mean you do not want connection, it means the process of connecting feels threatening. Many students with SAD desperately want friendships and relationships but feel paralyzed by the fear of rejection or embarrassment.</p>
+                <p><strong>Class participation:</strong> For students with social anxiety, mandatory participation can feel like torture rather than engagement. The fear of saying something wrong in front of peers can be intense enough to cause physical symptoms, racing heart, sweating, trembling, or going blank.</p>
+                <p><strong>Exposure therapy works:</strong> The gold-standard treatment involves gradually, systematically facing feared social situations. This does not mean being thrown into your worst nightmare, it means building confidence through small, manageable steps with professional guidance.</p>
+                <p><strong>Campus resources:</strong> Most colleges offer free counseling, social anxiety support groups, and disability accommodations. You are paying for these services through your tuition, use them.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your school or anyone else.</p>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function SocialAnxietyTestCollegePage() {
         <AnswerBlock
           what="A social anxiety screening tailored for college students covering classroom participation, campus social situations, and peer interaction."
           who="College students who avoid social situations, dread class participation, or feel intense anxiety around peers."
-          bottomLine="Social anxiety is one of the most common issues among college students — and one of the most treatable. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Social anxiety is one of the most common issues among college students, and one of the most treatable. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -271,7 +271,7 @@ export default function SocialAnxietyTestCollegePage() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Visit your campus counseling center</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Most colleges offer free or low-cost counseling sessions. Many have therapists
-                who specialize in anxiety and offer <strong>social anxiety groups</strong> — which
+                who specialize in anxiety and offer <strong>social anxiety groups</strong>, which
                 are especially effective because you practice social skills in a safe environment
                 with peers who understand exactly what you&apos;re going through.
               </p>
@@ -290,7 +290,7 @@ export default function SocialAnxietyTestCollegePage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Recovery doesn&apos;t require dramatic gestures. Say hi to one person in class.
                 Ask one question during office hours. Attend one club meeting. Small exposures
-                build confidence over time — and each one proves your anxiety wrong.
+                build confidence over time, and each one proves your anxiety wrong.
               </p>
             </div>
           </div>
@@ -303,10 +303,10 @@ export default function SocialAnxietyTestCollegePage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
             <li>
               <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to{" "}
@@ -318,7 +318,7 @@ export default function SocialAnxietyTestCollegePage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess social anxiety disorder or related conditions. Your responses
             are processed entirely in your browser and are never stored or transmitted. Always consult a
             qualified healthcare professional for medical advice.

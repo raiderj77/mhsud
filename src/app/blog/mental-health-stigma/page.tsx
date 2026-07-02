@@ -83,7 +83,7 @@ export default function MentalHealthStigmaPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Mental health stigma is a set of negative attitudes, beliefs, and behaviors directed toward people with mental health conditions &mdash; including the internalized version that people with mental health conditions direct toward themselves. Stigma is one of the most significant barriers to mental health treatment: research consistently shows it delays help-seeking, reduces treatment engagement, worsens outcomes, and causes harm that is independent of the mental health condition itself. It is also addressable &mdash; and understanding it is the first step.
+            Mental health stigma is a set of negative attitudes, beliefs, and behaviors directed toward people with mental health conditions, including the internalized version that people with mental health conditions direct toward themselves. Stigma is one of the most significant barriers to mental health treatment: research consistently shows it delays help-seeking, reduces treatment engagement, worsens outcomes, and causes harm that is independent of the mental health condition itself. It is also addressable, and understanding it is the first step.
           </p>
         </header>
 
@@ -95,16 +95,16 @@ export default function MentalHealthStigmaPage() {
               Sociologist Erving Goffman (1963) defined stigma as a deeply discrediting attribute that reduces a person &ldquo;from a whole and usual person to a tainted, discounted one.&rdquo; Applied to mental health, stigma operates through three interconnected mechanisms:
             </p>
             <p>
-              <strong>Public stigma:</strong> The negative attitudes and stereotypes that the general public holds about people with mental health conditions &mdash; that they are dangerous, unpredictable, weak, or responsible for their condition.
+              <strong>Public stigma:</strong> The negative attitudes and stereotypes that the general public holds about people with mental health conditions, that they are dangerous, unpredictable, weak, or responsible for their condition.
             </p>
             <p>
-              <strong>Self-stigma:</strong> The internalization of those public stigmas by people with mental health conditions themselves &mdash; leading to shame, reduced self-worth, and the belief that one doesn&rsquo;t deserve help or is &ldquo;crazy.&rdquo;
+              <strong>Self-stigma:</strong> The internalization of those public stigmas by people with mental health conditions themselves, leading to shame, reduced self-worth, and the belief that one doesn&rsquo;t deserve help or is &ldquo;crazy.&rdquo;
             </p>
             <p>
-              <strong>Structural stigma:</strong> Policies and institutional practices that disadvantage people with mental health conditions &mdash; inadequate insurance coverage for mental health care, discrimination in employment and housing, underfunding of mental health research relative to physical health.
+              <strong>Structural stigma:</strong> Policies and institutional practices that disadvantage people with mental health conditions, inadequate insurance coverage for mental health care, discrimination in employment and housing, underfunding of mental health research relative to physical health.
             </p>
             <p>
-              All three forms cause harm, but self-stigma is often the most immediately damaging &mdash; it is the one that lives inside the person and shapes their willingness to seek help, engage with treatment, and disclose their condition.
+              All three forms cause harm, but self-stigma is often the most immediately damaging, it is the one that lives inside the person and shapes their willingness to seek help, engage with treatment, and disclose their condition.
             </p>
           </section>
 
@@ -114,7 +114,7 @@ export default function MentalHealthStigmaPage() {
             <p>The gap between mental health need and mental health treatment is striking:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Approximately <strong>57% of US adults</strong> with a mental illness received no treatment in the past year (SAMHSA, 2023)</li>
-              <li>Stigma is consistently identified as one of the top reasons &mdash; alongside cost and access &mdash; that people don&rsquo;t seek mental health care</li>
+              <li>Stigma is consistently identified as one of the top reasons, alongside cost and access, that people don&rsquo;t seek mental health care</li>
               <li>The average delay between first onset of mental health symptoms and first treatment contact is <strong>11 years</strong> (Wang et al., 2005)</li>
               <li>People with depression wait an average of <strong>6&ndash;8 years</strong> before seeking treatment</li>
               <li>People with anxiety disorders wait an average of <strong>9&ndash;23 years</strong> before treatment</li>
@@ -126,18 +126,18 @@ export default function MentalHealthStigmaPage() {
 
           {/* Section 3 */}
           <section>
-            <h2>Common Stigmatizing Myths &mdash; and the Reality</h2>
+            <h2>Common Stigmatizing Myths, and the Reality</h2>
             <h3>&ldquo;Mental illness means someone is dangerous&rdquo;</h3>
             <p>
-              <strong>Reality:</strong> People with mental health conditions are significantly more likely to be victims of violence than perpetrators. The small elevated risk of violence associated with some severe mental health conditions &mdash; primarily untreated psychosis &mdash; is dwarfed by the far greater violence risk associated with substance use, poverty, and social marginalization. Attributing violence primarily to mental illness is both inaccurate and harmful.
+              <strong>Reality:</strong> People with mental health conditions are significantly more likely to be victims of violence than perpetrators. The small elevated risk of violence associated with some severe mental health conditions, primarily untreated psychosis, is dwarfed by the far greater violence risk associated with substance use, poverty, and social marginalization. Attributing violence primarily to mental illness is both inaccurate and harmful.
             </p>
             <h3>&ldquo;Mental illness is a sign of weakness&rdquo;</h3>
             <p>
-              <strong>Reality:</strong> Mental health conditions are medical conditions with biological, psychological, and social causes. They occur in people across all demographics, personality types, and levels of resilience. Developing depression, anxiety, or PTSD is not evidence of weakness &mdash; it is evidence of being human in a world that sometimes produces overwhelming experiences.
+              <strong>Reality:</strong> Mental health conditions are medical conditions with biological, psychological, and social causes. They occur in people across all demographics, personality types, and levels of resilience. Developing depression, anxiety, or PTSD is not evidence of weakness, it is evidence of being human in a world that sometimes produces overwhelming experiences.
             </p>
             <h3>&ldquo;People with mental health conditions can&rsquo;t recover&rdquo;</h3>
             <p>
-              <strong>Reality:</strong> Recovery &mdash; defined as living a meaningful, self-determined life &mdash; is the expected outcome for most people who receive appropriate treatment. Major depressive disorder responds to treatment in 60&ndash;80% of cases. PTSD has evidence-based treatments with large effect sizes. Even schizophrenia &mdash; among the most severe mental health conditions &mdash; is associated with meaningful recovery and functional improvement in most people with access to quality care.
+              <strong>Reality:</strong> Recovery, defined as living a meaningful, self-determined life, is the expected outcome for most people who receive appropriate treatment. Major depressive disorder responds to treatment in 60&ndash;80% of cases. PTSD has evidence-based treatments with large effect sizes. Even schizophrenia, among the most severe mental health conditions, is associated with meaningful recovery and functional improvement in most people with access to quality care.
             </p>
             <h3>&ldquo;Therapy is for people who are falling apart&rdquo;</h3>
             <p>
@@ -160,21 +160,21 @@ export default function MentalHealthStigmaPage() {
               <li>&ldquo;Needing help means I&rsquo;m weak&rdquo;</li>
               <li>&ldquo;I&rsquo;m broken&rdquo;</li>
               <li>&ldquo;If people knew, they would think less of me&rdquo;</li>
-              <li>&ldquo;I don&rsquo;t deserve help &mdash; others have it worse&rdquo;</li>
+              <li>&ldquo;I don&rsquo;t deserve help, others have it worse&rdquo;</li>
               <li>&ldquo;Therapists will judge me&rdquo;</li>
             </ul>
             <p>
-              Self-stigma is not a character flaw &mdash; it is a predictable outcome of absorbing cultural messages about mental illness. But it is also addressable.
+              Self-stigma is not a character flaw, it is a predictable outcome of absorbing cultural messages about mental illness. But it is also addressable.
             </p>
             <p>Research by Patrick Corrigan (2007) identifies several evidence-based approaches that reduce self-stigma:</p>
             <p>
-              <strong>Disclosure:</strong> Selectively disclosing a mental health condition to trusted others &mdash; and finding that the response is acceptance rather than rejection &mdash; powerfully disconfirms the feared consequences of self-stigma.
+              <strong>Disclosure:</strong> Selectively disclosing a mental health condition to trusted others, and finding that the response is acceptance rather than rejection, powerfully disconfirms the feared consequences of self-stigma.
             </p>
             <p>
               <strong>Peer contact:</strong> Connecting with others who have mental health conditions and are living full, functional lives provides powerful evidence against stigmatizing stereotypes.
             </p>
             <p>
-              <strong>Cognitive reframing:</strong> Challenging the stigmatizing self-beliefs directly &mdash; similar to the cognitive work done in CBT.
+              <strong>Cognitive reframing:</strong> Challenging the stigmatizing self-beliefs directly, similar to the cognitive work done in CBT.
             </p>
             <p>
               <strong>Self-compassion:</strong> Treating one&rsquo;s mental health struggle with the same compassion one would offer a close friend.
@@ -192,13 +192,13 @@ export default function MentalHealthStigmaPage() {
               <strong>Communities of color:</strong> In many communities, mental health stigma intersects with cultural values around strength, self-reliance, distrust of healthcare systems (historically grounded in real experiences of medical racism), and lack of culturally competent care options.
             </p>
             <p>
-              <strong>People with substance use disorders:</strong> Substance use disorders carry particularly intense stigma &mdash; framed as moral failure rather than medical condition. This stigma is embedded even in clinical language (&ldquo;addict,&rdquo; &ldquo;abuser&rdquo;) and significantly delays treatment-seeking.
+              <strong>People with substance use disorders:</strong> Substance use disorders carry particularly intense stigma, framed as moral failure rather than medical condition. This stigma is embedded even in clinical language (&ldquo;addict,&rdquo; &ldquo;abuser&rdquo;) and significantly delays treatment-seeking.
             </p>
             <p>
               <strong>Older adults:</strong> Mental health conditions are often attributed to &ldquo;normal aging&rdquo; in older adults, both by the individuals themselves and by healthcare providers. Stigma intersects with generation-specific attitudes toward mental health care.
             </p>
             <p>
-              <strong>Healthcare and helping profession workers:</strong> Stigma in medical culture means that healthcare workers &mdash; who experience high rates of burnout, depression, anxiety, and PTSD &mdash; often face professional consequences if they disclose mental health struggles, creating dangerous silence around provider wellbeing.
+              <strong>Healthcare and helping profession workers:</strong> Stigma in medical culture means that healthcare workers, who experience high rates of burnout, depression, anxiety, and PTSD, often face professional consequences if they disclose mental health struggles, creating dangerous silence around provider wellbeing.
             </p>
           </section>
 
@@ -207,10 +207,10 @@ export default function MentalHealthStigmaPage() {
           {/* Section 6 */}
           <section>
             <h2>What Actually Reduces Stigma</h2>
-            <p>Research on stigma reduction identifies what works &mdash; and some approaches work better than others.</p>
+            <p>Research on stigma reduction identifies what works, and some approaches work better than others.</p>
             <p><strong>What works:</strong></p>
             <p>
-              <strong>Contact-based education:</strong> Direct, humanizing contact with people who have mental health conditions &mdash; hearing personal stories, putting a face to the diagnosis &mdash; is the most evidence-based stigma reduction approach. Abstract education about mental health statistics is less effective than personal narrative.
+              <strong>Contact-based education:</strong> Direct, humanizing contact with people who have mental health conditions, hearing personal stories, putting a face to the diagnosis, is the most evidence-based stigma reduction approach. Abstract education about mental health statistics is less effective than personal narrative.
             </p>
             <p>
               <strong>Recovery-focused messaging:</strong> Framing mental health conditions as treatable, recoverable conditions rather than permanent, defining identities shifts the public narrative toward hope and help-seeking.
@@ -219,7 +219,7 @@ export default function MentalHealthStigmaPage() {
               <strong>Language change:</strong> Moving from person-first language (&ldquo;a person with schizophrenia&rdquo; rather than &ldquo;a schizophrenic&rdquo;) reflects and reinforces the humanity of people with mental health conditions. Avoiding terms like &ldquo;crazy,&rdquo; &ldquo;psycho,&rdquo; and casual misuse of clinical terms (&ldquo;I&rsquo;m so OCD&rdquo;) reduces normalization of stigmatizing language.
             </p>
             <p>
-              <strong>Open institutional disclosure:</strong> When public figures, institutions, and workplaces openly discuss mental health &mdash; normalizing both the conditions and the treatment &mdash; this produces measurable reductions in individual stigma.
+              <strong>Open institutional disclosure:</strong> When public figures, institutions, and workplaces openly discuss mental health, normalizing both the conditions and the treatment, this produces measurable reductions in individual stigma.
             </p>
             <p><strong>What doesn&rsquo;t work as well:</strong></p>
             <p>
@@ -231,16 +231,16 @@ export default function MentalHealthStigmaPage() {
           <section>
             <h2>If Stigma Has Been Keeping You From Getting Help</h2>
             <p>
-              Recognizing stigma &mdash; including your own internalized version &mdash; for what it is can be a step toward separating it from your decision-making.
+              Recognizing stigma, including your own internalized version, for what it is can be a step toward separating it from your decision-making.
             </p>
             <p>A few questions worth sitting with:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>If a close friend described to you exactly what you&rsquo;re experiencing, would you tell them they should be able to handle it alone?</li>
               <li>If you had a physical medical condition with the same functional impact as what you&rsquo;re experiencing, would you delay treatment?</li>
-              <li>What specifically are you afraid would happen if you sought help &mdash; and how likely is that, really?</li>
+              <li>What specifically are you afraid would happen if you sought help, and how likely is that, really?</li>
             </ul>
             <p>
-              The mental health conditions described on this site &mdash; depression, anxiety, PTSD, ADHD, OCD, substance use disorders &mdash; are not signs of weakness or failure. They are medical conditions that millions of people navigate with appropriate support. You deserve that support too.
+              The mental health conditions described on this site, depression, anxiety, PTSD, ADHD, OCD, substance use disorders, are not signs of weakness or failure. They are medical conditions that millions of people navigate with appropriate support. You deserve that support too.
             </p>
           </section>
 
@@ -250,7 +250,7 @@ export default function MentalHealthStigmaPage() {
           <div className="rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 p-5">
             <p className="text-sm text-amber-900 dark:text-amber-200 font-semibold mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              This article is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment. If you are experiencing a mental health condition, please consult a qualified healthcare professional &mdash; regardless of what anyone, including yourself, thinks about that choice.
+              This article is for informational and educational purposes only. It is not a diagnostic tool and should not be used as a substitute for professional evaluation, diagnosis, or treatment. If you are experiencing a mental health condition, please consult a qualified healthcare professional, regardless of what anyone, including yourself, thinks about that choice.
             </p>
           </div>
 
@@ -261,9 +261,9 @@ export default function MentalHealthStigmaPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="text-sm text-red-800 dark:text-red-300 space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -271,7 +271,7 @@ export default function MentalHealthStigmaPage() {
           <div className="rounded-lg bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 p-6 text-center">
             <h2 className="text-lg font-semibold text-sage-900 dark:text-sage-100 mb-2">Take a Free Mental Health Screening</h2>
             <p className="text-sm text-sage-700 dark:text-sage-400 mb-4">
-              Use our free, confidential screening tools &mdash; no account needed, results are instant and private.
+              Use our free, confidential screening tools, no account needed, results are instant and private.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/phq-9-depression-test" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">PHQ-9 Depression Check</Link>
@@ -288,7 +288,7 @@ export default function MentalHealthStigmaPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

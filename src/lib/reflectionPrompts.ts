@@ -23,7 +23,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "phq-9-depression-test": {
     toolName: "PHQ-9 Depression Self-Check",
     prompts: [
-      "Which of the nine areas felt most true for you right now — and has that changed recently?",
+      "Which of the nine areas felt most true for you right now, and has that changed recently?",
       "Have these feelings been present for a specific stretch of time, or do they come and go with certain situations?",
       "Is there someone in your life you feel comfortable talking to about how you have been feeling?",
       "What has helped you feel even slightly better in the past when you noticed similar feelings?",
@@ -32,7 +32,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
     faqEntries: [
       { question: "What should I do after taking the PHQ-9 depression self-check?", answer: "After completing the PHQ-9, take a moment to reflect on which symptoms feel most relevant to your daily life. Consider writing down your score and any patterns you notice so you can share them with a healthcare provider. The reflection prompts on this page can help you organize your thoughts before an appointment." },
-      { question: "How can I use my PHQ-9 results to talk to my doctor about depression?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. Many doctors use the PHQ-9 in clinical settings, so sharing your self-check score gives them a helpful starting point. You might say: 'I took a PHQ-9 online and scored [X] — I would like to discuss what that means for me.'" },
+      { question: "How can I use my PHQ-9 results to talk to my doctor about depression?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. Many doctors use the PHQ-9 in clinical settings, so sharing your self-check score gives them a helpful starting point. You might say: 'I took a PHQ-9 online and scored [X], I would like to discuss what that means for me.'" },
     ],
   },
 
@@ -43,10 +43,10 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
       "Have you noticed whether your mood shifts at certain times of day or in certain environments?",
       "Are there activities you used to enjoy that feel harder to engage with lately?",
       "How has your energy level affected your ability to carry out daily responsibilities?",
-      "What kind of support — from friends, family, or professionals — might help right now?",
+      "What kind of support, from friends, family, or professionals, might help right now?",
     ],
     faqEntries: [
-      { question: "What do my CES-D depression scale results mean for me?", answer: "The CES-D measures depressive symptoms over the past week. A higher score suggests more frequent symptoms, but it is a screening tool — not a clinical assessment. Reflect on which specific items resonated most and consider discussing persistent patterns with a healthcare provider." },
+      { question: "What do my CES-D depression scale results mean for me?", answer: "The CES-D measures depressive symptoms over the past week. A higher score suggests more frequent symptoms, but it is a screening tool, not a clinical assessment. Reflect on which specific items resonated most and consider discussing persistent patterns with a healthcare provider." },
       { question: "Should I see a doctor after taking the CES-D depression screening?", answer: "If your score falls in the moderate or high range, or if you have noticed depressive symptoms lasting two weeks or more, it is worth speaking with a healthcare provider. You can bring your CES-D results to give them context about what you have been experiencing." },
     ],
   },
@@ -59,11 +59,11 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
       "Which worries or anxious feelings from the past two weeks feel most difficult to control?",
       "Do your anxiety symptoms tend to be worse at certain times of day, or in specific situations like work or social settings?",
       "How is anxiety affecting your sleep, concentration, or relationships right now?",
-      "Have you tried anything in the past that helped you manage anxious feelings — even temporarily?",
+      "Have you tried anything in the past that helped you manage anxious feelings, even temporarily?",
       "If you could reduce one source of worry this week, which would make the biggest difference?",
     ],
     faqEntries: [
-      { question: "What should I do after taking the GAD-7 anxiety test?", answer: "After completing the GAD-7, reflect on which worries feel most out of your control. Consider whether anxiety is affecting your daily functioning — sleep, work, or relationships. If your score suggests moderate or higher anxiety, or if symptoms have lasted several weeks, speaking with a healthcare provider can help you explore next steps." },
+      { question: "What should I do after taking the GAD-7 anxiety test?", answer: "After completing the GAD-7, reflect on which worries feel most out of your control. Consider whether anxiety is affecting your daily functioning, sleep, work, or relationships. If your score suggests moderate or higher anxiety, or if symptoms have lasted several weeks, speaking with a healthcare provider can help you explore next steps." },
       { question: "How do I know if my GAD-7 anxiety score means I need professional help?", answer: "The GAD-7 is a screening tool, not a clinical assessment. Scores of 10 or above suggest moderate anxiety that may benefit from professional support. However, even lower scores warrant attention if anxiety is interfering with your quality of life. Trust your own sense of whether your worry feels manageable." },
     ],
   },
@@ -72,14 +72,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "SPIN Social Anxiety Self-Check",
     prompts: [
       "Which social situations from the questionnaire cause you the most distress in your daily life?",
-      "Do you tend to avoid certain activities or events because of social anxiety — and how does that avoidance affect you?",
-      "Have you noticed whether your social anxiety has changed over the past year — gotten better, worse, or stayed the same?",
+      "Do you tend to avoid certain activities or events because of social anxiety, and how does that avoidance affect you?",
+      "Have you noticed whether your social anxiety has changed over the past year, gotten better, worse, or stayed the same?",
       "Is there a social situation you wish you could handle more comfortably?",
       "What is one small social interaction you could practice this week that feels slightly outside your comfort zone?",
     ],
     faqEntries: [
       { question: "What does my SPIN social anxiety test score mean?", answer: "The SPIN measures how much social situations cause you fear, avoidance, and physical symptoms. Higher scores suggest greater social anxiety. Reflect on which specific situations feel most limiting and whether avoidance is affecting your work, relationships, or well-being." },
-      { question: "Is social anxiety something I should talk to a therapist about?", answer: "If social anxiety is causing you to avoid situations that matter to you — work presentations, friendships, everyday interactions — speaking with a therapist can help. Cognitive behavioral therapy (CBT) is one of the most effective approaches for social anxiety and can be accessed without a referral in most areas." },
+      { question: "Is social anxiety something I should talk to a therapist about?", answer: "If social anxiety is causing you to avoid situations that matter to you, work presentations, friendships, everyday interactions, speaking with a therapist can help. Cognitive behavioral therapy (CBT) is one of the most effective approaches for social anxiety and can be accessed without a referral in most areas." },
     ],
   },
 
@@ -89,14 +89,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "AUDIT Alcohol Screening",
     prompts: [
       "What prompted you to take this alcohol screening today?",
-      "Have you noticed any patterns in when or where you drink most — certain days, situations, or emotions?",
+      "Have you noticed any patterns in when or where you drink most, certain days, situations, or emotions?",
       "Has anyone in your life expressed concern about your drinking, and how did that conversation feel?",
       "What would your typical week look like if your drinking habits were different?",
       "If you decided to make one change to your relationship with alcohol, what feels most realistic right now?",
     ],
     faqEntries: [
       { question: "What should I do after taking the AUDIT alcohol screening?", answer: "After completing the AUDIT, reflect honestly on whether your drinking patterns are causing problems you might be minimizing. Consider whether alcohol is affecting your health, relationships, work, or mood. If your score suggests hazardous or harmful drinking, speaking with a healthcare provider about your results is a good next step." },
-      { question: "Does a high AUDIT score mean I have an alcohol problem?", answer: "A high AUDIT score does not provide a clinical assessment — it indicates that your drinking patterns may be placing you at risk. Many people score in the hazardous range without realizing it. The score is a starting point for honest reflection and, if needed, a conversation with a professional who can help you evaluate your relationship with alcohol." },
+      { question: "Does a high AUDIT score mean I have an alcohol problem?", answer: "A high AUDIT score does not provide a clinical assessment, it indicates that your drinking patterns may be placing you at risk. Many people score in the hazardous range without realizing it. The score is a starting point for honest reflection and, if needed, a conversation with a professional who can help you evaluate your relationship with alcohol." },
     ],
   },
 
@@ -104,8 +104,8 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "AUDIT-C Quick Alcohol Screen",
     prompts: [
       "How does your drinking frequency compare to what you expected before taking this screening?",
-      "Are there specific situations — stress, socializing, boredom — that tend to increase how much you drink?",
-      "How would you describe your relationship with alcohol right now — comfortable, concerning, or somewhere in between?",
+      "Are there specific situations, stress, socializing, boredom, that tend to increase how much you drink?",
+      "How would you describe your relationship with alcohol right now, comfortable, concerning, or somewhere in between?",
       "What would cutting back look like for you in practical terms this week?",
     ],
     faqEntries: [
@@ -118,10 +118,10 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "CAGE-AID Substance Use Screening",
     prompts: [
       "Were any of the four CAGE-AID questions harder to answer honestly than you expected?",
-      "Have you ever felt the need to cut down on your substance use — and what happened when you tried?",
+      "Have you ever felt the need to cut down on your substance use, and what happened when you tried?",
       "How do you feel when others comment on or question your use of alcohol or drugs?",
       "What role does substance use play in your daily routine right now?",
-      "What would reaching out for support look like for you — a friend, a hotline, or a professional?",
+      "What would reaching out for support look like for you, a friend, a hotline, or a professional?",
     ],
     faqEntries: [
       { question: "What does a positive CAGE-AID substance screening result mean?", answer: "Answering yes to two or more CAGE-AID questions suggests a pattern that may indicate a substance use concern. This brief screening does not provide a clinical assessment but highlights areas worth exploring further with a healthcare provider or counselor." },
@@ -133,9 +133,9 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "WHO ASSIST Substance Screening",
     prompts: [
       "Which substance or substances from the screening are you most concerned about right now?",
-      "How has your substance use changed over the past year — increased, decreased, or stayed about the same?",
+      "How has your substance use changed over the past year, increased, decreased, or stayed about the same?",
       "Have you experienced any health problems, social difficulties, or legal issues related to substance use?",
-      "What would motivate you most to make a change — health, relationships, finances, or something else?",
+      "What would motivate you most to make a change, health, relationships, finances, or something else?",
       "What is one realistic step you could take this week to reduce potential harm from substance use?",
     ],
     faqEntries: [
@@ -165,13 +165,13 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "PCL-5 PTSD Screening",
     prompts: [
       "Are there specific situations, places, or people that tend to trigger the symptoms you reported?",
-      "How are these experiences affecting your daily life right now — your sleep, work, or relationships?",
-      "Do you currently have any support in place — a therapist, counselor, doctor, or trusted person?",
+      "How are these experiences affecting your daily life right now, your sleep, work, or relationships?",
+      "Do you currently have any support in place, a therapist, counselor, doctor, or trusted person?",
       "Have you noticed whether certain coping strategies help more than others when symptoms are intense?",
       "What would it mean to you to feel even slightly more in control of these experiences?",
     ],
     faqEntries: [
-      { question: "What should I do after taking the PCL-5 PTSD screening?", answer: "After completing the PCL-5, reflect on which symptom clusters — intrusion, avoidance, negative changes in thinking, or heightened reactivity — are most present in your life. If your score is 31 or above, or if symptoms are significantly affecting your daily functioning, consider reaching out to a trauma-informed therapist or your healthcare provider." },
+      { question: "What should I do after taking the PCL-5 PTSD screening?", answer: "After completing the PCL-5, reflect on which symptom clusters, intrusion, avoidance, negative changes in thinking, or heightened reactivity, are most present in your life. If your score is 31 or above, or if symptoms are significantly affecting your daily functioning, consider reaching out to a trauma-informed therapist or your healthcare provider." },
       { question: "Does a high PCL-5 score mean I have PTSD?", answer: "A PCL-5 score of 31 or above suggests symptoms consistent with PTSD, but only a qualified professional can provide a clinical evaluation. Many people experience trauma-related symptoms without meeting the full criteria for PTSD. Regardless of your score, if these symptoms are affecting your quality of life, professional support can help." },
     ],
   },
@@ -179,8 +179,8 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "pc-ptsd-5-screening": {
     toolName: "PC-PTSD-5 Quick PTSD Screen",
     prompts: [
-      "Which of the five areas — nightmares, avoidance, hypervigilance, numbness, or guilt — feels most present in your life right now?",
-      "How long have you been experiencing these symptoms — weeks, months, or longer?",
+      "Which of the five areas, nightmares, avoidance, hypervigilance, numbness, or guilt, feels most present in your life right now?",
+      "How long have you been experiencing these symptoms, weeks, months, or longer?",
       "Have you spoken with anyone about the experiences that may be contributing to these symptoms?",
       "What helps you feel safest or most grounded when symptoms are at their worst?",
     ],
@@ -195,15 +195,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "asrs-adhd-screening": {
     toolName: "ASRS ADHD Self-Check",
     prompts: [
-      "Which ADHD-related symptoms — inattention, hyperactivity, or impulsivity — feel most disruptive in your daily life?",
-      "How long have you been noticing these patterns — are they recent, or have they been present since childhood?",
+      "Which ADHD-related symptoms, inattention, hyperactivity, or impulsivity, feel most disruptive in your daily life?",
+      "How long have you been noticing these patterns, are they recent, or have they been present since childhood?",
       "How are these symptoms affecting your work performance, relationships, or ability to complete daily tasks?",
       "Have you developed any strategies or workarounds that help you manage focus or restlessness?",
-      "What would getting a professional ADHD evaluation mean to you — relief, answers, or something else?",
+      "What would getting a professional ADHD evaluation mean to you, relief, answers, or something else?",
     ],
     faqEntries: [
       { question: "What should I do after taking the ASRS ADHD screening?", answer: "The ASRS is a starting point for understanding whether ADHD symptoms may be affecting your life. If your results suggest elevated symptoms, consider scheduling an evaluation with a psychiatrist, psychologist, or primary care provider experienced with ADHD. Bring your screening results to give them context." },
-      { question: "Can adults have ADHD even if they were never assessed as children?", answer: "Yes — many adults discover they have ADHD later in life, especially if their symptoms were misattributed to laziness, anxiety, or depression. Adult ADHD is underrecognized, and getting evaluated can lead to strategies, accommodations, or treatments that significantly improve daily functioning." },
+      { question: "Can adults have ADHD even if they were never assessed as children?", answer: "Yes, many adults discover they have ADHD later in life, especially if their symptoms were misattributed to laziness, anxiety, or depression. Adult ADHD is underrecognized, and getting evaluated can lead to strategies, accommodations, or treatments that significantly improve daily functioning." },
     ],
   },
 
@@ -212,9 +212,9 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "dass-21-depression-anxiety-stress": {
     toolName: "DASS-21 Depression, Anxiety & Stress Scale",
     prompts: [
-      "Which of the three domains — depression, anxiety, or stress — showed the highest score, and does that match how you have been feeling?",
+      "Which of the three domains, depression, anxiety, or stress, showed the highest score, and does that match how you have been feeling?",
       "Are these symptoms mostly triggered by specific circumstances, or do they feel present most of the time?",
-      "How are depression, anxiety, and stress each affecting different parts of your life — work, relationships, physical health?",
+      "How are depression, anxiety, and stress each affecting different parts of your life, work, relationships, physical health?",
       "What coping strategies have you found helpful for managing any of these three areas?",
       "If you could address one of the three areas first, which would make the biggest difference in your daily well-being?",
     ],
@@ -229,7 +229,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "who-5-wellbeing-index": {
     toolName: "WHO-5 Well-Being Index",
     prompts: [
-      "Which aspects of well-being — cheerfulness, calm, energy, restful sleep, or engagement — feel most lacking right now?",
+      "Which aspects of well-being, cheerfulness, calm, energy, restful sleep, or engagement, feel most lacking right now?",
       "How has your sense of well-being changed over the past month compared to the past two weeks?",
       "What activities or relationships tend to increase your overall sense of well-being?",
       "Are there specific barriers preventing you from doing things that usually make you feel good?",
@@ -244,14 +244,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "k6-distress-scale": {
     toolName: "K6 Psychological Distress Scale",
     prompts: [
-      "Which types of distress — nervousness, hopelessness, restlessness, sadness, effort, or worthlessness — felt strongest over the past month?",
+      "Which types of distress, nervousness, hopelessness, restlessness, sadness, effort, or worthlessness, felt strongest over the past month?",
       "How is psychological distress affecting your ability to function at work, at home, or in your relationships?",
       "Have you experienced this level of distress before, or does this feel different from your usual baseline?",
       "What resources or support systems do you currently have in place for managing distress?",
     ],
     faqEntries: [
-      { question: "What does a high K6 psychological distress score indicate?", answer: "A K6 score of 13 or above suggests serious psychological distress and is often used as a threshold for identifying people who may benefit from professional mental health support. The K6 does not specify which condition is present — it measures overall emotional strain across multiple dimensions." },
-      { question: "Is the K6 distress scale used by doctors and researchers?", answer: "Yes — the K6 is widely used in population health surveys, primary care, and research settings. It was developed by Kessler et al. and is endorsed by organizations worldwide for quickly assessing psychological distress levels in community and clinical populations." },
+      { question: "What does a high K6 psychological distress score indicate?", answer: "A K6 score of 13 or above suggests serious psychological distress and is often used as a threshold for identifying people who may benefit from professional mental health support. The K6 does not specify which condition is present, it measures overall emotional strain across multiple dimensions." },
+      { question: "Is the K6 distress scale used by doctors and researchers?", answer: "Yes, the K6 is widely used in population health surveys, primary care, and research settings. It was developed by Kessler et al. and is endorsed by organizations worldwide for quickly assessing psychological distress levels in community and clinical populations." },
     ],
   },
 
@@ -279,7 +279,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     prompts: [
       "Which aspects of social interaction or communication from the questionnaire felt most relevant to your experiences?",
       "Have you always felt different from your peers in how you process social situations, sensory input, or routines?",
-      "How do your tendencies around patterns, routines, or focus affect your daily life — positively or negatively?",
+      "How do your tendencies around patterns, routines, or focus affect your daily life, positively or negatively?",
       "What accommodations or strategies have you naturally developed to navigate social or sensory challenges?",
       "What would understanding more about your neurodevelopmental profile mean to you?",
     ],
@@ -294,14 +294,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "burnout-assessment-tool": {
     toolName: "Burnout Assessment Tool",
     prompts: [
-      "Which dimension of burnout — exhaustion, mental distance, cognitive impairment, or emotional impairment — resonated most with your current experience?",
+      "Which dimension of burnout, exhaustion, mental distance, cognitive impairment, or emotional impairment, resonated most with your current experience?",
       "Can you identify specific aspects of your work or life that are contributing most to feelings of burnout?",
       "How has burnout affected your performance, relationships, or physical health?",
-      "What boundaries or changes — even small ones — could you realistically set this week to protect your energy?",
+      "What boundaries or changes, even small ones, could you realistically set this week to protect your energy?",
       "When was the last time you felt truly recharged, and what made that possible?",
     ],
     faqEntries: [
-      { question: "What should I do after getting a high burnout assessment score?", answer: "A high burnout score signals that your current demands are exceeding your resources. Reflect on which specific areas — workload, lack of control, values mismatch — are the biggest contributors. Consider talking with your supervisor about workload, setting clearer boundaries, and consulting a therapist if burnout is affecting your mental health." },
+      { question: "What should I do after getting a high burnout assessment score?", answer: "A high burnout score signals that your current demands are exceeding your resources. Reflect on which specific areas, workload, lack of control, values mismatch, are the biggest contributors. Consider talking with your supervisor about workload, setting clearer boundaries, and consulting a therapist if burnout is affecting your mental health." },
       { question: "Is burnout the same as depression, or are they different?", answer: "Burnout and depression share symptoms like fatigue and low motivation, but burnout is specifically tied to chronic workplace or role-related stress. Depression tends to be more pervasive across all life areas. However, prolonged burnout can lead to depression. If you are unsure, taking both the burnout assessment and the PHQ-9 can help clarify the picture." },
     ],
   },
@@ -309,8 +309,8 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "work-stress-check": {
     toolName: "Work Stress Self-Check",
     prompts: [
-      "Which work stressors — workload, relationships, control, or recognition — feel most pressing right now?",
-      "How is work stress showing up in your body — tension, headaches, sleep problems, or changes in appetite?",
+      "Which work stressors, workload, relationships, control, or recognition, feel most pressing right now?",
+      "How is work stress showing up in your body, tension, headaches, sleep problems, or changes in appetite?",
       "Are there aspects of your work environment you can change, and which feel outside your control?",
       "What does a manageable workday look like for you, and how far is your current reality from that?",
       "What is one conversation or boundary that could reduce your work stress this week?",
@@ -324,15 +324,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "holmes-rahe-stress-inventory": {
     toolName: "Holmes-Rahe Stress Inventory",
     prompts: [
-      "Looking at the life events you checked, how many occurred in the past 12 months — and were you surprised by the total?",
+      "Looking at the life events you checked, how many occurred in the past 12 months, and were you surprised by the total?",
       "Which recent life changes have been the most emotionally demanding, even if they were positive events?",
       "How are you currently coping with the cumulative stress from these life events?",
-      "What support systems — friends, family, professionals — are available to you during this period of change?",
+      "What support systems, friends, family, professionals, are available to you during this period of change?",
       "What is one proactive step you could take to protect your health during a high-stress period?",
     ],
     faqEntries: [
-      { question: "What does my Holmes-Rahe stress inventory score mean for my health?", answer: "The Holmes-Rahe scale assigns point values to common life events. A score above 300 suggests a high risk of stress-related illness within the next two years, based on the original research. Scores between 150–299 indicate moderate risk. This is a general indicator, not a prediction — many protective factors can reduce your actual risk." },
-      { question: "Can positive life events cause stress too?", answer: "Yes — the Holmes-Rahe inventory includes positive events like marriage, pregnancy, job promotions, and vacations because all significant life changes require adaptation, which creates physiological stress. Understanding that even good changes demand energy can help you plan recovery time and support." },
+      { question: "What does my Holmes-Rahe stress inventory score mean for my health?", answer: "The Holmes-Rahe scale assigns point values to common life events. A score above 300 suggests a high risk of stress-related illness within the next two years, based on the original research. Scores between 150–299 indicate moderate risk. This is a general indicator, not a prediction, many protective factors can reduce your actual risk." },
+      { question: "Can positive life events cause stress too?", answer: "Yes, the Holmes-Rahe inventory includes positive events like marriage, pregnancy, job promotions, and vacations because all significant life changes require adaptation, which creates physiological stress. Understanding that even good changes demand energy can help you plan recovery time and support." },
     ],
   },
 
@@ -342,13 +342,13 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     toolName: "Sleep & Mood Reflection",
     prompts: [
       "What patterns do you notice between your sleep quality and how you feel emotionally the next day?",
-      "Are there specific habits — screen time, caffeine, worry — that you think affect your sleep most?",
+      "Are there specific habits, screen time, caffeine, worry, that you think affect your sleep most?",
       "How does poor sleep affect your patience, focus, or motivation during the day?",
       "What has helped you sleep better in the past, even if you are not doing it consistently now?",
       "What is one realistic change to your bedtime routine you could try this week?",
     ],
     faqEntries: [
-      { question: "How does sleep affect mental health and mood?", answer: "Sleep and mood are deeply connected. Poor sleep increases irritability, reduces emotional resilience, and worsens symptoms of anxiety and depression. Conversely, improving sleep quality is one of the most effective ways to support mental health. Even small changes — consistent wake times, reducing screen exposure — can make a noticeable difference." },
+      { question: "How does sleep affect mental health and mood?", answer: "Sleep and mood are deeply connected. Poor sleep increases irritability, reduces emotional resilience, and worsens symptoms of anxiety and depression. Conversely, improving sleep quality is one of the most effective ways to support mental health. Even small changes, consistent wake times, reducing screen exposure, can make a noticeable difference." },
       { question: "Should I talk to a doctor about sleep problems affecting my mood?", answer: "If poor sleep is a recurring pattern that is affecting your mood, energy, or ability to function, speaking with a healthcare provider is worthwhile. Sleep disorders like insomnia or sleep apnea are treatable, and addressing them often improves mood and mental health symptoms significantly." },
     ],
   },
@@ -356,14 +356,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "athens-insomnia-scale": {
     toolName: "Athens Insomnia Scale",
     prompts: [
-      "Which aspect of sleep — falling asleep, staying asleep, or waking too early — is most disrupted for you?",
-      "How long have your insomnia symptoms been present — days, weeks, or months?",
+      "Which aspect of sleep, falling asleep, staying asleep, or waking too early, is most disrupted for you?",
+      "How long have your insomnia symptoms been present, days, weeks, or months?",
       "How is poor sleep affecting your daytime functioning, mood, or ability to concentrate?",
-      "Have you tried any sleep hygiene strategies — and which ones helped even a little?",
+      "Have you tried any sleep hygiene strategies, and which ones helped even a little?",
       "What worries or thoughts tend to keep you awake at night?",
     ],
     faqEntries: [
-      { question: "What does my Athens Insomnia Scale score mean?", answer: "The Athens Insomnia Scale measures sleep difficulty over the past month. A score of 6 or above suggests clinically significant insomnia. The scale examines sleep onset, nighttime awakenings, early morning awakening, sleep quality, and daytime impact — giving you a comprehensive view of how sleep is affecting you." },
+      { question: "What does my Athens Insomnia Scale score mean?", answer: "The Athens Insomnia Scale measures sleep difficulty over the past month. A score of 6 or above suggests clinically significant insomnia. The scale examines sleep onset, nighttime awakenings, early morning awakening, sleep quality, and daytime impact, giving you a comprehensive view of how sleep is affecting you." },
       { question: "What is the most effective treatment for insomnia?", answer: "Cognitive Behavioral Therapy for Insomnia (CBT-I) is considered the first-line treatment, recommended over sleep medications by major medical organizations. CBT-I addresses the thoughts and behaviors that perpetuate insomnia and has lasting effects. Ask your healthcare provider about CBT-I programs or apps." },
     ],
   },
@@ -371,15 +371,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "mental-load-calculator": {
     toolName: "Mental Load Calculator",
     prompts: [
-      "Which categories of mental load — household, emotional, financial, or logistics — feel heaviest for you?",
+      "Which categories of mental load, household, emotional, financial, or logistics, feel heaviest for you?",
       "How does carrying this mental load affect your stress level, mood, and relationships?",
       "Are there specific tasks you handle that others in your household could share or take on?",
       "What would it feel like to have even 20% of your mental load redistributed?",
       "What is one concrete conversation you could have this week about sharing responsibilities more evenly?",
     ],
     faqEntries: [
-      { question: "What is mental load and why does it affect mental health?", answer: "Mental load refers to the invisible cognitive work of managing a household or family — remembering appointments, planning meals, tracking supplies, coordinating schedules. Research shows that an unequal distribution of mental load contributes to stress, burnout, and relationship dissatisfaction, particularly for women and primary caregivers." },
-      { question: "How can I reduce my mental load?", answer: "Start by making invisible tasks visible — list everything you manage and discuss redistribution with your partner or household members. Use shared calendars, delegate with full ownership (not just execution), and let go of standards that create unnecessary work. If mental load is causing significant stress, a therapist can help you set boundaries." },
+      { question: "What is mental load and why does it affect mental health?", answer: "Mental load refers to the invisible cognitive work of managing a household or family, remembering appointments, planning meals, tracking supplies, coordinating schedules. Research shows that an unequal distribution of mental load contributes to stress, burnout, and relationship dissatisfaction, particularly for women and primary caregivers." },
+      { question: "How can I reduce my mental load?", answer: "Start by making invisible tasks visible, list everything you manage and discuss redistribution with your partner or household members. Use shared calendars, delegate with full ownership (not just execution), and let go of standards that create unnecessary work. If mental load is causing significant stress, a therapist can help you set boundaries." },
     ],
   },
 
@@ -388,26 +388,26 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "rosenberg-self-esteem-scale": {
     toolName: "Rosenberg Self-Esteem Scale",
     prompts: [
-      "Which statements about yourself — positive or negative — felt most strongly true when you answered?",
-      "How does your self-esteem fluctuate in different contexts — at work, in relationships, or when alone?",
+      "Which statements about yourself, positive or negative, felt most strongly true when you answered?",
+      "How does your self-esteem fluctuate in different contexts, at work, in relationships, or when alone?",
       "Can you identify specific experiences or messages that have shaped how you feel about yourself?",
       "What qualities or accomplishments do others recognize in you that you find hard to see in yourself?",
       "What is one kind thing you could say to yourself today that you would easily say to a friend?",
     ],
     faqEntries: [
       { question: "What does my Rosenberg Self-Esteem Scale score mean?", answer: "The Rosenberg scale measures global self-esteem on a range from 0 to 30. Scores below 15 suggest low self-esteem. Low self-esteem is not a condition itself, but it is associated with depression, anxiety, and difficulty in relationships. Understanding your baseline can help you track progress as you work on self-perception." },
-      { question: "Can low self-esteem be improved with therapy?", answer: "Yes — low self-esteem responds well to therapy, particularly cognitive behavioral therapy (CBT), which helps identify and challenge negative self-beliefs. Self-compassion practices and mindfulness have also shown significant benefits. Improvement is gradual but achievable with consistent effort and support." },
+      { question: "Can low self-esteem be improved with therapy?", answer: "Yes, low self-esteem responds well to therapy, particularly cognitive behavioral therapy (CBT), which helps identify and challenge negative self-beliefs. Self-compassion practices and mindfulness have also shown significant benefits. Improvement is gradual but achievable with consistent effort and support." },
     ],
   },
 
   "ucla-loneliness-scale": {
     toolName: "UCLA Loneliness Scale",
     prompts: [
-      "Which aspects of loneliness from the questionnaire resonated most — lack of companionship, feeling left out, or emotional isolation?",
+      "Which aspects of loneliness from the questionnaire resonated most, lack of companionship, feeling left out, or emotional isolation?",
       "Is your loneliness primarily about the quantity of relationships, the quality, or both?",
       "How has loneliness affected your motivation to reach out to others or participate in social activities?",
       "Are there connections in your life that could deepen if you invested more time or vulnerability?",
-      "What is one small step you could take this week to feel more connected — even briefly?",
+      "What is one small step you could take this week to feel more connected, even briefly?",
     ],
     faqEntries: [
       { question: "What does my UCLA Loneliness Scale score indicate?", answer: "Higher scores on the UCLA Loneliness Scale indicate greater feelings of loneliness and social isolation. Loneliness is increasingly recognized as a significant public health concern associated with depression, anxiety, cardiovascular disease, and cognitive decline. Your score helps you understand the extent of social disconnection you are experiencing." },
@@ -418,15 +418,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "brief-resilience-scale": {
     toolName: "Brief Resilience Scale",
     prompts: [
-      "How do you typically respond to stressful events — do you bounce back quickly, or does recovery take time?",
+      "How do you typically respond to stressful events, do you bounce back quickly, or does recovery take time?",
       "What personal strengths or resources help you get through difficult periods?",
       "Are there specific situations where your resilience feels strong, and others where it feels depleted?",
       "What has a past experience of overcoming adversity taught you about yourself?",
       "What is one thing you could do regularly to build your capacity to handle stress?",
     ],
     faqEntries: [
-      { question: "What does a low resilience score on the Brief Resilience Scale mean?", answer: "A low resilience score suggests you may find it harder to bounce back from stressful events. Resilience is not a fixed trait — it can be developed through practices like building social connections, developing problem-solving skills, maintaining physical health, and learning stress management techniques." },
-      { question: "Can resilience be improved over time?", answer: "Yes — research consistently shows that resilience is a skill that can be strengthened. Regular exercise, strong social connections, mindfulness practices, adequate sleep, and cognitive reframing all contribute to greater resilience. Therapy, particularly CBT, can also help build resilience by changing how you respond to adversity." },
+      { question: "What does a low resilience score on the Brief Resilience Scale mean?", answer: "A low resilience score suggests you may find it harder to bounce back from stressful events. Resilience is not a fixed trait, it can be developed through practices like building social connections, developing problem-solving skills, maintaining physical health, and learning stress management techniques." },
+      { question: "Can resilience be improved over time?", answer: "Yes, research consistently shows that resilience is a skill that can be strengthened. Regular exercise, strong social connections, mindfulness practices, adequate sleep, and cognitive reframing all contribute to greater resilience. Therapy, particularly CBT, can also help build resilience by changing how you respond to adversity." },
     ],
   },
 
@@ -435,14 +435,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "ace-questionnaire": {
     toolName: "ACE (Adverse Childhood Experiences) Questionnaire",
     prompts: [
-      "How did it feel to reflect on these childhood experiences — was anything surprising or difficult to acknowledge?",
+      "How did it feel to reflect on these childhood experiences, was anything surprising or difficult to acknowledge?",
       "Have you noticed connections between your childhood experiences and your current emotional patterns or relationships?",
-      "What protective factors — supportive adults, skills, or inner strengths — helped you through difficult childhood experiences?",
+      "What protective factors, supportive adults, skills, or inner strengths, helped you through difficult childhood experiences?",
       "Are there areas of your life today where the effects of childhood adversity still show up?",
-      "What kind of support — therapy, community, self-care — might help you process these experiences?",
+      "What kind of support, therapy, community, self-care, might help you process these experiences?",
     ],
     faqEntries: [
-      { question: "What does my ACE score mean for my health?", answer: "ACE scores reflect the number of adverse childhood experiences you endorsed. Research by Felitti et al. (1998) found that higher ACE scores correlate with increased risk for chronic health conditions, mental health challenges, and substance use. However, an ACE score is not a destiny — protective factors, resilience, and support significantly modify outcomes." },
+      { question: "What does my ACE score mean for my health?", answer: "ACE scores reflect the number of adverse childhood experiences you endorsed. Research by Felitti et al. (1998) found that higher ACE scores correlate with increased risk for chronic health conditions, mental health challenges, and substance use. However, an ACE score is not a destiny, protective factors, resilience, and support significantly modify outcomes." },
       { question: "Should I see a therapist about my ACE score?", answer: "If your ACE score is 4 or higher, or if reflecting on childhood experiences brought up strong emotions, working with a trauma-informed therapist can be very helpful. Therapies like EMDR and trauma-focused CBT are specifically designed to help people process and heal from adverse childhood experiences." },
     ],
   },
@@ -450,11 +450,11 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "family-impact-assessment": {
     toolName: "Family Impact Assessment",
     prompts: [
-      "Which areas of family life — communication, trust, financial stability, or emotional safety — feel most affected?",
+      "Which areas of family life, communication, trust, financial stability, or emotional safety, feel most affected?",
       "How has substance use or mental health challenges in your family changed the dynamics between family members?",
-      "What role do you feel you play in your family system — caretaker, mediator, the one who keeps things together?",
+      "What role do you feel you play in your family system, caretaker, mediator, the one who keeps things together?",
       "What boundaries would help protect your own well-being while still supporting your family?",
-      "What kind of family support — counseling, a support group, or honest conversations — might help right now?",
+      "What kind of family support, counseling, a support group, or honest conversations, might help right now?",
     ],
     faqEntries: [
       { question: "How does a family member's substance use affect the whole family?", answer: "Substance use affects the entire family system, not just the individual using. Common effects include disrupted communication, financial strain, emotional volatility, trust erosion, and role reversal (children taking on adult responsibilities). The Family Impact Assessment helps you identify which specific areas are most affected in your situation." },
@@ -469,7 +469,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     prompts: [
       "What motivated you to start counting your sober days, and how has that motivation evolved?",
       "What has been the most unexpected benefit of your sobriety journey so far?",
-      "What has been the hardest part — and how have you navigated it?",
+      "What has been the hardest part, and how have you navigated it?",
       "Who or what has provided the most support during your recovery?",
       "What would you tell someone who is on day one of their sobriety journey?",
     ],
@@ -485,11 +485,11 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
       "Were you surprised by how much money substance use was costing you?",
       "What would you most like to do with the money you are saving in recovery?",
       "How does seeing the financial impact of recovery affect your motivation to continue?",
-      "What other costs — emotional, relational, professional — have decreased since you started recovery?",
+      "What other costs, emotional, relational, professional, have decreased since you started recovery?",
     ],
     faqEntries: [
       { question: "How much money can you save by quitting drinking or drug use?", answer: "The amount varies widely based on your previous habits, but many people save hundreds to thousands of dollars per month. The recovery savings calculator helps you see your personal financial impact based on your specific substance, frequency, and spending patterns." },
-      { question: "Does tracking money saved in recovery help with motivation?", answer: "Yes — research on behavior change shows that connecting actions to tangible, visible outcomes increases motivation. Seeing a concrete dollar amount grow over time reinforces the benefits of sobriety in a way that complements emotional and health-related motivations." },
+      { question: "Does tracking money saved in recovery help with motivation?", answer: "Yes, research on behavior change shows that connecting actions to tangible, visible outcomes increases motivation. Seeing a concrete dollar amount grow over time reinforces the benefits of sobriety in a way that complements emotional and health-related motivations." },
     ],
   },
 
@@ -512,12 +512,12 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     prompts: [
       "Were you surprised by the estimated BAC based on your typical drinking pattern?",
       "How does knowing your estimated BAC change how you think about your drinking on a typical night out?",
-      "At what point in an evening do you typically stop drinking — and is that before or after impairment begins?",
+      "At what point in an evening do you typically stop drinking, and is that before or after impairment begins?",
       "What strategies could you use to keep your BAC at a lower, safer level?",
     ],
     faqEntries: [
       { question: "How accurate is an online BAC calculator?", answer: "Online BAC calculators provide estimates based on the Widmark formula, which accounts for weight, sex, number of drinks, and time elapsed. However, individual factors like metabolism, food intake, medications, and tolerance mean that actual BAC can vary. These calculators are educational tools, not substitutes for a breathalyzer or blood test." },
-      { question: "What BAC level is considered legally impaired?", answer: "In most US states, a BAC of 0.08% is the legal limit for driving. However, impairment begins well below this level — at 0.02% you may experience altered mood and relaxed judgment, and at 0.05% motor coordination and judgment are measurably affected. There is no safe BAC level for driving." },
+      { question: "What BAC level is considered legally impaired?", answer: "In most US states, a BAC of 0.08% is the legal limit for driving. However, impairment begins well below this level, at 0.02% you may experience altered mood and relaxed judgment, and at 0.05% motor coordination and judgment are measurably affected. There is no safe BAC level for driving." },
     ],
   },
 
@@ -530,7 +530,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
       "What guidelines for low-risk drinking feel realistic for your lifestyle?",
     ],
     faqEntries: [
-      { question: "What counts as one standard drink?", answer: "In the US, one standard drink contains about 14 grams of pure alcohol — equivalent to 12 oz of regular beer (5% ABV), 5 oz of wine (12% ABV), or 1.5 oz of distilled spirits (40% ABV). Many common servings actually contain more than one standard drink, which is why a calculator can be eye-opening." },
+      { question: "What counts as one standard drink?", answer: "In the US, one standard drink contains about 14 grams of pure alcohol, equivalent to 12 oz of regular beer (5% ABV), 5 oz of wine (12% ABV), or 1.5 oz of distilled spirits (40% ABV). Many common servings actually contain more than one standard drink, which is why a calculator can be eye-opening." },
       { question: "How many standard drinks per week is considered low risk?", answer: "The NIAAA defines low-risk drinking as no more than 14 drinks per week for men and 7 per week for women, with no more than 4 per occasion for men and 3 for women. Newer research from the Canadian Centre on Substance Use and Addiction suggests even lower limits for optimal health." },
     ],
   },
@@ -538,14 +538,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "halt-check-in": {
     toolName: "HALT Check-In",
     prompts: [
-      "Which of the four HALT states — Hungry, Angry, Lonely, or Tired — do you experience most often before a craving or emotional low?",
+      "Which of the four HALT states, Hungry, Angry, Lonely, or Tired, do you experience most often before a craving or emotional low?",
       "How quickly can you usually recognize when you are in a HALT state?",
       "What quick actions can you take for each HALT state before it escalates?",
       "How has checking in with HALT helped you avoid reactive decisions?",
     ],
     faqEntries: [
-      { question: "What does HALT stand for and why is it used in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, and Tired — four basic states that increase vulnerability to relapse and poor decision-making. HALT is widely used in recovery programs because addressing these physical and emotional needs reduces the intensity of cravings and emotional reactivity." },
-      { question: "How often should I do a HALT check-in?", answer: "Ideally, check in with HALT at least once daily, and whenever you notice increased stress, cravings, or emotional volatility. Many people find it helpful to do HALT check-ins at transition points in their day — morning, after work, and before bed. The more regularly you practice, the more automatic self-awareness becomes." },
+      { question: "What does HALT stand for and why is it used in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, and Tired, four basic states that increase vulnerability to relapse and poor decision-making. HALT is widely used in recovery programs because addressing these physical and emotional needs reduces the intensity of cravings and emotional reactivity." },
+      { question: "How often should I do a HALT check-in?", answer: "Ideally, check in with HALT at least once daily, and whenever you notice increased stress, cravings, or emotional volatility. Many people find it helpful to do HALT check-ins at transition points in their day, morning, after work, and before bed. The more regularly you practice, the more automatic self-awareness becomes." },
     ],
   },
 
@@ -568,23 +568,23 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     prompts: [
       "Were the estimated treatment costs higher or lower than you expected?",
       "How does understanding the cost breakdown help you plan for getting help?",
-      "Are there financial barriers to treatment — and have you explored insurance coverage, sliding scale options, or free programs?",
-      "What is the cost of NOT getting treatment — in health, relationships, and lost potential?",
+      "Are there financial barriers to treatment, and have you explored insurance coverage, sliding scale options, or free programs?",
+      "What is the cost of NOT getting treatment, in health, relationships, and lost potential?",
     ],
     faqEntries: [
       { question: "How much does mental health or substance use treatment cost?", answer: "Treatment costs vary widely: outpatient therapy typically ranges from $100–250 per session (often covered by insurance), intensive outpatient programs $5,000–10,000, and residential treatment $10,000–30,000+. Many options exist for reducing costs including insurance coverage, sliding scale fees, state-funded programs, and SAMHSA-funded treatment centers." },
-      { question: "Can I get free or low-cost mental health treatment?", answer: "Yes — SAMHSA's treatment locator (findtreatment.gov) lists free and low-cost options. Community mental health centers offer sliding scale fees. Many therapists offer reduced rates for uninsured clients. State Medicaid programs cover mental health and substance use treatment in all 50 states." },
+      { question: "Can I get free or low-cost mental health treatment?", answer: "Yes, SAMHSA's treatment locator (findtreatment.gov) lists free and low-cost options. Community mental health centers offer sliding scale fees. Many therapists offer reduced rates for uninsured clients. State Medicaid programs cover mental health and substance use treatment in all 50 states." },
     ],
   },
 
   "relapse-prevention-plan": {
     toolName: "Relapse Prevention Plan Builder",
     prompts: [
-      "What are your three most common triggers — and which one catches you off guard most often?",
+      "What are your three most common triggers, and which one catches you off guard most often?",
       "What early warning signs have you noticed before previous relapses or close calls?",
-      "Who are the people you can call when you feel yourself slipping — and do they know they are on your list?",
+      "Who are the people you can call when you feel yourself slipping, and do they know they are on your list?",
       "What healthy coping strategies have worked for you, and which ones do you want to strengthen?",
-      "What does your ideal daily routine look like in recovery — and how close is your current routine to that?",
+      "What does your ideal daily routine look like in recovery, and how close is your current routine to that?",
     ],
     faqEntries: [
       { question: "Why is a relapse prevention plan important in recovery?", answer: "A relapse prevention plan provides a concrete, personalized strategy for maintaining sobriety when challenges arise. Research shows that people with written plans are significantly more likely to sustain recovery because they have pre-planned responses to triggers, cravings, and high-risk situations rather than relying on willpower alone." },
@@ -595,7 +595,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "readiness-to-change": {
     toolName: "Readiness to Change Assessment",
     prompts: [
-      "Where do you honestly feel you are in the stages of change — precontemplation, contemplation, preparation, action, or maintenance?",
+      "Where do you honestly feel you are in the stages of change, precontemplation, contemplation, preparation, action, or maintenance?",
       "What would need to happen for you to move one stage forward?",
       "What are the pros and cons of making a change right now in your life?",
       "What past attempts at change have taught you about what works and what does not?",
@@ -603,7 +603,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
     faqEntries: [
       { question: "What are the stages of change in recovery?", answer: "The Transtheoretical Model identifies five stages: Precontemplation (not yet considering change), Contemplation (thinking about change), Preparation (planning to change), Action (actively making changes), and Maintenance (sustaining changes over time). Understanding your current stage helps you set realistic goals and find appropriate support." },
-      { question: "What if I am not ready to change yet?", answer: "Being in the precontemplation or contemplation stage is a normal part of the change process — not a failure. Most people cycle through stages multiple times before making lasting changes. Exploring your ambivalence honestly, learning about the effects of your behavior, and keeping the door open for future change are all meaningful steps." },
+      { question: "What if I am not ready to change yet?", answer: "Being in the precontemplation or contemplation stage is a normal part of the change process, not a failure. Most people cycle through stages multiple times before making lasting changes. Exploring your ambivalence honestly, learning about the effects of your behavior, and keeping the door open for future change are all meaningful steps." },
     ],
   },
 
@@ -612,7 +612,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "trigger-identification-worksheet": {
     toolName: "Trigger Identification Worksheet",
     prompts: [
-      "Which triggers surprised you — were there patterns you had not consciously recognized before?",
+      "Which triggers surprised you, were there patterns you had not consciously recognized before?",
       "How do emotional triggers (stress, loneliness, boredom) differ from situational triggers (places, people, times) for you?",
       "For your top three triggers, what is one specific coping strategy you could use for each?",
       "How can you modify your environment or routine to reduce exposure to your strongest triggers?",
@@ -626,7 +626,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "coping-skills-randomizer": {
     toolName: "Coping Skills Randomizer",
     prompts: [
-      "Which coping skills that came up have you tried before — and which are new to you?",
+      "Which coping skills that came up have you tried before, and which are new to you?",
       "Do you tend to rely on one type of coping (distraction, physical activity, social connection) more than others?",
       "What coping skills work best for you when stress is high versus when it is moderate?",
       "What barriers prevent you from using coping skills when you need them most?",
@@ -640,7 +640,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "daily-recovery-check-in": {
     toolName: "Daily Recovery Check-In",
     prompts: [
-      "What patterns do you notice in your daily check-ins over the past week — are certain days consistently harder?",
+      "What patterns do you notice in your daily check-ins over the past week, are certain days consistently harder?",
       "How does checking in daily affect your awareness of your emotional state?",
       "What does a good recovery day look like for you, and what makes it possible?",
       "How can your daily check-in information help you in conversations with your counselor or sponsor?",
@@ -654,49 +654,49 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "urge-surfing-timer": {
     toolName: "Urge Surfing Timer",
     prompts: [
-      "What did you notice about the intensity of your craving as you practiced urge surfing — did it peak and then decrease?",
+      "What did you notice about the intensity of your craving as you practiced urge surfing, did it peak and then decrease?",
       "How does observing a craving without acting on it change your relationship with urges?",
       "What physical sensations do you notice in your body when a craving is at its peak?",
       "How might regular urge surfing practice build your confidence in managing future cravings?",
     ],
     faqEntries: [
-      { question: "What is urge surfing and how does it help with cravings?", answer: "Urge surfing is a mindfulness technique developed by Dr. Alan Marlatt that involves observing a craving as a wave — it builds, peaks, and naturally subsides without you needing to act on it. Research shows that cravings typically last 15–30 minutes. By riding the wave rather than fighting it, you build confidence that cravings are temporary and manageable." },
-      { question: "How long do cravings last if you do not act on them?", answer: "Most cravings peak within 15–20 minutes and begin to subside within 30 minutes if you do not act on them. This is why the urge surfing technique is so effective — it helps you stay present through the peak until the natural decline occurs. With practice, cravings become shorter and less intense over time." },
+      { question: "What is urge surfing and how does it help with cravings?", answer: "Urge surfing is a mindfulness technique developed by Dr. Alan Marlatt that involves observing a craving as a wave, it builds, peaks, and naturally subsides without you needing to act on it. Research shows that cravings typically last 15–30 minutes. By riding the wave rather than fighting it, you build confidence that cravings are temporary and manageable." },
+      { question: "How long do cravings last if you do not act on them?", answer: "Most cravings peak within 15–20 minutes and begin to subside within 30 minutes if you do not act on them. This is why the urge surfing technique is so effective, it helps you stay present through the peak until the natural decline occurs. With practice, cravings become shorter and less intense over time." },
     ],
   },
 
   "box-breathing-exercise": {
     toolName: "Box Breathing Exercise",
     prompts: [
-      "How did your body feel before and after the box breathing exercise — did you notice any shifts in tension or heart rate?",
+      "How did your body feel before and after the box breathing exercise, did you notice any shifts in tension or heart rate?",
       "In what situations during your typical day could box breathing be most helpful?",
       "How does controlled breathing compare to other stress management techniques you have tried?",
-      "What would a regular breathing practice — even 2 minutes per day — look like in your schedule?",
+      "What would a regular breathing practice, even 2 minutes per day, look like in your schedule?",
     ],
     faqEntries: [
       { question: "How does box breathing reduce anxiety and stress?", answer: "Box breathing activates the parasympathetic nervous system, which counteracts the fight-or-flight stress response. The structured 4-4-4-4 pattern (inhale, hold, exhale, hold) slows heart rate, lowers blood pressure, and reduces cortisol levels. Research shows measurable anxiety reduction within 2–5 minutes of practice." },
-      { question: "When is the best time to practice box breathing?", answer: "Box breathing is effective any time stress or anxiety spikes: before meetings, during conflict, when cravings arise, or before sleep. Many people also benefit from a scheduled daily practice — morning or evening — to build a baseline of calm. The technique is discreet enough to use anywhere without others noticing." },
+      { question: "When is the best time to practice box breathing?", answer: "Box breathing is effective any time stress or anxiety spikes: before meetings, during conflict, when cravings arise, or before sleep. Many people also benefit from a scheduled daily practice, morning or evening, to build a baseline of calm. The technique is discreet enough to use anywhere without others noticing." },
     ],
   },
 
   "five-senses-grounding": {
     toolName: "5-4-3-2-1 Grounding Exercise",
     prompts: [
-      "Which of your five senses was easiest to engage during grounding — and which was hardest?",
+      "Which of your five senses was easiest to engage during grounding, and which was hardest?",
       "How did shifting your attention to sensory details change the intensity of what you were feeling?",
-      "In what situations — anxiety, dissociation, overwhelm — do you think grounding would help you most?",
+      "In what situations, anxiety, dissociation, overwhelm, do you think grounding would help you most?",
       "What personalized sensory anchors (a specific scent, texture, or sound) could you keep accessible for grounding?",
     ],
     faqEntries: [
       { question: "What is the 5-4-3-2-1 grounding technique and when should I use it?", answer: "The 5-4-3-2-1 technique is a sensory grounding exercise that redirects your attention from anxious or intrusive thoughts to the present moment. You identify 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you taste. It is especially helpful during panic attacks, dissociation, flashbacks, or intense anxiety." },
-      { question: "Does grounding actually work for anxiety and panic attacks?", answer: "Yes — grounding techniques are evidence-based tools recommended by therapists for managing acute anxiety, panic, and trauma-related symptoms. By engaging the senses, grounding interrupts the anxiety feedback loop and brings your nervous system back to the present. Many people notice relief within minutes of practicing." },
+      { question: "Does grounding actually work for anxiety and panic attacks?", answer: "Yes, grounding techniques are evidence-based tools recommended by therapists for managing acute anxiety, panic, and trauma-related symptoms. By engaging the senses, grounding interrupts the anxiety feedback loop and brings your nervous system back to the present. Many people notice relief within minutes of practicing." },
     ],
   },
 
   "cognitive-distortion-identifier": {
     toolName: "Cognitive Distortion Identifier",
     prompts: [
-      "Which cognitive distortions — all-or-nothing thinking, catastrophizing, mind reading — do you recognize in your own thought patterns?",
+      "Which cognitive distortions, all-or-nothing thinking, catastrophizing, mind reading, do you recognize in your own thought patterns?",
       "How do these distorted thoughts affect your mood, decisions, and relationships?",
       "Can you think of a recent situation where you caught yourself using one of these thinking patterns?",
       "What would a more balanced version of your most frequent distorted thought sound like?",
@@ -704,17 +704,17 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
     faqEntries: [
       { question: "What are cognitive distortions and how do they affect mental health?", answer: "Cognitive distortions are automatic, biased patterns of thinking that reinforce negative emotions. Common examples include catastrophizing (assuming the worst), all-or-nothing thinking, and personalization (blaming yourself for everything). These distortions are a central focus of cognitive behavioral therapy because changing them leads to significant improvements in mood and behavior." },
-      { question: "How can I stop cognitive distortions?", answer: "You do not need to stop thoughts entirely — the goal is to recognize them and reframe them. When you notice a distorted thought, ask yourself: 'What is the evidence for and against this thought?' and 'What would I say to a friend thinking this?' With practice, you develop the habit of catching distortions before they spiral into strong negative emotions." },
+      { question: "How can I stop cognitive distortions?", answer: "You do not need to stop thoughts entirely, the goal is to recognize them and reframe them. When you notice a distorted thought, ask yourself: 'What is the evidence for and against this thought?' and 'What would I say to a friend thinking this?' With practice, you develop the habit of catching distortions before they spiral into strong negative emotions." },
     ],
   },
 
   "safety-plan": {
     toolName: "Safety Plan",
     prompts: [
-      "Do the warning signs you identified feel comprehensive — are there early signs you might be missing?",
+      "Do the warning signs you identified feel comprehensive, are there early signs you might be missing?",
       "Are the coping strategies in your plan ones you can realistically access during a crisis?",
-      "Have you shared this safety plan with someone you trust — a friend, family member, or therapist?",
-      "Is your environment set up to support your safety — have you considered reducing access to means?",
+      "Have you shared this safety plan with someone you trust, a friend, family member, or therapist?",
+      "Is your environment set up to support your safety, have you considered reducing access to means?",
       "When do you plan to review and update this safety plan next?",
     ],
     faqEntries: [
@@ -726,8 +726,8 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "cbt-thought-record": {
     toolName: "CBT Thought Record",
     prompts: [
-      "What situation triggered the negative thought you recorded — and how intense was the emotion on a scale of 1–10?",
-      "What evidence supports the negative thought — and what evidence challenges it?",
+      "What situation triggered the negative thought you recorded, and how intense was the emotion on a scale of 1–10?",
+      "What evidence supports the negative thought, and what evidence challenges it?",
       "After completing the thought record, did the intensity of the emotion change?",
       "What patterns do you notice in the types of situations or thoughts that recur most often?",
       "How could you use thought records regularly to build awareness of your thinking patterns?",
@@ -748,16 +748,16 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
     faqEntries: [
       { question: "What is worry time and does it actually help with anxiety?", answer: "Worry time is a CBT technique where you designate a specific 15–30 minute period each day to focus on your worries. Outside that window, you postpone worry to the scheduled time. Research shows this reduces overall worry frequency and duration because it gives the brain a structured alternative to constant, uncontrolled worrying." },
-      { question: "How do I set up an effective worry time routine?", answer: "Choose a consistent 15–30 minute window (not before bed). When worries arise outside this time, write them down and postpone. During worry time, review your list — many worries will have resolved or feel less urgent. For remaining worries, distinguish between solvable problems (make an action plan) and unsolvable concerns (practice acceptance)." },
+      { question: "How do I set up an effective worry time routine?", answer: "Choose a consistent 15–30 minute window (not before bed). When worries arise outside this time, write them down and postpone. During worry time, review your list, many worries will have resolved or feel less urgent. For remaining worries, distinguish between solvable problems (make an action plan) and unsolvable concerns (practice acceptance)." },
     ],
   },
 
   "values-card-sort": {
     toolName: "Values Card Sort",
     prompts: [
-      "Were you surprised by which values rose to the top — or did they confirm what you already felt?",
+      "Were you surprised by which values rose to the top, or did they confirm what you already felt?",
       "How well does your daily life align with the values you identified as most important?",
-      "Are there values you ranked highly that you feel you are neglecting — and what would honoring them look like?",
+      "Are there values you ranked highly that you feel you are neglecting, and what would honoring them look like?",
       "How could your top values guide decisions you are currently facing?",
       "What is one action you could take this week that aligns with your most important value?",
     ],
@@ -770,9 +770,9 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "big-five-personality-test": {
     toolName: "Big Five Personality Test (IPIP-NEO-50)",
     prompts: [
-      "Which of the five traits surprised you the most — either higher or lower than you expected?",
+      "Which of the five traits surprised you the most, either higher or lower than you expected?",
       "How does your Extraversion score match the way you actually feel in social situations versus how others perceive you?",
-      "Think about your Conscientiousness score — does it reflect how you approach work, school, or daily responsibilities?",
+      "Think about your Conscientiousness score, does it reflect how you approach work, school, or daily responsibilities?",
       "Your Neuroticism score reflects emotional reactivity. What situations tend to bring out your strongest emotional responses?",
       "How might your Openness and Agreeableness scores shape the kinds of friendships and relationships you seek out?",
       "If you could shift one trait by a few points in either direction, which would it be and why?",
@@ -788,7 +788,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     prompts: [
       "Which of the four attachment styles resonated most with how you experience close relationships?",
       "Have you noticed patterns in how you respond when a partner pulls away or gets too close?",
-      "How do your early relationship experiences — with caregivers or first partners — show up in your current relationships?",
+      "How do your early relationship experiences, with caregivers or first partners, show up in your current relationships?",
       "What does feeling emotionally safe in a relationship look like for you?",
       "Is there one relationship pattern you would like to understand or shift, even slightly?",
       "If you could share one thing about your attachment style with a partner or therapist, what would it be?",
@@ -802,30 +802,30 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "msi-bpd-screening": {
     toolName: "MSI-BPD Borderline Personality Disorder Screening",
     prompts: [
-      "Which of the ten areas felt most relevant to your current experience — and has that changed over time?",
+      "Which of the ten areas felt most relevant to your current experience, and has that changed over time?",
       "Have you noticed patterns in your closest relationships that you would like to understand better?",
       "When you experience intense emotions, what has helped you feel more grounded in the past?",
-      "Is there someone in your life — a friend, family member, or professional — you feel safe talking to about these experiences?",
+      "Is there someone in your life, a friend, family member, or professional, you feel safe talking to about these experiences?",
       "What would feel like one small, manageable step toward better understanding yourself this week?",
       "If you could share one thing about your emotional experiences with a mental health professional, what would it be?",
     ],
     faqEntries: [
       { question: "What should I do after taking the MSI-BPD screening?", answer: "After completing the MSI-BPD, take a moment to reflect on which items felt most relevant to your daily life. Consider writing down your score and any patterns you notice so you can share them with a mental health professional. The reflection prompts on this page can help you organize your thoughts before seeking further evaluation." },
-      { question: "How can I use my MSI-BPD results to talk to a therapist about borderline personality disorder?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. You might say: 'I took an MSI-BPD screening online and scored [X] — I would like to discuss what that means for me.' A qualified professional can help determine whether a comprehensive evaluation is appropriate." },
+      { question: "How can I use my MSI-BPD results to talk to a therapist about borderline personality disorder?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. You might say: 'I took an MSI-BPD screening online and scored [X], I would like to discuss what that means for me.' A qualified professional can help determine whether a comprehensive evaluation is appropriate." },
     ],
   },
 
   "dbt-crisis-skills": {
     toolName: "DBT Crisis Survival Skills",
     prompts: [
-      "Which DBT crisis skills — TIPP, distraction, self-soothing, or pros and cons — felt most accessible to you?",
+      "Which DBT crisis skills, TIPP, distraction, self-soothing, or pros and cons, felt most accessible to you?",
       "How quickly were you able to notice a shift in your emotional intensity after using a skill?",
       "Which skills would you want to have memorized for moments when you cannot access your phone or a guide?",
       "How could you practice these skills during lower-stress moments so they become second nature during crises?",
     ],
     faqEntries: [
       { question: "What are DBT crisis survival skills?", answer: "DBT (Dialectical Behavior Therapy) crisis survival skills are techniques designed to help you tolerate intense emotions without making the situation worse. Key skills include TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), distraction through activities, self-soothing with the five senses, and weighing pros and cons of crisis behavior." },
-      { question: "When should I use DBT crisis skills versus regular coping skills?", answer: "DBT crisis skills are specifically designed for high-intensity moments when your emotional distress is a 7 out of 10 or higher. They are not meant for everyday stress — they are emergency tools for when you feel overwhelmed, at risk of self-harm, or in danger of acting impulsively. For everyday stress, regular coping skills and mindfulness are more appropriate." },
+      { question: "When should I use DBT crisis skills versus regular coping skills?", answer: "DBT crisis skills are specifically designed for high-intensity moments when your emotional distress is a 7 out of 10 or higher. They are not meant for everyday stress, they are emergency tools for when you feel overwhelmed, at risk of self-harm, or in danger of acting impulsively. For everyday stress, regular coping skills and mindfulness are more appropriate." },
     ],
   },
 };

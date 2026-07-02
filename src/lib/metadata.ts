@@ -25,7 +25,7 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
   const { path = "", openGraph: ogOverrides, twitter: twOverrides, alternates: _altOverrides, ...rest } = overrides;
   const url = `${SITE_URL}${path}`;
 
-  const defaultTitle = `${SITE_NAME} — Free, Private Mental Health Self-Checks`;
+  const defaultTitle = `${SITE_NAME}, Free, Private Mental Health Self-Checks`;
   const pageTitle = typeof rest.title === "string" ? rest.title : defaultTitle;
   const pageDescription = (rest.description as string) ?? SITE_DESCRIPTION;
 
@@ -94,7 +94,7 @@ export function organizationJsonLd() {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: `${SITE_NAME} — Free Mental Health Screening Tools`,
+        name: `${SITE_NAME}, Free Mental Health Screening Tools`,
         description:
           "Free, clinically-informed mental health and SUD screening tools. No account required.",
         publisher: {

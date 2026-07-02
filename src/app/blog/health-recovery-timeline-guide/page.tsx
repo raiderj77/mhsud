@@ -70,7 +70,7 @@ export default function HealthRecoveryTimelineGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Your body begins healing within hours of your last drink or use. Blood pressure starts to normalize within 20 minutes. Blood sugar stabilizes within a day. Nerve endings begin regenerating within 48 hours. The timeline of physical recovery is one of the most encouraging aspects of sobriety &mdash; and understanding it can provide powerful motivation during the difficult early days of recovery.
+            Your body begins healing within hours of your last drink or use. Blood pressure starts to normalize within 20 minutes. Blood sugar stabilizes within a day. Nerve endings begin regenerating within 48 hours. The timeline of physical recovery is one of the most encouraging aspects of sobriety, and understanding it can provide powerful motivation during the difficult early days of recovery.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function HealthRecoveryTimelineGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,26 +96,26 @@ export default function HealthRecoveryTimelineGuidePage() {
           <section>
             <h2>The first 24 hours: your body starts responding</h2>
             <p>
-              The human body is remarkably resilient, and recovery begins almost immediately. Within 20 minutes of your last drink, your heart rate and blood pressure begin to normalize as your body is no longer processing a depressant. This is measurable &mdash; not metaphorical.
+              The human body is remarkably resilient, and recovery begins almost immediately. Within 20 minutes of your last drink, your heart rate and blood pressure begin to normalize as your body is no longer processing a depressant. This is measurable, not metaphorical.
             </p>
             <p>
               Within 8&ndash;12 hours, blood alcohol levels drop to zero and the body begins to clear acetaldehyde, the toxic byproduct of alcohol metabolism that contributes to hangover symptoms and long-term organ damage. Blood sugar levels, which alcohol disrupts by interfering with glucose production in the liver, start to stabilize.
             </p>
             <p>
-              By the 24-hour mark, your body has cleared the last of the alcohol and is beginning its repair processes in earnest. However, this is also when withdrawal symptoms may begin for heavy or long-term drinkers &mdash; a reminder that medical supervision during detox is important. The <Link href="/withdrawal-timeline" className="text-sage-600 dark:text-sage-400 underline">withdrawal timeline tool</Link> can help you understand what to expect.
+              By the 24-hour mark, your body has cleared the last of the alcohol and is beginning its repair processes in earnest. However, this is also when withdrawal symptoms may begin for heavy or long-term drinkers, a reminder that medical supervision during detox is important. The <Link href="/withdrawal-timeline" className="text-sage-600 dark:text-sage-400 underline">withdrawal timeline tool</Link> can help you understand what to expect.
             </p>
           </section>
 
           <section>
             <h2>Days 2 through 7: the hardest stretch with real progress</h2>
             <p>
-              At 48 hours, nerve endings that were suppressed by chronic alcohol use begin to regenerate. This is why many people in early recovery report heightened sensitivity to touch, sound, and light &mdash; the nervous system is &quot;waking up&quot; after being dampened.
+              At 48 hours, nerve endings that were suppressed by chronic alcohol use begin to regenerate. This is why many people in early recovery report heightened sensitivity to touch, sound, and light, the nervous system is &quot;waking up&quot; after being dampened.
             </p>
             <p>
               By 72 hours, the body has substantially completed its acute detoxification process. The liver is actively clearing stored toxins, and the digestive system begins to recover from alcohol&apos;s inflammatory effects on the stomach lining and intestines.
             </p>
             <p>
-              By the end of the first week, most people notice significant improvements in sleep quality. While alcohol may help you fall asleep faster, it severely disrupts REM sleep &mdash; the restorative phase critical for memory consolidation and emotional regulation. Some sleep measures, such as time to fall asleep and early REM sleep, begin improving within the first week of abstinence, though full sleep recovery often takes considerably longer and varies between individuals.
+              By the end of the first week, most people notice significant improvements in sleep quality. While alcohol may help you fall asleep faster, it severely disrupts REM sleep, the restorative phase critical for memory consolidation and emotional regulation. Some sleep measures, such as time to fall asleep and early REM sleep, begin improving within the first week of abstinence, though full sleep recovery often takes considerably longer and varies between individuals.
             </p>
           </section>
 

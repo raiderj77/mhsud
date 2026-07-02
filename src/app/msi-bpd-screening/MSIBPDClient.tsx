@@ -33,7 +33,7 @@ const OPTIONS = [
 
 const RANGES = [
   { min: 0, max: 4, level: "Low Likelihood", key: "low", description: "Your responses suggest a lower likelihood of borderline personality features based on this screening.", suggestion: "Continue being mindful of your emotional well-being. If you notice changes or have concerns, consider checking in again or speaking with a healthcare provider." },
-  { min: 5, max: 6, level: "Uncertain — Cannot Rule Out", key: "uncertain", description: "Your responses fall in an uncertain range. Based on this screening, borderline personality features cannot be ruled out.", suggestion: "Consider speaking with a mental health professional for a more thorough evaluation. This score does not mean you have BPD, but further assessment may be helpful." },
+  { min: 5, max: 6, level: "Uncertain, Cannot Rule Out", key: "uncertain", description: "Your responses fall in an uncertain range. Based on this screening, borderline personality features cannot be ruled out.", suggestion: "Consider speaking with a mental health professional for a more thorough evaluation. This score does not mean you have BPD, but further assessment may be helpful." },
   { min: 7, max: 10, level: "Positive Screen", key: "positive", description: "Your responses meet the threshold for a positive screen on the MSI-BPD. This suggests that further evaluation for borderline personality features may be warranted.", suggestion: "Speaking with a mental health professional experienced with personality disorders is strongly encouraged. Effective treatments like Dialectical Behavior Therapy (DBT) are available and can make a meaningful difference." },
 ];
 
@@ -113,7 +113,7 @@ export function MSIBPDClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "MSI-BPD Borderline Personality Disorder Screening — Free & Private",
+        title: "MSI-BPD Borderline Personality Disorder Screening, Free & Private",
         text: "Take a free, private MSI-BPD borderline personality disorder screening. Your answers never leave your browser.",
         url,
       };
@@ -126,7 +126,7 @@ export function MSIBPDClient({ faqData }: Props) {
       return;
     }
 
-    const summary = `MSI-BPD Screening Results\nScore: ${totalScore}/10 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the screening: ${url}`;
+    const summary = `MSI-BPD Screening Results\nScore: ${totalScore}/10, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the screening: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My MSI-BPD Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -281,9 +281,9 @@ export function MSIBPDClient({ faqData }: Props) {
                   </p>
                   <div className="bg-crisis-100/50 dark:bg-crisis-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-crisis-700 dark:text-crisis-400 mb-1">Resources:</p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong></p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>International:</strong> Visit <strong>findahelpline.com</strong> for your country</p>
                   </div>
                 </div>
@@ -298,14 +298,14 @@ export function MSIBPDClient({ faqData }: Props) {
               <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
                 <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your MSI-BPD Score</p>
                 <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-                <p className={`text-sm font-semibold ${colors.text}`}>out of 10 — {range.level}</p>
+                <p className={`text-sm font-semibold ${colors.text}`}>out of 10, {range.level}</p>
                 <div className="mt-6">
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                     <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 10) * 100}%` }} />
                   </div>
                   <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                    <span>0 — Low</span>
-                    <span>10 — Positive Screen</span>
+                    <span>0, Low</span>
+                    <span>10, Positive Screen</span>
                   </div>
                 </div>
               </div>
@@ -345,7 +345,7 @@ export function MSIBPDClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>MSI-BPD Screening from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>MSI-BPD Screening from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -470,9 +470,9 @@ export function MSIBPDClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -524,7 +524,7 @@ export function MSIBPDClient({ faqData }: Props) {
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">What Do My MSI-BPD Results Mean?</h2>
             <div className="card p-5 sm:p-6">
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
-                Your MSI-BPD score indicates the number of BPD-related experiences you endorsed. A higher score suggests more features associated with BPD, but this screening cannot confirm or rule out any condition. Many factors — including current stress, other mental health conditions, and life circumstances — can influence your responses.
+                Your MSI-BPD score indicates the number of BPD-related experiences you endorsed. A higher score suggests more features associated with BPD, but this screening cannot confirm or rule out any condition. Many factors, including current stress, other mental health conditions, and life circumstances, can influence your responses.
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                 If your score suggests further evaluation, consider speaking with a mental health professional who has experience with personality disorders. A comprehensive assessment typically includes a detailed clinical interview and consideration of your full history.
@@ -540,7 +540,7 @@ export function MSIBPDClient({ faqData }: Props) {
                 No. The MSI-BPD is a screening instrument, not a diagnostic tool. It is designed to identify individuals who may benefit from a more comprehensive evaluation. Only a qualified mental health professional can assess personality disorders through a thorough clinical evaluation that considers your full history, current functioning, and other possible explanations for your experiences.
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                A positive screen is a starting point for a deeper conversation — not a label or a conclusion. Borderline personality disorder is highly treatable, and early identification can lead to effective support.
+                A positive screen is a starting point for a deeper conversation, not a label or a conclusion. Borderline personality disorder is highly treatable, and early identification can lead to effective support.
               </p>
             </div>
           </section>
@@ -581,7 +581,7 @@ export function MSIBPDClient({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Zanarini, M. C., Vujanovic, A. A., Parachini, E. A., Boulanger, J. L., Frankenburg, F. R., &amp; Hennen, J. (2003). A screening measure for BPD: The McLean Screening Instrument for Borderline Personality Disorder (MSI-BPD).{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/14609637/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Validation Study</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/14609637/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Validation Study</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Borderline Personality Disorder.{" "}

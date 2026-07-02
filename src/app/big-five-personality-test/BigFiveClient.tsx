@@ -384,7 +384,7 @@ export function BigFiveClient({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "Big Five Personality Test (IPIP-NEO-50) \u2014 Free & Private",
+        title: "Big Five Personality Test (IPIP-NEO-50), Free & Private",
         text: "Take a free, private Big Five personality test based on the IPIP-NEO-50. Your answers never leave your browser.",
         url,
       };
@@ -605,8 +605,8 @@ export function BigFiveClient({ faqData }: Props) {
                         />
                       </div>
                       <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">
-                        <span>10 &mdash; Low</span>
-                        <span>50 &mdash; High</span>
+                        <span>10, Low</span>
+                        <span>50, High</span>
                       </div>
                     </button>
                     {isExpanded && (
@@ -625,7 +625,7 @@ export function BigFiveClient({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>IPIP-NEO-50 Big Five Personality Test from mindchecktools.com &mdash; {new Date().toLocaleDateString()}</p>
+              <p>IPIP-NEO-50 Big Five Personality Test from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a self-reflection tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -689,7 +689,7 @@ export function BigFiveClient({ faqData }: Props) {
             reflectionPrompts={REFLECTION_PROMPTS["big-five-personality-test"]?.prompts ?? []}
             responses={QUESTIONS.map((q, i) => ({
               question: q,
-              answer: `${answers[i]} \u2014 ${OPTIONS[(answers[i] ?? 1) - 1]?.label}${REVERSE_ITEMS.has(i) ? " (R)" : ""}`,
+              answer: `${answers[i]}, ${OPTIONS[(answers[i] ?? 1) - 1]?.label}${REVERSE_ITEMS.has(i) ? " (R)" : ""}`,
             }))}
           />
 
@@ -751,8 +751,8 @@ export function BigFiveClient({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (

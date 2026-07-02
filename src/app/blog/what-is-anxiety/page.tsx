@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/what-is-anxiety",
   title: "What Is Anxiety? Symptoms, Types, and Treatment",
   description:
-    "Anxiety is normal \u2014 but anxiety disorders are not just being worried. Learn the difference, how the main anxiety disorders are defined, and what evidence-based treatment looks like.",
+    "Anxiety is normal, but anxiety disorders are not just being worried. Learn the difference, how the main anxiety disorders are defined, and what evidence-based treatment looks like.",
   keywords: [
     "what is anxiety",
     "anxiety symptoms",
@@ -54,7 +54,7 @@ const FAQ_DATA = [
 export default function WhatIsAnxietyPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "What Is Anxiety? Symptoms, Types, and Treatment", description: "Anxiety is normal \u2014 but anxiety disorders are not just being worried. Learn the difference, the main anxiety disorder types, and what evidence-based treatment looks like.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "What Is Anxiety? Symptoms, Types, and Treatment", description: "Anxiety is normal, but anxiety disorders are not just being worried. Learn the difference, the main anxiety disorder types, and what evidence-based treatment looks like.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "What Is Anxiety?", url: ARTICLE_URL }])) }} />
 
@@ -89,7 +89,7 @@ export default function WhatIsAnxietyPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Anxiety is the body&apos;s natural response to perceived threat &mdash; a physiological and psychological state of heightened alertness and readiness. Anxiety disorders are clinical conditions where anxiety is excessive relative to actual threat, difficult to control, and significantly interferes with functioning. Anxiety disorders are the most common mental health conditions in the United States, affecting approximately 19.1% of adults annually (NIMH, 2023). They are highly treatable.
+            Anxiety is the body&apos;s natural response to perceived threat, a physiological and psychological state of heightened alertness and readiness. Anxiety disorders are clinical conditions where anxiety is excessive relative to actual threat, difficult to control, and significantly interferes with functioning. Anxiety disorders are the most common mental health conditions in the United States, affecting approximately 19.1% of adults annually (NIMH, 2023). They are highly treatable.
           </p>
         </header>
 
@@ -120,12 +120,12 @@ export default function WhatIsAnxietyPage() {
 
             <h3>Generalized Anxiety Disorder (GAD)</h3>
             <p>
-              GAD is characterized by excessive, difficult-to-control worry about multiple domains of life &mdash; health, finances, work, relationships, everyday matters &mdash; present more days than not for at least 6 months.
+              GAD is characterized by excessive, difficult-to-control worry about multiple domains of life, health, finances, work, relationships, everyday matters, present more days than not for at least 6 months.
             </p>
             <p>What distinguishes GAD from ordinary worry:</p>
             <ul>
               <li>The worry is persistent and hard to stop, even when the person tries</li>
-              <li>Worry jumps between topics &mdash; when one concern is resolved, another takes its place</li>
+              <li>Worry jumps between topics, when one concern is resolved, another takes its place</li>
               <li>Physical symptoms are common: muscle tension, fatigue, restlessness, sleep disturbance, irritability, difficulty concentrating</li>
             </ul>
             <p>
@@ -134,7 +134,7 @@ export default function WhatIsAnxietyPage() {
 
             <h3>Panic Disorder</h3>
             <p>
-              Panic disorder involves recurrent unexpected panic attacks &mdash; sudden surges of intense fear or discomfort that peak within minutes &mdash; accompanied by persistent concern about future attacks or significant behavioral changes to avoid them.
+              Panic disorder involves recurrent unexpected panic attacks, sudden surges of intense fear or discomfort that peak within minutes, accompanied by persistent concern about future attacks or significant behavioral changes to avoid them.
             </p>
             <p>
               A panic attack involves four or more of: racing heart, sweating, trembling, shortness of breath, choking sensation, chest pain, nausea, dizziness, chills or hot flashes, numbness/tingling, derealization, fear of losing control or going crazy, fear of dying.
@@ -145,28 +145,28 @@ export default function WhatIsAnxietyPage() {
 
             <h3>Social Anxiety Disorder</h3>
             <p>
-              Social anxiety is a marked, persistent fear of one or more social or performance situations &mdash; meeting new people, speaking in public, being observed eating or writing &mdash; driven by fear of scrutiny or humiliation.
+              Social anxiety is a marked, persistent fear of one or more social or performance situations, meeting new people, speaking in public, being observed eating or writing, driven by fear of scrutiny or humiliation.
             </p>
             <p>
               Social anxiety is more than shyness or introversion. The fear is disproportionate to the actual social risk, recognized as excessive by the person, and leads to avoidance or endurance with significant distress. It commonly impairs career advancement, relationships, and education.
             </p>
             <p>
-              Social anxiety disorder affects approximately 7.1% of US adults annually &mdash; making it the third most common mental health disorder overall.
+              Social anxiety disorder affects approximately 7.1% of US adults annually, making it the third most common mental health disorder overall.
             </p>
 
             <h3>Specific Phobia</h3>
             <p>
-              An intense, disproportionate fear of specific objects or situations &mdash; animals, heights, flying, blood/injury/injection, enclosed spaces, vomiting, among others. The person typically recognizes the fear as excessive but cannot control it through reason.
+              An intense, disproportionate fear of specific objects or situations, animals, heights, flying, blood/injury/injection, enclosed spaces, vomiting, among others. The person typically recognizes the fear as excessive but cannot control it through reason.
             </p>
 
             <h3>Agoraphobia</h3>
             <p>
-              Fear and avoidance of situations where escape might be difficult or help unavailable during a panic attack &mdash; typically open spaces, crowds, public transport, being outside alone, or standing in line. Often develops as a complication of panic disorder.
+              Fear and avoidance of situations where escape might be difficult or help unavailable during a panic attack, typically open spaces, crowds, public transport, being outside alone, or standing in line. Often develops as a complication of panic disorder.
             </p>
 
             <h3>Separation Anxiety Disorder</h3>
             <p>
-              Previously considered a childhood disorder, separation anxiety is now recognized as occurring in adults as well &mdash; characterized by excessive fear about separation from attachment figures, often manifesting in relationship contexts.
+              Previously considered a childhood disorder, separation anxiety is now recognized as occurring in adults as well, characterized by excessive fear about separation from attachment figures, often manifesting in relationship contexts.
             </p>
           </section>
 
@@ -178,7 +178,7 @@ export default function WhatIsAnxietyPage() {
             <p><strong>Cognitive symptoms:</strong></p>
             <ul>
               <li>Racing, looping thoughts that are difficult to interrupt</li>
-              <li>Catastrophizing &mdash; automatically jumping to worst-case scenarios</li>
+              <li>Catastrophizing, automatically jumping to worst-case scenarios</li>
               <li>Difficulty concentrating; the mind keeps returning to worries</li>
               <li>Mental &quot;what if&quot; spirals that feel urgent but don&apos;t resolve</li>
               <li>Difficulty making decisions for fear of choosing wrong</li>
@@ -186,25 +186,25 @@ export default function WhatIsAnxietyPage() {
 
             <p><strong>Physical symptoms:</strong></p>
             <ul>
-              <li>Muscle tension, often in the shoulders, jaw, or neck &mdash; often not consciously noticed</li>
+              <li>Muscle tension, often in the shoulders, jaw, or neck, often not consciously noticed</li>
               <li>Heart racing or palpitations</li>
               <li>Shallow or rapid breathing; sometimes hyperventilation</li>
-              <li>Fatigue &mdash; anxiety is physically exhausting</li>
-              <li>Gastrointestinal distress &mdash; nausea, stomach discomfort, irritable bowel</li>
+              <li>Fatigue, anxiety is physically exhausting</li>
+              <li>Gastrointestinal distress, nausea, stomach discomfort, irritable bowel</li>
               <li>Headaches</li>
               <li>Restlessness, the inability to relax</li>
             </ul>
 
             <p><strong>Behavioral symptoms:</strong></p>
             <ul>
-              <li>Avoidance &mdash; of situations, conversations, sensations, or thoughts that trigger anxiety</li>
-              <li>Reassurance-seeking &mdash; repeatedly asking others for confirmation that things are okay</li>
+              <li>Avoidance, of situations, conversations, sensations, or thoughts that trigger anxiety</li>
+              <li>Reassurance-seeking, repeatedly asking others for confirmation that things are okay</li>
               <li>Overpreparation and checking</li>
               <li>Procrastination driven by overwhelm or fear of making errors</li>
             </ul>
 
             <p>
-              The avoidance cycle is the central mechanism maintaining most anxiety disorders. Avoidance provides immediate relief &mdash; which reinforces the behavior &mdash; but prevents the learning that the feared situation was survivable.
+              The avoidance cycle is the central mechanism maintaining most anxiety disorders. Avoidance provides immediate relief, which reinforces the behavior, but prevents the learning that the feared situation was survivable.
             </p>
           </section>
 
@@ -214,7 +214,7 @@ export default function WhatIsAnxietyPage() {
           <section>
             <h2>Anxiety and the body: the nervous system basics</h2>
             <p>
-              Understanding anxiety&apos;s physiology helps demystify the experience. Anxiety activates the <strong>sympathetic nervous system</strong> &mdash; the body&apos;s threat-response system &mdash; triggering a cascade:
+              Understanding anxiety&apos;s physiology helps demystify the experience. Anxiety activates the <strong>sympathetic nervous system</strong>, the body&apos;s threat-response system, triggering a cascade:
             </p>
             <ol>
               <li>The amygdala (threat detection center) identifies a potential danger</li>
@@ -223,10 +223,10 @@ export default function WhatIsAnxietyPage() {
               <li>Attention narrows to the perceived threat</li>
             </ol>
             <p>
-              This is the fight-or-flight response &mdash; evolved for physical danger, triggered by psychological threat in modern anxiety disorders. The physical symptoms of anxiety (racing heart, shallow breathing, muscle tension) are this system activating &mdash; uncomfortable but not dangerous.
+              This is the fight-or-flight response, evolved for physical danger, triggered by psychological threat in modern anxiety disorders. The physical symptoms of anxiety (racing heart, shallow breathing, muscle tension) are this system activating, uncomfortable but not dangerous.
             </p>
             <p>
-              Recovery from anxiety involves activating the <strong>parasympathetic nervous system</strong> &mdash; the &quot;rest and digest&quot; counterpart. Slow diaphragmatic breathing is one of the most direct ways to trigger parasympathetic activation, which is why breathing exercises are standard in anxiety treatment.
+              Recovery from anxiety involves activating the <strong>parasympathetic nervous system</strong>, the &quot;rest and digest&quot; counterpart. Slow diaphragmatic breathing is one of the most direct ways to trigger parasympathetic activation, which is why breathing exercises are standard in anxiety treatment.
             </p>
           </section>
 
@@ -235,11 +235,11 @@ export default function WhatIsAnxietyPage() {
             <h2>Anxiety and co-occurring conditions</h2>
             <p>Anxiety disorders rarely occur in isolation:</p>
             <ul>
-              <li><strong>Major depression</strong> co-occurs in approximately <strong>50&ndash;60%</strong> of anxiety disorder cases &mdash; the combination is particularly impairing and increases suicide risk</li>
-              <li><strong>Other anxiety disorders</strong> &mdash; having one anxiety disorder significantly increases risk for others</li>
-              <li><strong>Substance use</strong> &mdash; alcohol and cannabis are commonly used for self-regulation of anxiety; both worsen anxiety over time, particularly in the rebound period after use</li>
-              <li><strong>ADHD</strong> &mdash; the overlap is substantial; ADHD-driven difficulty meeting obligations produces significant anxiety</li>
-              <li><strong>Medical conditions</strong> &mdash; hyperthyroidism, cardiac arrhythmias, and other medical conditions can produce anxiety-like symptoms and should be ruled out</li>
+              <li><strong>Major depression</strong> co-occurs in approximately <strong>50&ndash;60%</strong> of anxiety disorder cases, the combination is particularly impairing and increases suicide risk</li>
+              <li><strong>Other anxiety disorders</strong>, having one anxiety disorder significantly increases risk for others</li>
+              <li><strong>Substance use</strong>, alcohol and cannabis are commonly used for self-regulation of anxiety; both worsen anxiety over time, particularly in the rebound period after use</li>
+              <li><strong>ADHD</strong>, the overlap is substantial; ADHD-driven difficulty meeting obligations produces significant anxiety</li>
+              <li><strong>Medical conditions</strong>, hyperthyroidism, cardiac arrhythmias, and other medical conditions can produce anxiety-like symptoms and should be ruled out</li>
             </ul>
             <p>
               If depression symptoms are present alongside anxiety, the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> gives a structured picture of that dimension alongside the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link>.
@@ -248,16 +248,16 @@ export default function WhatIsAnxietyPage() {
 
           <AdSlot position="Blog In-Content 2" className="my-8" />
 
-          {/* Section 6 — Treatment: Psychotherapy */}
+          {/* Section 6, Treatment: Psychotherapy */}
           <section>
             <h2>Evidence-based treatments for anxiety</h2>
 
             <h3>Psychotherapy</h3>
             <p>
-              <strong>Cognitive Behavioral Therapy (CBT):</strong> The most extensively researched treatment for anxiety disorders. CBT targets both the cognitive patterns (catastrophic thinking, probability overestimation) and behavioral patterns (avoidance) that maintain anxiety. Meta-analytic effect sizes for CBT across anxiety disorders range from 0.8 to 1.3 &mdash; large by any standard (Hofmann &amp; Smits, 2008).
+              <strong>Cognitive Behavioral Therapy (CBT):</strong> The most extensively researched treatment for anxiety disorders. CBT targets both the cognitive patterns (catastrophic thinking, probability overestimation) and behavioral patterns (avoidance) that maintain anxiety. Meta-analytic effect sizes for CBT across anxiety disorders range from 0.8 to 1.3, large by any standard (Hofmann &amp; Smits, 2008).
             </p>
             <p>
-              <strong>Exposure therapy:</strong> The behavioral core of anxiety treatment &mdash; systematic, graduated confrontation with feared situations or stimuli, which allows the anxiety response to extinguish through habituation. Works for specific phobias, social anxiety, panic disorder, and OCD (in the form of ERP specifically).
+              <strong>Exposure therapy:</strong> The behavioral core of anxiety treatment, systematic, graduated confrontation with feared situations or stimuli, which allows the anxiety response to extinguish through habituation. Works for specific phobias, social anxiety, panic disorder, and OCD (in the form of ERP specifically).
             </p>
             <p>
               <strong>Acceptance and Commitment Therapy (ACT):</strong> Rather than challenging anxious thoughts directly, ACT focuses on reducing the struggle against anxious experience and increasing engagement with valued activities despite anxiety. Growing evidence base, particularly for GAD.
@@ -274,14 +274,14 @@ export default function WhatIsAnxietyPage() {
               <strong>Buspirone:</strong> Effective for GAD specifically; non-addictive; takes several weeks to work.
             </p>
             <p>
-              <strong>Benzodiazepines (Xanax, Ativan, Klonopin):</strong> Fast-acting and effective for acute anxiety &mdash; but carry significant risks of tolerance, dependence, and withdrawal with regular use. Not recommended as a long-term treatment for anxiety disorders. Particularly problematic for people with co-occurring substance use history.
+              <strong>Benzodiazepines (Xanax, Ativan, Klonopin):</strong> Fast-acting and effective for acute anxiety, but carry significant risks of tolerance, dependence, and withdrawal with regular use. Not recommended as a long-term treatment for anxiety disorders. Particularly problematic for people with co-occurring substance use history.
             </p>
             <p>
-              <strong>Beta-blockers (propranolol):</strong> Used for performance anxiety (public speaking, performance) specifically &mdash; reduce physiological symptoms without affecting mental state.
+              <strong>Beta-blockers (propranolol):</strong> Used for performance anxiety (public speaking, performance) specifically, reduce physiological symptoms without affecting mental state.
             </p>
           </section>
 
-          {/* Section 7 — Lifestyle + When to seek help */}
+          {/* Section 7, Lifestyle + When to seek help */}
           <section>
             <h3>Lifestyle</h3>
             <ul>
@@ -307,7 +307,7 @@ export default function WhatIsAnxietyPage() {
               <li>Anxiety has been persisting for months rather than resolving</li>
             </ul>
             <p>
-              The <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> is a good starting point &mdash; it gives you a structured, validated snapshot to bring to any clinical conversation.
+              The <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> is a good starting point, it gives you a structured, validated snapshot to bring to any clinical conversation.
             </p>
           </section>
 
@@ -326,9 +326,9 @@ export default function WhatIsAnxietyPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -350,7 +350,7 @@ export default function WhatIsAnxietyPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/relapse-prevention-guide",
   title: "Relapse Prevention: The Three Stages and How to Intervene Early",
   description:
-    "Relapse is a process, not an event. Learn the three stages \u2014 emotional, mental, and physical \u2014 how to recognize warning signs early, and evidence-based strategies that work.",
+    "Relapse is a process, not an event. Learn the three stages, emotional, mental, and physical, how to recognize warning signs early, and evidence-based strategies that work.",
   keywords: [
     "relapse prevention",
     "stages of relapse",
@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "How long does relapse risk last?",
     answer:
-      "Risk is highest in the first 90 days and remains elevated through the first year of recovery — consistent with NIDA's characterization of addiction as a chronic, relapsing condition. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with therapy, mutual aid, and healthy routines provides a durable protective buffer against relapse at any stage of recovery.",
+      "Risk is highest in the first 90 days and remains elevated through the first year of recovery, consistent with NIDA's characterization of addiction as a chronic, relapsing condition. After one year of sustained recovery, relapse risk decreases substantially but never reaches zero. Ongoing engagement with therapy, mutual aid, and healthy routines provides a durable protective buffer against relapse at any stage of recovery.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function RelapsePreventionGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Relapse is not a single moment of weakness. It is a process that unfolds over days or weeks, moving through recognizable stages before substance use actually occurs. Understanding these stages &mdash; and recognizing where you are in the process &mdash; gives you the opportunity to intervene before the final stage. Relapse prevention is one of the most studied areas in addiction treatment, and the strategies that work are well-established.
+            Relapse is not a single moment of weakness. It is a process that unfolds over days or weeks, moving through recognizable stages before substance use actually occurs. Understanding these stages, and recognizing where you are in the process, gives you the opportunity to intervene before the final stage. Relapse prevention is one of the most studied areas in addiction treatment, and the strategies that work are well-established.
           </p>
         </header>
 
@@ -78,9 +78,9 @@ export default function RelapsePreventionGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -103,13 +103,13 @@ export default function RelapsePreventionGuidePage() {
               <li>Bottling up emotions rather than expressing them</li>
               <li>Isolating from support systems</li>
               <li>Skipping meetings, therapy, or recovery activities</li>
-              <li>Poor self-care &mdash; irregular sleep, poor diet, no exercise</li>
+              <li>Poor self-care, irregular sleep, poor diet, no exercise</li>
               <li>Increased irritability, anxiety, or mood swings</li>
               <li>Denying that anything is wrong</li>
             </ul>
 
             <h3>Stage 2: Mental relapse</h3>
-            <p>An internal tug-of-war begins &mdash; part of you wants to use and part of you does not:</p>
+            <p>An internal tug-of-war begins, part of you wants to use and part of you does not:</p>
             <ul>
               <li>Thinking about people, places, and things associated with past use</li>
               <li>Romanticizing past use while minimizing consequences</li>
@@ -132,7 +132,7 @@ export default function RelapsePreventionGuidePage() {
             <ul>
               <li><strong>Know your triggers:</strong> Identify the people, places, emotions, and situations that increase your urge to use. The <Link href="/trigger-identification-worksheet" className="text-sage-600 dark:text-sage-400 underline">trigger identification worksheet</Link> helps you map these systematically.</li>
               <li><strong>Build a daily routine:</strong> Structure reduces the idle time and decision fatigue that leave room for cravings. The <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link> anchors your day with a structured reflection.</li>
-              <li><strong>Use the HALT check:</strong> Regularly ask yourself if you are Hungry, Angry, Lonely, or Tired &mdash; four states that increase vulnerability.</li>
+              <li><strong>Use the HALT check:</strong> Regularly ask yourself if you are Hungry, Angry, Lonely, or Tired, four states that increase vulnerability.</li>
               <li><strong>Maintain your support network:</strong> Isolation is one of the strongest predictors of relapse. Stay connected to your therapist, sponsor, support group, or trusted people.</li>
               <li><strong>Practice urge surfing:</strong> When cravings arise, observe them without acting. In Marlatt&apos;s urge-surfing model (Mindfulness-Based Relapse Prevention), cravings are described as waves that typically peak and subside within 15&ndash;30 minutes when you observe them without acting on them.</li>
               <li><strong>Have a written plan:</strong> A <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan</Link> gives you specific steps for specific situations, decided in advance when you are thinking clearly.</li>
@@ -145,7 +145,7 @@ export default function RelapsePreventionGuidePage() {
               The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools relapse prevention plan builder</Link> walks you through creating a personalized, written plan that includes your triggers, warning signs, coping strategies, and emergency contacts. It is free, private, and runs entirely in your browser.
             </p>
             <p>
-              A written plan removes the need to think clearly in a crisis &mdash; the plan has already done the thinking for you. Relapse-prevention planning is a core component of evidence-based treatment models including Cognitive Behavioral Therapy and Marlatt &amp; Gordon&apos;s Relapse Prevention Therapy.
+              A written plan removes the need to think clearly in a crisis, the plan has already done the thinking for you. Relapse-prevention planning is a core component of evidence-based treatment models including Cognitive Behavioral Therapy and Marlatt &amp; Gordon&apos;s Relapse Prevention Therapy.
             </p>
           </section>
 
@@ -162,7 +162,7 @@ export default function RelapsePreventionGuidePage() {
               <li>You feel isolated and disconnected from your support system</li>
             </ul>
             <p>
-              SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals 24/7. A relapse does not mean starting over &mdash; it means adjusting your approach.
+              SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals 24/7. A relapse does not mean starting over, it means adjusting your approach.
             </p>
           </section>
 
