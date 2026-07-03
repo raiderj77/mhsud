@@ -13,6 +13,29 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "dast-10-vs-dast-20-guide",
+    title: "DAST-10 vs DAST-20: Which Drug-Use Screener Fits Your Setting?",
+    excerpt: "The DAST-10 suits fast-paced settings like primary care and EDs. The DAST-20 fits dedicated treatment programs needing more clinical detail. Compare scoring, use cases, and limits.",
+    category: "Education",
+    date: "2026-07-02",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-02",
+    modifiedDate: "2026-07-02",
+  },
+  {
+    slug: "sud-risk-screening-tools-guide",
+    title: "Which Validated Screening Tool Should You Use to Assess Your SUD Risk?",
+    excerpt: "No single tool covers every substance equally well. Compare AUDIT, DAST-10, CRAFFT, ORT, and ASSIST to find the right instrument for the right substance and population.",
+    category: "Education",
+    date: "2026-07-02",
+    readTime: "12 min read",
+    status: "published",
+    publishedDate: "2026-07-02",
+    modifiedDate: "2026-07-02",
+  },
+
+  {
     slug: "phq-9-guide",
     title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire (and What It Can't Tell You)",
     excerpt: "Learn what the PHQ-9 measures, how healthcare providers interpret scores, and why this widely-used screener is only a starting point, not a diagnosis.",
