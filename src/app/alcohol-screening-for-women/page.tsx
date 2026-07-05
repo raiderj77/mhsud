@@ -265,7 +265,7 @@ export default function AlcoholScreeningForWomenPage() {
         <h2>How Is the Alcohol Screen Scored?</h2>
         <h2>What Do My Alcohol Screening Results Mean?</h2>
       </section>
-<AUDITClient faqData={FAQ_DATA} />
+<AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

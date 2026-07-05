@@ -10,6 +10,7 @@ import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 interface Question {
@@ -136,9 +137,10 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  hideTherapyCTA?: boolean;
 }
 
-export function AUDITClient({ faqData }: Props) {
+export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(10).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -433,6 +435,15 @@ export function AUDITClient({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          {!hideTherapyCTA && ["hazardous", "harmful", "dependence"].includes(range.key) && (
+            <div className="mb-8">
+              <h3 className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
+                Professional Support Options
+              </h3>
+              <TherapyCTA show={true} />
+            </div>
+          )}
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>

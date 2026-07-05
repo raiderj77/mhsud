@@ -157,7 +157,7 @@ export default function AmIAnAlcoholicQuizPage() {
         <h2>How Is the Alcohol Quiz Scored?</h2>
         <h2>What Do My Alcohol Quiz Results Mean?</h2>
       </section>
-<AUDITClient faqData={FAQ_DATA} />
+<AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">
