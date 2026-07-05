@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -290,6 +291,8 @@ export function MSIBPDClient({ faqData }: Props) {
               </div>
             </div>
           )}
+
+          <TherapyCTA show={["positive", "uncertain"].includes(range.key) && answers[1] === 0} />
 
           {/* Printable Results Area */}
           <div ref={printRef} id="printable-results">

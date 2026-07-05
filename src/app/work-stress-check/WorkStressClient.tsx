@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 const QUESTIONS = [
@@ -221,6 +222,8 @@ export function WorkStressClient({ faqData }: Props) {
               <strong>Important:</strong> This is a self-reflection tool, not a clinical assessment. It uses original questions and cannot diagnose burnout, depression, or any condition. For persistent work-related distress, please talk to a healthcare professional.
             </p>
           </div>
+
+          <TherapyCTA show={["moderate", "high", "very-high"].includes(range.key)} />
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>

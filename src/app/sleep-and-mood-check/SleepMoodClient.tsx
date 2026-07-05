@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -239,6 +240,8 @@ export function SleepMoodClient({ faqData }: Props) {
               ))}
             </div>
           </div>
+
+          <TherapyCTA show={["moderate", "notable", "significant"].includes(range.key)} />
 
           {/* Sleep-mood education */}
           <div className="card p-5 sm:p-6 mb-5">

@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 /* ------------------------------------------------------------------ */
@@ -299,6 +300,8 @@ export function SpinClient({ faqData }: Props) {
             {tier.message}
           </p>
         </div>
+
+        <TherapyCTA show={totalScore >= 21} />
 
         <AdSlot npa position="results-top" />
 

@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -216,6 +217,8 @@ export function UCLAClient({ faqData }: Props) {
             {tier.message}
           </p>
         </div>
+
+        <TherapyCTA show={isElevated} />
 
         <AdSlot position="results-top" />
 

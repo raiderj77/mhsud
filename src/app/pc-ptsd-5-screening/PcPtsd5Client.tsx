@@ -7,6 +7,7 @@ import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -279,6 +280,8 @@ export function PcPtsd5Client({ faqData }: Props) {
               : "Your score of " + totalScore + " out of 5 is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress or difficulty functioning after a traumatic experience, those concerns are still worth discussing with a healthcare provider."}
           </p>
         </div>
+
+        <TherapyCTA show={isPositiveScreen} />
 
         <AdSlot npa position="results-top" />
 
