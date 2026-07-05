@@ -24,8 +24,8 @@ export function TherapyCTA({ show }: Props) {
       >
         Find a therapist
       </a>
-      <p className="text-[11px] text-neutral-400 dark:text-neutral-500 leading-relaxed mt-2">
-        We earn a commission if you sign up through this link; this does not change our recommendations.
+      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-4 pt-4 border-t border-sage-200 dark:border-sage-800">
+        <strong>Affiliate Disclosure:</strong> We earn a commission if you sign up through this link. This does not change our recommendations or the quality of service you receive.
       </p>
     </div>
   );

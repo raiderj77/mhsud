@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -45,9 +46,10 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  hideTherapyCTA?: boolean;
 }
 
-export function CAGEAIDClient({ faqData }: Props) {
+export function CAGEAIDClient({ faqData, hideTherapyCTA = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(4).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -482,6 +484,15 @@ export function CAGEAIDClient({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
+
+          {!hideTherapyCTA && positiveScreen && (
+            <div className="mb-8">
+              <h3 className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
+                Professional Support Options
+              </h3>
+              <TherapyCTA show={true} />
+            </div>
+          )}
 
           <EmailCapture toolName="CAGE-AID" />
 

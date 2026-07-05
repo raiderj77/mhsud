@@ -302,7 +302,7 @@ export default function EatingDisorderTestAthletesPage() {
           <h2>How Is the Eating Disorder Test Scored?</h2>
           <h2>What Do My Eating Disorder Results Mean?</h2>
         </section>
-        <SCOFFClient faqData={FAQ_DATA} />
+        <SCOFFClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
