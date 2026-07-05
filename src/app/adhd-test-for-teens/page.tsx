@@ -231,7 +231,7 @@ export default function AdhdTestForTeensPage() {
         <h2>How Is the Teen ADHD Test Scored?</h2>
         <h2>What Do My ADHD Results Mean?</h2>
       </section>
-<ASRSClient faqData={FAQ_DATA} />
+<ASRSClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

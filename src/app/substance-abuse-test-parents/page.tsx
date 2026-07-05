@@ -305,7 +305,7 @@ export default function SubstanceAbuseTestParentsPage() {
         <h2>How Is the Parent Substance Screening Scored?</h2>
         <h2>What Do My Substance Screening Results Mean?</h2>
       </section>
-<CAGEAIDClient faqData={FAQ_DATA} />
+<CAGEAIDClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -127,6 +128,12 @@ export function DASS21Client({ faqData }: Props) {
   const anyElevated = dSev.level !== "Normal" && dSev.level !== "Mild"
     || aSev.level !== "Normal" && aSev.level !== "Mild"
     || sSev.level !== "Normal" && sSev.level !== "Mild";
+
+  // Item #21 ("I felt that life was meaningless", index 20) is a soft crisis indicator.
+  // Only show therapy CTA if subscales are elevated AND item #21 response is low (0-1).
+  // Scores of 2-3 on item #21 combined with elevated subscales warrant crisis resources first.
+  const item21Response = answers[20] ?? null;
+  const showTherapyCTA = anyElevated && (item21Response === null || item21Response <= 1);
 
   function handleAnswer(qi: number, value: number) {
     const next = [...answers];
@@ -587,6 +594,9 @@ export function DASS21Client({ faqData }: Props) {
               ))}
             </div>
           </div>
+
+          {/* Therapy CTA - shown only if elevated AND item #21 (meaninglessness) is low */}
+          <TherapyCTA show={showTherapyCTA} />
 
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
             <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">

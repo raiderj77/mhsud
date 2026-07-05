@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -540,6 +541,16 @@ export function CrafftClient({ faqData }: Props) {
             ))}
           </div>
         </div>
+
+        {/* Professional Support Section - Separated from clinical guidance */}
+        {score >= 4 && (
+          <div className="mt-12 pt-8 border-t-2 border-neutral-200 dark:border-neutral-700">
+            <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+              Professional Therapist Support
+            </h2>
+            <TherapyCTA show={true} />
+          </div>
+        )}
       </div>
     );
   }

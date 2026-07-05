@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -88,9 +89,10 @@ const CLUSTER_COLORS: Record<string, string> = {
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  hideTherapyCTA?: boolean;
 }
 
-export function PCL5Client({ faqData }: Props) {
+export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(20).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -656,6 +658,8 @@ export function PCL5Client({ faqData }: Props) {
               ))}
             </div>
           </section>
+
+          <TherapyCTA show={!hideTherapyCTA} />
 
           <AdSlot npa position="Mid Content" className="mb-8" />
 

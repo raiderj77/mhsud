@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
@@ -49,9 +50,10 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  suppressTherapyCTA?: boolean;
 }
 
-export function GAD7Client({ faqData }: Props) {
+export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(7).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -333,6 +335,9 @@ export function GAD7Client({ faqData }: Props) {
               ))}
             </div>
           </div>
+
+          {/* Therapist CTA — positioned after all crisis resources, shown only for moderate anxiety (not severe) */}
+          <TherapyCTA show={!suppressTherapyCTA && range.key === "moderate"} />
 
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
             <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
