@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -271,6 +272,8 @@ export function AISClient({ faqData }: Props) {
         </div>
 
         <AdSlot position="results-top" />
+
+        <TherapyCTA show={totalScore >= 10} />
 
         {/* Insomnia follow-up */}
         {isInsomnia && totalScore >= 10 && (

@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -398,6 +399,8 @@ export function BurnoutClient({ faqData }: Props) {
                   </p>
                 </div>
               </div>
+
+              <TherapyCTA show={["moderate", "high", "severe"].includes(range.key)} />
 
               <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-night-700">
                 <button

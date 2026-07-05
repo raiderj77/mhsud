@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 interface Question {
@@ -359,6 +360,8 @@ export function AUDITCClient({ faqData }: Props) {
               prompts={REFLECTION_PROMPTS["audit-c-alcohol-screen"].prompts}
             />
           )}
+
+          <TherapyCTA show={["above", "high"].includes(range.key)} />
 
           <EmailCapture toolName="AUDIT-C" />
 

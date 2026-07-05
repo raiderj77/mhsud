@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 /* ------------------------------------------------------------------ */
@@ -229,6 +230,8 @@ export function Who5Client({ faqData }: Props) {
             </Link>
           </div>
         )}
+
+        <TherapyCTA show={pctScore < 50} />
 
         {/* Item Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
