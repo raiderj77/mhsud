@@ -13,6 +13,29 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "what-an-audit-score-actually-triggers-in-sud-treatment-intake",
+    title: "What Does an AUDIT Score Actually Trigger in SUD Treatment Intake?",
+    excerpt: "An AUDIT score does not diagnose anything on its own. It is a validated screening tool that places a person in a risk zone, and each zone maps to a specific clinical response, from brief advice at low scores to a full diagnostic assessment and possib",
+    category: "Education",
+    date: "2026-07-07",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-07",
+    modifiedDate: "2026-07-07",
+  },
+  {
+    slug: "sbirt-in-90-seconds-how-brief-intervention-follows-a-positive-screen",
+    title: "SBIRT in 90 Seconds: How Brief Intervention Follows a Positive Screen",
+    excerpt: "SBIRT stands for Screening, Brief Intervention, and Referral to Treatment. After a positive screen for risky alcohol or drug use, a trained provider spends roughly 5 to 15 minutes discussing the results, offering feedback, and gauging the person's re",
+    category: "Education",
+    date: "2026-07-07",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-07",
+    modifiedDate: "2026-07-07",
+  },
+
+  {
     slug: "dast-10-vs-dast-20-guide",
     title: "DAST-10 vs DAST-20: Which Drug-Use Screener Fits Your Setting?",
     excerpt: "The DAST-10 suits fast-paced settings like primary care and EDs. The DAST-20 fits dedicated treatment programs needing more clinical detail. Compare scoring, use cases, and limits.",
