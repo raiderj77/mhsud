@@ -44,6 +44,10 @@ test("newsletter form does not collect the screener name", async () => {
   const route = await readFile(new URL("../src/app/api/subscribe/route.ts", import.meta.url), "utf8");
   assert.doesNotMatch(component, /toolName|source:/);
   assert.doesNotMatch(route, /toolName|userGroup|body\.source/);
+  assert.ok(
+    route.indexOf("parseSubscriptionBody(rawBody)") < route.indexOf("if (!LOOPS_KEY)"),
+    "request validation must run before provider configuration checks",
+  );
 });
 
 test("youth substance screener contains no affiliate therapy promotion", async () => {
