@@ -494,7 +494,7 @@ export function CAGEAIDClient({ faqData, hideTherapyCTA = false }: Props) {
             </div>
           )}
 
-          <EmailCapture toolName="CAGE-AID" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

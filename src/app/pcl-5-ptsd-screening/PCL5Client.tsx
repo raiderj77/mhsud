@@ -594,7 +594,7 @@ export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
             </Link>
           </div>
 
-          <EmailCapture toolName="PCL-5" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

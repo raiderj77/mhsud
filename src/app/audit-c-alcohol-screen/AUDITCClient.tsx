@@ -363,7 +363,7 @@ export function AUDITCClient({ faqData }: Props) {
 
           <TherapyCTA show={["above", "high"].includes(range.key)} />
 
-          <EmailCapture toolName="AUDIT-C" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

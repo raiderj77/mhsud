@@ -604,7 +604,7 @@ export function DASS21Client({ faqData }: Props) {
             </Link>
           </div>
 
-          <EmailCapture toolName="DASS-21" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

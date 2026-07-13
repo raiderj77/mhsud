@@ -414,7 +414,7 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
             />
           )}
 
-          <EmailCapture toolName="GAD-7" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

@@ -474,7 +474,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="PC-PTSD-5" />
+        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

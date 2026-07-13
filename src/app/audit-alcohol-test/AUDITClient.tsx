@@ -514,7 +514,7 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
             />
           )}
 
-          <EmailCapture toolName="AUDIT" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

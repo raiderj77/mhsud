@@ -364,7 +364,7 @@ export function Who5Client({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="WHO-5" />
+        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

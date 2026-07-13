@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to any server. We use Google Analytics (with Consent Mode v2) for page-level analytics. We may display advertising in the future.
+              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to our servers. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, or crisis information. We also use consent-controlled analytics and advertising services as described in those policies.
             </p>
           </section>
 
@@ -118,13 +118,13 @@ export default function TermsPage() {
               If you are located in the EEA or UK, you have rights under the General Data Protection Regulation (GDPR) including:
             </p>
             <p>
-              <strong>Right to access:</strong> You can request information about what personal data we process. Since we do not collect personal data through our tools (screening answers stay in your browser), there is typically nothing to provide. Google Analytics processes anonymized data on our behalf.
+              <strong>Right to access:</strong> You can request information about what personal data we process. Screening answers stay in your browser. If you subscribed to resource emails, the subscriber record contains your email address.
             </p>
             <p>
-              <strong>Right to erasure:</strong> You can request deletion of your personal data. Since we don&apos;t store personal data, you can clear cookies through your browser and use our cookie consent controls to withdraw consent. 
+              <strong>Right to erasure:</strong> You can request deletion of your subscriber record by contacting privacy@mindchecktools.com. You can also unsubscribe from any marketing email, clear browser storage, and use our cookie controls to withdraw cookie consent. Service providers may retain limited records where required for suppression, security, backup, or legal obligations.
             </p>
             <p>
-              <strong>Right to object / withdraw consent:</strong> You can withdraw cookie consent at any time through our cookie banner or the <Link href="/cookies">Cookie Policy</Link> page.
+              <strong>Right to object / withdraw consent:</strong> You can unsubscribe from resource emails through any email and withdraw cookie consent through our cookie banner or the <Link href="/cookies">Cookie Policy</Link> page.
             </p>
             <p>
               <strong>Right to lodge a complaint:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you believe your data rights have been violated.
@@ -133,7 +133,7 @@ export default function TermsPage() {
               <strong>Data controller:</strong> MindCheck Tools (mindchecktools.com). Contact: <strong>privacy@mindchecktools.com</strong>.
             </p>
             <p>
-              <strong>Legal basis for processing:</strong> Consent (for analytics and advertising cookies). Legitimate interest (for essential site functionality).
+              <strong>Legal basis for processing:</strong> Consent for resource emails and non-essential cookies; legitimate interest for essential site functionality and security.
             </p>
           </section>
 
@@ -146,7 +146,7 @@ export default function TermsPage() {
               <strong>Right to know:</strong> You can request information about what personal information we collect, use, and disclose. Our data practices are described in our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link>.
             </p>
             <p>
-              <strong>Right to delete:</strong> You can request deletion of your personal information. Since we do not store personal information from tools, clearing your browser cookies and localStorage is sufficient.
+              <strong>Right to delete:</strong> Screening answers are not stored by us. Clearing cookies and localStorage removes browser-held preferences. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
               <strong>Right to opt out of sale/sharing:</strong> We do not &quot;sell&quot; personal information in the traditional sense. However, certain cookie-based analytics or advertising data may constitute &quot;sharing&quot; under the CPRA. You can opt out via our cookie banner or by using a browser that sends the Global Privacy Control (GPC) signal. We honor GPC signals.
