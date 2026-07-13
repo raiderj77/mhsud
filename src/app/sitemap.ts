@@ -1,6 +1,19 @@
 import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
-import { BLOG_POSTS } from "@/lib/blog";
+
+const QUARANTINED_PATHS = new Set([
+  "/depression-test-for-teens", "/depression-test-for-seniors", "/depression-test-for-new-moms",
+  "/depression-screening-for-veterans", "/depression-test-for-men", "/depression-screening-for-men",
+  "/am-i-depressed-quiz", "/anxiety-test-for-women", "/anxiety-test-for-teens", "/anxiety-test-for-men",
+  "/ptsd-test-veterans", "/ptsd-test-first-responders", "/do-i-have-ptsd-quiz", "/adhd-test-adults",
+  "/adhd-test-women", "/adhd-test-for-teens", "/social-anxiety-test-college",
+  "/alcohol-screening-for-college-students", "/alcohol-screening-for-women", "/alcohol-screening-military",
+  "/am-i-an-alcoholic-quiz", "/drug-screening-teens", "/substance-abuse-test-parents",
+  "/stress-test-college-students", "/burnout-test-for-nurses", "/burnout-test-for-healthcare-workers",
+  "/burnout-test-for-teachers", "/burnout-test-parents", "/loneliness-test-seniors",
+  "/eating-disorder-test-athletes", "/bpd-test-for-women", "/bpd-screening-for-young-adults",
+  "/attachment-style-test-for-couples", "/blog",
+]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastUpdated = "2026-03-27T00:00:00.000Z";
@@ -134,14 +147,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/disclaimer`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
-  const blogPages = BLOG_POSTS
-    .filter((p) => p.status === "published")
-    .map((p) => ({
-      url: `${SITE_URL}/blog/${p.slug}`,
-      lastModified: new Date(p.date).toISOString(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    }));
-
-  return [...staticPages, ...blogPages];
+  return staticPages.filter(({ url }) => {
+    const path = new URL(url).pathname.replace(/\/$/, "") || "/";
+    return !QUARANTINED_PATHS.has(path);
+  });
 }

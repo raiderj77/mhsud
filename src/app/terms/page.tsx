@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to our servers. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, or crisis information. We also use consent-controlled analytics and advertising services as described in those policies.
+              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to our servers. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. We use consent-controlled analytics. Advertising is not currently enabled.
             </p>
           </section>
 
