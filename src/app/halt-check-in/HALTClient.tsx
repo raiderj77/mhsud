@@ -436,7 +436,7 @@ export function HALTClient({ faqData }: Props) {
             </>
           )}
 
-          <EmailCapture toolName="HALT" />
+          <EmailCapture />
 
           <AdSlot position="halt-results" className="mt-6" />
         </div>

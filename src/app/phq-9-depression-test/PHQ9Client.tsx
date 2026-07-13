@@ -544,7 +544,7 @@ export function PHQ9Client({ faqData }: Props) {
             }
           />
 
-          <EmailCapture toolName="PHQ-9" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

@@ -506,7 +506,7 @@ export function SpinClient({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="SPIN" />
+        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

@@ -375,7 +375,7 @@ export function K6Client({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="K6" />
+        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

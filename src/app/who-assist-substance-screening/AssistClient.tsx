@@ -909,7 +909,7 @@ export function AssistClient({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="ASSIST" />
+        <EmailCapture />
 
         <AdSlot npa position="results-middle" />
 

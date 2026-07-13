@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last Reviewed: April 2026
+            Effective Date: January 1, 2026 | Last Reviewed: July 2026
           </p>
         </header>
 
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               The short version
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>Your answers never leave your browser.</strong> We don&apos;t collect them, store them, transmit them, or sell them. We have no accounts, no login, and no way to identify you. When you close the page, your responses are gone.
+              <strong>Your screening answers and scores never leave your browser.</strong> We do not collect or store them. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
             </p>
           </div>
 
@@ -99,7 +99,13 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you collect personal information?</h2>
             <p>
-              We do not require accounts, registration, email addresses, or any personal information to use our tools. If you contact us voluntarily (e.g., via email for feedback), we will receive whatever information you choose to share in that message. We will not use it for marketing or share it with third parties.
+              We do not require an account, registration, or email address to use our tools. If you voluntarily subscribe to resource emails, we collect your email address and send it to <strong>Loops</strong>, our email service provider. We do not send Loops the screening tool you used, your answers, score, diagnosis, crisis information, or the page where you subscribed.
+            </p>
+            <p>
+              Authorized MindCheck Tools administrators and Loops, acting as our service provider, can access subscriber records as needed to operate the mailing list. We use the address only for the emails you consented to receive. Every marketing email includes an unsubscribe link. We do not sell subscriber information or share it for advertising.
+            </p>
+            <p>
+              If you contact us voluntarily, we receive the information you choose to include in your message. Please do not send screening answers or other sensitive health information by email.
             </p>
           </section>
 
@@ -112,6 +118,7 @@ export default function PrivacyPage() {
               <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
               <li><strong>Cookie consent preferences:</strong> 12 months (managed by Cookiebot, stored on your device).</li>
               <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
+              <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
             </ul>
@@ -153,12 +160,15 @@ export default function PrivacyPage() {
             <p>
               Our site may link to external resources such as crisis hotlines, professional organizations, and educational materials. These external sites have their own privacy policies. We are not responsible for their content or data practices, but we only link to resources we believe are reputable.
             </p>
+            <p>
+              Some therapist links are affiliate links, which means we may earn a commission if you sign up. These links are configured not to send the referring page. We do not add your screening answers, score, diagnosis, crisis information, email address, or other identifiers to an affiliate link. The external provider may collect information after you choose to visit its site under its own privacy policy.
+            </p>
           </section>
 
           <section>
             <h2>Children&apos;s privacy</h2>
             <p>
-              Our tools are designed for adults. We do not knowingly collect any information from children under 13. Since we collect no personal data from any user, there is no mechanism through which we could inadvertently collect children&apos;s data through our tools. If you are a parent or guardian and have concerns, please contact us.
+              Most tools are designed for adults; any youth-oriented tool identifies its intended age range. We do not knowingly collect email addresses from children under 13. Screening answers remain in the browser and are not collected. If you are a parent or guardian and believe a child submitted an email address, contact privacy@mindchecktools.com so we can address it.
             </p>
           </section>
 
@@ -180,7 +190,7 @@ export default function PrivacyPage() {
               Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
             </p>
             <p>
-              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR, requiring explicit consent for processing. Because all screening results on MindCheck Tools are processed entirely in your browser and never transmitted to our servers, we do not process health data as a data controller. No health-related data is shared with third parties, including advertising systems.
+              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results on MindCheck Tools are processed entirely in your browser and are not transmitted to our servers. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
             </p>
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
@@ -229,7 +239,7 @@ export default function PrivacyPage() {
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> IP address, browser type, device identifiers collected via analytics.</li>
+              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and device identifiers collected via analytics.</li>
               <li><strong>Internet or network activity:</strong> Pages visited, time on site, referring URLs.</li>
               <li><strong>Inferred data:</strong> Interests or preferences inferred from browsing behavior via advertising partners.</li>
             </ul>
@@ -258,6 +268,7 @@ export default function PrivacyPage() {
               <li>To display advertising through Google AdSense (non-personalized ads are used on health screening pages)</li>
               <li>To analyze site traffic and improve user experience via analytics</li>
               <li>To maintain site security and prevent fraud</li>
+              <li>To send occasional resource emails when a subscriber has expressly consented</li>
             </ul>
             <p>We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising without your consent.</p>
 
@@ -283,9 +294,10 @@ export default function PrivacyPage() {
 
             <h3>Data Retention</h3>
             <p>
-              Analytics data is retained for 26 months and then deleted. We do not retain mental health
-              screening responses, all processing is client-side only. Server logs are retained for
-              90 days for security purposes.
+              Screening responses are not retained because processing is client-side only. Analytics and
+              server-log retention follow the periods described above and our configured service settings.
+              Newsletter addresses are retained while subscribed or until no longer needed, subject to the
+              limited provider records described above.
             </p>
           </section>
 

@@ -492,7 +492,7 @@ export function MSIBPDClient({ faqData }: Props) {
             </Link>
           </div>
 
-          <EmailCapture toolName="MSI-BPD" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 

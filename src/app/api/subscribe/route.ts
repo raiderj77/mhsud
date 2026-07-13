@@ -1,45 +1,48 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  buildEmailProviderPayload,
+  MAX_SUBSCRIPTION_BODY_BYTES,
+  parseSubscriptionBody,
+} from "@/lib/subscription.mjs";
 
 const LOOPS_KEY = process.env.LOOPS_API_KEY;
 const LOOPS_ENDPOINT = "https://app.loops.so/api/v1/contacts/create";
-
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: NextRequest) {
   if (!LOOPS_KEY) {
     return NextResponse.json({ ok: false }, { status: 500 });
   }
 
-  let email: string;
-  let source: string;
-
-  try {
-    const body = await req.json();
-    email = typeof body.email === "string" ? body.email.trim() : "";
-    source = typeof body.source === "string" ? body.source.trim() : "unknown";
-  } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  if (req.headers.get("content-type")?.split(";", 1)[0].trim() !== "application/json") {
+    return NextResponse.json({ ok: false }, { status: 415 });
   }
 
-  if (!EMAIL_RE.test(email)) {
-    return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
+  const declaredLength = Number(req.headers.get("content-length") ?? "0");
+  if (Number.isFinite(declaredLength) && declaredLength > MAX_SUBSCRIPTION_BODY_BYTES) {
+    return NextResponse.json({ ok: false }, { status: 413 });
   }
 
   try {
+    const rawBody = await req.text();
+    const parsed = parseSubscriptionBody(rawBody);
+    if (!parsed.ok) {
+      return NextResponse.json({ ok: false }, { status: parsed.status });
+    }
+
     const res = await fetch(LOOPS_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${LOOPS_KEY}`,
       },
-      body: JSON.stringify({ email, source, subscribed: true, userGroup: source }),
+      body: JSON.stringify(buildEmailProviderPayload(parsed.email)),
     });
 
     if (res.ok || res.status === 409) {
       return NextResponse.json({ ok: true });
     }
 
-    return NextResponse.json({ ok: false }, { status: res.status });
+    return NextResponse.json({ ok: false }, { status: 502 });
   } catch {
     return NextResponse.json({ ok: false }, { status: 500 });
   }
