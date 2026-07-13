@@ -1,4 +1,40 @@
 /** @type {import('next').NextConfig} */
+const quarantinedRedirects = [
+  ["/depression-test-for-teens", "/phq-9-depression-test"],
+  ["/depression-test-for-seniors", "/phq-9-depression-test"],
+  ["/depression-test-for-new-moms", "/phq-9-depression-test"],
+  ["/depression-screening-for-veterans", "/phq-9-depression-test"],
+  ["/depression-test-for-men", "/phq-9-depression-test"],
+  ["/depression-screening-for-men", "/phq-9-depression-test"],
+  ["/am-i-depressed-quiz", "/phq-9-depression-test"],
+  ["/anxiety-test-for-women", "/gad-7-anxiety-test"],
+  ["/anxiety-test-for-teens", "/gad-7-anxiety-test"],
+  ["/anxiety-test-for-men", "/gad-7-anxiety-test"],
+  ["/ptsd-test-veterans", "/pcl-5-ptsd-screening"],
+  ["/ptsd-test-first-responders", "/pcl-5-ptsd-screening"],
+  ["/do-i-have-ptsd-quiz", "/pcl-5-ptsd-screening"],
+  ["/adhd-test-adults", "/asrs-adhd-screening"],
+  ["/adhd-test-women", "/asrs-adhd-screening"],
+  ["/adhd-test-for-teens", "/asrs-adhd-screening"],
+  ["/social-anxiety-test-college", "/spin-social-anxiety-test"],
+  ["/alcohol-screening-for-college-students", "/audit-alcohol-test"],
+  ["/alcohol-screening-for-women", "/audit-alcohol-test"],
+  ["/alcohol-screening-military", "/audit-alcohol-test"],
+  ["/am-i-an-alcoholic-quiz", "/audit-alcohol-test"],
+  ["/drug-screening-teens", "/crafft-substance-screening"],
+  ["/substance-abuse-test-parents", "/cage-aid-substance-abuse-screening"],
+  ["/stress-test-college-students", "/dass-21-depression-anxiety-stress"],
+  ["/burnout-test-for-nurses", "/burnout-assessment-tool"],
+  ["/burnout-test-for-healthcare-workers", "/burnout-assessment-tool"],
+  ["/burnout-test-for-teachers", "/burnout-assessment-tool"],
+  ["/burnout-test-parents", "/burnout-assessment-tool"],
+  ["/loneliness-test-seniors", "/ucla-loneliness-scale"],
+  ["/eating-disorder-test-athletes", "/scoff-eating-disorder-screening"],
+  ["/bpd-test-for-women", "/msi-bpd-screening"],
+  ["/bpd-screening-for-young-adults", "/msi-bpd-screening"],
+  ["/attachment-style-test-for-couples", "/attachment-style-quiz"],
+].map(([source, destination]) => ({ source, destination, permanent: true }));
+
 const nextConfig = {
   // Performance
   compress: true,
@@ -79,6 +115,9 @@ const nextConfig = {
       { source: "/audit-vs-dast-10", destination: "/audit-alcohol-test", permanent: true },
       { source: "/dast-10-score-interpretation", destination: "/audit-alcohol-test", permanent: true },
       { source: "/blog/dast-10-guide", destination: "/audit-alcohol-test", permanent: true },
+      ...quarantinedRedirects,
+      { source: "/blog/:path*", destination: "/screening-tools", permanent: true },
+      { source: "/blog", destination: "/screening-tools", permanent: true },
     ];
   },
 };

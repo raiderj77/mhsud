@@ -58,3 +58,31 @@ test("youth substance screener contains no affiliate therapy promotion", async (
   assert.doesNotMatch(crafft, /TherapyCTA|THERAPY_AFFILIATE_URL/);
   assert.match(crafft, /Crisis Resources/);
 });
+
+test("tracking and advertising require consent and Clarity is absent", async () => {
+  const layout = await readFile(new URL("../src/app/layout.tsx", import.meta.url), "utf8");
+  assert.match(layout, /'analytics_storage': 'denied'/);
+  assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === "true"/);
+  assert.match(layout, /data-cookieconsent="statistics"/);
+  assert.match(layout, /data-cookieconsent="marketing"/);
+  assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
+  assert.doesNotMatch(layout, /data-georegions/);
+});
+
+test("scaled content stays quarantined from search and internal discovery", async () => {
+  const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
+  const sitemap = await readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");
+  const homepage = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
+
+  assert.match(nextConfig, /source: "\/blog\/:path\*", destination: "\/screening-tools"/);
+  assert.match(nextConfig, /"\/depression-test-for-teens", "\/phq-9-depression-test"/);
+  assert.doesNotMatch(sitemap, /BLOG_POSTS/);
+  assert.match(sitemap, /QUARANTINED_PATHS/);
+  assert.match(homepage, /targetedScreenings=\{\[\]\}/);
+});
+
+test("every MindCheck ad is non-personalized", async () => {
+  const adSlot = await readFile(new URL("../src/components/AdSlot.tsx", import.meta.url), "utf8");
+  assert.match(adSlot, /data-npa="1"/);
+  assert.doesNotMatch(adSlot, /npa \? \{ "data-npa"/);
+});

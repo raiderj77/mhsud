@@ -162,7 +162,7 @@ export function Footer() {
             {/* Resources links */}
             <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">Resources</h4>
             <ul className="space-y-1.5">
-              {INFO_LINKS.map((link) => (
+              {INFO_LINKS.filter((link) => link.href !== "/blog").map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
                     {link.label}
@@ -206,17 +206,8 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Targeted Screenings */}
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2 mt-6">Targeted Screenings</h4>
-            <ul className="space-y-1.5">
-              {TARGETED_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Scaled demographic variants are quarantined pending individual review. */}
+            {false && TARGETED_LINKS.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
           </div>
 
           {/* Recovery Tools column */}

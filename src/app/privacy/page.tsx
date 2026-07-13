@@ -67,7 +67,7 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d), our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
               <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
-              <li><strong>Google AdSense</strong>, advertising. On health screening pages, we use non-personalized ads that do not use behavioral targeting or health-related data for ad selection. Ads are never placed adjacent to crisis resources.</li>
+              <li><strong>Google AdSense</strong>, planned advertising provider. AdSense is not currently enabled because the site has not been approved to show ads.</li>
             </ul>
             <p>
               You can manage your cookie preferences at any time through the Cookiebot consent banner or your browser settings.
@@ -77,13 +77,13 @@ export default function PrivacyPage() {
           <section>
             <h2>What data is collected through analytics and advertising?</h2>
             <p>
-              We use Google Analytics (GA4) and Google AdSense, which may automatically collect the following categories of information through cookies and standard web protocols:
+              Google Analytics (GA4), when you consent, may automatically collect the following categories of information through cookies and standard web protocols. Google AdSense is not currently enabled.
             </p>
             <ul>
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
               <li><strong>Network information:</strong> IP address (anonymized by GA4 by default), approximate geographic location (city/region level, not precise)</li>
               <li><strong>Usage data:</strong> pages visited, time on page, referral URLs, click interactions</li>
-              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics, Google AdSense, and Cookiebot (our consent management platform)</li>
+              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics and Cookiebot (our consent management platform)</li>
             </ul>
             <p>
               <strong>None of this data includes your screening answers, scores, or results.</strong> Screening data never leaves your browser and is never accessible to analytics or advertising systems.
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
             </p>
             <p>
-              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is active.
+              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is available only after consent. Google AdSense is disabled.
             </p>
           </section>
 
@@ -127,10 +127,10 @@ export default function PrivacyPage() {
           <section>
             <h2>Advertising</h2>
             <p>
-              This site uses Google AdSense (publisher ID: ca-pub-7171402107622932) to display advertisements that support free access to all tools.
+              Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible future advertising provider but is not currently enabled. We will update this notice if advertising is activated after approval.
             </p>
             <p>
-              <strong>Health data is never passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser and are never accessible to Google AdSense or any other advertising platform. On health screening pages, we use non-personalized ads that do not rely on behavioral profiling or health-related data for ad targeting.
+              <strong>Health data is not passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser. If advertising is enabled in the future, MindCheck Tools will use non-personalized ads and require consent before advertising storage.
             </p>
             <p>
               Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
@@ -187,7 +187,7 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on consent obtained through our Cookiebot consent management platform before enabling analytics or advertising storage.
             </p>
             <p>
               <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results on MindCheck Tools are processed entirely in your browser and are not transmitted to our servers. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
@@ -241,7 +241,6 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and device identifiers collected via analytics.</li>
               <li><strong>Internet or network activity:</strong> Pages visited, time on site, referring URLs.</li>
-              <li><strong>Inferred data:</strong> Interests or preferences inferred from browsing behavior via advertising partners.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
@@ -265,7 +264,7 @@ export default function PrivacyPage() {
 
             <h3>How We Use Your Information</h3>
             <ul>
-              <li>To display advertising through Google AdSense (non-personalized ads are used on health screening pages)</li>
+              <li>To display non-personalized advertising through Google AdSense after approval and consent, if advertising is enabled in the future</li>
               <li>To analyze site traffic and improve user experience via analytics</li>
               <li>To maintain site security and prevent fraud</li>
               <li>To send occasional resource emails when a subscriber has expressly consented</li>
