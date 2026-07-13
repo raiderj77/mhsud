@@ -9,10 +9,6 @@ const LOOPS_KEY = process.env.LOOPS_API_KEY;
 const LOOPS_ENDPOINT = "https://app.loops.so/api/v1/contacts/create";
 
 export async function POST(req: NextRequest) {
-  if (!LOOPS_KEY) {
-    return NextResponse.json({ ok: false }, { status: 500 });
-  }
-
   if (req.headers.get("content-type")?.split(";", 1)[0].trim() !== "application/json") {
     return NextResponse.json({ ok: false }, { status: 415 });
   }
@@ -27,6 +23,10 @@ export async function POST(req: NextRequest) {
     const parsed = parseSubscriptionBody(rawBody);
     if (!parsed.ok) {
       return NextResponse.json({ ok: false }, { status: parsed.status });
+    }
+
+    if (!LOOPS_KEY) {
+      return NextResponse.json({ ok: false }, { status: 503 });
     }
 
     const res = await fetch(LOOPS_ENDPOINT, {
