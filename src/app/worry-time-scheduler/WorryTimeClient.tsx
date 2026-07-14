@@ -816,7 +816,8 @@ export function WorryTimeClient({ faqData }: Props) {
 
       <div className="text-center mb-6">
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          Your privacy matters. Your worry log is saved only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared.
+          Your worry log is saved in this browser&apos;s local storage and is not intentionally sent to
+          MindCheck Tools servers. Anyone using this browser profile may be able to view it.
         </p>
       </div>
 

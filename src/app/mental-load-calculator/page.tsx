@@ -31,7 +31,7 @@ export default function MentalLoadPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Mental Load Calculator", description: "Reflect on how planning, remembering, and organizing are distributed in your household.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-05-12" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Mental Load Calculator", url: TOOL_URL }])) }} />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ThoughtRecordClient } from "./ThoughtRecordClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
@@ -50,7 +51,7 @@ const FAQ_DATA = [
   },
   {
     question: "Are my thought records private?",
-    answer: "Yes. Everything you write in this tool stays in your browser's local storage on your device. Nothing is sent to any server, collected, or shared with anyone. Your records are only accessible from the browser and device you created them on. If you clear your browser data, your records will be deleted. We recommend printing important records so you have a physical copy. If you share a device with others and want privacy, you can delete individual records or use your browser's private/incognito mode (though records will not persist in incognito mode).",
+    answer: "Entries are saved in this browser's local storage and are not intentionally sent to MindCheck Tools application servers. Anyone with access to the same browser profile may be able to read them. Clearing site data deletes the local records. On a shared device, use a private window or delete records when finished. Keep any printed or downloaded copy in a secure location you control.",
   },
 ];
 
@@ -68,7 +69,7 @@ export default function CbtThoughtRecordPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -130,7 +131,8 @@ export default function CbtThoughtRecordPage() {
         <h2>How Does the CBT Thought Record Work?</h2>
         <h2>What Do My Thought Record Results Mean?</h2>
       </section>
-<ThoughtRecordClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your thought-record entries" />
+      <ThoughtRecordClient faqData={FAQ_DATA} />
     </>
   );
 }

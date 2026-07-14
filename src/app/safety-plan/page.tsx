@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SafetyPlanClient } from "./SafetyPlanClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/safety-plan`;
 
@@ -66,7 +67,7 @@ export default function SafetyPlanPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -128,7 +129,8 @@ export default function SafetyPlanPage() {
         <h2>How Does the Safety Plan Tool Work?</h2>
         <h2>When Should You Create a Safety Plan?</h2>
       </section>
-<SafetyPlanClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your safety-plan entries" />
+      <SafetyPlanClient faqData={FAQ_DATA} />
     </>
   );
 }

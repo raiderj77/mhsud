@@ -31,11 +31,11 @@ export default function BurnoutTestForTeachersPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Burnout Test for Teachers, Self-Assessment", description: "A free, private burnout screening tool for teachers and educators.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-08" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...medicalWebPageJsonLd({ name: "Burnout Test for Teachers", description: "A clinically informed burnout screening for K-12 and higher education teachers covering the three dimensions of burnout: emotional exhaustion, depersonalization, and reduced personal accomplishment.", url: TOOL_URL, lastReviewed: "2026-05-08" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Burnout Assessment Tool", url: `${SITE_URL}/burnout-assessment-tool` }, { name: "Burnout Test for Teachers", url: TOOL_URL }])) }} />

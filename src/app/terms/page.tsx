@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to our servers. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. We use consent-controlled analytics. Advertising is not currently enabled.
+              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: screening answers are processed entirely in your browser and are not transmitted to our servers. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. We use consent-controlled analytics. Advertising is not currently enabled.
             </p>
           </section>
 
@@ -146,7 +146,7 @@ export default function TermsPage() {
               <strong>Right to know:</strong> You can request information about what personal information we collect, use, and disclose. Our data practices are described in our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link>.
             </p>
             <p>
-              <strong>Right to delete:</strong> Screening answers are not stored by us. Clearing cookies and localStorage removes browser-held preferences. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
+              <strong>Right to delete:</strong> Screening answers are not stored by us. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
               <strong>Right to opt out of sale/sharing:</strong> We do not &quot;sell&quot; personal information in the traditional sense. However, certain cookie-based analytics or advertising data may constitute &quot;sharing&quot; under the CPRA. You can opt out via our cookie banner or by using a browser that sends the Global Privacy Control (GPC) signal. We honor GPC signals.

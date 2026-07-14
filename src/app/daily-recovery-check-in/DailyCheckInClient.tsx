@@ -237,7 +237,7 @@ export function DailyCheckInClient({ faqData }: Props) {
         Your data saves in your browser so you can see trends over time.
       </p>
       <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
-        Data is stored in your browser only. It is never sent anywhere.
+        Check-in data is saved in this browser and is not intentionally sent to MindCheck Tools servers.
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
@@ -660,8 +660,9 @@ export function DailyCheckInClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          Your check-in data is stored in your browser&rsquo;s localStorage. It is never sent to any server.
-          Clearing your browser data will erase your history.
+          Your check-in data is stored in this browser&rsquo;s localStorage and is not intentionally sent
+          to MindCheck Tools servers. Anyone using this browser profile may be able to view it. Clearing
+          browser site data will erase your history.
         </p>
       </footer>
     </main>

@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               The short version
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>Your screening answers and scores never leave your browser.</strong> We do not collect or store them. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
+              <strong>Your screening answers and scores never leave your browser.</strong> We do not collect or store them. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
             </p>
           </div>
 
@@ -59,7 +59,10 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you use cookies?</h2>
             <p>
-              We use a single <strong>localStorage</strong> entry to remember your dark mode preference (light or dark theme). This is stored only on your device and is never transmitted to us.
+              We use browser <strong>localStorage</strong> for the light/dark theme preference and for tools that need to preserve a journal or plan between visits. Those tools are the safety plan, CBT thought record, worry-time scheduler, daily recovery check-in, and sobriety calculator. Their pages display a local-storage notice before the interactive tool.
+            </p>
+            <p>
+              Browser-local entries are not intentionally transmitted to MindCheck Tools application servers, but they remain available to this browser profile until you use the tool&apos;s reset/delete control, clear site data, or the browser removes them. Anyone with access to the same browser profile may be able to read them. Use a private window or clear the tool on a shared device. Browser extensions, device software, screenshots, downloads, and backups are outside our control.
             </p>
             <p>
               The following third-party services may set cookies on this site:
@@ -97,6 +100,23 @@ export default function PrivacyPage() {
           </section>
 
           <section>
+            <h2>Hosting and technical request logs</h2>
+            <p>
+              Vercel hosts MindCheck Tools and may process ordinary request information such as IP
+              address, browser and user-agent details, requested URL, timestamps, and security events.
+              A requested URL can reveal which tool or topic page was visited, but screening answers,
+              scores, journal entries, and locally saved plans are not placed in URLs or intentionally
+              sent with those requests.
+            </p>
+            <p>
+              Infrastructure-log retention depends on provider settings, security needs, backups, and
+              legal obligations. We do not promise zero logging or immediate deletion from every system.
+              Sensitive tool pages use a no-referrer policy so the page path is not sent when you follow
+              an external link.
+            </p>
+          </section>
+
+          <section>
             <h2>Do you collect personal information?</h2>
             <p>
               We do not require an account, registration, or email address to use our tools. If you voluntarily subscribe to resource emails, we collect your email address and send it to <strong>Loops</strong>, our email service provider. We do not send Loops the screening tool you used, your answers, score, diagnosis, crisis information, or the page where you subscribed.
@@ -116,11 +136,13 @@ export default function PrivacyPage() {
             </p>
             <ul>
               <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
+              <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
               <li><strong>Cookie consent preferences:</strong> 12 months (managed by Cookiebot, stored on your device).</li>
               <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
               <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
+              <li><strong>Hosting and security logs:</strong> Retention follows Vercel settings and legitimate security, backup, and legal requirements; it may change and is not represented as zero retention.</li>
             </ul>
           </section>
 
@@ -246,8 +268,9 @@ export default function PrivacyPage() {
             <h3>Sensitive Personal Information</h3>
             <p>
               As of January 1, 2026, California law defines an expanded category of sensitive personal
-              information. <strong>MindCheck Tools does not knowingly collect sensitive personal
-              information</strong> as defined under CPRA, which includes: precise geolocation data,
+              information. <strong>MindCheck Tools does not intentionally collect screening answers,
+              scores, or browser-local journal entries through its application servers.</strong> Sensitive
+              information under CPRA includes precise geolocation data,
               racial or ethnic origin, religious beliefs, union membership, contents of private
               communications, genetic data, biometric data, health or medical information, or sexual
               orientation. Mental health screening responses entered into our tools are processed
@@ -293,7 +316,8 @@ export default function PrivacyPage() {
 
             <h3>Data Retention</h3>
             <p>
-              Screening responses are not retained because processing is client-side only. Analytics and
+              Screening responses are not retained because processing is client-side only. Browser-local
+              journal and planning data remains on the device until the visitor deletes it. Analytics and
               server-log retention follow the periods described above and our configured service settings.
               Newsletter addresses are retained while subscribed or until no longer needed, subject to the
               limited provider records described above.

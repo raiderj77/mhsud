@@ -9,6 +9,12 @@ const LOOPS_KEY = process.env.LOOPS_API_KEY;
 const LOOPS_ENDPOINT = "https://app.loops.so/api/v1/contacts/create";
 
 export async function POST(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  const fetchSite = req.headers.get("sec-fetch-site");
+  if (origin !== new URL(req.url).origin || (fetchSite && fetchSite !== "same-origin")) {
+    return NextResponse.json({ ok: false }, { status: 403 });
+  }
+
   if (req.headers.get("content-type")?.split(";", 1)[0].trim() !== "application/json") {
     return NextResponse.json({ ok: false }, { status: 415 });
   }

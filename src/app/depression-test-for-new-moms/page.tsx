@@ -35,7 +35,7 @@ export default function DepressionTestForNewMomsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Depression Test for New Moms, PHQ-9 Screening", description: "A free, private depression screening tool for new mothers using the PHQ-9.", url: TOOL_URL, datePublished: "2026-03-05", dateModified: "2026-05-08" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script
         type="application/ld+json"
@@ -47,7 +47,7 @@ export default function DepressionTestForNewMomsPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
