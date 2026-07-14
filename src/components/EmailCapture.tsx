@@ -17,6 +17,8 @@ export function EmailCapture() {
       const response = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
+        referrerPolicy: "no-referrer",
         body: JSON.stringify({ email, consent, website }),
       });
       const data = await response.json();

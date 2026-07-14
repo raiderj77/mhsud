@@ -86,19 +86,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
-        <link rel="dns-prefetch" href="https://adservice.google.com" />
-
-        <link
-          rel="preload"
-          href="/_next/static/media/13971731025ec697-s.p.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {adsenseEnabled && (
+          <>
+            <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
+            <link rel="dns-prefetch" href="https://adservice.google.com" />
+          </>
+        )}
 
         {/* Consent Mode v2 defaults - must fire before Cookiebot and all analytics */}
         <Script

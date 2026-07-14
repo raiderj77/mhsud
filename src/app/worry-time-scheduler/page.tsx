@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { WorryTimeClient } from "./WorryTimeClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/worry-time-scheduler`;
 
@@ -49,7 +50,7 @@ const FAQ_DATA = [
   },
   {
     question: "Are my worries stored privately?",
-    answer: "Yes. Everything you enter in this tool stays in your browser's local storage on your device. Nothing is sent to any server, collected, or shared. Your worry log is only accessible from the browser and device you used. Clearing your browser data will remove your entries. This tool is for educational self-help purposes and is not a replacement for professional therapy. If anxiety is significantly impacting your daily life, please consult a qualified mental health professional.",
+    answer: "Your worry log is saved in this browser's local storage and is not intentionally sent to MindCheck Tools application servers. Anyone with access to the same browser profile may be able to read it. Clearing site data removes the entries. On a shared device, use a private window or clear the log when finished. This educational tool is not a replacement for professional therapy.",
   },
 ];
 
@@ -67,7 +68,7 @@ export default function WorryTimeSchedulerPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -129,7 +130,8 @@ export default function WorryTimeSchedulerPage() {
         <h2>How Does the Worry Time Scheduler Work?</h2>
         <h2>What Are the Benefits of Scheduled Worry Time?</h2>
       </section>
-<WorryTimeClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your worry log and schedule" />
+      <WorryTimeClient faqData={FAQ_DATA} />
     </>
   );
 }

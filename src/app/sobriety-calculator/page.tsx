@@ -3,6 +3,7 @@ import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL }
 import { SobrietyClient } from "./SobrietyClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/sobriety-calculator`;
 
@@ -44,7 +45,7 @@ export default function SobrietyCalculatorPage() {
           __html: JSON.stringify(
             toolPageJsonLd({
               name: "Sobriety Calculator & Day Counter",
-              description: "A free sobriety calculator that tracks days sober, recovery milestones, next milestone countdown, and estimated money saved. Your clean date is stored in your browser only, completely private.",
+              description: "A free sobriety calculator that tracks days sober, recovery milestones, next milestone countdown, and estimated money saved. Your clean date stays in this browser until you reset the tool or clear site data.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
@@ -91,7 +92,8 @@ export default function SobrietyCalculatorPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-<SobrietyClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your sobriety date and optional daily-spending amount" />
+      <SobrietyClient faqData={FAQ_DATA} />
     </>
   );
 }

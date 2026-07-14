@@ -3,6 +3,7 @@ import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL }
 import { DailyCheckInClient } from "./DailyCheckInClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AuthorByline } from "@/components/AuthorByline";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/daily-recovery-check-in`;
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   { question: "Why should I do a daily check-in during recovery?", answer: "Daily check-ins build self-awareness, which is one of the strongest predictors of sustained recovery. When you track your mood, cravings, sleep, and stress every day, you start to see patterns that are invisible in the moment. You might notice that your cravings spike after poor sleep, or that your mood drops on days when you feel disconnected from others. These patterns are early warning signs, and catching them early gives you time to use coping skills before a craving becomes overwhelming. Research in behavioral health consistently shows that people who self-monitor are more likely to maintain positive changes." },
-  { question: "Where is my check-in data stored?", answer: "Your data is stored in your browser's localStorage, a small storage space on your device. It never leaves your computer or phone. We do not have a server, database, or any way to see your entries. This means your data is completely private, but it also means that clearing your browser data or switching devices will erase your history. If keeping a long-term record is important to you, consider periodically taking a screenshot of your trends or writing key observations in a physical journal." },
+  { question: "Where is my check-in data stored?", answer: "Your data is stored in this browser's localStorage so your trend history remains available after a refresh. MindCheck Tools does not intentionally send those entries to its application servers. Anyone with access to the same browser profile may be able to view them, and clearing site data or switching devices will remove the history. On a shared device, use a private window or clear the tool when finished. Keep any long-term copy in a secure location you control." },
   { question: "What is the streak counter?", answer: "The streak counter tracks how many consecutive days you have completed a check-in. If you check in today and checked in yesterday, your streak continues. If you miss a day, the streak resets to zero (but your longest streak is remembered). Streaks are a simple but powerful motivational tool, many people find that maintaining a streak makes them more likely to check in even on difficult days. The streak measures consistency, not perfection. If your streak breaks, start a new one. The habit matters more than any single number." },
   { question: "How should I interpret the trend charts?", answer: "Look for patterns rather than individual numbers. A single bad day is normal, everyone has them. What matters is the trend over 7 to 30 days. Are your average scores stable, improving, or declining? Is there a connection between your sleep score and your craving score the next day? Do your mood scores drop on certain days of the week? If you see a consistent downward trend across multiple dimensions, that is a signal to reach out for additional support, talk to your counselor, sponsor, or therapist about what you are seeing." },
   { question: "Can I edit a past check-in?", answer: "You can edit today's check-in by tapping the Edit button on the dashboard. Past entries cannot be edited, and this is intentional, the value of the check-in comes from capturing how you genuinely feel in the moment. Editing past entries to look better would undermine the tool's purpose. If you realize a past entry was inaccurate, just note it mentally and focus on being honest going forward. Honesty with yourself is the foundation of recovery." },
@@ -91,7 +92,8 @@ export default function DailyCheckInPage() {
         <h2>How Does the Recovery Check-In Work?</h2>
         <h2>What Do My Recovery Check-In Results Mean?</h2>
       </section>
-<DailyCheckInClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your recovery check-ins, goals, and trend history" />
+      <DailyCheckInClient faqData={FAQ_DATA} />
     </>
   );
 }

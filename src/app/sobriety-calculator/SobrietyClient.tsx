@@ -158,7 +158,8 @@ export function SobrietyClient({ faqData }: Props) {
           Sobriety Calculator
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Enter your clean date and see how far you&apos;ve come. Track milestones, count your days, and estimate money saved. Your date is stored in your browser only, completely private.
+          Enter your clean date and see how far you&apos;ve come. Track milestones, count your days, and
+          estimate money saved. Your date is stored in this browser until you reset the tool or clear site data.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -225,7 +226,9 @@ export function SobrietyClient({ faqData }: Props) {
           {/* Disclaimer */}
           <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4 mb-5">
             <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              <strong>Privacy:</strong> Your clean date and spending estimate are stored in your browser&apos;s local storage only. No data is ever sent to any server. You can clear your data at any time using the Reset button.
+              <strong>Privacy:</strong> Your clean date and spending estimate are stored in this browser&apos;s
+              local storage and are not intentionally sent to MindCheck Tools servers. Anyone using this
+              browser profile may be able to view them. Use Reset to clear the saved values.
             </p>
           </div>
         </div>
