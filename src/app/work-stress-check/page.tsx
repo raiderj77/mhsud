@@ -95,6 +95,10 @@ export default function WorkStressPage() {
           </p>
         </div>
 
+        <a href="#screening" className="btn-primary inline-flex mb-8">
+          Start the 3-minute check
+        </a>
+
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
           What Does Workplace Burnout Actually Look Like?
         </h2>
@@ -209,7 +213,7 @@ export default function WorkStressPage() {
           <h2>How Is the Work Stress Check Scored?</h2>
           <h2>What Do My Work Stress Results Mean?</h2>
         </section>
-        <WorkStressClient faqData={FAQ_DATA} />
+        <div id="screening"><WorkStressClient faqData={FAQ_DATA} /></div>
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">

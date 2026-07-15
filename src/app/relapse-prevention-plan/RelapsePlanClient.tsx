@@ -104,6 +104,7 @@ function TextInputList({ items, onChange, placeholder, onAdd, maxItems }: {
         <input
           key={i}
           type="text"
+          aria-label={`${placeholder} ${i + 1}`}
           value={item}
           onChange={(e) => onChange(i, e.target.value)}
           placeholder={`${placeholder} ${i + 1}`}
@@ -250,6 +251,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                       <input
                         key={i}
                         type="text"
+                        aria-label={`${cat.label} warning sign ${i + 1}`}
                         value={item}
                         onChange={(e) => setPlan((p) => ({ ...p, [cat.key]: updateArr(p[cat.key], i, e.target.value) }))}
                         placeholder={cat.placeholder}
@@ -277,6 +279,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                   </p>
                   <input
                     type="text"
+                    aria-label={`Coping strategy for trigger ${i + 1}`}
                     value={plan.copingStrategies[i] || ""}
                     onChange={(e) => setPlan((p) => ({ ...p, copingStrategies: updateArr(p.copingStrategies, i, e.target.value) }))}
                     placeholder="My coping strategy for this trigger"
@@ -300,6 +303,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <input
                       type="text"
+                      aria-label={`Support contact ${i + 1} name`}
                       value={contact.name}
                       onChange={(e) => {
                         const contacts = [...plan.contacts];
@@ -311,6 +315,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                     />
                     <input
                       type="tel"
+                      aria-label={`Support contact ${i + 1} phone number`}
                       value={contact.phone}
                       onChange={(e) => {
                         const contacts = [...plan.contacts];
@@ -360,6 +365,7 @@ export function RelapsePlanClient({ faqData }: Props) {
                   <span className="text-xs font-bold text-sage-600 dark:text-sage-400 w-5 shrink-0">{i + 1}.</span>
                   <input
                     type="text"
+                    aria-label={`Craving response step ${i + 1}`}
                     value={step}
                     onChange={(e) => setPlan((p) => ({ ...p, cravingSteps: updateArr(p.cravingSteps, i, e.target.value) }))}
                     placeholder={`Step ${i + 1}`}

@@ -144,8 +144,8 @@ export default function AUDITCScoreInterpretationPage() {
         faqs={FAQ_DATA}
         relatedTools={[
           { name: "Take the AUDIT-C", description: "Free, private 3-question brief alcohol screen", href: "/audit-c-alcohol-screen" },
-          { name: "Full AUDIT Self-Check", description: "10-question WHO alcohol use screening tool", href: "/audit-alcohol-screen" },
-          { name: "CAGE Questionnaire", description: "4-question alcohol screening tool", href: "/cage-questionnaire" },
+          { name: "Full AUDIT Self-Check", description: "10-question WHO alcohol use screening tool", href: "/audit-alcohol-test" },
+          { name: "CAGE-AID Questionnaire", description: "4-question substance use screening tool", href: "/cage-aid-substance-abuse-screening" },
         ]}
         sources={[
           { text: "Bush, K., et al. (1998). The AUDIT alcohol consumption questions (AUDIT-C): An effective brief screening test for problem drinking. Archives of Internal Medicine, 158(16), 1789\u20131795.", url: "https://pubmed.ncbi.nlm.nih.gov/9738608/" },

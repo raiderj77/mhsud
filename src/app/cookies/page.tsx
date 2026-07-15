@@ -93,7 +93,12 @@ export default function CookiePolicyPage() {
                       Consent: {cat.consent}
                     </span>
                   </div>
-                  <div className="overflow-x-auto">
+                  <div
+                    className="overflow-x-auto"
+                    role="region"
+                    aria-label={`${cat.category} cookie details`}
+                    tabIndex={0}
+                  >
                     <table className="w-full text-sm border border-sand-200 dark:border-neutral-700 rounded-lg overflow-hidden">
                       <thead>
                         <tr className="bg-sand-100 dark:bg-night-700">

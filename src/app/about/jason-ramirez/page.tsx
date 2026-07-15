@@ -83,7 +83,6 @@ const REVIEWED_TOOLS = [
   { name: "UCLA Loneliness Scale", href: "/ucla-loneliness-scale" },
   { name: "Athens Insomnia Scale", href: "/athens-insomnia-scale" },
   { name: "Brief Resilience Scale", href: "/brief-resilience-scale" },
-  { name: "Perceived Stress Scale", href: "/perceived-stress-scale" },
   { name: "Attachment Style Quiz", href: "/attachment-style-quiz" },
   { name: "Big Five Personality Test", href: "/big-five-personality-test" },
 ];

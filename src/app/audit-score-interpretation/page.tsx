@@ -137,7 +137,7 @@ export default function AUDITScoreInterpretationPage() {
         faqs={FAQ_DATA}
         relatedTools={[
           { name: "Take the AUDIT", description: "Free, private 10-question alcohol use self-check", href: "/audit-alcohol-test" },
-          { name: "CAGE-AID Substance Screening", description: "Quick 4-question substance use screening", href: "/cage-aid-substance-test" },
+          { name: "CAGE-AID Substance Screening", description: "Quick 4-question substance use screening", href: "/cage-aid-substance-abuse-screening" },
         ]}
         sources={[
           { text: "Saunders, J. B., Aasland, O. G., Babor, T. F., De La Fuente, J. R., & Grant, M. (1993). Development of the AUDIT: WHO collaborative project on early detection of persons with harmful alcohol consumption. Addiction, 88(6), 791\u2013804.", url: "https://pubmed.ncbi.nlm.nih.gov/8329970/" },

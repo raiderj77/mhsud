@@ -219,19 +219,19 @@ export function DailyCheckInClient({ faqData }: Props) {
 
   if (!loaded) {
     return (
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         <div className="text-center py-20 text-neutral-500 dark:text-neutral-400">Loading...</div>
-      </main>
+      </div>
     );
   }
 
   /* ── render ──────────────────────────────────────────── */
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
-        Daily Recovery Check-In
-      </h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
+        Start Today&apos;s Check-In
+      </h2>
       <p className="text-neutral-500 dark:text-neutral-400 text-center max-w-xl mx-auto mb-2 leading-relaxed">
         A quick daily wellness check to track how you are doing in recovery. Takes under 2 minutes.
         Your data saves in your browser so you can see trends over time.
@@ -665,6 +665,6 @@ export function DailyCheckInClient({ faqData }: Props) {
           browser site data will erase your history.
         </p>
       </footer>
-    </main>
+    </div>
   );
 }

@@ -369,7 +369,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
   const currentGroup = SKILL_GROUPS.find((g) => g.id === activeGroup)!;
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
         <Link href="/" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Home</Link>
@@ -420,7 +420,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             }`}
           >
             <span className="font-bold">{group.acronym}</span>
-            <span className="hidden sm:inline ml-1.5 font-normal opacity-80">{group.fullName}</span>
+            <span className="hidden sm:inline ml-1.5 font-normal">{group.fullName}</span>
           </button>
         ))}
       </div>
@@ -645,6 +645,6 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
       <div className="mt-8">
         <ToolReviewerBio />
       </div>
-    </main>
+    </div>
   );
 }

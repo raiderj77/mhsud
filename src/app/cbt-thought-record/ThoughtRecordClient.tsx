@@ -279,9 +279,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        CBT Thought Record Worksheet
-      </h1>
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
+        Start a Thought Record
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-8">
         The 7-column thought record is one of the most effective tools in cognitive behavioral therapy.
         Challenge negative thinking patterns by examining the evidence and building more balanced thoughts.
@@ -302,6 +302,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400">What happened? Where were you? Who were you with? When was it?</p>
             </div>
             <textarea
+              aria-label="Situation"
               value={situation}
               onChange={(e) => setSituation(e.target.value)}
               rows={4}
@@ -320,6 +321,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               <p className="text-sm text-neutral-600 dark:text-neutral-400">What went through your mind? What were you saying to yourself?</p>
             </div>
             <textarea
+              aria-label="Automatic thought"
               value={automaticThought}
               onChange={(e) => setAutomaticThought(e.target.value)}
               rows={3}
@@ -425,6 +427,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               {evidenceFor.map((val, i) => (
                 <input
                   key={i}
+                  aria-label={`Evidence supporting the thought ${i + 1}`}
                   type="text"
                   value={val}
                   onChange={(e) => updateEvidence("evidenceFor", i, e.target.value)}
@@ -455,6 +458,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               {evidenceAgainst.map((val, i) => (
                 <input
                   key={i}
+                  aria-label={`Evidence against the thought ${i + 1}`}
                   type="text"
                   value={val}
                   onChange={(e) => updateEvidence("evidenceAgainst", i, e.target.value)}
@@ -500,6 +504,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
             </div>
 
             <textarea
+              aria-label="Balanced thought"
               value={balancedThought}
               onChange={(e) => setBalancedThought(e.target.value)}
               rows={3}

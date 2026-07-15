@@ -72,7 +72,12 @@ export default function DailyCheckInPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 text-center">
+        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50">
+          Daily Recovery Check-In
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">

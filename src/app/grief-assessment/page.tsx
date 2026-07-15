@@ -132,6 +132,9 @@ export default function GriefAssessmentPage() {
         </div>
 
         {/* The Tool */}
+        <a href="#screening" className="btn-primary inline-flex mb-6">
+          Start the grief and mood assessment
+        </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
@@ -172,7 +175,7 @@ export default function GriefAssessmentPage() {
         <h2>How Is the Grief Assessment Scored?</h2>
         <h2>What Do My Grief Assessment Results Mean?</h2>
       </section>
-<PHQ9Client faqData={FAQ_DATA} />
+<div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         {/* Grief Warning Signs */}
         <div className="mt-10 mb-8">

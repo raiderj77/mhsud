@@ -312,9 +312,9 @@ export function SafetyPlanClient({ faqData }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        Safety Plan
-      </h1>
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
+        Build Your Safety Plan
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-6">
         Having a plan can help you get through a crisis. This tool walks you through the 6 steps
         of a safety plan so you have it ready when you need it most. <strong>You matter, and you

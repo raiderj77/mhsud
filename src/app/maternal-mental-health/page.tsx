@@ -110,7 +110,7 @@ export default function MaternalMentalHealthPage() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -416,7 +416,7 @@ export default function MaternalMentalHealthPage() {
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

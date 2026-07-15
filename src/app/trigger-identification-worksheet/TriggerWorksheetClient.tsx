@@ -301,7 +301,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
   /* ── render ──────────────────────────────────────────── */
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       {/* H1 */}
       <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
         Trigger Identification Worksheet
@@ -397,6 +397,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                   <div className="flex gap-2">
                     <input
                       type="text"
+                      aria-label={`Custom ${cat.label} trigger`}
                       value={customInput[cat.key]}
                       onChange={(e) => setCustomInput((prev) => ({ ...prev, [cat.key]: e.target.value }))}
                       onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addCustom(cat.key); } }}
@@ -728,6 +729,6 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           Your responses are completely private.
         </p>
       </footer>
-    </main>
+    </div>
   );
 }

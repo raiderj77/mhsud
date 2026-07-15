@@ -95,7 +95,12 @@ export function ScoreInterpretationLayout({
         <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
           {testAbbreviation} Score Ranges
         </h2>
-        <div className="overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700">
+        <div
+          className="overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700"
+          role="region"
+          aria-label={`${testAbbreviation} score range table`}
+          tabIndex={0}
+        >
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-sand-50 dark:bg-night-700">

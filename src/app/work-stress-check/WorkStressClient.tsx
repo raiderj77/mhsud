@@ -107,7 +107,7 @@ export function WorkStressClient({ faqData }: Props) {
           <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">Original Tool</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Not Clinical</span>
         </div>
-        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Work Stress &amp; Burnout Reflection</h1>
+        <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3">Work Stress &amp; Burnout Reflection</h2>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
           12 original questions to help you reflect on work demands, control, support, engagement, recovery, and impact. For personal reflection only, not a clinical assessment.
         </p>

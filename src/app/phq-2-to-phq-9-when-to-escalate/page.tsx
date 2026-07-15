@@ -108,7 +108,7 @@ export default function Phq2ToPhq9Page() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -423,7 +423,7 @@ export default function Phq2ToPhq9Page() {
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
