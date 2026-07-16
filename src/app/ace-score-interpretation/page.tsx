@@ -157,7 +157,7 @@ export default function ACEScoreInterpretationPage() {
         relatedTools={[
           { name: "Take the ACE Questionnaire", description: "Free, private 10-question adverse childhood experiences self-check", href: "/ace-questionnaire" },
           { name: "PHQ-9 Depression Self-Check", description: "9-question validated depression screening tool", href: "/phq-9-depression-test" },
-          { name: "AUDIT Alcohol Self-Check", description: "10-question WHO alcohol use screening tool", href: "/audit-alcohol-screen" },
+          { name: "AUDIT Alcohol Self-Check", description: "10-question WHO alcohol use screening tool", href: "/audit-alcohol-test" },
         ]}
         sources={[
           { text: "Felitti, V. J., et al. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults. American Journal of Preventive Medicine, 14(4), 245\u2013258.", url: "https://pubmed.ncbi.nlm.nih.gov/9635069/" },

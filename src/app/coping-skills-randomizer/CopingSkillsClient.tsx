@@ -200,7 +200,7 @@ export function CopingSkillsClient({ faqData }: Props) {
   const catInfo = currentSkill ? CATEGORY_INFO[currentSkill.category] : null;
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       {/* H1 */}
       <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
         Coping Skills Randomizer
@@ -535,6 +535,6 @@ export function CopingSkillsClient({ faqData }: Props) {
           Your selections are completely private.
         </p>
       </footer>
-    </main>
+    </div>
   );
 }

@@ -355,7 +355,7 @@ export function BoxBreathingClient({ faqData }: Props) {
                     }`}
                   >
                     <span className="block font-semibold">{p.label}</span>
-                    <span className="block text-xs opacity-80">{p.desc}</span>
+                    <span className="block text-xs">{p.desc}</span>
                   </button>
                 ))}
               </div>

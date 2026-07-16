@@ -239,9 +239,9 @@ export function WorryTimeClient({ faqData }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        Worry Time Scheduler
-      </h1>
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
+        Start a Worry-Time Session
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-8">
         A CBT-based worry postponement tool. Park your worries during the day, then process them
         in a scheduled session with guided prompts. Research shows most worries resolve on their own.

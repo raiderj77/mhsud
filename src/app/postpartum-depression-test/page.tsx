@@ -160,6 +160,10 @@ export default function PostpartumDepressionTestPage() {
           </p>
         </div>
 
+        <a href="#screening" className="btn-primary inline-flex mb-8">
+          Start the postpartum depression screening
+        </a>
+
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
           What PPD Actually Feels Like
         </h2>
@@ -262,7 +266,7 @@ export default function PostpartumDepressionTestPage() {
           <h2>How Is the Postpartum Depression Test Scored?</h2>
           <h2>What Do My Postpartum Depression Results Mean?</h2>
         </section>
-        <PHQ9Client faqData={FAQ_DATA} />
+        <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         <div className="mt-10 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">

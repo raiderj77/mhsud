@@ -108,7 +108,7 @@ export default function Dass21VsPhq9Gad7Page() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -484,7 +484,7 @@ export default function Dass21VsPhq9Gad7Page() {
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

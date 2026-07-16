@@ -103,6 +103,9 @@ export default function PHQ9Page() {
             <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
           </ul>
         </div>
+        <a href="#screening" className="btn-primary inline-flex mt-6">
+          Start the PHQ-9 self-check
+        </a>
       </div>
       <section className="sr-only">
         <h2>What Is the PHQ-9 Depression Screening?</h2>
@@ -141,40 +144,8 @@ export default function PHQ9Page() {
           lastUpdated="2026-03-20"
         />
       </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
-        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {FAQ_DATA.map((item) => (
-            <div key={item.question}>
-              <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
-              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
+      <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
       {/* SSR Clinical Content, visible to all crawlers */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 space-y-6">
@@ -234,8 +205,6 @@ export default function PHQ9Page() {
           </p>
         </section>
       </div>
-
-<PHQ9Client faqData={FAQ_DATA} />
 
       {/* Clinical References */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-2">

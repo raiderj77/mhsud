@@ -149,6 +149,9 @@ export default function CaregiverBurnoutAssessmentPage() {
         </div>
 
         {/* The Tool */}
+        <a href="#screening" className="btn-primary inline-flex mb-6">
+          Start the caregiver burnout assessment
+        </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
@@ -189,7 +192,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         <h2>How Is the Caregiver Burnout Assessment Scored?</h2>
         <h2>What Do My Caregiver Burnout Results Mean?</h2>
       </section>
-<div id="screening"><BurnoutClient faqData={FAQ_DATA} /></div>
+<div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">

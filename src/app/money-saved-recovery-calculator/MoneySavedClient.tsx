@@ -200,6 +200,7 @@ export function MoneySavedClient({ faqData }: Props) {
                   />
                 </div>
                 <select
+                  aria-label="Time period for spending amount"
                   value={period}
                   onChange={(e) => setPeriod(e.target.value)}
                   className="p-3 rounded-xl border-2 border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-800 dark:text-neutral-100 focus:border-sage-400 dark:focus:border-sage-600 focus:outline-none transition-colors"
@@ -238,6 +239,7 @@ export function MoneySavedClient({ faqData }: Props) {
               </div>
               {inputMode === "date" ? (
                 <input
+                  aria-label="Sobriety start date"
                   type="date"
                   max={today}
                   value={soberDate}
@@ -246,6 +248,7 @@ export function MoneySavedClient({ faqData }: Props) {
                 />
               ) : (
                 <input
+                  aria-label="Number of sober days"
                   type="number"
                   min="1"
                   placeholder="e.g., 90"

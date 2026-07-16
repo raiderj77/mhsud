@@ -133,6 +133,9 @@ export default function CompassionFatigueTestPage() {
         </div>
 
         {/* The Tool */}
+        <a href="#screening" className="btn-primary inline-flex mb-6">
+          Start the compassion fatigue check
+        </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
@@ -173,7 +176,7 @@ export default function CompassionFatigueTestPage() {
         <h2>How Is the Compassion Fatigue Test Scored?</h2>
         <h2>What Do My Compassion Fatigue Results Mean?</h2>
       </section>
-<BurnoutClient faqData={FAQ_DATA} />
+<div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
         {/* Compassion Fatigue vs Burnout Table */}
         <div className="mt-10 mb-8">

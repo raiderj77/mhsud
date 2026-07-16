@@ -170,7 +170,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
   ];
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 print:hidden">
         <Link href="/" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Home</Link>
@@ -729,6 +729,6 @@ export function ValuesCardSortClient({ faqData }: Props) {
       <div className="mt-8 print:mt-4">
         <ToolReviewerBio />
       </div>
-    </main>
+    </div>
   );
 }

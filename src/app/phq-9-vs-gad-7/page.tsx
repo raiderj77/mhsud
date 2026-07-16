@@ -108,7 +108,7 @@ export default function Phq9VsGad7Page() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -478,7 +478,7 @@ export default function Phq9VsGad7Page() {
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

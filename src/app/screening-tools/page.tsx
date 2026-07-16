@@ -298,7 +298,7 @@ export default function ScreeningToolsIndexPage() {
   const totalScreeners = CATEGORIES.reduce((acc, c) => acc + c.tools.length, 0);
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd()) }}
@@ -537,6 +537,6 @@ export default function ScreeningToolsIndexPage() {
           .
         </p>
       </section>
-    </main>
+    </div>
   );
 }
