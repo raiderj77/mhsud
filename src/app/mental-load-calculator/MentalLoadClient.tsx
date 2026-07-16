@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 
 
 interface Domain {
@@ -71,6 +72,7 @@ export function MentalLoadClient({ faqData }: Props) {
   }
 
   function handleSubmit() {
+    trackAssessmentEvent("assessment_completed");
     setShowResults(true);
     setTimeout(() => { document.documentElement.scrollTop = 0; document.body.scrollTop = 0; }, 100);
   }
@@ -146,7 +148,10 @@ export function MentalLoadClient({ faqData }: Props) {
         <DisclaimerGate
           toolName="Mental Load Calculator"
           toolDescription="This is an original reflection tool created by MindCheck Tools. It is designed to support conversations about household task distribution. It is NOT a clinical assessment and cannot diagnose any condition."
-          onAccept={() => setAccepted(true)}
+          onAccept={() => {
+            trackAssessmentEvent("assessment_started");
+            setAccepted(true);
+          }}
         />
       )}
 

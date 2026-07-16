@@ -2,14 +2,17 @@
 
 declare global {
   interface Window {
-    Cookiebot?: { renew: () => void };
+    Cookiebot?: {
+      consent?: { statistics?: boolean };
+      renew?: () => void;
+    };
   }
 }
 
 export function CookieSettingsButton() {
   return (
     <button
-      onClick={() => window.Cookiebot?.renew()}
+      onClick={() => window.Cookiebot?.renew?.()}
       className="btn-secondary text-sm"
     >
       Change Cookie Preferences

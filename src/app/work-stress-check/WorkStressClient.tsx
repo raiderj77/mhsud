@@ -179,7 +179,7 @@ export function WorkStressClient({ faqData }: Props) {
       )}
 
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
+        <div id="printable-results" ref={resultsRef} className="animate-fade-in" aria-live="polite">
           <div className="card overflow-hidden mb-5">
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your Work Stress Score</p>
@@ -227,6 +227,14 @@ export function WorkStressClient({ faqData }: Props) {
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="btn-secondary px-5 py-4"
+              title="Print your work stress results"
+            >
+              Print Results
+            </button>
           </div>
 
           {/* Download Reflection Summary */}

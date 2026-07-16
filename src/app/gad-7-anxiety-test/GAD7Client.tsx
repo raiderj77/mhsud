@@ -11,6 +11,7 @@ import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { TherapyCTA } from "@/components/TherapyCTA";
 import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 
 
 const QUESTIONS = [
@@ -82,6 +83,7 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
   }
 
   function handleSubmit() {
+    trackAssessmentEvent("assessment_completed");
     setShowResults(true);
     setTimeout(() => {
       if (resultsRef.current) resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -156,7 +158,10 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
         <DisclaimerGate
           toolName="GAD-7"
           toolDescription="This self-check uses the Generalized Anxiety Disorder-7 (GAD-7), a validated screening instrument developed by Drs. Spitzer, Kroenke, Williams, and Löwe. It is free to use without licensing fees."
-          onAccept={() => setAccepted(true)}
+          onAccept={() => {
+            trackAssessmentEvent("assessment_started");
+            setAccepted(true);
+          }}
         />
       )}
 
