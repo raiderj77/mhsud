@@ -117,6 +117,39 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.doesNotMatch(nextConfig, /unsafe-eval/);
 });
 
+test("assessment funnel events require statistics consent and contain no health data", async () => {
+  const analytics = await readFile(
+    new URL("../src/lib/assessmentAnalytics.ts", import.meta.url),
+    "utf8",
+  );
+  assert.match(analytics, /Cookiebot\?\.consent\?\.statistics !== true/);
+  assert.match(analytics, /"assessment_started" \| "assessment_completed"/);
+  assert.match(analytics, /gtag\?\.\("event", eventName\)/);
+  assert.doesNotMatch(analytics, /answers|score|severity|email|pathname|page_path/i);
+
+  for (const path of [
+    "../src/app/mental-load-calculator/MentalLoadClient.tsx",
+    "../src/app/phq-9-depression-test/PHQ9Client.tsx",
+    "../src/app/gad-7-anxiety-test/GAD7Client.tsx",
+  ]) {
+    const source = await readFile(new URL(path, import.meta.url), "utf8");
+    assert.match(source, /trackAssessmentEvent\("assessment_started"\)/);
+    assert.match(source, /trackAssessmentEvent\("assessment_completed"\)/);
+  }
+});
+
+test("the previously missing result pages offer local browser printing", async () => {
+  for (const path of [
+    "../src/app/phq-4-anxiety-depression-screen/PHQ4Client.tsx",
+    "../src/app/work-stress-check/WorkStressClient.tsx",
+  ]) {
+    const source = await readFile(new URL(path, import.meta.url), "utf8");
+    assert.match(source, /window\.print\(\)/);
+    assert.match(source, /Print Results/);
+    assert.match(source, /id="printable-results"/);
+  }
+});
+
 test("scaled content stays quarantined from search and internal discovery", async () => {
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   const sitemap = await readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");

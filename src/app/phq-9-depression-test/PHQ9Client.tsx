@@ -11,6 +11,7 @@ import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { TherapyCTA } from "@/components/TherapyCTA";
 import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -91,6 +92,7 @@ export function PHQ9Client({ faqData }: Props) {
   }
 
   function handleSubmit() {
+    trackAssessmentEvent("assessment_completed");
     setShowResults(true);
     setTimeout(() => {
       if (resultsRef.current) {
@@ -177,7 +179,10 @@ export function PHQ9Client({ faqData }: Props) {
         <DisclaimerGate
           toolName="PHQ-9"
           toolDescription="This self-check uses the Patient Health Questionnaire-9 (PHQ-9), a validated screening instrument developed by Drs. Spitzer, Williams, and Kroenke and placed in the public domain."
-          onAccept={() => setAccepted(true)}
+          onAccept={() => {
+            trackAssessmentEvent("assessment_started");
+            setAccepted(true);
+          }}
         />
       )}
 
