@@ -223,6 +223,37 @@ check("Dynamic dateModified guard", () => {
   }
 });
 
+check("Maintained external references", () => {
+  function walkSource(dir) {
+    return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      const full = resolve(dir, entry.name);
+      if (entry.isDirectory()) return walkSource(full);
+      return entry.isFile() && /\.(ts|tsx)$/.test(entry.name) ? [full] : [];
+    });
+  }
+
+  const content = walkSource(resolve(ROOT, "src"))
+    .map((file) => readFileSync(file, "utf-8"))
+    .join("\n");
+  const retiredUrls = [
+    "ads.google.com/settings",
+    "cdc.gov/niosh/topics/stress/default.html",
+    "nimh.nih.gov/health/topics/stress",
+    "med.stanford.edu/news/all-news/2023/01/breathing-exercises.html",
+    "va.gov/wholehealthlibrary/tools/grounding-techniques.asp",
+    "samhsa.gov/nctic",
+    "who.int/publications/i/item/audit-the-alcohol-use-disorders-identification-test",
+    "beckinstitute.org/about/aaron-t-beck-md",
+    "nia.nih.gov/health/caregiving/caregiver-health",
+    "cdc.gov/reproductivehealth/depression",
+    "who.int/news-room/fact-sheets/detail/maternal-mental-health",
+  ];
+  for (const retiredUrl of retiredUrls) {
+    if (content.includes(retiredUrl)) fail(`Retired external destination remains: ${retiredUrl}`);
+  }
+  if (!retiredUrls.some((retiredUrl) => content.includes(retiredUrl))) pass("Retired external destinations are absent");
+});
+
 // ---------------------------------------------------------------------------
 // Summary
 // ---------------------------------------------------------------------------

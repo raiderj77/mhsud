@@ -618,8 +618,8 @@ export function GroundingClient({ faqData }: Props) {
         </h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
-            <a href="https://www.va.gov/wholehealthlibrary/tools/grounding-techniques.asp" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              VA Whole Health Library, Grounding Techniques
+            <a href="https://news.va.gov/104920/live-whole-health-127-connecting-mind-body-session-3-sensation-grounding/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+              VA Whole Health, Sensation of Grounding
             </a>
           </li>
           <li>

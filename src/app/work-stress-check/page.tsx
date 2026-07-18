@@ -116,7 +116,7 @@ export default function WorkStressPage() {
               2019 Gallup study of nearly 7,500 full-time workers
             </a>{" "}
             found that 23% reported feeling burned out very often or always, while another 44% reported feeling burned out sometimes. That means roughly two-thirds of workers are experiencing meaningful burnout symptoms at any given time. The{" "}
-            <a href="https://www.cdc.gov/niosh/topics/stress/default.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+            <a href="https://www.cdc.gov/niosh/stress/about/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               CDC notes
             </a>{" "}
             that workplace stress is linked to cardiovascular disease, musculoskeletal disorders, and compromised immune function.
@@ -155,11 +155,7 @@ export default function WorkStressPage() {
             <li><strong>Impact</strong> - whether work stress is spilling into your physical health and personal life</li>
           </ul>
           <p>
-            When multiple domains are strained simultaneously, the cumulative effect is what{" "}
-            <a href="https://www.nimh.nih.gov/health/topics/stress" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
-              researchers and clinicians recognize as burnout risk
-            </a>
-            . This check helps you see which dimensions are most affected so you can target your attention and conversations.
+            When multiple domains are strained simultaneously, the combined pattern can be a practical signal that work stress deserves attention. This check helps you see which dimensions are most affected so you can target your attention and conversations.
           </p>
         </div>
 

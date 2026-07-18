@@ -134,7 +134,7 @@ export default function BurnoutTestForTeachersPage() {
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li><a href="https://www.cdc.gov/niosh/topics/stress/default.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC/NIOSH, Occupational Stress and Worker Health</a></li>
+            <li><a href="https://www.cdc.gov/niosh/stress/about/index.html" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC/NIOSH, About Stress at Work</a></li>
             <li><a href="https://www.samhsa.gov/workplace/resources" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA, Workplace Wellness and Burnout Resources</a></li>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov/21823769/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Maslach &amp; Leiter (2016), Burnout: A multidimensional perspective (PubMed)</a></li>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov/29093379/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Hultell et al., Teacher burnout longitudinal study (PubMed)</a></li>
