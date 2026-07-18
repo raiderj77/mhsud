@@ -143,7 +143,7 @@ export default function CaregiverBurnoutAssessmentPage() {
           </p>
           <p className="text-slate-600 dark:text-slate-300">
             This free assessment checks for emotional exhaustion, depersonalization, and
-            reduced personal accomplishment, the three core dimensions of burnout recognized by the <a href="https://www.nia.nih.gov/health/caregiving/caregiver-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a>. Your
+            reduced personal accomplishment. These signals can help you notice caregiver strain; the <a href="https://www.nia.nih.gov/health/caregiving" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a> provides current caregiver support and self-care resources. Your
             answers are scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>

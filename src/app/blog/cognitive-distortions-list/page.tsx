@@ -114,7 +114,7 @@ export default function CognitiveDistortionsListPage() {
             <h2>What Are Cognitive Distortions?</h2>
             <p>
               Cognitive distortions are systematic errors in thinking that cause you to perceive reality inaccurately. The concept was developed by psychiatrist Aaron Beck in the 1960s as part of his pioneering work on{" "}
-              <a href="https://beckinstitute.org/about/aaron-t-beck-md/" target="_blank" rel="noopener noreferrer">
+              <a href="https://beckinstitute.org/about/dr-aaron-t-beck/" target="_blank" rel="noopener noreferrer">
                 cognitive-behavioral therapy (CBT)
               </a>. Beck observed that his patients with depression and anxiety consistently interpreted events through distorted mental filters, and that these filters were predictable and categorizable.
             </p>

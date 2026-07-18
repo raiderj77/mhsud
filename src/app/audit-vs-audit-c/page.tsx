@@ -374,7 +374,7 @@ export default function AuditVsAuditCPage() {
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
               <li>Saunders JB, Aasland OG, Babor TF, et al. Development of the Alcohol Use Disorders Identification Test (AUDIT). <em>Addiction.</em> 1993;88(6):791–804.</li>
               <li>Bush K, Kivlahan DR, McDonell MB, et al. The AUDIT alcohol consumption questions (AUDIT-C). <em>Arch Intern Med.</em> 1998;158(16):1789–1795.</li>
-              <li><a href="https://www.who.int/publications/i/item/audit-the-alcohol-use-disorders-identification-test" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">WHO AUDIT Manual</a>, World Health Organization. (2001).</li>
+              <li><a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">WHO AUDIT Manual</a>, World Health Organization. (2001).</li>
               <li><a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">SAMHSA.gov</a>, Substance Abuse and Mental Health Services Administration.</li>
               <li><a href="https://www.cdc.gov/alcohol/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">CDC Alcohol and Public Health</a>, Centers for Disease Control and Prevention.</li>
             </ul>

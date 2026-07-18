@@ -163,7 +163,7 @@ export default function ACEScoreInterpretationPage() {
           { text: "Felitti, V. J., et al. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults. American Journal of Preventive Medicine, 14(4), 245\u2013258.", url: "https://pubmed.ncbi.nlm.nih.gov/9635069/" },
           { text: "CDC, Adverse Childhood Experiences (ACEs): Preventing early trauma to improve adult health.", url: "https://www.cdc.gov/aces/" },
           { text: "Hughes, K., et al. (2017). The effect of multiple adverse childhood experiences on health: a systematic review and meta-analysis. The Lancet Public Health, 2(8), e356\u2013e366.", url: "https://pubmed.ncbi.nlm.nih.gov/29253477/" },
-          { text: "SAMHSA, Trauma-Informed Care in Behavioral Health Services.", url: "https://www.samhsa.gov/nctic" },
+          { text: "SAMHSA, Trauma-Informed Care in Behavioral Health Services.", url: "https://library.samhsa.gov/product/tip-57-trauma-informed-care-behavioral-health-services/sma14-4816" },
         ]}
       />
     </>

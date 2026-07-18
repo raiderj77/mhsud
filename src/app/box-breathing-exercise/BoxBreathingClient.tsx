@@ -824,7 +824,7 @@ export function BoxBreathingClient({ faqData }: Props) {
             </a>
           </li>
           <li>
-            <a href="https://med.stanford.edu/news/all-news/2023/01/breathing-exercises.html" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+            <a href="https://med.stanford.edu/news/insights/2023/02/cyclic-sighing-can-help-breathe-away-anxiety" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
               Stanford Medicine, Brief structured breathing exercises enhance mood and reduce physiological arousal (2023)
             </a>
           </li>

@@ -180,7 +180,7 @@ export default function PostpartumDepressionTestPage() {
             PPD also shows up physically. Disrupted appetite (not just from newborn chaos, but a
             genuine loss of interest in food), heaviness in the body, and a kind of cognitive
             fog that makes simple decisions feel impossible. The{" "}
-            <a href="https://www.cdc.gov/reproductivehealth/depression/" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+            <a href="https://www.cdc.gov/reproductive-health/depression/" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               CDC notes
             </a>{" "}
             that postpartum depression is one of the most underdiagnosed conditions in obstetric
@@ -218,11 +218,11 @@ export default function PostpartumDepressionTestPage() {
           <p>
             Having risk factors does not mean PPD is inevitable. It does mean it is worth
             screening early and often, especially in the first six months.{" "}
-            <a href="https://www.who.int/news-room/fact-sheets/detail/maternal-mental-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+            <a href="https://www.who.int/teams/mental-health-and-substance-use/promotion-prevention/perinatal-mental-health" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               The WHO estimates
             </a>{" "}
-            that 10 to 15 percent of women in high-income countries and up to 20 percent in
-            low-income countries experience postpartum depression.
+            that about 13 percent of women who have just given birth experience a mental disorder,
+            primarily depression, rising to about 19.8 percent in developing countries.
           </p>
         </div>
 

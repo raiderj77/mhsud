@@ -853,7 +853,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
           <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Authoritative Sources</h2>
           <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
             <li>
-              <a href="https://beckinstitute.org/about/aaron-t-beck-md/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+              <a href="https://beckinstitute.org/about/dr-aaron-t-beck/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
                 Beck Institute, Aaron T. Beck, MD: Founder of Cognitive Therapy
               </a>
             </li>

@@ -159,8 +159,8 @@ export default function PrivacyPage() {
             </p>
             <p>
               You can opt out of personalized advertising by visiting{" "}
-              <a href="https://ads.google.com/settings" target="_blank" rel="noopener noreferrer">
-                Google Ad Settings
+              <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">
+                My Ad Center
               </a>{" "}
               or the{" "}
               <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">
