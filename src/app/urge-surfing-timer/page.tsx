@@ -8,32 +8,39 @@ const TOOL_URL = `${SITE_URL}/urge-surfing-timer`;
 
 export const metadata: Metadata = createMetadata({
   path: "/urge-surfing-timer",
-  title: "Urge Surfing Timer | Free Craving Mindfulness Tool",
+  title: "Urge Surfing Timer for Cravings | Free, Private Guided Tool",
   description:
-    "Ride out cravings with a guided urge surfing timer. Wave animation, breathing cues, mindfulness prompts, and a countdown timer. Free, private, based on Alan Marlatt's technique.",
+    "Use a free, private urge surfing timer to pause, notice craving sensations, and practice observing an urge without acting on it. Includes optional breathing prompts.",
   keywords: [
     "urge surfing", "urge surfing timer", "craving timer",
-    "how to resist cravings", "mindfulness for addiction",
-    "urge surfing technique", "ride out cravings",
-    "craving mindfulness", "urge surfing meditation",
-    "Alan Marlatt urge surfing", "craving coping tool",
-    "substance craving help", "addiction mindfulness tool",
+    "urge surfing technique", "craving mindfulness",
+    "substance craving coping tool", "mindfulness for cravings",
   ],
   openGraph: {
-    title: "Urge Surfing Timer | Free Craving Mindfulness Tool",
-    description: "Guided timer to ride out cravings using urge surfing. Wave animation, breathing cues, and mindfulness prompts. Free and private.",
+    title: "Urge Surfing Timer for Cravings | Free, Private Guided Tool",
+    description: "Pause and observe a craving with a private guided timer, body-awareness prompts, and optional paced breathing.",
     url: TOOL_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What is urge surfing?", answer: "Urge surfing is a mindfulness technique developed by psychologist Alan Marlatt, PhD, a pioneer in relapse prevention research. Instead of fighting a craving or giving in to it, you observe it like a wave, it rises, peaks, and eventually falls on its own. The key insight is that cravings are temporary. By paying attention to the craving without acting on it, you learn that you can tolerate discomfort and that urges pass naturally. Over time, this builds confidence in your ability to handle cravings without using." },
-  { question: "How long do cravings typically last?", answer: "Research consistently shows that most cravings peak within 15 to 30 minutes and then begin to subside on their own, even if you do nothing. This is why our timer defaults range from 5 to 30 minutes. The intensity of a craving may feel unbearable in the moment, but it is neurologically impossible for a craving to stay at peak intensity indefinitely. Your brain simply cannot sustain that level of activation. Knowing this fact, that the craving will pass, is one of the most powerful tools in recovery." },
-  { question: "Does urge surfing really work?", answer: "Yes. Multiple studies support urge surfing as an effective craving management technique. Research by Bowen et al. (2009) found that mindfulness-based relapse prevention, which includes urge surfing, significantly reduced substance use and cravings compared to standard relapse prevention alone. A 2014 follow-up study showed these benefits persisted at 12 months. Urge surfing works because it changes your relationship with cravings, instead of seeing them as commands you must obey, you learn to see them as temporary sensations you can observe and ride out." },
-  { question: "Can I use urge surfing for things other than substance cravings?", answer: "Absolutely. While urge surfing was developed in the context of addiction recovery, the technique works for any unwanted urge or impulse. People use it for emotional eating, smoking cessation, compulsive shopping, gambling urges, anger management, nail biting, phone checking habits, and other behaviors they want to change. The underlying principle is the same: observe the urge without acting on it, and it will pass. The timer and breathing exercises in this tool work for any type of craving." },
-  { question: "What if the urge does not go away after the timer ends?", answer: "If a craving persists after one session, you can start another timer, cravings sometimes come in waves, with a second, smaller wave following the first. You can also try changing your environment (go for a walk, move to a different room), calling someone from your support network, or using a different coping strategy from your relapse prevention plan. If cravings are frequent and intense, this is worth discussing with a counselor or therapist who can help you develop additional strategies. Persistent, intense cravings may indicate that your current level of support needs adjustment." },
-  { question: "How do I get better at urge surfing?", answer: "Like any skill, urge surfing improves with practice. Start by using it for mild cravings or even non-substance urges (like the urge to check your phone) to build the skill when stakes are low. Practice the breathing exercises daily, even when you are not experiencing a craving, so they become automatic. Over time, you will notice that cravings feel less overwhelming and pass more quickly. Many people find it helpful to practice urge surfing as part of a daily mindfulness routine, alongside tools like the HALT Check-In, so that the technique is second nature when a real craving hits." },
+  {
+    question: "What is urge surfing?",
+    answer: "Urge surfing is a coping exercise that treats an urge like a wave: notice where you feel it, describe the sensations, and observe how they change without automatically acting on the urge. The U.S. Department of Veterans Affairs and SAMHSA both publish urge-surfing exercises for substance-use treatment settings.",
+  },
+  {
+    question: "How long does a craving last?",
+    answer: "There is no single reliable duration for every person or craving. The timer offers several practice intervals, but it does not predict when an urge will peak or end. If the urge remains strong, use another part of your support or treatment plan rather than treating the timer as a guarantee.",
+  },
+  {
+    question: "Does urge surfing make a craving disappear?",
+    answer: "Not necessarily. The VA explains that the purpose is to experience a craving in a new way, not to force it to disappear. Some people notice an urge changing or fading during practice; others may need additional coping strategies or support.",
+  },
+  {
+    question: "What should I do if the urge is still strong?",
+    answer: "Pause the exercise and follow your treatment or relapse-prevention plan, change to a safer environment, or contact a trusted support person or qualified professional. If you may harm yourself or someone else, call emergency services. In the United States, call or text 988 for crisis support.",
+  },
 ];
 
 export default function UrgeSurfingPage() {
@@ -44,20 +51,18 @@ export default function UrgeSurfingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Urge Surfing Timer",
-              description: "A free guided mindfulness timer for riding out cravings using the urge surfing technique. Includes wave animation, box breathing cues, rotating mindfulness prompts, and a countdown timer. Based on Alan Marlatt's research in relapse prevention.",
+              name: "Urge Surfing Timer for Cravings",
+              description: "A private guided timer for pausing, noticing craving sensations, and practicing the urge-surfing exercise without a fixed-duration or outcome guarantee.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+              dateModified: "2026-07-17",
             })
           ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
       />
       <script
         type="application/ld+json"
@@ -71,27 +76,19 @@ export default function UrgeSurfingPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A guided urge surfing timer based on mindfulness principles that helps you ride out cravings without acting on them."
-          who="Anyone in recovery experiencing cravings who wants a structured technique to wait them out."
-          bottomLine="Cravings typically peak and pass within 15-30 minutes, urge surfing teaches you to ride the wave. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="A private guided timer for pausing, noticing craving sensations, and observing how an urge changes without automatically acting on it."
+          who="People who want to practice urge surfing as one coping skill within a broader recovery or support plan."
+          bottomLine="Choose a manageable practice interval. The timer does not predict when a craving will end and is not a replacement for treatment, crisis support, or a relapse-prevention plan."
+          lastUpdated="2026-07-17"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-07-17" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Urge Surfing Timer?</h2>
-        <h2>How Does Urge Surfing Work?</h2>
-        <h2>What Are the Benefits of Urge Surfing?</h2>
-      </section>
-<UrgeSurfingClient faqData={FAQ_DATA} />
+      <UrgeSurfingClient faqData={FAQ_DATA} />
     </>
   );
 }
