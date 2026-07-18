@@ -10,6 +10,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { SwUpdateNotification } from "@/components/SwUpdateNotification";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { AppInstallPrompt } from "@/components/AppInstallPrompt";
+import { ConsentAnalytics } from "@/components/ConsentAnalytics";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 const dmSans = DM_Sans({
@@ -163,26 +164,6 @@ export default function RootLayout({
           }}
         />
 
-        <Script
-          id="gtag-script"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
-          data-cookieconsent="statistics"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          data-cookieconsent="statistics"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XKHQN1NJ2Z', { anonymize_ip: true });
-            `,
-          }}
-        />
-
         {adsenseEnabled && (
           <Script
             id="adsense-script"
@@ -218,6 +199,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
+        <ConsentAnalytics />
         <ThemeProvider>
           <ScrollToTop />
           <script
