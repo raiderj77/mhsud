@@ -7,7 +7,7 @@ export function CrisisBanner() {
       <div className="max-w-4xl mx-auto">
         <span className="font-medium">⚠️ Clinical Disclaimer:</span>{" "}
         <span className="opacity-90">
-          These are educational screening tools only — not a diagnosis or treatment.
+          These are educational screening tools only, not a diagnosis or treatment.
           If you are in crisis, please call{" "}
           <strong className="font-semibold">988 Suicide & Crisis Lifeline</strong> (call or text 988),{" "}
           <strong className="font-semibold">Crisis Text Line</strong> (text HOME to 741741), or{" "}

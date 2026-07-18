@@ -88,7 +88,7 @@ export default function PostpartumDepressionGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Postpartum depression (PPD) is a common and treatable mood disorder that affects approximately 1 in 7 new mothers, according to the American College of Obstetricians and Gynecologists (ACOG). It can develop anytime during the first year after childbirth and involves persistent feelings of sadness, exhaustion, and difficulty bonding with your baby. PPD is not a sign of weakness or failure &mdash; it is a medical condition with effective interventions.
+            Postpartum depression (PPD) is a common and treatable mood disorder that affects approximately 1 in 7 new mothers, according to the American College of Obstetricians and Gynecologists (ACOG). It can develop anytime during the first year after childbirth and involves persistent feelings of sadness, exhaustion, and difficulty bonding with your baby. PPD is not a sign of weakness or failure, it is a medical condition with effective interventions.
           </p>
         </header>
 
@@ -97,10 +97,10 @@ export default function PostpartumDepressionGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>Postpartum Support International Helpline</strong> &mdash; <strong>1-800-944-4773</strong> (call or text)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>Postpartum Support International Helpline</strong>, <strong>1-800-944-4773</strong> (call or text)</li>
             </ul>
           </div>
 
@@ -116,13 +116,13 @@ export default function PostpartumDepressionGuidePage() {
           <section>
             <h2>What is postpartum depression?</h2>
             <p>
-              Postpartum depression is a mood disorder that can affect parents after the birth of a child. The DSM-5 classifies it as a major depressive episode with peripartum onset, meaning symptoms can begin during pregnancy or within the first four weeks after delivery &mdash; though clinicians and researchers recognize that onset can occur anytime within the first 12 months.
+              Postpartum depression is a mood disorder that can affect parents after the birth of a child. The DSM-5 classifies it as a major depressive episode with peripartum onset, meaning symptoms can begin during pregnancy or within the first four weeks after delivery, though clinicians and researchers recognize that onset can occur anytime within the first 12 months.
             </p>
             <p>
-              PPD goes beyond the &quot;baby blues&quot; &mdash; the mild mood swings, tearfulness, and anxiety that up to 80% of new mothers experience in the first two weeks postpartum. Baby blues are a normal hormonal adjustment and typically resolve on their own within 10&ndash;14 days. PPD is more severe, longer-lasting, and requires professional attention.
+              PPD goes beyond the &quot;baby blues&quot;, the mild mood swings, tearfulness, and anxiety that up to 80% of new mothers experience in the first two weeks postpartum. Baby blues are a normal hormonal adjustment and typically resolve on their own within 10&ndash;14 days. PPD is more severe, longer-lasting, and requires professional attention.
             </p>
             <p>
-              Risk factors include a personal or family history of depression or anxiety, complications during pregnancy or delivery, lack of social support, relationship difficulties, financial stress, and a history of trauma. Hormonal changes after birth &mdash; particularly the rapid drop in estrogen and progesterone &mdash; are believed to play a significant biological role.
+              Risk factors include a personal or family history of depression or anxiety, complications during pregnancy or delivery, lack of social support, relationship difficulties, financial stress, and a history of trauma. Hormonal changes after birth, particularly the rapid drop in estrogen and progesterone, are believed to play a significant biological role.
             </p>
           </section>
 
@@ -136,7 +136,7 @@ export default function PostpartumDepressionGuidePage() {
               <li>Persistent sadness, hopelessness, or feeling &quot;empty&quot;</li>
               <li>Excessive crying, often without a clear trigger</li>
               <li>Intense irritability, anger, or mood swings beyond the first two weeks</li>
-              <li>Feelings of guilt, worthlessness, or shame &mdash; especially about parenting</li>
+              <li>Feelings of guilt, worthlessness, or shame, especially about parenting</li>
               <li>Difficulty bonding with your baby or feeling emotionally disconnected</li>
               <li>Loss of interest or pleasure in activities you used to enjoy</li>
               <li>Anxiety or panic attacks, especially about the baby&apos;s health or safety</li>
@@ -145,7 +145,7 @@ export default function PostpartumDepressionGuidePage() {
             <p><strong>Physical symptoms:</strong></p>
             <ul>
               <li>Severe fatigue or exhaustion beyond normal new-parent tiredness</li>
-              <li>Changes in appetite &mdash; eating significantly more or less than usual</li>
+              <li>Changes in appetite, eating significantly more or less than usual</li>
               <li>Sleep difficulties even when the baby is sleeping</li>
               <li>Physical aches, headaches, or stomach problems without medical cause</li>
             </ul>
@@ -175,7 +175,7 @@ export default function PostpartumDepressionGuidePage() {
               The <Link href="/postpartum-depression-test" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools postpartum depression screening</Link> is free, private, and takes under five minutes. Your answers are scored entirely in your browser and are never stored or transmitted. The screening is based on clinically validated questions that assess the severity of depressive symptoms in the perinatal period.
             </p>
             <p>
-              A screening result is not a diagnosis. It is a starting point &mdash; a structured way to understand what you are experiencing so you can have a more informed conversation with your healthcare provider. Many people find it helpful to bring their screening results to their first appointment.
+              A screening result is not a diagnosis. It is a starting point, a structured way to understand what you are experiencing so you can have a more informed conversation with your healthcare provider. Many people find it helpful to bring their screening results to their first appointment.
             </p>
             <p>
               If you are also experiencing anxiety symptoms, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> can help you assess that dimension. Depression and anxiety frequently co-occur during the postpartum period.
@@ -222,7 +222,7 @@ export default function PostpartumDepressionGuidePage() {
               PPD is treatable. Evidence-based approaches include psychotherapy (particularly cognitive behavioral therapy and interpersonal therapy), support groups, and in some cases medication. Your provider can help you find the approach that is right for your situation, including options that are compatible with breastfeeding.
             </p>
             <p>
-              Taking the <Link href="/postpartum-depression-test" className="text-sage-600 dark:text-sage-400 underline">postpartum depression screening</Link> before your appointment gives you a concrete starting point for the conversation. You do not need to have all the answers &mdash; you just need to show up.
+              Taking the <Link href="/postpartum-depression-test" className="text-sage-600 dark:text-sage-400 underline">postpartum depression screening</Link> before your appointment gives you a concrete starting point for the conversation. You do not need to have all the answers, you just need to show up.
             </p>
           </section>
 
@@ -244,7 +244,7 @@ export default function PostpartumDepressionGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

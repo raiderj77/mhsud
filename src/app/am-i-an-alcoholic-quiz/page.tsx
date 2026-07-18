@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   path: "/am-i-an-alcoholic-quiz",
   title: "Am I an Alcoholic? Free Quiz | WHO AUDIT Alcohol Screening",
   description:
-    "Wondering 'am I an alcoholic?' Take our free, private WHO AUDIT quiz — the gold-standard alcohol screening tool used worldwide. 10 questions, honest results, no sign-up.",
+    "Wondering 'am I an alcoholic?' Take our free, private WHO AUDIT quiz, the gold-standard alcohol screening tool used worldwide. 10 questions, honest results, no sign-up.",
   keywords: [
     "am i an alcoholic quiz", "am i an alcoholic test", "alcoholic quiz free",
     "do i have a drinking problem quiz", "am i drinking too much quiz",
@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "What's the difference between heavy drinking and alcoholism?",
     answer:
-      "Heavy drinking refers to consuming more than recommended limits (more than 14 drinks per week or 4 per occasion for men; 7 per week or 3 per occasion for women). Alcohol Use Disorder (AUD) — what's commonly called alcoholism — is a medical diagnosis that involves a pattern of alcohol use causing significant impairment or distress, including loss of control, cravings, continued use despite consequences, and physical dependence. Heavy drinking increases the risk of developing AUD, but not all heavy drinkers have AUD.",
+      "Heavy drinking refers to consuming more than recommended limits (more than 14 drinks per week or 4 per occasion for men; 7 per week or 3 per occasion for women). Alcohol Use Disorder (AUD), what's commonly called alcoholism, is a medical diagnosis that involves a pattern of alcohol use causing significant impairment or distress, including loss of control, cravings, continued use despite consequences, and physical dependence. Heavy drinking increases the risk of developing AUD, but not all heavy drinkers have AUD.",
   },
   {
     question: "What does this quiz measure?",
@@ -46,12 +46,12 @@ const FAQ_DATA = [
   {
     question: "What do the AUDIT scores mean?",
     answer:
-      "Scores are interpreted as: 0–7 (low risk), 8–15 (hazardous use — consider reducing), 16–19 (harmful use — consider counseling), 20+ (possible dependence — professional evaluation recommended). The AUDIT is a screening tool, not a diagnosis. A score of 8 or above suggests that alcohol use may be affecting your health and is worth discussing with a healthcare provider.",
+      "Scores are interpreted as: 0–7 (low risk), 8–15 (hazardous use, consider reducing), 16–19 (harmful use, consider counseling), 20+ (possible dependence, professional evaluation recommended). The AUDIT is a screening tool, not a diagnosis. A score of 8 or above suggests that alcohol use may be affecting your health and is worth discussing with a healthcare provider.",
   },
   {
     question: "Can I have a drinking problem without being 'an alcoholic'?",
     answer:
-      "Yes. The term 'alcoholic' is not a clinical diagnosis. The medical diagnosis is Alcohol Use Disorder (AUD), which exists on a spectrum from mild to moderate to severe. Many people have problematic drinking patterns — drinking more than intended, using alcohol to cope with stress, experiencing consequences — without meeting criteria for severe AUD. Any level of AUD is worth addressing, and earlier intervention leads to better outcomes.",
+      "Yes. The term 'alcoholic' is not a clinical diagnosis. The medical diagnosis is Alcohol Use Disorder (AUD), which exists on a spectrum from mild to moderate to severe. Many people have problematic drinking patterns, drinking more than intended, using alcohol to cope with stress, experiencing consequences, without meeting criteria for severe AUD. Any level of AUD is worth addressing, and earlier intervention leads to better outcomes.",
   },
   {
     question: "What should I do if my score is high?",
@@ -75,7 +75,7 @@ export default function AmIAnAlcoholicQuizPage() {
             toolPageJsonLd({
               name: "Am I an Alcoholic? Free Quiz | WHO AUDIT Alcohol Screening",
               description:
-                "A free, private alcohol quiz using the WHO AUDIT — the gold-standard alcohol screening tool. 10 questions, honest results.",
+                "A free, private alcohol quiz using the WHO AUDIT, the gold-standard alcohol screening tool. 10 questions, honest results.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
               dateModified: "2026-05-12",
@@ -122,13 +122,13 @@ export default function AmIAnAlcoholicQuizPage() {
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
             Most people who wonder &quot;am I an alcoholic?&quot; are asking because something
-            has shifted — maybe you&apos;re drinking more than you planned to, or you&apos;ve
+            has shifted, maybe you&apos;re drinking more than you planned to, or you&apos;ve
             noticed you reach for a drink when you&apos;re stressed, or someone close to you
             has said something. That question takes courage to ask.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
             This free quiz uses the <strong>AUDIT</strong> (Alcohol Use Disorders Identification
-            Test) — the gold-standard alcohol screening tool developed by the World Health
+            Test), the gold-standard alcohol screening tool developed by the World Health
             Organization, used in primary care offices and hospitals worldwide. It gives you
             an honest, evidence-based picture of your relationship with alcohol.
           </p>
@@ -145,7 +145,7 @@ export default function AmIAnAlcoholicQuizPage() {
         <AnswerBlock
           what="The WHO AUDIT screening presented in a direct, accessible format to help you evaluate your relationship with alcohol."
           who="Anyone asking themselves whether their drinking has become a problem and wanting an honest, evidence-based check."
-          bottomLine="Alcohol use disorder exists on a spectrum — your score shows where you fall on validated clinical measures. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Alcohol use disorder exists on a spectrum, your score shows where you fall on validated clinical measures. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -157,7 +157,7 @@ export default function AmIAnAlcoholicQuizPage() {
         <h2>How Is the Alcohol Quiz Scored?</h2>
         <h2>What Do My Alcohol Quiz Results Mean?</h2>
       </section>
-<AUDITClient faqData={FAQ_DATA} />
+<AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
 
         {/* Warning Signs Section */}
         <div className="mt-10 mb-8">
@@ -222,19 +222,19 @@ export default function AmIAnAlcoholicQuizPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>SAMHSA National Helpline:</strong>{" "}
-              <strong>1-800-662-4357</strong> — free, confidential, 24/7 treatment referrals
+              <strong>1-800-662-4357</strong>, free, confidential, 24/7 treatment referrals
             </li>
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — if alcohol use is connected to thoughts of self-harm
+              <strong>988</strong>, if alcohol use is connected to thoughts of self-harm
             </li>
             <li>
               <strong>Alcoholics Anonymous:</strong>{" "}
-              <strong>aa.org</strong> — find local meetings
+              <strong>aa.org</strong>, find local meetings
             </li>
             <li>
               <strong>SMART Recovery:</strong>{" "}
-              <strong>smartrecovery.org</strong> — science-based alternative to AA
+              <strong>smartrecovery.org</strong>, science-based alternative to AA
             </li>
           </ul>
         </div>
@@ -242,7 +242,7 @@ export default function AmIAnAlcoholicQuizPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This quiz is for educational and informational purposes only — it is not a diagnosis.
+            This quiz is for educational and informational purposes only, it is not a diagnosis.
             Only a licensed healthcare professional can diagnose Alcohol Use Disorder. Your
             responses are processed entirely in your browser and are never stored or transmitted.
           </p>

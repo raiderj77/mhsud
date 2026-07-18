@@ -33,7 +33,7 @@ const SUBSTANCES: Substance[] = [
   { id: "other", label: "Other", examples: "any substance not listed above" },
 ];
 
-/* WHO ASSIST v3.1 — each question has differently weighted response values */
+/* WHO ASSIST v3.1, each question has differently weighted response values */
 
 interface QuestionDef {
   key: string;
@@ -291,7 +291,7 @@ export function AssistClient({ faqData }: Props) {
           WHO ASSIST Screening
         </h1>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
-          The Alcohol, Smoking and Substance Involvement Screening Test — a comprehensive substance use screening developed by the World Health Organization.
+          The Alcohol, Smoking and Substance Involvement Screening Test, a comprehensive substance use screening developed by the World Health Organization.
         </p>
         <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
           10 substance categories · ~5–10 minutes · Completely private · WHO ASSIST v3.1
@@ -305,15 +305,15 @@ export function AssistClient({ faqData }: Props) {
           <ul className="space-y-2 text-sm text-sage-700 dark:text-sage-300">
             <li className="flex items-start gap-2">
               <span className="shrink-0 font-bold">1.</span>
-              <span><strong>Lifetime use check</strong> — select which substances you have ever used, even once</span>
+              <span><strong>Lifetime use check</strong>, select which substances you have ever used, even once</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 font-bold">2.</span>
-              <span><strong>Per-substance questions</strong> — for each substance, answer 2–6 questions about recent use, problems, and attempts to cut down</span>
+              <span><strong>Per-substance questions</strong>, for each substance, answer 2–6 questions about recent use, problems, and attempts to cut down</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 font-bold">3.</span>
-              <span><strong>Risk results</strong> — a separate risk score for each substance with specific recommendations</span>
+              <span><strong>Risk results</strong>, a separate risk score for each substance with specific recommendations</span>
             </li>
           </ul>
         </div>
@@ -351,7 +351,7 @@ export function AssistClient({ faqData }: Props) {
   }
 
   /* ================================================================ */
-  /*  Q1 — LIFETIME USE                                                */
+  /*  Q1, LIFETIME USE                                                */
   /* ================================================================ */
   if (phase === "q1") {
     return (
@@ -437,7 +437,7 @@ export function AssistClient({ faqData }: Props) {
   }
 
   /* ================================================================ */
-  /*  SUBSTANCE DETAIL — Q2–Q7 per substance                          */
+  /*  SUBSTANCE DETAIL, Q2–Q7 per substance                          */
   /* ================================================================ */
   if (phase === "substance" && currentSub) {
     const a = substanceAnswers[currentSub.id] || {};
@@ -566,7 +566,7 @@ export function AssistClient({ faqData }: Props) {
   }
 
   /* ================================================================ */
-  /*  Q8 — INJECTION USE                                               */
+  /*  Q8, INJECTION USE                                               */
   /* ================================================================ */
   if (phase === "q8") {
     return (
@@ -586,7 +586,7 @@ export function AssistClient({ faqData }: Props) {
           Injection Drug Use
         </h2>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8 max-w-lg mx-auto text-sm">
-          This question is about non-medical injection use only. It is not included in your substance-specific scores — it is asked separately because injection use carries additional health risks.
+          This question is about non-medical injection use only. It is not included in your substance-specific scores, it is asked separately because injection use carries additional health risks.
         </p>
 
         <div className="p-4 rounded-xl bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 mb-8">
@@ -816,7 +816,7 @@ export function AssistClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 World Health Organization. The ASSIST: Alcohol, Smoking and Substance Involvement Screening Test.{" "}
-                <a href="https://www.who.int/publications/i/item/978924159938-2" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — ASSIST Manual</a>
+                <a href="https://www.who.int/publications/i/item/978924159938-2" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO, ASSIST Manual</a>
               </li>
               <li>
                 SAMHSA. Find Treatment.{" "}
@@ -895,7 +895,7 @@ export function AssistClient({ faqData }: Props) {
           reflectionPrompts={REFLECTION_PROMPTS["who-assist-substance-screening"]?.prompts ?? []}
           responses={results.map((r) => ({
             question: r.displayName,
-            answer: `Score: ${r.score} — ${r.risk.label}`,
+            answer: `Score: ${r.score}, ${r.risk.label}`,
           }))}
         />
 
@@ -909,7 +909,7 @@ export function AssistClient({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="ASSIST" />
+        <EmailCapture />
 
         <AdSlot npa position="results-middle" />
 
@@ -924,10 +924,10 @@ export function AssistClient({ faqData }: Props) {
           </p>
           <h2>Understanding Your Scores</h2>
           <p>
-            The ASSIST produces a separate risk score for each substance you have used, which is an important feature. A person may have low risk for alcohol but moderate risk for cannabis and high risk for opioids — each substance is evaluated independently. This allows for targeted recommendations rather than a single overall score that might mask important differences.
+            The ASSIST produces a separate risk score for each substance you have used, which is an important feature. A person may have low risk for alcohol but moderate risk for cannabis and high risk for opioids, each substance is evaluated independently. This allows for targeted recommendations rather than a single overall score that might mask important differences.
           </p>
           <p>
-            The three risk levels correspond to recommended levels of intervention: <strong>Low risk</strong> requires only positive reinforcement of current behavior. <strong>Moderate risk</strong> warrants a brief intervention — a short counseling session where a healthcare provider gives personalized feedback about your score, discusses risks, and supports your motivation to change. Brief interventions have strong evidence for reducing substance use, especially for alcohol and tobacco. <strong>High risk</strong> indicates that more intensive assessment and possibly treatment is needed, which may include specialized substance use disorder treatment, medication-assisted treatment, or residential care.
+            The three risk levels correspond to recommended levels of intervention: <strong>Low risk</strong> requires only positive reinforcement of current behavior. <strong>Moderate risk</strong> warrants a brief intervention, a short counseling session where a healthcare provider gives personalized feedback about your score, discusses risks, and supports your motivation to change. Brief interventions have strong evidence for reducing substance use, especially for alcohol and tobacco. <strong>High risk</strong> indicates that more intensive assessment and possibly treatment is needed, which may include specialized substance use disorder treatment, medication-assisted treatment, or residential care.
           </p>
           <h2>ASSIST vs. Other Screening Tools</h2>
           <p>
@@ -995,6 +995,6 @@ export function AssistClient({ faqData }: Props) {
     );
   }
 
-  /* Fallback — should not reach here */
+  /* Fallback, should not reach here */
   return null;
 }

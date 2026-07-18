@@ -49,7 +49,7 @@ const DOMAINS: Record<Domain, DomainInfo> = {
     textLight: "text-indigo-700",
     textDark: "dark:text-indigo-300",
     guidance:
-      "The behavior changes you have noticed are real and significant. Substance use alters brain chemistry, which changes how a person acts, thinks, and relates to others. You are not imagining things — trust what you observe.",
+      "The behavior changes you have noticed are real and significant. Substance use alters brain chemistry, which changes how a person acts, thinks, and relates to others. You are not imagining things, trust what you observe.",
   },
   financial: {
     label: "Financial Impact",
@@ -71,7 +71,7 @@ const DOMAINS: Record<Domain, DomainInfo> = {
     textLight: "text-pink-700",
     textDark: "dark:text-pink-300",
     guidance:
-      "Addiction erodes trust, communication, and emotional connection. These relationship wounds are real injuries that deserve attention. Family therapy or couples counseling with an addiction-informed therapist can help rebuild what has been damaged — whether your loved one enters recovery or not.",
+      "Addiction erodes trust, communication, and emotional connection. These relationship wounds are real injuries that deserve attention. Family therapy or couples counseling with an addiction-informed therapist can help rebuild what has been damaged, whether your loved one enters recovery or not.",
   },
   children: {
     label: "Impact on Children",
@@ -93,7 +93,7 @@ const DOMAINS: Record<Domain, DomainInfo> = {
     textLight: "text-violet-700",
     textDark: "dark:text-violet-300",
     guidance:
-      "The emotional weight you are carrying is enormous. Worry, guilt, anger, sadness, shame — these are all normal responses to an abnormal situation. You deserve support too. Individual therapy, Al-Anon or Nar-Anon meetings, and self-care are not selfish — they are necessary.",
+      "The emotional weight you are carrying is enormous. Worry, guilt, anger, sadness, shame, these are all normal responses to an abnormal situation. You deserve support too. Individual therapy, Al-Anon or Nar-Anon meetings, and self-care are not selfish, they are necessary.",
   },
   safety: {
     label: "Safety Concerns",
@@ -115,14 +115,14 @@ const DOMAINS: Record<Domain, DomainInfo> = {
     textLight: "text-orange-700",
     textDark: "dark:text-orange-300",
     guidance:
-      "Enabling is not a character flaw — it comes from love, fear, and wanting to keep the peace. But when we protect someone from the consequences of their substance use, we may unintentionally make it easier for them to continue. Learning to set boundaries is one of the most powerful things you can do — for yourself and for your loved one.",
+      "Enabling is not a character flaw, it comes from love, fear, and wanting to keep the peace. But when we protect someone from the consequences of their substance use, we may unintentionally make it easier for them to continue. Learning to set boundaries is one of the most powerful things you can do, for yourself and for your loved one.",
   },
 };
 
 const STATEMENTS: Statement[] = [
   // Behavior Changes (3)
   { id: 1, text: "I have noticed my loved one becoming more secretive about where they go, who they are with, or how they spend money.", domain: "behavior" },
-  { id: 2, text: "My loved one's mood has become unpredictable — they may go from calm to angry, energetic to withdrawn, without clear reason.", domain: "behavior" },
+  { id: 2, text: "My loved one's mood has become unpredictable, they may go from calm to angry, energetic to withdrawn, without clear reason.", domain: "behavior" },
   { id: 3, text: "My loved one has stopped keeping up with responsibilities they used to handle (work, household tasks, personal hygiene).", domain: "behavior" },
   // Financial Impact (2)
   { id: 4, text: "Money has gone missing, or there are unexplained expenses, debts, or financial problems connected to my loved one's behavior.", domain: "financial" },
@@ -130,12 +130,12 @@ const STATEMENTS: Statement[] = [
   // Relationship Impact (3)
   { id: 6, text: "I find it hard to trust what my loved one tells me because I have caught them in lies or half-truths.", domain: "relationships" },
   { id: 7, text: "Arguments about substance use (or its consequences) have become a regular part of our relationship.", domain: "relationships" },
-  { id: 8, text: "I feel emotionally distant from my loved one — like I am living with a stranger.", domain: "relationships" },
+  { id: 8, text: "I feel emotionally distant from my loved one, like I am living with a stranger.", domain: "relationships" },
   // Impact on Children/Dependents (2)
   { id: 9, text: "Children or other dependents in the household have been exposed to arguments, erratic behavior, or an unstable home environment.", domain: "children" },
   { id: 10, text: "Daily routines for children or dependents (meals, bedtimes, school activities) have been disrupted by my loved one's behavior.", domain: "children" },
   // Emotional Toll (3)
-  { id: 11, text: "I spend a significant amount of time worrying about my loved one — their safety, their health, or what they might do next.", domain: "emotional" },
+  { id: 11, text: "I spend a significant amount of time worrying about my loved one, their safety, their health, or what they might do next.", domain: "emotional" },
   { id: 12, text: "I feel guilty, wondering if I caused this or if I should be doing more to help.", domain: "emotional" },
   { id: 13, text: "I feel anger or resentment toward my loved one that I have trouble letting go of.", domain: "emotional" },
   // Safety Concerns (2)
@@ -174,7 +174,7 @@ const SEVERITY_TIERS: SeverityTier[] = [
     borderLight: "border-green-200",
     borderDark: "dark:border-green-800",
     message:
-      "Your responses suggest that substance use is having a relatively limited impact on your family life at this time. Even so, the fact that you took this assessment means something is on your mind. Trust that instinct. Early awareness and open communication are powerful — consider learning more about the signs of problematic substance use and what family support looks like.",
+      "Your responses suggest that substance use is having a relatively limited impact on your family life at this time. Even so, the fact that you took this assessment means something is on your mind. Trust that instinct. Early awareness and open communication are powerful, consider learning more about the signs of problematic substance use and what family support looks like.",
   },
   {
     label: "Mild Impact",
@@ -187,7 +187,7 @@ const SEVERITY_TIERS: SeverityTier[] = [
     borderLight: "border-amber-200",
     borderDark: "dark:border-amber-800",
     message:
-      "Your responses suggest that your loved one's substance use is beginning to affect your family in noticeable ways. You may be starting to feel the emotional weight, noticing behavior changes, or adjusting your own life around their use. This is an important time to seek support for yourself — not just for them. Organizations like Al-Anon and Nar-Anon exist specifically for people in your situation.",
+      "Your responses suggest that your loved one's substance use is beginning to affect your family in noticeable ways. You may be starting to feel the emotional weight, noticing behavior changes, or adjusting your own life around their use. This is an important time to seek support for yourself, not just for them. Organizations like Al-Anon and Nar-Anon exist specifically for people in your situation.",
   },
   {
     label: "Moderate Impact",
@@ -235,13 +235,13 @@ const DOMAIN_ORDER: Domain[] = [
 ];
 
 const SELF_CARE: string[] = [
-  "Attend an Al-Anon or Nar-Anon meeting — even just one — to hear from others who understand",
+  "Attend an Al-Anon or Nar-Anon meeting, even just one, to hear from others who understand",
   "Set one small boundary this week and practice holding it",
   "Schedule something that is just for you: a walk, a meal with a friend, an hour of quiet",
   "Talk to a therapist or counselor, even if your loved one is not ready for help",
-  "Write down three things that are within your control — and three that are not",
+  "Write down three things that are within your control, and three that are not",
   "Practice the phrase: \"I love you, and I cannot control this for you\"",
-  "Get enough sleep, eat regularly, and move your body — your health matters too",
+  "Get enough sleep, eat regularly, and move your body, your health matters too",
   "Reach out to one trusted person and be honest about what you are going through",
 ];
 
@@ -362,7 +362,7 @@ export function FamilyImpactClient({ faqData }: Props) {
             Your Experience Is Valid
           </h2>
           <p className="text-sm text-sage-700 dark:text-sage-300 leading-relaxed">
-            If you are here, it is because you care deeply about someone who is struggling. The stress, confusion, grief, and exhaustion you may feel are normal responses to living with or loving someone affected by substance use. You are not overreacting. You are not to blame. And you are not alone — millions of families navigate this every day.
+            If you are here, it is because you care deeply about someone who is struggling. The stress, confusion, grief, and exhaustion you may feel are normal responses to living with or loving someone affected by substance use. You are not overreacting. You are not to blame. And you are not alone, millions of families navigate this every day.
           </p>
         </div>
 
@@ -412,13 +412,13 @@ export function FamilyImpactClient({ faqData }: Props) {
           </h2>
           <div className="text-sm text-neutral-600 dark:text-neutral-300 space-y-3 leading-relaxed">
             <p>
-              Addiction is recognized by every major medical organization — including the American Medical Association, the National Institute on Drug Abuse, and the World Health Organization — as a chronic brain condition, not a moral failing or a choice. Substances change the brain&apos;s reward system, decision-making centers, and stress response in ways that make it extremely difficult for a person to stop on their own, even when they can see the harm.
+              Addiction is recognized by every major medical organization, including the American Medical Association, the National Institute on Drug Abuse, and the World Health Organization, as a chronic brain condition, not a moral failing or a choice. Substances change the brain&apos;s reward system, decision-making centers, and stress response in ways that make it extremely difficult for a person to stop on their own, even when they can see the harm.
             </p>
             <p>
-              This does not mean your loved one is not responsible for their actions. It means that willpower alone is usually not enough to overcome addiction. Effective approaches include professional assessment, evidence-based programs, medication-assisted options, peer support, and family involvement. Recovery is possible — but it often requires help.
+              This does not mean your loved one is not responsible for their actions. It means that willpower alone is usually not enough to overcome addiction. Effective approaches include professional assessment, evidence-based programs, medication-assisted options, peer support, and family involvement. Recovery is possible, but it often requires help.
             </p>
             <p>
-              Importantly, <strong>your loved one&apos;s recovery is not something you can control</strong>. What you <em>can</em> control is how you respond, the boundaries you set, and whether you get support for yourself. Families who seek their own support — regardless of whether their loved one enters recovery — consistently report improved wellbeing, reduced stress, and better family functioning.
+              Importantly, <strong>your loved one&apos;s recovery is not something you can control</strong>. What you <em>can</em> control is how you respond, the boundaries you set, and whether you get support for yourself. Families who seek their own support, regardless of whether their loved one enters recovery, consistently report improved wellbeing, reduced stress, and better family functioning.
             </p>
           </div>
         </div>
@@ -472,7 +472,7 @@ export function FamilyImpactClient({ faqData }: Props) {
                 Family Therapy
               </h3>
               <p className="text-xs text-rose-600 dark:text-rose-400 mb-2">
-                A therapist specializing in addiction and family systems can help you set boundaries, improve communication, and heal — whether or not your loved one is in recovery.
+                A therapist specializing in addiction and family systems can help you set boundaries, improve communication, and heal, whether or not your loved one is in recovery.
               </p>
               <p className="text-xs font-bold text-rose-700 dark:text-rose-300">
                 Find a therapist: psychologytoday.com
@@ -487,7 +487,7 @@ export function FamilyImpactClient({ faqData }: Props) {
             Self-Care for You
           </h2>
           <p className="text-sm text-sage-600 dark:text-sage-400 mb-3">
-            Taking care of yourself is not selfish — it is essential. Here are steps you can take this week:
+            Taking care of yourself is not selfish, it is essential. Here are steps you can take this week:
           </p>
           <ul className="space-y-2">
             {SELF_CARE.map((tip, i) => (
@@ -622,14 +622,14 @@ export function FamilyImpactClient({ faqData }: Props) {
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
           <h2>About This Assessment Tool</h2>
           <p>
-            The Family Impact Assessment is an original educational tool designed to help family members and loved ones reflect on how substance use is affecting their lives. It is not a validated clinical instrument — it is a structured self-reflection exercise that covers seven key areas commonly affected when a family member struggles with substance use.
+            The Family Impact Assessment is an original educational tool designed to help family members and loved ones reflect on how substance use is affecting their lives. It is not a validated clinical instrument, it is a structured self-reflection exercise that covers seven key areas commonly affected when a family member struggles with substance use.
           </p>
           <p>
             This assessment does not evaluate your loved one. It evaluates <em>your experience</em> as a family member. The goal is not to label anyone, but to give you clarity about what you are going through and to point you toward appropriate support.
           </p>
           <h2>The Seven Cs for Families</h2>
           <p>
-            Many family support programs teach the &ldquo;Seven Cs&rdquo; — a framework that can help family members understand their role:
+            Many family support programs teach the &ldquo;Seven Cs&rdquo;, a framework that can help family members understand their role:
           </p>
           <ul>
             <li>I didn&apos;t <strong>Cause</strong> it</li>
@@ -649,7 +649,7 @@ export function FamilyImpactClient({ faqData }: Props) {
           </p>
           <ul>
             <li>Your loved one is threatening self-harm or suicide (call 988)</li>
-            <li>You suspect an overdose (call 911 — many states have Good Samaritan laws)</li>
+            <li>You suspect an overdose (call 911, many states have Good Samaritan laws)</li>
             <li>Children are being neglected or abused</li>
             <li>You are being physically, verbally, or emotionally abused</li>
             <li>Your loved one is driving under the influence</li>

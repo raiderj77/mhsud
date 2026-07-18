@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "What is the difference between normal grief and complicated grief?",
     answer:
-      "Normal grief is a natural, painful response to loss that evolves over time. While there is no set timeline, most people find that grief — though it never fully disappears — becomes less acute and more integrated over months to years. Complicated grief (also called Prolonged Grief Disorder, or PGD) is characterized by grief that remains intensely debilitating beyond 12 months after the loss (6 months for children), with persistent yearning, difficulty accepting the loss, bitterness, and inability to engage in life. PGD affects approximately 10–15% of bereaved people.",
+      "Normal grief is a natural, painful response to loss that evolves over time. While there is no set timeline, most people find that grief, though it never fully disappears, becomes less acute and more integrated over months to years. Complicated grief (also called Prolonged Grief Disorder, or PGD) is characterized by grief that remains intensely debilitating beyond 12 months after the loss (6 months for children), with persistent yearning, difficulty accepting the loss, bitterness, and inability to engage in life. PGD affects approximately 10–15% of bereaved people.",
   },
   {
     question: "How do I know if my grief is 'normal'?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Can grief cause depression?",
     answer:
-      "Yes. Grief and depression share many symptoms — sadness, sleep changes, appetite changes, difficulty concentrating, loss of interest. However, they are distinct conditions. Grief is typically focused on the loss and includes waves of intense longing, while depression is more pervasive. Grief can also trigger a major depressive episode, especially in those with a history of depression. The PHQ-9 used in this assessment screens for depression symptoms that may be grief-related or co-occurring with grief.",
+      "Yes. Grief and depression share many symptoms, sadness, sleep changes, appetite changes, difficulty concentrating, loss of interest. However, they are distinct conditions. Grief is typically focused on the loss and includes waves of intense longing, while depression is more pervasive. Grief can also trigger a major depressive episode, especially in those with a history of depression. The PHQ-9 used in this assessment screens for depression symptoms that may be grief-related or co-occurring with grief.",
   },
   {
     question: "Is there treatment for complicated grief?",
@@ -53,7 +53,7 @@ const FAQ_DATA = [
   {
     question: "Can grief affect physical health?",
     answer:
-      "Yes. Grief is associated with increased risk of cardiovascular events (the 'broken heart' effect is real — risk of heart attack increases significantly in the days after a major loss), immune suppression, sleep disruption, and increased mortality in older adults. These effects are most pronounced in the first year after bereavement and in cases of complicated grief. Taking care of your physical health during grief — sleep, nutrition, medical appointments — is not optional.",
+      "Yes. Grief is associated with increased risk of cardiovascular events (the 'broken heart' effect is real, risk of heart attack increases significantly in the days after a major loss), immune suppression, sleep disruption, and increased mortality in older adults. These effects are most pronounced in the first year after bereavement and in cases of complicated grief. Taking care of your physical health during grief, sleep, nutrition, medical appointments, is not optional.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function GriefAssessmentPage() {
               datePublished: "2026-03-08",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -114,14 +114,14 @@ export default function GriefAssessmentPage() {
         {/* Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            Grief is not something you get over. It&apos;s something you carry — and over time,
+            Grief is not something you get over. It&apos;s something you carry, and over time,
             for most people, it becomes lighter. But sometimes grief doesn&apos;t ease. It
             stays as raw and consuming as the day it began, or it quietly hollows out your
             life until you realize you&apos;ve stopped living it.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
             This free assessment uses the PHQ-9 to screen for depression symptoms that
-            commonly accompany grief — and that, when persistent, may indicate complicated
+            commonly accompany grief, and that, when persistent, may indicate complicated
             or prolonged grief disorder. It won&apos;t measure the depth of your love or
             the magnitude of your loss. But it can help you understand whether what you&apos;re
             experiencing may benefit from professional support.
@@ -132,6 +132,9 @@ export default function GriefAssessmentPage() {
         </div>
 
         {/* The Tool */}
+        <a href="#screening" className="btn-primary inline-flex mb-6">
+          Start the grief and mood assessment
+        </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
@@ -172,7 +175,7 @@ export default function GriefAssessmentPage() {
         <h2>How Is the Grief Assessment Scored?</h2>
         <h2>What Do My Grief Assessment Results Mean?</h2>
       </section>
-<PHQ9Client faqData={FAQ_DATA} />
+<div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         {/* Grief Warning Signs */}
         <div className="mt-10 mb-8">
@@ -236,18 +239,18 @@ export default function GriefAssessmentPage() {
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
               <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-              <strong>988</strong> — if grief has brought thoughts of suicide
+              <strong>988</strong>, if grief has brought thoughts of suicide
             </li>
             <li>
               <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>
             </li>
             <li>
               <strong>GriefShare:</strong>{" "}
-              <strong>griefshare.org</strong> — grief support groups nationwide
+              <strong>griefshare.org</strong>, grief support groups nationwide
             </li>
             <li>
               <strong>Center for Complicated Grief:</strong>{" "}
-              <strong>complicatedgrief.columbia.edu</strong> — specialized treatment resources
+              <strong>complicatedgrief.columbia.edu</strong>, specialized treatment resources
             </li>
           </ul>
         </div>
@@ -255,7 +258,7 @@ export default function GriefAssessmentPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment is for educational purposes only — it is not a diagnosis. Only a
+            This assessment is for educational purposes only, it is not a diagnosis. Only a
             licensed healthcare professional can diagnose complicated grief or related conditions.
             Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>

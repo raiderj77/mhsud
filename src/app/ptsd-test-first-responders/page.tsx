@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/ptsd-test-first-responders`;
 
 export const metadata: Metadata = createMetadata({
   path: "/ptsd-test-first-responders",
-  title: "PTSD Test for First Responders — Free PCL-5",
+  title: "PTSD Test for First Responders, Free PCL-5",
   description:
     "Free PTSD screening for police, firefighters, EMTs, and dispatchers. Private, instant results.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
     "ems ptsd assessment", "free ptsd test first responders",
   ],
   openGraph: {
-    title: "PTSD Test for First Responders — Free PCL-5",
+    title: "PTSD Test for First Responders, Free PCL-5",
     description: "Free, private PTSD screening for police, firefighters, EMTs, and dispatchers using the clinically validated PCL-5. Instant results.",
     url: TOOL_URL,
     type: "website",
@@ -30,11 +30,11 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "How common is PTSD among first responders?",
-    answer: "PTSD rates among first responders are significantly higher than the general population. Research estimates that up to 32% of first responders develop PTSD at some point in their careers, compared to about 6-7% of the general population. Rates vary by role — dispatchers, who are often overlooked, show rates comparable to field personnel because they process traumatic calls without the ability to take physical action.",
+    answer: "PTSD rates among first responders are significantly higher than the general population. Research estimates that up to 32% of first responders develop PTSD at some point in their careers, compared to about 6-7% of the general population. Rates vary by role, dispatchers, who are often overlooked, show rates comparable to field personnel because they process traumatic calls without the ability to take physical action.",
   },
   {
     question: "Does having PTSD mean I am weak?",
-    answer: "No. PTSD is a neurological response to abnormal levels of trauma exposure — it is not a character flaw or a sign of weakness. First responders are exposed to more traumatic events in their first year on the job than most civilians experience in a lifetime. Your brain is responding normally to abnormal circumstances. Seeking help is a sign of strength and self-awareness, not weakness.",
+    answer: "No. PTSD is a neurological response to abnormal levels of trauma exposure, it is not a character flaw or a sign of weakness. First responders are exposed to more traumatic events in their first year on the job than most civilians experience in a lifetime. Your brain is responding normally to abnormal circumstances. Seeking help is a sign of strength and self-awareness, not weakness.",
   },
   {
     question: "Will PTSD affect my ability to do my job?",
@@ -50,7 +50,7 @@ const FAQ_DATA = [
   },
   {
     question: "What is cumulative PTSD?",
-    answer: "Cumulative PTSD develops not from a single traumatic event but from repeated exposure to traumatic situations over time. First responders may not identify a single triggering event because the trauma built up gradually — call after call, shift after shift. This is why some responders develop symptoms years into their career without a clear precipitating incident.",
+    answer: "Cumulative PTSD develops not from a single traumatic event but from repeated exposure to traumatic situations over time. First responders may not identify a single triggering event because the trauma built up gradually, call after call, shift after shift. This is why some responders develop symptoms years into their career without a clear precipitating incident.",
   },
   {
     question: "What treatment options are available for first responders?",
@@ -70,13 +70,13 @@ export default function PTSDTestFirstRespondersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "PTSD Test for First Responders — Free PCL-5",
+              name: "PTSD Test for First Responders, Free PCL-5",
               description: "A free, private PTSD screening tool for police officers, firefighters, EMTs, and dispatchers using the clinically validated PCL-5.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
               dateModified: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -90,7 +90,7 @@ export default function PTSDTestFirstRespondersPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -133,18 +133,18 @@ export default function PTSDTestFirstRespondersPage() {
             You signed up to help people on their worst days. What nobody told you is that
             those days don&apos;t leave when the shift ends. The pediatric call that went
             wrong. The scene you can still smell. The face you see when you close your eyes.
-            You push through because that&apos;s what the job demands — but the nightmares,
+            You push through because that&apos;s what the job demands, but the nightmares,
             the hypervigilance, the way you snap at people you love, the feeling of being
-            permanently on edge — that&apos;s not &quot;just part of the job.&quot; That&apos;s
+            permanently on edge, that&apos;s not &quot;just part of the job.&quot; That&apos;s
             your mind telling you something needs attention.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Up to 32% of first responders develop PTSD — and dispatchers, who are too often
+            Up to 32% of first responders develop PTSD, and dispatchers, who are too often
             overlooked, face rates just as high. Whether you&apos;re police, fire, EMS, or
             dispatch, your trauma is real and it deserves real support. This free, private
             screening uses the <strong>PCL-5</strong>, the same tool used in clinical and
             VA settings. It is <strong>not a diagnosis</strong>, but it can help you see
-            what&apos;s happening clearly — and decide what to do about it. Nobody from
+            what&apos;s happening clearly, and decide what to do about it. Nobody from
             your department will ever see your results.
           </p>
         </div>
@@ -158,7 +158,7 @@ export default function PTSDTestFirstRespondersPage() {
             Start the PTSD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5–10 minutes. Completely private — nothing is stored or shared.
+            Takes about 5–10 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -172,18 +172,16 @@ export default function PTSDTestFirstRespondersPage() {
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">Up to 32% PTSD rates</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 First responders develop PTSD at rates 4-5 times higher than the general
-                population. The nature of the work — repeated, unpredictable trauma exposure —
-                makes this an occupational hazard, not a personal failing.
-                <span className="text-slate-500 dark:text-slate-400"> — Journal of Traumatic Stress</span>
+                population. The nature of the work, repeated, unpredictable trauma exposure, makes this an occupational hazard, not a personal failing.
+                <span className="text-slate-500 dark:text-slate-400">, Journal of Traumatic Stress</span>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">Cumulative trauma</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Unlike single-event PTSD, first responder PTSD often builds gradually from
-                hundreds of traumatic exposures. There may be no single &quot;worst call&quot; —
-                the weight accumulates until the system can no longer compensate.
-                <span className="text-slate-500 dark:text-slate-400"> — International Journal of Emergency Mental Health</span>
+                hundreds of traumatic exposures. There may be no single &quot;worst call&quot;, the weight accumulates until the system can no longer compensate.
+                <span className="text-slate-500 dark:text-slate-400">, International Journal of Emergency Mental Health</span>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
@@ -193,7 +191,7 @@ export default function PTSDTestFirstRespondersPage() {
                 often excluded from first responder mental health programs. They process traumatic
                 calls without the ability to take physical action, creating a unique form of
                 helplessness-related trauma.
-                <span className="text-slate-500 dark:text-slate-400"> — Journal of Emergency Dispatch</span>
+                <span className="text-slate-500 dark:text-slate-400">, Journal of Emergency Dispatch</span>
               </p>
             </div>
           </div>
@@ -212,9 +210,9 @@ export default function PTSDTestFirstRespondersPage() {
                 PTSD symptom severity.
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Critical incidents:</strong> Line-of-duty deaths, pediatric fatalities, mass casualty events, officer-involved shootings, and suicide calls are among the most frequently cited critical incidents. But any call can become the one that stays with you — trauma does not follow a predictable script.</p>
+                <p><strong>Critical incidents:</strong> Line-of-duty deaths, pediatric fatalities, mass casualty events, officer-involved shootings, and suicide calls are among the most frequently cited critical incidents. But any call can become the one that stays with you, trauma does not follow a predictable script.</p>
                 <p><strong>Organizational stressors:</strong> PTSD in first responders is compounded by shift work, mandatory overtime, administrative pressure, public scrutiny, and leadership that may not prioritize mental health. The job itself is stressful even without the trauma.</p>
-                <p><strong>Stigma in the culture:</strong> First responder culture often equates emotional struggle with weakness. This stigma prevents many from seeking help until symptoms become severe. Recognizing that PTSD is a neurological response — not a character flaw — is the first step toward breaking that cycle.</p>
+                <p><strong>Stigma in the culture:</strong> First responder culture often equates emotional struggle with weakness. This stigma prevents many from seeking help until symptoms become severe. Recognizing that PTSD is a neurological response, not a character flaw, is the first step toward breaking that cycle.</p>
                 <p><strong>Sleep disruption:</strong> Shift work combined with PTSD creates severe sleep disruption. Nightmares, hypervigilance at bedtime, and irregular schedules compound each other. Sleep restoration is often a critical early focus of treatment.</p>
                 <p><strong>Substance use as coping:</strong> First responders have elevated rates of alcohol and substance use, often as a way to manage symptoms they cannot or will not address directly. If you are using substances to cope with what you have seen, that pattern is important to examine honestly.</p>
                 <p><strong>Peer support matters:</strong> Talking to someone who has been on similar calls and understands the culture can be more effective than general therapy. Many departments now have formal peer support teams, and organizations like Safe Call Now provide confidential support from fellow first responders.</p>
@@ -230,26 +228,26 @@ export default function PTSDTestFirstRespondersPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Most first responders don&apos;t develop PTSD from one catastrophic event — they develop
+              Most first responders don&apos;t develop PTSD from one catastrophic event, they develop
               it from the accumulated weight of thousands of difficult calls over a career. This
               distinction matters because it changes how the condition presents and how it&apos;s
               explained to yourself and others.
             </p>
             <p>
-              <strong>Single-incident PTSD</strong> has a clear &quot;before&quot; — a specific event
+              <strong>Single-incident PTSD</strong> has a clear &quot;before&quot;, a specific event
               that changed things. The person can often point to it.
             </p>
             <p>
               <strong>Cumulative trauma</strong> builds slowly and invisibly. There&apos;s no single
               event to point to. The firefighter who has worked pediatric codes for 15 years, the
               dispatcher who has managed active shooter calls, the EMT whose 3,000th overdose call
-              feels exactly like the first — this is cumulative critical incident stress, and it
+              feels exactly like the first, this is cumulative critical incident stress, and it
               produces the same PTSD symptom profile without the clear origin story.
             </p>
             <p>
               This creates a specific barrier: many first responders don&apos;t believe they
               &quot;qualify&quot; for PTSD because nothing happened that seemed bad enough on its own.
-              The cumulative weight doesn&apos;t feel like a trauma — it feels like the job. This is
+              The cumulative weight doesn&apos;t feel like a trauma, it feels like the job. This is
               the operational normalization of traumatic load, and it&apos;s one of the reasons first
               responder PTSD goes unrecognized for so long.
             </p>
@@ -267,7 +265,7 @@ export default function PTSDTestFirstRespondersPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              First responders are trained to maintain tactical awareness — scanning environments,
+              First responders are trained to maintain tactical awareness, scanning environments,
               positioning near exits, reading rooms for threats. These skills are professional assets
               in operational contexts.
             </p>
@@ -278,7 +276,7 @@ export default function PTSDTestFirstRespondersPage() {
               exhausting and relationship-damaging.
             </p>
             <p>
-              Many first responders interpret this as &quot;just how I am now&quot; — a personality
+              Many first responders interpret this as &quot;just how I am now&quot;, a personality
               change, a consequence of the job they&apos;ve accepted. It is neither. It is a clinical
               symptom that responds to treatment. Prolonged Exposure and CPT both include specific
               components that address hypervigilance and help the nervous system recalibrate threat
@@ -294,7 +292,7 @@ export default function PTSDTestFirstRespondersPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               These resources are specifically designed for public safety and emergency services
-              professionals — staffed by people who understand the culture:
+              professionals, staffed by people who understand the culture:
             </p>
             <div className="space-y-3">
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
@@ -303,23 +301,23 @@ export default function PTSDTestFirstRespondersPage() {
               </div>
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">First H.E.L.P.</p>
-                <p className="text-sm">firsthelp.org — Peer support and survivor assistance for first responders with PTSD and suicide history. Specific survivor support program.</p>
+                <p className="text-sm">firsthelp.org, Peer support and survivor assistance for first responders with PTSD and suicide history. Specific survivor support program.</p>
               </div>
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">Badge of Life</p>
-                <p className="text-sm">badgeoflife.com — Psychological survival resources specifically for law enforcement.</p>
+                <p className="text-sm">badgeoflife.com, Psychological survival resources specifically for law enforcement.</p>
               </div>
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">IAFF Center of Excellence</p>
-                <p className="text-sm">iaff-coe.org — Residential treatment program with specific programming for firefighters and their families.</p>
+                <p className="text-sm">iaff-coe.org, Residential treatment program with specific programming for firefighters and their families.</p>
               </div>
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">Code Green Campaign</p>
-                <p className="text-sm">codegreencampaign.org — Mental health awareness resources for EMS and fire; provider directory for clinicians with first responder experience.</p>
+                <p className="text-sm">codegreencampaign.org, Mental health awareness resources for EMS and fire; provider directory for clinicians with first responder experience.</p>
               </div>
               <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                 <p className="font-semibold text-slate-900 dark:text-white">SAMHSA First Responder Resources</p>
-                <p className="text-sm">samhsa.gov/first-responders — Federal treatment locator and resources with first responder filter.</p>
+                <p className="text-sm">samhsa.gov/first-responders, Federal treatment locator and resources with first responder filter.</p>
               </div>
             </div>
           </div>
@@ -343,7 +341,7 @@ export default function PTSDTestFirstRespondersPage() {
         <AnswerBlock
           what="A PCL-5-based PTSD screening tailored for first responders with context on cumulative trauma exposure in emergency services."
           who="Police, firefighters, EMTs, and dispatchers who have experienced repeated traumatic incidents on the job."
-          bottomLine="First responders face cumulative trauma — screening is a professional responsibility, not a weakness. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="First responders face cumulative trauma, screening is a professional responsibility, not a weakness. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -389,7 +387,7 @@ export default function PTSDTestFirstRespondersPage() {
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Call Safe Call Now</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                <strong>1-206-459-3020</strong> — a 24/7 crisis line staffed by and for first
+                <strong>1-206-459-3020</strong>, a 24/7 crisis line staffed by and for first
                 responders. They understand the job, the culture, and the specific challenges
                 you face. Completely confidential. You can also visit safecallnow.org.
               </p>
@@ -422,13 +420,13 @@ export default function PTSDTestFirstRespondersPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
             <li>
-              <strong>Safe Call Now:</strong> <strong>1-206-459-3020</strong> — 24/7 crisis line for first responders
+              <strong>Safe Call Now:</strong> <strong>1-206-459-3020</strong>, 24/7 crisis line for first responders
             </li>
           </ul>
         </div>
@@ -436,7 +434,7 @@ export default function PTSDTestFirstRespondersPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess PTSD or related conditions. Your responses are processed
             entirely in your browser and are never stored or transmitted. Always consult a qualified
             healthcare professional for medical advice.

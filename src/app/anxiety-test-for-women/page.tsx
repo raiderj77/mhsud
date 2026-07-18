@@ -34,7 +34,7 @@ const FAQ_DATA = [
   },
   {
     question: "Can hormonal changes cause anxiety symptoms?",
-    answer: "Yes. Hormonal shifts during the menstrual cycle, pregnancy, postpartum, and perimenopause can all influence anxiety levels. Estrogen and progesterone interact with neurotransmitters like serotonin and GABA that regulate mood and anxiety. This does not mean anxiety is 'just hormones' — it means hormones can be one contributing factor worth discussing with a healthcare provider.",
+    answer: "Yes. Hormonal shifts during the menstrual cycle, pregnancy, postpartum, and perimenopause can all influence anxiety levels. Estrogen and progesterone interact with neurotransmitters like serotonin and GABA that regulate mood and anxiety. This does not mean anxiety is 'just hormones', it means hormones can be one contributing factor worth discussing with a healthcare provider.",
   },
   {
     question: "Is this test valid for postpartum anxiety?",
@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "How does anxiety differ from normal stress?",
-    answer: "Stress is typically a response to a specific situation and resolves when the stressor is removed. Anxiety involves persistent, excessive worry that may not be tied to a specific cause. When anxiety begins to interfere with daily life — sleep, relationships, work, or physical health — it may be time to speak with a healthcare professional.",
+    answer: "Stress is typically a response to a specific situation and resolves when the stressor is removed. Anxiety involves persistent, excessive worry that may not be tied to a specific cause. When anxiety begins to interfere with daily life, sleep, relationships, work, or physical health, it may be time to speak with a healthcare professional.",
   },
   {
     question: "What should I do if my GAD-7 score is high?",
@@ -58,13 +58,13 @@ export default function AnxietyTestForWomenPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Anxiety Test for Women — GAD-7 Screening",
+              name: "Anxiety Test for Women, GAD-7 Screening",
               description: "A free, private anxiety screening tool for women using the clinically validated GAD-7 questionnaire. Includes information on hormonal and life-stage factors.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
               dateModified: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -78,7 +78,7 @@ export default function AnxietyTestForWomenPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -118,7 +118,7 @@ export default function AnxietyTestForWomenPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You know that feeling — the tightness in your chest when you wake up, the racing
+            You know that feeling, the tightness in your chest when you wake up, the racing
             thoughts at 2 a.m., the way you can&apos;t stop worrying even when you know
             logically that things are probably fine. You hold it together for everyone around
             you, but inside, the worry doesn&apos;t stop. You might wonder if this is just
@@ -130,7 +130,7 @@ export default function AnxietyTestForWomenPage() {
             changes, life demands, and expectations that pile up over time. This free, private
             screening can help you understand whether what you&apos;re experiencing goes
             beyond everyday worry. It is <strong>not a diagnosis</strong>, but it can give you
-            clarity — and permission to take the next step.
+            clarity, and permission to take the next step.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function AnxietyTestForWomenPage() {
             Start the Anxiety Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 2 minutes. Completely private — nothing is stored or shared.
+            Takes about 2 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -157,9 +157,9 @@ export default function AnxietyTestForWomenPage() {
               <p className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">2x the risk</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Women are twice as likely as men to be diagnosed with generalized anxiety disorder.
-                It&apos;s not a matter of being &quot;more sensitive&quot; — biology, hormones, and social
+                It&apos;s not a matter of being &quot;more sensitive&quot;, biology, hormones, and social
                 factors create real differences.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
@@ -167,16 +167,16 @@ export default function AnxietyTestForWomenPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Approximately 23% of women experience an anxiety disorder in any given year. That means
                 if you&apos;re struggling, you&apos;re far from alone.
-                <span className="text-slate-500 dark:text-slate-400"> — ADAA</span>
+                <span className="text-slate-500 dark:text-slate-400">, ADAA</span>
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">Up to 20%</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Perinatal anxiety affects up to 15–20% of women during pregnancy and the
-                postpartum period — yet it often goes unrecognized because the focus is on
+                postpartum period, yet it often goes unrecognized because the focus is on
                 postpartum depression.
-                <span className="text-slate-500 dark:text-slate-400"> — ACOG</span>
+                <span className="text-slate-500 dark:text-slate-400">, ACOG</span>
               </p>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function AnxietyTestForWomenPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Anxiety isn&apos;t &quot;all in your head&quot; — it&apos;s partly in your endocrine system.
+              Anxiety isn&apos;t &quot;all in your head&quot;, it&apos;s partly in your endocrine system.
               Estrogen and progesterone directly influence serotonin, GABA, and the
               hypothalamic-pituitary-adrenal (HPA) axis, which controls your stress response.
               When these hormones fluctuate, your brain&apos;s anxiety thermostat can shift
@@ -236,8 +236,8 @@ export default function AnxietyTestForWomenPage() {
               <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-4">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Postpartum</h3>
                 <p className="text-sm">
-                  The massive hormone drop after delivery — estrogen falls by over 100-fold within
-                  48 hours — can trigger postpartum anxiety, which is at least as common as
+                  The massive hormone drop after delivery, estrogen falls by over 100-fold within
+                  48 hours, can trigger postpartum anxiety, which is at least as common as
                   postpartum depression but far less discussed.
                 </p>
               </div>
@@ -310,8 +310,7 @@ export default function AnxietyTestForWomenPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Research shows that women are more likely than men to engage in <strong>rumination</strong> —
-              the tendency to replay worries, analyze them from every angle, and mentally rehearse
+              Research shows that women are more likely than men to engage in <strong>rumination</strong>, the tendency to replay worries, analyze them from every angle, and mentally rehearse
               worst-case scenarios. Rumination doesn&apos;t feel like anxiety; it feels like problem-solving.
               But it keeps your stress response activated without ever reaching a resolution.
             </p>
@@ -352,7 +351,7 @@ export default function AnxietyTestForWomenPage() {
         <AnswerBlock
           what="A GAD-7-based anxiety screening with context on how anxiety uniquely affects women, including hormonal and social factors."
           who="Women experiencing anxiety symptoms who want a validated screening with gender-specific health context."
-          bottomLine="Women are twice as likely to be diagnosed with anxiety disorders — early screening leads to better outcomes. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Women are twice as likely to be diagnosed with anxiety disorders, early screening leads to better outcomes. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -398,7 +397,7 @@ export default function AnxietyTestForWomenPage() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Talk to your doctor</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Your primary care doctor or OB-GYN is a great first step. Bring your screening
-                results — it gives them something concrete to discuss. Anxiety disorders are highly
+                results, it gives them something concrete to discuss. Anxiety disorders are highly
                 treatable with therapy, lifestyle changes, and sometimes medication.
               </p>
             </div>
@@ -428,10 +427,10 @@ export default function AnxietyTestForWomenPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -439,7 +438,7 @@ export default function AnxietyTestForWomenPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose an anxiety disorder. Your responses are processed entirely in
             your browser and are never stored or transmitted. Always consult a qualified healthcare professional
             for medical advice.

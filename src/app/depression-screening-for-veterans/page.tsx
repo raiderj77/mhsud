@@ -34,7 +34,7 @@ const FAQ_DATA = [
   },
   {
     question: "What is the connection between PTSD and depression in veterans?",
-    answer: "PTSD and depression frequently co-occur in veterans. Studies estimate that approximately 50% of veterans with PTSD also have depression. The conditions share overlapping symptoms — sleep disturbance, difficulty concentrating, loss of interest, and emotional numbness. This screening focuses on depression, but if you suspect PTSD, discussing both with a healthcare provider is important.",
+    answer: "PTSD and depression frequently co-occur in veterans. Studies estimate that approximately 50% of veterans with PTSD also have depression. The conditions share overlapping symptoms, sleep disturbance, difficulty concentrating, loss of interest, and emotional numbness. This screening focuses on depression, but if you suspect PTSD, discussing both with a healthcare provider is important.",
   },
   {
     question: "Is this screening tool used by the VA?",
@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results affect my VA benefits or disability rating?",
-    answer: "No. This screening is completely private and runs entirely in your browser. Nothing is stored, transmitted, or shared with anyone — including the VA. Your results here have no connection to your VA records, benefits, or disability claims.",
+    answer: "No. This screening is completely private and runs entirely in your browser. Nothing is stored, transmitted, or shared with anyone, including the VA. Your results here have no connection to your VA records, benefits, or disability claims.",
   },
   {
     question: "What veteran-specific mental health resources are available?",
@@ -58,13 +58,13 @@ export default function DepressionScreeningForVeteransPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Depression Screening for Veterans — PHQ-9",
+              name: "Depression Screening for Veterans, PHQ-9",
               description: "A free, private depression screening tool for veterans using the clinically validated PHQ-9 questionnaire. Includes VA resources and veteran-specific mental health information.",
               url: TOOL_URL,
               datePublished: "2026-03-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -109,11 +109,11 @@ export default function DepressionScreeningForVeteransPage() {
             that used to matter don&apos;t anymore. Maybe you&apos;re going through the motions
             but can&apos;t feel much of anything. Maybe you&apos;re carrying something heavy
             and you&apos;re not sure what to call it. You don&apos;t have to call it anything
-            yet — you just have to be honest with yourself for a few minutes.
+            yet, you just have to be honest with yourself for a few minutes.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             The military trained you to push through pain. But depression isn&apos;t a mission
-            you can power through — and recognizing that isn&apos;t weakness. It&apos;s the
+            you can power through, and recognizing that isn&apos;t weakness. It&apos;s the
             same awareness that kept you and your team alive. This free, private screening uses
             the <strong>PHQ-9</strong>, the exact same tool used across VA facilities, to help
             you understand what&apos;s going on. It is <strong>not a diagnosis</strong>,
@@ -131,7 +131,7 @@ export default function DepressionScreeningForVeteransPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — not connected to the VA in any way.
+            Takes about 3 minutes. Completely private, not connected to the VA in any way.
           </p>
         </div>
 
@@ -145,9 +145,9 @@ export default function DepressionScreeningForVeteransPage() {
               <p className="text-2xl font-bold text-green-700 dark:text-green-300 mb-1">1 in 3 veterans</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Roughly one in three veterans visiting VA primary care clinics screen positive for
-                depression. It&apos;s far more common than most people — including many
-                veterans — realize.
-                <span className="text-slate-500 dark:text-slate-400"> — VA/DOD Clinical Practice Guidelines</span>
+                depression. It&apos;s far more common than most people, including many
+                veterans, realize.
+                <span className="text-slate-500 dark:text-slate-400">, VA/DOD Clinical Practice Guidelines</span>
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
@@ -155,8 +155,8 @@ export default function DepressionScreeningForVeteransPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 About half of veterans diagnosed with PTSD also have co-occurring depression.
                 The two conditions share symptoms like sleep problems, emotional numbness, and
-                loss of interest — which means depression can hide behind a PTSD diagnosis.
-                <span className="text-slate-500 dark:text-slate-400"> — RAND Corporation</span>
+                loss of interest, which means depression can hide behind a PTSD diagnosis.
+                <span className="text-slate-500 dark:text-slate-400">, RAND Corporation</span>
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
@@ -164,7 +164,7 @@ export default function DepressionScreeningForVeteransPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Veterans are 1.5 times more likely to die by suicide compared to non-veteran adults.
                 Early screening and connection to care are among the most effective prevention strategies.
-                <span className="text-slate-500 dark:text-slate-400"> — VA National Veteran Suicide Prevention Report</span>
+                <span className="text-slate-500 dark:text-slate-400">, VA National Veteran Suicide Prevention Report</span>
               </p>
             </div>
           </div>
@@ -184,8 +184,8 @@ export default function DepressionScreeningForVeteransPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>How it works:</strong> You&apos;ll answer 9 questions about how you&apos;ve been feeling over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day). Straightforward, no tricks.</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 27. Higher scores suggest more significant symptoms. You&apos;ll see the clinical ranges and what your score means in plain language.</p>
-                <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t distinguish between depression, PTSD, TBI-related symptoms, or grief. A healthcare provider can help sort that out — this gives you a starting point.</p>
-                <p><strong>Your privacy:</strong> This has no connection to the VA, DOD, or any government system. Nothing is stored or transmitted. No one can access your results — not the VA, not your chain of command, not anyone. When you close this page, your data is gone.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t distinguish between depression, PTSD, TBI-related symptoms, or grief. A healthcare provider can help sort that out, this gives you a starting point.</p>
+                <p><strong>Your privacy:</strong> This has no connection to the VA, DOD, or any government system. Nothing is stored or transmitted. No one can access your results, not the VA, not your chain of command, not anyone. When you close this page, your data is gone.</p>
               </div>
             </div>
           </div>
@@ -199,8 +199,8 @@ export default function DepressionScreeningForVeteransPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               Not all service-related depression comes from fear or danger. <strong>Moral
-              injury</strong> — the deep psychological wound from participating in, witnessing,
-              or failing to prevent events that violate your moral code — manifests primarily as
+              injury</strong>, the deep psychological wound from participating in, witnessing,
+              or failing to prevent events that violate your moral code, manifests primarily as
               depression, not the hyperarousal and flashbacks of classic PTSD. Veterans with
               moral injury describe pervasive shame, self-condemnation, withdrawal from
               relationships, and a collapse of the belief systems that once gave life meaning.
@@ -208,8 +208,7 @@ export default function DepressionScreeningForVeteransPage() {
             <p>
               Standard PTSD treatments (prolonged exposure, CPT) are designed for fear-based
               trauma and may not fully address moral injury. Emerging approaches like Adaptive
-              Disclosure Therapy and Impact of Killing — developed specifically for moral injury
-              — address the guilt, shame, and existential questions directly. If your depression
+              Disclosure Therapy and Impact of Killing, developed specifically for moral injury, address the guilt, shame, and existential questions directly. If your depression
               feels more like punishment you are inflicting on yourself than fear of external
               threats, moral injury is worth exploring with a provider who understands it.
             </p>
@@ -233,7 +232,7 @@ export default function DepressionScreeningForVeteransPage() {
             </p>
             <p>
               Research shows that depression risk peaks during the first two years after
-              separation, regardless of combat exposure. The loss is not just a job — it is a
+              separation, regardless of combat exposure. The loss is not just a job, it is a
               community, a structure, and an identity built over years or decades. Programs like
               the VA&apos;s Solid Start initiative, which proactively contacts recently separated
               veterans, exist because this transition window is so critical. If you separated
@@ -259,9 +258,8 @@ export default function DepressionScreeningForVeteransPage() {
               yoga, acupuncture, and meditation that are now offered at many VA facilities.
             </p>
             <p>
-              The VA also runs clinical trials for emerging treatments. Peer support specialists
-              — veterans who have navigated their own mental health recovery and are trained to
-              support others — are available through many VA facilities and veteran service
+              The VA also runs clinical trials for emerging treatments. Peer support specialists, veterans who have navigated their own mental health recovery and are trained to
+              support others, are available through many VA facilities and veteran service
               organizations like Team Red White &amp; Blue, Wounded Warrior Project, and Give an
               Hour. Sometimes the most effective support comes from someone who has carried the
               same weight and found a way forward.
@@ -287,7 +285,7 @@ export default function DepressionScreeningForVeteransPage() {
         <AnswerBlock
           what="A PHQ-9-based depression screening with military-specific context and veteran resources including VA services."
           who="Veterans and active duty service members who want to screen for depression with relevant support information."
-          bottomLine="Depression is the most common mental health condition among veterans — screening is a sign of strength. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Depression is the most common mental health condition among veterans, screening is a sign of strength. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -333,9 +331,9 @@ export default function DepressionScreeningForVeteransPage() {
             <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Veterans Crisis Line</h3>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                Dial <strong>988</strong> then press <strong>1</strong> — or text <strong>838255</strong>.
+                Dial <strong>988</strong> then press <strong>1</strong>, or text <strong>838255</strong>.
                 Free, confidential, 24/7. Staffed by people who understand military experience.
-                You don&apos;t need to be in immediate danger to call — they&apos;re there for
+                You don&apos;t need to be in immediate danger to call, they&apos;re there for
                 any level of distress.
               </p>
             </div>
@@ -367,13 +365,13 @@ export default function DepressionScreeningForVeteransPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>Veterans Crisis Line:</strong> Dial <strong>988</strong> then press <strong>1</strong> — or text <strong>838255</strong>
+              <strong>Veterans Crisis Line:</strong> Dial <strong>988</strong> then press <strong>1</strong>, or text <strong>838255</strong>
             </li>
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — available to everyone, 24/7
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, available to everyone, 24/7
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -381,7 +379,7 @@ export default function DepressionScreeningForVeteransPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose depression. Your responses are processed entirely in your
             browser and are never stored or transmitted. Always consult a qualified healthcare professional
             for medical advice.

@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -100,7 +101,7 @@ const TIERS: Tier[] = [
     borderLight: "border-orange-200",
     borderDark: "dark:border-orange-800",
     message:
-      "Your score of 44 or higher meets the commonly used research threshold for elevated loneliness. This suggests you are experiencing a significant level of disconnection and unmet social needs. Chronic loneliness at this level has been linked in research to increased risk for depression, anxiety, cardiovascular problems, and weakened immune function. This score does not mean something is wrong with you \u2014 loneliness is a signal that your social needs are not being met. Consider reaching out to a therapist, counselor, or one of the support resources listed below.",
+      "Your score of 44 or higher meets the commonly used research threshold for elevated loneliness. This suggests you are experiencing a significant level of disconnection and unmet social needs. Chronic loneliness at this level has been linked in research to increased risk for depression, anxiety, cardiovascular problems, and weakened immune function. This score does not mean something is wrong with you, loneliness is a signal that your social needs are not being met. Consider reaching out to a therapist, counselor, or one of the support resources listed below.",
   },
   {
     label: "High Loneliness",
@@ -216,6 +217,8 @@ export function UCLAClient({ faqData }: Props) {
             {tier.message}
           </p>
         </div>
+
+        <TherapyCTA show={isElevated} />
 
         <AdSlot position="results-top" />
 
@@ -335,7 +338,7 @@ export function UCLAClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Russell, D. W. (1996). UCLA Loneliness Scale (Version 3): Reliability, validity, and factor structure.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/8656507/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — UCLA Loneliness Scale Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/8656507/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, UCLA Loneliness Scale Validation</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Mental Health Information.{" "}
@@ -414,21 +417,21 @@ export function UCLAClient({ faqData }: Props) {
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
           <h2>About the UCLA Loneliness Scale</h2>
           <p>
-            The UCLA Loneliness Scale was originally developed by Daniel Russell, Letitia Anne Peplau, and Carolyn Cutrona at UCLA in 1978. The current Version 3 was published by Russell in 1996 and is the most widely used version today. It has been cited in thousands of studies and translated into dozens of languages. The scale was designed to measure subjective feelings of loneliness and social isolation &mdash; the discrepancy between the social connections a person wants and the connections they actually have.
+            The UCLA Loneliness Scale was originally developed by Daniel Russell, Letitia Anne Peplau, and Carolyn Cutrona at UCLA in 1978. The current Version 3 was published by Russell in 1996 and is the most widely used version today. It has been cited in thousands of studies and translated into dozens of languages. The scale was designed to measure subjective feelings of loneliness and social isolation, the discrepancy between the social connections a person wants and the connections they actually have.
           </p>
           <p>
-            Unlike earlier versions, Version 3 includes both positively and negatively worded items. The 9 positively worded items (which are reverse-scored) were added to reduce response bias &mdash; the tendency for some people to agree with every statement regardless of content. This design makes the scale more psychometrically robust.
+            Unlike earlier versions, Version 3 includes both positively and negatively worded items. The 9 positively worded items (which are reverse-scored) were added to reduce response bias, the tendency for some people to agree with every statement regardless of content. This design makes the scale more psychometrically robust.
           </p>
           <h2>What Loneliness Is (and Isn&rsquo;t)</h2>
           <p>
-            Loneliness is not the same as being alone. It is a subjective emotional experience &mdash; the painful feeling that your social connections are insufficient or unsatisfying. A person can feel lonely in a marriage, at a party, or in a large family. Conversely, a person who lives alone and has few social contacts may not feel lonely at all if those contacts meet their needs.
+            Loneliness is not the same as being alone. It is a subjective emotional experience, the painful feeling that your social connections are insufficient or unsatisfying. A person can feel lonely in a marriage, at a party, or in a large family. Conversely, a person who lives alone and has few social contacts may not feel lonely at all if those contacts meet their needs.
           </p>
           <p>
             Loneliness is also different from depression, although the two frequently co-occur. <Link href="/phq-9-depression-test">Depression</Link> involves a broader pattern of low mood, loss of interest, and other symptoms. Loneliness specifically concerns the felt quality of social connection. However, chronic loneliness is a significant risk factor for developing depression, and depression can lead to social withdrawal that deepens loneliness.
           </p>
           <h2>Health Effects of Chronic Loneliness</h2>
           <p>
-            Research over the past two decades has established that chronic loneliness is a serious public health concern. A landmark meta-analysis by Holt-Lunstad and colleagues (2015) found that loneliness and social isolation were associated with a 26% increased risk of mortality &mdash; comparable to the risk of smoking 15 cigarettes per day. Other research has linked chronic loneliness to increased inflammation, elevated cortisol levels, weakened immune function, cardiovascular disease, and accelerated cognitive decline.
+            Research over the past two decades has established that chronic loneliness is a serious public health concern. A landmark meta-analysis by Holt-Lunstad and colleagues (2015) found that loneliness and social isolation were associated with a 26% increased risk of mortality, comparable to the risk of smoking 15 cigarettes per day. Other research has linked chronic loneliness to increased inflammation, elevated cortisol levels, weakened immune function, cardiovascular disease, and accelerated cognitive decline.
           </p>
           <p>
             The U.S. Surgeon General issued an advisory in 2023 declaring loneliness and social isolation a public health epidemic, noting that approximately half of U.S. adults reported experiencing measurable levels of loneliness even before the COVID-19 pandemic.

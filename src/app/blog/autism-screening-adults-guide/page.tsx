@@ -27,7 +27,7 @@ const FAQ_DATA = [
   { question: "Can you be autistic and not know it?", answer: "Yes. Many autistic adults grow up without being identified, especially those who learned to mask their differences early. Women, people assigned female at birth, and individuals with high verbal ability are particularly likely to go unrecognized. If you have always felt different from peers or found social situations unusually exhausting, exploring further with a qualified professional may be worthwhile." },
   { question: "Is autism underdiagnosed in women?", answer: "Yes. Diagnostic criteria were historically developed from studies of boys, and autistic traits in women often present differently. Women are more likely to develop social masking strategies and present with co-occurring anxiety or depression rather than externalized behaviors. Studies suggest the true male-to-female ratio may be closer to 3:1 rather than the historically reported 4:1." },
   { question: "What is the AQ-10 screening test?", answer: "The AQ-10 is a brief, 10-question screening tool developed at the University of Cambridge Autism Research Centre. Derived from the longer 50-item Autism-Spectrum Quotient, each question asks about social, communication, or behavioral patterns. A score of 6 or higher suggests a full autism evaluation may be warranted. It is a screening tool, not a diagnostic instrument." },
-  { question: "Should I get a formal autism evaluation?", answer: "If you consistently identify with autism-associated traits \u2014 difficulty reading social cues, sensory sensitivities, strong need for routine, or feeling fundamentally different \u2014 a formal evaluation can provide clarity. Assessment by a psychologist with autism expertise typically involves developmental history, standardized tools, and sometimes family input. Identification can open doors to accommodations and support." },
+  { question: "Should I get a formal autism evaluation?", answer: "If you consistently identify with autism-associated traits, difficulty reading social cues, sensory sensitivities, strong need for routine, or feeling fundamentally different, a formal evaluation can provide clarity. Assessment by a psychologist with autism expertise typically involves developmental history, standardized tools, and sometimes family input. Identification can open doors to accommodations and support." },
 ];
 
 export default function AutismScreeningAdultsGuidePage() {
@@ -68,7 +68,7 @@ export default function AutismScreeningAdultsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Many adults discover they may be autistic later in life &mdash; sometimes in their thirties, forties, or beyond. If you have always felt like you experience the world differently from those around you, you are not alone. Late identification is common, and for many people it brings not a label but a sense of relief: it explains so much. This guide covers the signs of autism in adults, how the AQ-10 screening tool works, and what steps to take if you want to learn more.
+            Many adults discover they may be autistic later in life, sometimes in their thirties, forties, or beyond. If you have always felt like you experience the world differently from those around you, you are not alone. Late identification is common, and for many people it brings not a label but a sense of relief: it explains so much. This guide covers the signs of autism in adults, how the AQ-10 screening tool works, and what steps to take if you want to learn more.
           </p>
           <div className="mt-6">
             <Link href="/aq-10-autism-screening" className="btn-primary text-sm">
@@ -81,7 +81,7 @@ export default function AutismScreeningAdultsGuidePage() {
           <section>
             <h2>How common is autism in adults?</h2>
             <p>
-              Autism spectrum condition affects a significant portion of the population, though precise adult prevalence is difficult to pin down. The CDC estimates that approximately 1 in 36 children in the United States are identified as autistic based on 2023 surveillance data. However, adult prevalence data remains limited because widespread screening of children only became common in the last two decades. Many adults who are autistic were never identified as children &mdash; particularly those born before the 1990s, when awareness and diagnostic criteria were far narrower.
+              Autism spectrum condition affects a significant portion of the population, though precise adult prevalence is difficult to pin down. The CDC estimates that approximately 1 in 36 children in the United States are identified as autistic based on 2023 surveillance data. However, adult prevalence data remains limited because widespread screening of children only became common in the last two decades. Many adults who are autistic were never identified as children, particularly those born before the 1990s, when awareness and diagnostic criteria were far narrower.
             </p>
             <p>
               A large-scale UK study published in <em>Archives of General Psychiatry</em> estimated adult autism prevalence at roughly 1 in 100, but researchers acknowledge this is likely an undercount. The reality is that a substantial number of autistic adults remain unidentified, living without the language or framework to understand their experiences.
@@ -95,14 +95,14 @@ export default function AutismScreeningAdultsGuidePage() {
             </p>
             <div className="not-prose my-6 space-y-2">
               {[
-                { sign: "Social communication differences \u2014 difficulty reading facial expressions, tone of voice, or unwritten social rules; conversations feel like navigating without a map" },
-                { sign: "Sensory sensitivities \u2014 strong reactions to sounds, lights, textures, or smells that others barely notice; feeling overwhelmed in busy environments" },
-                { sign: "Preference for routine \u2014 distress when plans change unexpectedly; relying on predictable structures to feel safe and functional" },
-                { sign: "Intense focused interests \u2014 deep, absorbing engagement with specific topics or hobbies, sometimes to the exclusion of other activities" },
-                { sign: "Difficulty with unwritten social rules \u2014 struggling with small talk, knowing when it\u2019s your turn to speak, or understanding sarcasm and implied meanings" },
-                { sign: "Social exhaustion \u2014 feeling drained after social interactions, even enjoyable ones; needing significant recovery time alone" },
-                { sign: "Literal communication style \u2014 saying exactly what you mean and expecting others to do the same; confusion when people are indirect" },
-                { sign: "Executive function challenges \u2014 difficulty with planning, organizing, transitioning between tasks, or managing time" },
+                { sign: "Social communication differences, difficulty reading facial expressions, tone of voice, or unwritten social rules; conversations feel like navigating without a map" },
+                { sign: "Sensory sensitivities, strong reactions to sounds, lights, textures, or smells that others barely notice; feeling overwhelmed in busy environments" },
+                { sign: "Preference for routine, distress when plans change unexpectedly; relying on predictable structures to feel safe and functional" },
+                { sign: "Intense focused interests, deep, absorbing engagement with specific topics or hobbies, sometimes to the exclusion of other activities" },
+                { sign: "Difficulty with unwritten social rules, struggling with small talk, knowing when it\u2019s your turn to speak, or understanding sarcasm and implied meanings" },
+                { sign: "Social exhaustion, feeling drained after social interactions, even enjoyable ones; needing significant recovery time alone" },
+                { sign: "Literal communication style, saying exactly what you mean and expecting others to do the same; confusion when people are indirect" },
+                { sign: "Executive function challenges, difficulty with planning, organizing, transitioning between tasks, or managing time" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 card">
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-4 flex-shrink-0">{i + 1}</span>
@@ -111,7 +111,7 @@ export default function AutismScreeningAdultsGuidePage() {
               ))}
             </div>
             <p>
-              These traits exist on a spectrum. Some autistic adults experience significant daily challenges, while others have developed strategies that allow them to navigate most situations &mdash; often at a considerable internal cost.
+              These traits exist on a spectrum. Some autistic adults experience significant daily challenges, while others have developed strategies that allow them to navigate most situations, often at a considerable internal cost.
             </p>
           </section>
 
@@ -120,7 +120,7 @@ export default function AutismScreeningAdultsGuidePage() {
           <section>
             <h2>Why many adults go undiagnosed: masking and camouflaging</h2>
             <p>
-              One of the primary reasons autism goes unrecognized in adults is masking &mdash; also called camouflaging. Masking refers to the conscious or unconscious effort to suppress autistic traits and mimic neurotypical social behavior. This can include rehearsing conversations in advance, forcing eye contact, suppressing stimming (self-soothing repetitive movements), copying the social mannerisms of peers, and hiding sensory distress.
+              One of the primary reasons autism goes unrecognized in adults is masking, also called camouflaging. Masking refers to the conscious or unconscious effort to suppress autistic traits and mimic neurotypical social behavior. This can include rehearsing conversations in advance, forcing eye contact, suppressing stimming (self-soothing repetitive movements), copying the social mannerisms of peers, and hiding sensory distress.
             </p>
             <p>
               Masking is exhausting. Many autistic adults describe it as performing a role all day, every day, with no intermission. The long-term costs are significant: chronic fatigue, burnout, anxiety, depression, and a fractured sense of identity. People who mask successfully often appear &quot;fine&quot; to others, which is precisely why they are overlooked by clinicians and loved ones alike.
@@ -133,10 +133,10 @@ export default function AutismScreeningAdultsGuidePage() {
           <section>
             <h2>Autism in women and gender differences</h2>
             <p>
-              Autism has historically been studied and defined through a male lens. The original diagnostic criteria were developed primarily from observations of boys, and many clinicians still carry outdated assumptions about what autism &quot;looks like.&quot; As a result, women and people assigned female at birth are identified later, less often, and frequently only after receiving other labels first &mdash; anxiety, depression, borderline personality disorder, or simply being &quot;sensitive.&quot;
+              Autism has historically been studied and defined through a male lens. The original diagnostic criteria were developed primarily from observations of boys, and many clinicians still carry outdated assumptions about what autism &quot;looks like.&quot; As a result, women and people assigned female at birth are identified later, less often, and frequently only after receiving other labels first, anxiety, depression, borderline personality disorder, or simply being &quot;sensitive.&quot;
             </p>
             <p>
-              Autistic women often develop stronger social mimicry skills from a young age, driven by greater social pressure to conform. They may maintain friendships (though often finding them draining), perform well academically, and present with more internalized symptoms like anxiety and emotional overwhelm rather than the externalized behaviors clinicians are trained to spot. Their intense interests may also look more socially typical &mdash; psychology, animals, literature &mdash; making them less conspicuous.
+              Autistic women often develop stronger social mimicry skills from a young age, driven by greater social pressure to conform. They may maintain friendships (though often finding them draining), perform well academically, and present with more internalized symptoms like anxiety and emotional overwhelm rather than the externalized behaviors clinicians are trained to spot. Their intense interests may also look more socially typical, psychology, animals, literature, making them less conspicuous.
             </p>
             <p>
               The growing recognition of these differences has led to calls for updated diagnostic criteria and better-trained clinicians. If you are a woman or AFAB person who relates to the traits described in this article, know that your experience is valid, even if past clinicians did not recognize it.
@@ -148,20 +148,20 @@ export default function AutismScreeningAdultsGuidePage() {
           <section>
             <h2>What is the AQ-10 screening tool?</h2>
             <p>
-              The AQ-10 (Autism-Spectrum Quotient &mdash; 10 items) is a brief screening tool developed by Simon Baron-Cohen and colleagues at the <a href="https://www.autismresearchcentre.com/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Autism Research Centre</a> at the University of Cambridge. It is a shortened version of the full 50-item Autism-Spectrum Quotient (AQ) and is designed to quickly identify adults who may benefit from a comprehensive autism assessment.
+              The AQ-10 (Autism-Spectrum Quotient, 10 items) is a brief screening tool developed by Simon Baron-Cohen and colleagues at the <a href="https://www.autismresearchcentre.com/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Autism Research Centre</a> at the University of Cambridge. It is a shortened version of the full 50-item Autism-Spectrum Quotient (AQ) and is designed to quickly identify adults who may benefit from a comprehensive autism assessment.
             </p>
             <p>
               The AQ-10 consists of 10 statements about social interaction, communication patterns, attention to detail, and flexibility. You rate each statement based on how strongly you agree or disagree. A score of 6 or higher suggests that further evaluation for autism may be warranted.
             </p>
             <p>
-              It is important to understand what the AQ-10 is &mdash; and what it is not. It is a screening tool, not a diagnostic instrument. A high score does not mean you are autistic; a low score does not mean you are not. What it does is help you decide whether pursuing a fuller assessment makes sense for you. You can take our free <Link href="/aq-10-autism-screening" className="text-sage-600 dark:text-sage-400 underline">AQ-10 autism screening</Link> right now. Your answers are processed entirely in your browser and are never stored or shared.
+              It is important to understand what the AQ-10 is, and what it is not. It is a screening tool, not a diagnostic instrument. A high score does not mean you are autistic; a low score does not mean you are not. What it does is help you decide whether pursuing a fuller assessment makes sense for you. You can take our free <Link href="/aq-10-autism-screening" className="text-sage-600 dark:text-sage-400 underline">AQ-10 autism screening</Link> right now. Your answers are processed entirely in your browser and are never stored or shared.
             </p>
           </section>
 
           <section>
             <h2>Late identification can be validating</h2>
             <p>
-              For many adults, discovering they are autistic later in life is not a moment of crisis &mdash; it is a moment of clarity. Years of feeling different, of not understanding why social situations felt so effortful, of wondering why certain environments were unbearable while others were enlivening &mdash; all of it suddenly has a framework.
+              For many adults, discovering they are autistic later in life is not a moment of crisis, it is a moment of clarity. Years of feeling different, of not understanding why social situations felt so effortful, of wondering why certain environments were unbearable while others were enlivening, all of it suddenly has a framework.
             </p>
             <p>
               Late-identified adults frequently describe a wave of validation: &quot;It explains so much.&quot; Childhood memories are recontextualized. The exhaustion of decades of masking finally makes sense. Relationships with family and partners can deepen as everyone gains a better understanding of how the person experiences the world.
@@ -176,7 +176,7 @@ export default function AutismScreeningAdultsGuidePage() {
           <section>
             <h2>How to pursue a formal evaluation</h2>
             <p>
-              If you suspect you may be autistic, the path to formal identification typically begins with a comprehensive assessment conducted by a psychologist or psychiatrist who specializes in autism spectrum conditions in adults. This is a crucial distinction &mdash; not all mental health professionals have training in adult autism, and those without it may miss the signs or apply outdated criteria.
+              If you suspect you may be autistic, the path to formal identification typically begins with a comprehensive assessment conducted by a psychologist or psychiatrist who specializes in autism spectrum conditions in adults. This is a crucial distinction, not all mental health professionals have training in adult autism, and those without it may miss the signs or apply outdated criteria.
             </p>
             <p>
               A thorough evaluation generally includes a detailed developmental history (often with input from a parent or family member who knew you as a child), standardized assessment tools, observation, and screening for co-occurring conditions like anxiety, depression, or ADHD. The process may take multiple sessions.
@@ -225,7 +225,7 @@ export default function AutismScreeningAdultsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.
@@ -263,7 +263,7 @@ export default function AutismScreeningAdultsGuidePage() {
               </Link>
               <Link href="/asrs-adhd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ASRS ADHD Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">ADHD and autism frequently co-occur &mdash; screen for both</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">ADHD and autism frequently co-occur, screen for both</p>
               </Link>
             </div>
           </section>

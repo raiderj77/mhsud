@@ -33,11 +33,11 @@ const FAQ_DATA = [
   },
   {
     question: "How long should I do box breathing?",
-    answer: "Even 2 minutes (about 4-5 cycles) of box breathing can produce a noticeable calming effect. For ongoing stress management, 5-10 minutes is ideal. Many practitioners recommend starting with short sessions and gradually increasing as you get more comfortable with the technique. During an acute anxiety or panic episode, continue until you feel your heart rate slow and your body relax — typically 5-15 minutes. For daily practice, 5 minutes in the morning or before bed is a great starting point.",
+    answer: "Even 2 minutes (about 4-5 cycles) of box breathing can produce a noticeable calming effect. For ongoing stress management, 5-10 minutes is ideal. Many practitioners recommend starting with short sessions and gradually increasing as you get more comfortable with the technique. During an acute anxiety or panic episode, continue until you feel your heart rate slow and your body relax, typically 5-15 minutes. For daily practice, 5 minutes in the morning or before bed is a great starting point.",
   },
   {
     question: "Is 4-4-4-4 the only box breathing pattern?",
-    answer: "No. While 4-4-4-4 is the most common and well-known pattern, box breathing can be adapted to different durations. Beginners may find a 3-3-3-3 pattern more comfortable, while experienced practitioners may prefer 5-5-5-5 or even 6-6-6-6 for deeper relaxation. The key principle is that all four phases are equal in length, creating the 'box' or 'square' shape. Some people also vary the pattern — for example, extending the exhale (4-4-6-4) — but at that point it becomes a different breathing technique rather than traditional box breathing.",
+    answer: "No. While 4-4-4-4 is the most common and well-known pattern, box breathing can be adapted to different durations. Beginners may find a 3-3-3-3 pattern more comfortable, while experienced practitioners may prefer 5-5-5-5 or even 6-6-6-6 for deeper relaxation. The key principle is that all four phases are equal in length, creating the 'box' or 'square' shape. Some people also vary the pattern, for example, extending the exhale (4-4-6-4), but at that point it becomes a different breathing technique rather than traditional box breathing.",
   },
   {
     question: "Can box breathing help with anxiety and panic attacks?",
@@ -49,7 +49,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is box breathing the same as meditation?",
-    answer: "Box breathing is not the same as meditation, but it shares some principles and can be used as a meditation technique. Traditional meditation typically involves observing thoughts without judgment, while box breathing is a structured breathing exercise with specific timed intervals. However, the focused attention on breathing in box breathing produces a meditative state. A 2023 Stanford study found that structured breathing exercises like box breathing were actually more effective at improving mood and reducing anxiety than traditional mindfulness meditation. Both practices are valuable — they just work in different ways.",
+    answer: "Box breathing is not the same as meditation, but it shares some principles and can be used as a meditation technique. Traditional meditation typically involves observing thoughts without judgment, while box breathing is a structured breathing exercise with specific timed intervals. However, the focused attention on breathing in box breathing produces a meditative state. A 2023 Stanford study found that structured breathing exercises like box breathing were actually more effective at improving mood and reducing anxiety than traditional mindfulness meditation. Both practices are valuable, they just work in different ways.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function BoxBreathingPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />

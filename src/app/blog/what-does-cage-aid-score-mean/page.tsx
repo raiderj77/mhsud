@@ -32,22 +32,22 @@ const FAQ_DATA = [
   {
     question: "Is the CAGE-AID the same as the original CAGE?",
     answer:
-      "The original CAGE was developed for alcohol only. The CAGE-AID adapts the same four questions to include \u201cor drug use\u201d \u2014 making it applicable to any substance. Both versions use the same scoring and cutoff. The CAGE-AID is preferred when both alcohol and drug use are relevant to screen.",
+      "The original CAGE was developed for alcohol only. The CAGE-AID adapts the same four questions to include \u201cor drug use\u201d, making it applicable to any substance. Both versions use the same scoring and cutoff. The CAGE-AID is preferred when both alcohol and drug use are relevant to screen.",
   },
   {
     question: "I only drink occasionally. Can I still screen positive?",
     answer:
-      "Yes. The CAGE-AID focuses on consequences and patterns rather than quantity or frequency. Someone who drinks rarely but has had significant consequences when they do drink \u2014 feeling guilty, being criticized by others, wanting to cut down \u2014 can score positive. The AUDIT captures quantity and frequency more directly if that\u2019s the relevant concern.",
+      "Yes. The CAGE-AID focuses on consequences and patterns rather than quantity or frequency. Someone who drinks rarely but has had significant consequences when they do drink, feeling guilty, being criticized by others, wanting to cut down, can score positive. The AUDIT captures quantity and frequency more directly if that\u2019s the relevant concern.",
   },
   {
     question: "What does \u201ceye-opener\u201d mean exactly?",
     answer:
-      "The Eye-opener question asks whether you\u2019ve ever had a drink or used drugs first thing in the morning to steady your nerves, get rid of a hangover, or start the day. It\u2019s detecting whether the substance is being used to manage withdrawal symptoms or anxiety about the day \u2014 both indicators of physical or psychological dependence.",
+      "The Eye-opener question asks whether you\u2019ve ever had a drink or used drugs first thing in the morning to steady your nerves, get rid of a hangover, or start the day. It\u2019s detecting whether the substance is being used to manage withdrawal symptoms or anxiety about the day, both indicators of physical or psychological dependence.",
   },
   {
     question: "Can I stop on my own without professional help?",
     answer:
-      "If you\u2019ve been drinking heavily and regularly, stopping abruptly can carry medical risk \u2014 alcohol withdrawal can cause seizures and may require supervision. For other substances, withdrawal management varies. A healthcare provider can help determine the safest approach. Research shows that professional support significantly improves outcomes compared to attempting change alone.",
+      "If you\u2019ve been drinking heavily and regularly, stopping abruptly can carry medical risk, alcohol withdrawal can cause seizures and may require supervision. For other substances, withdrawal management varies. A healthcare provider can help determine the safest approach. Research shows that professional support significantly improves outcomes compared to attempting change alone.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            CAGE-AID scores range from 0 to 4. A score of <strong>2 or higher</strong> is the validated positive screen &mdash; it indicates that alcohol or drug use patterns warrant further evaluation. A score of 0&ndash;1 falls below the clinical threshold. The CAGE-AID is a brief four-question screen designed for primary care settings; a positive result is a flag for further assessment, not a diagnosis of substance use disorder.
+            CAGE-AID scores range from 0 to 4. A score of <strong>2 or higher</strong> is the validated positive screen, it indicates that alcohol or drug use patterns warrant further evaluation. A score of 0&ndash;1 falls below the clinical threshold. The CAGE-AID is a brief four-question screen designed for primary care settings; a positive result is a flag for further assessment, not a diagnosis of substance use disorder.
           </p>
         </header>
 
@@ -78,20 +78,20 @@ export default function WhatDoesCageAidScoreMeanPage() {
           <section>
             <h2>What is the CAGE-AID?</h2>
             <p>
-              The <strong>CAGE-AID</strong> (Cut down, Annoyed, Guilty, Eye-opener &mdash; Adapted to Include Drugs) is a four-question substance use screen developed by adapting the original CAGE alcohol screen (Ewing, 1984) to include drug use alongside alcohol. The adaptation was developed by Brown and Rounds (1995).
+              The <strong>CAGE-AID</strong> (Cut down, Annoyed, Guilty, Eye-opener, Adapted to Include Drugs) is a four-question substance use screen developed by adapting the original CAGE alcohol screen (Ewing, 1984) to include drug use alongside alcohol. The adaptation was developed by Brown and Rounds (1995).
             </p>
             <p>Each letter in CAGE represents one question:</p>
             <ul>
-              <li><strong>C &mdash; Cut down:</strong> Have you ever felt you should cut down on your drinking or drug use?</li>
-              <li><strong>A &mdash; Annoyed:</strong> Have people annoyed you by criticizing your drinking or drug use?</li>
-              <li><strong>G &mdash; Guilty:</strong> Have you ever felt bad or guilty about your drinking or drug use?</li>
-              <li><strong>E &mdash; Eye-opener:</strong> Have you ever had a drink or used drugs first thing in the morning to steady your nerves or to get rid of a hangover?</li>
+              <li><strong>C, Cut down:</strong> Have you ever felt you should cut down on your drinking or drug use?</li>
+              <li><strong>A, Annoyed:</strong> Have people annoyed you by criticizing your drinking or drug use?</li>
+              <li><strong>G, Guilty:</strong> Have you ever felt bad or guilty about your drinking or drug use?</li>
+              <li><strong>E, Eye-opener:</strong> Have you ever had a drink or used drugs first thing in the morning to steady your nerves or to get rid of a hangover?</li>
             </ul>
             <p>
               Each &quot;yes&quot; answer scores 1 point. The total ranges from 0&ndash;4.
             </p>
             <p>
-              The CAGE-AID is one of the briefest validated substance use screens available &mdash; the four questions can be answered in under a minute. You can <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">take the CAGE-AID screen here</Link>. Its brevity makes it practical for routine primary care screening, though it captures less detail than the AUDIT or WHO-ASSIST.
+              The CAGE-AID is one of the briefest validated substance use screens available, the four questions can be answered in under a minute. You can <Link href="/cage-aid-substance-abuse-screening" className="text-sage-600 dark:text-sage-400 underline">take the CAGE-AID screen here</Link>. Its brevity makes it practical for routine primary care screening, though it captures less detail than the AUDIT or WHO-ASSIST.
             </p>
           </section>
 
@@ -109,8 +109,8 @@ export default function WhatDoesCageAidScoreMeanPage() {
                 </thead>
                 <tbody className="text-neutral-600 dark:text-neutral-400">
                   <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">0</td><td className="py-2 pr-4">No indicators present</td><td className="py-2">No action needed</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">1</td><td className="py-2 pr-4">One indicator &mdash; low concern</td><td className="py-2">Monitor; consider open conversation about use</td></tr>
-                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">2&ndash;3</td><td className="py-2 pr-4">Positive screen &mdash; moderate to significant concern</td><td className="py-2">Brief intervention; formal assessment recommended</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">1</td><td className="py-2 pr-4">One indicator, low concern</td><td className="py-2">Monitor; consider open conversation about use</td></tr>
+                  <tr className="border-b border-neutral-100 dark:border-neutral-800"><td className="py-2 pr-4">2&ndash;3</td><td className="py-2 pr-4">Positive screen, moderate to significant concern</td><td className="py-2">Brief intervention; formal assessment recommended</td></tr>
                   <tr><td className="py-2 pr-4">4</td><td className="py-2 pr-4">Strong positive screen</td><td className="py-2">Prompt professional evaluation recommended</td></tr>
                 </tbody>
               </table>
@@ -123,15 +123,15 @@ export default function WhatDoesCageAidScoreMeanPage() {
           {/* Section 3 */}
           <section>
             <h2>What each question is detecting</h2>
-            <p>The CAGE-AID&apos;s four questions aren&apos;t random &mdash; each captures a distinct dimension of problematic substance use:</p>
+            <p>The CAGE-AID&apos;s four questions aren&apos;t random, each captures a distinct dimension of problematic substance use:</p>
             <p>
-              <strong>Cut down (C):</strong> The desire to cut down is one of the earliest signs of a developing problem &mdash; it indicates awareness that use has become more than recreational. People who have no problematic relationship with a substance rarely feel the need to cut down; those who do often have noticed that their use is exceeding their own intended limits.
+              <strong>Cut down (C):</strong> The desire to cut down is one of the earliest signs of a developing problem, it indicates awareness that use has become more than recreational. People who have no problematic relationship with a substance rarely feel the need to cut down; those who do often have noticed that their use is exceeding their own intended limits.
             </p>
             <p>
-              <strong>Annoyed (A):</strong> When others &mdash; family members, partners, friends, colleagues &mdash; are commenting on someone&apos;s use, that&apos;s externally observable evidence of impact. The fact that their concern is experienced as annoying rather than welcomed reflects the ambivalence and defensiveness that characterize problematic use.
+              <strong>Annoyed (A):</strong> When others, family members, partners, friends, colleagues, are commenting on someone&apos;s use, that&apos;s externally observable evidence of impact. The fact that their concern is experienced as annoying rather than welcomed reflects the ambivalence and defensiveness that characterize problematic use.
             </p>
             <p>
-              <strong>Guilty (G):</strong> Guilt about substance use indicates that the person&apos;s own values and the behavior are in conflict &mdash; a sign that the use is outside what the person would endorse as acceptable. It also often reflects consequences that have occurred as a result of use.
+              <strong>Guilty (G):</strong> Guilt about substance use indicates that the person&apos;s own values and the behavior are in conflict, a sign that the use is outside what the person would endorse as acceptable. It also often reflects consequences that have occurred as a result of use.
             </p>
             <p>
               <strong>Eye-opener (E):</strong> Using in the morning to manage withdrawal symptoms or to function is a strong indicator of physical dependence. This single question has the highest positive predictive value of the four for identifying severe alcohol use disorder specifically.
@@ -177,10 +177,10 @@ export default function WhatDoesCageAidScoreMeanPage() {
               A score of 0 means no CAGE-AID indicators were endorsed. Your responses don&apos;t suggest a pattern of problematic substance use based on these four dimensions.
             </p>
             <p>
-              A score of 0 does not rule out all substance use concerns &mdash; the CAGE-AID is brief and doesn&apos;t capture quantity/frequency information, and someone can use substances in physically risky amounts without yet experiencing the social/interpersonal indicators the CAGE captures. If quantity or frequency is a concern, the AUDIT is more sensitive for this.
+              A score of 0 does not rule out all substance use concerns, the CAGE-AID is brief and doesn&apos;t capture quantity/frequency information, and someone can use substances in physically risky amounts without yet experiencing the social/interpersonal indicators the CAGE captures. If quantity or frequency is a concern, the AUDIT is more sensitive for this.
             </p>
             <p>
-              A score of 1 falls below the positive screen threshold but isn&apos;t without meaning &mdash; it suggests at least one dimension of problematic use may be emerging. A score of 1 on the Eye-opener question specifically warrants particular attention even as a single-item endorsement, given its strong association with dependence.
+              A score of 1 falls below the positive screen threshold but isn&apos;t without meaning, it suggests at least one dimension of problematic use may be emerging. A score of 1 on the Eye-opener question specifically warrants particular attention even as a single-item endorsement, given its strong association with dependence.
             </p>
           </section>
 
@@ -190,10 +190,10 @@ export default function WhatDoesCageAidScoreMeanPage() {
           <section>
             <h2>Score of 2&ndash;3: positive screen</h2>
             <p>
-              Two or three indicators represent a positive screen. Multiple dimensions of problematic use &mdash; desire to cut down, external concern from others, personal guilt, or morning use &mdash; have been endorsed.
+              Two or three indicators represent a positive screen. Multiple dimensions of problematic use, desire to cut down, external concern from others, personal guilt, or morning use, have been endorsed.
             </p>
             <p>
-              At this level, brief intervention &mdash; a structured, non-judgmental conversation with a clinician about use patterns, consequences, and goals &mdash; is well-supported by evidence. Motivational interviewing and brief intervention have demonstrated efficacy at reducing substance use in this score range (Bien et al., 1993). This doesn&apos;t require a specialty addiction program &mdash; primary care providers, general practitioners, and counselors can deliver effective brief intervention.
+              At this level, brief intervention, a structured, non-judgmental conversation with a clinician about use patterns, consequences, and goals, is well-supported by evidence. Motivational interviewing and brief intervention have demonstrated efficacy at reducing substance use in this score range (Bien et al., 1993). This doesn&apos;t require a specialty addiction program, primary care providers, general practitioners, and counselors can deliver effective brief intervention.
             </p>
           </section>
 
@@ -201,16 +201,16 @@ export default function WhatDoesCageAidScoreMeanPage() {
           <section>
             <h2>Score of 4: strong positive screen</h2>
             <p>
-              All four indicators are endorsed. This reflects a pattern that touches multiple dimensions of problematic use &mdash; felt need to cut down, external concern, personal guilt, and morning use. This combination strongly suggests evaluation by a substance use specialist or addiction medicine physician is warranted.
+              All four indicators are endorsed. This reflects a pattern that touches multiple dimensions of problematic use, felt need to cut down, external concern, personal guilt, and morning use. This combination strongly suggests evaluation by a substance use specialist or addiction medicine physician is warranted.
             </p>
             <p>
-              A score of 4 &mdash; particularly with Eye-opener present &mdash; is consistent with moderate-to-severe substance use disorder. Effective, evidence-based treatment is available. Recovery is not only possible but common.
+              A score of 4, particularly with Eye-opener present, is consistent with moderate-to-severe substance use disorder. Effective, evidence-based treatment is available. Recovery is not only possible but common.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
-          {/* Section 8 — Co-occurring */}
+          {/* Section 8, Co-occurring */}
           <section>
             <h2>Substance use, mental health, and the connection</h2>
             <p>
@@ -218,7 +218,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
             </p>
             <ul>
               <li><strong>Depression:</strong> Both a risk factor for substance use (self-medication) and a common consequence</li>
-              <li><strong>Anxiety:</strong> The short-term anxiolytic effects of alcohol make it a common anxiety coping tool &mdash; with significant long-term cost</li>
+              <li><strong>Anxiety:</strong> The short-term anxiolytic effects of alcohol make it a common anxiety coping tool, with significant long-term cost</li>
               <li><strong>PTSD:</strong> Alcohol and drug use are among the most common PTSD coping strategies; co-occurring rates are high</li>
             </ul>
             <p>
@@ -241,9 +241,9 @@ export default function WhatDoesCageAidScoreMeanPage() {
               If you are struggling with substance use and need immediate support:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
             </ul>
           </div>
 

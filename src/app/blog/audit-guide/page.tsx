@@ -29,9 +29,9 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   { question: "What counts as 'one drink' in the AUDIT?", answer: "A standard drink varies by country but generally contains about 14 grams of pure alcohol (US definition). This is roughly equivalent to 12 oz of regular beer (5% alcohol), 5 oz of wine (12% alcohol), or 1.5 oz of distilled spirits (40% alcohol). Many drinks served in bars and at home exceed these amounts." },
-  { question: "Is it possible to score in the higher zones and not have an alcohol problem?", answer: "The AUDIT identifies patterns associated with risk — it doesn't diagnose disorders. It is possible for cultural drinking patterns, social context, or temporary changes in drinking to elevate a score. However, higher scores consistently correlate with increased risk in research, so professional follow-up is recommended regardless." },
+  { question: "Is it possible to score in the higher zones and not have an alcohol problem?", answer: "The AUDIT identifies patterns associated with risk, it doesn't diagnose disorders. It is possible for cultural drinking patterns, social context, or temporary changes in drinking to elevate a score. However, higher scores consistently correlate with increased risk in research, so professional follow-up is recommended regardless." },
   { question: "Should I stop drinking if my score is high?", answer: "If you drink heavily, do not stop suddenly without medical guidance. Alcohol withdrawal can be medically dangerous and sometimes life-threatening. Talk to a healthcare provider about how to safely reduce your drinking if that is your goal. Medical professionals can offer outpatient monitoring, medication-assisted tapering, or supervised detoxification when needed." },
-  { question: "How is the AUDIT different from the CAGE questionnaire?", answer: "The CAGE is a 4-question screen focused on dependence-related experiences (Cutting down, Annoyance, Guilt, Eye-opener). The AUDIT is broader — it covers consumption patterns, dependence symptoms, and alcohol-related harm across 10 questions. The AUDIT is generally considered more sensitive for detecting hazardous drinking before dependence develops." },
+  { question: "How is the AUDIT different from the CAGE questionnaire?", answer: "The CAGE is a 4-question screen focused on dependence-related experiences (Cutting down, Annoyance, Guilt, Eye-opener). The AUDIT is broader, it covers consumption patterns, dependence symptoms, and alcohol-related harm across 10 questions. The AUDIT is generally considered more sensitive for detecting hazardous drinking before dependence develops." },
   { question: "Why does the AUDIT ask about the past year instead of two weeks?", answer: "Alcohol-related patterns and consequences often develop over months, not weeks. The one-year timeframe captures episodic heavy drinking and consequences that might be missed in a shorter window. This is different from depression and anxiety screeners, which use two-week windows because mood symptoms can change more rapidly." },
   { question: "Can I use my AUDIT score to show my doctor?", answer: "Absolutely. Bringing a completed AUDIT to an appointment is a helpful way to start a conversation about alcohol. Many providers use the AUDIT themselves and find it useful. You might say: I took an alcohol screening and scored X, and I would like to discuss what that means for me." },
 ];
@@ -73,13 +73,13 @@ export default function AUDITGuidePage() {
           <section>
             <h2>What is the AUDIT?</h2>
             <p>
-              The Alcohol Use Disorders Identification Test (AUDIT) is a 10-question screening tool developed by the World Health Organization in the late 1980s. It was designed to identify people whose alcohol consumption may be putting them at risk — before problems become severe.
+              The Alcohol Use Disorders Identification Test (AUDIT) is a 10-question screening tool developed by the World Health Organization in the late 1980s. It was designed to identify people whose alcohol consumption may be putting them at risk, before problems become severe.
             </p>
             <p>
               The AUDIT is in the public domain, meaning it can be used, reproduced, and distributed freely. This openness has contributed to its adoption in primary care clinics, emergency departments, workplace wellness programs, and research studies across more than 30 countries.
             </p>
             <p>
-              What makes the AUDIT distinctive is its scope. Unlike some alcohol screens that focus narrowly on dependence, the AUDIT was explicitly designed to capture the full spectrum of alcohol-related risk — from hazardous drinking patterns to harmful use to possible dependence.
+              What makes the AUDIT distinctive is its scope. Unlike some alcohol screens that focus narrowly on dependence, the AUDIT was explicitly designed to capture the full spectrum of alcohol-related risk, from hazardous drinking patterns to harmful use to possible dependence.
             </p>
           </section>
 
@@ -105,10 +105,10 @@ export default function AUDITGuidePage() {
             </p>
             <div className="not-prose my-6 space-y-2">
               {[
-                { range: "0–7", level: "Zone I — Lower Risk", note: "Alcohol education and reinforcement of healthy patterns", color: "text-sage-600 dark:text-sage-400" },
-                { range: "8–15", level: "Zone II — Hazardous", note: "Simple advice and brief intervention by a clinician", color: "text-warm-600 dark:text-warm-400" },
-                { range: "16–19", level: "Zone III — Harmful", note: "Brief counseling and continued monitoring", color: "text-orange-600 dark:text-orange-400" },
-                { range: "20–40", level: "Zone IV — Possible Dependence", note: "Referral for comprehensive diagnostic evaluation and treatment", color: "text-crisis-600 dark:text-crisis-400" },
+                { range: "0–7", level: "Zone I, Lower Risk", note: "Alcohol education and reinforcement of healthy patterns", color: "text-sage-600 dark:text-sage-400" },
+                { range: "8–15", level: "Zone II, Hazardous", note: "Simple advice and brief intervention by a clinician", color: "text-warm-600 dark:text-warm-400" },
+                { range: "16–19", level: "Zone III, Harmful", note: "Brief counseling and continued monitoring", color: "text-orange-600 dark:text-orange-400" },
+                { range: "20–40", level: "Zone IV, Possible Dependence", note: "Referral for comprehensive diagnostic evaluation and treatment", color: "text-crisis-600 dark:text-crisis-400" },
               ].map((r) => (
                 <div key={r.range} className="flex items-start gap-3 p-3 card">
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">{r.range}</span>
@@ -120,7 +120,7 @@ export default function AUDITGuidePage() {
               ))}
             </div>
             <p>
-              These zones were designed to guide what type of intervention a clinician might offer — not to diagnose a specific condition. Zone II doesn&apos;t mean you &quot;have a problem&quot;; it means your drinking pattern is associated with increased risk in population-level research, and a brief conversation with a provider might be beneficial.
+              These zones were designed to guide what type of intervention a clinician might offer, not to diagnose a specific condition. Zone II doesn&apos;t mean you &quot;have a problem&quot;; it means your drinking pattern is associated with increased risk in population-level research, and a brief conversation with a provider might be beneficial.
             </p>
           </section>
 
@@ -129,7 +129,7 @@ export default function AUDITGuidePage() {
           <section>
             <h2>How clinicians use the AUDIT</h2>
             <p>
-              In primary care, the AUDIT is often used as part of routine screening — sometimes annually, sometimes when a provider suspects alcohol may be contributing to a patient&apos;s health concerns. Emergency departments also use it to identify patients whose visit may be alcohol-related.
+              In primary care, the AUDIT is often used as part of routine screening, sometimes annually, sometimes when a provider suspects alcohol may be contributing to a patient&apos;s health concerns. Emergency departments also use it to identify patients whose visit may be alcohol-related.
             </p>
             <p>
               The WHO developed the AUDIT alongside a framework called &quot;Screening, Brief Intervention, and Referral to Treatment&quot; (SBIRT). The idea is simple: screen everyone, provide brief advice to those at moderate risk, and refer those at high risk for specialized assessment. The AUDIT&apos;s four zones map directly to this intervention model.
@@ -142,10 +142,10 @@ export default function AUDITGuidePage() {
           <section>
             <h2>A critical safety note: alcohol withdrawal</h2>
             <p>
-              If you drink heavily — daily or near-daily, in large amounts — and are considering cutting down or stopping, please talk to a healthcare professional first. Unlike most other substances, alcohol withdrawal can be medically dangerous and in severe cases life-threatening. Symptoms can include tremors, seizures, confusion, and rapid heart rate.
+              If you drink heavily, daily or near-daily, in large amounts, and are considering cutting down or stopping, please talk to a healthcare professional first. Unlike most other substances, alcohol withdrawal can be medically dangerous and in severe cases life-threatening. Symptoms can include tremors, seizures, confusion, and rapid heart rate.
             </p>
             <p>
-              This is not said to discourage change — it is said to encourage safe change. Medical professionals can help you reduce your drinking in a way that is safe, whether through outpatient monitoring, medication-assisted tapering, or supervised detoxification when needed.
+              This is not said to discourage change, it is said to encourage safe change. Medical professionals can help you reduce your drinking in a way that is safe, whether through outpatient monitoring, medication-assisted tapering, or supervised detoxification when needed.
             </p>
           </section>
 
@@ -155,7 +155,7 @@ export default function AUDITGuidePage() {
               The AUDIT cannot diagnose alcohol use disorder or any specific condition. It cannot determine whether you are physically dependent on alcohol. It cannot account for individual differences in body weight, metabolism, tolerance, genetics, or co-occurring health conditions that affect how alcohol impacts you.
             </p>
             <p>
-              Like all self-report tools, it depends on honest responses. Underreporting is common with alcohol screening — stigma, denial, and minimization are well-documented in research. A low score does not necessarily mean low risk if you weren&apos;t fully honest with yourself while answering.
+              Like all self-report tools, it depends on honest responses. Underreporting is common with alcohol screening, stigma, denial, and minimization are well-documented in research. A low score does not necessarily mean low risk if you weren&apos;t fully honest with yourself while answering.
             </p>
           </section>
 

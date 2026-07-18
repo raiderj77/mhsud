@@ -86,8 +86,7 @@ export function ScoreInterpretationLayout({
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
           <Link href={toolPageHref} className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 font-medium">
             Take the {testAbbreviation} self-check now
-          </Link>{" "}
-          — free, private, and results stay in your browser.
+          </Link>{" "}, free, private, and results stay in your browser.
         </p>
       </div>
 
@@ -96,7 +95,12 @@ export function ScoreInterpretationLayout({
         <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
           {testAbbreviation} Score Ranges
         </h2>
-        <div className="overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700">
+        <div
+          className="overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700"
+          role="region"
+          aria-label={`${testAbbreviation} score range table`}
+          tabIndex={0}
+        >
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-sand-50 dark:bg-night-700">
@@ -119,7 +123,7 @@ export function ScoreInterpretationLayout({
           </table>
         </div>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
-          These ranges come from published research. Color and text labels are both provided — color is not the only indicator.
+          These ranges come from published research. Color and text labels are both provided, color is not the only indicator.
         </p>
       </section>
 
@@ -260,7 +264,7 @@ export function ScoreInterpretationLayout({
         <div className="space-y-2.5">
           {[
             { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988", color: "text-crisis-600 dark:text-crisis-400" },
-            { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+            { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
             { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
           ].map((r) => (
             <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">

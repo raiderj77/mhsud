@@ -2,7 +2,7 @@
 title: "What Is the PHQ-9 and How Is It Used"
 date: "2026-04-15"
 slug: "what-is-the-phq-9-and-how-is-it-used"
-description: ""
+description: "The PHQ-9 is a 9-question tool that measures how severe depression symptoms are. Learn who created it, how it is scored, and what it can and cannot tell you."
 status: published
 site: "mindchecktools.com"
 repo: "mhsud"
@@ -13,11 +13,11 @@ tags: [rex-draft, mindcheck, needs-review]
 
 # What Is the PHQ-9 and How Is It Used
 
-The PHQ-9 is a widely used mental health assessment tool that helps identify symptoms of depression and track their severity. It's a crucial part of a comprehensive mental wellness plan, but many people are unclear about what it is and how it's used.
+The PHQ-9 is a widely used mental health screening tool that helps identify symptoms of depression and track their severity. It's a crucial part of a comprehensive mental wellness plan, but many people are unclear about what it is and how it's used.
 
 ## What is the PHQ-9?
 
-The PHQ-9 stands for the Patient Health Questionnaire-9, a clinical tool developed by Dr. Robert L Spitzer, Dr. Janet G. Williams, and Dr. Kurt Kroenke in 1999. It's a simple, yet informative questionnaire consisting of nine questions that assess the presence and severity of depression symptoms.
+The PHQ-9 stands for the Patient Health Questionnaire-9, a nine-item depression module validated by Kurt Kroenke, MD, Robert L. Spitzer, MD, and Janet B.W. Williams, DSW, and published in 2001 in the *Journal of General Internal Medicine*. It grew out of their earlier work on the full PRIME-MD Patient Health Questionnaire, published in 1999. It's a simple, yet informative questionnaire consisting of nine questions that assess the presence and severity of depression symptoms.
 
 ## What Symptoms Does the PHQ-9 Measure?
 
@@ -40,7 +40,7 @@ Each question on the PHQ-9 assesses the severity of depression symptoms, helping
 The PHQ-9 is commonly used in:
 
 - Primary care settings: It helps physicians identify patients who may be experiencing depression, allowing them to provide timely interventions.
-- Mental health assessments: Healthcare providers use the PHQ-9 as a diagnostic tool to identify symptoms of depression and develop treatment plans.
+- Mental health assessments: Healthcare providers use the PHQ-9 as a screening tool to flag possible symptoms of depression and inform treatment planning.
 - Clinical trials: Researchers often use the PHQ-9 to measure the effectiveness of new depression treatments.
 - Tracking progress: Individuals use the PHQ-9 to monitor their mental health progress and identify areas that need improvement.
 
@@ -60,7 +60,7 @@ The PHQ-9 is designed for individuals 18 years and older, but it's crucial to re
 A: The PHQ-9 is a widely used mental health assessment tool that helps identify symptoms of depression and track their severity.
 
 **Q: How accurate is the PHQ-9?**
-A: The PHQ-9 has been validated for use in various patient populations and has been shown to be a reliable and accurate measure of depression symptoms.
+A: In the original 2001 validation study, the PHQ-9 showed good sensitivity and specificity against an independent clinician interview across roughly 6,000 primary care and OB-GYN patients. Like any screening tool, it estimates the likelihood and severity of symptoms; only a licensed clinician can confirm a diagnosis.
 
 **Q: Can the PHQ-9 diagnose depression?**
 A: No, the PHQ-9 is not a diagnostic tool. It's a measurement tool that helps identify symptoms of depression. Only a licensed mental health professional can provide an accurate diagnosis.
@@ -68,11 +68,17 @@ A: No, the PHQ-9 is not a diagnostic tool. It's a measurement tool that helps id
 **Q: Can I use the PHQ-9 on my own?**
 A: No, it's essential to use the PHQ-9 with the guidance of a licensed mental health professional to ensure accurate interpretation and to create a comprehensive treatment plan.
 
+## Sources
+
+- Kroenke K, Spitzer RL, Williams JBW. "The PHQ-9: Validity of a Brief Depression Severity Measure." *Journal of General Internal Medicine*. 2001;16(9):606-613.
+- Spitzer RL, Kroenke K, Williams JBW; Patient Health Questionnaire Primary Care Study Group. "Validation and Utility of a Self-Report Version of PRIME-MD: The PHQ Primary Care Study." *JAMA*. 1999;282(18):1737-1744.
+- American Psychiatric Association. *Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR)*. Washington, DC: APA, 2022.
+
 ## What Comes Next?
 
 The PHQ-9 is an essential tool for individuals, healthcare providers, and researchers to understand and tackle depression symptoms. If you're experiencing depression or know someone who is, don't hesitate to seek professional help.
 
 **Crisis Resources (24/7):**
-- **Call or text 988** — Suicide & Crisis Lifeline
-- **Text 741741** — Crisis Text Line
-- **Call 1-800-662-4357** — SAMHSA National Helpline (substance use & mental health)
+- **Call or text 988**, Suicide & Crisis Lifeline
+- **Text 741741**, Crisis Text Line
+- **Call 1-800-662-4357**, SAMHSA National Helpline (substance use & mental health)

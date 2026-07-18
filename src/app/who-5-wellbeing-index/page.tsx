@@ -40,17 +40,17 @@ const FAQ_DATA = [
   {
     question: "Is the WHO-5 a depression test?",
     answer:
-      "No. The WHO-5 is a general wellbeing measure, not a depression screening tool. It uses positively worded items (cheerfulness, calm, energy, rest, engagement) rather than asking about depressive symptoms. However, research has consistently shown that low WHO-5 scores are associated with depression, which is why a score below 50% is a signal to consider further evaluation with a depression-specific screener like the PHQ-9. The WHO-5 can detect reduced wellbeing from many causes — not just depression.",
+      "No. The WHO-5 is a general wellbeing measure, not a depression screening tool. It uses positively worded items (cheerfulness, calm, energy, rest, engagement) rather than asking about depressive symptoms. However, research has consistently shown that low WHO-5 scores are associated with depression, which is why a score below 50% is a signal to consider further evaluation with a depression-specific screener like the PHQ-9. The WHO-5 can detect reduced wellbeing from many causes, not just depression.",
   },
   {
     question: "How is the WHO-5 different from the PHQ-9 or GAD-7?",
     answer:
-      "The PHQ-9 screens specifically for depression symptoms, and the GAD-7 screens specifically for anxiety symptoms. Both use negatively framed questions about problems and difficulties. The WHO-5 measures positive wellbeing — it asks about good feelings and experiences rather than symptoms. This makes the WHO-5 less stigmatizing and useful as a general check-in, while the PHQ-9 and GAD-7 are more specific clinical screening tools. They complement each other well: a low WHO-5 score tells you something is off, and tools like the PHQ-9 can help identify what.",
+      "The PHQ-9 screens specifically for depression symptoms, and the GAD-7 screens specifically for anxiety symptoms. Both use negatively framed questions about problems and difficulties. The WHO-5 measures positive wellbeing, it asks about good feelings and experiences rather than symptoms. This makes the WHO-5 less stigmatizing and useful as a general check-in, while the PHQ-9 and GAD-7 are more specific clinical screening tools. They complement each other well: a low WHO-5 score tells you something is off, and tools like the PHQ-9 can help identify what.",
   },
   {
     question: "Can I use the WHO-5 to track my wellbeing over time?",
     answer:
-      "Yes, and this is one of its primary strengths. The WHO-5 is designed to be taken repeatedly — weekly, biweekly, or monthly — to monitor changes in wellbeing. A change of 10 percentage points or more from a previous score is considered clinically significant. Tracking your score over time can help you notice patterns related to seasons, life events, work stress, sleep changes, or treatment effects. Many clinicians use the WHO-5 as a routine monitoring tool for this reason.",
+      "Yes, and this is one of its primary strengths. The WHO-5 is designed to be taken repeatedly, weekly, biweekly, or monthly, to monitor changes in wellbeing. A change of 10 percentage points or more from a previous score is considered clinically significant. Tracking your score over time can help you notice patterns related to seasons, life events, work stress, sleep changes, or treatment effects. Many clinicians use the WHO-5 as a routine monitoring tool for this reason.",
   },
   {
     question: "Is my data private?",
@@ -74,7 +74,7 @@ export default function Who5Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -103,7 +103,7 @@ export default function Who5Page() {
         <AnswerBlock
           what="The WHO-5 Wellbeing Index, a 5-item screening from the World Health Organization that measures subjective psychological wellbeing."
           who="Anyone who wants a brief, validated check on their overall mental wellbeing using a WHO standard tool."
-          bottomLine="The WHO-5 is positive-framed — a low score indicates reduced wellbeing that may warrant further screening. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The WHO-5 is positive-framed, a low score indicates reduced wellbeing that may warrant further screening. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

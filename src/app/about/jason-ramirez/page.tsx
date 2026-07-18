@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/met
 
 export const metadata: Metadata = createMetadata({
   path: "/about/jason-ramirez",
-  title: "Jason Ramirez, CADC-II — Clinical Reviewer",
+  title: "Jason Ramirez, CADC-II, Clinical Reviewer",
   description:
     "Jason Ramirez is a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience who reviews all screening tools and educational content on MindCheck Tools.",
   keywords: [
@@ -83,7 +83,6 @@ const REVIEWED_TOOLS = [
   { name: "UCLA Loneliness Scale", href: "/ucla-loneliness-scale" },
   { name: "Athens Insomnia Scale", href: "/athens-insomnia-scale" },
   { name: "Brief Resilience Scale", href: "/brief-resilience-scale" },
-  { name: "Perceived Stress Scale", href: "/perceived-stress-scale" },
   { name: "Attachment Style Quiz", href: "/attachment-style-quiz" },
   { name: "Big Five Personality Test", href: "/big-five-personality-test" },
 ];

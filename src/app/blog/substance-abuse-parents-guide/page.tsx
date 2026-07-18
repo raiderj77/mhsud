@@ -70,7 +70,7 @@ export default function SubstanceAbuseParentsGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Parenting is one of the most demanding roles a person can hold &mdash; and one of the least supported. Sleep deprivation, relentless stress, financial pressure, identity loss, and cultural messages that normalize drinking as a parenting coping mechanism create a perfect storm for substance use to quietly escalate. If you are a parent wondering whether your drinking or substance use has crossed a line, you are not alone. This guide is about giving you the space to honestly evaluate your patterns &mdash; privately, without shame, and with clear next steps if you want them.
+            Parenting is one of the most demanding roles a person can hold, and one of the least supported. Sleep deprivation, relentless stress, financial pressure, identity loss, and cultural messages that normalize drinking as a parenting coping mechanism create a perfect storm for substance use to quietly escalate. If you are a parent wondering whether your drinking or substance use has crossed a line, you are not alone. This guide is about giving you the space to honestly evaluate your patterns, privately, without shame, and with clear next steps if you want them.
           </p>
         </header>
 
@@ -78,9 +78,9 @@ export default function SubstanceAbuseParentsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -94,14 +94,14 @@ export default function SubstanceAbuseParentsGuidePage() {
           <section>
             <h2>Why parents are uniquely vulnerable to substance use</h2>
             <p>
-              Parenting involves a set of stressors that overlap in ways few other life experiences match. Understanding these pressures is not about making excuses &mdash; it is about recognizing the context that makes substance use escalation so common among parents.
+              Parenting involves a set of stressors that overlap in ways few other life experiences match. Understanding these pressures is not about making excuses, it is about recognizing the context that makes substance use escalation so common among parents.
             </p>
             <ul>
-              <li><strong>Sleep deprivation:</strong> Chronic sleep loss &mdash; especially in the early years &mdash; impairs judgment, emotional regulation, and impulse control. Parents operating on fragmented sleep are neurologically more vulnerable to reaching for substances to manage their state.</li>
+              <li><strong>Sleep deprivation:</strong> Chronic sleep loss, especially in the early years, impairs judgment, emotional regulation, and impulse control. Parents operating on fragmented sleep are neurologically more vulnerable to reaching for substances to manage their state.</li>
               <li><strong>Unrelenting stress without recovery:</strong> Unlike a demanding job, parenting has no weekends, no PTO, and no clock-out time. The absence of genuine recovery periods creates chronic stress that compounds over months and years.</li>
-              <li><strong>&quot;Mommy wine culture&quot; and normalization:</strong> Social media, greeting cards, T-shirts, and playdate culture have normalized heavy drinking among parents &mdash; particularly mothers. &quot;Wine o&apos;clock,&quot; &quot;mama needs her juice,&quot; and &quot;it&apos;s five o&apos;clock somewhere&quot; messaging frames alcohol as a harmless parenting reward. This cultural normalization makes it harder to recognize when casual use has become problematic.</li>
+              <li><strong>&quot;Mommy wine culture&quot; and normalization:</strong> Social media, greeting cards, T-shirts, and playdate culture have normalized heavy drinking among parents, particularly mothers. &quot;Wine o&apos;clock,&quot; &quot;mama needs her juice,&quot; and &quot;it&apos;s five o&apos;clock somewhere&quot; messaging frames alcohol as a harmless parenting reward. This cultural normalization makes it harder to recognize when casual use has become problematic.</li>
               <li><strong>Isolation:</strong> New parents and stay-at-home parents often experience profound social isolation. Loneliness is a well-documented risk factor for substance use across all populations, and parents are not exempt.</li>
-              <li><strong>Loss of identity:</strong> Many parents describe losing themselves in the parenting role &mdash; their interests, friendships, career identity, and sense of self get compressed or eliminated. Substances can fill the void where a sense of self used to be.</li>
+              <li><strong>Loss of identity:</strong> Many parents describe losing themselves in the parenting role, their interests, friendships, career identity, and sense of self get compressed or eliminated. Substances can fill the void where a sense of self used to be.</li>
               <li><strong>Financial pressure:</strong> The cost of raising children creates persistent financial stress that compounds every other stressor. Financial anxiety is one of the most consistent predictors of increased alcohol and substance use.</li>
             </ul>
           </section>
@@ -114,17 +114,17 @@ export default function SubstanceAbuseParentsGuidePage() {
               Functional impairment from substance use may look different for parents than for other populations. Traditional screening questions often focus on workplace performance, legal problems, or physical health consequences. But for parents, the signs may be more subtle:
             </p>
             <ul>
-              <li>Consistently drinking after the children go to bed &mdash; and finding it difficult to skip a night</li>
+              <li>Consistently drinking after the children go to bed, and finding it difficult to skip a night</li>
               <li>Using substances specifically to cope with the stress, frustration, or boredom of parenting</li>
               <li>Hiding the amount you use from your partner or family members</li>
               <li>Feeling irritable or anxious if you cannot use at your usual time</li>
               <li>Planning activities around when you will be able to drink or use</li>
               <li>Driving with children after having &quot;just a couple&quot;</li>
               <li>Using substances to manage the emotional weight of parenting a child with special needs, behavioral challenges, or health issues</li>
-              <li>Noticing that your tolerance has increased &mdash; you need more to achieve the same effect</li>
+              <li>Noticing that your tolerance has increased, you need more to achieve the same effect</li>
             </ul>
             <p>
-              None of these patterns automatically indicate a substance use disorder. But they are worth examining honestly. The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> helps you evaluate these patterns in a structured, private way &mdash; no account required, no data stored, and no one sees your results.
+              None of these patterns automatically indicate a substance use disorder. But they are worth examining honestly. The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> helps you evaluate these patterns in a structured, private way, no account required, no data stored, and no one sees your results.
             </p>
           </section>
 
@@ -134,7 +134,7 @@ export default function SubstanceAbuseParentsGuidePage() {
               This section is not included to add guilt. Guilt is rarely a useful motivator and often makes substance use worse. But understanding the impact on children can clarify the stakes and motivate change.
             </p>
             <p>
-              The landmark Adverse Childhood Experiences (ACEs) study identified household substance use as one of the ten original ACE categories. Each ACE a child accumulates increases their statistical risk for physical health problems, mental health conditions, and substance use in adulthood. This is not destiny &mdash; it is probability, and it can be changed.
+              The landmark Adverse Childhood Experiences (ACEs) study identified household substance use as one of the ten original ACE categories. Each ACE a child accumulates increases their statistical risk for physical health problems, mental health conditions, and substance use in adulthood. This is not destiny, it is probability, and it can be changed.
             </p>
             <p>
               Parental substance use affects children through several pathways:
@@ -142,7 +142,7 @@ export default function SubstanceAbuseParentsGuidePage() {
             <ul>
               <li><strong>Attachment disruption:</strong> Children need consistent, emotionally available caregivers to form secure attachments. Substance use can create periods of emotional unavailability that disrupt this process.</li>
               <li><strong>Modeling behavior:</strong> Children learn coping strategies by watching their parents. If the primary model for managing stress is reaching for a drink or a substance, children internalize that pattern.</li>
-              <li><strong>Unpredictability:</strong> Even when use is not severe, it can create subtle inconsistencies in parenting &mdash; mood shifts, altered patience levels, or changes in responsiveness that children pick up on.</li>
+              <li><strong>Unpredictability:</strong> Even when use is not severe, it can create subtle inconsistencies in parenting, mood shifts, altered patience levels, or changes in responsiveness that children pick up on.</li>
               <li><strong>Intergenerational patterns:</strong> Research consistently shows that children of parents with substance use concerns are 2&ndash;4 times more likely to develop similar patterns themselves. Breaking this cycle is one of the most powerful things a parent can do.</li>
             </ul>
           </section>
@@ -155,13 +155,13 @@ export default function SubstanceAbuseParentsGuidePage() {
               If you feel resistance to looking honestly at your substance use, that is completely normal. Shame and stigma are the primary reasons parents avoid self-assessment and delay seeking help.
             </p>
             <p>
-              Parents &mdash; especially mothers &mdash; face a double bind. Society normalizes heavy drinking as a parenting coping mechanism, then punishes parents who develop problems from doing exactly what the culture encouraged. The fear of being seen as a &quot;bad parent,&quot; of losing custody, of being judged by other parents, keeps many people stuck in patterns they want to change.
+              Parents, especially mothers, face a double bind. Society normalizes heavy drinking as a parenting coping mechanism, then punishes parents who develop problems from doing exactly what the culture encouraged. The fear of being seen as a &quot;bad parent,&quot; of losing custody, of being judged by other parents, keeps many people stuck in patterns they want to change.
             </p>
             <p>
-              The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> exists precisely because of this barrier. It is designed for parents to evaluate their own patterns privately, without creating a record, without involving anyone else, and without judgment. Your answers stay in your browser. No one &mdash; not your partner, your doctor, your employer, or this website &mdash; ever sees them.
+              The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> exists precisely because of this barrier. It is designed for parents to evaluate their own patterns privately, without creating a record, without involving anyone else, and without judgment. Your answers stay in your browser. No one, not your partner, your doctor, your employer, or this website, ever sees them.
             </p>
             <p>
-              This screening is about your wellbeing AND your children&apos;s wellbeing. Recognizing that something may need to change is not a failure &mdash; it is responsible parenting.
+              This screening is about your wellbeing AND your children&apos;s wellbeing. Recognizing that something may need to change is not a failure, it is responsible parenting.
             </p>
           </section>
 

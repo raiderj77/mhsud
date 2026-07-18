@@ -33,7 +33,7 @@ const FAQ_DATA = [
   {
     question: "How long do cravings last?",
     answer:
-      "Most cravings peak within 15\u201330 minutes and naturally subside if you do not act on them. Intensity follows a wave-like pattern \u2014 rising, cresting, and falling. Some cravings may feel shorter or longer depending on the trigger, but they are always temporary. The key insight of urge surfing is that no craving lasts forever.",
+      "Most cravings peak within 15\u201330 minutes and naturally subside if you do not act on them. Intensity follows a wave-like pattern, rising, cresting, and falling. Some cravings may feel shorter or longer depending on the trigger, but they are always temporary. The key insight of urge surfing is that no craving lasts forever.",
   },
   {
     question: "Does urge surfing actually work?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "What if the urge doesn't go away?",
     answer:
-      "If an urge feels persistent, you may be fighting it rather than observing it \u2014 resistance intensifies cravings. Shift attention to the physical sensations: where in your body do you feel the urge? Cravings sometimes come in multiple waves, each peaking and passing. If cravings feel unmanageable, call SAMHSA\u2019s helpline at 1-800-662-4357.",
+      "If an urge feels persistent, you may be fighting it rather than observing it, resistance intensifies cravings. Shift attention to the physical sensations: where in your body do you feel the urge? Cravings sometimes come in multiple waves, each peaking and passing. If cravings feel unmanageable, call SAMHSA\u2019s helpline at 1-800-662-4357.",
   },
   {
     question: "Can urge surfing help with non-substance cravings?",
@@ -70,7 +70,7 @@ export default function UrgeSurfingGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Cravings feel permanent in the moment, but they are not. Every craving follows a predictable pattern &mdash; it rises, peaks, and falls like a wave. Urge surfing is a mindfulness technique developed by psychologist Alan Marlatt at the University of Washington that teaches you to ride that wave rather than be pulled under by it. Instead of fighting the craving or giving in, you observe it, breathe through it, and watch it pass.
+            Cravings feel permanent in the moment, but they are not. Every craving follows a predictable pattern, it rises, peaks, and falls like a wave. Urge surfing is a mindfulness technique developed by psychologist Alan Marlatt at the University of Washington that teaches you to ride that wave rather than be pulled under by it. Instead of fighting the craving or giving in, you observe it, breathe through it, and watch it pass.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function UrgeSurfingGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -99,7 +99,7 @@ export default function UrgeSurfingGuidePage() {
               Urge surfing is a mindfulness-based technique for managing cravings without acting on them. It was developed by Dr. Alan Marlatt, a pioneering researcher in addiction psychology at the University of Washington, as part of his work on relapse prevention in the 1980s and 1990s.
             </p>
             <p>
-              The core metaphor is simple: a craving is like an ocean wave. It starts small, builds in intensity, reaches a peak, and then naturally subsides. Most people try to either suppress the wave (white-knuckling) or get swept away by it (giving in). Urge surfing offers a third option &mdash; you learn to sit on the surfboard and ride the wave through to the other side.
+              The core metaphor is simple: a craving is like an ocean wave. It starts small, builds in intensity, reaches a peak, and then naturally subsides. Most people try to either suppress the wave (white-knuckling) or get swept away by it (giving in). Urge surfing offers a third option, you learn to sit on the surfboard and ride the wave through to the other side.
             </p>
             <p>
               The technique is a key component of Mindfulness-Based Relapse Prevention (MBRP), an evidence-based program that combines mindfulness meditation with cognitive-behavioral relapse prevention strategies. MBRP has been shown in randomized controlled trials to reduce substance use and craving intensity at follow-up periods of up to 12 months (Bowen et al., 2014).
@@ -109,10 +109,10 @@ export default function UrgeSurfingGuidePage() {
           <section>
             <h2>Why cravings peak and pass</h2>
             <p>
-              Understanding the neuroscience behind cravings makes urge surfing easier to trust. When you encounter a trigger &mdash; a place, person, emotion, or sensory cue associated with past substance use &mdash; your brain&apos;s reward pathways activate. Dopamine surges in the nucleus accumbens, creating an intense feeling of wanting.
+              Understanding the neuroscience behind cravings makes urge surfing easier to trust. When you encounter a trigger, a place, person, emotion, or sensory cue associated with past substance use, your brain&apos;s reward pathways activate. Dopamine surges in the nucleus accumbens, creating an intense feeling of wanting.
             </p>
             <p>
-              But this neurochemical response is temporary. Without reinforcement (meaning, without actually using the substance), the dopamine signal fades. The brain&apos;s prefrontal cortex &mdash; responsible for decision-making and impulse control &mdash; re-engages. Research consistently shows that most cravings peak within 15&ndash;30 minutes and then naturally diminish.
+              But this neurochemical response is temporary. Without reinforcement (meaning, without actually using the substance), the dopamine signal fades. The brain&apos;s prefrontal cortex, responsible for decision-making and impulse control, re-engages. Research consistently shows that most cravings peak within 15&ndash;30 minutes and then naturally diminish.
             </p>
             <p>
               Each time you ride out a craving without acting on it, you weaken the association between the trigger and the reward response. This is a process called extinction learning. Over time, the cravings become less frequent and less intense. Your brain literally rewires itself through the practice.
@@ -130,13 +130,13 @@ export default function UrgeSurfingGuidePage() {
               <strong>Step 1: Notice the urge.</strong> When a craving appears, pause and acknowledge it. Say to yourself, &quot;I am having a craving right now.&quot; This simple act of labeling creates cognitive distance between you and the urge. You are the observer, not the urge itself.
             </p>
             <p>
-              <strong>Step 2: Locate it in your body.</strong> Cravings always have a physical component. Where do you feel it? Your chest, stomach, throat, jaw? What does it feel like &mdash; tightness, heat, restlessness, a gnawing sensation? Get curious about the physical experience rather than the story your mind is telling about it.
+              <strong>Step 2: Locate it in your body.</strong> Cravings always have a physical component. Where do you feel it? Your chest, stomach, throat, jaw? What does it feel like, tightness, heat, restlessness, a gnawing sensation? Get curious about the physical experience rather than the story your mind is telling about it.
             </p>
             <p>
-              <strong>Step 3: Breathe into it.</strong> Direct your breath toward the area where you feel the craving most intensely. Breathe slowly and steadily &mdash; in for four counts, out for six. You are not trying to make the craving go away. You are creating space around it.
+              <strong>Step 3: Breathe into it.</strong> Direct your breath toward the area where you feel the craving most intensely. Breathe slowly and steadily, in for four counts, out for six. You are not trying to make the craving go away. You are creating space around it.
             </p>
             <p>
-              <strong>Step 4: Watch the wave.</strong> Observe how the sensations change moment to moment. The craving will fluctuate &mdash; intensifying, shifting location, easing, maybe surging again. Stay with it. Notice that it is not static. It is moving, changing, and eventually fading.
+              <strong>Step 4: Watch the wave.</strong> Observe how the sensations change moment to moment. The craving will fluctuate, intensifying, shifting location, easing, maybe surging again. Stay with it. Notice that it is not static. It is moving, changing, and eventually fading.
             </p>
             <p>
               <strong>Step 5: Let it pass.</strong> Within 15&ndash;30 minutes (often sooner), the craving will subside on its own. You did not fight it, and you did not feed it. You surfed it. The <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 underline">urge surfing timer</Link> can guide you through this process with timed intervals and gentle prompts.
@@ -151,7 +151,7 @@ export default function UrgeSurfingGuidePage() {
             <ul>
               <li><strong>Timed intervals:</strong> The timer shows you exactly how long you have been sitting with the craving, reinforcing that time is passing and the peak will come.</li>
               <li><strong>Guided prompts:</strong> At key moments, the timer prompts you to check in with your body, adjust your breathing, and observe changes in intensity.</li>
-              <li><strong>Visual evidence:</strong> Watching the timer count up provides concrete proof that you are getting through it &mdash; something that feels impossible to believe mid-craving.</li>
+              <li><strong>Visual evidence:</strong> Watching the timer count up provides concrete proof that you are getting through it, something that feels impossible to believe mid-craving.</li>
             </ul>
             <p>
               The timer is free, private, and runs entirely in your browser. No data is stored or transmitted. You can use it alongside other coping strategies from the <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> or pair it with a <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline">HALT check-in</Link> to identify whether hunger, anger, loneliness, or tiredness is amplifying your craving.
@@ -163,7 +163,7 @@ export default function UrgeSurfingGuidePage() {
           <section>
             <h2>The evidence base for urge surfing</h2>
             <p>
-              Urge surfing is not a folk remedy &mdash; it is grounded in established psychological research. The technique draws on two well-supported principles:
+              Urge surfing is not a folk remedy, it is grounded in established psychological research. The technique draws on two well-supported principles:
             </p>
             <ul>
               <li><strong>Classical conditioning and extinction:</strong> Cravings are conditioned responses to triggers. When the trigger occurs without the reward (substance use), the conditioned response gradually weakens. This is the same principle behind exposure therapy for phobias.</li>
@@ -180,12 +180,12 @@ export default function UrgeSurfingGuidePage() {
           <section>
             <h2>Common challenges and how to overcome them</h2>
             <p>
-              Urge surfing sounds simple, but it is not easy &mdash; especially at first. Here are common obstacles and how to work through them:
+              Urge surfing sounds simple, but it is not easy, especially at first. Here are common obstacles and how to work through them:
             </p>
             <ul>
               <li><strong>&quot;I can&apos;t stop thinking about using.&quot;</strong> That is okay. Urge surfing does not require you to stop thinking about the substance. It asks you to shift attention from the thoughts to the physical sensations in your body. The thoughts will still be there, but they lose their power when you stop engaging with them.</li>
-              <li><strong>&quot;The craving keeps getting stronger.&quot;</strong> This usually happens when you are unconsciously fighting the craving. Resistance amplifies intensity. Try softening your stance &mdash; &quot;This is uncomfortable, and it will pass&quot; rather than &quot;Make this stop.&quot;</li>
-              <li><strong>&quot;I don&apos;t have 20 minutes to sit with this.&quot;</strong> Even 5 minutes of urge surfing can disrupt the automatic trigger-to-use pattern. You do not need to wait for the craving to fully pass &mdash; even partial surfing builds the skill.</li>
+              <li><strong>&quot;The craving keeps getting stronger.&quot;</strong> This usually happens when you are unconsciously fighting the craving. Resistance amplifies intensity. Try softening your stance, &quot;This is uncomfortable, and it will pass&quot; rather than &quot;Make this stop.&quot;</li>
+              <li><strong>&quot;I don&apos;t have 20 minutes to sit with this.&quot;</strong> Even 5 minutes of urge surfing can disrupt the automatic trigger-to-use pattern. You do not need to wait for the craving to fully pass, even partial surfing builds the skill.</li>
               <li><strong>&quot;It works sometimes but not always.&quot;</strong> Urge surfing is a skill that improves with practice. It is also one tool among many. Combine it with the strategies in your <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">relapse prevention plan</Link> for a comprehensive approach.</li>
             </ul>
           </section>

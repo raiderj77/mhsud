@@ -19,13 +19,14 @@ export function TherapyCTA({ show }: Props) {
       <a
         href={url}
         target="_blank"
-        rel="nofollow sponsored noopener"
+        rel="nofollow sponsored noopener noreferrer"
+        referrerPolicy="no-referrer"
         className="inline-block bg-sage-600 hover:bg-sage-700 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors"
       >
         Find a therapist
       </a>
-      <p className="text-[11px] text-neutral-400 dark:text-neutral-500 leading-relaxed mt-2">
-        We earn a commission if you sign up through this link; this does not change our recommendations.
+      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-4 pt-4 border-t border-sage-200 dark:border-sage-800">
+        <strong>Affiliate Disclosure:</strong> We may earn a commission if you sign up through this link. This does not change the price you pay or our editorial standards. Your screening answers and score are not sent with the link.
       </p>
     </div>
   );

@@ -162,7 +162,7 @@ export function Footer() {
             {/* Resources links */}
             <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">Resources</h4>
             <ul className="space-y-1.5">
-              {INFO_LINKS.map((link) => (
+              {INFO_LINKS.filter((link) => link.href !== "/blog").map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
                     {link.label}
@@ -206,17 +206,8 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Targeted Screenings */}
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2 mt-6">Targeted Screenings</h4>
-            <ul className="space-y-1.5">
-              {TARGETED_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Scaled demographic variants are quarantined pending individual review. */}
+            {false && TARGETED_LINKS.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
           </div>
 
           {/* Recovery Tools column */}
@@ -278,7 +269,7 @@ export function Footer() {
             These screening tools are for informational purposes only and are not a substitute for professional medical or mental health advice. Always consult a qualified healthcare provider or licensed mental health professional regarding any mental health concerns. Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto mt-2">
-            If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) — available 24/7.
+            If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), available 24/7.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
             This site may display ads to support free tools. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.

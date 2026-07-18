@@ -30,18 +30,18 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Does poor sleep cause depression, or does depression cause poor sleep?", answer: "Both. Research consistently shows a bidirectional relationship. Insomnia increases the risk of developing depression by roughly five times, and about 75% of people with depression experience insomnia. They reinforce each other in a cycle — poor sleep worsens mood, and low mood disrupts sleep. Breaking the cycle often requires addressing both sides." },
-  { question: "Am I depressed or just not sleeping enough?", answer: "It can be hard to tell because sleep deprivation and depression share many symptoms — fatigue, difficulty concentrating, irritability, and low motivation. A useful (though imperfect) test: if you get several nights of genuinely good sleep and still feel persistently low, depression may be a factor. Either way, talking to a healthcare provider can help you sort it out." },
-  { question: "How many hours of sleep do I need to protect my mental health?", answer: "Most research points to 7-9 hours for adults. Studies show that both sleeping less than 6 hours and more than 9 hours are associated with higher rates of depression and anxiety. However, individual needs vary — the best measure is whether you feel rested and can function well during the day." },
-  { question: "Why do I feel anxious when I wake up in the morning?", answer: "Morning anxiety is common and has a physiological basis. Cortisol — your body&apos;s primary stress hormone — naturally peaks about 30-45 minutes after waking (called the cortisol awakening response). If you&apos;re already anxious or stressed, this natural spike can feel like a wave of dread. Poor sleep the night before amplifies the effect." },
-  { question: "Can improving sleep actually reduce anxiety and depression symptoms?", answer: "Yes. A meta-analysis published in Sleep Medicine Reviews found that treating insomnia with cognitive behavioral therapy (CBT-I) produced significant improvements in depression, anxiety, and overall psychological well-being — even when those conditions weren't directly treated. Sleep is not the whole picture, but it is often a powerful lever." },
-  { question: "Is sleeping too much a sign of depression?", answer: "It can be. While insomnia gets more attention, about 15% of people with depression experience hypersomnia — sleeping excessively and still feeling exhausted. If you&apos;re regularly sleeping 10+ hours and still feel tired, or if you&apos;re using sleep to escape how you feel, it&apos;s worth discussing with a healthcare provider." },
+  { question: "Does poor sleep cause depression, or does depression cause poor sleep?", answer: "Both. Research consistently shows a bidirectional relationship. Insomnia increases the risk of developing depression by roughly five times, and about 75% of people with depression experience insomnia. They reinforce each other in a cycle, poor sleep worsens mood, and low mood disrupts sleep. Breaking the cycle often requires addressing both sides." },
+  { question: "Am I depressed or just not sleeping enough?", answer: "It can be hard to tell because sleep deprivation and depression share many symptoms, fatigue, difficulty concentrating, irritability, and low motivation. A useful (though imperfect) test: if you get several nights of genuinely good sleep and still feel persistently low, depression may be a factor. Either way, talking to a healthcare provider can help you sort it out." },
+  { question: "How many hours of sleep do I need to protect my mental health?", answer: "Most research points to 7-9 hours for adults. Studies show that both sleeping less than 6 hours and more than 9 hours are associated with higher rates of depression and anxiety. However, individual needs vary, the best measure is whether you feel rested and can function well during the day." },
+  { question: "Why do I feel anxious when I wake up in the morning?", answer: "Morning anxiety is common and has a physiological basis. Cortisol, your body&apos;s primary stress hormone, naturally peaks about 30-45 minutes after waking (called the cortisol awakening response). If you&apos;re already anxious or stressed, this natural spike can feel like a wave of dread. Poor sleep the night before amplifies the effect." },
+  { question: "Can improving sleep actually reduce anxiety and depression symptoms?", answer: "Yes. A meta-analysis published in Sleep Medicine Reviews found that treating insomnia with cognitive behavioral therapy (CBT-I) produced significant improvements in depression, anxiety, and overall psychological well-being, even when those conditions weren't directly treated. Sleep is not the whole picture, but it is often a powerful lever." },
+  { question: "Is sleeping too much a sign of depression?", answer: "It can be. While insomnia gets more attention, about 15% of people with depression experience hypersomnia, sleeping excessively and still feeling exhausted. If you&apos;re regularly sleeping 10+ hours and still feel tired, or if you&apos;re using sleep to escape how you feel, it&apos;s worth discussing with a healthcare provider." },
 ];
 
 export default function SleepMoodPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)", description: "The science behind the sleep-mood connection — why poor sleep worsens anxiety and depression, and what to do about it.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)", description: "The science behind the sleep-mood connection, why poor sleep worsens anxiety and depression, and what to do about it.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Sleep & Mood Guide", url: ARTICLE_URL }])) }} />
 
@@ -76,7 +76,7 @@ export default function SleepMoodPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            You already know you feel terrible after a bad night&apos;s sleep. But the relationship between sleep and mood goes far deeper than grogginess. Research shows that sleep and mental health are locked in a bidirectional cycle — each one powerfully shaping the other. This guide explains what the science says, how to recognize when sleep is undermining your mental health, and what you can actually do about it.
+            You already know you feel terrible after a bad night&apos;s sleep. But the relationship between sleep and mood goes far deeper than grogginess. Research shows that sleep and mental health are locked in a bidirectional cycle, each one powerfully shaping the other. This guide explains what the science says, how to recognize when sleep is undermining your mental health, and what you can actually do about it.
           </p>
           <div className="mt-6">
             <Link href="/sleep-and-mood-check" className="btn-primary text-sm">
@@ -90,9 +90,9 @@ export default function SleepMoodPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -107,10 +107,10 @@ export default function SleepMoodPage() {
           <section>
             <h2>The sleep-mood connection: it goes both ways</h2>
             <p>
-              The relationship between sleep and mood is not one-directional. Poor sleep doesn&apos;t just make you cranky — it fundamentally alters how your brain processes emotions. And emotional distress doesn&apos;t just keep you up at night — it restructures your sleep architecture in ways that perpetuate the problem.
+              The relationship between sleep and mood is not one-directional. Poor sleep doesn&apos;t just make you cranky, it fundamentally alters how your brain processes emotions. And emotional distress doesn&apos;t just keep you up at night, it restructures your sleep architecture in ways that perpetuate the problem.
             </p>
             <p>
-              A landmark meta-analysis from the American Psychological Association, covering over 50 years of research and more than 5,000 participants, found that sleep deprivation significantly reduces positive mood while increasing anxiety. Notably, the effects on anxiety were even stronger than the effects on general mood — meaning lost sleep hits your emotional stability particularly hard.
+              A landmark meta-analysis from the American Psychological Association, covering over 50 years of research and more than 5,000 participants, found that sleep deprivation significantly reduces positive mood while increasing anxiety. Notably, the effects on anxiety were even stronger than the effects on general mood, meaning lost sleep hits your emotional stability particularly hard.
             </p>
             <p>
               On the other side, insomnia is one of the strongest predictors of developing depression. People with persistent insomnia are roughly five times more likely to develop depression than those who sleep well. And approximately 75% of people already experiencing depression report significant sleep disturbance. The two conditions feed each other in a cycle that can be difficult to break without intentional intervention.
@@ -120,13 +120,13 @@ export default function SleepMoodPage() {
           <section>
             <h2>What happens to your brain when you don&apos;t sleep</h2>
             <p>
-              Sleep deprivation doesn&apos;t just make you tired — it changes how your brain functions at a neurological level. Brain imaging studies show that after just one night of poor sleep, the amygdala (your brain&apos;s threat-detection center) becomes roughly 60% more reactive to negative stimuli. At the same time, the prefrontal cortex — the region responsible for rational thinking and emotional regulation — becomes less connected to the amygdala.
+              Sleep deprivation doesn&apos;t just make you tired, it changes how your brain functions at a neurological level. Brain imaging studies show that after just one night of poor sleep, the amygdala (your brain&apos;s threat-detection center) becomes roughly 60% more reactive to negative stimuli. At the same time, the prefrontal cortex, the region responsible for rational thinking and emotional regulation, becomes less connected to the amygdala.
             </p>
             <p>
               In practical terms, this means you literally lose some of your ability to regulate emotions when you&apos;re sleep-deprived. Small frustrations feel bigger. Anxious thoughts spiral more easily. The gap between a triggering event and your emotional reaction narrows, making it harder to pause, assess, and respond thoughtfully.
             </p>
             <p>
-              Sleep also plays a critical role in processing emotional memories. During REM sleep, your brain integrates emotional experiences from the day, essentially stripping the emotional charge from memories while preserving the information. When REM sleep is disrupted — as it commonly is in both insomnia and depression — emotional memories remain &quot;raw,&quot; contributing to next-day irritability, anxiety, and mood instability.
+              Sleep also plays a critical role in processing emotional memories. During REM sleep, your brain integrates emotional experiences from the day, essentially stripping the emotional charge from memories while preserving the information. When REM sleep is disrupted, as it commonly is in both insomnia and depression, emotional memories remain &quot;raw,&quot; contributing to next-day irritability, anxiety, and mood instability.
             </p>
           </section>
 
@@ -154,14 +154,14 @@ export default function SleepMoodPage() {
               ))}
             </div>
             <p>
-              If several of these resonate, sleep is likely playing a role in your mental health — even if it&apos;s not the only factor. The good news is that sleep is often one of the most actionable things you can address.
+              If several of these resonate, sleep is likely playing a role in your mental health, even if it&apos;s not the only factor. The good news is that sleep is often one of the most actionable things you can address.
             </p>
           </section>
 
           <section>
             <h2>Am I depressed or just tired? How to tell</h2>
             <p>
-              Sleep deprivation and depression share so many symptoms that distinguishing them can be genuinely difficult. Both cause fatigue, poor concentration, low motivation, irritability, and reduced interest in activities. This is not a coincidence — the neurological pathways involved overlap significantly.
+              Sleep deprivation and depression share so many symptoms that distinguishing them can be genuinely difficult. Both cause fatigue, poor concentration, low motivation, irritability, and reduced interest in activities. This is not a coincidence, the neurological pathways involved overlap significantly.
             </p>
             <p>
               A few clues that may help you (and your healthcare provider) sort it out:
@@ -172,7 +172,7 @@ export default function SleepMoodPage() {
                 { label: "Interest in activities", tired: "You want to do things but lack energy", depressed: "You've lost interest even in things you used to enjoy" },
                 { label: "Emotional range", tired: "Mostly irritable or foggy", depressed: "Persistent sadness, emptiness, or hopelessness" },
                 { label: "Self-perception", tired: "You feel like yourself, just exhausted", depressed: "You feel worthless, guilty, or fundamentally different" },
-                { label: "Duration", tired: "Tracks with sleep quality — better sleep, better mood", depressed: "Persists regardless of sleep improvements" },
+                { label: "Duration", tired: "Tracks with sleep quality, better sleep, better mood", depressed: "Persists regardless of sleep improvements" },
               ].map((r) => (
                 <div key={r.label} className="card p-3">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{r.label}</p>
@@ -184,7 +184,7 @@ export default function SleepMoodPage() {
               ))}
             </div>
             <p>
-              Importantly, it doesn&apos;t have to be one or the other. Sleep deprivation can cause depressive symptoms, and depression can cause sleep deprivation. If you&apos;re unsure, a professional can help you untangle the causes — our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression self-check</Link> can also help you reflect on whether depressive symptoms are present.
+              Importantly, it doesn&apos;t have to be one or the other. Sleep deprivation can cause depressive symptoms, and depression can cause sleep deprivation. If you&apos;re unsure, a professional can help you untangle the causes, our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression self-check</Link> can also help you reflect on whether depressive symptoms are present.
             </p>
           </section>
 
@@ -193,26 +193,26 @@ export default function SleepMoodPage() {
           <section>
             <h2>Why you can&apos;t sleep when you&apos;re anxious</h2>
             <p>
-              If you&apos;ve ever lain in bed with your mind racing — tired but completely unable to fall asleep — you&apos;ve experienced the anxiety-insomnia loop firsthand. Anxiety activates your sympathetic nervous system (the &quot;fight or flight&quot; response), flooding your body with cortisol and adrenaline. These hormones are designed to keep you alert and ready for danger — the exact opposite of what you need to fall asleep.
+              If you&apos;ve ever lain in bed with your mind racing, tired but completely unable to fall asleep, you&apos;ve experienced the anxiety-insomnia loop firsthand. Anxiety activates your sympathetic nervous system (the &quot;fight or flight&quot; response), flooding your body with cortisol and adrenaline. These hormones are designed to keep you alert and ready for danger, the exact opposite of what you need to fall asleep.
             </p>
             <p>
-              Making matters worse, the experience of not being able to sleep often generates its own anxiety. You start watching the clock, calculating how many hours you have left, worrying about how exhausted you&apos;ll be tomorrow — which creates more arousal, which makes sleep even harder. This meta-worry about sleep is a hallmark of chronic insomnia and is one of the primary targets of cognitive behavioral therapy for insomnia (CBT-I).
+              Making matters worse, the experience of not being able to sleep often generates its own anxiety. You start watching the clock, calculating how many hours you have left, worrying about how exhausted you&apos;ll be tomorrow, which creates more arousal, which makes sleep even harder. This meta-worry about sleep is a hallmark of chronic insomnia and is one of the primary targets of cognitive behavioral therapy for insomnia (CBT-I).
             </p>
             <p>
-              Morning anxiety is another common pattern. Cortisol naturally peaks about 30-45 minutes after waking — a phenomenon called the cortisol awakening response. If you&apos;re already in an anxious state, this natural hormonal spike can feel like waking up to a wave of dread, even before anything stressful has happened. Poor sleep the night before amplifies this effect significantly.
+              Morning anxiety is another common pattern. Cortisol naturally peaks about 30-45 minutes after waking, a phenomenon called the cortisol awakening response. If you&apos;re already in an anxious state, this natural hormonal spike can feel like waking up to a wave of dread, even before anything stressful has happened. Poor sleep the night before amplifies this effect significantly.
             </p>
           </section>
 
           <section>
             <h2>The oversleeping side: when too much sleep signals a problem</h2>
             <p>
-              While insomnia gets most of the attention, sleeping too much can also signal a mental health concern. Approximately 15% of people with depression experience hypersomnia — sleeping excessively (often 10+ hours) and still feeling exhausted. This is different from the occasional weekend sleep-in; it&apos;s a persistent pattern where sleep becomes an escape from emotional pain rather than genuine rest.
+              While insomnia gets most of the attention, sleeping too much can also signal a mental health concern. Approximately 15% of people with depression experience hypersomnia, sleeping excessively (often 10+ hours) and still feeling exhausted. This is different from the occasional weekend sleep-in; it&apos;s a persistent pattern where sleep becomes an escape from emotional pain rather than genuine rest.
             </p>
             <p>
-              Research also shows a U-shaped relationship between sleep duration and mental health outcomes. Both sleeping less than 6 hours and more than 9 hours on a regular basis are associated with higher rates of depression, anxiety, and overall psychological distress. The sweet spot for most adults is 7-9 hours — though individual needs genuinely vary.
+              Research also shows a U-shaped relationship between sleep duration and mental health outcomes. Both sleeping less than 6 hours and more than 9 hours on a regular basis are associated with higher rates of depression, anxiety, and overall psychological distress. The sweet spot for most adults is 7-9 hours, though individual needs genuinely vary.
             </p>
             <p>
-              If you&apos;re regularly sleeping long hours and still feel tired, it&apos;s worth considering whether the quantity of sleep is masking a problem with quality — or whether the need to sleep is itself a symptom worth discussing with a healthcare provider.
+              If you&apos;re regularly sleeping long hours and still feel tired, it&apos;s worth considering whether the quantity of sleep is masking a problem with quality, or whether the need to sleep is itself a symptom worth discussing with a healthcare provider.
             </p>
           </section>
 
@@ -227,7 +227,7 @@ export default function SleepMoodPage() {
               <strong>Create a &quot;worry window&quot; earlier in the evening.</strong> Set aside 15-20 minutes (well before bed) to write down your worries and anything on your mind. The goal is not to solve problems but to externalize them so they&apos;re less likely to ambush you when your head hits the pillow.
             </p>
             <p>
-              <strong>Stop watching the clock.</strong> Clock-watching during the night fuels sleep anxiety. Turn your clock around or move your phone out of arm&apos;s reach. Knowing it&apos;s 2:47 AM does not help you fall asleep — it only helps you calculate how terrible tomorrow will be.
+              <strong>Stop watching the clock.</strong> Clock-watching during the night fuels sleep anxiety. Turn your clock around or move your phone out of arm&apos;s reach. Knowing it&apos;s 2:47 AM does not help you fall asleep, it only helps you calculate how terrible tomorrow will be.
             </p>
             <p>
               <strong>Get out of bed if you can&apos;t sleep.</strong> If you&apos;ve been lying awake for roughly 20 minutes, get up and do something low-stimulation (read, stretch, listen to calm audio) in dim light. Return to bed when you feel sleepy. This breaks the association between your bed and the frustration of not sleeping.
@@ -249,7 +249,7 @@ export default function SleepMoodPage() {
               Self-help strategies are a good starting point, but some sleep-mood problems require professional support. Consider reaching out to a healthcare provider if your sleep problems have persisted for more than a few weeks despite consistent effort; if you&apos;re experiencing symptoms of depression (persistent sadness, loss of interest, feelings of worthlessness) alongside poor sleep; if anxiety about sleep itself has become a major source of distress; if you suspect a sleep disorder like sleep apnea (snoring, gasping, daytime sleepiness despite adequate sleep time); or if you&apos;re using alcohol, cannabis, or sleep medications regularly just to fall asleep.
             </p>
             <p>
-              Cognitive behavioral therapy for insomnia (CBT-I) is considered the first-line treatment for chronic insomnia — more effective than medication for long-term results. If your provider isn&apos;t familiar with CBT-I, you can ask for a referral to a sleep specialist or behavioral sleep medicine provider.
+              Cognitive behavioral therapy for insomnia (CBT-I) is considered the first-line treatment for chronic insomnia, more effective than medication for long-term results. If your provider isn&apos;t familiar with CBT-I, you can ask for a referral to a sleep specialist or behavioral sleep medicine provider.
             </p>
           </section>
 
@@ -269,7 +269,7 @@ export default function SleepMoodPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

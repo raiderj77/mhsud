@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "Can I learn DBT skills without a therapist?",
     answer:
-      "You can learn and practice individual DBT skills on your own through books, workbooks, and guided tools. Many people find self-study helpful for distress tolerance and mindfulness. However, the full DBT program \u2014 individual therapy, skills group, phone coaching, and therapist consultation \u2014 is most effective with professional guidance for complex conditions. Self-study is a reasonable starting point.",
+      "You can learn and practice individual DBT skills on your own through books, workbooks, and guided tools. Many people find self-study helpful for distress tolerance and mindfulness. However, the full DBT program, individual therapy, skills group, phone coaching, and therapist consultation, is most effective with professional guidance for complex conditions. Self-study is a reasonable starting point.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function DbtCrisisSkillsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            There are moments when emotions become so intense that rational thinking shuts down. You cannot problem-solve, you cannot see the bigger picture, and every option feels terrible. DBT crisis survival skills &mdash; developed by Marsha Linehan as part of Dialectical Behavior Therapy &mdash; are designed specifically for these moments. They are not long-term solutions. They are bridge strategies to help you survive acute distress without making things worse.
+            There are moments when emotions become so intense that rational thinking shuts down. You cannot problem-solve, you cannot see the bigger picture, and every option feels terrible. DBT crisis survival skills, developed by Marsha Linehan as part of Dialectical Behavior Therapy, are designed specifically for these moments. They are not long-term solutions. They are bridge strategies to help you survive acute distress without making things worse.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function DbtCrisisSkillsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ export default function DbtCrisisSkillsGuidePage() {
               Crisis survival skills are one category within the distress tolerance module of Dialectical Behavior Therapy (DBT). DBT, created by psychologist Marsha Linehan at the University of Washington, was originally developed for individuals with borderline personality disorder but has since been validated for a wide range of conditions including depression, anxiety, PTSD, eating disorders, and substance use disorders.
             </p>
             <p>
-              DBT includes four modules: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Crisis survival skills fall under distress tolerance &mdash; the module focused on getting through painful moments without resorting to destructive behaviors. The fundamental philosophy is: you cannot always change the situation, but you can survive it without making it worse.
+              DBT includes four modules: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Crisis survival skills fall under distress tolerance, the module focused on getting through painful moments without resorting to destructive behaviors. The fundamental philosophy is: you cannot always change the situation, but you can survive it without making it worse.
             </p>
             <p>
               The <Link href="/dbt-crisis-skills" className="text-sage-600 dark:text-sage-400 underline">DBT crisis skills tool</Link> provides guided access to each skill category so you can quickly find the right technique when you need it most.
@@ -127,19 +127,19 @@ export default function DbtCrisisSkillsGuidePage() {
           <section>
             <h2>TIPP: the fastest way to change your emotional state</h2>
             <p>
-              TIPP is the go-to skill when your emotional intensity is at its peak &mdash; a 9 or 10 out of 10. Each letter represents a physiological intervention that works within minutes:
+              TIPP is the go-to skill when your emotional intensity is at its peak, a 9 or 10 out of 10. Each letter represents a physiological intervention that works within minutes:
             </p>
             <p>
-              <strong>T &mdash; Temperature.</strong> Submerge your face in cold water or hold ice packs to your cheeks and forehead for 30 seconds. This triggers the mammalian dive reflex, which automatically slows heart rate and redirects blood flow to vital organs. It is one of the fastest ways to reduce extreme emotional arousal. If you cannot submerge your face, holding ice cubes in your hands or placing a cold pack on the back of your neck achieves a similar effect.
+              <strong>T, Temperature.</strong> Submerge your face in cold water or hold ice packs to your cheeks and forehead for 30 seconds. This triggers the mammalian dive reflex, which automatically slows heart rate and redirects blood flow to vital organs. It is one of the fastest ways to reduce extreme emotional arousal. If you cannot submerge your face, holding ice cubes in your hands or placing a cold pack on the back of your neck achieves a similar effect.
             </p>
             <p>
-              <strong>I &mdash; Intense exercise.</strong> Engage in vigorous physical activity for 10&ndash;20 minutes. Running, jumping jacks, fast walking, or even doing burpees in your living room. Intense exercise burns off the adrenaline and cortisol flooding your system during acute distress, and releases endorphins that naturally shift your mood.
+              <strong>I, Intense exercise.</strong> Engage in vigorous physical activity for 10&ndash;20 minutes. Running, jumping jacks, fast walking, or even doing burpees in your living room. Intense exercise burns off the adrenaline and cortisol flooding your system during acute distress, and releases endorphins that naturally shift your mood.
             </p>
             <p>
-              <strong>P &mdash; Paced breathing.</strong> Slow your breathing rate to 5&ndash;6 breaths per minute. Breathe in for 4 seconds and out for 6&ndash;8 seconds, making the exhale longer than the inhale. This activates the parasympathetic nervous system via the vagus nerve, directly counteracting the fight-or-flight response. <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box breathing</Link> is one effective pacing method.
+              <strong>P, Paced breathing.</strong> Slow your breathing rate to 5&ndash;6 breaths per minute. Breathe in for 4 seconds and out for 6&ndash;8 seconds, making the exhale longer than the inhale. This activates the parasympathetic nervous system via the vagus nerve, directly counteracting the fight-or-flight response. <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box breathing</Link> is one effective pacing method.
             </p>
             <p>
-              <strong>P &mdash; Progressive (Paired muscle) relaxation.</strong> Systematically tense and release muscle groups throughout your body, starting from your feet and working upward. Tense each muscle group for 5 seconds, then release for 10 seconds. This technique directly addresses the muscle tension that accompanies emotional distress.
+              <strong>P, Progressive (Paired muscle) relaxation.</strong> Systematically tense and release muscle groups throughout your body, starting from your feet and working upward. Tense each muscle group for 5 seconds, then release for 10 seconds. This technique directly addresses the muscle tension that accompanies emotional distress.
             </p>
           </section>
 
@@ -148,14 +148,14 @@ export default function DbtCrisisSkillsGuidePage() {
           <section>
             <h2>ACCEPTS: distraction that works</h2>
             <p>
-              When emotions are intense but not at a crisis peak (a 6&ndash;8 out of 10), ACCEPTS provides structured distraction strategies. The goal is not to avoid your feelings permanently &mdash; it is to create enough distance to prevent impulsive actions while the emotional wave passes. Each letter represents a distraction category:
+              When emotions are intense but not at a crisis peak (a 6&ndash;8 out of 10), ACCEPTS provides structured distraction strategies. The goal is not to avoid your feelings permanently, it is to create enough distance to prevent impulsive actions while the emotional wave passes. Each letter represents a distraction category:
             </p>
             <ul>
-              <li><strong>Activities:</strong> Engage in absorbing tasks &mdash; cleaning, cooking, exercising, playing a game, doing a puzzle. Activities that require focus occupy the cognitive resources that would otherwise feed rumination.</li>
+              <li><strong>Activities:</strong> Engage in absorbing tasks, cleaning, cooking, exercising, playing a game, doing a puzzle. Activities that require focus occupy the cognitive resources that would otherwise feed rumination.</li>
               <li><strong>Contributing:</strong> Do something for someone else. Send an encouraging text, volunteer, help a neighbor, or donate. Contributing shifts attention outward and activates reward circuits associated with prosocial behavior.</li>
-              <li><strong>Comparisons:</strong> Compare your current situation to times when you have coped with something difficult before, or to people who are facing greater hardship. This is not about minimizing your pain &mdash; it is about accessing perspective when perspective feels impossible.</li>
-              <li><strong>Emotions:</strong> Generate a different emotion intentionally. Watch a funny video, listen to upbeat music, read something inspiring, or look at photos of good memories. Emotions are not permanent states &mdash; you can shift them with deliberate input.</li>
-              <li><strong>Pushing away:</strong> Mentally push the distressing situation away temporarily. Visualize putting the problem in a box and placing it on a shelf. You are not denying it exists &mdash; you are choosing to return to it when you are in a better emotional state to handle it.</li>
+              <li><strong>Comparisons:</strong> Compare your current situation to times when you have coped with something difficult before, or to people who are facing greater hardship. This is not about minimizing your pain, it is about accessing perspective when perspective feels impossible.</li>
+              <li><strong>Emotions:</strong> Generate a different emotion intentionally. Watch a funny video, listen to upbeat music, read something inspiring, or look at photos of good memories. Emotions are not permanent states, you can shift them with deliberate input.</li>
+              <li><strong>Pushing away:</strong> Mentally push the distressing situation away temporarily. Visualize putting the problem in a box and placing it on a shelf. You are not denying it exists, you are choosing to return to it when you are in a better emotional state to handle it.</li>
               <li><strong>Thoughts:</strong> Replace distressing thoughts with neutral mental tasks. Count backward from 100 by 7s, recite song lyrics, list state capitals, or describe a process step by step. Occupying working memory reduces rumination.</li>
               <li><strong>Sensations:</strong> Create strong physical sensations to interrupt the emotional experience. Hold ice, snap a rubber band on your wrist, take a cold shower, eat something with a strong flavor (sour candy, hot sauce). The <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline">5-4-3-2-1 grounding exercise</Link> uses a related sensory approach.</li>
             </ul>
@@ -164,7 +164,7 @@ export default function DbtCrisisSkillsGuidePage() {
           <section>
             <h2>Self-soothe with the five senses</h2>
             <p>
-              Self-soothing is the practice of providing comfort to yourself through gentle, pleasant sensory experiences. It is the opposite of the intense sensory input used in crisis-level grounding &mdash; here, the goal is to calm and nurture rather than alert and redirect.
+              Self-soothing is the practice of providing comfort to yourself through gentle, pleasant sensory experiences. It is the opposite of the intense sensory input used in crisis-level grounding, here, the goal is to calm and nurture rather than alert and redirect.
             </p>
             <ul>
               <li><strong>Vision:</strong> Look at beautiful images, nature, art, or anything visually pleasing. Watch a sunset, look at photos of loved ones, or light a candle and watch the flame.</li>
@@ -184,9 +184,9 @@ export default function DbtCrisisSkillsGuidePage() {
             </p>
             <ul>
               <li><strong>Imagery:</strong> Visualize a safe, peaceful place in vivid detail. Imagine a positive outcome. Use mental rehearsal to see yourself getting through this.</li>
-              <li><strong>Meaning:</strong> Find purpose or meaning in the suffering. This is not toxic positivity &mdash; it is recognizing that difficult experiences can lead to growth, empathy, or motivation for change.</li>
+              <li><strong>Meaning:</strong> Find purpose or meaning in the suffering. This is not toxic positivity, it is recognizing that difficult experiences can lead to growth, empathy, or motivation for change.</li>
               <li><strong>Prayer or connection:</strong> Connect with a higher power, spiritual practice, or sense of something larger than yourself. For non-religious individuals, this can mean connecting with nature, community, or personal values.</li>
-              <li><strong>Relaxation:</strong> Engage in deliberate relaxation &mdash; progressive muscle relaxation, gentle stretching, yoga, or slow breathing.</li>
+              <li><strong>Relaxation:</strong> Engage in deliberate relaxation, progressive muscle relaxation, gentle stretching, yoga, or slow breathing.</li>
               <li><strong>One thing in the moment:</strong> Focus entirely on the present task. Do not think about the past or future. Just be here, doing this one thing, right now.</li>
               <li><strong>Vacation:</strong> Take a brief mental or physical vacation. Step outside for 10 minutes, go for a walk, or simply sit somewhere different. Changing your physical environment can shift your emotional state.</li>
               <li><strong>Encouragement:</strong> Talk to yourself the way you would talk to a friend in crisis. &quot;You can get through this. This feeling is temporary. You have survived hard things before.&quot;</li>
@@ -216,7 +216,7 @@ export default function DbtCrisisSkillsGuidePage() {
               Crisis survival skills are powerful self-management tools, but some situations require professional support beyond self-help:
             </p>
             <ul>
-              <li>You are experiencing suicidal thoughts or urges to self-harm &mdash; call 988 or go to your nearest emergency room</li>
+              <li>You are experiencing suicidal thoughts or urges to self-harm, call 988 or go to your nearest emergency room</li>
               <li>Emotional crises are happening frequently (multiple times per week)</li>
               <li>You are using substances to cope with distress</li>
               <li>Relationships are being seriously affected by emotional intensity</li>
@@ -224,7 +224,7 @@ export default function DbtCrisisSkillsGuidePage() {
               <li>Self-help strategies are not sufficient to manage your symptoms</li>
             </ul>
             <p>
-              A therapist trained in DBT can provide the full treatment program &mdash; including individual therapy, skills group, phone coaching, and consultation team &mdash; which has been shown in randomized controlled trials to be significantly more effective than the skills alone. If you also experience thoughts of self-harm, a <Link href="/safety-plan" className="text-sage-600 dark:text-sage-400 underline">safety plan</Link> can provide structured guidance for keeping yourself safe. SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals.
+              A therapist trained in DBT can provide the full treatment program, including individual therapy, skills group, phone coaching, and consultation team, which has been shown in randomized controlled trials to be significantly more effective than the skills alone. If you also experience thoughts of self-harm, a <Link href="/safety-plan" className="text-sage-600 dark:text-sage-400 underline">safety plan</Link> can provide structured guidance for keeping yourself safe. SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals.
             </p>
           </section>
 
@@ -246,7 +246,7 @@ export default function DbtCrisisSkillsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

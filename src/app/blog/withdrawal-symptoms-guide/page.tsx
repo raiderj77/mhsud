@@ -70,7 +70,7 @@ export default function WithdrawalSymptomsGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            When your body has adapted to regular substance use and that substance is reduced or stopped, withdrawal symptoms occur. These symptoms are your nervous system recalibrating &mdash; and depending on the substance, they can range from mildly uncomfortable to medically dangerous. Understanding what to expect and when to seek help can make the difference between a safe transition and a medical emergency.
+            When your body has adapted to regular substance use and that substance is reduced or stopped, withdrawal symptoms occur. These symptoms are your nervous system recalibrating, and depending on the substance, they can range from mildly uncomfortable to medically dangerous. Understanding what to expect and when to seek help can make the difference between a safe transition and a medical emergency.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function WithdrawalSymptomsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -95,7 +95,7 @@ export default function WithdrawalSymptomsGuidePage() {
           <section>
             <h2>What causes withdrawal symptoms?</h2>
             <p>
-              Repeated substance use causes the brain to adapt by adjusting its own neurotransmitter production and receptor sensitivity. When the substance is removed, the brain is temporarily in a state of imbalance &mdash; overexcited or underregulated depending on the substance class. This imbalance produces withdrawal symptoms.
+              Repeated substance use causes the brain to adapt by adjusting its own neurotransmitter production and receptor sensitivity. When the substance is removed, the brain is temporarily in a state of imbalance, overexcited or underregulated depending on the substance class. This imbalance produces withdrawal symptoms.
             </p>
             <p>
               Physical dependence (the body&apos;s adaptation to a substance) is distinct from addiction (compulsive use despite consequences), though they often co-occur. Someone taking prescribed benzodiazepines daily for months will develop physical dependence and may experience withdrawal even without addiction. If you are concerned about your alcohol use specifically, the <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT screening tool</Link> can help you assess your drinking pattern before making changes.
@@ -118,7 +118,7 @@ export default function WithdrawalSymptomsGuidePage() {
             <h3>Opioid withdrawal</h3>
             <ul>
               <li><strong>8&ndash;24 hours (short-acting):</strong> Muscle aches, anxiety, sweating, runny nose, yawning</li>
-              <li><strong>1&ndash;3 days:</strong> Peak symptoms &mdash; nausea, vomiting, diarrhea, abdominal cramps, dilated pupils</li>
+              <li><strong>1&ndash;3 days:</strong> Peak symptoms, nausea, vomiting, diarrhea, abdominal cramps, dilated pupils</li>
               <li><strong>5&ndash;7 days:</strong> Acute symptoms subside</li>
               <li><strong>Weeks&ndash;months:</strong> Insomnia, irritability, cravings, depression</li>
             </ul>
@@ -126,7 +126,7 @@ export default function WithdrawalSymptomsGuidePage() {
             <h3>Benzodiazepine withdrawal</h3>
             <ul>
               <li><strong>1&ndash;4 days:</strong> Rebound anxiety, insomnia, irritability</li>
-              <li><strong>1&ndash;2 weeks:</strong> Peak symptoms &mdash; tremors, panic, seizure risk</li>
+              <li><strong>1&ndash;2 weeks:</strong> Peak symptoms, tremors, panic, seizure risk</li>
               <li><strong>Weeks&ndash;months:</strong> Protracted withdrawal can last months; gradual taper essential</li>
             </ul>
             <p><strong>Never stop benzodiazepines abruptly.</strong> Medical supervision and gradual tapering are required.</p>
@@ -140,7 +140,7 @@ export default function WithdrawalSymptomsGuidePage() {
               The <Link href="/withdrawal-timeline" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools withdrawal timeline</Link> provides a substance-specific, day-by-day overview of what withdrawal symptoms to expect and when. It helps you understand what is happening in your body and when the worst is typically over.
             </p>
             <p>
-              The timeline is informational &mdash; it does not replace medical guidance. But knowing that your symptoms are expected and temporary can reduce panic and help you prepare. You can also share the timeline with a support person so they know what to watch for.
+              The timeline is informational, it does not replace medical guidance. But knowing that your symptoms are expected and temporary can reduce panic and help you prepare. You can also share the timeline with a support person so they know what to watch for.
             </p>
             <p>
               If you are tracking your progress after stopping, the <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline">sobriety calculator</Link> shows how many days you have completed, and the <Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline">health recovery timeline</Link> shows the physical improvements happening at each stage.
@@ -161,7 +161,7 @@ export default function WithdrawalSymptomsGuidePage() {
               <li>Low energy and motivation</li>
             </ul>
             <p>
-              PAWS is not a sign of failure &mdash; it is the brain gradually rebalancing. Understanding that these symptoms are temporary and expected helps prevent them from triggering relapse. The <Link href="/withdrawal-timeline" className="text-sage-600 dark:text-sage-400 underline">withdrawal timeline tool</Link> includes PAWS information for each substance.
+              PAWS is not a sign of failure, it is the brain gradually rebalancing. Understanding that these symptoms are temporary and expected helps prevent them from triggering relapse. The <Link href="/withdrawal-timeline" className="text-sage-600 dark:text-sage-400 underline">withdrawal timeline tool</Link> includes PAWS information for each substance.
             </p>
           </section>
 

@@ -51,7 +51,7 @@ export default function PHQ9Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -83,7 +83,7 @@ export default function PHQ9Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -98,11 +98,14 @@ export default function PHQ9Page() {
         <div className="card mt-6 p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20">
           <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
           <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-            <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-            <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-            <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+            <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+            <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+            <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
           </ul>
         </div>
+        <a href="#screening" className="btn-primary inline-flex mt-6">
+          Start the PHQ-9 self-check
+        </a>
       </div>
       <section className="sr-only">
         <h2>What Is the PHQ-9 Depression Screening?</h2>
@@ -136,47 +139,15 @@ export default function PHQ9Page() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="The PHQ-9 is a validated 9-question depression screening tool used by healthcare professionals worldwide."
-          who="Anyone wanting to understand their depression symptoms — results should always be reviewed with a qualified healthcare provider."
-          bottomLine="This 2-minute screening produces a standardized score you can share with your doctor or counselor — it is not a diagnosis."
+          who="Anyone wanting to understand their depression symptoms, results should always be reviewed with a qualified healthcare provider."
+          bottomLine="This 2-minute screening produces a standardized score you can share with your doctor or counselor, it is not a diagnosis."
           lastUpdated="2026-03-20"
         />
       </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
-        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {FAQ_DATA.map((item) => (
-            <div key={item.question}>
-              <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
-              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* SSR Clinical Content — visible to all crawlers */}
+      <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
+
+      {/* SSR Clinical Content, visible to all crawlers */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 space-y-6">
         <section>
           <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">What the PHQ-9 Measures</h2>
@@ -196,23 +167,23 @@ export default function PHQ9Page() {
           <div className="space-y-2">
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">0–4</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — few depressive symptoms; monitoring may be appropriate</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, few depressive symptoms; monitoring may be appropriate</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">5–9</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — some symptoms; watchful waiting or lifestyle changes recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, some symptoms; watchful waiting or lifestyle changes recommended</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">10–14</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — clinically significant symptoms; treatment discussion recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, clinically significant symptoms; treatment discussion recommended</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">15–19</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderately severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — many symptoms at high frequency; active treatment typically needed</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderately severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, many symptoms at high frequency; active treatment typically needed</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">20–27</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — severe symptom burden; active treatment and close follow-up recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, severe symptom burden; active treatment and close follow-up recommended</span></div>
             </div>
           </div>
         </section>
@@ -234,8 +205,6 @@ export default function PHQ9Page() {
           </p>
         </section>
       </div>
-
-<PHQ9Client faqData={FAQ_DATA} />
 
       {/* Clinical References */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-2">

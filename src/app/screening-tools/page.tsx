@@ -298,7 +298,7 @@ export default function ScreeningToolsIndexPage() {
   const totalScreeners = CATEGORIES.reduce((acc, c) => acc + c.tools.length, 0);
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd()) }}
@@ -522,7 +522,7 @@ export default function ScreeningToolsIndexPage() {
           About this index
         </h2>
         <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-          Published and maintained by MindCheck Tools — Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
+          Published and maintained by MindCheck Tools, Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
           <Link href="/clinical-evidence" className="text-sage-700 dark:text-sage-400 hover:underline">
             clinical evidence
           </Link>{" "}
@@ -537,6 +537,6 @@ export default function ScreeningToolsIndexPage() {
           .
         </p>
       </section>
-    </main>
+    </div>
   );
 }

@@ -138,7 +138,7 @@ export function ToolGrid({
               type="search"
               role="searchbox"
               aria-label="Search tools by name, description, or category"
-              placeholder="Search tools — depression, anxiety, alcohol, burnout..."
+              placeholder="Search tools, depression, anxiety, alcohol, burnout..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-11 pr-10 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 dark:placeholder:text-neutral-500 text-base focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors"
@@ -161,7 +161,7 @@ export function ToolGrid({
         {/* Filter tabs */}
         <div className="mb-8" role="tablist" aria-label="Filter tools by category">
           <div className="flex flex-wrap gap-2">
-            {FILTER_CATEGORIES.map((cat) => {
+            {FILTER_CATEGORIES.filter((cat) => targetedScreenings.length > 0 || cat !== TARGETED_FILTER).map((cat) => {
               const isActive = activeFilter === cat;
               return (
                 <button
@@ -171,7 +171,7 @@ export function ToolGrid({
                   onClick={() => setActiveFilter(cat)}
                   className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2 dark:focus:ring-offset-night-900 ${
                     isActive
-                      ? "bg-sage-600 text-white shadow-sm"
+                      ? "bg-sage-700 text-white shadow-sm"
                       : "bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400 hover:bg-sage-100 dark:hover:bg-sage-950/50"
                   }`}
                 >
@@ -237,7 +237,7 @@ export function ToolGrid({
 
       {/* ============ TARGETED SCREENINGS SECTION ============ */}
       {/* Show as separate section only in default (unfiltered) view */}
-      {!isFiltering && (
+      {!isFiltering && targetedScreenings.length > 0 && (
         <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
           <div className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">

@@ -31,17 +31,17 @@ const FAQ_DATA = [
   {
     question: "Can ADHD develop in the teenage years?",
     answer:
-      "ADHD is present from childhood but can appear to develop in the teenage years because symptoms were previously mild or compensated for. The increased demands of middle and high school \u2014 more complex assignments, less structure, greater self-management \u2014 often reveal ADHD that was manageable earlier. The environment changed enough to make existing symptoms disruptive.",
+      "ADHD is present from childhood but can appear to develop in the teenage years because symptoms were previously mild or compensated for. The increased demands of middle and high school, more complex assignments, less structure, greater self-management, often reveal ADHD that was manageable earlier. The environment changed enough to make existing symptoms disruptive.",
   },
   {
     question: "How is ADHD different in teens vs young children?",
     answer:
-      "In young children, ADHD often presents as visible hyperactivity \u2014 running, climbing, inability to sit still. In teenagers, hyperactivity shifts inward: restlessness, fidgeting, and difficulty relaxing. The dominant teen challenges are executive function deficits \u2014 time management, planning, organization, and emotional regulation. Teens may also struggle with impulse control and motivation for non-rewarding tasks.",
+      "In young children, ADHD often presents as visible hyperactivity, running, climbing, inability to sit still. In teenagers, hyperactivity shifts inward: restlessness, fidgeting, and difficulty relaxing. The dominant teen challenges are executive function deficits, time management, planning, organization, and emotional regulation. Teens may also struggle with impulse control and motivation for non-rewarding tasks.",
   },
   {
     question: "Should I get my teenager tested for ADHD?",
     answer:
-      "Consider a professional evaluation if your teenager consistently struggles with organization, time management, emotional regulation, or focus in ways that interfere with school or relationships \u2014 and these patterns trace back to childhood. The MindCheck Tools ADHD test for teens can identify whether patterns are consistent with ADHD, but only a qualified professional can make an official evaluation.",
+      "Consider a professional evaluation if your teenager consistently struggles with organization, time management, emotional regulation, or focus in ways that interfere with school or relationships, and these patterns trace back to childhood. The MindCheck Tools ADHD test for teens can identify whether patterns are consistent with ADHD, but only a qualified professional can make an official evaluation.",
   },
   {
     question: "Can ADHD be managed without medication?",
@@ -88,7 +88,7 @@ export default function AdhdTeensGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            ADHD (attention-deficit/hyperactivity disorder) affects approximately 9.8% of U.S. children ages 3&ndash;17, according to the CDC. But ADHD in teenagers often looks very different from the hyperactive child bouncing off the walls. In adolescence, symptoms shift toward executive function challenges &mdash; difficulty with time management, planning, emotional regulation, and motivation &mdash; that can be mistaken for laziness, defiance, or simply &quot;not trying hard enough.&quot; This guide is for parents and teens who want to understand what ADHD looks like in the teenage years and what steps to take next.
+            ADHD (attention-deficit/hyperactivity disorder) affects approximately 9.8% of U.S. children ages 3&ndash;17, according to the CDC. But ADHD in teenagers often looks very different from the hyperactive child bouncing off the walls. In adolescence, symptoms shift toward executive function challenges, difficulty with time management, planning, emotional regulation, and motivation, that can be mistaken for laziness, defiance, or simply &quot;not trying hard enough.&quot; This guide is for parents and teens who want to understand what ADHD looks like in the teenage years and what steps to take next.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AdhdTeensGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -115,7 +115,7 @@ export default function AdhdTeensGuidePage() {
               When most people picture ADHD, they imagine a young child who cannot sit still. But ADHD changes as the brain develops. In teenagers, the most visible symptoms often shift from external hyperactivity to internal executive function struggles:
             </p>
             <ul>
-              <li><strong>Time blindness:</strong> Difficulty estimating how long tasks will take, chronic lateness, and leaving assignments until the last minute &mdash; not because they do not care, but because their internal sense of time is unreliable</li>
+              <li><strong>Time blindness:</strong> Difficulty estimating how long tasks will take, chronic lateness, and leaving assignments until the last minute, not because they do not care, but because their internal sense of time is unreliable</li>
               <li><strong>Planning and prioritization:</strong> Struggling to break large projects into steps, difficulty knowing where to start, and trouble distinguishing urgent from important</li>
               <li><strong>Emotional dysregulation:</strong> Intense emotional reactions that seem disproportionate, difficulty recovering from frustration, rejection sensitivity, and mood swings that may be mistaken for typical teen behavior or mood disorders</li>
               <li><strong>Motivation for non-preferred tasks:</strong> ADHD brains struggle with tasks that are not immediately interesting or rewarding. This looks like procrastination or laziness but is actually a neurological difference in dopamine-driven motivation</li>
@@ -132,7 +132,7 @@ export default function AdhdTeensGuidePage() {
               ADHD in teenage girls is significantly underidentified. Girls are more likely to present with the inattentive type of ADHD rather than the hyperactive-impulsive type, which means their symptoms are less disruptive and less likely to be flagged by teachers.
             </p>
             <p>
-              Girls with ADHD often develop social masking strategies &mdash; working twice as hard to keep up, internalizing their struggles, and presenting as &quot;good students&quot; who are simply not reaching their potential. The result is that many girls with ADHD are not identified until adolescence or adulthood, after years of anxiety, low self-esteem, and the exhaustion of compensating.
+              Girls with ADHD often develop social masking strategies, working twice as hard to keep up, internalizing their struggles, and presenting as &quot;good students&quot; who are simply not reaching their potential. The result is that many girls with ADHD are not identified until adolescence or adulthood, after years of anxiety, low self-esteem, and the exhaustion of compensating.
             </p>
             <p>
               Common signs of ADHD in teen girls include: difficulty sustaining focus during lectures or reading, seeming to daydream frequently, disorganized notebooks and backpacks, chronic difficulty turning in homework despite completing it, social difficulties related to impulsivity or difficulty reading social cues, and intense emotional responses that may be attributed to hormones or personality rather than ADHD.
@@ -145,7 +145,7 @@ export default function AdhdTeensGuidePage() {
               While academic struggles are often the most visible sign, ADHD affects far more than grades:
             </p>
             <ul>
-              <li><strong>Friendships:</strong> Impulsivity, difficulty with turn-taking in conversations, and emotional intensity can strain peer relationships. Teens with ADHD may also struggle with social timing &mdash; interrupting, missing social cues, or dominating conversations</li>
+              <li><strong>Friendships:</strong> Impulsivity, difficulty with turn-taking in conversations, and emotional intensity can strain peer relationships. Teens with ADHD may also struggle with social timing, interrupting, missing social cues, or dominating conversations</li>
               <li><strong>Self-esteem:</strong> Years of hearing &quot;you&apos;re so smart, if you would just try harder&quot; takes a toll. Many teens with ADHD internalize the belief that they are lazy or stupid, despite evidence of their intelligence</li>
               <li><strong>Family relationships:</strong> Homework battles, forgotten chores, and impulsive behavior create conflict. Parents may feel frustrated, and teens may feel misunderstood</li>
               <li><strong>Substance use risk:</strong> Research indicates that untreated ADHD increases the risk of substance experimentation in adolescence. Teens may self-medicate with nicotine, cannabis, or alcohol. Importantly, appropriate ADHD management appears to reduce this risk</li>
@@ -221,7 +221,7 @@ export default function AdhdTeensGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

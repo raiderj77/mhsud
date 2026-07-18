@@ -45,7 +45,7 @@ const FAQ_DATA = [
   {
     question: "Can antidepressants make bipolar disorder worse?",
     answer:
-      "Research suggests that antidepressants without a mood stabilizer may trigger manic or hypomanic episodes in some people with bipolar disorder and increase mood cycling frequency. This is why accurate screening matters \u2014 standard depression treatment can potentially worsen bipolar disorder. A healthcare provider can help determine the safest approach for your situation.",
+      "Research suggests that antidepressants without a mood stabilizer may trigger manic or hypomanic episodes in some people with bipolar disorder and increase mood cycling frequency. This is why accurate screening matters, standard depression treatment can potentially worsen bipolar disorder. A healthcare provider can help determine the safest approach for your situation.",
   },
   {
     question: "How is bipolar disorder screened for?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
   {
     question: "Is bipolar disorder hereditary?",
     answer:
-      "Genetics play a significant role. Research from the National Institute of Mental Health indicates that people with a first-degree relative who has bipolar disorder are at higher risk. However, family history does not guarantee developing the condition \u2014 many people with genetic risk factors never do. Environmental factors and life experiences also contribute.",
+      "Genetics play a significant role. Research from the National Institute of Mental Health indicates that people with a first-degree relative who has bipolar disorder are at higher risk. However, family history does not guarantee developing the condition, many people with genetic risk factors never do. Environmental factors and life experiences also contribute.",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function BipolarVsDepressionPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Bipolar disorder is one of the most commonly misidentified mental health conditions. Because people usually seek help during depressive episodes — not during periods of elevated mood — bipolar disorder is frequently mistaken for major depression. This guide explains why the distinction matters, what to look for, and which screening tools can help.
+            Bipolar disorder is one of the most commonly misidentified mental health conditions. Because people usually seek help during depressive episodes, not during periods of elevated mood, bipolar disorder is frequently mistaken for major depression. This guide explains why the distinction matters, what to look for, and which screening tools can help.
           </p>
         </header>
 
@@ -105,13 +105,13 @@ export default function BipolarVsDepressionPage() {
           <section>
             <h2>Why bipolar disorder is commonly misidentified as depression</h2>
             <p>
-              Most people with bipolar disorder spend far more time in depressive episodes than in manic or hypomanic ones. When someone is feeling persistently low, exhausted, and hopeless, they seek help — and what their provider sees looks exactly like major depressive disorder. The elevated-mood episodes that distinguish bipolar disorder may have occurred months or years earlier, and the person may not think to mention them.
+              Most people with bipolar disorder spend far more time in depressive episodes than in manic or hypomanic ones. When someone is feeling persistently low, exhausted, and hopeless, they seek help, and what their provider sees looks exactly like major depressive disorder. The elevated-mood episodes that distinguish bipolar disorder may have occurred months or years earlier, and the person may not think to mention them.
             </p>
             <p>
-              This is especially true for bipolar II disorder, where the &quot;up&quot; periods (hypomania) are milder and may actually feel good. A person experiencing hypomania might feel unusually productive, energetic, and confident — hardly something they would describe as a problem. Without being asked specifically about these experiences, many people never report them.
+              This is especially true for bipolar II disorder, where the &quot;up&quot; periods (hypomania) are milder and may actually feel good. A person experiencing hypomania might feel unusually productive, energetic, and confident, hardly something they would describe as a problem. Without being asked specifically about these experiences, many people never report them.
             </p>
             <p>
-              The result is that, according to research published in the <em>Journal of Clinical Psychiatry</em>, approximately 40% of people with bipolar disorder are initially given a screening result consistent with unipolar depression. On average, it takes nearly <strong>10 years</strong> from the onset of symptoms to receive an accurate bipolar screening. That decade-long gap can mean years of treatment approaches that may not fully address — and could potentially worsen — the underlying condition.
+              The result is that, according to research published in the <em>Journal of Clinical Psychiatry</em>, approximately 40% of people with bipolar disorder are initially given a screening result consistent with unipolar depression. On average, it takes nearly <strong>10 years</strong> from the onset of symptoms to receive an accurate bipolar screening. That decade-long gap can mean years of treatment approaches that may not fully address, and could potentially worsen, the underlying condition.
             </p>
           </section>
 
@@ -121,10 +121,10 @@ export default function BipolarVsDepressionPage() {
               The core distinction between bipolar disorder and major depression is the presence of manic or hypomanic episodes. Major depressive disorder involves persistent low mood, while bipolar disorder involves <em>cycling</em> between depressive episodes and periods of abnormally elevated or irritable mood.
             </p>
             <p>
-              In major depression, the mood state is relatively consistent — a person may feel low for weeks or months at a time. In bipolar disorder, mood shifts between distinct episodes. These cycles vary widely: some people experience rapid cycling (four or more episodes per year), while others may go months or years between mood shifts.
+              In major depression, the mood state is relatively consistent, a person may feel low for weeks or months at a time. In bipolar disorder, mood shifts between distinct episodes. These cycles vary widely: some people experience rapid cycling (four or more episodes per year), while others may go months or years between mood shifts.
             </p>
             <p>
-              Another important difference is the quality of the depressive episodes themselves. Research suggests that bipolar depression may be more likely to involve oversleeping (rather than insomnia), heavy feelings in the limbs (leaden paralysis), and a pattern of episodes that begin and end more abruptly. However, these features alone are not enough to distinguish the two — a thorough screening history is essential.
+              Another important difference is the quality of the depressive episodes themselves. Research suggests that bipolar depression may be more likely to involve oversleeping (rather than insomnia), heavy feelings in the limbs (leaden paralysis), and a pattern of episodes that begin and end more abruptly. However, these features alone are not enough to distinguish the two, a thorough screening history is essential.
             </p>
           </section>
 
@@ -136,10 +136,10 @@ export default function BipolarVsDepressionPage() {
               Bipolar disorder is not a single condition. The major types differ in the severity and duration of mood episodes:
             </p>
             <p>
-              <strong>Bipolar I</strong> involves at least one manic episode — a period of abnormally elevated, expansive, or irritable mood lasting at least seven days (or requiring hospitalization). Manic episodes may include grandiosity, severely reduced need for sleep, pressured speech, racing thoughts, and impulsive behavior with serious consequences. Depressive episodes typically occur as well, though they are not required for screening.
+              <strong>Bipolar I</strong> involves at least one manic episode, a period of abnormally elevated, expansive, or irritable mood lasting at least seven days (or requiring hospitalization). Manic episodes may include grandiosity, severely reduced need for sleep, pressured speech, racing thoughts, and impulsive behavior with serious consequences. Depressive episodes typically occur as well, though they are not required for screening.
             </p>
             <p>
-              <strong>Bipolar II</strong> involves at least one hypomanic episode and at least one major depressive episode, but no full manic episodes. Hypomania is a less severe form of mania — it lasts at least four days and is noticeable to others, but does not cause the severe impairment or psychotic features that can accompany full mania. Bipolar II is not a &quot;milder&quot; form of bipolar I; the depressive episodes can be just as severe and debilitating.
+              <strong>Bipolar II</strong> involves at least one hypomanic episode and at least one major depressive episode, but no full manic episodes. Hypomania is a less severe form of mania, it lasts at least four days and is noticeable to others, but does not cause the severe impairment or psychotic features that can accompany full mania. Bipolar II is not a &quot;milder&quot; form of bipolar I; the depressive episodes can be just as severe and debilitating.
             </p>
             <p>
               <strong>Cyclothymic disorder</strong> involves chronic fluctuating mood with periods of hypomanic and depressive symptoms that do not meet the full criteria for hypomanic or major depressive episodes. Symptoms must be present for at least two years in adults. While less severe in individual episodes, cyclothymic disorder can still significantly affect daily functioning.
@@ -149,13 +149,13 @@ export default function BipolarVsDepressionPage() {
           <section>
             <h2>What mania looks like vs hypomania</h2>
             <p>
-              Understanding the difference between mania and hypomania is critical for accurate screening. Both involve elevated or irritable mood, increased energy, and changes in behavior — but they differ in severity, duration, and impact.
+              Understanding the difference between mania and hypomania is critical for accurate screening. Both involve elevated or irritable mood, increased energy, and changes in behavior, but they differ in severity, duration, and impact.
             </p>
             <p>
               <strong>Mania</strong> is severe. It lasts at least seven days, may include psychotic features (delusions, hallucinations), and causes marked impairment in social or occupational functioning. A person in a manic episode may make reckless financial decisions, go days without sleeping, or engage in behavior that is clearly out of character. Manic episodes frequently require hospitalization.
             </p>
             <p>
-              <strong>Hypomania</strong> is milder. It lasts at least four days and represents a clear change from a person&apos;s usual behavior, but it does not cause severe impairment or require hospitalization. A person in a hypomanic episode might feel exceptionally creative, talkative, and productive. To outside observers, they may seem &quot;on a roll&quot; rather than unwell — which is why hypomania so often goes unreported and unrecognized.
+              <strong>Hypomania</strong> is milder. It lasts at least four days and represents a clear change from a person&apos;s usual behavior, but it does not cause severe impairment or require hospitalization. A person in a hypomanic episode might feel exceptionally creative, talkative, and productive. To outside observers, they may seem &quot;on a roll&quot; rather than unwell, which is why hypomania so often goes unreported and unrecognized.
             </p>
           </section>
 
@@ -164,33 +164,33 @@ export default function BipolarVsDepressionPage() {
           <section>
             <h2>Why the distinction matters: treatment differences</h2>
             <p>
-              The difference between bipolar disorder and unipolar depression is not academic — it has direct implications for which approaches may be appropriate. This is perhaps the most important reason accurate screening matters.
+              The difference between bipolar disorder and unipolar depression is not academic, it has direct implications for which approaches may be appropriate. This is perhaps the most important reason accurate screening matters.
             </p>
             <p>
               For major depressive disorder, antidepressants (such as SSRIs or SNRIs) are a common first-line approach. For bipolar disorder, however, <strong>antidepressants taken without a mood stabilizer may trigger manic or hypomanic episodes</strong> or increase the frequency of mood cycling. Research published in the <em>American Journal of Psychiatry</em> has documented this risk, and current clinical guidelines generally recommend mood stabilizers (such as lithium or valproate) or atypical antipsychotics as primary approaches for bipolar disorder.
             </p>
             <p>
-              This means that a person with unrecognized bipolar disorder who receives antidepressants alone may experience worsening symptoms — more frequent mood episodes, treatment-resistant depression, or sudden manic episodes. Accurate screening is not just helpful; it can be the difference between an approach that helps and one that may cause harm.
+              This means that a person with unrecognized bipolar disorder who receives antidepressants alone may experience worsening symptoms, more frequent mood episodes, treatment-resistant depression, or sudden manic episodes. Accurate screening is not just helpful; it can be the difference between an approach that helps and one that may cause harm.
             </p>
           </section>
 
           <section>
             <h2>The MDQ as a bipolar screening tool</h2>
             <p>
-              The Mood Disorder Questionnaire (MDQ) is one of the most widely used screening instruments for bipolar disorder. Developed by Dr. Robert Hirschfeld and colleagues, the MDQ asks about lifetime experiences of manic and hypomanic symptoms — the very symptoms that are most likely to go unreported in clinical settings.
+              The Mood Disorder Questionnaire (MDQ) is one of the most widely used screening instruments for bipolar disorder. Developed by Dr. Robert Hirschfeld and colleagues, the MDQ asks about lifetime experiences of manic and hypomanic symptoms, the very symptoms that are most likely to go unreported in clinical settings.
             </p>
             <p>
-              The MDQ includes 13 yes/no items about specific experiences (such as periods of unusually elevated mood, decreased need for sleep, racing thoughts, and increased goal-directed activity), followed by questions about whether these experiences occurred at the same time and caused functional problems. A positive screening result may indicate the need for a comprehensive clinical evaluation — it is not a diagnosis.
+              The MDQ includes 13 yes/no items about specific experiences (such as periods of unusually elevated mood, decreased need for sleep, racing thoughts, and increased goal-directed activity), followed by questions about whether these experiences occurred at the same time and caused functional problems. A positive screening result may indicate the need for a comprehensive clinical evaluation, it is not a diagnosis.
             </p>
             <p>
-              The strength of the MDQ is that it asks directly about the manic side of the equation — the part that is most commonly missed. If you have been screened for depression but never specifically asked about periods of elevated mood, the MDQ can fill that gap.
+              The strength of the MDQ is that it asks directly about the manic side of the equation, the part that is most commonly missed. If you have been screened for depression but never specifically asked about periods of elevated mood, the MDQ can fill that gap.
             </p>
           </section>
 
           <section>
             <h2>The PHQ-9&apos;s limitations for bipolar screening</h2>
             <p>
-              The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> is an excellent screening tool for depressive symptoms — but it only measures one side of the picture. It asks about the past two weeks of depressive symptoms: low mood, loss of interest, sleep changes, fatigue, difficulty concentrating, and related experiences.
+              The <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> is an excellent screening tool for depressive symptoms, but it only measures one side of the picture. It asks about the past two weeks of depressive symptoms: low mood, loss of interest, sleep changes, fatigue, difficulty concentrating, and related experiences.
             </p>
             <p>
               What the PHQ-9 does <em>not</em> ask about is any history of manic or hypomanic episodes. A person with bipolar disorder who is currently in a depressive episode will likely score high on the PHQ-9, and their results will look identical to those of someone with major depressive disorder. The PHQ-9 cannot distinguish between the two.
@@ -203,7 +203,7 @@ export default function BipolarVsDepressionPage() {
           <section>
             <h2>Mood charting as a screening aid</h2>
             <p>
-              One of the most useful tools for distinguishing between bipolar disorder and unipolar depression is a mood chart — a daily record of mood, energy, sleep, and other relevant variables over time. While a single screening tool captures a snapshot, a mood chart reveals patterns.
+              One of the most useful tools for distinguishing between bipolar disorder and unipolar depression is a mood chart, a daily record of mood, energy, sleep, and other relevant variables over time. While a single screening tool captures a snapshot, a mood chart reveals patterns.
             </p>
             <p>
               Tracking your mood for several weeks or months can help you and your healthcare provider identify cycling patterns that might not be obvious in a single office visit. Many people are surprised to discover that what they thought was &quot;just a good week&quot; actually shows a consistent pattern of elevated mood following depressive periods.
@@ -224,7 +224,7 @@ export default function BipolarVsDepressionPage() {
               If you have been experiencing recurrent depression that does not respond well to standard approaches, or if you have ever had periods of unusually elevated mood, energy, or impulsivity, it may be worth completing a bipolar-specific screening tool and discussing the results with a qualified mental health professional.
             </p>
             <p>
-              No online tool can replace a professional evaluation. But the right screening questions can help ensure that the right questions get asked — and that the full picture of your mood history is considered.
+              No online tool can replace a professional evaluation. But the right screening questions can help ensure that the right questions get asked, and that the full picture of your mood history is considered.
             </p>
           </section>
 
@@ -232,7 +232,7 @@ export default function BipolarVsDepressionPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment — they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mt-2">
               If you or someone you know is in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <strong>988</strong>, text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line), or reach the <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong> (free, confidential, 24/7).
@@ -257,7 +257,7 @@ export default function BipolarVsDepressionPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

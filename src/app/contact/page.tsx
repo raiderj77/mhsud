@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/contact",
   title: "Contact Us",
   description:
-    "Get in touch with the MindCheck Tools team. Questions, feedback, or accessibility concerns — we're here to help.",
+    "Get in touch with the MindCheck Tools team. Questions, feedback, or accessibility concerns, we're here to help.",
 });
 
 export default function ContactPage() {
@@ -72,7 +72,7 @@ export default function ContactPage() {
           <section>
             <h2>Response Time</h2>
             <p>
-              We aim to respond to all emails within <strong>48 hours</strong>. For urgent mental health concerns, please contact the resources below — they are available 24/7.
+              We aim to respond to all emails within <strong>48 hours</strong>. For urgent mental health concerns, please contact the resources below, they are available 24/7.
             </p>
           </section>
 
@@ -84,7 +84,7 @@ export default function ContactPage() {
             <div className="not-prose space-y-3">
               <div className="p-4 card">
                 <p className="font-semibold text-neutral-900 dark:text-neutral-50">988 Suicide & Crisis Lifeline</p>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">Call or text <strong>988</strong> — Available 24/7</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">Call or text <strong>988</strong>, Available 24/7</p>
               </div>
               <div className="p-4 card">
                 <p className="font-semibold text-neutral-900 dark:text-neutral-50">Crisis Text Line</p>
@@ -92,7 +92,7 @@ export default function ContactPage() {
               </div>
               <div className="p-4 card">
                 <p className="font-semibold text-neutral-900 dark:text-neutral-50">SAMHSA National Helpline</p>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">Call <strong>1-800-662-4357</strong> — Free, confidential treatment referrals</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">Call <strong>1-800-662-4357</strong>, Free, confidential treatment referrals</p>
               </div>
             </div>
           </section>

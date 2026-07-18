@@ -13,9 +13,55 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "what-an-audit-score-actually-triggers-in-sud-treatment-intake",
+    title: "What Does an AUDIT Score Actually Trigger in SUD Treatment Intake?",
+    excerpt: "An AUDIT score does not diagnose anything on its own. It is a validated screening tool that places a person in a risk zone, and each zone maps to a specific clinical response, from brief advice at low scores to a full diagnostic assessment and possib",
+    category: "Education",
+    date: "2026-07-07",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-07",
+    modifiedDate: "2026-07-07",
+  },
+  {
+    slug: "sbirt-in-90-seconds-how-brief-intervention-follows-a-positive-screen",
+    title: "SBIRT in 90 Seconds: How Brief Intervention Follows a Positive Screen",
+    excerpt: "SBIRT stands for Screening, Brief Intervention, and Referral to Treatment. After a positive screen for risky alcohol or drug use, a trained provider spends roughly 5 to 15 minutes discussing the results, offering feedback, and gauging the person's re",
+    category: "Education",
+    date: "2026-07-07",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-07",
+    modifiedDate: "2026-07-07",
+  },
+
+  {
+    slug: "dast-10-vs-dast-20-guide",
+    title: "DAST-10 vs DAST-20: Which Drug-Use Screener Fits Your Setting?",
+    excerpt: "The DAST-10 suits fast-paced settings like primary care and EDs. The DAST-20 fits dedicated treatment programs needing more clinical detail. Compare scoring, use cases, and limits.",
+    category: "Education",
+    date: "2026-07-02",
+    readTime: "11 min read",
+    status: "published",
+    publishedDate: "2026-07-02",
+    modifiedDate: "2026-07-02",
+  },
+  {
+    slug: "sud-risk-screening-tools-guide",
+    title: "Which Validated Screening Tool Should You Use to Assess Your SUD Risk?",
+    excerpt: "No single tool covers every substance equally well. Compare AUDIT, DAST-10, CRAFFT, ORT, and ASSIST to find the right instrument for the right substance and population.",
+    category: "Education",
+    date: "2026-07-02",
+    readTime: "12 min read",
+    status: "published",
+    publishedDate: "2026-07-02",
+    modifiedDate: "2026-07-02",
+  },
+
+  {
     slug: "phq-9-guide",
     title: "PHQ-9 Explained: How Clinicians Use This Depression Questionnaire (and What It Can't Tell You)",
-    excerpt: "Learn what the PHQ-9 measures, how healthcare providers interpret scores, and why this widely-used screener is only a starting point — not a diagnosis.",
+    excerpt: "Learn what the PHQ-9 measures, how healthcare providers interpret scores, and why this widely-used screener is only a starting point, not a diagnosis.",
     category: "Tool Guide",
     toolSlug: "/phq-9-depression-test",
     date: "2025-01-15",
@@ -27,7 +73,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gad-7-guide",
     title: "GAD-7 Anxiety Scale: What It Measures and How Doctors Interpret Scores",
-    excerpt: "A plain-language guide to the GAD-7, the world's most commonly used anxiety screener — what it catches, what it misses, and what to do with your results.",
+    excerpt: "A plain-language guide to the GAD-7, the world's most commonly used anxiety screener, what it catches, what it misses, and what to do with your results.",
     category: "Tool Guide",
     toolSlug: "/gad-7-anxiety-test",
     date: "2025-01-20",
@@ -39,7 +85,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "audit-guide",
     title: "AUDIT Alcohol Screening Tool: How It Works and Why Clinicians Use It",
-    excerpt: "Understanding the WHO's AUDIT alcohol screening questionnaire — its origins, how it's scored, and what your results mean in context.",
+    excerpt: "Understanding the WHO's AUDIT alcohol screening questionnaire, its origins, how it's scored, and what your results mean in context.",
     category: "Tool Guide",
     toolSlug: "/audit-alcohol-test",
     date: "2025-01-25",
@@ -63,7 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "sleep-and-mood",
     title: "How Sleep Affects Your Mood (and Why Poor Sleep Makes Everything Harder)",
-    excerpt: "The science behind the sleep-mood connection — why poor sleep worsens anxiety and depression, how to tell if sleep is affecting your mental health, and what to do about it.",
+    excerpt: "The science behind the sleep-mood connection, why poor sleep worsens anxiety and depression, how to tell if sleep is affecting your mental health, and what to do about it.",
     category: "Education",
     toolSlug: "/sleep-and-mood-check",
     date: "2025-02-10",
@@ -123,7 +169,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "adult-adhd-signs",
     title: "Adult ADHD: Signs You Might Have Missed",
-    excerpt: "Common signs of ADHD in adults, why it's underdiagnosed — especially in women — the three presentations, and how to get screened.",
+    excerpt: "Common signs of ADHD in adults, why it's underdiagnosed, especially in women, the three presentations, and how to get screened.",
     category: "Education",
     toolSlug: "/asrs-adhd-screening",
     date: "2026-03-05",
@@ -253,7 +299,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "dbt-skills-beginners",
     title: "DBT Skills for Everyday Life: A Beginner's Guide",
-    excerpt: "Learn the 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — in plain language.",
+    excerpt: "Learn the 4 DBT skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, in plain language.",
     category: "Education",
     toolSlug: "/dbt-crisis-skills",
     date: "2026-03-05",
@@ -313,7 +359,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "what-does-audit-score-mean",
     title: "What Does Your AUDIT Score Mean?",
-    excerpt: "AUDIT scores range from 0\u201340. Learn what each score zone means \u2014 from low risk to possible dependence \u2014 and what steps to take based on your results.",
+    excerpt: "AUDIT scores range from 0\u201340. Learn what each score zone means, from low risk to possible dependence, and what steps to take based on your results.",
     category: "Education",
     toolSlug: "/audit-alcohol-test",
     date: "2026-03-10",
@@ -325,7 +371,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "when-should-i-see-a-therapist",
     title: "When Should I See a Therapist? 10 Signs",
-    excerpt: "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional \u2014 and what to expect when you do.",
+    excerpt: "Not sure if therapy is for you? These 10 signs suggest it may be time to talk to a mental health professional, and what to expect when you do.",
     category: "Education",
     toolSlug: "/phq-9-depression-test",
     date: "2026-03-10",
@@ -349,7 +395,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-talk-to-doctor-about-mental-health",
     title: "How to Talk to Your Doctor About Mental Health",
-    excerpt: "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect \u2014 including how to use your screening results.",
+    excerpt: "Talking to a doctor about mental health can feel daunting. Here\u2019s exactly what to say, how to prepare, and what to expect, including how to use your screening results.",
     category: "Education",
     toolSlug: "/phq-9-depression-test",
     date: "2026-03-10",
@@ -421,7 +467,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "what-is-anxiety",
     title: "What Is Anxiety? Symptoms, Types, and Treatment",
-    excerpt: "Anxiety is normal \u2014 but anxiety disorders are not just being worried. Learn the difference, how the main anxiety disorders are defined, and what evidence-based treatment looks like.",
+    excerpt: "Anxiety is normal, but anxiety disorders are not just being worried. Learn the difference, how the main anxiety disorders are defined, and what evidence-based treatment looks like.",
     category: "Education",
     toolSlug: "/gad-7-anxiety-test",
     date: "2026-03-10",
@@ -433,7 +479,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-find-a-therapist",
     title: "How to Find a Therapist: A Step-by-Step Guide",
-    excerpt: "Finding a therapist is harder than it should be. Here\u2019s a practical, step-by-step guide for finding one that fits your needs, budget, and insurance \u2014 without the runaround.",
+    excerpt: "Finding a therapist is harder than it should be. Here\u2019s a practical, step-by-step guide for finding one that fits your needs, budget, and insurance, without the runaround.",
     category: "Education",
     toolSlug: "/phq-9-depression-test",
     date: "2026-03-10",
@@ -587,7 +633,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-support-someone-with-mental-health-condition",
     title: "How to Support Someone With a Mental Health Condition",
-    excerpt: "Supporting someone with depression, anxiety, PTSD, or another mental health condition can be hard to get right. Here\u2019s what actually helps \u2014 and what to avoid.",
+    excerpt: "Supporting someone with depression, anxiety, PTSD, or another mental health condition can be hard to get right. Here\u2019s what actually helps, and what to avoid.",
     category: "Education",
     toolSlug: "/phq-9-depression-test",
     date: "2026-03-10",
@@ -635,7 +681,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "attachment-styles-guide",
     title: "Understanding Attachment Styles: How Early Bonds Shape Adult Relationships",
-    excerpt: "Attachment styles affect how you connect in relationships. Learn the four styles \u2014 secure, anxious, avoidant, and disorganized \u2014 and how a self-assessment can help.",
+    excerpt: "Attachment styles affect how you connect in relationships. Learn the four styles, secure, anxious, avoidant, and disorganized, and how a self-assessment can help.",
     category: "Education",
     toolSlug: "/attachment-style-quiz",
     date: "2026-03-17",
@@ -851,7 +897,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "halt-checkin-guide",
     title: "HALT: The Recovery Check-In That Prevents Relapse",
-    excerpt: "HALT stands for Hungry, Angry, Lonely, Tired \u2014 four vulnerability states that increase relapse risk. Learn how this simple check-in works.",
+    excerpt: "HALT stands for Hungry, Angry, Lonely, Tired, four vulnerability states that increase relapse risk. Learn how this simple check-in works.",
     category: "Recovery",
     toolSlug: "/halt-check-in",
     date: "2026-03-17",
@@ -863,7 +909,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "relapse-prevention-guide",
     title: "Relapse Prevention: The Three Stages and How to Intervene Early",
-    excerpt: "Relapse is a process, not an event. Learn the three stages \u2014 emotional, mental, and physical \u2014 how to recognize warning signs early, and evidence-based strategies that work.",
+    excerpt: "Relapse is a process, not an event. Learn the three stages, emotional, mental, and physical, how to recognize warning signs early, and evidence-based strategies that work.",
     category: "Recovery",
     toolSlug: "/relapse-prevention-plan",
     date: "2026-03-17",

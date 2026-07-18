@@ -9,6 +9,7 @@ import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 interface Question {
@@ -53,7 +54,7 @@ const RANGES = [
   { min: 0, max: 2, level: "Lower Risk (Below Threshold)", key: "low", description: "Your responses fall below the commonly used screening threshold. In research, scores in this range are generally not associated with elevated alcohol-related risk.", suggestion: "Continue being mindful of your drinking habits. If your patterns change over time, consider checking in again." },
   { min: 3, max: 4, level: "At-Threshold (Consider Further Assessment)", key: "threshold", description: "Your responses are at or near the screening threshold used in many clinical settings (3+ for women, 4+ for men). This does not mean you have a problem, but further reflection or a more detailed assessment may be worthwhile.", suggestion: "Consider taking the full 10-question AUDIT for a more detailed picture, or discuss your drinking patterns with a healthcare provider." },
   { min: 5, max: 7, level: "Above Threshold (Further Assessment Recommended)", key: "above", description: "Your responses are above the screening threshold used in most clinical settings. This suggests that a more detailed assessment of your alcohol use would be beneficial.", suggestion: "Taking the full 10-question AUDIT and/or speaking with a healthcare provider about your drinking patterns is encouraged." },
-  { min: 8, max: 12, level: "Well Above Threshold (Assessment Strongly Recommended)", key: "high", description: "Your responses are well above the screening threshold. A comprehensive assessment by a healthcare professional is strongly recommended.", suggestion: "Please consider speaking with a healthcare professional about your alcohol use. If you drink heavily and want to cut down, do not stop suddenly without medical guidance — withdrawal can be medically serious." },
+  { min: 8, max: 12, level: "Well Above Threshold (Assessment Strongly Recommended)", key: "high", description: "Your responses are well above the screening threshold. A comprehensive assessment by a healthcare professional is strongly recommended.", suggestion: "Please consider speaking with a healthcare professional about your alcohol use. If you drink heavily and want to cut down, do not stop suddenly without medical guidance, withdrawal can be medically serious." },
 ];
 
 function getRange(score: number) {
@@ -125,7 +126,7 @@ export function AUDITCClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/audit-c-alcohol-screen";
     if (mode === "blank") {
       const shareData = {
-        title: "AUDIT-C Quick Alcohol Screen — Free & Private",
+        title: "AUDIT-C Quick Alcohol Screen, Free & Private",
         text: "Take a free, private AUDIT-C Quick Alcohol Screen. Your answers never leave your browser.",
         url,
       };
@@ -137,7 +138,7 @@ export function AUDITCClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `AUDIT-C Quick Alcohol Screen Results\nScore: ${totalScore}/12 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `AUDIT-C Quick Alcohol Screen Results\nScore: ${totalScore}/12, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My AUDIT-C Quick Alcohol Screen Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -157,7 +158,7 @@ export function AUDITCClient({ faqData }: Props) {
           AUDIT-C Quick Alcohol Screen
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          A 3-question brief alcohol screen used in primary care settings worldwide. The fastest way to reflect on your drinking patterns — completely private.
+          A 3-question brief alcohol screen used in primary care settings worldwide. The fastest way to reflect on your drinking patterns, completely private.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[{ icon: "🔒", text: "100% Private" }, { icon: "⚡", text: "~60 Seconds" }, { icon: "📋", text: "3 Questions" }].map((b) => (
@@ -181,7 +182,7 @@ export function AUDITCClient({ faqData }: Props) {
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-xs font-semibold text-sage-600 dark:text-sage-400">{answers.filter((a) => a !== null).length} of 3 answered</span>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400">Quick screen — be honest with yourself</span>
+              <span className="text-xs text-neutral-500 dark:text-neutral-400">Quick screen, be honest with yourself</span>
             </div>
             <div className="h-1 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-sage-400 to-sage-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
@@ -226,13 +227,13 @@ export function AUDITCClient({ faqData }: Props) {
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your AUDIT-C Score</p>
               <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 12 — {range.level}</p>
+              <p className={`text-sm font-semibold ${colors.text}`}>out of 12, {range.level}</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 12) * 100}%` }} />
                 </div>
                 <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                  <span>0 — Lower Risk</span><span>12 — Higher Risk</span>
+                  <span>0, Lower Risk</span><span>12, Higher Risk</span>
                 </div>
               </div>
             </div>
@@ -360,7 +361,9 @@ export function AUDITCClient({ faqData }: Props) {
             />
           )}
 
-          <EmailCapture toolName="AUDIT-C" />
+          <TherapyCTA show={["above", "high"].includes(range.key)} />
+
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
@@ -387,12 +390,12 @@ export function AUDITCClient({ faqData }: Props) {
             <div className="card p-5 sm:p-6">
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
-                  World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test — Guidelines for Use in Primary Care (2nd ed.).{" "}
-                  <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO — AUDIT Manual</a>
+                  World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test, Guidelines for Use in Primary Care (2nd ed.).{" "}
+                  <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO, AUDIT Manual</a>
                 </li>
                 <li>
                   Bush, K., Kivlahan, D. R., McDonell, M. B., et al. (1998). The AUDIT alcohol consumption questions (AUDIT-C).{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/9738608/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — AUDIT-C Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/9738608/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, AUDIT-C Validation</a>
                 </li>
                 <li>
                   National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Use Disorder.{" "}
@@ -425,8 +428,8 @@ export function AUDITCClient({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If you&apos;re concerned about your drinking, help is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 — free, confidential, 24/7 referrals", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free, confidential, 24/7 referrals", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (

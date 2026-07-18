@@ -88,7 +88,7 @@ export default function InsomniaTestGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Chronic insomnia affects roughly 10% of adults, and occasional insomnia symptoms &mdash; trouble falling asleep, staying asleep, or waking too early &mdash; affect 30&ndash;35%. If you&apos;ve been struggling with sleep, a validated self-assessment like the Athens Insomnia Scale can help you understand whether your difficulties may warrant professional attention.
+            Chronic insomnia affects roughly 10% of adults, and occasional insomnia symptoms, trouble falling asleep, staying asleep, or waking too early, affect 30&ndash;35%. If you&apos;ve been struggling with sleep, a validated self-assessment like the Athens Insomnia Scale can help you understand whether your difficulties may warrant professional attention.
           </p>
         </header>
 
@@ -97,7 +97,7 @@ export default function InsomniaTestGuidePage() {
           <section>
             <h2>What is insomnia?</h2>
             <p>
-              Insomnia is more than a few bad nights. The DSM-5 defines insomnia disorder as difficulty initiating sleep, maintaining sleep, or early morning awakening that occurs at least 3 nights per week for 3 or more months and causes significant distress or impairment in daytime functioning &mdash; including fatigue, difficulty concentrating, mood disturbance, or reduced performance at work or school.
+              Insomnia is more than a few bad nights. The DSM-5 defines insomnia disorder as difficulty initiating sleep, maintaining sleep, or early morning awakening that occurs at least 3 nights per week for 3 or more months and causes significant distress or impairment in daytime functioning, including fatigue, difficulty concentrating, mood disturbance, or reduced performance at work or school.
             </p>
             <p>
               Occasional sleep difficulties are normal, especially during stressful periods. What distinguishes insomnia disorder from ordinary poor sleep is <strong>persistence</strong> (3+ months), <strong>frequency</strong> (3+ nights per week), and <strong>functional impact</strong> (it meaningfully interferes with your day).
@@ -109,9 +109,9 @@ export default function InsomniaTestGuidePage() {
             <h2>How do the different types of insomnia present?</h2>
             <p>Insomnia is not a single experience. It tends to present in one or more of these patterns:</p>
             <ul>
-              <li><strong>Sleep onset insomnia</strong> &mdash; difficulty falling asleep at the beginning of the night. You lie in bed for 30 minutes or more, mind racing or body unable to relax. This pattern is strongly associated with anxiety and hyperarousal.</li>
-              <li><strong>Sleep maintenance insomnia</strong> &mdash; waking multiple times during the night and having difficulty returning to sleep. Often associated with chronic pain, medical conditions, or substance use.</li>
-              <li><strong>Early morning awakening</strong> &mdash; waking 2&ndash;3 hours before the intended wake time and being unable to fall back asleep. This pattern has a well-documented association with depression.</li>
+              <li><strong>Sleep onset insomnia</strong>, difficulty falling asleep at the beginning of the night. You lie in bed for 30 minutes or more, mind racing or body unable to relax. This pattern is strongly associated with anxiety and hyperarousal.</li>
+              <li><strong>Sleep maintenance insomnia</strong>, waking multiple times during the night and having difficulty returning to sleep. Often associated with chronic pain, medical conditions, or substance use.</li>
+              <li><strong>Early morning awakening</strong>, waking 2&ndash;3 hours before the intended wake time and being unable to fall back asleep. This pattern has a well-documented association with depression.</li>
             </ul>
             <p>
               Many people experience more than one type simultaneously. All three types can be assessed using the{" "}
@@ -127,22 +127,22 @@ export default function InsomniaTestGuidePage() {
             </p>
             <p>The AIS covers eight domains:</p>
             <ul>
-              <li><strong>Sleep induction</strong> &mdash; how long it takes to fall asleep</li>
-              <li><strong>Awakenings during the night</strong> &mdash; frequency and difficulty returning to sleep</li>
-              <li><strong>Early morning awakening</strong> &mdash; waking earlier than desired</li>
-              <li><strong>Total sleep duration</strong> &mdash; whether total sleep time feels sufficient</li>
-              <li><strong>Sleep quality</strong> &mdash; overall satisfaction with sleep</li>
-              <li><strong>Well-being during the day</strong> &mdash; how rested and functional you feel</li>
-              <li><strong>Functioning during the day</strong> &mdash; cognitive and physical performance</li>
-              <li><strong>Sleepiness during the day</strong> &mdash; excessive daytime drowsiness</li>
+              <li><strong>Sleep induction</strong>, how long it takes to fall asleep</li>
+              <li><strong>Awakenings during the night</strong>, frequency and difficulty returning to sleep</li>
+              <li><strong>Early morning awakening</strong>, waking earlier than desired</li>
+              <li><strong>Total sleep duration</strong>, whether total sleep time feels sufficient</li>
+              <li><strong>Sleep quality</strong>, overall satisfaction with sleep</li>
+              <li><strong>Well-being during the day</strong>, how rested and functional you feel</li>
+              <li><strong>Functioning during the day</strong>, cognitive and physical performance</li>
+              <li><strong>Sleepiness during the day</strong>, excessive daytime drowsiness</li>
             </ul>
             <p>
-              Each item is scored 0&ndash;3, producing a total score of 0&ndash;24. A score of <strong>6 or higher</strong> indicates clinically significant insomnia. The AIS is not a diagnostic tool &mdash; it is a screening instrument that can help you and your healthcare provider determine whether further evaluation is appropriate.
+              Each item is scored 0&ndash;3, producing a total score of 0&ndash;24. A score of <strong>6 or higher</strong> indicates clinically significant insomnia. The AIS is not a diagnostic tool, it is a screening instrument that can help you and your healthcare provider determine whether further evaluation is appropriate.
             </p>
             <p>
               You can take the{" "}
               <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale self-assessment</Link>{" "}
-              on this site. It takes about 2 minutes, and your answers are scored in your browser &mdash; nothing is stored or transmitted.
+              on this site. It takes about 2 minutes, and your answers are scored in your browser, nothing is stored or transmitted.
             </p>
           </section>
 
@@ -152,13 +152,13 @@ export default function InsomniaTestGuidePage() {
           <section>
             <h2>How are insomnia and mental health connected?</h2>
             <p>
-              The relationship between insomnia and mental health is <strong>bidirectional</strong> &mdash; each worsens the other, creating a cycle that can be difficult to break without targeted intervention.
+              The relationship between insomnia and mental health is <strong>bidirectional</strong>, each worsens the other, creating a cycle that can be difficult to break without targeted intervention.
             </p>
             <p><strong>Insomnia increases the risk of mental health conditions:</strong></p>
             <ul>
               <li>People with persistent insomnia have approximately <strong>2 times the risk</strong> of developing depression compared to those who sleep well (Baglioni et al., 2011)</li>
               <li>Insomnia is associated with a <strong>3-fold increased risk</strong> of developing an anxiety disorder</li>
-              <li>Chronic sleep deprivation impairs emotional regulation &mdash; the amygdala becomes hyperreactive to negative stimuli while prefrontal control weakens</li>
+              <li>Chronic sleep deprivation impairs emotional regulation, the amygdala becomes hyperreactive to negative stimuli while prefrontal control weakens</li>
             </ul>
             <p><strong>Mental health conditions disrupt sleep:</strong></p>
             <ul>
@@ -167,7 +167,7 @@ export default function InsomniaTestGuidePage() {
               <li>PTSD causes nightmares, hypervigilance at night, and fragmented sleep</li>
             </ul>
             <p>
-              This bidirectional relationship means that treating insomnia often improves mental health symptoms &mdash; and addressing mental health conditions often improves sleep. If you&apos;re experiencing both sleep difficulties and mood changes, tools like the{" "}
+              This bidirectional relationship means that treating insomnia often improves mental health symptoms, and addressing mental health conditions often improves sleep. If you&apos;re experiencing both sleep difficulties and mood changes, tools like the{" "}
               <Link href="/sleep-and-mood-check" className="text-sage-600 dark:text-sage-400 underline">Sleep &amp; Mood Check</Link>{" "}
               and the{" "}
               <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link>{" "}
@@ -183,7 +183,7 @@ export default function InsomniaTestGuidePage() {
             </p>
             <p>CBT-I typically includes four core components:</p>
             <p>
-              <strong>Sleep restriction:</strong> Temporarily limiting time in bed to match actual sleep time. This builds sleep pressure (homeostatic sleep drive) and consolidates fragmented sleep into a solid block. It is counterintuitive &mdash; spending less time in bed initially &mdash; but highly effective.
+              <strong>Sleep restriction:</strong> Temporarily limiting time in bed to match actual sleep time. This builds sleep pressure (homeostatic sleep drive) and consolidates fragmented sleep into a solid block. It is counterintuitive, spending less time in bed initially, but highly effective.
             </p>
             <p>
               <strong>Stimulus control:</strong> Re-establishing the association between bed and sleep. The bed is used only for sleep (not reading, watching screens, or worrying). If you can&apos;t fall asleep within about 20 minutes, you get up and return only when sleepy.
@@ -208,12 +208,12 @@ export default function InsomniaTestGuidePage() {
               While CBT-I is the most effective approach for chronic insomnia, foundational sleep hygiene practices can help anyone sleeping poorly. These are not substitutes for professional help when insomnia is persistent, but they are a reasonable starting point:
             </p>
             <ul>
-              <li><strong>Keep a consistent wake time</strong> &mdash; waking at the same time every day, including weekends, is the single most powerful anchor for your circadian system. A consistent wake time matters more than a fixed bedtime.</li>
-              <li><strong>Create a cool, dark, quiet environment</strong> &mdash; optimal sleep temperature is typically 60&ndash;67&deg;F (15&ndash;19&deg;C). Blackout curtains and white noise can help.</li>
-              <li><strong>Limit screens before bed</strong> &mdash; blue light from screens suppresses melatonin production. Stopping screen use 30&ndash;60 minutes before bed supports natural sleep onset.</li>
-              <li><strong>Avoid caffeine after noon</strong> &mdash; caffeine has a half-life of 5&ndash;6 hours. An afternoon coffee can still be active in your system at midnight.</li>
-              <li><strong>Get morning light exposure</strong> &mdash; 15&ndash;30 minutes of outdoor light in the morning helps regulate the circadian clock, improving both sleep onset and wake times.</li>
-              <li><strong>Avoid alcohol as a sleep aid</strong> &mdash; alcohol speeds sleep onset but fragments sleep in the second half of the night, suppresses REM sleep, and worsens sleep quality overall.</li>
+              <li><strong>Keep a consistent wake time</strong>, waking at the same time every day, including weekends, is the single most powerful anchor for your circadian system. A consistent wake time matters more than a fixed bedtime.</li>
+              <li><strong>Create a cool, dark, quiet environment</strong>, optimal sleep temperature is typically 60&ndash;67&deg;F (15&ndash;19&deg;C). Blackout curtains and white noise can help.</li>
+              <li><strong>Limit screens before bed</strong>, blue light from screens suppresses melatonin production. Stopping screen use 30&ndash;60 minutes before bed supports natural sleep onset.</li>
+              <li><strong>Avoid caffeine after noon</strong>, caffeine has a half-life of 5&ndash;6 hours. An afternoon coffee can still be active in your system at midnight.</li>
+              <li><strong>Get morning light exposure</strong>, 15&ndash;30 minutes of outdoor light in the morning helps regulate the circadian clock, improving both sleep onset and wake times.</li>
+              <li><strong>Avoid alcohol as a sleep aid</strong>, alcohol speeds sleep onset but fragments sleep in the second half of the night, suppresses REM sleep, and worsens sleep quality overall.</li>
             </ul>
           </section>
 
@@ -231,7 +231,7 @@ export default function InsomniaTestGuidePage() {
             <p>
               A validated self-assessment like the{" "}
               <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale</Link>{" "}
-              can be a useful starting point for that conversation &mdash; bringing your results to your provider gives them concrete information about the nature and severity of your sleep difficulties.
+              can be a useful starting point for that conversation, bringing your results to your provider gives them concrete information about the nature and severity of your sleep difficulties.
             </p>
           </section>
 
@@ -252,9 +252,9 @@ export default function InsomniaTestGuidePage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -276,7 +276,7 @@ export default function InsomniaTestGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

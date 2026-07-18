@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { WorryTimeClient } from "./WorryTimeClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/worry-time-scheduler`;
 
@@ -33,23 +34,23 @@ const FAQ_DATA = [
   },
   {
     question: "How long should my worry time session be?",
-    answer: "Most CBT protocols recommend 15-30 minutes. Start with 15 minutes and increase if you find you consistently need more time. The key is having a fixed endpoint — worry time should not extend indefinitely. If you finish early, that is a good sign. If you do not get through all worries, prioritize the most pressing ones and save the rest for tomorrow. Over time, many people find they need less worry time as their anxiety decreases.",
+    answer: "Most CBT protocols recommend 15-30 minutes. Start with 15 minutes and increase if you find you consistently need more time. The key is having a fixed endpoint, worry time should not extend indefinitely. If you finish early, that is a good sign. If you do not get through all worries, prioritize the most pressing ones and save the rest for tomorrow. Over time, many people find they need less worry time as their anxiety decreases.",
   },
   {
     question: "What if I cannot stop worrying outside of worry time?",
-    answer: "This is completely normal, especially when starting out. The goal is not perfection — it is practice. When a worry pops up, acknowledge it, write it down quickly (so your brain knows it will not be forgotten), and gently redirect your attention. Some people find it helpful to say to themselves: 'I see this worry. I have written it down. I will give it my full attention at [scheduled time].' If a worry feels truly urgent (involving immediate safety), address it right away. Otherwise, the act of postponing gets easier with practice.",
+    answer: "This is completely normal, especially when starting out. The goal is not perfection, it is practice. When a worry pops up, acknowledge it, write it down quickly (so your brain knows it will not be forgotten), and gently redirect your attention. Some people find it helpful to say to themselves: 'I see this worry. I have written it down. I will give it my full attention at [scheduled time].' If a worry feels truly urgent (involving immediate safety), address it right away. Otherwise, the act of postponing gets easier with practice.",
   },
   {
     question: "When is the best time to schedule worry time?",
-    answer: "Choose a time that works consistently for your schedule, but avoid right before bed (worrying before sleep can cause insomnia) and the very start of your day (it may set a negative tone). Late afternoon or early evening works well for many people — it is late enough that you have collected the day's worries but early enough that you have time to decompress afterward. The most important factor is consistency: the same time each day helps your brain learn that worries have a designated time and place.",
+    answer: "Choose a time that works consistently for your schedule, but avoid right before bed (worrying before sleep can cause insomnia) and the very start of your day (it may set a negative tone). Late afternoon or early evening works well for many people, it is late enough that you have collected the day's worries but early enough that you have time to decompress afterward. The most important factor is consistency: the same time each day helps your brain learn that worries have a designated time and place.",
   },
   {
     question: "Is worry time the same as rumination?",
-    answer: "No — and this is a critical distinction. Rumination is passive, repetitive, unproductive thinking that goes in circles. Worry time is structured and goal-oriented. During worry time, you actively engage with each worry: Is it solvable? If yes, plan a concrete next step. If no, practice acceptance and letting go. The guided prompts in this tool help ensure your worry time stays productive rather than becoming rumination. If you find yourself going in circles on a worry, that is a signal to move on to the next one.",
+    answer: "No, and this is a critical distinction. Rumination is passive, repetitive, unproductive thinking that goes in circles. Worry time is structured and goal-oriented. During worry time, you actively engage with each worry: Is it solvable? If yes, plan a concrete next step. If no, practice acceptance and letting go. The guided prompts in this tool help ensure your worry time stays productive rather than becoming rumination. If you find yourself going in circles on a worry, that is a signal to move on to the next one.",
   },
   {
     question: "Are my worries stored privately?",
-    answer: "Yes. Everything you enter in this tool stays in your browser's local storage on your device. Nothing is sent to any server, collected, or shared. Your worry log is only accessible from the browser and device you used. Clearing your browser data will remove your entries. This tool is for educational self-help purposes and is not a replacement for professional therapy. If anxiety is significantly impacting your daily life, please consult a qualified mental health professional.",
+    answer: "Your worry log is saved in this browser's local storage and is not intentionally sent to MindCheck Tools application servers. Anyone with access to the same browser profile may be able to read it. Clearing site data removes the entries. On a shared device, use a private window or clear the log when finished. This educational tool is not a replacement for professional therapy.",
   },
 ];
 
@@ -67,7 +68,7 @@ export default function WorryTimeSchedulerPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -89,7 +90,12 @@ export default function WorryTimeSchedulerPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100">
+          Worry Time Scheduler
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
@@ -129,7 +135,8 @@ export default function WorryTimeSchedulerPage() {
         <h2>How Does the Worry Time Scheduler Work?</h2>
         <h2>What Are the Benefits of Scheduled Worry Time?</h2>
       </section>
-<WorryTimeClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your worry log and schedule" />
+      <WorryTimeClient faqData={FAQ_DATA} />
     </>
   );
 }

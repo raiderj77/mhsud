@@ -31,12 +31,12 @@ const FAQ_DATA = [
   {
     question: "Why is ADHD underdiagnosed in women?",
     answer:
-      "ADHD research historically focused on hyperactive boys, creating diagnostic criteria that miss the predominantly inattentive presentation more common in women. Women also develop sophisticated masking strategies \u2014 overcompensation, excessive planning, perfectionism \u2014 that hide symptoms. Additionally, clinicians often attribute ADHD symptoms in women to anxiety or depression, leading to misdiagnosis rather than recognition of ADHD as the underlying condition.",
+      "ADHD research historically focused on hyperactive boys, creating diagnostic criteria that miss the predominantly inattentive presentation more common in women. Women also develop sophisticated masking strategies, overcompensation, excessive planning, perfectionism, that hide symptoms. Additionally, clinicians often attribute ADHD symptoms in women to anxiety or depression, leading to misdiagnosis rather than recognition of ADHD as the underlying condition.",
   },
   {
     question: "Can ADHD symptoms get worse during perimenopause?",
     answer:
-      "Yes. Estrogen supports dopamine production in the brain, and dopamine is the primary neurotransmitter affected in ADHD. As estrogen levels decline during perimenopause, many women experience a significant worsening of ADHD symptoms \u2014 particularly difficulty concentrating, memory problems, and emotional regulation challenges. Women diagnosed with ADHD earlier may need medication adjustments during this transition.",
+      "Yes. Estrogen supports dopamine production in the brain, and dopamine is the primary neurotransmitter affected in ADHD. As estrogen levels decline during perimenopause, many women experience a significant worsening of ADHD symptoms, particularly difficulty concentrating, memory problems, and emotional regulation challenges. Women diagnosed with ADHD earlier may need medication adjustments during this transition.",
   },
   {
     question: "Is ADHD in women different from ADHD in men?",
@@ -88,7 +88,7 @@ export default function AdhdWomenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Women with ADHD are diagnosed on average five to ten years later than men. Many are not identified until their 30s, 40s, or later &mdash; often only after a child receives a screening or after years of being treated for anxiety and depression that never fully responded to standard approaches. The problem is not that ADHD is rare in women. It is that the way ADHD presents in women does not match the stereotype most people &mdash; including many clinicians &mdash; still carry.
+            Women with ADHD are diagnosed on average five to ten years later than men. Many are not identified until their 30s, 40s, or later, often only after a child receives a screening or after years of being treated for anxiety and depression that never fully responded to standard approaches. The problem is not that ADHD is rare in women. It is that the way ADHD presents in women does not match the stereotype most people, including many clinicians, still carry.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AdhdWomenGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ export default function AdhdWomenGuidePage() {
           <section>
             <h2>Why ADHD looks different in women</h2>
             <p>
-              The image most people hold of ADHD &mdash; a hyperactive boy who cannot sit still in class &mdash; was shaped by decades of research conducted primarily on male children. This created diagnostic criteria and clinical expectations that systematically miss the way ADHD manifests in girls and women.
+              The image most people hold of ADHD, a hyperactive boy who cannot sit still in class, was shaped by decades of research conducted primarily on male children. This created diagnostic criteria and clinical expectations that systematically miss the way ADHD manifests in girls and women.
             </p>
             <p>
               Women with ADHD are more likely to present with the predominantly inattentive type. Rather than external hyperactivity, they experience internal chaos: racing thoughts, difficulty prioritizing, chronic disorganization, and an overwhelming sense that they cannot keep up with the demands of daily life. From the outside, they may appear to be functioning well. Internally, the effort required to maintain that appearance is exhausting.
@@ -132,7 +132,7 @@ export default function AdhdWomenGuidePage() {
           <section>
             <h2>The misdiagnosis cycle: anxiety, depression, and what gets missed</h2>
             <p>
-              Women with undiagnosed ADHD frequently seek help for symptoms that are downstream effects of their ADHD rather than the root cause. The chronic stress of managing undiagnosed ADHD produces genuine anxiety. The sense of falling short despite enormous effort produces real depressive symptoms. So clinicians treat what they see &mdash; anxiety and depression &mdash; without investigating what is driving them.
+              Women with undiagnosed ADHD frequently seek help for symptoms that are downstream effects of their ADHD rather than the root cause. The chronic stress of managing undiagnosed ADHD produces genuine anxiety. The sense of falling short despite enormous effort produces real depressive symptoms. So clinicians treat what they see, anxiety and depression, without investigating what is driving them.
             </p>
             <p>
               This creates a frustrating pattern: medications for anxiety or depression may partially help but never fully resolve the problem, because the underlying ADHD remains unaddressed. Many women describe years of therapy and medication changes before someone finally asks the right questions about attention, executive function, and childhood behavior.
@@ -163,7 +163,7 @@ export default function AdhdWomenGuidePage() {
           <section>
             <h2>The &quot;gifted&quot; woman trap: when intelligence masks ADHD</h2>
             <p>
-              High-functioning women with ADHD face a particular challenge: their intelligence and work ethic can mask their ADHD for decades. They develop elaborate compensatory systems &mdash; multiple calendars, reminder apps, meticulous routines, and sheer force of will &mdash; that allow them to perform at a high level. From the outside, they look successful. From the inside, they are running on fumes.
+              High-functioning women with ADHD face a particular challenge: their intelligence and work ethic can mask their ADHD for decades. They develop elaborate compensatory systems, multiple calendars, reminder apps, meticulous routines, and sheer force of will, that allow them to perform at a high level. From the outside, they look successful. From the inside, they are running on fumes.
             </p>
             <p>
               This compensation tends to work until life complexity exceeds the capacity of their systems. Common tipping points include:
@@ -175,7 +175,7 @@ export default function AdhdWomenGuidePage() {
               <li>Hormonal changes during perimenopause that reduce the neurochemical support for their strategies</li>
             </ul>
             <p>
-              When the system breaks down, these women often experience a crisis &mdash; burnout, relationship problems, career difficulties, or severe anxiety &mdash; that finally leads to screening. The relief of finally understanding why everything has been so hard can be profound.
+              When the system breaks down, these women often experience a crisis, burnout, relationship problems, career difficulties, or severe anxiety, that finally leads to screening. The relief of finally understanding why everything has been so hard can be profound.
             </p>
           </section>
 
@@ -187,13 +187,13 @@ export default function AdhdWomenGuidePage() {
               Emotional dysregulation is one of the most impactful but least discussed aspects of ADHD in women. While not included in the formal diagnostic criteria, research increasingly recognizes it as a core feature of the condition.
             </p>
             <p>
-              Women with ADHD often experience emotions more intensely than their neurotypical peers. Joy, frustration, sadness, and anger can arrive suddenly, feel overwhelming, and be difficult to modulate. This is not a character flaw &mdash; it reflects differences in how the ADHD brain regulates emotional responses.
+              Women with ADHD often experience emotions more intensely than their neurotypical peers. Joy, frustration, sadness, and anger can arrive suddenly, feel overwhelming, and be difficult to modulate. This is not a character flaw, it reflects differences in how the ADHD brain regulates emotional responses.
             </p>
             <p>
               Rejection Sensitive Dysphoria (RSD), while not a formal clinical term, describes a pattern that many women with ADHD recognize immediately: an intense, visceral emotional response to perceived criticism or rejection. A casual comment from a coworker, a friend not returning a text promptly, or constructive feedback from a manager can trigger an emotional reaction that feels wildly disproportionate to the situation.
             </p>
             <p>
-              This emotional intensity is often what leads women to seek help &mdash; and what leads clinicians to misidentify their symptoms as anxiety, depression, or borderline personality traits rather than ADHD.
+              This emotional intensity is often what leads women to seek help, and what leads clinicians to misidentify their symptoms as anxiety, depression, or borderline personality traits rather than ADHD.
             </p>
           </section>
 
@@ -206,10 +206,10 @@ export default function AdhdWomenGuidePage() {
               A screening is not an assessment. It identifies whether your symptom patterns are consistent with ADHD and whether further evaluation by a qualified professional is warranted. If your results suggest elevated ADHD symptoms, consider these next steps:
             </p>
             <ul>
-              <li>Seek evaluation from a clinician experienced with adult ADHD &mdash; specifically one who understands how ADHD presents in women</li>
+              <li>Seek evaluation from a clinician experienced with adult ADHD, specifically one who understands how ADHD presents in women</li>
               <li>Bring your screening results to the appointment as a conversation starter</li>
               <li>Prepare a list of symptoms across settings (work, home, relationships) and across your lifespan</li>
-              <li>If you are also experiencing anxiety or depression, mention this &mdash; a thorough evaluation should consider whether ADHD may be the underlying factor</li>
+              <li>If you are also experiencing anxiety or depression, mention this, a thorough evaluation should consider whether ADHD may be the underlying factor</li>
             </ul>
             <p>
               You can also take the <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS ADHD Screening</Link> for a complementary perspective. If anxiety or depression are also concerns, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> can help clarify the full picture.
@@ -234,7 +234,7 @@ export default function AdhdWomenGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

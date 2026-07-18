@@ -88,7 +88,7 @@ export default function DepressionVeteransGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Veterans carry experiences that most civilians never encounter &mdash; combat exposure, prolonged separation from family, moral injury, and the disorienting transition back to civilian life. These experiences create unique vulnerability to depression. Yet military culture, which values toughness and self-reliance, makes it harder for veterans to recognize depression in themselves or ask for help. The result: depression in veterans is widespread but significantly underrecognized and undertreated.
+            Veterans carry experiences that most civilians never encounter, combat exposure, prolonged separation from family, moral injury, and the disorienting transition back to civilian life. These experiences create unique vulnerability to depression. Yet military culture, which values toughness and self-reliance, makes it harder for veterans to recognize depression in themselves or ask for help. The result: depression in veterans is widespread but significantly underrecognized and undertreated.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function DepressionVeteransGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (press 1 for Veterans, US 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (press 1 for Veterans, US 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -116,7 +116,7 @@ export default function DepressionVeteransGuidePage() {
               <li><strong>Combat exposure:</strong> Direct exposure to life-threatening situations, witnessing death, and making split-second survival decisions create lasting psychological impact that extends well beyond deployment</li>
               <li><strong>Military sexual trauma (MST):</strong> The VA reports that roughly 1 in 3 women and 1 in 50 men experienced MST during service. MST is strongly associated with depression, PTSD, and substance use</li>
               <li><strong>Traumatic brain injury (TBI):</strong> TBI, particularly from blast exposure, is common among post-9/11 veterans. Depression co-occurs with TBI at rates of 25&ndash;50%, and the overlap between TBI symptoms and depression symptoms makes both harder to identify</li>
-              <li><strong>Moral injury:</strong> Experiencing or witnessing events that violate a person&apos;s moral code &mdash; harming civilians, following orders they disagreed with, failing to prevent harm &mdash; creates deep shame and guilt that fuels depression</li>
+              <li><strong>Moral injury:</strong> Experiencing or witnessing events that violate a person&apos;s moral code, harming civilians, following orders they disagreed with, failing to prevent harm, creates deep shame and guilt that fuels depression</li>
               <li><strong>Transition to civilian life:</strong> Leaving the military means losing structure, mission, rank identity, and the unit cohesion that defined daily life. Many veterans describe feeling purposeless, disconnected, and invisible after discharge</li>
               <li><strong>Loss of unit cohesion:</strong> The bonds formed in military service are among the strongest social connections many people ever experience. Losing that community contributes to isolation and depression</li>
             </ul>
@@ -125,7 +125,7 @@ export default function DepressionVeteransGuidePage() {
           <section>
             <h2>How depression and PTSD overlap in veterans</h2>
             <p>
-              Depression and PTSD co-occur in over 50% of cases among veterans. This overlap is not coincidental &mdash; the conditions share risk factors, neurological pathways, and symptoms including sleep disruption, concentration problems, emotional numbness, and social withdrawal.
+              Depression and PTSD co-occur in over 50% of cases among veterans. This overlap is not coincidental, the conditions share risk factors, neurological pathways, and symptoms including sleep disruption, concentration problems, emotional numbness, and social withdrawal.
             </p>
             <p>
               The overlap creates diagnostic challenges. A veteran experiencing nightmares, emotional detachment, irritability, and loss of interest may have PTSD, depression, or both. Screening for both conditions is important because treatment approaches differ, and addressing only one often leaves the veteran still struggling.
@@ -150,7 +150,7 @@ export default function DepressionVeteransGuidePage() {
               <li>&quot;My problems aren&apos;t bad enough to justify getting help&quot;</li>
             </ul>
             <p>
-              These beliefs are reinforced by military training and peer expectations. Even after discharge, many veterans continue to operate by the unwritten rule that &quot;I&apos;m fine&quot; is the only acceptable answer. This is why structured screening tools are so valuable &mdash; they bypass the general &quot;how are you?&quot; question and ask about specific, observable symptoms.
+              These beliefs are reinforced by military training and peer expectations. Even after discharge, many veterans continue to operate by the unwritten rule that &quot;I&apos;m fine&quot; is the only acceptable answer. This is why structured screening tools are so valuable, they bypass the general &quot;how are you?&quot; question and ask about specific, observable symptoms.
             </p>
           </section>
 
@@ -163,7 +163,7 @@ export default function DepressionVeteransGuidePage() {
               Several factors compound this risk: access to firearms, combat-acquired comfort with violence, social isolation after service, chronic pain, and untreated depression and PTSD. Notably, the majority of veteran suicides occur among those who are not connected to VA healthcare, highlighting the gap between available resources and the veterans who most need them.
             </p>
             <p>
-              Depression screening represents one concrete way to close that gap. A screening does not replace professional evaluation, but it can be the moment when a veteran first sees their experience reflected in specific, measurable terms &mdash; and recognizes that what they are going through has a name and available support.
+              Depression screening represents one concrete way to close that gap. A screening does not replace professional evaluation, but it can be the moment when a veteran first sees their experience reflected in specific, measurable terms, and recognizes that what they are going through has a name and available support.
             </p>
           </section>
 
@@ -175,7 +175,7 @@ export default function DepressionVeteransGuidePage() {
               The <Link href="/depression-screening-for-veterans" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for veterans</Link> is a free, private assessment that takes under five minutes. It is based on the PHQ-9, the same validated instrument used throughout the VA healthcare system for routine depression screening.
             </p>
             <p>
-              The screening runs entirely in your browser &mdash; no data is stored, no account is needed, and no one sees your answers. For veterans who are not ready to walk into a VA clinic or talk to a counselor, a private online screening provides a low-barrier entry point. It helps quantify what you may be experiencing and gives you something concrete to bring to a provider if you choose to seek help.
+              The screening runs entirely in your browser, no data is stored, no account is needed, and no one sees your answers. For veterans who are not ready to walk into a VA clinic or talk to a counselor, a private online screening provides a low-barrier entry point. It helps quantify what you may be experiencing and gives you something concrete to bring to a provider if you choose to seek help.
             </p>
             <p>
               If PTSD is also a concern, consider taking the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5 PTSD screening</Link> alongside the <Link href="/depression-screening-for-veterans" className="text-sage-600 dark:text-sage-400 underline">depression screening</Link>. Understanding both conditions helps guide the conversation with a provider.
@@ -194,7 +194,7 @@ export default function DepressionVeteransGuidePage() {
               <li><strong>Veterans Crisis Line:</strong> Dial 988, press 1, available 24/7 for veterans in crisis</li>
             </ul>
             <p>
-              Barriers to VA care are real &mdash; wait times, geographic distance, bureaucratic complexity, and stigma within VA facilities themselves. But options are expanding, and many veterans find that the hardest part is making the first call. A screening result can provide the motivation to make that call.
+              Barriers to VA care are real, wait times, geographic distance, bureaucratic complexity, and stigma within VA facilities themselves. But options are expanding, and many veterans find that the hardest part is making the first call. A screening result can provide the motivation to make that call.
             </p>
           </section>
 
@@ -206,9 +206,9 @@ export default function DepressionVeteransGuidePage() {
               If you are concerned about a veteran in your life, direct questions like &quot;are you depressed?&quot; are likely to be met with &quot;I&apos;m fine.&quot; More effective approaches include:
             </p>
             <ul>
-              <li>Asking about specific behaviors: &quot;I&apos;ve noticed you haven&apos;t been sleeping well &mdash; how long has that been going on?&quot;</li>
+              <li>Asking about specific behaviors: &quot;I&apos;ve noticed you haven&apos;t been sleeping well, how long has that been going on?&quot;</li>
               <li>Normalizing the experience: &quot;A lot of veterans deal with this after getting out&quot;</li>
-              <li>Sharing the screening tool: &quot;I came across this &mdash; it takes five minutes and it&apos;s completely private&quot;</li>
+              <li>Sharing the screening tool: &quot;I came across this, it takes five minutes and it&apos;s completely private&quot;</li>
               <li>Offering to help with logistics: &quot;I can help you make the appointment or drive you there&quot;</li>
               <li>Being persistent without being pushy: check in regularly, not just once</li>
             </ul>
@@ -233,7 +233,7 @@ export default function DepressionVeteransGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

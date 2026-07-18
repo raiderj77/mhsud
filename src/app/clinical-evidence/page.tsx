@@ -552,7 +552,7 @@ export default function ClinicalEvidencePage() {
   ]);
 
   return (
-    <main className="bg-sand-50 dark:bg-night-950 min-h-screen">
+    <div className="bg-sand-50 dark:bg-night-950 min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd()) }}
@@ -712,16 +712,16 @@ export default function ClinicalEvidencePage() {
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.threshold}</dd>
                 </div>
                 )}
-                <div className="grid sm:grid-cols-2 gap-3">
-                  <div>
+                <>
+                  <div className="sm:inline-block sm:w-1/2 sm:pr-2 sm:align-top">
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Sensitivity</dt>
                     <dd className="text-neutral-600 dark:text-neutral-300">{i.sensitivity}</dd>
                   </div>
-                  <div>
+                  <div className="sm:inline-block sm:w-1/2 sm:pl-2 sm:align-top">
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Specificity</dt>
                     <dd className="text-neutral-600 dark:text-neutral-300">{i.specificity}</dd>
                   </div>
-                </div>
+                </>
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">License / availability</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.license}</dd>
@@ -837,6 +837,6 @@ export default function ClinicalEvidencePage() {
           </p>
         </section>
       </article>
-    </main>
+    </div>
   );
 }

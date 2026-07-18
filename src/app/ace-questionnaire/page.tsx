@@ -37,12 +37,12 @@ const FAQ_DATA = [
   {
     question: "What does my ACE score mean?",
     answer:
-      "Your ACE score is simply the count of categories of adversity you experienced before age 18, ranging from 0 to 10. Research shows that higher ACE scores are statistically associated with increased risk for certain health outcomes later in life — but an ACE score is not a diagnosis, a prediction, or a destiny. Many people with high ACE scores live healthy, fulfilling lives, especially when protective factors like supportive relationships, community connection, and access to resources are present. Your ACE score is one piece of a much larger picture.",
+      "Your ACE score is simply the count of categories of adversity you experienced before age 18, ranging from 0 to 10. Research shows that higher ACE scores are statistically associated with increased risk for certain health outcomes later in life, but an ACE score is not a diagnosis, a prediction, or a destiny. Many people with high ACE scores live healthy, fulfilling lives, especially when protective factors like supportive relationships, community connection, and access to resources are present. Your ACE score is one piece of a much larger picture.",
   },
   {
     question: "Is a high ACE score a diagnosis?",
     answer:
-      "No. An ACE score is not a clinical diagnosis or a measure of current mental health. It is a research-based count of childhood adversity categories. It does not capture the severity, duration, or timing of experiences, and it does not account for resilience factors, protective relationships, or healing that may have occurred since childhood. A high ACE score does not mean you are damaged or destined for poor health — it means you experienced more types of adversity, which research associates with increased statistical risk. Many people with high ACE scores thrive with appropriate support.",
+      "No. An ACE score is not a clinical diagnosis or a measure of current mental health. It is a research-based count of childhood adversity categories. It does not capture the severity, duration, or timing of experiences, and it does not account for resilience factors, protective relationships, or healing that may have occurred since childhood. A high ACE score does not mean you are damaged or destined for poor health, it means you experienced more types of adversity, which research associates with increased statistical risk. Many people with high ACE scores thrive with appropriate support.",
   },
   {
     question: "Why does the questionnaire include a content warning?",
@@ -52,7 +52,7 @@ const FAQ_DATA = [
   {
     question: "What are resilience factors?",
     answer:
-      "Resilience factors are protective experiences and resources that can buffer the impact of adverse childhood experiences. The CDC identifies several key resilience factors: having at least one stable, caring adult relationship during childhood; developing social and emotional skills; feeling a sense of belonging in a community; access to basic needs like food, housing, and healthcare; and having opportunities for meaningful participation in community life. Research shows that resilience is not a fixed trait — it can be developed at any age through supportive relationships, therapy, community connection, and intentional self-care.",
+      "Resilience factors are protective experiences and resources that can buffer the impact of adverse childhood experiences. The CDC identifies several key resilience factors: having at least one stable, caring adult relationship during childhood; developing social and emotional skills; feeling a sense of belonging in a community; access to basic needs like food, housing, and healthcare; and having opportunities for meaningful participation in community life. Research shows that resilience is not a fixed trait, it can be developed at any age through supportive relationships, therapy, community connection, and intentional self-care.",
   },
   {
     question: "Is my data private?",
@@ -69,14 +69,14 @@ export default function AcePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "ACE Questionnaire — Adverse Childhood Experiences",
+              name: "ACE Questionnaire, Adverse Childhood Experiences",
               description:
                 "A free online implementation of the ACE (Adverse Childhood Experiences) Questionnaire based on the CDC-Kaiser Permanente ACE Study. 10 yes/no questions about childhood adversity across three categories: abuse, neglect, and household dysfunction. Score 0-10 with resilience framing and protective factors.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />

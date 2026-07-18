@@ -88,7 +88,7 @@ export default function OcdTeensGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Obsessive-compulsive disorder often first appears during adolescence, with about half of all cases beginning before age 18. But OCD in teenagers is widely misunderstood &mdash; it is not about being neat, organized, or particular. It is about distressing intrusive thoughts and compulsions performed to reduce overwhelming anxiety. The mean delay from symptom onset to treatment is 7&ndash;10 years. Early screening and recognition can save a teenager years of unnecessary suffering.
+            Obsessive-compulsive disorder often first appears during adolescence, with about half of all cases beginning before age 18. But OCD in teenagers is widely misunderstood, it is not about being neat, organized, or particular. It is about distressing intrusive thoughts and compulsions performed to reduce overwhelming anxiety. The mean delay from symptom onset to treatment is 7&ndash;10 years. Early screening and recognition can save a teenager years of unnecessary suffering.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function OcdTeensGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you or your teen are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -116,8 +116,8 @@ export default function OcdTeensGuidePage() {
             </p>
             <ul>
               <li><strong>Contamination fears:</strong> Excessive handwashing, avoiding public surfaces, fear of germs or illness. Hands may be raw or chapped from washing. The teen may refuse to touch doorknobs, shared items, or other people.</li>
-              <li><strong>&quot;Just right&quot; compulsions:</strong> Needing things to feel, look, or sound a certain way. Rewriting sentences until they are &quot;perfect,&quot; tapping or touching in specific patterns, or arranging objects symmetrically &mdash; not from preference, but from an overwhelming sense that something terrible will happen if it is not &quot;right.&quot;</li>
-              <li><strong>Intrusive violent or sexual thoughts:</strong> Among the most distressing OCD subtypes, and extremely common. Teens may have unwanted thoughts about harming someone they love or intrusive sexual imagery that feels deeply wrong to them. These thoughts are ego-dystonic &mdash; they go against the teen&apos;s values and desires &mdash; which is precisely what makes them so distressing. Having these thoughts does not mean the teen wants to act on them.</li>
+              <li><strong>&quot;Just right&quot; compulsions:</strong> Needing things to feel, look, or sound a certain way. Rewriting sentences until they are &quot;perfect,&quot; tapping or touching in specific patterns, or arranging objects symmetrically, not from preference, but from an overwhelming sense that something terrible will happen if it is not &quot;right.&quot;</li>
+              <li><strong>Intrusive violent or sexual thoughts:</strong> Among the most distressing OCD subtypes, and extremely common. Teens may have unwanted thoughts about harming someone they love or intrusive sexual imagery that feels deeply wrong to them. These thoughts are ego-dystonic, they go against the teen&apos;s values and desires, which is precisely what makes them so distressing. Having these thoughts does not mean the teen wants to act on them.</li>
               <li><strong>Reassurance-seeking:</strong> Constantly asking parents or others for confirmation: &quot;Did I lock the door?&quot; &quot;Am I a bad person?&quot; &quot;Are you sure I did not do something wrong?&quot; This can look like neediness but is actually a compulsion.</li>
               <li><strong>Perfectionism that paralyzes:</strong> Beyond normal high standards, OCD-driven perfectionism involves spending hours on assignments, erasing and rewriting repeatedly, being unable to submit work, or refusing to start tasks out of fear they cannot be done perfectly.</li>
               <li><strong>Ritualistic behaviors:</strong> Counting, checking, repeating phrases, mental reviewing, touching things in a specific order or number of times. These rituals may be invisible to others (mental compulsions) or visible but misinterpreted as &quot;quirks.&quot;</li>
@@ -145,7 +145,7 @@ export default function OcdTeensGuidePage() {
               Early identification matters enormously with OCD. The mean delay from symptom onset to receiving appropriate treatment is 7&ndash;10 years. During that delay, OCD patterns become more entrenched, academic and social functioning deteriorate, and comorbid conditions like depression often develop. A screening tool cannot provide a clinical assessment, but it can prompt the conversation that leads to one.
             </p>
             <p>
-              If anxiety is also present &mdash; which is common with OCD &mdash; the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> can help identify the broader anxiety picture.
+              If anxiety is also present, which is common with OCD, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> can help identify the broader anxiety picture.
             </p>
           </section>
 
@@ -155,7 +155,7 @@ export default function OcdTeensGuidePage() {
               Exposure and Response Prevention (ERP) is the most effective evidence-based treatment for OCD in both teens and adults. Understanding how it works can reduce the fear around seeking help:
             </p>
             <ul>
-              <li><strong>How it works:</strong> ERP involves gradually and systematically exposing the teen to situations, thoughts, or objects that trigger obsessions &mdash; while preventing the compulsive response. For example, a teen with contamination OCD might touch a doorknob and then resist the urge to wash their hands.</li>
+              <li><strong>How it works:</strong> ERP involves gradually and systematically exposing the teen to situations, thoughts, or objects that trigger obsessions, while preventing the compulsive response. For example, a teen with contamination OCD might touch a doorknob and then resist the urge to wash their hands.</li>
               <li><strong>Why it works:</strong> Through repeated exposure, the brain learns two things: (1) the feared outcome does not occur, and (2) anxiety naturally decreases on its own without performing the compulsion. This process is called habituation.</li>
               <li><strong>Effectiveness:</strong> Studies consistently show that 60&ndash;80% of adolescents with OCD experience significant improvement with ERP. It is the most effective treatment available, outperforming medication alone.</li>
               <li><strong>What it requires:</strong> ERP is challenging. It involves deliberately facing distressing thoughts and situations. A qualified therapist guides the process at a pace the teen can tolerate, building from less distressing exposures to more difficult ones.</li>
@@ -222,7 +222,7 @@ export default function OcdTeensGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

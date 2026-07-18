@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/dbt-skills-beginners",
   title: "DBT Skills for Everyday Life: A Beginner's Guide",
   description:
-    "Learn the 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — in plain language.",
+    "Learn the 4 DBT skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, in plain language.",
   keywords: [
     "DBT skills for beginners", "dialectical behavior therapy skills", "DBT mindfulness skills",
     "DBT distress tolerance", "DBT emotion regulation", "DBT interpersonal effectiveness",
@@ -31,13 +31,13 @@ const FAQ_DATA = [
   { question: "What is the difference between DBT and CBT?", answer: "CBT focuses primarily on identifying and changing unhelpful thought patterns. DBT includes cognitive-behavioral techniques but adds acceptance-based strategies from mindfulness practice and a strong emphasis on building skills for managing intense emotions. CBT focuses on change; DBT balances change with acceptance. DBT also includes structured skills training as a core component." },
   { question: "Can I learn DBT on my own?", answer: "You can learn and practice individual DBT skills using books, workbooks, and online resources. Many people find significant benefit from self-guided practice. However, comprehensive DBT includes individual therapy, a skills group, phone coaching, and a consultation team. The full model is most effective for complex difficulties. Self-guided practice is a helpful starting point." },
   { question: "What does TIPP stand for in DBT?", answer: "TIPP stands for Temperature (cold water or ice to activate the dive reflex), Intense exercise (burning off stress hormones through vigorous activity), Paced breathing (slowing your exhale to activate the parasympathetic nervous system), and Progressive muscle relaxation (tensing and releasing muscle groups). These skills are designed for acute crisis moments when emotions feel overwhelming." },
-  { question: "How long does DBT take to work?", answer: "A standard comprehensive DBT program runs about one year with weekly therapy and skills group sessions. Many people notice improvements in managing emotions within the first few months of consistent practice. Building lasting habits takes time. Self-guided practice has no fixed timeline \u2014 you may notice benefits as soon as you apply skills consistently to real-life situations." },
+  { question: "How long does DBT take to work?", answer: "A standard comprehensive DBT program runs about one year with weekly therapy and skills group sessions. Many people notice improvements in managing emotions within the first few months of consistent practice. Building lasting habits takes time. Self-guided practice has no fixed timeline, you may notice benefits as soon as you apply skills consistently to real-life situations." },
 ];
 
 export default function DbtSkillsBeginnersPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "DBT Skills for Everyday Life: A Beginner's Guide", description: "Learn the 4 DBT skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — in plain language.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "DBT Skills for Everyday Life: A Beginner's Guide", description: "Learn the 4 DBT skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, in plain language.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "DBT Skills for Beginners", url: ARTICLE_URL }])) }} />
 
@@ -72,7 +72,7 @@ export default function DbtSkillsBeginnersPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Dialectical behavior therapy sounds clinical and complicated, but the skills at its core are surprisingly practical. Originally developed for people in severe emotional pain, DBT skills have since proven useful for anyone who wants to manage stress, handle difficult emotions, and communicate more effectively. This guide breaks down all four DBT skill modules in plain language — no therapy degree required.
+            Dialectical behavior therapy sounds clinical and complicated, but the skills at its core are surprisingly practical. Originally developed for people in severe emotional pain, DBT skills have since proven useful for anyone who wants to manage stress, handle difficult emotions, and communicate more effectively. This guide breaks down all four DBT skill modules in plain language, no therapy degree required.
           </p>
           <div className="mt-6">
             <Link href="/dbt-crisis-skills" className="btn-primary text-sm">
@@ -85,20 +85,20 @@ export default function DbtSkillsBeginnersPage() {
           <section>
             <h2>What is DBT?</h2>
             <p>
-              Dialectical behavior therapy (DBT) is a type of cognitive-behavioral treatment developed in the late 1980s by psychologist Marsha Linehan at the University of Washington. It was originally created to help individuals with borderline personality disorder (BPD) — particularly those experiencing chronic suicidal thoughts and self-harm — who were not responding well to standard treatments.
+              Dialectical behavior therapy (DBT) is a type of cognitive-behavioral treatment developed in the late 1980s by psychologist Marsha Linehan at the University of Washington. It was originally created to help individuals with borderline personality disorder (BPD), particularly those experiencing chronic suicidal thoughts and self-harm, who were not responding well to standard treatments.
             </p>
             <p>
               Since then, DBT has been adapted for a much broader range of concerns. Research supported by the <a href="https://www.nimh.nih.gov/health/topics/borderline-personality-disorder" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health (NIMH)</a> and other institutions has shown DBT to be effective for depression, anxiety, eating disorders, substance use, and PTSD, among other conditions. The <a href="https://behavioraltech.org/resources/faqs/dialectical-behavior-therapy-dbt/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Linehan Institute at Behavioral Tech</a> continues to advance training and research in DBT worldwide.
             </p>
             <p>
-              At its heart, DBT is a skills-based approach. While the full treatment model includes individual therapy, group skills training, phone coaching, and a therapist consultation team, the skills themselves can be learned and practiced by anyone — and many people find them transformative even outside of formal therapy.
+              At its heart, DBT is a skills-based approach. While the full treatment model includes individual therapy, group skills training, phone coaching, and a therapist consultation team, the skills themselves can be learned and practiced by anyone, and many people find them transformative even outside of formal therapy.
             </p>
           </section>
 
           <section>
             <h2>The &quot;dialectical&quot; concept: acceptance AND change</h2>
             <p>
-              The word &quot;dialectical&quot; refers to the balance between two things that seem opposite but are both true. In DBT, the core dialectic is <strong>acceptance and change</strong>. You can accept yourself as you are right now and still work to change behaviors that are causing you suffering. These are not contradictions — they work together.
+              The word &quot;dialectical&quot; refers to the balance between two things that seem opposite but are both true. In DBT, the core dialectic is <strong>acceptance and change</strong>. You can accept yourself as you are right now and still work to change behaviors that are causing you suffering. These are not contradictions, they work together.
             </p>
             <p>
               This is what sets DBT apart from many other approaches. Pure change-based therapies can feel invalidating to someone in deep emotional pain. Pure acceptance can feel stagnant. DBT holds both at the same time: &quot;I am doing the best I can, and I can do better.&quot; This synthesis is the foundation upon which all four skill modules are built.
@@ -113,11 +113,11 @@ export default function DbtSkillsBeginnersPage() {
               Mindfulness is the foundation of all DBT skills. It is the practice of paying attention to the present moment, on purpose, without judgment. In DBT, mindfulness is broken into six specific skills organized into two groups:
             </p>
             <p>
-              <strong>&quot;What&quot; skills — what you do:</strong>
+              <strong>&quot;What&quot; skills, what you do:</strong>
             </p>
             <div className="not-prose my-4 space-y-2">
               {[
-                { label: "Observe", desc: "Notice what is happening inside and around you — sensations, thoughts, emotions, sounds — without trying to change anything. Simply watch." },
+                { label: "Observe", desc: "Notice what is happening inside and around you, sensations, thoughts, emotions, sounds, without trying to change anything. Simply watch." },
                 { label: "Describe", desc: "Put words to what you observe. Instead of 'I feel terrible,' try 'I notice a tightness in my chest and a thought that says I can't handle this.'" },
                 { label: "Participate", desc: "Throw yourself fully into the current activity. When you are washing dishes, wash dishes. When you are in a conversation, be in the conversation." },
               ].map((item, i) => (
@@ -128,7 +128,7 @@ export default function DbtSkillsBeginnersPage() {
               ))}
             </div>
             <p>
-              <strong>&quot;How&quot; skills — how you do it:</strong>
+              <strong>&quot;How&quot; skills, how you do it:</strong>
             </p>
             <div className="not-prose my-4 space-y-2">
               {[
@@ -143,14 +143,14 @@ export default function DbtSkillsBeginnersPage() {
               ))}
             </div>
             <p>
-              <strong>Everyday application:</strong> The next time you feel overwhelmed, pause and spend 30 seconds simply observing what you notice in your body. Describe it silently to yourself without adding judgments. This small act creates space between a stimulus and your response — and that space is where better decisions live. You can also practice mindful breathing with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link>.
+              <strong>Everyday application:</strong> The next time you feel overwhelmed, pause and spend 30 seconds simply observing what you notice in your body. Describe it silently to yourself without adding judgments. This small act creates space between a stimulus and your response, and that space is where better decisions live. You can also practice mindful breathing with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link>.
             </p>
           </section>
 
           <section>
             <h2>Module 2: Distress tolerance</h2>
             <p>
-              Distress tolerance skills are designed for crisis moments — times when emotions are so intense that you feel you cannot cope. The goal is not to make the pain go away but to survive the moment without making things worse. These are sometimes called crisis survival skills.
+              Distress tolerance skills are designed for crisis moments, times when emotions are so intense that you feel you cannot cope. The goal is not to make the pain go away but to survive the moment without making things worse. These are sometimes called crisis survival skills.
             </p>
             <p>
               Key distress tolerance skills include:
@@ -178,14 +178,14 @@ export default function DbtSkillsBeginnersPage() {
           <section>
             <h2>Module 3: Emotion regulation</h2>
             <p>
-              While distress tolerance is about surviving a crisis, emotion regulation is about the longer game — understanding your emotions, reducing your vulnerability to intense emotional reactions, and changing emotions you want to change.
+              While distress tolerance is about surviving a crisis, emotion regulation is about the longer game, understanding your emotions, reducing your vulnerability to intense emotional reactions, and changing emotions you want to change.
             </p>
             <p>
               Core emotion regulation skills include:
             </p>
             <div className="not-prose my-4 space-y-2">
               {[
-                { label: "Understanding emotions", desc: "Learning what emotions do, why they exist, and how to name them accurately. Emotions are not random — they carry information. Identifying an emotion precisely ('I feel ashamed' vs. 'I feel bad') is the first step toward managing it." },
+                { label: "Understanding emotions", desc: "Learning what emotions do, why they exist, and how to name them accurately. Emotions are not random, they carry information. Identifying an emotion precisely ('I feel ashamed' vs. 'I feel bad') is the first step toward managing it." },
                 { label: "Checking the facts", desc: "Before acting on an emotion, check whether it fits the facts of the situation. Ask: What event triggered this feeling? What are my interpretations? Are there other possible interpretations? Is the intensity of my emotion proportional to the actual situation?" },
                 { label: "Opposite action", desc: "When an emotion does not fit the facts or is not effective, act opposite to the urge the emotion creates. If shame tells you to hide, show up. If anger says attack, step back gently. If fear says avoid, approach. This works because emotions and actions reinforce each other." },
                 { label: "PLEASE skills", desc: "Reduce emotional vulnerability by taking care of your body: treat PhysicaL illness, balance Eating, Avoid mood-altering substances, balance Sleep, and get Exercise. When your body is depleted, every emotion hits harder." },
@@ -204,7 +204,7 @@ export default function DbtSkillsBeginnersPage() {
           <section>
             <h2>Module 4: Interpersonal effectiveness</h2>
             <p>
-              Interpersonal effectiveness skills help you navigate relationships — asking for what you need, saying no, and maintaining both self-respect and the relationship. DBT organizes these skills into three memorable acronyms:
+              Interpersonal effectiveness skills help you navigate relationships, asking for what you need, saying no, and maintaining both self-respect and the relationship. DBT organizes these skills into three memorable acronyms:
             </p>
             <div className="not-prose my-4 space-y-2">
               {[
@@ -219,20 +219,20 @@ export default function DbtSkillsBeginnersPage() {
               ))}
             </div>
             <p>
-              <strong>Everyday application:</strong> Before a difficult conversation — asking your boss for a raise, setting a boundary with a family member, or resolving a conflict with a partner — walk through DEAR MAN in advance. Write out what you want to describe, express, and assert. Decide where you are willing to negotiate. This preparation turns emotionally charged conversations into structured, effective communication.
+              <strong>Everyday application:</strong> Before a difficult conversation, asking your boss for a raise, setting a boundary with a family member, or resolving a conflict with a partner, walk through DEAR MAN in advance. Write out what you want to describe, express, and assert. Decide where you are willing to negotiate. This preparation turns emotionally charged conversations into structured, effective communication.
             </p>
           </section>
 
           <section>
             <h2>How DBT differs from CBT</h2>
             <p>
-              Both DBT and cognitive behavioral therapy (CBT) are evidence-based treatments, and they share common ground — both help people identify and change patterns that cause suffering. However, there are important differences.
+              Both DBT and cognitive behavioral therapy (CBT) are evidence-based treatments, and they share common ground, both help people identify and change patterns that cause suffering. However, there are important differences.
             </p>
             <p>
               CBT focuses primarily on changing unhelpful thoughts and behaviors. The underlying assumption is that if you change how you think, you change how you feel. DBT includes this cognitive-behavioral approach but adds a critical layer: <strong>acceptance</strong>. Sometimes you cannot think your way out of an emotion. Sometimes the most effective thing is to accept the pain, tolerate the distress, and ride the wave without making it worse.
             </p>
             <p>
-              DBT also places greater emphasis on <strong>skills training</strong> as a core component, not an add-on. The four modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — are taught systematically and practiced between sessions. CBT may incorporate skills, but it does not typically follow DBT&apos;s structured skills curriculum.
+              DBT also places greater emphasis on <strong>skills training</strong> as a core component, not an add-on. The four modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, are taught systematically and practiced between sessions. CBT may incorporate skills, but it does not typically follow DBT&apos;s structured skills curriculum.
             </p>
             <p>
               Finally, DBT was specifically designed for people who experience emotions intensely. If you have been told you are &quot;too sensitive&quot; or &quot;too emotional,&quot; DBT&apos;s validation-based approach may feel more aligned with your experience than a purely change-focused model.
@@ -270,10 +270,10 @@ export default function DbtSkillsBeginnersPage() {
           <section>
             <h2>Using the DBT Crisis Skills Cards tool</h2>
             <p>
-              If you want to start practicing distress tolerance skills right away, our <Link href="/dbt-crisis-skills" className="text-sage-600 dark:text-sage-400 underline">DBT Crisis Survival Skills Cards</Link> tool provides quick, interactive reference cards for the major crisis survival techniques — including TIPP, STOP, and ACCEPTS. Each card explains the skill in simple terms and walks you through how to use it in the moment.
+              If you want to start practicing distress tolerance skills right away, our <Link href="/dbt-crisis-skills" className="text-sage-600 dark:text-sage-400 underline">DBT Crisis Survival Skills Cards</Link> tool provides quick, interactive reference cards for the major crisis survival techniques, including TIPP, STOP, and ACCEPTS. Each card explains the skill in simple terms and walks you through how to use it in the moment.
             </p>
             <p>
-              The tool runs entirely in your browser. Nothing is stored or transmitted. You can also pair it with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link> for guided paced breathing — one of the core components of the TIPP skill.
+              The tool runs entirely in your browser. Nothing is stored or transmitted. You can also pair it with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link> for guided paced breathing, one of the core components of the TIPP skill.
             </p>
           </section>
 
@@ -308,7 +308,7 @@ export default function DbtSkillsBeginnersPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

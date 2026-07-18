@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "Is anxiety normal for teenagers?",
     answer:
-      "Some anxiety is normal during adolescence \u2014 worrying before a test or feeling nervous about a first date are age-appropriate responses. Anxiety becomes a concern when it is persistent, disproportionate, and interferes with daily functioning like school attendance, friendships, or activities they used to enjoy. About 32% of adolescents meet criteria for an anxiety disorder.",
+      "Some anxiety is normal during adolescence, worrying before a test or feeling nervous about a first date are age-appropriate responses. Anxiety becomes a concern when it is persistent, disproportionate, and interferes with daily functioning like school attendance, friendships, or activities they used to enjoy. About 32% of adolescents meet criteria for an anxiety disorder.",
   },
   {
     question: "How much anxiety is too much for a teen?",
@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "What helps a teenager with anxiety?",
     answer:
-      "Cognitive-behavioral therapy (CBT), including gradual exposure to feared situations, is the most effective approach. Family involvement matters \u2014 parents can learn to avoid accommodating avoidance while providing support. Lifestyle factors help too: regular physical activity, adequate sleep, and limited caffeine. For moderate to severe cases, SSRIs may be discussed alongside therapy. The first step is an open conversation and professional evaluation.",
+      "Cognitive-behavioral therapy (CBT), including gradual exposure to feared situations, is the most effective approach. Family involvement matters, parents can learn to avoid accommodating avoidance while providing support. Lifestyle factors help too: regular physical activity, adequate sleep, and limited caffeine. For moderate to severe cases, SSRIs may be discussed alongside therapy. The first step is an open conversation and professional evaluation.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function AnxietyTeensGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Approximately 32% of adolescents have an anxiety disorder, according to the National Institute of Mental Health &mdash; making anxiety the most common mental health condition among teenagers. Social anxiety is especially prevalent in this age group. Yet anxiety in teens is frequently dismissed as shyness, perfectionism, or &quot;just being a teenager.&quot; Understanding what adolescent anxiety actually looks like is essential for getting teens the support they need before avoidance patterns become entrenched.
+            Approximately 32% of adolescents have an anxiety disorder, according to the National Institute of Mental Health, making anxiety the most common mental health condition among teenagers. Social anxiety is especially prevalent in this age group. Yet anxiety in teens is frequently dismissed as shyness, perfectionism, or &quot;just being a teenager.&quot; Understanding what adolescent anxiety actually looks like is essential for getting teens the support they need before avoidance patterns become entrenched.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AnxietyTeensGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you or your teen are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -115,7 +115,7 @@ export default function AnxietyTeensGuidePage() {
               Anxiety in adolescents often does not look like what adults imagine. While an anxious adult might describe persistent worry, a teen&apos;s anxiety more commonly manifests through behaviors that can be mistaken for other issues:
             </p>
             <ul>
-              <li><strong>Avoidance:</strong> School refusal, dropping extracurricular activities, declining invitations, avoiding new situations. Avoidance is the hallmark behavioral sign of anxiety &mdash; the teen is not being lazy or defiant, they are trying to escape situations that feel overwhelming.</li>
+              <li><strong>Avoidance:</strong> School refusal, dropping extracurricular activities, declining invitations, avoiding new situations. Avoidance is the hallmark behavioral sign of anxiety, the teen is not being lazy or defiant, they are trying to escape situations that feel overwhelming.</li>
               <li><strong>Physical complaints:</strong> Stomachaches, headaches, nausea, muscle tension, rapid heartbeat, and dizziness. Many anxious teens end up in the pediatrician&apos;s office for physical symptoms before anyone considers anxiety.</li>
               <li><strong>Perfectionism:</strong> Spending excessive time on assignments, refusing to turn in work that is not &quot;perfect,&quot; catastrophizing about grades, or becoming paralyzed by fear of failure.</li>
               <li><strong>Reassurance-seeking:</strong> Repeatedly asking parents, teachers, or friends for confirmation that things will be okay, that they did not make a mistake, or that people are not upset with them.</li>
@@ -127,11 +127,11 @@ export default function AnxietyTeensGuidePage() {
           <section>
             <h2>What drives teen anxiety?</h2>
             <p>
-              Adolescence is inherently a period of heightened anxiety risk. The brain is undergoing significant development &mdash; the amygdala (threat detection) matures before the prefrontal cortex (rational regulation) &mdash; creating a neurological imbalance that literally makes teens more reactive to perceived threats. Add environmental pressures, and it is easy to see why anxiety peaks during this stage:
+              Adolescence is inherently a period of heightened anxiety risk. The brain is undergoing significant development, the amygdala (threat detection) matures before the prefrontal cortex (rational regulation), creating a neurological imbalance that literally makes teens more reactive to perceived threats. Add environmental pressures, and it is easy to see why anxiety peaks during this stage:
             </p>
             <ul>
               <li><strong>Academic pressure:</strong> Competitive college admissions, standardized testing, GPA tracking from freshman year, and heavy course loads create chronic performance anxiety.</li>
-              <li><strong>Social media and peer comparison:</strong> Teens are exposed to curated versions of their peers&apos; lives constantly. The comparison is relentless, and the feedback loop &mdash; likes, comments, followers &mdash; ties social standing to quantifiable metrics.</li>
+              <li><strong>Social media and peer comparison:</strong> Teens are exposed to curated versions of their peers&apos; lives constantly. The comparison is relentless, and the feedback loop, likes, comments, followers, ties social standing to quantifiable metrics.</li>
               <li><strong>Identity formation:</strong> Teens are actively figuring out who they are across multiple dimensions: gender, sexuality, values, beliefs, and social identity. Uncertainty in any of these areas can fuel anxiety.</li>
               <li><strong>Future uncertainty:</strong> Climate anxiety, economic concerns, and an awareness of global instability contribute to a pervasive sense that the future is unpredictable and possibly threatening.</li>
               <li><strong>Family dynamics:</strong> Parental conflict, divorce, financial stress, or a parent&apos;s own mental health challenges all increase a teen&apos;s anxiety risk.</li>
@@ -163,7 +163,7 @@ export default function AnxietyTeensGuidePage() {
               The <Link href="/anxiety-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for teens</Link> is a free, private self-assessment that helps identify whether a teen&apos;s anxiety has moved beyond normal developmental worry into something that warrants professional attention. It takes a few minutes, runs entirely in the browser, and stores no data.
             </p>
             <p>
-              An anxiety screening provides structure. Instead of an abstract conversation about &quot;are you anxious?&quot; it asks specific, concrete questions about symptoms and their frequency. This makes it easier for teens who may struggle to articulate what they are feeling &mdash; and for parents who may not know the right questions to ask.
+              An anxiety screening provides structure. Instead of an abstract conversation about &quot;are you anxious?&quot; it asks specific, concrete questions about symptoms and their frequency. This makes it easier for teens who may struggle to articulate what they are feeling, and for parents who may not know the right questions to ask.
             </p>
             <p>
               If the screening suggests elevated anxiety, you can bring the results to a pediatrician or mental health professional. For teens who may also be experiencing social anxiety specifically, the <Link href="/spin-social-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">SPIN social anxiety screening</Link> provides a more targeted assessment. And if anxiety feels acute in the moment, the <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing exercise</Link> offers an immediate, evidence-based calming technique.
@@ -180,7 +180,7 @@ export default function AnxietyTeensGuidePage() {
             <ul>
               <li><strong>Cognitive-behavioral therapy (CBT):</strong> The gold-standard approach for anxiety. CBT helps teens identify anxious thought patterns, challenge cognitive distortions, and gradually face feared situations through exposure. Numerous studies show CBT produces significant improvement in 60&ndash;80% of anxious youth.</li>
               <li><strong>Exposure therapy:</strong> A core component of CBT, exposure involves gradually and systematically confronting feared situations rather than avoiding them. Avoidance makes anxiety worse over time; exposure teaches the brain that the feared outcome is either unlikely or manageable.</li>
-              <li><strong>Family involvement:</strong> Parents play a critical role. Family accommodation &mdash; when parents help their teen avoid anxiety-provoking situations &mdash; is well-intentioned but reinforces the anxiety cycle. Learning to support without accommodating is one of the most impactful things parents can do.</li>
+              <li><strong>Family involvement:</strong> Parents play a critical role. Family accommodation, when parents help their teen avoid anxiety-provoking situations, is well-intentioned but reinforces the anxiety cycle. Learning to support without accommodating is one of the most impactful things parents can do.</li>
               <li><strong>Lifestyle supports:</strong> Regular physical activity (at least 30 minutes most days), consistent sleep schedules, limited caffeine, and mindfulness or relaxation techniques all reduce anxiety baseline.</li>
               <li><strong>Medication:</strong> For moderate to severe anxiety, SSRIs may be recommended alongside therapy. Medication alone is less effective than medication combined with CBT.</li>
             </ul>
@@ -222,7 +222,7 @@ export default function AnxietyTeensGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

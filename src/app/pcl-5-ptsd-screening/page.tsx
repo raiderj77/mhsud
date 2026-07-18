@@ -29,10 +29,10 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   { question: "What is the PCL-5?", answer: "The PCL-5 (PTSD Checklist for DSM-5) is a 20-item self-report measure developed by the National Center for PTSD at the U.S. Department of Veterans Affairs. It assesses the 20 DSM-5 symptoms of PTSD across four clusters: intrusion, avoidance, negative alterations in cognitions and mood, and alterations in arousal and reactivity. It is widely used by clinicians, researchers, and the VA system worldwide." },
   { question: "How is the PCL-5 scored?", answer: "Each of the 20 items is rated on a 0\u20134 scale (Not at all, A little bit, Moderately, Quite a bit, Extremely). The total score ranges from 0 to 80. A score of 33 or higher is the commonly used cutoff suggesting probable PTSD warranting further professional evaluation. The tool also provides scores for each of the four DSM-5 symptom clusters." },
-  { question: "What does a PCL-5 score of 33 or higher mean?", answer: "A total score of 33 or higher on the PCL-5 is the research-supported cutoff that suggests a probable PTSD presentation. However, this is a screening tool, not a clinical assessment. A score above 33 means professional evaluation is strongly recommended \u2014 it does not confirm or rule out PTSD. Only a qualified mental health professional can properly evaluate trauma-related symptoms through a comprehensive clinical interview." },
+  { question: "What does a PCL-5 score of 33 or higher mean?", answer: "A total score of 33 or higher on the PCL-5 is the research-supported cutoff that suggests a probable PTSD presentation. However, this is a screening tool, not a clinical assessment. A score above 33 means professional evaluation is strongly recommended, it does not confirm or rule out PTSD. Only a qualified mental health professional can properly evaluate trauma-related symptoms through a comprehensive clinical interview." },
   { question: "Is PTSD the same as a normal stress response?", answer: "No. It is normal to experience distress after a traumatic event, and most people recover naturally over weeks to months. PTSD is characterized by symptoms that persist beyond the initial response period (typically more than one month), are severe enough to interfere with daily functioning, and include specific patterns of re-experiencing, avoidance, negative mood changes, and heightened reactivity. The PCL-5 helps identify when these symptoms may have reached a level that warrants professional attention." },
   { question: "Where can I get help for PTSD?", answer: "If your PCL-5 results suggest elevated PTSD symptoms, consider reaching out to a mental health professional who specializes in trauma. Veterans can contact the Veterans Crisis Line at 1-800-273-8255 (Press 1) or the VA for specialized PTSD services. Anyone can call the SAMHSA National Helpline at 1-800-662-4357 for free referrals, or contact the 988 Suicide and Crisis Lifeline by calling or texting 988." },
-  { question: "What is the difference between the PCL-5 and the older PCL-C?", answer: "The PCL-C (PTSD Checklist \u2014 Civilian Version) was based on the DSM-IV criteria and had 17 items. The PCL-5 is the updated version aligned with DSM-5 criteria, which expanded to 20 items and reorganized PTSD symptoms into four clusters (previously three). The PCL-5 is now the standard version recommended for clinical and research use." },
+  { question: "What is the difference between the PCL-5 and the older PCL-C?", answer: "The PCL-C (PTSD Checklist, Civilian Version) was based on the DSM-IV criteria and had 17 items. The PCL-5 is the updated version aligned with DSM-5 criteria, which expanded to 20 items and reorganized PTSD symptoms into four clusters (previously three). The PCL-5 is now the standard version recommended for clinical and research use." },
   { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
 ];
 
@@ -50,7 +50,7 @@ export default function PCL5Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -82,7 +82,7 @@ export default function PCL5Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -113,7 +113,7 @@ export default function PCL5Page() {
         <AnswerBlock
           what="The PCL-5, a comprehensive 20-item PTSD screening that maps directly to DSM-5 diagnostic criteria."
           who="Anyone who has experienced trauma and wants a detailed assessment of PTSD symptom severity across all four symptom clusters."
-          bottomLine="The PCL-5 is the gold standard PTSD self-report — scores of 31-33 or above suggest probable PTSD. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The PCL-5 is the gold standard PTSD self-report, scores of 31-33 or above suggest probable PTSD. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

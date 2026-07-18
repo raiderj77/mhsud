@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/burnout-assessment-tool`;
 export const metadata: Metadata = createMetadata({
   path: "/burnout-assessment-tool",
   title: "Burnout Assessment Tool | Free Professional Self-Check",
-  description: "Free burnout screening tool — assess emotional exhaustion, depersonalization, and reduced accomplishment. Private, instant results. No signup.",
+  description: "Free burnout screening tool, assess emotional exhaustion, depersonalization, and reduced accomplishment. Private, instant results. No signup.",
   keywords: [
     "burnout assessment", "burnout test", "emotional exhaustion", "work burnout", 
     "professional burnout", "mental health screening", "stress assessment", "burnout symptoms",
@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
     "healthcare burnout", "burnout recovery", "burnout prevention", "burnout symptoms test"
   ],
   openGraph: {
-    title: "Burnout Assessment Tool — Free Professional Self-Check",
+    title: "Burnout Assessment Tool, Free Professional Self-Check",
     description: "Take our free, clinically-informed burnout screening tool. Assess emotional exhaustion, depersonalization, and reduced personal accomplishment.",
     url: TOOL_URL,
     type: "website",
@@ -66,7 +66,7 @@ export default function BurnoutAssessmentPage() {
               datePublished: "2025-02-25",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -91,7 +91,7 @@ export default function BurnoutAssessmentPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening that measures exhaustion, cynicism, and reduced professional efficacy across your work life." who="Working professionals who feel chronically depleted and want to assess whether they are experiencing clinical burnout." bottomLine="Burnout is a recognized occupational phenomenon — high scores indicate it is time to address workload and recovery. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening that measures exhaustion, cynicism, and reduced professional efficacy across your work life." who="Working professionals who feel chronically depleted and want to assess whether they are experiencing clinical burnout." bottomLine="Burnout is a recognized occupational phenomenon, high scores indicate it is time to address workload and recovery. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">

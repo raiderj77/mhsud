@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { EmailCapture } from "@/components/EmailCapture";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -128,6 +129,12 @@ export function DASS21Client({ faqData }: Props) {
     || aSev.level !== "Normal" && aSev.level !== "Mild"
     || sSev.level !== "Normal" && sSev.level !== "Mild";
 
+  // Item #21 ("I felt that life was meaningless", index 20) is a soft crisis indicator.
+  // Only show therapy CTA if subscales are elevated AND item #21 response is low (0-1).
+  // Scores of 2-3 on item #21 combined with elevated subscales warrant crisis resources first.
+  const item21Response = answers[20] ?? null;
+  const showTherapyCTA = anyElevated && (item21Response === null || item21Response <= 1);
+
   function handleAnswer(qi: number, value: number) {
     const next = [...answers];
     next[qi] = value;
@@ -169,7 +176,7 @@ export function DASS21Client({ faqData }: Props) {
 
     if (mode === "blank") {
       const shareData = {
-        title: "DASS-21 Depression, Anxiety & Stress Self-Check \u2014 Free & Private",
+        title: "DASS-21 Depression, Anxiety & Stress Self-Check, Free & Private",
         text: "Take a free, private DASS-21 screening. One test screens depression, anxiety, and stress. Your answers never leave your browser.",
         url,
       };
@@ -185,7 +192,7 @@ export function DASS21Client({ faqData }: Props) {
     const ds = QUESTIONS.reduce((s, q, i) => q.sub === "D" ? s + (answers[i] ?? 0) : s, 0) * 2;
     const as = QUESTIONS.reduce((s, q, i) => q.sub === "A" ? s + (answers[i] ?? 0) : s, 0) * 2;
     const ss = QUESTIONS.reduce((s, q, i) => q.sub === "S" ? s + (answers[i] ?? 0) : s, 0) * 2;
-    const summary = `DASS-21 Screening Results\nDepression: ${ds}/42 \u2014 ${getSeverity("D", ds).level}\nAnxiety: ${as}/42 \u2014 ${getSeverity("A", as).level}\nStress: ${ss}/42 \u2014 ${getSeverity("S", ss).level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `DASS-21 Screening Results\nDepression: ${ds}/42, ${getSeverity("D", ds).level}\nAnxiety: ${as}/42, ${getSeverity("A", as).level}\nStress: ${ss}/42, ${getSeverity("S", ss).level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My DASS-21 Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -358,16 +365,16 @@ export function DASS21Client({ faqData }: Props) {
                 <span className="text-xl">{"\u26A0\uFE0F"}</span>
                 <div>
                   <h3 className="font-serif text-lg font-semibold text-warm-800 dark:text-warm-300 mb-2">
-                    One or more scores are elevated — professional consultation recommended
+                    One or more scores are elevated, professional consultation recommended
                   </h3>
                   <p className="text-sm text-warm-700 dark:text-warm-400 leading-relaxed mb-3">
-                    At least one of your subscale scores falls in the moderate or higher range. This suggests that further evaluation by a qualified healthcare provider may be beneficial. This is not a confirmation of any condition — it indicates the need for a professional conversation.
+                    At least one of your subscale scores falls in the moderate or higher range. This suggests that further evaluation by a qualified healthcare provider may be beneficial. This is not a confirmation of any condition, it indicates the need for a professional conversation.
                   </p>
                   <div className="bg-warm-100/50 dark:bg-warm-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-warm-700 dark:text-warm-400 mb-1">Resources:</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline — Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline — Call or text <strong>988</strong></p>
-                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line — Text <strong>HOME</strong> to <strong>741741</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
+                    <p className="text-sm text-warm-700 dark:text-warm-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
                     <p className="text-sm text-warm-700 dark:text-warm-400"><strong>International:</strong> Visit <strong>findahelpline.com</strong> for your country</p>
                   </div>
                 </div>
@@ -425,7 +432,7 @@ export function DASS21Client({ faqData }: Props) {
                       <span className={`text-sm font-semibold whitespace-nowrap ${
                         (answers[i] ?? 0) >= 2 ? "text-warm-600 dark:text-warm-400" : "text-sage-600 dark:text-sage-400"
                       }`}>
-                        {answers[i]} — {OPTIONS[answers[i] ?? 0].label}
+                        {answers[i]}, {OPTIONS[answers[i] ?? 0].label}
                       </span>
                     </div>
                   );
@@ -435,7 +442,7 @@ export function DASS21Client({ faqData }: Props) {
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
-              <p>DASS-21 Self-Check from mindchecktools.com — {new Date().toLocaleDateString()}</p>
+              <p>DASS-21 Self-Check from mindchecktools.com, {new Date().toLocaleDateString()}</p>
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
@@ -501,7 +508,7 @@ export function DASS21Client({ faqData }: Props) {
             reflectionPrompts={REFLECTION_PROMPTS["dass-21-depression-anxiety-stress"]?.prompts ?? []}
             responses={QUESTIONS.map((q, i) => ({
               question: q.text,
-              answer: `${answers[i]} — ${OPTIONS[answers[i] ?? 0].label}`,
+              answer: `${answers[i]}, ${OPTIONS[answers[i] ?? 0].label}`,
             }))}
           />
 
@@ -575,8 +582,8 @@ export function DASS21Client({ faqData }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
@@ -588,13 +595,16 @@ export function DASS21Client({ faqData }: Props) {
             </div>
           </div>
 
+          {/* Therapy CTA - shown only if elevated AND item #21 (meaninglessness) is low */}
+          <TherapyCTA show={showTherapyCTA} />
+
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
             <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
 
-          <EmailCapture toolName="DASS-21" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
@@ -625,7 +635,7 @@ export function DASS21Client({ faqData }: Props) {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Understanding the Scoring</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  The DASS-21 is the short form of the original 42-item DASS. Because it uses half as many items, raw scores are multiplied by 2 to produce final scores on the same scale as the full version. Each subscale uses different severity thresholds — for instance, a depression score of 14 is &quot;Moderate&quot; while the same score for stress is &quot;Normal&quot; — because these conditions have different baseline distributions in the general population. The DASS-21 has been validated across many cultures and settings (Lovibond &amp; Lovibond, 1995) and is widely used in both clinical practice and research.
+                  The DASS-21 is the short form of the original 42-item DASS. Because it uses half as many items, raw scores are multiplied by 2 to produce final scores on the same scale as the full version. Each subscale uses different severity thresholds, for instance, a depression score of 14 is &quot;Moderate&quot; while the same score for stress is &quot;Normal&quot;, because these conditions have different baseline distributions in the general population. The DASS-21 has been validated across many cultures and settings (Lovibond &amp; Lovibond, 1995) and is widely used in both clinical practice and research.
                 </p>
               </div>
               <ToolReviewerBio />
@@ -668,7 +678,7 @@ export function DASS21Client({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Lovibond, S. H., &amp; Lovibond, P. F. (1995). Manual for the Depression Anxiety Stress Scales.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/7497257/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — DASS Validation</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/7497257/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, DASS Validation</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Depression.{" "}

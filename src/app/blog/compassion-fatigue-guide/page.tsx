@@ -37,7 +37,7 @@ const FAQ_DATA = [
 export default function CompassionFatigueGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Compassion Fatigue: Signs, Prevention, and Recovery for Caregivers and Helpers", description: "A comprehensive guide to compassion fatigue \u2014 what it is, how it differs from burnout, who is at risk, and evidence-based strategies for prevention and recovery.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Compassion Fatigue: Signs, Prevention, and Recovery for Caregivers and Helpers", description: "A comprehensive guide to compassion fatigue, what it is, how it differs from burnout, who is at risk, and evidence-based strategies for prevention and recovery.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Compassion Fatigue Guide", url: ARTICLE_URL }])) }} />
 
@@ -88,17 +88,17 @@ export default function CompassionFatigueGuidePage() {
               Compassion fatigue is a state of emotional and physical exhaustion that results from prolonged exposure to the suffering of others. The term was first used by nurse researcher Carla Joinson in 1992 to describe the unique burnout experienced by emergency department nurses. Trauma researcher Charles Figley later developed the concept further, defining it as &ldquo;the cost of caring&rdquo; for people in emotional or physical pain.
             </p>
             <p>
-              Unlike general workplace stress, compassion fatigue is rooted in empathy itself. The very quality that makes someone an effective caregiver &mdash; the ability to connect deeply with another person&apos;s suffering &mdash; is what makes them vulnerable. Over time, repeated exposure to others&apos; trauma can overwhelm the caregiver&apos;s capacity to process it, leading to a gradual erosion of hope, energy, and the ability to feel.
+              Unlike general workplace stress, compassion fatigue is rooted in empathy itself. The very quality that makes someone an effective caregiver, the ability to connect deeply with another person&apos;s suffering, is what makes them vulnerable. Over time, repeated exposure to others&apos; trauma can overwhelm the caregiver&apos;s capacity to process it, leading to a gradual erosion of hope, energy, and the ability to feel.
             </p>
             <p>
-              Compassion fatigue is sometimes called <strong>secondary traumatic stress</strong> because the caregiver absorbs traumatic material secondhand. You don&apos;t have to experience the trauma directly &mdash; hearing about it, witnessing its aftermath, or holding space for someone living through it is enough.
+              Compassion fatigue is sometimes called <strong>secondary traumatic stress</strong> because the caregiver absorbs traumatic material secondhand. You don&apos;t have to experience the trauma directly, hearing about it, witnessing its aftermath, or holding space for someone living through it is enough.
             </p>
           </section>
 
           <section>
             <h2>How is compassion fatigue different from burnout?</h2>
             <p>
-              Burnout and compassion fatigue are related but distinct. <strong>Burnout</strong> is driven by workload, organizational dysfunction, and chronic workplace stress. It can happen in any profession &mdash; an overwhelmed accountant or a frustrated software engineer can burn out. <strong>Compassion fatigue</strong> is specifically tied to the emotional weight of caring for people who are suffering. It requires empathic engagement with another person&apos;s pain.
+              Burnout and compassion fatigue are related but distinct. <strong>Burnout</strong> is driven by workload, organizational dysfunction, and chronic workplace stress. It can happen in any profession, an overwhelmed accountant or a frustrated software engineer can burn out. <strong>Compassion fatigue</strong> is specifically tied to the emotional weight of caring for people who are suffering. It requires empathic engagement with another person&apos;s pain.
             </p>
             <p>
               In practice, the two frequently co-occur. A social worker with an unmanageable caseload (burnout) who is also absorbing the trauma of her clients (compassion fatigue) is dealing with both simultaneously. The distinction matters because interventions differ: burnout responds to workload reduction and organizational change, while compassion fatigue requires emotional processing, boundary work, and sometimes clinical support.
@@ -113,10 +113,10 @@ export default function CompassionFatigueGuidePage() {
           <section>
             <h2>How is compassion fatigue different from vicarious trauma?</h2>
             <p>
-              <strong>Vicarious trauma</strong> (also called secondary traumatization) refers to a fundamental shift in worldview that results from repeated exposure to others&apos; traumatic experiences. A therapist who works with sexual assault survivors for years may begin to see the world as inherently unsafe &mdash; that deep cognitive shift is vicarious trauma.
+              <strong>Vicarious trauma</strong> (also called secondary traumatization) refers to a fundamental shift in worldview that results from repeated exposure to others&apos; traumatic experiences. A therapist who works with sexual assault survivors for years may begin to see the world as inherently unsafe, that deep cognitive shift is vicarious trauma.
             </p>
             <p>
-              <strong>Compassion fatigue</strong> is the more acute emotional and physical exhaustion &mdash; the depleted feeling of having nothing left to give. While vicarious trauma changes how you think about the world, compassion fatigue changes how you feel day to day. Both can develop simultaneously, and both deserve professional attention.
+              <strong>Compassion fatigue</strong> is the more acute emotional and physical exhaustion, the depleted feeling of having nothing left to give. While vicarious trauma changes how you think about the world, compassion fatigue changes how you feel day to day. Both can develop simultaneously, and both deserve professional attention.
             </p>
           </section>
 
@@ -131,7 +131,7 @@ export default function CompassionFatigueGuidePage() {
                 { role: "Social workers", detail: "High caseloads combined with systemic barriers and exposure to abuse, neglect, and poverty." },
                 { role: "Therapists and counselors", detail: "Sustained empathic engagement with trauma narratives across many clients." },
                 { role: "EMTs and first responders", detail: "Acute, repeated exposure to injury, death, and crisis situations." },
-                { role: "Family caregivers", detail: "Caring for a loved one with chronic illness, dementia, or disability — often without training, support, or breaks." },
+                { role: "Family caregivers", detail: "Caring for a loved one with chronic illness, dementia, or disability, often without training, support, or breaks." },
                 { role: "Teachers", detail: "Especially in under-resourced schools where students face trauma, food insecurity, or violence." },
                 { role: "Veterinarians", detail: "High rates of euthanasia decisions, client grief, and moral distress contribute to some of the highest compassion fatigue rates of any profession." },
               ].map((r) => (
@@ -163,7 +163,7 @@ export default function CompassionFatigueGuidePage() {
               <strong>Behavioral symptoms:</strong> withdrawing from colleagues, family, or friends, avoiding certain clients or situations, increased use of alcohol or other substances to cope, neglecting personal self-care, and difficulty making decisions.
             </p>
             <p>
-              If these symptoms sound familiar, our <Link href="/compassion-fatigue-test" className="text-sage-600 dark:text-sage-400 underline">compassion fatigue self-check</Link> can help you reflect on what you&apos;re experiencing &mdash; with the important caveat that it is a reflection tool, not a clinical assessment.
+              If these symptoms sound familiar, our <Link href="/compassion-fatigue-test" className="text-sage-600 dark:text-sage-400 underline">compassion fatigue self-check</Link> can help you reflect on what you&apos;re experiencing, with the important caveat that it is a reflection tool, not a clinical assessment.
             </p>
           </section>
 
@@ -173,7 +173,7 @@ export default function CompassionFatigueGuidePage() {
               The standard measurement tool in research and clinical settings is the <strong>Professional Quality of Life Scale (ProQOL)</strong>, developed by Beth Hudnall Stamm. The ProQOL measures three dimensions: compassion satisfaction (the positive aspects of caregiving), burnout, and secondary traumatic stress (compassion fatigue). It has been translated into over 20 languages and is widely used in healthcare, social work, and emergency services.
             </p>
             <p>
-              The ProQOL is a screening instrument, not a diagnostic tool. Elevated scores on the secondary traumatic stress subscale may indicate compassion fatigue, but only a qualified professional can interpret those results in the context of your full situation. Online self-checks &mdash; including ours &mdash; are simplified reflection tools that can help you notice patterns, but they are not substitutes for a validated clinical assessment.
+              The ProQOL is a screening instrument, not a diagnostic tool. Elevated scores on the secondary traumatic stress subscale may indicate compassion fatigue, but only a qualified professional can interpret those results in the context of your full situation. Online self-checks, including ours, are simplified reflection tools that can help you notice patterns, but they are not substitutes for a validated clinical assessment.
             </p>
           </section>
 
@@ -185,7 +185,7 @@ export default function CompassionFatigueGuidePage() {
               Compassion fatigue is not inevitable. Research supports several evidence-based strategies for prevention and recovery:
             </p>
             <p>
-              <strong>Self-awareness and regular assessment.</strong> The first step is recognizing that compassion fatigue is a real occupational hazard, not a personal failure. Periodic self-assessment &mdash; whether through the ProQOL, a self-check tool, or honest reflection &mdash; helps you catch early warning signs before they become entrenched.
+              <strong>Self-awareness and regular assessment.</strong> The first step is recognizing that compassion fatigue is a real occupational hazard, not a personal failure. Periodic self-assessment, whether through the ProQOL, a self-check tool, or honest reflection, helps you catch early warning signs before they become entrenched.
             </p>
             <p>
               <strong>Clinical supervision and peer support.</strong> Processing difficult cases with a supervisor or trusted colleagues is one of the most protective factors identified in the research. Peer support groups normalize the emotional impact of caregiving work and reduce isolation.
@@ -194,20 +194,20 @@ export default function CompassionFatigueGuidePage() {
               <strong>Boundaries between work and personal life.</strong> This includes physical boundaries (leaving work at work when possible), emotional boundaries (not carrying every client&apos;s story home), and time boundaries (protecting days off and vacation).
             </p>
             <p>
-              <strong>Mindfulness and stress-reduction practices.</strong> Research consistently links mindfulness-based practices &mdash; meditation, yoga, deep breathing, body scans &mdash; with reduced compassion fatigue symptoms. Even 10 minutes a day can make a measurable difference.
+              <strong>Mindfulness and stress-reduction practices.</strong> Research consistently links mindfulness-based practices, meditation, yoga, deep breathing, body scans, with reduced compassion fatigue symptoms. Even 10 minutes a day can make a measurable difference.
             </p>
             <p>
               <strong>Balanced caseloads and organizational support.</strong> Organizations bear responsibility too. Rotating assignments between high-intensity and lower-intensity work, providing adequate staffing, and creating cultures where seeking help is normalized all reduce compassion fatigue risk.
             </p>
             <p>
-              <strong>Professional help.</strong> If compassion fatigue has taken hold, working with a therapist &mdash; particularly one experienced in trauma or occupational mental health &mdash; can help you process what you&apos;ve absorbed and rebuild your capacity for empathic engagement. You don&apos;t need to be in crisis to deserve support.
+              <strong>Professional help.</strong> If compassion fatigue has taken hold, working with a therapist, particularly one experienced in trauma or occupational mental health, can help you process what you&apos;ve absorbed and rebuild your capacity for empathic engagement. You don&apos;t need to be in crisis to deserve support.
             </p>
           </section>
 
           <section>
             <h2>When to seek professional help</h2>
             <p>
-              Consider talking to a mental health professional if compassion fatigue symptoms persist for more than a few weeks, if you find yourself unable to feel empathy for people you care about, if you are using alcohol or substances to cope, if intrusive thoughts about clients&apos; or patients&apos; suffering are affecting your sleep or daily life, or if you feel a deep hopelessness about the value of your work. You do not need to be in crisis to seek support &mdash; early intervention leads to better outcomes.
+              Consider talking to a mental health professional if compassion fatigue symptoms persist for more than a few weeks, if you find yourself unable to feel empathy for people you care about, if you are using alcohol or substances to cope, if intrusive thoughts about clients&apos; or patients&apos; suffering are affecting your sleep or daily life, or if you feel a deep hopelessness about the value of your work. You do not need to be in crisis to seek support, early intervention leads to better outcomes.
             </p>
             <p>
               If you&apos;re also experiencing symptoms of depression, our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression self-check</Link> can help you reflect on those symptoms as a starting point for a conversation with your provider.
@@ -229,9 +229,9 @@ export default function CompassionFatigueGuidePage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -253,7 +253,7 @@ export default function CompassionFatigueGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

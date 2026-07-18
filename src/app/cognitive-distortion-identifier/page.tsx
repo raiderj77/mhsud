@@ -30,7 +30,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What are cognitive distortions?",
-    answer: "Cognitive distortions are systematic errors in thinking that cause you to perceive reality inaccurately. They were first identified by psychiatrist Aaron Beck in the 1960s and later expanded by psychologist David Burns in his book Feeling Good. Common examples include all-or-nothing thinking, catastrophizing, and emotional reasoning. Everyone experiences cognitive distortions — they become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety and depression.",
+    answer: "Cognitive distortions are systematic errors in thinking that cause you to perceive reality inaccurately. They were first identified by psychiatrist Aaron Beck in the 1960s and later expanded by psychologist David Burns in his book Feeling Good. Common examples include all-or-nothing thinking, catastrophizing, and emotional reasoning. Everyone experiences cognitive distortions, they become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety and depression.",
   },
   {
     question: "Is this tool the same as therapy or AI?",
@@ -38,7 +38,7 @@ const FAQ_DATA = [
   },
   {
     question: "How many cognitive distortions should I expect to find in one thought?",
-    answer: "Most negative thoughts involve 2-4 cognitive distortions at once. For example, the thought 'I failed the test, so I'm an idiot and I'll never graduate' contains all-or-nothing thinking (total failure from one test), labeling (calling yourself an idiot), fortune telling (predicting you'll never graduate), and overgeneralization (one test defines your future). Finding multiple distortions in a single thought is completely normal and does not mean something is wrong with you — it just means the thought is doing a lot of distorting.",
+    answer: "Most negative thoughts involve 2-4 cognitive distortions at once. For example, the thought 'I failed the test, so I'm an idiot and I'll never graduate' contains all-or-nothing thinking (total failure from one test), labeling (calling yourself an idiot), fortune telling (predicting you'll never graduate), and overgeneralization (one test defines your future). Finding multiple distortions in a single thought is completely normal and does not mean something is wrong with you, it just means the thought is doing a lot of distorting.",
   },
   {
     question: "What is a CBT thought record?",
@@ -46,11 +46,11 @@ const FAQ_DATA = [
   },
   {
     question: "Does identifying cognitive distortions mean my thoughts are wrong?",
-    answer: "Not necessarily. A thought can contain cognitive distortions and still have some truth in it. The goal is not to replace negative thoughts with positive ones — it is to make your thinking more accurate and balanced. For example, 'I made a mistake at work and I'll probably get fired' contains fortune telling and catastrophizing, but the first part (making a mistake) may be true. The reframe isn't 'Everything is fine!' — it might be 'I made a mistake at work. Mistakes happen. I can address it and see what happens next.' The goal is balance, not denial.",
+    answer: "Not necessarily. A thought can contain cognitive distortions and still have some truth in it. The goal is not to replace negative thoughts with positive ones, it is to make your thinking more accurate and balanced. For example, 'I made a mistake at work and I'll probably get fired' contains fortune telling and catastrophizing, but the first part (making a mistake) may be true. The reframe isn't 'Everything is fine!', it might be 'I made a mistake at work. Mistakes happen. I can address it and see what happens next.' The goal is balance, not denial.",
   },
   {
     question: "How often should I practice identifying cognitive distortions?",
-    answer: "Research suggests that regular practice produces the best results. Many CBT therapists recommend completing a thought record at least once per day, especially during periods of high stress, anxiety, or depression. Even 2-3 times per week can build the skill. Over time, you will start catching distortions automatically in real time — before they spiral into overwhelming emotions. Think of it like a muscle: the more you exercise it, the stronger and more natural it becomes.",
+    answer: "Research suggests that regular practice produces the best results. Many CBT therapists recommend completing a thought record at least once per day, especially during periods of high stress, anxiety, or depression. Even 2-3 times per week can build the skill. Over time, you will start catching distortions automatically in real time, before they spiral into overwhelming emotions. Think of it like a muscle: the more you exercise it, the stronger and more natural it becomes.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CognitiveDistortionPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -97,7 +97,7 @@ export default function CognitiveDistortionPage() {
         <AnswerBlock
           what="A tool that helps you identify common cognitive distortions like catastrophizing, all-or-nothing thinking, and mind reading in your own thought patterns."
           who="Anyone working on CBT skills who wants to recognize which thinking traps they fall into most often."
-          bottomLine="Identifying cognitive distortions is the first step to challenging them — awareness creates space for change. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Identifying cognitive distortions is the first step to challenging them, awareness creates space for change. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

@@ -15,8 +15,8 @@ interface AdSlotProps {
    */
   adSlot?: string;
   adFormat?: "auto" | "rectangle" | "vertical" | "horizontal";
-  /** When true, signals AdSense to serve non-personalized ads (data-npa="1").
-   *  Required on health screening pages per privacy policy. */
+  /** Retained for call-site compatibility. MindCheck always serves
+   *  non-personalized ads because all site topics can reveal health interests. */
   npa?: boolean;
 }
 
@@ -32,7 +32,6 @@ export function AdSlot({
   className = "",
   adSlot,
   adFormat = "auto",
-  npa = false,
 }: AdSlotProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
@@ -46,11 +45,13 @@ export function AdSlot({
         pushed.current = true;
       }
     } catch {
-      // AdSense not loaded — silently skip
+      // AdSense not loaded, silently skip
     }
   }, []);
 
   const dims = FORMAT_DIMS[adFormat] ?? FORMAT_DIMS.auto;
+
+  if (process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true") return null;
 
   return (
     <div
@@ -66,7 +67,7 @@ export function AdSlot({
           style={{ display: "block" }}
           data-ad-client="ca-pub-7171402107622932"
           {...(adSlot ? { "data-ad-slot": adSlot } : {})}
-          {...(npa ? { "data-npa": "1" } : {})}
+          data-npa="1"
           data-ad-format={adFormat}
           data-full-width-responsive="true"
         />

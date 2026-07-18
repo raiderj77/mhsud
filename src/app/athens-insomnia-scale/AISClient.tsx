@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -272,6 +273,8 @@ export function AISClient({ faqData }: Props) {
 
         <AdSlot position="results-top" />
 
+        <TherapyCTA show={totalScore >= 10} />
+
         {/* Insomnia follow-up */}
         {isInsomnia && totalScore >= 10 && (
           <div className="mb-8 p-5 rounded-xl border-2 bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800">
@@ -424,7 +427,7 @@ export function AISClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Soldatos, C. R., Dikeos, D. G., &amp; Paparrigopoulos, T. J. (2000). Athens Insomnia Scale: validation of an instrument based on ICD-10 criteria.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/11091029/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — AIS Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/11091029/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, AIS Validation</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Sleep Disorders.{" "}
@@ -509,7 +512,7 @@ export function AISClient({ faqData }: Props) {
             Sleep and mental health have a bidirectional relationship. Poor sleep increases the risk of developing <Link href="/phq-9-depression-test">depression</Link>, <Link href="/gad-7-anxiety-test">anxiety</Link>, and other mental health conditions, and mental health conditions frequently disrupt sleep. Research published in <em>The Lancet Psychiatry</em> has shown that treating insomnia with CBT-I can reduce symptoms of depression and anxiety, even when those conditions are not directly targeted.
           </p>
           <p>
-            Chronic sleep deprivation impairs emotional regulation, concentration, decision-making, and immune function. The National Sleep Foundation recommends that adults get 7&ndash;9 hours of sleep per night, though individual needs vary. Quality of sleep matters as much as quantity &mdash; fragmented or light sleep can leave you feeling unrefreshed even after adequate hours in bed.
+            Chronic sleep deprivation impairs emotional regulation, concentration, decision-making, and immune function. The National Sleep Foundation recommends that adults get 7&ndash;9 hours of sleep per night, though individual needs vary. Quality of sleep matters as much as quantity, fragmented or light sleep can leave you feeling unrefreshed even after adequate hours in bed.
           </p>
           <h2>CBT-I: The Gold Standard Treatment</h2>
           <p>

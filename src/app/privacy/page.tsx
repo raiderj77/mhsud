@@ -4,7 +4,7 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   path: "/privacy",
-  title: "Privacy Policy — How We Protect Your Data",
+  title: "Privacy Policy, How We Protect Your Data",
   description:
     "Your screening answers never leave your browser. No accounts, no login. Ads never access your responses. Full transparency.",
 });
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last Reviewed: April 2026
+            Effective Date: January 1, 2026 | Last Reviewed: July 2026
           </p>
         </header>
 
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               The short version
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>Your answers never leave your browser.</strong> We don&apos;t collect them, store them, transmit them, or sell them. We have no accounts, no login, and no way to identify you. When you close the page, your responses are gone.
+              <strong>Your screening answers and scores never leave your browser.</strong> We do not collect or store them. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <section>
             <h2>What data do we collect from the self-check tools?</h2>
             <p>
-              <strong>None.</strong> All scoring and result calculations happen entirely in your browser using client-side JavaScript. Your responses to any questionnaire on this site — including the PHQ-9, GAD-7, AUDIT, and AUDIT-C — are processed locally on your device. No answer data is ever sent to our servers or any third-party server.
+              <strong>None.</strong> All scoring and result calculations happen entirely in your browser using client-side JavaScript. Your responses to any questionnaire on this site, including the PHQ-9, GAD-7, AUDIT, and AUDIT-C, are processed locally on your device. No answer data is ever sent to our servers or any third-party server.
             </p>
             <p>
               We have deliberately built our tools this way because we believe that mental health screening should be private. There is no technical mechanism on this site that captures, logs, or transmits your questionnaire responses.
@@ -59,15 +59,18 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you use cookies?</h2>
             <p>
-              We use a single <strong>localStorage</strong> entry to remember your dark mode preference (light or dark theme). This is stored only on your device and is never transmitted to us.
+              We use browser <strong>localStorage</strong> for the light/dark theme preference and for tools that need to preserve a journal or plan between visits. Those tools are the safety plan, CBT thought record, worry-time scheduler, daily recovery check-in, and sobriety calculator. Their pages display a local-storage notice before the interactive tool.
+            </p>
+            <p>
+              Browser-local entries are not intentionally transmitted to MindCheck Tools application servers, but they remain available to this browser profile until you use the tool&apos;s reset/delete control, clear site data, or the browser removes them. Anyone with access to the same browser profile may be able to read them. Use a private window or clear the tool on a shared device. Browser extensions, device software, screenshots, downloads, and backups are outside our control.
             </p>
             <p>
               The following third-party services may set cookies on this site:
             </p>
             <ul>
-              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d) — our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
-              <li><strong>Google Analytics (GA4)</strong> — anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
-              <li><strong>Google AdSense</strong> — advertising. On health screening pages, we use non-personalized ads that do not use behavioral targeting or health-related data for ad selection. Ads are never placed adjacent to crisis resources.</li>
+              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d), our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
+              <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
+              <li><strong>Google AdSense</strong>, planned advertising provider. AdSense is not currently enabled because the site has not been approved to show ads.</li>
             </ul>
             <p>
               You can manage your cookie preferences at any time through the Cookiebot consent banner or your browser settings.
@@ -77,13 +80,13 @@ export default function PrivacyPage() {
           <section>
             <h2>What data is collected through analytics and advertising?</h2>
             <p>
-              We use Google Analytics (GA4) and Google AdSense, which may automatically collect the following categories of information through cookies and standard web protocols:
+              Google Analytics (GA4), when you consent, may automatically collect the following categories of information through cookies and standard web protocols. Google AdSense is not currently enabled.
             </p>
             <ul>
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
               <li><strong>Network information:</strong> IP address (anonymized by GA4 by default), approximate geographic location (city/region level, not precise)</li>
               <li><strong>Usage data:</strong> pages visited, time on page, referral URLs, click interactions</li>
-              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics, Google AdSense, and Cookiebot (our consent management platform)</li>
+              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics and Cookiebot (our consent management platform)</li>
             </ul>
             <p>
               <strong>None of this data includes your screening answers, scores, or results.</strong> Screening data never leaves your browser and is never accessible to analytics or advertising systems.
@@ -92,14 +95,37 @@ export default function PrivacyPage() {
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
             </p>
             <p>
-              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is active.
+              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is available only after consent. Google AdSense is disabled.
+            </p>
+          </section>
+
+          <section>
+            <h2>Hosting and technical request logs</h2>
+            <p>
+              Vercel hosts MindCheck Tools and may process ordinary request information such as IP
+              address, browser and user-agent details, requested URL, timestamps, and security events.
+              A requested URL can reveal which tool or topic page was visited, but screening answers,
+              scores, journal entries, and locally saved plans are not placed in URLs or intentionally
+              sent with those requests.
+            </p>
+            <p>
+              Infrastructure-log retention depends on provider settings, security needs, backups, and
+              legal obligations. We do not promise zero logging or immediate deletion from every system.
+              Sensitive tool pages use a no-referrer policy so the page path is not sent when you follow
+              an external link.
             </p>
           </section>
 
           <section>
             <h2>Do you collect personal information?</h2>
             <p>
-              We do not require accounts, registration, email addresses, or any personal information to use our tools. If you contact us voluntarily (e.g., via email for feedback), we will receive whatever information you choose to share in that message. We will not use it for marketing or share it with third parties.
+              We do not require an account, registration, or email address to use our tools. If you voluntarily subscribe to resource emails, we collect your email address and send it to <strong>Loops</strong>, our email service provider. We do not send Loops the screening tool you used, your answers, score, diagnosis, crisis information, or the page where you subscribed.
+            </p>
+            <p>
+              Authorized MindCheck Tools administrators and Loops, acting as our service provider, can access subscriber records as needed to operate the mailing list. We use the address only for the emails you consented to receive. Every marketing email includes an unsubscribe link. We do not sell subscriber information or share it for advertising.
+            </p>
+            <p>
+              If you contact us voluntarily, we receive the information you choose to include in your message. Please do not send screening answers or other sensitive health information by email.
             </p>
           </section>
 
@@ -110,20 +136,23 @@ export default function PrivacyPage() {
             </p>
             <ul>
               <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
+              <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
               <li><strong>Cookie consent preferences:</strong> 12 months (managed by Cookiebot, stored on your device).</li>
               <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
+              <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
+              <li><strong>Hosting and security logs:</strong> Retention follows Vercel settings and legitimate security, backup, and legal requirements; it may change and is not represented as zero retention.</li>
             </ul>
           </section>
 
           <section>
             <h2>Advertising</h2>
             <p>
-              This site uses Google AdSense (publisher ID: ca-pub-7171402107622932) to display advertisements that support free access to all tools.
+              Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible future advertising provider but is not currently enabled. We will update this notice if advertising is activated after approval.
             </p>
             <p>
-              <strong>Health data is never passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser and are never accessible to Google AdSense or any other advertising platform. On health screening pages, we use non-personalized ads that do not rely on behavioral profiling or health-related data for ad targeting.
+              <strong>Health data is not passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser. If advertising is enabled in the future, MindCheck Tools will use non-personalized ads and require consent before advertising storage.
             </p>
             <p>
               Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
@@ -153,12 +182,15 @@ export default function PrivacyPage() {
             <p>
               Our site may link to external resources such as crisis hotlines, professional organizations, and educational materials. These external sites have their own privacy policies. We are not responsible for their content or data practices, but we only link to resources we believe are reputable.
             </p>
+            <p>
+              Some therapist links are affiliate links, which means we may earn a commission if you sign up. These links are configured not to send the referring page. We do not add your screening answers, score, diagnosis, crisis information, email address, or other identifiers to an affiliate link. The external provider may collect information after you choose to visit its site under its own privacy policy.
+            </p>
           </section>
 
           <section>
             <h2>Children&apos;s privacy</h2>
             <p>
-              Our tools are designed for adults. We do not knowingly collect any information from children under 13. Since we collect no personal data from any user, there is no mechanism through which we could inadvertently collect children&apos;s data through our tools. If you are a parent or guardian and have concerns, please contact us.
+              Most tools are designed for adults; any youth-oriented tool identifies its intended age range. We do not knowingly collect email addresses from children under 13. Screening answers remain in the browser and are not collected. If you are a parent or guardian and believe a child submitted an email address, contact privacy@mindchecktools.com so we can address it.
             </p>
           </section>
 
@@ -177,20 +209,20 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. Our lawful basis for processing analytics data is legitimate interest; for advertising cookies, we rely on consent obtained through our Cookiebot consent management platform.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on consent obtained through our Cookiebot consent management platform before enabling analytics or advertising storage.
             </p>
             <p>
-              <strong>GDPR Article 9 — Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR, requiring explicit consent for processing. Because all screening results on MindCheck Tools are processed entirely in your browser and never transmitted to our servers, we do not process health data as a data controller. No health-related data is shared with third parties, including advertising systems.
+              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results on MindCheck Tools are processed entirely in your browser and are not transmitted to our servers. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
             </p>
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
             <p>
-              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data — all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
+              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data, all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
             </p>
 
-            <h3>Maryland Online Data Privacy Act (MODPA — enforcement effective April 1, 2026)</h3>
+            <h3>Maryland Online Data Privacy Act (MODPA, enforcement effective April 1, 2026)</h3>
             <p>
-              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary — not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
+              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary, not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
             </p>
             <p>
               <strong>Your rights under MODPA:</strong>
@@ -203,7 +235,7 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection — you do not need to interact with a consent banner.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection, you do not need to interact with a consent banner.
             </p>
             <p>
               <strong>We do not sell sensitive personal data under any circumstance.</strong> Sensitive data under MODPA includes health information, precise geolocation, racial or ethnic origin, religious beliefs, sexual orientation, citizenship status, genetic or biometric data, and personal data of known minors under 18. No consent can override this prohibition.
@@ -229,16 +261,16 @@ export default function PrivacyPage() {
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> IP address, browser type, device identifiers collected via analytics.</li>
+              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and device identifiers collected via analytics.</li>
               <li><strong>Internet or network activity:</strong> Pages visited, time on site, referring URLs.</li>
-              <li><strong>Inferred data:</strong> Interests or preferences inferred from browsing behavior via advertising partners.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
             <p>
               As of January 1, 2026, California law defines an expanded category of sensitive personal
-              information. <strong>MindCheck Tools does not knowingly collect sensitive personal
-              information</strong> as defined under CPRA, which includes: precise geolocation data,
+              information. <strong>MindCheck Tools does not intentionally collect screening answers,
+              scores, or browser-local journal entries through its application servers.</strong> Sensitive
+              information under CPRA includes precise geolocation data,
               racial or ethnic origin, religious beliefs, union membership, contents of private
               communications, genetic data, biometric data, health or medical information, or sexual
               orientation. Mental health screening responses entered into our tools are processed
@@ -255,9 +287,10 @@ export default function PrivacyPage() {
 
             <h3>How We Use Your Information</h3>
             <ul>
-              <li>To display advertising through Google AdSense (non-personalized ads are used on health screening pages)</li>
+              <li>To display non-personalized advertising through Google AdSense after approval and consent, if advertising is enabled in the future</li>
               <li>To analyze site traffic and improve user experience via analytics</li>
               <li>To maintain site security and prevent fraud</li>
+              <li>To send occasional resource emails when a subscriber has expressly consented</li>
             </ul>
             <p>We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising without your consent.</p>
 
@@ -283,9 +316,11 @@ export default function PrivacyPage() {
 
             <h3>Data Retention</h3>
             <p>
-              Analytics data is retained for 26 months and then deleted. We do not retain mental health
-              screening responses — all processing is client-side only. Server logs are retained for
-              90 days for security purposes.
+              Screening responses are not retained because processing is client-side only. Browser-local
+              journal and planning data remains on the device until the visitor deletes it. Analytics and
+              server-log retention follow the periods described above and our configured service settings.
+              Newsletter addresses are retained while subscribed or until no longer needed, subject to the
+              limited provider records described above.
             </p>
           </section>
 
@@ -338,7 +373,7 @@ export default function PrivacyPage() {
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              If we make material changes to this privacy policy — particularly if we begin collecting any data we do not currently collect — we will update the &quot;Last updated&quot; date at the top of this page. For significant changes, we will also add a notice on the homepage.
+              If we make material changes to this privacy policy, particularly if we begin collecting any data we do not currently collect, we will update the &quot;Last updated&quot; date at the top of this page. For significant changes, we will also add a notice on the homepage.
             </p>
           </section>
 

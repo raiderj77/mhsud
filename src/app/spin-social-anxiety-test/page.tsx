@@ -41,17 +41,17 @@ const FAQ_DATA = [
   {
     question: "What do the severity levels mean?",
     answer:
-      "SPIN total scores fall into five severity ranges: 0-20 is none to mild, 21-30 is moderate, 31-40 is severe, 41-50 is very severe, and 51-68 is extremely severe. A score of 19 or higher has been identified as the optimal cutoff for distinguishing people with social anxiety disorder from those without it, with good sensitivity (73%) and specificity (80%). These cutoffs are guidelines — only a qualified professional can make a clinical determination.",
+      "SPIN total scores fall into five severity ranges: 0-20 is none to mild, 21-30 is moderate, 31-40 is severe, 41-50 is very severe, and 51-68 is extremely severe. A score of 19 or higher has been identified as the optimal cutoff for distinguishing people with social anxiety disorder from those without it, with good sensitivity (73%) and specificity (80%). These cutoffs are guidelines, only a qualified professional can make a clinical determination.",
   },
   {
     question: "What are the three subscales?",
     answer:
-      "The SPIN measures three dimensions of social anxiety: (1) Fear — anxiety or fear triggered by social situations like being judged, criticized, or being the center of attention; (2) Avoidance — the tendency to avoid social situations, speaking up, or doing things where others might watch; (3) Physiological — physical symptoms like blushing, sweating, trembling, and heart palpitations in social situations. Looking at your subscale scores can help you understand which aspects of social anxiety are most prominent for you.",
+      "The SPIN measures three dimensions of social anxiety: (1) Fear, anxiety or fear triggered by social situations like being judged, criticized, or being the center of attention; (2) Avoidance, the tendency to avoid social situations, speaking up, or doing things where others might watch; (3) Physiological, physical symptoms like blushing, sweating, trembling, and heart palpitations in social situations. Looking at your subscale scores can help you understand which aspects of social anxiety are most prominent for you.",
   },
   {
     question: "How is the SPIN different from the GAD-7?",
     answer:
-      "The GAD-7 measures generalized anxiety — persistent, excessive worry about many different things. The SPIN specifically measures social anxiety — fear, avoidance, and physical symptoms in social or performance situations. Someone can score high on one and low on the other. The GAD-7 is a broader anxiety screen, while the SPIN provides focused information about social anxiety specifically. If you score high on the SPIN, taking the GAD-7 as well can help clarify whether your anxiety extends beyond social situations.",
+      "The GAD-7 measures generalized anxiety, persistent, excessive worry about many different things. The SPIN specifically measures social anxiety, fear, avoidance, and physical symptoms in social or performance situations. Someone can score high on one and low on the other. The GAD-7 is a broader anxiety screen, while the SPIN provides focused information about social anxiety specifically. If you score high on the SPIN, taking the GAD-7 as well can help clarify whether your anxiety extends beyond social situations.",
   },
   {
     question: "Is my data private?",
@@ -75,7 +75,7 @@ export default function SpinPage() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />

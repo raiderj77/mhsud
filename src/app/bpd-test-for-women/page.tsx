@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/bpd-test-for-women`;
 
 export const metadata: Metadata = createMetadata({
   path: "/bpd-test-for-women",
-  title: "BPD Test for Women — Free MSI-BPD Screening",
+  title: "BPD Test for Women, Free MSI-BPD Screening",
   description:
     "Free borderline personality disorder screening for women using the MSI-BPD. Private, instant results. No signup.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = createMetadata({
     "free bpd test",
   ],
   openGraph: {
-    title: "BPD Test for Women — Free MSI-BPD Screening",
+    title: "BPD Test for Women, Free MSI-BPD Screening",
     description: "Free borderline personality disorder screening for women using the MSI-BPD. Private, instant results. No signup.",
     url: TOOL_URL,
     type: "website",
@@ -32,7 +32,7 @@ const FAQ_DATA = [
   },
   {
     question: "How does BPD present differently in women versus men?",
-    answer: "Women with BPD are more likely to experience comorbid eating disorders, depression, anxiety, and post-traumatic stress. They tend to internalize distress — through self-harm, emotional pain, and relationship turmoil — rather than externalize it. Men with BPD are more likely to present with substance use disorders and antisocial features such as aggression and explosive anger. These differences in presentation can lead to women being misidentified with depression or bipolar disorder before BPD is accurately assessed.",
+    answer: "Women with BPD are more likely to experience comorbid eating disorders, depression, anxiety, and post-traumatic stress. They tend to internalize distress, through self-harm, emotional pain, and relationship turmoil, rather than externalize it. Men with BPD are more likely to present with substance use disorders and antisocial features such as aggression and explosive anger. These differences in presentation can lead to women being misidentified with depression or bipolar disorder before BPD is accurately assessed.",
   },
   {
     question: "Is BPD caused by trauma?",
@@ -40,11 +40,11 @@ const FAQ_DATA = [
   },
   {
     question: "Can BPD be treated?",
-    answer: "Yes — BPD is considered one of the most treatable personality disorders. Dialectical Behavior Therapy (DBT) is the gold-standard treatment and has been shown to significantly reduce self-harm, emotional instability, and interpersonal difficulties. Other effective approaches include Mentalization-Based Therapy (MBT) and Schema-Focused Therapy. Research shows that many individuals with BPD achieve remission of symptoms over time, especially with consistent treatment. Recovery is not only possible — it is common.",
+    answer: "Yes, BPD is considered one of the most treatable personality disorders. Dialectical Behavior Therapy (DBT) is the gold-standard treatment and has been shown to significantly reduce self-harm, emotional instability, and interpersonal difficulties. Other effective approaches include Mentalization-Based Therapy (MBT) and Schema-Focused Therapy. Research shows that many individuals with BPD achieve remission of symptoms over time, especially with consistent treatment. Recovery is not only possible, it is common.",
   },
   {
     question: "How is BPD different from bipolar disorder?",
-    answer: "BPD and bipolar disorder are frequently confused but are distinct conditions. BPD involves rapid emotional shifts that can change within hours or even minutes, often triggered by interpersonal events. It is characterized by chronic feelings of emptiness, fear of abandonment, and unstable self-image. Bipolar disorder involves distinct mood episodes — mania or hypomania and depression — that last days, weeks, or months, with changes in energy, sleep, and activity levels. A person can have both conditions, which is why a thorough professional assessment is important.",
+    answer: "BPD and bipolar disorder are frequently confused but are distinct conditions. BPD involves rapid emotional shifts that can change within hours or even minutes, often triggered by interpersonal events. It is characterized by chronic feelings of emptiness, fear of abandonment, and unstable self-image. Bipolar disorder involves distinct mood episodes, mania or hypomania and depression, that last days, weeks, or months, with changes in energy, sleep, and activity levels. A person can have both conditions, which is why a thorough professional assessment is important.",
   },
 ];
 
@@ -56,13 +56,13 @@ export default function BpdTestForWomenPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "BPD Test for Women — Free MSI-BPD Screening",
+              name: "BPD Test for Women, Free MSI-BPD Screening",
               description: "A free, private borderline personality disorder screening for women using the clinically validated MSI-BPD questionnaire. Includes information on how BPD presents uniquely in women.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -102,10 +102,10 @@ export default function BpdTestForWomenPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You feel things deeply — more deeply than the people around you seem to. One moment
+            You feel things deeply, more deeply than the people around you seem to. One moment
             everything is fine, and the next you&apos;re overwhelmed by a wave of emotion so intense
             it takes your breath away. Your relationships feel like they&apos;re always on the edge
-            of something — closeness that shifts to distance in the span of an evening. You might
+            of something, closeness that shifts to distance in the span of an evening. You might
             wonder if you&apos;re &quot;too much,&quot; or if something deeper is going on beneath
             the surface.
           </p>
@@ -115,7 +115,7 @@ export default function BpdTestForWomenPage() {
             complex interplay of biology, trauma history, and the way women&apos;s emotional pain is
             perceived by the world around them. This free, private screening using the clinically
             validated MSI-BPD can help you understand whether your experiences may point toward
-            something worth exploring further. It is <strong>not a diagnosis</strong> — it is a
+            something worth exploring further. It is <strong>not a diagnosis</strong>, it is a
             starting point for self-understanding and, if needed, a conversation with a professional
             who can help.
           </p>
@@ -130,7 +130,7 @@ export default function BpdTestForWomenPage() {
             Start the BPD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 2 minutes. Completely private — nothing is stored or shared.
+            Takes about 2 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ export default function BpdTestForWomenPage() {
                 research suggests actual prevalence may be more equal. The disparity likely reflects
                 referral patterns, how symptoms are expressed, and longstanding biases in clinical
                 settings.
-                <span className="text-slate-500 dark:text-slate-400"> — Journal of Personality Disorders</span>
+                <span className="text-slate-500 dark:text-slate-400">, Journal of Personality Disorders</span>
               </p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-950/30 border border-pink-200 dark:border-pink-800 rounded-xl p-5">
@@ -156,17 +156,16 @@ export default function BpdTestForWomenPage() {
                 About 75% of people diagnosed with BPD in clinical settings are women, partly due
                 to referral bias and gendered symptom expression. Women are more likely to seek help
                 for emotional distress, making them more visible in clinical populations.
-                <span className="text-slate-500 dark:text-slate-400"> — APA</span>
+                <span className="text-slate-500 dark:text-slate-400">, APA</span>
               </p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-950/30 border border-pink-200 dark:border-pink-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-pink-700 dark:text-pink-300 mb-1">Often misdiagnosed</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Women with BPD are frequently misidentified as having depression, bipolar disorder,
-                or anxiety before receiving an accurate assessment. The overlapping symptoms —
-                mood swings, irritability, sleep disruption — can obscure the underlying pattern
+                or anxiety before receiving an accurate assessment. The overlapping symptoms, mood swings, irritability, sleep disruption, can obscure the underlying pattern
                 for years.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
           </div>
@@ -182,19 +181,18 @@ export default function BpdTestForWomenPage() {
               <p>
                 Borderline personality disorder often looks different in women than in men, and
                 understanding these differences is essential for accurate screening. Women with BPD
-                tend to <strong>internalize</strong> their emotional pain — turning it inward through
+                tend to <strong>internalize</strong> their emotional pain, turning it inward through
                 self-harm, disordered eating, intense shame, and self-blame. Men with BPD are more
                 likely to <strong>externalize</strong> distress through aggression, substance misuse,
                 and antisocial behavior. Because clinical criteria and referral pathways have
                 historically been shaped around internalizing presentations, women are more likely to
                 be assessed and identified. This does not mean BPD is a &quot;women&apos;s
-                condition&quot; — it means the system is better at catching it in women, while
+                condition&quot;, it means the system is better at catching it in women, while
                 potentially underidentifying it in men.
               </p>
               <p>
                 Hormonal fluctuations play a meaningful role in the emotional dysregulation that
-                characterizes BPD. Estrogen and progesterone influence neurotransmitter systems —
-                particularly serotonin and GABA — that regulate mood, anxiety, and impulse control.
+                characterizes BPD. Estrogen and progesterone influence neurotransmitter systems, particularly serotonin and GABA, that regulate mood, anxiety, and impulse control.
                 Many women with BPD report that their symptoms intensify during certain phases of the
                 menstrual cycle, during pregnancy, in the postpartum period, or during perimenopause.
                 This hormonal dimension does not cause BPD on its own, but it can amplify the
@@ -204,8 +202,8 @@ export default function BpdTestForWomenPage() {
               </p>
               <p>
                 Women with BPD frequently present with <strong>comorbid conditions</strong> that
-                complicate assessment and treatment. Eating disorders — particularly bulimia nervosa
-                and binge eating disorder — co-occur at significantly higher rates in women with BPD
+                complicate assessment and treatment. Eating disorders, particularly bulimia nervosa
+                and binge eating disorder, co-occur at significantly higher rates in women with BPD
                 than in the general population. Major depression and post-traumatic stress disorder
                 (PTSD) are also extremely common, with some studies showing that over 50% of women
                 with BPD meet criteria for concurrent PTSD. These overlapping conditions can mask
@@ -215,17 +213,17 @@ export default function BpdTestForWomenPage() {
               </p>
               <p>
                 Relationship patterns and interpersonal sensitivity are often at the heart of BPD
-                in women. The fear of abandonment — real or perceived — can drive intense efforts to
+                in women. The fear of abandonment, real or perceived, can drive intense efforts to
                 maintain closeness, followed by equally intense withdrawal when trust feels broken.
                 Women with BPD frequently describe a pattern of idealization and devaluation in
                 relationships: a partner or friend is seen as perfect one moment and threatening the
-                next. This is not manipulation — it reflects a genuine instability in how the self
+                next. This is not manipulation, it reflects a genuine instability in how the self
                 and others are experienced. The role of early trauma is significant here as well.
                 Women with BPD report higher rates of childhood emotional neglect, physical abuse,
                 and sexual abuse compared to men with the same condition. Trauma does not cause BPD
                 in every case, but it is a powerful contributing factor that shapes how emotional
                 sensitivity develops into a persistent pattern. Recognizing these dynamics is the
-                first step toward healing — and effective, evidence-based treatments like Dialectical
+                first step toward healing, and effective, evidence-based treatments like Dialectical
                 Behavior Therapy (DBT) are specifically designed to address them.
               </p>
             </div>
@@ -247,7 +245,7 @@ export default function BpdTestForWomenPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>How it works:</strong> You&apos;ll answer 10 yes/no questions about patterns in your emotions, relationships, and behavior. Each &quot;yes&quot; response scores one point.</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 10. A score of 7 or higher is considered a positive screen, suggesting further evaluation may be warranted. Scores of 5 to 6 fall in an uncertain range.</p>
-                <p><strong>What it&apos;s not:</strong> This is a screening tool, not an assessment. It cannot tell you whether you have BPD — only a qualified mental health professional can make that determination through a comprehensive evaluation.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening tool, not an assessment. It cannot tell you whether you have BPD, only a qualified mental health professional can make that determination through a comprehensive evaluation.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Your answers are never stored, transmitted, or visible to anyone but you.</p>
               </div>
             </div>
@@ -268,7 +266,7 @@ export default function BpdTestForWomenPage() {
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A BPD screening with context on why borderline personality disorder is more frequently diagnosed in women." who="Women experiencing intense emotions, unstable relationships, or identity issues who want a validated BPD screening." bottomLine="BPD is highly treatable with DBT and other therapies — a screening is the first step toward support. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A BPD screening with context on why borderline personality disorder is more frequently diagnosed in women." who="Women experiencing intense emotions, unstable relationships, or identity issues who want a validated BPD screening." bottomLine="BPD is highly treatable with DBT and other therapies, a screening is the first step toward support. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
@@ -347,10 +345,10 @@ export default function BpdTestForWomenPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -358,7 +356,7 @@ export default function BpdTestForWomenPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess borderline personality disorder through a comprehensive evaluation.
             Your responses are processed entirely in your browser and are never stored or transmitted. Always
             consult a qualified healthcare professional for medical advice.

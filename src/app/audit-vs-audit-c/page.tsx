@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "How accurate is the AUDIT-C compared to the full AUDIT?",
     answer:
-      "The AUDIT-C performs well as a triage tool. Studies show sensitivity of approximately 86% and specificity of 89% for detecting hazardous drinking at the standard cutoffs (≥4 for men, ≥3 for women). The full AUDIT has somewhat stronger performance for detecting alcohol dependence and harmful drinking patterns that go beyond quantity alone. The AUDIT-C is designed to identify who needs further assessment — not to replace the full AUDIT for comprehensive evaluation.",
+      "The AUDIT-C performs well as a triage tool. Studies show sensitivity of approximately 86% and specificity of 89% for detecting hazardous drinking at the standard cutoffs (≥4 for men, ≥3 for women). The full AUDIT has somewhat stronger performance for detecting alcohol dependence and harmful drinking patterns that go beyond quantity alone. The AUDIT-C is designed to identify who needs further assessment, not to replace the full AUDIT for comprehensive evaluation.",
   },
   {
     question: "What are the AUDIT-C cutoff scores?",
@@ -56,7 +56,7 @@ const FAQ_DATA = [
   {
     question: "Can the AUDIT or AUDIT-C diagnose alcohol use disorder?",
     answer:
-      "No. Neither the AUDIT nor the AUDIT-C is a diagnostic tool. They are screening instruments designed to identify people who may benefit from brief counseling, further assessment, or referral to treatment. A clinical diagnosis of alcohol use disorder requires a full evaluation by a qualified healthcare provider using DSM-5 or ICD-11 criteria. A high score on the AUDIT or AUDIT-C means you should speak with a professional — it does not mean you have been diagnosed.",
+      "No. Neither the AUDIT nor the AUDIT-C is a diagnostic tool. They are screening instruments designed to identify people who may benefit from brief counseling, further assessment, or referral to treatment. A clinical diagnosis of alcohol use disorder requires a full evaluation by a qualified healthcare provider using DSM-5 or ICD-11 criteria. A high score on the AUDIT or AUDIT-C means you should speak with a professional, it does not mean you have been diagnosed.",
   },
   {
     question: "Is the AUDIT valid for all populations?",
@@ -66,7 +66,7 @@ const FAQ_DATA = [
   {
     question: "What should I do if I score high on the AUDIT or AUDIT-C?",
     answer:
-      "A high score means your drinking pattern may be putting your health at risk and warrants a conversation with a healthcare provider. This does not mean you need inpatient treatment or that you are an 'alcoholic' — these are clinical labels that require professional assessment. Your primary care provider, a Certified Drug and Alcohol Counselor (CADC), or an addiction medicine specialist can help you understand what your results mean in context and discuss options ranging from brief counseling to formal treatment referral. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7.",
+      "A high score means your drinking pattern may be putting your health at risk and warrants a conversation with a healthcare provider. This does not mean you need inpatient treatment or that you are an 'alcoholic', these are clinical labels that require professional assessment. Your primary care provider, a Certified Drug and Alcohol Counselor (CADC), or an addiction medicine specialist can help you understand what your results mean in context and discuss options ranging from brief counseling to formal treatment referral. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7.",
   },
   {
     question: "Where can I find the official AUDIT and AUDIT-C tools?",
@@ -85,7 +85,7 @@ export default function AuditVsAuditCPage() {
             articleJsonLd({
               title: "AUDIT vs. AUDIT-C: Differences in Scoring, Purpose, and Use",
               description:
-                "A comprehensive comparison of the AUDIT (10-question) and AUDIT-C (3-question) alcohol screening tools — what each measures, how they are scored, and when each is used.",
+                "A comprehensive comparison of the AUDIT (10-question) and AUDIT-C (3-question) alcohol screening tools, what each measures, how they are scored, and when each is used.",
               url: PAGE_URL,
               datePublished: "2026-05-06",
               dateModified: "2026-05-06",
@@ -109,7 +109,7 @@ export default function AuditVsAuditCPage() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -118,9 +118,9 @@ export default function AuditVsAuditCPage() {
           <div className="max-w-2xl mx-auto">
             <p className="font-semibold mb-2">⚠️ If you are in crisis or need immediate support:</p>
             <ul className="space-y-1 text-sm">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, confidential, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, confidential, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function AuditVsAuditCPage() {
               </div>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Total scores range from 0 to 40. Risk zones: 0–7 low risk, 8–15 hazardous use, 16–19 harmful use, 20+ possible alcohol dependence. The full AUDIT is the only tool in this family that captures dependence signs and harmful consequences — not just consumption volume.
+              Total scores range from 0 to 40. Risk zones: 0–7 low risk, 8–15 hazardous use, 16–19 harmful use, 20+ possible alcohol dependence. The full AUDIT is the only tool in this family that captures dependence signs and harmful consequences, not just consumption volume.
             </p>
           </section>
 
@@ -215,7 +215,7 @@ export default function AuditVsAuditCPage() {
               The AUDIT-C is widely used by the U.S. Department of Veterans Affairs (VA) as part of routine primary care screening and has been validated across large, diverse populations. Its brevity (approximately 1 minute) makes it feasible for high-volume settings.
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Scores range from 0 to 12 (3 questions × max 4 points each). The standard positive-screen thresholds are ≥4 for men and ≥3 for women, reflecting the well-established difference in physiological vulnerability to alcohol-related harm between sexes. A positive AUDIT-C result indicates the person should receive further evaluation — typically with the full AUDIT or a clinical interview.
+              Scores range from 0 to 12 (3 questions × max 4 points each). The standard positive-screen thresholds are ≥4 for men and ≥3 for women, reflecting the well-established difference in physiological vulnerability to alcohol-related harm between sexes. A positive AUDIT-C result indicates the person should receive further evaluation, typically with the full AUDIT or a clinical interview.
             </p>
           </section>
 
@@ -223,7 +223,7 @@ export default function AuditVsAuditCPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How are the AUDIT and AUDIT-C different?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              The critical difference is breadth of coverage. The AUDIT-C tells you whether someone is drinking at potentially hazardous levels. The full AUDIT additionally tells you whether there are signs of dependence or alcohol-related harm — information that significantly changes clinical decision-making.
+              The critical difference is breadth of coverage. The AUDIT-C tells you whether someone is drinking at potentially hazardous levels. The full AUDIT additionally tells you whether there are signs of dependence or alcohol-related harm, information that significantly changes clinical decision-making.
             </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
@@ -320,27 +320,27 @@ export default function AuditVsAuditCPage() {
             </p>
             <div className="space-y-4 mb-4">
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-1">Zone I: 0–7 — Low Risk</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-1">Zone I: 0–7, Low Risk</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
                   Alcohol use is within low-risk levels. No intervention indicated beyond health education about standard low-risk drinking limits.
                 </p>
               </div>
               <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-                <h3 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">Zone II: 8–15 — Hazardous Use</h3>
+                <h3 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">Zone II: 8–15, Hazardous Use</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Hazardous drinking pattern with risk of future harm. Simple brief advice recommended — typically 5–10 minutes with a healthcare provider discussing consequences and limits.
+                  Hazardous drinking pattern with risk of future harm. Simple brief advice recommended, typically 5–10 minutes with a healthcare provider discussing consequences and limits.
                 </p>
               </div>
               <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-4">
-                <h3 className="font-semibold text-orange-800 dark:text-orange-300 mb-1">Zone III: 16–19 — Harmful Use</h3>
+                <h3 className="font-semibold text-orange-800 dark:text-orange-300 mb-1">Zone III: 16–19, Harmful Use</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
                   Alcohol use is causing harm. Extended brief counseling (brief motivational interviewing) recommended, with possible referral to a specialist.
                 </p>
               </div>
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-1">Zone IV: 20–40 — Possible Dependence</h3>
+                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-1">Zone IV: 20–40, Possible Dependence</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Probable alcohol dependence. Referral to specialist alcohol services for diagnostic evaluation and treatment is recommended. Self-managed withdrawal from alcohol can be medically dangerous — always consult a healthcare provider before stopping heavy drinking.
+                  Probable alcohol dependence. Referral to specialist alcohol services for diagnostic evaluation and treatment is recommended. Self-managed withdrawal from alcohol can be medically dangerous, always consult a healthcare provider before stopping heavy drinking.
                 </p>
               </div>
             </div>
@@ -350,13 +350,13 @@ export default function AuditVsAuditCPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">What should you do if your AUDIT or AUDIT-C score is high?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              A high AUDIT or AUDIT-C score indicates that your drinking pattern warrants evaluation by a qualified healthcare provider — these are screening tools, not diagnostic instruments. The appropriate response varies by score zone:
+              A high AUDIT or AUDIT-C score indicates that your drinking pattern warrants evaluation by a qualified healthcare provider, these are screening tools, not diagnostic instruments. The appropriate response varies by score zone:
             </p>
             <ul className="space-y-2 text-slate-600 dark:text-slate-400 mb-4 list-disc list-inside">
               <li><strong>AUDIT-C positive (≥4 men, ≥3 women):</strong> Consider taking the full AUDIT and speaking with a primary care provider about your drinking pattern.</li>
               <li><strong>AUDIT Zone II (8–15):</strong> Brief counseling from your primary care provider or family doctor is typically appropriate.</li>
               <li><strong>AUDIT Zone III (16–19):</strong> Extended brief counseling and possible referral to an addiction specialist, CADC, or counselor.</li>
-              <li><strong>AUDIT Zone IV (20+):</strong> Speak with a healthcare provider as soon as possible. Do not stop drinking abruptly without medical supervision — alcohol withdrawal can be medically dangerous.</li>
+              <li><strong>AUDIT Zone IV (20+):</strong> Speak with a healthcare provider as soon as possible. Do not stop drinking abruptly without medical supervision, alcohol withdrawal can be medically dangerous.</li>
             </ul>
             <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
               <p className="text-sm text-amber-900 dark:text-amber-200 font-semibold">
@@ -374,9 +374,9 @@ export default function AuditVsAuditCPage() {
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
               <li>Saunders JB, Aasland OG, Babor TF, et al. Development of the Alcohol Use Disorders Identification Test (AUDIT). <em>Addiction.</em> 1993;88(6):791–804.</li>
               <li>Bush K, Kivlahan DR, McDonell MB, et al. The AUDIT alcohol consumption questions (AUDIT-C). <em>Arch Intern Med.</em> 1998;158(16):1789–1795.</li>
-              <li><a href="https://www.who.int/publications/i/item/audit-the-alcohol-use-disorders-identification-test" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">WHO AUDIT Manual</a> — World Health Organization. (2001).</li>
-              <li><a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">SAMHSA.gov</a> — Substance Abuse and Mental Health Services Administration.</li>
-              <li><a href="https://www.cdc.gov/alcohol/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">CDC Alcohol and Public Health</a> — Centers for Disease Control and Prevention.</li>
+              <li><a href="https://www.who.int/publications/i/item/audit-the-alcohol-use-disorders-identification-test" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">WHO AUDIT Manual</a>, World Health Organization. (2001).</li>
+              <li><a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">SAMHSA.gov</a>, Substance Abuse and Mental Health Services Administration.</li>
+              <li><a href="https://www.cdc.gov/alcohol/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">CDC Alcohol and Public Health</a>, Centers for Disease Control and Prevention.</li>
             </ul>
           </section>
 
@@ -404,7 +404,7 @@ export default function AuditVsAuditCPage() {
             <ul className="space-y-3">
               <li>
                 <Link href="/audit-alcohol-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  AUDIT — Full Alcohol Use Disorders Identification Test →
+                  AUDIT, Full Alcohol Use Disorders Identification Test →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                   Free, validated 10-question alcohol screening covering consumption, dependence, and harm. Takes about 3–5 minutes.
@@ -412,7 +412,7 @@ export default function AuditVsAuditCPage() {
               </li>
               <li className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  AUDIT-C — Rapid Alcohol Consumption Screen →
+                  AUDIT-C, Rapid Alcohol Consumption Screen →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                   Free, validated 3-question rapid screen for hazardous drinking. Takes about 1 minute.
@@ -433,13 +433,13 @@ export default function AuditVsAuditCPage() {
           >
             <p className="font-semibold mb-2">⚠️ If you are in crisis or need immediate support:</p>
             <ul className="space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, confidential, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, confidential, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

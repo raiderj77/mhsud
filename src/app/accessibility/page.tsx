@@ -51,7 +51,7 @@ export default function AccessibilityPage() {
               <strong>Semantic HTML:</strong> Our pages use proper heading hierarchy (h1 through h4), landmark regions (nav, main, footer), and meaningful link text to support screen readers and assistive technology.
             </p>
             <p>
-              <strong>Keyboard navigation:</strong> All interactive elements — including tool questions, buttons, toggles, and navigation — are accessible via keyboard. You can use Tab to move between elements and Enter or Space to activate them.
+              <strong>Keyboard navigation:</strong> All interactive elements, including tool questions, buttons, toggles, and navigation, are accessible via keyboard. You can use Tab to move between elements and Enter or Space to activate them.
             </p>
             <p>
               <strong>Color contrast:</strong> We maintain a minimum contrast ratio of 4.5:1 for body text and 3:1 for large text in both light and dark modes, consistent with WCAG AA requirements.
@@ -72,7 +72,7 @@ export default function AccessibilityPage() {
               <strong>Focus management:</strong> When you complete a screening tool, focus is moved to the results section so screen readers announce your score and interpretation immediately.
             </p>
             <p>
-              <strong>ARIA attributes:</strong> We use ARIA roles, labels, and states where native HTML semantics are insufficient — for example, on toggle switches in our cookie consent banner and progress indicators in our tools.
+              <strong>ARIA attributes:</strong> We use ARIA roles, labels, and states where native HTML semantics are insufficient, for example, on toggle switches in our cookie consent banner and progress indicators in our tools.
             </p>
             <p>
               <strong>No auto-play:</strong> Our site does not auto-play audio, video, or animations that cannot be paused. The only animation is a subtle pulse indicator on the homepage, which is purely decorative.
@@ -121,7 +121,7 @@ export default function AccessibilityPage() {
           <section>
             <h2>Ongoing efforts</h2>
             <p>
-              Accessibility is not a one-time project — it is an ongoing practice. We are committed to:
+              Accessibility is not a one-time project, it is an ongoing practice. We are committed to:
             </p>
             <p>
               Regularly testing our site with screen readers and keyboard-only navigation. Reviewing new content and features for accessibility before deployment. Monitoring WCAG guidelines for updates and incorporating new best practices. Responding promptly to accessibility feedback from our users.

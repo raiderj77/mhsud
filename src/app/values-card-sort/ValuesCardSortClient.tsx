@@ -170,7 +170,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
   ];
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 print:hidden">
         <Link href="/" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Home</Link>
@@ -233,7 +233,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
             </span>
           </div>
           <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-6">
-            For each value, choose how important it is to you. There are no right or wrong answers — go with your gut feeling.
+            For each value, choose how important it is to you. There are no right or wrong answers, go with your gut feeling.
           </p>
 
           {/* Progress bar */}
@@ -338,7 +338,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
             Step 2: Choose Your Top 5
           </h2>
           <p className="text-neutral-600 dark:text-neutral-300 mb-6">
-            You marked <strong>{veryImportant.length}</strong> values as very important. Now pick the <strong>5</strong> that matter most to you. This is the hardest part — trust your instincts.
+            You marked <strong>{veryImportant.length}</strong> values as very important. Now pick the <strong>5</strong> that matter most to you. This is the hardest part, trust your instincts.
           </p>
 
           <div className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
@@ -530,7 +530,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
                 What one change would bring your life closer to your top values?
               </label>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
-                Pick one small, concrete step you could take this week. It does not have to be big — small shifts add up.
+                Pick one small, concrete step you could take this week. It does not have to be big, small shifts add up.
               </p>
               <textarea
                 id="reflection2"
@@ -602,13 +602,13 @@ export function ValuesCardSortClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 space-y-4">
           <p>
-            A values card sort is a widely used exercise in counseling, coaching, and personal development. Originally developed for use in <strong>Motivational Interviewing (MI)</strong>, values clarification exercises help people identify what truly matters to them — and reveal gaps between their values and their current behavior. This awareness is often the starting point for meaningful change.
+            A values card sort is a widely used exercise in counseling, coaching, and personal development. Originally developed for use in <strong>Motivational Interviewing (MI)</strong>, values clarification exercises help people identify what truly matters to them, and reveal gaps between their values and their current behavior. This awareness is often the starting point for meaningful change.
           </p>
           <p>
             In <strong>substance use recovery</strong>, values work is particularly powerful. When someone can clearly name their core values, they gain a compass for decisions: &ldquo;Does this choice move me toward or away from what I care about most?&rdquo; Research published in the journal <em>Psychology of Addictive Behaviors</em> has found that values-based interventions can strengthen motivation for change and reduce ambivalence about recovery.
           </p>
           <p>
-            The card sort format — physically or digitally sorting values into piles — is preferred over simple ranking because it forces comparison. When you must choose between two things you care about, you learn something about yourself. The process of narrowing to 5 core values is intentionally difficult; the struggle itself is part of the insight.
+            The card sort format, physically or digitally sorting values into piles, is preferred over simple ranking because it forces comparison. When you must choose between two things you care about, you learn something about yourself. The process of narrowing to 5 core values is intentionally difficult; the struggle itself is part of the insight.
           </p>
           <p>
             This exercise is not a screening or assessment. There are no scores and no right or wrong answers. It is a self-reflection tool meant to help you better understand your own priorities. If you are working with a therapist or counselor, your values profile can be a valuable starting point for deeper conversation.
@@ -621,14 +621,12 @@ export function ValuesCardSortClient({ faqData }: Props) {
             <li>
               <a href="https://motivationalinterviewing.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
                 Motivational Interviewing Network of Trainers (MINT)
-              </a>{" "}
-              — The international organization for MI training and research
+              </a>{" "}, The international organization for MI training and research
             </li>
             <li>
               <a href="https://www.samhsa.gov/medications-substance-use-disorders" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
                 SAMHSA: Substance Use Treatment Resources
-              </a>{" "}
-              — Federal agency for substance abuse and mental health services
+              </a>{" "}, Federal agency for substance abuse and mental health services
             </li>
           </ul>
         </div>
@@ -731,6 +729,6 @@ export function ValuesCardSortClient({ faqData }: Props) {
       <div className="mt-8 print:mt-4">
         <ToolReviewerBio />
       </div>
-    </main>
+    </div>
   );
 }

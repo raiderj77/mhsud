@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/audit-c-alcohol-screen",
   title: "AUDIT-C Alcohol Screen | Free 3-Question Test",
   description:
-    "Take the free AUDIT-C alcohol screening — just 3 questions, under 60 seconds. The quick WHO-validated test for risky drinking. Private, no sign-up.",
+    "Take the free AUDIT-C alcohol screening, just 3 questions, under 60 seconds. The quick WHO-validated test for risky drinking. Private, no sign-up.",
   keywords: [
     "audit c screening", "alcohol use screening", "quick alcohol test",
     "audit-c", "audit c", "brief alcohol screen", "audit-c online",
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     title: "AUDIT-C Alcohol Screen | Free 3-Question Test",
-    description: "Take the free AUDIT-C alcohol screening — just 3 questions, under 60 seconds. WHO-validated, private, no sign-up.",
+    description: "Take the free AUDIT-C alcohol screening, just 3 questions, under 60 seconds. WHO-validated, private, no sign-up.",
     url: TOOL_URL,
     type: "website",
   },
@@ -31,7 +31,7 @@ const FAQ_DATA = [
   { question: "What is a positive AUDIT-C score?", answer: "For men, a score of 4 or above is considered a positive screen for hazardous drinking. For women, the threshold is 3 or above. A positive screen suggests that a more comprehensive assessment, such as the full AUDIT, may be appropriate." },
   { question: "How is the AUDIT-C different from the full AUDIT?", answer: "The AUDIT-C uses only the first 3 questions of the 10-question AUDIT. It focuses purely on consumption patterns and is faster to complete, but does not capture alcohol-related consequences or signs of dependence. A positive AUDIT-C often prompts follow-up with the full AUDIT." },
   { question: "Is the AUDIT-C test accurate?", answer: "The AUDIT-C has good sensitivity for detecting hazardous drinking and has been validated across multiple populations. It is a screening tool, not a diagnostic test, and results should be interpreted in the context of a broader clinical conversation." },
-  { question: "Should I take the AUDIT-C or the full AUDIT?", answer: "If you want a quick initial check, the AUDIT-C takes under a minute. If you want a more thorough picture of your relationship with alcohol — including consequences and warning signs of dependence — take the full AUDIT. Many people do both." },
+  { question: "Should I take the AUDIT-C or the full AUDIT?", answer: "If you want a quick initial check, the AUDIT-C takes under a minute. If you want a more thorough picture of your relationship with alcohol, including consequences and warning signs of dependence, take the full AUDIT. Many people do both." },
   { question: "Can this tool diagnose an alcohol problem?", answer: "No. The AUDIT-C is a brief screening tool, not a diagnostic instrument. A positive screen means further assessment is recommended, not that you have an alcohol use disorder. Only a healthcare professional can make a diagnosis." },
 ];
 
@@ -45,7 +45,7 @@ export default function AUDITCPage() {
         <AnswerBlock
           what="The AUDIT-C, a 3-question brief alcohol screening used in primary care to identify hazardous drinking patterns."
           who="Anyone who wants a quick validated check of their alcohol consumption against clinical risk thresholds."
-          bottomLine="The AUDIT-C is a brief initial screen — a positive result suggests taking the full AUDIT for a more detailed assessment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The AUDIT-C is a brief initial screen, a positive result suggests taking the full AUDIT for a more detailed assessment. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

@@ -9,9 +9,9 @@ const TOOL_URL = `${SITE_URL}/depression-screening-for-men`;
 export const metadata: Metadata = {
   ...createMetadata({
     path: "/depression-screening-for-men",
-    title: "Depression Screening for Men — Free PHQ-9",
+    title: "Depression Screening for Men, Free PHQ-9",
     description:
-      "Men are diagnosed with depression at half the rate of women — not because they experience it less, but because it looks different. Free validated PHQ-9 screening with context on how depression actually presents in men.",
+      "Men are diagnosed with depression at half the rate of women, not because they experience it less, but because it looks different. Free validated PHQ-9 screening with context on how depression actually presents in men.",
     keywords: [
       "depression screening men", "depression test for men", "male depression symptoms",
       "men and depression signs", "PHQ-9 men", "depression in men anger",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "depression symptoms men irritability", "men depression underdiagnosed",
     ],
     openGraph: {
-      title: "Depression Screening for Men — Free PHQ-9",
+      title: "Depression Screening for Men, Free PHQ-9",
       description: "Free, private depression screening for men using the clinically validated PHQ-9. Instant results, no signup required.",
       url: TOOL_URL,
       type: "website",
@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 const FAQ_DATA = [
   {
     question: "Is it normal to not feel 'sad' with depression?",
-    answer: "Yes. Sadness is not required for a depression diagnosis — loss of interest or pleasure (anhedonia) is the alternative core criterion. Many men with clinical depression describe flatness, emptiness, or irritability rather than sadness. The PHQ-9 asks about both.",
+    answer: "Yes. Sadness is not required for a depression diagnosis, loss of interest or pleasure (anhedonia) is the alternative core criterion. Many men with clinical depression describe flatness, emptiness, or irritability rather than sadness. The PHQ-9 asks about both.",
   },
   {
     question: "Can exercise fix depression?",
-    answer: "Exercise has a meaningful effect on mild to moderate depression — effect sizes comparable to medication in some studies. It is a legitimate part of treatment. It is not a substitute for professional care at moderate to severe severity, and it doesn't address the underlying causes. Use it as a component, not a replacement.",
+    answer: "Exercise has a meaningful effect on mild to moderate depression, effect sizes comparable to medication in some studies. It is a legitimate part of treatment. It is not a substitute for professional care at moderate to severe severity, and it doesn't address the underlying causes. Use it as a component, not a replacement.",
   },
   {
     question: "What if I don't want to tell anyone?",
-    answer: "That position is worth examining. The fear of others knowing is often one of the strongest symptoms of depression — the belief that you should be able to handle this, that disclosing would change how people see you. Many men who finally seek help report that their first appointment was far less difficult than they anticipated, and that they wish they'd gone sooner.",
+    answer: "That position is worth examining. The fear of others knowing is often one of the strongest symptoms of depression, the belief that you should be able to handle this, that disclosing would change how people see you. Many men who finally seek help report that their first appointment was far less difficult than they anticipated, and that they wish they'd gone sooner.",
   },
   {
     question: "Why are men diagnosed with depression less often than women?",
-    answer: "Several factors converge: stigma prevents men from reporting symptoms, depression in men more often presents as irritability and anger rather than sadness, screening tools emphasize presentations more common in women, clinicians are statistically less likely to diagnose depression in men with equivalent symptom severity, and men visit primary care less frequently — reducing screening opportunities.",
+    answer: "Several factors converge: stigma prevents men from reporting symptoms, depression in men more often presents as irritability and anger rather than sadness, screening tools emphasize presentations more common in women, clinicians are statistically less likely to diagnose depression in men with equivalent symptom severity, and men visit primary care less frequently, reducing screening opportunities.",
   },
   {
     question: "Does alcohol make depression worse?",
@@ -53,7 +53,7 @@ const FAQ_DATA = [
   },
   {
     question: "How effective is treatment for depression in men?",
-    answer: "Very effective. Men respond just as well to treatment as anyone else. CBT and other evidence-based therapies, medication (SSRIs), exercise, and lifestyle changes are all effective. Many men find that addressing depression improves not just mental health but physical health, relationships, and work performance. The biggest barrier is not treatment effectiveness — it's getting men to start.",
+    answer: "Very effective. Men respond just as well to treatment as anyone else. CBT and other evidence-based therapies, medication (SSRIs), exercise, and lifestyle changes are all effective. Many men find that addressing depression improves not just mental health but physical health, relationships, and work performance. The biggest barrier is not treatment effectiveness, it's getting men to start.",
   },
 ];
 
@@ -61,8 +61,8 @@ export default function DepressionScreeningForMenPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      ...toolPageJsonLd({ name: "Depression Screening for Men — PHQ-9", description: "A free, private depression screening tool for men using the clinically validated PHQ-9.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: "2026-05-12" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      ...toolPageJsonLd({ name: "Depression Screening for Men, PHQ-9", description: "A free, private depression screening tool for men using the clinically validated PHQ-9.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: "2026-05-12" }),
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "PHQ-9 Depression Test", url: `${SITE_URL}/phq-9-depression-test` }, { name: "Depression Screening for Men", url: TOOL_URL }])) }} />
@@ -82,14 +82,14 @@ export default function DepressionScreeningForMenPage() {
             You might not call it depression. It might feel like a short fuse that wasn&apos;t there
             before. A flatness where motivation used to be. More drinks than you planned. Working
             longer hours to avoid sitting with your own thoughts. Men experience depression
-            differently — and because of that, it goes unrecognized, untreated, and sometimes fatal.
+            differently, and because of that, it goes unrecognized, untreated, and sometimes fatal.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Men are diagnosed with depression at roughly <strong>half the rate of women</strong> — not
+            Men are diagnosed with depression at roughly <strong>half the rate of women</strong>, not
             because they experience it less, but because it looks different in men, and because asking
             for help conflicts with what many men have been taught strength looks like. This free
             screening uses the <strong>PHQ-9</strong>, the same tool your doctor uses. It is{" "}
-            <strong>not a diagnosis</strong> — but it can start to put language to something you may
+            <strong>not a diagnosis</strong>, but it can start to put language to something you may
             have been carrying alone.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function DepressionScreeningForMenPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -109,9 +109,9 @@ export default function DepressionScreeningForMenPage() {
             <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-blue-700 dark:text-blue-300 mb-1">3.5× suicide rate</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                Men die by suicide at 3.5 times the rate of women in the United States — despite
+                Men die by suicide at 3.5 times the rate of women in the United States, despite
                 lower diagnosis rates for depression.
-                <span className="text-slate-500 dark:text-slate-400"> — AFSP, 2023</span>
+                <span className="text-slate-500 dark:text-slate-400">, AFSP, 2023</span>
               </p>
             </div>
             <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
@@ -119,7 +119,7 @@ export default function DepressionScreeningForMenPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Men are diagnosed with depression at approximately half the rate of women, despite
                 comparable underlying prevalence.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
             <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
@@ -127,7 +127,7 @@ export default function DepressionScreeningForMenPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Estimated US men affected by depression annually, the majority undiagnosed and
                 untreated.
-                <span className="text-slate-500 dark:text-slate-400"> — NIMH</span>
+                <span className="text-slate-500 dark:text-slate-400">, NIMH</span>
               </p>
             </div>
           </div>
@@ -139,22 +139,22 @@ export default function DepressionScreeningForMenPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              The classic depression picture — persistent sadness, tearfulness, visible
-              withdrawal — is more common in women. Men with depression more frequently present with:
+              The classic depression picture, persistent sadness, tearfulness, visible
+              withdrawal, is more common in women. Men with depression more frequently present with:
             </p>
             <p>
               <strong>Irritability and anger:</strong> A short fuse, road rage, snapping at family
               members, intolerance for minor frustrations. This is often not recognized as
-              depression — by the man experiencing it or the people around him.
+              depression, by the man experiencing it or the people around him.
             </p>
             <p>
               <strong>Emotional flatness:</strong> Many men with depression describe not sadness but
-              numbness — going through the motions, loss of interest in things that used to matter, a
+              numbness, going through the motions, loss of interest in things that used to matter, a
               sense that nothing is particularly worth doing. Anhedonia without the visible sadness.
             </p>
             <p>
               <strong>Risk-taking and recklessness:</strong> Increased alcohol use, substance use,
-              gambling, aggressive driving, sexual risk-taking — attempts to feel something, escape
+              gambling, aggressive driving, sexual risk-taking, attempts to feel something, escape
               internal numbness, or self-medicate emotional pain.
             </p>
             <p>
@@ -183,7 +183,7 @@ export default function DepressionScreeningForMenPage() {
               </li>
               <li>
                 <strong>Screening calibration:</strong> The PHQ-9 emphasizes sadness and
-                tearfulness — presentations more common in women. Male-typical presentations
+                tearfulness, presentations more common in women. Male-typical presentations
                 (irritability, somatic complaints, anhedonia without sadness) can score lower than the
                 clinical reality.
               </li>
@@ -207,7 +207,7 @@ export default function DepressionScreeningForMenPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               Alcohol and male depression have a particularly important relationship. Alcohol is a CNS
-              depressant that acutely dulls emotional pain — making it an obvious self-medication tool
+              depressant that acutely dulls emotional pain, making it an obvious self-medication tool
               for men who can&apos;t or won&apos;t name what they&apos;re feeling.
             </p>
             <p>
@@ -233,7 +233,7 @@ export default function DepressionScreeningForMenPage() {
             Take the PHQ-9 Depression Screening
           </h2>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Answer honestly — based on how you&apos;ve actually been, not how you present to others.
+            Answer honestly, based on how you&apos;ve actually been, not how you present to others.
           </p>
         </div>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
@@ -305,7 +305,7 @@ export default function DepressionScreeningForMenPage() {
             <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 <strong>Score 15+:</strong> Moderately severe to severe. Please reach out to a healthcare
-                provider. If alcohol or substance use is involved, mention it — it&apos;s clinically
+                provider. If alcohol or substance use is involved, mention it, it&apos;s clinically
                 relevant and your provider needs to know.
               </p>
             </div>
@@ -320,9 +320,9 @@ export default function DepressionScreeningForMenPage() {
         <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Crisis Resources</h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential</li>
-            <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> — free, 24/7</li>
-            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7</li>
+            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential</li>
+            <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong>, free, 24/7</li>
+            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7</li>
           </ul>
         </div>
 

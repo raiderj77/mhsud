@@ -92,7 +92,7 @@ const CATEGORY_META: Record<string, { label: string; color: string }> = {
 const RESILIENCE_FACTORS = [
   {
     title: "Supportive Relationships",
-    text: "Having at least one stable, caring adult — a parent, teacher, coach, neighbor, or mentor — who provides safety and support.",
+    text: "Having at least one stable, caring adult, a parent, teacher, coach, neighbor, or mentor, who provides safety and support.",
   },
   {
     title: "Social & Emotional Skills",
@@ -100,7 +100,7 @@ const RESILIENCE_FACTORS = [
   },
   {
     title: "Community Connection",
-    text: "Feeling a sense of belonging — through school, faith communities, sports, clubs, cultural groups, or neighborhoods.",
+    text: "Feeling a sense of belonging, through school, faith communities, sports, clubs, cultural groups, or neighborhoods.",
   },
   {
     title: "Basic Needs Met",
@@ -108,7 +108,7 @@ const RESILIENCE_FACTORS = [
   },
   {
     title: "Sense of Purpose",
-    text: "Feeling that your life has meaning and that you can make a positive difference — through work, volunteering, creativity, or helping others.",
+    text: "Feeling that your life has meaning and that you can make a positive difference, through work, volunteering, creativity, or helping others.",
   },
   {
     title: "Therapy & Healing",
@@ -191,7 +191,7 @@ export function AceClient({ faqData }: Props) {
                 <strong>There is no obligation to complete this questionnaire.</strong> If you are currently in crisis or working through trauma with a therapist, consider discussing this with them before proceeding.
               </p>
               <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed">
-                Your answers are completely private — they are scored in your browser and never sent anywhere.
+                Your answers are completely private, they are scored in your browser and never sent anywhere.
               </p>
             </div>
           </div>
@@ -213,7 +213,7 @@ export function AceClient({ faqData }: Props) {
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#10003;</span>
-              <span>Your score includes resilience information — an ACE score is not destiny</span>
+              <span>Your score includes resilience information, an ACE score is not destiny</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#10003;</span>
@@ -228,7 +228,7 @@ export function AceClient({ faqData }: Props) {
             onClick={handleBegin}
             className="px-8 py-3 rounded-xl text-base font-semibold bg-sage-600 text-white hover:bg-sage-700 transition-colors shadow-sm"
           >
-            I Understand — Begin Questionnaire
+            I Understand, Begin Questionnaire
           </button>
         </div>
 
@@ -261,7 +261,7 @@ export function AceClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
+            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity, it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
           </p>
         </div>
 
@@ -312,10 +312,10 @@ export function AceClient({ faqData }: Props) {
           </div>
           <p className={`text-sm leading-relaxed ${scoreColor.text}`}>
             {score === 0
-              ? "You did not report any of the 10 categories of adverse childhood experiences. This does not mean your childhood was without challenges — the ACE questionnaire captures specific categories of adversity, not every difficult experience."
+              ? "You did not report any of the 10 categories of adverse childhood experiences. This does not mean your childhood was without challenges, the ACE questionnaire captures specific categories of adversity, not every difficult experience."
               : score <= 3
-                ? "You reported some categories of childhood adversity. Research associates ACE scores in this range with some increased statistical risk for certain health outcomes — but risk is not certainty, and many protective factors can buffer the impact of early adversity."
-                : "You reported a higher number of childhood adversity categories. Research associates higher ACE scores with increased statistical risk for certain health outcomes. However, an ACE score is not a prediction or a diagnosis. Resilience, healing, and protective factors matter enormously — and they can be built at any age."
+                ? "You reported some categories of childhood adversity. Research associates ACE scores in this range with some increased statistical risk for certain health outcomes, but risk is not certainty, and many protective factors can buffer the impact of early adversity."
+                : "You reported a higher number of childhood adversity categories. Research associates higher ACE scores with increased statistical risk for certain health outcomes. However, an ACE score is not a prediction or a diagnosis. Resilience, healing, and protective factors matter enormously, and they can be built at any age."
             }
           </p>
         </div>
@@ -328,7 +328,7 @@ export function AceClient({ faqData }: Props) {
             Your Score Is Not Your Destiny
           </h2>
           <p className="text-sm text-sage-700 dark:text-sage-300 leading-relaxed mb-4 text-center max-w-2xl mx-auto">
-            The ACE study identified statistical associations between childhood adversity and later health risks — but those are population-level statistics, not individual predictions. Many people with high ACE scores lead healthy, fulfilling lives. Resilience is real, and it can be developed at any age.
+            The ACE study identified statistical associations between childhood adversity and later health risks, but those are population-level statistics, not individual predictions. Many people with high ACE scores lead healthy, fulfilling lives. Resilience is real, and it can be developed at any age.
           </p>
           <h3 className="text-base font-bold text-sage-700 dark:text-sage-300 mb-3">
             CDC-Identified Protective Factors
@@ -469,19 +469,19 @@ export function AceClient({ faqData }: Props) {
           <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#8226;</span>
-              <span><strong>Talk to a therapist</strong> — trauma-informed therapy (EMDR, CBT, somatic experiencing) can help process childhood adversity at any age</span>
+              <span><strong>Talk to a therapist</strong>, trauma-informed therapy (EMDR, CBT, somatic experiencing) can help process childhood adversity at any age</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#8226;</span>
-              <span><strong>Share with your doctor</strong> — ACE-aware healthcare providers can consider your history as part of your overall health picture</span>
+              <span><strong>Share with your doctor</strong>, ACE-aware healthcare providers can consider your history as part of your overall health picture</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#8226;</span>
-              <span><strong>Build protective factors</strong> — strong relationships, community connection, physical health, and stress management all build resilience</span>
+              <span><strong>Build protective factors</strong>, strong relationships, community connection, physical health, and stress management all build resilience</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="shrink-0 mt-0.5 text-sage-500">&#8226;</span>
-              <span><strong>Learn more</strong> — the CDC&apos;s ACE prevention resources provide evidence-based strategies for individuals and communities</span>
+              <span><strong>Learn more</strong>, the CDC&apos;s ACE prevention resources provide evidence-based strategies for individuals and communities</span>
             </li>
           </ul>
         </div>
@@ -493,7 +493,7 @@ export function AceClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Felitti, V. J., Anda, R. F., Nordenberg, D., et al. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Original ACE Study</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Original ACE Study</a>
               </li>
               <li>
                 Centers for Disease Control and Prevention. Adverse Childhood Experiences (ACEs).{" "}
@@ -556,7 +556,7 @@ export function AceClient({ faqData }: Props) {
                 ? "You reported some categories of childhood adversity. Research associates ACE scores in this range with some increased statistical risk for certain health outcomes."
                 : "You reported a higher number of childhood adversity categories. Research associates higher ACE scores with increased statistical risk for certain health outcomes."
           }
-          suggestion="Consider sharing your results with a healthcare provider or trauma-informed therapist. An ACE score is not a prediction or destiny — resilience can be built at any age."
+          suggestion="Consider sharing your results with a healthcare provider or trauma-informed therapist. An ACE score is not a prediction or destiny, resilience can be built at any age."
           reflectionPrompts={REFLECTION_PROMPTS["ace-questionnaire"]?.prompts ?? []}
           responses={ACE_ITEMS.map((item) => ({
             question: item.label,
@@ -581,18 +581,18 @@ export function AceClient({ faqData }: Props) {
             The Adverse Childhood Experiences (ACE) Study was conducted from 1995 to 1997 by Dr. Vincent Felitti at Kaiser Permanente and Dr. Robert Anda at the Centers for Disease Control and Prevention (CDC). It was one of the largest investigations ever conducted on the links between childhood adversity and later-life health and wellbeing. The study involved over 17,000 participants, predominantly middle-class adults with health insurance in San Diego, California.
           </p>
           <p>
-            The study found a graded dose-response relationship between the number of ACE categories experienced and the risk for numerous health outcomes later in life, including heart disease, cancer, chronic lung disease, liver disease, depression, substance use disorders, and suicide attempts. The more categories of adversity experienced, the higher the statistical risk — but this describes population-level trends, not individual destinies.
+            The study found a graded dose-response relationship between the number of ACE categories experienced and the risk for numerous health outcomes later in life, including heart disease, cancer, chronic lung disease, liver disease, depression, substance use disorders, and suicide attempts. The more categories of adversity experienced, the higher the statistical risk, but this describes population-level trends, not individual destinies.
           </p>
           <h2>How ACEs Affect Health</h2>
           <p>
-            The leading scientific explanation for the ACE-health connection is that prolonged childhood stress (toxic stress) can disrupt the developing brain and body&apos;s stress response systems. Chronic activation of the stress response in early life — without adequate buffering by supportive adult relationships — can affect brain architecture, immune function, hormonal systems, and even gene expression (epigenetics). These changes can increase vulnerability to both mental and physical health challenges later in life.
+            The leading scientific explanation for the ACE-health connection is that prolonged childhood stress (toxic stress) can disrupt the developing brain and body&apos;s stress response systems. Chronic activation of the stress response in early life, without adequate buffering by supportive adult relationships, can affect brain architecture, immune function, hormonal systems, and even gene expression (epigenetics). These changes can increase vulnerability to both mental and physical health challenges later in life.
           </p>
           <h2>The Science of Resilience</h2>
           <p>
-            Critically, the ACE study also showed that adversity is not destiny. Subsequent research has identified numerous protective factors — sometimes called &ldquo;positive childhood experiences&rdquo; (PCEs) — that can buffer the impact of ACEs. The single most powerful protective factor identified in the research is having at least one stable, supportive relationship with a caring adult during childhood. Other protective factors include social and emotional skill development, community belonging, and access to basic needs.
+            Critically, the ACE study also showed that adversity is not destiny. Subsequent research has identified numerous protective factors, sometimes called &ldquo;positive childhood experiences&rdquo; (PCEs), that can buffer the impact of ACEs. The single most powerful protective factor identified in the research is having at least one stable, supportive relationship with a caring adult during childhood. Other protective factors include social and emotional skill development, community belonging, and access to basic needs.
           </p>
           <p>
-            Research also shows that resilience is not a fixed trait — it can be developed at any age. Trauma-informed therapy, supportive relationships, physical health practices, and community connection can all contribute to healing and growth, even decades after childhood adversity occurred.
+            Research also shows that resilience is not a fixed trait, it can be developed at any age. Trauma-informed therapy, supportive relationships, physical health practices, and community connection can all contribute to healing and growth, even decades after childhood adversity occurred.
           </p>
         </div>
 
@@ -600,13 +600,13 @@ export function AceClient({ faqData }: Props) {
         <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
           <p className="font-semibold mb-1">Clinical Disclaimer</p>
           <p>
-            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
+            The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity, it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
           </p>
         </div>
 
         <ToolReviewerBio />
 
-        {/* Crisis Resources — trauma-specific */}
+        {/* Crisis Resources, trauma-specific */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">
           <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-2">
             Need Support?
@@ -790,7 +790,7 @@ export function AceClient({ faqData }: Props) {
       <div className="mb-6 p-4 bg-sand-100 dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
         <p className="font-semibold mb-1">Clinical Disclaimer</p>
         <p>
-          The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity — it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
+          The ACE Questionnaire is an educational tool for self-reflection. It is not a clinical assessment, diagnosis, or prediction of future health outcomes. An ACE score describes categories of childhood adversity, it does not capture severity, duration, context, or resilience factors. Always consult a qualified healthcare professional for concerns related to childhood trauma. Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
         </p>
       </div>
 

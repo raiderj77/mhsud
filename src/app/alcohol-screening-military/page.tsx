@@ -9,7 +9,7 @@ const TOOL_URL = `${SITE_URL}/alcohol-screening-military`;
 
 export const metadata: Metadata = createMetadata({
   path: "/alcohol-screening-military",
-  title: "Alcohol Screening for Military — Free AUDIT",
+  title: "Alcohol Screening for Military, Free AUDIT",
   description:
     "Free confidential alcohol screening for military and veterans. AUDIT tool. Private, instant.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = createMetadata({
     "service member alcohol assessment",
   ],
   openGraph: {
-    title: "Alcohol Screening for Military — Free AUDIT",
+    title: "Alcohol Screening for Military, Free AUDIT",
     description: "Free, confidential alcohol screening for military service members and veterans using the AUDIT tool. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -35,7 +35,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will seeking help for alcohol use affect my security clearance?",
-    answer: "Voluntarily seeking help for alcohol use generally does not negatively affect your security clearance. In fact, the Department of Defense has stated that self-referral for substance use treatment is viewed favorably and demonstrates responsibility. What can affect your clearance is untreated alcohol problems that lead to incidents, legal issues, or impaired duty performance. Getting help protects your career — avoiding it puts it at risk.",
+    answer: "Voluntarily seeking help for alcohol use generally does not negatively affect your security clearance. In fact, the Department of Defense has stated that self-referral for substance use treatment is viewed favorably and demonstrates responsibility. What can affect your clearance is untreated alcohol problems that lead to incidents, legal issues, or impaired duty performance. Getting help protects your career, avoiding it puts it at risk.",
   },
   {
     question: "Will getting help for alcohol use affect my military career?",
@@ -43,7 +43,7 @@ const FAQ_DATA = [
   },
   {
     question: "What is the connection between PTSD and alcohol use?",
-    answer: "PTSD and alcohol use are closely linked in military populations. Approximately 20% of veterans with PTSD also have a substance use disorder, and many use alcohol to self-medicate — to numb intrusive memories, reduce hypervigilance, or help with sleep. While alcohol may provide temporary relief, it worsens PTSD symptoms over time and creates a cycle that is difficult to break without professional support.",
+    answer: "PTSD and alcohol use are closely linked in military populations. Approximately 20% of veterans with PTSD also have a substance use disorder, and many use alcohol to self-medicate, to numb intrusive memories, reduce hypervigilance, or help with sleep. While alcohol may provide temporary relief, it worsens PTSD symptoms over time and creates a cycle that is difficult to break without professional support.",
   },
   {
     question: "What alcohol treatment does the VA offer?",
@@ -55,7 +55,7 @@ const FAQ_DATA = [
   },
   {
     question: "What counts as binge drinking in the military?",
-    answer: "Binge drinking is defined as consuming 5 or more drinks on one occasion for men, or 4 or more for women. In military populations, binge drinking rates are significantly higher than among civilians — approximately 65% of military drinkers report binge drinking, often tied to unit culture, post-deployment periods, and social environments that normalize heavy consumption.",
+    answer: "Binge drinking is defined as consuming 5 or more drinks on one occasion for men, or 4 or more for women. In military populations, binge drinking rates are significantly higher than among civilians, approximately 65% of military drinkers report binge drinking, often tied to unit culture, post-deployment periods, and social environments that normalize heavy consumption.",
   },
   {
     question: "What are signs that my drinking may be a problem?",
@@ -71,7 +71,7 @@ export default function AlcoholScreeningMilitaryPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Alcohol Screening for Military — Free AUDIT Assessment",
+              name: "Alcohol Screening for Military, Free AUDIT Assessment",
               description: "A free, confidential alcohol screening tool for military service members and veterans using the clinically validated AUDIT questionnaire.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
@@ -129,18 +129,18 @@ export default function AlcoholScreeningMilitaryPage() {
         {/* Warm Empathetic Intro */}
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            You have carried things most people will never understand — the weight of service,
+            You have carried things most people will never understand, the weight of service,
             the things you saw, the things you did, and the things you could not do. If drinking
             has become how you decompress, sleep, or quiet the noise, you are not alone. Alcohol
-            use in the military is not just common — it is woven into the culture. But when
+            use in the military is not just common, it is woven into the culture. But when
             &quot;having a few&quot; turns into something you need rather than choose, it
             deserves an honest look.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free, completely private screening uses the AUDIT (Alcohol Use Disorders
             Identification Test), a tool developed by the World Health Organization and used
-            worldwide. It is <strong>not a diagnosis</strong>, and no one — not your command,
-            the VA, or anyone else — will see your answers. Everything stays in your browser.
+            worldwide. It is <strong>not a diagnosis</strong>, and no one, not your command,
+            the VA, or anyone else, will see your answers. Everything stays in your browser.
             This is between you and the screen.
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function AlcoholScreeningMilitaryPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -170,16 +170,16 @@ export default function AlcoholScreeningMilitaryPage() {
                 Military service members and veterans drink at significantly higher rates than the
                 general population, with approximately 30% of active-duty personnel meeting criteria
                 for hazardous drinking.
-                <span className="text-slate-500 dark:text-slate-400"> — Department of Defense Health Survey</span>
+                <span className="text-slate-500 dark:text-slate-400">, Department of Defense Health Survey</span>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-sky-700 dark:text-sky-300 mb-1">65% binge drinking</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                Approximately 65% of military drinkers report binge drinking episodes — nearly
+                Approximately 65% of military drinkers report binge drinking episodes, nearly
                 double the civilian rate. This pattern is often normalized within unit culture but
                 carries serious health and safety risks.
-                <span className="text-slate-500 dark:text-slate-400"> — RAND Corporation</span>
+                <span className="text-slate-500 dark:text-slate-400">, RAND Corporation</span>
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
@@ -188,7 +188,7 @@ export default function AlcoholScreeningMilitaryPage() {
                 Approximately 20% of veterans with PTSD also have a substance use disorder. Alcohol
                 is the most common substance used to self-medicate combat-related trauma, creating a
                 cycle that worsens both conditions.
-                <span className="text-slate-500 dark:text-slate-400"> — National Center for PTSD</span>
+                <span className="text-slate-500 dark:text-slate-400">, National Center for PTSD</span>
               </p>
             </div>
           </div>
@@ -207,10 +207,10 @@ export default function AlcoholScreeningMilitaryPage() {
                 across military and veteran populations.
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Drinking patterns:</strong> The AUDIT looks at how often you drink, how much, and whether your drinking has escalated — patterns that are especially important to recognize in military culture where heavy drinking is normalized.</p>
+                <p><strong>Drinking patterns:</strong> The AUDIT looks at how often you drink, how much, and whether your drinking has escalated, patterns that are especially important to recognize in military culture where heavy drinking is normalized.</p>
                 <p><strong>Consequences:</strong> Questions about blackouts, injuries, and others&apos; concern help you see whether drinking is affecting areas of your life you may have been minimizing.</p>
                 <p><strong>Combat and transition:</strong> Many service members and veterans increase drinking during deployments, post-deployment, or during the transition to civilian life. This screening can help you take stock of where you are now.</p>
-                <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis or a judgment. A high score does not mean you are an &quot;alcoholic&quot; — it means your drinking pattern may benefit from professional guidance.</p>
+                <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis or a judgment. A high score does not mean you are an &quot;alcoholic&quot;, it means your drinking pattern may benefit from professional guidance.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is reported to your command, the VA, your security clearance review, or anyone else. Period.</p>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function AlcoholScreeningMilitaryPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              Combat and operational stress create measurable neurological changes — a
+              Combat and operational stress create measurable neurological changes, a
               dysregulated HPA axis (your body&apos;s stress command center), heightened startle
               response, and chronic hyperarousal that makes it difficult to relax or sleep.
               Alcohol suppresses these responses temporarily: it quiets the hypervigilance,
@@ -233,11 +233,10 @@ export default function AlcoholScreeningMilitaryPage() {
             </p>
             <p>
               The problem is neurochemical. Alcohol boosts GABA (a calming neurotransmitter) and
-              suppresses glutamate (an excitatory one) — creating short-term calm. But the brain
+              suppresses glutamate (an excitatory one), creating short-term calm. But the brain
               adapts by upregulating glutamate and downregulating GABA, which means each morning
               after brings more anxiety, worse sleep, and stronger hyperarousal than before. The
-              only thing that provides relief is more alcohol. This isn&apos;t a character flaw
-              — it is a predictable neurological trap, and it requires professional support to
+              only thing that provides relief is more alcohol. This isn&apos;t a character flaw, it is a predictable neurological trap, and it requires professional support to
               break safely.
             </p>
           </div>
@@ -255,13 +254,13 @@ export default function AlcoholScreeningMilitaryPage() {
               concerns about MOS or rating impacts, fear of involuntary separation, and the
               practical reality that seeking treatment requires time away from duties all create
               real obstacles. For many service members, &quot;toughing it out&quot; is not just a
-              cultural expectation — it was trained behavior that kept them and their unit alive.
+              cultural expectation, it was trained behavior that kept them and their unit alive.
               Unlearning it requires a compelling reason and a safe environment.
             </p>
             <p>
               Confidential options do exist. Military OneSource provides up to 12 non-medical
               counseling sessions that are not reported to your command. The AUDIT screening
-              you&apos;re about to take runs entirely in your browser — no records, no tracking.
+              you&apos;re about to take runs entirely in your browser, no records, no tracking.
               Chaplains offer privileged communication. And self-referral for substance use
               treatment is protected under DOD policy and is generally viewed more favorably than
               a command-directed referral after an incident. Reaching out early gives you the
@@ -281,14 +280,13 @@ export default function AlcoholScreeningMilitaryPage() {
               unavailable during deployment, consumption surges during R&amp;R and immediately
               post-deployment, and heavy drinking can become entrenched during the reintegration
               period. Research identifies the first 6 months after returning from deployment as
-              the highest-risk window for developing hazardous drinking patterns — a period when
+              the highest-risk window for developing hazardous drinking patterns, a period when
               the stress of combat is still fresh but the structure of deployment is gone.
             </p>
             <p>
               Reintegration stress compounds the risk. Reconnecting with family dynamics that
               shifted during absence, re-establishing routines, navigating changed relationships,
-              and adjusting to a pace of life that feels simultaneously too slow and overwhelming
-              — these transitions create their own pressures. Alcohol often fills the gap between
+              and adjusting to a pace of life that feels simultaneously too slow and overwhelming, these transitions create their own pressures. Alcohol often fills the gap between
               how things were supposed to feel and how they actually do. If you are within a year
               of returning from deployment, this screening is especially relevant.
             </p>
@@ -313,7 +311,7 @@ export default function AlcoholScreeningMilitaryPage() {
         <AnswerBlock
           what="An AUDIT-based alcohol screening with military-specific context, culture considerations, and veteran resources."
           who="Active duty service members and veterans who want a private alcohol use assessment with relevant support resources."
-          bottomLine="Military culture can normalize heavy drinking — this screening uses clinical thresholds to assess risk. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Military culture can normalize heavy drinking, this screening uses clinical thresholds to assess risk. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -325,7 +323,7 @@ export default function AlcoholScreeningMilitaryPage() {
         <h2>How Is the Military Alcohol Screen Scored?</h2>
         <h2>What Do My Alcohol Screening Results Mean?</h2>
       </section>
-<AUDITClient faqData={FAQ_DATA} />
+<AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
@@ -372,16 +370,16 @@ export default function AlcoholScreeningMilitaryPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>Veterans Crisis Line:</strong> Call <strong>988, press 1</strong> — or text <strong>838255</strong> — free, 24/7, confidential
+              <strong>Veterans Crisis Line:</strong> Call <strong>988, press 1</strong>, or text <strong>838255</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>Military OneSource:</strong> <strong>1-800-342-9647</strong> — free counseling and referrals, 24/7
+              <strong>Military OneSource:</strong> <strong>1-800-342-9647</strong>, free counseling and referrals, 24/7
             </li>
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
           </ul>
         </div>
@@ -389,7 +387,7 @@ export default function AlcoholScreeningMilitaryPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess alcohol use disorders. Your responses are processed entirely
             in your browser and are never stored or transmitted. This screening is not affiliated with the
             Department of Defense, the VA, or any military branch. Always consult a qualified healthcare

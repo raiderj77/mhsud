@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "What are intrusive thoughts?",
     answer:
-      "Intrusive thoughts are unwanted, involuntary thoughts, images, or urges that pop into your mind. Nearly everyone experiences them. In OCD, these thoughts get stuck \u2014 the person assigns excessive meaning to them and feels compelled to perform rituals to neutralize the anxiety. Having an intrusive thought does not mean you want to act on it.",
+      "Intrusive thoughts are unwanted, involuntary thoughts, images, or urges that pop into your mind. Nearly everyone experiences them. In OCD, these thoughts get stuck, the person assigns excessive meaning to them and feels compelled to perform rituals to neutralize the anxiety. Having an intrusive thought does not mean you want to act on it.",
   },
   {
     question: "Can OCD be cured?",
@@ -93,7 +93,7 @@ export default function WhatOCDLooksLikePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            &quot;I&apos;m so OCD about my desk.&quot; You&apos;ve probably heard someone say this — or something like it. But obsessive-compulsive disorder is not a personality quirk or a preference for neatness. It&apos;s a chronic mental health condition that affects roughly 2&ndash;3% of the population and can be profoundly disabling when left untreated. Here&apos;s what OCD actually looks like, beyond the stereotypes.
+            &quot;I&apos;m so OCD about my desk.&quot; You&apos;ve probably heard someone say this, or something like it. But obsessive-compulsive disorder is not a personality quirk or a preference for neatness. It&apos;s a chronic mental health condition that affects roughly 2&ndash;3% of the population and can be profoundly disabling when left untreated. Here&apos;s what OCD actually looks like, beyond the stereotypes.
           </p>
         </header>
 
@@ -111,10 +111,10 @@ export default function WhatOCDLooksLikePage() {
               Misconceptions about OCD are widespread, and they do real harm. When people treat OCD as a quirky personality trait, it minimizes the experience of those who live with the condition and can delay people from seeking help.
             </p>
             <p>
-              <strong>Myth: OCD is just being neat or organized.</strong> While contamination and symmetry are real OCD subtypes, many people with OCD have obsessions that have nothing to do with cleanliness. Someone with harm OCD may be tormented by intrusive thoughts about hurting a loved one. Someone with scrupulosity OCD may spend hours in religious or moral rumination. Neatness is not the defining feature — distress is.
+              <strong>Myth: OCD is just being neat or organized.</strong> While contamination and symmetry are real OCD subtypes, many people with OCD have obsessions that have nothing to do with cleanliness. Someone with harm OCD may be tormented by intrusive thoughts about hurting a loved one. Someone with scrupulosity OCD may spend hours in religious or moral rumination. Neatness is not the defining feature, distress is.
             </p>
             <p>
-              <strong>Myth: Everyone is &quot;a little OCD.&quot;</strong> Preferring a clean kitchen or organizing your bookshelf by color is not OCD. OCD involves intrusive, unwanted thoughts that cause significant anxiety and compulsive behaviors that a person feels driven to perform even when they recognize the behaviors are excessive. The difference is not degree — it&apos;s kind.
+              <strong>Myth: Everyone is &quot;a little OCD.&quot;</strong> Preferring a clean kitchen or organizing your bookshelf by color is not OCD. OCD involves intrusive, unwanted thoughts that cause significant anxiety and compulsive behaviors that a person feels driven to perform even when they recognize the behaviors are excessive. The difference is not degree, it&apos;s kind.
             </p>
             <p>
               <strong>Myth: OCD is a personality quirk you can just stop.</strong> OCD is a neurobiological condition. Brain imaging studies show differences in activity in the orbitofrontal cortex, anterior cingulate cortex, and basal ganglia in people with OCD. Telling someone with OCD to &quot;just stop&quot; is like telling someone with asthma to &quot;just breathe normally.&quot;
@@ -129,20 +129,20 @@ export default function WhatOCDLooksLikePage() {
               OCD operates through a cycle that repeats and reinforces itself. Understanding this cycle is essential for understanding why OCD is so difficult to manage without proper treatment.
             </p>
             <p>
-              The cycle begins with an <strong>intrusive thought, image, or urge</strong> (the obsession). This triggers intense <strong>anxiety or distress</strong>. To relieve that distress, the person performs a <strong>compulsion</strong> — a behavior or mental act intended to neutralize the threat or reduce the anxiety. The compulsion provides temporary relief, which reinforces the cycle. The brain learns: &quot;The compulsion made the anxiety go away, so the threat must have been real.&quot; The next time the intrusive thought appears, the anxiety is just as strong — or stronger.
+              The cycle begins with an <strong>intrusive thought, image, or urge</strong> (the obsession). This triggers intense <strong>anxiety or distress</strong>. To relieve that distress, the person performs a <strong>compulsion</strong>, a behavior or mental act intended to neutralize the threat or reduce the anxiety. The compulsion provides temporary relief, which reinforces the cycle. The brain learns: &quot;The compulsion made the anxiety go away, so the threat must have been real.&quot; The next time the intrusive thought appears, the anxiety is just as strong, or stronger.
             </p>
             <p>
-              This is why reassurance-seeking, one of the most common compulsions, ultimately makes OCD worse rather than better. Each time someone asks &quot;Are you sure I didn&apos;t leave the stove on?&quot; and receives reassurance, the brain gets a momentary hit of relief — but it also reinforces the idea that the worry was legitimate and that external reassurance is necessary to feel safe.
+              This is why reassurance-seeking, one of the most common compulsions, ultimately makes OCD worse rather than better. Each time someone asks &quot;Are you sure I didn&apos;t leave the stove on?&quot; and receives reassurance, the brain gets a momentary hit of relief, but it also reinforces the idea that the worry was legitimate and that external reassurance is necessary to feel safe.
             </p>
           </section>
 
           <section>
             <h2>The Distress Component: Why OCD Thoughts Are Ego-Dystonic</h2>
             <p>
-              A critical feature of OCD that often goes unmentioned is that obsessive thoughts are <strong>ego-dystonic</strong> — they conflict with the person&apos;s values, identity, and desires. A parent with harm OCD who has intrusive thoughts about hurting their child is horrified by those thoughts precisely because they love their child deeply. A person with scrupulosity OCD who obsesses about committing a sin does so because their faith matters profoundly to them.
+              A critical feature of OCD that often goes unmentioned is that obsessive thoughts are <strong>ego-dystonic</strong>, they conflict with the person&apos;s values, identity, and desires. A parent with harm OCD who has intrusive thoughts about hurting their child is horrified by those thoughts precisely because they love their child deeply. A person with scrupulosity OCD who obsesses about committing a sin does so because their faith matters profoundly to them.
             </p>
             <p>
-              This is what makes OCD so painful. The thoughts attack what the person cares about most. The distress is not about the content of the thought itself — it&apos;s about what the person fears the thought says about them. Understanding this distinction is essential for anyone trying to support someone with OCD.
+              This is what makes OCD so painful. The thoughts attack what the person cares about most. The distress is not about the content of the thought itself, it&apos;s about what the person fears the thought says about them. Understanding this distinction is essential for anyone trying to support someone with OCD.
             </p>
           </section>
 
@@ -156,8 +156,8 @@ export default function WhatOCDLooksLikePage() {
                 { name: "Contamination OCD", desc: "Fear of germs, illness, or contamination. Compulsions often include excessive handwashing, cleaning, or avoidance of perceived contaminants." },
                 { name: "Harm OCD", desc: "Unwanted intrusive thoughts about harming oneself or others. Compulsions may include avoidance of sharp objects, constant checking, or mental review for reassurance." },
                 { name: "Symmetry and Ordering", desc: "Intense need for things to be symmetrical, even, or arranged in a specific way. Distress occurs when things feel 'not right' rather than from a specific feared outcome." },
-                { name: "Checking OCD", desc: "Persistent doubt about whether something was done correctly — locks, stoves, emails. Compulsions involve repeated checking, sometimes dozens of times." },
-                { name: "Pure-O (Intrusive Thoughts)", desc: "Characterized by distressing obsessions without visible compulsions. However, compulsions are usually present as mental rituals — rumination, mental reviewing, silent counting, or internal reassurance-seeking." },
+                { name: "Checking OCD", desc: "Persistent doubt about whether something was done correctly, locks, stoves, emails. Compulsions involve repeated checking, sometimes dozens of times." },
+                { name: "Pure-O (Intrusive Thoughts)", desc: "Characterized by distressing obsessions without visible compulsions. However, compulsions are usually present as mental rituals, rumination, mental reviewing, silent counting, or internal reassurance-seeking." },
                 { name: "Scrupulosity", desc: "Obsessive concern about morality, religious purity, or ethics. Compulsions may include excessive praying, confession, or seeking reassurance about one's moral character." },
               ].map((s) => (
                 <div key={s.name} className="card p-4">
@@ -176,7 +176,7 @@ export default function WhatOCDLooksLikePage() {
           <section>
             <h2>How OCD Differs from OCPD</h2>
             <p>
-              Obsessive-compulsive disorder (OCD) and obsessive-compulsive personality disorder (OCPD) sound similar but are fundamentally different conditions. People with <strong>OCD</strong> experience their obsessions as unwanted and distressing — they recognize that their thoughts and behaviors are excessive. People with <strong>OCPD</strong>, by contrast, view their perfectionism and rigid standards as reasonable and even desirable.
+              Obsessive-compulsive disorder (OCD) and obsessive-compulsive personality disorder (OCPD) sound similar but are fundamentally different conditions. People with <strong>OCD</strong> experience their obsessions as unwanted and distressing, they recognize that their thoughts and behaviors are excessive. People with <strong>OCPD</strong>, by contrast, view their perfectionism and rigid standards as reasonable and even desirable.
             </p>
             <p>
               OCPD is characterized by a pervasive pattern of preoccupation with orderliness, perfectionism, and control. Unlike OCD, OCPD does not involve intrusive thoughts or the obsession-compulsion cycle. A person with OCPD may insist on doing things &quot;the right way&quot; because they genuinely believe their way is correct, while a person with OCD performs compulsions because they are terrified of what might happen if they don&apos;t.
@@ -186,10 +186,10 @@ export default function WhatOCDLooksLikePage() {
           <section>
             <h2>How OCD Differs from General Anxiety</h2>
             <p>
-              OCD and generalized anxiety disorder (GAD) both involve excessive worry, but the nature of that worry differs. <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">Generalized anxiety</Link> tends to involve realistic concerns (finances, health, relationships) that are blown out of proportion. OCD obsessions, by contrast, are often bizarre, taboo, or clearly irrational — and the person usually recognizes this, which adds to the distress.
+              OCD and generalized anxiety disorder (GAD) both involve excessive worry, but the nature of that worry differs. <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">Generalized anxiety</Link> tends to involve realistic concerns (finances, health, relationships) that are blown out of proportion. OCD obsessions, by contrast, are often bizarre, taboo, or clearly irrational, and the person usually recognizes this, which adds to the distress.
             </p>
             <p>
-              Another key difference is the compulsion component. While anxiety may lead to avoidance or worry, OCD drives specific, repetitive behaviors or mental acts that the person feels compelled to perform in response to the obsession. If the worry doesn&apos;t come with a ritualized response, it may indicate anxiety rather than OCD — though only a qualified professional can make that determination.
+              Another key difference is the compulsion component. While anxiety may lead to avoidance or worry, OCD drives specific, repetitive behaviors or mental acts that the person feels compelled to perform in response to the obsession. If the worry doesn&apos;t come with a ritualized response, it may indicate anxiety rather than OCD, though only a qualified professional can make that determination.
             </p>
           </section>
 
@@ -199,25 +199,25 @@ export default function WhatOCDLooksLikePage() {
               The Obsessive-Compulsive Inventory &ndash; Revised (OCI-R) is a widely used validated screening instrument that measures OCD symptom severity across six clinical dimensions:
             </p>
             <ol>
-              <li><strong>Washing</strong> &mdash; contamination-related cleaning behaviors</li>
-              <li><strong>Checking</strong> &mdash; repeated verification behaviors</li>
-              <li><strong>Ordering</strong> &mdash; need for symmetry and specific arrangements</li>
-              <li><strong>Obsessing</strong> &mdash; unwanted intrusive thoughts</li>
-              <li><strong>Hoarding</strong> &mdash; difficulty discarding items</li>
-              <li><strong>Neutralizing</strong> &mdash; mental or behavioral acts to undo thoughts</li>
+              <li><strong>Washing</strong>, contamination-related cleaning behaviors</li>
+              <li><strong>Checking</strong>, repeated verification behaviors</li>
+              <li><strong>Ordering</strong>, need for symmetry and specific arrangements</li>
+              <li><strong>Obsessing</strong>, unwanted intrusive thoughts</li>
+              <li><strong>Hoarding</strong>, difficulty discarding items</li>
+              <li><strong>Neutralizing</strong>, mental or behavioral acts to undo thoughts</li>
             </ol>
             <p>
-              These dimensions reflect the range of OCD presentations. A professional trained in OCD can administer validated assessments and provide a thorough evaluation — OCD is highly treatable when properly identified.
+              These dimensions reflect the range of OCD presentations. A professional trained in OCD can administer validated assessments and provide a thorough evaluation, OCD is highly treatable when properly identified.
             </p>
           </section>
 
           <section>
             <h2>ERP: The Gold-Standard Treatment for OCD</h2>
             <p>
-              Exposure and Response Prevention (ERP) is the most effective evidence-based treatment for OCD. ERP works by breaking the obsession-compulsion cycle. Under the guidance of a trained therapist, the person is gradually exposed to the thoughts, images, or situations that trigger their obsessions — and then practices resisting the compulsive response.
+              Exposure and Response Prevention (ERP) is the most effective evidence-based treatment for OCD. ERP works by breaking the obsession-compulsion cycle. Under the guidance of a trained therapist, the person is gradually exposed to the thoughts, images, or situations that trigger their obsessions, and then practices resisting the compulsive response.
             </p>
             <p>
-              Over time, this process — called habituation — teaches the brain that the anxiety naturally decreases on its own without the compulsion. The feared outcome does not occur, and the obsession loses its power. Research consistently shows that ERP can reduce OCD symptoms by 50&ndash;70% for most people who complete treatment.
+              Over time, this process, called habituation, teaches the brain that the anxiety naturally decreases on its own without the compulsion. The feared outcome does not occur, and the obsession loses its power. Research consistently shows that ERP can reduce OCD symptoms by 50&ndash;70% for most people who complete treatment.
             </p>
             <p>
               ERP is not easy. It requires deliberately facing what feels most threatening, which is why working with a therapist who specializes in OCD and ERP is important. The <a href="https://iocdf.org/find-help/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">International OCD Foundation (IOCDF)</a> maintains a directory of OCD specialists that can help you find a qualified provider.
@@ -229,10 +229,10 @@ export default function WhatOCDLooksLikePage() {
           <section>
             <h2>Why Reassurance-Seeking Doesn&apos;t Help</h2>
             <p>
-              One of the most counterintuitive aspects of OCD is that reassurance — something that feels helpful in the moment — actually maintains and strengthens the disorder. When a person with OCD asks &quot;Did I lock the door?&quot; or &quot;Am I a bad person?&quot; and receives reassurance, the relief is temporary. The doubt returns, often stronger, because the brain has learned that it needs external validation to feel safe.
+              One of the most counterintuitive aspects of OCD is that reassurance, something that feels helpful in the moment, actually maintains and strengthens the disorder. When a person with OCD asks &quot;Did I lock the door?&quot; or &quot;Am I a bad person?&quot; and receives reassurance, the relief is temporary. The doubt returns, often stronger, because the brain has learned that it needs external validation to feel safe.
             </p>
             <p>
-              This is why loved ones of people with OCD are often encouraged to learn about the condition and, with professional guidance, practice not providing reassurance — even though it feels unkind in the moment. Supporting someone with OCD means helping them build tolerance for uncertainty, not eliminating uncertainty for them.
+              This is why loved ones of people with OCD are often encouraged to learn about the condition and, with professional guidance, practice not providing reassurance, even though it feels unkind in the moment. Supporting someone with OCD means helping them build tolerance for uncertainty, not eliminating uncertainty for them.
             </p>
           </section>
 
@@ -242,17 +242,17 @@ export default function WhatOCDLooksLikePage() {
               OCD can consume hours of a person&apos;s day. Some people spend 3&ndash;8 hours daily engaged in compulsions or trapped in obsessive thought loops. The condition can affect every area of life: work performance suffers when checking rituals take precedence over tasks; relationships strain when a partner doesn&apos;t understand why reassurance never seems to be enough; social activities are avoided because they trigger obsessions.
             </p>
             <p>
-              The shame and secrecy that often accompany OCD add another layer of difficulty. Many people with OCD — particularly those with taboo intrusive thoughts — suffer in silence for years before seeking help, fearing that their thoughts mean something terrible about who they are. On average, it takes 14&ndash;17 years from symptom onset for a person with OCD to receive appropriate treatment.
+              The shame and secrecy that often accompany OCD add another layer of difficulty. Many people with OCD, particularly those with taboo intrusive thoughts, suffer in silence for years before seeking help, fearing that their thoughts mean something terrible about who they are. On average, it takes 14&ndash;17 years from symptom onset for a person with OCD to receive appropriate treatment.
             </p>
           </section>
 
           <section>
             <h2>Prevalence: OCD Is More Common Than You Think</h2>
             <p>
-              OCD affects an estimated 2&ndash;3% of the global population — roughly 1 in 40 adults. It occurs across all ages, genders, and cultural backgrounds, though symptoms often begin in childhood or early adulthood. Despite its prevalence, OCD remains widely misunderstood, which contributes to delays in screening and treatment.
+              OCD affects an estimated 2&ndash;3% of the global population, roughly 1 in 40 adults. It occurs across all ages, genders, and cultural backgrounds, though symptoms often begin in childhood or early adulthood. Despite its prevalence, OCD remains widely misunderstood, which contributes to delays in screening and treatment.
             </p>
             <p>
-              If you recognize yourself in any of the descriptions above, you are not alone — and effective help exists. The first step may be as simple as taking a brief screening to reflect on your experiences.
+              If you recognize yourself in any of the descriptions above, you are not alone, and effective help exists. The first step may be as simple as taking a brief screening to reflect on your experiences.
             </p>
           </section>
 
@@ -287,7 +287,7 @@ export default function WhatOCDLooksLikePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

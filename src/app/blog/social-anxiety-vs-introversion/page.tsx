@@ -45,7 +45,7 @@ const FAQ_DATA = [
   {
     question: "Is social anxiety the same as being shy?",
     answer:
-      "Not exactly. Shyness involves mild discomfort in social situations, especially with unfamiliar people. Social anxiety disorder is a clinical condition with intense, persistent fear that causes significant distress and functional impairment \u2014 it may prevent attending school, holding a job, or forming relationships. Shy people typically warm up over time, while social anxiety distress often persists.",
+      "Not exactly. Shyness involves mild discomfort in social situations, especially with unfamiliar people. Social anxiety disorder is a clinical condition with intense, persistent fear that causes significant distress and functional impairment, it may prevent attending school, holding a job, or forming relationships. Shy people typically warm up over time, while social anxiety distress often persists.",
   },
   {
     question: "Can social anxiety be cured?",
@@ -97,7 +97,7 @@ export default function SocialAnxietyVsIntroversionPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Many people wonder whether their discomfort in social situations is simply introversion or something more. While introversion and social anxiety can look similar from the outside, they are fundamentally different experiences — and understanding which one applies to you matters, because social anxiety is a treatable condition while introversion is a normal personality trait.
+            Many people wonder whether their discomfort in social situations is simply introversion or something more. While introversion and social anxiety can look similar from the outside, they are fundamentally different experiences, and understanding which one applies to you matters, because social anxiety is a treatable condition while introversion is a normal personality trait.
           </p>
         </header>
 
@@ -106,9 +106,9 @@ export default function SocialAnxietyVsIntroversionPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -126,10 +126,10 @@ export default function SocialAnxietyVsIntroversionPage() {
               Introversion is a personality trait, not a disorder. As psychologist and researcher Susan Cain explains in her influential work <em>Quiet: The Power of Introverts in a World That Can&apos;t Stop Talking</em>, introversion is primarily about how a person responds to stimulation. Introverts tend to prefer less stimulating environments and feel most energized during quieter, more solitary activities.
             </p>
             <p>
-              Introverts may enjoy deep one-on-one conversations but feel drained after large social gatherings. They often prefer to think before speaking, favor written communication, and need alone time to recharge after social interactions. This is not avoidance driven by fear — it is a genuine preference for how they manage their energy.
+              Introverts may enjoy deep one-on-one conversations but feel drained after large social gatherings. They often prefer to think before speaking, favor written communication, and need alone time to recharge after social interactions. This is not avoidance driven by fear, it is a genuine preference for how they manage their energy.
             </p>
             <p>
-              Importantly, introverts <em>can</em> enjoy socializing. They may have rich friendships, speak publicly, and engage in group activities. The key is that they do so on their own terms and in manageable doses. After a dinner party, an introvert may feel pleasantly tired and ready for solitude — not panicked, ashamed, or replaying every conversation for perceived mistakes.
+              Importantly, introverts <em>can</em> enjoy socializing. They may have rich friendships, speak publicly, and engage in group activities. The key is that they do so on their own terms and in manageable doses. After a dinner party, an introvert may feel pleasantly tired and ready for solitude, not panicked, ashamed, or replaying every conversation for perceived mistakes.
             </p>
           </section>
 
@@ -139,7 +139,7 @@ export default function SocialAnxietyVsIntroversionPage() {
               Social anxiety disorder (sometimes called social phobia) is a recognized mental health condition characterized by intense, persistent fear of social situations where a person might be scrutinized, judged, or embarrassed. According to the <a href="https://www.nimh.nih.gov/health/topics/social-anxiety-disorder" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health (NIMH)</a>, social anxiety disorder affects approximately 7% of adults in the United States.
             </p>
             <p>
-              Unlike introversion, social anxiety involves significant distress and functional impairment. A person with social anxiety does not simply prefer less socializing — they actively fear and avoid social situations because of an overwhelming worry about being negatively evaluated. This fear is persistent (typically lasting six months or more), out of proportion to the actual situation, and causes real problems in daily life.
+              Unlike introversion, social anxiety involves significant distress and functional impairment. A person with social anxiety does not simply prefer less socializing, they actively fear and avoid social situations because of an overwhelming worry about being negatively evaluated. This fear is persistent (typically lasting six months or more), out of proportion to the actual situation, and causes real problems in daily life.
             </p>
             <p>
               Social anxiety may focus on specific situations (such as public speaking or eating in front of others) or be generalized across most social interactions. In either case, the defining feature is <strong>fear and avoidance</strong>, not simply a preference for solitude.
@@ -151,7 +151,7 @@ export default function SocialAnxietyVsIntroversionPage() {
           <section>
             <h2>Key differences between introversion and social anxiety</h2>
             <p>
-              The most important distinction is the role of fear. Introverts step away from social situations because they find them tiring — not because they are afraid. People with social anxiety avoid social situations because they fear humiliation, judgment, or embarrassment. The emotional experience is fundamentally different.
+              The most important distinction is the role of fear. Introverts step away from social situations because they find them tiring, not because they are afraid. People with social anxiety avoid social situations because they fear humiliation, judgment, or embarrassment. The emotional experience is fundamentally different.
             </p>
             <p>
               Introverts can enjoy socializing in small doses without dread or distress. They may look forward to a gathering with close friends, attend it comfortably, and then need quiet time afterward. A person with social anxiety may dread the same gathering for days or weeks beforehand, experience intense anxiety during it, and spend hours afterward analyzing what they said for possible mistakes.
@@ -160,7 +160,7 @@ export default function SocialAnxietyVsIntroversionPage() {
               Another key difference is functional impairment. Introversion does not interfere with a person&apos;s ability to work, maintain relationships, or pursue goals. Social anxiety frequently does. It may prevent someone from speaking up in meetings, applying for jobs that involve interaction, attending classes, making phone calls, or even grocery shopping during busy hours.
             </p>
             <p>
-              Finally, introversion is stable and generally ego-syntonic — introverts typically accept their nature as part of who they are. Social anxiety is ego-dystonic — people with social anxiety usually recognize that their fear is excessive and wish they could overcome it. This internal distress is a hallmark of the disorder.
+              Finally, introversion is stable and generally ego-syntonic, introverts typically accept their nature as part of who they are. Social anxiety is ego-dystonic, people with social anxiety usually recognize that their fear is excessive and wish they could overcome it. This internal distress is a hallmark of the disorder.
             </p>
           </section>
 
@@ -189,10 +189,10 @@ export default function SocialAnxietyVsIntroversionPage() {
           <section>
             <h2>Physical symptoms of social anxiety</h2>
             <p>
-              One of the clearest distinctions between introversion and social anxiety is the presence of physical symptoms. Introversion does not produce physical distress — social anxiety frequently does. Common physical symptoms include:
+              One of the clearest distinctions between introversion and social anxiety is the presence of physical symptoms. Introversion does not produce physical distress, social anxiety frequently does. Common physical symptoms include:
             </p>
             <p>
-              <strong>Blushing</strong> — often intense and difficult to control, which can increase self-consciousness. <strong>Trembling or shaking</strong> — particularly in the hands or voice. <strong>Sweating</strong> — especially in social performance situations. <strong>Nausea or stomach distress</strong> — sometimes severe enough to prevent eating in social settings. <strong>Rapid heartbeat</strong> — the fight-or-flight response activating in situations that are not physically dangerous. <strong>Mind going blank</strong> — a sudden inability to think of anything to say, often described as the most distressing symptom.
+              <strong>Blushing</strong>, often intense and difficult to control, which can increase self-consciousness. <strong>Trembling or shaking</strong>, particularly in the hands or voice. <strong>Sweating</strong>, especially in social performance situations. <strong>Nausea or stomach distress</strong>, sometimes severe enough to prevent eating in social settings. <strong>Rapid heartbeat</strong>, the fight-or-flight response activating in situations that are not physically dangerous. <strong>Mind going blank</strong>, a sudden inability to think of anything to say, often described as the most distressing symptom.
             </p>
             <p>
               These physical symptoms can create a vicious cycle. A person fears blushing during a presentation, which makes them more anxious, which makes blushing more likely, which confirms their fear. This cycle is characteristic of social anxiety and does not occur with introversion.
@@ -211,7 +211,7 @@ export default function SocialAnxietyVsIntroversionPage() {
               In <strong>education</strong>, students with social anxiety may avoid class participation, skip presentations, or drop courses entirely. Some students delay or abandon their education because classroom interaction feels unbearable.
             </p>
             <p>
-              The cumulative effect of these limitations often leads to frustration, low self-esteem, and a shrinking life — which is why screening and early intervention matter so much.
+              The cumulative effect of these limitations often leads to frustration, low self-esteem, and a shrinking life, which is why screening and early intervention matter so much.
             </p>
           </section>
 
@@ -224,7 +224,7 @@ export default function SocialAnxietyVsIntroversionPage() {
               Each item is rated on a scale from 0 (not at all) to 4 (extremely), producing a total score between 0 and 68. Research has established that a score of 19 or above may indicate clinically significant social anxiety that warrants further evaluation. The SPIN takes only a few minutes to complete and can help distinguish between normal introversion and social anxiety that may benefit from intervention.
             </p>
             <p>
-              Like all screening instruments, the SPIN is not a diagnosis. A score above the threshold does not mean you have social anxiety disorder — it means your symptoms may indicate the need for a more thorough evaluation by a qualified mental health professional. If you are unsure whether your social discomfort is introversion or something more, the SPIN can be a helpful starting point.
+              Like all screening instruments, the SPIN is not a diagnosis. A score above the threshold does not mean you have social anxiety disorder, it means your symptoms may indicate the need for a more thorough evaluation by a qualified mental health professional. If you are unsure whether your social discomfort is introversion or something more, the SPIN can be a helpful starting point.
             </p>
           </section>
 
@@ -255,10 +255,10 @@ export default function SocialAnxietyVsIntroversionPage() {
               Getting this distinction right matters for one fundamental reason: introversion does not need treatment, but social anxiety does. Introversion is a healthy, normal personality variation. Labeling it as a problem to be fixed would be both inaccurate and harmful.
             </p>
             <p>
-              Social anxiety, however, is a condition that can progressively limit a person&apos;s life if left unaddressed. Research consistently shows that early screening and intervention lead to better outcomes. The longer social anxiety goes unrecognized — especially when it is dismissed as &quot;just being introverted&quot; — the more entrenched avoidance patterns become.
+              Social anxiety, however, is a condition that can progressively limit a person&apos;s life if left unaddressed. Research consistently shows that early screening and intervention lead to better outcomes. The longer social anxiety goes unrecognized, especially when it is dismissed as &quot;just being introverted&quot;, the more entrenched avoidance patterns become.
             </p>
             <p>
-              If you recognize yourself in the descriptions of social anxiety rather than introversion, consider taking a validated screening like the SPIN. Understanding your experience is the first step toward addressing it — and effective help is available.
+              If you recognize yourself in the descriptions of social anxiety rather than introversion, consider taking a validated screening like the SPIN. Understanding your experience is the first step toward addressing it, and effective help is available.
             </p>
           </section>
 
@@ -266,7 +266,7 @@ export default function SocialAnxietyVsIntroversionPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment — they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mt-2">
               If you or someone you know is in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <strong>988</strong>, or reach the <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong> (free, confidential, 24/7).
@@ -291,7 +291,7 @@ export default function SocialAnxietyVsIntroversionPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

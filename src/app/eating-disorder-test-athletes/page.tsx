@@ -89,7 +89,7 @@ export default function EatingDisorderTestAthletesPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -103,7 +103,7 @@ export default function EatingDisorderTestAthletesPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -302,7 +302,7 @@ export default function EatingDisorderTestAthletesPage() {
           <h2>How Is the Eating Disorder Test Scored?</h2>
           <h2>What Do My Eating Disorder Results Mean?</h2>
         </section>
-        <SCOFFClient faqData={FAQ_DATA} />
+        <SCOFFClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">

@@ -37,7 +37,7 @@ const FAQ_DATA = [
   {
     question: "What is maternal mental health?",
     answer:
-      "Maternal mental health refers to the emotional and psychological well-being of people during pregnancy, childbirth, and the postpartum period. This includes mood, anxiety, stress responses, and overall mental functioning. A significant proportion of pregnant and postpartum people experience mood or anxiety disorders — these are medical conditions, not character flaws or failures.",
+      "Maternal mental health refers to the emotional and psychological well-being of people during pregnancy, childbirth, and the postpartum period. This includes mood, anxiety, stress responses, and overall mental functioning. A significant proportion of pregnant and postpartum people experience mood or anxiety disorders, these are medical conditions, not character flaws or failures.",
   },
   {
     question: "How common are perinatal mood and anxiety disorders?",
@@ -57,12 +57,12 @@ const FAQ_DATA = [
   {
     question: "What is the difference between baby blues and postpartum depression?",
     answer:
-      "Baby blues are extremely common (affecting 50–80% of new mothers) and typically occur in the first 1–2 weeks after birth. Symptoms include mood swings, tearfulness, irritability, and anxiety — and they resolve on their own as hormones stabilize. Postpartum depression is a clinical condition that lasts longer than two weeks, is more severe, and interferes significantly with functioning and bonding. If symptoms persist or worsen beyond two weeks, professional evaluation is important.",
+      "Baby blues are extremely common (affecting 50–80% of new mothers) and typically occur in the first 1–2 weeks after birth. Symptoms include mood swings, tearfulness, irritability, and anxiety, and they resolve on their own as hormones stabilize. Postpartum depression is a clinical condition that lasts longer than two weeks, is more severe, and interferes significantly with functioning and bonding. If symptoms persist or worsen beyond two weeks, professional evaluation is important.",
   },
   {
     question: "When should I talk to my doctor about maternal mental health?",
     answer:
-      "Contact your OB-GYN, midwife, or primary care doctor as soon as you notice persistent mood or anxiety symptoms during pregnancy or postpartum — especially if they are interfering with daily functioning, sleep beyond normal newborn-related sleep deprivation, appetite, or your ability to care for yourself or your baby. Do not wait for symptoms to get worse. Perinatal mood and anxiety disorders are highly treatable.",
+      "Contact your OB-GYN, midwife, or primary care doctor as soon as you notice persistent mood or anxiety symptoms during pregnancy or postpartum, especially if they are interfering with daily functioning, sleep beyond normal newborn-related sleep deprivation, appetite, or your ability to care for yourself or your baby. Do not wait for symptoms to get worse. Perinatal mood and anxiety disorders are highly treatable.",
   },
   {
     question: "What treatment options exist for perinatal mood disorders?",
@@ -110,7 +110,7 @@ export default function MaternalMentalHealthPage() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -119,9 +119,9 @@ export default function MaternalMentalHealthPage() {
           <div className="max-w-2xl mx-auto">
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1 text-sm">
-              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
               <li><strong>Postpartum Support International:</strong> <strong>1-800-944-4773</strong> (call or text; text &quot;Help&quot; to 800-944-4773 English or 971-203-7773 Spanish)</li>
             </ul>
           </div>
@@ -174,10 +174,10 @@ export default function MaternalMentalHealthPage() {
           <section className="mt-10 mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">What is maternal mental health?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Maternal mental health encompasses the emotional and psychological well-being of people during pregnancy, childbirth, and the postpartum period — often referred to as the perinatal period. This includes mood regulation, anxiety responses, stress management, and overall psychological functioning. Perinatal mental health is not simply about &quot;being happy&quot; after having a baby; it is about emotional stability, the ability to cope with change, and having adequate support and resources.
+              Maternal mental health encompasses the emotional and psychological well-being of people during pregnancy, childbirth, and the postpartum period, often referred to as the perinatal period. This includes mood regulation, anxiety responses, stress management, and overall psychological functioning. Perinatal mental health is not simply about &quot;being happy&quot; after having a baby; it is about emotional stability, the ability to cope with change, and having adequate support and resources.
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              During pregnancy and postpartum, hormonal shifts, sleep disruption, physical recovery, identity changes, and life circumstances can all affect mental health. While some degree of adjustment stress is normal, persistent or severe mood and anxiety symptoms are medical conditions — not character failures or signs that you are an inadequate parent. These conditions are treatable, and seeking help is a sign of strength and self-awareness.
+              During pregnancy and postpartum, hormonal shifts, sleep disruption, physical recovery, identity changes, and life circumstances can all affect mental health. While some degree of adjustment stress is normal, persistent or severe mood and anxiety symptoms are medical conditions, not character failures or signs that you are an inadequate parent. These conditions are treatable, and seeking help is a sign of strength and self-awareness.
             </p>
           </section>
 
@@ -219,7 +219,7 @@ export default function MaternalMentalHealthPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Can I use the GAD-7 during pregnancy or postpartum?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Yes. The GAD-7 (Generalized Anxiety Disorder-7) is a validated 7-question screening tool for anxiety symptoms and has been specifically validated in pregnant and postpartum populations. While depression screening receives more attention in perinatal care, perinatal anxiety is equally common and equally treatable — yet it often goes unrecognized.
+              Yes. The GAD-7 (Generalized Anxiety Disorder-7) is a validated 7-question screening tool for anxiety symptoms and has been specifically validated in pregnant and postpartum populations. While depression screening receives more attention in perinatal care, perinatal anxiety is equally common and equally treatable, yet it often goes unrecognized.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
               Perinatal anxiety can present as persistent worry about the pregnancy or baby&apos;s health, physical tension, irritability, difficulty concentrating, or panic attacks. Some people experience &quot;pregnancy-related OCD&quot; with intrusive thoughts and compulsive behaviors. These are real medical symptoms, not character flaws, and they respond well to treatment.
@@ -261,7 +261,7 @@ export default function MaternalMentalHealthPage() {
               <li>Withdrawing from family or friends</li>
             </ul>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Perinatal mood and anxiety disorders are highly treatable. Early identification and treatment improve outcomes for both you and your baby. Your healthcare provider will not judge you — they want to help.
+              Perinatal mood and anxiety disorders are highly treatable. Early identification and treatment improve outcomes for both you and your baby. Your healthcare provider will not judge you, they want to help.
             </p>
           </section>
 
@@ -409,14 +409,14 @@ export default function MaternalMentalHealthPage() {
           >
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1">
-              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
               <li><strong>Postpartum Support International:</strong> <strong>1-800-944-4773</strong> (call or text)</li>
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

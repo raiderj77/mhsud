@@ -7,6 +7,7 @@ import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -110,7 +111,7 @@ export function PcPtsd5Client({ faqData }: Props) {
   }
 
   /* ---------------------------------------------------------------- */
-  /*  Results — Gate = No (no trauma exposure)                         */
+  /*  Results, Gate = No (no trauma exposure)                         */
   /* ---------------------------------------------------------------- */
   if (showResults && gateAnswer === false) {
     return (
@@ -200,7 +201,7 @@ export function PcPtsd5Client({ faqData }: Props) {
   }
 
   /* ---------------------------------------------------------------- */
-  /*  Results — Gate = Yes (symptom questions answered)                 */
+  /*  Results, Gate = Yes (symptom questions answered)                 */
   /* ---------------------------------------------------------------- */
   if (showResults && gateAnswer === true) {
     return (
@@ -275,10 +276,12 @@ export function PcPtsd5Client({ faqData }: Props) {
             }`}
           >
             {isPositiveScreen
-              ? "Your score of " + totalScore + " out of 5 meets the cutoff (3 or higher) for a positive PTSD screen. This does not mean you have PTSD — it means that your symptoms may warrant further evaluation by a qualified professional. A positive screen is a reason to talk to someone, not a reason to panic."
+              ? "Your score of " + totalScore + " out of 5 meets the cutoff (3 or higher) for a positive PTSD screen. This does not mean you have PTSD, it means that your symptoms may warrant further evaluation by a qualified professional. A positive screen is a reason to talk to someone, not a reason to panic."
               : "Your score of " + totalScore + " out of 5 is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress or difficulty functioning after a traumatic experience, those concerns are still worth discussing with a healthcare provider."}
           </p>
         </div>
+
+        <TherapyCTA show={isPositiveScreen} />
 
         <AdSlot npa position="results-top" />
 
@@ -329,7 +332,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           </h2>
           <div className="text-sm text-neutral-600 dark:text-neutral-300 space-y-3 leading-relaxed">
             <p>
-              The PC-PTSD-5 is a brief screening tool — not a comprehensive assessment. A positive screen (3 or more &ldquo;Yes&rdquo; answers) indicates that further evaluation with a longer instrument like the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800 dark:hover:text-sage-300">PCL-5 (20-item PTSD Checklist)</Link> or a clinical interview is recommended.
+              The PC-PTSD-5 is a brief screening tool, not a comprehensive assessment. A positive screen (3 or more &ldquo;Yes&rdquo; answers) indicates that further evaluation with a longer instrument like the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800 dark:hover:text-sage-300">PCL-5 (20-item PTSD Checklist)</Link> or a clinical interview is recommended.
             </p>
             <p>
               A negative screen does not rule out PTSD or other trauma-related difficulties. If you are struggling after a traumatic experience, a healthcare provider can help even if this screen is negative.
@@ -449,7 +452,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           severityLabel={isPositiveScreen ? "Positive Screen" : "Negative Screen"}
           scoreRange={isPositiveScreen ? "3–5" : "0–2"}
           interpretation={isPositiveScreen
-            ? "Your score meets the cutoff (3 or higher) for a positive PTSD screen. This does not mean you have PTSD — it means that your symptoms may warrant further evaluation by a qualified professional."
+            ? "Your score meets the cutoff (3 or higher) for a positive PTSD screen. This does not mean you have PTSD, it means that your symptoms may warrant further evaluation by a qualified professional."
             : "Your score is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress, those concerns are still worth discussing with a healthcare provider."}
           suggestion={isPositiveScreen
             ? "Consider taking the full PCL-5 for a more detailed assessment, or speak with your primary care provider, therapist, or a VA mental health provider about your results."
@@ -471,7 +474,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           />
         )}
 
-        <EmailCapture toolName="PC-PTSD-5" />
+        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
@@ -484,11 +487,11 @@ export function PcPtsd5Client({ faqData }: Props) {
           </p>
           <h2>PC-PTSD-5 vs. PCL-5</h2>
           <p>
-            The PC-PTSD-5 and the <Link href="/pcl-5-ptsd-screening">PCL-5</Link> serve different purposes. The PC-PTSD-5 is a 5-item <strong>brief screen</strong> — a quick way to identify whether further evaluation is needed. The PCL-5 is a 20-item <strong>comprehensive assessment</strong> that measures PTSD symptom severity across all four DSM-5 symptom clusters. In clinical settings, the PC-PTSD-5 is often used first; if positive, the PCL-5 or a clinical interview follows.
+            The PC-PTSD-5 and the <Link href="/pcl-5-ptsd-screening">PCL-5</Link> serve different purposes. The PC-PTSD-5 is a 5-item <strong>brief screen</strong>, a quick way to identify whether further evaluation is needed. The PCL-5 is a 20-item <strong>comprehensive assessment</strong> that measures PTSD symptom severity across all four DSM-5 symptom clusters. In clinical settings, the PC-PTSD-5 is often used first; if positive, the PCL-5 or a clinical interview follows.
           </p>
           <h2>When to Seek Help</h2>
           <p>
-            If you are experiencing distressing symptoms after a traumatic event — whether or not this screen is positive — you deserve support. Effective, evidence-based approaches for trauma-related difficulties include Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and Eye Movement Desensitization and Reprocessing (EMDR). Your primary care provider, a mental health professional, or the resources listed above can help you get started.
+            If you are experiencing distressing symptoms after a traumatic event, whether or not this screen is positive, you deserve support. Effective, evidence-based approaches for trauma-related difficulties include Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), and Eye Movement Desensitization and Reprocessing (EMDR). Your primary care provider, a mental health professional, or the resources listed above can help you get started.
           </p>
           <h2>Who Should Take the PC-PTSD-5?</h2>
           <p>
@@ -496,7 +499,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           </p>
           <h2>What Do My PC-PTSD-5 Results Mean?</h2>
           <p>
-            A positive screen (3 or more &quot;Yes&quot; answers) means your symptom pattern is consistent with what is commonly seen in people who may have PTSD. It does not confirm PTSD — it means a more thorough evaluation is recommended. A negative screen (0–2) suggests PTSD symptoms are less likely based on your current responses, but does not rule out trauma-related difficulties. If you are experiencing distress regardless of your score, that is still worth discussing with a healthcare provider.
+            A positive screen (3 or more &quot;Yes&quot; answers) means your symptom pattern is consistent with what is commonly seen in people who may have PTSD. It does not confirm PTSD, it means a more thorough evaluation is recommended. A negative screen (0–2) suggests PTSD symptoms are less likely based on your current responses, but does not rule out trauma-related difficulties. If you are experiencing distress regardless of your score, that is still worth discussing with a healthcare provider.
           </p>
         </div>
 
@@ -539,7 +542,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           ~1 minute · Completely private · Public domain instrument
         </p>
 
-        {/* AdSlot intentionally omitted pre-submit — YMYL: no ads alongside an active PTSD screening. */}
+        {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active PTSD screening. */}
 
         <div className="p-6 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl mb-8">
           <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">

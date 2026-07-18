@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/gad-7-anxiety-test",
   title: "GAD-7 Anxiety Test | Free Online Screening",
   description:
-    "Take the free GAD-7 anxiety test — the clinically validated 7-question screening used by doctors. Results in 2 minutes. Private, no sign-up needed.",
+    "Take the free GAD-7 anxiety test, the clinically validated 7-question screening used by doctors. Results in 2 minutes. Private, no sign-up needed.",
   keywords: [
     "gad-7 test", "anxiety test", "gad 7 questionnaire",
     "gad7", "gad-7", "anxiety questionnaire",
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     title: "GAD-7 Anxiety Test | Free Online Screening",
-    description: "Take the free GAD-7 anxiety test — clinically validated, 7 questions, results in 2 minutes. Private, no sign-up needed.",
+    description: "Take the free GAD-7 anxiety test, clinically validated, 7 questions, results in 2 minutes. Private, no sign-up needed.",
     url: TOOL_URL,
     type: "website",
   },
@@ -36,7 +36,7 @@ const FAQ_DATA = [
   { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
   { question: "What should I do if my GAD-7 score is high?", answer: "A higher score suggests more anxiety symptoms, but does not mean you have a specific diagnosis. Consider talking with a healthcare provider, therapist, or counselor. If anxiety is significantly impacting your daily life, seeking help sooner is encouraged." },
   { question: "What does my anxiety assessment score mean?", answer: "Your GAD-7 score reflects the frequency of anxiety symptoms over the past two weeks. Scores of 0\u20134 indicate minimal anxiety, 5\u20139 mild, 10\u201314 moderate, and 15\u201321 severe. The score helps identify whether anxiety symptoms are present and how much they may be affecting your daily life. It is a snapshot, not a permanent label." },
-  { question: "Is this anxiety test medically accurate?", answer: "The GAD-7 is one of the most extensively validated anxiety screening tools in clinical research. Studies demonstrate a sensitivity of 89% and specificity of 82% for generalized anxiety disorder at a cutoff score of 10. It is used by doctors, psychologists, and researchers worldwide. However, it is a screening tool \u2014 not a diagnostic instrument \u2014 and results should be discussed with a healthcare professional for proper context." },
+  { question: "Is this anxiety test medically accurate?", answer: "The GAD-7 is one of the most extensively validated anxiety screening tools in clinical research. Studies demonstrate a sensitivity of 89% and specificity of 82% for generalized anxiety disorder at a cutoff score of 10. It is used by doctors, psychologists, and researchers worldwide. However, it is a screening tool, not a diagnostic instrument, and results should be discussed with a healthcare professional for proper context." },
   { question: "How often should I take an anxiety assessment?", answer: "The GAD-7 measures symptoms over the past two weeks, so retaking it every 2\u20134 weeks is a practical interval for tracking changes. If you are currently receiving treatment, your provider may use repeated GAD-7 scores to monitor progress. A drop of 5 or more points is generally considered a clinically meaningful improvement." },
 ];
 
@@ -54,7 +54,7 @@ export default function GAD7Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -83,7 +83,7 @@ export default function GAD7Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -91,6 +91,9 @@ export default function GAD7Page() {
         <h1 className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">
           GAD-7 Anxiety Test
         </h1>
+        <a href="#screening" className="btn-primary inline-flex mt-6">
+          Start the GAD-7 self-check
+        </a>
       </div>
       <section className="sr-only">
         <h2>What Is the GAD-7 Anxiety Screening?</h2>
@@ -125,57 +128,14 @@ export default function GAD7Page() {
         <AnswerBlock
           what="The GAD-7 is a clinically validated 7-question tool that measures generalized anxiety disorder severity."
           who="Anyone experiencing worry, nervousness, or anxiety symptoms who wants a standardized self-assessment."
-          bottomLine="Your score indicates anxiety severity on a recognized clinical scale — always discuss results with a mental health professional."
+          bottomLine="Your score indicates anxiety severity on a recognized clinical scale, always discuss results with a mental health professional."
           lastUpdated="2026-03-20"
         />
       </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
-        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {FAQ_DATA.map((item) => (
-            <div key={item.question}>
-              <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-2">{item.question}</h3>
-              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-sm text-neutral-500 dark:text-neutral-400">
-          For comprehensive information on anxiety disorders and global mental health resources, visit the{" "}
-          <a
-            href="https://www.who.int/health-topics/mental-health"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sage-600 dark:text-sage-400 hover:underline"
-          >
-            WHO Mental Health Resources
-          </a>.
-        </p>
-      </section>
 
-      {/* SSR Clinical Content — visible to all crawlers */}
+      <div id="screening"><GAD7Client faqData={FAQ_DATA} /></div>
+
+      {/* SSR Clinical Content, visible to all crawlers */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 space-y-6">
         <section>
           <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">What the GAD-7 Measures</h2>
@@ -195,19 +155,19 @@ export default function GAD7Page() {
           <div className="space-y-2">
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">0–4</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — few anxiety symptoms; monitoring appropriate</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, few anxiety symptoms; monitoring appropriate</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">5–9</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — some symptoms present; lifestyle support may help</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, some symptoms present; lifestyle support may help</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">10–14</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — clinical evaluation recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, clinical evaluation recommended</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">15–21</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400"> — professional support strongly encouraged</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe anxiety</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, professional support strongly encouraged</span></div>
             </div>
           </div>
         </section>
@@ -215,15 +175,13 @@ export default function GAD7Page() {
         <section>
           <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">When to Seek Help for Anxiety</h2>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
-            A score of 10 or above is the standard clinical threshold for further evaluation. A lower score does not mean anxiety is not affecting you — if worry is persistent, difficult to control, or interfering with work or relationships, speaking with a healthcare provider is appropriate regardless of your score. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> notes that anxiety disorders are among the most treatable mental health conditions, with cognitive behavioral therapy and medication both showing strong efficacy.
+            A score of 10 or above is the standard clinical threshold for further evaluation. A lower score does not mean anxiety is not affecting you, if worry is persistent, difficult to control, or interfering with work or relationships, speaking with a healthcare provider is appropriate regardless of your score. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> notes that anxiety disorders are among the most treatable mental health conditions, with cognitive behavioral therapy and medication both showing strong efficacy.
           </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             Anxiety and depression co-occur in approximately 50% of cases. If your GAD-7 score is elevated, taking the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screen</Link> alongside this test provides a more complete clinical picture. For a detailed explanation of how clinicians use the GAD-7 and what it cannot tell you, see our <Link href="/blog/gad-7-guide" className="text-sage-600 dark:text-sage-400 underline">GAD-7 clinical guide</Link>.
           </p>
         </section>
       </div>
-
-<GAD7Client faqData={FAQ_DATA} />
 
       {/* Clinical References */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-4">

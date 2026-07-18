@@ -8,7 +8,7 @@ const TOOL_URL = `${SITE_URL}/stress-test-college-students`;
 
 export const metadata: Metadata = createMetadata({
   path: "/stress-test-college-students",
-  title: "Stress Test for College Students — Free Screen",
+  title: "Stress Test for College Students, Free Screen",
   description:
     "Free stress, anxiety, and depression screening for college students. DASS-21. Private, instant.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "college student mental health check", "student wellness screening",
   ],
   openGraph: {
-    title: "Stress Test for College Students — Free Screen",
+    title: "Stress Test for College Students, Free Screen",
     description: "Free, private stress, anxiety, and depression screening for college students using the DASS-21. Instant results, no sign-up required.",
     url: TOOL_URL,
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is stress in college normal?",
-    answer: "Some stress in college is completely normal — exams, deadlines, and adjusting to independence are genuinely challenging. But when stress becomes constant, overwhelming, or starts affecting your sleep, grades, relationships, or ability to function, it has crossed into something that deserves attention. The line between normal stress and a mental health concern is not always obvious, which is why screening can help.",
+    answer: "Some stress in college is completely normal, exams, deadlines, and adjusting to independence are genuinely challenging. But when stress becomes constant, overwhelming, or starts affecting your sleep, grades, relationships, or ability to function, it has crossed into something that deserves attention. The line between normal stress and a mental health concern is not always obvious, which is why screening can help.",
   },
   {
     question: "When does college stress become a mental health issue?",
@@ -37,7 +37,7 @@ const FAQ_DATA = [
   },
   {
     question: "How do I know if I need professional help?",
-    answer: "If you are struggling to keep up with basic responsibilities, feeling anxious or sad most days, using substances to cope, having trouble sleeping for weeks, or experiencing thoughts of self-harm, those are signals to reach out. You do not need to be in crisis to deserve help. Most campus counseling centers see students with a wide range of concerns — you do not need to wait until things are at their worst.",
+    answer: "If you are struggling to keep up with basic responsibilities, feeling anxious or sad most days, using substances to cope, having trouble sleeping for weeks, or experiencing thoughts of self-harm, those are signals to reach out. You do not need to be in crisis to deserve help. Most campus counseling centers see students with a wide range of concerns, you do not need to wait until things are at their worst.",
   },
   {
     question: "Does my college offer free counseling?",
@@ -45,15 +45,15 @@ const FAQ_DATA = [
   },
   {
     question: "Can stress affect my grades?",
-    answer: "Yes, significantly. Chronic stress impairs concentration, memory, and decision-making — the exact cognitive functions you need for academic performance. Research shows that students with high stress levels have lower GPAs, higher dropout rates, and more academic probation. Addressing stress is not a distraction from academics — it is essential to academic success.",
+    answer: "Yes, significantly. Chronic stress impairs concentration, memory, and decision-making, the exact cognitive functions you need for academic performance. Research shows that students with high stress levels have lower GPAs, higher dropout rates, and more academic probation. Addressing stress is not a distraction from academics, it is essential to academic success.",
   },
   {
     question: "What is the difference between college stress and burnout?",
-    answer: "Stress is the feeling of being overwhelmed by demands. Burnout is what happens when stress goes unaddressed for too long — it includes emotional exhaustion, cynicism about your studies, and a sense that nothing you do matters. Stress says you have too much on your plate. Burnout says you have lost the ability to care. Both are addressable, but burnout typically requires more significant changes.",
+    answer: "Stress is the feeling of being overwhelmed by demands. Burnout is what happens when stress goes unaddressed for too long, it includes emotional exhaustion, cynicism about your studies, and a sense that nothing you do matters. Stress says you have too much on your plate. Burnout says you have lost the ability to care. Both are addressable, but burnout typically requires more significant changes.",
   },
   {
     question: "Can I take a leave of absence for mental health?",
-    answer: "Yes. Most colleges have medical or personal leave of absence policies that include mental health. Taking a leave is not giving up — it is protecting your long-term success. Talk to your academic advisor, dean of students, or counseling center about your options. Many students who take leave return stronger and more focused.",
+    answer: "Yes. Most colleges have medical or personal leave of absence policies that include mental health. Taking a leave is not giving up, it is protecting your long-term success. Talk to your academic advisor, dean of students, or counseling center about your options. Many students who take leave return stronger and more focused.",
   },
   {
     question: "What does the DASS-21 measure?",
@@ -69,13 +69,13 @@ export default function StressTestCollegeStudentsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Stress Test for College Students — DASS-21 Screening",
+              name: "Stress Test for College Students, DASS-21 Screening",
               description: "A free, private stress, anxiety, and depression screening tool for college students using the clinically validated DASS-21.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
               dateModified: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -89,7 +89,7 @@ export default function StressTestCollegeStudentsPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -126,16 +126,16 @@ export default function StressTestCollegeStudentsPage() {
 
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-            College is supposed to be the best years of your life — at least that&apos;s what
+            College is supposed to be the best years of your life, at least that&apos;s what
             everyone keeps saying. But between the academic pressure, financial stress, social
             expectations, sleep deprivation, and the constant feeling that everyone else has it
             figured out, &quot;best years&quot; can feel like a cruel joke. If you&apos;re
             running on caffeine and anxiety, crying in your dorm, or just going through the
-            motions — you&apos;re not alone, and you&apos;re not weak.
+            motions, you&apos;re not alone, and you&apos;re not weak.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free, private screening uses the DASS-21, a clinically validated tool that
-            measures depression, anxiety, and stress separately — so you can understand exactly
+            measures depression, anxiety, and stress separately, so you can understand exactly
             what you&apos;re dealing with. It is <strong>not a diagnosis</strong>, but it can
             help you figure out whether what you&apos;re feeling is typical college stress or
             something that deserves professional support.
@@ -150,7 +150,7 @@ export default function StressTestCollegeStudentsPage() {
             Start the Stress Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private — nothing is stored or shared.
+            Takes about 5 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -165,23 +165,23 @@ export default function StressTestCollegeStudentsPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 More than 60% of college students report overwhelming anxiety, making it the most
                 common mental health concern on campuses nationwide.
-                <span className="text-slate-500 dark:text-slate-400"> — American College Health Association (ACHA-NCHA)</span>
+                <span className="text-slate-500 dark:text-slate-400">, American College Health Association (ACHA-NCHA)</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">2nd leading cause of death</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 Suicide is the second leading cause of death for people ages 15–24 in the United States. Early mental health screening during the college years is among the most evidence-backed prevention strategies available.
-                <span className="text-slate-500 dark:text-slate-400"> — CDC National Vital Statistics</span>
+                <span className="text-slate-500 dark:text-slate-400">, CDC National Vital Statistics</span>
               </p>
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl p-5">
               <p className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">73% report crisis</p>
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 73% of college students report experiencing a mental health crisis during their
-                college years. This is not a niche problem — it is the college experience for
+                college years. This is not a niche problem, it is the college experience for
                 most students.
-                <span className="text-slate-500 dark:text-slate-400"> — JED Foundation / Healthy Minds Study</span>
+                <span className="text-slate-500 dark:text-slate-400">, JED Foundation / Healthy Minds Study</span>
               </p>
             </div>
           </div>
@@ -192,22 +192,22 @@ export default function StressTestCollegeStudentsPage() {
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Understanding Stress in the College Environment</h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              College concentrates multiple major stressors into the same period of life in a way that is historically unusual. Academic pressure, financial precarity, identity development, relationship formation, and separation from family happen simultaneously — often beginning at age 18, a developmental window when the prefrontal cortex (responsible for regulating stress responses) is still maturing. The campus environment normalizes chronic sleep deprivation, irregular eating, and high-stimulation social demands in ways that would be recognized as unsustainable in any other context.
+              College concentrates multiple major stressors into the same period of life in a way that is historically unusual. Academic pressure, financial precarity, identity development, relationship formation, and separation from family happen simultaneously, often beginning at age 18, a developmental window when the prefrontal cortex (responsible for regulating stress responses) is still maturing. The campus environment normalizes chronic sleep deprivation, irregular eating, and high-stimulation social demands in ways that would be recognized as unsustainable in any other context.
             </p>
             <p>
-              <strong>First-year transition stress</strong> is one of the most reliably documented risk periods. The ACHA-NCHA data consistently shows that first-year students report the highest rates of depression and anxiety of any class year, driven by loss of familiar social support, new academic expectations, and the disorientation of living away from home for the first time. The transition is real and the stress it produces is physiologically measurable — not a sign of weakness.
+              <strong>First-year transition stress</strong> is one of the most reliably documented risk periods. The ACHA-NCHA data consistently shows that first-year students report the highest rates of depression and anxiety of any class year, driven by loss of familiar social support, new academic expectations, and the disorientation of living away from home for the first time. The transition is real and the stress it produces is physiologically measurable, not a sign of weakness.
             </p>
             <p>
-              <strong>Junior-year stress</strong> represents a second peak that often catches students off-guard. The social scaffolding of the first two years — orientation programs, resident advisors, built-in roommate relationships — has dissolved. Career pressure intensifies. Students who successfully navigated their first two years sometimes find the third year harder because the structure that carried them is gone. This pattern is consistent enough that the JED Foundation has identified it as a distinct risk window in campus mental health programming.
+              <strong>Junior-year stress</strong> represents a second peak that often catches students off-guard. The social scaffolding of the first two years, orientation programs, resident advisors, built-in roommate relationships, has dissolved. Career pressure intensifies. Students who successfully navigated their first two years sometimes find the third year harder because the structure that carried them is gone. This pattern is consistent enough that the JED Foundation has identified it as a distinct risk window in campus mental health programming.
             </p>
             <p>
-              <strong>Financial precarity</strong> is a stress driver that campus mental health resources frequently underaddress. Students managing food insecurity, part-time employment, student loan anxiety, and family financial obligations alongside full course loads carry a compound stress burden that is qualitatively different from academic pressure alone. Research published in the Journal of American College Health shows that financial stress is among the strongest predictors of academic discontinuation — stronger than academic performance itself.
+              <strong>Financial precarity</strong> is a stress driver that campus mental health resources frequently underaddress. Students managing food insecurity, part-time employment, student loan anxiety, and family financial obligations alongside full course loads carry a compound stress burden that is qualitatively different from academic pressure alone. Research published in the Journal of American College Health shows that financial stress is among the strongest predictors of academic discontinuation, stronger than academic performance itself.
             </p>
             <p>
-              <strong>Social isolation despite high contact</strong> is a paradox specific to campus life. Dormitories, dining halls, and classrooms create constant proximity to other people while providing little genuine connection. Social media amplifies the gap between apparent connection and actual loneliness. Students who appear socially active may be experiencing profound isolation — which is why loneliness is not well-predicted by dorm floor occupancy or party attendance. The DASS-21 captures the depressive dimension of this isolation (anhedonia, withdrawal, low mood) in ways that a general stress quiz does not.
+              <strong>Social isolation despite high contact</strong> is a paradox specific to campus life. Dormitories, dining halls, and classrooms create constant proximity to other people while providing little genuine connection. Social media amplifies the gap between apparent connection and actual loneliness. Students who appear socially active may be experiencing profound isolation, which is why loneliness is not well-predicted by dorm floor occupancy or party attendance. The DASS-21 captures the depressive dimension of this isolation (anhedonia, withdrawal, low mood) in ways that a general stress quiz does not.
             </p>
             <p>
-              <strong>Sleep deprivation as a campus norm</strong> deserves specific attention because it is both a stressor and a consequence of stress. Campus culture often treats chronic sleep deprivation as a badge of academic dedication. Clinically, sleeping fewer than 7 hours per night consistently elevates cortisol, impairs memory consolidation, reduces emotional regulation capacity, and amplifies the subjective severity of stressors. A student who is chronically sleep-deprived will report higher stress, anxiety, and depression on the DASS-21 — and those elevated scores are accurate, not artifacts.
+              <strong>Sleep deprivation as a campus norm</strong> deserves specific attention because it is both a stressor and a consequence of stress. Campus culture often treats chronic sleep deprivation as a badge of academic dedication. Clinically, sleeping fewer than 7 hours per night consistently elevates cortisol, impairs memory consolidation, reduces emotional regulation capacity, and amplifies the subjective severity of stressors. A student who is chronically sleep-deprived will report higher stress, anxiety, and depression on the DASS-21, and those elevated scores are accurate, not artifacts.
             </p>
           </div>
         </div>
@@ -224,8 +224,8 @@ export default function StressTestCollegeStudentsPage() {
                 Scales), a 21-question tool used by counselors and psychologists worldwide.
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Three separate scores:</strong> Unlike a single stress quiz, the DASS-21 gives you separate scores for depression, anxiety, and stress — so you know exactly what&apos;s driving your distress.</p>
-                <p><strong>Academic pressure:</strong> The screening captures symptoms common in college life — difficulty concentrating, feeling overwhelmed, irritability, and loss of motivation.</p>
+                <p><strong>Three separate scores:</strong> Unlike a single stress quiz, the DASS-21 gives you separate scores for depression, anxiety, and stress, so you know exactly what&apos;s driving your distress.</p>
+                <p><strong>Academic pressure:</strong> The screening captures symptoms common in college life, difficulty concentrating, feeling overwhelmed, irritability, and loss of motivation.</p>
                 <p><strong>Imposter syndrome:</strong> Feeling like you don&apos;t belong or aren&apos;t smart enough is incredibly common in college. This screening can help you see whether those feelings are connected to broader anxiety or depression.</p>
                 <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis. A high score is a reason to seek support, not a label. A low score does not mean you should ignore ongoing struggles.</p>
                 <p><strong>Your privacy:</strong> Everything happens in your browser. No data is stored, transmitted, or visible to your school, parents, or anyone else.</p>
@@ -238,11 +238,11 @@ export default function StressTestCollegeStudentsPage() {
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3">Clinical References</h2>
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li><a href="https://www.cdc.gov/nchs/nvss/deaths.htm" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC — National Vital Statistics: Leading Causes of Death by Age Group</a></li>
-            <li><a href="https://www.nimh.nih.gov/health/statistics/mental-illness" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH — Mental Illness Statistics (young adult prevalence)</a></li>
-            <li><a href="https://www.samhsa.gov/mental-health/college-student-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA — College Student Mental Health Resources</a></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31948376/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Lovibond &amp; Lovibond — DASS-21 Validation Study (PubMed)</a></li>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/28578295/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Eisenberg et al. — Mental health and academic outcomes in college (PubMed)</a></li>
+            <li><a href="https://www.cdc.gov/nchs/nvss/deaths.htm" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">CDC, National Vital Statistics: Leading Causes of Death by Age Group</a></li>
+            <li><a href="https://www.nimh.nih.gov/health/statistics/mental-illness" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">NIMH, Mental Illness Statistics (young adult prevalence)</a></li>
+            <li><a href="https://www.samhsa.gov/mental-health/college-student-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">SAMHSA, College Student Mental Health Resources</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31948376/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Lovibond &amp; Lovibond, DASS-21 Validation Study (PubMed)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/28578295/" className="text-sky-600 dark:text-sky-400 hover:underline" target="_blank" rel="noopener noreferrer">Eisenberg et al., Mental health and academic outcomes in college (PubMed)</a></li>
           </ul>
         </div>
       </div>
@@ -264,7 +264,7 @@ export default function StressTestCollegeStudentsPage() {
         <AnswerBlock
           what="A stress assessment tailored for college students covering academic, social, financial, and identity-related stressors."
           who="College students who feel overwhelmed and want to evaluate whether their stress level has reached concerning thresholds."
-          bottomLine="College stress is real and measurable — high scores mean it is time to use campus support resources. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="College stress is real and measurable, high scores mean it is time to use campus support resources. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-05-08"
         />
       </div>
@@ -342,19 +342,19 @@ export default function StressTestCollegeStudentsPage() {
           </h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
             <li>
-              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential
+              <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential
             </li>
             <li>
-              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7
+              <strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7
             </li>
             <li>
-              <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> — free, 24/7
+              <strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong>, free, 24/7
             </li>
             <li>
-              <strong>JED Foundation:</strong> <strong>jedfoundation.org</strong> — college student mental health resources
+              <strong>JED Foundation:</strong> <strong>jedfoundation.org</strong>, college student mental health resources
             </li>
             <li>
-              <strong>Active Minds:</strong> <strong>activeminds.org</strong> — student-led mental health advocacy
+              <strong>Active Minds:</strong> <strong>activeminds.org</strong>, student-led mental health advocacy
             </li>
           </ul>
         </div>
@@ -362,7 +362,7 @@ export default function StressTestCollegeStudentsPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This screening tool is for educational purposes only — it is not a diagnosis. Only a qualified
+            This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess depression, anxiety, or stress disorders. Your responses are
             processed entirely in your browser and are never stored or transmitted. Always consult a qualified
             healthcare professional for medical advice.

@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/blog/work-stress-vs-burnout",
   title: "Am I Burned Out or Just Stressed? What Most Tests Miss",
   description:
-    "Not all exhaustion is burnout. Learn the WHO-defined difference between burnout and work stress — plus what most burnout checklists fail to capture.",
+    "Not all exhaustion is burnout. Learn the WHO-defined difference between burnout and work stress, plus what most burnout checklists fail to capture.",
   keywords: [
     "am i burned out or just stressed", "work stress vs burnout difference",
     "signs of burnout vs normal stress", "burnout self-assessment quiz accuracy",
@@ -41,7 +41,7 @@ const FAQ_DATA = [
 export default function WorkStressBurnoutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Work Stress vs. Burnout: How to Tell the Difference", description: "A plain-language guide to the difference between everyday work stress and clinical burnout — what the WHO says, why online quizzes have limits, and when to talk to a professional.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Work Stress vs. Burnout: How to Tell the Difference", description: "A plain-language guide to the difference between everyday work stress and clinical burnout, what the WHO says, why online quizzes have limits, and when to talk to a professional.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Work Stress vs. Burnout", url: ARTICLE_URL }])) }} />
 
@@ -76,7 +76,7 @@ export default function WorkStressBurnoutPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Everyone has stressful days at work. But when exhaustion becomes your baseline and no amount of rest seems to help, you might wonder: am I burned out or just stressed? This guide breaks down the real differences, explains what the WHO actually says about burnout, and is honest about why online self-checks — including ours — are only a starting point.
+            Everyone has stressful days at work. But when exhaustion becomes your baseline and no amount of rest seems to help, you might wonder: am I burned out or just stressed? This guide breaks down the real differences, explains what the WHO actually says about burnout, and is honest about why online self-checks, including ours, are only a starting point.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/work-stress-check" className="btn-primary text-sm">
@@ -92,10 +92,10 @@ export default function WorkStressBurnoutPage() {
           <section>
             <h2>What is burnout? The WHO definition</h2>
             <p>
-              In 2019, the World Health Organization included burnout in the 11th Revision of the International Classification of Diseases (ICD-11) — but not as a medical condition. The WHO classifies burnout as an &quot;occupational phenomenon&quot; resulting from chronic workplace stress that has not been successfully managed.
+              In 2019, the World Health Organization included burnout in the 11th Revision of the International Classification of Diseases (ICD-11), but not as a medical condition. The WHO classifies burnout as an &quot;occupational phenomenon&quot; resulting from chronic workplace stress that has not been successfully managed.
             </p>
             <p>
-              The WHO defines burnout through three dimensions: feelings of energy depletion or exhaustion; increased mental distance from one&apos;s job, or feelings of negativism or cynicism related to work; and reduced professional efficacy. All three must be present and specifically tied to the occupational context — burnout is not meant to describe experiences in other areas of life.
+              The WHO defines burnout through three dimensions: feelings of energy depletion or exhaustion; increased mental distance from one&apos;s job, or feelings of negativism or cynicism related to work; and reduced professional efficacy. All three must be present and specifically tied to the occupational context, burnout is not meant to describe experiences in other areas of life.
             </p>
             <p>
               This distinction matters. Burnout is not simply &quot;being tired of work.&quot; It&apos;s a specific syndrome with defined characteristics, and its classification as an occupational phenomenon (rather than a medical diagnosis) means it exists in a gray area that can make it harder to address through traditional healthcare channels.
@@ -110,7 +110,7 @@ export default function WorkStressBurnoutPage() {
             <div className="not-prose my-6 space-y-2">
               {[
                 { label: "Energy", stress: "Depleted but recoverable after rest", burnout: "Chronically exhausted; rest doesn't help" },
-                { label: "Emotions", stress: "Reactive — anxiety, urgency, frustration", burnout: "Flat — numbness, detachment, cynicism" },
+                { label: "Emotions", stress: "Reactive, anxiety, urgency, frustration", burnout: "Flat, numbness, detachment, cynicism" },
                 { label: "Motivation", stress: "Still engaged, often over-engaged", burnout: "Disengaged, going through the motions" },
                 { label: "Focus", stress: "Scattered but functional", burnout: "Difficulty concentrating or making decisions" },
                 { label: "Duration", stress: "Tied to specific demands; eases when demands do", burnout: "Persists even after vacation or time off" },
@@ -141,7 +141,7 @@ export default function WorkStressBurnoutPage() {
             <div className="not-prose my-6 space-y-2">
               {[
                 { stage: "1", name: "Honeymoon phase", desc: "High energy, optimism, and commitment to work. Stress exists but feels manageable and even motivating." },
-                { stage: "2", name: "Onset of stress", desc: "Certain days feel harder. You notice fatigue, irritability, or difficulty sleeping — but attribute it to a busy period." },
+                { stage: "2", name: "Onset of stress", desc: "Certain days feel harder. You notice fatigue, irritability, or difficulty sleeping, but attribute it to a busy period." },
                 { stage: "3", name: "Chronic stress", desc: "Stress becomes the default state. Procrastination, resentment, social withdrawal, and physical symptoms increase. Work-life boundaries erode." },
                 { stage: "4", name: "Burnout", desc: "Exhaustion is pervasive. Cynicism and detachment dominate. You may feel numb, question your career, or struggle to care about outcomes." },
                 { stage: "5", name: "Habitual burnout", desc: "Burnout symptoms become embedded in daily life. Chronic mental and physical health problems may develop. Professional help is critical at this stage." },
@@ -150,20 +150,20 @@ export default function WorkStressBurnoutPage() {
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-6 flex-shrink-0">{s.stage}</span>
                   <div>
                     <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{s.name}</span>
-                    <span className="text-sm text-neutral-500 dark:text-neutral-400"> — {s.desc}</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">, {s.desc}</span>
                   </div>
                 </div>
               ))}
             </div>
             <p>
-              Most people who take a <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout self-check</Link> are somewhere between stages 2 and 4. The important thing is not to identify your exact stage but to recognize that the trajectory is real — and that earlier intervention leads to better outcomes.
+              Most people who take a <Link href="/burnout-assessment-tool" className="text-sage-600 dark:text-sage-400 underline">burnout self-check</Link> are somewhere between stages 2 and 4. The important thing is not to identify your exact stage but to recognize that the trajectory is real, and that earlier intervention leads to better outcomes.
             </p>
           </section>
 
           <section>
             <h2>Burnout symptoms: physical vs. emotional</h2>
             <p>
-              One reason burnout is hard to recognize is that people often attribute its physical symptoms to other causes. Burnout is not just an emotional experience — chronic workplace stress produces measurable physiological effects.
+              One reason burnout is hard to recognize is that people often attribute its physical symptoms to other causes. Burnout is not just an emotional experience, chronic workplace stress produces measurable physiological effects.
             </p>
             <p>
               <strong>Emotional symptoms</strong> include persistent exhaustion that sleep doesn&apos;t fix, cynicism or negativity toward work and colleagues, feeling ineffective or questioning your competence, emotional numbness or detachment, loss of satisfaction from accomplishments, and irritability or short temper that bleeds into personal relationships.
@@ -181,32 +181,32 @@ export default function WorkStressBurnoutPage() {
           <section>
             <h2>Burnout vs. depression: how to tell the difference</h2>
             <p>
-              Burnout and depression share many symptoms — fatigue, difficulty concentrating, loss of motivation, sleep disruption, and feelings of hopelessness. This overlap is one reason professional assessment matters.
+              Burnout and depression share many symptoms, fatigue, difficulty concentrating, loss of motivation, sleep disruption, and feelings of hopelessness. This overlap is one reason professional assessment matters.
             </p>
             <p>
-              The key distinction is context. Burnout is typically anchored to work: symptoms intensify during the workweek and may partially improve during extended time off (at least initially). Depression, by contrast, is pervasive — it affects how you feel about everything, not just your job.
+              The key distinction is context. Burnout is typically anchored to work: symptoms intensify during the workweek and may partially improve during extended time off (at least initially). Depression, by contrast, is pervasive, it affects how you feel about everything, not just your job.
             </p>
             <p>
               However, this distinction becomes less clear over time. Chronic, unaddressed burnout can develop into clinical depression. Someone who started with work-specific exhaustion may find that hopelessness has spread to their relationships, hobbies, and sense of self. At that point, the burnout-depression boundary blurs, and the most important step is getting professional support regardless of the label.
             </p>
             <p>
-              If you&apos;re wondering whether what you&apos;re experiencing might be depression, our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression self-check</Link> can help you reflect on those symptoms — with the same caveat that it&apos;s a starting point, not a diagnosis.
+              If you&apos;re wondering whether what you&apos;re experiencing might be depression, our <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression self-check</Link> can help you reflect on those symptoms, with the same caveat that it&apos;s a starting point, not a diagnosis.
             </p>
           </section>
 
           <section>
             <h2>Can an online burnout quiz actually diagnose you?</h2>
             <p>
-              No — and any site that implies otherwise is misleading you. Here&apos;s why online burnout self-checks have real limitations:
+              No, and any site that implies otherwise is misleading you. Here&apos;s why online burnout self-checks have real limitations:
             </p>
             <p>
               The gold standard for measuring burnout in research is the Maslach Burnout Inventory (MBI), developed by Christina Maslach and Susan Jackson. The MBI is a validated, copyrighted instrument that measures the three WHO burnout dimensions (exhaustion, cynicism, reduced efficacy) using 22 carefully worded items. It is not freely available online, and any free &quot;burnout quiz&quot; you find is either using different questions or is using the MBI without authorization.
             </p>
             <p>
-              Even the MBI itself is a research and screening tool — it does not produce a diagnosis. Burnout is not a binary condition you either have or don&apos;t. It exists on a spectrum, interacts with your physical health, personal circumstances, workplace culture, and coping resources, and can only be fully understood in the context of your whole life.
+              Even the MBI itself is a research and screening tool, it does not produce a diagnosis. Burnout is not a binary condition you either have or don&apos;t. It exists on a spectrum, interacts with your physical health, personal circumstances, workplace culture, and coping resources, and can only be fully understood in the context of your whole life.
             </p>
             <p>
-              Our <Link href="/work-stress-check" className="text-sage-600 dark:text-sage-400 underline">Work Stress Self-Check</Link> is an original reflection tool — not based on any proprietary scale. It&apos;s designed to help you notice patterns, not to tell you whether you&apos;re burned out. Think of it as a structured way to check in with yourself, not as a verdict.
+              Our <Link href="/work-stress-check" className="text-sage-600 dark:text-sage-400 underline">Work Stress Self-Check</Link> is an original reflection tool, not based on any proprietary scale. It&apos;s designed to help you notice patterns, not to tell you whether you&apos;re burned out. Think of it as a structured way to check in with yourself, not as a verdict.
             </p>
           </section>
 
@@ -215,7 +215,7 @@ export default function WorkStressBurnoutPage() {
           <section>
             <h2>Burnout risk for remote and hybrid workers</h2>
             <p>
-              Remote work eliminated commutes but introduced new burnout risk factors. Without physical separation between work and home, many remote workers struggle with &quot;always on&quot; culture — the laptop is right there, the Slack notifications keep coming, and the boundary between &quot;at work&quot; and &quot;at home&quot; dissolves.
+              Remote work eliminated commutes but introduced new burnout risk factors. Without physical separation between work and home, many remote workers struggle with &quot;always on&quot; culture, the laptop is right there, the Slack notifications keep coming, and the boundary between &quot;at work&quot; and &quot;at home&quot; dissolves.
             </p>
             <p>
               Research from the Mental Health UK 2024 Burnout Report found that 91% of UK adults experienced high or extreme stress in the past year, with remote and hybrid workers reporting particular difficulty disconnecting. The absence of casual social interaction, the fatigue of back-to-back video calls, and the isolation of working alone all contribute to a distinct remote burnout profile.
@@ -231,7 +231,7 @@ export default function WorkStressBurnoutPage() {
               You don&apos;t need to be in crisis to seek help. Consider talking to a healthcare provider if work stress is affecting your sleep or physical health for more than a few weeks; if you feel emotionally numb, detached, or unable to care about things that used to matter; if you&apos;re relying on alcohol, substances, or other coping mechanisms to get through the day; if your relationships are suffering because of work-related irritability or withdrawal; or if you&apos;ve tried making changes (boundaries, time off, workload adjustments) and nothing has helped.
             </p>
             <p>
-              A therapist, counselor, or your primary care provider can help you determine whether what you&apos;re experiencing is situational stress, burnout, depression, or something else entirely — and can work with you on a plan that accounts for your specific circumstances, which no online tool can do.
+              A therapist, counselor, or your primary care provider can help you determine whether what you&apos;re experiencing is situational stress, burnout, depression, or something else entirely, and can work with you on a plan that accounts for your specific circumstances, which no online tool can do.
             </p>
           </section>
 
@@ -271,7 +271,7 @@ export default function WorkStressBurnoutPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

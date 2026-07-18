@@ -63,7 +63,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "I",
         name: "Intense Exercise",
         oneLiner: "Burn off the adrenaline your body is producing",
-        instructions: "Do intense physical activity for 10-20 minutes. The goal is to match your body's arousal level — your emotions are intense, so make the exercise intense. This metabolizes stress hormones like cortisol and adrenaline and releases endorphins. You do not need a gym; anything that gets your heart rate up works.",
+        instructions: "Do intense physical activity for 10-20 minutes. The goal is to match your body's arousal level, your emotions are intense, so make the exercise intense. This metabolizes stress hormones like cortisol and adrenaline and releases endorphins. You do not need a gym; anything that gets your heart rate up works.",
         examples: [
           "Run up and down stairs for 5-10 minutes",
           "Do jumping jacks, burpees, or push-ups until you feel the intensity drop",
@@ -74,9 +74,9 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "P",
         name: "Paced Breathing",
         oneLiner: "Slow your breath to slow your whole nervous system",
-        instructions: "Breathe out slowly, making your exhale longer than your inhale. A common pattern is breathing in for 4 counts and out for 6-8 counts. This activates your parasympathetic nervous system (your body's braking system) and directly counters the fight-or-flight response. Focus on your exhale — that is where the calming happens.",
+        instructions: "Breathe out slowly, making your exhale longer than your inhale. A common pattern is breathing in for 4 counts and out for 6-8 counts. This activates your parasympathetic nervous system (your body's braking system) and directly counters the fight-or-flight response. Focus on your exhale, that is where the calming happens.",
         examples: [
-          "Breathe in for 4 counts, out for 8 counts — repeat for 2-3 minutes",
+          "Breathe in for 4 counts, out for 8 counts, repeat for 2-3 minutes",
           "Try box breathing: in for 4, hold for 4, out for 4, hold for 4",
           "Breathe in through your nose, out through pursed lips like blowing through a straw",
         ],
@@ -85,7 +85,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "P",
         name: "Progressive Relaxation",
         oneLiner: "Release tension by tensing and relaxing each muscle group",
-        instructions: "Starting from your toes and moving up, tense each muscle group for 5-10 seconds and then release completely. Notice the difference between tension and relaxation. This works because your body cannot be tense and relaxed at the same time — by systematically releasing tension, you signal safety to your nervous system.",
+        instructions: "Starting from your toes and moving up, tense each muscle group for 5-10 seconds and then release completely. Notice the difference between tension and relaxation. This works because your body cannot be tense and relaxed at the same time, by systematically releasing tension, you signal safety to your nervous system.",
         examples: [
           "Curl your toes tightly for 10 seconds, then release. Move to calves, thighs, stomach, and up",
           "Clench both fists as hard as you can for 10 seconds, then let them go completely limp",
@@ -109,21 +109,21 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "S",
         name: "Stop",
         oneLiner: "Freeze. Do not react. Do not move.",
-        instructions: "When you feel an intense urge to act impulsively, literally stop what you are doing. Do not say a word. Do not send that text. Do not make that call. Do not reach for a substance. Just freeze. This brief pause is the most powerful moment because it creates a gap between the trigger and your response — and in that gap, you have a choice.",
+        instructions: "When you feel an intense urge to act impulsively, literally stop what you are doing. Do not say a word. Do not send that text. Do not make that call. Do not reach for a substance. Just freeze. This brief pause is the most powerful moment because it creates a gap between the trigger and your response, and in that gap, you have a choice.",
         examples: [
-          "You are about to send an angry text — put the phone face-down on the table",
-          "You feel the urge to use — freeze your hands at your sides and hold still",
-          "You are about to say something hurtful — close your mouth and pause",
+          "You are about to send an angry text, put the phone face-down on the table",
+          "You feel the urge to use, freeze your hands at your sides and hold still",
+          "You are about to say something hurtful, close your mouth and pause",
         ],
       },
       {
         letter: "T",
         name: "Take a Step Back",
-        oneLiner: "Create distance — mentally or physically",
-        instructions: "Remove yourself from the situation, even slightly. Take a physical step back, leave the room, or mentally detach by imagining you are watching the scene from above. You are not avoiding — you are giving yourself space to think clearly. Intense emotions narrow your focus; stepping back widens it.",
+        oneLiner: "Create distance, mentally or physically",
+        instructions: "Remove yourself from the situation, even slightly. Take a physical step back, leave the room, or mentally detach by imagining you are watching the scene from above. You are not avoiding, you are giving yourself space to think clearly. Intense emotions narrow your focus; stepping back widens it.",
         examples: [
           "Say: 'I need a minute' and walk to another room",
-          "Imagine you are watching the situation from a balcony above — what do you see?",
+          "Imagine you are watching the situation from a balcony above, what do you see?",
           "Take three slow breaths before doing anything else",
         ],
       },
@@ -131,7 +131,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "O",
         name: "Observe",
         oneLiner: "Notice what is happening inside and around you",
-        instructions: "Without judging, observe what is happening. What are you feeling in your body? What thoughts are going through your mind? What is actually happening in the situation versus what your emotions are telling you? Observation puts you in 'wise mind' — the place between pure emotion and pure logic.",
+        instructions: "Without judging, observe what is happening. What are you feeling in your body? What thoughts are going through your mind? What is actually happening in the situation versus what your emotions are telling you? Observation puts you in 'wise mind', the place between pure emotion and pure logic.",
         examples: [
           "Notice: 'My chest is tight, my jaw is clenched, and I am thinking they did this on purpose'",
           "Ask yourself: 'What are the facts here? What am I adding with my interpretation?'",
@@ -142,7 +142,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "P",
         name: "Proceed Mindfully",
         oneLiner: "Act with awareness, not on autopilot",
-        instructions: "Now that you have stopped, stepped back, and observed, choose your next action deliberately. Ask yourself: 'What do I want from this situation? What action will be most effective right now? What would wise mind do?' The goal is not to suppress your feelings but to respond rather than react — to act in a way you will not regret later.",
+        instructions: "Now that you have stopped, stepped back, and observed, choose your next action deliberately. Ask yourself: 'What do I want from this situation? What action will be most effective right now? What would wise mind do?' The goal is not to suppress your feelings but to respond rather than react, to act in a way you will not regret later.",
         examples: [
           "Ask: 'If I respond this way, will I feel better or worse in an hour?'",
           "Choose the response that aligns with your values, not your impulse",
@@ -166,7 +166,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "A",
         name: "Activities",
         oneLiner: "Do something that demands your attention",
-        instructions: "Engage in an activity that requires enough focus to pull your mind away from the distress. The activity does not need to be fun — it just needs to occupy your brain. Physical activities work especially well because they engage both body and mind.",
+        instructions: "Engage in an activity that requires enough focus to pull your mind away from the distress. The activity does not need to be fun, it just needs to occupy your brain. Physical activities work especially well because they engage both body and mind.",
         examples: [
           "Clean a room, organize a drawer, or do dishes",
           "Play a game that requires concentration (puzzle, Sudoku, video game)",
@@ -177,7 +177,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "C",
         name: "Contributing",
         oneLiner: "Help someone else to get out of your own head",
-        instructions: "Do something kind for another person. Contributing shifts your focus outward and creates a sense of purpose and connection. It also generates positive emotions that counteract distress. The act does not need to be big — small gestures count.",
+        instructions: "Do something kind for another person. Contributing shifts your focus outward and creates a sense of purpose and connection. It also generates positive emotions that counteract distress. The act does not need to be big, small gestures count.",
         examples: [
           "Text a friend to check in on them",
           "Do a chore for someone in your household without being asked",
@@ -188,11 +188,11 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "C",
         name: "Comparisons",
         oneLiner: "Gain perspective by comparing to harder times",
-        instructions: "Compare your current situation to a time you coped with something harder, or to people who are dealing with greater challenges. This is not about minimizing your pain — it is about reminding yourself that you have survived difficult things before and that this moment will pass too.",
+        instructions: "Compare your current situation to a time you coped with something harder, or to people who are dealing with greater challenges. This is not about minimizing your pain, it is about reminding yourself that you have survived difficult things before and that this moment will pass too.",
         examples: [
           "Remember a past crisis you got through and remind yourself: 'I survived that. I can survive this.'",
           "Think of someone you admire who overcame a major challenge",
-          "Compare how you feel right now to how you felt at your worst — notice any difference",
+          "Compare how you feel right now to how you felt at your worst, notice any difference",
         ],
       },
       {
@@ -210,11 +210,11 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "P",
         name: "Pushing Away",
         oneLiner: "Mentally set the problem aside for now",
-        instructions: "Temporarily push the distressing situation out of your mind. This is not denial — it is intentionally choosing not to engage with the problem right now because you are too overwhelmed to deal with it effectively. You are giving yourself permission to come back to it when you are calmer.",
+        instructions: "Temporarily push the distressing situation out of your mind. This is not denial, it is intentionally choosing not to engage with the problem right now because you are too overwhelmed to deal with it effectively. You are giving yourself permission to come back to it when you are calmer.",
         examples: [
           "Imagine putting the worry in a box, closing the lid, and placing it on a shelf",
           "Tell yourself: 'I will deal with this at 3 PM tomorrow. Right now, I am taking a break.'",
-          "Mentally build a wall between you and the problem — brick by brick",
+          "Mentally build a wall between you and the problem, brick by brick",
         ],
       },
       {
@@ -236,7 +236,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         examples: [
           "Hold an ice cube in your hand and focus on the cold",
           "Snap a rubber band on your wrist (gently)",
-          "Eat something with a strong flavor — sour candy, hot sauce, peppermint",
+          "Eat something with a strong flavor, sour candy, hot sauce, peppermint",
         ],
       },
     ],
@@ -256,9 +256,9 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "I",
         name: "Imagery",
         oneLiner: "Visualize a safe, calm place in your mind",
-        instructions: "Close your eyes and create a vivid mental image of a place where you feel safe, calm, and at peace. Engage all your senses — what do you see, hear, smell, and feel? Your nervous system responds to vivid imagery almost as if it were real, so a detailed mental safe place can genuinely calm your body.",
+        instructions: "Close your eyes and create a vivid mental image of a place where you feel safe, calm, and at peace. Engage all your senses, what do you see, hear, smell, and feel? Your nervous system responds to vivid imagery almost as if it were real, so a detailed mental safe place can genuinely calm your body.",
         examples: [
-          "Imagine lying on a warm beach — feel the sun, hear the waves, smell the salt air",
+          "Imagine lying on a warm beach, feel the sun, hear the waves, smell the salt air",
           "Picture yourself in a cozy cabin with a fire crackling and snow falling outside",
           "Visualize a protective bubble around you that nothing harmful can penetrate",
         ],
@@ -267,7 +267,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "M",
         name: "Meaning",
         oneLiner: "Find purpose or meaning in the suffering",
-        instructions: "Look for some meaning, lesson, or purpose in what you are going through. This does not mean the suffering is good or deserved — it means you are choosing to make it count for something. Finding meaning is one of the most powerful ways humans cope with adversity.",
+        instructions: "Look for some meaning, lesson, or purpose in what you are going through. This does not mean the suffering is good or deserved, it means you are choosing to make it count for something. Finding meaning is one of the most powerful ways humans cope with adversity.",
         examples: [
           "Ask: 'What might I learn from this experience that could help me or others?'",
           "Think about how going through this could make you stronger or more empathetic",
@@ -289,7 +289,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "R",
         name: "Relaxation",
         oneLiner: "Deliberately relax your body to calm your mind",
-        instructions: "Use any relaxation technique to reduce physical tension. When your body relaxes, your mind follows. This works because the brain interprets a relaxed body as evidence that you are safe — even if the situation has not changed.",
+        instructions: "Use any relaxation technique to reduce physical tension. When your body relaxes, your mind follows. This works because the brain interprets a relaxed body as evidence that you are safe, even if the situation has not changed.",
         examples: [
           "Take a warm bath or shower and focus on how the water feels",
           "Do a body scan: slowly relax each muscle group from your toes to your head",
@@ -300,10 +300,10 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "O",
         name: "One Thing at a Time",
         oneLiner: "Focus only on this moment, this breath, this task",
-        instructions: "When you are overwhelmed, your mind is trying to deal with everything at once — the past, the future, every problem stacked on top of each other. This skill asks you to deliberately narrow your focus to just one thing: the current moment, the current breath, the current step. You only need to get through this one moment.",
+        instructions: "When you are overwhelmed, your mind is trying to deal with everything at once, the past, the future, every problem stacked on top of each other. This skill asks you to deliberately narrow your focus to just one thing: the current moment, the current breath, the current step. You only need to get through this one moment.",
         examples: [
           "Tell yourself: 'I only have to get through the next 5 minutes. That is all.'",
-          "Focus entirely on whatever you are doing right now — washing a dish, taking a step, breathing",
+          "Focus entirely on whatever you are doing right now, washing a dish, taking a step, breathing",
           "When your mind races ahead, gently bring it back: 'Just this. Just now.'",
         ],
       },
@@ -311,11 +311,11 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "V",
         name: "Vacation",
         oneLiner: "Take a brief mental or physical escape",
-        instructions: "Give yourself a short break from the distress. This is not running away — it is a brief, intentional timeout so you can return with more capacity. Even 20 minutes of mental vacation can reset your ability to cope.",
+        instructions: "Give yourself a short break from the distress. This is not running away, it is a brief, intentional timeout so you can return with more capacity. Even 20 minutes of mental vacation can reset your ability to cope.",
         examples: [
           "Take a 20-minute walk with no phone and no agenda",
           "Read a few chapters of a book that absorbs you completely",
-          "Watch one episode of a comforting show — give yourself full permission to enjoy it",
+          "Watch one episode of a comforting show, give yourself full permission to enjoy it",
         ],
       },
       {
@@ -369,7 +369,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
   const currentGroup = SKILL_GROUPS.find((g) => g.id === activeGroup)!;
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
         <Link href="/" className="hover:text-sage-600 dark:hover:text-sage-400 transition-colors">Home</Link>
@@ -377,7 +377,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         <span className="text-neutral-700 dark:text-neutral-200">DBT Crisis Survival Skills</span>
       </nav>
 
-      {/* Crisis banner — top of page, prominent */}
+      {/* Crisis banner, top of page, prominent */}
       <div className="p-4 bg-red-50 dark:bg-red-950/30 rounded-xl border border-red-200 dark:border-red-800 mb-6">
         <p className="text-sm font-semibold text-red-800 dark:text-red-200 mb-1">In crisis right now?</p>
         <ul className="text-sm text-red-700 dark:text-red-300 space-y-0.5">
@@ -420,7 +420,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             }`}
           >
             <span className="font-bold">{group.acronym}</span>
-            <span className="hidden sm:inline ml-1.5 font-normal opacity-80">{group.fullName}</span>
+            <span className="hidden sm:inline ml-1.5 font-normal">{group.fullName}</span>
           </button>
         ))}
       </div>
@@ -522,10 +522,10 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             <strong>Dialectical Behavior Therapy (DBT)</strong> was developed by Dr. Marsha Linehan in the late 1980s, originally for people with borderline personality disorder and chronic suicidal thoughts. It has since been adapted for a wide range of conditions including depression, anxiety, substance use disorders, eating disorders, and PTSD. DBT is now one of the most extensively researched and evidence-based psychotherapies available.
           </p>
           <p>
-            <strong>Distress tolerance skills</strong> are one of DBT&apos;s four core skill modules (alongside mindfulness, emotion regulation, and interpersonal effectiveness). These skills are specifically designed for <em>crisis moments</em> — times when emotions are so intense that rational problem-solving is not yet possible. The goal is not to solve the problem or make the pain go away, but to <strong>survive the crisis without making it worse</strong>.
+            <strong>Distress tolerance skills</strong> are one of DBT&apos;s four core skill modules (alongside mindfulness, emotion regulation, and interpersonal effectiveness). These skills are specifically designed for <em>crisis moments</em>, times when emotions are so intense that rational problem-solving is not yet possible. The goal is not to solve the problem or make the pain go away, but to <strong>survive the crisis without making it worse</strong>.
           </p>
           <p>
-            The four acronyms on this page — TIPP, STOP, ACCEPTS, and IMPROVE — represent different categories of crisis survival skills. TIPP changes your body chemistry quickly. STOP prevents impulsive reactions. ACCEPTS provides healthy distraction. IMPROVE makes the moment more bearable. Together, they form a toolkit for getting through intense emotional experiences safely.
+            The four acronyms on this page, TIPP, STOP, ACCEPTS, and IMPROVE, represent different categories of crisis survival skills. TIPP changes your body chemistry quickly. STOP prevents impulsive reactions. ACCEPTS provides healthy distraction. IMPROVE makes the moment more bearable. Together, they form a toolkit for getting through intense emotional experiences safely.
           </p>
           <p>
             These skills are educational resources and are not a substitute for DBT therapy with a trained clinician. If you are experiencing a mental health crisis, please reach out to a professional or contact one of the crisis resources listed on this page.
@@ -538,14 +538,12 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             <li>
               <a href="https://behavioraltech.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
                 Behavioral Tech / The Linehan Institute
-              </a>{" "}
-              — Founded by Dr. Marsha Linehan, the developer of DBT
+              </a>{" "}, Founded by Dr. Marsha Linehan, the developer of DBT
             </li>
             <li>
               <a href="https://www.samhsa.gov/medications-substance-use-disorders" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
                 SAMHSA: Substance Use Treatment Resources
-              </a>{" "}
-              — Federal agency for substance abuse and mental health services
+              </a>{" "}, Federal agency for substance abuse and mental health services
             </li>
           </ul>
         </div>
@@ -647,6 +645,6 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
       <div className="mt-8">
         <ToolReviewerBio />
       </div>
-    </main>
+    </div>
   );
 }

@@ -87,7 +87,7 @@ export default function PtsdTestVeteransPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -101,7 +101,7 @@ export default function PtsdTestVeteransPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -327,22 +327,22 @@ export default function PtsdTestVeteransPage() {
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Headaches</td>
-                    <td className="text-center py-2 px-4">&#x2014;</td>
+                    <td className="text-center py-2 px-4">, </td>
                     <td className="text-center py-2 pl-4">&#x2713;</td>
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Emotional numbing</td>
                     <td className="text-center py-2 px-4">&#x2713;</td>
-                    <td className="text-center py-2 pl-4">&#x2014;</td>
+                    <td className="text-center py-2 pl-4">, </td>
                   </tr>
                   <tr className="border-b border-slate-200 dark:border-slate-700">
                     <td className="py-2 pr-4">Flashbacks</td>
                     <td className="text-center py-2 px-4">&#x2713;</td>
-                    <td className="text-center py-2 pl-4">&#x2014;</td>
+                    <td className="text-center py-2 pl-4">, </td>
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">Light/noise sensitivity</td>
-                    <td className="text-center py-2 px-4">&#x2014;</td>
+                    <td className="text-center py-2 px-4">, </td>
                     <td className="text-center py-2 pl-4">&#x2713;</td>
                   </tr>
                 </tbody>

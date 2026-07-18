@@ -239,9 +239,9 @@ export function WorryTimeClient({ faqData }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        Worry Time Scheduler
-      </h1>
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
+        Start a Worry-Time Session
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-8">
         A CBT-based worry postponement tool. Park your worries during the day, then process them
         in a scheduled session with guided prompts. Research shows most worries resolve on their own.
@@ -289,7 +289,7 @@ export function WorryTimeClient({ faqData }: Props) {
                 Schedule Your Worry Time
               </h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                Pick a consistent daily time to process your worries. Late afternoon or early evening works well — not right before bed.
+                Pick a consistent daily time to process your worries. Late afternoon or early evening works well, not right before bed.
               </p>
             </div>
 
@@ -349,7 +349,7 @@ export function WorryTimeClient({ faqData }: Props) {
                   <p className="text-xs text-sage-600 dark:text-sage-400 mt-3 text-center">
                     {stats.pct >= 50
                       ? "Most of your worries resolved before you even got to them. Your brain is learning that worrying in advance is often unnecessary."
-                      : "You are building awareness of your worry patterns. Keep practicing — the insight grows over time."}
+                      : "You are building awareness of your worry patterns. Keep practicing, the insight grows over time."}
                   </p>
                 )}
               </div>
@@ -425,8 +425,8 @@ export function WorryTimeClient({ faqData }: Props) {
                         </p>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
                           {w.timestamp}
-                          {w.processed && w.stillRelevant === false && " — resolved on its own"}
-                          {w.processed && w.stillRelevant === true && " — addressed"}
+                          {w.processed && w.stillRelevant === false && ", resolved on its own"}
+                          {w.processed && w.stillRelevant === true && ", addressed"}
                         </p>
                       </div>
                       {!w.processed && (
@@ -597,7 +597,7 @@ export function WorryTimeClient({ faqData }: Props) {
                     {solvableAnswer === false && (
                       <div className="bg-sky-50/50 dark:bg-sky-950/20 border border-sky-200 dark:border-sky-800 rounded-xl p-4">
                         <p className="text-sm text-sky-700 dark:text-sky-400 leading-relaxed">
-                          This worry is about something outside your control. Can you practice accepting uncertainty about this for now? You have acknowledged the worry — you do not need to solve it to let it go.
+                          This worry is about something outside your control. Can you practice accepting uncertainty about this for now? You have acknowledged the worry, you do not need to solve it to let it go.
                         </p>
                       </div>
                     )}
@@ -696,11 +696,11 @@ export function WorryTimeClient({ faqData }: Props) {
           How to Use This Tool
         </h2>
         <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li><strong>Set your worry time</strong> — In the Setup tab, pick a daily time (late afternoon works well) and session length (15-30 min).</li>
-          <li><strong>Park worries throughout the day</strong> — When a worry pops up, go to the Park It tab and write it down. Tell yourself: &quot;I&apos;ll deal with this during worry time.&quot;</li>
-          <li><strong>Start your session at the scheduled time</strong> — The Worry Time tab walks you through each parked worry with guided questions.</li>
-          <li><strong>For each worry, ask yourself</strong> — Is it still bothering me? Is it solvable? What is one action step? How likely is the worst case?</li>
-          <li><strong>Notice the pattern</strong> — Over time, you will see that many worries resolve on their own before you ever get to worry time. This builds confidence in your ability to let worries go.</li>
+          <li><strong>Set your worry time</strong>, In the Setup tab, pick a daily time (late afternoon works well) and session length (15-30 min).</li>
+          <li><strong>Park worries throughout the day</strong>, When a worry pops up, go to the Park It tab and write it down. Tell yourself: &quot;I&apos;ll deal with this during worry time.&quot;</li>
+          <li><strong>Start your session at the scheduled time</strong>, The Worry Time tab walks you through each parked worry with guided questions.</li>
+          <li><strong>For each worry, ask yourself</strong>, Is it still bothering me? Is it solvable? What is one action step? How likely is the worst case?</li>
+          <li><strong>Notice the pattern</strong>, Over time, you will see that many worries resolve on their own before you ever get to worry time. This builds confidence in your ability to let worries go.</li>
         </ol>
       </section>
 
@@ -711,24 +711,24 @@ export function WorryTimeClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
           <p>
-            The worry time technique (also called worry postponement or stimulus control for worry) is a <strong>cognitive behavioral therapy (CBT) strategy</strong> specifically designed for people who struggle with chronic worrying and generalized anxiety. Instead of trying to suppress worries — which research shows actually makes them worse — you give yourself <strong>permission to worry, but only at a specific scheduled time</strong>.
+            The worry time technique (also called worry postponement or stimulus control for worry) is a <strong>cognitive behavioral therapy (CBT) strategy</strong> specifically designed for people who struggle with chronic worrying and generalized anxiety. Instead of trying to suppress worries, which research shows actually makes them worse, you give yourself <strong>permission to worry, but only at a specific scheduled time</strong>.
           </p>
           <p>
             The technique was developed within the CBT framework for <strong>generalized anxiety disorder (GAD)</strong> and has been studied extensively. A key study by Borkovec, Wilkinson, Folensbee, and Lerman (1983) found that participants who postponed their worrying to a designated period experienced a <strong>significant reduction in anxiety and worry frequency</strong> compared to those who tried to control their worrying in the moment. More recent research published in <em>Behaviour Research and Therapy</em> (2015) confirmed that worry postponement reduces both the frequency and intensity of worry episodes.
           </p>
           <p>
-            The technique works through several mechanisms. First, it <strong>breaks the habit loop</strong> of responding to every anxious thought with immediate engagement. Second, it creates <strong>temporal distance</strong> between the trigger and the response, which allows the anxiety to naturally subside. Third, it provides <strong>concrete evidence</strong> that most worries resolve on their own — research suggests that approximately <strong>85% of the things people worry about</strong> never actually happen, and of the 15% that do, 79% of people handle them better than they expected (LaLeche, 2019).
+            The technique works through several mechanisms. First, it <strong>breaks the habit loop</strong> of responding to every anxious thought with immediate engagement. Second, it creates <strong>temporal distance</strong> between the trigger and the response, which allows the anxiety to naturally subside. Third, it provides <strong>concrete evidence</strong> that most worries resolve on their own, research suggests that approximately <strong>85% of the things people worry about</strong> never actually happen, and of the 15% that do, 79% of people handle them better than they expected (LaLeche, 2019).
           </p>
 
           <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
             Tips for Success
           </h3>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Be consistent</strong> — Same time every day. Consistency trains your brain to postpone worry automatically.</li>
-            <li><strong>Write it down, then let it go</strong> — The act of writing tells your brain &quot;I won&apos;t forget this,&quot; which makes it easier to disengage.</li>
-            <li><strong>Keep worry time away from bedtime</strong> — At least 2 hours before sleep. Worry time should not bleed into rest time.</li>
-            <li><strong>If worry time feels too long, that&apos;s a good sign</strong> — It means you are running out of things to worry about.</li>
-            <li><strong>Combine with other techniques</strong> — Box breathing before worry time, or the cognitive distortion identifier during it, can make sessions even more effective.</li>
+            <li><strong>Be consistent</strong>, Same time every day. Consistency trains your brain to postpone worry automatically.</li>
+            <li><strong>Write it down, then let it go</strong>, The act of writing tells your brain &quot;I won&apos;t forget this,&quot; which makes it easier to disengage.</li>
+            <li><strong>Keep worry time away from bedtime</strong>, At least 2 hours before sleep. Worry time should not bleed into rest time.</li>
+            <li><strong>If worry time feels too long, that&apos;s a good sign</strong>, It means you are running out of things to worry about.</li>
+            <li><strong>Combine with other techniques</strong>, Box breathing before worry time, or the cognitive distortion identifier during it, can make sessions even more effective.</li>
           </ul>
         </div>
       </section>
@@ -798,11 +798,11 @@ export function WorryTimeClient({ faqData }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 text-sm">
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-              <p className="text-amber-700 dark:text-amber-300">Call or text 988 — 24/7, free & confidential</p>
+              <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
             </div>
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357 — Treatment referral & info</p>
+              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
             </div>
           </div>
         </div>
@@ -816,7 +816,8 @@ export function WorryTimeClient({ faqData }: Props) {
 
       <div className="text-center mb-6">
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          Your privacy matters. Your worry log is saved only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared.
+          Your worry log is saved in this browser&apos;s local storage and is not intentionally sent to
+          MindCheck Tools servers. Anyone using this browser profile may be able to view it.
         </p>
       </div>
 
@@ -827,17 +828,17 @@ export function WorryTimeClient({ faqData }: Props) {
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
             <a href="https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              American Psychological Association — Cognitive Behavioral Therapy
+              American Psychological Association, Cognitive Behavioral Therapy
             </a>
           </li>
           <li>
             <a href="https://adaa.org/understanding-anxiety/generalized-anxiety-disorder-gad" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Anxiety and Depression Association of America — Generalized Anxiety Disorder
+              Anxiety and Depression Association of America, Generalized Anxiety Disorder
             </a>
           </li>
           <li>
             <a href="https://www.nimh.nih.gov/health/topics/generalized-anxiety-disorder-gad" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              National Institute of Mental Health — Generalized Anxiety Disorder
+              National Institute of Mental Health, Generalized Anxiety Disorder
             </a>
           </li>
         </ul>

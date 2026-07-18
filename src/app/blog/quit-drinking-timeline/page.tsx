@@ -79,7 +79,7 @@ export default function QuitDrinkingTimelinePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Your body begins recovering from alcohol faster than you might think. Here is an evidence-based timeline of what happens when you stop drinking — from the first 24 hours through your first full year. This guide also covers critical safety information about alcohol withdrawal that everyone considering sobriety should understand.
+            Your body begins recovering from alcohol faster than you might think. Here is an evidence-based timeline of what happens when you stop drinking, from the first 24 hours through your first full year. This guide also covers critical safety information about alcohol withdrawal that everyone considering sobriety should understand.
           </p>
           <div className="mt-6 flex gap-3">
             <Link href="/health-recovery-timeline" className="btn-primary text-sm">Track Your Recovery Timeline</Link>
@@ -111,7 +111,7 @@ export default function QuitDrinkingTimelinePage() {
                   <strong>Medication-assisted treatment (MAT)</strong> can make withdrawal safer and more manageable. Medications such as benzodiazepines, naltrexone, and acamprosate are evidence-based options that a healthcare provider can prescribe. MAT significantly reduces the risk of dangerous complications and improves long-term outcomes.
                 </p>
                 <p className="font-semibold">
-                  If you or someone you know is experiencing alcohol withdrawal symptoms — tremors, confusion, rapid heart rate, hallucinations — call 911 or go to the nearest emergency room immediately.
+                  If you or someone you know is experiencing alcohol withdrawal symptoms, tremors, confusion, rapid heart rate, hallucinations, call 911 or go to the nearest emergency room immediately.
                 </p>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
@@ -134,7 +134,7 @@ export default function QuitDrinkingTimelinePage() {
               Within hours of your last drink, your body starts recalibrating. Blood sugar levels, which alcohol disrupts, begin to normalize. Blood alcohol concentration drops to zero, and your liver shifts from metabolizing alcohol to its regular detoxification and metabolic functions.
             </p>
             <p>
-              For light or moderate drinkers, this period may pass with minimal discomfort — perhaps mild restlessness or difficulty sleeping. For heavy drinkers, early withdrawal symptoms such as anxiety, tremors, sweating, and nausea may begin within 6 to 12 hours. This is when the body signals that it has become physically adapted to alcohol&apos;s presence.
+              For light or moderate drinkers, this period may pass with minimal discomfort, perhaps mild restlessness or difficulty sleeping. For heavy drinkers, early withdrawal symptoms such as anxiety, tremors, sweating, and nausea may begin within 6 to 12 hours. This is when the body signals that it has become physically adapted to alcohol&apos;s presence.
             </p>
             <p>
               Your body is already working to restore balance. Hydration improves as alcohol&apos;s diuretic effect wears off, and your nervous system begins readjusting to functioning without alcohol&apos;s sedative influence.
@@ -149,7 +149,7 @@ export default function QuitDrinkingTimelinePage() {
               For people with significant alcohol dependence, this is the most medically critical period. Acute withdrawal symptoms typically peak around 48 to 72 hours after the last drink. This is when the risk of seizures and delirium tremens is highest.
             </p>
             <p>
-              In a medically supervised setting, healthcare providers monitor vital signs, manage symptoms with medication when needed, and ensure safety throughout this window. This is why the safety warning above is so important — this period can be genuinely dangerous without professional support.
+              In a medically supervised setting, healthcare providers monitor vital signs, manage symptoms with medication when needed, and ensure safety throughout this window. This is why the safety warning above is so important, this period can be genuinely dangerous without professional support.
             </p>
             <p>
               For those without severe dependence, days two and three may involve disrupted sleep, irritability, mild anxiety, and physical discomfort. These symptoms, while unpleasant, are generally not dangerous and tend to improve steadily.
@@ -159,7 +159,7 @@ export default function QuitDrinkingTimelinePage() {
           <section>
             <h2>One Week: Sleep Quality Starts Improving</h2>
             <p>
-              By the end of the first week, many people notice that their sleep is beginning to improve. While alcohol may seem like it helps you fall asleep, it actually disrupts sleep architecture — reducing REM sleep, increasing nighttime awakenings, and preventing the deep restorative sleep your body needs.
+              By the end of the first week, many people notice that their sleep is beginning to improve. While alcohol may seem like it helps you fall asleep, it actually disrupts sleep architecture, reducing REM sleep, increasing nighttime awakenings, and preventing the deep restorative sleep your body needs.
             </p>
             <p>
               Without alcohol interfering, your sleep cycles begin to normalize. You may start waking up feeling more rested, even if falling asleep initially feels harder. Digestion often improves as well, since alcohol irritates the stomach lining and disrupts nutrient absorption.
@@ -176,7 +176,7 @@ export default function QuitDrinkingTimelinePage() {
               <a href="https://www.niaaa.nih.gov/" target="_blank" rel="noopener noreferrer">
                 National Institute on Alcohol Abuse and Alcoholism (NIAAA)
               </a>
-              , indicates that liver fat begins to decrease within as little as two weeks of abstinence. The liver is remarkably resilient — it is one of the few organs that can regenerate itself when given the chance.
+              , indicates that liver fat begins to decrease within as little as two weeks of abstinence. The liver is remarkably resilient, it is one of the few organs that can regenerate itself when given the chance.
             </p>
             <p>
               Blood pressure often begins to decrease during this period as well. Alcohol raises blood pressure both acutely and chronically, and two weeks without it gives the cardiovascular system a meaningful break.
@@ -194,7 +194,7 @@ export default function QuitDrinkingTimelinePage() {
               At one month, many of the changes happening internally become visible externally. Skin often appears clearer and more hydrated because alcohol dehydrates the body and dilates blood vessels, contributing to redness and uneven skin tone.
             </p>
             <p>
-              Liver fat reduction becomes more significant at this point. Studies on &quot;Dry January&quot; participants have shown measurable decreases in liver fat, improved insulin resistance, and lower blood pressure after just one month of abstinence — even in people who returned to moderate drinking afterward.
+              Liver fat reduction becomes more significant at this point. Studies on &quot;Dry January&quot; participants have shown measurable decreases in liver fat, improved insulin resistance, and lower blood pressure after just one month of abstinence, even in people who returned to moderate drinking afterward.
             </p>
             <p>
               Energy levels typically improve noticeably. Without alcohol disrupting sleep, depleting B vitamins, and taxing the liver, many people report having more sustained energy throughout the day. Exercise feels easier, and motivation often increases.
@@ -207,7 +207,7 @@ export default function QuitDrinkingTimelinePage() {
               At the three-month mark, lab work often reflects meaningful improvements. Liver enzymes (ALT, AST, GGT) that may have been elevated due to alcohol-related liver stress frequently return toward normal ranges. For people with early-stage fatty liver disease, imaging may show significant improvement.
             </p>
             <p>
-              Cognitive function continues to sharpen. Research suggests that alcohol-related cognitive impairment — including problems with memory, attention, and decision-making — shows measurable improvement over the first three months of sobriety, with further gains continuing beyond that.
+              Cognitive function continues to sharpen. Research suggests that alcohol-related cognitive impairment, including problems with memory, attention, and decision-making, shows measurable improvement over the first three months of sobriety, with further gains continuing beyond that.
             </p>
             <p>
               The immune system strengthens as well. Alcohol suppresses immune function, and after three months, the body&apos;s ability to fight infections and heal from illness may be noticeably improved.
@@ -220,7 +220,7 @@ export default function QuitDrinkingTimelinePage() {
               Alcohol is classified as a Group 1 carcinogen by the World Health Organization, meaning there is sufficient evidence that it causes cancer in humans. It is linked to cancers of the mouth, throat, esophagus, liver, breast, and colon.
             </p>
             <p>
-              While the reduction in cancer risk is gradual, research suggests that the body begins to benefit from reduced exposure to acetaldehyde — the toxic byproduct of alcohol metabolism — within months of stopping. The longer you remain alcohol-free, the more your cancer risk decreases, though it may take years to return to the baseline risk of someone who has never been a heavy drinker.
+              While the reduction in cancer risk is gradual, research suggests that the body begins to benefit from reduced exposure to acetaldehyde, the toxic byproduct of alcohol metabolism, within months of stopping. The longer you remain alcohol-free, the more your cancer risk decreases, though it may take years to return to the baseline risk of someone who has never been a heavy drinker.
             </p>
             <p>
               At six months, many people also report that their weight has stabilized, their relationship with food has improved, and they feel physically stronger and more resilient.
@@ -233,10 +233,10 @@ export default function QuitDrinkingTimelinePage() {
               After a full year without alcohol, liver inflammation is often substantially reduced. For many people with alcohol-related fatty liver disease who have not progressed to cirrhosis, the liver may have recovered to near-normal function.
             </p>
             <p>
-              Cardiovascular risk decreases as well — blood pressure, triglyceride levels, and overall heart health tend to improve significantly. The risk of stroke and heart disease begins to decline.
+              Cardiovascular risk decreases as well, blood pressure, triglyceride levels, and overall heart health tend to improve significantly. The risk of stroke and heart disease begins to decline.
             </p>
             <p>
-              The one-year mark is also significant psychologically. You have developed a full year of coping strategies, navigated holidays, social situations, and stressful periods without alcohol, and built a foundation of evidence that life without alcohol is not just possible — it may be better in ways you didn&apos;t anticipate.
+              The one-year mark is also significant psychologically. You have developed a full year of coping strategies, navigated holidays, social situations, and stressful periods without alcohol, and built a foundation of evidence that life without alcohol is not just possible, it may be better in ways you didn&apos;t anticipate.
             </p>
           </section>
 
@@ -248,13 +248,13 @@ export default function QuitDrinkingTimelinePage() {
               The mental health benefits of stopping alcohol deserve their own attention, because they are often the most life-changing improvements people experience.
             </p>
             <p>
-              In the first one to two weeks, anxiety levels often initially increase before beginning to decrease. This is because alcohol suppresses the nervous system, and the brain needs time to recalibrate. By weeks three and four, many people notice that their baseline anxiety is lower than it was while drinking — a counterintuitive finding for those who used alcohol to manage anxiety.
+              In the first one to two weeks, anxiety levels often initially increase before beginning to decrease. This is because alcohol suppresses the nervous system, and the brain needs time to recalibrate. By weeks three and four, many people notice that their baseline anxiety is lower than it was while drinking, a counterintuitive finding for those who used alcohol to manage anxiety.
             </p>
             <p>
               Depression symptoms frequently improve within one to three months. Research indicates that a significant percentage of alcohol-related depression resolves on its own once alcohol is removed, though pre-existing depression may require separate treatment.
             </p>
             <p>
-              Over three to six months, emotional regulation improves. Mood swings become less intense, irritability decreases, and the ability to handle stress without reaching for a drink strengthens. Many people describe feeling emotions more fully — both positive and negative — which can be challenging at first but ultimately leads to a richer emotional life.
+              Over three to six months, emotional regulation improves. Mood swings become less intense, irritability decreases, and the ability to handle stress without reaching for a drink strengthens. Many people describe feeling emotions more fully, both positive and negative, which can be challenging at first but ultimately leads to a richer emotional life.
             </p>
           </section>
 
@@ -311,7 +311,7 @@ export default function QuitDrinkingTimelinePage() {
             <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
               <strong>Clinical Disclaimer:</strong> This article is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. The information presented here describes general patterns observed in research and may not reflect your individual experience. This content is not a screening tool and does not provide a diagnosis. If you are concerned about your alcohol use or experiencing withdrawal symptoms, please contact a healthcare provider immediately. In a crisis, call the{" "}
               <strong>988 Suicide and Crisis Lifeline (call or text 988)</strong> or the{" "}
-              <strong>SAMHSA National Helpline at 1-800-662-4357</strong> (free, confidential, 24/7). All information is processed in your browser — we do not collect or store any personal data.
+              <strong>SAMHSA National Helpline at 1-800-662-4357</strong> (free, confidential, 24/7). All information is processed in your browser, we do not collect or store any personal data.
             </p>
           </div>
 

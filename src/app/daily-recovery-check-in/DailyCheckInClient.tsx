@@ -89,12 +89,12 @@ function calcStreak(entries: CheckIn[]): { current: number; longest: number } {
   // check if today exists
   const todayStr = today();
   if (!dates.has(todayStr)) {
-    // check yesterday — if yesterday exists, streak is still alive (hasn't checked in yet today)
+    // check yesterday, if yesterday exists, streak is still alive (hasn't checked in yet today)
     const yesterday = new Date(d);
     yesterday.setDate(yesterday.getDate() - 1);
     const yStr = yesterday.toISOString().split("T")[0];
     if (!dates.has(yStr)) {
-      // no check-in today or yesterday — streak is 0
+      // no check-in today or yesterday, streak is 0
       // but still compute longest
       return { current: 0, longest: computeLongest(entries) };
     }
@@ -219,25 +219,25 @@ export function DailyCheckInClient({ faqData }: Props) {
 
   if (!loaded) {
     return (
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         <div className="text-center py-20 text-neutral-500 dark:text-neutral-400">Loading...</div>
-      </main>
+      </div>
     );
   }
 
   /* ── render ──────────────────────────────────────────── */
 
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
-        Daily Recovery Check-In
-      </h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
+        Start Today&apos;s Check-In
+      </h2>
       <p className="text-neutral-500 dark:text-neutral-400 text-center max-w-xl mx-auto mb-2 leading-relaxed">
         A quick daily wellness check to track how you are doing in recovery. Takes under 2 minutes.
         Your data saves in your browser so you can see trends over time.
       </p>
       <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
-        Data is stored in your browser only. It is never sent anywhere.
+        Check-in data is saved in this browser and is not intentionally sent to MindCheck Tools servers.
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
@@ -345,7 +345,7 @@ export function DailyCheckInClient({ faqData }: Props) {
           {/* today snapshot */}
           <section className="card p-5 sm:p-6 mb-6" aria-label="Today's scores">
             <h2 className="font-serif font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Today &mdash; {formatDateShort(todayEntry.date)}
+              Today, {formatDateShort(todayEntry.date)}
             </h2>
             <div className="space-y-3 mb-4">
               {DIMENSIONS.map((dim) => {
@@ -548,7 +548,7 @@ export function DailyCheckInClient({ faqData }: Props) {
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
           <strong>Look for patterns, not individual numbers.</strong> A single day with a mood score of 3
-          is not a crisis — everyone has bad days. What matters is the trend: are your averages stable,
+          is not a crisis, everyone has bad days. What matters is the trend: are your averages stable,
           improving, or declining over 7 to 30 days?
         </p>
         <ul className="space-y-2 text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
@@ -578,19 +578,19 @@ export function DailyCheckInClient({ faqData }: Props) {
               <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 HALT Check-In
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Quick check for Hungry, Angry, Lonely, Tired</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Quick check for Hungry, Angry, Lonely, Tired</span>
             </li>
             <li>
               <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Relapse Prevention Plan
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Build a written plan with triggers and coping strategies</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Build a written plan with triggers and coping strategies</span>
             </li>
             <li>
               <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Coping Skills Randomizer
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">— Get a random healthy coping skill when you need one</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Get a random healthy coping skill when you need one</span>
             </li>
           </ul>
         </div>
@@ -660,10 +660,11 @@ export function DailyCheckInClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          Your check-in data is stored in your browser&rsquo;s localStorage. It is never sent to any server.
-          Clearing your browser data will erase your history.
+          Your check-in data is stored in this browser&rsquo;s localStorage and is not intentionally sent
+          to MindCheck Tools servers. Anyone using this browser profile may be able to view it. Clearing
+          browser site data will erase your history.
         </p>
       </footer>
-    </main>
+    </div>
   );
 }

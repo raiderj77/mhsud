@@ -29,7 +29,7 @@ const FAQ_DATA = [
   { question: "Does the GAD-7 only detect generalized anxiety disorder?", answer: "While developed for generalized anxiety, the GAD-7 has reasonable sensitivity for panic disorder, social anxiety, and PTSD. However, it cannot distinguish between these conditions. A positive screen warrants professional evaluation to determine the specific nature of the anxiety and appropriate next steps." },
   { question: "Can anxiety medication be prescribed based on a GAD-7 score alone?", answer: "No. Treatment decisions require comprehensive clinical evaluation. Sharing your GAD-7 score gives a provider useful information about symptom frequency and severity, which can inform their clinical judgment but never replaces a thorough professional assessment of your individual situation." },
   { question: "What's the difference between normal worry and clinical anxiety?", answer: "Clinical anxiety is distinguished by persistence, intensity, and impact on daily functioning. The GAD-7 captures this by asking about symptom frequency over two weeks, including difficulty controlling worry and physical effects. However, the distinction ultimately requires professional assessment beyond a screening score." },
-  { question: "Can physical health conditions affect my GAD-7 score?", answer: "Yes. Thyroid disorders, heart disease, chronic pain, and medication side effects can produce symptoms overlapping with anxiety, such as restlessness and difficulty relaxing. This is why professional follow-up matters \u2014 a provider can help determine what is contributing to your symptoms." },
+  { question: "Can physical health conditions affect my GAD-7 score?", answer: "Yes. Thyroid disorders, heart disease, chronic pain, and medication side effects can produce symptoms overlapping with anxiety, such as restlessness and difficulty relaxing. This is why professional follow-up matters, a provider can help determine what is contributing to your symptoms." },
   { question: "My score was low but I still feel anxious. Why?", answer: "The GAD-7 captures a specific set of symptoms. Some forms of anxiety like specific phobias, health anxiety, or situational anxiety may not be fully reflected in these seven questions. If you feel anxious, that experience is valid regardless of your screening score and worth discussing with a provider." },
   { question: "How is the GAD-7 different from the GAD-2?", answer: "The GAD-2 uses only the first two GAD-7 questions as an ultra-brief screen. In clinical settings, a positive GAD-2 triggers the full GAD-7. Our site offers the complete GAD-7 for a more thorough picture of anxiety symptoms across all seven domains." },
 ];
@@ -83,9 +83,9 @@ export default function GAD7GuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -102,7 +102,7 @@ export default function GAD7GuidePage() {
               The Generalized Anxiety Disorder-7 (GAD-7) is a 7-item self-report questionnaire developed by Drs. Robert L. Spitzer, Kurt Kroenke, Janet B.W. Williams, and Bernd Löwe. <a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">Published in 2006</a> in the <em>Archives of Internal Medicine</em>, it was designed to be a brief, practical screening tool for anxiety symptoms in primary care and other clinical settings.
             </p>
             <p>
-              Like the PHQ-9 for depression, the GAD-7 was made freely available for clinical and research use without licensing fees. This accessibility has made it one of the most widely used anxiety measures worldwide — it has been translated into dozens of languages and validated across many populations.
+              Like the PHQ-9 for depression, the GAD-7 was made freely available for clinical and research use without licensing fees. This accessibility has made it one of the most widely used anxiety measures worldwide, it has been translated into dozens of languages and validated across many populations.
             </p>
           </section>
 
@@ -115,7 +115,7 @@ export default function GAD7GuidePage() {
               Each item asks how often you&apos;ve been bothered by that symptom over the past two weeks, using the same 0–3 frequency scale as the PHQ-9: not at all (0), several days (1), more than half the days (2), or nearly every day (3). The two-week window helps distinguish persistent anxiety from temporary stress responses.
             </p>
             <p>
-              While named for generalized anxiety disorder, the GAD-7 captures symptoms that overlap with several anxiety-related conditions. Research has shown it has reasonable sensitivity for detecting panic disorder, social anxiety disorder, and post-traumatic stress disorder — though it cannot distinguish between them. Think of it as a general anxiety thermometer, not a specific diagnostic test.
+              While named for generalized anxiety disorder, the GAD-7 captures symptoms that overlap with several anxiety-related conditions. Research has shown it has reasonable sensitivity for detecting panic disorder, social anxiety disorder, and post-traumatic stress disorder, though it cannot distinguish between them. Think of it as a general anxiety thermometer, not a specific diagnostic test.
             </p>
           </section>
 
@@ -137,26 +137,26 @@ export default function GAD7GuidePage() {
                   <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">{r.range}</span>
                   <div>
                     <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.level}</span>
-                    <span className="text-sm text-neutral-500 dark:text-neutral-400"> — {r.note}</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">, {r.note}</span>
                   </div>
                 </div>
               ))}
             </div>
             <p>
-              A score of 10 is often cited in research as a threshold for &quot;moderate&quot; anxiety. The original validation study reported 89% sensitivity and 82% specificity at this cutoff, and the <a href="https://pubmed.ncbi.nlm.nih.gov/18573025/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">2008 standardization study (Löwe et al.)</a> further confirmed these properties in a large general population sample. That said, this cutoff was derived for research purposes and should not be treated as a bright line — clinical context always matters more than the number.
+              A score of 10 is often cited in research as a threshold for &quot;moderate&quot; anxiety. The original validation study reported 89% sensitivity and 82% specificity at this cutoff, and the <a href="https://pubmed.ncbi.nlm.nih.gov/18573025/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">2008 standardization study (Löwe et al.)</a> further confirmed these properties in a large general population sample. That said, this cutoff was derived for research purposes and should not be treated as a bright line, clinical context always matters more than the number.
             </p>
           </section>
 
           <section>
             <h2>How clinicians use the GAD-7 in practice</h2>
             <p>
-              In primary care, the GAD-7 serves as a conversation opener. A provider might hand you the questionnaire in a waiting room or ask the questions during a visit. An elevated score doesn&apos;t end the assessment — it begins it.
+              In primary care, the GAD-7 serves as a conversation opener. A provider might hand you the questionnaire in a waiting room or ask the questions during a visit. An elevated score doesn&apos;t end the assessment, it begins it.
             </p>
             <p>
               The clinician will want to understand the context: How long have you felt this way? What triggers your anxiety? How is it affecting your work, relationships, and daily functioning? Are there contributing factors like caffeine intake, sleep deprivation, medical conditions, or substance use?
             </p>
             <p>
-              The GAD-7 is also used to track treatment progress. If you start therapy or medication, your provider may ask you to complete it periodically. A decreasing score over weeks or months provides concrete evidence that treatment is helping — or signals that adjustments may be needed.
+              The GAD-7 is also used to track treatment progress. If you start therapy or medication, your provider may ask you to complete it periodically. A decreasing score over weeks or months provides concrete evidence that treatment is helping, or signals that adjustments may be needed.
             </p>
           </section>
 
@@ -165,20 +165,20 @@ export default function GAD7GuidePage() {
           <section>
             <h2>What the GAD-7 cannot tell you</h2>
             <p>
-              The GAD-7 cannot diagnose any anxiety disorder. It cannot distinguish generalized anxiety from panic disorder, social anxiety, OCD, or PTSD. It cannot identify the root cause of your anxiety — whether that&apos;s biological, situational, relational, or a combination.
+              The GAD-7 cannot diagnose any anxiety disorder. It cannot distinguish generalized anxiety from panic disorder, social anxiety, OCD, or PTSD. It cannot identify the root cause of your anxiety, whether that&apos;s biological, situational, relational, or a combination.
             </p>
             <p>
               It also has blind spots. The questions focus on cognitive and physical symptoms of anxiety but may not capture avoidance behaviors, specific fears, or the social and occupational impact that define how disabling anxiety has become. Some people experience significant anxiety that doesn&apos;t map neatly onto these seven questions.
             </p>
             <p>
-              Like all self-report tools, it depends on your willingness and ability to accurately report your inner experience — something that anxiety itself can complicate. People who minimize their symptoms or who have normalized their anxiety over years may underreport.
+              Like all self-report tools, it depends on your willingness and ability to accurately report your inner experience, something that anxiety itself can complicate. People who minimize their symptoms or who have normalized their anxiety over years may underreport.
             </p>
           </section>
 
           <section>
             <h2>Anxiety and depression often overlap</h2>
             <p>
-              Anxiety and depression frequently co-occur. Research consistently shows that a substantial proportion of people with significant anxiety also have depressive symptoms, and vice versa. This is why many clinicians administer the GAD-7 and PHQ-9 together — the combination gives a more complete picture.
+              Anxiety and depression frequently co-occur. Research consistently shows that a substantial proportion of people with significant anxiety also have depressive symptoms, and vice versa. This is why many clinicians administer the GAD-7 and PHQ-9 together, the combination gives a more complete picture.
             </p>
             <p>
               If your GAD-7 score suggests notable anxiety, consider also taking the <Link href="/phq-9-depression-test">PHQ-9 depression self-check</Link> for a broader perspective. And if you&apos;re sharing results with a provider, bringing both scores can be especially helpful.
@@ -188,7 +188,7 @@ export default function GAD7GuidePage() {
           <section>
             <h2>What to do with your score</h2>
             <p>
-              For minimal or mild scores, awareness itself is valuable. Knowing what to watch for — and having a baseline — means you can notice if things shift over time.
+              For minimal or mild scores, awareness itself is valuable. Knowing what to watch for, and having a baseline, means you can notice if things shift over time.
             </p>
             <p>
               For moderate or severe scores, reaching out to a healthcare provider is strongly encouraged. Anxiety is one of the most treatable mental health conditions, with strong evidence for both therapy (particularly CBT) and medication. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive anxiety resources including treatment guidance and how to find professional support. Many people see significant improvement with the right support.
@@ -215,7 +215,7 @@ export default function GAD7GuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

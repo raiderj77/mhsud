@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "How long does grounding take to work?",
     answer:
-      "Most people notice a shift within 2\u20135 minutes. The 5-4-3-2-1 method takes 3\u20135 minutes to complete. Effects are often gradual \u2014 heart rate slowing, muscles relaxing, and sharper awareness of surroundings as the exercise progresses. With regular practice, grounding becomes faster and more effective.",
+      "Most people notice a shift within 2\u20135 minutes. The 5-4-3-2-1 method takes 3\u20135 minutes to complete. Effects are often gradual, heart rate slowing, muscles relaxing, and sharper awareness of surroundings as the exercise progresses. With regular practice, grounding becomes faster and more effective.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function GroundingTechniquesGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            When anxiety, panic, or a flashback pulls you out of the present moment, grounding techniques bring you back. These exercises redirect your attention from internal distress to the physical world around you &mdash; what you can see, touch, hear, smell, and taste right now. The 5-4-3-2-1 method is the most widely used grounding technique, and it can be practiced anywhere in under five minutes with no tools or training required.
+            When anxiety, panic, or a flashback pulls you out of the present moment, grounding techniques bring you back. These exercises redirect your attention from internal distress to the physical world around you, what you can see, touch, hear, smell, and taste right now. The 5-4-3-2-1 method is the most widely used grounding technique, and it can be practiced anywhere in under five minutes with no tools or training required.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function GroundingTechniquesGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -114,7 +114,7 @@ export default function GroundingTechniquesGuidePage() {
           <section>
             <h2>What are grounding techniques?</h2>
             <p>
-              Grounding techniques are a category of coping strategies that anchor your awareness in the present moment by engaging your senses and your physical connection to the environment. They are the opposite of dissociation &mdash; instead of disconnecting from reality, you actively reconnect with it.
+              Grounding techniques are a category of coping strategies that anchor your awareness in the present moment by engaging your senses and your physical connection to the environment. They are the opposite of dissociation, instead of disconnecting from reality, you actively reconnect with it.
             </p>
             <p>
               Grounding is widely used in clinical psychology, particularly in the treatment of anxiety disorders, post-traumatic stress disorder (PTSD), dissociative disorders, and borderline personality disorder. It is a core skill in Dialectical Behavior Therapy (DBT), developed by Marsha Linehan, and is commonly taught in trauma-focused therapies including Cognitive Processing Therapy and Prolonged Exposure.
@@ -139,7 +139,7 @@ export default function GroundingTechniquesGuidePage() {
               <strong>3 things you can hear.</strong> Listen for three distinct sounds. A clock ticking, traffic outside, the hum of an air conditioner, your own breathing. Naming ambient sounds you normally filter out pulls your awareness further into the present environment.
             </p>
             <p>
-              <strong>2 things you can smell.</strong> Identify two scents. This may require actively bringing something to your nose &mdash; your sleeve, a cup of coffee, a hand lotion. The olfactory system has direct connections to the limbic system, making smell a particularly effective grounding sense.
+              <strong>2 things you can smell.</strong> Identify two scents. This may require actively bringing something to your nose, your sleeve, a cup of coffee, a hand lotion. The olfactory system has direct connections to the limbic system, making smell a particularly effective grounding sense.
             </p>
             <p>
               <strong>1 thing you can taste.</strong> Notice one taste in your mouth. Take a sip of water, chew a piece of gum, or simply notice the current taste on your tongue. The <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline">guided grounding exercise</Link> walks you through each step with prompts and timing.
@@ -151,13 +151,13 @@ export default function GroundingTechniquesGuidePage() {
           <section>
             <h2>The neuroscience behind grounding</h2>
             <p>
-              Grounding techniques work by engaging specific brain regions that counteract the neural patterns of anxiety and dissociation. When you are anxious or dissociating, the amygdala &mdash; your brain&apos;s threat detection center &mdash; is hyperactive, flooding your system with stress hormones and creating a sense of danger even when no physical threat exists.
+              Grounding techniques work by engaging specific brain regions that counteract the neural patterns of anxiety and dissociation. When you are anxious or dissociating, the amygdala, your brain&apos;s threat detection center, is hyperactive, flooding your system with stress hormones and creating a sense of danger even when no physical threat exists.
             </p>
             <p>
               Sensory grounding activates the sensory cortices (visual, somatosensory, auditory, olfactory, gustatory) and the prefrontal cortex (responsible for attention, reasoning, and executive function). These regions compete with amygdala activation for neural resources. By deliberately directing attention to concrete sensory input, you shift processing power away from the threat-detection loop and toward present-moment awareness.
             </p>
             <p>
-              This mechanism is sometimes called &quot;bottom-up regulation&quot; &mdash; using sensory experience to regulate emotional states, as opposed to &quot;top-down&quot; approaches like cognitive reappraisal that work through reasoning. Bottom-up strategies are especially valuable during intense distress because they do not require the cognitive capacity that anxiety and dissociation impair.
+              This mechanism is sometimes called &quot;bottom-up regulation&quot;, using sensory experience to regulate emotional states, as opposed to &quot;top-down&quot; approaches like cognitive reappraisal that work through reasoning. Bottom-up strategies are especially valuable during intense distress because they do not require the cognitive capacity that anxiety and dissociation impair.
             </p>
           </section>
 
@@ -167,8 +167,8 @@ export default function GroundingTechniquesGuidePage() {
               While the techniques overlap, anxiety and dissociation involve different neural states that benefit from slightly different grounding approaches:
             </p>
             <ul>
-              <li><strong>Anxiety grounding</strong> focuses on calming the hyperactivated nervous system. Techniques emphasize soothing sensory input &mdash; soft textures, cool water, calming scents. The goal is to downregulate arousal. Pairing grounding with <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing</Link> enhances the calming effect.</li>
-              <li><strong>Dissociation grounding</strong> focuses on reconnecting with the body and environment. Techniques emphasize strong, alerting sensory input &mdash; cold water on the wrists, ice in the hands, stomping feet on the ground, strong scents like peppermint. The goal is to increase arousal and awareness enough to re-establish contact with reality.</li>
+              <li><strong>Anxiety grounding</strong> focuses on calming the hyperactivated nervous system. Techniques emphasize soothing sensory input, soft textures, cool water, calming scents. The goal is to downregulate arousal. Pairing grounding with <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing</Link> enhances the calming effect.</li>
+              <li><strong>Dissociation grounding</strong> focuses on reconnecting with the body and environment. Techniques emphasize strong, alerting sensory input, cold water on the wrists, ice in the hands, stomping feet on the ground, strong scents like peppermint. The goal is to increase arousal and awareness enough to re-establish contact with reality.</li>
             </ul>
             <p>
               The 5-4-3-2-1 method works for both because it systematically re-engages the senses regardless of whether you are hyper-aroused (anxious) or hypo-aroused (dissociated). However, for dissociation, adding a physical component like squeezing ice cubes or running cold water over your hands can accelerate the process.
@@ -240,7 +240,7 @@ export default function GroundingTechniquesGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

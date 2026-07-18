@@ -167,7 +167,7 @@ export function CrafftClient({ faqData }: Props) {
                 ? "text-amber-700 dark:text-amber-300"
                 : "text-green-700 dark:text-green-300"
             }`}>
-              {isPositive ? "Higher Risk — Positive Screen" : "Lower Risk"}
+              {isPositive ? "Higher Risk, Positive Screen" : "Lower Risk"}
             </h2>
             <span className={`text-2xl font-bold ${
               isPositive
@@ -192,9 +192,9 @@ export function CrafftClient({ faqData }: Props) {
               : "text-green-700 dark:text-green-300"
           }`}>
             {isPositive
-              ? "Your answers suggest that your use of alcohol or drugs might be putting you at risk. This doesn't mean you're in trouble — it means that talking to someone you trust could be really helpful. A parent, school counselor, doctor, or other trusted adult can help you think through what's going on."
+              ? "Your answers suggest that your use of alcohol or drugs might be putting you at risk. This doesn't mean you're in trouble, it means that talking to someone you trust could be really helpful. A parent, school counselor, doctor, or other trusted adult can help you think through what's going on."
               : score === 1
-                ? "Your overall score is below the screening threshold, which is a positive sign. However, you did answer \"Yes\" to one question — take a look at which one it was and think about whether it's something worth paying attention to."
+                ? "Your overall score is below the screening threshold, which is a positive sign. However, you did answer \"Yes\" to one question, take a look at which one it was and think about whether it's something worth paying attention to."
                 : "Your answers suggest a lower level of risk right now. That's good news. Keep making safe choices, and remember that this screening is always here if things change."
             }
           </p>
@@ -252,7 +252,7 @@ export function CrafftClient({ faqData }: Props) {
               Important Safety Note
             </h3>
             <p className="text-sm text-red-700 dark:text-red-300 leading-relaxed">
-              Riding in a car with a driver who has been using alcohol or drugs is one of the leading causes of death for young people. Please never get in a car with an impaired driver. It is always okay to call a parent, another trusted adult, or a rideshare service instead — even if it feels awkward in the moment. Your safety is more important.
+              Riding in a car with a driver who has been using alcohol or drugs is one of the leading causes of death for young people. Please never get in a car with an impaired driver. It is always okay to call a parent, another trusted adult, or a rideshare service instead, even if it feels awkward in the moment. Your safety is more important.
             </p>
           </div>
         )}
@@ -264,7 +264,7 @@ export function CrafftClient({ faqData }: Props) {
               About Nicotine &amp; Vaping
             </h3>
             <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed mb-2">
-              You indicated that you have used nicotine or tobacco products in the past 12 months. Nicotine is highly addictive, and the younger you start, the harder it can be to quit. Vaping and e-cigarettes are not safe alternatives to smoking — they still deliver nicotine and other chemicals that can affect your developing brain and lungs.
+              You indicated that you have used nicotine or tobacco products in the past 12 months. Nicotine is highly addictive, and the younger you start, the harder it can be to quit. Vaping and e-cigarettes are not safe alternatives to smoking, they still deliver nicotine and other chemicals that can affect your developing brain and lungs.
             </p>
             <p className="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
               If you want to quit or cut down, free help is available: text DITCHVAPE to 88709, call 1-800-QUIT-NOW (1-800-784-8669), or visit teen.smokefree.gov.
@@ -284,23 +284,23 @@ export function CrafftClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-amber-700 dark:text-amber-300">
               <li className="flex items-start gap-2">
                 <span className="shrink-0 mt-0.5">•</span>
-                <span><strong>Talk to a trusted adult</strong> — a parent, school counselor, coach, or family member</span>
+                <span><strong>Talk to a trusted adult</strong>, a parent, school counselor, coach, or family member</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="shrink-0 mt-0.5">•</span>
-                <span><strong>Talk to your doctor</strong> — they can help privately and without judgment</span>
+                <span><strong>Talk to your doctor</strong>, they can help privately and without judgment</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="shrink-0 mt-0.5">•</span>
-                <span><strong>Text HOME to 741741</strong> — free, confidential Crisis Text Line (24/7)</span>
+                <span><strong>Text HOME to 741741</strong>, free, confidential Crisis Text Line (24/7)</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="shrink-0 mt-0.5">•</span>
-                <span><strong>Call or text 988</strong> — Suicide &amp; Crisis Lifeline (24/7)</span>
+                <span><strong>Call or text 988</strong>, Suicide &amp; Crisis Lifeline (24/7)</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="shrink-0 mt-0.5">•</span>
-                <span><strong>Call 1-800-662-4357</strong> — SAMHSA National Helpline for treatment referrals (24/7)</span>
+                <span><strong>Call 1-800-662-4357</strong>, SAMHSA National Helpline for treatment referrals (24/7)</span>
               </li>
             </ul>
           </div>
@@ -366,7 +366,7 @@ export function CrafftClient({ faqData }: Props) {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
               <li>
                 Knight, J. R., Sherritt, L., Shrier, L. A., et al. (2002). Validity of the CRAFFT substance abuse screening test among adolescent clinic patients.{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/12042886/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — CRAFFT Validation</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/12042886/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, CRAFFT Validation</a>
               </li>
               <li>
                 SAMHSA. Underage Drinking.{" "}
@@ -420,7 +420,7 @@ export function CrafftClient({ faqData }: Props) {
           toolName="CRAFFT Screening"
           toolUrl="https://mindchecktools.com/crafft-substance-screening"
           score={score}
-          severityLabel={isPositive ? "Higher Risk — Positive Screen" : "Lower Risk"}
+          severityLabel={isPositive ? "Higher Risk, Positive Screen" : "Lower Risk"}
           scoreRange={isPositive ? "2+" : "0–1"}
           interpretation={
             isPositive
@@ -462,14 +462,14 @@ export function CrafftClient({ faqData }: Props) {
           </p>
           <h2>How the CRAFFT Works</h2>
           <p>
-            The CRAFFT uses a two-part structure. <strong>Part A</strong> asks about recent substance use (past 12 months) to determine which Part B questions are relevant. If you haven&apos;t used alcohol, marijuana, or other drugs in the past year, you only need to answer the &ldquo;Car&rdquo; question about riding with impaired drivers — an important safety question for all young people regardless of personal use.
+            The CRAFFT uses a two-part structure. <strong>Part A</strong> asks about recent substance use (past 12 months) to determine which Part B questions are relevant. If you haven&apos;t used alcohol, marijuana, or other drugs in the past year, you only need to answer the &ldquo;Car&rdquo; question about riding with impaired drivers, an important safety question for all young people regardless of personal use.
           </p>
           <p>
             If you have used any substances, <strong>Part B</strong> asks all six CRAFFT questions. Each &ldquo;Yes&rdquo; answer adds one point to your score. The six questions were carefully chosen because research shows they are the best predictors of substance-related problems in young people. A score of 2 or higher suggests a pattern that may benefit from a conversation with a healthcare provider.
           </p>
           <h2>Why the CRAFFT Matters</h2>
           <p>
-            Substance use during adolescence carries unique risks because the brain continues developing until around age 25. Alcohol, drugs, and nicotine can affect brain development, learning, memory, and decision-making in ways that are different from adult use. Early identification of risky patterns gives young people the best chance of avoiding long-term problems. The CRAFFT is not about punishment or labels — it is about helping young people make informed decisions about their health and safety.
+            Substance use during adolescence carries unique risks because the brain continues developing until around age 25. Alcohol, drugs, and nicotine can affect brain development, learning, memory, and decision-making in ways that are different from adult use. Early identification of risky patterns gives young people the best chance of avoiding long-term problems. The CRAFFT is not about punishment or labels, it is about helping young people make informed decisions about their health and safety.
           </p>
         </div>
 
@@ -483,7 +483,7 @@ export function CrafftClient({ faqData }: Props) {
 
         <ToolReviewerBio />
 
-        {/* Crisis Resources — youth-specific */}
+        {/* Crisis Resources, youth-specific */}
         <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl">
           <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-2">
             Need to Talk to Someone?
@@ -540,6 +540,7 @@ export function CrafftClient({ faqData }: Props) {
             ))}
           </div>
         </div>
+
       </div>
     );
   }
@@ -556,7 +557,7 @@ export function CrafftClient({ faqData }: Props) {
         CRAFFT Screening
       </h1>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
-        A quick, confidential check-in about alcohol, drugs, and safety — designed for young people ages 12–21.
+        A quick, confidential check-in about alcohol, drugs, and safety, designed for young people ages 12–21.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
         ~2 minutes · Yes/No questions · Completely private · CRAFFT 2.1+N
@@ -567,7 +568,7 @@ export function CrafftClient({ faqData }: Props) {
       {/* Reassurance */}
       <div className="mb-8 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">
         <p className="text-sm text-sage-700 dark:text-sage-300 text-center leading-relaxed">
-          No judgment here. Your answers are private — they stay in your browser and are never saved or shared with anyone. Not your parents, not your school, not us.
+          No judgment here. Your answers are private, they stay in your browser and are never saved or shared with anyone. Not your parents, not your school, not us.
         </p>
       </div>
 
@@ -647,7 +648,7 @@ export function CrafftClient({ faqData }: Props) {
         </div>
       </div>
 
-      {/* Part B — appears after all Part A answered */}
+      {/* Part B, appears after all Part A answered */}
       {allPartAAnswered && (
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-1">

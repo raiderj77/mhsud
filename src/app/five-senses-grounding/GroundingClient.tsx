@@ -457,12 +457,12 @@ export function GroundingClient({ faqData }: Props) {
           How to Use This Grounding Tool
         </h2>
         <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li><strong>Find a comfortable position</strong> — Sit or stand wherever you are. You do not need a quiet room.</li>
+          <li><strong>Find a comfortable position</strong>, Sit or stand wherever you are. You do not need a quiet room.</li>
           <li><strong>Press &quot;Begin Grounding Exercise&quot;</strong> to start. Optionally turn on the breathing pause to give yourself a moment between senses.</li>
-          <li><strong>Follow each step</strong> — The tool will ask you to name things you can see, touch, hear, smell, and taste, one sense at a time.</li>
-          <li><strong>Type what you notice</strong> — Writing it out engages your brain more than just thinking about it, which is why this tool uses text inputs.</li>
-          <li><strong>Move at your own pace</strong> — There is no time limit. Take as long as you need on each step.</li>
-          <li><strong>Review your summary</strong> — At the end, you will see everything you noticed. This is a reminder that you are safe and present.</li>
+          <li><strong>Follow each step</strong>, The tool will ask you to name things you can see, touch, hear, smell, and taste, one sense at a time.</li>
+          <li><strong>Type what you notice</strong>, Writing it out engages your brain more than just thinking about it, which is why this tool uses text inputs.</li>
+          <li><strong>Move at your own pace</strong>, There is no time limit. Take as long as you need on each step.</li>
+          <li><strong>Review your summary</strong>, At the end, you will see everything you noticed. This is a reminder that you are safe and present.</li>
         </ol>
       </section>
 
@@ -473,10 +473,10 @@ export function GroundingClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
           <p>
-            The 5-4-3-2-1 grounding technique is one of the most widely recommended coping strategies for anxiety, panic attacks, and dissociation. It works by redirecting your attention away from distressing thoughts and into the present moment through <strong>sensory awareness</strong>. When anxiety activates your body&apos;s fight-or-flight response, your brain gets locked into &quot;threat mode&quot; — scanning for danger, ruminating on worst-case scenarios, or disconnecting from reality entirely. The 5-4-3-2-1 technique interrupts this cycle by giving your brain a concrete, immediate task: notice what is real and present around you.
+            The 5-4-3-2-1 grounding technique is one of the most widely recommended coping strategies for anxiety, panic attacks, and dissociation. It works by redirecting your attention away from distressing thoughts and into the present moment through <strong>sensory awareness</strong>. When anxiety activates your body&apos;s fight-or-flight response, your brain gets locked into &quot;threat mode&quot;, scanning for danger, ruminating on worst-case scenarios, or disconnecting from reality entirely. The 5-4-3-2-1 technique interrupts this cycle by giving your brain a concrete, immediate task: notice what is real and present around you.
           </p>
           <p>
-            The counting structure (5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste) is designed to work through your senses from most accessible to least. Vision is the easiest — you can always find 5 things to look at. Taste is the hardest, which is why only one item is asked for. This graduated difficulty keeps you engaged and makes the exercise achievable even during intense anxiety or panic.
+            The counting structure (5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste) is designed to work through your senses from most accessible to least. Vision is the easiest, you can always find 5 things to look at. Taste is the hardest, which is why only one item is asked for. This graduated difficulty keeps you engaged and makes the exercise achievable even during intense anxiety or panic.
           </p>
           <p>
             The technique is rooted in <strong>cognitive behavioral therapy (CBT)</strong> and <strong>dialectical behavior therapy (DBT)</strong>, where grounding is a core distress tolerance skill. Research on mindfulness-based interventions shows that sensory grounding reduces amygdala activation (the brain&apos;s fear center) and increases prefrontal cortex activity (responsible for rational thinking and emotional regulation). A 2019 study in the <em>Journal of Clinical Psychology</em> found that grounding techniques significantly reduced symptoms of acute anxiety and dissociation in clinical populations.
@@ -498,7 +498,7 @@ export function GroundingClient({ faqData }: Props) {
             Why Typing Helps
           </h3>
           <p>
-            Most guided grounding exercises ask you to simply think about what you notice. This tool asks you to <strong>type it out</strong>, which adds a layer of cognitive engagement. Writing activates different brain regions than passive observation — it requires you to find words, organize thoughts, and use your hands. This additional engagement makes the grounding more effective because it gives anxious brain pathways even less room to continue their distress loop.
+            Most guided grounding exercises ask you to simply think about what you notice. This tool asks you to <strong>type it out</strong>, which adds a layer of cognitive engagement. Writing activates different brain regions than passive observation, it requires you to find words, organize thoughts, and use your hands. This additional engagement makes the grounding more effective because it gives anxious brain pathways even less room to continue their distress loop.
           </p>
         </div>
       </section>
@@ -586,11 +586,11 @@ export function GroundingClient({ faqData }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 text-sm">
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-              <p className="text-amber-700 dark:text-amber-300">Call or text 988 — 24/7, free & confidential</p>
+              <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
             </div>
             <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
               <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357 — Treatment referral & info</p>
+              <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
             </div>
           </div>
         </div>
@@ -619,17 +619,17 @@ export function GroundingClient({ faqData }: Props) {
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
             <a href="https://www.va.gov/wholehealthlibrary/tools/grounding-techniques.asp" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              VA Whole Health Library — Grounding Techniques
+              VA Whole Health Library, Grounding Techniques
             </a>
           </li>
           <li>
             <a href="https://www.therapistaid.com/therapy-worksheet/grounding-techniques" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Therapist Aid — Grounding Techniques Worksheet
+              Therapist Aid, Grounding Techniques Worksheet
             </a>
           </li>
           <li>
             <a href="https://dialecticalbehaviortherapy.com/distress-tolerance/grounding/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              DBT Skills — Grounding as a Distress Tolerance Skill
+              DBT Skills, Grounding as a Distress Tolerance Skill
             </a>
           </li>
         </ul>

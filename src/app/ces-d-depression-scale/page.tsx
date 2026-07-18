@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "How is the CES-D scored?",
     answer:
-      "Each of the 20 items is rated on a 4-point scale for the past week: 0 (Rarely or none of the time — less than 1 day), 1 (Some or a little of the time — 1-2 days), 2 (Occasionally or a moderate amount — 3-4 days), 3 (Most or all of the time — 5-7 days). Four items (#4, #8, #12, #16) are positively worded and reverse-scored: for these, the scoring is reversed (0 becomes 3, 1 becomes 2, etc.). The total score ranges from 0 to 60. A score of 16 or higher is the traditional cutoff suggesting clinically significant depressive symptoms.",
+      "Each of the 20 items is rated on a 4-point scale for the past week: 0 (Rarely or none of the time, less than 1 day), 1 (Some or a little of the time, 1-2 days), 2 (Occasionally or a moderate amount, 3-4 days), 3 (Most or all of the time, 5-7 days). Four items (#4, #8, #12, #16) are positively worded and reverse-scored: for these, the scoring is reversed (0 becomes 3, 1 becomes 2, etc.). The total score ranges from 0 to 60. A score of 16 or higher is the traditional cutoff suggesting clinically significant depressive symptoms.",
   },
   {
     question: "What are the reverse-scored items?",
@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "What does a CES-D score of 16 or higher mean?",
     answer:
-      "A score of 16 or higher on the CES-D is the traditionally used cutoff suggesting clinically significant depressive symptoms. This threshold was established in Radloff's original 1977 validation study and has been replicated in many populations. However, exceeding this cutoff does not mean you have clinical depression — it means your symptom level warrants further evaluation. Many factors can elevate a CES-D score, including grief, stress, medical illness, or sleep deprivation. A qualified healthcare professional can help determine what your symptoms mean in context.",
+      "A score of 16 or higher on the CES-D is the traditionally used cutoff suggesting clinically significant depressive symptoms. This threshold was established in Radloff's original 1977 validation study and has been replicated in many populations. However, exceeding this cutoff does not mean you have clinical depression, it means your symptom level warrants further evaluation. Many factors can elevate a CES-D score, including grief, stress, medical illness, or sleep deprivation. A qualified healthcare professional can help determine what your symptoms mean in context.",
   },
   {
     question: "Is my data private?",
@@ -75,7 +75,7 @@ export default function CesdPage() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -104,7 +104,7 @@ export default function CesdPage() {
         <AnswerBlock
           what="The CES-D (Center for Epidemiologic Studies Depression Scale), a 20-item validated depression screening used in research and clinical settings."
           who="Adults who want a comprehensive depression symptom assessment using a widely researched screening instrument."
-          bottomLine="The CES-D measures depressive symptoms over the past week — a high score warrants professional follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The CES-D measures depressive symptoms over the past week, a high score warrants professional follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

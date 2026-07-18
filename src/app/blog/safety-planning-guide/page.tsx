@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "When should I use my safety plan?",
     answer:
-      "Use your safety plan at the earliest sign of a crisis \u2014 when you first notice increasing hopelessness, withdrawal from others, racing thoughts about self-harm, or overwhelming emotional pain. The earlier you engage with your plan, the more effective it is. You do not need to wait until you are in acute danger to start using it.",
+      "Use your safety plan at the earliest sign of a crisis, when you first notice increasing hopelessness, withdrawal from others, racing thoughts about self-harm, or overwhelming emotional pain. The earlier you engage with your plan, the more effective it is. You do not need to wait until you are in acute danger to start using it.",
   },
   {
     question: "Should I create a safety plan with a therapist?",
@@ -88,7 +88,7 @@ export default function SafetyPlanningGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            A crisis does not wait for you to be ready. When overwhelming emotional pain strikes, your ability to think clearly and make decisions is impaired &mdash; which is exactly when you need a plan the most. A safety plan is a written, step-by-step guide you create in advance so that when a crisis arrives, you do not have to figure out what to do in the moment. You already know. The plan is already there.
+            A crisis does not wait for you to be ready. When overwhelming emotional pain strikes, your ability to think clearly and make decisions is impaired, which is exactly when you need a plan the most. A safety plan is a written, step-by-step guide you create in advance so that when a crisis arrives, you do not have to figure out what to do in the moment. You already know. The plan is already there.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function SafetyPlanningGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis right now</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
               You do not need to be in immediate danger to reach out. These services are available for anyone experiencing emotional distress.
@@ -117,7 +117,7 @@ export default function SafetyPlanningGuidePage() {
           <section>
             <h2>What is a safety plan?</h2>
             <p>
-              A safety plan is a written, prioritized list of coping strategies and resources you can turn to when experiencing a suicidal crisis or overwhelming emotional distress. It is designed to be brief, specific, and actionable &mdash; something you can pull out and follow step by step when your thinking is clouded by pain.
+              A safety plan is a written, prioritized list of coping strategies and resources you can turn to when experiencing a suicidal crisis or overwhelming emotional distress. It is designed to be brief, specific, and actionable, something you can pull out and follow step by step when your thinking is clouded by pain.
             </p>
             <p>
               The most widely used and researched model is the Stanley-Brown Safety Planning Intervention (SPI), developed by Barbara Stanley, Ph.D., and Gregory Brown, Ph.D. A 2018 study published in <em>JAMA Psychiatry</em> (Stanley et al.) found that safety planning combined with structured follow-up reduced suicide attempts by 45% among veterans presenting to emergency departments with suicidal ideation.
@@ -130,7 +130,7 @@ export default function SafetyPlanningGuidePage() {
           <section>
             <h2>The 6 steps of the Stanley-Brown Safety Plan</h2>
             <p>
-              The Stanley-Brown model follows a specific sequence, starting with things you can do on your own and escalating to external support. This structure is intentional &mdash; it gives you multiple options before reaching the point of needing emergency intervention.
+              The Stanley-Brown model follows a specific sequence, starting with things you can do on your own and escalating to external support. This structure is intentional, it gives you multiple options before reaching the point of needing emergency intervention.
             </p>
 
             <h3>Step 1: Recognize your warning signs</h3>
@@ -138,7 +138,7 @@ export default function SafetyPlanningGuidePage() {
               What are the early signals that a crisis may be developing? These are the thoughts, feelings, behaviors, or situations that typically precede your worst moments. Examples include increasing isolation, persistent thoughts of being a burden, disrupted sleep, or a specific emotional state like hopelessness or rage.
             </p>
             <p>
-              Being specific is critical. &quot;Feeling bad&quot; is too vague. &quot;Staying in bed past noon and not responding to messages for two days&quot; is actionable &mdash; it tells you exactly when to pull out the plan.
+              Being specific is critical. &quot;Feeling bad&quot; is too vague. &quot;Staying in bed past noon and not responding to messages for two days&quot; is actionable, it tells you exactly when to pull out the plan.
             </p>
 
             <h3>Step 2: Use internal coping strategies</h3>
@@ -155,7 +155,7 @@ export default function SafetyPlanningGuidePage() {
 
             <h3>Step 3: Contact people and places for distraction</h3>
             <p>
-              If internal strategies are not enough, the next step is putting yourself around other people &mdash; not necessarily to talk about your crisis, but to interrupt isolation. This might mean going to a coffee shop, gym, library, or place of worship. It might mean calling a friend to talk about anything other than how you are feeling.
+              If internal strategies are not enough, the next step is putting yourself around other people, not necessarily to talk about your crisis, but to interrupt isolation. This might mean going to a coffee shop, gym, library, or place of worship. It might mean calling a friend to talk about anything other than how you are feeling.
             </p>
 
             <h3>Step 4: Ask someone for help</h3>
@@ -170,7 +170,7 @@ export default function SafetyPlanningGuidePage() {
 
             <h3>Step 6: Make the environment safe</h3>
             <p>
-              This step involves reducing access to lethal means during a crisis. Research consistently shows that means restriction is one of the most effective suicide prevention strategies &mdash; most suicidal crises are temporary, and if lethal means are not accessible during the crisis period, the person often survives. This might involve asking a trusted person to temporarily hold medications, firearms, or other items.
+              This step involves reducing access to lethal means during a crisis. Research consistently shows that means restriction is one of the most effective suicide prevention strategies, most suicidal crises are temporary, and if lethal means are not accessible during the crisis period, the person often survives. This might involve asking a trusted person to temporarily hold medications, firearms, or other items.
             </p>
           </section>
 
@@ -179,7 +179,7 @@ export default function SafetyPlanningGuidePage() {
           <section>
             <h2>Why safety plans work</h2>
             <p>
-              Safety plans work because they address the core problem of suicidal crises: impaired decision-making during extreme emotional pain. When someone is in crisis, their cognitive field narrows &mdash; a phenomenon called cognitive constriction. Options that seem obvious during calm moments become invisible during a crisis.
+              Safety plans work because they address the core problem of suicidal crises: impaired decision-making during extreme emotional pain. When someone is in crisis, their cognitive field narrows, a phenomenon called cognitive constriction. Options that seem obvious during calm moments become invisible during a crisis.
             </p>
             <p>
               A written safety plan bypasses this impairment. You do not need to generate solutions in the moment because the solutions are already written down. You just need to follow the steps. The sequential structure means there is always a next thing to try, which counteracts the feeling that nothing can help.
@@ -192,7 +192,7 @@ export default function SafetyPlanningGuidePage() {
           <section>
             <h2>Safety plans are not no-suicide contracts</h2>
             <p>
-              It is important to understand what a safety plan is not. For years, clinicians used &quot;no-suicide contracts&quot; or &quot;contracts for safety&quot; &mdash; verbal or written agreements where a patient promised not to harm themselves. These contracts have no evidence supporting their effectiveness and may actually increase risk by creating a false sense of security.
+              It is important to understand what a safety plan is not. For years, clinicians used &quot;no-suicide contracts&quot; or &quot;contracts for safety&quot;, verbal or written agreements where a patient promised not to harm themselves. These contracts have no evidence supporting their effectiveness and may actually increase risk by creating a false sense of security.
             </p>
             <p>
               A safety plan is fundamentally different. It does not ask you to promise anything. Instead, it gives you concrete tools and a clear path of escalation. It acknowledges that crises will happen and prepares for them rather than pretending a promise can prevent them.
@@ -227,7 +227,7 @@ export default function SafetyPlanningGuidePage() {
               A therapist can help you create a more thorough safety plan, address the underlying issues contributing to crisis episodes, and provide evidence-based treatments such as Dialectical Behavior Therapy (DBT), Cognitive Behavioral Therapy for Suicide Prevention (CBT-SP), or the Collaborative Assessment and Management of Suicidality (CAMS).
             </p>
             <p>
-              If you do not currently have a therapist, SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals. You do not need to be in crisis to call &mdash; they can help you find a provider in your area.
+              If you do not currently have a therapist, SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals. You do not need to be in crisis to call, they can help you find a provider in your area.
             </p>
           </section>
 
@@ -251,7 +251,7 @@ export default function SafetyPlanningGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

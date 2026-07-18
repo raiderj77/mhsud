@@ -33,12 +33,12 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2>Not medical advice — critical disclaimer</h2>
+            <h2>Not medical advice, critical disclaimer</h2>
             <p>
               <strong>MindCheck Tools does not provide medical advice, diagnoses, or treatment recommendations.</strong> All tools, questionnaires, screeners, checklists, and content on this Site are provided for educational and self-reflection purposes only.
             </p>
             <p>
-              The self-check tools on this Site — including the PHQ-9, GAD-7, AUDIT, AUDIT-C, and all original tools — are screening instruments. A screening result is not the same as a clinical diagnosis. Only a qualified healthcare professional (such as a physician, psychiatrist, psychologist, or licensed clinical social worker) can diagnose a mental health condition or substance use disorder.
+              The self-check tools on this Site, including the PHQ-9, GAD-7, AUDIT, AUDIT-C, and all original tools, are screening instruments. A screening result is not the same as a clinical diagnosis. Only a qualified healthcare professional (such as a physician, psychiatrist, psychologist, or licensed clinical social worker) can diagnose a mental health condition or substance use disorder.
             </p>
             <p>
               <strong>Do not rely on any information on this Site as a substitute for professional medical advice, diagnosis, or treatment.</strong> Always seek the advice of your physician or other qualified healthcare provider with any questions you may have regarding a medical or mental health condition. Never disregard professional medical advice or delay in seeking it because of something you have read or scored on this Site.
@@ -55,7 +55,7 @@ export default function TermsPage() {
           <section>
             <h2>Emergency situations</h2>
             <p>
-              <strong>If you are experiencing a medical or mental health emergency — including thoughts of harming yourself or others — please call your local emergency number (911 in the US) or go to your nearest emergency room immediately.</strong>
+              <strong>If you are experiencing a medical or mental health emergency, including thoughts of harming yourself or others, please call your local emergency number (911 in the US) or go to your nearest emergency room immediately.</strong>
             </p>
             <p>
               MindCheck Tools is not equipped to handle emergencies. Our <Link href="/crisis-resources">crisis resources page</Link> lists helplines and services, but we are not a crisis service and cannot provide immediate help.
@@ -88,7 +88,7 @@ export default function TermsPage() {
           <section>
             <h2>Intellectual property</h2>
             <p>
-              The PHQ-9, GAD-7, and AUDIT/AUDIT-C instruments are in the public domain and may be used freely. All original content on this Site — including original tools (Work Stress &amp; Burnout, Mental Load Calculator, Sleep &amp; Mood Reflection), article text, page designs, and visual elements — is the property of MindCheck Tools and is protected by applicable intellectual property laws.
+              The PHQ-9, GAD-7, and AUDIT/AUDIT-C instruments are in the public domain and may be used freely. All original content on this Site, including original tools (Work Stress &amp; Burnout, Mental Load Calculator, Sleep &amp; Mood Reflection), article text, page designs, and visual elements, is the property of MindCheck Tools and is protected by applicable intellectual property laws.
             </p>
             <p>
               You may use our tools for personal, educational, or clinical purposes. You may not reproduce, redistribute, or commercially use our original content without written permission.
@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: your screening answers are processed entirely in your browser and never transmitted to any server. We use Google Analytics (with Consent Mode v2) for page-level analytics. We may display advertising in the future.
+              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: screening answers are processed entirely in your browser and are not transmitted to our servers. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. We use consent-controlled analytics. Advertising is not currently enabled.
             </p>
           </section>
 
@@ -118,13 +118,13 @@ export default function TermsPage() {
               If you are located in the EEA or UK, you have rights under the General Data Protection Regulation (GDPR) including:
             </p>
             <p>
-              <strong>Right to access:</strong> You can request information about what personal data we process. Since we do not collect personal data through our tools (screening answers stay in your browser), there is typically nothing to provide. Google Analytics processes anonymized data on our behalf.
+              <strong>Right to access:</strong> You can request information about what personal data we process. Screening answers stay in your browser. If you subscribed to resource emails, the subscriber record contains your email address.
             </p>
             <p>
-              <strong>Right to erasure:</strong> You can request deletion of your personal data. Since we don&apos;t store personal data, you can clear cookies through your browser and use our cookie consent controls to withdraw consent. 
+              <strong>Right to erasure:</strong> You can request deletion of your subscriber record by contacting privacy@mindchecktools.com. You can also unsubscribe from any marketing email, clear browser storage, and use our cookie controls to withdraw cookie consent. Service providers may retain limited records where required for suppression, security, backup, or legal obligations.
             </p>
             <p>
-              <strong>Right to object / withdraw consent:</strong> You can withdraw cookie consent at any time through our cookie banner or the <Link href="/cookies">Cookie Policy</Link> page.
+              <strong>Right to object / withdraw consent:</strong> You can unsubscribe from resource emails through any email and withdraw cookie consent through our cookie banner or the <Link href="/cookies">Cookie Policy</Link> page.
             </p>
             <p>
               <strong>Right to lodge a complaint:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you believe your data rights have been violated.
@@ -133,7 +133,7 @@ export default function TermsPage() {
               <strong>Data controller:</strong> MindCheck Tools (mindchecktools.com). Contact: <strong>privacy@mindchecktools.com</strong>.
             </p>
             <p>
-              <strong>Legal basis for processing:</strong> Consent (for analytics and advertising cookies). Legitimate interest (for essential site functionality).
+              <strong>Legal basis for processing:</strong> Consent for resource emails and non-essential cookies; legitimate interest for essential site functionality and security.
             </p>
           </section>
 
@@ -146,7 +146,7 @@ export default function TermsPage() {
               <strong>Right to know:</strong> You can request information about what personal information we collect, use, and disclose. Our data practices are described in our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link>.
             </p>
             <p>
-              <strong>Right to delete:</strong> You can request deletion of your personal information. Since we do not store personal information from tools, clearing your browser cookies and localStorage is sufficient.
+              <strong>Right to delete:</strong> Screening answers are not stored by us. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
               <strong>Right to opt out of sale/sharing:</strong> We do not &quot;sell&quot; personal information in the traditional sense. However, certain cookie-based analytics or advertising data may constitute &quot;sharing&quot; under the CPRA. You can opt out via our cookie banner or by using a browser that sends the Global Privacy Control (GPC) signal. We honor GPC signals.

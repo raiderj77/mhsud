@@ -8,8 +8,10 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { TherapyCTA } from "@/components/TherapyCTA";
 import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 
 
 const QUESTIONS = [
@@ -49,9 +51,10 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  suppressTherapyCTA?: boolean;
 }
 
-export function GAD7Client({ faqData }: Props) {
+export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(7).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -80,6 +83,7 @@ export function GAD7Client({ faqData }: Props) {
   }
 
   function handleSubmit() {
+    trackAssessmentEvent("assessment_completed");
     setShowResults(true);
     setTimeout(() => {
       if (resultsRef.current) resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -105,7 +109,7 @@ export function GAD7Client({ faqData }: Props) {
     const url = "https://mindchecktools.com/gad-7-anxiety-test";
     if (mode === "blank") {
       const shareData = {
-        title: "GAD-7 Anxiety Self-Check — Free & Private",
+        title: "GAD-7 Anxiety Self-Check, Free & Private",
         text: "Take a free, private GAD-7 Anxiety Self-Check. Your answers never leave your browser.",
         url,
       };
@@ -117,7 +121,7 @@ export function GAD7Client({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `GAD-7 Anxiety Self-Check Results\nScore: ${totalScore}/21 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `GAD-7 Anxiety Self-Check Results\nScore: ${totalScore}/21, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My GAD-7 Anxiety Self-Check Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -147,20 +151,23 @@ export function GAD7Client({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
       </header>
 
-      {/* Reviewer Bio — visible before test so users see CADC-II credentials upfront */}
+      {/* Reviewer Bio, visible before test so users see CADC-II credentials upfront */}
       <ToolReviewerBio />
 
       {!accepted && (
         <DisclaimerGate
           toolName="GAD-7"
           toolDescription="This self-check uses the Generalized Anxiety Disorder-7 (GAD-7), a validated screening instrument developed by Drs. Spitzer, Kroenke, Williams, and Löwe. It is free to use without licensing fees."
-          onAccept={() => setAccepted(true)}
+          onAccept={() => {
+            trackAssessmentEvent("assessment_started");
+            setAccepted(true);
+          }}
         />
       )}
 
       {accepted && !showResults && (
         <div className="animate-fade-in">
-          {/* Privacy Trust Signal — visible immediately above first question */}
+          {/* Privacy Trust Signal, visible immediately above first question */}
           <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
             <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
             Your answers are scored locally in your browser and are never stored or shared.
@@ -221,11 +228,11 @@ export function GAD7Client({ faqData }: Props) {
 
       {showResults && (
         <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
-          {/* Severe-bracket crisis routing (YMYL safety) — placed above AdSlot and next steps */}
+          {/* Severe-bracket crisis routing (YMYL safety), placed above AdSlot and next steps */}
           {range.key === "severe" && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5" role="alert">
               <h3 className="font-serif text-lg font-semibold text-crisis-800 dark:text-crisis-300 mb-2">
-                Your score suggests severe anxiety — support is available
+                Your score suggests severe anxiety, support is available
               </h3>
               <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
                 A score of 15 or above on the GAD-7 indicates severe anxiety symptoms. Talking with a healthcare professional or contacting a crisis service is strongly encouraged.
@@ -243,13 +250,13 @@ export function GAD7Client({ faqData }: Props) {
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your GAD-7 Score</p>
               <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 21 — {range.level} anxiety level</p>
+              <p className={`text-sm font-semibold ${colors.text}`}>out of 21, {range.level} anxiety level</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 21) * 100}%` }} />
                 </div>
                 <div className="flex justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-1.5">
-                  <span>0 — Minimal</span><span>21 — Severe</span>
+                  <span>0, Minimal</span><span>21, Severe</span>
                 </div>
               </div>
             </div>
@@ -321,9 +328,9 @@ export function GAD7Client({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If anxiety is affecting your daily life, support is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -333,6 +340,9 @@ export function GAD7Client({ faqData }: Props) {
               ))}
             </div>
           </div>
+
+          {/* Therapist CTA — positioned after all crisis resources, shown only for moderate anxiety (not severe) */}
+          <TherapyCTA show={!suppressTherapyCTA && range.key === "moderate"} />
 
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
             <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
@@ -409,7 +419,7 @@ export function GAD7Client({ faqData }: Props) {
             />
           )}
 
-          <EmailCapture toolName="GAD-7" />
+          <EmailCapture />
 
           <AdSlot npa position="Below Results" className="mb-8" />
 
@@ -441,7 +451,7 @@ export function GAD7Client({ faqData }: Props) {
               <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
                 <li>
                   Spitzer, R. L., Kroenke, K., Williams, J. B., &amp; Löwe, B. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7.{" "}
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed — Validation Study</a>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/16717171/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Validation Study</a>
                 </li>
                 <li>
                   National Institute of Mental Health (NIMH). Anxiety Disorders.{" "}

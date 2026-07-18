@@ -14,6 +14,66 @@
   content-visibility: auto;
 }
 
+/* Keep secondary text and branded links readable on the site's warm light backgrounds. */
+.text-neutral-400,
+.text-neutral-500 {
+  color: #525252;
+}
+
+.text-sage-600,
+.hover\:text-sage-600:hover {
+  color: #0f766e;
+}
+
+.bg-sage-600 {
+  background-color: #0f766e;
+}
+
+.text-amber-600,
+.text-amber-700,
+.hover\:text-amber-800:hover,
+.text-warm-600,
+.text-warm-700 {
+  color: #92400e;
+}
+
+.text-emerald-600 {
+  color: #047857;
+}
+
+.text-sky-600 {
+  color: #0369a1;
+}
+
+.text-crisis-500,
+.text-crisis-600 {
+  color: #9f1239;
+}
+
+.text-red-600 {
+  color: #b91c1c;
+}
+
+.text-blue-500 {
+  color: #1d4ed8;
+}
+
+.text-slate-400,
+.text-slate-500 {
+  color: #475569;
+}
+
+.text-white\/80,
+.text-white\/60 {
+  color: #ffffff;
+}
+
+main p a:not([class*="btn-"]),
+main li a:not([class*="btn-"]) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

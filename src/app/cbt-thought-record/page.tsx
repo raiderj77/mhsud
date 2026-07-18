@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ThoughtRecordClient } from "./ThoughtRecordClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { LocalStorageNotice } from "@/components/LocalStorageNotice";
 
 const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
@@ -34,11 +35,11 @@ const FAQ_DATA = [
   },
   {
     question: "How often should I complete a thought record?",
-    answer: "During active CBT treatment, therapists typically recommend completing at least one thought record per day, especially when you notice strong negative emotions. Even 2-3 per week can build the cognitive restructuring skill over time. The key is consistency — regular practice trains your brain to automatically question distorted thoughts. Many people find it helpful to set a daily time (like the evening) to reflect on the most distressing moment of their day and work through it. Over time, you will start catching and challenging negative thoughts in real time without needing to write them down.",
+    answer: "During active CBT treatment, therapists typically recommend completing at least one thought record per day, especially when you notice strong negative emotions. Even 2-3 per week can build the cognitive restructuring skill over time. The key is consistency, regular practice trains your brain to automatically question distorted thoughts. Many people find it helpful to set a daily time (like the evening) to reflect on the most distressing moment of their day and work through it. Over time, you will start catching and challenging negative thoughts in real time without needing to write them down.",
   },
   {
     question: "What if my emotions do not change after completing a thought record?",
-    answer: "It is completely normal for emotion ratings to not change dramatically, especially in the beginning. The goal is not to eliminate negative emotions — it is to make your thinking more accurate and reduce the intensity somewhat. Even a 10-point reduction (e.g., anxiety from 80 to 70) is meaningful. If you consistently find no change, it may mean the balanced thought does not feel convincing yet, which is common. Try asking: 'What would I tell a friend in this situation?' or 'What will I think about this in a year?' If emotions remain very intense, this is worth discussing with a therapist who can help you develop the skill further.",
+    answer: "It is completely normal for emotion ratings to not change dramatically, especially in the beginning. The goal is not to eliminate negative emotions, it is to make your thinking more accurate and reduce the intensity somewhat. Even a 10-point reduction (e.g., anxiety from 80 to 70) is meaningful. If you consistently find no change, it may mean the balanced thought does not feel convincing yet, which is common. Try asking: 'What would I tell a friend in this situation?' or 'What will I think about this in a year?' If emotions remain very intense, this is worth discussing with a therapist who can help you develop the skill further.",
   },
   {
     question: "What is the difference between a thought and an emotion?",
@@ -50,7 +51,7 @@ const FAQ_DATA = [
   },
   {
     question: "Are my thought records private?",
-    answer: "Yes. Everything you write in this tool stays in your browser's local storage on your device. Nothing is sent to any server, collected, or shared with anyone. Your records are only accessible from the browser and device you created them on. If you clear your browser data, your records will be deleted. We recommend printing important records so you have a physical copy. If you share a device with others and want privacy, you can delete individual records or use your browser's private/incognito mode (though records will not persist in incognito mode).",
+    answer: "Entries are saved in this browser's local storage and are not intentionally sent to MindCheck Tools application servers. Anyone with access to the same browser profile may be able to read them. Clearing site data deletes the local records. On a shared device, use a private window or delete records when finished. Keep any printed or downloaded copy in a secure location you control.",
   },
 ];
 
@@ -68,7 +69,7 @@ export default function CbtThoughtRecordPage() {
               datePublished: "2026-03-05",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -90,14 +91,19 @@ export default function CbtThoughtRecordPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100">
+          CBT Thought Record
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="A guided CBT thought record worksheet that walks you through identifying, challenging, and reframing negative thought patterns."
           who="Anyone practicing cognitive behavioral therapy skills who wants a structured tool for examining unhelpful thoughts."
-          bottomLine="Thought records are a core CBT skill — regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Thought records are a core CBT skill, regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -130,7 +136,8 @@ export default function CbtThoughtRecordPage() {
         <h2>How Does the CBT Thought Record Work?</h2>
         <h2>What Do My Thought Record Results Mean?</h2>
       </section>
-<ThoughtRecordClient faqData={FAQ_DATA} />
+      <LocalStorageNotice dataDescription="your thought-record entries" />
+      <ThoughtRecordClient faqData={FAQ_DATA} />
     </>
   );
 }

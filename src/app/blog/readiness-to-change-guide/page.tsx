@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "What if I&apos;m not ready to change?",
     answer:
-      "Not being ready is not a personal failing \u2014 it is a recognized stage in the change process. Precontemplation and contemplation are valid stages where meaningful internal work happens. Motivational interviewing, education, and honest self-reflection are the most helpful approaches. The readiness assessment can help you clarify where you are right now.",
+      "Not being ready is not a personal failing, it is a recognized stage in the change process. Precontemplation and contemplation are valid stages where meaningful internal work happens. Motivational interviewing, education, and honest self-reflection are the most helpful approaches. The readiness assessment can help you clarify where you are right now.",
   },
   {
     question: "How does the readiness assessment work?",
@@ -70,7 +70,7 @@ export default function ReadinessToChangeGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Change does not happen all at once. Prochaska and DiClemente&apos;s Transtheoretical Model &mdash; one of the most widely used frameworks in addiction treatment &mdash; describes change as a process that unfolds through predictable stages. Understanding which stage you are in allows you to match your next step to where you actually are, rather than where someone else thinks you should be. The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> helps you identify your current stage so you can take the most effective next step.
+            Change does not happen all at once. Prochaska and DiClemente&apos;s Transtheoretical Model, one of the most widely used frameworks in addiction treatment, describes change as a process that unfolds through predictable stages. Understanding which stage you are in allows you to match your next step to where you actually are, rather than where someone else thinks you should be. The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> helps you identify your current stage so you can take the most effective next step.
           </p>
         </header>
 
@@ -79,9 +79,9 @@ export default function ReadinessToChangeGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -96,15 +96,15 @@ export default function ReadinessToChangeGuidePage() {
           <section>
             <h2>The Transtheoretical Model: how change actually works</h2>
             <p>
-              In the early 1980s, psychologists James Prochaska and Carlo DiClemente studied how people successfully change addictive behaviors &mdash; both with and without professional help. What they found challenged the prevailing assumption that change is a binary event (you either change or you do not). Instead, they discovered that change follows a predictable pattern of stages, and that people who succeed tend to use different strategies at different stages.
+              In the early 1980s, psychologists James Prochaska and Carlo DiClemente studied how people successfully change addictive behaviors, both with and without professional help. What they found challenged the prevailing assumption that change is a binary event (you either change or you do not). Instead, they discovered that change follows a predictable pattern of stages, and that people who succeed tend to use different strategies at different stages.
             </p>
             <p>
-              This became the Transtheoretical Model (TTM), also known as the Stages of Change model. It has since become one of the most influential frameworks in addiction treatment, health behavior change, and motivational interviewing. The model is not a judgment of where you &quot;should&quot; be &mdash; it is a map that helps you understand where you are and what will actually help you move forward from there.
+              This became the Transtheoretical Model (TTM), also known as the Stages of Change model. It has since become one of the most influential frameworks in addiction treatment, health behavior change, and motivational interviewing. The model is not a judgment of where you &quot;should&quot; be, it is a map that helps you understand where you are and what will actually help you move forward from there.
             </p>
           </section>
 
           <section>
-            <h2>Stage 1: Precontemplation &mdash; not yet considering change</h2>
+            <h2>Stage 1: Precontemplation, not yet considering change</h2>
             <p>
               In precontemplation, you are not yet considering change. You may not believe there is a problem, or you may be aware of the problem but feel that change is impossible, unnecessary, or not worth the cost. Common characteristics include:
             </p>
@@ -115,16 +115,16 @@ export default function ReadinessToChangeGuidePage() {
               <li>Feeling demoralized by past attempts at change</li>
             </ul>
             <p>
-              <strong>What helps at this stage:</strong> Confrontation and pressure typically increase resistance. What works is non-judgmental information, empathic listening, and gentle exploration of values. Motivational interviewing is specifically designed for this stage &mdash; it helps people examine the gap between their current behavior and their deeper values without feeling pushed. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST drug screening</Link> can provide objective feedback that supports self-reflection without judgment.
+              <strong>What helps at this stage:</strong> Confrontation and pressure typically increase resistance. What works is non-judgmental information, empathic listening, and gentle exploration of values. Motivational interviewing is specifically designed for this stage, it helps people examine the gap between their current behavior and their deeper values without feeling pushed. The <Link href="/audit-alcohol-test" className="text-sage-600 dark:text-sage-400 underline">AUDIT alcohol screening</Link> or <Link href="/who-assist-substance-screening" className="text-sage-600 dark:text-sage-400 underline">WHO-ASSIST drug screening</Link> can provide objective feedback that supports self-reflection without judgment.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
-            <h2>Stage 2: Contemplation &mdash; thinking about change</h2>
+            <h2>Stage 2: Contemplation, thinking about change</h2>
             <p>
-              In contemplation, you are aware that a problem exists and are seriously thinking about change, but you have not yet committed to action. This stage is defined by ambivalence &mdash; you can see both the reasons to change and the reasons to stay the same:
+              In contemplation, you are aware that a problem exists and are seriously thinking about change, but you have not yet committed to action. This stage is defined by ambivalence, you can see both the reasons to change and the reasons to stay the same:
             </p>
             <ul>
               <li>Acknowledging that substance use is causing problems</li>
@@ -133,12 +133,12 @@ export default function ReadinessToChangeGuidePage() {
               <li>Thinking about change &quot;someday&quot; but not setting a specific date</li>
             </ul>
             <p>
-              <strong>What helps at this stage:</strong> Exploring ambivalence honestly is the most productive work at this stage. Decisional balance exercises (listing the pros and cons of both changing and not changing) help clarify your thinking. The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> can help you see where you stand and what questions might be worth sitting with. Forcing action at this stage often backfires &mdash; contemplation is not procrastination; it is a necessary part of the process.
+              <strong>What helps at this stage:</strong> Exploring ambivalence honestly is the most productive work at this stage. Decisional balance exercises (listing the pros and cons of both changing and not changing) help clarify your thinking. The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> can help you see where you stand and what questions might be worth sitting with. Forcing action at this stage often backfires, contemplation is not procrastination; it is a necessary part of the process.
             </p>
           </section>
 
           <section>
-            <h2>Stage 3: Preparation &mdash; getting ready to act</h2>
+            <h2>Stage 3: Preparation, getting ready to act</h2>
             <p>
               In the preparation stage, you have decided to change and are beginning to plan how. You may have already taken small steps or set a target date. This stage is characterized by:
             </p>
@@ -157,7 +157,7 @@ export default function ReadinessToChangeGuidePage() {
           <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
-            <h2>Stage 4: Action &mdash; making the change</h2>
+            <h2>Stage 4: Action, making the change</h2>
             <p>
               The action stage is what most people think of when they think of &quot;change.&quot; You are actively modifying your behavior, experiences, and environment. This is the most visible stage, but it is also the most demanding:
             </p>
@@ -169,12 +169,12 @@ export default function ReadinessToChangeGuidePage() {
               <li>Actively working on your recovery every day</li>
             </ul>
             <p>
-              <strong>What helps at this stage:</strong> Behavioral strategies, social support, and practical tools. The <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline">HALT check-in</Link> helps you monitor vulnerability states daily. The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> gives you strategies when you need them. Celebrate small wins &mdash; each day of action reinforces the neural pathways that support your new behavior.
+              <strong>What helps at this stage:</strong> Behavioral strategies, social support, and practical tools. The <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline">HALT check-in</Link> helps you monitor vulnerability states daily. The <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> gives you strategies when you need them. Celebrate small wins, each day of action reinforces the neural pathways that support your new behavior.
             </p>
           </section>
 
           <section>
-            <h2>Stage 5: Maintenance &mdash; sustaining the change</h2>
+            <h2>Stage 5: Maintenance, sustaining the change</h2>
             <p>
               Maintenance is the stage where you work to sustain the changes you have made and prevent relapse. This stage begins after the initial action phase has stabilized (typically after about six months of sustained change) and, in the context of addiction recovery, often continues indefinitely:
             </p>
@@ -182,20 +182,20 @@ export default function ReadinessToChangeGuidePage() {
               <li>Continuing engagement with support systems (therapy, meetings, community)</li>
               <li>Maintaining healthy routines and coping strategies</li>
               <li>Recognizing and managing new triggers as they arise</li>
-              <li>Building a life that supports sobriety &mdash; meaningful work, healthy relationships, purpose</li>
+              <li>Building a life that supports sobriety, meaningful work, healthy relationships, purpose</li>
               <li>Ongoing self-monitoring and self-reflection</li>
             </ul>
             <p>
-              <strong>What helps at this stage:</strong> Continued vigilance without hypervigilance. The greatest risk in maintenance is complacency &mdash; the belief that because things are going well, you no longer need your recovery practices. Ongoing engagement with support, regular self-reflection through tools like the <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link>, and periodic reassessment of your relapse prevention plan all support sustained recovery.
+              <strong>What helps at this stage:</strong> Continued vigilance without hypervigilance. The greatest risk in maintenance is complacency, the belief that because things are going well, you no longer need your recovery practices. Ongoing engagement with support, regular self-reflection through tools like the <Link href="/daily-recovery-check-in" className="text-sage-600 dark:text-sage-400 underline">daily recovery check-in</Link>, and periodic reassessment of your relapse prevention plan all support sustained recovery.
             </p>
           </section>
 
           <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
-            <h2>Why readiness fluctuates &mdash; and that is normal</h2>
+            <h2>Why readiness fluctuates, and that is normal</h2>
             <p>
-              One of the most important insights from the Transtheoretical Model is that movement through the stages is not linear. People cycle through stages, revisit earlier stages, and sometimes move backward before moving forward again. This is not failure &mdash; it is the normal pattern of behavior change.
+              One of the most important insights from the Transtheoretical Model is that movement through the stages is not linear. People cycle through stages, revisit earlier stages, and sometimes move backward before moving forward again. This is not failure, it is the normal pattern of behavior change.
             </p>
             <p>
               Motivational interviewing, developed by William Miller and Stephen Rollnick, was designed specifically to work with this reality. Rather than pushing people toward action before they are ready, motivational interviewing helps people explore their own motivation at whatever stage they are in. The key principles include:
@@ -207,7 +207,7 @@ export default function ReadinessToChangeGuidePage() {
               <li><strong>Support self-efficacy:</strong> Reinforcing the person&apos;s belief that change is possible</li>
             </ul>
             <p>
-              The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> is designed with these principles in mind. It does not tell you what you should do &mdash; it helps you see where you are so you can decide what makes sense for you right now.
+              The <Link href="/readiness-to-change" className="text-sage-600 dark:text-sage-400 underline">readiness to change assessment</Link> is designed with these principles in mind. It does not tell you what you should do, it helps you see where you are so you can decide what makes sense for you right now.
             </p>
           </section>
 

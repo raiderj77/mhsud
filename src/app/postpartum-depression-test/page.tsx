@@ -82,7 +82,7 @@ export default function PostpartumDepressionTestPage() {
               datePublished: "2026-03-08",
               dateModified: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -97,7 +97,7 @@ export default function PostpartumDepressionTestPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -159,6 +159,10 @@ export default function PostpartumDepressionTestPage() {
             scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>
+
+        <a href="#screening" className="btn-primary inline-flex mb-8">
+          Start the postpartum depression screening
+        </a>
 
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
           What PPD Actually Feels Like
@@ -262,7 +266,7 @@ export default function PostpartumDepressionTestPage() {
           <h2>How Is the Postpartum Depression Test Scored?</h2>
           <h2>What Do My Postpartum Depression Results Mean?</h2>
         </section>
-        <PHQ9Client faqData={FAQ_DATA} />
+        <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         <div className="mt-10 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">

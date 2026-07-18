@@ -137,7 +137,7 @@ export function AppInstallPrompt() {
                 transition-colors duration-200
                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500"
               type="button"
-              aria-label="Dismiss install prompt"
+              aria-label="Not now"
             >
               Not now
             </button>

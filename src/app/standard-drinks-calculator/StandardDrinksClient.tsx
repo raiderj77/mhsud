@@ -381,8 +381,8 @@ export function StandardDrinksClient({ faqData }: Props) {
         </p>
         <div className="space-y-2.5">
           {[
-            { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357 \u2014 free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
-            { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 \u2014 available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+            { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+            { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
             { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
           ].map((r) => (
             <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">
@@ -416,7 +416,7 @@ export function StandardDrinksClient({ faqData }: Props) {
           <div>
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">NIAAA Drinking Guidelines</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              The National Institute on Alcohol Abuse and Alcoholism defines <strong>moderate drinking</strong> as up to 1 standard drink per day for women and up to 2 for men. <strong>Binge drinking</strong> is defined as reaching a BAC of 0.08% — typically 4+ drinks for women or 5+ for men within about 2 hours. <strong>Heavy drinking</strong> is more than 3 drinks on any day (or 7/week) for women, or more than 4 on any day (or 14/week) for men. These guidelines are based on <em>standard drinks</em> — so a night of &ldquo;3 craft IPAs&rdquo; is actually closer to 5.7 standard drinks, which exceeds binge drinking thresholds for both men and women.
+              The National Institute on Alcohol Abuse and Alcoholism defines <strong>moderate drinking</strong> as up to 1 standard drink per day for women and up to 2 for men. <strong>Binge drinking</strong> is defined as reaching a BAC of 0.08%, typically 4+ drinks for women or 5+ for men within about 2 hours. <strong>Heavy drinking</strong> is more than 3 drinks on any day (or 7/week) for women, or more than 4 on any day (or 14/week) for men. These guidelines are based on <em>standard drinks</em>, so a night of &ldquo;3 craft IPAs&rdquo; is actually closer to 5.7 standard drinks, which exceeds binge drinking thresholds for both men and women.
             </p>
           </div>
           <div>

@@ -4,7 +4,7 @@ import { CookieSettingsButton } from "./CookieSettingsButton";
 
 export const metadata: Metadata = createMetadata({
   path: "/cookies",
-  title: "Cookie Policy — What Cookies We Use and Why",
+  title: "Cookie Policy, What Cookies We Use and Why",
   description:
     "MindCheck Tools cookie policy. Details on analytics and advertising cookies, how to manage your preferences, and your rights under GDPR and CCPA.",
   keywords: [
@@ -22,6 +22,14 @@ const COOKIE_TABLE = [
     ],
   },
   {
+    category: "Browser storage (not cookies)",
+    consent: "Tool choice",
+    cookies: [
+      { name: "mct-safety-plan, mct-thought-records, mct-worry-*", purpose: "Keeps a safety plan, thought records, or worry log available in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
+      { name: "mct-recovery-checkins, mindcheck_sobriety_*", purpose: "Keeps recovery check-ins, sobriety date, and optional spending estimate in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
+    ],
+  },
+  {
     category: "Analytics",
     consent: "Required",
     cookies: [
@@ -33,7 +41,7 @@ const COOKIE_TABLE = [
     category: "Advertising",
     consent: "Required",
     cookies: [
-      { name: "Various", purpose: "Ad network cookies for serving and measuring ads. Not currently active.", duration: "Varies", provider: "TBD — will be disclosed when ads are enabled" },
+      { name: "Various", purpose: "Ad network cookies for serving and measuring ads. Not currently active.", duration: "Varies", provider: "TBD, will be disclosed when ads are enabled" },
     ],
   },
 ];
@@ -46,7 +54,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: February 17, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: July 13, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -61,6 +69,13 @@ export default function CookiePolicyPage() {
             <h2>How we use cookies</h2>
             <p>
               MindCheck Tools uses a minimal number of cookies. Importantly, <strong>cookies are never used to track, store, or access your screening responses</strong>. All questionnaire scoring happens in client-side JavaScript and no answer data is ever transmitted.
+            </p>
+            <p>
+              LocalStorage is browser storage, not a cookie. The safety plan, CBT thought record,
+              worry-time scheduler, daily recovery check-in, and sobriety calculator use it only
+              after you choose to enter or save tool data. That information stays available to the
+              browser profile until you reset the tool or clear site data, and other users of the
+              same browser profile may be able to see it.
             </p>
             <p>
               We use Google Consent Mode v2 to ensure that analytics and advertising cookies are only set after you provide explicit consent through our cookie banner. If you decline, no non-essential cookies are placed on your device.
@@ -78,7 +93,12 @@ export default function CookiePolicyPage() {
                       Consent: {cat.consent}
                     </span>
                   </div>
-                  <div className="overflow-x-auto">
+                  <div
+                    className="overflow-x-auto"
+                    role="region"
+                    aria-label={`${cat.category} cookie details`}
+                    tabIndex={0}
+                  >
                     <table className="w-full text-sm border border-sand-200 dark:border-neutral-700 rounded-lg overflow-hidden">
                       <thead>
                         <tr className="bg-sand-100 dark:bg-night-700">
@@ -121,10 +141,10 @@ export default function CookiePolicyPage() {
               We use Google Analytics (GA4, measurement ID: G-XKHQN1NJ2Z) with Google Consent Mode v2. This means:
             </p>
             <p>
-              If you <strong>accept</strong> analytics cookies, Google Analytics operates normally — setting cookies to distinguish users and sessions, and collecting anonymized usage data (pages visited, traffic sources, geographic region).
+              If you <strong>accept</strong> analytics cookies, Google Analytics operates normally, setting cookies to distinguish users and sessions, and collecting anonymized usage data (pages visited, traffic sources, geographic region).
             </p>
             <p>
-              If you <strong>decline</strong> analytics cookies, no Google Analytics cookies are set on your device. Google may still receive cookieless pings that allow it to model aggregate traffic data, but no individual user data is collected or stored.
+              If you <strong>decline</strong> analytics cookies, the Google Analytics script remains blocked and no Google Analytics cookies are set by MindCheck Tools.
             </p>
             <p>
               You can also opt out of Google Analytics entirely by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> at tools.google.com/dlpage/gaoptout.
@@ -147,7 +167,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              We will update this policy whenever we add or change cookies — particularly when advertising cookies become active. The &quot;Last updated&quot; date at the top reflects the most recent revision.
+              We will update this policy whenever we add or change cookies, particularly when advertising cookies become active. The &quot;Last updated&quot; date at the top reflects the most recent revision.
             </p>
           </section>
 

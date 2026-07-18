@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "Why are women more likely to be diagnosed with BPD?",
     answer:
-      "Women with BPD are more likely to present with internalizing symptoms \u2014 self-harm, emotional distress, and help-seeking \u2014 that bring them into clinical settings. Men more often externalize through aggression and substance use, receiving different labels. Research suggests clinicians apply gendered stereotypes, labeling identical symptoms as BPD in women but something else in men. This reflects systemic bias.",
+      "Women with BPD are more likely to present with internalizing symptoms, self-harm, emotional distress, and help-seeking, that bring them into clinical settings. Men more often externalize through aggression and substance use, receiving different labels. Research suggests clinicians apply gendered stereotypes, labeling identical symptoms as BPD in women but something else in men. This reflects systemic bias.",
   },
   {
     question: "Does BPD affect women differently than men?",
@@ -46,7 +46,7 @@ const FAQ_DATA = [
   {
     question: "What is the best treatment for BPD in women?",
     answer:
-      "Dialectical behavior therapy (DBT) is the most researched treatment for BPD, teaching mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Other evidence-based approaches include mentalization-based therapy (MBT) and schema therapy. Treatment should address co-occurring conditions common in women with BPD. Recovery is well-documented \u2014 longitudinal studies show significant improvement with appropriate treatment.",
+      "Dialectical behavior therapy (DBT) is the most researched treatment for BPD, teaching mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Other evidence-based approaches include mentalization-based therapy (MBT) and schema therapy. Treatment should address co-occurring conditions common in women with BPD. Recovery is well-documented, longitudinal studies show significant improvement with appropriate treatment.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function BpdWomenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Approximately 75% of people who receive a borderline personality disorder (BPD) diagnosis are women (American Psychiatric Association, DSM-5-TR, 2022). For decades, this statistic was taken at face value &mdash; BPD was considered a &quot;women&apos;s disorder.&quot; But community-based studies consistently show that BPD occurs at roughly equal rates across genders (Grant et al., 2008). The disparity is not in who has BPD, but in who gets identified, how symptoms are interpreted, and which diagnostic label clinicians apply. Understanding this gender bias is essential for women seeking accurate assessment and appropriate care.
+            Approximately 75% of people who receive a borderline personality disorder (BPD) diagnosis are women (American Psychiatric Association, DSM-5-TR, 2022). For decades, this statistic was taken at face value, BPD was considered a &quot;women&apos;s disorder.&quot; But community-based studies consistently show that BPD occurs at roughly equal rates across genders (Grant et al., 2008). The disparity is not in who has BPD, but in who gets identified, how symptoms are interpreted, and which diagnostic label clinicians apply. Understanding this gender bias is essential for women seeking accurate assessment and appropriate care.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function BpdWomenGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -115,13 +115,13 @@ export default function BpdWomenGuidePage() {
               The gender disparity in BPD diagnosis is one of the most studied and debated issues in personality disorder research. Several factors contribute to women being disproportionately identified:
             </p>
             <ul>
-              <li><strong>Internalizing versus externalizing symptoms:</strong> Women with BPD are more likely to present with self-harm, emotional distress, suicidal ideation, and help-seeking behavior &mdash; symptoms that bring them into clinical settings where BPD can be identified. Men with BPD more often externalize through aggression, substance misuse, and antisocial behavior, which leads to different diagnostic labels or involvement with the criminal justice system rather than mental health services.</li>
+              <li><strong>Internalizing versus externalizing symptoms:</strong> Women with BPD are more likely to present with self-harm, emotional distress, suicidal ideation, and help-seeking behavior, symptoms that bring them into clinical settings where BPD can be identified. Men with BPD more often externalize through aggression, substance misuse, and antisocial behavior, which leads to different diagnostic labels or involvement with the criminal justice system rather than mental health services.</li>
               <li><strong>Clinician bias:</strong> Research has demonstrated that some clinicians apply gendered expectations when interpreting symptoms. Emotional reactivity and relationship instability in women may be labeled BPD, while the same patterns in men may be attributed to antisocial personality disorder (ASPD), substance use disorders, or intermittent explosive disorder.</li>
               <li><strong>Treatment-seeking patterns:</strong> Women are more likely to seek mental health treatment than men across all conditions. Since BPD is primarily identified in clinical settings, higher treatment-seeking rates among women naturally inflate the clinical gender ratio.</li>
               <li><strong>Diagnostic criteria framing:</strong> Some researchers argue that the DSM criteria for BPD are more closely aligned with how women typically express emotional distress, while equivalent dysregulation in men manifests differently and falls outside the current diagnostic framework.</li>
             </ul>
             <p>
-              Understanding that the gender skew reflects diagnostic practices &mdash; not a genuine gender difference &mdash; is important context for women seeking assessment. It means that a BPD evaluation for women should be thorough, nuanced, and attentive to the full range of co-occurring conditions rather than defaulting to a familiar label.
+              Understanding that the gender skew reflects diagnostic practices, not a genuine gender difference, is important context for women seeking assessment. It means that a BPD evaluation for women should be thorough, nuanced, and attentive to the full range of co-occurring conditions rather than defaulting to a familiar label.
             </p>
           </section>
 
@@ -133,7 +133,7 @@ export default function BpdWomenGuidePage() {
               Research consistently identifies high rates of childhood trauma among people with BPD. In one large clinical sample, 91% of patients with BPD reported some form of childhood abuse and 92% reported childhood neglect (Zanarini et al., 1997). Reported rates of childhood sexual abuse specifically vary widely across individual studies.
             </p>
             <p>
-              The relationship between trauma and BPD is complex. Trauma is neither necessary nor sufficient for BPD &mdash; not all women with BPD have trauma histories, and not all trauma survivors develop BPD. But for many women, BPD can be understood as a pattern of emotional and relational responses that developed in the context of environments that were unpredictable, invalidating, or unsafe.
+              The relationship between trauma and BPD is complex. Trauma is neither necessary nor sufficient for BPD, not all women with BPD have trauma histories, and not all trauma survivors develop BPD. But for many women, BPD can be understood as a pattern of emotional and relational responses that developed in the context of environments that were unpredictable, invalidating, or unsafe.
             </p>
             <p>
               This has important implications for assessment. Women presenting with emotional instability, self-harm, and relationship difficulties should be evaluated for both BPD and PTSD, as the conditions frequently co-occur and have overlapping features. The <Link href="/bpd-test-for-women" className="text-sage-600 dark:text-sage-400 underline">BPD screening for women</Link> can help identify patterns that warrant further professional evaluation.
@@ -146,7 +146,7 @@ export default function BpdWomenGuidePage() {
               BPD rarely occurs in isolation, and the rates of co-occurring conditions in women with BPD are strikingly high:
             </p>
             <ul>
-              <li><strong>Depression:</strong> Up to 83% of people with BPD meet criteria for major depressive disorder at some point (Zanarini et al., 1998; Shah &amp; Zanarini, 2018). Depression in BPD often has a distinctive quality &mdash; it tends to be reactive and tied to interpersonal events rather than the pervasive, situation-independent quality of standalone depression.</li>
+              <li><strong>Depression:</strong> Up to 83% of people with BPD meet criteria for major depressive disorder at some point (Zanarini et al., 1998; Shah &amp; Zanarini, 2018). Depression in BPD often has a distinctive quality, it tends to be reactive and tied to interpersonal events rather than the pervasive, situation-independent quality of standalone depression.</li>
               <li><strong>Anxiety disorders:</strong> Roughly 74&ndash;88% of people with BPD experience significant anxiety, including generalized anxiety disorder, social anxiety, and panic disorder (Zanarini et al., 1998; Shah &amp; Zanarini, 2018).</li>
               <li><strong>Eating disorders:</strong> A 2025 meta-analysis estimates that roughly 30% of people with BPD have a co-occurring eating disorder (Paudex et al., 2025). Both conditions involve impulsivity and difficulty with emotional regulation, and they can reinforce each other.</li>
               <li><strong>PTSD:</strong> Given the high trauma rates, PTSD co-occurs with BPD in approximately 25&ndash;58% of patients in clinical samples (Pagura et al., 2010). Distinguishing between BPD and complex PTSD (C-PTSD) can be clinically challenging, as the conditions share features including emotional dysregulation, identity disturbance, and relationship difficulties.</li>
@@ -170,7 +170,7 @@ export default function BpdWomenGuidePage() {
               <li><strong>Perimenopause:</strong> Hormonal changes during the menopausal transition may reactivate or intensify BPD symptoms that had previously improved, though more research is needed.</li>
             </ul>
             <p>
-              Understanding these hormonal influences helps women and their clinicians anticipate periods of increased vulnerability and adjust coping strategies accordingly. It is not about biology as destiny &mdash; it is about informed self-management.
+              Understanding these hormonal influences helps women and their clinicians anticipate periods of increased vulnerability and adjust coping strategies accordingly. It is not about biology as destiny, it is about informed self-management.
             </p>
           </section>
 
@@ -180,10 +180,10 @@ export default function BpdWomenGuidePage() {
               Women with BPD face a compounded form of stigma. BPD itself is one of the most stigmatized conditions in mental health, and when combined with gender-based dismissal of women&apos;s emotional experiences, the result can be profoundly invalidating.
             </p>
             <p>
-              Women with BPD may encounter clinicians who view them as &quot;difficult&quot; or &quot;manipulative&quot; &mdash; terms that reflect bias rather than clinical reality. They may have their legitimate medical concerns dismissed as &quot;just BPD,&quot; a phenomenon called diagnostic overshadowing. They may face judgment from partners, family members, and friends who have absorbed stigmatizing portrayals of BPD.
+              Women with BPD may encounter clinicians who view them as &quot;difficult&quot; or &quot;manipulative&quot;, terms that reflect bias rather than clinical reality. They may have their legitimate medical concerns dismissed as &quot;just BPD,&quot; a phenomenon called diagnostic overshadowing. They may face judgment from partners, family members, and friends who have absorbed stigmatizing portrayals of BPD.
             </p>
             <p>
-              This stigma has real consequences. It delays help-seeking, erodes trust in the therapeutic relationship, and can worsen the very symptoms the person is trying to address. If you have had negative experiences with the mental health system, that is not a reflection of your worth or your capacity for change &mdash; it is a reflection of systemic shortcomings that the field is actively working to address.
+              This stigma has real consequences. It delays help-seeking, erodes trust in the therapeutic relationship, and can worsen the very symptoms the person is trying to address. If you have had negative experiences with the mental health system, that is not a reflection of your worth or your capacity for change, it is a reflection of systemic shortcomings that the field is actively working to address.
             </p>
             <p>
               The <Link href="/bpd-test-for-women" className="text-sage-600 dark:text-sage-400 underline">BPD screening for women</Link> offers a private, judgment-free starting point for self-assessment. Your results stay in your browser, and you can use them to guide a conversation with a provider you trust.
@@ -193,7 +193,7 @@ export default function BpdWomenGuidePage() {
           <section>
             <h2>DBT: a treatment developed by and for women</h2>
             <p>
-              Dialectical behavior therapy (DBT) was developed by Marsha Linehan &mdash; a psychologist who has publicly shared her own history of BPD and suicidal crises. Linehan developed DBT specifically for chronically suicidal women and has since become one of the most influential figures in evidence-based treatment for BPD.
+              Dialectical behavior therapy (DBT) was developed by Marsha Linehan, a psychologist who has publicly shared her own history of BPD and suicidal crises. Linehan developed DBT specifically for chronically suicidal women and has since become one of the most influential figures in evidence-based treatment for BPD.
             </p>
             <p>
               DBT is not the only effective treatment, but it is the most extensively studied. Key outcomes from clinical trials include:
@@ -228,7 +228,7 @@ export default function BpdWomenGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

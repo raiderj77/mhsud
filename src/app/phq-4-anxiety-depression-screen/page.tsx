@@ -49,7 +49,7 @@ export default function PHQ4Page() {
               datePublished: "2026-03-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -80,7 +80,7 @@ export default function PHQ4Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -92,7 +92,7 @@ export default function PHQ4Page() {
         <AnswerBlock
           what="The PHQ-4, an ultra-brief 4-question screening that simultaneously checks for both anxiety and depression."
           who="Anyone who wants the quickest possible validated check for both anxiety and depression symptoms."
-          bottomLine="The PHQ-4 takes under a minute — a positive result on either subscale suggests taking the full GAD-7 or PHQ-9. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The PHQ-4 takes under a minute, a positive result on either subscale suggests taking the full GAD-7 or PHQ-9. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

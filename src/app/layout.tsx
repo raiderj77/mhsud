@@ -81,28 +81,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // GPC is handled client-side per-visitor by the gpc-auto-decline script below,
-  // which calls Cookiebot.decline() when navigator.globalPrivacyControl is set.
-  // Server-side header gating was removed because it cached one visitor GPC state
-  // into the static HTML and froze Cookiebot off for everyone. Keep this false.
-  const gpcHeader = false;
+  const adsenseEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
-        <link rel="dns-prefetch" href="https://adservice.google.com" />
-
-        <link
-          rel="preload"
-          href="/_next/static/media/13971731025ec697-s.p.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {adsenseEnabled && (
+          <>
+            <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
+            <link rel="dns-prefetch" href="https://adservice.google.com" />
+          </>
+        )}
 
         {/* Consent Mode v2 defaults - must fire before Cookiebot and all analytics */}
         <Script
@@ -113,16 +104,6 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'granted',
-                'functionality_storage': 'granted',
-                'personalization_storage': 'denied',
-                'security_storage': 'granted'
-              });
-              gtag('consent', 'default', {
-                'region': ['GB','BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','HR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','IS','LI','NO'],
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
@@ -152,48 +133,46 @@ export default function RootLayout({
           }}
         />
 
-        {/* Cookiebot consent management. data-blockingmode auto handles script blocking; data-georegions gates EU/GB consent banner. */}
-        {!gpcHeader && (
-          <Script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-            data-blockingmode="auto"
-            data-georegions={"{'region':'GB,EU','cbid':'a9a99ccb-4863-4e33-a895-a6d5642f408d'}"}
-            strategy="beforeInteractive"
-          />
-        )}
+        {/* Mental-health browsing can be sensitive. Show the CMP in every region and
+            keep analytics and advertising storage denied until the visitor chooses. */}
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
 
         {/* GPC client-side fallback: declines via Cookiebot when navigator.globalPrivacyControl is set. */}
-        {!gpcHeader && (
-          <Script
-            id="gpc-auto-decline"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.addEventListener('CookiebotOnLoad', function () {
-                  try {
-                    var gpcActive =
-                      !!navigator.globalPrivacyControl ||
-                      document.cookie.indexOf('empire_gpc=1') !== -1;
-                    if (gpcActive && window.Cookiebot) {
-                      window.Cookiebot.decline();
-                    }
-                  } catch (e) {}
-                });
-              `,
-            }}
-          />
-        )}
+        <Script
+          id="gpc-auto-decline"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('CookiebotOnLoad', function () {
+                try {
+                  var gpcActive =
+                    !!navigator.globalPrivacyControl ||
+                    document.cookie.indexOf('empire_gpc=1') !== -1;
+                  if (gpcActive && window.Cookiebot) {
+                    window.Cookiebot.decline();
+                  }
+                } catch (e) {}
+              });
+            `,
+          }}
+        />
 
         <Script
           id="gtag-script"
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XKHQN1NJ2Z"
+          data-cookieconsent="statistics"
         />
         <Script
           id="gtag-init"
           strategy="afterInteractive"
+          data-cookieconsent="statistics"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -204,31 +183,15 @@ export default function RootLayout({
           }}
         />
 
-        <Script
-          id="adsense-script"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
-
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (
-                !navigator.globalPrivacyControl &&
-                document.cookie.indexOf('empire_gpc=1') === -1
-              ) {
-                (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window,document,"clarity","script","vsqobt7va0");
-              }
-            `,
-          }}
-        />
+        {adsenseEnabled && (
+          <Script
+            id="adsense-script"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
+            crossOrigin="anonymous"
+            strategy="lazyOnload"
+            data-cookieconsent="marketing"
+          />
+        )}
 
         <script
           type="application/ld+json"

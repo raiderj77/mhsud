@@ -7,9 +7,9 @@ const TOOL_URL = `${SITE_URL}/attachment-style-quiz`;
 
 export const metadata: Metadata = createMetadata({
   path: "/attachment-style-quiz",
-  title: "Attachment Style Quiz — ECR-R Test",
+  title: "Attachment Style Quiz, ECR-R Test",
   description:
-    "Discover your attachment style with the free ECR-R quiz. Secure, anxious, avoidant, or disorganized — understand how you connect in relationships.",
+    "Discover your attachment style with the free ECR-R quiz. Secure, anxious, avoidant, or disorganized, understand how you connect in relationships.",
   keywords: [
     "attachment style quiz", "ecr-r", "attachment style test",
     "attachment test", "relationship attachment style",
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
     "fearful avoidant test", "dismissive avoidant quiz",
   ],
   openGraph: {
-    title: "Attachment Style Quiz — ECR-R Test",
+    title: "Attachment Style Quiz, ECR-R Test",
     description: "Take the free ECR-R attachment style quiz. 36 questions, 5 minutes. Discover your attachment style. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -50,7 +50,7 @@ export default function AttachmentStylePage() {
               datePublished: "2026-03-08",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -82,7 +82,7 @@ export default function AttachmentStylePage() {
               url: TOOL_URL,
               lastReviewed: "2026-03-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -91,7 +91,7 @@ export default function AttachmentStylePage() {
         <AnswerBlock
           what="An attachment style assessment that identifies your primary attachment pattern: secure, anxious, avoidant, or fearful-avoidant."
           who="Anyone curious about how their attachment style may influence their relationships and emotional responses."
-          bottomLine="Attachment styles can shift with awareness and effort — understanding yours is the first step. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Attachment styles can shift with awareness and effort, understanding yours is the first step. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

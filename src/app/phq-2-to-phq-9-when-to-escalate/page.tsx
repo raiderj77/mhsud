@@ -35,7 +35,7 @@ const FAQ_DATA = [
   {
     question: "What is the PHQ-2?",
     answer:
-      "The PHQ-2 (Patient Health Questionnaire-2) is a 2-item ultra-brief depression screen derived from the first two questions of the full PHQ-9. It asks: (1) Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things? (2) How often have you been feeling down, depressed, or hopeless? Each item is rated 0–3, giving a total score of 0–6. It is designed for rapid population-level triage — not comprehensive assessment.",
+      "The PHQ-2 (Patient Health Questionnaire-2) is a 2-item ultra-brief depression screen derived from the first two questions of the full PHQ-9. It asks: (1) Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things? (2) How often have you been feeling down, depressed, or hopeless? Each item is rated 0–3, giving a total score of 0–6. It is designed for rapid population-level triage, not comprehensive assessment.",
   },
   {
     question: "What PHQ-2 score indicates escalation to the PHQ-9?",
@@ -45,12 +45,12 @@ const FAQ_DATA = [
   {
     question: "What does a PHQ-2 score of 1 or 2 mean?",
     answer:
-      "A PHQ-2 score of 1–2 is below the standard escalation threshold of 3. This suggests the person may have minimal or no significant depressive symptoms at the time of screening. However, the PHQ-2 is not designed to rule out depression definitively — it is a triage tool. A clinician may still choose to administer the full PHQ-9 based on clinical judgment, patient history, or expressed concern, even if the PHQ-2 score is below 3.",
+      "A PHQ-2 score of 1–2 is below the standard escalation threshold of 3. This suggests the person may have minimal or no significant depressive symptoms at the time of screening. However, the PHQ-2 is not designed to rule out depression definitively, it is a triage tool. A clinician may still choose to administer the full PHQ-9 based on clinical judgment, patient history, or expressed concern, even if the PHQ-2 score is below 3.",
   },
   {
     question: "Can the PHQ-2 replace the PHQ-9?",
     answer:
-      "No. The PHQ-2 cannot replace the PHQ-9 because it only measures the two core depressive symptoms (anhedonia and depressed mood) and does not assess the remaining 7 symptom domains — sleep, fatigue, appetite, self-worth, concentration, psychomotor changes, or suicidal ideation. The PHQ-2 tells you whether further screening is warranted; the PHQ-9 tells you the full clinical picture, including a direct suicidality item and a severity score that guides treatment decisions.",
+      "No. The PHQ-2 cannot replace the PHQ-9 because it only measures the two core depressive symptoms (anhedonia and depressed mood) and does not assess the remaining 7 symptom domains, sleep, fatigue, appetite, self-worth, concentration, psychomotor changes, or suicidal ideation. The PHQ-2 tells you whether further screening is warranted; the PHQ-9 tells you the full clinical picture, including a direct suicidality item and a severity score that guides treatment decisions.",
   },
   {
     question: "How sensitive and specific is the PHQ-2 as a screening tool?",
@@ -70,7 +70,7 @@ const FAQ_DATA = [
   {
     question: "Does a PHQ-2 score of 3 or higher mean I have depression?",
     answer:
-      "No. A PHQ-2 score of 3 or higher means you may have significant depressive symptoms and should complete the full PHQ-9 for a more detailed assessment. Neither the PHQ-2 nor the PHQ-9 makes a clinical diagnosis — that requires a comprehensive evaluation by a qualified healthcare provider. The purpose of the PHQ-2 is to flag people who need more thorough evaluation, not to establish a diagnosis.",
+      "No. A PHQ-2 score of 3 or higher means you may have significant depressive symptoms and should complete the full PHQ-9 for a more detailed assessment. Neither the PHQ-2 nor the PHQ-9 makes a clinical diagnosis, that requires a comprehensive evaluation by a qualified healthcare provider. The purpose of the PHQ-2 is to flag people who need more thorough evaluation, not to establish a diagnosis.",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Phq2ToPhq9Page() {
         }}
       />
 
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Crisis Resources at Top */}
         <div
           role="alert"
@@ -117,9 +117,9 @@ export default function Phq2ToPhq9Page() {
           <div className="max-w-2xl mx-auto">
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1 text-sm">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function Phq2ToPhq9Page() {
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
               The PHQ-2 is a 2-question depression pre-screen; the{" "}
               <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link>{" "}
-              is the 9-question full screen — and the clinical escalation threshold is a PHQ-2 score of 3 or higher. The PHQ-2 is used as a rapid gate in time-limited settings; a positive result (score ≥ 3) means completing the full PHQ-9 is the recommended next step. This page is for anyone who has taken the PHQ-2 and wants to understand whether and how to escalate. The explanation below covers why the two-step protocol exists, what the PHQ-9 adds, and how to interpret the combined results.
+              is the 9-question full screen, and the clinical escalation threshold is a PHQ-2 score of 3 or higher. The PHQ-2 is used as a rapid gate in time-limited settings; a positive result (score ≥ 3) means completing the full PHQ-9 is the recommended next step. This page is for anyone who has taken the PHQ-2 and wants to understand whether and how to escalate. The explanation below covers why the two-step protocol exists, what the PHQ-9 adds, and how to interpret the combined results.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               Understanding this process helps you know what your PHQ-2 result means and what to do with it.
@@ -165,7 +165,7 @@ export default function Phq2ToPhq9Page() {
           <AnswerBlock
             what="An explanation of the PHQ-2, what the 3-point escalation cutoff means, and the clinical protocol for moving from the PHQ-2 triage screen to the full PHQ-9 assessment."
             who="Anyone who has received a PHQ-2 result and wants to understand what it means, or anyone who wants to understand how depression screening works in primary care settings."
-            bottomLine="A PHQ-2 score of 3 or higher means significant depressive symptoms may be present and the full PHQ-9 should be completed. The PHQ-2 is a triage tool — not a diagnosis, and not a replacement for the full PHQ-9."
+            bottomLine="A PHQ-2 score of 3 or higher means significant depressive symptoms may be present and the full PHQ-9 should be completed. The PHQ-2 is a triage tool, not a diagnosis, and not a replacement for the full PHQ-9."
             lastUpdated="2026-05-06"
           />
 
@@ -186,7 +186,7 @@ export default function Phq2ToPhq9Page() {
               </ol>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              These two items — anhedonia and depressed mood — are the core features of major depressive disorder and are the minimum criteria for a clinical diagnosis under DSM-5. They are asked first in the PHQ-9 for this reason. The PHQ-2 extracts just these two items to serve as a rapid first-pass triage screen.
+              These two items, anhedonia and depressed mood, are the core features of major depressive disorder and are the minimum criteria for a clinical diagnosis under DSM-5. They are asked first in the PHQ-9 for this reason. The PHQ-2 extracts just these two items to serve as a rapid first-pass triage screen.
             </p>
           </section>
 
@@ -218,7 +218,7 @@ export default function Phq2ToPhq9Page() {
                   </tr>
                   <tr>
                     <td className="p-3 border border-slate-200 dark:border-slate-700 text-sky-700 dark:text-sky-400 font-semibold">3–6</td>
-                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Positive screen — significant symptoms may be present</td>
+                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Positive screen, significant symptoms may be present</td>
                     <td className="p-3 border border-slate-200 dark:border-slate-700 text-sky-700 dark:text-sky-400 font-semibold">Administer full PHQ-9; clinical evaluation recommended</td>
                   </tr>
                 </tbody>
@@ -233,7 +233,7 @@ export default function Phq2ToPhq9Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Why is the PHQ-9 needed after a positive PHQ-2?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              The PHQ-2 only asks about two of the nine DSM-5 criteria for major depressive disorder. A PHQ-2 score of 3 tells you that someone endorses significant anhedonia, depressed mood, or both — but it tells you nothing about the remaining symptoms that complete the diagnostic picture:
+              The PHQ-2 only asks about two of the nine DSM-5 criteria for major depressive disorder. A PHQ-2 score of 3 tells you that someone endorses significant anhedonia, depressed mood, or both, but it tells you nothing about the remaining symptoms that complete the diagnostic picture:
             </p>
             <ul className="space-y-2 text-slate-600 dark:text-slate-400 mb-4 list-disc list-inside text-sm">
               <li>Sleep disturbance (insomnia or hypersomnia)</li>
@@ -249,7 +249,7 @@ export default function Phq2ToPhq9Page() {
             </p>
             <div className="bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-800 rounded-lg p-4 mb-4">
               <p className="text-sm text-sky-900 dark:text-sky-200">
-                <strong>Important:</strong> The PHQ-9 includes item 9, which asks about thoughts of being better off dead or of hurting yourself. This item is flagged by clinicians separately regardless of the total score. The PHQ-2 does not include this item — which is one reason a positive PHQ-2 always requires follow-up with the full PHQ-9.
+                <strong>Important:</strong> The PHQ-9 includes item 9, which asks about thoughts of being better off dead or of hurting yourself. This item is flagged by clinicians separately regardless of the total score. The PHQ-2 does not include this item, which is one reason a positive PHQ-2 always requires follow-up with the full PHQ-9.
               </p>
             </div>
           </section>
@@ -281,7 +281,7 @@ export default function Phq2ToPhq9Page() {
               </div>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              This nested structure allows healthcare settings to balance efficiency and thoroughness — using the short forms for broad population screening and reserving the full instruments for patients who screen positive.
+              This nested structure allows healthcare settings to balance efficiency and thoroughness, using the short forms for broad population screening and reserving the full instruments for patients who screen positive.
             </p>
           </section>
 
@@ -289,10 +289,10 @@ export default function Phq2ToPhq9Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When might the PHQ-2 miss a case the PHQ-9 would catch?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Because the PHQ-2 only captures two of nine depressive symptoms, it can miss people whose depression presents atypically — for example, those who do not endorse prominent low mood or anhedonia but do experience significant somatic symptoms (fatigue, sleep changes, appetite changes, psychomotor slowing) that would score positively on the full PHQ-9.
+              Because the PHQ-2 only captures two of nine depressive symptoms, it can miss people whose depression presents atypically, for example, those who do not endorse prominent low mood or anhedonia but do experience significant somatic symptoms (fatigue, sleep changes, appetite changes, psychomotor slowing) that would score positively on the full PHQ-9.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Research suggests a false-negative rate of approximately 17% at the ≥3 cutoff — meaning roughly 1 in 6 people with major depressive disorder will not be flagged by the PHQ-2 alone. This is acceptable for a rapid triage tool but reinforces why clinical judgment should not rely solely on the PHQ-2, and why the full PHQ-9 is preferred when there is sufficient time.
+              Research suggests a false-negative rate of approximately 17% at the ≥3 cutoff, meaning roughly 1 in 6 people with major depressive disorder will not be flagged by the PHQ-2 alone. This is acceptable for a rapid triage tool but reinforces why clinical judgment should not rely solely on the PHQ-2, and why the full PHQ-9 is preferred when there is sufficient time.
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Populations where the PHQ-2 may perform less well include older adults (who more commonly present with somatic rather than affective depression symptoms), people with medical comorbidities, and people with lower health literacy who may have difficulty interpreting the two specific symptom questions.
@@ -303,7 +303,7 @@ export default function Phq2ToPhq9Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">What should you do if your PHQ-2 score is 3 or higher?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              A PHQ-2 score of 3 or higher is a signal — not a verdict. Here are the recommended next steps:
+              A PHQ-2 score of 3 or higher is a signal, not a verdict. Here are the recommended next steps:
             </p>
             <ol className="space-y-3 text-slate-600 dark:text-slate-400 mb-4 list-decimal list-inside">
               <li>
@@ -315,11 +315,11 @@ export default function Phq2ToPhq9Page() {
                 <strong>Share your results with a healthcare provider.</strong> Your primary care doctor, a therapist, or a mental health professional can conduct a full evaluation, put your scores in clinical context, and discuss next steps.
               </li>
               <li>
-                <strong>Do not use the score to self-diagnose.</strong> A PHQ-2 score of 3+ means you should seek evaluation — not that you have been diagnosed with depression.
+                <strong>Do not use the score to self-diagnose.</strong> A PHQ-2 score of 3+ means you should seek evaluation, not that you have been diagnosed with depression.
               </li>
             </ol>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              If you are experiencing significant distress right now, do not wait for an appointment — contact the <a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">SAMHSA National Helpline</a> (1-800-662-4357) for free confidential referrals to treatment and support services.
+              If you are experiencing significant distress right now, do not wait for an appointment, contact the <a href="https://www.samhsa.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">SAMHSA National Helpline</a> (1-800-662-4357) for free confidential referrals to treatment and support services.
             </p>
           </section>
 
@@ -330,9 +330,9 @@ export default function Phq2ToPhq9Page() {
               <li>Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. <em>Med Care.</em> 2003;41(11):1284–1292.</li>
               <li>Löwe B, Kroenke K, Gräfe K. Detecting and monitoring depression with a two-item questionnaire (PHQ-2). <em>J Psychosom Res.</em> 2005;58(2):163–171.</li>
               <li>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. <em>J Gen Intern Med.</em> 2001;16(9):606–613.</li>
-              <li><a href="https://www.phqscreeners.com/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">PHQscreeners.com</a> — Official PHQ instruments and scoring guides.</li>
-              <li><a href="https://www.uspreventiveservicestaskforce.org/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">U.S. Preventive Services Task Force</a> — Depression Screening in Adults recommendation.</li>
-              <li><a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">NIMH</a> — National Institute of Mental Health.</li>
+              <li><a href="https://www.phqscreeners.com/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">PHQscreeners.com</a>, Official PHQ instruments and scoring guides.</li>
+              <li><a href="https://www.uspreventiveservicestaskforce.org/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">U.S. Preventive Services Task Force</a>, Depression Screening in Adults recommendation.</li>
+              <li><a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline" rel="noopener noreferrer" target="_blank">NIMH</a>, National Institute of Mental Health.</li>
             </ul>
           </section>
 
@@ -360,7 +360,7 @@ export default function Phq2ToPhq9Page() {
             <ul className="space-y-3">
               <li>
                 <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  PHQ-9 — Full Depression Screening →
+                  PHQ-9, Full Depression Screening →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                   The complete 9-item depression screening tool. Take this after a positive PHQ-2 for a full symptom profile. Free, takes 2–3 minutes.
@@ -368,7 +368,7 @@ export default function Phq2ToPhq9Page() {
               </li>
               <li className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  GAD-7 — Anxiety Screening →
+                  GAD-7, Anxiety Screening →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                   Free, validated 7-question anxiety screen. Often administered alongside the PHQ-9 at clinical intake.
@@ -417,13 +417,13 @@ export default function Phq2ToPhq9Page() {
           >
             <p className="font-semibold mb-2">⚠️ If you are in crisis or having thoughts of self-harm:</p>
             <ul className="space-y-1">
-              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7</li>
-              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong> — free, 24/7</li>
-              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free, 24/7</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7</li>
+              <li><strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>, free, 24/7</li>
+              <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free, 24/7</li>
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

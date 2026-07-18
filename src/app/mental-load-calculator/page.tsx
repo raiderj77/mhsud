@@ -19,11 +19,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "What is 'mental load'?", answer: "Mental load refers to the invisible cognitive work of managing a household or family — remembering appointments, planning meals, tracking supplies, anticipating needs, coordinating schedules, and noticing what needs to be done. It's the planning and remembering that happens before any task gets executed." },
+  { question: "What is 'mental load'?", answer: "Mental load refers to the invisible cognitive work of managing a household or family, remembering appointments, planning meals, tracking supplies, anticipating needs, coordinating schedules, and noticing what needs to be done. It's the planning and remembering that happens before any task gets executed." },
   { question: "Is this a clinical assessment?", answer: "No. This is a reflection and conversation tool designed to help you identify patterns. It is not based on any clinical scale and cannot diagnose any condition. It's meant to support healthier conversations at home." },
-  { question: "Can I use this with my partner?", answer: "Yes — that's one of the best uses. Each person can take it independently, then compare results. The goal is to start a constructive conversation about task distribution, not to assign blame." },
+  { question: "Can I use this with my partner?", answer: "Yes, that's one of the best uses. Each person can take it independently, then compare results. The goal is to start a constructive conversation about task distribution, not to assign blame." },
   { question: "Is my data stored?", answer: "No. Everything happens in your browser. Your responses are never sent to any server." },
-  { question: "Why does mental load matter for mental health?", answer: "Research suggests that carrying a disproportionate share of cognitive household labor is associated with higher stress, resentment, and burnout — particularly for women and primary caregivers. Recognizing the pattern is often the first step toward more equitable distribution." },
+  { question: "Why does mental load matter for mental health?", answer: "Research suggests that carrying a disproportionate share of cognitive household labor is associated with higher stress, resentment, and burnout, particularly for women and primary caregivers. Recognizing the pattern is often the first step toward more equitable distribution." },
 ];
 
 export default function MentalLoadPage() {
@@ -31,7 +31,7 @@ export default function MentalLoadPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Mental Load Calculator", description: "Reflect on how planning, remembering, and organizing are distributed in your household.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-05-12" }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Mental Load Calculator", url: TOOL_URL }])) }} />

@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 const QUESTIONS = [
@@ -34,7 +35,7 @@ const OPTIONS = [
 
 const RANGES = [
   { min: 0, max: 9, level: "Lower Stress", key: "low", description: "Your responses suggest relatively lower levels of work-related stress in the areas covered by this check.", suggestion: "Continue maintaining healthy boundaries and recovery habits. If specific areas stood out, they may still be worth reflecting on." },
-  { min: 10, max: 18, level: "Moderate Stress", key: "moderate", description: "Your responses suggest moderate work stress across several areas. Some of these patterns — especially if persistent — may be worth paying attention to.", suggestion: "Consider which domains scored highest. Talking with a trusted colleague, manager, or counselor about specific stressors may help. Small changes in boundaries or routines can sometimes make a meaningful difference." },
+  { min: 10, max: 18, level: "Moderate Stress", key: "moderate", description: "Your responses suggest moderate work stress across several areas. Some of these patterns, especially if persistent, may be worth paying attention to.", suggestion: "Consider which domains scored highest. Talking with a trusted colleague, manager, or counselor about specific stressors may help. Small changes in boundaries or routines can sometimes make a meaningful difference." },
   { min: 19, max: 27, level: "High Stress", key: "high", description: "Your responses suggest high levels of work-related stress. Multiple areas of your work life appear to be significantly impacted.", suggestion: "Speaking with a healthcare provider, therapist, or employee assistance program (EAP) is strongly encouraged. Work stress at this level often benefits from professional support and may also warrant conversations about workload or working conditions." },
   { min: 28, max: 36, level: "Very High Stress", key: "very-high", description: "Your responses suggest very high levels of work stress affecting most areas covered by this check. This pattern is often associated with burnout risk.", suggestion: "Please consider reaching out to a mental health professional. If your workplace has an EAP, they can provide confidential support. If work stress is also affecting your physical health, a medical checkup is a good idea." },
 ];
@@ -106,9 +107,9 @@ export function WorkStressClient({ faqData }: Props) {
           <span className="badge bg-warm-50 dark:bg-warm-950/30 text-warm-700 dark:text-warm-400">Original Tool</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Not Clinical</span>
         </div>
-        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Work Stress &amp; Burnout Reflection</h1>
+        <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3">Work Stress &amp; Burnout Reflection</h2>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          12 original questions to help you reflect on work demands, control, support, engagement, recovery, and impact. For personal reflection only — not a clinical assessment.
+          12 original questions to help you reflect on work demands, control, support, engagement, recovery, and impact. For personal reflection only, not a clinical assessment.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "12 Questions" }].map((b) => (
@@ -178,12 +179,12 @@ export function WorkStressClient({ faqData }: Props) {
       )}
 
       {showResults && (
-        <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
+        <div id="printable-results" ref={resultsRef} className="animate-fade-in" aria-live="polite">
           <div className="card overflow-hidden mb-5">
             <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
               <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your Work Stress Score</p>
               <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 36 — {range.level}</p>
+              <p className={`text-sm font-semibold ${colors.text}`}>out of 36, {range.level}</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 36) * 100}%` }} />
@@ -222,8 +223,18 @@ export function WorkStressClient({ faqData }: Props) {
             </p>
           </div>
 
+          <TherapyCTA show={["moderate", "high", "very-high"].includes(range.key)} />
+
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="btn-secondary px-5 py-4"
+              title="Print your work stress results"
+            >
+              Print Results
+            </button>
           </div>
 
           {/* Download Reflection Summary */}
@@ -294,9 +305,9 @@ export function WorkStressClient({ faqData }: Props) {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">If work stress is affecting your well-being, help is available:</p>
             <div className="space-y-2.5">
               {[
-                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988 — available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
+                { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
-                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357 — free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
+                { label: "SAMHSA Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "International Resources", detail: "Visit findahelpline.com for your country", color: "text-sage-600 dark:text-sage-400" },
               ].map((r) => (
                 <div key={r.label} className="p-3.5 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700">

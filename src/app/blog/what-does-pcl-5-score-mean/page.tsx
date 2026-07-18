@@ -35,22 +35,22 @@ const FAQ_DATA = [
   {
     question: "What is a \u201Cgood\u201D score on the PCL-5?",
     answer:
-      "Lower scores indicate fewer PTSD symptoms. A score below 31\u201333 is below the standard clinical threshold. But there\u2019s no score that means you\u2019re \u201Cfine\u201D if you\u2019re struggling \u2014 the number is a data point, not a complete picture of your wellbeing.",
+      "Lower scores indicate fewer PTSD symptoms. A score below 31\u201333 is below the standard clinical threshold. But there\u2019s no score that means you\u2019re \u201Cfine\u201D if you\u2019re struggling, the number is a data point, not a complete picture of your wellbeing.",
   },
   {
     question: "Can PTSD develop years after a traumatic event?",
     answer:
-      "Yes. Delayed-onset PTSD \u2014 where full symptom criteria are not met until at least six months after the trauma \u2014 occurs in a meaningful minority of cases (Andrews et al., 2007). Life transitions, additional stressors, or even media exposure can activate symptoms from earlier trauma. A recent high score does not require a recent traumatic event.",
+      "Yes. Delayed-onset PTSD, where full symptom criteria are not met until at least six months after the trauma, occurs in a meaningful minority of cases (Andrews et al., 2007). Life transitions, additional stressors, or even media exposure can activate symptoms from earlier trauma. A recent high score does not require a recent traumatic event.",
   },
   {
     question: "Can the PCL-5 be used to track treatment progress?",
     answer:
-      "Yes \u2014 this is one of its primary clinical uses. A reduction of 10\u201320 points is generally considered a clinically meaningful improvement (Weathers et al., 2013). Many trauma therapists administer it monthly to track symptom changes during treatment, making it a valuable tool for measuring progress over the course of therapy.",
+      "Yes, this is one of its primary clinical uses. A reduction of 10\u201320 points is generally considered a clinically meaningful improvement (Weathers et al., 2013). Many trauma therapists administer it monthly to track symptom changes during treatment, making it a valuable tool for measuring progress over the course of therapy.",
   },
   {
     question: "Is PTSD only caused by combat or extreme violence?",
     answer:
-      "No. PTSD can result from any event experienced as life-threatening or severely distressing \u2014 including accidents, medical emergencies, natural disasters, sexual assault, childhood abuse, sudden loss, or witnessing harm to others. The subjective experience of threat matters as much as the event\u2019s \u201Cobjective\u201D severity.",
+      "No. PTSD can result from any event experienced as life-threatening or severely distressing, including accidents, medical emergencies, natural disasters, sexual assault, childhood abuse, sudden loss, or witnessing harm to others. The subjective experience of threat matters as much as the event\u2019s \u201Cobjective\u201D severity.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            PCL-5 scores range from 0 to 80. A score of 31 to 33 or higher is the widely used threshold that suggests PTSD symptoms warrant further clinical evaluation. Scores are also analyzed by symptom cluster &mdash; reexperiencing, avoidance, negative cognitions and mood, and hyperarousal &mdash; each of which maps to the DSM-5 diagnostic criteria for PTSD.
+            PCL-5 scores range from 0 to 80. A score of 31 to 33 or higher is the widely used threshold that suggests PTSD symptoms warrant further clinical evaluation. Scores are also analyzed by symptom cluster, reexperiencing, avoidance, negative cognitions and mood, and hyperarousal, each of which maps to the DSM-5 diagnostic criteria for PTSD.
           </p>
         </header>
 
@@ -156,7 +156,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
           <section>
             <h2>What Do the Four PCL-5 Symptom Clusters Mean?</h2>
             <p>
-              The PCL-5 is organized into four clusters that mirror the DSM-5 PTSD diagnostic criteria. Looking at your scores by cluster &mdash; not just your total &mdash; gives a more detailed picture.
+              The PCL-5 is organized into four clusters that mirror the DSM-5 PTSD diagnostic criteria. Looking at your scores by cluster, not just your total, gives a more detailed picture.
             </p>
 
             <h3>Cluster B: Reexperiencing (Items 1&ndash;5)</h3>
@@ -166,7 +166,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
 
             <h3>Cluster C: Avoidance (Items 6&ndash;7)</h3>
             <p>
-              Avoiding trauma-related thoughts, feelings, and external reminders (places, people, conversations, activities). Avoidance is often how PTSD maintains itself over time &mdash; the less a person confronts trauma-related material, the more distressing it remains.
+              Avoiding trauma-related thoughts, feelings, and external reminders (places, people, conversations, activities). Avoidance is often how PTSD maintains itself over time, the less a person confronts trauma-related material, the more distressing it remains.
             </p>
 
             <h3>Cluster D: Negative Cognitions and Mood (Items 8&ndash;14)</h3>
@@ -189,7 +189,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
               A score below the screening threshold does not mean you weren&apos;t affected by a traumatic event, or that your experiences aren&apos;t real and significant. It means that the specific symptom pattern the PCL-5 measures hasn&apos;t reached the frequency and intensity that typically indicates a PTSD diagnosis.
             </p>
             <p>
-              Trauma responses exist on a spectrum. Acute stress reactions, adjustment difficulties, and subsyndromal PTSD are all real and can be distressing even when they don&apos;t meet the full PTSD threshold. If you experienced something traumatic and are struggling &mdash; regardless of your score &mdash; that&apos;s reason enough to speak with a mental health professional.
+              Trauma responses exist on a spectrum. Acute stress reactions, adjustment difficulties, and subsyndromal PTSD are all real and can be distressing even when they don&apos;t meet the full PTSD threshold. If you experienced something traumatic and are struggling, regardless of your score, that&apos;s reason enough to speak with a mental health professional.
             </p>
           </section>
 
@@ -197,13 +197,13 @@ export default function WhatDoesPCL5ScoreMeanPage() {
           <section>
             <h2>What Does a Score of 33 or Higher Mean?</h2>
             <p>
-              A score at or above the screening threshold suggests your symptom pattern is consistent with what clinicians typically see in PTSD. This does not confirm a diagnosis &mdash; it signals that a comprehensive clinical evaluation is warranted.
+              A score at or above the screening threshold suggests your symptom pattern is consistent with what clinicians typically see in PTSD. This does not confirm a diagnosis, it signals that a comprehensive clinical evaluation is warranted.
             </p>
             <p>
               PTSD is diagnosed through a structured clinical interview that assesses not just symptom presence but also: whether the symptoms are linked to a qualifying traumatic event, the duration of symptoms, functional impairment, and whether another condition better explains the presentation.
             </p>
             <p>
-              If you scored at or above the threshold, please reach out to a mental health professional &mdash; ideally one with trauma training. Effective treatments exist, and PTSD responds well to evidence-based care.
+              If you scored at or above the threshold, please reach out to a mental health professional, ideally one with trauma training. Effective treatments exist, and PTSD responds well to evidence-based care.
             </p>
           </section>
 
@@ -236,7 +236,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
           <section>
             <h2>The PCL-5 and the PC-PTSD-5</h2>
             <p>
-              The PCL-5 is a comprehensive 20-item screen used for detailed symptom assessment. The <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PC-PTSD-5</Link> is a 5-item brief screen used as a first-step gateway &mdash; if you score 3 or higher on the PC-PTSD-5, the full PCL-5 is the recommended follow-up.
+              The PCL-5 is a comprehensive 20-item screen used for detailed symptom assessment. The <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PC-PTSD-5</Link> is a 5-item brief screen used as a first-step gateway, if you score 3 or higher on the PC-PTSD-5, the full PCL-5 is the recommended follow-up.
             </p>
             <p>
               If you took the PC-PTSD-5 and were directed here, your PCL-5 score gives you and any clinician you speak with a much richer picture of which symptom clusters are most prominent.
@@ -249,7 +249,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment &mdash; they do not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. Screening tools may indicate the need for further assessment, they do not confirm or rule out any condition.
             </p>
           </div>
 
@@ -260,9 +260,9 @@ export default function WhatDoesPCL5ScoreMeanPage() {
               If you are in crisis or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -284,7 +284,7 @@ export default function WhatDoesPCL5ScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

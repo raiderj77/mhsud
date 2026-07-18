@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "How often should I fill out a thought record?",
     answer:
-      "Most CBT therapists recommend completing a thought record whenever you notice a strong negative emotion, especially in early weeks of practice \u2014 roughly one to three per day. Over time the process becomes more automatic. The goal is to internalize the skill of catching and challenging automatic thoughts so it becomes a mental habit.",
+      "Most CBT therapists recommend completing a thought record whenever you notice a strong negative emotion, especially in early weeks of practice, roughly one to three per day. Over time the process becomes more automatic. The goal is to internalize the skill of catching and challenging automatic thoughts so it becomes a mental habit.",
   },
   {
     question: "What is the difference between a thought record and a thought diary?",
@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "Do thought records work for anxiety?",
     answer:
-      "Yes. Anxiety is driven by overestimation of threat and underestimation of coping ability \u2014 both cognitive distortions that thought records are designed to address. Meta-analyses consistently show CBT, which relies heavily on thought records, is the first-line evidence-based treatment for generalized anxiety disorder, social anxiety, panic disorder, and specific phobias.",
+      "Yes. Anxiety is driven by overestimation of threat and underestimation of coping ability, both cognitive distortions that thought records are designed to address. Meta-analyses consistently show CBT, which relies heavily on thought records, is the first-line evidence-based treatment for generalized anxiety disorder, social anxiety, panic disorder, and specific phobias.",
   },
   {
     question: "Can I do CBT on my own without a therapist?",
@@ -97,9 +97,9 @@ export default function CbtThoughtRecordGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ export default function CbtThoughtRecordGuidePage() {
               A thought record (also called a dysfunctional thought record or DTR) is a structured worksheet developed by psychiatrist Aaron Beck in the 1960s as a core component of Cognitive Behavioral Therapy. It is a systematic method for identifying, examining, and challenging the automatic negative thoughts that drive emotional distress.
             </p>
             <p>
-              The premise is straightforward: when something upsetting happens, you do not react to the event itself &mdash; you react to what you think the event means. A thought record helps you slow down that automatic process, separate the event from the interpretation, and check whether your interpretation is accurate or distorted.
+              The premise is straightforward: when something upsetting happens, you do not react to the event itself, you react to what you think the event means. A thought record helps you slow down that automatic process, separate the event from the interpretation, and check whether your interpretation is accurate or distorted.
             </p>
             <p>
               Decades of research have established CBT as one of the most effective psychological treatments available. A comprehensive meta-analysis by Hofmann et al. (2012) found CBT effective across over 200 studies for depression (with a number needed to treat of approximately 4), anxiety disorders, PTSD, OCD, eating disorders, and substance use disorders.
@@ -139,7 +139,7 @@ export default function CbtThoughtRecordGuidePage() {
               <strong>Column 3: Emotions.</strong> Name the emotions you felt and rate their intensity from 0&ndash;100. For example: Anxiety (85), Sadness (60), Shame (40). Being precise about emotions helps track whether the thought record process is actually shifting how you feel.
             </p>
             <p>
-              <strong>Column 4: Evidence for the thought.</strong> What facts support this thought? Not feelings, not assumptions &mdash; observable evidence. &quot;She walked past without making eye contact.&quot;
+              <strong>Column 4: Evidence for the thought.</strong> What facts support this thought? Not feelings, not assumptions, observable evidence. &quot;She walked past without making eye contact.&quot;
             </p>
             <p>
               <strong>Column 5: Evidence against the thought.</strong> What facts contradict this thought? &quot;She gave me positive feedback last week. She was on her phone when she walked in. She often skips greetings when she is running late.&quot;
@@ -148,7 +148,7 @@ export default function CbtThoughtRecordGuidePage() {
               <strong>Column 6: Alternative thought.</strong> Based on all the evidence, what is a more balanced interpretation? &quot;She was probably distracted. Her not saying good morning is not evidence that she is unhappy with my work.&quot;
             </p>
             <p>
-              <strong>Column 7: Re-rate emotions.</strong> How do you feel now? Anxiety (35), Sadness (20), Shame (10). The emotions do not disappear &mdash; but they typically reduce significantly when the distorted thought is replaced with a balanced one.
+              <strong>Column 7: Re-rate emotions.</strong> How do you feel now? Anxiety (35), Sadness (20), Shame (10). The emotions do not disappear, but they typically reduce significantly when the distorted thought is replaced with a balanced one.
             </p>
             <p>
               The <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools thought record</Link> guides you through each of these columns in a simple, private digital format.
@@ -160,20 +160,20 @@ export default function CbtThoughtRecordGuidePage() {
           <section>
             <h2>Why thought records work: the neuroscience</h2>
             <p>
-              When a triggering event occurs, the amygdala (the brain&apos;s threat detection center) fires before the prefrontal cortex (the rational, analytical part of the brain) can fully process what has happened. This is why automatic thoughts feel so true &mdash; they arrive with the full force of an emotional reaction before you have had time to think critically.
+              When a triggering event occurs, the amygdala (the brain&apos;s threat detection center) fires before the prefrontal cortex (the rational, analytical part of the brain) can fully process what has happened. This is why automatic thoughts feel so true, they arrive with the full force of an emotional reaction before you have had time to think critically.
             </p>
             <p>
-              A thought record deliberately engages the prefrontal cortex. By writing down evidence for and against a thought, you are activating analytical processing that would otherwise be bypassed. Neuroimaging studies have shown that CBT actually changes brain activity patterns &mdash; reducing amygdala reactivity and strengthening prefrontal cortex regulation over time (Porto et al., 2009).
+              A thought record deliberately engages the prefrontal cortex. By writing down evidence for and against a thought, you are activating analytical processing that would otherwise be bypassed. Neuroimaging studies have shown that CBT actually changes brain activity patterns, reducing amygdala reactivity and strengthening prefrontal cortex regulation over time (Porto et al., 2009).
             </p>
             <p>
-              This means thought records are not just a coping technique &mdash; they are a form of neural retraining. With consistent practice, the gap between trigger and response widens, and you develop the ability to catch distorted thoughts before they spiral into full emotional episodes.
+              This means thought records are not just a coping technique, they are a form of neural retraining. With consistent practice, the gap between trigger and response widens, and you develop the ability to catch distorted thoughts before they spiral into full emotional episodes.
             </p>
           </section>
 
           <section>
             <h2>Common cognitive distortions to watch for</h2>
             <p>
-              As you practice thought records, you will begin to notice patterns in your thinking. These recurring patterns are called cognitive distortions &mdash; systematic errors in reasoning that skew your interpretation of events. Some of the most common include:
+              As you practice thought records, you will begin to notice patterns in your thinking. These recurring patterns are called cognitive distortions, systematic errors in reasoning that skew your interpretation of events. Some of the most common include:
             </p>
             <ul>
               <li><strong>All-or-nothing thinking:</strong> Seeing things in black and white categories. &quot;If I&apos;m not perfect, I&apos;m a failure.&quot;</li>
@@ -196,10 +196,10 @@ export default function CbtThoughtRecordGuidePage() {
               The <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools thought record</Link> is a free, private digital tool that walks you through the 7-column process step by step. It is designed to be used whenever you notice a strong negative emotion and want to examine the thought behind it.
             </p>
             <p>
-              The tool runs entirely in your browser &mdash; nothing is stored on a server, no account is needed, and your entries are completely private. You can save or print your completed record to share with a therapist or keep for your own reference.
+              The tool runs entirely in your browser, nothing is stored on a server, no account is needed, and your entries are completely private. You can save or print your completed record to share with a therapist or keep for your own reference.
             </p>
             <p>
-              For the best results, try to complete a thought record as close to the triggering event as possible, while the thought and emotion are still fresh. Over time, you will start recognizing your most common distortions and generating alternative thoughts more quickly &mdash; even without writing them down.
+              For the best results, try to complete a thought record as close to the triggering event as possible, while the thought and emotion are still fresh. Over time, you will start recognizing your most common distortions and generating alternative thoughts more quickly, even without writing them down.
             </p>
           </section>
 
@@ -240,7 +240,7 @@ export default function CbtThoughtRecordGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

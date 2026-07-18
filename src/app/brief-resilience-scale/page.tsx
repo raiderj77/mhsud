@@ -41,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "What does low resilience mean?",
     answer:
-      "A low resilience score (below 3.00) suggests that you may have more difficulty bouncing back from stressful events, setbacks, or adversity. This does not mean you are weak or flawed. Resilience is influenced by many factors including life circumstances, social support, mental health, physical health, and coping skills. Low resilience is associated with higher levels of depression, anxiety, and negative affect in research. The good news is that resilience is not a fixed trait \u2014 it can be developed and strengthened through therapy, social support, mindfulness practices, and building coping skills.",
+      "A low resilience score (below 3.00) suggests that you may have more difficulty bouncing back from stressful events, setbacks, or adversity. This does not mean you are weak or flawed. Resilience is influenced by many factors including life circumstances, social support, mental health, physical health, and coping skills. Low resilience is associated with higher levels of depression, anxiety, and negative affect in research. The good news is that resilience is not a fixed trait, it can be developed and strengthened through therapy, social support, mindfulness practices, and building coping skills.",
   },
   {
     question: "Can resilience be improved?",
@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "How is resilience related to mental health?",
     answer:
-      "Resilience and mental health are closely connected. Higher resilience is associated with lower rates of depression, anxiety, and PTSD following stressful events. People with higher resilience tend to recover more quickly from setbacks and are less likely to develop mental health conditions in response to adversity. However, resilience is not the absence of distress \u2014 resilient people still experience stress and pain, but they are able to recover more effectively. If your resilience score is low, you may also benefit from screening for depression (PHQ-9) or general distress (K6) to get a more complete picture.",
+      "Resilience and mental health are closely connected. Higher resilience is associated with lower rates of depression, anxiety, and PTSD following stressful events. People with higher resilience tend to recover more quickly from setbacks and are less likely to develop mental health conditions in response to adversity. However, resilience is not the absence of distress, resilient people still experience stress and pain, but they are able to recover more effectively. If your resilience score is low, you may also benefit from screening for depression (PHQ-9) or general distress (K6) to get a more complete picture.",
   },
   {
     question: "Is my data private?",
@@ -75,7 +75,7 @@ export default function BRSPage() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -100,7 +100,7 @@ export default function BRSPage() {
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="The Brief Resilience Scale (BRS), a 6-item validated tool that measures your ability to bounce back from stress and adversity." who="Anyone who wants to assess their resilience level and understand how well they recover from difficult experiences." bottomLine="Resilience is a skill that can be strengthened — your score reflects current capacity, not a fixed trait. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="The Brief Resilience Scale (BRS), a 6-item validated tool that measures your ability to bounce back from stress and adversity." who="Anyone who wants to assess their resilience level and understand how well they recover from difficult experiences." bottomLine="Resilience is a skill that can be strengthened, your score reflects current capacity, not a fixed trait. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">

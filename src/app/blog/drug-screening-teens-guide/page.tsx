@@ -70,7 +70,7 @@ export default function DrugScreeningTeensGuidePage() {
           </h1>
           <AuthorByline publishedDate={POST_DATA.publishedDate} modifiedDate={POST_DATA.modifiedDate} />
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            About 17% of high school students report current marijuana use (past 30 days) and 22% report current alcohol use, according to the <a href="https://www.cdc.gov/yrbs/dstr/index.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">CDC&apos;s 2023 Youth Risk Behavior Survey (YRBS)</a>. But substance use screening for adolescents is not about catching or punishing &mdash; it is about opening a conversation. The adolescent brain is uniquely vulnerable to the effects of substances because the prefrontal cortex, responsible for judgment and impulse control, does not fully develop until around age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Early identification through screening can change the trajectory of a young person&apos;s life.
+            About 17% of high school students report current marijuana use (past 30 days) and 22% report current alcohol use, according to the <a href="https://www.cdc.gov/yrbs/dstr/index.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">CDC&apos;s 2023 Youth Risk Behavior Survey (YRBS)</a>. But substance use screening for adolescents is not about catching or punishing, it is about opening a conversation. The adolescent brain is uniquely vulnerable to the effects of substances because the prefrontal cortex, responsible for judgment and impulse control, does not fully develop until around age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Early identification through screening can change the trajectory of a young person&apos;s life.
           </p>
         </header>
 
@@ -78,9 +78,9 @@ export default function DrugScreeningTeensGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you or your teen are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -94,13 +94,13 @@ export default function DrugScreeningTeensGuidePage() {
           <section>
             <h2>Why adolescent substance use screening matters</h2>
             <p>
-              The adolescent brain is still under construction. The prefrontal cortex &mdash; the region responsible for decision-making, impulse control, risk assessment, and long-term planning &mdash; does not fully mature until approximately age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Meanwhile, the brain&apos;s reward system is already fully active, creating a neurological setup that makes teens more likely to seek novel experiences and less able to evaluate consequences.
+              The adolescent brain is still under construction. The prefrontal cortex, the region responsible for decision-making, impulse control, risk assessment, and long-term planning, does not fully mature until approximately age 25 (<a href="https://www.nimh.nih.gov/health/publications/the-teen-brain-7-things-to-know" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">NIMH</a>). Meanwhile, the brain&apos;s reward system is already fully active, creating a neurological setup that makes teens more likely to seek novel experiences and less able to evaluate consequences.
             </p>
             <p>
               This is not a character flaw. It is developmental neuroscience. And it has a direct implication: adolescents who use substances are significantly more vulnerable to developing substance use disorders later in life. Research from the <a href="https://nida.nih.gov/research-topics/adolescents-young-adults" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute on Drug Abuse (NIDA)</a> and national survey data show that the earlier substance use begins, the greater the risk of developing addiction. A person who first uses substances at age 13 is far more likely to develop a substance use disorder than someone who begins at 21.
             </p>
             <p>
-              Screening provides a structured, evidence-based way to identify patterns before they escalate. The goal is not to label or shame &mdash; it is to start a conversation that could prevent years of struggle.
+              Screening provides a structured, evidence-based way to identify patterns before they escalate. The goal is not to label or shame, it is to start a conversation that could prevent years of struggle.
             </p>
           </section>
 
@@ -113,7 +113,7 @@ export default function DrugScreeningTeensGuidePage() {
               <li><strong>Cannabis:</strong> The most commonly used illicit substance among adolescents. With legalization in many states, teens often perceive cannabis as low-risk. However, regular use during adolescence is associated with cognitive impairment, reduced academic performance, and increased risk of psychosis in genetically vulnerable individuals.</li>
               <li><strong>Alcohol:</strong> Still the most widely used substance overall. About 22% of high school students reported current alcohol use in 2023 (<a href="https://www.cdc.gov/yrbs/dstr/index.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">2023 YRBS</a>). The YRBS binge drinking question was revised in 2021 and prior figures are not directly comparable. Adolescent alcohol use is associated with lasting effects on brain development.</li>
               <li><strong>Vaping and nicotine:</strong> E-cigarette use has surged among teens. Nicotine is highly addictive at any age, but adolescent brains are especially susceptible. Vaping can also serve as a gateway to other substance use.</li>
-              <li><strong>Prescription drug misuse:</strong> Stimulants (Adderall, Ritalin), opioids, and benzodiazepines are misused by some teens &mdash; often obtained from family medicine cabinets or peers.</li>
+              <li><strong>Prescription drug misuse:</strong> Stimulants (Adderall, Ritalin), opioids, and benzodiazepines are misused by some teens, often obtained from family medicine cabinets or peers.</li>
               <li><strong>Fentanyl contamination:</strong> This is the most dangerous development in the current drug landscape. Counterfeit pills sold as Xanax, Percocet, or other medications increasingly contain fentanyl, a synthetic opioid that can be lethal in microscopic doses. Teens who think they are taking a prescription pill may unknowingly be taking fentanyl. This makes any experimentation with pills of unknown origin potentially fatal.</li>
             </ul>
           </section>
@@ -144,12 +144,12 @@ export default function DrugScreeningTeensGuidePage() {
               CRAFFT stands for six key assessment areas:
             </p>
             <ul>
-              <li><strong>C</strong> &mdash; Have you ever ridden in a <strong>Car</strong> driven by someone (including yourself) who was high or had been using alcohol or drugs?</li>
-              <li><strong>R</strong> &mdash; Do you ever use alcohol or drugs to <strong>Relax</strong>, feel better about yourself, or fit in?</li>
-              <li><strong>A</strong> &mdash; Do you ever use alcohol or drugs while you are by yourself, or <strong>Alone</strong>?</li>
-              <li><strong>F</strong> &mdash; Do you ever <strong>Forget</strong> things you did while using alcohol or drugs?</li>
-              <li><strong>F</strong> &mdash; Do your family or <strong>Friends</strong> ever tell you that you should cut down on your drinking or drug use?</li>
-              <li><strong>T</strong> &mdash; Have you ever gotten into <strong>Trouble</strong> while you were using alcohol or drugs?</li>
+              <li><strong>C</strong>, Have you ever ridden in a <strong>Car</strong> driven by someone (including yourself) who was high or had been using alcohol or drugs?</li>
+              <li><strong>R</strong>, Do you ever use alcohol or drugs to <strong>Relax</strong>, feel better about yourself, or fit in?</li>
+              <li><strong>A</strong>, Do you ever use alcohol or drugs while you are by yourself, or <strong>Alone</strong>?</li>
+              <li><strong>F</strong>, Do you ever <strong>Forget</strong> things you did while using alcohol or drugs?</li>
+              <li><strong>F</strong>, Do your family or <strong>Friends</strong> ever tell you that you should cut down on your drinking or drug use?</li>
+              <li><strong>T</strong>, Have you ever gotten into <strong>Trouble</strong> while you were using alcohol or drugs?</li>
             </ul>
             <p>
               A score of 2 or higher on the CRAFFT questions indicates patterns that may warrant further evaluation. The screening is free, takes a few minutes, runs entirely in the browser, and stores no data. You can take it together with your teen as a conversation starter, or a teen can take it privately.
@@ -161,12 +161,12 @@ export default function DrugScreeningTeensGuidePage() {
           <section>
             <h2>How to talk to your teen about substance use</h2>
             <p>
-              The most effective approach is rooted in motivational interviewing &mdash; a clinical communication style designed to elicit change from within rather than imposing it from outside. Here are practical applications for parents:
+              The most effective approach is rooted in motivational interviewing, a clinical communication style designed to elicit change from within rather than imposing it from outside. Here are practical applications for parents:
             </p>
             <ul>
               <li><strong>Ask, do not accuse.</strong> &quot;I&apos;ve noticed some changes lately, and I want to understand what&apos;s going on&quot; opens a door. &quot;Are you doing drugs?&quot; slams it shut.</li>
               <li><strong>Listen more than you talk.</strong> Your teen is more likely to share if they feel heard. Resist the urge to lecture immediately.</li>
-              <li><strong>Be honest about risks without exaggerating.</strong> Teens can detect dishonesty. Overstating risks undermines your credibility. Share factual information &mdash; especially about fentanyl contamination, which is a genuinely novel danger their friends may not understand.</li>
+              <li><strong>Be honest about risks without exaggerating.</strong> Teens can detect dishonesty. Overstating risks undermines your credibility. Share factual information, especially about fentanyl contamination, which is a genuinely novel danger their friends may not understand.</li>
               <li><strong>Separate the behavior from the person.</strong> &quot;I love you. I&apos;m concerned about this behavior&quot; is different from &quot;I&apos;m disappointed in you.&quot;</li>
               <li><strong>Use the <Link href="/drug-screening-teens" className="text-sage-600 dark:text-sage-400 underline">teen substance use screening</Link> as a tool.</strong> Taking a screening together removes the confrontational dynamic and creates a structured, less emotional way to explore patterns.</li>
               <li><strong>Make it clear: safety over punishment.</strong> If your teen knows that coming to you for help will result in support rather than punishment, they are far more likely to reach out when it matters most.</li>

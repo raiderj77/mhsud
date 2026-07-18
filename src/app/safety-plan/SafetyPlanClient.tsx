@@ -312,9 +312,9 @@ export function SafetyPlanClient({ faqData }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        Safety Plan
-      </h1>
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
+        Build Your Safety Plan
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-6">
         Having a plan can help you get through a crisis. This tool walks you through the 6 steps
         of a safety plan so you have it ready when you need it most. <strong>You matter, and you
@@ -392,7 +392,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                 Step 2: Things I Can Do on My Own
               </h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
-                Activities that help take your mind off problems — things you can do alone, without contacting another person.
+                Activities that help take your mind off problems, things you can do alone, without contacting another person.
               </p>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 These don&apos;t have to solve the problem. They just need to get you through the moment.
@@ -447,7 +447,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               </h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
                 People you can be around or places you can go that help take your mind off things.
-                You don&apos;t have to tell them what you&apos;re going through — their presence alone can help.
+                You don&apos;t have to tell them what you&apos;re going through, their presence alone can help.
               </p>
             </div>
 
@@ -492,7 +492,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                 Step 4: People I Can Tell I&apos;m in Crisis
               </h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-1">
-                People you trust enough to tell that you&apos;re struggling. These are people who will listen and help — a friend, family member, sponsor, faith leader, or anyone you feel safe with.
+                People you trust enough to tell that you&apos;re struggling. These are people who will listen and help, a friend, family member, sponsor, faith leader, or anyone you feel safe with.
               </p>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 italic">
                 Reaching out is a sign of strength, not weakness.
@@ -657,7 +657,7 @@ export function SafetyPlanClient({ faqData }: Props) {
                 My reasons for living
               </label>
               <p className="text-xs text-sage-600 dark:text-sage-400 mb-3">
-                What matters most to you? People, pets, goals, hopes — anything worth holding onto.
+                What matters most to you? People, pets, goals, hopes, anything worth holding onto.
               </p>
               <textarea
                 id="reasons"
@@ -815,12 +815,12 @@ export function SafetyPlanClient({ faqData }: Props) {
             How to Use This Safety Planning Tool
           </h2>
           <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <li><strong>Work through each step</strong> — Go at your own pace. You can jump between steps using the step indicator.</li>
-            <li><strong>Be specific</strong> — Names, phone numbers, and concrete actions are more helpful during a crisis than vague ideas.</li>
-            <li><strong>Fill in what you can</strong> — Not every field needs to be filled. Even a partially completed plan is valuable.</li>
-            <li><strong>Print your plan</strong> — Keep a paper copy in your wallet, on your fridge, or next to your bed. Give a copy to someone you trust.</li>
-            <li><strong>Your plan auto-saves</strong> — It is stored in your browser so you can come back and update it anytime.</li>
-            <li><strong>Review and update regularly</strong> — Your plan should evolve as your life changes. Update it with your therapist or on your own.</li>
+            <li><strong>Work through each step</strong>, Go at your own pace. You can jump between steps using the step indicator.</li>
+            <li><strong>Be specific</strong>, Names, phone numbers, and concrete actions are more helpful during a crisis than vague ideas.</li>
+            <li><strong>Fill in what you can</strong>, Not every field needs to be filled. Even a partially completed plan is valuable.</li>
+            <li><strong>Print your plan</strong>, Keep a paper copy in your wallet, on your fridge, or next to your bed. Give a copy to someone you trust.</li>
+            <li><strong>Your plan auto-saves</strong>, It is stored in your browser so you can come back and update it anytime.</li>
+            <li><strong>Review and update regularly</strong>, Your plan should evolve as your life changes. Update it with your therapist or on your own.</li>
           </ol>
         </section>
 
@@ -844,18 +844,18 @@ export function SafetyPlanClient({ faqData }: Props) {
               Why Safety Plans Work
             </h3>
             <ul className="list-disc list-inside space-y-1">
-              <li><strong>They interrupt the crisis spiral</strong> — Suicidal crises are often time-limited. Having a concrete plan provides a path through the worst moments.</li>
-              <li><strong>They reduce impulsivity</strong> — Most suicide attempts involve some degree of impulsivity. A plan creates a pause between the impulse and the action.</li>
-              <li><strong>They connect you to support</strong> — Having names and numbers written down removes the barrier of having to think of who to call during a crisis.</li>
-              <li><strong>They are personalized</strong> — Unlike generic advice, your safety plan reflects your specific warning signs, coping strategies, and support network.</li>
-              <li><strong>Means restriction saves lives</strong> — Research consistently shows that reducing access to lethal means during a crisis is one of the single most effective suicide prevention strategies.</li>
+              <li><strong>They interrupt the crisis spiral</strong>, Suicidal crises are often time-limited. Having a concrete plan provides a path through the worst moments.</li>
+              <li><strong>They reduce impulsivity</strong>, Most suicide attempts involve some degree of impulsivity. A plan creates a pause between the impulse and the action.</li>
+              <li><strong>They connect you to support</strong>, Having names and numbers written down removes the barrier of having to think of who to call during a crisis.</li>
+              <li><strong>They are personalized</strong>, Unlike generic advice, your safety plan reflects your specific warning signs, coping strategies, and support network.</li>
+              <li><strong>Means restriction saves lives</strong>, Research consistently shows that reducing access to lethal means during a crisis is one of the single most effective suicide prevention strategies.</li>
             </ul>
 
             <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
               When to Use Your Safety Plan
             </h3>
             <p>
-              Use your safety plan <strong>as soon as you notice your warning signs</strong> — the thoughts, feelings, or situations you identified in Step 1. Do not wait until you are in full crisis. The earlier you start working through your plan, the more effective it will be. Start with Step 2 (internal coping) and work your way through the steps in order until you feel safer.
+              Use your safety plan <strong>as soon as you notice your warning signs</strong>, the thoughts, feelings, or situations you identified in Step 1. Do not wait until you are in full crisis. The earlier you start working through your plan, the more effective it will be. Start with Step 2 (internal coping) and work your way through the steps in order until you feel safer.
             </p>
           </div>
         </section>
@@ -930,7 +930,7 @@ export function SafetyPlanClient({ faqData }: Props) {
         <section className="mb-8">
           <div className="bg-crisis-50 dark:bg-crisis-950/40 border-2 border-crisis-300 dark:border-crisis-700 rounded-xl p-6">
             <h2 className="text-lg font-serif font-bold text-crisis-800 dark:text-crisis-200 mb-4 text-center">
-              You Are Not Alone — Crisis Resources
+              You Are Not Alone, Crisis Resources
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="bg-white/70 dark:bg-crisis-900/40 rounded-lg p-4">
@@ -982,7 +982,8 @@ export function SafetyPlanClient({ faqData }: Props) {
 
         <div className="text-center mb-6">
           <p className="text-xs text-neutral-500 dark:text-neutral-400">
-            Your privacy matters. Your safety plan is stored only in your browser&apos;s local storage on this device. Nothing is sent to any server, collected, or shared with anyone.
+            Your safety plan is stored in this browser&apos;s local storage and is not intentionally sent
+            to MindCheck Tools servers. Anyone using this browser profile may be able to view it.
           </p>
         </div>
 
@@ -1001,17 +1002,17 @@ export function SafetyPlanClient({ faqData }: Props) {
             </li>
             <li>
               <a href="https://www.sprc.org/resources-programs/patient-safety-plan-template" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Suicide Prevention Resource Center — Safety Plan Template
+                Suicide Prevention Resource Center, Safety Plan Template
               </a>
             </li>
             <li>
               <a href="https://www.va.gov/ve/safetyplan.asp" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                U.S. Department of Veterans Affairs — Safety Planning
+                U.S. Department of Veterans Affairs, Safety Planning
               </a>
             </li>
             <li>
               <a href="https://www.hsph.harvard.edu/means-matter/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Harvard T.H. Chan School of Public Health — Means Matter
+                Harvard T.H. Chan School of Public Health, Means Matter
               </a>
             </li>
           </ul>

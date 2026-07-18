@@ -31,12 +31,12 @@ const FAQ_DATA = [
   {
     question: "Why are women more likely to have anxiety?",
     answer:
-      "The 2:1 ratio reflects biological, psychological, and social factors working together. Hormonal fluctuations across the menstrual cycle, pregnancy, and perimenopause affect neurotransmitter systems involved in anxiety. Higher rates of trauma increase vulnerability. Socialization patterns emphasizing vigilance and emotional labor add chronic cognitive load. No single factor explains the gap &mdash; it is their interaction.",
+      "The 2:1 ratio reflects biological, psychological, and social factors working together. Hormonal fluctuations across the menstrual cycle, pregnancy, and perimenopause affect neurotransmitter systems involved in anxiety. Higher rates of trauma increase vulnerability. Socialization patterns emphasizing vigilance and emotional labor add chronic cognitive load. No single factor explains the gap, it is their interaction.",
   },
   {
     question: "Can hormones cause anxiety?",
     answer:
-      "Hormonal fluctuations can trigger or worsen anxiety, but hormones alone rarely cause an anxiety disorder. Estrogen and progesterone influence serotonin and GABA &mdash; neurotransmitters that regulate mood and anxiety. Drops in estrogen (premenstrual, postpartum, perimenopause) are associated with increased anxiety in susceptible women. Hormonal contributions are real and should be discussed with a healthcare provider.",
+      "Hormonal fluctuations can trigger or worsen anxiety, but hormones alone rarely cause an anxiety disorder. Estrogen and progesterone influence serotonin and GABA, neurotransmitters that regulate mood and anxiety. Drops in estrogen (premenstrual, postpartum, perimenopause) are associated with increased anxiety in susceptible women. Hormonal contributions are real and should be discussed with a healthcare provider.",
   },
   {
     question: "Is perimenopause-related anxiety common?",
@@ -88,7 +88,7 @@ export default function AnxietyWomenGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Women are approximately twice as likely as men to develop an anxiety disorder (NIMH). This is not simply a matter of women being more willing to report symptoms &mdash; the disparity appears consistently across cultures, age groups, and study methodologies. Understanding why women are disproportionately affected by anxiety, and how hormones, trauma, socialization, and chronic mental load interact, is essential for recognizing when anxiety has crossed the line from normal worry into something that deserves attention.
+            Women are approximately twice as likely as men to develop an anxiety disorder (NIMH). This is not simply a matter of women being more willing to report symptoms, the disparity appears consistently across cultures, age groups, and study methodologies. Understanding why women are disproportionately affected by anxiety, and how hormones, trauma, socialization, and chronic mental load interact, is essential for recognizing when anxiety has crossed the line from normal worry into something that deserves attention.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AnxietyWomenGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -113,18 +113,18 @@ export default function AnxietyWomenGuidePage() {
             <h2>Why women are more vulnerable to anxiety disorders</h2>
             <p>The 2:1 gender disparity in anxiety disorders reflects the convergence of multiple factors, none of which fully explain the gap on their own:</p>
             <ul>
-              <li><strong>Hormonal fluctuations:</strong> Estrogen and progesterone directly influence serotonin, GABA, and the hypothalamic-pituitary-adrenal (HPA) axis &mdash; all of which regulate anxiety. Women experience significant hormonal shifts across the menstrual cycle, pregnancy, postpartum, and perimenopause, each of which can trigger or worsen anxiety in susceptible individuals</li>
+              <li><strong>Hormonal fluctuations:</strong> Estrogen and progesterone directly influence serotonin, GABA, and the hypothalamic-pituitary-adrenal (HPA) axis, all of which regulate anxiety. Women experience significant hormonal shifts across the menstrual cycle, pregnancy, postpartum, and perimenopause, each of which can trigger or worsen anxiety in susceptible individuals</li>
               <li><strong>Higher rates of trauma and sexual violence:</strong> Women are disproportionately affected by sexual assault, intimate partner violence, and childhood sexual abuse. Trauma exposure is one of the strongest predictors of anxiety disorders, and the types of trauma women more commonly experience are particularly associated with generalized anxiety, PTSD, and panic disorder</li>
               <li><strong>Socialization and vigilance:</strong> Women are socialized from childhood to be attuned to others&apos; needs, anticipate problems, and maintain social harmony. While these skills are valuable, they also create a chronic state of vigilance and cognitive load that feeds anxiety</li>
               <li><strong>Gender-based discrimination and safety concerns:</strong> The daily reality of navigating gender-based harassment, workplace discrimination, and personal safety concerns adds a layer of chronic stress that men are less likely to experience</li>
-              <li><strong>Mental load:</strong> Research consistently shows that women carry a disproportionate share of household management, childcare coordination, and emotional labor &mdash; even in dual-income households. This invisible cognitive burden contributes to chronic overwhelm and anxiety</li>
+              <li><strong>Mental load:</strong> Research consistently shows that women carry a disproportionate share of household management, childcare coordination, and emotional labor, even in dual-income households. This invisible cognitive burden contributes to chronic overwhelm and anxiety</li>
             </ul>
           </section>
 
           <section>
             <h2>Hormones and anxiety across the lifespan</h2>
             <p>
-              Hormonal contributions to anxiety are real, significant, and often dismissed. Understanding these connections helps women recognize that certain anxiety patterns are not &quot;all in their head&quot; &mdash; they have a physiological basis:
+              Hormonal contributions to anxiety are real, significant, and often dismissed. Understanding these connections helps women recognize that certain anxiety patterns are not &quot;all in their head&quot;, they have a physiological basis:
             </p>
             <ul>
               <li><strong>Menstrual cycle:</strong> Many women experience increased anxiety in the luteal phase (the week or two before menstruation) when progesterone rises and then drops. Premenstrual dysphoric disorder (PMDD) involves severe anxiety and mood symptoms that significantly disrupt functioning</li>
@@ -132,7 +132,7 @@ export default function AnxietyWomenGuidePage() {
               <li><strong>Perimenopause and menopause:</strong> The years surrounding menopause (typically ages 40&ndash;55) bring erratic hormonal fluctuations that can trigger new-onset anxiety even in women with no prior history. Research shows women are 2&ndash;4 times more likely to experience clinically significant anxiety during perimenopause compared to premenopause</li>
             </ul>
             <p>
-              Perimenopause-related anxiety is particularly underrecognized. Women in their 40s and 50s who develop sudden anxiety, insomnia, heart palpitations, or panic attacks may not connect these symptoms to hormonal changes &mdash; and their providers may not ask. If you are experiencing new or worsening anxiety in midlife, discussing hormonal contributions with your healthcare provider is worthwhile.
+              Perimenopause-related anxiety is particularly underrecognized. Women in their 40s and 50s who develop sudden anxiety, insomnia, heart palpitations, or panic attacks may not connect these symptoms to hormonal changes, and their providers may not ask. If you are experiencing new or worsening anxiety in midlife, discussing hormonal contributions with your healthcare provider is worthwhile.
             </p>
           </section>
 
@@ -141,7 +141,7 @@ export default function AnxietyWomenGuidePage() {
           <section>
             <h2>Anxiety and depression: the overlap in women</h2>
             <p>
-              More than 60% of women with anxiety disorders also experience depression, and the reverse is similarly common. This overlap is not coincidental &mdash; the conditions share neurobiological pathways, risk factors (trauma, hormonal sensitivity, chronic stress), and often emerge together.
+              More than 60% of women with anxiety disorders also experience depression, and the reverse is similarly common. This overlap is not coincidental, the conditions share neurobiological pathways, risk factors (trauma, hormonal sensitivity, chronic stress), and often emerge together.
             </p>
             <p>
               For many women, anxiety comes first. Chronic worry, hypervigilance, and the physical exhaustion of sustained anxiety eventually deplete emotional resources, leading to the hopelessness and withdrawal that characterize depression. Screening for both conditions provides a more complete picture. If anxiety is your primary concern, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> is a good starting point, and the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> can help assess whether depression is also present.
@@ -151,7 +151,7 @@ export default function AnxietyWomenGuidePage() {
           <section>
             <h2>When anxiety gets dismissed as &quot;being emotional&quot;</h2>
             <p>
-              Women&apos;s anxiety is frequently minimized &mdash; by partners, by workplaces, and even by healthcare providers. Common dismissals include:
+              Women&apos;s anxiety is frequently minimized, by partners, by workplaces, and even by healthcare providers. Common dismissals include:
             </p>
             <ul>
               <li>&quot;You&apos;re overthinking it&quot;</li>
@@ -176,7 +176,7 @@ export default function AnxietyWomenGuidePage() {
               The <Link href="/anxiety-test-for-women" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for women</Link> is a free, private assessment that takes under five minutes. It runs entirely in your browser, requires no account, and your answers are never stored.
             </p>
             <p>
-              The screening helps quantify what you may be experiencing &mdash; putting numbers to the worry, restlessness, and physical tension that women often minimize or attribute to &quot;just being stressed.&quot; A structured result can help you communicate more effectively with a provider, or simply help you recognize that what you are experiencing warrants attention.
+              The screening helps quantify what you may be experiencing, putting numbers to the worry, restlessness, and physical tension that women often minimize or attribute to &quot;just being stressed.&quot; A structured result can help you communicate more effectively with a provider, or simply help you recognize that what you are experiencing warrants attention.
             </p>
             <p>
               If you carry a heavy mental load at home or work, the <Link href="/mental-load-calculator" className="text-sage-600 dark:text-sage-400 underline">Mental Load Calculator</Link> can help you see how cognitive and emotional labor may be contributing to your anxiety. The <Link href="/anxiety-test-for-women" className="text-sage-600 dark:text-sage-400 underline">anxiety screening</Link> provides the clinical picture; the mental load assessment provides context for what may be driving it.
@@ -214,7 +214,7 @@ export default function AnxietyWomenGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

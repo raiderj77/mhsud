@@ -88,7 +88,7 @@ export default function StressCollegeStudentsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            According to the American Psychological Association&apos;s Stress in America report, college-age adults (18&ndash;24) consistently report the highest stress levels of any age group. Roughly 60% of college students report experiencing significant stress, yet only about 11% use campus counseling services. The gap between suffering and help-seeking is enormous &mdash; and it starts with not knowing when normal academic pressure has crossed the line into something that needs attention.
+            According to the American Psychological Association&apos;s Stress in America report, college-age adults (18&ndash;24) consistently report the highest stress levels of any age group. Roughly 60% of college students report experiencing significant stress, yet only about 11% use campus counseling services. The gap between suffering and help-seeking is enormous, and it starts with not knowing when normal academic pressure has crossed the line into something that needs attention.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function StressCollegeStudentsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ export default function StressCollegeStudentsGuidePage() {
           <section>
             <h2>Where does college stress come from?</h2>
             <p>
-              College stress is not a single experience &mdash; it is a convergence of multiple pressures hitting simultaneously during a period of significant developmental transition. The major sources include:
+              College stress is not a single experience, it is a convergence of multiple pressures hitting simultaneously during a period of significant developmental transition. The major sources include:
             </p>
             <ul>
               <li><strong>Academic pressure:</strong> Heavy course loads, high-stakes exams, GPA requirements for scholarships or graduate school, competitive grading curves, and the constant feeling of never being &quot;caught up&quot;</li>
@@ -120,7 +120,7 @@ export default function StressCollegeStudentsGuidePage() {
               <li><strong>Future uncertainty:</strong> Career anxiety, job market competition, pressure to have a clear plan, and the weight of decisions that feel permanent</li>
               <li><strong>Social comparison:</strong> Social media amplifies comparison with peers who appear to be succeeding effortlessly. Instagram and TikTok create a curated illusion that everyone else is handling college better</li>
               <li><strong>Family expectations:</strong> First-generation students carry the weight of being the family&apos;s path to upward mobility. Students from high-achieving families feel pressure to match or exceed parental accomplishments</li>
-              <li><strong>Identity development:</strong> College is when many students are navigating questions of identity &mdash; sexuality, gender, values, beliefs, and independence from family &mdash; all while under academic and social pressure</li>
+              <li><strong>Identity development:</strong> College is when many students are navigating questions of identity, sexuality, gender, values, beliefs, and independence from family, all while under academic and social pressure</li>
               <li><strong>Sleep deprivation:</strong> College culture normalizes sleep deprivation. Over 60% of students report poor sleep quality, which directly impairs stress resilience, emotional regulation, and cognitive performance</li>
             </ul>
           </section>
@@ -131,7 +131,7 @@ export default function StressCollegeStudentsGuidePage() {
               Normal stress is temporary, proportional to the stressor, and resolves when the stressor passes. You feel stressed before a midterm, the midterm happens, and the stress subsides. Pathological stress looks different:
             </p>
             <ul>
-              <li><strong>Persistence:</strong> The stress continues for weeks or months, even when specific stressors resolve. There is no &quot;after&quot; &mdash; the baseline is constant tension</li>
+              <li><strong>Persistence:</strong> The stress continues for weeks or months, even when specific stressors resolve. There is no &quot;after&quot;, the baseline is constant tension</li>
               <li><strong>Impairment:</strong> Stress is interfering with your ability to attend class, complete assignments, maintain relationships, or engage in activities you previously enjoyed</li>
               <li><strong>Physical symptoms:</strong> Chronic headaches, stomach problems, chest tightness, muscle pain, frequent illness, or fatigue that sleep does not resolve</li>
               <li><strong>Cognitive changes:</strong> Inability to concentrate, racing thoughts, difficulty making decisions, memory problems, or blanking on exams despite preparation</li>
@@ -156,7 +156,7 @@ export default function StressCollegeStudentsGuidePage() {
               <li><strong>Burnout</strong> is a state of chronic exhaustion resulting from prolonged, unresolvable stress. It involves emotional exhaustion, cynicism or detachment, and reduced sense of accomplishment. In college, burnout often manifests as loss of motivation for academics that previously felt meaningful</li>
             </ul>
             <p>
-              These conditions frequently co-occur. A student experiencing chronic academic stress may develop generalized anxiety, which &mdash; if unaddressed &mdash; can progress to burnout. Understanding which pattern fits your experience helps determine the right response.
+              These conditions frequently co-occur. A student experiencing chronic academic stress may develop generalized anxiety, which, if unaddressed, can progress to burnout. Understanding which pattern fits your experience helps determine the right response.
             </p>
           </section>
 
@@ -166,7 +166,7 @@ export default function StressCollegeStudentsGuidePage() {
               The <Link href="/stress-test-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools stress screening for college students</Link> is a free, private self-assessment designed specifically for the stressors college students face. It takes under five minutes, runs entirely in your browser, and requires no account or login.
             </p>
             <p>
-              A screening provides a structured snapshot of your stress level &mdash; objective data that cuts through the normalization of &quot;everyone is stressed&quot; in college culture. It can help you determine whether your stress is within a typical range or whether it has reached a level that would benefit from professional support.
+              A screening provides a structured snapshot of your stress level, objective data that cuts through the normalization of &quot;everyone is stressed&quot; in college culture. It can help you determine whether your stress is within a typical range or whether it has reached a level that would benefit from professional support.
             </p>
             <p>
               You can bring your results to a campus counselor, your doctor, or a therapist as a conversation starter. If the screening suggests elevated stress alongside symptoms of anxiety or depression, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7</Link> and <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9</Link> provide focused screenings for those dimensions.
@@ -187,7 +187,7 @@ export default function StressCollegeStudentsGuidePage() {
               <li>Testing in a low-distraction environment</li>
             </ul>
             <p>
-              To access accommodations, you typically need documentation from a healthcare provider and registration with your school&apos;s disability services office. These services are confidential &mdash; professors are told what accommodations to provide but not the reason behind them.
+              To access accommodations, you typically need documentation from a healthcare provider and registration with your school&apos;s disability services office. These services are confidential, professors are told what accommodations to provide but not the reason behind them.
             </p>
           </section>
 
@@ -199,7 +199,7 @@ export default function StressCollegeStudentsGuidePage() {
               Despite the fact that roughly 60% of college students report significant stress, only about 11% use campus counseling services. The reasons mirror broader mental health help-seeking barriers but are amplified by college-specific factors:
             </p>
             <ul>
-              <li><strong>Normalization:</strong> &quot;Everyone is stressed&quot; becomes a reason not to seek help. If stress is universal, it cannot be a real problem &mdash; or so the reasoning goes</li>
+              <li><strong>Normalization:</strong> &quot;Everyone is stressed&quot; becomes a reason not to seek help. If stress is universal, it cannot be a real problem, or so the reasoning goes</li>
               <li><strong>Time pressure:</strong> The students who most need counseling are often the ones who feel they cannot afford the time for weekly appointments</li>
               <li><strong>Wait lists:</strong> Many campus counseling centers have wait times of 2&ndash;6 weeks, which feels like an eternity during a mental health crisis</li>
               <li><strong>Session limits:</strong> Most campuses limit students to 6&ndash;12 sessions per year, which may not feel like enough</li>
@@ -207,7 +207,7 @@ export default function StressCollegeStudentsGuidePage() {
               <li><strong>Lack of awareness:</strong> Some students simply do not know what services are available or how to access them</li>
             </ul>
             <p>
-              Online self-screening tools like the <Link href="/stress-test-college-students" className="text-sage-600 dark:text-sage-400 underline">college stress screening</Link> can serve as a bridge &mdash; a private first step that helps a student determine whether their stress level warrants seeking more support.
+              Online self-screening tools like the <Link href="/stress-test-college-students" className="text-sage-600 dark:text-sage-400 underline">college stress screening</Link> can serve as a bridge, a private first step that helps a student determine whether their stress level warrants seeking more support.
             </p>
           </section>
 
@@ -240,7 +240,7 @@ export default function StressCollegeStudentsGuidePage() {
               <li>Relationships are deteriorating because of your stress level</li>
             </ul>
             <p>
-              Taking a screening is not a substitute for professional evaluation, but it provides a structured starting point. You do not need to have everything figured out before reaching out &mdash; showing up is enough.
+              Taking a screening is not a substitute for professional evaluation, but it provides a structured starting point. You do not need to have everything figured out before reaching out, showing up is enough.
             </p>
           </section>
 
@@ -260,7 +260,7 @@ export default function StressCollegeStudentsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

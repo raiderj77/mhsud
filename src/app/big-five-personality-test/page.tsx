@@ -7,7 +7,7 @@ const TOOL_URL = `${SITE_URL}/big-five-personality-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/big-five-personality-test",
-  title: "Big Five Personality Test — IPIP-NEO",
+  title: "Big Five Personality Test, IPIP-NEO",
   description:
     "Take the free Big Five personality test (IPIP-NEO-50). Measure openness, conscientiousness, extraversion, agreeableness, and neuroticism in minutes.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
     "five factor personality test", "big five inventory",
   ],
   openGraph: {
-    title: "Big Five Personality Test — IPIP-NEO",
+    title: "Big Five Personality Test, IPIP-NEO",
     description: "Take the free Big Five (OCEAN) personality test. 50 questions, 10 minutes. Measure Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Private, instant results.",
     url: TOOL_URL,
     type: "website",
@@ -50,7 +50,7 @@ export default function BigFivePersonalityTestPage() {
               datePublished: "2026-03-08",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -82,7 +82,7 @@ export default function BigFivePersonalityTestPage() {
               url: TOOL_URL,
               lastReviewed: "2026-03-08",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -91,7 +91,7 @@ export default function BigFivePersonalityTestPage() {
         <AnswerBlock
           what="A personality assessment measuring the Big Five traits: openness, conscientiousness, extraversion, agreeableness, and neuroticism."
           who="Anyone interested in understanding their personality profile using the most widely researched trait model in psychology."
-          bottomLine="The Big Five model describes tendencies, not fixed categories — traits exist on a spectrum. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The Big Five model describes tendencies, not fixed categories, traits exist on a spectrum. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

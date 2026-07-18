@@ -9,7 +9,7 @@ const TOOL_URL = `${SITE_URL}/alcohol-screening-for-women`;
 
 export const metadata: Metadata = createMetadata({
   path: "/alcohol-screening-for-women",
-  title: "Alcohol Use Screening for Women — Free AUDIT",
+  title: "Alcohol Use Screening for Women, Free AUDIT",
   description:
     "Women develop alcohol-related health problems faster and at lower consumption levels than men. The screening thresholds are different too. Free validated AUDIT screening with context on women and alcohol risk.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "wine culture women", "alcohol and breast cancer", "women AUD screening",
   ],
   openGraph: {
-    title: "Alcohol Use Screening for Women — Free AUDIT",
+    title: "Alcohol Use Screening for Women, Free AUDIT",
     description: "Free, private alcohol screening for women using the WHO's clinically validated AUDIT. Context on why alcohol risk is different for women.",
     url: TOOL_URL,
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "Is one drink a day actually a problem for women?",
-    answer: "The evidence has shifted. Earlier research suggested cardiovascular benefits from light drinking, but more recent studies using stronger methodology suggest the protective effect was overstated. The dose-response relationship between alcohol and breast cancer exists even at one drink per day. Current guidance is that any alcohol use carries some risk — for women with elevated breast cancer risk, even light drinking deserves consideration.",
+    answer: "The evidence has shifted. Earlier research suggested cardiovascular benefits from light drinking, but more recent studies using stronger methodology suggest the protective effect was overstated. The dose-response relationship between alcohol and breast cancer exists even at one drink per day. Current guidance is that any alcohol use carries some risk, for women with elevated breast cancer risk, even light drinking deserves consideration.",
   },
   {
     question: "Why is the AUDIT-C cutoff lower for women?",
@@ -37,7 +37,7 @@ const FAQ_DATA = [
   },
   {
     question: "What does treatment look like for women with AUD?",
-    answer: "Medications — naltrexone, acamprosate — are equally effective for women as men. Women often benefit from treatment programs that address the higher rates of trauma, depression, and anxiety comorbidity common in women with AUD. SAMHSA's treatment locator at findtreatment.gov can filter for women-specific programs.",
+    answer: "Medications, naltrexone, acamprosate, are equally effective for women as men. Women often benefit from treatment programs that address the higher rates of trauma, depression, and anxiety comorbidity common in women with AUD. SAMHSA's treatment locator at findtreatment.gov can filter for women-specific programs.",
   },
   {
     question: "Why do women develop alcohol problems faster than men?",
@@ -45,18 +45,18 @@ const FAQ_DATA = [
   },
   {
     question: "Does alcohol affect women's hormones?",
-    answer: "Yes. Alcohol disrupts estrogen metabolism and can worsen premenstrual symptoms. Many women notice increased alcohol sensitivity in the luteal phase — the week or two before menstruation. Some women increase drinking premenstrually as self-medication for mood symptoms without recognizing the pattern. Alcohol also affects fertility and can worsen menopausal symptoms.",
+    answer: "Yes. Alcohol disrupts estrogen metabolism and can worsen premenstrual symptoms. Many women notice increased alcohol sensitivity in the luteal phase, the week or two before menstruation. Some women increase drinking premenstrually as self-medication for mood symptoms without recognizing the pattern. Alcohol also affects fertility and can worsen menopausal symptoms.",
   },
   {
     question: "Is 'wine culture' actually a problem?",
-    answer: "The normalization of daily wine drinking as self-care and stress relief — 'mommy wine culture,' wine-themed merchandise, social media — has contributed to a measurable increase in heavy drinking among women. Between 2001 and 2013, heavy drinking in women increased 58%. Wine is alcohol; a standard glass is 5 oz at 12% ABV. Home pours are typically 6–8 oz, making each glass 1.2–1.6 standard drinks.",
+    answer: "The normalization of daily wine drinking as self-care and stress relief, 'mommy wine culture,' wine-themed merchandise, social media, has contributed to a measurable increase in heavy drinking among women. Between 2001 and 2013, heavy drinking in women increased 58%. Wine is alcohol; a standard glass is 5 oz at 12% ABV. Home pours are typically 6–8 oz, making each glass 1.2–1.6 standard drinks.",
   },
 ];
 
 export default function AlcoholScreeningForWomenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Alcohol Use Screening for Women — AUDIT", description: "A free, private alcohol screening tool for women using the WHO's clinically validated AUDIT questionnaire.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: "2026-05-08" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "Alcohol Use Screening for Women, AUDIT", description: "A free, private alcohol screening tool for women using the WHO's clinically validated AUDIT questionnaire.", url: TOOL_URL, datePublished: "2026-03-10", dateModified: "2026-05-08" })) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -86,14 +86,14 @@ export default function AlcoholScreeningForWomenPage() {
         <div className="mb-6">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
             Most people don&apos;t know that women and men process alcohol differently at a biological
-            level — and that the same number of drinks produces meaningfully higher blood alcohol
+            level, and that the same number of drinks produces meaningfully higher blood alcohol
             concentration in women. Or that women develop liver disease, cardiomyopathy, and alcohol
             dependence at lower consumption levels and over shorter time periods than men. Or that the
             clinical screening tools use <strong>different positive thresholds for women</strong>{" "}
             specifically because of this.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            This page gives you that context — and a free, validated alcohol screening calibrated to
+            This page gives you that context, and a free, validated alcohol screening calibrated to
             those differences. It is <strong>not a diagnosis</strong>, just an honest check-in with
             yourself.
           </p>
@@ -104,7 +104,7 @@ export default function AlcoholScreeningForWomenPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private — nothing is stored or shared.
+            Takes about 3 minutes. Completely private, nothing is stored or shared.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export default function AlcoholScreeningForWomenPage() {
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
               <strong>Body composition:</strong> Women have lower total body water (approximately 52%
-              vs 61% in men), so the same amount of alcohol distributes in less fluid — producing
+              vs 61% in men), so the same amount of alcohol distributes in less fluid, producing
               higher blood alcohol concentration per drink at the same body weight.
             </p>
             <p>
@@ -132,8 +132,8 @@ export default function AlcoholScreeningForWomenPage() {
             </p>
             <p>
               <strong>Breast cancer:</strong> Alcohol is a known carcinogen with a dose-response
-              relationship with breast cancer risk. Even moderate drinking — approximately one drink
-              per day — is associated with elevated breast cancer risk. This applies specifically to
+              relationship with breast cancer risk. Even moderate drinking, approximately one drink
+              per day, is associated with elevated breast cancer risk. This applies specifically to
               women and is underemphasized in standard public health messaging.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function AlcoholScreeningForWomenPage() {
           </h2>
           <div className="space-y-4 text-slate-700 dark:text-slate-300">
             <p>
-              The AUDIT-C — a widely used 3-question brief alcohol screen — uses different positive
+              The AUDIT-C, a widely used 3-question brief alcohol screen, uses different positive
               thresholds by sex:
             </p>
             <div className="overflow-x-auto my-4">
@@ -172,13 +172,13 @@ export default function AlcoholScreeningForWomenPage() {
               </table>
             </div>
             <p>
-              Using the male threshold for women produces false negatives — missing women with
+              Using the male threshold for women produces false negatives, missing women with
               hazardous drinking patterns that carry real health risk.
             </p>
             <p>
               When completing any alcohol screen, use the actual standard drink definitions:{" "}
               <strong>12 oz regular beer (5% ABV), 5 oz wine (12% ABV), or 1.5 oz spirits (40%
-              ABV)</strong>. Home pours are typically larger — a standard wine glass poured at home is
+              ABV)</strong>. Home pours are typically larger, a standard wine glass poured at home is
               often 6–8 oz, not 5 oz.
             </p>
           </div>
@@ -192,13 +192,13 @@ export default function AlcoholScreeningForWomenPage() {
             <p>
               This is a public health trend worth understanding directly. Between 2001 and 2013, heavy
               drinking in women increased by 58% (Grant et al., 2017). The COVID-19 pandemic
-              accelerated this further — high-risk drinking in women increased by 41% during lockdowns
+              accelerated this further, high-risk drinking in women increased by 41% during lockdowns
               (Pollard et al., 2020).
             </p>
             <p>
               The drivers are real: targeted alcohol marketing to women, normalization of &quot;wine
               culture&quot; as self-care, dual-income household stress, reduced social constraints on
-              drinking. The downstream consequences — liver disease, breast cancer, AUD — are now
+              drinking. The downstream consequences, liver disease, breast cancer, AUD, are now
               appearing in clinical populations.
             </p>
           </div>
@@ -212,14 +212,14 @@ export default function AlcoholScreeningForWomenPage() {
             <p>
               <strong>Anxiety and depression:</strong> Women are more likely than men to use alcohol to
               manage negative emotional states. Alcohol provides short-term relief from anxiety and
-              depression while reliably worsening both conditions over time — particularly in the days
+              depression while reliably worsening both conditions over time, particularly in the days
               following drinking. This creates a self-reinforcing cycle that can be difficult to
               recognize from the inside.
             </p>
             <p>
               <strong>Trauma history:</strong> Women have significantly higher rates of sexual trauma
               and interpersonal violence than men. PTSD and alcohol use disorder co-occur at high rates
-              in women — the drinking often beginning as self-medication for trauma symptoms. Effective
+              in women, the drinking often beginning as self-medication for trauma symptoms. Effective
               treatment must address both. The{" "}
               <Link href="/pcl-5-ptsd-screening" className="text-sky-600 dark:text-sky-400 hover:underline">
                 PCL-5 PTSD screening
@@ -228,7 +228,7 @@ export default function AlcoholScreeningForWomenPage() {
             </p>
             <p>
               <strong>Menstrual cycle sensitivity:</strong> Many women notice increased alcohol
-              sensitivity in the luteal phase — the week or two before menstruation — when estrogen
+              sensitivity in the luteal phase, the week or two before menstruation, when estrogen
               drops. Some women increase drinking premenstrually as self-medication for mood symptoms,
               without recognizing the pattern.
             </p>
@@ -242,7 +242,7 @@ export default function AlcoholScreeningForWomenPage() {
             Take the AUDIT Alcohol Screening
           </h2>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Answer based on your actual intake — not an idealized version. Clinical usefulness depends
+            Answer based on your actual intake, not an idealized version. Clinical usefulness depends
             on honest answers.
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function AlcoholScreeningForWomenPage() {
         <AnswerBlock
           what="An AUDIT-based alcohol screening with gender-specific thresholds and health information for women."
           who="Women who want to assess their alcohol use with screening thresholds calibrated for female physiology."
-          bottomLine="Women metabolize alcohol differently — lower thresholds reflect real biological risk differences. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Women metabolize alcohol differently, lower thresholds reflect real biological risk differences. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -265,7 +265,7 @@ export default function AlcoholScreeningForWomenPage() {
         <h2>How Is the Alcohol Screen Scored?</h2>
         <h2>What Do My Alcohol Screening Results Mean?</h2>
       </section>
-<AUDITClient faqData={FAQ_DATA} />
+<AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-10">
@@ -302,17 +302,16 @@ export default function AlcoholScreeningForWomenPage() {
             For a 2-minute brief screen:{" "}
             <Link href="/audit-c-alcohol-screen" className="text-sky-600 dark:text-sky-400 hover:underline">
               Take the AUDIT-C →
-            </Link>{" "}
-            — remember the positive threshold for women is &ge;3, not &ge;4.
+            </Link>{" "}, remember the positive threshold for women is &ge;3, not &ge;4.
           </p>
         </div>
 
         <div className="bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800 rounded-xl p-5 mb-8">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Crisis Resources</h2>
           <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong> — free, 24/7, confidential</li>
-            <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong> — free, 24/7</li>
-            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong> — free referrals, 24/7</li>
+            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <strong>988</strong>, free, 24/7, confidential</li>
+            <li><strong>Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong>, free, 24/7</li>
+            <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong>, free referrals, 24/7</li>
           </ul>
         </div>
 

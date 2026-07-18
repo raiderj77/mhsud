@@ -78,7 +78,7 @@ export default function HealthTimelinePage() {
         <AnswerBlock
           what="A timeline showing the physical health improvements that occur at each stage of sobriety from 24 hours to 15 years."
           who="Anyone in recovery from alcohol or substance use who wants to see the tangible health benefits of continued sobriety."
-          bottomLine="Your body begins healing within hours of stopping — every day sober brings measurable improvements. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Your body begins healing within hours of stopping, every day sober brings measurable improvements. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

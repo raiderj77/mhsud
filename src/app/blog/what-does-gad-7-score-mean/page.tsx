@@ -35,7 +35,7 @@ const FAQ_DATA = [
   {
     question: "Is a GAD-7 score of 8 normal?",
     answer:
-      "A score of 8 falls in the mild range and does not cross the clinical threshold. \u201CNormal\u201D varies widely \u2014 what matters most is whether these symptoms are affecting your daily life and whether they\u2019ve been persistent. Many people function well with mild anxiety; others find it significantly disruptive. Your experience matters more than the number.",
+      "A score of 8 falls in the mild range and does not cross the clinical threshold. \u201CNormal\u201D varies widely, what matters most is whether these symptoms are affecting your daily life and whether they\u2019ve been persistent. Many people function well with mild anxiety; others find it significantly disruptive. Your experience matters more than the number.",
   },
   {
     question: "Can the GAD-7 detect panic disorder or social anxiety?",
@@ -45,12 +45,12 @@ const FAQ_DATA = [
   {
     question: "My GAD-7 score went up since last time. Should I be worried?",
     answer:
-      "An increase of 5 or more points is generally considered a clinically meaningful change. If your score has increased, that\u2019s worth paying attention to \u2014 particularly if other areas of your life are also feeling harder. Consider speaking with a healthcare provider, especially if the increase coincides with sustained stress or life changes.",
+      "An increase of 5 or more points is generally considered a clinically meaningful change. If your score has increased, that\u2019s worth paying attention to, particularly if other areas of your life are also feeling harder. Consider speaking with a healthcare provider, especially if the increase coincides with sustained stress or life changes.",
   },
   {
     question: "Can anxiety and depression occur together?",
     answer:
-      "Yes \u2014 very commonly. Research suggests that approximately 50% of people with major depression also have a co-occurring anxiety disorder (Kessler et al., 2003). If you scored in the mild-to-moderate range on the GAD-7, taking the PHQ-9 as well can give you a more complete picture to share with a healthcare provider.",
+      "Yes, very commonly. Research suggests that approximately 50% of people with major depression also have a co-occurring anxiety disorder (Kessler et al., 2003). If you scored in the mild-to-moderate range on the GAD-7, taking the PHQ-9 as well can give you a more complete picture to share with a healthcare provider.",
   },
   {
     question: "Is the GAD-7 valid for tracking anxiety over time?",
@@ -60,7 +60,7 @@ const FAQ_DATA = [
   {
     question: "What does a GAD-7 score of 10 mean exactly?",
     answer:
-      "A score of 10 is the standard clinical threshold used in most healthcare settings to indicate that further professional evaluation is warranted. At this level, anxiety symptoms are present on more than half the days across multiple domains \u2014 worry, restlessness, irritability, tension. It does not confirm a diagnosis of generalized anxiety disorder, but it is a meaningful signal that symptoms are affecting daily life and that a conversation with a healthcare provider is appropriate.",
+      "A score of 10 is the standard clinical threshold used in most healthcare settings to indicate that further professional evaluation is warranted. At this level, anxiety symptoms are present on more than half the days across multiple domains, worry, restlessness, irritability, tension. It does not confirm a diagnosis of generalized anxiety disorder, but it is a meaningful signal that symptoms are affecting daily life and that a conversation with a healthcare provider is appropriate.",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            GAD-7 scores range from 0 to 21. Scores of 0–4 indicate minimal anxiety, 5–9 indicate mild anxiety, 10–14 indicate moderate anxiety, and 15–21 indicate severe anxiety. A score of 10 or higher is the standard clinical threshold for further evaluation of generalized anxiety disorder — though severity, duration, and impact on daily functioning all matter alongside the number.
+            GAD-7 scores range from 0 to 21. Scores of 0–4 indicate minimal anxiety, 5–9 indicate mild anxiety, 10–14 indicate moderate anxiety, and 15–21 indicate severe anxiety. A score of 10 or higher is the standard clinical threshold for further evaluation of generalized anxiety disorder, though severity, duration, and impact on daily functioning all matter alongside the number.
           </p>
         </header>
 
@@ -162,7 +162,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               A score of 0–4 indicates <strong>minimal anxiety symptoms</strong>. The worry and tension the GAD-7 measures are either absent or occurring infrequently enough that they don&apos;t suggest a clinical concern.
             </p>
             <p>
-              Anxiety is a normal part of human experience — everyone has moments of worry or unease. A minimal score means those moments haven&apos;t been clustering into a pattern over the past two weeks. If you took the screen during a relatively calm period but feel like something has changed recently, consider retaking it after two more weeks.
+              Anxiety is a normal part of human experience, everyone has moments of worry or unease. A minimal score means those moments haven&apos;t been clustering into a pattern over the past two weeks. If you took the screen during a relatively calm period but feel like something has changed recently, consider retaking it after two more weeks.
             </p>
           </section>
 
@@ -172,7 +172,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           <section>
             <h2>What does a GAD-7 score of 5–9 mean?</h2>
             <p>
-              A score of 5–9 indicates <strong>mild anxiety symptoms</strong>. You&apos;re experiencing some of the symptoms the GAD-7 measures — perhaps some restlessness, occasional worry that&apos;s hard to control, or mild physical tension — but not at a severity that typically indicates generalized anxiety disorder.
+              A score of 5–9 indicates <strong>mild anxiety symptoms</strong>. You&apos;re experiencing some of the symptoms the GAD-7 measures, perhaps some restlessness, occasional worry that&apos;s hard to control, or mild physical tension, but not at a severity that typically indicates generalized anxiety disorder.
             </p>
             <p>
               At this level, clinicians often recommend monitoring symptoms over time. Strategies like regular exercise, sleep hygiene, mindfulness, and reducing caffeine intake can help mild anxiety symptoms, and research supports their effectiveness for this range (Hofmann et al., 2010).
@@ -189,10 +189,10 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               A score of 10–14 indicates <strong>moderate anxiety</strong> and crosses the clinical evaluation threshold used in most healthcare settings. At this level, anxiety symptoms are likely showing up meaningfully in your day-to-day life.
             </p>
             <p>
-              Moderate anxiety might look like: excessive worry that&apos;s difficult to turn off, trouble sleeping because your mind won&apos;t quiet down, irritability, difficulty concentrating, or physical symptoms like muscle tension and headaches. The GAD-7 specifically measures whether these experiences feel out of proportion to what&apos;s actually happening around you — a hallmark of generalized anxiety disorder.
+              Moderate anxiety might look like: excessive worry that&apos;s difficult to turn off, trouble sleeping because your mind won&apos;t quiet down, irritability, difficulty concentrating, or physical symptoms like muscle tension and headaches. The GAD-7 specifically measures whether these experiences feel out of proportion to what&apos;s actually happening around you, a hallmark of generalized anxiety disorder.
             </p>
             <p>
-              A score in this range doesn&apos;t confirm a diagnosis. It does mean that a professional evaluation — with a therapist, psychologist, or primary care doctor — can give you a clearer picture and help you decide on next steps.
+              A score in this range doesn&apos;t confirm a diagnosis. It does mean that a professional evaluation, with a therapist, psychologist, or primary care doctor, can give you a clearer picture and help you decide on next steps.
             </p>
             <p>
               <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">Take the GAD-7 Anxiety Self-Check →</Link>
@@ -205,7 +205,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           <section>
             <h2>What does a GAD-7 score of 15–21 mean?</h2>
             <p>
-              A score of 15–21 indicates <strong>severe anxiety symptoms</strong>. The GAD-7 items you&apos;re rating highest — excessive worry, inability to control worry, restlessness, easily fatigued, difficulty concentrating, irritability, muscle tension, or sleep disturbance — are occurring at the most frequent level across most of the scale.
+              A score of 15–21 indicates <strong>severe anxiety symptoms</strong>. The GAD-7 items you&apos;re rating highest, excessive worry, inability to control worry, restlessness, easily fatigued, difficulty concentrating, irritability, muscle tension, or sleep disturbance, are occurring at the most frequent level across most of the scale.
             </p>
             <p>
               At this level, anxiety is very likely significantly impairing how you function. Research indicates that scores in the severe range are associated with substantial disruption in occupational and social functioning (Kroenke et al., 2007).
@@ -214,7 +214,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               Both evidence-based psychotherapy (particularly cognitive behavioral therapy) and medication (SSRIs and SNRIs) are effective for generalized anxiety disorder. The American Psychological Association and the National Institute of Mental Health both recognize CBT as a first-line treatment (APA, 2020). A mental health professional can help you understand which path makes the most sense for your situation.
             </p>
             <p>
-              If you&apos;re scoring in the severe range, please don&apos;t wait to reach out. Anxiety responds well to treatment — and the sooner you connect with support, the sooner that can begin.
+              If you&apos;re scoring in the severe range, please don&apos;t wait to reach out. Anxiety responds well to treatment, and the sooner you connect with support, the sooner that can begin.
             </p>
           </section>
 
@@ -298,7 +298,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           <section>
             <h2>Does anxiety go away on its own?</h2>
             <p>
-              Sometimes — and sometimes it doesn&apos;t. Research shows that mild anxiety symptoms can resolve with lifestyle changes and supportive coping. But generalized anxiety disorder, when untreated, often follows a chronic, waxing-and-waning course (Kessler et al., 2002).
+              Sometimes, and sometimes it doesn&apos;t. Research shows that mild anxiety symptoms can resolve with lifestyle changes and supportive coping. But generalized anxiety disorder, when untreated, often follows a chronic, waxing-and-waning course (Kessler et al., 2002).
             </p>
             <p>
               The encouraging news: anxiety disorders are among the most treatable mental health conditions. The <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> estimates that effective treatment helps most people with anxiety disorders reduce their symptoms significantly (NIMH, 2023). Seeking support early generally leads to better outcomes than waiting.
@@ -309,7 +309,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
             <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The GAD-7 is a screening tool — it may indicate the need for further assessment but does not confirm or rule out any condition.
+              This article is for educational purposes only. It is not a substitute for professional evaluation, and nothing here should be interpreted as a diagnosis or treatment recommendation. The GAD-7 is a screening tool, it may indicate the need for further assessment but does not confirm or rule out any condition.
             </p>
           </div>
 
@@ -320,9 +320,9 @@ export default function WhatDoesGAD7ScoreMeanPage() {
               If you are in crisis, overwhelmed, or having thoughts of self-harm, please reach out now:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> — Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> — Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> — <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -344,7 +344,7 @@ export default function WhatDoesGAD7ScoreMeanPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

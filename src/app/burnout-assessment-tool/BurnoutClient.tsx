@@ -8,6 +8,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -99,9 +100,10 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
+  embedded?: boolean;
 }
 
-export function BurnoutClient({ faqData }: Props) {
+export function BurnoutClient({ faqData, embedded = false }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(15).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -181,7 +183,7 @@ export function BurnoutClient({ faqData }: Props) {
     const url = "https://mindchecktools.com/burnout-assessment-tool";
     if (mode === "blank") {
       const shareData = {
-        title: "Burnout Assessment — Free & Private",
+        title: "Burnout Assessment, Free & Private",
         text: "Take a free, private Burnout Assessment. Your answers never leave your browser.",
         url,
       };
@@ -193,7 +195,7 @@ export function BurnoutClient({ faqData }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `Burnout Assessment Results\nScore: ${totalScore}/90 — ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `Burnout Assessment Results\nScore: ${totalScore}/90, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
     if (navigator.share) {
       try { await navigator.share({ title: "My Burnout Assessment Results", text: summary }); return; } catch { /* user cancelled */ }
     }
@@ -209,9 +211,15 @@ export function BurnoutClient({ faqData }: Props) {
           <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Clinically-Informed</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Free to Use</span>
         </div>
-        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
-          Burnout Assessment Tool
-        </h1>
+        {embedded ? (
+          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            Burnout Assessment Tool
+          </h2>
+        ) : (
+          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            Burnout Assessment Tool
+          </h1>
+        )}
         <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
           Assess emotional exhaustion, depersonalization, and reduced personal accomplishment with this professionally-designed screening tool.
         </p>
@@ -398,6 +406,8 @@ export function BurnoutClient({ faqData }: Props) {
                   </p>
                 </div>
               </div>
+
+              <TherapyCTA show={["moderate", "high", "severe"].includes(range.key)} />
 
               <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-night-700">
                 <button

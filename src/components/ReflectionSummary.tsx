@@ -17,7 +17,7 @@ interface Props {
 
 /**
  * "Download Reflection Summary" button that generates and downloads
- * a clean HTML file — entirely in the browser, zero server calls.
+ * a clean HTML file, entirely in the browser, zero server calls.
  *
  * Appears below results, above educational content.
  * Keyboard accessible, includes aria-label and loading/success states.
@@ -67,7 +67,7 @@ export function ReflectionSummary({
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${escapeHtml(toolName)} — Reflection Summary</title>
+<title>${escapeHtml(toolName)}, Reflection Summary</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; max-width: 700px; margin: 0 auto; padding: 32px 24px; line-height: 1.6; font-size: 15px; }
@@ -110,7 +110,7 @@ export function ReflectionSummary({
   <p><strong>What you can consider next:</strong> ${escapeHtml(suggestion)}</p>
 
   <div class="warning-box">
-    <p><strong>What this score cannot tell you:</strong> This is a screening tool, not a clinical assessment. A single score from a self-check cannot capture the full picture of your mental health. Many factors — how you felt today, recent events, sleep, and physical health — influence your responses. Only a qualified healthcare professional who knows your situation can properly evaluate your well-being.</p>
+    <p><strong>What this score cannot tell you:</strong> This is a screening tool, not a clinical assessment. A single score from a self-check cannot capture the full picture of your mental health. Many factors, how you felt today, recent events, sleep, and physical health, influence your responses. Only a qualified healthcare professional who knows your situation can properly evaluate your well-being.</p>
   </div>
 
   ${responsesHtml}
@@ -122,7 +122,7 @@ export function ReflectionSummary({
   </ol>
 
   <h2>Suggested Next Steps</h2>
-  <p>Consider sharing this summary with a healthcare provider — a doctor, therapist, or counselor. You might say:</p>
+  <p>Consider sharing this summary with a healthcare provider, a doctor, therapist, or counselor. You might say:</p>
   <p><em>"I took a ${escapeHtml(toolName)} online and scored ${escapeHtml(String(score))}. I would like to discuss what this means for me."</em></p>
 
   <div class="crisis">
@@ -176,7 +176,7 @@ export function ReflectionSummary({
             <svg className="w-4 h-4 text-sage-600 dark:text-sage-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
-            <span className="text-sage-600 dark:text-sage-400">Summary ready — check your downloads</span>
+            <span className="text-sage-600 dark:text-sage-400">Summary ready, check your downloads</span>
           </>
         ) : (
           <>

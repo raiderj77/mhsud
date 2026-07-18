@@ -28,10 +28,10 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "Is loneliness a mental health condition?", answer: "Loneliness is not classified as a mental health disorder \u2014 it is a subjective emotional state. However, chronic loneliness is a significant risk factor for depression, anxiety, and substance use concerns. If it persists for weeks or months and affects your daily functioning, it may indicate an underlying issue worth exploring with a provider." },
+  { question: "Is loneliness a mental health condition?", answer: "Loneliness is not classified as a mental health disorder, it is a subjective emotional state. However, chronic loneliness is a significant risk factor for depression, anxiety, and substance use concerns. If it persists for weeks or months and affects your daily functioning, it may indicate an underlying issue worth exploring with a provider." },
   { question: "Can loneliness cause physical illness?", answer: "Research strongly suggests it can. Chronic loneliness activates the stress response, increasing inflammation and weakening immune function. Studies link prolonged loneliness to increased risk of cardiovascular disease, stroke, diabetes, and dementia. The Surgeon General\u2019s 2023 advisory compared its health effects to smoking 15 cigarettes per day." },
-  { question: "Why am I lonely even with friends?", answer: "Loneliness is about connection quality, not headcount. You can have an active social life and still feel lonely if interactions lack emotional intimacy or genuine vulnerability. This is called \u201cemotional loneliness\u201d \u2014 you may have companions but feel no one truly understands you. It is very common and does not mean something is wrong." },
-  { question: "How do I know if I&apos;m lonely or depressed?", answer: "Loneliness and depression overlap significantly \u2014 both involve sadness, withdrawal, and low energy. A key difference: loneliness tends to improve when meaningful connection is restored, while depression often persists regardless. If you feel persistently low even around people you care about, depression may be a factor. The PHQ-9 can help clarify." },
+  { question: "Why am I lonely even with friends?", answer: "Loneliness is about connection quality, not headcount. You can have an active social life and still feel lonely if interactions lack emotional intimacy or genuine vulnerability. This is called \u201cemotional loneliness\u201d, you may have companions but feel no one truly understands you. It is very common and does not mean something is wrong." },
+  { question: "How do I know if I&apos;m lonely or depressed?", answer: "Loneliness and depression overlap significantly, both involve sadness, withdrawal, and low energy. A key difference: loneliness tends to improve when meaningful connection is restored, while depression often persists regardless. If you feel persistently low even around people you care about, depression may be a factor. The PHQ-9 can help clarify." },
   { question: "What helps with chronic loneliness?", answer: "Evidence-based approaches include prioritizing relationship quality over quantity, engaging in structured social activities like classes or volunteer work, addressing social anxiety through CBT, and building community connections through shared purpose. Small, consistent steps are more effective than dramatic changes. A therapist can help identify specific barriers to connection." },
 ];
 
@@ -89,7 +89,7 @@ export default function LonelinessMentalHealthPage() {
               In May 2023, US Surgeon General Dr. Vivek Murthy released a landmark advisory titled <a href="https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">&quot;Our Epidemic of Loneliness and Isolation&quot;</a>, calling social disconnection one of the most pressing public health concerns of our time. The advisory cited data showing that approximately half of US adults reported experiencing measurable loneliness even before the COVID-19 pandemic accelerated the trend.
             </p>
             <p>
-              The numbers are striking. Americans&apos; time spent with friends has declined by nearly 70% over two decades. Young adults aged 18-25 report the highest rates of loneliness of any age group. And the health consequences are not limited to feeling sad — they are physiological, measurable, and serious.
+              The numbers are striking. Americans&apos; time spent with friends has declined by nearly 70% over two decades. Young adults aged 18-25 report the highest rates of loneliness of any age group. And the health consequences are not limited to feeling sad, they are physiological, measurable, and serious.
             </p>
             <p>
               This is not just an American problem. The World Health Organization, the United Kingdom, and Japan have all established formal initiatives to address loneliness as a public health priority. The consensus among researchers is clear: social connection is a fundamental human need, and its absence has consequences that rival those of well-established risk factors like physical inactivity and poor diet.
@@ -99,13 +99,13 @@ export default function LonelinessMentalHealthPage() {
           <section>
             <h2>Loneliness vs. being alone: a critical distinction</h2>
             <p>
-              One of the most important things to understand about loneliness is that it is subjective. Loneliness is not the same as being alone. Solitude — choosing to spend time by yourself — can be restorative, creative, and perfectly healthy. Loneliness, by contrast, is the distressing feeling that your social connections are inadequate in quality or quantity. It is the gap between the connection you want and the connection you have.
+              One of the most important things to understand about loneliness is that it is subjective. Loneliness is not the same as being alone. Solitude, choosing to spend time by yourself, can be restorative, creative, and perfectly healthy. Loneliness, by contrast, is the distressing feeling that your social connections are inadequate in quality or quantity. It is the gap between the connection you want and the connection you have.
             </p>
             <p>
-              This distinction matters because it explains why someone can feel profoundly lonely in a crowded room or in a marriage, while another person living alone may feel deeply connected and content. Loneliness is not about headcount — it is about whether your relationships provide the emotional intimacy, understanding, and sense of belonging that you need.
+              This distinction matters because it explains why someone can feel profoundly lonely in a crowded room or in a marriage, while another person living alone may feel deeply connected and content. Loneliness is not about headcount, it is about whether your relationships provide the emotional intimacy, understanding, and sense of belonging that you need.
             </p>
             <p>
-              Social isolation, on the other hand, is an objective measure — it refers to having few social contacts or relationships. While isolation and loneliness often overlap, they do not always. You can be socially isolated without feeling lonely, and you can feel lonely without being socially isolated. Both carry health risks, but the subjective experience of loneliness appears to be particularly damaging to mental health.
+              Social isolation, on the other hand, is an objective measure, it refers to having few social contacts or relationships. While isolation and loneliness often overlap, they do not always. You can be socially isolated without feeling lonely, and you can feel lonely without being socially isolated. Both carry health risks, but the subjective experience of loneliness appears to be particularly damaging to mental health.
             </p>
           </section>
 
@@ -114,13 +114,13 @@ export default function LonelinessMentalHealthPage() {
           <section>
             <h2>Health effects of chronic loneliness</h2>
             <p>
-              The physical and mental health consequences of chronic loneliness are extensive and well-documented. The Surgeon General&apos;s advisory highlighted research showing that chronic loneliness carries health risks equivalent to smoking up to 15 cigarettes per day. That comparison is not rhetorical — it is based on meta-analytic data covering hundreds of thousands of participants.
+              The physical and mental health consequences of chronic loneliness are extensive and well-documented. The Surgeon General&apos;s advisory highlighted research showing that chronic loneliness carries health risks equivalent to smoking up to 15 cigarettes per day. That comparison is not rhetorical, it is based on meta-analytic data covering hundreds of thousands of participants.
             </p>
             <p>
               On the physical side, chronic loneliness is associated with a 29% increased risk of heart disease, a 32% increased risk of stroke, and a 26% increased risk of premature death from all causes. It accelerates cognitive decline and significantly increases the risk of developing dementia. The mechanism is largely biological: loneliness activates the body&apos;s stress response system, leading to chronically elevated cortisol levels, increased systemic inflammation, and suppressed immune function.
             </p>
             <p>
-              The mental health effects are equally concerning. Chronic loneliness is strongly linked to depression, anxiety, increased substance use, sleep disturbances, and suicidal ideation. Research from the <a href="https://www.nimh.nih.gov/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health (NIMH)</a> consistently shows that social disconnection is one of the most reliable predictors of poor mental health outcomes across age groups. Loneliness does not just make you feel bad — it changes how your brain processes threats, rewards, and social information in ways that can perpetuate the cycle.
+              The mental health effects are equally concerning. Chronic loneliness is strongly linked to depression, anxiety, increased substance use, sleep disturbances, and suicidal ideation. Research from the <a href="https://www.nimh.nih.gov/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health (NIMH)</a> consistently shows that social disconnection is one of the most reliable predictors of poor mental health outcomes across age groups. Loneliness does not just make you feel bad, it changes how your brain processes threats, rewards, and social information in ways that can perpetuate the cycle.
             </p>
           </section>
 
@@ -133,7 +133,7 @@ export default function LonelinessMentalHealthPage() {
               {[
                 { group: "Young adults (18-25)", detail: "Consistently report the highest loneliness rates of any age group, contrary to the assumption that loneliness is primarily an older-adult problem. Social media use, life transitions, and the pressure to appear socially successful may all contribute." },
                 { group: "Older adults and seniors", detail: "Loss of a spouse, declining health, reduced mobility, retirement, and shrinking social networks all increase vulnerability. Social isolation in older adults is linked to accelerated cognitive decline and increased mortality risk." },
-                { group: "People in major life transitions", detail: "Moving to a new city, starting college, changing jobs, becoming a new parent, going through divorce, or retiring — any major transition can disrupt existing social networks and create a period of heightened loneliness." },
+                { group: "People in major life transitions", detail: "Moving to a new city, starting college, changing jobs, becoming a new parent, going through divorce, or retiring, any major transition can disrupt existing social networks and create a period of heightened loneliness." },
                 { group: "People with mental health concerns", detail: "Depression, social anxiety, and other conditions can create barriers to initiating and maintaining social connections, making loneliness both a symptom and a contributing factor." },
                 { group: "Caregivers", detail: "The demands of caregiving can be profoundly isolating, leaving little time or energy for maintaining friendships or participating in community life." },
               ].map((item, i) => (
@@ -151,13 +151,13 @@ export default function LonelinessMentalHealthPage() {
           <section>
             <h2>The loneliness-depression cycle</h2>
             <p>
-              Loneliness and depression share a deeply intertwined, bidirectional relationship — each one feeds the other in a cycle that can be difficult to break without intentional effort. Chronic loneliness increases the risk of developing depression, and depression makes it harder to reach out, maintain relationships, and interpret social cues accurately.
+              Loneliness and depression share a deeply intertwined, bidirectional relationship, each one feeds the other in a cycle that can be difficult to break without intentional effort. Chronic loneliness increases the risk of developing depression, and depression makes it harder to reach out, maintain relationships, and interpret social cues accurately.
             </p>
             <p>
-              When you are lonely, your brain shifts into a kind of social threat-detection mode. Research shows that lonely individuals tend to perceive ambiguous social signals more negatively — a neutral facial expression may be read as rejection, a delayed text response as disinterest. This hypervigilance, while intended to protect you, often leads to withdrawal, which deepens the isolation and loneliness further.
+              When you are lonely, your brain shifts into a kind of social threat-detection mode. Research shows that lonely individuals tend to perceive ambiguous social signals more negatively, a neutral facial expression may be read as rejection, a delayed text response as disinterest. This hypervigilance, while intended to protect you, often leads to withdrawal, which deepens the isolation and loneliness further.
             </p>
             <p>
-              Depression compounds this by draining the motivation and energy needed to initiate social contact. The desire for connection may still be there, but the activation energy required to reach out feels insurmountable. Over time, this withdrawal can erode existing relationships, confirming the depressive belief that you are a burden or that no one cares — which is rarely true but feels entirely real.
+              Depression compounds this by draining the motivation and energy needed to initiate social contact. The desire for connection may still be there, but the activation energy required to reach out feels insurmountable. Over time, this withdrawal can erode existing relationships, confirming the depressive belief that you are a burden or that no one cares, which is rarely true but feels entirely real.
             </p>
             <p>
               If you recognize this pattern in yourself, screening tools like the <Link href="/phq-9-depression-test" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 depression screening</Link> and the <Link href="/ucla-loneliness-scale" className="text-sage-600 dark:text-sage-400 underline">UCLA Loneliness Scale</Link> can help you reflect on where you stand. They are not a substitute for professional evaluation, but they can be a useful starting point for understanding your experience.
@@ -169,13 +169,13 @@ export default function LonelinessMentalHealthPage() {
           <section>
             <h2>Social media&apos;s complex role</h2>
             <p>
-              The relationship between social media and loneliness is more nuanced than headlines suggest. Social media is neither purely helpful nor purely harmful — its impact depends largely on how you use it.
+              The relationship between social media and loneliness is more nuanced than headlines suggest. Social media is neither purely helpful nor purely harmful, its impact depends largely on how you use it.
             </p>
             <p>
-              Passive consumption — scrolling through feeds, comparing your life to curated highlights, watching others socialize without you — is consistently associated with increased loneliness and lower well-being. It creates a distorted picture of how connected other people are, making your own social life feel inadequate by comparison.
+              Passive consumption, scrolling through feeds, comparing your life to curated highlights, watching others socialize without you, is consistently associated with increased loneliness and lower well-being. It creates a distorted picture of how connected other people are, making your own social life feel inadequate by comparison.
             </p>
             <p>
-              Active, meaningful engagement — direct messaging, participating in supportive communities, maintaining long-distance friendships, coordinating in-person plans — can reduce loneliness and strengthen social bonds. For people with mobility limitations, social anxiety, or geographic isolation, online communities may provide genuine and important connection.
+              Active, meaningful engagement, direct messaging, participating in supportive communities, maintaining long-distance friendships, coordinating in-person plans, can reduce loneliness and strengthen social bonds. For people with mobility limitations, social anxiety, or geographic isolation, online communities may provide genuine and important connection.
             </p>
             <p>
               The key question is not whether you use social media, but whether your social media use leaves you feeling more connected or more alone. If it consistently leaves you feeling worse, that is worth paying attention to.
@@ -185,10 +185,10 @@ export default function LonelinessMentalHealthPage() {
           <section>
             <h2>Measuring loneliness: the UCLA Loneliness Scale</h2>
             <p>
-              The UCLA Loneliness Scale, developed by Dr. Daniel Russell, is the most widely used and validated instrument for measuring subjective loneliness in research and clinical settings. It asks respondents to rate how often they experience various feelings related to social disconnection — such as feeling left out, lacking companionship, or feeling isolated from others.
+              The UCLA Loneliness Scale, developed by Dr. Daniel Russell, is the most widely used and validated instrument for measuring subjective loneliness in research and clinical settings. It asks respondents to rate how often they experience various feelings related to social disconnection, such as feeling left out, lacking companionship, or feeling isolated from others.
             </p>
             <p>
-              The scale is useful because loneliness can be difficult to self-identify. Many people experience chronic loneliness without labeling it as such — they may describe feeling &quot;empty,&quot; &quot;disconnected,&quot; or simply &quot;off&quot; without connecting those feelings to a lack of meaningful social connection. A structured screening can help bring clarity.
+              The scale is useful because loneliness can be difficult to self-identify. Many people experience chronic loneliness without labeling it as such, they may describe feeling &quot;empty,&quot; &quot;disconnected,&quot; or simply &quot;off&quot; without connecting those feelings to a lack of meaningful social connection. A structured screening can help bring clarity.
             </p>
             <p>
               You can take the <Link href="/ucla-loneliness-scale" className="text-sage-600 dark:text-sage-400 underline">UCLA Loneliness Scale screening</Link> on this site. It is free, private (your responses are processed entirely in your browser and never stored), and takes about 3 minutes. The results may help you understand your experience and decide whether to seek additional support.
@@ -204,7 +204,7 @@ export default function LonelinessMentalHealthPage() {
               <strong>Prioritize depth over breadth.</strong> One or two close, trusting relationships are more protective against loneliness than a large network of acquaintances. Focus on deepening existing connections through vulnerability, reciprocity, and consistent presence rather than trying to expand your social circle rapidly.
             </p>
             <p>
-              <strong>Engage in structured social activities.</strong> Classes, clubs, volunteer organizations, faith communities, and recreational leagues provide built-in reasons to show up regularly. This matters because frequency and consistency of contact are key ingredients in building relationships — something that becomes harder to create organically in adulthood.
+              <strong>Engage in structured social activities.</strong> Classes, clubs, volunteer organizations, faith communities, and recreational leagues provide built-in reasons to show up regularly. This matters because frequency and consistency of contact are key ingredients in building relationships, something that becomes harder to create organically in adulthood.
             </p>
             <p>
               <strong>Volunteer or help others.</strong> Research consistently shows that volunteering reduces loneliness, partly because it provides a sense of purpose and belonging, and partly because it shifts attention away from self-focused rumination. Helping others creates a natural context for connection that feels less vulnerable than purely social pursuits.
@@ -213,7 +213,7 @@ export default function LonelinessMentalHealthPage() {
               <strong>Address social anxiety or negative thought patterns.</strong> For many people, loneliness persists not because opportunities for connection are absent but because anxiety, negative self-beliefs, or past social pain create barriers to engaging. Cognitive behavioral therapy (CBT) has strong evidence for addressing the thought patterns that maintain social withdrawal.
             </p>
             <p>
-              <strong>Build community connection.</strong> Shared purpose — whether through neighborhood involvement, community gardens, advocacy groups, or mutual aid — creates connection that feels meaningful and sustainable. Loneliness researchers emphasize that belonging to something larger than yourself is a powerful antidote to disconnection.
+              <strong>Build community connection.</strong> Shared purpose, whether through neighborhood involvement, community gardens, advocacy groups, or mutual aid, creates connection that feels meaningful and sustainable. Loneliness researchers emphasize that belonging to something larger than yourself is a powerful antidote to disconnection.
             </p>
           </section>
 
@@ -225,7 +225,7 @@ export default function LonelinessMentalHealthPage() {
               While occasional loneliness is a normal part of human experience, chronic loneliness that persists for months and begins affecting your daily functioning, sleep, physical health, or mood may indicate something that warrants professional support. This is especially true if loneliness is accompanied by persistent sadness, hopelessness, anxiety, increased substance use, or thoughts of self-harm.
             </p>
             <p>
-              A therapist can help you identify the specific barriers to connection you are facing — whether those are social anxiety, grief, trust issues, negative self-beliefs, or practical circumstances — and develop a targeted plan for addressing them. Therapy is not just for people with diagnosed conditions; it can be a valuable resource for anyone stuck in a pattern of disconnection they cannot seem to break on their own.
+              A therapist can help you identify the specific barriers to connection you are facing, whether those are social anxiety, grief, trust issues, negative self-beliefs, or practical circumstances, and develop a targeted plan for addressing them. Therapy is not just for people with diagnosed conditions; it can be a valuable resource for anyone stuck in a pattern of disconnection they cannot seem to break on their own.
             </p>
             <p>
               If you are in crisis or experiencing thoughts of suicide, please reach out immediately. The <strong>988 Suicide and Crisis Lifeline</strong> is available 24/7 by calling or texting <strong>988</strong>. The <strong>SAMHSA National Helpline</strong> at <strong>1-800-662-4357</strong> provides free, confidential referrals and information 24 hours a day, 7 days a week.
@@ -244,9 +244,9 @@ export default function LonelinessMentalHealthPage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">Crisis Resources</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -265,7 +265,7 @@ export default function LonelinessMentalHealthPage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

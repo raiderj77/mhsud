@@ -31,12 +31,12 @@ const FAQ_DATA = [
   {
     question: "Can you develop ADHD as an adult?",
     answer:
-      "ADHD originates during brain development and does not develop for the first time in adulthood. However, many adults were never identified in childhood \u2014 particularly those with the predominantly inattentive presentation, which lacks hyperactive behaviors that prompt referrals. What looks like \u201cdeveloping ADHD as an adult\u201d is usually a lifelong condition becoming visible as life demands exceed compensatory strategies.",
+      "ADHD originates during brain development and does not develop for the first time in adulthood. However, many adults were never identified in childhood, particularly those with the predominantly inattentive presentation, which lacks hyperactive behaviors that prompt referrals. What looks like \u201cdeveloping ADHD as an adult\u201d is usually a lifelong condition becoming visible as life demands exceed compensatory strategies.",
   },
   {
     question: "What does adult ADHD look like?",
     answer:
-      "Adult ADHD often looks different from childhood stereotypes. Common presentations include chronic disorganization, difficulty finishing projects, time blindness, emotional reactivity, internal restlessness, difficulty sustaining attention in meetings, and impulsive decisions. Many adults describe being told they are \u201csmart but lazy\u201d or \u201cnot reaching their potential\u201d \u2014 a pattern of underperformance relative to ability.",
+      "Adult ADHD often looks different from childhood stereotypes. Common presentations include chronic disorganization, difficulty finishing projects, time blindness, emotional reactivity, internal restlessness, difficulty sustaining attention in meetings, and impulsive decisions. Many adults describe being told they are \u201csmart but lazy\u201d or \u201cnot reaching their potential\u201d, a pattern of underperformance relative to ability.",
   },
   {
     question: "Should I get tested for ADHD as an adult?",
@@ -88,7 +88,7 @@ export default function AdhdAdultsGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Most adults living with ADHD were never identified in childhood. They made it through school, maybe through college, maybe through decades of career and family life &mdash; often labeled &quot;lazy,&quot; &quot;disorganized,&quot; or &quot;not living up to their potential.&quot; For many, the possibility of ADHD only surfaces in their 30s, 40s, or even 50s, often triggered by a child&apos;s assessment or a moment of recognition in a social media post. If you are wondering whether you should get screened for ADHD as an adult, this guide will help you understand what to look for and how to take the next step.
+            Most adults living with ADHD were never identified in childhood. They made it through school, maybe through college, maybe through decades of career and family life, often labeled &quot;lazy,&quot; &quot;disorganized,&quot; or &quot;not living up to their potential.&quot; For many, the possibility of ADHD only surfaces in their 30s, 40s, or even 50s, often triggered by a child&apos;s assessment or a moment of recognition in a social media post. If you are wondering whether you should get screened for ADHD as an adult, this guide will help you understand what to look for and how to take the next step.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function AdhdAdultsGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -112,12 +112,12 @@ export default function AdhdAdultsGuidePage() {
           <section>
             <h2>Why most adults with ADHD were never identified</h2>
             <p>
-              ADHD awareness has expanded dramatically, but for decades the condition was understood almost exclusively as a childhood problem &mdash; specifically, a problem of hyperactive boys disrupting classrooms. This narrow framing left out enormous groups of people:
+              ADHD awareness has expanded dramatically, but for decades the condition was understood almost exclusively as a childhood problem, specifically, a problem of hyperactive boys disrupting classrooms. This narrow framing left out enormous groups of people:
             </p>
             <ul>
               <li><strong>Primarily inattentive presentation:</strong> Formerly called ADD, this form of ADHD involves difficulty sustaining attention, disorganization, and distractibility without the hyperactive behavior that prompts teacher referrals. These children often daydream quietly, lose homework, and underperform without anyone flagging a neurological cause.</li>
               <li><strong>Girls and women:</strong> ADHD in girls tends to present with inattention rather than hyperactivity, and is often attributed to anxiety, being &quot;spacey,&quot; or not trying hard enough. Research indicates that girls with ADHD are identified at approximately half the rate of boys.</li>
-              <li><strong>High-IQ compensators:</strong> Intelligent children with ADHD often develop compensatory strategies &mdash; hyperfocusing during tests, using deadline pressure as a motivator, relying on natural ability rather than executive function. These strategies mask the condition until demands exceed the person&apos;s capacity to compensate, sometimes not until graduate school, a demanding career, or parenthood.</li>
+              <li><strong>High-IQ compensators:</strong> Intelligent children with ADHD often develop compensatory strategies, hyperfocusing during tests, using deadline pressure as a motivator, relying on natural ability rather than executive function. These strategies mask the condition until demands exceed the person&apos;s capacity to compensate, sometimes not until graduate school, a demanding career, or parenthood.</li>
               <li><strong>People of color:</strong> Research consistently shows that Black and Hispanic children are significantly less likely to receive an ADHD assessment than white children, even when they display identical symptoms. This underidentification carries into adulthood.</li>
             </ul>
             <p>
@@ -133,7 +133,7 @@ export default function AdhdAdultsGuidePage() {
               Adult ADHD looks different from the childhood stereotype. Physical hyperactivity often diminishes or transforms into internal restlessness, and the primary impairments shift toward executive function challenges that affect work, relationships, and daily life. Common indicators include:
             </p>
             <ul>
-              <li><strong>Chronic disorganization:</strong> Not occasional mess &mdash; a persistent pattern of cluttered spaces, lost items, forgotten appointments, and difficulty maintaining systems even when you set them up</li>
+              <li><strong>Chronic disorganization:</strong> Not occasional mess, a persistent pattern of cluttered spaces, lost items, forgotten appointments, and difficulty maintaining systems even when you set them up</li>
               <li><strong>Difficulty finishing projects:</strong> Starting with enthusiasm, then losing momentum as the novelty fades. A trail of unfinished books, abandoned hobbies, and half-completed tasks</li>
               <li><strong>Time blindness:</strong> Consistently misjudging how long tasks take, running late despite genuine effort, losing track of time during activities, and struggling with long-term planning</li>
               <li><strong>Emotional reactivity:</strong> Intense, fast emotional responses that feel disproportionate. Quick frustration, sensitivity to criticism, and difficulty letting go of slights. ADHD-related emotional dysregulation is increasingly recognized as a core feature, not just a secondary symptom</li>
@@ -156,7 +156,7 @@ export default function AdhdAdultsGuidePage() {
               People with ADHD and high cognitive ability often develop elaborate workarounds: pulling all-nighters because they cannot start work in advance, using the adrenaline of an approaching deadline as a substitute for dopamine-driven motivation, choosing majors and careers where they can hyperfocus, or relying on a structured partner or assistant to handle the organizational demands they cannot manage alone.
             </p>
             <p>
-              These strategies work &mdash; until they do not. Common tipping points include:
+              These strategies work, until they do not. Common tipping points include:
             </p>
             <ul>
               <li>Graduate school or career advancement that demands sustained, self-directed effort without external structure</li>
@@ -178,7 +178,7 @@ export default function AdhdAdultsGuidePage() {
               A surprisingly common path to adult ADHD identification begins with a child&apos;s evaluation. A parent takes their child for an ADHD assessment, listens to the clinician describe the symptoms, and realizes: &quot;Wait, I do all of those things.&quot;
             </p>
             <p>
-              This is not coincidental. ADHD has a strong genetic component &mdash; heritability is estimated at 74%, making it one of the most heritable psychiatric conditions. If your child has ADHD, there is a significant probability that a biological parent does as well. The child&apos;s assessment creates a mirror in which the parent can finally see their own patterns clearly.
+              This is not coincidental. ADHD has a strong genetic component, heritability is estimated at 74%, making it one of the most heritable psychiatric conditions. If your child has ADHD, there is a significant probability that a biological parent does as well. The child&apos;s assessment creates a mirror in which the parent can finally see their own patterns clearly.
             </p>
             <p>
               If you are in this situation, the <Link href="/adhd-test-adults" className="text-sage-600 dark:text-sage-400 underline">adult ADHD screening</Link> is a reasonable next step. It takes under five minutes, is completely private, and can help you determine whether your own patterns warrant professional evaluation.
@@ -191,8 +191,8 @@ export default function AdhdAdultsGuidePage() {
               ADHD in adults rarely exists alone. Research indicates high rates of co-occurring conditions:
             </p>
             <ul>
-              <li><strong>Anxiety (approximately 47%):</strong> Many adults with ADHD develop anxiety as a consequence of living in a world that demands executive function skills they struggle to maintain. The anxiety is often secondary &mdash; driven by fear of forgetting something important, missing a deadline, or being &quot;found out&quot; as disorganized.</li>
-              <li><strong>Depression (approximately 38%):</strong> Chronic underachievement, relationship difficulties, and the shame of repeatedly failing to meet commitments can lead to depression. Depression in adults with ADHD often has a strong component of demoralization &mdash; &quot;I know what I should do, I just cannot make myself do it.&quot;</li>
+              <li><strong>Anxiety (approximately 47%):</strong> Many adults with ADHD develop anxiety as a consequence of living in a world that demands executive function skills they struggle to maintain. The anxiety is often secondary, driven by fear of forgetting something important, missing a deadline, or being &quot;found out&quot; as disorganized.</li>
+              <li><strong>Depression (approximately 38%):</strong> Chronic underachievement, relationship difficulties, and the shame of repeatedly failing to meet commitments can lead to depression. Depression in adults with ADHD often has a strong component of demoralization, &quot;I know what I should do, I just cannot make myself do it.&quot;</li>
               <li><strong>Substance use:</strong> Adults with undiagnosed ADHD are more likely to develop problematic substance use, often as a form of self-medication. Stimulants like caffeine and nicotine can temporarily improve focus, while alcohol may quiet the internal restlessness.</li>
               <li><strong>Sleep disorders:</strong> ADHD is strongly associated with delayed sleep phase, insomnia, and poor sleep quality. Sleep deprivation, in turn, worsens every ADHD symptom. This bidirectional relationship means that sleep must be addressed as part of any ADHD management plan.</li>
             </ul>
@@ -241,7 +241,7 @@ export default function AdhdAdultsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

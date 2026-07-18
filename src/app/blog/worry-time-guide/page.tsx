@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "How long should worry time last?",
     answer:
-      "Most clinicians recommend 15\u201330 minutes. Shorter sessions may not allow meaningful processing, while longer sessions risk becoming rumination. Start with 15 minutes and adjust as needed. Consistency is key \u2014 same time, same place, every day \u2014 so your brain learns the routine.",
+      "Most clinicians recommend 15\u201330 minutes. Shorter sessions may not allow meaningful processing, while longer sessions risk becoming rumination. Start with 15 minutes and adjust as needed. Consistency is key, same time, same place, every day, so your brain learns the routine.",
   },
   {
     question: "What if I can't stop worrying outside of worry time?",
@@ -88,7 +88,7 @@ export default function WorryTimeGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            What if the best way to worry less was to schedule your worrying? Worry time &mdash; also called stimulus control for worry &mdash; is a cognitive behavioral therapy (CBT) technique where you designate a specific 15&ndash;30 minute period each day for focused worrying, and actively postpone any worries that arise outside that window. It sounds counterintuitive, but research shows it works: giving yourself permission to worry at a set time makes worrying less intrusive the rest of the day.
+            What if the best way to worry less was to schedule your worrying? Worry time, also called stimulus control for worry, is a cognitive behavioral therapy (CBT) technique where you designate a specific 15&ndash;30 minute period each day for focused worrying, and actively postpone any worries that arise outside that window. It sounds counterintuitive, but research shows it works: giving yourself permission to worry at a set time makes worrying less intrusive the rest of the day.
           </p>
         </header>
 
@@ -97,9 +97,9 @@ export default function WorryTimeGuidePage() {
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
             <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
             <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong> &mdash; Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong> &mdash; Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong> &mdash; <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
+              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
+              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
+              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
             </ul>
           </div>
 
@@ -117,7 +117,7 @@ export default function WorryTimeGuidePage() {
               Worry time is a structured behavioral intervention developed from the stimulus control research of Thomas Borkovec and colleagues at Penn State University. The principle is straightforward: rather than trying to suppress or eliminate worry (which paradoxically increases it), you contain it within a predictable, bounded time period.
             </p>
             <p>
-              The technique works through two mechanisms. First, it disrupts the pattern of constant, low-level worry that characterizes generalized anxiety by giving worries a designated outlet. Second, it leverages a psychological phenomenon called the Zeigarnik effect &mdash; unfinished tasks occupy the mind, but the act of writing a worry down and scheduling time to address it signals to the brain that the task is &quot;captured&quot; and can be set aside.
+              The technique works through two mechanisms. First, it disrupts the pattern of constant, low-level worry that characterizes generalized anxiety by giving worries a designated outlet. Second, it leverages a psychological phenomenon called the Zeigarnik effect, unfinished tasks occupy the mind, but the act of writing a worry down and scheduling time to address it signals to the brain that the task is &quot;captured&quot; and can be set aside.
             </p>
             <p>
               Research by Borkovec et al. demonstrated that participants who practiced stimulus control for worry experienced a 35&ndash;50% reduction in generalized worry compared to control groups. This effect has been replicated across multiple studies and is now a standard component of CBT protocols for generalized anxiety disorder.
@@ -130,16 +130,16 @@ export default function WorryTimeGuidePage() {
               Setting up a worry time practice takes minimal effort, but consistency is what makes it effective. Here is how to get started:
             </p>
             <p>
-              <strong>Step 1: Choose your time and place.</strong> Pick a consistent 15&ndash;30 minute window each day, ideally in the late afternoon or early evening &mdash; not right before bed, as this can interfere with sleep. Choose a specific location where you will sit and worry. This physical consistency helps your brain associate worry with that specific context.
+              <strong>Step 1: Choose your time and place.</strong> Pick a consistent 15&ndash;30 minute window each day, ideally in the late afternoon or early evening, not right before bed, as this can interfere with sleep. Choose a specific location where you will sit and worry. This physical consistency helps your brain associate worry with that specific context.
             </p>
             <p>
               <strong>Step 2: Catch and postpone.</strong> Throughout the day, when a worry arises, notice it without engaging. Write it down briefly in a notebook, phone note, or the <Link href="/worry-time-scheduler" className="text-sage-600 dark:text-sage-400 underline">worry time scheduler</Link>. Then tell yourself: &quot;I will think about this during worry time.&quot; Return your attention to what you were doing.
             </p>
             <p>
-              <strong>Step 3: Use your worry time fully.</strong> When your scheduled time arrives, sit down and review your list. For each worry, ask: Is this still bothering me? Is there anything I can actually do about it? If yes, write down one concrete action step. If no, acknowledge the worry and move on. Many worries will have lost their urgency by the time you revisit them &mdash; this is one of the most powerful parts of the technique.
+              <strong>Step 3: Use your worry time fully.</strong> When your scheduled time arrives, sit down and review your list. For each worry, ask: Is this still bothering me? Is there anything I can actually do about it? If yes, write down one concrete action step. If no, acknowledge the worry and move on. Many worries will have lost their urgency by the time you revisit them, this is one of the most powerful parts of the technique.
             </p>
             <p>
-              <strong>Step 4: Stop when time is up.</strong> When your window closes, stop worrying. If unfinished worries remain, they go on tomorrow&apos;s list. This boundary is essential &mdash; it teaches your brain that worry has limits.
+              <strong>Step 4: Stop when time is up.</strong> When your window closes, stop worrying. If unfinished worries remain, they go on tomorrow&apos;s list. This boundary is essential, it teaches your brain that worry has limits.
             </p>
           </section>
 
@@ -148,23 +148,23 @@ export default function WorryTimeGuidePage() {
           <section>
             <h2>Why the paradox works: giving yourself permission to worry</h2>
             <p>
-              One of the most striking findings in anxiety research is that trying to suppress thoughts makes them more frequent and intense. This is known as the ironic process theory, described by Daniel Wegner in his classic &quot;white bear&quot; experiments &mdash; when people were told not to think about a white bear, they thought about it more than those who were given no instruction at all.
+              One of the most striking findings in anxiety research is that trying to suppress thoughts makes them more frequent and intense. This is known as the ironic process theory, described by Daniel Wegner in his classic &quot;white bear&quot; experiments, when people were told not to think about a white bear, they thought about it more than those who were given no instruction at all.
             </p>
             <p>
               Worry time sidesteps this paradox entirely. You are not telling yourself to stop worrying. You are telling yourself to worry later. This distinction matters because postponement does not trigger the rebound effect that suppression does. Your brain registers that the worry will be addressed, which reduces the urgency and allows you to disengage from the worry cycle.
             </p>
             <p>
-              Over time, something remarkable happens: many people find that their worry list shrinks. When you review your captured worries during worry time, you discover that 50&ndash;80% of them no longer feel pressing. This repeated experience erodes the belief that every worry demands immediate attention &mdash; a core cognitive distortion in generalized anxiety.
+              Over time, something remarkable happens: many people find that their worry list shrinks. When you review your captured worries during worry time, you discover that 50&ndash;80% of them no longer feel pressing. This repeated experience erodes the belief that every worry demands immediate attention, a core cognitive distortion in generalized anxiety.
             </p>
           </section>
 
           <section>
             <h2>Worry time and generalized anxiety disorder</h2>
             <p>
-              Generalized anxiety disorder (GAD) is characterized by chronic, excessive worry about multiple areas of life &mdash; health, finances, relationships, work, and more. What distinguishes GAD from normal worry is that the worry feels uncontrollable, disproportionate to the actual situation, and persists for six months or longer.
+              Generalized anxiety disorder (GAD) is characterized by chronic, excessive worry about multiple areas of life, health, finances, relationships, work, and more. What distinguishes GAD from normal worry is that the worry feels uncontrollable, disproportionate to the actual situation, and persists for six months or longer.
             </p>
             <p>
-              Worry time is particularly effective for GAD because it directly targets the &quot;uncontrollable&quot; dimension. People with GAD often believe they cannot control their worry, and this belief becomes self-reinforcing. Each time they successfully postpone a worry to their scheduled window, they gather evidence that worry is controllable &mdash; challenging the core belief that drives the disorder.
+              Worry time is particularly effective for GAD because it directly targets the &quot;uncontrollable&quot; dimension. People with GAD often believe they cannot control their worry, and this belief becomes self-reinforcing. Each time they successfully postpone a worry to their scheduled window, they gather evidence that worry is controllable, challenging the core belief that drives the disorder.
             </p>
             <p>
               If you suspect you may be experiencing generalized anxiety, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> can help you assess the severity of your symptoms. Worry time works well as a self-management strategy alongside professional support.
@@ -195,7 +195,7 @@ export default function WorryTimeGuidePage() {
             </p>
             <ul>
               <li><strong>Scheduling worry time right before bed.</strong> Engaging with worries at night can activate your stress response and interfere with sleep. Schedule your window at least 2&ndash;3 hours before bedtime.</li>
-              <li><strong>Skipping days.</strong> Consistency is critical. If you skip your worry time, your brain loses trust in the system and reverts to worrying throughout the day. Even on low-worry days, sit down for your scheduled window &mdash; you can always end early.</li>
+              <li><strong>Skipping days.</strong> Consistency is critical. If you skip your worry time, your brain loses trust in the system and reverts to worrying throughout the day. Even on low-worry days, sit down for your scheduled window, you can always end early.</li>
               <li><strong>Using worry time for rumination.</strong> The goal is productive engagement, not spiraling. For each worry, ask: &quot;Can I do something about this?&quot; If yes, identify one action. If no, practice acceptance and move to the next item.</li>
               <li><strong>Expecting instant results.</strong> Most people need 1&ndash;2 weeks of consistent practice before worry postponement becomes natural. The technique works, but it requires patience as your brain forms the new habit.</li>
             </ul>
@@ -238,7 +238,7 @@ export default function WorryTimeGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools &mdash; Your Friendly Developer LLC
+        MindCheck Tools, Your Friendly Developer LLC
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
         Publisher and maintainer of free, evidence-based mental health screening tools for adults.

@@ -75,7 +75,7 @@ export default function RSESPage() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -104,7 +104,7 @@ export default function RSESPage() {
         <AnswerBlock
           what="The Rosenberg Self-Esteem Scale, a 10-item validated measure of global self-esteem used widely in psychology research."
           who="Anyone who wants to assess their overall self-esteem using the most widely used self-esteem measure in the field."
-          bottomLine="Self-esteem is not fixed — understanding where you are now is the starting point for building confidence. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="Self-esteem is not fixed, understanding where you are now is the starting point for building confidence. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>

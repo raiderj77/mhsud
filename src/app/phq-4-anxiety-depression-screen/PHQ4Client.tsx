@@ -83,7 +83,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
 
       {/* Clinical Disclaimer Banner */}
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6 text-sm text-amber-800 dark:text-amber-300">
-        <strong>Educational tool only.</strong> This is a screening instrument — not a diagnosis.
+        <strong>Educational tool only.</strong> This is a screening instrument, not a diagnosis.
         Answers are scored in your browser and never stored or transmitted.
       </div>
 
@@ -131,7 +131,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
 
       {/* Results */}
       {result && (
-        <div className="mb-8">
+        <div id="printable-results" className="mb-8">
           <div className="bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl p-6 mb-6">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
               Your PHQ-4 Results
@@ -170,12 +170,23 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
             )}
           </div>
 
-          <button
-            onClick={() => { setAnswers({}); setSubmitted(false); }}
-            className="text-sm text-sky-600 dark:text-sky-400 hover:underline"
-          >
-            ← Retake the quiz
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="px-5 py-2.5 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors text-sm font-medium"
+              title="Print your PHQ-4 results"
+            >
+              Print Results
+            </button>
+            <button
+              type="button"
+              onClick={() => { setAnswers({}); setSubmitted(false); }}
+              className="text-sm text-sky-600 dark:text-sky-400 hover:underline"
+            >
+              ← Retake the quiz
+            </button>
+          </div>
         </div>
       )}
 
@@ -246,7 +257,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li>
             <strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text{" "}
-            <strong>988</strong> — free, 24/7, confidential
+            <strong>988</strong>, free, 24/7, confidential
           </li>
           <li>
             <strong>Crisis Text Line:</strong> Text <strong>HOME to 741741</strong>
@@ -263,7 +274,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
       {/* Clinical Disclaimer */}
       <div className="mb-6">
         <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-          This screening tool is for educational purposes only — it is not a diagnosis. Only a
+          This screening tool is for educational purposes only, it is not a diagnosis. Only a
           licensed healthcare professional can diagnose anxiety or depression. Your responses are
           processed entirely in your browser and are never stored or transmitted.
         </p>

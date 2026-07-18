@@ -36,7 +36,7 @@ const FAQ_DATA = [
   {
     question: "How is the Holmes-Rahe Scale scored?",
     answer:
-      "You check all life events that have occurred in the past 12 months. Each event has a pre-assigned Life Change Unit (LCU) value ranging from 11 to 100. Your total score is the sum of all checked events. Scores below 150 suggest low susceptibility to stress-related illness. Scores of 150-299 suggest about a 50% chance of a major health breakdown in the next 2 years. Scores of 300 or more suggest about an 80% chance — though these are statistical associations, not certainties.",
+      "You check all life events that have occurred in the past 12 months. Each event has a pre-assigned Life Change Unit (LCU) value ranging from 11 to 100. Your total score is the sum of all checked events. Scores below 150 suggest low susceptibility to stress-related illness. Scores of 150-299 suggest about a 50% chance of a major health breakdown in the next 2 years. Scores of 300 or more suggest about an 80% chance, though these are statistical associations, not certainties.",
   },
   {
     question: "What are Life Change Units (LCU)?",
@@ -46,12 +46,12 @@ const FAQ_DATA = [
   {
     question: "Is this a medical test?",
     answer:
-      "No. The Holmes-Rahe Stress Inventory is a self-reflection and educational tool, not a clinical diagnosis or medical test. It identifies statistical associations between accumulated life changes and health risk at the population level — it does not predict what will happen to any individual. Many people with high scores remain healthy, and many factors (coping skills, social support, physical health) influence outcomes. Always consult a healthcare professional for health concerns.",
+      "No. The Holmes-Rahe Stress Inventory is a self-reflection and educational tool, not a clinical diagnosis or medical test. It identifies statistical associations between accumulated life changes and health risk at the population level, it does not predict what will happen to any individual. Many people with high scores remain healthy, and many factors (coping skills, social support, physical health) influence outcomes. Always consult a healthcare professional for health concerns.",
   },
   {
     question: "Why are positive events included in the scale?",
     answer:
-      "The Holmes-Rahe Scale measures life change and readjustment, not just negative stress. Events like marriage, retirement, pregnancy, and outstanding personal achievement all require significant adaptation and adjustment — even though they are positive. The research behind the scale found that any major life change, whether welcome or unwelcome, contributes to the overall stress load on the body and mind. This is why positive events like vacation (13 LCU) and Christmas (12 LCU) appear on the list.",
+      "The Holmes-Rahe Scale measures life change and readjustment, not just negative stress. Events like marriage, retirement, pregnancy, and outstanding personal achievement all require significant adaptation and adjustment, even though they are positive. The research behind the scale found that any major life change, whether welcome or unwelcome, contributes to the overall stress load on the body and mind. This is why positive events like vacation (13 LCU) and Christmas (12 LCU) appear on the list.",
   },
   {
     question: "Is my data private?",
@@ -75,7 +75,7 @@ export default function HolmesRahePage() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" },
+      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -104,7 +104,7 @@ export default function HolmesRahePage() {
         <AnswerBlock
           what="The Holmes-Rahe Stress Inventory, a validated tool that measures accumulated life change stress by summing Life Change Units from major events."
           who="Anyone who has experienced multiple life changes recently and wants to understand their cumulative stress level."
-          bottomLine="High life-change scores are associated with increased illness risk — awareness helps you take preventive action. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="High life-change scores are associated with increased illness risk, awareness helps you take preventive action. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
           lastUpdated="2026-03-20"
         />
       </div>
