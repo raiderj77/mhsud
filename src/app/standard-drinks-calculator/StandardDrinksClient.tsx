@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
@@ -66,6 +66,11 @@ export function StandardDrinksClient({ faqData }: Props) {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [shareMessage, setShareMessage] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [printDate, setPrintDate] = useState("");
+
+  useEffect(() => {
+    setPrintDate(new Date().toLocaleDateString());
+  }, []);
 
   const rawVol = parseFloat(volume) || 0;
   const rawAbv = parseFloat(abv) || 0;
@@ -320,7 +325,10 @@ export function StandardDrinksClient({ faqData }: Props) {
 
         {/* Print-only footer */}
         <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pt-3 border-t border-neutral-200">
-          <p>Standard Drinks Calculator — mindchecktools.com — {new Date().toLocaleDateString()}</p>
+          <p>
+            Standard Drinks Calculator — mindchecktools.com
+            {printDate ? ` — ${printDate}` : ""}
+          </p>
           <p>1 US standard drink = 14g pure alcohol. For educational purposes only.</p>
         </div>
       </div>

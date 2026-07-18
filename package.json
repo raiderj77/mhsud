@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test:hydration": "node --test tests/hydration-regression.test.mjs",
     "lint:content": "node scripts/content-lint.js",
     "lint:predeploy": "node scripts/predeploy-check.js",
     "prebuild": "npm run lint:predeploy && npm run lint:content"
