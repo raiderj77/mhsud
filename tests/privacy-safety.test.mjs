@@ -101,11 +101,22 @@ test("youth substance screener contains no affiliate therapy promotion", async (
 
 test("tracking and advertising require consent and Clarity is absent", async () => {
   const layout = await readFile(new URL("../src/app/layout.tsx", import.meta.url), "utf8");
+  const consentAnalytics = await readFile(
+    new URL("../src/components/ConsentAnalytics.tsx", import.meta.url),
+    "utf8",
+  );
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   assert.match(layout, /'analytics_storage': 'denied'/);
   assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === "true"/);
-  assert.match(layout, /data-cookieconsent="statistics"/);
+  assert.match(layout, /<ConsentAnalytics \/>/);
+  assert.doesNotMatch(layout, /googletagmanager\.com\/gtag\/js/);
   assert.match(layout, /data-cookieconsent="marketing"/);
+  assert.match(consentAnalytics, /CookiebotOnConsent/);
+  assert.match(consentAnalytics, /CookiebotOnAccept/);
+  assert.match(consentAnalytics, /consent\?\.statistics !== true/);
+  assert.match(consentAnalytics, /document\.createElement\("script"\)/);
+  assert.match(consentAnalytics, /globalPrivacyControlIsActive/);
+  assert.match(consentAnalytics, /G-XKHQN1NJ2Z/);
   assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
   assert.doesNotMatch(layout, /data-georegions/);
   assert.doesNotMatch(layout, /rel="preconnect" href="https:\/\/www\.googletagmanager\.com"/);
