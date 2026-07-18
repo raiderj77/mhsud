@@ -40,7 +40,7 @@ const SKILL_GROUPS: SkillGroup[] = [
   {
     id: "tipp",
     acronym: "TIPP",
-    fullName: "Change Your Body Chemistry Fast",
+    fullName: "Body-Based Distress Tolerance",
     color: "blue",
     cardFront: "border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30",
     cardBack: "border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-950/40",
@@ -51,23 +51,23 @@ const SKILL_GROUPS: SkillGroup[] = [
       {
         letter: "T",
         name: "Temperature",
-        oneLiner: "Use cold to activate your dive reflex and calm down fast",
-        instructions: "Hold a cold pack or ice on your face, especially your cheeks and around your eyes, for 30 seconds. You can also splash very cold water on your face or hold your breath and put your face in a bowl of cold water. This triggers the mammalian dive reflex, which slows your heart rate and calms your nervous system within seconds.",
+        oneLiner: "Use a cool sensation only if it is medically safe for you",
+        instructions: "Temperature-based TIPP practice can change heart rate quickly and is not safe for everyone. Do not put ice directly on skin or submerge your face based only on this page. If you have a medical condition, temperature intolerance, take medication that affects heart rate, or are unsure, ask a health professional for an adapted version.",
         examples: [
-          "Hold an ice pack or bag of frozen peas against your cheeks and forehead for 30 seconds",
-          "Fill a bowl with cold water, hold your breath, and submerge your face for 15-30 seconds",
-          "Step outside in cold air and take slow breaths",
+          "Hold a comfortably cool cloth in your hands and notice the sensation",
+          "Splash your hands with cool, not painfully cold, water",
+          "Skip this skill and choose STOP or paced breathing if temperature change is unsafe",
         ],
       },
       {
         letter: "I",
         name: "Intense Exercise",
-        oneLiner: "Burn off the adrenaline your body is producing",
-        instructions: "Do intense physical activity for 10-20 minutes. The goal is to match your body's arousal level, your emotions are intense, so make the exercise intense. This metabolizes stress hormones like cortisol and adrenaline and releases endorphins. You do not need a gym; anything that gets your heart rate up works.",
+        oneLiner: "Move within your health, mobility, and treatment limits",
+        instructions: "Exercise can raise heart rate rapidly. Use only activity that is safe for your health and current surroundings. If you have a medical condition, physical limitation, disordered-eating concern, take medication that affects heart rate, or are unsure, ask a health professional before using intense exercise as a coping skill.",
         examples: [
-          "Run up and down stairs for 5-10 minutes",
-          "Do jumping jacks, burpees, or push-ups until you feel the intensity drop",
-          "Put on music and dance as hard as you can for a full song",
+          "Take a brisk walk if that is already safe and familiar for you",
+          "Try gentle movement or stretching instead of intense exercise",
+          "Skip physical activity and choose a nonphysical skill if you feel pain, dizziness, or shortness of breath",
         ],
       },
       {
@@ -235,7 +235,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         instructions: "Use strong physical sensations to ground yourself in the present moment and interrupt the emotional spiral. Intense but safe sensory input can redirect your nervous system's attention from emotional pain to physical sensation.",
         examples: [
           "Hold an ice cube in your hand and focus on the cold",
-          "Snap a rubber band on your wrist (gently)",
+          "Hold a textured object and describe what you feel",
           "Eat something with a strong flavor, sour candy, hot sauce, peppermint",
         ],
       },
@@ -519,13 +519,13 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 space-y-4">
           <p>
-            <strong>Dialectical Behavior Therapy (DBT)</strong> was developed by Dr. Marsha Linehan in the late 1980s, originally for people with borderline personality disorder and chronic suicidal thoughts. It has since been adapted for a wide range of conditions including depression, anxiety, substance use disorders, eating disorders, and PTSD. DBT is now one of the most extensively researched and evidence-based psychotherapies available.
+            <strong>Dialectical Behavior Therapy (DBT)</strong> is a structured, multicomponent treatment developed by Dr. Marsha Linehan. It was originally evaluated for people with borderline personality disorder and chronic suicidal behavior. Research reviews have since examined DBT in additional clinical settings, but evidence and treatment format vary by population. The cards on this page cover selected skills only and are not a complete DBT program.
           </p>
           <p>
             <strong>Distress tolerance skills</strong> are one of DBT&apos;s four core skill modules (alongside mindfulness, emotion regulation, and interpersonal effectiveness). These skills are specifically designed for <em>crisis moments</em>, times when emotions are so intense that rational problem-solving is not yet possible. The goal is not to solve the problem or make the pain go away, but to <strong>survive the crisis without making it worse</strong>.
           </p>
           <p>
-            The four acronyms on this page, TIPP, STOP, ACCEPTS, and IMPROVE, represent different categories of crisis survival skills. TIPP changes your body chemistry quickly. STOP prevents impulsive reactions. ACCEPTS provides healthy distraction. IMPROVE makes the moment more bearable. Together, they form a toolkit for getting through intense emotional experiences safely.
+            The four acronyms on this page organize different crisis-survival skills. TIPP uses body-based techniques and requires medical caution. STOP creates a pause before action. ACCEPTS offers temporary distraction. IMPROVE focuses on making the moment more manageable. These cards are a brief reference, not a complete DBT program or individualized treatment plan.
           </p>
           <p>
             These skills are educational resources and are not a substitute for DBT therapy with a trained clinician. If you are experiencing a mental health crisis, please reach out to a professional or contact one of the crisis resources listed on this page.
@@ -536,14 +536,14 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
           <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Authoritative Sources</h3>
           <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1.5">
             <li>
-              <a href="https://behavioraltech.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
-                Behavioral Tech / The Linehan Institute
-              </a>{" "}, Founded by Dr. Marsha Linehan, the developer of DBT
+              <a href="https://www.mirecc.va.gov/mirecc/visn16/docs/DBT_Visual_Review_Flash_Cards.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
+                U.S. Department of Veterans Affairs: DBT Visual Review flash cards
+              </a>{" "}, Includes TIPP safety cautions
             </li>
             <li>
-              <a href="https://www.samhsa.gov/medications-substance-use-disorders" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
-                SAMHSA: Substance Use Treatment Resources
-              </a>{" "}, Federal agency for substance abuse and mental health services
+              <a href="https://www.ncbi.nlm.nih.gov/books/NBK525629/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
+                NCBI Bookshelf: DBT clinical-effectiveness review
+              </a>{" "}, Reviews DBT as a multicomponent intervention
             </li>
           </ul>
         </div>
@@ -612,7 +612,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             These DBT distress tolerance skills are presented for educational purposes only. This tool is not a substitute for professional DBT therapy with a trained clinician. While these skills are evidence-based, learning them in the context of a therapeutic relationship provides much deeper understanding and more effective application. If you are experiencing a mental health crisis, please contact a professional or use the crisis resources on this page.
           </p>
           <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mt-2">
-            All content is processed entirely in your browser. Nothing is stored or transmitted to any server.
+            Your selected cards are handled in your browser and are not sent to analytics. General page usage may be measured only if you consent to statistics cookies.
           </p>
         </div>
       </section>

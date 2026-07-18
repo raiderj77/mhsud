@@ -206,12 +206,10 @@ export function UrgeSurfingClient({ faqData }: Props) {
         Urge Surfing Timer
       </h1>
       <p className="text-neutral-500 dark:text-neutral-400 text-center max-w-xl mx-auto mb-8 leading-relaxed">
-        Cravings are like waves, they rise, peak, and fall. This guided timer helps you ride the wave using
-        mindfulness and breathing, based on{" "}
-        <span className="font-medium text-neutral-700 dark:text-neutral-300">Alan Marlatt&rsquo;s urge surfing technique</span>.
-        Most cravings pass within 15&ndash;30 minutes.
+        Pause and notice where you feel an urge, describe the sensations, and observe how they change.
+        The timer provides structure, not a promise about when a craving will end.
       </p>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: July 17, 2026</p>
 
       <AdSlot position="urge-surfing-top" />
 
@@ -222,7 +220,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
             Choose Your Duration
           </h2>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 text-center mb-6">
-            Most cravings peak in 15&ndash;20 minutes. Start there if you&rsquo;re unsure.
+            Choose a short interval you can manage. You may stop at any time or select another coping strategy.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -240,12 +238,6 @@ export function UrgeSurfingClient({ faqData }: Props) {
               </button>
             ))}
           </div>
-
-          {selectedMinutes >= 15 && (
-            <p className="text-xs text-sage-600 dark:text-sage-400 text-center mb-6 font-medium">
-              Recommended for riding out most cravings
-            </p>
-          )}
 
           <div className="text-center">
             <button
@@ -381,8 +373,8 @@ export function UrgeSurfingClient({ faqData }: Props) {
             You Rode the Wave
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400 mb-6 max-w-md mx-auto leading-relaxed">
-            You stayed present through the craving instead of acting on it. That takes real strength.
-            Every time you do this, you rewire your brain&rsquo;s response to cravings.
+            You completed a period of noticing the urge and its sensations. Check in with yourself now,
+            and choose the next safe step from your support or treatment plan.
           </p>
 
           {/* stats */}
@@ -399,8 +391,9 @@ export function UrgeSurfingClient({ faqData }: Props) {
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6 max-w-md mx-auto">
             <p className="text-sm text-amber-800 dark:text-amber-200 leading-relaxed">
-              <span className="font-semibold">Remember:</span> The craving peaked and passed, just like a wave.
-              The more you practice this, the easier it gets. You are building new neural pathways every session.
+              <span className="font-semibold">Important:</span> Finishing the timer does not mean the urge has ended.
+              If it remains strong, contact a support person or professional, change to a safer environment,
+              or use another step from your relapse-prevention plan.
             </p>
           </div>
 
@@ -420,90 +413,68 @@ export function UrgeSurfingClient({ faqData }: Props) {
 
       <AdSlot position="urge-surfing-mid" />
 
-      {/* ─── EDUCATIONAL CONTENT ───────────────────────── */}
+      {/* ─── EDUCATIONAL CONTENT ─────────────────────── */}
       <section className="prose-custom mb-12">
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          What Is Urge Surfing?
+          How Urge Surfing Works
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Urge surfing is a mindfulness-based technique developed by <strong>Alan Marlatt, PhD</strong>, a
-          pioneering researcher in addiction psychology at the University of Washington. The core idea is
-          simple but powerful: instead of fighting a craving (which often makes it stronger) or giving in to it,
-          you <em>observe</em> it, like watching a wave in the ocean.
+          The U.S. Department of Veterans Affairs describes urge surfing as staying with an urge until it
+          changes rather than trying to overpower it. The exercise asks you to notice where the craving is
+          felt, describe the sensations, and observe how those sensations change.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          A craving, like a wave, has a natural arc. It builds, reaches a peak, and then subsides. By paying
-          attention to the physical sensations and thoughts that come with a craving, without judging them or
-          acting on them, you allow the wave to pass on its own. This is the essence of urge surfing: riding
-          the wave rather than being pulled under by it.
-        </p>
-        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          The technique is a core component of <strong>Mindfulness-Based Relapse Prevention (MBRP)</strong>,
-          developed by Sarah Bowen, PhD, and colleagues, which has been shown in research to reduce relapse
-          rates and decrease craving intensity over time.
+          The goal is not to force a craving to disappear. A timer can create a defined practice interval,
+          but cravings vary and the selected duration is not a prediction. If the urge remains strong,
+          use another part of your treatment or relapse-prevention plan.
         </p>
 
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          The Science Behind Cravings
-        </h2>
-        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Cravings are neurological events. When you encounter a trigger, a place, a person, a feeling, a
-          memory, your brain releases dopamine in anticipation of the substance or behavior. This creates the
-          intense urge to use. But here is the critical fact: <strong>your brain cannot sustain a craving at
-          peak intensity</strong>. The dopamine surge is temporary.
-        </p>
-        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Research consistently shows that most cravings peak within <strong>15 to 30 minutes</strong> and then
-          naturally decline, even without intervention. A study published in <em>Addictive Behaviors</em>
-          found that the average craving duration was approximately 11 minutes, with intensity peaking around
-          the halfway point. By simply waiting, and observing, you outlast the craving.
-        </p>
-        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          Each time you ride out a craving without acting on it, you weaken the neural pathway that connects
-          the trigger to the behavior. Over time, cravings become less frequent and less intense. This is
-          neuroplasticity working in your favor.
-        </p>
-
-        <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          How to Practice Urge Surfing
+          A Cautious Practice Sequence
         </h2>
         <ol className="space-y-3 text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 list-decimal list-inside">
-          <li><strong>Notice the craving.</strong> Acknowledge it without judgment. Say to yourself: &ldquo;I am having a craving right now.&rdquo;</li>
-          <li><strong>Start the timer.</strong> Choose 15&ndash;20 minutes. Knowing there is an endpoint makes it easier to commit.</li>
-          <li><strong>Focus on your breath.</strong> Use the box breathing pattern: 4 seconds in, 4 seconds hold, 4 seconds out, 4 seconds hold. This activates your parasympathetic nervous system and reduces anxiety.</li>
-          <li><strong>Observe your body.</strong> Where do you feel the craving? Your stomach? Chest? Throat? Hands? Notice the sensations without trying to change them.</li>
-          <li><strong>Ride the wave.</strong> The craving will intensify, peak, and then begin to fall. Watch it happen. You do not need to do anything except observe.</li>
-          <li><strong>Celebrate.</strong> When the timer ends, acknowledge what you just did. You faced a craving head-on and came through the other side.</li>
+          <li><strong>Pause safely.</strong> Move away from substances, gambling access, driving, weapons, or another immediate risk when possible.</li>
+          <li><strong>Name the urge.</strong> Notice that an urge is present without treating it as a command.</li>
+          <li><strong>Choose an interval.</strong> Pick a duration that feels manageable; you can stop early.</li>
+          <li><strong>Notice sensations.</strong> Observe where the urge appears in your body and how the sensations change.</li>
+          <li><strong>Use breathing only if comfortable.</strong> Return to normal breathing if breath holds or pacing feel uncomfortable.</li>
+          <li><strong>Reassess.</strong> When the timer ends, choose the next safe action. Do not assume the craving has passed.</li>
         </ol>
 
-        {/* internal links */}
+        <div className="bg-blue-50 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-800 p-5 mb-6">
+          <h3 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-3 uppercase tracking-wider">
+            Primary Sources
+          </h3>
+          <ul className="space-y-2 text-sm text-blue-700 dark:text-blue-300">
+            <li>
+              <a href="https://www.mirecc.va.gov/MIRECC/visn5/EBT/CBT-SUD/Urge-Surfing.asp" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
+                U.S. Department of Veterans Affairs: Urge Surfing
+              </a>
+            </li>
+            <li>
+              <a href="https://store.samhsa.gov/sites/default/files/pep23-02-01-003.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 dark:hover:text-blue-100">
+                SAMHSA TIP 65: Counseling Approaches for Promoting Harm Reduction and Preventing Recurrence
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div className="bg-sage-50 dark:bg-sage-950/30 rounded-xl p-5 mb-6">
           <h3 className="text-sm font-semibold text-sage-700 dark:text-sage-400 mb-3 uppercase tracking-wider">
             Related Recovery Tools
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
-                HALT Check-In
-              </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Check if Hunger, Anger, Loneliness, or Tiredness is driving your craving</span>
+              <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">HALT Check-In</Link>
+              <span className="text-neutral-500 dark:text-neutral-400"> — Consider whether hunger, anger, loneliness, or tiredness needs attention.</span>
             </li>
             <li>
-              <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
-                Relapse Prevention Plan
-              </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Build a written plan with triggers, coping strategies, and emergency contacts</span>
-            </li>
-            <li>
-              <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
-                Sobriety Calculator
-              </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Track your progress and celebrate milestones</span>
+              <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">Relapse Prevention Plan</Link>
+              <span className="text-neutral-500 dark:text-neutral-400"> — Write down triggers, coping steps, and people to contact.</span>
             </li>
           </ul>
         </div>
       </section>
-
       {/* ─── FAQ ───────────────────────────────────────── */}
       <section className="mb-12">
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -575,8 +546,8 @@ export function UrgeSurfingClient({ faqData }: Props) {
 
         {/* privacy */}
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          This tool runs entirely in your browser. No data is stored, transmitted, or collected.
-          Your session is completely private.
+          Your timer choice and session details stay in your browser and are not sent to analytics.
+          General page usage may be measured only if you consent to statistics cookies.
         </p>
       </footer>
     </div>

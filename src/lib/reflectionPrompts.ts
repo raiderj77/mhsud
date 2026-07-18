@@ -654,14 +654,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "urge-surfing-timer": {
     toolName: "Urge Surfing Timer",
     prompts: [
-      "What did you notice about the intensity of your craving as you practiced urge surfing, did it peak and then decrease?",
+      "What, if anything, did you notice about the intensity of your craving as you practiced urge surfing?",
       "How does observing a craving without acting on it change your relationship with urges?",
-      "What physical sensations do you notice in your body when a craving is at its peak?",
-      "How might regular urge surfing practice build your confidence in managing future cravings?",
+      "What physical sensations did you notice in your body during the practice?",
+      "Would urge surfing be useful as one option in your broader coping or support plan?",
     ],
     faqEntries: [
-      { question: "What is urge surfing and how does it help with cravings?", answer: "Urge surfing is a mindfulness technique developed by Dr. Alan Marlatt that involves observing a craving as a wave, it builds, peaks, and naturally subsides without you needing to act on it. Research shows that cravings typically last 15–30 minutes. By riding the wave rather than fighting it, you build confidence that cravings are temporary and manageable." },
-      { question: "How long do cravings last if you do not act on them?", answer: "Most cravings peak within 15–20 minutes and begin to subside within 30 minutes if you do not act on them. This is why the urge surfing technique is so effective, it helps you stay present through the peak until the natural decline occurs. With practice, cravings become shorter and less intense over time." },
+      { question: "What is urge surfing?", answer: "Urge surfing is a coping exercise that asks you to notice where an urge is felt, describe the sensations, and observe how they change without automatically acting on the urge. It can be one option within a broader support or treatment plan." },
+      { question: "How long do cravings last if you do not act on them?", answer: "There is no single reliable duration for every person or craving. A timer can provide structure for practice, but it cannot predict when an urge will peak or end. If the urge remains strong, use another part of your support or treatment plan." },
     ],
   },
 
