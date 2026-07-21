@@ -54,7 +54,7 @@ Sites: flipmycase.com, creatorrevenuecalculator.com
 **Tier 2 — YMYL-Adjacent**: Tier 1 + legal disclaimers, document privacy, enhanced data handling disclosures.
 Sites: contractextract.com, 524tracker.com
 
-**Tier 3 — Full YMYL**: Tier 2 + health data privacy (GDPR Article 9, WA MHMDA, MD MODPA), crisis resources on every page, licensed professional review attribution, Cookiebot CMP, non-personalized ad consideration, AAA accessibility consideration for cognitive accessibility.
+**Tier 3 — Full YMYL**: Tier 2 + health data privacy (GDPR Article 9, WA MHMDA, MD MODPA), crisis resources on every page, licensed professional review attribution, prior opt-in consent controls, non-personalized ad consideration, AAA accessibility consideration for cognitive accessibility.
 Sites: mindchecktools.com, medicalbillreader.com
 
 **Tier 4 — Micro-SaaS**: Additional API security, document upload handling/deletion policies, freemium model compliance, upload privacy notices.
@@ -101,7 +101,7 @@ Every Empire site must have these pages:
 - **Monetization**: AdSense only (NO affiliate links on health content). Consider non-personalized ads on screening pages. No ads adjacent to crisis resources.
 - **Attribution**: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)"
 - **Schema Types**: Organization, WebSite, WebApplication (per tool), FAQPage, Person (reviewer), BreadcrumbList
-- **Cookiebot CMP**: CBID `a9a99ccb-4863-4e33-a895-a6d5642f408d`, pub ID `pub-7171402107622932`. Must load before any tracking/ad scripts.
+- **Consent manager**: first-party privacy choices stored locally in the browser. Analytics and advertising scripts must not load before the matching affirmative choice; GPC forces optional services off. AdSense pub ID: `pub-7171402107622932`.
 - **Validated Instruments** (NEVER modify questions or scoring):
   - PHQ-9: 9 questions, scored 0-27 (0-4 minimal, 5-9 mild, 10-14 moderate, 15-19 moderately severe, 20-27 severe)
   - GAD-7: 7 questions, scored 0-21 (0-4 minimal, 5-9 mild, 10-14 moderate, 15-21 severe)

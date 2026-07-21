@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ADS_READY_EVENT, CONSENT_EVENT, getCurrentConsent } from "@/lib/privacyConsent";
 
 interface AdSlotProps {
   position: string;
@@ -35,23 +36,38 @@ export function AdSlot({
 }: AdSlotProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
+  const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    if (pushed.current) return;
-    try {
-      const w = window as unknown as { adsbygoogle?: unknown[] };
-      if (w.adsbygoogle && adRef.current) {
-        w.adsbygoogle.push({});
-        pushed.current = true;
-      }
-    } catch {
-      // AdSense not loaded, silently skip
-    }
+    const refresh = () => setAllowed(getCurrentConsent()?.advertising === true);
+    refresh();
+    window.addEventListener(CONSENT_EVENT, refresh);
+    return () => window.removeEventListener(CONSENT_EVENT, refresh);
   }, []);
+
+  useEffect(() => {
+    if (!allowed) return;
+
+    const requestAd = () => {
+      if (pushed.current || getCurrentConsent()?.advertising !== true) return;
+      try {
+        if (window.adsbygoogle && adRef.current) {
+          window.adsbygoogle.push({});
+          pushed.current = true;
+        }
+      } catch {
+        // AdSense can reject a duplicate or unavailable slot; leave the page usable.
+      }
+    };
+
+    requestAd();
+    window.addEventListener(ADS_READY_EVENT, requestAd);
+    return () => window.removeEventListener(ADS_READY_EVENT, requestAd);
+  }, [allowed]);
 
   const dims = FORMAT_DIMS[adFormat] ?? FORMAT_DIMS.auto;
 
-  if (process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true") return null;
+  if (process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true" || !allowed) return null;
 
   return (
     <div

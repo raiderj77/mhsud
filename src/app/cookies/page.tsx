@@ -54,7 +54,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: July 13, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: July 20, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -78,7 +78,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              We use Google Consent Mode v2 to ensure that analytics and advertising cookies are only set after you provide explicit consent through our cookie banner. If you decline, no non-essential cookies are placed on your device.
+              Our first-party privacy control keeps analytics and advertising services off until you make an affirmative choice. Google Consent Mode v2 communicates that choice to Google services only when an optional service is enabled. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools.
             </p>
           </section>
 
@@ -128,7 +128,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Managing your preferences</h2>
             <p>
-              You can change your cookie preferences at any time by clicking the button below. You can also clear cookies through your browser settings.
+              You can change your privacy choices at any time by clicking the button below. You can also clear cookies and local storage through your browser settings.
             </p>
             <div className="not-prose mt-4">
               <CookieSettingsButton />

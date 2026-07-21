@@ -1,17 +1,9 @@
-type AssessmentEvent = "assessment_started" | "assessment_completed";
+import { getCurrentConsent } from "@/lib/privacyConsent";
 
-declare global {
-  interface Window {
-    Cookiebot?: {
-      consent?: { statistics?: boolean };
-      renew?: () => void;
-    };
-    gtag?: (command: "event", eventName: AssessmentEvent) => void;
-  }
-}
+type AssessmentEvent = "assessment_started" | "assessment_completed";
 
 export function trackAssessmentEvent(eventName: AssessmentEvent): void {
   if (typeof window === "undefined") return;
-  if (window.Cookiebot?.consent?.statistics !== true) return;
+  if (getCurrentConsent()?.analytics !== true) return;
   window.gtag?.("event", eventName);
 }
