@@ -105,35 +105,42 @@ test("tracking and advertising require consent and Clarity is absent", async () 
     new URL("../src/components/ConsentAnalytics.tsx", import.meta.url),
     "utf8",
   );
+  const adSlot = await readFile(new URL("../src/components/AdSlot.tsx", import.meta.url), "utf8");
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   assert.match(layout, /'analytics_storage': 'denied'/);
   assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === "true"/);
-  assert.match(layout, /<ConsentAnalytics \/>/);
+  assert.match(layout, /<ConsentAnalytics adsenseEnabled=\{adsenseEnabled\} \/>/);
   assert.doesNotMatch(layout, /googletagmanager\.com\/gtag\/js/);
-  assert.match(layout, /data-cookieconsent="marketing"/);
-  assert.match(consentAnalytics, /CookiebotOnConsent/);
-  assert.match(consentAnalytics, /CookiebotOnAccept/);
-  assert.match(consentAnalytics, /consent\?\.statistics !== true/);
+  assert.doesNotMatch(layout, /Cookiebot|consent\.cookiebot|data-cookieconsent/i);
+  assert.match(consentAnalytics, /CONSENT_STORAGE_KEY/);
+  assert.match(consentAnalytics, /analytics: false, advertising: false/);
+  assert.match(consentAnalytics, /analytics_storage: consent\.analytics \? "granted" : "denied"/);
+  assert.match(consentAnalytics, /ad_storage: consent\.advertising \? "granted" : "denied"/);
+  assert.match(consentAnalytics, /ad_user_data: "denied"/);
+  assert.match(consentAnalytics, /ad_personalization: "denied"/);
   assert.match(consentAnalytics, /document\.createElement\("script"\)/);
   assert.match(consentAnalytics, /globalPrivacyControlIsActive/);
   assert.match(consentAnalytics, /G-XKHQN1NJ2Z/);
+  assert.match(consentAnalytics, /SAFE_CAMPAIGN_KEYS/);
+  assert.match(consentAnalytics, /page_path: pathname/);
+  assert.match(consentAnalytics, /consented-google-adsense/);
+  assert.match(adSlot, /getCurrentConsent\(\)\?\.advertising !== true/);
+  assert.match(adSlot, /data-npa="1"/);
   assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
   assert.doesNotMatch(layout, /data-georegions/);
   assert.doesNotMatch(layout, /rel="preconnect" href="https:\/\/www\.googletagmanager\.com"/);
+  assert.doesNotMatch(layout, /rel="preconnect" href="https:\/\/pagead2\.googlesyndication\.com"/);
   assert.doesNotMatch(layout, /13971731025ec697-s\.p\.woff2/);
-  assert.ok(
-    layout.indexOf("{adsenseEnabled && (") < layout.indexOf('rel="preconnect" href="https://pagead2.googlesyndication.com"'),
-    "advertising resource hints must stay behind the AdSense production flag",
-  );
+  assert.doesNotMatch(nextConfig, /consent\.cookiebot|consentcdn\.cookiebot/i);
   assert.doesNotMatch(nextConfig, /unsafe-eval/);
 });
 
-test("assessment funnel events require statistics consent and contain no health data", async () => {
+test("assessment funnel events require analytics consent and contain no health data", async () => {
   const analytics = await readFile(
     new URL("../src/lib/assessmentAnalytics.ts", import.meta.url),
     "utf8",
   );
-  assert.match(analytics, /Cookiebot\?\.consent\?\.statistics !== true/);
+  assert.match(analytics, /getCurrentConsent\(\)\?\.analytics !== true/);
   assert.match(analytics, /"assessment_started" \| "assessment_completed"/);
   assert.match(analytics, /gtag\?\.\("event", eventName\)/);
   assert.doesNotMatch(analytics, /answers|score|severity|email|pathname|page_path/i);

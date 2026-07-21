@@ -65,15 +65,15 @@ export default function PrivacyPage() {
               Browser-local entries are not intentionally transmitted to MindCheck Tools application servers, but they remain available to this browser profile until you use the tool&apos;s reset/delete control, clear site data, or the browser removes them. Anyone with access to the same browser profile may be able to read them. Use a private window or clear the tool on a shared device. Browser extensions, device software, screenshots, downloads, and backups are outside our control.
             </p>
             <p>
-              The following third-party services may set cookies on this site:
+              The following controls and optional third-party services may use browser storage on this site:
             </p>
             <ul>
-              <li><strong>Cookiebot</strong> (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d), our consent management platform. Stores your cookie consent preferences. Required for GDPR and CCPA compliance.</li>
+              <li><strong>MindCheck Tools privacy choices</strong>, our first-party consent control. It stores only your analytics and advertising choices in this browser.</li>
               <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
               <li><strong>Google AdSense</strong>, planned advertising provider. AdSense is not currently enabled because the site has not been approved to show ads.</li>
             </ul>
             <p>
-              You can manage your cookie preferences at any time through the Cookiebot consent banner or your browser settings.
+              You can manage your choices at any time through the Privacy Choices link in the site footer or through your browser settings.
             </p>
           </section>
 
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
               <li><strong>Network information:</strong> IP address (anonymized by GA4 by default), approximate geographic location (city/region level, not precise)</li>
               <li><strong>Usage data:</strong> pages visited, time on page, referral URLs, click interactions</li>
-              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics and Cookiebot (our consent management platform)</li>
+              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics after analytics consent</li>
             </ul>
             <p>
               <strong>None of this data includes your screening answers, scores, or results.</strong> Screening data never leaves your browser and is never accessible to analytics or advertising systems.
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
-              <li><strong>Cookie consent preferences:</strong> 12 months (managed by Cookiebot, stored on your device).</li>
+              <li><strong>Privacy choices:</strong> Stored in this browser until you change them or clear site data. The choice itself is not sent to a consent-management provider.</li>
               <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
               <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
@@ -209,7 +209,7 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on consent obtained through our Cookiebot consent management platform before enabling analytics or advertising storage.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on your affirmative choice in our first-party privacy control before enabling analytics or advertising storage.
             </p>
             <p>
               <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results on MindCheck Tools are processed entirely in your browser and are not transmitted to our servers. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
@@ -308,7 +308,7 @@ export default function PrivacyPage() {
             <p>
               We do not sell personal information. To opt out of sharing for advertising purposes,
               you may use a <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
-              browser. Our Consent Management Platform (Cookiebot) also provides granular consent controls.
+              browser. Our first-party Privacy Choices control also provides separate analytics and advertising choices.
             </p>
 
             <h3>How to Submit a Request</h3>

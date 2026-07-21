@@ -1,21 +1,14 @@
 "use client";
 
-declare global {
-  interface Window {
-    Cookiebot?: {
-      consent?: { statistics?: boolean };
-      renew?: () => void;
-    };
-  }
-}
+import { OPEN_CONSENT_EVENT } from "@/lib/privacyConsent";
 
 export function CookieSettingsButton() {
   return (
     <button
-      onClick={() => window.Cookiebot?.renew?.()}
+      onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
       className="btn-secondary text-sm"
     >
-      Change Cookie Preferences
+      Change Privacy Choices
     </button>
   );
 }

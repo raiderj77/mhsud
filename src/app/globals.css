@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
- * Suppress Cookiebot consent dialog as LCP candidate.
- * Without this, the browser treats the consent banner as the largest contentful paint,
- * inflating LCP from ~2s to ~5s. contain:strict excludes the element from LCP
- * candidate consideration; content-visibility:auto defers rendering cost.
- */
-#CybotCookiebotDialog,
-#CybotCookiebotDialogBodyUnderlay {
-  contain: strict;
-  content-visibility: auto;
-}
-
 /* Keep secondary text and branded links readable on the site's warm light backgrounds. */
 .text-neutral-400,
 .text-neutral-500 {

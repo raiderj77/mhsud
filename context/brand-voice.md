@@ -3,7 +3,7 @@
 ## Site Overview
 mindchecktools.com is a free mental health and substance use screening tool suite.
 Tools: PHQ-9 (depression), GAD-7 (anxiety), AUDIT (alcohol use), Mental Load Calculator, and more.
-Monetization: Google AdSense. Cookiebot CMP installed (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d).
+Monetization: Google AdSense planned but currently disabled. First-party, consent-gated privacy choices are installed.
 YMYL site — all content requires extra care and clinical accuracy.
 
 ## Target Audience

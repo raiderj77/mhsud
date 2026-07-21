@@ -87,16 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
-        {adsenseEnabled && (
-          <>
-            <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
-            <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
-            <link rel="dns-prefetch" href="https://adservice.google.com" />
-          </>
-        )}
-
-        {/* Consent Mode v2 defaults - must fire before Cookiebot and all analytics */}
+        {/* Consent Mode v2 defaults run before any optional Google service. */}
         <Script
           id="consent-mode"
           strategy="beforeInteractive"
@@ -109,10 +100,9 @@ export default function RootLayout({
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
                 'analytics_storage': 'denied',
-                'functionality_storage': 'denied',
+                'functionality_storage': 'granted',
                 'personalization_storage': 'denied',
-                'security_storage': 'granted',
-                'wait_for_update': 500
+                'security_storage': 'granted'
               });
               // GPC override: runs before any analytics tag can initialize.
               // Checks navigator.globalPrivacyControl (browser-native signal) AND the
@@ -133,46 +123,6 @@ export default function RootLayout({
             `,
           }}
         />
-
-        {/* Mental-health browsing can be sensitive. Show the CMP in every region and
-            keep analytics and advertising storage denied until the visitor chooses. */}
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-          data-blockingmode="auto"
-          strategy="beforeInteractive"
-        />
-
-        {/* GPC client-side fallback: declines via Cookiebot when navigator.globalPrivacyControl is set. */}
-        <Script
-          id="gpc-auto-decline"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.addEventListener('CookiebotOnLoad', function () {
-                try {
-                  var gpcActive =
-                    !!navigator.globalPrivacyControl ||
-                    document.cookie.indexOf('empire_gpc=1') !== -1;
-                  if (gpcActive && window.Cookiebot) {
-                    window.Cookiebot.decline();
-                  }
-                } catch (e) {}
-              });
-            `,
-          }}
-        />
-
-        {adsenseEnabled && (
-          <Script
-            id="adsense-script"
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
-            crossOrigin="anonymous"
-            strategy="lazyOnload"
-            data-cookieconsent="marketing"
-          />
-        )}
 
         <script
           type="application/ld+json"
@@ -199,7 +149,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
-        <ConsentAnalytics />
+        <ConsentAnalytics adsenseEnabled={adsenseEnabled} />
         <ThemeProvider>
           <ScrollToTop />
           <script

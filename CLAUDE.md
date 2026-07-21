@@ -21,7 +21,7 @@
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Package Manager**: npm
-- **CMP**: Cookiebot (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d)
+- **Consent manager**: first-party, local browser choices; no paid CMP runtime
 - Client components for interactive tools, server components for pages
 - Config-driven architecture: adding a tool to config auto-populates nav, footer, sitemap
 
@@ -144,7 +144,7 @@ Configure in `public/robots.txt`. Allow all search-facing AI crawlers:
 ### Cookie Consent
 - EU/EEA/UK: Opt-in model (consent before tracking)
 - US: Opt-out model (honor GPC)
-- Cookiebot CMP (CBID: a9a99ccb-4863-4e33-a895-a6d5642f408d). Must load before any tracking/ad scripts.
+- First-party consent manager. Analytics and advertising scripts must not load before the matching affirmative choice; GPC forces optional services off.
 
 ### Health Data Privacy (CRITICAL)
 - Treat ALL screening data as sensitive requiring explicit consent
