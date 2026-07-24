@@ -62,3 +62,9 @@ test("history restores reset state, result sharing is disabled, and printing req
   assert.doesNotMatch(phq, /Copy My Results|PHQ-9 Self-Check Results/);
   assert.doesNotMatch(scoff, /Copy My Results|SCOFF Eating Disorder Screening Results/);
 });
+
+test("screening consent has a stable accessible selector for synthetic monitoring", async () => {
+  const gate = await read("../src/components/DisclaimerGate.tsx");
+  assert.match(gate, /htmlFor="educational-use-consent"/);
+  assert.match(gate, /id="educational-use-consent"/);
+});

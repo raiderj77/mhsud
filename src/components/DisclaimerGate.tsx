@@ -38,12 +38,13 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
         </ul>
       </div>
 
-      <label className={`flex items-start gap-3 cursor-pointer p-4 rounded-xl border-2 transition-all mb-6 ${
+      <label htmlFor="educational-use-consent" className={`flex items-start gap-3 cursor-pointer p-4 rounded-xl border-2 transition-all mb-6 ${
         checked
           ? "border-sage-400 dark:border-sage-600 bg-sage-50/50 dark:bg-sage-950/20"
           : "border-sand-200 dark:border-neutral-600"
       }`}>
         <input
+          id="educational-use-consent"
           type="checkbox"
           checked={checked}
           onChange={() => setChecked(!checked)}
