@@ -8,21 +8,33 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-sw.js');
 
 if (workbox) {
-  // Configure Workbox to log appropriately in dev only
-  if (process.env.NODE_ENV === 'production') {
-    workbox.setConfig({ debug: false });
-  }
+  workbox.setConfig({ debug: false });
 
   // === CONSTANTS ===
-  const CACHE_VERSION = '1.0.0';
+  const CACHE_VERSION = '1.1.0';
   const CACHE_TIMESTAMP = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const PRECACHE_NAME = `mindcheck-precache-${CACHE_VERSION}`;
   const RUNTIME_CACHE_NAMES = {
-    staticAssets: `mindcheck-static-${CACHE_TIMESTAMP}`,
-    toolPages: `mindcheck-tools-${CACHE_TIMESTAMP}`,
-    blogPosts: `mindcheck-blog-${CACHE_TIMESTAMP}`,
-    api: `mindcheck-api-${CACHE_TIMESTAMP}`,
-    analytics: `mindcheck-analytics-${CACHE_TIMESTAMP}`,
+    staticAssets: `mindcheck-static-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
+    toolPages: `mindcheck-tools-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
+    blogPosts: `mindcheck-blog-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
+    api: `mindcheck-api-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
+  };
+
+  const SENSITIVE_TOOL_SEGMENT =
+    /(?:^|-)(?:test|screen|screening|assessment|questionnaire|scale|inventory|calculator|check|check-in|record|scheduler)(?:-|$)/i;
+  const EXPLICIT_SENSITIVE_ROUTES = new Set([
+    'screening-tools',
+    'safety-plan',
+    'readiness-to-change',
+    'who-5-wellbeing-index',
+  ]);
+  const isSensitivePath = (pathname) => {
+    const firstSegment = pathname.split('/').filter(Boolean)[0]?.toLowerCase();
+    if (!firstSegment || firstSegment === 'blog') return false;
+    return /^results?$/.test(firstSegment) ||
+      EXPLICIT_SENSITIVE_ROUTES.has(firstSegment) ||
+      SENSITIVE_TOOL_SEGMENT.test(firstSegment);
   };
 
   // === PRECACHE CRITICAL ASSETS ===
@@ -36,6 +48,13 @@ if (workbox) {
   workbox.precaching.precacheAndRoute(precacheAssets);
 
   // === CACHING STRATEGIES ===
+
+  // Sensitive tools are network-only. Their HTML, answers, and result state
+  // must never be available from a service-worker cache.
+  workbox.routing.registerRoute(
+    ({ url }) => isSensitivePath(url.pathname),
+    new workbox.strategies.NetworkOnly()
+  );
 
   // 1. STATIC ASSETS: Cache-first (versioned with hash in filename)
   // Next.js outputs hashed filenames in _next/static, so cache-first is safe
@@ -127,45 +146,10 @@ if (workbox) {
     })
   );
 
-  // 6. GOOGLE ANALYTICS: Network-first with fallback
-  // Never fail analytics - just use cache or skip
-  workbox.routing.registerRoute(
-    ({ url }) => url.hostname.includes('google-analytics.com') ||
-                  url.hostname.includes('analytics.google.com'),
-    new workbox.strategies.NetworkFirst({
-      cacheName: RUNTIME_CACHE_NAMES.analytics,
-      networkTimeoutSeconds: 2,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 20,
-          maxAgeSeconds: 60 * 60, // 1 hour
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // 7. GOOGLE ADSENSE: Network-first with fallback
-  workbox.routing.registerRoute(
-    ({ url }) => url.hostname.includes('google') &&
-                  url.pathname.includes('ads'),
-    new workbox.strategies.NetworkFirst({
-      cacheName: RUNTIME_CACHE_NAMES.analytics,
-      networkTimeoutSeconds: 2,
-      plugins: [
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
   // === FALLBACK HANDLING ===
   // Navigation requests that fail should show offline page
   workbox.routing.registerRoute(
-    ({ request }) => request.mode === 'navigate',
+    ({ request, url }) => request.mode === 'navigate' && !isSensitivePath(url.pathname),
     new workbox.strategies.NetworkFirst({
       cacheName: RUNTIME_CACHE_NAMES.toolPages,
       networkTimeoutSeconds: 3,

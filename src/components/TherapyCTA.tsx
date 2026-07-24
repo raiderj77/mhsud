@@ -1,11 +1,17 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { isSensitiveRoute } from "@/lib/routePolicies";
+
 interface Props {
   show: boolean;
 }
 
 export function TherapyCTA({ show }: Props) {
+  const pathname = usePathname();
   const url = process.env.NEXT_PUBLIC_THERAPY_AFFILIATE_URL;
 
-  if (!show || !url) return null;
+  if (!show || !url || isSensitiveRoute(pathname)) return null;
 
   return (
     <div className="card p-5 sm:p-6 mb-5 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
