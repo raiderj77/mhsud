@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ADS_READY_EVENT, CONSENT_EVENT, getCurrentConsent } from "@/lib/privacyConsent";
+import { isSensitiveRoute } from "@/lib/routePolicies";
 
 interface AdSlotProps {
   position: string;
@@ -34,16 +36,18 @@ export function AdSlot({
   adSlot,
   adFormat = "auto",
 }: AdSlotProps) {
+  const pathname = usePathname();
+  const sensitive = isSensitiveRoute(pathname);
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    const refresh = () => setAllowed(getCurrentConsent()?.advertising === true);
+    const refresh = () => setAllowed(!sensitive && getCurrentConsent()?.advertising === true);
     refresh();
     window.addEventListener(CONSENT_EVENT, refresh);
     return () => window.removeEventListener(CONSENT_EVENT, refresh);
-  }, []);
+  }, [sensitive]);
 
   useEffect(() => {
     if (!allowed) return;
@@ -67,7 +71,7 @@ export function AdSlot({
 
   const dims = FORMAT_DIMS[adFormat] ?? FORMAT_DIMS.auto;
 
-  if (process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true" || !allowed) return null;
+  if (sensitive || process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true" || !allowed) return null;
 
   return (
     <div

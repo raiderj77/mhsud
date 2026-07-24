@@ -1,0 +1,10 @@
+# Ownership is documented here even though this single-owner repository does
+# not require self-review. The branch ruleset still requires a pull request and
+# successful build before main can change.
+* @raiderj77
+
+/src/app/phq-9-depression-test/ @raiderj77
+/src/app/scoff-eating-disorder-screening/ @raiderj77
+/src/lib/routePolicies.ts @raiderj77
+/src/middleware.ts @raiderj77
+/.github/ @raiderj77

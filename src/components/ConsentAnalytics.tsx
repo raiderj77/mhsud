@@ -10,6 +10,7 @@ import {
   OPEN_CONSENT_EVENT,
   type PrivacyConsent,
 } from "@/lib/privacyConsent";
+import { isSensitiveRoute } from "@/lib/routePolicies";
 
 const MEASUREMENT_ID = "G-XKHQN1NJ2Z";
 const ANALYTICS_SCRIPT_ID = "consented-google-analytics";
@@ -125,6 +126,12 @@ function clearGoogleAnalytics(): void {
   }
 }
 
+function removeOptionalServiceScripts(): void {
+  document.getElementById(ANALYTICS_SCRIPT_ID)?.remove();
+  document.getElementById(ADS_SCRIPT_ID)?.remove();
+  clearGoogleAnalytics();
+}
+
 function readStoredConsent(): PrivacyConsent | null {
   try {
     const parsed = JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) || "null") as Partial<PrivacyConsent> | null;
@@ -140,6 +147,7 @@ type ConsentAnalyticsProps = { adsenseEnabled: boolean };
 
 export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const pathname = usePathname();
+  const sensitive = isSensitiveRoute(pathname);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
   const [gpcActive, setGpcActive] = useState(false);
@@ -147,23 +155,27 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const [advertising, setAdvertising] = useState(false);
 
   const applyConsent = useCallback((choice: PrivacyConsent, persist = true) => {
-    const effectiveChoice = globalPrivacyControlIsActive()
+    const storedChoice = globalPrivacyControlIsActive()
       ? { version: 1 as const, analytics: false, advertising: false }
       : { ...choice, advertising: adsenseEnabled && choice.advertising };
+    const effectiveChoice = sensitive
+      ? { version: 1 as const, analytics: false, advertising: false }
+      : storedChoice;
 
     window.__mindcheckConsent = effectiveChoice;
     updateGoogleConsent(effectiveChoice);
-    if (effectiveChoice.analytics) loadGoogleAnalytics(pathname);
+    if (sensitive) removeOptionalServiceScripts();
+    else if (effectiveChoice.analytics) loadGoogleAnalytics(pathname);
     else clearGoogleAnalytics();
     if (effectiveChoice.advertising) loadNonPersonalizedAds();
 
     if (persist) {
-      try { localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(effectiveChoice)); } catch {}
+      try { localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(storedChoice)); } catch {}
     }
     window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: effectiveChoice }));
     setAnalytics(effectiveChoice.analytics);
     setAdvertising(effectiveChoice.advertising);
-  }, [adsenseEnabled, pathname]);
+  }, [adsenseEnabled, pathname, sensitive]);
 
   useEffect(() => {
     const gpc = globalPrivacyControlIsActive();
@@ -188,8 +200,12 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   }, []);
 
   useEffect(() => {
+    if (sensitive) {
+      removeOptionalServiceScripts();
+      return;
+    }
     if (ready && window.__mindcheckConsent?.analytics) loadGoogleAnalytics(pathname);
-  }, [pathname, ready]);
+  }, [pathname, ready, sensitive]);
 
   if (!ready || !open) return null;
 

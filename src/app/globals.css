@@ -321,6 +321,11 @@ main li a:not([class*="btn-"]) {
 /* Append this to the END of your globals.css file */
 
 @media print {
+  /* Sensitive results are printable only after the in-app privacy warning. */
+  body[data-sensitive-route="true"]:not(.print-approved) #printable-results {
+    display: none !important;
+  }
+
   /* Hide anything tagged .no-print (Navbar, Footer, AdSlots, etc.) */
   .no-print {
     display: none !important;

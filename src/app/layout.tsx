@@ -11,6 +11,7 @@ import { SwUpdateNotification } from "@/components/SwUpdateNotification";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { AppInstallPrompt } from "@/components/AppInstallPrompt";
 import { ConsentAnalytics } from "@/components/ConsentAnalytics";
+import { SensitiveRouteLifecycle } from "@/components/SensitiveRouteLifecycle";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 const dmSans = DM_Sans({
@@ -149,6 +150,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
+        <SensitiveRouteLifecycle />
         <ConsentAnalytics adsenseEnabled={adsenseEnabled} />
         <ThemeProvider>
           <ScrollToTop />
