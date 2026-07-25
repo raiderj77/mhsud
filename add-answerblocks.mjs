@@ -580,9 +580,9 @@ for (const dir of dirs) {
   // Build the AnswerBlock JSX
   const answerBlock = `      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="${what.replace(/"/g, '\\"')}"
-          who="${who.replace(/"/g, '\\"')}"
-          bottomLine="${bottomLine.replace(/"/g, '\\"')}"
+          what={${JSON.stringify(what)}}
+          who={${JSON.stringify(who)}}
+          bottomLine={${JSON.stringify(bottomLine)}}
           lastUpdated="2026-03-20"
         />
       </div>\n`;
