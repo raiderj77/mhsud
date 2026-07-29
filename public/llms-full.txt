@@ -74,7 +74,6 @@ MindCheck Tools (https://mindchecktools.com) provides free, validated mental hea
 - [Substance Abuse Test for Parents](https://mindchecktools.com/substance-abuse-test-parents): Substance use screening with parenting context
 - [Eating Disorder Test for Athletes](https://mindchecktools.com/eating-disorder-test-athletes): Eating disorder screening for athletes
 - [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): Loneliness screening for older adults
-- [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): Attachment style assessment for couples
 
 ### Recovery and Substance Use Tools
 - [Sobriety Calculator](https://mindchecktools.com/sobriety-calculator): Track sobriety duration and milestones

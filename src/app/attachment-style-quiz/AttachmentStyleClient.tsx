@@ -669,7 +669,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
             <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
-                { name: "Attachment Style Test for Couples", desc: "ECR-R with relationship-focused context", href: "/attachment-style-test-for-couples" },
+                { name: "Big Five Personality Test", desc: "Explore five broad personality dimensions", href: "/big-five-personality-test" },
                 { name: "UCLA Loneliness Scale", desc: "20-item measure of subjective loneliness", href: "/ucla-loneliness-scale" },
                 { name: "Rosenberg Self-Esteem Scale", desc: "10-item global self-esteem measure", href: "/rosenberg-self-esteem-scale" },
               ].map((t) => (
