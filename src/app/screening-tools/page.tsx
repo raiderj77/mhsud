@@ -156,7 +156,6 @@ const CATEGORIES: Category[] = [
     tools: [
       { name: "Big Five Personality Test", href: "/big-five-personality-test", description: "Trait-level personality reflection across openness, conscientiousness, extraversion, agreeableness, and neuroticism.", population: "General adults", items: "About 50 items", time: "About 8 minutes" },
       { name: "Attachment Style Quiz", href: "/attachment-style-quiz", description: "Educational reflection on attachment patterns in close relationships.", population: "General adults", items: "About 30 items", time: "About 6 minutes" },
-      { name: "Attachment Style Test for Couples", href: "/attachment-style-test-for-couples", description: "Same framework applied to a current relationship for joint reflection.", population: "Couples", items: "About 30 items each", time: "About 10 minutes for both" },
       { name: "Rosenberg Self-Esteem Scale", acronym: "RSES", href: "/rosenberg-self-esteem-scale", description: "Ten-item global self-esteem scale, widely used in research and education.", population: "Adolescents and adults", items: "10 items", time: "About 3 minutes" },
       { name: "Values Card Sort", href: "/values-card-sort", description: "Reflective sort of personal values, used in motivational interviewing and ACT-based work.", population: "General adults", items: "Card sort", time: "About 10 minutes" },
     ],

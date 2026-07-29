@@ -193,7 +193,7 @@ export default function AttachmentStylesGuidePage() {
               Understanding your attachment style is not about labeling yourself or assigning blame. It is about recognizing patterns, why you react the way you do in certain relationship situations, what triggers your anxiety or withdrawal, and what you actually need from the people close to you.
             </p>
             <p>
-              If you are in a relationship and want to explore how your patterns interact with your partner&apos;s, the <Link href="/attachment-style-test-for-couples" className="text-sage-600 dark:text-sage-400 underline">attachment style test for couples</Link> can provide additional insight.
+              Partners can each complete the <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">attachment style quiz</Link> separately, then discuss the patterns they recognize together.
             </p>
             <p>
               These are self-awareness tools, not clinical assessments. For a comprehensive attachment evaluation, a therapist trained in attachment-focused approaches can provide much deeper insight.
@@ -242,7 +242,6 @@ export default function AttachmentStylesGuidePage() {
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and your answers never leave your browser.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/attachment-style-quiz" className="btn-primary text-sm">Take the Attachment Style Quiz</Link>
-              <Link href="/attachment-style-test-for-couples" className="btn-primary text-sm">Couples Attachment Test</Link>
             </div>
           </div>
 
@@ -290,9 +289,9 @@ export default function AttachmentStylesGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Attachment Style Quiz</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Identify your attachment pattern</p>
               </Link>
-              <Link href="/attachment-style-test-for-couples" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Couples Attachment Test</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Explore attachment dynamics in your relationship</p>
+              <Link href="/big-five-personality-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Big Five Personality Test</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Explore five broad personality dimensions</p>
               </Link>
             </div>
           </section>

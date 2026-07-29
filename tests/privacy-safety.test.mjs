@@ -172,12 +172,21 @@ test("scaled content stays quarantined from search and internal discovery", asyn
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   const sitemap = await readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");
   const homepage = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
+  const attachmentQuiz = await readFile(new URL("../src/app/attachment-style-quiz/AttachmentStyleClient.tsx", import.meta.url), "utf8");
+  const attachmentGuide = await readFile(new URL("../src/app/blog/attachment-styles-guide/page.tsx", import.meta.url), "utf8");
+  const screeningTools = await readFile(new URL("../src/app/screening-tools/page.tsx", import.meta.url), "utf8");
+  const llms = await readFile(new URL("../public/llms.txt", import.meta.url), "utf8");
+  const llmsFull = await readFile(new URL("../public/llms-full.txt", import.meta.url), "utf8");
+  const llmsFullRoute = await readFile(new URL("../src/app/llms-full.txt/route.ts", import.meta.url), "utf8");
 
   assert.match(nextConfig, /source: "\/blog\/:path\*", destination: "\/screening-tools"/);
   assert.match(nextConfig, /"\/depression-test-for-teens", "\/phq-9-depression-test"/);
   assert.doesNotMatch(sitemap, /BLOG_POSTS/);
   assert.match(sitemap, /QUARANTINED_PATHS/);
   assert.match(homepage, /targetedScreenings=\{\[\]\}/);
+  for (const source of [attachmentQuiz, attachmentGuide, screeningTools, llms, llmsFull, llmsFullRoute]) {
+    assert.doesNotMatch(source, /attachment-style-test-for-couples/);
+  }
 });
 
 test("every MindCheck ad is non-personalized", async () => {

@@ -111,7 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/eating-disorder-test-athletes`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/bpd-test-for-women`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/bpd-screening-for-young-adults`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: `${SITE_URL}/attachment-style-test-for-couples`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-test-for-men`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/adhd-test-for-teens`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/depression-screening-for-men`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },

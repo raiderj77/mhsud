@@ -301,7 +301,6 @@ Substance use and addiction content reviewed by a Certified Drug and Alcohol Cou
 ### Other Conditions
 - [BPD Test for Women](https://mindchecktools.com/bpd-test-for-women): MSI-BPD with women-specific BPD presentation.
 - [BPD Screening for Young Adults](https://mindchecktools.com/bpd-screening-for-young-adults): MSI-BPD with adolescent/young adult onset context.
-- [Attachment Style Test for Couples](https://mindchecktools.com/attachment-style-test-for-couples): ECR-R with couples dynamics and communication context.
 - [Eating Disorder Test for Athletes](https://mindchecktools.com/eating-disorder-test-athletes): SCOFF with RED-S info and sport-specific risks.
 - [Loneliness Test for Seniors](https://mindchecktools.com/loneliness-test-seniors): UCLA Loneliness Scale with senior isolation stats.
 - [Grief Assessment](https://mindchecktools.com/grief-assessment): Grief screening and resources.
