@@ -210,8 +210,20 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   if (!ready || !open) return null;
 
   const save = (choice: PrivacyConsent) => {
+    const previous = window.__mindcheckConsent;
+    const withdrewOptionalService = Boolean(
+      previous &&
+        ((previous.analytics && !choice.analytics) ||
+          (previous.advertising && !choice.advertising)),
+    );
+
     applyConsent(choice);
     setOpen(false);
+
+    // Consent updates stop future Google events immediately. Reload after a
+    // withdrawal as well so a previously executed analytics or advertising
+    // runtime cannot remain active in the current document.
+    if (withdrewOptionalService) window.location.reload();
   };
 
   return (

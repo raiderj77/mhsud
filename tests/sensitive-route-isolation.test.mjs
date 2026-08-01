@@ -32,6 +32,41 @@ test("sensitive routes bypass tracking, advertising, affiliates, and assessment 
   assert.match(events, /isSensitiveBrowserLocation\(\)/);
 });
 
+test("interactive health tools without generic screening words stay sensitive", async () => {
+  const [policies, worker] = await Promise.all([
+    read("../src/lib/routePolicies.ts"),
+    read("../public/service-worker.js"),
+  ]);
+  for (const route of [
+    "attachment-style-quiz",
+    "box-breathing-exercise",
+    "cognitive-distortion-identifier",
+    "coping-skills-randomizer",
+    "dass-21-depression-anxiety-stress",
+    "dbt-crisis-skills",
+    "five-senses-grounding",
+    "health-recovery-timeline",
+    "relapse-prevention-plan",
+    "treatment-cost-estimator",
+    "trigger-identification-worksheet",
+    "urge-surfing-timer",
+    "values-card-sort",
+    "withdrawal-timeline",
+  ]) {
+    assert.match(policies, new RegExp(`"${route}"`));
+    assert.match(worker, new RegExp(`'${route}'`));
+  }
+  assert.match(worker, /const CACHE_VERSION = '1\.2\.0'/);
+});
+
+test("withdrawing optional consent reloads a clean document", async () => {
+  const consent = await read("../src/components/ConsentAnalytics.tsx");
+  assert.match(consent, /const previous = window\.__mindcheckConsent/);
+  assert.match(consent, /previous\.analytics && !choice\.analytics/);
+  assert.match(consent, /previous\.advertising && !choice\.advertising/);
+  assert.match(consent, /if \(withdrewOptionalService\) window\.location\.reload\(\)/);
+});
+
 test("service worker never caches sensitive routes or optional Google services", async () => {
   const worker = await read("../public/service-worker.js");
   assert.match(worker, /isSensitivePath\(url\.pathname\)[\s\S]*NetworkOnly/);

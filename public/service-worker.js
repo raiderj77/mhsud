@@ -11,7 +11,7 @@ if (workbox) {
   workbox.setConfig({ debug: false });
 
   // === CONSTANTS ===
-  const CACHE_VERSION = '1.1.0';
+  const CACHE_VERSION = '1.2.0';
   const CACHE_TIMESTAMP = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const PRECACHE_NAME = `mindcheck-precache-${CACHE_VERSION}`;
   const RUNTIME_CACHE_NAMES = {
@@ -28,6 +28,20 @@ if (workbox) {
     'safety-plan',
     'readiness-to-change',
     'who-5-wellbeing-index',
+    'attachment-style-quiz',
+    'box-breathing-exercise',
+    'cognitive-distortion-identifier',
+    'coping-skills-randomizer',
+    'dass-21-depression-anxiety-stress',
+    'dbt-crisis-skills',
+    'five-senses-grounding',
+    'health-recovery-timeline',
+    'relapse-prevention-plan',
+    'treatment-cost-estimator',
+    'trigger-identification-worksheet',
+    'urge-surfing-timer',
+    'values-card-sort',
+    'withdrawal-timeline',
   ]);
   const isSensitivePath = (pathname) => {
     const firstSegment = pathname.split('/').filter(Boolean)[0]?.toLowerCase();
