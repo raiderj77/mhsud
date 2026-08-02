@@ -263,7 +263,7 @@ export function Navbar() {
             </button>
 
             <Link
-              href="/blog"
+              href="/clinical-evidence"
               className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
                 text-neutral-600 dark:text-neutral-300
                 hover:text-sage-700 dark:hover:text-sage-400
@@ -271,7 +271,7 @@ export function Navbar() {
                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
                 transition-colors"
             >
-              Blog
+              Evidence
             </Link>
             <Link
               href="/crisis-resources"
@@ -583,7 +583,7 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
         {/* Static nav links */}
         <div className="border-t border-sand-200 dark:border-neutral-700 mt-3 pt-3 space-y-0.5">
           <Link
-            href="/blog"
+            href="/clinical-evidence"
             onClick={onClose}
             className="block px-3 py-2.5 rounded-xl text-sm font-semibold
               text-neutral-700 dark:text-neutral-200
@@ -591,7 +591,7 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
               transition-colors"
           >
-            Blog &amp; Guides
+            Clinical Evidence
           </Link>
           <Link
             href="/about"
