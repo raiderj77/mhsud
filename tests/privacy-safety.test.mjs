@@ -189,6 +189,45 @@ test("scaled content stays quarantined from search and internal discovery", asyn
   }
 });
 
+test("AI discovery files use maintained canonical URLs and scoped clinical claims", async () => {
+  const [sitemap, llms, llmsFull, llmsFullRoute, navbar] = await Promise.all([
+    readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8"),
+    readFile(new URL("../public/llms.txt", import.meta.url), "utf8"),
+    readFile(new URL("../public/llms-full.txt", import.meta.url), "utf8"),
+    readFile(new URL("../src/app/llms-full.txt/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/Navbar.tsx", import.meta.url), "utf8"),
+  ]);
+
+  const quarantineBlock = sitemap.match(/const QUARANTINED_PATHS = new Set\(\[([\s\S]*?)\]\);/)?.[1] ?? "";
+  const quarantined = new Set(
+    [...quarantineBlock.matchAll(/"(\/[^\"]+)"/g)].map((match) => match[1]),
+  );
+  const maintained = new Set(["/"]);
+  for (const match of sitemap.matchAll(/url:\s*`\$\{SITE_URL\}([^`]+)`/g)) {
+    const path = match[1].replace(/\/$/, "") || "/";
+    if (!quarantined.has(path)) maintained.add(path);
+  }
+
+  for (const [name, content] of [["llms.txt", llms], ["llms-full.txt", llmsFull]]) {
+    const siteUrls = [...content.matchAll(/https:\/\/mindchecktools\.com(?:\/[^)\s\]]*)?/g)].map((match) => match[0]);
+    assert.ok(siteUrls.length > 0, `${name} has no site URLs`);
+    for (const rawUrl of siteUrls) {
+      const path = new URL(rawUrl).pathname.replace(/\/$/, "") || "/";
+      assert.equal(maintained.has(path), true, `${name} contains noncanonical URL ${rawUrl}`);
+      assert.equal(path === "/blog" || path.startsWith("/blog/"), false, `${name} exposes quarantined blog URL ${rawUrl}`);
+    }
+    assert.doesNotMatch(content, /all tools[^\n.]*clinically validated/i);
+  }
+
+  assert.match(llms, /Some screening pages implement published validated instruments/);
+  assert.match(llmsFull, /other tools are educational or self-reflection resources/);
+  assert.match(llmsFullRoute, /readFileSync/);
+  assert.match(llmsFullRoute, /public[\s\S]*llms-full\.txt/);
+  assert.doesNotMatch(llmsFullRoute, /https:\/\/mindchecktools\.com/);
+  assert.doesNotMatch(navbar, /href="\/blog"/);
+  assert.match(navbar, /href="\/clinical-evidence"/);
+});
+
 test("every MindCheck ad is non-personalized", async () => {
   const adSlot = await readFile(new URL("../src/components/AdSlot.tsx", import.meta.url), "utf8");
   assert.match(adSlot, /data-npa="1"/);
