@@ -381,7 +381,7 @@ export default function HowToFindATherapistPage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">When Should I See a Therapist? 10 Signs</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Signs it may be time to talk to a mental health professional</p>
               </Link>
-              <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+              <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">How to Talk to Your Doctor About Mental Health</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">What to say, how to prepare, and what to expect</p>
               </Link>

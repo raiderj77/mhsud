@@ -311,7 +311,7 @@ export default function DepressionScreeningForMenPage() {
             </div>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-4">
-            <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline">
+            <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline">
               How to talk to your doctor about mental health →
             </Link>
           </p>

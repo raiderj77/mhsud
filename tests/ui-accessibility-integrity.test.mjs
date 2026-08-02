@@ -72,6 +72,42 @@ test("public source does not link to retired or nonexistent tool routes", async 
   }
 });
 
+test("doctor-guide links bypass the quarantined blog catch-all", async () => {
+  const legacyPath = "/blog/how-to-talk-to-doctor-about-mental-health";
+  const canonicalPath = "/how-to-talk-to-your-doctor-about-mental-health";
+  const legacyPage = path.join(
+    root,
+    "src",
+    "app",
+    "blog",
+    "how-to-talk-to-doctor-about-mental-health",
+    "page.tsx",
+  );
+  const files = await sourceFiles(path.join(root, "src"));
+
+  for (const file of files) {
+    if (file === legacyPage) continue;
+    const source = await readFile(file, "utf8");
+    assert.equal(source.includes(legacyPath), false, `stale doctor-guide link in ${file}`);
+  }
+
+  for (const file of ["public/llms.txt", "public/llms-full.txt"]) {
+    const source = await readFile(path.join(root, file), "utf8");
+    assert.equal(source.includes(legacyPath), false, `stale doctor-guide link in ${file}`);
+    assert.equal(source.includes(canonicalPath), true, `canonical doctor-guide link missing from ${file}`);
+  }
+
+  const nextConfig = await readFile(path.join(root, "next.config.mjs"), "utf8");
+  const exactRedirect = `source: "${legacyPath}"`;
+  const blogCatchAll = 'source: "/blog/:path*"';
+  assert.ok(nextConfig.includes(exactRedirect), "legacy doctor-guide redirect is missing");
+  assert.ok(
+    nextConfig.indexOf(exactRedirect) < nextConfig.indexOf(blogCatchAll),
+    "legacy doctor-guide redirect must precede the blog catch-all",
+  );
+  assert.match(nextConfig, new RegExp(`destination: "${canonicalPath}"`));
+});
+
 test("primary PHQ-9 and GAD-7 assessments appear before long clinical content", async () => {
   for (const [route, component] of [
     ["phq-9-depression-test", "<PHQ9Client"],

@@ -319,7 +319,7 @@ export default function UnderstandingScreeningResultsPage() {
               <li>Taking multiple screens to give a fuller picture: PHQ-9 + GAD-7 + AUDIT together takes about 8 minutes and covers depression, anxiety, and alcohol use</li>
             </ul>
             <p>
-              The <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">how to talk to your doctor about mental health</Link> guide covers this in detail, including exactly what to say if you don&rsquo;t know where to start.
+              The <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-orange-600 dark:text-orange-400 underline hover:text-orange-700 dark:hover:text-orange-300">how to talk to your doctor about mental health</Link> guide covers this in detail, including exactly what to say if you don&rsquo;t know where to start.
             </p>
           </section>
 

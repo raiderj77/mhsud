@@ -269,7 +269,7 @@ export default function DepressionMenGuidePage() {
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Depression Screening Guide</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">PHQ-9 assessment and treatment options</p>
               </Link>
-              <Link href="/blog/how-to-talk-to-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+              <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">How to Talk to Your Doctor About Mental Health</p>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400">Practical tips for starting the conversation</p>
               </Link>
