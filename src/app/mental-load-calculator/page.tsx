@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { MentalLoadClient } from "./MentalLoadClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/mental-load-calculator`;
 
@@ -74,7 +75,10 @@ export default function MentalLoadPage() {
         <h2>How Does the Mental Load Calculator Work?</h2>
         <h2>What Do My Mental Load Results Mean?</h2>
       </section>
-<MentalLoadClient faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
+      <MentalLoadClient faqData={FAQ_DATA} />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL }
 import { ThoughtRecordClient } from "./ThoughtRecordClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { LocalStorageNotice } from "@/components/LocalStorageNotice";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
@@ -136,6 +137,9 @@ export default function CbtThoughtRecordPage() {
         <h2>What Do My Thought Record Results Mean?</h2>
       </section>
       <LocalStorageNotice dataDescription="your thought-record entries" />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
       <ThoughtRecordClient faqData={FAQ_DATA} />
     </>
   );

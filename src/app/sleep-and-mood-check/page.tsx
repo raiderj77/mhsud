@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SleepMoodClient } from "./SleepMoodClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/sleep-and-mood-check`;
 
@@ -74,7 +75,10 @@ export default function SleepMoodPage() {
         <h2>How Does the Sleep and Mood Check Work?</h2>
         <h2>What Do My Sleep and Mood Results Mean?</h2>
       </section>
-<SleepMoodClient faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
+      <SleepMoodClient faqData={FAQ_DATA} />
     </>
   );
 }

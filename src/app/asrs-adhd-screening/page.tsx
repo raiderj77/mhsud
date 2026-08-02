@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { ASRSClient } from "./ASRSClient";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/asrs-adhd-screening`;
 
@@ -129,6 +130,9 @@ export default function ASRSPage() {
         <h2>How Is the ASRS Scored?</h2>
         <h2>What Do My ASRS Results Mean?</h2>
       </section>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
       <ASRSClient faqData={FAQ_DATA} />
 
       {/* Related Tools */}

@@ -3,6 +3,7 @@ import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL }
 import { SafetyPlanClient } from "./SafetyPlanClient";
 import AnswerBlock from "@/components/AnswerBlock";
 import { LocalStorageNotice } from "@/components/LocalStorageNotice";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/safety-plan`;
 
@@ -134,6 +135,9 @@ export default function SafetyPlanPage() {
         <h2>When Should You Create a Safety Plan?</h2>
       </section>
       <LocalStorageNotice dataDescription="your safety-plan entries" />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
       <SafetyPlanClient faqData={FAQ_DATA} />
     </>
   );
