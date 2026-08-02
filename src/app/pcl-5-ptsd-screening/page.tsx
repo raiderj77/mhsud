@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PCL5Client } from "./PCL5Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/pcl-5-ptsd-screening`;
 
@@ -144,6 +145,9 @@ export default function PCL5Page() {
         <h2>How Is the PCL-5 Scored?</h2>
         <h2>What Do My PCL-5 Results Mean?</h2>
       </section>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
       <PCL5Client faqData={FAQ_DATA} />
 
       {/* Related Tools */}

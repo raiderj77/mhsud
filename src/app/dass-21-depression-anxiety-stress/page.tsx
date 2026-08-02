@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { DASS21Client } from "./DASS21Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
 
@@ -123,10 +124,13 @@ export default function DASS21Page() {
         <h2>How Is the DASS-21 Scored?</h2>
         <h2>What Do My DASS-21 Results Mean?</h2>
       </section>
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-<DASS21Client faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
+      <DASS21Client faqData={FAQ_DATA} />
 
       {/* Related Tools */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">

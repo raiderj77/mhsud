@@ -224,6 +224,35 @@ test("maintained YMYL routes expose the named reviewer in visible page compositi
   assert.deepEqual(missing, []);
 });
 
+test("interactive YMYL tools expose the reviewer before the gated client experience", async () => {
+  const routes = [
+    ["pcl-5-ptsd-screening", "PCL5Client"],
+    ["asrs-adhd-screening", "ASRSClient"],
+    ["dass-21-depression-anxiety-stress", "DASS21Client"],
+    ["scoff-eating-disorder-screening", "SCOFFClient"],
+    ["aq-10-autism-screening", "AQ10Client"],
+    ["msi-bpd-screening", "MSIBPDClient"],
+    ["attachment-style-quiz", "AttachmentStyleClient"],
+    ["big-five-personality-test", "BigFiveClient"],
+    ["burnout-assessment-tool", "BurnoutClient"],
+    ["mental-load-calculator", "MentalLoadClient"],
+    ["sleep-and-mood-check", "SleepMoodClient"],
+    ["safety-plan", "SafetyPlanClient"],
+    ["cbt-thought-record", "ThoughtRecordClient"],
+    ["worry-time-scheduler", "WorryTimeClient"],
+  ];
+
+  for (const [route, client] of routes) {
+    const page = await source(`src/app/${route}/page.tsx`);
+    const reviewerIndex = page.indexOf("<ToolReviewerBio");
+    const clientIndex = page.indexOf(`<${client}`);
+    assert.ok(reviewerIndex >= 0, `${route} has no server-rendered reviewer bio`);
+    assert.ok(clientIndex >= 0, `${route} has no ${client} composition`);
+    assert.ok(reviewerIndex < clientIndex, `${route} gates the reviewer behind its client experience`);
+    assert.match(page, /<ToolReviewerBio lastReviewed="August 2, 2026"\s*\/>/);
+  }
+});
+
 test("custom burnout pages disclose original educational scoring without clinical validation claims", async () => {
   const pages = await Promise.all([
     source("src/app/burnout-assessment-tool/page.tsx"),

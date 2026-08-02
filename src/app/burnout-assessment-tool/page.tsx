@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { BurnoutClient } from "./BurnoutClient";
 
 const TOOL_URL = `${SITE_URL}/burnout-assessment-tool`;
@@ -91,6 +92,9 @@ export default function BurnoutAssessmentPage() {
         Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="An original educational check-in about energy and recovery, connection and patience, and confidence and meaning in a work or caregiving role." who="People who want to reflect on current role-related strain. This check-in cannot determine whether someone has clinical burnout or another condition." bottomLine="The questions and four score bands are site-defined and have not been clinically validated. They are not diagnostic cutoffs or a substitute for professional evaluation." lastUpdated="2026-08-02" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">

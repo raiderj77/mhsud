@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
 import { AQ10Client } from "./AQ10Client";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/aq-10-autism-screening`;
 
@@ -106,10 +107,13 @@ export default function AQ10Page() {
         <h2>How Is the AQ-10 Scored?</h2>
         <h2>What Do My AQ-10 Results Mean?</h2>
       </section>
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
-<AQ10Client faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
+      </div>
+      <AQ10Client faqData={FAQ_DATA} />
     </>
   );
 }
