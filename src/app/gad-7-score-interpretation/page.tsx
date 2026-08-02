@@ -102,7 +102,6 @@ export default function GAD7ScoreInterpretationPage() {
         testName="GAD-7"
         testAbbreviation="GAD-7"
         toolPageHref="/gad-7-anxiety-test"
-        blogGuideHref="/blog/gad-7-guide"
         lastUpdated="March 14, 2026"
         intro={[
           "The GAD-7 (Generalized Anxiety Disorder 7-item scale) is a brief, validated screening tool developed by Drs. Spitzer, Kroenke, Williams, and L\u00f6we. Originally designed for primary care settings, it has become one of the most widely used anxiety measures in clinical practice, research, and community health programs worldwide. Your score reflects the frequency of anxiety symptoms over the past two weeks.",

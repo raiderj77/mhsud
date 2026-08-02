@@ -201,7 +201,7 @@ export default function PHQ9Page() {
             The PHQ-9 is a screening tool, not a diagnostic test. A score of 10 or higher is widely used as a clinical threshold to prompt further evaluation, but context always matters more than the number. Symptoms lasting two or more weeks, difficulty functioning at work or in relationships, or hopelessness at any score level are reasons to speak with a healthcare provider. The <a href="https://www.nimh.nih.gov/health/topics/depression" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">National Institute of Mental Health</a> provides comprehensive depression information including treatment options and how to find professional support.
           </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            For a deeper explanation of how clinicians interpret PHQ-9 scores, what the instrument can and cannot tell you, and how to bring results to a healthcare appointment, see our <Link href="/blog/phq-9-guide" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 clinical guide</Link>.
+            For a deeper explanation of how clinicians interpret PHQ-9 scores, what the instrument can and cannot tell you, and how to bring results to a healthcare appointment, see our <Link href="/phq-9-score-interpretation" className="text-sage-600 dark:text-sage-400 underline">PHQ-9 clinical guide</Link>.
           </p>
         </section>
       </div>

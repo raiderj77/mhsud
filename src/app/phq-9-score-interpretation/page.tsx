@@ -93,7 +93,6 @@ export default function PHQ9ScoreInterpretationPage() {
         testName="PHQ-9"
         testAbbreviation="PHQ-9"
         toolPageHref="/phq-9-depression-test"
-        blogGuideHref="/blog/phq-9-guide"
         lastUpdated="March 14, 2026"
         intro={[
           "The PHQ-9 (Patient Health Questionnaire-9) is a nine-item depression screening instrument developed by Drs. Spitzer, Williams, and Kroenke. It is one of the most widely used depression screening tools in primary care, research, and community settings worldwide. Your score reflects the frequency of depressive symptoms over the past two weeks.",

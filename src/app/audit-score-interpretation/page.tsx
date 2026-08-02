@@ -74,7 +74,6 @@ export default function AUDITScoreInterpretationPage() {
         testName="AUDIT"
         testAbbreviation="AUDIT"
         toolPageHref="/audit-alcohol-test"
-        blogGuideHref="/blog/audit-guide"
         lastUpdated="March 14, 2026"
         intro={[
           "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-item screening instrument developed by the World Health Organization (WHO) to identify individuals whose alcohol consumption may be putting their health at risk. It is one of the most widely used and validated alcohol screening tools globally, designed to detect hazardous and harmful drinking patterns before they progress to severe dependence.",

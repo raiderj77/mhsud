@@ -92,7 +92,6 @@ export default function ACEScoreInterpretationPage() {
         testName="ACE"
         testAbbreviation="ACE"
         toolPageHref="/ace-questionnaire"
-        blogGuideHref="/blog/ace-score-meaning"
         lastUpdated="March 7, 2026"
         intro={[
           "The ACE (Adverse Childhood Experiences) questionnaire is a 10-item screening tool based on the landmark CDC-Kaiser Permanente ACE Study conducted by Drs. Vincent Felitti and Robert Anda in the late 1990s. That study, which surveyed over 17,000 adults, revealed a powerful connection between childhood adversity and health outcomes later in life. Your ACE score reflects how many categories of adverse experiences you reported from your childhood.",
