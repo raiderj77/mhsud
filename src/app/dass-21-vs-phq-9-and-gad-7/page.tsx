@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const PAGE_URL = `${SITE_URL}/dass-21-vs-phq-9-and-gad-7`;
 
@@ -40,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "Does the DASS-21 replace the PHQ-9 and GAD-7?",
     answer:
-      "Not in most clinical settings. The DASS-21 is widely used in research and in psychology-focused clinical settings, but the PHQ-9 and GAD-7 are the dominant clinical tools in primary care, telehealth, and behavioral health integration programs globally. The PHQ-9 and GAD-7 are embedded in most electronic health record systems as standard intake measures. The DASS-21 is better viewed as a complementary research tool or as an alternative when the stress dimension is specifically needed.",
+      "No single instrument replaces the others. The DASS-21 measures depression, anxiety, and stress domains and is common in research and some psychology settings. The PHQ-9 and GAD-7 are widely used in primary care for depression and anxiety. Choice should depend on the population, purpose, local workflow, and follow-up plan.",
   },
   {
     question: "What is the 'stress' subscale of the DASS-21 measuring?",
@@ -87,7 +88,7 @@ export default function Dass21VsPhq9Gad7Page() {
                 "A comprehensive comparison of the DASS-21 and the PHQ-9/GAD-7 pair, what each measures, how they are scored, and when each is most appropriate.",
               url: PAGE_URL,
               datePublished: "2026-05-06",
-              dateModified: "2026-05-06",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -159,7 +160,7 @@ export default function Dass21VsPhq9Gad7Page() {
               <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link>{" "}
               and{" "}
               <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link>{" "}
-              paired when you need stricter alignment with DSM diagnostic categories. The DASS-21 is common in research and stress-monitoring contexts; the PHQ-9 and GAD-7 pair is standard in primary care and outpatient behavioral health. This page is for anyone deciding between a combined stress-inclusive screen and the two-instrument clinical standard. The comparison below covers scoring, sensitivity, and practical tradeoffs.
+              together when the focus is depression and anxiety and the care setting uses those instruments. The DASS-21 is common in research and stress-monitoring contexts; the PHQ-9 and GAD-7 are widely used in primary care. The appropriate choice depends on population, purpose, and follow-up plan.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               The key distinction: the DASS-21 measures depression, anxiety, and stress simultaneously in a single 21-item instrument. The PHQ-9 and GAD-7 are two separate instruments, one for depression, one for anxiety, that are often used together. Neither approach is universally better; the right choice depends on your clinical context and what information you need.
@@ -169,7 +170,7 @@ export default function Dass21VsPhq9Gad7Page() {
           <AnswerBlock
             what="A detailed comparison of the DASS-21 (Depression Anxiety Stress Scales, 21-item version) and the PHQ-9/GAD-7 pair, covering the constructs each measures, their scoring systems, and their appropriate clinical and research contexts."
             who="Anyone trying to understand the difference between these tools, or deciding which to use for self-screening, clinical intake, or research purposes."
-            bottomLine="The DASS-21 measures depression, anxiety, and stress in one instrument and is widely used in research and psychology settings. The PHQ-9 and GAD-7 are the dominant clinical tools in primary care globally, mapping to DSM criteria and embedded in most healthcare workflows."
+            bottomLine="The DASS-21 measures depression, anxiety, and stress in one instrument. The PHQ-9 and GAD-7 separately measure depression and anxiety and are widely used in primary care. None provides a diagnosis, and the best choice depends on context."
             lastUpdated="2026-05-06"
           />
 
@@ -261,8 +262,8 @@ export default function Dass21VsPhq9Gad7Page() {
                   </tr>
                   <tr className="bg-slate-50 dark:bg-slate-900/30">
                     <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium">EHR integration</td>
-                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Limited</td>
-                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Standard in most EHR platforms</td>
+                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Varies by organization and platform</td>
+                    <td className="p-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">Commonly available; varies by platform</td>
                   </tr>
                 </tbody>
               </table>
@@ -448,27 +449,7 @@ export default function Dass21VsPhq9Gad7Page() {
 
           {/* Author Bio */}
           <div className="my-8">
-            <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
+            <AuthorByline publishedDate="2026-05-06" modifiedDate="2026-08-02" />
           </div>
 
           {/* Crisis Resources at Bottom */}

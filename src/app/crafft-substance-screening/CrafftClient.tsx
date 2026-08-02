@@ -386,9 +386,9 @@ export function CrafftClient({ faqData }: Props) {
             Related Mental Health Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/depression-test-for-teens" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
-              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">Depression Test for Teens →</span>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">PHQ-9 with teen-specific info and resources</p>
+            <Link href="/phq-9-depression-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
+              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">PHQ-9 Depression Self-Check →</span>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Nine-question depression screening and next-step guidance</p>
             </Link>
             <Link href="/gad-7-anxiety-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">GAD-7 Anxiety Self-Check →</span>

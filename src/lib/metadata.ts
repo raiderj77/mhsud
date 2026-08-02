@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
+import { AUTHOR_SCHEMA } from "@/config/author";
 
 export const SITE_NAME = "MindCheck Tools";
 export const SITE_URL = "https://mindchecktools.com";
 export const SITE_DESCRIPTION =
-  "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.";
+  "Free mental health and substance use self-checks. Screening answers are processed in your browser; optional worksheet saves stay in local browser storage. PHQ-9, GAD-7, AUDIT, and more.";
 
 export const DEFAULT_KEYWORDS = [
   "mental health self-check",
@@ -37,8 +37,8 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
     },
     description: SITE_DESCRIPTION,
     keywords: DEFAULT_KEYWORDS,
-    authors: [{ name: SITE_AUTHOR.name }],
-    creator: SITE_AUTHOR.name,
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    creator: SITE_NAME,
     openGraph: {
       type: "website",
       locale: "en_US",
@@ -96,7 +96,7 @@ export function organizationJsonLd() {
         url: SITE_URL,
         name: `${SITE_NAME}, Free Mental Health Screening Tools`,
         description:
-          "Free, clinically-informed mental health and SUD screening tools. No account required.",
+          "Free published screening instruments and clearly labeled educational mental health and substance use self-checks. No account required.",
         publisher: {
           "@id": `${SITE_URL}/#organization`,
         },
@@ -184,12 +184,12 @@ export function articleJsonLd({
     datePublished,
     dateModified,
     image: image || `${SITE_URL}/og-default.png`,
-    author: AUTHOR_SCHEMA,
-    reviewedBy: {
-      "@type": "Person",
-      name: SITE_AUTHOR.name,
-      jobTitle: SITE_AUTHOR.credentialFull,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
     },
+    reviewedBy: AUTHOR_SCHEMA,
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -222,16 +222,7 @@ export function medicalWebPageJsonLd({
     description,
     url,
     lastReviewed,
-    reviewedBy: {
-      "@type": "Person",
-      name: SITE_AUTHOR.name,
-      jobTitle: SITE_AUTHOR.credentialFull,
-      description: SITE_AUTHOR.experience,
-      sameAs: [
-        "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
-        "https://mindchecktools.com/about/jason-ramirez",
-      ],
-    },
+    reviewedBy: AUTHOR_SCHEMA,
     medicalAudience: {
       "@type": "MedicalAudience",
       audienceType: "Patient",

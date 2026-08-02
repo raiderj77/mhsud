@@ -652,7 +652,7 @@ export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
-                { name: "ADHD Test for Teens", desc: "ASRS screening with teen-specific context", href: "/adhd-test-for-teens" },
+                { name: "ASRS Score Guide", desc: "Understand ASRS scoring, thresholds, and next steps", href: "/asrs-score-interpretation" },
                 { name: "PHQ-9 Depression Self-Check", desc: "9-question validated depression screener", href: "/phq-9-depression-test" },
                 { name: "GAD-7 Anxiety Self-Check", desc: "7-question validated anxiety screener", href: "/gad-7-anxiety-test" },
               ].map((t) => (

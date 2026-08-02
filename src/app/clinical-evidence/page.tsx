@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 const PAGE_URL = `${SITE_URL}/clinical-evidence`;
-const TODAY = "2026-05-12";
+const TODAY = "2026-08-02";
 
 export const metadata: Metadata = createMetadata({
   path: "/clinical-evidence",
-  title: "Clinical Evidence: Source Studies for Every Screening Tool",
+  title: "Clinical Evidence for Published Screening Instruments",
   description:
-    "Per-instrument clinical evidence base for the validated screening tools used on MindCheck Tools. Original developers, validation populations, sensitivity and specificity values, peer-reviewed source citations on PubMed, and license status.",
+    "Evidence directory for the published screening instruments documented by MindCheck Tools, including source studies, validation populations, reported accuracy, thresholds, and reuse notes.",
   keywords: [
     "clinical evidence",
     "validated screening instruments",
@@ -21,9 +22,9 @@ export const metadata: Metadata = createMetadata({
     "mental health screening evidence",
   ],
   openGraph: {
-    title: "Clinical Evidence: Source Studies for Every Screening Tool",
+    title: "Clinical Evidence for Published Screening Instruments",
     description:
-      "The peer-reviewed validation studies behind every screening instrument on MindCheck Tools, with PubMed citations.",
+      "Source studies and validation details for the published screening instruments documented by MindCheck Tools.",
     url: PAGE_URL,
     type: "article",
   },
@@ -74,6 +75,7 @@ const INSTRUMENTS: Instrument[] = [
     slug: "phq-4",
     acronym: "PHQ-4",
     fullName: "Patient Health Questionnaire-4",
+    liveOn: "/phq-4-anxiety-depression-screen",
     year: 2009,
     authors: "Kroenke K, Spitzer RL, Williams JBW, Löwe B",
     journal: "Psychosomatics",
@@ -511,12 +513,13 @@ function articleJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Clinical Evidence: Source Studies for Every Screening Tool",
+    headline: "Clinical Evidence for Published Screening Instruments",
     description:
-      "Per-instrument clinical evidence base for the validated screening tools used on MindCheck Tools, with PubMed citations.",
+      "Source studies and validation details for the published screening instruments documented by MindCheck Tools.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
-    author: { "@type": "Organization", name: "Your Friendly Developer LLC" },
+    author: { "@type": "Organization", name: "MindCheck Tools" },
+    reviewedBy: AUTHOR_SCHEMA,
     publisher: {
       "@type": "Organization",
       name: "MindCheck Tools",
@@ -530,9 +533,9 @@ function definedTermSetJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
-    name: "Validated Mental Health Screening Instruments",
+    name: "Published Screening Instruments Documented by MindCheck Tools",
     description:
-      "Peer-reviewed validated screening instruments used on MindCheck Tools, with primary source citations.",
+      "Published screening instruments documented by MindCheck Tools, with primary-source citations and scope notes.",
     hasDefinedTerm: INSTRUMENTS.map((i) => ({
       "@type": "DefinedTerm",
       "@id": `${PAGE_URL}#${i.slug}`,
@@ -578,10 +581,14 @@ export default function ClinicalEvidencePage() {
 
         <header className="mb-8">
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-3">
-            Clinical Evidence: Source Studies for Every Screening Tool
+            Clinical Evidence for Published Screening Instruments
           </h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
-            Last updated: {TODAY}. Reviewed for accuracy by the MindCheck Tools editorial team.
+            Last updated: August 2, 2026. Reviewed by{" "}
+            <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 underline">
+              {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
+            </Link>
+            .
           </p>
         </header>
 
@@ -605,22 +612,25 @@ export default function ClinicalEvidencePage() {
             Why we publish per-instrument evidence
           </h2>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            Most mental health quizzes on the open web are not validated
-            screening tools. They are personality tests, marketing funnels, or
-            symptom lists assembled without peer-reviewed evidence behind their
-            scoring. MindCheck Tools uses only screening instruments that have
-            been published in peer-reviewed journals, scored using thresholds
-            published by their original authors, and never modified.
+            A published screening instrument is different from an original
+            educational quiz or reflection tool. MindCheck Tools labels those
+            categories separately. This directory covers the published
+            instruments listed below; it is not a claim that every tool on the
+            site is clinically validated or appropriate for every population.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            This page documents, for every instrument live on the site: who
-            developed it, when and where it was first published, the population
-            it was validated on, the published sensitivity and specificity
-            values where reported, the recommended scoring threshold, the
-            license status, and a direct link to the original validation paper
-            on PubMed. Every PubMed citation below has been verified by
-            fetching the linked record. Where a value is not stated in the
-            published abstract, we mark it as such rather than estimating.
+            This page currently documents {INSTRUMENTS.length} instruments. Each
+            entry identifies the developers, publication, validation population,
+            reported sensitivity and specificity where available, common
+            thresholds, and a source link. When a value is not reported in the
+            source available to us, the entry says so rather than estimating it.
+            Some entries are retained as evidence references even when MindCheck
+            Tools does not offer a live implementation.
+          </p>
+          <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            Reuse and license notes are informational, not legal permission.
+            Anyone republishing an instrument should confirm current terms with
+            the author or rights holder.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             For an overview of how the site uses these instruments, including
@@ -723,7 +733,7 @@ export default function ClinicalEvidencePage() {
                   </div>
                 </>
                 <div>
-                  <dt className="font-semibold text-neutral-700 dark:text-neutral-200">License / availability</dt>
+                  <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Availability / reuse note</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.license}</dd>
                 </div>
                 <div>
@@ -791,14 +801,11 @@ export default function ClinicalEvidencePage() {
             beginning of a clinical conversation, not the end of one.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            We also list license status because that affects what you, a
-            clinician, or a researcher can do with an instrument. Pfizer-released
-            tools (PHQ-9, PHQ-4, GAD-7) are free to use without permission. WHO
-            instruments (AUDIT, AUDIT-C, ASRS, WHO-5) are public domain. U.S.
-            Department of Veterans Affairs instruments (PCL-5, PC-PTSD-5) are
-            in the public domain. Some instruments, such as DAST-10, retain
-            copyright with the original author or institution and require
-            permission for commercial reuse.
+            Availability varies by instrument, version, use case, and rights
+            holder. The reuse note in each entry is a starting point for due
+            diligence, not a substitute for checking the current terms. This is
+            especially important for commercial reuse, translations, modified
+            wording, or redistribution outside the original clinical context.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Where the published abstract did not state a sensitivity or
@@ -815,18 +822,18 @@ export default function ClinicalEvidencePage() {
             About this review
           </h2>
           <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            Citations on this page were verified by fetching the linked
-            PubMed record and confirming the title, authors, journal, and
-            year. Threshold and license details reflect the published
-            instrument manuals and widely cited secondary sources where the
-            primary abstract did not state them. The Rosenberg Self-Esteem
-            Scale (1965) is published as a book monograph and is not indexed
-            in PubMed; we cite the original publication directly. For details
-            about how the site applies these instruments, see the{" "}
+            Citation details are checked against the linked PubMed record or
+            identified source publication. Threshold and availability notes
+            reflect the cited publication, instrument manual, or an identified
+            secondary source when the abstract does not state them. The
+            Rosenberg Self-Esteem Scale (1965) is a book monograph and is not
+            indexed in PubMed. For details about how the site applies these
+            instruments, see the{" "}
             <Link href="/methodology" className="text-sage-700 dark:text-sage-400 underline">
               methodology page
             </Link>
-            . Clinical reviewer:{" "}
+            . Review covers source alignment, scoring limitations, and safety
+            language. Clinical reviewer:{" "}
             <Link
               href="/about/jason-ramirez"
               className="text-sage-700 dark:text-sage-400 underline"

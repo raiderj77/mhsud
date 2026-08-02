@@ -31,7 +31,6 @@ export default function SleepMoodPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Sleep & Mood Reflection Tool", description: "Original 10-question tool to reflect on sleep quality, duration, and mood impact.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-05-12" }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Sleep & Mood Reflection", url: TOOL_URL }])) }} />
@@ -50,7 +49,7 @@ export default function SleepMoodPage() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>

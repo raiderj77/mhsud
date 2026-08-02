@@ -66,7 +66,7 @@ const FAQ_DATA = [
   {
     question: "What should I do if I score high on the AUDIT or AUDIT-C?",
     answer:
-      "A high score means your drinking pattern may be putting your health at risk and warrants a conversation with a healthcare provider. This does not mean you need inpatient treatment or that you are an 'alcoholic', these are clinical labels that require professional assessment. Your primary care provider, a Certified Drug and Alcohol Counselor (CADC), or an addiction medicine specialist can help you understand what your results mean in context and discuss options ranging from brief counseling to formal treatment referral. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7.",
+      "A high score means your drinking pattern may be putting your health at risk and warrants a conversation with a healthcare provider. This does not mean you need inpatient treatment or that you are an 'alcoholic', these are clinical labels that require professional assessment. Your primary care provider, a Certified Alcohol and Drug Counselor (CADC), or an addiction medicine specialist can help you understand what your results mean in context and discuss options ranging from brief counseling to formal treatment referral. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7.",
   },
   {
     question: "Where can I find the official AUDIT and AUDIT-C tools?",

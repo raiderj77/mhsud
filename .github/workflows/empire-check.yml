@@ -117,11 +117,11 @@ jobs:
           echo "✓ IndexNow key file: $KEY_FILE"
 
       # ── Check 6: Author byline policy (updated 2026-05-11) ─────
-      # Policy: "Jason Ramirez" + CADC-II credential is the canonical author
-      # entity across the entire Empire portfolio. One author = stronger EEAT
-      # and AI-citation signal than 11 anonymous publishers. This check now
-      # WARNS if the name is missing rather than failing if present.
-      - name: Author byline present (informational)
+      # Policy: MindCheck Tools is the publisher. Jason Ramirez is the named
+      # clinical reviewer for MindCheck Tools, within CADC-II scope. Keep the
+      # public reviewer name and credential, but never publish LLC, residential
+      # location/address, or unrelated personal-history details.
+      - name: Publisher and reviewer attribution present (informational)
         env:
           REPO: ${{ github.repository }}
         run: |
@@ -135,9 +135,19 @@ jobs:
             exit 0
           fi
 
-          MATCHES=$(grep -rl "Jason Ramirez" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
-          if [ "$MATCHES" -eq 0 ]; then
-            echo "::warning::No 'Jason Ramirez' byline found. Per portfolio policy, author byline + CADC-II credential should appear on author pages and in post frontmatter for EEAT."
+          PUBLISHER_MATCHES=$(grep -rl "MindCheck Tools" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
+          REVIEWER_MATCHES=$(grep -rl "Jason Ramirez" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
+          CREDENTIAL_MATCHES=$(grep -rl "Certified Alcohol and Drug Counselor Level II (CADC-II)" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
+
+          if [ "$PUBLISHER_MATCHES" -eq 0 ]; then
+            echo "::warning::No 'MindCheck Tools' publisher attribution found."
+          fi
+          if [ "$REVIEWER_MATCHES" -eq 0 ] || [ "$CREDENTIAL_MATCHES" -eq 0 ]; then
+            echo "::warning::Named reviewer attribution is incomplete. Keep Jason Ramirez and the exact CADC-II credential public on the reviewer profile and reviewed content."
           else
-            echo "✓ Author byline present in $MATCHES file(s) (portfolio policy: name + credential everywhere)"
+            echo "✓ MindCheck Tools publisher and named CADC-II reviewer attribution present"
+          fi
+
+          if grep -rEql "Your Friendly Developer|Prunedale|Salinas|PostalAddress|recovering addict|storage shed" "${SEARCH_DIRS[@]}" 2>/dev/null; then
+            echo "::warning::Public source may contain private LLC, address/location, or unrelated personal-history details."
           fi

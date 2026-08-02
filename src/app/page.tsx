@@ -69,7 +69,7 @@ const TOOLS: Tool[] = [
   {
     href: "/spin-social-anxiety-test",
     title: "SPIN Social Anxiety Test",
-    description: "17-item Social Phobia Inventory (Connor et al., 2000). Three subscales: Fear, Avoidance, and Physiological. Total 0-68. Clinical cutoff of 19+ for social anxiety disorder.",
+    description: "17-item Social Phobia Inventory (Connor et al., 2000). Three subscales: fear, avoidance, and physiological symptoms. Total score 0-68; results are not diagnostic.",
     badge: "Validated",
     time: "~3 min",
     questions: 17,
@@ -257,7 +257,7 @@ const TOOLS: Tool[] = [
   {
     href: "/athens-insomnia-scale",
     title: "Athens Insomnia Scale",
-    description: "8-item insomnia severity measure based on ICD-10 criteria (Soldatos et al., 2000). Past month. Score 0-24. Cutoff of 6+ for insomnia (93% sensitivity).",
+    description: "8-item insomnia symptom measure based on ICD-10 criteria (Soldatos et al., 2000). Past month, score 0-24; results are not a sleep-disorder diagnosis.",
     badge: "Validated",
     time: "~2 min",
     questions: 8,
@@ -268,7 +268,7 @@ const TOOLS: Tool[] = [
   {
     href: "/ucla-loneliness-scale",
     title: "UCLA Loneliness Scale",
-    description: "20-item measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items. Score 20-80. Research cutoff 44+ for elevated loneliness.",
+    description: "20-item research measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items; higher scores reflect greater self-reported loneliness.",
     badge: "Validated",
     time: "~5 min",
     questions: 20,
@@ -279,7 +279,7 @@ const TOOLS: Tool[] = [
   {
     href: "/rosenberg-self-esteem-scale",
     title: "Rosenberg Self-Esteem Scale",
-    description: "10-item measure of global self-esteem (Rosenberg, 1965). 4-point scale with 5 reverse-scored items. Score 0-30. Below 15 suggests low self-esteem.",
+    description: "10-item research measure of global self-esteem (Rosenberg, 1965). Four-point scale with five reverse-scored items; it is not a diagnostic instrument.",
     badge: "Validated",
     time: "~2 min",
     questions: 10,
@@ -311,9 +311,9 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/burnout-assessment-tool",
-    title: "Burnout Assessment Tool",
-    description: "Assess emotional exhaustion, depersonalization, and reduced accomplishment with a clinically informed burnout screening.",
-    badge: "Validated",
+    title: "Burnout Reflection",
+    description: "15 original questions for educational reflection on exhaustion, detachment, and sense of effectiveness. Score bands are not clinical cutoffs.",
+    badge: "Original",
     time: "~3 min",
     questions: 15,
     color: "sage",
@@ -537,7 +537,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Evidence-Based",
-    text: "Our core tools use validated, public-domain instruments trusted by clinicians worldwide, the PHQ-9, GAD-7, and AUDIT.",
+    text: "Core pages implement published screening instruments such as the PHQ-9, GAD-7, and AUDIT, with sources and limitations shown.",
   },
   {
     icon: (
@@ -565,13 +565,13 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: "2026-05-12" }),
+          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: "2026-08-02" }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: "2026-05-12" }),
+          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: "2026-08-02" }),
         }}
       />
       <script
@@ -589,9 +589,9 @@ export default function HomePage() {
               price: "0",
               priceCurrency: "USD",
             },
-            dateModified: "2026-05-12",
+            dateModified: "2026-08-02",
             description:
-              "Free, private mental health screening tools, PHQ-9, GAD-7, AUDIT and more. All scoring happens in your browser. No accounts, no data storage.",
+              "Free, private published screening instruments and original educational self-checks. Screening answers are processed in the browser and are not sent to MindCheck Tools.",
             provider: {
               "@type": "Organization",
               name: "MindCheck Tools",
@@ -613,10 +613,10 @@ export default function HomePage() {
             <span className="text-sage-600 dark:text-sage-400">trust</span>
           </h1>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            MindCheck Tools provides free, evidence-based mental health and substance use screening instruments built on validated clinical scales. Every assessment uses the published scoring methodology, with results explained in plain language.
+            MindCheck Tools provides published mental health and substance use screening instruments alongside original educational self-checks and practical tools. Each page identifies its basis, sources, scoring approach, and limits.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
-            Published and maintained by Your Friendly Developer LLC. Content reviewed for accuracy.{" "}
+            Published and maintained by MindCheck Tools. Content reviewed for accuracy.{" "}
             <Link
               href="/about"
               className="underline hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
@@ -625,7 +625,7 @@ export default function HomePage() {
             </Link>
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
-            Take validated, evidence-based screening tools in the privacy of your browser. No accounts, no login, no judgment, your answers are scored locally and never stored.
+            Use published screeners and clearly labeled educational tools in the privacy of your browser. No account or login is required, and screening answers are not sent to MindCheck Tools.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/phq-9-depression-test" className="btn-primary text-base">
@@ -675,13 +675,15 @@ export default function HomePage() {
             How do mental health screening tools work?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            These tools use validated clinical questionnaires to help you identify and understand your symptoms. Results are for informational purposes only, not a diagnosis.
+            Published screeners use established questionnaires and source-based scoring. Original tools are labeled as educational self-checks with site-defined reflection ranges. Neither type provides a diagnosis.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
-            Validated instruments like the PHQ-9 and GAD-7 are used by clinicians worldwide as a first step in mental health assessment. They have been tested in large clinical populations and shown to reliably identify symptom patterns that warrant further evaluation. The World Health Organization estimates that 1 in 4 people globally will be affected by a mental health condition at some point in their lives, screening tools help that first conversation happen sooner.
+            Instruments such as the PHQ-9 and GAD-7 have published validation studies and are used as one part of clinical screening. Their accuracy varies by population and setting, so a score should be interpreted with symptoms, functioning, history, and professional judgment. See the{" "}
+            <Link href="/clinical-evidence" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">clinical evidence directory</Link>{" "}
+            for source studies and reported limitations.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            On MindCheck Tools, all scoring happens in your browser. No answers are transmitted to a server, stored, or shared.
+            On MindCheck Tools, scoring happens in your browser and screening answers are not transmitted to us. A few optional worksheets and recovery tools save entries in local browser storage only when their page says so.
           </p>
         </section>
 
@@ -693,10 +695,10 @@ export default function HomePage() {
             A screening tool identifies patterns that may suggest a condition. Only a licensed clinician can provide a diagnosis after a comprehensive evaluation.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-3">
-            Screening results help you have more informed conversations with healthcare providers, they are a starting point, not a substitute for those conversations. Sharing your results with a doctor or therapist can help guide the assessment process and ensure you receive the right level of care. Research published in JAMA Psychiatry shows that early intervention reduces the duration of untreated depression by an average of 2 years.
+            Screening results can support a more informed conversation with a healthcare provider, but they are only a starting point. A clinician can consider context the questionnaire cannot capture, including medical conditions, medications, duration, functioning, and safety.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            According to the National Alliance on Mental Illness, 1 in 5 U.S. adults experiences a mental health condition each year, yet only 46% of those adults receive treatment. Accessible, free screening tools can help close that gap by lowering the barrier to that first step.
+            If symptoms persist, interfere with daily life, or concern you even when a score is low, seek professional evaluation. Do not wait for a questionnaire result when there is an urgent safety concern.
           </p>
         </section>
 
@@ -705,10 +707,10 @@ export default function HomePage() {
             Are these screening tools free and confidential?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            Yes, all screening tools on MindCheck Tools are completely free. Your responses are processed in your browser and never stored or transmitted to any server.
+            Yes. Tools can be used without payment or an account. Screening answers are processed in your browser and are not transmitted to MindCheck Tools.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            No account is required, and no data is retained after you close the page. All scoring logic runs locally using client-side JavaScript. We have deliberately built our tools this way because mental health screening should be private by design, not just by policy.
+            Scoring logic runs locally using client-side JavaScript. Some optional worksheets and recovery trackers can retain entries in your browser so they work across visits; those pages disclose local storage before use.
           </p>
         </section>
 
@@ -771,7 +773,7 @@ export default function HomePage() {
               Your privacy is not negotiable
             </h2>
             <p className="text-white/80 leading-relaxed mb-3">
-              Every answer you give is processed entirely in your browser using client-side JavaScript. We have no server, no database, and no way to see your responses. When you close the page, your data is gone.
+              Screening answers are processed entirely in your browser using client-side JavaScript. We do not receive or store them. Optional local-saving tools disclose when an entry can remain in your browser after the page closes.
             </p>
             <p className="text-white/60 text-sm">
               We use analytics and may display ads, but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
@@ -791,16 +793,16 @@ export default function HomePage() {
             __html: JSON.stringify(
               faqJsonLd([
                 {
-                  question: "Are these mental health screening tools clinically validated?",
-                  answer: "The PHQ-9, GAD-7, AUDIT, and AUDIT-C are validated clinical instruments used by healthcare professionals worldwide. The screening questions and scoring are standardized and have not been modified. Results are for informational purposes only and are not a substitute for professional evaluation.",
+                  question: "Which pages use published screening instruments?",
+                  answer: "Pages such as the PHQ-9, GAD-7, AUDIT, and AUDIT-C implement published screening instruments with their source-based questions and scoring. Other pages are explicitly labeled as original educational self-checks. Neither type replaces professional evaluation.",
                 },
                 {
                   question: "What is the PHQ-9 used for?",
-                  answer: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question screening tool for depression severity. Scores range from 0 to 27, with higher scores indicating greater symptom severity. A score of 10 or above suggests moderate to severe depression and warrants professional evaluation. This tool does not provide a diagnosis.",
+                  answer: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question depression symptom screener. Scores range from 0 to 27, with higher scores reflecting more self-reported symptoms. A score of 10 is a commonly studied screening cutoff, but symptoms, functioning, and safety matter at every score. This tool does not provide a diagnosis.",
                 },
                 {
                   question: "What is the difference between the AUDIT and AUDIT-C?",
-                  answer: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool that identifies hazardous, harmful, and dependent alcohol use. The AUDIT-C is a 3-question abbreviated version focused on consumption patterns. Both are validated by the World Health Organization and used in primary care settings.",
+                  answer: "The AUDIT is a 10-question alcohol-risk screening instrument developed through a World Health Organization collaborative project. The AUDIT-C is a separately studied 3-question subset focused on consumption. Both are screens, not alcohol use disorder diagnoses.",
                 },
                 {
                   question: "Who should use these mental health screening tools?",
@@ -817,16 +819,16 @@ export default function HomePage() {
         <div className="space-y-6">
           {[
             {
-              q: "Are these mental health screening tools clinically validated?",
-              a: "The PHQ-9, GAD-7, AUDIT, and AUDIT-C are validated clinical instruments used by healthcare professionals worldwide. The screening questions and scoring are standardized and have not been modified. Results are for informational purposes only and are not a substitute for professional evaluation.",
+              q: "Which pages use published screening instruments?",
+              a: "Pages such as the PHQ-9, GAD-7, AUDIT, and AUDIT-C implement published screening instruments with their source-based questions and scoring. Other pages are explicitly labeled as original educational self-checks. Neither type replaces professional evaluation.",
             },
             {
               q: "What is the PHQ-9 used for?",
-              a: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question screening tool for depression severity. Scores range from 0 to 27, with higher scores indicating greater symptom severity. A score of 10 or above suggests moderate to severe depression and warrants professional evaluation. This tool does not provide a diagnosis.",
+              a: "The PHQ-9 (Patient Health Questionnaire-9) is a 9-question depression symptom screener. Scores range from 0 to 27, with higher scores reflecting more self-reported symptoms. A score of 10 is a commonly studied screening cutoff, but symptoms, functioning, and safety matter at every score. This tool does not provide a diagnosis.",
             },
             {
               q: "What is the difference between the AUDIT and AUDIT-C?",
-              a: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool that identifies hazardous, harmful, and dependent alcohol use. The AUDIT-C is a 3-question abbreviated version focused on consumption patterns. Both are validated by the World Health Organization and used in primary care settings.",
+              a: "The AUDIT is a 10-question alcohol-risk screening instrument developed through a World Health Organization collaborative project. The AUDIT-C is a separately studied 3-question subset focused on consumption. Both are screens, not alcohol use disorder diagnoses.",
             },
             {
               q: "Who should use these mental health screening tools?",

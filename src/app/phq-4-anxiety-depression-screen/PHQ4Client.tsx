@@ -301,8 +301,8 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline">
           DASS-21 (Depression + Anxiety + Stress) →
         </Link>
-        <Link href="/am-i-depressed-quiz" className="text-sky-600 dark:text-sky-400 hover:underline">
-          Am I Depressed Quiz →
+        <Link href="/phq-9-vs-gad-7" className="text-sky-600 dark:text-sky-400 hover:underline">
+          PHQ-9 vs. GAD-7 Guide →
         </Link>
       </div>
     </div>

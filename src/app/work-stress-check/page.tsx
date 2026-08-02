@@ -63,11 +63,9 @@ export default function WorkStressPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...toolPageJsonLd({ name: "Work Stress & Burnout Self-Check", description: "Original 12-question work stress reflection tool. Private, free, not a diagnosis.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-05-14" }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       ...medicalWebPageJsonLd({ name: "Work Stress & Burnout Self-Check", description: "A free 12-question self-reflection tool covering workplace demands, control, support, engagement, recovery, and physical impact. For personal reflection only.", url: TOOL_URL, lastReviewed: "2026-05-14" }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Work Stress & Burnout Self-Check", url: TOOL_URL }])) }} />
@@ -184,7 +182,7 @@ export default function WorkStressPage() {
           <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -258,8 +256,8 @@ export default function WorkStressPage() {
 
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/" className="text-sky-600 dark:text-sky-400 hover:underline">MindCheck Tools Home &rarr;</Link>
-          <Link href="/burnout-test-for-healthcare-workers" className="text-sky-600 dark:text-sky-400 hover:underline">Burnout Test for Healthcare Workers &rarr;</Link>
-          <Link href="/burnout-test-for-teachers" className="text-sky-600 dark:text-sky-400 hover:underline">Burnout Test for Teachers &rarr;</Link>
+          <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">Burnout Assessment Tool &rarr;</Link>
+          <Link href="/compassion-fatigue-test" className="text-sky-600 dark:text-sky-400 hover:underline">Compassion Fatigue Test &rarr;</Link>
         </div>
       </div>
     </>

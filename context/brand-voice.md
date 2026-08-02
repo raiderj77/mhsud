@@ -33,12 +33,12 @@ YMYL site — all content requires extra care and clinical accuracy.
 ## YMYL Rules (Non-Negotiable)
 - Every article must include the crisis resources block (988, Crisis Text Line, SAMHSA)
 - Every article must include: "This article is for informational purposes only..."
-- Every article must include attribution: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)"
+- Every maintained clinical article must include attribution: "Reviewed by Jason Ramirez, CADC-II"
 - Never make diagnostic claims
 - Never recommend specific medications or treatments
 - Always recommend professional consultation
 
 ## Attribution
-- Blog posts: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)"
+- Clinical articles and guides: "Reviewed by Jason Ramirez, CADC-II" linked to the reviewer profile
 - Tool pages only: "Jason Ramirez, CADC-II" (for E-E-A-T)
 - No author name in blog post bylines

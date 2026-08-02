@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "Is what I tell my doctor about mental health confidential?",
     answer:
-      "Yes, doctor-patient confidentiality protects what you share in a medical appointment. There are narrow exceptions: if there is an imminent risk to your life or someone else's, or in cases of suspected child or elder abuse. Outside those situations, your doctor cannot share your mental health information without your written consent.",
+      "Health privacy laws generally protect information shared in medical care, but they allow or require disclosure in some circumstances. Examples can include treatment and care coordination, serious safety concerns, abuse reporting, court orders or qualifying subpoenas, and rules involving minors. Details vary by jurisdiction and setting, so ask the provider to explain the notice of privacy practices and its limits.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function DoctorGuidePage() {
                 "Preparing to discuss mental health with a doctor or therapist? Get exact language, what to bring, and how to use screening results.",
               url: PAGE_URL,
               datePublished: "2026-03-07",
-              dateModified: "2026-03-08",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -98,7 +98,7 @@ export default function DoctorGuidePage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Guides", url: SITE_URL },
+              { name: "Tools and guides", url: `${SITE_URL}/screening-tools` },
               { name: "How to Talk to Your Doctor", url: PAGE_URL },
             ])
           ),
@@ -135,7 +135,7 @@ export default function DoctorGuidePage() {
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
             Starting the conversation about mental health can feel intimidating. This guide gives you exact language, practical steps, and everything you need to make that appointment productive.
           </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Last updated: March 7, 2026</p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Last updated: August 2, 2026</p>
         </header>
 
         <div className="prose-mh space-y-10">
@@ -241,7 +241,7 @@ export default function DoctorGuidePage() {
             </p>
             <div className="card p-4 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
               <p className="text-sm text-sage-700 dark:text-sage-400 leading-relaxed">
-                <strong>Confidentiality:</strong> What you share with your doctor is protected by doctor-patient privilege. They cannot share your mental health information with employers, family members, or anyone else without your written consent, except in narrow circumstances involving imminent safety risks.
+                <strong>Confidentiality:</strong> Health information is generally protected, but disclosure can be allowed or required for treatment, safety, reporting, legal process, and other circumstances. Rules vary by setting and state. Review your provider&apos;s notice of privacy practices and see the <a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/mental-health/index.html" target="_blank" rel="noopener noreferrer" className="underline">HHS mental-health privacy guidance</a>.
               </p>
             </div>
           </section>
@@ -381,7 +381,7 @@ export default function DoctorGuidePage() {
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
             This guide is for educational purposes only. It is not medical advice or a substitute for professional care. The suggestions on this page are intended to help you prepare for a conversation with a healthcare provider, they are not clinical recommendations.
           </p>
-          <ToolReviewerBio />
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
         </footer>
       </div>
     </>

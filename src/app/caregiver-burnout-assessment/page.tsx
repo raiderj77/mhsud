@@ -8,9 +8,9 @@ const TOOL_URL = `${SITE_URL}/caregiver-burnout-assessment`;
 
 export const metadata: Metadata = createMetadata({
   path: "/caregiver-burnout-assessment",
-  title: "Caregiver Burnout Assessment | Free Self-Check for Family Caregivers",
+  title: "Caregiver Burnout Self-Check | Free Educational Check-In",
   description:
-    "Free burnout assessment for family caregivers. Are you exhausted, resentful, or losing yourself? Take our private, validated screening. Instant results, no sign-up.",
+    "Original educational check-in for family and professional caregivers. Reflect on current role-related strain with private in-browser scoring and no signup.",
   keywords: [
     "caregiver burnout assessment", "caregiver burnout test", "caregiver burnout quiz",
     "family caregiver burnout", "am i burned out as a caregiver", "caregiver exhaustion test",
@@ -21,9 +21,9 @@ export const metadata: Metadata = createMetadata({
     "caregiver wellbeing assessment", "caregiver support resources",
   ],
   openGraph: {
-    title: "Caregiver Burnout Assessment | Free Self-Check for Family Caregivers",
+    title: "Caregiver Burnout Self-Check | Free Educational Check-In",
     description:
-      "Free burnout assessment for family caregivers. Check for emotional exhaustion, compassion fatigue, and caregiver stress. Private, instant results.",
+      "Use an original educational check-in about energy, recovery, connection, patience, confidence, and meaning. Not a validated caregiver-burden instrument.",
     url: TOOL_URL,
     type: "website",
   },
@@ -38,12 +38,12 @@ const FAQ_DATA = [
   {
     question: "How is caregiver burnout different from regular stress?",
     answer:
-      "Regular stress is temporary and usually resolves when the stressor is removed. Caregiver burnout is cumulative, it builds over months or years of sustained caregiving without adequate support or respite. Unlike work stress that ends when you leave the office, caregiving often has no clear boundaries. Burnout involves a deeper depletion: emotional numbness, loss of empathy, and a sense that you've lost yourself in the role.",
+      "Caregiving stress can be brief or long-lasting. The term caregiver burnout is often used when sustained demands and limited recovery are accompanied by persistent exhaustion, detachment, irritability, or reduced capacity to manage the role. These experiences overlap with depression, anxiety, sleep problems, grief, and medical conditions, so a self-check cannot determine the cause.",
   },
   {
     question: "Is it normal to feel resentful or angry as a caregiver?",
     answer:
-      "Yes, and it's more common than most caregivers admit. Resentment and anger are natural responses to an unsustainable situation, not signs that you're a bad person or that you don't love the person you're caring for. These feelings are often signals that you need more support, respite, or help. Suppressing them without addressing the underlying situation tends to worsen burnout over time.",
+      "Resentment or anger can occur when caregiving demands exceed the time, support, or recovery available. Those feelings do not by themselves mean that you do not care about the person you support. If they are persistent, frightening, or affecting anyone's safety, step away when possible and seek help from a trusted person, respite resource, or qualified professional.",
   },
   {
     question: "What can I do about caregiver burnout?",
@@ -55,6 +55,11 @@ const FAQ_DATA = [
     answer:
       "Seek professional help if you are experiencing persistent depression or anxiety, thoughts of harming yourself or the person you care for, inability to perform basic self-care, or if your own health is deteriorating. These are signs that the caregiving situation has exceeded what one person can manage alone, and professional support, whether therapy, respite care, or a care team, is needed.",
   },
+  {
+    question: "Does this page use a validated caregiver-burden scale?",
+    answer:
+      "No. It does not administer the Zarit Burden Interview or another validated caregiver-burden instrument. It uses MindCheck Tools' original 15-item educational check-in about energy and recovery, connection and patience, and confidence and meaning. Its score bands are site-defined reflection ranges, not clinical cutoffs.",
+  },
 ];
 
 export default function CaregiverBurnoutAssessmentPage() {
@@ -65,14 +70,13 @@ export default function CaregiverBurnoutAssessmentPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Caregiver Burnout Assessment | Free Self-Check for Family Caregivers",
+              name: "Caregiver Burnout Educational Self-Check",
               description:
-                "A free, private burnout assessment for family caregivers. Check for emotional exhaustion, compassion fatigue, and caregiver stress.",
+                "An original educational check-in for caregivers. Its site-defined score bands are not validated clinical cutoffs and cannot diagnose caregiver burnout.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-05-08",
+              dateModified: "2026-08-02",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -81,12 +85,11 @@ export default function CaregiverBurnoutAssessmentPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...medicalWebPageJsonLd({
-              name: "Caregiver Burnout Assessment",
-              description: "Free burnout assessment for family caregivers measuring emotional exhaustion, compassion fatigue, and the cumulative toll of sustained caregiving without adequate support or respite.",
+              name: "Caregiver Burnout Educational Self-Check",
+              description: "Educational information about caregiver strain with an original, non-diagnostic self-check. The page does not administer a validated caregiver-burden scale.",
               url: TOOL_URL,
-              lastReviewed: "2026-05-08",
+              lastReviewed: "2026-08-02",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -100,8 +103,8 @@ export default function CaregiverBurnoutAssessmentPage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Burnout Assessment Tool", url: `${SITE_URL}/burnout-assessment-tool` },
-              { name: "Caregiver Burnout Assessment", url: TOOL_URL },
+              { name: "Burnout Educational Check-In", url: `${SITE_URL}/burnout-assessment-tool` },
+              { name: "Caregiver Burnout Self-Check", url: TOOL_URL },
             ])
           ),
         }}
@@ -110,7 +113,7 @@ export default function CaregiverBurnoutAssessmentPage() {
         {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sage-100 text-sage-800 dark:bg-sage-900/40 dark:text-sage-300">
-            Validated Burnout Scale
+            Original Educational Check-In
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
             Family Caregivers
@@ -122,11 +125,11 @@ export default function CaregiverBurnoutAssessmentPage() {
 
         {/* H1 */}
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-          Caregiver Burnout Assessment
+          Caregiver Burnout Self-Check
         </h1>
 
         <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-          Caregiver burnout assessment commonly uses the Zarit Burden Interview, a 22-item scale measuring physical, emotional, and financial strain from caregiving. Scores range 0 to 88, with 0-20 indicating little burden, 21-40 mild to moderate, 41-60 moderate to severe, and 61+ severe burden requiring intervention.
+          This page does not administer the Zarit Burden Interview or another validated caregiver-burden scale. It uses MindCheck Tools&apos; original 15-item educational check-in. Its score bands were created for reflection and are not validated clinical cutoffs.
         </p>
 
         {/* Empathetic Intro */}
@@ -142,32 +145,32 @@ export default function CaregiverBurnoutAssessmentPage() {
             giving more than you&apos;ve been able to replenish.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            This free assessment checks for emotional exhaustion, depersonalization, and
-            reduced personal accomplishment. These signals can help you notice caregiver strain; the <a href="https://www.nia.nih.gov/health/caregiving" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a> provides current caregiver support and self-care resources. Your
+            This educational check-in asks about energy and recovery, connection and patience,
+            and confidence and meaning across a work or caregiving role. It is not tailored or validated specifically for caregivers and cannot determine a burnout level. The <a href="https://www.nia.nih.gov/health/caregiving" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a> provides caregiver support and self-care resources. Your
             answers are scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>
 
         {/* The Tool */}
         <a href="#screening" className="btn-primary inline-flex mb-6">
-          Start the caregiver burnout assessment
+          Start the caregiver burnout check-in
         </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A burnout screening for caregivers that measures the unique physical, emotional, and social toll of caring for others."
-          who="Family caregivers and professional caretakers who feel exhausted, isolated, or resentful and want to assess their burnout level."
-          bottomLine="Caregiver burnout is extremely common, you cannot pour from an empty cup. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="An original educational check-in about energy and recovery, connection and patience, and confidence and meaning. It is not a caregiver-specific clinical instrument."
+          who="Family and professional caregivers who want to reflect on current role-related strain without receiving a diagnosis or a validated caregiver-burden score."
+          bottomLine="The questions and score bands are site-defined and have not been clinically validated. They are not diagnostic cutoffs or a substitute for professional evaluation."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -178,8 +181,8 @@ export default function CaregiverBurnoutAssessmentPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -188,9 +191,9 @@ export default function CaregiverBurnoutAssessmentPage() {
       </div>
 
       <section className="sr-only">
-        <h2>What Is the Caregiver Burnout Assessment?</h2>
-        <h2>How Is the Caregiver Burnout Assessment Scored?</h2>
-        <h2>What Do My Caregiver Burnout Results Mean?</h2>
+        <h2>What Is the Caregiver Burnout Educational Check-In?</h2>
+        <h2>How Is the Caregiver Check-In Scored?</h2>
+        <h2>What Does My Caregiver Check-In Summary Mean?</h2>
       </section>
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
@@ -274,8 +277,9 @@ export default function CaregiverBurnoutAssessmentPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment is for educational purposes only, it is not a diagnosis. Only a
-            qualified healthcare professional can assess burnout or related conditions. Your
+            This check-in is for educational purposes only and is not a diagnosis. Its original
+            questions and site-defined score bands have not been clinically validated. A qualified
+            healthcare professional can evaluate persistent or concerning experiences. Your
             responses are processed entirely in your browser and are never stored or transmitted.
           </p>
         </div>
@@ -283,20 +287,20 @@ export default function CaregiverBurnoutAssessmentPage() {
         {/* Author Bio */}
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Compiled by Jason Ramirez, CADC-II. Clinical content drawn from WHO, CDC NIOSH, and NIMH. This is a self-reflection tool, not a clinical assessment.
+            Reviewed by Jason Ramirez, CADC-II. The questions and score ranges are original, site-defined educational content, not a validated clinical assessment.
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+            Last reviewed: August 2, 2026
           </p>
         </div>
 
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">
-            General Burnout Assessment →
+            General Burnout Check-In →
           </Link>
           <Link href="/compassion-fatigue-test" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Compassion Fatigue Test →
+            Compassion Fatigue Self-Check →
           </Link>
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             PHQ-9 Depression Test →

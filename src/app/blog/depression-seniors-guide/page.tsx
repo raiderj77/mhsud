@@ -53,7 +53,7 @@ const FAQ_DATA = [
 export default function DepressionSeniorsGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Depression in Older Adults: Signs That Are Often Missed", description: "Depression in seniors is common but underdiagnosed. Learn how it presents differently and how screening helps.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }), author: { "@type": "Organization", "name": "Your Friendly Developer LLC" }, reviewedBy: { "@type": "Organization", "name": "Your Friendly Developer LLC" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Depression in Older Adults: Signs That Are Often Missed", description: "Depression in seniors is common but underdiagnosed. Learn how it presents differently and how screening helps.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }) }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Depression in Seniors Guide", url: ARTICLE_URL }])) }} />
 
@@ -69,7 +69,7 @@ export default function DepressionSeniorsGuidePage() {
           <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -204,13 +204,13 @@ export default function DepressionSeniorsGuidePage() {
     </div>
     <div>
       <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools, Your Friendly Developer LLC
+        MindCheck Tools
       </h3>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-        Publisher and maintainer of free, evidence-based mental health screening tools for adults.
+        Published by MindCheck Tools and reviewed by Jason Ramirez, CADC-II.
       </p>
       <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-        Content reviewed for clinical accuracy against authoritative sources including NIMH, APA, CDC, and WHO.
+        Reviewed for source alignment, screening limitations, and safety language. This editorial review is not diagnosis or individual care.
       </p>
     </div>
   </div>

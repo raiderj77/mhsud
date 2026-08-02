@@ -6,82 +6,87 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
-import { ReflectionSummary } from "@/components/ReflectionSummary";
-import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
 
 const QUESTIONS = [
-  // Emotional Exhaustion (Questions 1-5)
-  "I feel emotionally drained from my work",
-  "I feel used up at the end of the workday",
-  "I feel fatigued when I get up in the morning and have to face another day at work",
-  "Working with people all day is a strain for me",
-  "I feel burned out from my work",
+  // Energy and recovery (questions 1-5)
+  "After a demanding day, I have little emotional energy left.",
+  "I need more recovery time than I used to after work or caregiving.",
+  "Starting the next day often feels mentally or physically heavy.",
+  "Frequent responsibilities or interactions leave me depleted.",
+  "The demands of my role often feel greater than the energy I have available.",
   
-  // Depersonalization/Cynicism (Questions 6-10)
-  "I've become more callous toward people since I took this job",
-  "I worry that this job is hardening me emotionally",
-  "I don't really care what happens to some recipients",
-  "I feel I treat some recipients as if they were impersonal objects",
-  "I've become less interested in my work since I started this job",
+  // Connection and patience (questions 6-10)
+  "I notice I have less patience with people involved in my work or care role.",
+  "I create more emotional distance than I would like to get through demanding situations.",
+  "It is harder for me to stay curious about what other people are experiencing.",
+  "I sometimes respond mechanically when I would prefer to be more attentive.",
+  "It is harder than before to stay engaged with my responsibilities.",
   
-  // Reduced Personal Accomplishment (Questions 11-15)
-  "I can easily understand how my recipients feel about things",
-  "I deal very effectively with the problems of my recipients",
-  "I feel I'm positively influencing other people's lives through my work",
-  "I feel very energetic",
-  "I can easily create a relaxed atmosphere with my recipients",
+  // Confidence and meaning (questions 11-15, positively phrased)
+  "I can usually identify what the people I support need from me.",
+  "I can respond constructively when challenges arise.",
+  "My efforts still feel useful or meaningful.",
+  "I can find moments of energy or interest in my role.",
+  "I can help create a calmer tone during difficult interactions.",
 ];
 
 const OPTIONS = [
-  { label: "Never", value: 0 },
-  { label: "A few times a year", value: 1 },
-  { label: "Once a month or less", value: 2 },
-  { label: "A few times a month", value: 3 },
-  { label: "Once a week", value: 4 },
-  { label: "A few times a week", value: 5 },
-  { label: "Every day", value: 6 },
+  { label: "Not at all", value: 0 },
+  { label: "On a few days", value: 1 },
+  { label: "On several days", value: 2 },
+  { label: "On most days", value: 3 },
+  { label: "Nearly every day", value: 4 },
 ];
 
-// Note: Questions 11-15 are reverse scored (0=6, 1=5, 2=4, 3=3, 4=2, 5=1, 6=0)
+// Positively phrased questions 11-15 are reversed so every area score points in
+// the same direction: a higher number means more current strain.
 const REVERSE_SCORED_INDICES = [10, 11, 12, 13, 14]; // Questions 11-15 (0-indexed)
 
 const RANGES = [
-  { 
-    min: 0, 
-    max: 18, 
-    level: "Low Burnout", 
-    key: "low", 
-    description: "Your responses suggest low levels of burnout symptoms. You appear to be managing work-related stress effectively.",
-    suggestion: "Continue your current self-care practices and maintain healthy work-life boundaries. Regular check-ins can help you stay aware of your stress levels."
+  {
+    min: 0,
+    max: 14,
+    level: "Lower current-strain range",
+    key: "lower",
+    description: "On this educational check-in, your responses fall in the lower site-defined range for current role-related strain. This does not rule out burnout or another concern.",
+    suggestion: "Consider what is helping you recover and whether any individual response still deserves attention."
   },
-  { 
-    min: 19, 
-    max: 32, 
-    level: "Moderate Burnout", 
-    key: "moderate", 
-    description: "Your responses suggest moderate levels of burnout symptoms. You may be experiencing some emotional exhaustion, cynicism, or reduced sense of accomplishment.",
-    suggestion: "Consider implementing stress-reduction strategies and setting clearer boundaries. Speaking with a supervisor, HR representative, or mental health professional could provide helpful support."
+  {
+    min: 15,
+    max: 29,
+    level: "Some current-strain range",
+    key: "some",
+    description: "On this educational check-in, your responses fall in the second site-defined range for current role-related strain.",
+    suggestion: "Review which situations or responsibilities contributed most, then consider one practical change or a conversation with someone you trust."
   },
-  { 
-    min: 33, 
-    max: 54, 
-    level: "High Burnout", 
-    key: "high", 
-    description: "Your responses suggest high levels of burnout symptoms. You may be experiencing significant emotional exhaustion, depersonalization, and reduced personal accomplishment.",
-    suggestion: "It's important to take these results seriously. Consider reaching out to a healthcare professional, counselor, or employee assistance program. Burnout is treatable, and support is available to help you recover."
+  {
+    min: 30,
+    max: 44,
+    level: "Higher current-strain range",
+    key: "higher",
+    description: "On this educational check-in, your responses fall in a higher site-defined range for current role-related strain.",
+    suggestion: "Consider discussing the pressures with someone you trust, a supervisor, an employee assistance program, or a healthcare professional, especially if they are persistent or affecting daily life."
   },
-  { 
-    min: 55, 
-    max: 90, 
-    level: "Severe Burnout", 
-    key: "severe", 
-    description: "Your responses suggest severe levels of burnout symptoms. You may be experiencing intense emotional exhaustion, significant cynicism, and a strong sense of reduced accomplishment.",
-    suggestion: "Please consider seeking professional support as soon as possible. Burnout at this level can have serious impacts on your health and well-being. Contact a healthcare provider, therapist, or crisis resource for immediate guidance."
+  {
+    min: 45,
+    max: 60,
+    level: "Highest current-strain range",
+    key: "highest",
+    description: "On this educational check-in, your responses fall in the highest site-defined range for current role-related strain.",
+    suggestion: "This total is not an emergency signal or a diagnosis. If these experiences are persistent, worsening, or affecting your health, functioning, or safety, consider prompt support from a qualified professional or an appropriate workplace or caregiver resource."
   },
+];
+
+const BURNOUT_REFLECTION_PROMPTS = [
+  "Which response or reflection area felt most important to you?",
+  "What recent demands have made it harder to recover your energy?",
+  "Where have you noticed changes in patience, attention, or engagement?",
+  "What parts of your role still feel useful or meaningful?",
+  "What small boundary, support request, or recovery step feels realistic this week?",
 ];
 
 function getRange(score: number) {
@@ -90,10 +95,10 @@ function getRange(score: number) {
 
 // Color mappings per range key
 const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = {
-  low:      { text: "text-sage-700 dark:text-sage-400",         bg: "bg-sage-50 dark:bg-sage-950/30",      bar: "from-sage-400 to-sage-600" },
-  moderate: { text: "text-warm-700 dark:text-warm-400",         bg: "bg-warm-50 dark:bg-warm-950/30",      bar: "from-warm-400 to-warm-600" },
-  high:     { text: "text-orange-700 dark:text-orange-400",     bg: "bg-orange-50 dark:bg-orange-950/30",  bar: "from-orange-400 to-orange-600" },
-  severe:   { text: "text-crisis-700 dark:text-crisis-400",     bg: "bg-crisis-50 dark:bg-crisis-950/30",  bar: "from-crisis-400 to-crisis-600" },
+  lower:   { text: "text-sage-700 dark:text-sage-400",       bg: "bg-sage-50 dark:bg-sage-950/30",     bar: "from-sage-400 to-sage-600" },
+  some:    { text: "text-warm-700 dark:text-warm-400",       bg: "bg-warm-50 dark:bg-warm-950/30",     bar: "from-warm-400 to-warm-600" },
+  higher:  { text: "text-orange-700 dark:text-orange-400",   bg: "bg-orange-50 dark:bg-orange-950/30", bar: "from-orange-400 to-orange-600" },
+  highest: { text: "text-crisis-700 dark:text-crisis-400",   bg: "bg-crisis-50 dark:bg-crisis-950/30", bar: "from-crisis-400 to-crisis-600" },
 };
 
 // ── Component ───────────────────────────────────────────────────────────
@@ -113,12 +118,11 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
   const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Calculate score with reverse scoring for questions 11-15
+  // Calculate an educational reflection total. This is not a validated scale.
   const totalScore = answers.reduce<number>((score, answer, index) => {
     if (answer === null) return score;
     if (REVERSE_SCORED_INDICES.includes(index)) {
-      // Reverse score: 0 becomes 6, 1 becomes 5, etc.
-      return score + (6 - answer);
+      return score + (4 - answer);
     }
     return score + answer;
   }, 0);
@@ -129,21 +133,20 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
   const progress = (answers.filter((a) => a !== null).length / 15) * 100;
   const furthestAnswered = answers.findLastIndex((a) => a !== null);
 
-  // Calculate subscale scores
-  const emotionalExhaustionScore = answers.slice(0, 5).reduce<number>((sum, a) => {
+  // Reflection-area totals; these are not validated subscales.
+  const energyRecoveryScore = answers.slice(0, 5).reduce<number>((sum, a) => {
     if (a === null) return sum;
     return sum + a;
   }, 0);
   
-  const depersonalizationScore = answers.slice(5, 10).reduce<number>((sum, a) => {
+  const connectionPatienceScore = answers.slice(5, 10).reduce<number>((sum, a) => {
     if (a === null) return sum;
     return sum + a;
   }, 0);
   
-  const personalAccomplishmentScore = answers.slice(10, 15).reduce<number>((sum, a) => {
+  const confidenceMeaningScore = answers.slice(10, 15).reduce<number>((sum, a) => {
     if (a === null) return sum;
-    // Reverse score for personal accomplishment questions
-    return sum + (6 - a);
+    return sum + (4 - a);
   }, 0);
 
   function handleAnswer(qi: number, value: number) {
@@ -183,8 +186,8 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
     const url = "https://mindchecktools.com/burnout-assessment-tool";
     if (mode === "blank") {
       const shareData = {
-        title: "Burnout Assessment, Free & Private",
-        text: "Take a free, private Burnout Assessment. Your answers never leave your browser.",
+        title: "Burnout Educational Check-In, Free & Private",
+        text: "Use a free, private educational check-in about current role-related strain. Your answers never leave your browser.",
         url,
       };
       if (navigator.share) {
@@ -195,9 +198,9 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
       setTimeout(() => setShareMessage(""), 2500);
       return;
     }
-    const summary = `Burnout Assessment Results\nScore: ${totalScore}/90, ${range.level}\n\nThis is a screening tool, not a diagnosis. Take the self-check: ${url}`;
+    const summary = `Burnout Educational Check-In\nScore: ${totalScore}/60\nSite-defined range: ${range.level}\n\nThese educational ranges are not validated clinical cutoffs and cannot diagnose burnout. Use the check-in: ${url}`;
     if (navigator.share) {
-      try { await navigator.share({ title: "My Burnout Assessment Results", text: summary }); return; } catch { /* user cancelled */ }
+      try { await navigator.share({ title: "My Burnout Check-In Summary", text: summary }); return; } catch { /* user cancelled */ }
     }
     await navigator.clipboard.writeText(summary);
     setShareMessage("Results copied!");
@@ -208,30 +211,33 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <header className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Clinically-Informed</span>
+          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Original Educational Check-In</span>
           <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Free to Use</span>
         </div>
         {embedded ? (
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-3">
-            Burnout Assessment Tool
+            Burnout Educational Check-In
           </h2>
         ) : (
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
-            Burnout Assessment Tool
+            Burnout Educational Check-In
           </h1>
         )}
         <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
-          Assess emotional exhaustion, depersonalization, and reduced personal accomplishment with this professionally-designed screening tool.
+          Reflect on energy and recovery, connection and patience, and confidence and meaning in your work or caregiving role.
         </p>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: March 16, 2026</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+          MindCheck Tools created these questions for education and self-reflection. This check-in does not administer a proprietary or validated burnout instrument.
+        </p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: August 2, 2026</p>
       </header>
 
       <AdSlot position="burnout-top" className="mb-8" />
 
       {!accepted ? (
         <DisclaimerGate
-          toolName="Burnout Assessment"
-          toolDescription="This self-check uses a validated burnout assessment tool based on established psychological measures to help you understand your current stress and burnout levels."
+          toolName="Burnout Educational Check-In"
+          toolDescription="This original educational self-check helps you reflect on current role-related strain. Its score bands are site-defined ranges, not validated clinical cutoffs, and the result cannot diagnose burnout or another condition."
           onAccept={() => setAccepted(true)}
         />
       ) : (
@@ -252,6 +258,9 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                 style={{ width: `${progress}%` }}
               />
             </div>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-4">
+              For each statement, choose how often it applied during the past two weeks.
+            </p>
           </div>
 
           {/* Questions */}
@@ -276,7 +285,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                     {q}
                   </h3>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                   {OPTIONS.map((opt) => (
                     <button
                       key={opt.value}
@@ -328,7 +337,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
               className={`mb-12 p-6 rounded-2xl ${colors.bg} border ${colors.text.replace("text-", "border-")}/30`}
             >
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold">Your Results</h2>
+                <h2 className="text-2xl font-bold">Your Check-In Summary</h2>
                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${colors.text} ${colors.bg}`}>
                   {range.level}
                 </span>
@@ -337,27 +346,30 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
               {/* Score Display */}
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium">Total Score: {totalScore}/90</span>
+                  <span className="font-medium">Educational total: {totalScore}/60</span>
                   <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                    Range: {range.min}-{range.max}
+                    Site-defined range: {range.min}-{range.max}
                   </span>
                 </div>
                 <div className="h-4 bg-neutral-200 dark:bg-night-700 rounded-full overflow-hidden">
                   <div
                     className={`h-full bg-gradient-to-r ${colors.bar} transition-all duration-1000`}
-                    style={{ width: `${Math.min(100, (totalScore / 90) * 100)}%` }}
+                    style={{ width: `${Math.min(100, (totalScore / 60) * 100)}%` }}
                   />
                 </div>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-3">
+                  MindCheck Tools created these bands for education and reflection. They are not validated clinical cutoffs and do not determine whether you have burnout.
+                </p>
               </div>
 
-              {/* Subscale Scores */}
+              {/* Reflection-area scores */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="p-4 rounded-xl bg-white/50 dark:bg-black/20 border border-neutral-200 dark:border-night-700">
                   <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">
-                    Emotional Exhaustion
+                    Energy &amp; Recovery Strain
                   </h3>
                   <div className="text-2xl font-bold text-sage-700 dark:text-sage-400">
-                    {emotionalExhaustionScore}/30
+                    {energyRecoveryScore}/20
                   </div>
                   <div className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
                     Questions 1-5
@@ -365,10 +377,10 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                 </div>
                 <div className="p-4 rounded-xl bg-white/50 dark:bg-black/20 border border-neutral-200 dark:border-night-700">
                   <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">
-                    Depersonalization
+                    Connection &amp; Patience Strain
                   </h3>
                   <div className="text-2xl font-bold text-warm-700 dark:text-warm-400">
-                    {depersonalizationScore}/30
+                    {connectionPatienceScore}/20
                   </div>
                   <div className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
                     Questions 6-10
@@ -376,13 +388,13 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                 </div>
                 <div className="p-4 rounded-xl bg-white/50 dark:bg-black/20 border border-neutral-200 dark:border-night-700">
                   <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">
-                    Personal Accomplishment
+                    Confidence &amp; Meaning Strain
                   </h3>
                   <div className="text-2xl font-bold text-orange-700 dark:text-orange-400">
-                    {personalAccomplishmentScore}/30
+                    {confidenceMeaningScore}/20
                   </div>
                   <div className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-                    Questions 11-15 (reverse scored)
+                    Questions 11-15 (positive items recoded)
                   </div>
                 </div>
               </div>
@@ -407,7 +419,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                 </div>
               </div>
 
-              <TherapyCTA show={["moderate", "high", "severe"].includes(range.key)} />
+              <TherapyCTA show />
 
               <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-night-700">
                 <button
@@ -417,19 +429,19 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                 >
                   {showScoring ? "Hide" : "Show"} Scoring Details
                 </button>
-                {showScoring && (
-                  <div className="mt-4 p-4 bg-white/50 dark:bg-black/20 rounded-xl text-sm">
-                    <p className="text-neutral-700 dark:text-neutral-300 mb-2">
-                      This assessment is based on three dimensions of burnout:
-                    </p>
-                    <ul className="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
-                      <li><strong>Emotional Exhaustion</strong> (questions 1-5): Feelings of being emotionally overextended and drained</li>
-                      <li><strong>Depersonalization</strong> (questions 6-10): Unfeeling and impersonal response toward recipients of one&apos;s service</li>
-                      <li><strong>Reduced Personal Accomplishment</strong> (questions 11-15): Feelings of incompetence and lack of achievement</li>
-                    </ul>
-                    <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-                      Questions 11-15 are reverse scored (higher scores indicate lower personal accomplishment).
-                    </p>
+                  {showScoring && (
+                    <div className="mt-4 p-4 bg-white/50 dark:bg-black/20 rounded-xl text-sm">
+                      <p className="text-neutral-700 dark:text-neutral-300 mb-2">
+                       This original educational check-in groups responses into three reflection areas:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                       <li><strong>Energy and recovery strain</strong> (questions 1-5): Difficulty restoring energy after role demands</li>
+                       <li><strong>Connection and patience strain</strong> (questions 6-10): Changes in attention, patience, and engagement</li>
+                       <li><strong>Confidence and meaning strain</strong> (questions 11-15): Reduced confidence, interest, or sense of usefulness</li>
+                      </ul>
+                      <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+                       Questions 11-15 are positively phrased and recoded so higher area totals consistently represent more reported strain. The total and bands are site-defined educational ranges, not validated clinical scores or cutoffs.
+                      </p>
                   </div>
                 )}
               </div>
@@ -462,7 +474,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
-                    Copy My Results
+                   Copy My Summary
                   </button>
                   <button
                     onClick={() => handleShare("blank")}
@@ -471,7 +483,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                     </svg>
-                    Share Blank Test
+                   Share Blank Check-In
                   </button>
                 </div>
                 {shareMessage && (
@@ -483,31 +495,11 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
             </>
           )}
 
-          {/* Download Reflection Summary */}
-          <ReflectionSummary
-            toolName="Burnout Assessment Tool"
-            toolUrl="https://mindchecktools.com/burnout-assessment-tool"
-            score={totalScore}
-            severityLabel={range.level}
-            scoreRange={`${range.min}–${range.max}`}
-            interpretation={range.description}
-            suggestion={range.suggestion}
-            reflectionPrompts={REFLECTION_PROMPTS["burnout-assessment-tool"]?.prompts ?? []}
-            responses={QUESTIONS.map((q, i) => ({
-              question: q,
-              answer: `${OPTIONS[answers[i]!]?.label} (${answers[i]})`,
-            }))}
-          />
-
-
-
           {/* Reflection Prompts */}
-          {REFLECTION_PROMPTS["burnout-assessment-tool"] && (
-            <ReflectionPrompts
-              toolName="Burnout Assessment Tool"
-              prompts={REFLECTION_PROMPTS["burnout-assessment-tool"].prompts}
-            />
-          )}
+          <ReflectionPrompts
+            toolName="Burnout Educational Check-In"
+            prompts={BURNOUT_REFLECTION_PROMPTS}
+          />
 
           <AdSlot position="burnout-middle" className="my-8" />
 
@@ -559,7 +551,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
             </div>
           </section>
 
-          <ToolReviewerBio />
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
 
           {/* Crisis Resources */}
           <div className="mb-10 p-6 rounded-2xl bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800">
@@ -674,7 +666,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                   Work Stress Check
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Assess workplace stress factors and get personalized coping strategies.
+                  Review workplace stress factors and general coping ideas.
                 </p>
               </Link>
               <Link
@@ -685,7 +677,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                   PHQ-9 Depression Test
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Professional depression screening based on the Patient Health Questionnaire.
+                  Published nine-item depression symptom screener with source-based scoring.
                 </p>
               </Link>
               <Link
@@ -696,7 +688,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                   GAD-7 Anxiety Test
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Clinically validated anxiety screening used by healthcare professionals worldwide.
+                  Published seven-item anxiety symptom screener with source-based scoring.
                 </p>
               </Link>
             </div>
@@ -707,7 +699,7 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
           {/* Disclaimer */}
           <div className="text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-night-700 pt-6">
             <p className="mb-2">
-              <strong>Disclaimer:</strong> This tool is for educational and self-assessment purposes only. It is not a diagnostic tool and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical or mental health condition.
+              <strong>Disclaimer:</strong> This tool is for education and self-reflection only. Its original questions, totals, and score bands have not been clinically validated. It cannot diagnose burnout or another condition and should not replace professional medical advice, diagnosis, or treatment. Seek advice from a qualified health professional if you have questions about a medical or mental health concern.
             </p>
             <p>
               If you are experiencing a medical or mental health emergency, please call 911 or go to the nearest emergency room immediately.

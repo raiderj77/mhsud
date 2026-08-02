@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/metadata";
+import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 const PAGE_PATH = "/screening-tools";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const TODAY = "2026-05-12";
+const TODAY = "2026-08-02";
 
 export const metadata: Metadata = createMetadata({
   path: PAGE_PATH,
   title: "All Free Mental Health Screening Tools and Self-Checks",
   description:
-    "A complete index of validated mental health screening tools on MindCheck Tools: depression, anxiety, PTSD, alcohol and substance use, ADHD, eating disorders, OCD, bipolar, BPD, autism, stress, sleep, loneliness, and more. All free and private.",
+    "Browse maintained mental health and substance use screening instruments, educational self-checks, calculators, and coping tools. Each page states its source, purpose, and limits.",
   keywords: [
     "free mental health screening",
     "validated mental health self-check",
@@ -38,6 +39,46 @@ type Category = {
   tools: Tool[];
 };
 
+const EVIDENCE_ANCHORS: Record<string, string> = {
+  "/phq-9-depression-test": "phq-9",
+  "/phq-4-anxiety-depression-screen": "phq-4",
+  "/gad-7-anxiety-test": "gad-7",
+  "/dass-21-depression-anxiety-stress": "dass-21",
+  "/spin-social-anxiety-test": "spin",
+  "/pcl-5-ptsd-screening": "pcl-5",
+  "/pc-ptsd-5-screening": "pc-ptsd-5",
+  "/ace-questionnaire": "ace",
+  "/audit-alcohol-test": "audit",
+  "/audit-c-alcohol-screen": "audit-c",
+  "/cage-aid-substance-abuse-screening": "cage-aid",
+  "/crafft-substance-screening": "crafft",
+  "/asrs-adhd-screening": "asrs",
+  "/scoff-eating-disorder-screening": "scoff",
+  "/msi-bpd-screening": "msi-bpd",
+  "/aq-10-autism-screening": "aq-10",
+  "/rosenberg-self-esteem-scale": "rosenberg",
+  "/k6-distress-scale": "k6",
+  "/holmes-rahe-stress-inventory": "holmes-rahe",
+  "/who-5-wellbeing-index": "who-5",
+  "/ucla-loneliness-scale": "ucla-loneliness",
+};
+
+const PUBLISHED_MEASURE_PATHS = new Set([
+  ...Object.keys(EVIDENCE_ANCHORS),
+  "/ces-d-depression-scale",
+  "/big-five-personality-test",
+  "/attachment-style-quiz",
+  "/brief-resilience-scale",
+  "/athens-insomnia-scale",
+]);
+
+function toolBasis(href: string) {
+  if (href === "/postpartum-depression-test") return "PHQ-9-based adaptation";
+  if (href === "/grief-assessment") return "PHQ-9 depression screener";
+  if (PUBLISHED_MEASURE_PATHS.has(href)) return "Published measure";
+  return "Educational self-check";
+}
+
 const CATEGORIES: Category[] = [
   {
     id: "depression",
@@ -47,15 +88,8 @@ const CATEGORIES: Category[] = [
     tools: [
       { name: "PHQ-9 Depression Test", acronym: "PHQ-9", href: "/phq-9-depression-test", scoreInterpHref: "/phq-9-score-interpretation", description: "Nine-item screen for depressive symptom severity used widely in primary care.", population: "General adults", items: "9 items", time: "About 3 minutes" },
       { name: "PHQ-4 Quick Screen", acronym: "PHQ-4", href: "/phq-4-anxiety-depression-screen", description: "Ultra-brief combined depression and anxiety screen, 2 items each.", population: "General adults", items: "4 items", time: "Under 2 minutes" },
-      { name: "Am I Depressed Quiz", href: "/am-i-depressed-quiz", description: "Plain-language entry point that walks you through the same depressive symptom set as PHQ-9.", population: "General adults", items: "9 items", time: "About 3 minutes" },
       { name: "CES-D Depression Scale", acronym: "CES-D", href: "/ces-d-depression-scale", description: "Twenty-item depression scale used in community and research settings.", population: "General adults", items: "20 items", time: "About 5 minutes" },
-      { name: "Depression Test for Men", href: "/depression-test-for-men", description: "PHQ-9-based check framed for symptom presentations more common in men.", population: "Adult men", items: "9 items", time: "About 3 minutes" },
-      { name: "Depression Screening for Men", href: "/depression-screening-for-men", description: "Companion landing page focused on how men often experience depression.", population: "Adult men", items: "9 items", time: "About 3 minutes" },
-      { name: "Depression Test for New Moms", href: "/depression-test-for-new-moms", description: "Postpartum-aware depression check for the first year after childbirth.", population: "Postpartum mothers", items: "10 items", time: "About 3 minutes" },
-      { name: "Postpartum Depression Test", href: "/postpartum-depression-test", description: "Edinburgh-style postpartum depression screen for the perinatal period.", population: "Perinatal women", items: "10 items", time: "About 3 minutes" },
-      { name: "Depression Test for Seniors", href: "/depression-test-for-seniors", description: "Depression screen calibrated for older adults, including somatic and grief-related framing.", population: "Adults 65+", items: "9 items", time: "About 4 minutes" },
-      { name: "Depression Test for Teens", href: "/depression-test-for-teens", description: "Adolescent-framed depression screen, parent-aware language.", population: "Adolescents 12 to 17", items: "9 items", time: "About 3 minutes" },
-      { name: "Depression Screening for Veterans", href: "/depression-screening-for-veterans", description: "PHQ-9-based screen with veteran-aware context, paired with PTSD resources.", population: "Veterans and active duty", items: "9 items", time: "About 3 minutes" },
+      { name: "Postpartum Depression Test", href: "/postpartum-depression-test", description: "PHQ-9-based depression self-screen with postpartum-specific safety and next-step guidance.", population: "Postpartum adults", items: "9 items", time: "About 3 minutes" },
     ],
   },
   {
@@ -67,10 +101,6 @@ const CATEGORIES: Category[] = [
       { name: "GAD-7 Anxiety Test", acronym: "GAD-7", href: "/gad-7-anxiety-test", scoreInterpHref: "/gad-7-score-interpretation", description: "Seven-item generalized anxiety screen used widely in primary care.", population: "General adults", items: "7 items", time: "About 2 minutes" },
       { name: "DASS-21 Depression, Anxiety, and Stress Scale", acronym: "DASS-21", href: "/dass-21-depression-anxiety-stress", scoreInterpHref: "/dass-21-score-interpretation", description: "Twenty-one-item scale that scores depression, anxiety, and stress separately.", population: "General adults", items: "21 items", time: "About 5 minutes" },
       { name: "SPIN Social Anxiety Test", acronym: "SPIN", href: "/spin-social-anxiety-test", description: "Seventeen-item screen for social anxiety symptoms across fear, avoidance, and physiologic items.", population: "General adults", items: "17 items", time: "About 4 minutes" },
-      { name: "Anxiety Test for Men", href: "/anxiety-test-for-men", description: "GAD-7-based check with framing aligned to common male symptom presentations.", population: "Adult men", items: "7 items", time: "About 2 minutes" },
-      { name: "Anxiety Test for Women", href: "/anxiety-test-for-women", description: "GAD-7-based check with framing aligned to common female symptom presentations.", population: "Adult women", items: "7 items", time: "About 2 minutes" },
-      { name: "Anxiety Test for Teens", href: "/anxiety-test-for-teens", description: "Adolescent-framed anxiety screen.", population: "Adolescents 12 to 17", items: "7 items", time: "About 2 minutes" },
-      { name: "Social Anxiety Test for College", href: "/social-anxiety-test-college", description: "Social anxiety screen with college-context examples.", population: "College students", items: "17 items", time: "About 4 minutes" },
     ],
   },
   {
@@ -81,9 +111,6 @@ const CATEGORIES: Category[] = [
     tools: [
       { name: "PCL-5 PTSD Checklist", acronym: "PCL-5", href: "/pcl-5-ptsd-screening", scoreInterpHref: "/pcl-5-score-interpretation", description: "Twenty-item DSM-5-aligned PTSD symptom checklist.", population: "General adults", items: "20 items", time: "About 6 minutes" },
       { name: "PC-PTSD-5 Primary Care PTSD Screen", acronym: "PC-PTSD-5", href: "/pc-ptsd-5-screening", description: "Five-item brief PTSD screen used in primary care.", population: "General adults", items: "5 items", time: "Under 2 minutes" },
-      { name: "Do I Have PTSD Quiz", href: "/do-i-have-ptsd-quiz", description: "Plain-language entry point built on the PC-PTSD-5 and PCL-5 frameworks.", population: "General adults", items: "5 to 20 items", time: "2 to 6 minutes" },
-      { name: "PTSD Test for First Responders", href: "/ptsd-test-first-responders", description: "PTSD screen with examples specific to police, fire, EMS, and dispatch contexts.", population: "First responders", items: "20 items", time: "About 6 minutes" },
-      { name: "PTSD Test for Veterans", href: "/ptsd-test-veterans", description: "PTSD screen with combat-related and military-context framing.", population: "Veterans and active duty", items: "20 items", time: "About 6 minutes" },
       { name: "ACE Questionnaire", acronym: "ACE", href: "/ace-questionnaire", scoreInterpHref: "/ace-score-interpretation", description: "Ten-item Adverse Childhood Experiences screen used in trauma-informed care.", population: "Adults reflecting on childhood before age 18", items: "10 items", time: "About 4 minutes" },
     ],
   },
@@ -98,12 +125,6 @@ const CATEGORIES: Category[] = [
       { name: "CAGE-AID Substance Use Screen", acronym: "CAGE-AID", href: "/cage-aid-substance-abuse-screening", description: "Four-item screen for alcohol and other drug problems.", population: "General adults", items: "4 items", time: "Under 2 minutes" },
 { name: "CRAFFT Substance Use Screen", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Adolescent substance use screen used in pediatric and school-based care.", population: "Adolescents 12 to 21", items: "6 to 9 items", time: "About 3 minutes" },
       { name: "WHO ASSIST Substance Use Screen", acronym: "ASSIST", href: "/who-assist-substance-screening", description: "World Health Organization screen across tobacco, alcohol, and other substances.", population: "General adults", items: "Up to 8 items per substance", time: "5 to 10 minutes" },
-      { name: "Am I an Alcoholic Quiz", href: "/am-i-an-alcoholic-quiz", description: "Plain-language entry point built on the AUDIT framework.", population: "General adults", items: "10 items", time: "About 3 minutes" },
-      { name: "Alcohol Screening for College Students", href: "/alcohol-screening-for-college-students", description: "AUDIT-based screen with examples specific to college drinking patterns.", population: "College students", items: "10 items", time: "About 3 minutes" },
-      { name: "Alcohol Screening for Women", href: "/alcohol-screening-for-women", description: "AUDIT-based screen using the recommended lower threshold for women.", population: "Adult women", items: "10 items", time: "About 3 minutes" },
-      { name: "Alcohol Screening for Military", href: "/alcohol-screening-military", description: "AUDIT-based screen with active-duty and veteran context.", population: "Active duty and veterans", items: "10 items", time: "About 3 minutes" },
-      { name: "Drug Screening for Teens", href: "/drug-screening-teens", description: "CRAFFT-based teen substance use screen.", population: "Adolescents 12 to 17", items: "6 to 9 items", time: "About 3 minutes" },
-      { name: "Substance Abuse Test for Parents", href: "/substance-abuse-test-parents", description: "Reflective screen for parents about their own substance use and family impact.", population: "Parents", items: "10 items", time: "About 3 minutes" },
     ],
   },
   {
@@ -113,9 +134,6 @@ const CATEGORIES: Category[] = [
       "Adult ADHD screens including the ASRS plus population-framed versions. ADHD diagnosis requires a clinical evaluation, including history and rule-outs.",
     tools: [
       { name: "ASRS Adult ADHD Self-Report Scale", acronym: "ASRS", href: "/asrs-adhd-screening", scoreInterpHref: "/asrs-score-interpretation", description: "Eighteen-item adult ADHD symptom checklist with a six-item screener subset, developed with the World Health Organization.", population: "Adults 18+", items: "18 items (6-item screener)", time: "About 5 minutes" },
-      { name: "ADHD Test for Adults", href: "/adhd-test-adults", description: "ASRS-based check framed for first-time adult ADHD self-screening.", population: "Adults 18+", items: "18 items", time: "About 5 minutes" },
-      { name: "ADHD Test for Women", href: "/adhd-test-women", description: "ASRS-based screen with framing for inattentive and internalizing presentations more often missed in women.", population: "Adult women", items: "18 items", time: "About 5 minutes" },
-      { name: "ADHD Test for Teens", href: "/adhd-test-for-teens", description: "Adolescent-framed ADHD screen.", population: "Adolescents 12 to 17", items: "18 items", time: "About 5 minutes" },
     ],
   },
   {
@@ -125,7 +143,6 @@ const CATEGORIES: Category[] = [
       "Brief screens to surface possible disordered eating. Eating disorder diagnosis requires evaluation by a clinician with training in eating disorders.",
     tools: [
       { name: "SCOFF Eating Disorder Screen", acronym: "SCOFF", href: "/scoff-eating-disorder-screening", description: "Five-item brief screen for anorexia nervosa and bulimia nervosa.", population: "General adults and adolescents", items: "5 items", time: "Under 2 minutes" },
-      { name: "Eating Disorder Test for Athletes", href: "/eating-disorder-test-athletes", description: "Disordered-eating screen with athlete-context items including weight-class and aesthetic-sport pressures.", population: "Athletes", items: "5 to 10 items", time: "About 3 minutes" },
     ],
   },
   {
@@ -135,8 +152,6 @@ const CATEGORIES: Category[] = [
       "Brief screens for borderline personality traits. BPD diagnosis requires a structured clinical interview and longitudinal observation, not a self-report screen.",
     tools: [
       { name: "MSI-BPD McLean Screening Instrument for BPD", acronym: "MSI-BPD", href: "/msi-bpd-screening", description: "Ten-item brief screen for borderline personality features.", population: "General adults", items: "10 items", time: "About 3 minutes" },
-      { name: "BPD Screening for Young Adults", href: "/bpd-screening-for-young-adults", description: "MSI-BPD-based screen framed for the developmental period when BPD often first presents.", population: "Young adults 18 to 25", items: "10 items", time: "About 3 minutes" },
-      { name: "BPD Test for Women", href: "/bpd-test-for-women", description: "MSI-BPD-based screen with framing for presentations commonly missed or mislabeled in women.", population: "Adult women", items: "10 items", time: "About 3 minutes" },
     ],
   },
   {
@@ -169,15 +184,10 @@ const CATEGORIES: Category[] = [
       { name: "K6 Psychological Distress Scale", acronym: "K6", href: "/k6-distress-scale", description: "Six-item nonspecific psychological distress scale used in population health.", population: "General adults", items: "6 items", time: "Under 2 minutes" },
       { name: "Holmes-Rahe Life Stress Inventory", href: "/holmes-rahe-stress-inventory", description: "Life-events stress inventory totaling Life Change Units across the past year.", population: "General adults", items: "43 events", time: "About 5 minutes" },
       { name: "Brief Resilience Scale", acronym: "BRS", href: "/brief-resilience-scale", description: "Six-item scale of bounce-back style resilience.", population: "General adults", items: "6 items", time: "Under 2 minutes" },
-      { name: "Burnout Assessment Tool", href: "/burnout-assessment-tool", description: "Multi-domain burnout reflection covering exhaustion, mental distance, and impairment.", population: "Working adults", items: "About 23 items", time: "About 5 minutes" },
-      { name: "Burnout Test for Healthcare Workers", href: "/burnout-test-for-healthcare-workers", description: "Burnout reflection with healthcare-specific examples.", population: "Healthcare workers", items: "About 22 items", time: "About 5 minutes" },
-      { name: "Burnout Test for Nurses", href: "/burnout-test-for-nurses", description: "Burnout reflection framed for nursing workloads and shift patterns.", population: "Nurses", items: "About 22 items", time: "About 5 minutes" },
-      { name: "Burnout Test for Teachers", href: "/burnout-test-for-teachers", description: "Burnout reflection framed for K to 12 and higher-education educators.", population: "Teachers", items: "About 22 items", time: "About 5 minutes" },
-      { name: "Burnout Test for Parents", href: "/burnout-test-parents", description: "Parental burnout reflection covering exhaustion, distancing, and contrast with prior self.", population: "Parents", items: "About 22 items", time: "About 5 minutes" },
-      { name: "Compassion Fatigue Test", href: "/compassion-fatigue-test", description: "Reflection on secondary traumatic stress and compassion satisfaction.", population: "Helping professionals and caregivers", items: "About 30 items", time: "About 7 minutes" },
-      { name: "Caregiver Burnout Assessment", href: "/caregiver-burnout-assessment", description: "Self-check for unpaid family or chosen-family caregivers.", population: "Family caregivers", items: "About 22 items", time: "About 5 minutes" },
+      { name: "Burnout Reflection", href: "/burnout-assessment-tool", description: "Original educational self-check covering exhaustion, detachment, and sense of effectiveness. Its score bands are not clinical cutoffs.", population: "Working adults", items: "15 items", time: "About 5 minutes" },
+      { name: "Compassion Fatigue Reflection", href: "/compassion-fatigue-test", description: "General educational reflection for people in helping roles; not a validated compassion-fatigue instrument.", population: "Helping professionals and caregivers", items: "15 items", time: "About 5 minutes" },
+      { name: "Caregiver Burnout Reflection", href: "/caregiver-burnout-assessment", description: "General educational self-check for unpaid family or chosen-family caregivers; not a validated caregiver-burnout instrument.", population: "Family caregivers", items: "15 items", time: "About 5 minutes" },
       { name: "Work Stress Check", href: "/work-stress-check", description: "Workplace stress self-check covering demands, control, and support.", population: "Working adults", items: "About 15 items", time: "About 4 minutes" },
-      { name: "Stress Test for College Students", href: "/stress-test-college-students", description: "Stress check framed for academic, social, and financial pressures of college life.", population: "College students", items: "About 15 items", time: "About 4 minutes" },
     ],
   },
   {
@@ -187,7 +197,6 @@ const CATEGORIES: Category[] = [
       "Brief positive-functioning checks. These complement deficit-focused screens by tracking what is going well.",
     tools: [
       { name: "WHO-5 Well-Being Index", acronym: "WHO-5", href: "/who-5-wellbeing-index", description: "Five-item wellbeing scale developed by the World Health Organization, often used as a general mental health barometer.", population: "General adults and adolescents", items: "5 items", time: "Under 2 minutes" },
-      { name: "PHQ-4 Combined Quick Screen", acronym: "PHQ-4", href: "/phq-4-anxiety-depression-screen", description: "Two-item depression plus two-item anxiety quick screen.", population: "General adults", items: "4 items", time: "Under 2 minutes" },
     ],
   },
   {
@@ -197,7 +206,6 @@ const CATEGORIES: Category[] = [
       "Loneliness self-checks. The UCLA scale is the most cited measure of loneliness in research.",
     tools: [
       { name: "UCLA Loneliness Scale (Version 3)", href: "/ucla-loneliness-scale", description: "Twenty-item self-report scale of loneliness across connection, belonging, and isolation.", population: "Adolescents and adults", items: "20 items", time: "About 5 minutes" },
-      { name: "Loneliness Test for Seniors", href: "/loneliness-test-seniors", description: "Loneliness check framed for older adults, including bereavement and mobility-related social loss.", population: "Adults 65+", items: "20 items", time: "About 5 minutes" },
     ],
   },
   {
@@ -216,7 +224,7 @@ const CATEGORIES: Category[] = [
     intro:
       "Grief self-reflection. Most grief is not a disorder. Prolonged grief disorder, defined in the DSM-5-TR, requires clinical evaluation.",
     tools: [
-      { name: "Grief Assessment", href: "/grief-assessment", description: "Reflection on grief intensity, function, and time since loss.", population: "Bereaved adults", items: "About 12 items", time: "About 4 minutes" },
+      { name: "Grief and Mood Check", href: "/grief-assessment", description: "PHQ-9 depression self-screen with grief-specific context. It does not assess prolonged grief disorder.", population: "Bereaved adults", items: "9 items", time: "About 3 minutes" },
     ],
   },
 ];
@@ -250,16 +258,26 @@ const COPING_TOOLS = [
   { name: "Family Impact Assessment", href: "/family-impact-assessment", description: "Reflective check for how a substance use or mental health pattern is affecting family relationships." },
 ];
 
+const CLINICAL_GUIDES = [
+  { name: "Maternal Mental Health", href: "/maternal-mental-health", description: "Screening options, warning signs, and care pathways during pregnancy and postpartum." },
+  { name: "PHQ-2 to PHQ-9: When to Continue", href: "/phq-2-to-phq-9-when-to-escalate", description: "How the two-item depression screen is used before the full PHQ-9." },
+  { name: "PHQ-9 vs GAD-7", href: "/phq-9-vs-gad-7", description: "Choose the depression screen, anxiety screen, or both based on the concern." },
+  { name: "AUDIT vs AUDIT-C", href: "/audit-vs-audit-c", description: "Compare the three-item alcohol screen with the full ten-item AUDIT." },
+  { name: "DASS-21 vs PHQ-9 and GAD-7", href: "/dass-21-vs-phq-9-and-gad-7", description: "Compare a three-domain research scale with condition-specific clinical screeners." },
+  { name: "How to Talk to Your Doctor", href: "/how-to-talk-to-your-doctor-about-mental-health", description: "Turn a screening result into a clear, practical clinical conversation." },
+];
+
 function articleJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "All Free Mental Health Screening Tools and Self-Checks",
     description:
-      "Index of validated mental health screening tools available free on MindCheck Tools, organized by clinical category, with population, length, and links to score interpretation pages.",
+      "Index of maintained published screeners and educational self-checks on MindCheck Tools, organized by topic with population, length, limitations, and score-guide links.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
-    author: { "@type": "Organization", name: "Your Friendly Developer LLC" },
+    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    reviewedBy: AUTHOR_SCHEMA,
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: PAGE_URL,
   };
@@ -282,8 +300,8 @@ function itemListJsonLd() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Free Mental Health Screening Tools",
-    description: "Validated mental health screening instruments and self-checks indexed on MindCheck Tools.",
-    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    description: "Maintained published screening instruments and educational self-checks indexed on MindCheck Tools.",
+    itemListOrder: "https://schema.org/ItemListUnordered",
     numberOfItems: items.length,
     itemListElement: items,
   };
@@ -326,7 +344,11 @@ export default function ScreeningToolsIndexPage() {
         All Free Mental Health Screening Tools and Self-Checks
       </h1>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-        Last updated: {TODAY}. Reviewed for accuracy by the MindCheck Tools editorial team.
+        Last updated: August 2, 2026. Reviewed by{" "}
+        <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 hover:underline">
+          {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
+        </Link>
+        .
       </p>
 
       <div
@@ -352,22 +374,22 @@ export default function ScreeningToolsIndexPage() {
         role="note"
         className="mb-8 px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 text-sm text-amber-800 dark:text-amber-300"
       >
-        <strong>Important:</strong> The screeners below are educational
-        self-checks, not diagnostic instruments. A score is a starting point
-        for a conversation with a qualified clinician, not a diagnosis.
+        <strong>Important:</strong> This directory includes both published
+        screening instruments and original educational self-checks. Each tool
+        page identifies its basis and limits. No result is a diagnosis.
       </div>
 
       <section className="mb-10 prose-medical text-neutral-700 dark:text-neutral-300 leading-relaxed">
         <p>
-          MindCheck Tools hosts {totalScreeners} validated mental health
-          screening instruments plus practical calculators and coping skill
-          tools. Every screener listed in this index is reproduced from a
-          published, peer-reviewed instrument, scored according to the source
-          paper, and reviewed for accuracy by the MindCheck Tools editorial team before going live.
+          MindCheck Tools currently lists {totalScreeners} maintained screening
+          and self-check pages, plus practical calculators, worksheets, and
+          coping-skill tools. Some pages implement published screening
+          instruments; others are explicitly labeled educational reflection
+          tools and do not claim clinical validation.
         </p>
         <p>
-          For the source study, validated population, sensitivity and
-          specificity, and licensing status of each instrument, see the{" "}
+          For source studies, validated populations, reported accuracy, and
+          licensing notes for the published instruments we document, see the{" "}
           <Link href="/clinical-evidence" className="text-sage-700 dark:text-sage-400 hover:underline">
             clinical evidence
           </Link>{" "}
@@ -392,6 +414,11 @@ export default function ScreeningToolsIndexPage() {
               </a>
             </li>
           ))}
+          <li>
+            <a href="#clinical-guides" className="text-sage-700 dark:text-sage-400 hover:underline">
+              Clinical guides and comparisons
+            </a>
+          </li>
           <li>
             <a href="#practical" className="text-sage-700 dark:text-sage-400 hover:underline">
               Calculators and practical tools
@@ -430,6 +457,9 @@ export default function ScreeningToolsIndexPage() {
                       {tool.acronym}
                     </span>
                   )}
+                  <span className="inline-flex items-center rounded-full bg-sand-100 dark:bg-night-800 px-2 py-0.5 text-xs font-medium text-neutral-600 dark:text-neutral-300">
+                    {toolBasis(tool.href)}
+                  </span>
                 </div>
                 <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-3">
                   {tool.description}
@@ -457,12 +487,46 @@ export default function ScreeningToolsIndexPage() {
                       Score interpretation
                     </Link>
                   )}
+                  {EVIDENCE_ANCHORS[tool.href] && (
+                    <Link
+                      href={`/clinical-evidence#${EVIDENCE_ANCHORS[tool.href]}`}
+                      className="text-sage-700 dark:text-sage-400 hover:underline"
+                    >
+                      Evidence and source
+                    </Link>
+                  )}
                 </div>
               </li>
             ))}
           </ul>
         </section>
       ))}
+
+      <section id="clinical-guides" className="mb-12 scroll-mt-24">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
+          Clinical guides and comparisons
+        </h2>
+        <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
+          Use these guides to choose an appropriate screener, understand how
+          related instruments differ, and prepare to discuss a result with a
+          healthcare professional.
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {CLINICAL_GUIDES.map((guide) => (
+            <li
+              key={guide.href}
+              className="rounded-xl border border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-900 p-4"
+            >
+              <Link href={guide.href} className="text-sage-700 dark:text-sage-400 hover:underline font-semibold text-sm">
+                {guide.name}
+              </Link>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1 leading-relaxed">
+                {guide.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section id="practical" className="mb-12 scroll-mt-24">
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
@@ -521,7 +585,11 @@ export default function ScreeningToolsIndexPage() {
           About this index
         </h2>
         <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-          Published and maintained by MindCheck Tools, Your Friendly Developer LLC. Content reviewed for clinical accuracy. For instrument source studies see the{" "}
+          Published and maintained by MindCheck Tools. Reviewed for source alignment, limitations, and safety language by{" "}
+          <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 hover:underline">
+            {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
+          </Link>
+          . For instrument source studies see the{" "}
           <Link href="/clinical-evidence" className="text-sage-700 dark:text-sage-400 hover:underline">
             clinical evidence
           </Link>{" "}

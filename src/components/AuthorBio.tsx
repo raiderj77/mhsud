@@ -36,13 +36,11 @@ export function AuthorBio({ publishedDate, modifiedDate }: AuthorBioProps) {
             </Link>
           </h3>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-            {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience} in substance abuse counseling
+            {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-            {SITE_AUTHOR.name} has worked in diverse clinical settings including inpatient treatment, outpatient programs,
-            and community mental health, specializing in evidence-based screening tools and their appropriate
-            clinical application. All content on MindCheck Tools is reviewed for clinical accuracy and
-            adherence to best practices in mental health education.
+            Review covers source fidelity, scoring alignment, screening limitations, safety language, and appropriate
+            next-step guidance. It is editorial quality control, not diagnosis or individual clinical care.
           </p>
           {(publishedDate || modifiedDate) && (
             <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400">

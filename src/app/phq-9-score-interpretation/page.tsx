@@ -68,7 +68,7 @@ export default function PHQ9ScoreInterpretationPage() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>

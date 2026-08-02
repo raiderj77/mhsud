@@ -1,13 +1,28 @@
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
 import {
   buildEmailProviderPayload,
   MAX_SUBSCRIPTION_BODY_BYTES,
   parseSubscriptionBody,
 } from "../src/lib/subscription.mjs";
+
+async function readSourceTree(directory) {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const entryPath = join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...await readSourceTree(entryPath));
+    } else if (/\.(?:ts|tsx|mjs)$/.test(entry.name)) {
+      files.push({ path: entryPath, source: await readFile(entryPath, "utf8") });
+    }
+  }
+  return files;
+}
 
 test("subscription requires explicit consent", () => {
   assert.equal(parseSubscriptionBody(JSON.stringify({ email: "person@example.com" })).ok, false);
@@ -81,12 +96,35 @@ test("unused public indexing proxy and false search action stay removed", async 
   assert.doesNotMatch(metadata, /SearchAction|search_term_string/);
 });
 
-test("clinical schema names the documented reviewer on maintained tools", async () => {
-  const gad = await readFile(new URL("../src/app/gad-7-anxiety-test/page.tsx", import.meta.url), "utf8");
-  const phq = await readFile(new URL("../src/app/phq-9-depression-test/page.tsx", import.meta.url), "utf8");
-  for (const page of [gad, phq]) {
-    assert.doesNotMatch(page, /reviewedBy: \{ "@type": "Organization", "name": "Your Friendly Developer LLC"/);
-    assert.match(page, /reviewedBy: \{ "@type": "Person", "name": "Jason Ramirez"/);
+test("publisher and named reviewer identities remain separate, public, and private by scope", async () => {
+  const metadata = await readFile(new URL("../src/lib/metadata.ts", import.meta.url), "utf8");
+  const author = await readFile(new URL("../src/config/author.ts", import.meta.url), "utf8");
+  const profile = await readFile(new URL("../src/app/about/jason-ramirez/page.tsx", import.meta.url), "utf8");
+  const appSources = await readSourceTree(fileURLToPath(new URL("../src/app/", import.meta.url)));
+
+  assert.match(author, /name: "Jason Ramirez"/);
+  assert.match(author, /credentialFull: "Certified Alcohol and Drug Counselor Level II \(CADC-II\)"/);
+  assert.match(author, /hasCredential:/);
+  assert.match(author, /credentialRegistryUrl:/);
+  const sameAs = author.match(/sameAs:\s*\[([\s\S]*?)\]/)?.[1] ?? "";
+  assert.doesNotMatch(sameAs, /credentialRegistryUrl/);
+
+  assert.match(metadata, /authors: \[\{ name: SITE_NAME, url: SITE_URL \}\]/);
+  assert.match(metadata, /creator: SITE_NAME/);
+  assert.doesNotMatch(metadata, /authors: \[\{ name: SITE_AUTHOR\.name \}\]/);
+  assert.ok((metadata.match(/reviewedBy: AUTHOR_SCHEMA/g) ?? []).length >= 3);
+
+  assert.match(profile, /Jason Ramirez, CADC-II/);
+  assert.match(profile, /Certified Alcohol and Drug Counselor Level II \(CADC-II\)/);
+  assert.match(profile, /CCAPP SUD Credential Registry/);
+
+  const privateIdentity = /Your Friendly Developer|Prunedale|Salinas|PostalAddress|recovering addict|storage shed/i;
+  const obsoleteCredential = /Certified (?:Drug and Alcohol Counselor|Alcohol and Drug Counselor II)/;
+  for (const { path, source } of appSources) {
+    assert.doesNotMatch(source, /reviewedBy:\s*\{\s*"@type":\s*"Organization"/, path);
+    assert.doesNotMatch(source, /reviewedBy: \{ "@type": "Person", "name": "Jason Ramirez"/, path);
+    assert.doesNotMatch(source, privateIdentity, path);
+    assert.doesNotMatch(source, obsoleteCredential, path);
   }
 });
 

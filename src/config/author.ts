@@ -3,19 +3,35 @@
 export const SITE_AUTHOR = {
   name: "Jason Ramirez",
   credential: "CADC-II",
-  credentialFull: "Certified Drug and Alcohol Counselor (CADC-II)",
-  experience: "11 years of clinical experience",
+  credentialFull: "Certified Alcohol and Drug Counselor Level II (CADC-II)",
+  experience: "11 years of clinical experience in substance use counseling",
   role: "Clinical Reviewer",
   email: "hello@mindchecktools.com",
   linkedin: "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
+  profileUrl: "https://mindchecktools.com/about/jason-ramirez",
+  credentialRegistryUrl:
+    "https://ccappcredentialing.org/verify-credential/",
 } as const;
 
 // For structured data / JSON-LD
 export const AUTHOR_SCHEMA = {
   "@type": "Person" as const,
+  "@id": `${SITE_AUTHOR.profileUrl}#person`,
   name: SITE_AUTHOR.name,
-  jobTitle: SITE_AUTHOR.credentialFull,
-  url: "https://mindchecktools.com/about/jason-ramirez",
+  jobTitle: SITE_AUTHOR.role,
+  description: `${SITE_AUTHOR.credentialFull} with ${SITE_AUTHOR.experience}.`,
+  url: SITE_AUTHOR.profileUrl,
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential" as const,
+    credentialCategory: "Professional Certification",
+    name: SITE_AUTHOR.credentialFull,
+    recognizedBy: {
+      "@type": "Organization" as const,
+      name: "CCAPP Credentialing",
+      url: "https://ccappcredentialing.org/",
+    },
+    url: SITE_AUTHOR.credentialRegistryUrl,
+  },
   knowsAbout: [
     "Substance use disorder screening",
     "Alcohol use disorder screening (AUDIT, AUDIT-C)",
@@ -26,8 +42,7 @@ export const AUTHOR_SCHEMA = {
     "SBIRT (Screening, Brief Intervention, Referral to Treatment)",
   ],
   sameAs: [
-    "https://www.linkedin.com/in/jason-ramirez-9262591a3/",
-    "https://mindchecktools.com/about/jason-ramirez",
+    SITE_AUTHOR.linkedin,
   ],
 };
 

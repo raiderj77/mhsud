@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const PAGE_URL = `${SITE_URL}/phq-9-vs-gad-7`;
 
 export const metadata: Metadata = createMetadata({
   path: "/phq-9-vs-gad-7",
-  title: "PHQ-9 vs. GAD-7: What's the Difference? | MindCheck Tools",
+  title: "PHQ-9 vs. GAD-7: What's the Difference?",
   description:
     "PHQ-9 screens for depression; GAD-7 screens for anxiety. Learn the key differences in what each tool measures, how they are scored, and when to use each one.",
   keywords: [
@@ -87,7 +88,7 @@ export default function Phq9VsGad7Page() {
                 "A comprehensive comparison of the PHQ-9 depression screen and the GAD-7 anxiety screen, what each measures, how they differ, and when to use them.",
               url: PAGE_URL,
               datePublished: "2026-05-06",
-              dateModified: "2026-05-06",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -153,7 +154,7 @@ export default function Phq9VsGad7Page() {
           {/* Intro */}
           <div className="prose prose-slate dark:prose-invert max-w-none mb-8">
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-              Use the <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> if you are screening for depression; use the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> if you are screening for anxiety. Because depression and anxiety co-occur in roughly 50% of cases, taking both tools is often the most clinically appropriate choice. This page is for anyone deciding which screening to take, or whether to take both. The comparison below covers scoring, clinical thresholds, and how the results relate to each other.
+              Use the <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> to reflect on depressive symptoms and the <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> to reflect on anxiety symptoms. Depression and anxiety can occur together, so using both can be reasonable when symptoms overlap. A clinician can help choose and interpret the appropriate screen for an individual situation.
             </p>
           </div>
 
@@ -364,12 +365,9 @@ export default function Phq9VsGad7Page() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">When do clinicians use the PHQ-9 and GAD-7 together versus separately?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Clinicians typically use both tools together, at initial intake, during treatment monitoring, and at care transitions, because depression and anxiety are highly comorbid; either tool may be used alone when only one condition is the clinical focus.{" "}
-              Clinical guidelines from organizations including the{" "}
-              <a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">National Institute of Mental Health (NIMH)</a>{" "}
-              and the{" "}
+              Clinicians may use both tools when depression and anxiety are both relevant, or one tool when a single symptom domain is the focus. The{" "}
               <a href="https://www.uspreventiveservicestaskforce.org/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">U.S. Preventive Services Task Force (USPSTF)</a>{" "}
-              support routine screening for both depression and anxiety in primary care. The USPSTF recommends screening for depression in adults and anxiety in adults 64 and younger.
+              publishes separate adult recommendations for depression and anxiety screening. Screening should occur within a care system that can provide evaluation, treatment, and follow-up.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
               In practice, clinicians typically use both tools together during initial intake, periodic monitoring (e.g., every 4–8 weeks during treatment), and at treatment transitions. Using both allows clinicians to track whether interventions are improving depression, anxiety, or both, and to adjust treatment accordingly.
@@ -442,27 +440,7 @@ export default function Phq9VsGad7Page() {
 
           {/* Author Bio */}
           <div className="my-8">
-            <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
+            <AuthorByline publishedDate="2026-05-06" modifiedDate="2026-08-02" />
           </div>
 
           {/* Crisis Resources at Bottom */}

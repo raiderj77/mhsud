@@ -7,18 +7,18 @@ const TOOL_URL = `${SITE_URL}/burnout-assessment-tool`;
 
 export const metadata: Metadata = createMetadata({
   path: "/burnout-assessment-tool",
-  title: "Burnout Assessment Tool | Free Professional Self-Check",
-  description: "Free burnout screening tool, assess emotional exhaustion, depersonalization, and reduced accomplishment. Private, instant results. No signup.",
+  title: "Burnout Self-Check | Free Educational Check-In",
+  description: "Original educational burnout self-check about current role-related strain. Site-defined reflection ranges, private in-browser scoring, and no signup.",
   keywords: [
-    "burnout assessment", "burnout test", "emotional exhaustion", "work burnout", 
+    "burnout assessment", "burnout test", "role-related strain", "work burnout",
     "professional burnout", "mental health screening", "stress assessment", "burnout symptoms",
     "burnout questionnaire", "workplace stress", "occupational burnout", "burnout scale",
     "burnout screening", "job burnout", "caregiver burnout", "teacher burnout",
     "healthcare burnout", "burnout recovery", "burnout prevention", "burnout symptoms test"
   ],
   openGraph: {
-    title: "Burnout Assessment Tool, Free Professional Self-Check",
-    description: "Take our free, clinically-informed burnout screening tool. Assess emotional exhaustion, depersonalization, and reduced personal accomplishment.",
+    title: "Burnout Self-Check | Free Educational Check-In",
+    description: "Use an original educational check-in about energy, recovery, connection, patience, confidence, and meaning. Not a validated or diagnostic instrument.",
     url: TOOL_URL,
     type: "website",
   },
@@ -27,23 +27,23 @@ export const metadata: Metadata = createMetadata({
 const faqData = [
   {
     question: "What is burnout?",
-    answer: "Burnout is a state of emotional, physical, and mental exhaustion caused by excessive and prolonged stress. It often occurs when you feel overwhelmed, emotionally drained, and unable to meet constant demands. The three main dimensions are emotional exhaustion, depersonalization (cynicism), and reduced personal accomplishment.",
+    answer: "Burnout is an occupational phenomenon associated with chronic workplace stress that has not been successfully managed. People may notice depleted energy, greater mental distance or cynicism toward work, and reduced professional effectiveness. Similar experiences can also occur with depression, anxiety, sleep problems, medical conditions, or difficult life circumstances, so a self-check cannot determine the cause.",
   },
   {
     question: "Is this tool a clinical diagnosis?",
-    answer: "No. This tool is a self-assessment screening instrument based on established burnout research. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions you may have regarding a medical or mental health condition.",
+    answer: "No. MindCheck Tools created this educational self-check for reflection. It is not a validated screening instrument and cannot diagnose burnout, depression, anxiety, or another condition. A qualified healthcare professional can help evaluate persistent or concerning experiences.",
   },
   {
-    question: "How accurate is this burnout assessment?",
-    answer: "This tool is based on clinically-informed questions that assess the three core dimensions of burnout. While it provides valuable insight into your current experience, it is not a diagnostic tool. For a formal assessment, please consult with a healthcare professional.",
+    question: "How should I interpret this burnout check-in?",
+    answer: "Use it to notice patterns in energy and recovery, connection and patience, and confidence and meaning. The questions, totals, and four score bands were created by MindCheck Tools for education. They have not been clinically validated, and the bands are not clinical cutoffs.",
   },
   {
-    question: "What should I do if my results suggest high burnout?",
-    answer: "If your results suggest high levels of burnout, consider reaching out to a healthcare professional, counselor, or employee assistance program. Burnout is treatable, and early intervention can prevent more serious health consequences. Practical steps include setting boundaries, practicing self-care, seeking social support, and considering workplace adjustments.",
+    question: "What should I do if my total falls in a higher site-defined range?",
+    answer: "The total alone does not establish that you have burnout or need a particular treatment. Review the individual responses that concern you and consider practical support, such as discussing workload, arranging recovery time, contacting an employee assistance program, or speaking with a qualified healthcare professional if the experiences persist or interfere with daily life.",
   },
   {
-    question: "How often should I take this assessment?",
-    answer: "You can take this assessment whenever you feel it might be helpful. Some people find it useful to check in monthly or quarterly, especially during periods of high stress or workload. Tracking changes over time can help you recognize patterns and take proactive steps.",
+    question: "How often should I use this check-in?",
+    answer: "You can use the check-in whenever reflection might be helpful. Some people repeat it during periods of high stress or workload to notice changes in individual responses. Because the score bands are not validated, do not use changes in the total as a medical outcome measure.",
   },
   {
     question: "Are my results private?",
@@ -60,13 +60,12 @@ export default function BurnoutAssessmentPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Burnout Assessment Tool",
-              description: "Free, clinically-informed burnout screening tool assessing emotional exhaustion, depersonalization, and reduced personal accomplishment. Immediate results with guidance.",
+              name: "Burnout Educational Self-Check",
+              description: "An original educational check-in about current role-related strain. Its site-defined score bands are not validated clinical cutoffs and cannot diagnose burnout.",
               url: TOOL_URL,
               datePublished: "2025-02-25",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -83,20 +82,20 @@ export default function BurnoutAssessmentPage() {
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
               { name: "Tools", url: `${SITE_URL}/tools` },
-              { name: "Burnout Assessment Tool", url: TOOL_URL },
+              { name: "Burnout Educational Self-Check", url: TOOL_URL },
             ])
           ),
         }}
       />
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="A burnout screening that measures exhaustion, cynicism, and reduced professional efficacy across your work life." who="Working professionals who feel chronically depleted and want to assess whether they are experiencing clinical burnout." bottomLine="Burnout is a recognized occupational phenomenon, high scores indicate it is time to address workload and recovery. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="An original educational check-in about energy and recovery, connection and patience, and confidence and meaning in a work or caregiving role." who="People who want to reflect on current role-related strain. This check-in cannot determine whether someone has clinical burnout or another condition." bottomLine="The questions and four score bands are site-defined and have not been clinically validated. They are not diagnostic cutoffs or a substitute for professional evaluation." lastUpdated="2026-08-02" /></div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -107,8 +106,8 @@ export default function BurnoutAssessmentPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -116,9 +115,9 @@ export default function BurnoutAssessmentPage() {
 </div>
       </div>
       <section className="sr-only">
-        <h2>What Is the Burnout Assessment Tool?</h2>
-        <h2>How Is the Burnout Assessment Scored?</h2>
-        <h2>What Do My Burnout Results Mean?</h2>
+        <h2>What Is the Burnout Educational Check-In?</h2>
+        <h2>How Is the Educational Check-In Scored?</h2>
+        <h2>What Does My Check-In Summary Mean?</h2>
       </section>
 <BurnoutClient faqData={faqData} />
     </>

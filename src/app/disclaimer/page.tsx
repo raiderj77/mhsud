@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import { SITE_AUTHOR } from "@/config/author";
+
+const LAST_REVIEWED = "2026-08-02";
 
 export const metadata: Metadata = createMetadata({
   path: "/disclaimer",
@@ -30,7 +33,7 @@ export default function DisclaimerPage() {
             Disclaimer
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Last updated: {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+            Last reviewed: <time dateTime={LAST_REVIEWED}>August 2, 2026</time>
           </p>
         </header>
 
@@ -48,7 +51,7 @@ export default function DisclaimerPage() {
           <section>
             <h2>Not a medical or clinical service</h2>
             <p>
-              MindCheck Tools is not a healthcare provider, licensed counselor, therapist, or medical professional. The self-check tools available on this site, including the PHQ-9, GAD-7, AUDIT, AUDIT-C, Sleep &amp; Mood Check, Mental Load Calculator, and Burnout Assessment, are validated screening instruments adapted for self-administration. They are designed to help you reflect on your experiences and decide whether to seek professional support.
+              MindCheck Tools is not a healthcare provider, therapy practice, or medical service. The site includes a mix of published screening instruments, such as the PHQ-9, GAD-7, AUDIT, and AUDIT-C, plus original educational self-reflection tools, calculators, and worksheets. Original tools are not presented as validated diagnostic instruments.
             </p>
             <p>
               <strong>No tool on this site can provide a diagnosis.</strong> Only a qualified mental health professional or healthcare provider can assess, evaluate, and offer a clinical opinion about your mental health or substance use.
@@ -91,7 +94,11 @@ export default function DisclaimerPage() {
           <section>
             <h2>Accuracy and completeness</h2>
             <p>
-              We make every effort to ensure the information on this site is accurate, current, and reviewed by qualified professionals. However, we do not warrant that the content is free of errors, complete, or up to date at all times. Mental health research evolves, clinical guidelines change, and individual circumstances vary widely. Always verify information with a qualified professional.
+              Maintained screening pages are checked against identified source publications and reviewed for source alignment, limitations, and safety language by{" "}
+              <Link href="/about/jason-ramirez">
+                {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
+              </Link>
+              . That review does not guarantee that every page is error-free or current at all times. Mental health research evolves, clinical guidance changes, and individual circumstances vary. Verify health decisions with a qualified healthcare professional.
             </p>
           </section>
 
@@ -126,7 +133,8 @@ export default function DisclaimerPage() {
             <h2>Related policies</h2>
             <p>
               For information about how we handle your data, see our{" "}
-              <Link href="/privacy">Privacy Policy</Link>. For terms governing your use of the site, see our{" "}
+              <Link href="/privacy">Privacy Policy</Link>. For how published screeners and original reflection tools are distinguished, see our{" "}
+              <Link href="/methodology">Methodology</Link>. For terms governing your use of the site, see our{" "}
               <Link href="/terms">Terms of Use</Link>. For details about cookies, see our{" "}
               <Link href="/cookies">Cookie Policy</Link>.
             </p>
