@@ -116,6 +116,11 @@ const nextConfig = {
       { source: "/dast-10-score-interpretation", destination: "/audit-alcohol-test", permanent: true },
       { source: "/blog/dast-10-guide", destination: "/audit-alcohol-test", permanent: true },
       ...quarantinedRedirects,
+      {
+        source: "/blog/how-to-talk-to-doctor-about-mental-health",
+        destination: "/how-to-talk-to-your-doctor-about-mental-health",
+        permanent: true,
+      },
       { source: "/blog/:path*", destination: "/screening-tools", permanent: true },
       { source: "/blog", destination: "/screening-tools", permanent: true },
     ];

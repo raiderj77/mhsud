@@ -114,7 +114,7 @@ const REVIEWED_ARTICLES = [
   { name: "PHQ-9 vs GAD-7", href: "/blog/phq-9-vs-gad-7" },
   { name: "When Should I See a Therapist?", href: "/blog/when-should-i-see-a-therapist" },
   { name: "How to Find a Therapist", href: "/blog/how-to-find-a-therapist" },
-  { name: "How to Talk to Your Doctor About Mental Health", href: "/blog/how-to-talk-to-doctor-about-mental-health" },
+  { name: "How to Talk to Your Doctor About Mental Health", href: "/how-to-talk-to-your-doctor-about-mental-health" },
   { name: "Mental Health and Sleep", href: "/blog/mental-health-and-sleep" },
   { name: "Mental Health Stigma", href: "/blog/mental-health-stigma" },
   { name: "How to Support Someone With a Mental Health Condition", href: "/blog/how-to-support-someone-with-mental-health-condition" },
