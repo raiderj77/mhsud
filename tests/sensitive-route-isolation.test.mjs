@@ -77,6 +77,23 @@ test("service worker never caches sensitive routes or optional Google services",
   assert.doesNotMatch(worker, /process\.env/);
 });
 
+test("service worker privacy updates bypass stale script caches and activate promptly", async () => {
+  const [worker, layout, nextConfig] = await Promise.all([
+    read("../public/service-worker.js"),
+    read("../src/app/layout.tsx"),
+    read("../next.config.mjs"),
+  ]);
+  assert.match(worker, /self\.addEventListener\('install', \(\) => self\.skipWaiting\(\)\)/);
+  assert.match(layout, /register\('\/service-worker\.js', \{ updateViaCache: 'none' \}\)/);
+  assert.match(nextConfig, /source: "\/service-worker\.js"[\s\S]*?"no-cache, no-store, must-revalidate"/);
+  assert.match(nextConfig, /source: "\/service-worker\.js"[\s\S]*?"Vercel-CDN-Cache-Control"/);
+  assert.ok(
+    nextConfig.indexOf('source: "/service-worker.js"')
+      > nextConfig.indexOf('value: "public, max-age=31536000, immutable"'),
+    "service-worker cache overrides must follow the generic JavaScript cache rule",
+  );
+});
+
 test("history restores reset state, result sharing is disabled, and printing requires a warning", async () => {
   const [lifecycle, printing, css, phq, scoff] = await Promise.all([
     read("../src/components/SensitiveRouteLifecycle.tsx"),

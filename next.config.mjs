@@ -93,6 +93,16 @@ const nextConfig = {
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
+      {
+        // The service-worker URL is stable, so it must never inherit the
+        // immutable JavaScript policy used for fingerprinted build assets.
+        source: "/service-worker.js",
+        headers: [
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "CDN-Cache-Control", value: "no-store" },
+          { key: "Vercel-CDN-Cache-Control", value: "no-store" },
+        ],
+      },
     ];
   },
 
