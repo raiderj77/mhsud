@@ -266,14 +266,11 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2"><strong>What you can consider next:</strong> {range.suggestion}</p>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Learn more:{" "}
-                  <Link href="/blog/gad-7-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    How clinicians use the GAD-7
+                  <Link href="/gad-7-score-interpretation" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    GAD-7 score interpretation
                   </Link>{" "}·{" "}
-                  <Link href="/blog/what-does-gad-7-score-mean" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    What your score means
-                  </Link>{" "}·{" "}
-                  <Link href="/blog/anxiety-coping-strategies" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    Anxiety coping strategies
+                  <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    Anxiety grounding exercise
                   </Link>
                 </p>
               </div>

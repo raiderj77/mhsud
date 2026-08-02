@@ -780,54 +780,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Blog Preview */}
-      {false && <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-              Guides &amp; Educational Resources
-            </h2>
-            <p className="text-neutral-500 dark:text-neutral-400">
-              Understand the tools, the science behind them, and when to seek help.
-            </p>
-          </div>
-          <Link href="/blog" className="hidden sm:inline-flex text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
-            View all →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {[
-            {
-              title: "Cognitive Distortions: 15 Thinking Errors That Fuel Anxiety",
-              slug: "cognitive-distortions-list",
-              excerpt: "Learn about 15 common cognitive distortions, how they fuel anxiety, and how CBT can help you reframe them.",
-            },
-            {
-              title: "What Happens When You Stop Drinking: A Timeline",
-              slug: "quit-drinking-timeline",
-              excerpt: "Hour-by-hour and week-by-week timeline of body recovery after quitting alcohol, with critical safety warnings.",
-            },
-            {
-              title: "DBT Skills for Everyday Life: A Beginner's Guide",
-              slug: "dbt-skills-beginners",
-              excerpt: "The 4 DBT skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, explained simply.",
-            },
-          ].map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-              <span className="text-xs font-medium text-sage-600 dark:text-sage-400 mb-2 block">Guide</span>
-              <h3 className="font-serif font-semibold text-neutral-800 dark:text-neutral-100 mb-2 leading-snug">
-                {post.title}
-              </h3>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-                {post.excerpt}
-              </p>
-              <span className="inline-block mt-3 text-xs text-sage-600 dark:text-sage-400 font-medium hover:underline">Read guide →</span>
-            </Link>
-          ))}
-        </div>
-      </section>}
-
       {/* FAQ Section */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
         <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-8">

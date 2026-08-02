@@ -108,6 +108,65 @@ test("doctor-guide links bypass the quarantined blog catch-all", async () => {
   assert.match(nextConfig, new RegExp(`destination: "${canonicalPath}"`));
 });
 
+test("retired blog links preserve intent through maintained canonical pages", async () => {
+  const redirects = [
+    ["/blog/audit-guide", "/audit-score-interpretation"],
+    ["/blog/what-does-audit-score-mean", "/audit-score-interpretation"],
+    ["/blog/quit-drinking-timeline", "/health-recovery-timeline"],
+    ["/blog/gad-7-guide", "/gad-7-score-interpretation"],
+    ["/blog/what-does-gad-7-score-mean", "/gad-7-score-interpretation"],
+    ["/blog/anxiety-coping-strategies", "/five-senses-grounding"],
+    ["/blog/phq-9-guide", "/phq-9-score-interpretation"],
+    ["/blog/what-does-phq-9-score-mean", "/phq-9-score-interpretation"],
+    ["/blog/depression-vs-anxiety", "/phq-9-vs-gad-7"],
+    ["/blog/ace-score-meaning", "/ace-score-interpretation"],
+    ["/blog/dass-21-score-guide", "/dass-21-score-interpretation"],
+    ["/blog/what-does-pcl-5-score-mean", "/pcl-5-score-interpretation"],
+    ["/blog/what-does-asrs-score-mean", "/asrs-score-interpretation"],
+    ["/blog/what-does-dass-21-score-mean", "/dass-21-score-interpretation"],
+    ["/blog/what-does-ace-score-mean", "/ace-score-interpretation"],
+    ["/blog/what-does-pc-ptsd-5-score-mean", "/pc-ptsd-5-screening"],
+    ["/blog/what-does-cage-aid-score-mean", "/cage-aid-substance-abuse-screening"],
+    ["/blog/what-does-rosenberg-self-esteem-score-mean", "/rosenberg-self-esteem-scale"],
+    ["/blog/phq-9-vs-gad-7", "/phq-9-vs-gad-7"],
+  ];
+  const maintainedFiles = [
+    "src/app/page.tsx",
+    "src/app/about/jason-ramirez/page.tsx",
+    "src/app/ace-score-interpretation/page.tsx",
+    "src/app/audit-alcohol-test/AUDITClient.tsx",
+    "src/app/audit-score-interpretation/page.tsx",
+    "src/app/dass-21-depression-anxiety-stress/page.tsx",
+    "src/app/gad-7-anxiety-test/GAD7Client.tsx",
+    "src/app/gad-7-anxiety-test/page.tsx",
+    "src/app/gad-7-score-interpretation/page.tsx",
+    "src/app/phq-9-depression-test/PHQ9Client.tsx",
+    "src/app/phq-9-depression-test/page.tsx",
+    "src/app/phq-9-score-interpretation/page.tsx",
+  ];
+
+  for (const file of maintainedFiles) {
+    const source = await readFile(path.join(root, file), "utf8");
+    for (const [legacyPath] of redirects) {
+      assert.equal(source.includes(legacyPath), false, `stale ${legacyPath} link in ${file}`);
+    }
+  }
+
+  const authorProfile = await readFile(path.join(root, "src/app/about/jason-ramirez/page.tsx"), "utf8");
+  assert.doesNotMatch(authorProfile, /href: "\/blog\//);
+
+  const nextConfig = await readFile(path.join(root, "next.config.mjs"), "utf8");
+  const catchAllIndex = nextConfig.indexOf('source: "/blog/:path*"');
+  const redirectSpreadIndex = nextConfig.indexOf("...canonicalBlogRedirects");
+  assert.ok(redirectSpreadIndex >= 0 && redirectSpreadIndex < catchAllIndex);
+  for (const [legacyPath, canonicalPath] of redirects) {
+    assert.ok(
+      nextConfig.includes(`["${legacyPath}", "${canonicalPath}"]`),
+      `missing exact redirect from ${legacyPath} to ${canonicalPath}`,
+    );
+  }
+});
+
 test("primary PHQ-9 and GAD-7 assessments appear before long clinical content", async () => {
   for (const [route, component] of [
     ["phq-9-depression-test", "<PHQ9Client"],

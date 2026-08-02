@@ -35,6 +35,30 @@ const quarantinedRedirects = [
   ["/attachment-style-test-for-couples", "/attachment-style-quiz"],
 ].map(([source, destination]) => ({ source, destination, permanent: true }));
 
+// Preserve useful legacy article URLs by sending them to maintained pages with
+// the same user intent. These must remain ahead of the generic blog catch-all.
+const canonicalBlogRedirects = [
+  ["/blog/audit-guide", "/audit-score-interpretation"],
+  ["/blog/what-does-audit-score-mean", "/audit-score-interpretation"],
+  ["/blog/quit-drinking-timeline", "/health-recovery-timeline"],
+  ["/blog/gad-7-guide", "/gad-7-score-interpretation"],
+  ["/blog/what-does-gad-7-score-mean", "/gad-7-score-interpretation"],
+  ["/blog/anxiety-coping-strategies", "/five-senses-grounding"],
+  ["/blog/phq-9-guide", "/phq-9-score-interpretation"],
+  ["/blog/what-does-phq-9-score-mean", "/phq-9-score-interpretation"],
+  ["/blog/depression-vs-anxiety", "/phq-9-vs-gad-7"],
+  ["/blog/ace-score-meaning", "/ace-score-interpretation"],
+  ["/blog/dass-21-score-guide", "/dass-21-score-interpretation"],
+  ["/blog/what-does-pcl-5-score-mean", "/pcl-5-score-interpretation"],
+  ["/blog/what-does-asrs-score-mean", "/asrs-score-interpretation"],
+  ["/blog/what-does-dass-21-score-mean", "/dass-21-score-interpretation"],
+  ["/blog/what-does-ace-score-mean", "/ace-score-interpretation"],
+  ["/blog/what-does-pc-ptsd-5-score-mean", "/pc-ptsd-5-screening"],
+  ["/blog/what-does-cage-aid-score-mean", "/cage-aid-substance-abuse-screening"],
+  ["/blog/what-does-rosenberg-self-esteem-score-mean", "/rosenberg-self-esteem-scale"],
+  ["/blog/phq-9-vs-gad-7", "/phq-9-vs-gad-7"],
+].map(([source, destination]) => ({ source, destination, permanent: true }));
+
 const nextConfig = {
   // Performance
   compress: true,
@@ -126,6 +150,7 @@ const nextConfig = {
       { source: "/dast-10-score-interpretation", destination: "/audit-alcohol-test", permanent: true },
       { source: "/blog/dast-10-guide", destination: "/audit-alcohol-test", permanent: true },
       ...quarantinedRedirects,
+      ...canonicalBlogRedirects,
       {
         source: "/blog/how-to-talk-to-doctor-about-mental-health",
         destination: "/how-to-talk-to-your-doctor-about-mental-health",

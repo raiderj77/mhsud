@@ -345,14 +345,11 @@ export function PHQ9Client({ faqData }: Props) {
                   </p>
                   <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                     Learn more:{" "}
-                    <Link href="/blog/phq-9-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                      How clinicians use the PHQ-9
+                    <Link href="/phq-9-score-interpretation" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                      PHQ-9 score interpretation
                     </Link>{" "}·{" "}
-                    <Link href="/blog/what-does-phq-9-score-mean" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                      What your score means
-                    </Link>{" "}·{" "}
-                    <Link href="/blog/depression-vs-anxiety" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                      Depression vs. anxiety
+                    <Link href="/phq-9-vs-gad-7" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                      PHQ-9 vs. GAD-7
                     </Link>
                   </p>
                 </div>

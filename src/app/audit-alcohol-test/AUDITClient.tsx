@@ -387,14 +387,11 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
                 )}
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Learn more:{" "}
-                  <Link href="/blog/audit-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    How the AUDIT works
+                  <Link href="/audit-score-interpretation" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    AUDIT score interpretation
                   </Link>{" "}·{" "}
-                  <Link href="/blog/what-does-audit-score-mean" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    What your score means
-                  </Link>{" "}·{" "}
-                  <Link href="/blog/quit-drinking-timeline" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
-                    Quit-drinking timeline
+                  <Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                    Health recovery timeline
                   </Link>
                 </p>
               </div>
