@@ -6,6 +6,24 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "safety-plan",
   "readiness-to-change",
   "who-5-wellbeing-index",
+  // Interactive health tools whose slugs do not contain one of the generic
+  // screening keywords above. Keep these explicit so they cannot load ads or
+  // analytics, inherit shared caches, or send a referrer merely because their
+  // public-facing name uses words such as quiz, plan, or timeline.
+  "attachment-style-quiz",
+  "box-breathing-exercise",
+  "cognitive-distortion-identifier",
+  "coping-skills-randomizer",
+  "dass-21-depression-anxiety-stress",
+  "dbt-crisis-skills",
+  "five-senses-grounding",
+  "health-recovery-timeline",
+  "relapse-prevention-plan",
+  "treatment-cost-estimator",
+  "trigger-identification-worksheet",
+  "urge-surfing-timer",
+  "values-card-sort",
+  "withdrawal-timeline",
 ]);
 
 export function isSensitiveRoute(pathname: string): boolean {
