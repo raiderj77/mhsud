@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const PAGE_URL = `${SITE_URL}/phq-2-to-phq-9-when-to-escalate`;
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/phq-2-to-phq-9-when-to-escalate",
   title: "PHQ-2 to PHQ-9: When to Escalate from the Short to the Full Screen",
   description:
-    "The PHQ-2 is a 2-question triage screen. A score of 3 or higher triggers escalation to the full PHQ-9. Learn what the PHQ-2 measures, when to move to the PHQ-9, and how clinicians use this two-step protocol.",
+    "The PHQ-2 is a 2-question initial screen. Learn about the common score-of-3 cutoff, when clinicians continue to the PHQ-9, and why thresholds vary by setting.",
   keywords: [
     "PHQ-2 to PHQ-9",
     "when to escalate PHQ-2",
@@ -40,7 +41,7 @@ const FAQ_DATA = [
   {
     question: "What PHQ-2 score indicates escalation to the PHQ-9?",
     answer:
-      "A PHQ-2 score of 3 or higher is the standard cutoff for positive screening and should trigger administration of the full PHQ-9. Research shows that a PHQ-2 score ≥3 has sensitivity of approximately 83% and specificity of 90% for major depressive disorder in primary care populations. Some guidelines use a lower threshold of ≥2 for higher-risk populations, but ≥3 is the most widely cited clinical standard.",
+      "A score of 3 or higher is a commonly used positive-screen cutoff and often leads to the full PHQ-9 in two-step workflows. The original primary-care study reported about 83% sensitivity and 90% specificity at that cutoff. Some settings use a different threshold based on population and purpose, so a clinician's protocol should control.",
   },
   {
     question: "What does a PHQ-2 score of 1 or 2 mean?",
@@ -87,7 +88,7 @@ export default function Phq2ToPhq9Page() {
                 "Explains what the PHQ-2 measures, the ≥3 cutoff that triggers escalation to the full PHQ-9, and how clinicians use this two-step depression screening protocol.",
               url: PAGE_URL,
               datePublished: "2026-05-06",
-              dateModified: "2026-05-06",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -387,27 +388,7 @@ export default function Phq2ToPhq9Page() {
 
           {/* Author Bio */}
           <div className="my-8">
-            <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-05-06">
-          {new Date("2026-05-06T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
+            <AuthorByline publishedDate="2026-05-06" modifiedDate="2026-08-02" />
           </div>
 
           {/* Crisis Resources at Bottom */}

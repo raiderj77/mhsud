@@ -16,7 +16,7 @@ const QUARANTINED_PATHS = new Set([
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastUpdated = "2026-03-27T00:00:00.000Z";
+  const lastUpdated = "2026-08-02T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
 
   const staticPages = [

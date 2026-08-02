@@ -8,22 +8,17 @@ const TOOL_URL = `${SITE_URL}/grief-assessment`;
 
 export const metadata: Metadata = createMetadata({
   path: "/grief-assessment",
-  title: "Grief Assessment | Free Screening for Complicated Grief & Loss",
+  title: "Grief and Depression Self-Screen | PHQ-9 Mood Check",
   description:
-    "Free grief assessment to check if your grief has become complicated or prolonged. Uses the PHQ-9 to screen for grief-related depression. Private, instant results, no sign-up.",
+    "Use the PHQ-9 to reflect on depression symptoms during grief. This private self-screen does not assess or diagnose prolonged grief disorder.",
   keywords: [
-    "grief assessment", "grief assessment free", "complicated grief test",
-    "prolonged grief disorder test", "grief screening", "grief quiz",
-    "am i grieving normally", "grief self assessment", "grief test online",
-    "complicated grief quiz", "grief depression test", "loss and grief assessment",
-    "grief mental health test", "free grief assessment", "grief screening tool",
-    "prolonged grief assessment", "grief disorder quiz", "grief and depression test",
-    "grief self-check", "bereavement assessment",
+    "grief and depression self-screen", "PHQ-9 after a loss", "grief and mood check",
+    "depression symptoms during grief", "bereavement mental health", "grief support",
   ],
   openGraph: {
-    title: "Grief Assessment | Free Screening for Complicated Grief & Loss",
+    title: "Grief and Depression Self-Screen | PHQ-9 Mood Check",
     description:
-      "Free grief assessment to check if your grief has become complicated or prolonged. Private, instant results, no sign-up.",
+      "Use the PHQ-9 to reflect on depression symptoms during grief. It does not assess prolonged grief disorder.",
     url: TOOL_URL,
     type: "website",
   },
@@ -33,27 +28,27 @@ const FAQ_DATA = [
   {
     question: "What is the difference between normal grief and complicated grief?",
     answer:
-      "Normal grief is a natural, painful response to loss that evolves over time. While there is no set timeline, most people find that grief, though it never fully disappears, becomes less acute and more integrated over months to years. Complicated grief (also called Prolonged Grief Disorder, or PGD) is characterized by grief that remains intensely debilitating beyond 12 months after the loss (6 months for children), with persistent yearning, difficulty accepting the loss, bitterness, and inability to engage in life. PGD affects approximately 10–15% of bereaved people.",
+      "Grief is a natural response to loss and does not follow one universal timeline. Prolonged grief disorder is a separate clinical condition involving persistent, intense grief plus substantial disruption in daily functioning. For diagnosis, the death must have occurred at least 12 months earlier for adults or 6 months earlier for children and adolescents, and a clinician must consider cultural and personal context. This PHQ-9 self-screen does not assess prolonged grief disorder.",
   },
   {
     question: "How do I know if my grief is 'normal'?",
     answer:
-      "There is no single timeline for grief. Factors that suggest grief may have become complicated include: inability to accept the reality of the loss even months later, persistent inability to engage in normal activities or relationships, intense longing that doesn't diminish over time, feeling that life is meaningless without the person, bitterness or anger that doesn't ease, and avoiding reminders of the person to a degree that interferes with daily life. If grief is significantly impairing your functioning more than a year after the loss, it's worth speaking with a grief-informed therapist.",
+      "There is no single timeline for grief, and this page cannot label grief as normal or disordered. If grief remains intensely distressing, persistently disrupts daily functioning, or leaves you feeling unsafe, talk with a licensed clinician who can consider the full situation and your cultural and personal context.",
   },
   {
     question: "Can grief cause depression?",
     answer:
-      "Yes. Grief and depression share many symptoms, sadness, sleep changes, appetite changes, difficulty concentrating, loss of interest. However, they are distinct conditions. Grief is typically focused on the loss and includes waves of intense longing, while depression is more pervasive. Grief can also trigger a major depressive episode, especially in those with a history of depression. The PHQ-9 used in this assessment screens for depression symptoms that may be grief-related or co-occurring with grief.",
+      "Grief and depression can share symptoms such as sadness, sleep changes, appetite changes, difficulty concentrating, and loss of interest, but they are not the same condition. The PHQ-9 on this page screens for depression symptoms that may occur during grief. It cannot determine their cause or assess prolonged grief disorder.",
   },
   {
-    question: "Is there treatment for complicated grief?",
+    question: "Can this PHQ-9 result show prolonged grief disorder?",
     answer:
-      "Yes. Complicated Grief Treatment (CGT), developed by Dr. Katherine Shear at Columbia University, is a specialized therapy with strong evidence for Prolonged Grief Disorder. It combines elements of cognitive-behavioral therapy and interpersonal therapy with grief-specific techniques. Standard CBT and interpersonal therapy are also effective. Medication may help with co-occurring depression or anxiety. The Center for Complicated Grief (complicatedgrief.columbia.edu) offers resources and a therapist directory.",
+      "No. The PHQ-9 measures depression symptoms over the past two weeks. Prolonged grief disorder is distinct from depression and requires a grief-specific clinical evaluation. A PHQ-9 result may help you discuss mood symptoms with a clinician, but it cannot confirm or rule out prolonged grief disorder.",
   },
   {
     question: "Can grief affect physical health?",
     answer:
-      "Yes. Grief is associated with increased risk of cardiovascular events (the 'broken heart' effect is real, risk of heart attack increases significantly in the days after a major loss), immune suppression, sleep disruption, and increased mortality in older adults. These effects are most pronounced in the first year after bereavement and in cases of complicated grief. Taking care of your physical health during grief, sleep, nutrition, medical appointments, is not optional.",
+      "Grief can affect sleep, appetite, energy, concentration, and daily routines. New, severe, or persistent physical symptoms deserve medical evaluation rather than being assumed to be caused by grief.",
   },
 ];
 
@@ -65,14 +60,13 @@ export default function GriefAssessmentPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Grief Assessment | Free Screening for Complicated Grief & Loss",
+              name: "Grief and Depression Self-Screen | PHQ-9 Mood Check",
               description:
-                "A free, private grief assessment screening for complicated or prolonged grief using the PHQ-9.",
+                "A private PHQ-9 depression self-screen for people who are grieving. It does not assess prolonged grief disorder.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -96,7 +90,7 @@ export default function GriefAssessmentPage() {
         {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sage-100 text-sage-800 dark:bg-sage-900/40 dark:text-sage-300">
-            Clinically Validated (PHQ-9)
+            Published Depression Screener (PHQ-9)
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-900/40 dark:text-slate-300">
             Loss &amp; Bereavement
@@ -108,7 +102,7 @@ export default function GriefAssessmentPage() {
 
         {/* H1 */}
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-          Grief Assessment
+          Grief and Mood Check
         </h1>
 
         {/* Empathetic Intro */}
@@ -120,11 +114,10 @@ export default function GriefAssessmentPage() {
             life until you realize you&apos;ve stopped living it.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            This free assessment uses the PHQ-9 to screen for depression symptoms that
-            commonly accompany grief, and that, when persistent, may indicate complicated
-            or prolonged grief disorder. It won&apos;t measure the depth of your love or
-            the magnitude of your loss. But it can help you understand whether what you&apos;re
-            experiencing may benefit from professional support.
+            This page uses the PHQ-9 to screen for depression symptoms that can occur while
+            grieving. The PHQ-9 does not measure grief and cannot tell you whether you have
+            prolonged grief disorder. It can help you notice depression symptoms worth
+            discussing with a qualified healthcare professional.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
             Your answers are scored entirely in your browser. Nothing is stored or shared.
@@ -133,16 +126,16 @@ export default function GriefAssessmentPage() {
 
         {/* The Tool */}
         <a href="#screening" className="btn-primary inline-flex mb-6">
-          Start the grief and mood assessment
+          Start the PHQ-9 mood self-screen
         </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A grief assessment that distinguishes between normal grief and prolonged grief disorder using validated screening criteria."
-          who="Anyone who has experienced a significant loss and is wondering whether their grief may have become prolonged or complicated."
-          bottomLine="Grief has no timeline, but prolonged grief disorder is a recognized condition with effective treatments. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          what="A PHQ-9 depression self-screen presented with grief-specific context. It does not measure grief or prolonged grief disorder."
+          who="Adults who are grieving and want to reflect on depression symptoms over the past two weeks."
+          bottomLine="A PHQ-9 result can support a conversation about mood, but only a qualified clinician can evaluate depression or prolonged grief disorder."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -150,7 +143,7 @@ export default function GriefAssessmentPage() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -171,16 +164,16 @@ export default function GriefAssessmentPage() {
       </div>
 
       <section className="sr-only">
-        <h2>What Is the Grief Assessment Tool?</h2>
-        <h2>How Is the Grief Assessment Scored?</h2>
-        <h2>What Do My Grief Assessment Results Mean?</h2>
+        <h2>What Is the Grief and Mood Check?</h2>
+        <h2>How Is the PHQ-9 Scored?</h2>
+        <h2>What Does a PHQ-9 Result During Grief Mean?</h2>
       </section>
 <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         {/* Grief Warning Signs */}
         <div className="mt-10 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-            Signs That Grief May Have Become Complicated
+            When to Seek a Grief-Specific Evaluation
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -205,9 +198,17 @@ export default function GriefAssessmentPage() {
             ))}
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-3 italic">
-            Prolonged Grief Disorder (PGD) is diagnosed when these symptoms persist at a
-            clinically significant level for more than 12 months after the loss (6 months
-            for children). It affects approximately 10–15% of bereaved people.
+            These experiences are reasons to seek support, not a diagnostic checklist. The{" "}
+            <a href="https://www.psychiatry.org/patients-families/prolonged-grief-disorder" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+              American Psychiatric Association
+            </a>{" "}
+            explains that prolonged grief disorder requires persistent symptoms, impaired
+            functioning, timing criteria, and clinical evaluation. The PHQ-9 below cannot
+            make that distinction. The{" "}
+            <a href="https://newsinhealth.nih.gov/2026/07/navigating-grief" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+              NIH grief guide
+            </a>{" "}
+            offers current support guidance.
           </p>
         </div>
 
@@ -249,8 +250,10 @@ export default function GriefAssessmentPage() {
               <strong>griefshare.org</strong>, grief support groups nationwide
             </li>
             <li>
-              <strong>Center for Complicated Grief:</strong>{" "}
-              <strong>complicatedgrief.columbia.edu</strong>, specialized treatment resources
+              <strong>American Psychiatric Association:</strong>{" "}
+              <a href="https://www.psychiatry.org/patients-families/prolonged-grief-disorder" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+                prolonged grief disorder information
+              </a>
             </li>
           </ul>
         </div>
@@ -270,7 +273,7 @@ export default function GriefAssessmentPage() {
             Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, PubMed, and WHO. For evaluation, consult a licensed mental health professional.
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+             Last reviewed: August 2, 2026
           </p>
         </div>
 
@@ -279,8 +282,8 @@ export default function GriefAssessmentPage() {
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             PHQ-9 Depression Test →
           </Link>
-          <Link href="/am-i-depressed-quiz" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Am I Depressed Quiz →
+          <Link href="/phq-4-anxiety-depression-screen" className="text-sky-600 dark:text-sky-400 hover:underline">
+            PHQ-4 Quick Screen →
           </Link>
           <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             GAD-7 Anxiety Test →

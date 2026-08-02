@@ -10,7 +10,7 @@ Jason is a solo entrepreneur building 4 static tool websites toward $3,500/month
 - **flipmycase.com** — Text conversion utilities. 1 click/month, 89 impressions, position 27.3.
 - **creatorrevenuecalculator.com** — Revenue calculators for content creators. Static HTML on GitHub Pages.
 
-Jason has CADC-II credentials (Certified Alcohol and Drug Counselor II, 11 years clinical experience in substance abuse counseling) which gives him genuine E-E-A-T authority in the mental health space.
+Jason is a Certified Alcohol and Drug Counselor Level II (CADC-II) with 11 years of clinical experience in substance use counseling, which supports reviewer E-E-A-T within that professional scope.
 
 ## Your Perspective
 When analyzing any idea, strategy, or decision:

@@ -74,9 +74,9 @@ export default function AUDITCPage() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Full AUDIT Test</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Complete 10-question WHO alcohol screening</p>
           </Link>
-          <Link href="/alcohol-screening-for-women" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Alcohol Screening for Women</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Gender-specific alcohol screening with context</p>
+          <Link href="/clinical-evidence#audit-c" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT-C Clinical Evidence</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Review the source study, validation, scoring, and limitations</p>
           </Link>
           <Link href="/audit-vs-audit-c" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">AUDIT vs. AUDIT-C</p>

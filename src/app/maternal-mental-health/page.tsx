@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
+import { AuthorByline } from "@/components/AuthorByline";
 
 const PAGE_URL = `${SITE_URL}/maternal-mental-health`;
 
@@ -67,7 +68,7 @@ const FAQ_DATA = [
   {
     question: "What treatment options exist for perinatal mood disorders?",
     answer:
-      "Evidence-based treatments include psychotherapy (cognitive-behavioral therapy, interpersonal therapy), medication (several antidepressants are safe during pregnancy and breastfeeding), lifestyle interventions, and support groups. The choice depends on symptom severity, personal preference, and any breastfeeding plans. Many pregnant and postpartum people benefit from a combination of approaches. Your healthcare provider can help you weigh the risks and benefits of each option.",
+      "Treatment can include psychotherapy, medication, social support, and other individualized care. Medication decisions during pregnancy or breastfeeding require a personal benefit-risk discussion with an obstetric and prescribing clinician. Do not start, stop, or change a psychiatric medication without medical guidance.",
   },
   {
     question: "Where can I find maternal mental health support?",
@@ -89,7 +90,7 @@ export default function MaternalMentalHealthPage() {
                 "Evidence-based information on maternal mental health screening and the use of PHQ-9 and GAD-7 in perinatal populations.",
               url: PAGE_URL,
               datePublished: "2026-05-01",
-              dateModified: "2026-05-01",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -159,7 +160,7 @@ export default function MaternalMentalHealthPage() {
               Pregnancy and the postpartum period bring profound physical, emotional, and life changes. For many, these changes include mood or anxiety symptoms that go beyond typical adjustment. If you are pregnant or postpartum and wondering whether what you are experiencing might be a perinatal mood or anxiety disorder, this page provides evidence-based information on screening and support options.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
-              The <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> are clinically validated screening tools that have been specifically tested in pregnant and postpartum populations. They are recommended by major clinical organizations, including the <a href="https://www.acog.org/clinical-guidance/committee-opinion/articles/2018/04/screening-for-perinatal-depression-and-anxiety" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">American College of Obstetricians and Gynecologists</a>, for routine perinatal mental health screening.
+              The <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">PHQ-9</Link> and <Link href="/gad-7-anxiety-test" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">GAD-7</Link> are published screening instruments used in perinatal care. Current <a href="https://www.acog.org/programs/perinatal-mental-health/patient-screening" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG guidance</a> recommends standardized, validated screening for depression and anxiety during pregnancy and postpartum, with systems for assessment, treatment, and follow-up.
             </p>
           </div>
 
@@ -185,7 +186,7 @@ export default function MaternalMentalHealthPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">How common are perinatal mood and anxiety disorders?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Perinatal mood and anxiety disorders are far more common than many people realize. According to the <a href="https://www.nimh.nih.gov/" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">National Institute of Mental Health (NIMH)</a>, approximately <strong>1 in 5 pregnant or postpartum people</strong> experience a diagnosable perinatal mood or anxiety disorder. This includes major depressive disorder, generalized anxiety disorder, panic disorder, obsessive-compulsive disorder, and post-traumatic stress disorder.
+              Perinatal mental health conditions are common. An <a href="https://www.acog.org/education-and-events/emodules/addressing-perinatal-mental-health-conditions-in-obstetric-settings" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG clinical education resource</a> reports that they affect more than <strong>1 in 5 perinatal people</strong>. Prevalence varies by condition, population, and method of measurement.
             </p>
             <div className="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-5 mb-4 border border-slate-200 dark:border-slate-700">
               <p className="text-sm text-slate-700 dark:text-slate-300 mb-3"><strong>Key statistics:</strong></p>
@@ -205,7 +206,7 @@ export default function MaternalMentalHealthPage() {
           <section className="mb-10">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Can I use the PHQ-9 during pregnancy or postpartum?</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-              Yes. The PHQ-9 (Patient Health Questionnaire-9) has been extensively validated for use in pregnant and postpartum populations. The tool measures depressive symptoms over the past two weeks and is recommended by <a href="https://www.acog.org" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG</a>, the <a href="https://www.cdc.gov" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">Centers for Disease Control and Prevention (CDC)</a>, and the <a href="https://www.samhsa.gov" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">Substance Abuse and Mental Health Services Administration (SAMHSA)</a> for routine perinatal screening.
+              Yes. The PHQ-9 (Patient Health Questionnaire-9) measures depressive symptoms over the past two weeks and is included in <a href="https://www.acog.org/programs/perinatal-mental-health/patient-screening" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG&apos;s perinatal screening resources</a>. A self-screen is not a diagnosis and should be paired with professional follow-up when symptoms, functioning, or safety are concerning.
             </p>
             <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
               The nine questions of the PHQ-9 assess core depressive symptoms: low mood, loss of interest, sleep changes, fatigue, appetite changes, feelings of worthlessness, difficulty concentrating, psychomotor changes, and thoughts of self-harm. Scores range from 0 to 27, with a score of 10 or higher typically warranting professional evaluation during pregnancy or postpartum.
@@ -281,7 +282,7 @@ export default function MaternalMentalHealthPage() {
               <div className="border-l-4 border-sky-400 pl-4">
                 <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-1">Medication</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Several antidepressants and anti-anxiety medications are safe during pregnancy and while breastfeeding. Sertraline, paroxetine, and other SSRIs have low transfer into breast milk. Your psychiatrist or OB-GYN can discuss which options are appropriate for your situation.
+                  Medication decisions during pregnancy and breastfeeding are individualized. Benefits, untreated-illness risks, pregnancy stage, feeding plans, prior response, and the specific medicine all matter. Do not start, stop, or change medication without guidance from your obstetric and prescribing clinicians. See <a href="https://www.acog.org/programs/perinatal-mental-health/assessment-and-treatment-of-perinatal-mental-health-conditions" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG&apos;s assessment and treatment resources</a>.
                 </p>
               </div>
               <div className="border-l-4 border-sky-400 pl-4">
@@ -379,27 +380,7 @@ export default function MaternalMentalHealthPage() {
 
           {/* Author Bio */}
           <div className="my-8">
-            <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2026-05-01">
-          {new Date("2026-05-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-05-01">
-          {new Date("2026-05-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
+            <AuthorByline publishedDate="2026-05-01" modifiedDate="2026-08-02" />
           </div>
 
           {/* Crisis Resources at Bottom */}

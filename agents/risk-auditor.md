@@ -49,7 +49,7 @@ When documenting in shared_reasoning.md, use this structure:
 - [ ] SAMHSA 1-800-662-4357 visible?
 - [ ] No diagnostic claims?
 - [ ] CADC-II credential represented accurately (not inflated)?
-- [ ] No personal name used in public-facing content (use generic "Certified Drug and Alcohol Counselor" only)?
+- [ ] MindCheck Tools shows the approved "Jason Ramirez, CADC-II" reviewer attribution without exposing the LLC, location, address, or unrelated personal history?
 - [ ] Years of experience stated as 11 (not 30+)?
 - [ ] Privacy statement present (browser-only processing)?
 

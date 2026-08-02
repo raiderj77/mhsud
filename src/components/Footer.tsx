@@ -74,42 +74,7 @@ const RECOVERY_TOOLS = [
   { href: "/family-impact-assessment", label: "Family Impact" },
 ];
 
-const TARGETED_LINKS = [
-  { href: "/depression-test-for-teens", label: "Depression: Teens" },
-  { href: "/depression-test-for-seniors", label: "Depression: Seniors" },
-  { href: "/depression-test-for-new-moms", label: "Depression: New Moms" },
-  { href: "/depression-screening-for-veterans", label: "Depression: Veterans" },
-  { href: "/anxiety-test-for-women", label: "Anxiety: Women" },
-  { href: "/anxiety-test-for-teens", label: "Anxiety: Teens" },
-  { href: "/anxiety-test-for-men", label: "Anxiety: Men" },
-  { href: "/ptsd-test-veterans", label: "PTSD: Veterans" },
-  { href: "/ptsd-test-first-responders", label: "PTSD: First Responders" },
-  { href: "/adhd-test-adults", label: "ADHD: Adults" },
-  { href: "/adhd-test-women", label: "ADHD: Women" },
-  { href: "/social-anxiety-test-college", label: "Social Anxiety: Students" },
-  { href: "/alcohol-screening-for-college-students", label: "Alcohol: College" },
-  { href: "/alcohol-screening-military", label: "Alcohol: Military" },
-  { href: "/drug-screening-teens", label: "Substances: Teens" },
-  { href: "/substance-abuse-test-parents", label: "Substances: Parents" },
-  { href: "/stress-test-college-students", label: "Stress: College" },
-  { href: "/burnout-test-for-nurses", label: "Burnout: Nurses" },
-  { href: "/burnout-test-for-healthcare-workers", label: "Burnout: Healthcare" },
-  { href: "/burnout-test-for-teachers", label: "Burnout: Teachers" },
-  { href: "/burnout-test-parents", label: "Burnout: Parents" },
-  { href: "/loneliness-test-seniors", label: "Loneliness: Seniors" },
-  { href: "/eating-disorder-test-athletes", label: "Eating Disorder: Athletes" },
-  { href: "/caregiver-burnout-assessment", label: "Caregiver Burnout" },
-  { href: "/compassion-fatigue-test", label: "Compassion Fatigue" },
-  { href: "/postpartum-depression-test", label: "Postpartum Depression" },
-  { href: "/grief-assessment", label: "Grief Assessment" },
-  { href: "/am-i-depressed-quiz", label: "Am I Depressed?" },
-  { href: "/do-i-have-ptsd-quiz", label: "Do I Have PTSD?" },
-  { href: "/am-i-an-alcoholic-quiz", label: "Am I an Alcoholic?" },
-  { href: "/phq-4-anxiety-depression-screen", label: "PHQ-4 Quick Screen" },
-];
-
 const INFO_LINKS = [
-  { href: "/blog", label: "Blog & Guides" },
   { href: "/screening-tools", label: "All Screening Tools" },
   { href: "/about", label: "About" },
   { href: "/clinical-evidence", label: "Clinical Evidence" },
@@ -162,7 +127,7 @@ export function Footer() {
             {/* Resources links */}
             <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">Resources</h4>
             <ul className="space-y-1.5">
-              {INFO_LINKS.filter((link) => link.href !== "/blog").map((link) => (
+              {INFO_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors">
                     {link.label}
@@ -206,8 +171,6 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Scaled demographic variants are quarantined pending individual review. */}
-            {false && TARGETED_LINKS.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
           </div>
 
           {/* Recovery Tools column */}

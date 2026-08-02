@@ -375,7 +375,7 @@ Every article MUST include a **40–60 word direct answer block** beneath each H
 ---
 *This article is for informational purposes only and does not constitute medical or mental health advice. If you are in crisis, call or text 988 (Suicide & Crisis Lifeline) or text HOME to 741741 (Crisis Text Line). For substance use support, call SAMHSA at 1-800-662-4357.*
 
-*Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).*
+*Published by MindCheck Tools. Reviewed by Jason Ramirez — Certified Alcohol and Drug Counselor Level II (CADC-II).*
 ```
 
 **medicalbillreader.com ONLY , append this block:**
@@ -387,9 +387,9 @@ Every article MUST include a **40–60 word direct answer block** beneath each H
 ```
 
 ### Attribution Rules (All Sites)
-- **mindchecktools.com**: Use "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)"
-- **All other sites**: Use generic bylines only , no personal names in author fields
-- **Exception**: mindchecktools.com tool pages (not blog posts) may display "Jason Ramirez, CADC-II" for E-E-A-T
+- **mindchecktools.com**: Use MindCheck Tools as the publisher and "Jason Ramirez — Certified Alcohol and Drug Counselor Level II (CADC-II)" as the named reviewer on maintained tools and articles.
+- **All other sites**: Use the site or organization as publisher. Do not reuse Jason Ramirez or the CADC-II credential outside MindCheck Tools.
+- **Public privacy boundary**: Keep Jason Ramirez and CADC-II public on MindCheck Tools, but do not publish the LLC, residential location or address, or unrelated personal history.
 
 ### Output Path (Empire)
 All draft files go to: `content/drafts/[topic-slug]-[YYYY-MM-DD].md`

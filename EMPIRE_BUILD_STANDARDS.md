@@ -42,7 +42,7 @@ The Empire is a portfolio of 7 websites: 5 utility tools (ad-supported via Googl
 - **AdSense Publisher ID**: `ca-pub-7171402107622932`
 - **ads.txt content**: `google.com, pub-7171402107622932, DIRECT, f08c47fec0942fa0`
 - **Amazon Associates ID**: `ytearnings-20`
-- **Attribution Rule**: NEVER use the site owner's personal name anywhere in public-facing content, code, comments, or metadata. Use generic professional credentials instead.
+- **Attribution Rule**: Keep the owner's identity private by default. MindCheck Tools is the explicit YMYL exception: publish "Jason Ramirez, CADC-II" on the reviewer profile, review bylines, and matching Person schema, while keeping the LLC, home location, address, and unrelated personal history private.
 
 ### Compliance Tiers
 
@@ -99,7 +99,7 @@ Every Empire site must have these pages:
 - **Type**: Utility (ad-supported) | **Tier**: Full YMYL
 - **Purpose**: Mental health screening tools (PHQ-9, GAD-7, AUDIT, AUDIT-C, Mental Load Calculator)
 - **Monetization**: AdSense only (NO affiliate links on health content). Consider non-personalized ads on screening pages. No ads adjacent to crisis resources.
-- **Attribution**: "Reviewed by a Certified Drug and Alcohol Counselor (CADC-II)"
+- **Attribution**: "Reviewed by Jason Ramirez, CADC-II" with a link to the public reviewer profile and CCAPP registry. Use the official credential name, "Certified Alcohol and Drug Counselor Level II (CADC-II)," and do not describe it as a medical or independent mental health license.
 - **Schema Types**: Organization, WebSite, WebApplication (per tool), FAQPage, Person (reviewer), BreadcrumbList
 - **Consent manager**: first-party privacy choices stored locally in the browser. Analytics and advertising scripts must not load before the matching affirmative choice; GPC forces optional services off. AdSense pub ID: `pub-7171402107622932`.
 - **Validated Instruments** (NEVER modify questions or scoring):
@@ -347,7 +347,7 @@ E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness
 - Editorial process description (especially for YMYL — explain how content is reviewed and fact-checked)
 
 ### YMYL Requirements for mindchecktools.com
-- All content reviewed by licensed CADC-II professional with credentials displayed
+- Maintained MindCheck Tools screening content displays named review by Jason Ramirez, CADC-II; describe CADC-II as a professional certification, not a medical or independent mental health license
 - Crisis resources on EVERY page (988, Crisis Text Line 741741, SAMHSA 1-800-662-4357)
 - Tools framed as supplementary to professional care — NEVER replacements for diagnosis or treatment
 - Prominent disclaimers on every screening page
@@ -858,7 +858,7 @@ Run through this EVERY time before deploying:
 7. Cross-site links present in footer (5 sister sites)
 8. Security headers configured in `vercel.json` or `next.config.js`
 9. Structured data validates (spot-check with Rich Results Test)
-10. No personal name exposed anywhere in public-facing content
+10. No personal name exposed in public-facing content except the approved MindCheck Tools YMYL reviewer attribution
 11. YMYL sites: Crisis resources visible, health disclaimers present
 12. Mobile responsive: test at 320px width
 
@@ -868,7 +868,7 @@ Run through this EVERY time before deploying:
 
 Things Claude Code must NEVER do on ANY Empire site:
 
-1. **Never expose the site owner's personal name** in any code, content, comments, metadata, or configuration — EXCEPT on the About page, blog post bylines, and Article/Person schema of YMYL sites where Google's E-E-A-T scrutiny requires a verifiable named author with credentials. YMYL sites and their attribution: [mindchecktools.com](http://mindchecktools.com) (Jason Ramirez, CADC-II), [524tracker.com](http://524tracker.com) (Jason Ramirez, Founder of Your Friendly Developer), [taxbreaktools.com](http://taxbreaktools.com) (Jason Ramirez, Founder of Your Friendly Developer), [contractextract.com](http://contractextract.com) (Jason Ramirez, Founder of Your Friendly Developer), [medicalbillreader.com](http://medicalbillreader.com) (Jason Ramirez, Founder of Your Friendly Developer). Tool pages, calculator pages, OG tags on non-author pages, and footers across all sites use generic credentials only ("Built by an experienced web professional with a focus on [domain]").
+1. **Keep the site owner's personal identity private by default.** The approved exception is [mindchecktools.com](http://mindchecktools.com): "Jason Ramirez, CADC-II" must remain public on the reviewer profile, review bylines, and matching Person schema for transparent YMYL authorship. Do not publish the owner's LLC, home location, address, or unrelated personal history. Other sites continue to use role-based attribution unless the owner explicitly changes that policy.
 2. **Never modify ads.txt** unless explicitly asked — incorrect ads.txt stops ALL ad revenue
 3. **Never remove legal pages** (privacy policy, terms of service) — creates legal exposure
 4. **Never hardcode API keys** in any file — use environment variables exclusively

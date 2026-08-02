@@ -51,7 +51,6 @@ export default function PHQ9Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -83,7 +82,6 @@ export default function PHQ9Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -117,7 +115,7 @@ export default function PHQ9Page() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -239,9 +237,9 @@ export default function PHQ9Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Score Guide</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Anxiety screening interpretation and next steps</p>
           </Link>
-          <Link href="/am-i-depressed-quiz" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Am I Depressed? Quiz</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Guided depression self-check with context</p>
+          <Link href="/phq-4-anxiety-depression-screen" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-4 Quick Screen</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Brief combined depression and anxiety screening</p>
           </Link>
           <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Talk to Your Doctor</p>

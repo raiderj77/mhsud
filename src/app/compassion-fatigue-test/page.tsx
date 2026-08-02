@@ -8,9 +8,9 @@ const TOOL_URL = `${SITE_URL}/compassion-fatigue-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/compassion-fatigue-test",
-  title: "Compassion Fatigue Test | Free Self-Assessment for Helpers & Caregivers",
+  title: "Compassion Fatigue Self-Check | Educational Check-In",
   description:
-    "Free compassion fatigue test for nurses, therapists, social workers, first responders, and family caregivers. Assess emotional exhaustion from helping others. Private, instant results.",
+    "Original educational check-in for helpers and caregivers reflecting on current role-related strain. Private in-browser scoring and no signup.",
   keywords: [
     "compassion fatigue test", "compassion fatigue quiz", "compassion fatigue assessment",
     "compassion fatigue screening", "compassion fatigue self test", "do i have compassion fatigue",
@@ -22,9 +22,9 @@ export const metadata: Metadata = createMetadata({
     "compassion fatigue healthcare workers", "burnout vs compassion fatigue",
   ],
   openGraph: {
-    title: "Compassion Fatigue Test | Free Self-Assessment for Helpers & Caregivers",
+    title: "Compassion Fatigue Self-Check | Educational Check-In",
     description:
-      "Free compassion fatigue test for nurses, therapists, social workers, and caregivers. Assess emotional exhaustion from helping others. Private, instant results.",
+      "Use an original educational check-in about energy, recovery, connection, patience, confidence, and meaning. This page does not administer ProQOL.",
     url: TOOL_URL,
     type: "website",
   },
@@ -34,27 +34,27 @@ const FAQ_DATA = [
   {
     question: "What is compassion fatigue?",
     answer:
-      "Compassion fatigue is a form of emotional and physical exhaustion that results from the cumulative cost of caring for others who are suffering. Unlike burnout, which develops from general workplace stress, compassion fatigue is specifically linked to empathic engagement with others' pain, trauma, or distress. It is common among nurses, therapists, social workers, first responders, hospice workers, and family caregivers. Signs include emotional numbness, reduced empathy, intrusive thoughts about clients or patients, and a diminished sense of purpose.",
+      "Compassion fatigue is a term used for stress reactions that some people report after repeated exposure to the suffering or trauma of people they support. Experiences may include emotional depletion, detachment, reduced empathy, intrusive thoughts, or a diminished sense of purpose. These experiences overlap with burnout, secondary traumatic stress, depression, anxiety, grief, and sleep problems, so a self-check cannot determine the cause.",
   },
   {
     question: "What's the difference between compassion fatigue and burnout?",
     answer:
-      "Burnout develops from chronic workplace stress, overwork, lack of control, insufficient reward. Compassion fatigue is specifically caused by the emotional cost of empathizing with others' suffering. You can experience both simultaneously. Burnout tends to develop slowly; compassion fatigue can develop more rapidly after exposure to traumatic material. Both are serious and both are treatable.",
+      "The concepts overlap. Burnout is generally associated with chronic workplace demands and limited recovery, while compassion fatigue is used in helping settings to emphasize the impact of repeated exposure to others' distress. A person may identify with both descriptions, and an online check-in cannot reliably distinguish between them or rule out another concern.",
   },
   {
     question: "Who is most at risk for compassion fatigue?",
     answer:
-      "Anyone in a helping role is at risk, but particularly: emergency nurses and physicians, mental health therapists and counselors, social workers, hospice and palliative care workers, paramedics and first responders, child protective services workers, trauma surgeons, and family caregivers of seriously ill loved ones. High caseloads, inadequate supervision, lack of organizational support, and personal trauma history all increase risk.",
+      "People in helping roles may report compassion-fatigue experiences, including healthcare workers, therapists, social workers, first responders, hospice workers, child-welfare staff, and family caregivers. Workload, repeated exposure to distressing material, limited supervision, limited recovery time, and personal circumstances may influence an individual's experience.",
   },
   {
-    question: "What does this assessment measure?",
+    question: "What does this educational check-in cover?",
     answer:
-      "This assessment uses a validated burnout scale measuring the three core dimensions most associated with compassion fatigue: emotional exhaustion (feeling depleted by your work with others), depersonalization (emotional distancing or cynicism as a protective response), and reduced personal accomplishment (feeling ineffective or questioning the value of your work). These dimensions overlap significantly with compassion fatigue as defined by Figley and Stamm's ProQOL model.",
+      "This page uses the same original 15-item MindCheck Tools check-in as the general burnout page. It asks about energy and recovery, connection and patience, and confidence and meaning. It does not administer the Professional Quality of Life Scale (ProQOL) or another validated compassion-fatigue instrument. Its score bands are site-defined educational ranges, not clinical cutoffs.",
   },
   {
     question: "What can I do about compassion fatigue?",
     answer:
-      "Effective strategies include: regular clinical supervision or peer consultation, setting clear professional boundaries, building in recovery time between difficult cases, trauma-informed self-care practices, therapy (especially trauma-focused approaches), reducing caseload where possible, and organizational advocacy for better support structures. The Compassion Fatigue Awareness Project (compassionfatigue.org) offers resources specifically for helpers.",
+      "Options to consider include regular supervision or peer consultation, clearer role boundaries, recovery time after difficult cases, reducing workload where possible, and asking an employer or care team for additional support. A qualified mental health professional can help evaluate persistent distress and discuss options suited to your situation.",
   },
 ];
 
@@ -66,14 +66,13 @@ export default function CompassionFatigueTestPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
       ...toolPageJsonLd({
-              name: "Compassion Fatigue Test | Free Self-Assessment for Helpers & Caregivers",
+              name: "Compassion Fatigue Educational Self-Check",
               description:
-                "A free, private compassion fatigue assessment for nurses, therapists, social workers, and caregivers.",
+                "An original educational check-in for helpers and caregivers. Its site-defined score bands are not validated clinical cutoffs and cannot identify compassion fatigue.",
               url: TOOL_URL,
               datePublished: "2026-03-08",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -87,8 +86,8 @@ export default function CompassionFatigueTestPage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Burnout Assessment Tool", url: `${SITE_URL}/burnout-assessment-tool` },
-              { name: "Compassion Fatigue Test", url: TOOL_URL },
+              { name: "Burnout Educational Check-In", url: `${SITE_URL}/burnout-assessment-tool` },
+              { name: "Compassion Fatigue Self-Check", url: TOOL_URL },
             ])
           ),
         }}
@@ -97,7 +96,7 @@ export default function CompassionFatigueTestPage() {
         {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sage-100 text-sage-800 dark:bg-sage-900/40 dark:text-sage-300">
-            Validated Burnout Scale
+            Original Educational Check-In
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">
             Helpers &amp; Caregivers
@@ -109,7 +108,7 @@ export default function CompassionFatigueTestPage() {
 
         {/* H1 */}
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-          Compassion Fatigue Test
+          Compassion Fatigue Self-Check
         </h1>
 
         {/* Empathetic Intro */}
@@ -121,14 +120,14 @@ export default function CompassionFatigueTestPage() {
             you&apos;re tired in a way that a weekend off doesn&apos;t fix.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-4">
-            Compassion fatigue is the occupational hazard of empathy, and it&apos;s
-            especially common among nurses, therapists, social workers, first responders,
-            and family caregivers. It&apos;s not weakness. It&apos;s what happens when you
-            absorb others&apos; pain without enough recovery.
+            Compassion fatigue is a term used for strain that can arise in helping roles
+            involving repeated exposure to other people&apos;s pain or trauma. Experiences vary,
+            and similar symptoms can have many causes.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            This free assessment checks for the core dimensions of compassion fatigue and
-            burnout. Your answers are scored entirely in your browser. Nothing is stored or shared.
+            This page uses MindCheck Tools&apos; original general burnout check-in. It is not tailored
+            or validated specifically for compassion fatigue, does not administer ProQOL, and cannot
+            diagnose a condition. Your answers are scored entirely in your browser. Nothing is stored or shared.
           </p>
         </div>
 
@@ -137,21 +136,21 @@ export default function CompassionFatigueTestPage() {
           Start the compassion fatigue check
         </a>
               <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A compassion fatigue screening that measures the emotional cost of caring for others in distress, combining burnout and secondary trauma."
+          what="An original educational check-in about energy and recovery, connection and patience, and confidence and meaning. It is not a compassion-fatigue clinical instrument."
           who="Helping professionals, caregivers, and anyone in a caring role who feels emotionally drained by others' suffering."
-          bottomLine="Compassion fatigue is an occupational hazard of caring, early recognition prevents deeper burnout. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          bottomLine="The questions and score bands are site-defined and have not been clinically validated. They cannot identify compassion fatigue, secondary trauma, burnout, or another condition."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -162,8 +161,8 @@ export default function CompassionFatigueTestPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -172,9 +171,9 @@ export default function CompassionFatigueTestPage() {
       </div>
 
       <section className="sr-only">
-        <h2>What Is the Compassion Fatigue Test?</h2>
-        <h2>How Is the Compassion Fatigue Test Scored?</h2>
-        <h2>What Do My Compassion Fatigue Results Mean?</h2>
+        <h2>What Is the Compassion Fatigue Educational Check-In?</h2>
+        <h2>How Is the Compassion Fatigue Check-In Scored?</h2>
+        <h2>What Does My Compassion Fatigue Check-In Summary Mean?</h2>
       </section>
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
@@ -183,6 +182,9 @@ export default function CompassionFatigueTestPage() {
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Compassion Fatigue vs. Burnout
           </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
+            These are broad educational distinctions, not diagnostic rules. The experiences can overlap, and a qualified professional can evaluate persistent or concerning symptoms.
+          </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -194,19 +196,19 @@ export default function CompassionFatigueTestPage() {
               </thead>
               <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
                 <tr>
-                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Cause</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Empathic engagement with others&apos; trauma</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Chronic workplace stress and overload</td>
+                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Common context</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Repeated exposure to other people&apos;s distress or trauma</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Ongoing workplace demands with limited recovery</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Onset</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Can develop rapidly</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Develops gradually over time</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">May appear after repeated or intense exposure</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Often described as building over time</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Key symptom</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Reduced empathy, intrusive thoughts</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Cynicism, detachment, exhaustion</td>
+                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Possible experiences</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Reduced empathy, emotional depletion, intrusive thoughts</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Exhaustion, detachment, reduced work effectiveness</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Who is affected</td>
@@ -214,9 +216,9 @@ export default function CompassionFatigueTestPage() {
                   <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Anyone in a demanding job</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Treatment</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Supervision, trauma processing, boundaries</td>
-                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Rest, workload reduction, systemic change</td>
+                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Support to consider</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Supervision, peer support, boundaries, professional evaluation</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Recovery time, workload review, workplace support, professional evaluation</td>
                 </tr>
               </tbody>
             </table>
@@ -263,8 +265,9 @@ export default function CompassionFatigueTestPage() {
         {/* Clinical Disclaimer */}
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-            This assessment is for educational purposes only, it is not a diagnosis. Only a
-            qualified healthcare professional can assess compassion fatigue or related conditions.
+            This check-in is for educational purposes only and is not a diagnosis. Its original
+            questions and site-defined score bands have not been clinically validated. A qualified
+            healthcare professional can evaluate compassion-fatigue experiences or related concerns.
             Your responses are processed entirely in your browser and are never stored or transmitted.
           </p>
         </div>
@@ -272,26 +275,26 @@ export default function CompassionFatigueTestPage() {
         {/* Author Bio */}
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Compiled by Jason Ramirez, CADC-II. Clinical content drawn from WHO, CDC NIOSH, and NIMH. This is a self-reflection tool, not a clinical assessment.
+            Reviewed by Jason Ramirez, CADC-II. The questions and score ranges are original, site-defined educational content, not a validated clinical assessment.
           </p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
-            Last reviewed: March 2026
+            Last reviewed: August 2, 2026
           </p>
         </div>
 
         {/* Internal Links */}
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
           <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">
-            General Burnout Assessment →
+            General Burnout Check-In →
           </Link>
           <Link href="/caregiver-burnout-assessment" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Caregiver Burnout Assessment →
+            Caregiver Burnout Self-Check →
           </Link>
-          <Link href="/burnout-test-for-nurses" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Burnout Test for Nurses →
+          <Link href="/work-stress-check" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Work Stress Check →
           </Link>
-          <Link href="/burnout-test-for-healthcare-workers" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Healthcare Worker Burnout →
+          <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Talk to Your Doctor →
           </Link>
           <Link href="/phq-9-depression-test" className="text-sky-600 dark:text-sky-400 hover:underline">
             PHQ-9 Depression Test →

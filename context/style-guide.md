@@ -22,5 +22,5 @@
 ```
 *This article is for informational purposes only and does not constitute medical or mental health advice. Always consult a qualified mental health professional for diagnosis and treatment.*
 
-*Reviewed by a Certified Drug and Alcohol Counselor (CADC-II).*
+*Reviewed by Jason Ramirez — Certified Alcohol and Drug Counselor Level II (CADC-II).*
 ```

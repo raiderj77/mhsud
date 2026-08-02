@@ -1,60 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/metadata";
+import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
+
+const PROFILE_URL = `${SITE_URL}/about/jason-ramirez`;
+const LAST_REVIEWED = "2026-08-02";
 
 export const metadata: Metadata = createMetadata({
   path: "/about/jason-ramirez",
   title: "Jason Ramirez, CADC-II, Clinical Reviewer",
   description:
-    "Jason Ramirez is a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience who reviews all screening tools and educational content on MindCheck Tools.",
+    "Jason Ramirez is a Certified Alcohol and Drug Counselor Level II (CADC-II) with 11 years of substance use counseling experience and the named clinical reviewer for MindCheck Tools.",
   keywords: [
     "Jason Ramirez CADC-II",
-    "certified drug and alcohol counselor",
-    "mental health clinical reviewer",
-    "substance use counselor",
+    "certified alcohol and drug counselor",
+    "substance use clinical reviewer",
     "MindCheck Tools reviewer",
   ],
 });
 
-function personJsonLd() {
+function profilePageJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Jason Ramirez",
-    jobTitle: "Certified Drug and Alcohol Counselor (CADC-II)",
-    knowsAbout: [
-      "Substance use disorder screening",
-      "Alcohol use disorder screening (AUDIT, AUDIT-C)",
-      "Drug use screening (DAST-10)",
-      "Co-occurring disorders screening",
-      "Addiction counseling",
-      "Relapse prevention",
-      "SBIRT (Screening, Brief Intervention, Referral to Treatment)",
-    ],
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Professional Certification",
-      name: "CADC-II",
+    "@type": "ProfilePage",
+    dateModified: LAST_REVIEWED,
+    mainEntity: {
+      ...AUTHOR_SCHEMA,
+      worksFor: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
     },
-    sameAs: [
-      "https://npiregistry.cms.hhs.gov/provider-view/1689024218",
-      "https://ccappcredentialing.org/verify-credential/",
-      "https://linkedin.com/in/jason-ramirez-cadc",
-    ],
-    url: `${SITE_URL}/about/jason-ramirez`,
-    worksFor: {
-      "@type": "Organization",
-      name: `${SITE_NAME} / Your Friendly Developer LLC`,
-      url: SITE_URL,
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Prunedale",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
-    description:
-      "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience in substance use and mental health counseling. Clinical reviewer for MindCheck Tools.",
   };
 }
 
@@ -67,7 +44,7 @@ const REVIEWED_TOOLS = [
   { name: "PCL-5 PTSD Screening", href: "/pcl-5-ptsd-screening" },
   { name: "PC-PTSD-5 PTSD Screen", href: "/pc-ptsd-5-screening" },
   { name: "ASRS ADHD Screening", href: "/asrs-adhd-screening" },
-  { name: "DASS-21 Depression/Anxiety/Stress", href: "/dass-21-depression-anxiety-stress" },
+  { name: "DASS-21 Depression, Anxiety, and Stress", href: "/dass-21-depression-anxiety-stress" },
   { name: "WHO-5 Well-Being Index", href: "/who-5-wellbeing-index" },
   { name: "K6 Psychological Distress Scale", href: "/k6-distress-scale" },
   { name: "SPIN Social Anxiety Test", href: "/spin-social-anxiety-test" },
@@ -83,11 +60,9 @@ const REVIEWED_TOOLS = [
   { name: "UCLA Loneliness Scale", href: "/ucla-loneliness-scale" },
   { name: "Athens Insomnia Scale", href: "/athens-insomnia-scale" },
   { name: "Brief Resilience Scale", href: "/brief-resilience-scale" },
-  { name: "Attachment Style Quiz", href: "/attachment-style-quiz" },
-  { name: "Big Five Personality Test", href: "/big-five-personality-test" },
 ];
 
-const REVIEWED_ARTICLES = [
+const REVIEWED_GUIDES = [
   { name: "PHQ-9 Score Guide", href: "/phq-9-score-interpretation" },
   { name: "GAD-7 Score Guide", href: "/gad-7-score-interpretation" },
   { name: "AUDIT Score Guide", href: "/audit-score-interpretation" },
@@ -96,7 +71,7 @@ const REVIEWED_ARTICLES = [
   { name: "DASS-21 Score Guide", href: "/dass-21-score-interpretation" },
   { name: "ACE Score Guide", href: "/ace-score-interpretation" },
   { name: "PHQ-9 vs GAD-7", href: "/phq-9-vs-gad-7" },
-  { name: "How to Talk to Your Doctor About Mental Health", href: "/how-to-talk-to-your-doctor-about-mental-health" },
+  { name: "How to Talk to Your Doctor", href: "/how-to-talk-to-your-doctor-about-mental-health" },
 ];
 
 export default function JasonRamirezPage() {
@@ -104,9 +79,7 @@ export default function JasonRamirezPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personJsonLd()),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd()) }}
       />
       <script
         type="application/ld+json"
@@ -115,7 +88,7 @@ export default function JasonRamirezPage() {
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
               { name: "About", url: `${SITE_URL}/about` },
-              { name: "Jason Ramirez, CADC-II", url: `${SITE_URL}/about/jason-ramirez` },
+              { name: "Jason Ramirez, CADC-II", url: PROFILE_URL },
             ])
           ),
         }}
@@ -123,7 +96,7 @@ export default function JasonRamirezPage() {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
-          <nav className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+          <nav className="text-sm text-neutral-500 dark:text-neutral-400 mb-4" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-sage-600 dark:hover:text-sage-400">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/about" className="hover:text-sage-600 dark:hover:text-sage-400">About</Link>
@@ -134,43 +107,53 @@ export default function JasonRamirezPage() {
             Jason Ramirez, CADC-II
           </h1>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-2xl">
-            Certified Drug and Alcohol Counselor with 11 years of clinical experience in substance use and mental health counseling. Clinical reviewer for MindCheck Tools.
+            {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}. Clinical reviewer for MindCheck Tools.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-3">
+            Profile last reviewed: <time dateTime={LAST_REVIEWED}>August 2, 2026</time>
           </p>
         </header>
 
         <div className="prose-mh space-y-8">
           <section>
-            <h2>About Jason</h2>
+            <h2>Professional scope</h2>
             <p>
-              Jason Ramirez is a Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience
-              spanning inpatient treatment, outpatient programs, and community mental health settings. His work has
-              focused on evidence-based screening, substance use treatment, and helping individuals navigate the
-              continuum of care from initial assessment through long-term recovery support.
+              Jason Ramirez is a {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}. His professional focus
+              includes alcohol and other drug screening, substance use counseling, relapse prevention, co-occurring
+              concerns, and SBIRT (Screening, Brief Intervention, and Referral to Treatment).
             </p>
             <p>
-              As clinical reviewer for MindCheck Tools, Jason ensures that every screening instrument uses correct
-              validated wording, that scoring algorithms match published clinical guidelines, and that result
-              interpretations include appropriate context and limitations. His review process covers both the clinical
-              tools and the educational content across the site.
+              For MindCheck Tools, Jason reviews maintained screening pages for source fidelity, scoring alignment,
+              educational rather than diagnostic wording, safety language, and appropriate limitations. Source
+              publications and public-health guidance remain the authority for each instrument.
             </p>
             <p>
-              Jason holds the CADC-II credential, the highest level of certification for drug and alcohol counselors,
-              requiring thousands of supervised clinical hours and ongoing continuing education. His areas of
-              specialization include co-occurring mental health and substance use disorders, motivational interviewing,
-              trauma-informed care, and validated clinical screening instruments.
+              CADC-II is a professional substance use counseling certification. It is not presented here as a medical license or as a
+              license to practice psychology, psychiatry, or independent mental health diagnosis. A
+              website review is quality control, not individual clinical care.
             </p>
           </section>
 
           <section>
-            <h2>Connect</h2>
+            <h2>Verify the credential</h2>
+            <p>
+              <a href={SITE_AUTHOR.credentialRegistryUrl} target="_blank" rel="noopener noreferrer">
+                CCAPP SUD Credential Registry
+              </a>{" "}
+              (search for Jason Ramirez; the registry is the authoritative source for current status and expiration).
+            </p>
             <p>
               <a
-                href="https://linkedin.com/in/jason-ramirez-cadc"
+                href="https://www.dhcs.ca.gov/providers-partners/counselor-certification/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sage-600 dark:text-sage-400 underline underline-offset-2 hover:text-sage-700 dark:hover:text-sage-300"
               >
-                LinkedIn Profile →
+                California DHCS counselor-certification requirements
+              </a>
+            </p>
+            <p>
+              <a href={SITE_AUTHOR.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn profile
               </a>
             </p>
           </section>
@@ -191,15 +174,15 @@ export default function JasonRamirezPage() {
           </section>
 
           <section>
-            <h2>Reviewed articles and guides</h2>
+            <h2>Reviewed score guides and practical guidance</h2>
             <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-2 my-6">
-              {REVIEWED_ARTICLES.map((article) => (
+              {REVIEWED_GUIDES.map((guide) => (
                 <Link
-                  key={article.href}
-                  href={article.href}
+                  key={guide.href}
+                  href={guide.href}
                   className="text-sm text-sage-600 dark:text-sage-400 hover:text-sage-700 dark:hover:text-sage-300 underline underline-offset-2 py-1"
                 >
-                  {article.name}
+                  {guide.name}
                 </Link>
               ))}
             </div>
@@ -211,10 +194,9 @@ export default function JasonRamirezPage() {
                 Clinical disclaimer
               </h2>
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                All tools on MindCheck Tools are screening instruments for educational and self-reflection purposes
-                only. They are not diagnostic tools and should not be used as a substitute for professional evaluation,
-                diagnosis, or treatment. If you are concerned about your mental health or substance use, please consult
-                a qualified healthcare professional.
+                MindCheck Tools provides educational screening and self-reflection resources. They do not diagnose a
+                condition and do not replace professional evaluation, diagnosis, or treatment. If you are concerned
+                about your mental health or substance use, consult a qualified healthcare professional.
               </p>
             </div>
           </section>

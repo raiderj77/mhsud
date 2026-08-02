@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/metadata";
+import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 const PAGE_PATH = "/methodology";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const TODAY = "2026-05-12";
+const TODAY = "2026-08-02";
 
 export const metadata: Metadata = createMetadata({
   path: PAGE_PATH,
@@ -22,23 +23,12 @@ export const metadata: Metadata = createMetadata({
 
 function authorPersonJsonLd() {
   return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Jason Ramirez",
-    jobTitle: "CADC-II Certified Drug and Alcohol Counselor",
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Professional Certification",
-      name: "CADC-II",
-    },
-    url: `${SITE_URL}/about/jason-ramirez`,
+    ...AUTHOR_SCHEMA,
     worksFor: {
       "@type": "Organization",
-      name: `${SITE_NAME} / Your Friendly Developer LLC`,
+      name: SITE_NAME,
       url: SITE_URL,
     },
-    description:
-      "Certified Drug and Alcohol Counselor (CADC-II) with 11 years of clinical experience. Clinical reviewer for MindCheck Tools.",
   };
 }
 
@@ -51,7 +41,12 @@ function articleJsonLd() {
       "Selection criteria, scoring fidelity, privacy practices, and the role of the clinical reviewer for MindCheck Tools.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
-    author: authorPersonJsonLd(),
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    reviewedBy: authorPersonJsonLd(),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -125,8 +120,8 @@ export default function MethodologyPage() {
           How instruments are selected
         </h2>
         <p>
-          A screening instrument only makes it onto MindCheck Tools if it meets
-          all of the following criteria:
+          A page is labeled as a validated screening instrument only when it
+          meets all of the following criteria:
         </p>
         <ul className="list-disc pl-6 space-y-1">
           <li>
@@ -159,6 +154,13 @@ export default function MethodologyPage() {
             page.
           </li>
         </ul>
+        <p>
+          MindCheck Tools also publishes original educational self-reflection
+          tools, calculators, worksheets, and skills-practice aids. Those pages
+          are labeled as educational or reflective, do not claim clinical
+          validation, and are not included in the clinical-evidence directory
+          unless a named published instrument is actually implemented.
+        </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">
           How scoring is preserved
@@ -202,25 +204,26 @@ export default function MethodologyPage() {
           The clinical reviewer
         </h2>
         <p>
-          All screening tools and their accompanying score interpretation pages
-          are reviewed by{" "}
+          Maintained screening pages and their accompanying score interpretation
+          guides are reviewed by{" "}
           <Link
             href="/about/jason-ramirez"
             className="text-sage-700 dark:text-sage-400 hover:underline"
           >
             Jason Ramirez, CADC-II
           </Link>
-          , a Certified Drug and Alcohol Counselor with 11 years of clinical
-          experience in substance use and mental health counseling. The review
+          , a {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}. The review
           checks that items match the published instrument, that the scoring
           and bands match the source paper, that the language used to describe
           results stays educational rather than diagnostic, and that crisis
           resources are present where they are needed.
         </p>
         <p>
-          Clinical review does not turn an educational screener into a
-          diagnostic test. It is a quality control step on top of source
-          fidelity, not a substitute for evaluation by your own clinician.
+          CADC-II is a substance use counseling certification, not a physician,
+          psychologist, psychiatrist, or independent mental health license.
+          Clinical review does not turn an educational screener into a diagnostic
+          test. It is a quality-control step on top of source fidelity, not a
+          substitute for evaluation by your own clinician.
         </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">

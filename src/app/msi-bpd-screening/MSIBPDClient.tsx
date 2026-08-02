@@ -603,8 +603,8 @@ export function MSIBPDClient({ faqData }: Props) {
             <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
-                { name: "BPD Test for Women", desc: "MSI-BPD screening with context on BPD in women", href: "/bpd-test-for-women" },
-                { name: "BPD Screening for Young Adults", desc: "MSI-BPD screening with young adult context", href: "/bpd-screening-for-young-adults" },
+                { name: "MSI-BPD Clinical Evidence", desc: "Review the source study, validation, scoring, and limitations", href: "/clinical-evidence#msi-bpd" },
+                { name: "Talk to Your Doctor", desc: "Prepare questions and discuss a screening result with a clinician", href: "/how-to-talk-to-your-doctor-about-mental-health" },
                 { name: "PHQ-9 Depression Self-Check", desc: "9-question validated depression screener", href: "/phq-9-depression-test" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">

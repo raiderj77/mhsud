@@ -10,7 +10,7 @@ Jason is a solo entrepreneur building 4 static tool websites toward $3,500/month
 - **flipmycase.com** — Text conversion utilities. Users want instant, copy-paste workflows.
 - **creatorrevenuecalculator.com** — Revenue calculators for content creators. Static HTML on GitHub Pages.
 
-Jason has CADC-II credentials (Certified Alcohol and Drug Counselor II, 11 years clinical experience in substance abuse counseling). His name must NEVER appear in any public-facing content.
+Jason is a Certified Alcohol and Drug Counselor Level II (CADC-II) with 11 years of substance use counseling experience. MindCheck Tools must publicly attribute clinical review to "Jason Ramirez, CADC-II" and link to the reviewer profile; do not expose his LLC, location, address, or unrelated personal history.
 
 ## Your Perspective — User Experience
 1. **Tool design** — Is each screening tool intuitive? Can a user complete it without confusion? Is the consent/acknowledgment step clear but not annoying? Are progress indicators present for multi-question tools? Do results feel informative without being alarming?

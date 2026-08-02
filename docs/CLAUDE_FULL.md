@@ -65,9 +65,9 @@ How to maintain these:
 - Maintain About page with verifiable organizational info and mission
 - Include Contact information accessible from every page
 - Describe editorial review process (especially for YMYL content)
-- Attribution in body copy: "Certified Drug and Alcohol Counselor (CADC-II)" — never use personal name in body copy or headings
-- Attribution in bylines: named attribution REQUIRED for E-E-A-T — "Reviewed by Jason Ramirez, CADC-II — Certified Drug and Alcohol Counselor with 11 years of clinical experience. See /about/jason-ramirez."
-- All content reviewed by licensed CADC-II professional. Cite validated instruments and authoritative sources (WHO, CDC, APA). Describe editorial review process on About page.
+- Attribution in body copy: use the official credential name, "Certified Alcohol and Drug Counselor Level II (CADC-II)," and keep claims within substance use counseling scope.
+- Attribution in bylines: named attribution REQUIRED for E-E-A-T — "Reviewed by Jason Ramirez — Certified Alcohol and Drug Counselor Level II (CADC-II) with 11 years of substance use counseling experience. See /about/jason-ramirez."
+- Maintained screening pages must show named review, traceable sources, limitations, and review dates. CADC-II is a professional certification, not a medical or independent mental health license.
 
 ## 5. Structured Data (JSON-LD)
 

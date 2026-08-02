@@ -82,7 +82,6 @@ export default function PostpartumDepressionTestPage() {
               datePublished: "2026-03-08",
               dateModified: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -97,7 +96,6 @@ export default function PostpartumDepressionTestPage() {
               url: TOOL_URL,
               lastReviewed: "2026-05-14",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -241,7 +239,7 @@ export default function PostpartumDepressionTestPage() {
           <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -376,11 +374,11 @@ export default function PostpartumDepressionTestPage() {
           <Link href="/" className="text-sky-600 dark:text-sky-400 hover:underline">
             MindCheck Tools Home &rarr;
           </Link>
-          <Link href="/depression-test-for-new-moms" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Depression Test for New Moms &rarr;
+          <Link href="/maternal-mental-health" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Maternal Mental Health Guide &rarr;
           </Link>
-          <Link href="/burnout-test-parents" className="text-sky-600 dark:text-sky-400 hover:underline">
-            Burnout Test for Parents &rarr;
+          <Link href="/burnout-assessment-tool" className="text-sky-600 dark:text-sky-400 hover:underline">
+            Burnout Assessment Tool &rarr;
           </Link>
         </div>
       </div>

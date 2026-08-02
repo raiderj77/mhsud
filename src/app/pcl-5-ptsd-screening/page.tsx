@@ -50,7 +50,6 @@ export default function PCL5Page() {
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -82,7 +81,6 @@ export default function PCL5Page() {
               url: TOOL_URL,
               lastReviewed: "2026-03-07",
             }),
-      reviewedBy: { "@type": "Person", "name": "Jason Ramirez", "jobTitle": "Certified Drug and Alcohol Counselor (CADC-II)", "url": "https://mindchecktools.com/about/jason-ramirez" },
     }),
         }}
       />
@@ -90,7 +88,7 @@ export default function PCL5Page() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -121,7 +119,7 @@ export default function PCL5Page() {
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
     <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools &middot; Your Friendly Developer LLC
+      Published by MindCheck Tools
     </p>
     <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
       <span>
@@ -160,9 +158,9 @@ export default function PCL5Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PC-PTSD-5 Brief Screen</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Quick 5-question PTSD screening</p>
           </Link>
-          <Link href="/ptsd-test-veterans" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PTSD Test for Veterans</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Veteran-focused PTSD screening with VA resources</p>
+          <Link href="/clinical-evidence#pcl-5" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 Clinical Evidence</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Review the source study, validation, scoring, and limitations</p>
           </Link>
         </div>
       </div>
