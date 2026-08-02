@@ -11,6 +11,11 @@ import { ResultDisclaimer } from "@/components/ResultDisclaimer";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { EmailCapture } from "@/components/EmailCapture";
 import { TherapyCTA } from "@/components/TherapyCTA";
+import {
+  getAuditSupportLevel,
+  hasAuditItemLevelEscalation,
+  shouldShowAuditWithdrawalSafety,
+} from "@/lib/auditGuidance.mjs";
 
 
 interface Question {
@@ -135,6 +140,25 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
   dependence: { text: "text-crisis-700 dark:text-crisis-400", bg: "bg-crisis-50 dark:bg-crisis-950/30", bar: "from-crisis-400 to-crisis-600" },
 };
 
+const SUPPORT_GUIDANCE: Record<number, { label: string; suggestion: string }> = {
+  1: {
+    label: "Alcohol education",
+    suggestion: "Review lower-risk guidance and continue monitoring your drinking pattern.",
+  },
+  2: {
+    label: "Simple advice",
+    suggestion: "Consider practical risk-reduction steps and discuss your pattern with a healthcare professional if you are concerned.",
+  },
+  3: {
+    label: "Brief counseling and continued monitoring",
+    suggestion: "Discuss these results with a healthcare professional for individualized guidance and follow-up.",
+  },
+  4: {
+    label: "Professional diagnostic evaluation and treatment guidance",
+    suggestion: "Arrange a professional evaluation to discuss your drinking pattern and the safest next steps.",
+  },
+};
+
 interface Props {
   faqData: { question: string; answer: string }[];
   hideTherapyCTA?: boolean;
@@ -156,7 +180,9 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
   const colors = RANGE_COLORS[range.key];
   const progress = (answers.filter((a) => a !== null).length / 10) * 100;
   const furthestAnswered = answers.findLastIndex((a) => a !== null);
-  const highRisk = totalScore >= 20;
+  const itemLevelEscalation = hasAuditItemLevelEscalation(answers);
+  const supportGuidance = SUPPORT_GUIDANCE[getAuditSupportLevel(totalScore, answers)];
+  const showWithdrawalSafety = shouldShowAuditWithdrawalSafety(totalScore, answers);
 
   function handleAnswer(qi: number, value: number) {
     const next = [...answers];
@@ -310,9 +336,9 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
 
       {showResults && (
         <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
-          {/* Withdrawal Warning for high scores */}
-          {highRisk && (
-            <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5">
+          {/* Withdrawal caution follows drinking-pattern answers, not only the total score. */}
+          {showWithdrawalSafety && (
+            <div role="alert" className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5">
               <div className="flex gap-3 items-start">
                 <span className="text-xl">⚠️</span>
                 <div>
@@ -351,7 +377,14 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
             <div className="p-5 sm:p-6 space-y-4">
               <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
               <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2"><strong>What you can consider next:</strong> {range.suggestion}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2">
+                  <strong>WHO support guidance, {supportGuidance.label}:</strong> {supportGuidance.suggestion}
+                </p>
+                {itemLevelEscalation && (
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2" role="note">
+                    One or more individual responses meet the WHO manual&apos;s threshold for the next-highest support level. This does not change your total score and is not a diagnosis.
+                  </p>
+                )}
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Learn more:{" "}
                   <Link href="/blog/audit-guide" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
@@ -496,7 +529,7 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
             severityLabel={range.level}
             scoreRange={`${range.min}–${range.max}`}
             interpretation={range.description}
-            suggestion={range.suggestion}
+            suggestion={supportGuidance.suggestion}
             reflectionPrompts={REFLECTION_PROMPTS["audit-alcohol-test"]?.prompts ?? []}
             responses={QUESTIONS.map((q, i) => ({
               question: q.text,
@@ -545,8 +578,8 @@ export function AUDITClient({ faqData, hideTherapyCTA = false }: Props) {
                   <a href="https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">WHO, AUDIT Manual</a>
                 </li>
                 <li>
-                  National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Use Disorder.{" "}
-                  <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-use-disorder" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">niaaa.nih.gov</a>
+                  National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Use Disorder: From Risk to Diagnosis to Recovery.{" "}
+                  <a href="https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/alcohol-use-disorder-risk-diagnosis-recovery" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">niaaa.nih.gov</a>
                 </li>
                 <li>
                   SAMHSA National Helpline.{" "}

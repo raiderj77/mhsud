@@ -135,7 +135,7 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/service-worker.js').then(
+                  navigator.serviceWorker.register('/service-worker.js', { updateViaCache: 'none' }).then(
                     function(registration) {
                       console.log('Service Worker registered successfully:', registration);
                     },

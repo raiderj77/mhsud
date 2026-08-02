@@ -10,6 +10,10 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox
 if (workbox) {
   workbox.setConfig({ debug: false });
 
+  // Activate privacy-policy updates promptly instead of leaving a new worker
+  // waiting for every existing tab to close.
+  self.addEventListener('install', () => self.skipWaiting());
+
   // === CONSTANTS ===
   const CACHE_VERSION = '1.2.0';
   const CACHE_TIMESTAMP = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
