@@ -17,28 +17,57 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
 
     const gate = gateRef.current;
     const assessmentRoot = gate?.parentElement ?? null;
-    const nextContentTop = gate
-      ? gate.getBoundingClientRect().top + window.scrollY
-      : window.scrollY;
+
+    let moved = false;
+    let fallbackAttempts = 0;
+    let fallbackTimer: number | undefined;
+    let observer: MutationObserver | null = null;
+
+    const moveToQuestionnaire = () => {
+      // React may not have replaced the gate yet. Querying too early finds the
+      // enabled Begin button, which is then removed and drops focus on <body>.
+      if (moved || gate?.isConnected) return false;
+
+      const firstAnswer = assessmentRoot?.querySelector<HTMLElement>(
+        '[role="radiogroup"] [role="radio"], [role="radio"], button[aria-pressed], input[type="radio"], input[type="range"], select, textarea, button:not([disabled])',
+      );
+      if (!firstAnswer) return false;
+
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const liveAnswerTop = firstAnswer.getBoundingClientRect().top + window.scrollY;
+      const questionContextOffset = Math.min(320, window.innerHeight * 0.4);
+      window.scrollTo({
+        top: Math.max(0, liveAnswerTop - questionContextOffset),
+        behavior: reducedMotion ? "auto" : "smooth",
+      });
+      firstAnswer.focus({ preventScroll: true });
+      moved = true;
+      observer?.disconnect();
+      if (fallbackTimer !== undefined) window.clearTimeout(fallbackTimer);
+      return true;
+    };
+
+    if (assessmentRoot) {
+      observer = new MutationObserver(() => {
+        moveToQuestionnaire();
+      });
+      observer.observe(assessmentRoot, { childList: true, subtree: true });
+    }
 
     onAccept();
 
-    // The gate is replaced by the questionnaire. Wait for that render, then
-    // return visitors to its beginning and put keyboard focus on its first answer.
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        const firstAnswer = assessmentRoot?.querySelector<HTMLElement>(
-          '[role="radiogroup"] [role="radio"], [role="radio"], button[aria-pressed], input[type="radio"], select, textarea, button:not([disabled])',
-        );
-
-        window.scrollTo({
-          top: Math.max(0, nextContentTop - 80),
-          behavior: reducedMotion ? "auto" : "smooth",
-        });
-        firstAnswer?.focus({ preventScroll: true });
-      });
-    });
+    // The observer handles React's commit. These fallbacks cover environments
+    // that batch or suppress mutation delivery without focusing the old gate.
+    const retryMove = () => {
+      if (moveToQuestionnaire()) return;
+      fallbackAttempts += 1;
+      if (fallbackAttempts >= 20) {
+        observer?.disconnect();
+        return;
+      }
+      fallbackTimer = window.setTimeout(retryMove, 100);
+    };
+    window.requestAnimationFrame(retryMove);
   };
 
   return (
