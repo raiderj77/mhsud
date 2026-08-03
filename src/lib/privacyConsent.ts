@@ -4,9 +4,13 @@ export const OPEN_CONSENT_EVENT = "mindcheck:open-privacy-choices";
 export const ADS_READY_EVENT = "mindcheck:ads-ready";
 
 export type PrivacyConsent = {
-  version: 1;
+  version: 2;
   analytics: boolean;
   advertising: boolean;
+};
+
+export type AdsByGoogleQueue = unknown[] & {
+  requestNonPersonalizedAds?: 1;
 };
 
 declare global {
@@ -15,7 +19,7 @@ declare global {
     __mindcheckLastTrackedPath?: string;
     dataLayer?: unknown[][];
     gtag?: (...args: unknown[]) => void;
-    adsbygoogle?: unknown[];
+    adsbygoogle?: AdsByGoogleQueue;
   }
 }
 

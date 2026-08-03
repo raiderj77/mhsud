@@ -52,11 +52,6 @@ export default function AUDITCPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
-      <section className="sr-only">
-        <h2>What Is the AUDIT-C Alcohol Screen?</h2>
-        <h2>How Is the AUDIT-C Scored?</h2>
-        <h2>What Do My AUDIT-C Results Mean?</h2>
-      </section>
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026
       </p>

@@ -129,11 +129,6 @@ export default function SafetyPlanPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is a Safety Plan?</h2>
-        <h2>How Does the Safety Plan Tool Work?</h2>
-        <h2>When Should You Create a Safety Plan?</h2>
-      </section>
       <LocalStorageNotice dataDescription="your safety-plan entries" />
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />

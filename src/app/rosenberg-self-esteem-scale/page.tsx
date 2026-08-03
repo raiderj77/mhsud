@@ -131,11 +131,6 @@ export default function RSESPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Rosenberg Self-Esteem Scale?</h2>
-        <h2>How Is the Rosenberg Self-Esteem Scale Scored?</h2>
-        <h2>What Do My Self-Esteem Results Mean?</h2>
-      </section>
 <RSESClient faqData={FAQ_DATA} />
     </>
   );

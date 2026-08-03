@@ -86,11 +86,6 @@ export default function HealthTimelinePage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Health Recovery Timeline?</h2>
-        <h2>How Does the Health Recovery Timeline Work?</h2>
-        <h2>What Do My Recovery Timeline Results Mean?</h2>
-      </section>
 <HealthTimelineClient faqData={FAQ_DATA} />
     </>
   );

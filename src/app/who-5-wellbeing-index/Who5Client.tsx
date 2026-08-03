@@ -472,7 +472,7 @@ export function Who5Client({ faqData }: Props) {
         Rate each statement for how you have been feeling over the <strong>last two weeks</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        5 questions · ~2 minutes · Completely private · WHO public domain instrument
+        5 questions · ~2 minutes · private by design · WHO public domain instrument
       </p>
 
       {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active wellbeing questionnaire. */}
@@ -580,7 +580,7 @@ export function Who5Client({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

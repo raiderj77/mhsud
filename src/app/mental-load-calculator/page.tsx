@@ -70,11 +70,6 @@ export default function MentalLoadPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Mental Load Calculator?</h2>
-        <h2>How Does the Mental Load Calculator Work?</h2>
-        <h2>What Do My Mental Load Results Mean?</h2>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>

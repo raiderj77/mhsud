@@ -117,24 +117,25 @@ export function SwUpdateNotification({
 
   // Position classes
   const positionClass = {
-    'top-left': 'top-4 left-4',
-    'top-right': 'top-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'bottom-right': 'bottom-4 right-4',
+    'top-left': 'top-3 left-3 sm:top-4 sm:left-4',
+    'top-right': 'top-3 right-3 sm:top-4 sm:right-4',
+    'bottom-left': 'bottom-3 left-3 sm:bottom-4 sm:left-4',
+    'bottom-right': 'bottom-3 right-3 sm:bottom-4 sm:right-4',
   }[position]
 
   return (
     <div
-      className={`fixed ${positionClass} z-50 max-w-sm animate-in slide-in-from-bottom-4`}
-      role="status"
-      aria-live="polite"
+      className={`fixed ${positionClass} z-50 w-[calc(100%_-_1.5rem)] max-w-sm sm:w-full animate-in slide-in-from-bottom-4`}
+      role="region"
+      aria-labelledby="service-worker-update-title"
     >
+      <p className="sr-only" role="status" aria-live="polite">A MindCheck Tools update is available.</p>
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg overflow-hidden">
         {/* Header */}
         <div className="p-4">
           <div className="flex items-start justify-between gap-3">
             <div className="flex-1">
-              <h3 className="font-semibold text-lg">Update Available</h3>
+              <h3 id="service-worker-update-title" className="font-semibold text-lg">Update Available</h3>
               <p className="text-blue-100 text-sm mt-1">
                 A new version of mindchecktools is ready
               </p>
@@ -142,12 +143,13 @@ export function SwUpdateNotification({
 
             {/* Close button */}
             <button
+              type="button"
               onClick={handleDismiss}
               disabled={isLoading}
-              className="flex-shrink-0 text-blue-200 hover:text-white disabled:opacity-50"
+              className="inline-flex min-h-[44px] min-w-[44px] flex-shrink-0 items-center justify-center rounded-lg text-blue-100 hover:bg-white/10 hover:text-white disabled:opacity-50 focus-visible:outline-white"
               aria-label="Dismiss update notification"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path
                   fillRule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -161,13 +163,14 @@ export function SwUpdateNotification({
         {/* Actions */}
         <div className="bg-blue-700 bg-opacity-50 px-4 py-3 flex gap-2">
           <button
+            type="button"
             onClick={handleUpdate}
             disabled={isLoading}
-            className="flex-1 bg-white text-blue-600 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="min-h-[44px] flex-1 bg-white text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {isLoading ? (
               <span className="flex items-center justify-center gap-2">
-                <span className="inline-block w-4 h-4 border-2 border-blue-300 border-t-blue-600 rounded-full animate-spin" />
+                <span className="inline-block w-4 h-4 border-2 border-blue-300 border-t-blue-600 rounded-full animate-spin" aria-hidden="true" />
                 Updating...
               </span>
             ) : (
@@ -176,9 +179,10 @@ export function SwUpdateNotification({
           </button>
 
           <button
+            type="button"
             onClick={handleDismiss}
             disabled={isLoading}
-            className="px-4 py-2 text-blue-100 hover:text-white disabled:opacity-50 text-sm font-medium"
+            className="min-h-[44px] px-4 py-2 text-blue-100 hover:text-white disabled:opacity-50 text-sm font-medium focus-visible:outline-white"
           >
             Later
           </button>
@@ -186,7 +190,7 @@ export function SwUpdateNotification({
 
         {/* Progress indicator */}
         {isLoading && (
-          <div className="h-1 bg-blue-800">
+          <div className="h-1 bg-blue-800" role="progressbar" aria-label="Installing update" aria-valuetext="Updating">
             <div className="h-full bg-white animate-pulse"></div>
           </div>
         )}
@@ -222,23 +226,24 @@ export function SwUpdateNotificationMinimal({
   }
 
   const positionClass = {
-    'top-left': 'top-4 left-4',
-    'top-right': 'top-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'bottom-right': 'bottom-4 right-4',
+    'top-left': 'top-3 left-3 sm:top-4 sm:left-4',
+    'top-right': 'top-3 right-3 sm:top-4 sm:right-4',
+    'bottom-left': 'bottom-3 left-3 sm:bottom-4 sm:left-4',
+    'bottom-right': 'bottom-3 right-3 sm:bottom-4 sm:right-4',
   }[position]
 
   return (
-    <div className={`fixed ${positionClass} z-50`}>
+    <div className={`fixed ${positionClass} z-50 w-[calc(100%_-_1.5rem)] max-w-sm sm:w-auto`} role="status" aria-live="polite">
       <div className="bg-blue-600 text-white rounded px-4 py-3 shadow-lg">
         <p className="text-sm mb-2">New version available</p>
         <button
+          type="button"
           onClick={async () => {
             setIsLoading(true)
             await reloadWithNewServiceWorker()
           }}
           disabled={isLoading}
-          className="bg-white text-blue-600 px-3 py-1 rounded text-sm font-semibold hover:bg-blue-50 disabled:opacity-50"
+          className="min-h-[44px] bg-white text-blue-700 px-3 py-1 rounded text-sm font-semibold hover:bg-blue-50 disabled:opacity-50"
         >
           {isLoading ? 'Updating...' : 'Update'}
         </button>

@@ -50,7 +50,7 @@ export default function BurnoutTestForTeachersPage() {
         </div>
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold text-base hover:bg-amber-700 transition-colors shadow-sm">Start the Burnout Assessment</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 5 minutes. Completely private, nothing is stored or shared.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
         </div>
 
         {/* Why This Matters */}
@@ -181,11 +181,6 @@ export default function BurnoutTestForTeachersPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Teacher Burnout Screening?</h2>
-        <h2>How Is the Teacher Burnout Test Scored?</h2>
-        <h2>What Do My Burnout Screening Results Mean?</h2>
-      </section>
 <BurnoutClient faqData={FAQ_DATA} />
       </div>
 

@@ -86,11 +86,6 @@ export default function CAGEAIDPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the CAGE-AID Substance Screening?</h2>
-        <h2>How Is the CAGE-AID Scored?</h2>
-        <h2>What Do My CAGE-AID Results Mean?</h2>
-      </section>
       <CAGEAIDClient faqData={FAQ_DATA} />
     </>
   );

@@ -560,7 +560,7 @@ export function CrafftClient({ faqData }: Props) {
         A quick, confidential check-in about alcohol, drugs, and safety, designed for young people ages 12–21.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        ~2 minutes · Yes/No questions · Completely private · CRAFFT 2.1+N
+        ~2 minutes · Yes/No questions · private by design · CRAFFT 2.1+N
       </p>
 
       <AdSlot npa position="tool-top" />
@@ -767,7 +767,7 @@ export function CrafftClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

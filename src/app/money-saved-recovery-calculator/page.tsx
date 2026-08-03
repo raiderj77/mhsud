@@ -85,11 +85,6 @@ export default function MoneySavedPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Recovery Savings Calculator?</h2>
-        <h2>How Does the Recovery Savings Calculator Work?</h2>
-        <h2>What Do My Recovery Savings Results Mean?</h2>
-      </section>
 <MoneySavedClient faqData={FAQ_DATA} />
     </>
   );

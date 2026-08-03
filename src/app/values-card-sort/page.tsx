@@ -124,11 +124,6 @@ export default function ValuesCardSortPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Values Card Sort?</h2>
-        <h2>How Does the Values Card Sort Work?</h2>
-        <h2>What Do My Values Card Sort Results Mean?</h2>
-      </section>
 <ValuesCardSortClient faqData={FAQ_DATA} />
     </>
   );

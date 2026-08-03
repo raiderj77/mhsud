@@ -136,10 +136,10 @@ export function SleepMoodClient({ faqData }: Props) {
         </div>
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Sleep &amp; Mood Reflection</h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          How is your sleep affecting your mood, energy, and daily life? 10 original questions to help you see the connection, completely private.
+          How is your sleep affecting your mood, energy, and daily life? 10 original questions to help you see the connection, private by design.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~2 Minutes" }, { icon: "🌙", text: "10 Questions" }].map((b) => (
+          {[{ icon: "🔒", text: "Answers Stay Local" }, { icon: "⏱", text: "~2 Minutes" }, { icon: "🌙", text: "10 Questions" }].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>

@@ -236,7 +236,7 @@ export function TreatmentCostClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\uD83D\uDD12", text: "100% Private" },
+            { icon: "\uD83D\uDD12", text: "Answers Stay Local" },
             { icon: "\uD83D\uDCB0", text: "Cost Ranges" },
             { icon: "\u2139\uFE0F", text: "Estimates Only" },
           ].map((b) => (
@@ -516,7 +516,7 @@ export function TreatmentCostClient({ faqData }: Props) {
             by a qualified healthcare professional based on a comprehensive assessment.
           </p>
           <p>
-            All interactions are processed entirely in your browser. Nothing is stored or transmitted.
+            All interactions are processed in your browser and are not sent to MindCheck Tools.
           </p>
           <ToolReviewerBio />
         </div>

@@ -1,245 +1,161 @@
 /**
- * Service Worker for mindchecktools.com PWA
- * Implements Workbox caching strategies for offline-first experience
- * PRIVACY: NO health data logging, NO personal info caching
+ * First-party service worker for MindCheck Tools.
+ *
+ * Privacy invariants:
+ * - no third-party runtime or CDN import;
+ * - no API response caching;
+ * - no caching of screening, assessment, result, crisis, or other sensitive
+ *   interactive routes;
+ * - query strings and fragments are never used as cache keys.
  */
 
-// Import Workbox modules from CDN
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-sw.js');
+const CACHE_VERSION = "2.0.0";
+const STATIC_CACHE = `mindcheck-static-${CACHE_VERSION}`;
+const PAGE_CACHE = `mindcheck-pages-${CACHE_VERSION}`;
+const CURRENT_CACHES = new Set([STATIC_CACHE, PAGE_CACHE]);
+const MAX_STATIC_ENTRIES = 120;
+const MAX_PAGE_ENTRIES = 60;
 
-if (workbox) {
-  workbox.setConfig({ debug: false });
+const PRECACHE_ASSETS = [
+  "/",
+  "/offline",
+  "/manifest.json",
+  "/favicon.ico",
+  "/icon-192.png",
+  "/icon-512.png",
+];
 
-  // Activate privacy-policy updates promptly instead of leaving a new worker
-  // waiting for every existing tab to close.
-  self.addEventListener('install', () => self.skipWaiting());
+const SENSITIVE_TOOL_SEGMENT =
+  /(?:^|-)(?:test|screen|screening|assessment|questionnaire|scale|inventory|calculator|check|check-in|record|scheduler)(?:-|$)/i;
 
-  // === CONSTANTS ===
-  const CACHE_VERSION = '1.2.0';
-  const CACHE_TIMESTAMP = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  const PRECACHE_NAME = `mindcheck-precache-${CACHE_VERSION}`;
-  const RUNTIME_CACHE_NAMES = {
-    staticAssets: `mindcheck-static-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
-    toolPages: `mindcheck-tools-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
-    blogPosts: `mindcheck-blog-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
-    api: `mindcheck-api-${CACHE_VERSION}-${CACHE_TIMESTAMP}`,
-  };
+const EXPLICIT_SENSITIVE_ROUTES = new Set([
+  "screening-tools",
+  "safety-plan",
+  "readiness-to-change",
+  "who-5-wellbeing-index",
+  "attachment-style-quiz",
+  "box-breathing-exercise",
+  "cognitive-distortion-identifier",
+  "coping-skills-randomizer",
+  "dass-21-depression-anxiety-stress",
+  "dbt-crisis-skills",
+  "five-senses-grounding",
+  "health-recovery-timeline",
+  "relapse-prevention-plan",
+  "treatment-cost-estimator",
+  "trigger-identification-worksheet",
+  "urge-surfing-timer",
+  "values-card-sort",
+  "withdrawal-timeline",
+]);
 
-  const SENSITIVE_TOOL_SEGMENT =
-    /(?:^|-)(?:test|screen|screening|assessment|questionnaire|scale|inventory|calculator|check|check-in|record|scheduler)(?:-|$)/i;
-  const EXPLICIT_SENSITIVE_ROUTES = new Set([
-    'screening-tools',
-    'safety-plan',
-    'readiness-to-change',
-    'who-5-wellbeing-index',
-    'attachment-style-quiz',
-    'box-breathing-exercise',
-    'cognitive-distortion-identifier',
-    'coping-skills-randomizer',
-    'dass-21-depression-anxiety-stress',
-    'dbt-crisis-skills',
-    'five-senses-grounding',
-    'health-recovery-timeline',
-    'relapse-prevention-plan',
-    'treatment-cost-estimator',
-    'trigger-identification-worksheet',
-    'urge-surfing-timer',
-    'values-card-sort',
-    'withdrawal-timeline',
-  ]);
-  const isSensitivePath = (pathname) => {
-    const firstSegment = pathname.split('/').filter(Boolean)[0]?.toLowerCase();
-    if (!firstSegment || firstSegment === 'blog') return false;
-    return /^results?$/.test(firstSegment) ||
-      EXPLICIT_SENSITIVE_ROUTES.has(firstSegment) ||
-      SENSITIVE_TOOL_SEGMENT.test(firstSegment);
-  };
-
-  // === PRECACHE CRITICAL ASSETS ===
-  const precacheAssets = [
-    { url: '/', revision: CACHE_VERSION },
-    { url: '/manifest.json', revision: CACHE_VERSION },
-    { url: '/favicon.ico', revision: CACHE_VERSION },
-    { url: '/offline', revision: CACHE_VERSION },
-  ];
-
-  workbox.precaching.precacheAndRoute(precacheAssets);
-
-  // === CACHING STRATEGIES ===
-
-  // Sensitive tools are network-only. Their HTML, answers, and result state
-  // must never be available from a service-worker cache.
-  workbox.routing.registerRoute(
-    ({ url }) => isSensitivePath(url.pathname),
-    new workbox.strategies.NetworkOnly()
-  );
-
-  // 1. STATIC ASSETS: Cache-first (versioned with hash in filename)
-  // Next.js outputs hashed filenames in _next/static, so cache-first is safe
-  workbox.routing.registerRoute(
-    ({ url }) => url.pathname.startsWith('/_next/static') ||
-                  url.pathname.match(/\.(woff2?|ttf|otf|eot)$/),
-    new workbox.strategies.CacheFirst({
-      cacheName: RUNTIME_CACHE_NAMES.staticAssets,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 100,
-          maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // 2. ICON/FONT ASSETS: Cache-first
-  workbox.routing.registerRoute(
-    ({ url }) => url.pathname.startsWith('/icons') ||
-                  url.pathname.match(/\.(png|jpg|jpeg|svg|gif|webp)$/),
-    new workbox.strategies.CacheFirst({
-      cacheName: RUNTIME_CACHE_NAMES.staticAssets,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 50,
-          maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // 3. TOOL PAGES: Stale-while-revalidate
-  // Includes assessment tools like /phq-9, /gad-7, and published results
-  workbox.routing.registerRoute(
-    ({ url }) => /^(\/phq-9|\/gad-7|\/published)/.test(url.pathname),
-    new workbox.strategies.StaleWhileRevalidate({
-      cacheName: RUNTIME_CACHE_NAMES.toolPages,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 20,
-          maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // 4. BLOG POSTS: Stale-while-revalidate
-  workbox.routing.registerRoute(
-    ({ url }) => url.pathname.startsWith('/blog/'),
-    new workbox.strategies.StaleWhileRevalidate({
-      cacheName: RUNTIME_CACHE_NAMES.blogPosts,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 50,
-          maxAgeSeconds: 60 * 60 * 24 * 14, // 14 days
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // 5. API ROUTES: Network-first (always try fresh data)
-  workbox.routing.registerRoute(
-    ({ url }) => url.pathname.startsWith('/api/'),
-    new workbox.strategies.NetworkFirst({
-      cacheName: RUNTIME_CACHE_NAMES.api,
-      networkTimeoutSeconds: 3,
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 30,
-          maxAgeSeconds: 60 * 60 * 24, // 1 day
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    })
-  );
-
-  // === FALLBACK HANDLING ===
-  // Navigation requests that fail should show offline page
-  workbox.routing.registerRoute(
-    ({ request, url }) => request.mode === 'navigate' && !isSensitivePath(url.pathname),
-    new workbox.strategies.NetworkFirst({
-      cacheName: RUNTIME_CACHE_NAMES.toolPages,
-      networkTimeoutSeconds: 3,
-      plugins: [
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    }).catch(() => caches.match('/offline') || new Response('Offline - please try again'))
-  );
-
-  // === CACHE CLEANUP ===
-  // Remove old cache entries on service worker activation
-  self.addEventListener('activate', (event) => {
-    event.waitUntil(
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            // Keep current caches, delete old ones
-            const validCaches = Object.values(RUNTIME_CACHE_NAMES);
-            validCaches.push(PRECACHE_NAME);
-
-            if (!validCaches.includes(cacheName)) {
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      }).then(() => self.clients.claim())
-    );
-  });
-
-  // === QUOTA MANAGEMENT ===
-  // Monitor cache size and clean up if needed (50MB limit)
-  self.addEventListener('message', (event) => {
-    if (event.data && event.data.type === 'CHECK_CACHE_QUOTA') {
-      event.waitUntil(
-        navigator.storage?.estimate?.().then((estimate) => {
-          const percentUsed = (estimate.usage / estimate.quota) * 100;
-
-          // If cache is >80% full, start cleanup
-          if (percentUsed > 80) {
-            // Delete oldest entries from largest cache
-            caches.open(RUNTIME_CACHE_NAMES.staticAssets).then((cache) => {
-              cache.keys().then((requests) => {
-                if (requests.length > 20) {
-                  requests.slice(0, 10).forEach((req) => cache.delete(req));
-                }
-              });
-            });
-          }
-
-          event.ports[0].postMessage({
-            type: 'CACHE_QUOTA_RESPONSE',
-            usage: estimate.usage,
-            quota: estimate.quota,
-            percentUsed: percentUsed,
-          });
-        }).catch(() => {
-          // Storage Quota API not available, ignore
-          event.ports[0].postMessage({
-            type: 'CACHE_QUOTA_RESPONSE',
-            error: 'Storage Quota API not available',
-          });
-        })
-      );
-    }
-  });
-
-  // === BACKGROUND SYNC (Future) ===
-  // Placeholder for offline form submissions in future phase
-  // workbox.backgroundSync.initialize();
-
-} else {
-  console.error('Workbox failed to load from CDN');
+function isSensitivePath(pathname) {
+  const firstSegment = pathname.split("/").filter(Boolean)[0]?.toLowerCase();
+  if (!firstSegment || firstSegment === "blog") return false;
+  return /^results?$/.test(firstSegment) ||
+    EXPLICIT_SENSITIVE_ROUTES.has(firstSegment) ||
+    SENSITIVE_TOOL_SEGMENT.test(firstSegment);
 }
+
+function cacheKeyFor(url) {
+  return new Request(`${url.origin}${url.pathname}`, {
+    method: "GET",
+    credentials: "same-origin",
+  });
+}
+
+function mayCache(response) {
+  if (!response || !response.ok || response.type !== "basic") return false;
+  const cacheControl = response.headers.get("cache-control") ?? "";
+  return !/(?:^|,)\s*(?:no-store|private)(?:\s|,|$)/i.test(cacheControl) &&
+    !response.headers.has("set-cookie");
+}
+
+async function trimCache(cache, maxEntries) {
+  const keys = await cache.keys();
+  const excess = keys.length - maxEntries;
+  if (excess <= 0) return;
+  await Promise.all(keys.slice(0, excess).map((key) => cache.delete(key)));
+}
+
+async function cacheFirst(request, url) {
+  const cache = await caches.open(STATIC_CACHE);
+  const key = cacheKeyFor(url);
+  const cached = await cache.match(key);
+  if (cached) return cached;
+
+  const response = await fetch(request);
+  if (mayCache(response)) {
+    await cache.put(key, response.clone());
+    await trimCache(cache, MAX_STATIC_ENTRIES);
+  }
+  return response;
+}
+
+async function networkFirstPage(request, url) {
+  const cache = await caches.open(PAGE_CACHE);
+  const key = cacheKeyFor(url);
+  try {
+    const response = await fetch(request);
+    if (mayCache(response)) {
+      await cache.put(key, response.clone());
+      await trimCache(cache, MAX_PAGE_ENTRIES);
+    }
+    return response;
+  } catch {
+    return (await cache.match(key)) ||
+      (await caches.match("/offline")) ||
+      new Response("Offline - please try again", {
+        status: 503,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+  }
+}
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => cache.addAll(PRECACHE_ASSETS))
+      .then(() => self.skipWaiting()),
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((names) => Promise.all(
+        names
+          .filter((name) =>
+            (name.startsWith("mindcheck-") || name.startsWith("workbox-precache")) &&
+            !CURRENT_CACHES.has(name),
+          )
+          .map((name) => caches.delete(name)),
+      ))
+      .then(() => self.clients.claim()),
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  const request = event.request;
+  if (request.method !== "GET") return;
+
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
+
+  if (url.pathname.startsWith("/api/") || isSensitivePath(url.pathname)) {
+    event.respondWith(fetch(request, { cache: "no-store" }));
+    return;
+  }
+
+  if (
+    url.pathname.startsWith("/_next/static/") ||
+    /\.(?:css|js|woff2?|ttf|otf|eot|png|jpe?g|svg|gif|webp|ico)$/i.test(url.pathname)
+  ) {
+    event.respondWith(cacheFirst(request, url));
+    return;
+  }
+
+  if (request.mode === "navigate") {
+    event.respondWith(networkFirstPage(request, url));
+  }
+});

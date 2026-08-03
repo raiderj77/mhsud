@@ -131,11 +131,6 @@ export default function K6Page() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the K6 Distress Scale?</h2>
-        <h2>How Is the K6 Distress Scale Scored?</h2>
-        <h2>What Do My K6 Distress Results Mean?</h2>
-      </section>
 <K6Client faqData={FAQ_DATA} />
     </>
   );

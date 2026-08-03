@@ -8,29 +8,35 @@ interface AnswerBlockProps {
 export default function AnswerBlock({ what, who, bottomLine, lastUpdated }: AnswerBlockProps) {
   return (
     <section
-      aria-label="Quick Answer"
+      aria-labelledby="quick-answer-label"
       className="answer-block border-l-4 border-sage-600 bg-neutral-50 dark:bg-neutral-800/50 dark:border-sage-400 rounded-r-lg p-5 mb-8"
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
+      <p
+        id="quick-answer-label"
+        className="text-base font-semibold text-neutral-900 dark:text-neutral-100 mb-4"
+      >
+        Quick answer
+      </p>
+      <dl className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
+          <dt className="block text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">
             What is this?
-          </span>
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{what}</p>
+          </dt>
+          <dd className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{what}</dd>
         </div>
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
-            Who needs it?
-          </span>
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{who}</p>
+          <dt className="block text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">
+            Who is it for?
+          </dt>
+          <dd className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{who}</dd>
         </div>
         <div>
-          <span className="block text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">
+          <dt className="block text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">
             Bottom line
-          </span>
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{bottomLine}</p>
+          </dt>
+          <dd className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 m-0">{bottomLine}</dd>
         </div>
-      </div>
+      </dl>
       <time
         dateTime={lastUpdated}
         className="block text-right text-xs text-neutral-400"

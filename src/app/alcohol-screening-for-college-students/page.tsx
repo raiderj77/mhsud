@@ -39,7 +39,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results be shared with my school?",
-    answer: "No. This tool runs entirely in your browser. Nothing you enter is stored, transmitted, or shared with any server, school, or third party. Your results are completely private, when you close this page, your responses are gone.",
+    answer: "No. This tool scores answers in your browser and does not send them to MindCheck Tools, your school, or another third party. When you close this page, the on-screen responses are gone.",
   },
   {
     question: "I only drink on weekends, can that still be a problem?",
@@ -128,7 +128,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private, nothing is stored or shared with your school.
+            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools or your school.
           </p>
         </div>
 
@@ -355,11 +355,6 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
-      <section className="sr-only">
-        <h2>What Is the College Alcohol Screening?</h2>
-        <h2>How Is the College Alcohol Screen Scored?</h2>
-        <h2>What Do My Alcohol Screening Results Mean?</h2>
-      </section>
 <AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 

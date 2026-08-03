@@ -257,7 +257,7 @@ export function HALTClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\uD83D\uDD12", text: "100% Private" },
+            { icon: "\uD83D\uDD12", text: "Answers Stay Local" },
             { icon: "\u23F1", text: "Under 60 Seconds" },
             { icon: "\uD83D\uDD01", text: "Use Daily" },
           ].map((b) => (

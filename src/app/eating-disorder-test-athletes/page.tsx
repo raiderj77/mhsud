@@ -170,7 +170,7 @@ export default function EatingDisorderTestAthletesPage() {
             Start the Eating Disorder Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private - nothing is stored or shared.
+            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -295,11 +295,6 @@ export default function EatingDisorderTestAthletesPage() {
 </div>
         </div>
 
-        <section className="sr-only">
-          <h2>What Is the Athlete Eating Disorder Screening?</h2>
-          <h2>How Is the Eating Disorder Test Scored?</h2>
-          <h2>What Do My Eating Disorder Results Mean?</h2>
-        </section>
         <SCOFFClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 

@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Terms of Use</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: February 17, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 2, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -38,7 +38,7 @@ export default function TermsPage() {
               <strong>MindCheck Tools does not provide medical advice, diagnoses, or treatment recommendations.</strong> All tools, questionnaires, screeners, checklists, and content on this Site are provided for educational and self-reflection purposes only.
             </p>
             <p>
-              The self-check tools on this Site, including the PHQ-9, GAD-7, AUDIT, AUDIT-C, and all original tools, are screening instruments. A screening result is not the same as a clinical diagnosis. Only a qualified healthcare professional (such as a physician, psychiatrist, psychologist, or licensed clinical social worker) can diagnose a mental health condition or substance use disorder.
+              Some self-check pages implement published screening instruments, including the PHQ-9, GAD-7, AUDIT, and AUDIT-C. Other original tools are educational reflection exercises and are not presented as validated clinical screeners. Neither kind of tool provides a diagnosis. A qualified healthcare professional must evaluate an individual before offering a clinical diagnosis or treatment recommendation.
             </p>
             <p>
               <strong>Do not rely on any information on this Site as a substitute for professional medical advice, diagnosis, or treatment.</strong> Always seek the advice of your physician or other qualified healthcare provider with any questions you may have regarding a medical or mental health condition. Never disregard professional medical advice or delay in seeking it because of something you have read or scored on this Site.
@@ -48,7 +48,7 @@ export default function TermsPage() {
           <section>
             <h2>No provider-patient relationship</h2>
             <p>
-              Your use of MindCheck Tools does not create a provider-patient, therapist-client, or counselor-client relationship. MindCheck Tools is not a healthcare provider, mental health service, crisis service, or medical facility. We do not employ or contract with physicians, therapists, or counselors.
+              Your use of MindCheck Tools does not create a provider-patient, therapist-client, or counselor-client relationship. MindCheck Tools is not a healthcare provider, mental health service, crisis service, or medical facility. Named contributors and reviewers provide editorial review within their stated scope; they do not provide individualized care through the Site.
             </p>
           </section>
 
@@ -78,7 +78,7 @@ export default function TermsPage() {
           <section>
             <h2>Accuracy of information</h2>
             <p>
-              We make reasonable efforts to ensure that the information on this Site is accurate and up to date. The PHQ-9, GAD-7, and AUDIT/AUDIT-C questionnaires are reproduced from their public-domain source materials. Scoring ranges and interpretive language are based on published clinical research.
+              We make reasonable efforts to ensure that the information on this Site is accurate and up to date. Published instruments are identified with their source, scoring reference, and known reuse terms or public-use status. Scoring ranges and interpretive language are checked against the cited publications or official materials.
             </p>
             <p>
               However, we cannot guarantee that all information is error-free. Research guidelines and clinical practices evolve. If you notice an error or have a concern about accuracy, please contact us at <strong>hello@mindchecktools.com</strong>.
@@ -88,7 +88,7 @@ export default function TermsPage() {
           <section>
             <h2>Intellectual property</h2>
             <p>
-              The PHQ-9, GAD-7, and AUDIT/AUDIT-C instruments are in the public domain and may be used freely. All original content on this Site, including original tools (Work Stress &amp; Burnout, Mental Load Calculator, Sleep &amp; Mood Reflection), article text, page designs, and visual elements, is the property of MindCheck Tools and is protected by applicable intellectual property laws.
+              Rights and reuse terms differ among published instruments. Consult each tool&apos;s identified source and publisher terms before reproducing it. Original MindCheck Tools text, original educational tools, page designs, and visual elements are protected by applicable intellectual property laws.
             </p>
             <p>
               You may use our tools for personal, educational, or clinical purposes. You may not reproduce, redistribute, or commercially use our original content without written permission.
@@ -98,7 +98,7 @@ export default function TermsPage() {
           <section>
             <h2>User responsibilities</h2>
             <p>
-              By using this Site, you represent that you are at least 18 years old (or the age of majority in your jurisdiction). You agree to use the Site for lawful purposes only and in accordance with these Terms.
+              You agree to use the Site for lawful purposes and in accordance with these Terms. If you are under the age of majority where you live, use youth-oriented material with a parent or guardian when required. Children under 13 must not submit an email address or contact message.
             </p>
             <p>
               You understand and agree that screening results are not diagnoses, and that you are solely responsible for any decisions you make based on information from this Site.
@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: screening answers are processed entirely in your browser and are not transmitted to our servers. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. We use consent-controlled analytics. Advertising is not currently enabled.
+              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: screening answers are processed entirely in your browser and are not transmitted to our servers. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. Analytics is consent-controlled and disabled on sensitive routes. Advertising remains behind separate publisher, certified-CMP, consent, non-personalized, and route-safety gates.
             </p>
           </section>
 

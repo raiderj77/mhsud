@@ -140,6 +140,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/clinical-evidence`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/methodology`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/privacy`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },
+    { url: `${SITE_URL}/consumer-health-data-privacy`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.5 },
     { url: `${SITE_URL}/cookies`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/terms`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/accessibility`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },

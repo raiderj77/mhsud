@@ -6,10 +6,10 @@ import AnswerBlock from "@/components/AnswerBlock";
 const TOOL_URL = `${SITE_URL}/phq-9-score-interpretation`;
 
 const FAQ_DATA = [
-  { question: "What does a PHQ-9 score of 10 mean?", answer: "A PHQ-9 score of 10 falls in the moderate range, suggesting you may be experiencing depressive symptoms that are affecting your daily life. This is the threshold at which many clinicians consider further evaluation and discuss treatment options. It does not mean you have depression, only a professional assessment can determine that." },
-  { question: "What does a PHQ-9 score of 15 mean?", answer: "A score of 15 on the PHQ-9 falls in the moderately severe range (15–19). This suggests significant depressive symptoms over the past two weeks. At this level, healthcare providers typically recommend active treatment, which may include therapy, medication, or a combination. Speaking with a professional is strongly encouraged." },
-  { question: "Is a PHQ-9 score of 5 something to worry about?", answer: "A PHQ-9 score of 5 falls at the boundary between minimal (0–4) and mild (5–9) symptom levels. It suggests you may be experiencing some low-level depressive symptoms. While this is generally not cause for alarm, monitoring your mood over the coming weeks and retaking the screening can help you decide if further support would be helpful." },
-  { question: "Can I retake the PHQ-9 to see if my score changes?", answer: "Yes, the PHQ-9 measures symptoms over the past two weeks, so your score can change as your circumstances change. Retaking it every 2–4 weeks is a good way to track trends. Clinicians often use repeated PHQ-9 scores to monitor treatment progress." },
+  { question: "What does a PHQ-9 score of 10 mean?", answer: "A PHQ-9 score of 10 falls in the moderate symptom range and is a commonly studied cutoff for considering further professional evaluation. It does not mean you have depression, and the score alone cannot determine treatment. A clinician considers symptoms, functioning, safety, history, possible medical causes, and your preferences." },
+  { question: "What does a PHQ-9 score of 15 mean?", answer: "A score of 15 falls in the moderately severe symptom range (15–19), based on self-reported symptoms during the past two weeks. Consider seeking a professional evaluation. A clinician can assess your individual context and discuss options; the score alone cannot diagnose depression or determine treatment." },
+  { question: "Is a PHQ-9 score of 5 something to worry about?", answer: "A PHQ-9 score of 5 falls at the boundary between minimal (0–4) and mild (5–9) symptom ranges. The number alone cannot determine whether care is needed. Consider how long symptoms have lasted, whether they are worsening, how they affect daily life, and whether there are any safety concerns." },
+  { question: "Can I retake the PHQ-9 to see if my score changes?", answer: "Yes. The PHQ-9 asks about the past two weeks, so a later score may change as symptoms and circumstances change. If you use repeated scores to track symptoms or care, ask a healthcare professional how often to repeat it and how to interpret changes in context." },
   { question: "How accurate is the PHQ-9 as a depression screening tool?", answer: "The PHQ-9 is one of the most extensively validated depression screening instruments in clinical research. Studies show sensitivity of 88% and specificity of 88% for detecting major depressive disorder at a cutoff of 10. However, no screening tool is perfect, false positives and false negatives occur, which is why professional follow-up is important." },
   { question: "Does a high PHQ-9 score mean I have clinical depression?", answer: "A high PHQ-9 score does not confirm a clinical assessment of depression. The PHQ-9 is a screening tool that identifies people who may benefit from further evaluation. Many factors, grief, medical conditions, life circumstances, sleep deprivation, can elevate your score without indicating a depressive disorder. A healthcare provider considers your full context." },
   { question: "What should I do if my PHQ-9 score is high?", answer: "If your PHQ-9 score is in the moderate (10–14), moderately severe (15–19), or severe (20–27) range, consider scheduling an appointment with a healthcare provider. You can bring your screening results to give them context. If you are in crisis, contact the 988 Suicide & Crisis Lifeline (call or text 988) or SAMHSA at 1-800-662-4357." },
@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
   path: "/phq-9-score-interpretation",
   title: "PHQ-9 Score Interpretation: What Your Score Means",
   description:
-    "Understand your PHQ-9 depression score. See what each range means, when to seek help, and how to discuss results with your doctor.",
+    "Understand PHQ-9 symptom ranges, their limits, and when to consider professional evaluation. A score cannot diagnose depression or determine treatment.",
 });
 
 export default function PHQ9ScoreInterpretationPage() {
@@ -32,10 +32,10 @@ export default function PHQ9ScoreInterpretationPage() {
           __html: JSON.stringify(
             articleJsonLd({
               title: "PHQ-9 Score Interpretation: What Your Results Mean",
-              description: "Understand your PHQ-9 depression score. See what each range means, when to seek help, and how to discuss results with your doctor.",
+              description: "Understand PHQ-9 symptom ranges, their limits, and when to consider professional evaluation. A score cannot diagnose depression or determine treatment.",
               url: TOOL_URL,
               datePublished: "2025-06-01",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -58,10 +58,10 @@ export default function PHQ9ScoreInterpretationPage() {
       />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A guide explaining PHQ-9 depression scores, severity levels, clinical cutoffs, and recommended actions for each range."
-          who="Anyone who has completed the PHQ-9 and wants to understand what their depression score means clinically."
-          bottomLine="PHQ-9 scores range from minimal to severe depression, scores of 10 or above warrant professional follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="A guide to the PHQ-9's published symptom ranges, commonly studied cutoff, limits, and professional follow-up considerations."
+          who="Adults who completed the PHQ-9 and want context for the score before discussing symptoms with a qualified healthcare professional."
+          bottomLine="A score summarizes self-reported symptom frequency. It cannot diagnose depression or determine treatment; individual clinical context and safety matter."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -79,8 +79,8 @@ export default function PHQ9ScoreInterpretationPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -93,12 +93,12 @@ export default function PHQ9ScoreInterpretationPage() {
         testName="PHQ-9"
         testAbbreviation="PHQ-9"
         toolPageHref="/phq-9-depression-test"
-        lastUpdated="March 14, 2026"
+        lastUpdated="August 2, 2026"
         intro={[
-          "The PHQ-9 (Patient Health Questionnaire-9) is a nine-item depression screening instrument developed by Drs. Spitzer, Williams, and Kroenke. It is one of the most widely used depression screening tools in primary care, research, and community settings worldwide. Your score reflects the frequency of depressive symptoms over the past two weeks.",
-          "Each of the nine questions is scored from 0 (not at all) to 3 (nearly every day), producing a total between 0 and 27. The score maps to five severity levels used in clinical research to guide next steps: none/minimal (0\u20134), mild (5\u20139), moderate (10\u201314), moderately severe (15\u201319), and severe (20\u201327).",
-          "Clinicians use the PHQ-9 both as an initial screening tool and as a progress measure during treatment. A drop of 5 or more points from one administration to the next is generally considered a clinically meaningful improvement. Because the PHQ-9 asks about the past two weeks, it can be readministered every 2\u20134 weeks to track changes over time, making it valuable for patients and providers working together toward recovery.",
-          "Understanding your score is the first step. Below, you will find detailed explanations of each score range, guidance on what to do next, factors that can affect your results, and tips for discussing your score with a healthcare provider.",
+          "The PHQ-9 (Patient Health Questionnaire-9) is a published nine-item depression screening instrument developed by Drs. Spitzer, Williams, and Kroenke. It summarizes the frequency of self-reported depression-related symptoms over the past two weeks.",
+          "Each of the nine questions is scored from 0 (not at all) to 3 (nearly every day), producing a total between 0 and 27. The score maps to five published symptom ranges: none/minimal (0\u20134), mild (5\u20139), moderate (10\u201314), moderately severe (15\u201319), and severe (20\u201327). These ranges do not diagnose depression or determine treatment.",
+          "Clinicians may use repeated PHQ-9 scores as one part of monitoring symptoms during care. Any change needs to be interpreted with symptoms, functioning, safety, history, and other clinical context. A healthcare professional can advise whether and when repeating the questionnaire is useful for you.",
+          "Below, you will find explanations of each symptom range, the limits of a score, factors that can affect results, and questions to discuss with a healthcare provider.",
         ]}
         scoreRanges={[
           { range: "0–4", label: "Minimal", meaning: "Few or no depressive symptoms reported over the past two weeks", nextStep: "Continue monitoring your well-being; retake if things change", colorClass: "bg-sage-50/50 dark:bg-sage-950/20", textColorClass: "text-sage-700 dark:text-sage-400" },
@@ -116,37 +116,37 @@ export default function PHQ9ScoreInterpretationPage() {
             heading: "PHQ-9 Score 0–4: Minimal or No Depressive Symptoms",
             paragraphs: [
               "A score in the 0\u20134 range suggests that you reported few or no depressive symptoms over the past two weeks. People in this range typically describe feeling generally well, with normal variations in mood and energy that do not significantly interfere with daily life.",
-              "If you feel well and your score confirms that, no further action is needed. Continue engaging in habits that support your mental health, regular sleep, physical activity, social connection, and activities you enjoy. If you notice changes in the future, retaking the PHQ-9 can help you catch emerging patterns early.",
-              "Even with a minimal score, it can be valuable to establish a baseline. Knowing what your typical PHQ-9 score looks like when you feel well makes future changes easier to spot. Some people find it helpful to retake the screening periodically, for example, during transitions like starting a new job, moving, or experiencing a loss.",
+              "A minimal-range score does not rule out a mental health concern and cannot determine whether care is needed. Consider your functioning, how long symptoms have lasted, changes over time, and any safety concerns.",
+              "If you remain concerned despite a low score, symptoms worsen, or daily life is affected, consider speaking with a qualified healthcare professional. Seek urgent help for immediate safety concerns regardless of the total score.",
             ],
           },
           {
             heading: "PHQ-9 Score 5–9: Mild Depressive Symptoms",
             paragraphs: [
               "A score of 5–9 suggests mild depressive symptoms. You may be noticing low mood, reduced interest, or changes in sleep or energy that are present but not yet severely disrupting your life. Many people in this range describe feeling 'off' without being able to pinpoint exactly why.",
-              "At this level, monitoring is the most common recommendation. Pay attention to whether symptoms persist, worsen, or fluctuate. Lifestyle adjustments, improved sleep hygiene, exercise, stress management, and social support, can be particularly effective for mild symptoms. If symptoms last more than two weeks, consider speaking with a healthcare provider.",
+              "The score alone cannot determine what action or treatment is appropriate. If symptoms persist, worsen, affect daily life, or raise safety concerns, consider a professional evaluation so your individual context can be assessed.",
             ],
           },
           {
             heading: "PHQ-9 Score 10\u201314: Moderate Depressive Symptoms",
             paragraphs: [
-              "A score of 10\u201314 is the clinical threshold at which many providers begin to discuss further evaluation and potential treatment options. At this level, depressive symptoms are likely affecting your daily functioning, work productivity, relationships, self-care, or the ability to experience pleasure.",
+              "A score of 10\u201314 falls in the moderate symptom range. A score of 10 is a commonly studied screening cutoff for considering further evaluation, but the number alone cannot establish a diagnosis, functional impact, or treatment plan.",
               "Research shows that a PHQ-9 score of 10 has the best balance of sensitivity and specificity for identifying major depression. If you scored in this range, scheduling an appointment with a healthcare provider is a reasonable next step. You can bring your screening results to help frame the conversation.",
-              "At the moderate level, evidence-based options include psychotherapy (particularly cognitive behavioral therapy and interpersonal therapy), lifestyle modifications, and in some cases medication. Many people at this level respond well to therapy alone. Your provider can help determine which approach fits your situation and preferences.",
+              "A healthcare professional can review symptoms, functioning, safety, medical history, possible alternative causes, and your preferences before discussing whether any care options are appropriate.",
             ],
           },
           {
             heading: "PHQ-9 Score 15–19: Moderately Severe Depressive Symptoms",
             paragraphs: [
               "A score in the 15–19 range suggests that depressive symptoms are significantly impacting your quality of life. People in this range often report difficulty maintaining daily responsibilities, withdrawal from relationships, persistent feelings of worthlessness or guilt, and changes in sleep and appetite that feel hard to manage.",
-              "Healthcare providers typically recommend active treatment at this level, which may include psychotherapy (particularly cognitive behavioral therapy), medication, or a combination. Speaking with a professional is strongly encouraged. You do not have to manage these feelings alone, and effective help is available.",
+              "This range is a reason to seek professional evaluation. A clinician can consider symptoms, functioning, safety, history, other possible causes, and your preferences before discussing options. The score alone cannot determine whether therapy, medication, or another approach is appropriate.",
             ],
           },
           {
             heading: "PHQ-9 Score 20\u201327: Severe Depressive Symptoms",
             paragraphs: [
               "A score of 20\u201327 indicates severe depressive symptoms that are pervasive and significantly impairing daily functioning. People in this range often describe feeling overwhelmed, unable to complete basic tasks, and experiencing hopelessness or helplessness that feels constant.",
-              "If you scored in this range, please consider reaching out to a healthcare professional as soon as possible. Effective treatments exist even for severe depression. A combination of psychotherapy and medication has the strongest evidence base for severe depression, and many people experience meaningful improvement within weeks of beginning treatment.",
+              "If you scored in this range, consider seeking prompt professional evaluation. A clinician can assess safety, functioning, history, possible alternative causes, and your preferences. Treatment decisions require individual clinical context and cannot be made from a PHQ-9 score alone.",
               "If you are in crisis or having thoughts of self-harm, contact the 988 Suicide & Crisis Lifeline (call or text 988) or SAMHSA National Helpline (1-800-662-4357) immediately. You do not need to face this alone.",
             ],
           },

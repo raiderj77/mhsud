@@ -482,7 +482,7 @@ export function K6Client({ faqData }: Props) {
         A brief measure of nonspecific psychological distress used in national health surveys.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        6 questions · ~2 minutes · Completely private · Public domain instrument
+        6 questions · ~2 minutes · private by design · Public domain instrument
       </p>
 
       {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active distress questionnaire. */}
@@ -597,7 +597,7 @@ export function K6Client({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

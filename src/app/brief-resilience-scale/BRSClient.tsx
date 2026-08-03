@@ -465,7 +465,7 @@ export function BRSClient({ faqData }: Props) {
         A measure of your ability to bounce back or recover from stress (Smith et al., 2008).
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        6 questions &middot; ~2 minutes &middot; Completely private
+        6 questions &middot; ~2 minutes &middot; private by design
       </p>
 
       <AdSlot position="tool-top" />
@@ -580,7 +580,7 @@ export function BRSClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

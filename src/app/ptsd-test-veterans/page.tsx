@@ -54,7 +54,7 @@ const FAQ_DATA = [
   {
     question: "Does a PTSD screening affect VA benefits or disability ratings?",
     answer:
-      "Taking this online screening has no effect on your VA benefits - it is completely private and no data is stored or transmitted. If you seek formal evaluation through the VA, a PTSD diagnosis can support a service-connected disability claim. The VA rates PTSD from 0% to 100% based on symptom severity and functional impairment. Seeking help for PTSD does not negatively affect your benefits; in fact, it may help establish documentation for a claim.",
+      "This independent screening is not connected to VA or DOD systems. Answers are scored in your browser and are not sent to MindCheck Tools or the VA. It cannot determine eligibility, a disability rating, or the outcome of any claim. Verify current benefits and care information directly with the VA or an accredited representative.",
   },
   {
     question: "Is PTSD treatment effective for veterans?",
@@ -163,7 +163,7 @@ export default function PtsdTestVeteransPage() {
             Start the PTSD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private - nothing is stored or shared.
+            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -437,11 +437,6 @@ export default function PtsdTestVeteransPage() {
 </div>
         </div>
 
-        <section className="sr-only">
-          <h2>What Is PTSD Screening for Veterans?</h2>
-          <h2>How Is the Veteran PTSD Test Scored?</h2>
-          <h2>What Do My PTSD Screening Results Mean?</h2>
-        </section>
         <PCL5Client faqData={FAQ_DATA} />
       </div>
 

@@ -131,11 +131,6 @@ export default function HolmesRahePage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Holmes-Rahe Stress Inventory?</h2>
-        <h2>How Is the Holmes-Rahe Stress Inventory Scored?</h2>
-        <h2>What Do My Stress Inventory Results Mean?</h2>
-      </section>
 <HolmesRaheClient faqData={FAQ_DATA} />
     </>
   );

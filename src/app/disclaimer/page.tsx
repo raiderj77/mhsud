@@ -44,7 +44,7 @@ export default function DisclaimerPage() {
               Important
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>The tools on this site are screening instruments, not diagnostic tools.</strong> They are provided for educational and informational purposes only. Results should never be used as a substitute for professional evaluation, advice, or care from a qualified healthcare provider.
+              <strong>No tool on this site can diagnose a condition.</strong> Some pages implement published screening instruments; others are original educational reflection tools, worksheets, or calculators. Results should never replace professional evaluation, advice, or care from a qualified healthcare provider.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
           <section>
             <h2>Screening results are informational</h2>
             <p>
-              The scores and interpretive ranges displayed after completing a screening are based on published clinical thresholds from peer-reviewed research. However, these thresholds were developed for use in clinical settings with professional oversight. When used for self-screening:
+              Published screeners identify the source used for scoring and interpretation. Original educational tools use clearly labeled site-defined summaries rather than clinical thresholds. Neither kind of result accounts for a full history, physical health, context, clinician observation, or differential diagnosis. When used for self-reflection:
             </p>
             <ul>
               <li>Results may indicate areas worth discussing with a professional</li>
@@ -74,7 +74,7 @@ export default function DisclaimerPage() {
           <section>
             <h2>No professional-client relationship</h2>
             <p>
-              Using any tool on this site does not create a therapeutic, counseling, medical, or professional-client relationship between you and MindCheck Tools, its contributors, or its reviewers. The clinical reviewer credited on blog content provides editorial oversight for accuracy but is not providing individual clinical services through this website.
+              Using any tool on this site does not create a therapeutic, counseling, medical, or professional-client relationship between you and MindCheck Tools, its contributors, or its reviewers. A named reviewer provides editorial source, scoring, limitation, and safety review within the scope stated on the reviewer profile; that reviewer is not providing individual clinical services through this website.
             </p>
           </section>
 

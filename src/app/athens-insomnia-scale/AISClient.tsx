@@ -606,7 +606,7 @@ export function AISClient({ faqData }: Props) {
         A validated measure of insomnia severity based on ICD-10 criteria (Soldatos et al., 2000).
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        8 questions &middot; ~2 minutes &middot; Past month &middot; Completely private
+        8 questions &middot; ~2 minutes &middot; Past month &middot; private by design
       </p>
 
       <AdSlot position="tool-top" />
@@ -724,7 +724,7 @@ export function AISClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

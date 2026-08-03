@@ -106,7 +106,7 @@ export default function DoIHavePTSDQuizPage() {
             20 Questions · ~5 min
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            🔒 100% Private
+            🔒 Answers Stay Local
           </span>
         </div>
 
@@ -130,7 +130,7 @@ export default function DoIHavePTSDQuizPage() {
             settings worldwide.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            Your answers are scored entirely in your browser. Nothing is stored or shared.
+            Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -170,11 +170,6 @@ export default function DoIHavePTSDQuizPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the PTSD Self-Assessment Quiz?</h2>
-        <h2>How Is the PTSD Quiz Scored?</h2>
-        <h2>What Do My PTSD Quiz Results Mean?</h2>
-      </section>
 <PCL5Client faqData={FAQ_DATA} />
 
         {/* PTSD Symptom Clusters */}

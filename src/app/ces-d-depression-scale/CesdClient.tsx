@@ -495,7 +495,7 @@ export function CesdClient({ faqData }: Props) {
         For each statement, select how often you have felt this way <strong>during the past week</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        20 questions · ~5 minutes · Completely private · NIMH public domain instrument
+        20 questions · ~5 minutes · private by design · NIMH public domain instrument
       </p>
 
       {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active mental-health questionnaire. */}
@@ -609,7 +609,7 @@ export function CesdClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

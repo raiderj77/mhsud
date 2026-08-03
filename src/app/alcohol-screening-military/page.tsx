@@ -137,7 +137,7 @@ export default function AlcoholScreeningMilitaryPage() {
             deserves an honest look.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            This free, completely private screening uses the AUDIT (Alcohol Use Disorders
+            This free, browser-local screening uses the AUDIT (Alcohol Use Disorders
             Identification Test), a tool developed by the World Health Organization and used
             worldwide. It is <strong>not a diagnosis</strong>, and no one, not your command,
             the VA, or anyone else, will see your answers. Everything stays in your browser.
@@ -154,7 +154,7 @@ export default function AlcoholScreeningMilitaryPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private, nothing is stored or shared.
+            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -318,11 +318,6 @@ export default function AlcoholScreeningMilitaryPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
-      <section className="sr-only">
-        <h2>What Is Military Alcohol Screening?</h2>
-        <h2>How Is the Military Alcohol Screen Scored?</h2>
-        <h2>What Do My Alcohol Screening Results Mean?</h2>
-      </section>
 <AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 

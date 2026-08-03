@@ -118,11 +118,6 @@ export default function FamilyImpactAssessmentPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Family Impact Assessment?</h2>
-        <h2>How Does the Family Impact Assessment Work?</h2>
-        <h2>What Do My Family Impact Results Mean?</h2>
-      </section>
 <FamilyImpactClient faqData={FAQ_DATA} />
     </>
   );

@@ -524,7 +524,7 @@ export function UCLAClient({ faqData }: Props) {
         A widely used measure of subjective loneliness and social isolation (Russell, 1996).
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        20 questions &middot; ~5 minutes &middot; Completely private &middot; Version 3
+        20 questions &middot; ~5 minutes &middot; private by design &middot; Version 3
       </p>
 
       <AdSlot position="tool-top" />
@@ -639,7 +639,7 @@ export function UCLAClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

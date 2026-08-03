@@ -136,11 +136,6 @@ export default function UCLAPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the UCLA Loneliness Scale?</h2>
-        <h2>How Is the UCLA Loneliness Scale Scored?</h2>
-        <h2>What Do My Loneliness Scale Results Mean?</h2>
-      </section>
 <UCLAClient faqData={FAQ_DATA} />
     </>
   );

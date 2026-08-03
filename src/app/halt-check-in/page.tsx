@@ -8,9 +8,9 @@ const TOOL_URL = `${SITE_URL}/halt-check-in`;
 
 export const metadata: Metadata = createMetadata({
   path: "/halt-check-in",
-  title: "HALT Check-In | Free Recovery Self-Check Tool",
+  title: "HALT Recovery Check-In: Hungry, Angry, Lonely, Tired",
   description:
-    "Use the free HALT check-in to identify emotional triggers in recovery. Are you Hungry, Angry, Lonely, or Tired? Takes 60 seconds. Reviewed by CADC-II.",
+    "Use a free 60-second HALT recovery check-in to notice hunger, anger, loneliness, and tiredness, then review practical next steps. Educational only.",
   keywords: [
     "HALT recovery tool", "HALT check in",
     "relapse prevention tool", "am I at risk for relapse",
@@ -20,8 +20,8 @@ export const metadata: Metadata = createMetadata({
     "recovery vulnerability check", "addiction recovery tools",
   ],
   openGraph: {
-    title: "HALT Check-In | Free Recovery Self-Check Tool",
-    description: "Rate Hungry, Angry, Lonely, Tired on a 1-5 scale. See your vulnerability level and get coping suggestions instantly.",
+    title: "HALT Recovery Check-In: Hungry, Angry, Lonely, Tired",
+    description: "Rate hunger, anger, loneliness, and tiredness, then review practical next steps. A 60-second educational recovery reflection, not a relapse predictor.",
     url: TOOL_URL,
     type: "website",
   },
@@ -48,7 +48,7 @@ export default function HALTPage() {
               description: "A free daily recovery check-in tool based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each dimension on a 1-5 scale and see your current vulnerability level with personalized coping suggestions.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             })
           ),
         }}
@@ -72,25 +72,20 @@ export default function HALTPage() {
       />
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A HALT check-in tool that helps you identify if you are Hungry, Angry, Lonely, or Tired, four common relapse and mood triggers."
-          who="Anyone in recovery or managing mental health who wants a quick check on basic needs that affect emotional stability."
-          bottomLine="HALT triggers are the most common relapse precursors, checking in regularly builds self-awareness. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="An educational check-in for four states used in recovery reflection: hungry, angry, lonely, and tired."
+          who="Adults in recovery who want to pause and notice basic physical or emotional needs before choosing a next step."
+          bottomLine="HALT can support reflection, but it cannot predict or prevent relapse and is not a clinical assessment, treatment plan, or emergency service."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-08-02" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the HALT Check-In?</h2>
-        <h2>How Does the HALT Check-In Work?</h2>
-        <h2>What Do My HALT Check-In Results Mean?</h2>
-      </section>
 <HALTClient faqData={FAQ_DATA} />
     </>
   );

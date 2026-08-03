@@ -801,7 +801,7 @@ export function BoxBreathingClient({ faqData }: Props) {
       {/* ── Privacy ── */}
       <div className="text-center mb-6">
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          Your privacy matters. This tool runs entirely in your browser. No data is stored, collected, or transmitted.
+          Your privacy matters. This tool runs in your browser. Its inputs are not sent to MindCheck Tools.
         </p>
       </div>
 

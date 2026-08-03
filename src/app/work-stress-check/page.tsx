@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/work-stress-check",
   title: "Work Stress & Burnout Self-Check | Free & Private",
   description:
-    "Reflect on your work stress and burnout risk with this original 12-question self-check. 100% private, ~3 minutes. Not a clinical tool - for personal reflection only.",
+    "Reflect on work stress with this original 12-question, browser-local self-check. About 3 minutes. Not a clinical tool; for personal reflection only.",
   keywords: [
     "work stress test", "burnout self-check", "job burnout questionnaire",
     "work stress assessment", "burnout risk check", "workplace stress test",
@@ -74,7 +74,7 @@ export default function WorkStressPage() {
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-warm-100 text-warm-800 dark:bg-warm-900/40 dark:text-warm-300">Original 12-Question Tool</span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300">Working Professionals</span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">100% Private</span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Answers Stay Local</span>
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
@@ -202,11 +202,6 @@ export default function WorkStressPage() {
 </div>
         </div>
 
-        <section className="sr-only">
-          <h2>What Is the Work Stress Check?</h2>
-          <h2>How Is the Work Stress Check Scored?</h2>
-          <h2>What Do My Work Stress Results Mean?</h2>
-        </section>
         <div id="screening"><WorkStressClient faqData={FAQ_DATA} /></div>
 
         <div className="mb-8">

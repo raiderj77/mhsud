@@ -147,7 +147,7 @@ export function PHQ9Client({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "🔒", text: "100% Private" },
+            { icon: "🔒", text: "Answers Stay Local" },
             { icon: "⏱", text: "~2 Minutes" },
             { icon: "📋", text: "9 Questions" },
           ].map((b) => (
@@ -179,8 +179,8 @@ export function PHQ9Client({ faqData }: Props) {
         <div className="animate-fade-in">
           {/* Privacy Trust Signal, visible immediately above first question */}
           <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
-            <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
-            Your answers are scored locally in your browser and are never stored or shared.
+            <span className="font-semibold">🔒 Answers Stay Local.</span>{" "}
+            Your answers are scored in your browser and are not sent to MindCheck Tools.
           </div>
 
           {/* Progress */}

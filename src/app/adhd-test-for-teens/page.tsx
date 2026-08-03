@@ -87,7 +87,7 @@ export default function AdhdTestForTeensPage() {
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free screening can help you understand what you&apos;re experiencing. It is <strong>not
-            a diagnosis</strong>, it&apos;s a starting point. Everything is completely private. Your
+            a diagnosis</strong>, it&apos;s a starting point. Your answers stay in your browser and are not sent to MindCheck Tools. Your
             answers are processed in your browser and never stored or shared with anyone.
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function AdhdTestForTeensPage() {
 
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold text-base hover:bg-amber-700 transition-colors shadow-sm">Start the ADHD Screening</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Completely private, nothing is stored or shared.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
         </div>
 
         <div className="mb-10">
@@ -224,11 +224,6 @@ export default function AdhdTestForTeensPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Teen ADHD Screening?</h2>
-        <h2>How Is the Teen ADHD Test Scored?</h2>
-        <h2>What Do My ADHD Results Mean?</h2>
-      </section>
 <ASRSClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 

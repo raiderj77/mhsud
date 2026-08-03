@@ -118,11 +118,6 @@ export default function PHQ4Page() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the PHQ-4 Anxiety and Depression Screen?</h2>
-        <h2>How Is the PHQ-4 Scored?</h2>
-        <h2>What Do My PHQ-4 Results Mean?</h2>
-      </section>
 <PHQ4Client faqData={FAQ_DATA} />
     </>
   );

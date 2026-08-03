@@ -353,8 +353,6 @@ export default function DoctorGuidePage() {
             </div>
           </section>
 
-          <AdSlot position="Footer" className="my-8" />
-
           {/* Crisis Resources */}
           <div className="card p-5 sm:p-6">
             <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need support now?</h2>

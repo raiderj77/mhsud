@@ -743,7 +743,7 @@ export function FamilyImpactClient({ faqData }: Props) {
         For family members and loved ones concerned about someone&apos;s substance use. This assessment helps you reflect on how their use is affecting <em>your</em> life.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        {STATEMENTS.length} questions · ~5 minutes · Completely private
+        {STATEMENTS.length} questions · ~5 minutes · private by design
       </p>
 
       <AdSlot position="tool-top" />
@@ -862,7 +862,7 @@ export function FamilyImpactClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

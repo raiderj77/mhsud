@@ -109,7 +109,7 @@ export default function AmIAnAlcoholicQuizPage() {
             10 Questions · ~3 min
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            🔒 100% Private
+            🔒 Answers Stay Local
           </span>
         </div>
 
@@ -133,7 +133,7 @@ export default function AmIAnAlcoholicQuizPage() {
             an honest, evidence-based picture of your relationship with alcohol.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            Your answers are scored entirely in your browser. Nothing is stored or shared.
+            Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -152,11 +152,6 @@ export default function AmIAnAlcoholicQuizPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
-      <section className="sr-only">
-        <h2>What Is the Alcohol Self-Assessment Quiz?</h2>
-        <h2>How Is the Alcohol Quiz Scored?</h2>
-        <h2>What Do My Alcohol Quiz Results Mean?</h2>
-      </section>
 <AUDITClient faqData={FAQ_DATA} hideTherapyCTA={true} />
 
         {/* Warning Signs Section */}

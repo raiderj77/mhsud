@@ -463,7 +463,7 @@ export function RSESClient({ faqData }: Props) {
         A widely used measure of global self-esteem developed by Morris Rosenberg (1965).
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        10 questions &middot; ~2 minutes &middot; Completely private &middot; Public domain instrument
+        10 questions &middot; ~2 minutes &middot; private by design &middot; Public domain instrument
       </p>
 
       <AdSlot position="tool-top" />
@@ -578,7 +578,7 @@ export function RSESClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

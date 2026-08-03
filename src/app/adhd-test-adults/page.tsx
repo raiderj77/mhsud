@@ -97,7 +97,7 @@ export default function AdhdTestAdultsPage() {
 
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-600 text-white font-semibold text-base hover:bg-violet-700 transition-colors shadow-sm">Start the ADHD Screening</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Completely private, nothing is stored or shared.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
         </div>
 
         <div className="mb-10">
@@ -224,11 +224,6 @@ export default function AdhdTestAdultsPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Adult ADHD Screening?</h2>
-        <h2>How Is the Adult ADHD Test Scored?</h2>
-        <h2>What Do My ADHD Screening Results Mean?</h2>
-      </section>
 <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8" aria-label="Frequently Asked Questions">
   <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-6">Frequently Asked Questions</h2>
   <div className="space-y-6">

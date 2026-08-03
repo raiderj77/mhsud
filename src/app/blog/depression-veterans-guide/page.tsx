@@ -208,7 +208,7 @@ export default function DepressionVeteransGuidePage() {
             <ul>
               <li>Asking about specific behaviors: &quot;I&apos;ve noticed you haven&apos;t been sleeping well, how long has that been going on?&quot;</li>
               <li>Normalizing the experience: &quot;A lot of veterans deal with this after getting out&quot;</li>
-              <li>Sharing the screening tool: &quot;I came across this, it takes five minutes and it&apos;s completely private&quot;</li>
+              <li>Sharing the screening tool: &quot;I came across this, it takes five minutes and it&apos;s private by design&quot;</li>
               <li>Offering to help with logistics: &quot;I can help you make the appointment or drive you there&quot;</li>
               <li>Being persistent without being pushy: check in regularly, not just once</li>
             </ul>

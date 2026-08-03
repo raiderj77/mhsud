@@ -19,6 +19,8 @@ const COOKIE_TABLE = [
     consent: "Not required",
     cookies: [
       { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
+      { name: "mindchecktools:privacy-consent", purpose: "Stores the analytics and advertising choices you make", duration: "Until changed or site data is cleared (localStorage)", provider: "MindCheck Tools" },
+      { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so optional services stay off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
     ],
   },
   {
@@ -41,7 +43,7 @@ const COOKIE_TABLE = [
     category: "Advertising",
     consent: "Required",
     cookies: [
-      { name: "Various", purpose: "Ad network cookies for serving and measuring ads. Not currently active.", duration: "Varies", provider: "TBD, will be disclosed when ads are enabled" },
+      { name: "Google advertising cookies and storage", purpose: "Non-personalized ad delivery, frequency capping, fraud prevention, and aggregated reporting. Not active at the last review.", duration: "Varies by Google service and consent choice", provider: "Google AdSense" },
     ],
   },
 ];
@@ -54,7 +56,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: July 20, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 2, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -78,7 +80,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              Our first-party privacy control keeps analytics and advertising services off until you make an affirmative choice. Google Consent Mode v2 communicates that choice to Google services only when an optional service is enabled. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools.
+              Our first-party privacy control keeps analytics and advertising services off until you make an affirmative choice. The inline Consent Mode default queues a denied state locally and does not contact Google by itself. A Google service script loads only after the corresponding choice. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools.
             </p>
           </section>
 
@@ -141,7 +143,7 @@ export default function CookiePolicyPage() {
               We use Google Analytics (GA4, measurement ID: G-XKHQN1NJ2Z) with Google Consent Mode v2. This means:
             </p>
             <p>
-              If you <strong>accept</strong> analytics cookies, Google Analytics operates normally, setting cookies to distinguish users and sessions, and collecting anonymized usage data (pages visited, traffic sources, geographic region).
+              If you <strong>accept</strong> analytics cookies, Google Analytics sets cookies to distinguish users and sessions and processes privacy-limited usage data such as sanitized public-page URLs, traffic-source origin, device/browser information, and approximate geographic region. Analytics remains disabled on sensitive routes and never receives questionnaire answers, scores, or browser-local entries.
             </p>
             <p>
               If you <strong>decline</strong> analytics cookies, the Google Analytics script remains blocked and no Google Analytics cookies are set by MindCheck Tools.
@@ -167,7 +169,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              We will update this policy whenever we add or change cookies, particularly when advertising cookies become active. The &quot;Last updated&quot; date at the top reflects the most recent revision.
+              We will update this policy whenever we add or change cookies, particularly before advertising is activated. Google&apos;s European-regulations message was verified published on August 2, 2026, while the AdSense site review was still &quot;Getting ready.&quot; AdSense remains blocked until publisher enablement, certified-CMP readiness, and strict-CSP readiness are confirmed in addition to the visitor&apos;s advertising choice. The &quot;Last updated&quot; date at the top reflects the most recent revision.
             </p>
           </section>
 

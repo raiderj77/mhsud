@@ -92,11 +92,6 @@ export default function DailyCheckInPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Daily Recovery Check-In?</h2>
-        <h2>How Does the Recovery Check-In Work?</h2>
-        <h2>What Do My Recovery Check-In Results Mean?</h2>
-      </section>
       <LocalStorageNotice dataDescription="your recovery check-ins, goals, and trend history" />
       <DailyCheckInClient faqData={FAQ_DATA} />
     </>

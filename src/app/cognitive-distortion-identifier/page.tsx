@@ -124,11 +124,6 @@ export default function CognitiveDistortionPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Cognitive Distortion Identifier?</h2>
-        <h2>How Does the Cognitive Distortion Tool Work?</h2>
-        <h2>What Do My Cognitive Distortion Results Mean?</h2>
-      </section>
 <CognitiveDistortionClient faqData={FAQ_DATA} />
     </>
   );

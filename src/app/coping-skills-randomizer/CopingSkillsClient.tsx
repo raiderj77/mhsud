@@ -531,8 +531,8 @@ export function CopingSkillsClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          This tool runs entirely in your browser. No data is stored, transmitted, or collected.
-          Your selections are completely private.
+          This tool runs in your browser. Its inputs are not sent to MindCheck Tools.
+          Your selections are private by design.
         </p>
       </footer>
     </div>

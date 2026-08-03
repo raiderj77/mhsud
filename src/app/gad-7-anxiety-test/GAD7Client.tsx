@@ -144,7 +144,7 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
           A validated screening questionnaire that helps you reflect on anxiety symptoms over the past two weeks. Your answers stay in your browser and are never stored.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~2 Minutes" }, { icon: "📋", text: "7 Questions" }].map((b) => (
+          {[{ icon: "🔒", text: "Answers Stay Local" }, { icon: "⏱", text: "~2 Minutes" }, { icon: "📋", text: "7 Questions" }].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
@@ -169,8 +169,8 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
         <div className="animate-fade-in">
           {/* Privacy Trust Signal, visible immediately above first question */}
           <div className="mb-4 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/30 px-4 py-3 text-sm text-sage-800 dark:text-sage-200" role="note">
-            <span className="font-semibold">🔒 100% Private &amp; Anonymous.</span>{" "}
-            Your answers are scored locally in your browser and are never stored or shared.
+            <span className="font-semibold">🔒 Answers Stay Local.</span>{" "}
+            Your answers are scored locally in your browser and are not sent to MindCheck Tools.
           </div>
 
           <div className="sticky top-14 z-10 bg-sand-50/90 dark:bg-night-900/90 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4">

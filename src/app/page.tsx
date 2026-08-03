@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { createMetadata, breadcrumbJsonLd, faqJsonLd, organizationJsonLd, websiteJsonLd, SITE_URL } from "@/lib/metadata";
+import { createMetadata, breadcrumbJsonLd, faqJsonLd, SITE_URL } from "@/lib/metadata";
 import { ToolGrid } from "@/components/ToolGrid";
 import type { ToolCategory, Tool } from "@/components/ToolGrid";
 
@@ -527,8 +527,8 @@ const FEATURES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
       </svg>
     ),
-    title: "Completely Private",
-    text: "Your screening answers are scored in your browser and never sent to any server. No accounts, no login, no way to connect your results to you.",
+    title: "Private by Design",
+    text: "Screening answers and scores stay in your browser and are not sent to MindCheck Tools. No account or login is required. As with any website, ordinary hosting records can still include the page you requested.",
   },
   {
     icon: (
@@ -565,25 +565,16 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...organizationJsonLd(), dateModified: "2026-08-02" }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...websiteJsonLd(), dateModified: "2026-08-02" }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "MindCheck Tools, Free Mental Health Screening",
+            "@id": `${SITE_URL}/#application`,
+            name: "MindCheck Tools",
+            alternateName: "Free Mental Health Screening Tools",
             url: SITE_URL,
             applicationCategory: "HealthApplication",
-            operatingSystem: "All",
+            operatingSystem: "Any",
+            isAccessibleForFree: true,
             offers: {
               "@type": "Offer",
               price: "0",
@@ -593,9 +584,7 @@ export default function HomePage() {
             description:
               "Free, private published screening instruments and original educational self-checks. Screening answers are processed in the browser and are not sent to MindCheck Tools.",
             provider: {
-              "@type": "Organization",
-              name: "MindCheck Tools",
-              url: SITE_URL,
+              "@id": `${SITE_URL}/#organization`,
             },
           }),
         }}
@@ -654,11 +643,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="sr-only">
-        <h2>What Are Mental Health Screening Tools?</h2>
-        <h2>How Do Mental Health Screenings Work?</h2>
-        <h2>What Do My Screening Results Mean?</h2>
-      </section>
 
       {/* Tools Grid + Targeted Screenings (client component for search/filter) */}
       <ToolGrid
@@ -776,7 +760,16 @@ export default function HomePage() {
               Screening answers are processed entirely in your browser using client-side JavaScript. We do not receive or store them. Optional local-saving tools disclose when an entry can remain in your browser after the page closes.
             </p>
             <p className="text-white/60 text-sm">
-              We use analytics and may display ads, but they never have access to your screening responses. No accounts. No login. No answer data ever leaves your device.
+              Optional analytics and advertising stay off unless you consent, and neither receives screening answers or scores. No account or login is required. Ordinary website request records are described in the notice below.
+            </p>
+            <p className="mt-4 text-sm">
+              <Link
+                href="/consumer-health-data-privacy"
+                className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+              >
+                Read our Consumer Health Data Privacy Notice
+              </Link>
+              .
             </p>
           </div>
         </div>

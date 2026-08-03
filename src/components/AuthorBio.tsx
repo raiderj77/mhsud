@@ -26,7 +26,7 @@ export function AuthorBio({ publishedDate, modifiedDate }: AuthorBioProps) {
     <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
       <div className="flex gap-4 items-start">
         <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">
-          <span className="text-sage-600 dark:text-sage-400 text-lg">&#x1F9D1;&#x200D;&#x2695;&#xFE0F;</span>
+          <span className="text-sage-600 dark:text-sage-400 text-lg" aria-hidden="true">&#x1F9D1;&#x200D;&#x2695;&#xFE0F;</span>
         </div>
         <div>
           <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
@@ -38,12 +38,12 @@ export function AuthorBio({ publishedDate, modifiedDate }: AuthorBioProps) {
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
             {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}
           </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
             Review covers source fidelity, scoring alignment, screening limitations, safety language, and appropriate
             next-step guidance. It is editorial quality control, not diagnosis or individual clinical care.
           </p>
           {(publishedDate || modifiedDate) && (
-            <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400">
               {publishedDate && (
                 <span>
                   Published: <time dateTime={publishedDate}>{formatDate(publishedDate)}</time>

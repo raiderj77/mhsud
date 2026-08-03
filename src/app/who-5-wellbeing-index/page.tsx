@@ -130,11 +130,6 @@ export default function Who5Page() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the WHO-5 Wellbeing Index?</h2>
-        <h2>How Is the WHO-5 Scored?</h2>
-        <h2>What Do My WHO-5 Results Mean?</h2>
-      </section>
 <Who5Client faqData={FAQ_DATA} />
     </>
   );

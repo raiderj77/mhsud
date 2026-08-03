@@ -137,7 +137,7 @@ export function MentalLoadClient({ faqData }: Props) {
           Who remembers, plans, and organizes in your household? This checklist helps you see how the invisible work of running a home is distributed, and start a conversation about it.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "24 Items" }].map((b) => (
+          {[{ icon: "🔒", text: "Answers Stay Local" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "24 Items" }].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>

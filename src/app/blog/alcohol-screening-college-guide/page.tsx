@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Will my college find out if I take a screening?",
     answer:
-      "The MindCheck Tools alcohol screening is completely private, it runs in your browser, requires no login, and no data is stored or transmitted. If you use your campus counseling center, those conversations are also confidential under FERPA and professional ethics rules, with very limited exceptions for imminent danger.",
+      "The MindCheck Tools alcohol screening scores answers in your browser, requires no login, and does not send answers to MindCheck Tools. Campus counseling privacy and disclosure rules vary by provider, record type, and situation; ask the service to explain its current policy before sharing sensitive information.",
   },
   {
     question: "Is it normal to drink a lot in college?",

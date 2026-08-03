@@ -31,7 +31,7 @@ const FAQ_DATA = [
   { question: "What is the AUDIT alcohol test?", answer: "The AUDIT (Alcohol Use Disorders Identification Test) is a 10-question screening tool developed by the World Health Organization to identify hazardous and harmful alcohol use. It is widely used in primary care, emergency settings, and counseling to initiate conversations about alcohol use." },
   { question: "How is the AUDIT scored?", answer: "AUDIT scores range from 0–40. A score of 8 or above suggests hazardous alcohol use and warrants a brief intervention. Scores of 16 and above indicate harmful use, and scores of 20 or above may suggest alcohol dependence requiring further assessment." },
   { question: "What is the difference between the AUDIT and AUDIT-C?", answer: "The AUDIT is the full 10-question assessment covering frequency, quantity, and consequences of drinking. The AUDIT-C is a shorter 3-question version using only the first three questions, it is faster but focuses solely on consumption rather than consequences or dependence." },
-  { question: "Is the AUDIT test confidential?", answer: "Yes. This online version processes all your responses in your browser only. Nothing you enter is stored or transmitted to any server. Your results are completely private." },
+  { question: "Is the AUDIT test confidential?", answer: "Yes. This online version processes all your responses in your browser only. Nothing you enter is stored or transmitted to any server. Your results are private by design." },
   { question: "What should I do if I score high on the AUDIT?", answer: "A high AUDIT score is a signal worth taking seriously. Consider speaking with your primary care doctor or a licensed substance use counselor. Many people find that even a brief conversation with a professional leads to meaningful changes. You can also explore SAMHSA's National Helpline at 1-800-662-4357 for free, confidential support." },
   { question: "Can this tool diagnose an alcohol use disorder?", answer: "No. The AUDIT is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can diagnose an alcohol use disorder through a comprehensive evaluation." },
   { question: "What if I'm concerned about withdrawal?", answer: "If you drink heavily and are considering reducing or stopping, please talk to a healthcare professional first. Alcohol withdrawal can be medically dangerous and sometimes requires supervised care. Do not attempt to stop suddenly without medical guidance if you have been drinking heavily." },
@@ -45,12 +45,6 @@ export default function AUDITPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: TOOL_URL }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, lastReviewed: "2026-03-07" })) }} />
-      <section className="sr-only">
-        <h2>What Is the AUDIT Alcohol Screening?</h2>
-        <h2>How Is the AUDIT Scored?</h2>
-        <h2>What Do My AUDIT Results Mean?</h2>
-        <p>AUDIT scores range from 0 to 40. Score 0–7: Zone I, lower risk. Score 8–15: Zone II, hazardous use. Score 16–19: Zone III, harmful use. Score 20–40: Zone IV, possible dependence.</p>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
       </div>

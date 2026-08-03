@@ -111,11 +111,6 @@ export default function AssistPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the WHO ASSIST Substance Screening?</h2>
-        <h2>How Is the WHO ASSIST Scored?</h2>
-        <h2>What Do My WHO ASSIST Results Mean?</h2>
-      </section>
 <AssistClient faqData={FAQ_DATA} />
     </>
   );

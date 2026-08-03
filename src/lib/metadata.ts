@@ -20,9 +20,9 @@ export const DEFAULT_KEYWORDS = [
 ];
 
 /** Base metadata shared across all pages */
-export function createMetadata(overrides: Partial<Metadata> & { path?: string }): Metadata {
+export function createMetadata(overrides: Partial<Metadata> & { path: string }): Metadata {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { path = "", openGraph: ogOverrides, twitter: twOverrides, alternates: _altOverrides, ...rest } = overrides;
+  const { path, openGraph: ogOverrides, twitter: twOverrides, alternates: _altOverrides, ...rest } = overrides;
   const url = `${SITE_URL}${path}`;
 
   const defaultTitle = `${SITE_NAME}, Free, Private Mental Health Self-Checks`;
@@ -59,6 +59,9 @@ export function createMetadata(overrides: Partial<Metadata> & { path?: string })
     robots: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
       googleBot: {
         index: true,
         follow: true,
@@ -88,13 +91,14 @@ export function organizationJsonLd() {
           "@type": "ImageObject",
           url: `${SITE_URL}/logo.png`,
         },
-        sameAs: [],
       },
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: `${SITE_NAME}, Free Mental Health Screening Tools`,
+        name: SITE_NAME,
+        alternateName: "Free Mental Health Screening Tools",
+        inLanguage: "en-US",
         description:
           "Free published screening instruments and clearly labeled educational mental health and substance use self-checks. No account required.",
         publisher: {
@@ -121,12 +125,15 @@ export function toolPageJsonLd({
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
+    "@id": `${url}#application`,
     name,
     description,
     url,
     applicationCategory: "HealthApplication",
     operatingSystem: "Any",
+    isAccessibleForFree: true,
+    mainEntityOfPage: url,
     offers: {
       "@type": "Offer",
       price: "0",
@@ -135,9 +142,7 @@ export function toolPageJsonLd({
     datePublished,
     dateModified,
     provider: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@id": `${SITE_URL}/#organization`,
     },
     reviewedBy: AUTHOR_SCHEMA,
   };
@@ -218,11 +223,21 @@ export function medicalWebPageJsonLd({
   return {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
+    "@id": `${url}#webpage`,
     name,
     description,
     url,
     lastReviewed,
     reviewedBy: AUTHOR_SCHEMA,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    isPartOf: {
+      "@id": `${SITE_URL}/#website`,
+    },
+    mainEntity: {
+      "@id": `${url}#application`,
+    },
     medicalAudience: {
       "@type": "MedicalAudience",
       audienceType: "Patient",
@@ -235,13 +250,14 @@ export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: "Free Mental Health Screening Tools",
     url: SITE_URL,
+    inLanguage: "en-US",
     description: SITE_DESCRIPTION,
     publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@id": `${SITE_URL}/#organization`,
     },
   };
 }

@@ -123,11 +123,6 @@ export default function FiveSensesGroundingPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Five Senses Grounding Exercise?</h2>
-        <h2>How Does Five Senses Grounding Work?</h2>
-        <h2>What Are the Benefits of Grounding Exercises?</h2>
-      </section>
 <GroundingClient faqData={FAQ_DATA} />
     </>
   );

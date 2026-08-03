@@ -130,11 +130,6 @@ export default function WorryTimeSchedulerPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Worry Time Scheduler?</h2>
-        <h2>How Does the Worry Time Scheduler Work?</h2>
-        <h2>What Are the Benefits of Scheduled Worry Time?</h2>
-      </section>
       <LocalStorageNotice dataDescription="your worry log and schedule" />
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />

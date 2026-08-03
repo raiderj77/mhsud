@@ -525,7 +525,7 @@ export function HolmesRaheClient({ faqData }: Props) {
         Social Readjustment Rating Scale &middot; Holmes &amp; Rahe (1967)
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        43 items &middot; ~3 minutes &middot; Completely private
+        43 items &middot; ~3 minutes &middot; private by design
       </p>
 
       <AdSlot position="tool-top" />

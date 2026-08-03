@@ -79,20 +79,34 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           // Security
-          { key: "X-Frame-Options", value: "SAMEORIGIN" }, // DENY blocks AdSense iframes — changed to SAMEORIGIN
+          // X-Frame-Options governs whether this site can be embedded. Ad
+          // frames embedded by this site are controlled by CSP frame-src.
+          { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-DNS-Prefetch-Control", value: "off" },
+          { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()" },
+          { key: "Permissions-Policy", value: "accelerometer=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()" },
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+          { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
           {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              // Optional Google analytics and advertising services
+              "base-uri 'self'",
+              "object-src 'none'",
+              "frame-ancestors 'none'",
+              "form-action 'self'",
+              "manifest-src 'self'",
+              "worker-src 'self'",
+              // Optional Google analytics and advertising services. This
+              // domain allowlist is not represented as future-proof for
+              // AdSense; the ad runtime remains gated until a separate
+              // nonce-based strict-CSP migration passes report-only testing.
               "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googleadservices.com https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com",
+              "style-src 'self' 'unsafe-inline'",
+              "font-src 'self'",
               // AdSense ad images and tracking pixels
               "img-src 'self' data: https: https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://www.googletagmanager.com",
               // AdSense + Analytics connections
@@ -101,6 +115,17 @@ const nextConfig = {
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
             ].join("; "),
           },
+        ],
+      },
+      {
+        // Subscription responses can reveal whether an address was accepted
+        // and must never be stored by a browser, CDN, or shared cache.
+        source: "/api/:path*",
+        headers: [
+          { key: "Cache-Control", value: "private, no-store, max-age=0, must-revalidate" },
+          { key: "CDN-Cache-Control", value: "no-store" },
+          { key: "Vercel-CDN-Cache-Control", value: "no-store" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
         ],
       },
       {

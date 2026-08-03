@@ -8,9 +8,9 @@ const TOOL_URL = `${SITE_URL}/phq-9-depression-test`;
 
 export const metadata: Metadata = createMetadata({
   path: "/phq-9-depression-test",
-  title: "PHQ-9 Depression Test | Free Screening Tool",
+  title: "Free PHQ-9 Depression Test: 9-Question Self-Screen",
   description:
-    "Take the free PHQ-9 depression screening test. 9 questions, instant results, clinically validated. Not a diagnosis.",
+    "Take the free 9-question PHQ-9 depression self-screen in about 3 minutes. Get an instant score with private browser-only processing. Not a diagnosis.",
   keywords: [
     "phq-9 test", "phq 9 questionnaire", "depression screening test",
     "phq9", "phq-9", "depression test", "depression questionnaire",
@@ -19,16 +19,16 @@ export const metadata: Metadata = createMetadata({
     "free depression test", "mental health screening",
   ],
   openGraph: {
-    title: "PHQ-9 Depression Test | Free Screening Tool",
-    description: "Take the free PHQ-9 depression screening test used by doctors worldwide. 9 questions, 3 minutes. Private, instant results.",
+    title: "Free PHQ-9 Depression Test: 9-Question Self-Screen",
+    description: "Complete the published nine-item PHQ-9 depression self-screen in about 3 minutes. Private browser-only scoring with source and limitation notes.",
     url: TOOL_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What is the PHQ-9 test?", answer: "The PHQ-9 (Patient Health Questionnaire-9) is a clinically validated 9-question screening tool used by doctors and mental health professionals to assess the severity of depression. Developed by Drs. Kroenke, Spitzer, and Williams, it was published in 2001 in the Journal of General Internal Medicine and has become one of the most widely used depression screening instruments in primary care worldwide. It measures how often you have experienced symptoms like low mood, sleep changes, and loss of interest over the past two weeks." },
-  { question: "How is the PHQ-9 scored?", answer: "Each of the 9 questions is scored 0–3 (Not at all, Several days, More than half the days, Nearly every day). Total scores range from 0–27: 1–4 is minimal depression, 5–9 is mild, 10–14 is moderate, 15–19 is moderately severe, and 20–27 is severe depression. The original 2001 validation study (Kroenke et al., JGIM) reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff score of 10." },
+  { question: "What is the PHQ-9 test?", answer: "The PHQ-9 (Patient Health Questionnaire-9) is a published nine-question screening instrument that summarizes how often you report depression-related symptoms over the past two weeks. It was developed by Drs. Kroenke, Spitzer, and Williams and published in 2001 in the Journal of General Internal Medicine. A score can support a conversation with a healthcare professional, but it does not diagnose depression or determine treatment." },
+  { question: "How is the PHQ-9 scored?", answer: "Each of the 9 questions is scored 0–3 (Not at all, Several days, More than half the days, Nearly every day). Total scores range from 0–27. Standard symptom-severity labels are minimal (0–4), mild (5–9), moderate (10–14), moderately severe (15–19), and severe (20–27). These labels summarize self-reported symptoms; they do not diagnose depression or determine treatment. The original 2001 validation study (Kroenke et al., JGIM) reported 88% sensitivity and 88% specificity for major depressive disorder at a cutoff score of 10." },
   { question: "Is the PHQ-9 questionnaire accurate?", answer: "The PHQ-9 has strong clinical validity. The original validation study reported 88% sensitivity and 88% specificity at a cutoff score of 10 for detecting major depression. Subsequent large-scale meta-analyses have broadly supported these figures, though accuracy can vary across populations. However, it is a screening tool, not a diagnostic instrument. A positive screen should be followed up with a licensed mental health professional for a proper evaluation." },
   { question: "Can I use the PHQ-9 test online for free?", answer: "Yes. This tool provides the full PHQ-9 questionnaire at no cost. Your responses are processed entirely in your browser and are never stored or transmitted to any server." },
   { question: "What should I do if my PHQ-9 score is high?", answer: "A high score (10 or above) suggests it may be helpful to speak with a doctor or mental health professional. This screening tool is a starting point for a conversation, not a final answer. If you are in crisis or having thoughts of self-harm, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988." },
@@ -46,10 +46,10 @@ export default function PHQ9Page() {
           __html: JSON.stringify({
       ...toolPageJsonLd({
               name: "PHQ-9 Depression Test",
-              description: "A free online implementation of the PHQ-9 Patient Health Questionnaire, the gold-standard 9-item depression screening tool used by clinicians worldwide.",
+              description: "A free browser-based implementation of the published nine-item PHQ-9 depression screening instrument. It provides a symptom score, not a diagnosis or treatment decision.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             }),
     }),
         }}
@@ -78,9 +78,9 @@ export default function PHQ9Page() {
           __html: JSON.stringify({
       ...medicalWebPageJsonLd({
               name: "PHQ-9 Depression Test",
-              description: "A free online implementation of the PHQ-9 Patient Health Questionnaire, the gold-standard 9-item depression screening tool used by clinicians worldwide.",
+              description: "A free browser-based implementation of the published nine-item PHQ-9 depression screening instrument. It provides a symptom score, not a diagnosis or treatment decision.",
               url: TOOL_URL,
-              lastReviewed: "2026-03-07",
+              lastReviewed: "2026-08-02",
             }),
     }),
         }}
@@ -91,7 +91,7 @@ export default function PHQ9Page() {
           PHQ-9 Depression Test
         </h1>
         <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mt-4">
-          The PHQ-9 is a nine-item depression screening tool scored 0 to 27, used in primary care and VA mental health settings. Scores of 5 to 9 indicate mild symptoms, 10 to 14 moderate, 15 to 19 moderately severe, and 20 or higher severe depression. Item nine specifically screens for suicidal ideation.
+          The PHQ-9 is a nine-item depression screening tool scored 0 to 27 and used in primary care and VA mental health settings. Its standard score bands label the severity of self-reported symptoms, not a diagnosis. Item nine asks about thoughts of being better off dead or of self-harm and requires separate safety assessment when endorsed.
         </p>
         <div className="card mt-6 p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20">
           <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
@@ -105,12 +105,6 @@ export default function PHQ9Page() {
           Start the PHQ-9 self-check
         </a>
       </div>
-      <section className="sr-only">
-        <h2>What Is the PHQ-9 Depression Screening?</h2>
-        <h2>How Is the PHQ-9 Scored?</h2>
-        <h2>What Do My PHQ-9 Results Mean?</h2>
-        <p>PHQ-9 scores range from 0 to 27. Score 1–4: minimal depression. Score 5–9: mild depression. Score 10–14: moderate depression. Score 15–19: moderately severe depression. Score 20–27: severe depression.</p>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
@@ -136,10 +130,10 @@ export default function PHQ9Page() {
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="The PHQ-9 is a validated 9-question depression screening tool used by healthcare professionals worldwide."
-          who="Anyone wanting to understand their depression symptoms, results should always be reviewed with a qualified healthcare provider."
-          bottomLine="This 2-minute screening produces a standardized score you can share with your doctor or counselor, it is not a diagnosis."
-          lastUpdated="2026-03-20"
+          what="The PHQ-9 is a published nine-question self-report screener for depression-related symptoms during the past two weeks."
+          who="Adults who want to summarize recent symptoms before deciding whether to discuss them with a qualified healthcare professional."
+          bottomLine="The result is a symptom-range score you can share with a clinician. It does not diagnose depression or determine treatment."
+          lastUpdated="2026-08-02"
         />
       </div>
 
@@ -165,23 +159,23 @@ export default function PHQ9Page() {
           <div className="space-y-2">
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">0–4</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, few depressive symptoms; monitoring may be appropriate</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Minimal depressive symptom range</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, few or no reported symptoms</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">5–9</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, some symptoms; watchful waiting or lifestyle changes recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Mild depressive symptom range</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, consider professional evaluation if symptoms persist, worsen, or interfere with daily life</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">10–14</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, clinically significant symptoms; treatment discussion recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderate depressive symptom range</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, consider professional evaluation; treatment decisions require individual clinical context</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">15–19</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderately severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, many symptoms at high frequency; active treatment typically needed</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Moderately severe depressive symptom range</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, seek professional evaluation; treatment decisions require individual clinical context</span></div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
               <span className="text-sm font-mono font-bold text-sage-600 dark:text-sage-400 w-12 flex-shrink-0">20–27</span>
-              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe depression</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, severe symptom burden; active treatment and close follow-up recommended</span></div>
+              <div><span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">Severe depressive symptom range</span><span className="text-sm text-neutral-500 dark:text-neutral-400">, seek prompt professional evaluation; treatment decisions require individual clinical context</span></div>
             </div>
           </div>
         </section>
