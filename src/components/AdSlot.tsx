@@ -9,12 +9,11 @@ interface AdSlotProps {
   position: string;
   className?: string;
   /**
-   * FIX: data-ad-slot is required by Google AdSense for targeted ad serving.
-   * Without a slot ID, AdSense cannot serve targeted ads and fill rates drop significantly.
+   * Optional AdSense ad-unit identifier for an account-configured placement.
+   * MindCheck requests non-personalized ads regardless of whether a slot is named.
    * Get slot IDs from: https://www.google.com/adsense → Ads → By ad unit → Create ad unit
    *
-   * If omitted, the component falls back to auto-ads behavior (acceptable for initial
-   * setup, but named slot IDs improve fill rate and revenue by 20-40%).
+   * If omitted, account-configured auto-ad behavior may supply the placement.
    */
   adSlot?: string;
   adFormat?: "auto" | "rectangle" | "vertical" | "horizontal";
@@ -41,6 +40,10 @@ export function AdSlot({
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
   const [allowed, setAllowed] = useState(false);
+  const runtimeEnabled =
+    process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" &&
+    process.env.NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true" &&
+    process.env.NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true";
 
   useEffect(() => {
     const refresh = () => setAllowed(!sensitive && getCurrentConsent()?.advertising === true);
@@ -56,6 +59,7 @@ export function AdSlot({
       if (pushed.current || getCurrentConsent()?.advertising !== true) return;
       try {
         if (window.adsbygoogle && adRef.current) {
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
           window.adsbygoogle.push({});
           pushed.current = true;
         }
@@ -71,7 +75,10 @@ export function AdSlot({
 
   const dims = FORMAT_DIMS[adFormat] ?? FORMAT_DIMS.auto;
 
-  if (sensitive || process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true" || !allowed) return null;
+  // The asynchronous AdSense manual-unit API requires a configured slot ID.
+  // When no ID is supplied, render nothing and let the consent-gated global
+  // script handle account-side Auto ads instead of pushing an invalid unit.
+  if (sensitive || !runtimeEnabled || !allowed || !adSlot) return null;
 
   return (
     <div

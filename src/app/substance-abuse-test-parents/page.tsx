@@ -153,7 +153,7 @@ export default function SubstanceAbuseTestParentsPage() {
             Start the Substance Use Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 2 minutes. Completely private, nothing is stored or shared.
+            Takes about 2 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -300,11 +300,6 @@ export default function SubstanceAbuseTestParentsPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-08" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Parent Substance Use Screening?</h2>
-        <h2>How Is the Parent Substance Screening Scored?</h2>
-        <h2>What Do My Substance Screening Results Mean?</h2>
-      </section>
 <CAGEAIDClient faqData={FAQ_DATA} hideTherapyCTA={true} />
       </div>
 

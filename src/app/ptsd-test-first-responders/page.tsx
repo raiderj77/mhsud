@@ -156,7 +156,7 @@ export default function PTSDTestFirstRespondersPage() {
             Start the PTSD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5–10 minutes. Completely private, nothing is stored or shared.
+            Takes about 5–10 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -367,11 +367,6 @@ export default function PTSDTestFirstRespondersPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is PTSD Screening for First Responders?</h2>
-        <h2>How Is the First Responder PTSD Test Scored?</h2>
-        <h2>What Do My PTSD Screening Results Mean?</h2>
-      </section>
 <PCL5Client faqData={FAQ_DATA} />
       </div>
 

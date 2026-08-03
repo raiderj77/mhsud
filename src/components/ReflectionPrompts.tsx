@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 interface Props {
   prompts: string[];
@@ -14,20 +14,18 @@ interface Props {
  */
 export function ReflectionPrompts({ prompts, toolName }: Props) {
   const [isOpen, setIsOpen] = useState(false);
-  const id = "reflection-prompts";
+  const componentId = useId();
+  const panelId = `${componentId}-reflection-prompts`;
+  const buttonId = `${componentId}-reflection-prompts-button`;
 
   return (
     <section aria-label="Reflection prompts" className="card overflow-hidden mb-5">
       <button
+        id={buttonId}
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        onKeyDown={(e) => {
-          if (e.key === " ") {
-            e.preventDefault();
-            setIsOpen(!isOpen);
-          }
-        }}
         aria-expanded={isOpen}
-        aria-controls={id}
+        aria-controls={panelId}
         className="w-full p-5 flex justify-between items-center text-left min-h-[44px] gap-3"
       >
         <span className="flex items-center gap-2">
@@ -37,6 +35,7 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={2}
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -46,6 +45,7 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
           </svg>
           <span className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100">
             Reflect on Your Results
+            <span className="sr-only"> for {toolName}</span>
           </span>
         </span>
         <svg
@@ -56,15 +56,17 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
           viewBox="0 0 24 24"
           stroke="currentColor"
           strokeWidth={2}
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       <div
-        id={id}
+        id={panelId}
         role="region"
-        aria-label={`Reflection questions for the ${toolName}`}
+        aria-labelledby={buttonId}
+        aria-hidden={!isOpen}
         className={`transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}

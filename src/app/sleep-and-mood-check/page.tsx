@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/sleep-and-mood-check",
   title: "Free Sleep & Mood Reflection Tool (Private, Not a Diagnosis)",
   description:
-    "Reflect on how your sleep quality, duration, and habits relate to your mood and energy. 10 questions, ~2 minutes, 100% private. Not a diagnosis tool.",
+    "Reflect on how sleep relates to mood and energy with this browser-local, 10-question educational tool. About 2 minutes. Not a diagnostic tool.",
   keywords: [
     "sleep and mood tracker", "sleep quality check", "insomnia self-check",
     "sleep habits and mental health", "sleep mood connection", "sleep assessment",
@@ -70,11 +70,6 @@ export default function SleepMoodPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Sleep and Mood Check?</h2>
-        <h2>How Does the Sleep and Mood Check Work?</h2>
-        <h2>What Do My Sleep and Mood Results Mean?</h2>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>

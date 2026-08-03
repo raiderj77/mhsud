@@ -112,7 +112,7 @@ export function WorkStressClient({ faqData }: Props) {
           12 original questions to help you reflect on work demands, control, support, engagement, recovery, and impact. For personal reflection only, not a clinical assessment.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {[{ icon: "🔒", text: "100% Private" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "12 Questions" }].map((b) => (
+          {[{ icon: "🔒", text: "Answers Stay Local" }, { icon: "⏱", text: "~3 Minutes" }, { icon: "📋", text: "12 Questions" }].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>

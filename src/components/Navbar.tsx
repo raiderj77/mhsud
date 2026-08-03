@@ -124,6 +124,7 @@ export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const mobileButtonRef = useRef<HTMLButtonElement>(null);
   const { isOnline } = useOnlineStatus();
 
   // Add scroll shadow effect
@@ -149,8 +150,18 @@ export function Navbar() {
     }
     function handleEsc(e: KeyboardEvent) {
       if (e.key === "Escape") {
+        const activeElement = document.activeElement;
+        const focusWasInDesktopMenu = dropdownRef.current?.contains(activeElement) ?? false;
+        const focusWasInMobileMenu =
+          document.getElementById("mobile-navigation-menu")?.contains(activeElement) ?? false;
         setToolsOpen(false);
         setMenuOpen(false);
+        if (focusWasInDesktopMenu || focusWasInMobileMenu) {
+          window.requestAnimationFrame(() => {
+            if (focusWasInDesktopMenu) buttonRef.current?.focus();
+            if (focusWasInMobileMenu) mobileButtonRef.current?.focus();
+          });
+        }
       }
     }
     document.addEventListener("mousedown", handleClick);
@@ -188,7 +199,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 group shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500 rounded-lg"
+            className="flex min-h-[44px] items-center gap-2.5 group shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 rounded-lg"
             aria-label="MindCheck Tools - Home"
           >
             <div
@@ -223,8 +234,7 @@ export function Navbar() {
                 className="flex items-center gap-1.5 px-3 py-2 rounded-lg
                   bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
                   text-crisis-700 dark:text-crisis-300 text-xs font-medium"
-                role="status"
-                aria-label="Offline - working without internet connection"
+                aria-hidden="true"
               >
                 <span aria-hidden="true">⚠️</span>
                 <span className="hidden sm:inline">Offline</span>
@@ -234,16 +244,17 @@ export function Navbar() {
             {/* Tools dropdown trigger */}
             <button
               ref={buttonRef}
+              type="button"
               onClick={() => setToolsOpen(!toolsOpen)}
               className={`px-3 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
                 ${
                   toolsOpen
                     ? "text-sage-700 dark:text-sage-400 bg-sage-50 dark:bg-sage-950/30"
                     : "text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30"
                 }`}
               aria-expanded={toolsOpen}
-              aria-haspopup="true"
+              aria-controls="desktop-tools-menu"
             >
               Tools
               <svg
@@ -268,7 +279,7 @@ export function Navbar() {
                 text-neutral-600 dark:text-neutral-300
                 hover:text-sage-700 dark:hover:text-sage-400
                 hover:bg-sage-50 dark:hover:bg-sage-950/30
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
                 transition-colors"
             >
               Evidence
@@ -289,7 +300,7 @@ export function Navbar() {
                 text-neutral-600 dark:text-neutral-300
                 hover:text-sage-700 dark:hover:text-sage-400
                 hover:bg-sage-50 dark:hover:bg-sage-950/30
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
                 transition-colors"
             >
               About
@@ -305,7 +316,7 @@ export function Navbar() {
               <div
                 className="flex items-center gap-1 px-2 py-1 rounded-lg bg-crisis-100 dark:bg-crisis-950 text-crisis-700 dark:text-crisis-300"
                 title="Offline"
-                aria-label="Offline - working without internet connection"
+                aria-hidden="true"
               >
                 <span className="text-sm" aria-hidden="true">
                   ⚠️
@@ -314,15 +325,19 @@ export function Navbar() {
             )}
             <DarkModeToggle />
             <button
+              ref={mobileButtonRef}
+              id="mobile-menu-button"
+              type="button"
               onClick={() => {
                 setMenuOpen(!menuOpen);
                 setToolsOpen(false);
               }}
               className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg
                 hover:bg-sand-200 dark:hover:bg-night-700 transition-colors
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500"
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
+              aria-controls="mobile-navigation-menu"
             >
               {menuOpen ? (
                 <svg
@@ -364,29 +379,41 @@ export function Navbar() {
       {toolsOpen && (
         <div
           ref={dropdownRef}
+          id="desktop-tools-menu"
           className="hidden md:block absolute left-0 right-0 bg-white dark:bg-night-800 border-b border-sand-200 dark:border-neutral-700 shadow-xl animate-fade-in z-50"
+          role="region"
+          aria-label="Browse mental health tools"
         >
           <div className="max-w-6xl mx-auto px-6 py-5">
             {/* Search */}
             <div className="relative mb-4">
-              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
+              <label htmlFor="desktop-tool-search" className="sr-only">
+                Search mental health tools
+              </label>
               <input
-                type="text"
+                id="desktop-tool-search"
+                type="search"
                 placeholder="Search tools... (e.g. depression, AUDIT, anxiety)"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-sm text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 dark:focus:ring-sage-600"
-                autoFocus
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-base text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300"
               />
             </div>
 
+            <p className="sr-only" role="status" aria-live="polite">
+              {filtered.length} {filtered.length === 1 ? "tool" : "tools"} shown
+            </p>
+
             {/* Category pills */}
-            <div className="flex flex-wrap gap-1.5 mb-4">
+            <div className="flex flex-wrap gap-1.5 mb-4" role="group" aria-label="Filter tools by category">
               <button
+                type="button"
                 onClick={() => setActiveCategory("all")}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                aria-pressed={activeCategory === "all"}
+                className={`px-3 py-1.5 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                   activeCategory === "all"
                     ? "bg-sage-600 text-white"
                     : "bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:bg-sand-200 dark:hover:bg-night-600"
@@ -397,8 +424,10 @@ export function Navbar() {
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat.id}
+                  type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                  aria-pressed={activeCategory === cat.id}
+                  className={`px-3 py-1.5 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                     activeCategory === cat.id
                       ? "bg-sage-600 text-white"
                       : "bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:bg-sand-200 dark:hover:bg-night-600"
@@ -419,7 +448,7 @@ export function Navbar() {
                   {CATEGORIES.map((cat) => (
                     <div key={cat.id}>
                       <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2 flex items-center gap-2">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
                         </svg>
                         {cat.name}
@@ -495,9 +524,10 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
 
   return (
     <div
-      className="md:hidden border-t border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 animate-fade-in max-h-[calc(100vh-3.5rem)] overflow-y-auto"
+      id="mobile-navigation-menu"
+      className="md:hidden border-t border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 animate-fade-in max-h-[calc(100dvh_-_3.5rem)] overflow-x-hidden overflow-y-auto overscroll-contain pb-[max(0.75rem,env(safe-area-inset-bottom))]"
       role="region"
-      aria-label="Mobile navigation menu"
+      aria-labelledby="mobile-menu-button"
     >
       <div className="px-4 py-3">
         {/* Offline banner */}
@@ -505,10 +535,10 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
           <div
             className="mb-3 p-3 rounded-lg bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
               text-crisis-700 dark:text-crisis-300 text-sm"
-            role="alert"
+            role="note"
           >
             <p className="font-semibold mb-1">You&apos;re offline</p>
-            <p className="text-xs opacity-90">Screening tools still work without internet.</p>
+            <p className="text-sm opacity-90">Sensitive tools require an internet connection.</p>
           </div>
         )}
 
@@ -528,47 +558,66 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+          <label htmlFor="mobile-tool-search" className="sr-only">
+            Search mental health tools
+          </label>
           <input
+            id="mobile-tool-search"
             type="search"
             placeholder="Search tools..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600
-              bg-sand-50 dark:bg-night-900 text-sm text-neutral-800 dark:text-neutral-200
-              placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
+              bg-sand-50 dark:bg-night-900 text-base text-neutral-800 dark:text-neutral-200
+              placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300"
           />
         </div>
 
         {/* Category accordions */}
         <div className="space-y-1">
-          {filteredCategories.map((cat) => (
+          {filteredCategories.map((cat) => {
+            const isExpanded = expanded === cat.id || Boolean(search.trim());
+            const panelId = `mobile-tools-${cat.id}`;
+            const buttonId = `mobile-tools-button-${cat.id}`;
+
+            return (
             <div key={cat.id}>
               <button
+                id={buttonId}
+                type="button"
                 onClick={() => setExpanded(expanded === cat.id ? null : cat.id)}
-                className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
+                aria-expanded={isExpanded}
+                aria-controls={panelId}
+                className="w-full min-h-[44px] flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
               >
                 <span className="flex items-center gap-2.5">
-                  <svg className="w-4 h-4 text-sage-500 dark:text-sage-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-4 h-4 text-sage-500 dark:text-sage-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
                   </svg>
                   {cat.name}
                   <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">({cat.tools.length})</span>
                 </span>
                 <svg
-                  className={`w-4 h-4 text-neutral-400 transition-transform ${expanded === cat.id ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 text-neutral-400 transition-transform ${isExpanded ? "rotate-180" : ""}`}
                   fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  aria-hidden="true"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {(expanded === cat.id || search.trim()) && (
-                <div className="ml-4 pl-4 border-l-2 border-sage-100 dark:border-sage-900 space-y-0.5 pb-2">
+              {isExpanded && (
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  className="ml-4 pl-4 border-l-2 border-sage-100 dark:border-sage-900 space-y-0.5 pb-2"
+                >
                   {cat.tools.map((tool) => (
                     <Link
                       key={tool.href}
                       href={tool.href}
                       onClick={onClose}
-                      className="block px-3 py-2 rounded-lg hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
+                      className="flex min-h-[44px] flex-col justify-center px-3 py-2 rounded-lg hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
                     >
                       <p className="text-sm font-medium text-neutral-700 dark:text-neutral-200">{tool.label}</p>
                       <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.sub}</p>
@@ -577,7 +626,13 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
                 </div>
               )}
             </div>
-          ))}
+            );
+          })}
+          {filteredCategories.length === 0 && (
+            <p className="py-6 text-center text-sm text-neutral-600 dark:text-neutral-300" role="status">
+              No tools match your search.
+            </p>
+          )}
         </div>
 
         {/* Static nav links */}
@@ -585,10 +640,10 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
           <Link
             href="/clinical-evidence"
             onClick={onClose}
-            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
               text-neutral-700 dark:text-neutral-200
               hover:bg-sage-50 dark:hover:bg-sage-950/20
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
               transition-colors"
           >
             Clinical Evidence
@@ -596,10 +651,10 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
           <Link
             href="/about"
             onClick={onClose}
-            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
               text-neutral-700 dark:text-neutral-200
               hover:bg-sage-50 dark:hover:bg-sage-950/20
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
               transition-colors"
           >
             About
@@ -607,7 +662,7 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
           <Link
             href="/crisis-resources"
             onClick={onClose}
-            className="block px-3 py-2.5 rounded-xl text-sm font-semibold
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
               text-crisis-600 dark:text-crisis-400
               hover:bg-crisis-50 dark:hover:bg-crisis-950/30
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crisis-600

@@ -426,7 +426,7 @@ export function BigFiveClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\u{1F512}", text: "100% Private" },
+            { icon: "\u{1F512}", text: "Answers Stay Local" },
             { icon: "\u23F1", text: "~8 Minutes" },
             { icon: "\u{1F4CB}", text: "50 Questions" },
           ].map((b) => (

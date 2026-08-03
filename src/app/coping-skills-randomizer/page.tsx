@@ -105,11 +105,6 @@ export default function CopingSkillsPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Coping Skills Randomizer?</h2>
-        <h2>How Does the Coping Skills Randomizer Work?</h2>
-        <h2>What Are Evidence-Based Coping Skills?</h2>
-      </section>
 <CopingSkillsClient faqData={FAQ_DATA} />
     </>
   );

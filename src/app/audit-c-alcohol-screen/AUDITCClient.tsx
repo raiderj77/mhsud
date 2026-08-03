@@ -158,10 +158,10 @@ export function AUDITCClient({ faqData }: Props) {
           AUDIT-C Quick Alcohol Screen
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          A 3-question brief alcohol screen used in primary care settings worldwide. The fastest way to reflect on your drinking patterns, completely private.
+          A 3-question brief alcohol screen used in primary care settings worldwide, with answers scored locally in your browser.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {[{ icon: "🔒", text: "100% Private" }, { icon: "⚡", text: "~60 Seconds" }, { icon: "📋", text: "3 Questions" }].map((b) => (
+          {[{ icon: "🔒", text: "Answers Stay Local" }, { icon: "⚡", text: "~60 Seconds" }, { icon: "📋", text: "3 Questions" }].map((b) => (
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>

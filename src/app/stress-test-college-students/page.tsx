@@ -148,7 +148,7 @@ export default function StressTestCollegeStudentsPage() {
             Start the Stress Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private, nothing is stored or shared.
+            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -290,11 +290,6 @@ export default function StressTestCollegeStudentsPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the College Stress Screening?</h2>
-        <h2>How Is the College Stress Test Scored?</h2>
-        <h2>What Do My Stress Screening Results Mean?</h2>
-      </section>
 <DASS21Client faqData={FAQ_DATA} />
       </div>
 

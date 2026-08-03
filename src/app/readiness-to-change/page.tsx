@@ -87,11 +87,6 @@ export default function ReadinessToChangePage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Readiness to Change Assessment?</h2>
-        <h2>How Is the Readiness to Change Assessment Scored?</h2>
-        <h2>What Do My Readiness to Change Results Mean?</h2>
-      </section>
 <ReadinessClient faqData={FAQ_DATA} />
     </>
   );

@@ -119,7 +119,7 @@ export default function CaregiverBurnoutAssessmentPage() {
             Family Caregivers
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            🔒 100% Private
+            🔒 Answers Stay Local
           </span>
         </div>
 
@@ -190,11 +190,6 @@ export default function CaregiverBurnoutAssessmentPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Caregiver Burnout Educational Check-In?</h2>
-        <h2>How Is the Caregiver Check-In Scored?</h2>
-        <h2>What Does My Caregiver Check-In Summary Mean?</h2>
-      </section>
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
         {/* Warning Signs Section */}

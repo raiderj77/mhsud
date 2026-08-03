@@ -141,14 +141,14 @@ export function ToolGrid({
               placeholder="Search tools, depression, anxiety, alcohol, burnout..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-10 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 dark:placeholder:text-neutral-500 text-base focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors"
+              className="w-full pl-11 pr-12 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 dark:placeholder:text-neutral-500 text-base focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300 focus:border-sage-700 transition-colors"
             />
             {search && (
               <button
                 type="button"
                 onClick={() => setSearch("")}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full text-neutral-400 hover:text-neutral-600 dark:text-neutral-500 dark:hover:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
+                className="absolute right-0.5 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-lg text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -159,17 +159,21 @@ export function ToolGrid({
         </div>
 
         {/* Filter tabs */}
-        <div className="mb-8" role="tablist" aria-label="Filter tools by category">
+        <p className="sr-only" role="status" aria-live="polite">
+          {totalResults} {totalResults === 1 ? "tool" : "tools"} shown
+        </p>
+
+        <div className="mb-8" role="group" aria-label="Filter tools by category">
           <div className="flex flex-wrap gap-2">
             {FILTER_CATEGORIES.filter((cat) => targetedScreenings.length > 0 || cat !== TARGETED_FILTER).map((cat) => {
               const isActive = activeFilter === cat;
               return (
                 <button
                   key={cat}
-                  role="tab"
-                  aria-selected={isActive}
+                  type="button"
+                  aria-pressed={isActive}
                   onClick={() => setActiveFilter(cat)}
-                  className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2 dark:focus:ring-offset-night-900 ${
+                  className={`min-h-[44px] px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300 focus:ring-offset-2 dark:focus:ring-offset-night-900 ${
                     isActive
                       ? "bg-sage-700 text-white shadow-sm"
                       : "bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400 hover:bg-sage-100 dark:hover:bg-sage-950/50"
@@ -189,11 +193,12 @@ export function ToolGrid({
               No tools found for &ldquo;{search.trim() || activeFilter}&rdquo;
             </p>
             <button
+              type="button"
               onClick={() => {
                 setSearch("");
                 setActiveFilter("All");
               }}
-              className="mt-3 text-sage-600 dark:text-sage-400 text-sm font-medium hover:underline"
+              className="mt-3 min-h-[44px] px-3 text-sage-600 dark:text-sage-400 text-sm font-medium hover:underline"
             >
               Clear filters
             </button>
@@ -213,7 +218,7 @@ export function ToolGrid({
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {categoryTools.map((tool) => (
-                      <ToolCard key={tool.href} tool={tool} />
+                      <ToolCard key={tool.href} tool={tool} headingLevel="h4" />
                     ))}
                   </div>
                 </div>
@@ -263,14 +268,16 @@ export function ToolGrid({
 /*  Card sub-components                                                */
 /* ------------------------------------------------------------------ */
 
-function ToolCard({ tool }: { tool: Tool }) {
-  return (
-    <Link
-      href={tool.status === "live" ? tool.href : "#"}
-      className={`card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 ${
-        tool.status === "coming" ? "opacity-60 pointer-events-none" : ""
-      }`}
-    >
+function ToolCard({
+  tool,
+  headingLevel = "h3",
+}: {
+  tool: Tool;
+  headingLevel?: "h3" | "h4";
+}) {
+  const Heading = headingLevel;
+  const content = (
+    <>
       <div className="flex items-start justify-between mb-3">
         <div className="flex gap-2">
           <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
@@ -293,9 +300,9 @@ function ToolCard({ tool }: { tool: Tool }) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </div>
-      <h4 className="font-serif font-semibold text-lg text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
+      <Heading className="font-serif font-semibold text-lg text-neutral-800 dark:text-neutral-100 mb-1.5 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
         {tool.title}
-      </h4>
+      </Heading>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4">
         {tool.description}
       </p>
@@ -304,6 +311,23 @@ function ToolCard({ tool }: { tool: Tool }) {
         <span>{tool.time}</span>
         <span>&#128274; Private</span>
       </div>
+    </>
+  );
+
+  if (tool.status === "coming") {
+    return (
+      <article className="card border-dashed p-6" aria-label={`${tool.title}, coming soon`}>
+        {content}
+      </article>
+    );
+  }
+
+  return (
+    <Link
+      href={tool.href}
+      className="card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700"
+    >
+      {content}
     </Link>
   );
 }

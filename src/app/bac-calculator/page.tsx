@@ -84,11 +84,6 @@ export default function BACCalculatorPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
-      <section className="sr-only">
-        <h2>What Is the BAC Calculator?</h2>
-        <h2>How Is Blood Alcohol Content Calculated?</h2>
-        <h2>What Do My BAC Results Mean?</h2>
-      </section>
 <BACClient faqData={FAQ_DATA} />
     </>
   );

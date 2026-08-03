@@ -131,11 +131,6 @@ export default function SpinPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the SPIN Social Anxiety Test?</h2>
-        <h2>How Is the SPIN Scored?</h2>
-        <h2>What Do My SPIN Results Mean?</h2>
-      </section>
 <SpinClient faqData={FAQ_DATA} />
     </>
   );

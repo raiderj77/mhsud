@@ -5,6 +5,15 @@
 
 All interactive answers and scores are processed locally in the browser. Sensitive tool routes do not load analytics or advertising. Optional services on eligible public pages require consent. No account is required to use the tools.
 
+## Editorial trust and scope
+
+- MindCheck Tools publishes the site and is the named authoring organization.
+- Health and substance-use content is reviewed for source alignment, scoring limits, and safety language by Jason Ramirez, Certified Alcohol and Drug Counselor Level II (CADC-II).
+- CADC-II is a substance use counseling certification. It is not a physician, psychologist, psychiatrist, or independent mental-health license.
+- [Reviewer profile and credential scope](https://mindchecktools.com/about/jason-ramirez)
+- [Editorial methodology](https://mindchecktools.com/methodology)
+- [Clinical evidence and source notes](https://mindchecktools.com/clinical-evidence)
+
 ## Maintained canonical pages
 
 - [Home](https://mindchecktools.com)
@@ -78,7 +87,7 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [Caregiver Burnout Assessment](https://mindchecktools.com/caregiver-burnout-assessment)
 - [Compassion Fatigue Test](https://mindchecktools.com/compassion-fatigue-test)
 - [Postpartum Depression Test](https://mindchecktools.com/postpartum-depression-test)
-- [Grief Assessment](https://mindchecktools.com/grief-assessment)
+- [Grief and Mood Check](https://mindchecktools.com/grief-assessment)
 - [PHQ 4 Anxiety Depression Screen](https://mindchecktools.com/phq-4-anxiety-depression-screen)
 - [Contact](https://mindchecktools.com/contact)
 - [Crisis Resources](https://mindchecktools.com/crisis-resources)
@@ -88,6 +97,7 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [Clinical Evidence](https://mindchecktools.com/clinical-evidence)
 - [Methodology](https://mindchecktools.com/methodology)
 - [Privacy](https://mindchecktools.com/privacy)
+- [Consumer Health Data Privacy Notice](https://mindchecktools.com/consumer-health-data-privacy)
 - [Cookies](https://mindchecktools.com/cookies)
 - [Terms](https://mindchecktools.com/terms)
 - [Accessibility](https://mindchecktools.com/accessibility)

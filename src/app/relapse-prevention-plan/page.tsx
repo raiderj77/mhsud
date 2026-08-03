@@ -83,11 +83,6 @@ export default function RelapsePlanPage() {
       </div>
 
 
-      <section className="sr-only">
-        <h2>What Is a Relapse Prevention Plan?</h2>
-        <h2>How Does the Relapse Prevention Plan Tool Work?</h2>
-        <h2>What Do My Relapse Prevention Results Mean?</h2>
-      </section>
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026

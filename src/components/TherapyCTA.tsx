@@ -7,9 +7,19 @@ interface Props {
   show: boolean;
 }
 
+function getSafeAffiliateUrl(value: string | undefined): string | null {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
 export function TherapyCTA({ show }: Props) {
   const pathname = usePathname();
-  const url = process.env.NEXT_PUBLIC_THERAPY_AFFILIATE_URL;
+  const url = getSafeAffiliateUrl(process.env.NEXT_PUBLIC_THERAPY_AFFILIATE_URL);
 
   if (!show || !url || isSensitiveRoute(pathname)) return null;
 

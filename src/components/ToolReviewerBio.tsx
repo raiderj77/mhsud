@@ -13,10 +13,10 @@ export function ToolReviewerBio({ lastReviewed = "March 2026" }: { lastReviewed?
         </strong>{" "}
         with {SITE_AUTHOR.experience}.
       </p>
-      <p className="text-xs text-neutral-500 dark:text-neutral-400">
+      <p className="text-sm text-neutral-500 dark:text-neutral-400">
         Review covers source alignment, scoring, limitations, and safety language within the reviewer&apos;s stated credential scope; it is not diagnosis or individual care.
       </p>
-      <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+      <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
         Last reviewed: {lastReviewed}
       </p>
     </div>

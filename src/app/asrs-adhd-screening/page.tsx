@@ -125,11 +125,6 @@ export default function ASRSPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the ASRS ADHD Screening?</h2>
-        <h2>How Is the ASRS Scored?</h2>
-        <h2>What Do My ASRS Results Mean?</h2>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>

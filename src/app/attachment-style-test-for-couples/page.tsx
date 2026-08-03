@@ -132,7 +132,7 @@ export default function AttachmentStyleTestForCouplesPage() {
             Start the Attachment Style Quiz
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Completely private, nothing is stored or shared.
+            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -268,11 +268,6 @@ export default function AttachmentStyleTestForCouplesPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Couples Attachment Style Test?</h2>
-        <h2>How Is the Attachment Style Test Scored?</h2>
-        <h2>What Do My Attachment Style Results Mean?</h2>
-      </section>
 <AttachmentStyleClient faqData={FAQ_DATA} />
       </div>
 

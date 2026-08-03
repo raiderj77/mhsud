@@ -9,9 +9,9 @@ const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
 export const metadata: Metadata = createMetadata({
   path: "/cbt-thought-record",
-  title: "CBT Thought Record | Free Online Thought Diary Worksheet",
+  title: "Free CBT Thought Record: 7-Column Online Worksheet",
   description:
-    "Free interactive CBT thought record worksheet. 7-column thought diary with emotion tracking and before/after comparison. Save entries privately. No signup required.",
+    "Use a free 7-column CBT thought record to identify automatic thoughts, compare evidence, and draft a balanced alternative. Local browser save; no signup.",
   keywords: [
     "CBT thought record", "thought record worksheet",
     "CBT worksheet online", "thought diary",
@@ -22,8 +22,8 @@ export const metadata: Metadata = createMetadata({
     "Aaron Beck thought record",
   ],
   openGraph: {
-    title: "CBT Thought Record | Free Online Thought Diary Worksheet",
-    description: "Free 7-column CBT thought record. Track automatic thoughts, weigh evidence, reframe thinking, and see before/after emotion changes. Private and printable.",
+    title: "Free CBT Thought Record: 7-Column Online Worksheet",
+    description: "Work through a 7-column CBT thought record, compare evidence, and draft a balanced alternative thought. Optional local browser save; no signup.",
     url: TOOL_URL,
     type: "website",
   },
@@ -68,7 +68,7 @@ export default function CbtThoughtRecordPage() {
               description: "A free interactive 7-column CBT thought record worksheet. Record situations, automatic thoughts, emotions with intensity ratings, evidence for and against, balanced alternative thoughts, and re-rate emotions. Before/after emotion comparison. Save entries to browser for a private thought journal. Printable output. Based on the work of Aaron Beck, David Burns, and Christine Padesky.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-02",
             }),
     }),
         }}
@@ -97,14 +97,14 @@ export default function CbtThoughtRecordPage() {
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A guided CBT thought record worksheet that walks you through identifying, challenging, and reframing negative thought patterns."
-          who="Anyone practicing cognitive behavioral therapy skills who wants a structured tool for examining unhelpful thoughts."
-          bottomLine="Thought records are a core CBT skill, regular practice can change how you respond to distressing situations. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="A seven-column educational worksheet for recording a situation, automatic thoughts, emotions, evidence, and a more balanced alternative thought."
+          who="Adults learning CBT concepts who want a structured reflection exercise; it is not a substitute for working with a qualified professional."
+          bottomLine="The worksheet can organize reflection, but it does not assess, diagnose, or treat a mental health condition. Optional saves remain in this browser profile."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -122,8 +122,8 @@ export default function CbtThoughtRecordPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -131,11 +131,6 @@ export default function CbtThoughtRecordPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is a CBT Thought Record?</h2>
-        <h2>How Does the CBT Thought Record Work?</h2>
-        <h2>What Do My Thought Record Results Mean?</h2>
-      </section>
       <LocalStorageNotice dataDescription="your thought-record entries" />
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />

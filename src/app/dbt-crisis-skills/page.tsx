@@ -7,9 +7,9 @@ const TOOL_URL = `${SITE_URL}/dbt-crisis-skills`;
 
 export const metadata: Metadata = createMetadata({
   path: "/dbt-crisis-skills",
-  title: "DBT Crisis Survival Skills | TIPP, STOP, ACCEPTS & IMPROVE",
+  title: "DBT Crisis Skills: TIPP, STOP, ACCEPTS & IMPROVE",
   description:
-    "Review interactive DBT crisis survival skill cards for TIPP, STOP, ACCEPTS, and IMPROVE, with safety cautions, examples, and crisis-support links.",
+    "Explore DBT crisis-skill cards for TIPP, STOP, ACCEPTS, and IMPROVE, with medical cautions and 988 links. Educational only; not emergency care.",
   keywords: [
     "DBT skills cards", "distress tolerance skills",
     "DBT crisis skills", "TIPP skills DBT",
@@ -19,8 +19,8 @@ export const metadata: Metadata = createMetadata({
     "DBT coping skills", "Marsha Linehan DBT",
   ],
   openGraph: {
-    title: "DBT Crisis Survival Skills | TIPP, STOP, ACCEPTS & IMPROVE",
-    description: "Interactive DBT distress-tolerance cards with safety cautions, examples, and crisis-support links.",
+    title: "DBT Crisis Skills: TIPP, STOP, ACCEPTS & IMPROVE",
+    description: "Interactive DBT distress-tolerance cards with medical cautions and crisis-support links. Educational only; not DBT treatment or emergency care.",
     url: TOOL_URL,
     type: "website",
   },
@@ -65,7 +65,7 @@ export default function DbtCrisisSkillsPage() {
               description: "Free interactive DBT distress tolerance skills cards. 22 crisis survival skills organized by four acronyms: TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), STOP (Stop, Take a step back, Observe, Proceed mindfully), ACCEPTS (Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations), and IMPROVE (Imagery, Meaning, Prayer, Relaxation, One thing at a time, Vacation, Encouragement). Each card shows detailed instructions and concrete examples. Random skill button for crisis moments. Based on Dialectical Behavior Therapy by Dr. Marsha Linehan.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-07-17",
+              dateModified: "2026-08-02",
             }),
     }),
         }}
@@ -89,14 +89,14 @@ export default function DbtCrisisSkillsPage() {
       />
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: July 17, 2026
+        Last updated: August 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A guided DBT crisis survival skills tool with TIPP, STOP, and distress tolerance techniques for managing intense emotions."
-          who="Anyone in emotional crisis who needs structured, step-by-step DBT skills to get through the moment safely."
-          bottomLine="Crisis skills are for surviving the moment without making it worse, they are not long-term solutions. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-07-17"
+          what="An educational reference for DBT distress-tolerance skills, including TIPP, STOP, ACCEPTS, and IMPROVE."
+          who="Adults learning DBT skills who want a structured reference during non-emergency distress. For immediate danger, call emergency services."
+          bottomLine="A skill may help create a pause, but it cannot make a crisis safe. This page is not DBT treatment, medical advice, or emergency care."
+          lastUpdated="2026-08-02"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -114,8 +114,8 @@ export default function DbtCrisisSkillsPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-07-17">
-          {new Date("2026-07-17T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>

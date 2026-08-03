@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/privacy",
   title: "Privacy Policy, How We Protect Your Data",
   description:
-    "Your screening answers never leave your browser. No accounts, no login. Ads never access your responses. Full transparency.",
+    "How MindCheck Tools handles browser-local screening data, hosting requests, optional analytics, subscriptions, and privacy choices.",
 });
 
 export default function PrivacyPage() {
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last Reviewed: July 2026
+            Effective Date: January 1, 2026 | Last Reviewed: August 2, 2026
           </p>
         </header>
 
@@ -80,12 +80,12 @@ export default function PrivacyPage() {
           <section>
             <h2>What data is collected through analytics and advertising?</h2>
             <p>
-              Google Analytics (GA4), when you consent, may automatically collect the following categories of information through cookies and standard web protocols. Google AdSense is not currently enabled.
+              Google Analytics (GA4), when you consent, may process the following categories of information through cookies and standard web protocols on routes that are not classified as sensitive. Google AdSense was disabled at the last review and is protected by separate publisher, certified-CMP, strict-CSP, consent, and route-safety gates.
             </p>
             <ul>
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
-              <li><strong>Network information:</strong> IP address (anonymized by GA4 by default), approximate geographic location (city/region level, not precise)</li>
-              <li><strong>Usage data:</strong> pages visited, time on page, referral URLs, click interactions</li>
+              <li><strong>Network information:</strong> IP address used to transmit the request and approximate geographic region derived by Google, not precise location</li>
+              <li><strong>Usage data:</strong> sanitized page URL and path, page title, session timing, and the referring site&apos;s origin</li>
               <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics after analytics consent</li>
             </ul>
             <p>
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
             </p>
             <p>
-              <strong>Current status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is available only after consent. Google AdSense is disabled.
+              <strong>Current application status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is available only after consent and is disabled on sensitive routes. Google&apos;s European-regulations message was verified published on August 2, 2026, but the AdSense site review was still &quot;Getting ready.&quot; AdSense stays fail-closed unless publisher enablement, certified-CMP readiness, and strict-CSP readiness are all explicitly confirmed.
             </p>
           </section>
 
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
               <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
               <li><strong>Privacy choices:</strong> Stored in this browser until you change them or clear site data. The choice itself is not sent to a consent-management provider.</li>
-              <li><strong>Google Analytics data:</strong> 14 months (Google&apos;s default GA4 retention period), then automatically deleted.</li>
+              <li><strong>Google Analytics data:</strong> Retention follows the configured Google Analytics property setting and Google&apos;s service rules. The current account-side setting cannot be verified from public application code; you may request the current period at privacy@mindchecktools.com.</li>
               <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
@@ -149,10 +149,10 @@ export default function PrivacyPage() {
           <section>
             <h2>Advertising</h2>
             <p>
-              Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible future advertising provider but is not currently enabled. We will update this notice if advertising is activated after approval.
+              Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible advertising provider but was not active at the last review. Application code requires explicit publisher enablement, certified-CMP readiness, and strict-CSP readiness before the AdSense runtime can load.
             </p>
             <p>
-              <strong>Health data is not passed to advertising systems.</strong> Your screening answers, scores, and results are processed entirely in your browser. If advertising is enabled in the future, MindCheck Tools will use non-personalized ads and require consent before advertising storage.
+              <strong>Screening answers, scores, results, and browser-local tool entries are not passed to advertising systems.</strong> If advertising is enabled, MindCheck Tools requests non-personalized ads, requires an affirmative advertising choice, and excludes sensitive routes. Non-personalized ads can still use cookies or device identifiers for purposes such as frequency capping and aggregated reporting, which is why the advertising service remains consent-gated.
             </p>
             <p>
               Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
@@ -190,14 +190,14 @@ export default function PrivacyPage() {
           <section>
             <h2>Children&apos;s privacy</h2>
             <p>
-              Most tools are designed for adults; any youth-oriented tool identifies its intended age range. We do not knowingly collect email addresses from children under 13. Screening answers remain in the browser and are not collected. If you are a parent or guardian and believe a child submitted an email address, contact privacy@mindchecktools.com so we can address it.
+              MindCheck Tools is a general-audience educational site. Any youth-oriented tool identifies its intended age range and should be used with a parent, guardian, or qualified professional when appropriate. Screening answers remain in the browser, and subscription forms are suppressed on sensitive interactive routes. Children under 13 should not submit an email address or contact message. If you are a parent or guardian and believe a child provided personal information, contact privacy@mindchecktools.com so we can investigate and address it.
             </p>
           </section>
 
           <section>
             <h2>Data security</h2>
             <p>
-              Because we do not collect or store your questionnaire responses, there is no database of user answers to protect. Our site is served over HTTPS, and we follow standard security practices for web applications including security headers, content security policies, and regular dependency updates.
+              Because we do not collect or store questionnaire responses, there is no application database of user answers. The site is served over HTTPS and uses restrictive response headers, a content security policy, no-store controls on sensitive routes and API responses, and dependency review. No security measure can eliminate every risk, especially risks from a shared device, browser extension, downloaded file, or software outside our control.
             </p>
           </section>
 
@@ -217,12 +217,12 @@ export default function PrivacyPage() {
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
             <p>
-              Under Washington&apos;s My Health My Data Act, consumers have the right to know what health data is collected, the right to withdraw consent, and the right to have health data deleted. MindCheck Tools does not collect, store, or share health data, all screening results are processed client-side in your browser and are never transmitted to our servers or any third party.
+              Washington law can treat reasonably linkable information that identifies a person&apos;s interest in seeking health care as consumer health data. MindCheck Tools does not collect questionnaire answers, scores, journal entries, or locally saved plans, but a requested health-topic path can appear in ordinary hosting data and consented public-page analytics. Our dedicated <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> describes the categories, purposes, sources, service providers, and request process we apply to that limited data.
             </p>
 
-            <h3>Maryland Online Data Privacy Act (MODPA, enforcement effective April 1, 2026)</h3>
+            <h3>Maryland Online Data Privacy Act (MODPA)</h3>
             <p>
-              Maryland&apos;s MODPA is the strictest US state privacy law and applies to any site that processes data about Maryland residents. It requires data minimization (collect only what is <em>strictly</em> necessary, not merely reasonably necessary), an outright ban on the sale of sensitive data with no consent workaround, and mandatory honoring of the Global Privacy Control signal.
+              MODPA took effect October 1, 2025 and applies when its statutory processing thresholds and other requirements are met. It gives covered Maryland residents rights to access, correct, delete, and obtain a portable copy of personal data, plus rights to opt out of sale, targeted advertising, and certain profiling. It also restricts the sale and unnecessary processing of sensitive data.
             </p>
             <p>
               <strong>Your rights under MODPA:</strong>
@@ -235,10 +235,10 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. When your browser sends a GPC signal, we automatically suppress all non-essential cookies and data collection, you do not need to interact with a consent banner.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing optional analytics and advertising services; you do not need to interact with the privacy-choice dialog for those services to remain off. Ordinary hosting and security processing still occurs to deliver and protect the site.
             </p>
             <p>
-              <strong>We do not sell sensitive personal data under any circumstance.</strong> Sensitive data under MODPA includes health information, precise geolocation, racial or ethnic origin, religious beliefs, sexual orientation, citizenship status, genetic or biometric data, and personal data of known minors under 18. No consent can override this prohibition.
+              <strong>We do not sell sensitive personal data.</strong> We also do not use consumer health data for targeted advertising or profiling.
             </p>
             <p>
               To exercise your MODPA rights, contact us at <strong>privacy@mindchecktools.com</strong>. We respond within 45 days.
@@ -254,15 +254,15 @@ export default function PrivacyPage() {
             <p>
               If you are a California resident, the California Consumer Privacy Act (CCPA) as amended
               by the California Privacy Rights Act (CPRA) grants you specific rights regarding your
-              personal information. This section describes those rights and how to exercise them.
-              These rights are effective as of January 1, 2026.
+              personal information. This section describes those rights and how to exercise them
+              when the law applies, and the privacy controls we make available more broadly.
             </p>
 
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and device identifiers collected via analytics.</li>
-              <li><strong>Internet or network activity:</strong> Pages visited, time on site, referring URLs.</li>
+              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and consented analytics cookie identifiers.</li>
+              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, sanitized consented analytics page data, and referring-site origin.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
@@ -292,7 +292,7 @@ export default function PrivacyPage() {
               <li>To maintain site security and prevent fraud</li>
               <li>To send occasional resource emails when a subscriber has expressly consented</li>
             </ul>
-            <p>We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising without your consent.</p>
+            <p>We do not sell your personal information and do not use consumer health data for cross-context behavioral advertising.</p>
 
             <h3>Your Rights as a California Resident</h3>
             <ul>
@@ -327,46 +327,24 @@ export default function PrivacyPage() {
           <section id="state-privacy" aria-labelledby="state-heading">
             <h2 id="state-heading">Additional U.S. State Privacy Rights</h2>
             <p>
-              Residents of the following states have privacy rights similar to California&apos;s CCPA/CPRA.
-              To exercise your rights, contact us via the <Link href="/contact">Contact page</Link>.
-              We will respond within the timeframe required by your state&apos;s law.
+              U.S. state privacy laws have different coverage thresholds, exemptions, and request
+              procedures. Where an applicable law gives you rights to access, correct, delete, or
+              obtain a portable copy of personal data, or to opt out of sale, targeted advertising,
+              or qualifying profiling, you may submit a request through the <Link href="/contact">Contact page</Link>
+              or email privacy@mindchecktools.com. We will authenticate and respond within the period
+              required by the applicable law.
             </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>State</th>
-                  <th>Law</th>
-                  <th>Effective</th>
-                  <th>Key Rights</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Colorado</td><td>CPA</td><td>Jul 2023</td><td>Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td>Connecticut</td><td>CTDPA</td><td>Jul 2023</td><td>Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td>Virginia</td><td>VCDPA</td><td>Jan 2023</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Texas</td><td>TDPSA</td><td>Jul 2024</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Florida</td><td>FDBR</td><td>Jul 2024</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Montana</td><td>MTCPA</td><td>Oct 2024</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Oregon</td><td>OCPA</td><td>Jul 2024</td><td>Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td>Tennessee</td><td>TIPA</td><td>Jul 2025</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Minnesota</td><td>MNDPA</td><td>Jul 2025</td><td>Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td>Maryland</td><td>MODPA</td><td>Apr 2026</td><td>Access, delete, correct, opt-out, portability; bans sale of sensitive data; honors GPC</td></tr>
-                <tr><td>Indiana</td><td>IDCPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Kentucky</td><td>KYCPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
-                <tr><td>Rhode Island</td><td>RIDPA</td><td>Jan 2026</td><td>Access, delete, correct, opt-out</td></tr>
-              </tbody>
-            </table>
-            <p className="mt-4">
-              We honor Global Privacy Control (GPC) signals from all states that require it.
-              We do not sell personal information to third parties. We do not engage in targeted
-              advertising using sensitive personal information.
+            <p>
+              Regardless of location, our Privacy Choices control can keep optional analytics and
+              advertising off. We honor Global Privacy Control by disabling both optional services,
+              do not sell personal information, and do not use consumer health data for targeted advertising.
             </p>
           </section>
 
           <section>
             <h2>Related policies</h2>
             <p>
-              For more details, see our <Link href="/cookies">Cookie Policy</Link> (what cookies we use, how to manage them) and <Link href="/terms">Terms of Use</Link> (legal disclaimers, GDPR rights, CCPA rights, limitation of liability).
+              For more details, see our <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> (health-topic request and service data), <Link href="/cookies">Cookie Policy</Link> (browser storage and choices), and <Link href="/terms">Terms of Use</Link> (use limitations and legal terms).
             </p>
           </section>
 

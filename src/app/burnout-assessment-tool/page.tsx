@@ -118,11 +118,6 @@ export default function BurnoutAssessmentPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Burnout Educational Check-In?</h2>
-        <h2>How Is the Educational Check-In Scored?</h2>
-        <h2>What Does My Check-In Summary Mean?</h2>
-      </section>
 <BurnoutClient faqData={faqData} />
     </>
   );

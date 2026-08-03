@@ -267,6 +267,72 @@ const CLINICAL_GUIDES = [
   { name: "How to Talk to Your Doctor", href: "/how-to-talk-to-your-doctor-about-mental-health", description: "Turn a screening result into a clear, practical clinical conversation." },
 ];
 
+const TOOL_CHOOSER_ROWS = [
+  {
+    concern: "Low mood, reduced interest, or other depressive symptoms over the past two weeks",
+    tool: "PHQ-9",
+    href: "/phq-9-depression-test",
+    detail: "A published nine-item depression symptom screener for adults.",
+    evidence: "phq-9",
+  },
+  {
+    concern: "Persistent worry or generalized anxiety symptoms over the past two weeks",
+    tool: "GAD-7",
+    href: "/gad-7-anxiety-test",
+    detail: "A published seven-item generalized anxiety symptom screener.",
+    evidence: "gad-7",
+  },
+  {
+    concern: "A very brief combined check for depression and anxiety symptoms",
+    tool: "PHQ-4",
+    href: "/phq-4-anxiety-depression-screen",
+    detail: "Four items: two about depressive symptoms and two about anxiety symptoms.",
+    evidence: "phq-4",
+  },
+  {
+    concern: "A brief initial check for PTSD symptoms after a potentially traumatic event",
+    tool: "PC-PTSD-5",
+    href: "/pc-ptsd-5-screening",
+    detail: "A published five-item primary-care PTSD screen for adults.",
+    evidence: "pc-ptsd-5",
+  },
+  {
+    concern: "A more detailed review of PTSD symptoms over the past month",
+    tool: "PCL-5",
+    href: "/pcl-5-ptsd-screening",
+    detail: "A published 20-item PTSD symptom checklist for adults.",
+    evidence: "pcl-5",
+  },
+  {
+    concern: "Alcohol use patterns and possible alcohol-related risk",
+    tool: "AUDIT",
+    href: "/audit-alcohol-test",
+    detail: "The World Health Organization's full 10-item alcohol use screen.",
+    evidence: "audit",
+  },
+  {
+    concern: "A brief check focused on alcohol consumption",
+    tool: "AUDIT-C",
+    href: "/audit-c-alcohol-screen",
+    detail: "The three consumption items from the full AUDIT.",
+    evidence: "audit-c",
+  },
+  {
+    concern: "Possible problems involving alcohol or other drug use",
+    tool: "CAGE-AID",
+    href: "/cage-aid-substance-abuse-screening",
+    detail: "A published four-item screen covering alcohol and other drugs.",
+    evidence: "cage-aid",
+  },
+  {
+    concern: "Adult ADHD symptoms",
+    tool: "ASRS",
+    href: "/asrs-adhd-screening",
+    detail: "An adult self-report symptom checklist for people age 18 and older.",
+    evidence: "asrs",
+  },
+] as const;
+
 function articleJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -402,11 +468,78 @@ export default function ScreeningToolsIndexPage() {
         </p>
       </section>
 
+      <section id="choose-a-tool" className="mb-10 scroll-mt-24">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-3">
+          Which mental health screening tool should I use?
+        </h2>
+        <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+          Start with the concern you want to explore. This table maps common concerns to
+          published screening instruments; it is not a diagnosis or a personalized clinical
+          recommendation. A healthcare professional may choose a different tool based on age,
+          history, safety, symptoms, and care setting.
+        </p>
+        <p className="mb-2 text-xs text-neutral-600 dark:text-neutral-400 sm:hidden">
+          Swipe horizontally to see what each tool covers and its evidence source.
+        </p>
+        <div
+          role="region"
+          aria-label="Concern-to-screening-tool guide"
+          tabIndex={0}
+          className="overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-sage-500"
+        >
+          <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+            <caption className="sr-only">Common concerns and screening tools that may fit them</caption>
+            <thead className="bg-sand-50 dark:bg-night-800">
+              <tr>
+                <th scope="col" className="px-4 py-3 font-semibold text-neutral-900 dark:text-neutral-100">Concern</th>
+                <th scope="col" className="px-4 py-3 font-semibold text-neutral-900 dark:text-neutral-100">Start with</th>
+                <th scope="col" className="px-4 py-3 font-semibold text-neutral-900 dark:text-neutral-100">What it covers</th>
+                <th scope="col" className="px-4 py-3 font-semibold text-neutral-900 dark:text-neutral-100">Source</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-sand-200 dark:divide-neutral-700">
+              {TOOL_CHOOSER_ROWS.map((row) => (
+                <tr key={row.href} className="bg-white dark:bg-night-900 align-top">
+                  <td className="px-4 py-3 text-neutral-700 dark:text-neutral-300">{row.concern}</td>
+                  <td className="px-4 py-3">
+                    <Link href={row.href} className="font-semibold text-sage-700 dark:text-sage-400 hover:underline">
+                      {row.tool}
+                    </Link>
+                  </td>
+                  <td className="px-4 py-3 text-neutral-700 dark:text-neutral-300">{row.detail}</td>
+                  <td className="px-4 py-3">
+                    <Link href={`/clinical-evidence#${row.evidence}`} className="text-sage-700 dark:text-sage-400 hover:underline">
+                      Evidence
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
+          Comparing related tools? See{" "}
+          <Link href="/phq-9-vs-gad-7" className="text-sage-700 dark:text-sage-400 hover:underline">
+            PHQ-9 vs GAD-7
+          </Link>{" "}
+          or{" "}
+          <Link href="/audit-vs-audit-c" className="text-sage-700 dark:text-sage-400 hover:underline">
+            AUDIT vs AUDIT-C
+          </Link>
+          .
+        </p>
+      </section>
+
       <nav aria-label="Categories" className="mb-10 rounded-xl border border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-800 p-5">
         <h2 className="text-base font-semibold text-neutral-900 dark:text-neutral-100 mb-3">
           Jump to a category
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+          <li>
+            <a href="#choose-a-tool" className="text-sage-700 dark:text-sage-400 hover:underline">
+              Choose a screening tool
+            </a>
+          </li>
           {CATEGORIES.map((c) => (
             <li key={c.id}>
               <a href={`#${c.id}`} className="text-sage-700 dark:text-sage-400 hover:underline">

@@ -130,11 +130,6 @@ export default function PcPtsd5Page() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the PC-PTSD-5 Screening?</h2>
-        <h2>How Is the PC-PTSD-5 Scored?</h2>
-        <h2>What Do My PC-PTSD-5 Results Mean?</h2>
-      </section>
       <PcPtsd5Client faqData={FAQ_DATA} />
     </>
   );

@@ -140,11 +140,6 @@ export default function PCL5Page() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the PCL-5 PTSD Screening?</h2>
-        <h2>How Is the PCL-5 Scored?</h2>
-        <h2>What Do My PCL-5 Results Mean?</h2>
-      </section>
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>

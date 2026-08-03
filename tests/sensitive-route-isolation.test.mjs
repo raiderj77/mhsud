@@ -4,6 +4,11 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
+function setMembers(source, name) {
+  const block = source.match(new RegExp(`const ${name} = new Set\\(\\[([\\s\\S]*?)\\]\\);`))?.[1] ?? "";
+  return [...block.matchAll(/["']([^"']+)["']/g)].map((match) => match[1]).sort();
+}
+
 test("sensitive routes receive no-store and no-referrer response headers", async () => {
   const middleware = await read("../src/middleware.ts");
   assert.match(middleware, /isSensitiveRoute\(request\.nextUrl\.pathname\)/);
@@ -27,7 +32,8 @@ test("sensitive routes bypass tracking, advertising, affiliates, and assessment 
   ]);
   assert.match(consent, /sensitive[\s\S]*analytics: false, advertising: false/);
   assert.match(consent, /removeOptionalServiceScripts/);
-  assert.match(ads, /sensitive \|\| process\.env\.NEXT_PUBLIC_ADSENSE_ENABLED/);
+  assert.match(ads, /sensitive \|\| !runtimeEnabled/);
+  assert.match(ads, /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true"/);
   assert.match(therapy, /isSensitiveRoute\(pathname\)/);
   assert.match(events, /isSensitiveBrowserLocation\(\)/);
 });
@@ -54,9 +60,17 @@ test("interactive health tools without generic screening words stay sensitive", 
     "withdrawal-timeline",
   ]) {
     assert.match(policies, new RegExp(`"${route}"`));
-    assert.match(worker, new RegExp(`'${route}'`));
+    assert.match(worker, new RegExp(`["']${route}["']`));
   }
-  assert.match(worker, /const CACHE_VERSION = '1\.2\.0'/);
+  assert.deepEqual(
+    setMembers(worker, "EXPLICIT_SENSITIVE_ROUTES"),
+    setMembers(policies, "EXPLICIT_SENSITIVE_ROUTES"),
+    "browser and service-worker sensitive-route sets must stay identical",
+  );
+  const policyPattern = policies.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
+  const workerPattern = worker.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
+  assert.equal(workerPattern, policyPattern, "sensitive slug patterns must stay identical");
+  assert.match(worker, /const CACHE_VERSION = "2\.0\.0"/);
 });
 
 test("withdrawing optional consent reloads a clean document", async () => {
@@ -69,12 +83,16 @@ test("withdrawing optional consent reloads a clean document", async () => {
 
 test("service worker never caches sensitive routes or optional Google services", async () => {
   const worker = await read("../public/service-worker.js");
-  assert.match(worker, /isSensitivePath\(url\.pathname\)[\s\S]*NetworkOnly/);
-  assert.match(worker, /request\.mode === 'navigate' && !isSensitivePath\(url\.pathname\)/);
+  assert.match(worker, /url\.pathname\.startsWith\("\/api\/"\) \|\| isSensitivePath\(url\.pathname\)/);
+  assert.match(worker, /fetch\(request, \{ cache: "no-store" \}\)/);
   assert.doesNotMatch(worker, /mindcheck-analytics/);
-  assert.doesNotMatch(worker, /GOOGLE ANALYTICS: Network-first/);
-  assert.doesNotMatch(worker, /GOOGLE ADSENSE: Network-first/);
+  assert.doesNotMatch(worker, /importScripts|storage\.googleapis\.com|googletagmanager|googlesyndication/i);
+  assert.doesNotMatch(worker, /url\.pathname\.startsWith\("\/api\/"\)[\s\S]*caches\.open/);
   assert.doesNotMatch(worker, /process\.env/);
+  assert.match(worker, /const MAX_STATIC_ENTRIES = 120/);
+  assert.match(worker, /const MAX_PAGE_ENTRIES = 60/);
+  assert.match(worker, /await trimCache\(cache, MAX_STATIC_ENTRIES\)/);
+  assert.match(worker, /await trimCache\(cache, MAX_PAGE_ENTRIES\)/);
 });
 
 test("service worker privacy updates bypass stale script caches and activate promptly", async () => {
@@ -83,7 +101,8 @@ test("service worker privacy updates bypass stale script caches and activate pro
     read("../src/app/layout.tsx"),
     read("../next.config.mjs"),
   ]);
-  assert.match(worker, /self\.addEventListener\('install', \(\) => self\.skipWaiting\(\)\)/);
+  assert.match(worker, /self\.addEventListener\("install", \(event\) => \{/);
+  assert.match(worker, /event\.waitUntil\([\s\S]*self\.skipWaiting\(\)/);
   assert.match(layout, /register\('\/service-worker\.js', \{ updateViaCache: 'none' \}\)/);
   assert.match(nextConfig, /source: "\/service-worker\.js"[\s\S]*?"no-cache, no-store, must-revalidate"/);
   assert.match(nextConfig, /source: "\/service-worker\.js"[\s\S]*?"Vercel-CDN-Cache-Control"/);

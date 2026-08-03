@@ -25,13 +25,13 @@ export function AuthorByline({ publishedDate, modifiedDate }: AuthorBylineProps)
             {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
           </Link>
         </p>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
           {SITE_AUTHOR.credentialFull} &middot; {SITE_AUTHOR.experience}
         </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
           Editorial review covers source alignment, limitations, and safety language within the reviewer&apos;s stated credential scope.
         </p>
-        <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+        <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
           <span>
             Published: <time dateTime={publishedDate}>{formatDate(publishedDate)}</time>
           </span>

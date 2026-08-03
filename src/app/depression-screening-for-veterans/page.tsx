@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results affect my VA benefits or disability rating?",
-    answer: "No. This screening is completely private and runs entirely in your browser. Nothing is stored, transmitted, or shared with anyone, including the VA. Your results here have no connection to your VA records, benefits, or disability claims.",
+    answer: "No. This screening is private by design and runs entirely in your browser. Nothing is stored, transmitted, or shared with anyone, including the VA. Your results here have no connection to your VA records, benefits, or disability claims.",
   },
   {
     question: "What veteran-specific mental health resources are available?",
@@ -130,7 +130,7 @@ export default function DepressionScreeningForVeteransPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private, not connected to the VA in any way.
+            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools or VA systems.
           </p>
         </div>
 
@@ -312,11 +312,6 @@ export default function DepressionScreeningForVeteransPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is Depression Screening for Veterans?</h2>
-        <h2>How Is the Veteran Depression Screen Scored?</h2>
-        <h2>What Do My Depression Screening Results Mean?</h2>
-      </section>
 <PHQ9Client faqData={FAQ_DATA} />
       </div>
 

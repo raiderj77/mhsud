@@ -233,7 +233,7 @@ export function AttachmentStyleClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\u{1F512}", text: "100% Private" },
+            { icon: "\u{1F512}", text: "Answers Stay Local" },
             { icon: "\u23F1", text: "~5 Minutes" },
             { icon: "\u{1F4CB}", text: "36 Questions" },
           ].map((b) => (

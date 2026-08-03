@@ -96,7 +96,7 @@ export default function GriefAssessmentPage() {
             Loss &amp; Bereavement
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            🔒 100% Private
+            🔒 Answers Stay Local
           </span>
         </div>
 
@@ -120,7 +120,7 @@ export default function GriefAssessmentPage() {
             discussing with a qualified healthcare professional.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            Your answers are scored entirely in your browser. Nothing is stored or shared.
+            Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -163,11 +163,6 @@ export default function GriefAssessmentPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Grief and Mood Check?</h2>
-        <h2>How Is the PHQ-9 Scored?</h2>
-        <h2>What Does a PHQ-9 Result During Grief Mean?</h2>
-      </section>
 <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         {/* Grief Warning Signs */}

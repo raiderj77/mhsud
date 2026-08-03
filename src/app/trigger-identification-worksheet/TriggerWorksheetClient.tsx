@@ -725,8 +725,8 @@ export function TriggerWorksheetClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          This tool runs entirely in your browser. No data is stored, transmitted, or collected.
-          Your responses are completely private.
+          This tool runs in your browser. Its inputs are not sent to MindCheck Tools.
+          Your responses are private by design.
         </p>
       </footer>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface DisclaimerGateProps {
   toolName: string;
@@ -10,11 +10,41 @@ interface DisclaimerGateProps {
 
 export function DisclaimerGate({ toolName, toolDescription, onAccept }: DisclaimerGateProps) {
   const [checked, setChecked] = useState(false);
+  const gateRef = useRef<HTMLDivElement>(null);
+
+  const handleAccept = () => {
+    if (!checked) return;
+
+    const gate = gateRef.current;
+    const assessmentRoot = gate?.parentElement ?? null;
+    const nextContentTop = gate
+      ? gate.getBoundingClientRect().top + window.scrollY
+      : window.scrollY;
+
+    onAccept();
+
+    // The gate is replaced by the questionnaire. Wait for that render, then
+    // return visitors to its beginning and put keyboard focus on its first answer.
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const firstAnswer = assessmentRoot?.querySelector<HTMLElement>(
+          '[role="radiogroup"] [role="radio"], [role="radio"], button[aria-pressed], input[type="radio"], select, textarea, button:not([disabled])',
+        );
+
+        window.scrollTo({
+          top: Math.max(0, nextContentTop - 80),
+          behavior: reducedMotion ? "auto" : "smooth",
+        });
+        firstAnswer?.focus({ preventScroll: true });
+      });
+    });
+  };
 
   return (
-    <div className="card p-6 sm:p-8 animate-fade-in">
+    <div ref={gateRef} className="card p-6 sm:p-8 animate-fade-in">
       <div className="flex gap-3 items-start mb-5">
-        <div className="w-9 h-9 rounded-full bg-warm-50 dark:bg-warm-950/40 flex items-center justify-center flex-shrink-0 text-lg">
+        <div className="w-9 h-9 rounded-full bg-warm-50 dark:bg-warm-950/40 flex items-center justify-center flex-shrink-0 text-lg" aria-hidden="true">
           ⚠️
         </div>
         <div>
@@ -33,7 +63,7 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
           <li>This is <strong>not a diagnosis</strong> and does not replace professional evaluation.</li>
           <li>Results are <strong>educational only</strong>, they describe symptom levels, not clinical conditions.</li>
           <li>Only a qualified healthcare professional can diagnose or treat conditions.</li>
-          <li>Your answers are processed <strong>entirely in your browser</strong> and are never stored or transmitted.</li>
+          <li>Your answers are processed <strong>entirely in your browser</strong> and are not sent to MindCheck Tools. Pages that offer optional local saving say so before use.</li>
           <li>If you are in <strong>immediate danger</strong> or having thoughts of self-harm, please contact emergency services or a crisis hotline now.</li>
         </ul>
       </div>
@@ -56,7 +86,8 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
       </label>
 
       <button
-        onClick={() => checked && onAccept()}
+        type="button"
+        onClick={handleAccept}
         disabled={!checked}
         className="btn-primary w-full text-base py-4"
       >

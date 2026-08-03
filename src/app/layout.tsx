@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     siteName: "MindCheck Tools",
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
-      "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.",
+      "Free, private mental health and substance use self-checks. Screening answers are scored in your browser and are not sent to MindCheck Tools.",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
-      "Free, private mental health and substance use self-checks. Your screening answers are scored in your browser and never stored. PHQ-9, GAD-7, AUDIT, and more.",
+      "Free, private mental health and substance use self-checks. Screening answers are scored in your browser and are not sent to MindCheck Tools.",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   alternates: {
@@ -83,7 +83,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const adsenseEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
+  // AdSense stays fail-closed until the publisher has enabled ads, confirmed
+  // the certified CMP, and completed the nonce-based strict-CSP migration.
+  // Account-side review/CMP state cannot be established by application code.
+  const adsenseEnabled =
+    process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" &&
+    process.env.NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true" &&
+    process.env.NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true";
 
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
@@ -168,7 +174,7 @@ export default function RootLayout({
           />
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sage-600 focus:text-white focus:rounded-lg focus:text-sm focus:font-medium"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:inline-flex focus:min-h-[44px] focus:items-center focus:px-4 focus:py-2 focus:bg-sage-700 focus:text-white focus:rounded-lg focus:text-base focus:font-medium"
           >
             Skip to main content
           </a>
@@ -177,7 +183,7 @@ export default function RootLayout({
           <SwUpdateNotification />
           <AppInstallPrompt />
           <Navbar />
-          <main id="main-content" className="flex-1">
+          <main id="main-content" tabIndex={-1} className="flex-1 scroll-mt-20 focus:outline-none">
             {children}
           </main>
           <Footer />

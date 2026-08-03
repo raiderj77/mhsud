@@ -160,7 +160,7 @@ export default function DrugScreeningTeensPage() {
             Start the CRAFFT Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Completely private - nothing is stored or shared.
+            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -221,7 +221,7 @@ export default function DrugScreeningTeensPage() {
                 <p><strong>What it&apos;s not:</strong> This is a screening tool, not a diagnosis. A high score does not make you a bad person or an &quot;addict.&quot; It means talking to someone could help. The{" "}
                   <a href="https://www.who.int/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">WHO notes</a>{" "}
                   that early identification is one of the most effective ways to address adolescent substance risk.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. No one - not your parents, school, doctor, or anyone else - can see your answers. This is 100% private.</p>
+                <p><strong>Your privacy:</strong> Answers are processed in your browser and are not sent to MindCheck Tools, your parents, your school, or your doctor. Someone with access to your device, browser, or screen may still be able to see what you enter.</p>
               </div>
             </div>
           </div>
@@ -252,11 +252,6 @@ export default function DrugScreeningTeensPage() {
           <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-05-14" />
         </div>
 
-        <section className="sr-only">
-          <h2>What Is the Teen Drug Screening?</h2>
-          <h2>How Is the Teen Drug Screening Scored?</h2>
-          <h2>What Do My Drug Screening Results Mean?</h2>
-        </section>
         <CrafftClient faqData={FAQ_DATA} />
       </div>
 

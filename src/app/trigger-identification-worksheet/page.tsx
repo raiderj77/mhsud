@@ -86,11 +86,6 @@ export default function TriggerWorksheetPage() {
         <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Trigger Identification Worksheet?</h2>
-        <h2>How Does the Trigger Identification Worksheet Work?</h2>
-        <h2>What Do My Trigger Identification Results Mean?</h2>
-      </section>
 <TriggerWorksheetClient faqData={FAQ_DATA} />
     </>
   );

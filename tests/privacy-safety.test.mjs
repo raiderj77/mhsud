@@ -53,6 +53,7 @@ test("affiliate links suppress referrer data and disclose the relationship", asy
   assert.match(component, /noreferrer/);
   assert.match(component, /Affiliate Disclosure/);
   assert.match(component, /answers and score are not sent/);
+  assert.match(component, /url\.protocol === "https:"/);
 });
 
 test("newsletter form does not collect the screener name", async () => {
@@ -61,6 +62,7 @@ test("newsletter form does not collect the screener name", async () => {
   assert.doesNotMatch(component, /toolName|source:/);
   assert.doesNotMatch(route, /toolName|userGroup|body\.source/);
   assert.match(component, /referrerPolicy:\s*"no-referrer"/);
+  assert.match(component, /isSensitiveRoute\(pathname\)\) return null/);
   assert.match(route, /origin !== new URL\(req\.url\)\.origin/);
   assert.match(route, /fetchSite && fetchSite !== "same-origin"/);
   assert.ok(
@@ -88,6 +90,28 @@ test("browser-local health records are disclosed where they are stored", async (
   assert.match(terms, /locally saved journal, plan, check-in, or sobriety data/);
   assert.match(notice, /anyone with access to this browser profile/i);
   for (const page of pages) assert.match(page, /LocalStorageNotice/);
+});
+
+test("consumer-health-data notice discloses limited request data and service providers", async () => {
+  const notice = await readFile(
+    new URL("../src/app/consumer-health-data-privacy/page.tsx", import.meta.url),
+    "utf8",
+  );
+  const privacy = await readFile(new URL("../src/app/privacy/page.tsx", import.meta.url), "utf8");
+  for (const required of [
+    /Website request data/,
+    /Consented public-page analytics/,
+    /Resource-email subscription/,
+    /Vercel/,
+    /Google Analytics/,
+    /Loops/,
+    /Consumer Health Data Request/,
+  ]) assert.match(notice, required);
+  assert.match(notice, /do not sell consumer health data/i);
+  assert.match(notice, /Questionnaire answers, scores[\s\S]*are not collected/);
+  assert.match(privacy, /requested health-topic path can appear in ordinary hosting data/);
+  assert.doesNotMatch(privacy, /MindCheck Tools does not collect, store, or share health data/);
+  assert.match(privacy, /MODPA took effect October 1, 2025/);
 });
 
 test("unused public indexing proxy and false search action stay removed", async () => {
@@ -147,6 +171,8 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   assert.match(layout, /'analytics_storage': 'denied'/);
   assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === "true"/);
+  assert.match(layout, /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true"/);
+  assert.match(layout, /NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true"/);
   assert.match(layout, /<ConsentAnalytics adsenseEnabled=\{adsenseEnabled\} \/>/);
   assert.doesNotMatch(layout, /googletagmanager\.com\/gtag\/js/);
   assert.doesNotMatch(layout, /Cookiebot|consent\.cookiebot|data-cookieconsent/i);
@@ -161,8 +187,18 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.match(consentAnalytics, /G-XKHQN1NJ2Z/);
   assert.match(consentAnalytics, /SAFE_CAMPAIGN_KEYS/);
   assert.match(consentAnalytics, /page_path: pathname/);
+  assert.match(consentAnalytics, /version !== 2/);
+  assert.match(consentAnalytics, /page path can reveal the mental-health or substance-use topic/);
+  assert.match(consentAnalytics, /Consumer Health Data Privacy Notice/);
   assert.match(consentAnalytics, /consented-google-adsense/);
+  assert.match(consentAnalytics, /queue\.requestNonPersonalizedAds = 1/);
+  assert.match(consentAnalytics, /if \(effectiveChoice\.advertising\) loadNonPersonalizedAds\(\)/);
   assert.match(adSlot, /getCurrentConsent\(\)\?\.advertising !== true/);
+  assert.match(adSlot, /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true"/);
+  assert.match(adSlot, /NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true"/);
+  assert.match(adSlot, /!adSlot\) return null/);
+  assert.match(adSlot, /adsbygoogle\.requestNonPersonalizedAds = 1/);
+  assert.match(adSlot, /sensitive \|\| !runtimeEnabled \|\| !allowed \|\| !adSlot/);
   assert.match(adSlot, /data-npa="1"/);
   assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
   assert.doesNotMatch(layout, /data-georegions/);
@@ -171,6 +207,15 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.doesNotMatch(layout, /13971731025ec697-s\.p\.woff2/);
   assert.doesNotMatch(nextConfig, /consent\.cookiebot|consentcdn\.cookiebot/i);
   assert.doesNotMatch(nextConfig, /unsafe-eval/);
+  for (const directive of [
+    /X-Frame-Options", value: "DENY/,
+    /frame-ancestors 'none'/,
+    /object-src 'none'/,
+    /base-uri 'self'/,
+    /form-action 'self'/,
+    /worker-src 'self'/,
+  ]) assert.match(nextConfig, directive);
+  assert.match(nextConfig, /source: "\/api\/:path\*"[\s\S]*?private, no-store/);
 });
 
 test("assessment funnel events require analytics consent and contain no health data", async () => {
@@ -267,7 +312,29 @@ test("AI discovery files use maintained canonical URLs and scoped clinical claim
 });
 
 test("every MindCheck ad is non-personalized", async () => {
+  const consent = await readFile(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url), "utf8");
   const adSlot = await readFile(new URL("../src/components/AdSlot.tsx", import.meta.url), "utf8");
   assert.match(adSlot, /data-npa="1"/);
+  assert.match(adSlot, /adsbygoogle\.requestNonPersonalizedAds = 1/);
+  assert.match(consent, /queue\.requestNonPersonalizedAds = 1/);
   assert.doesNotMatch(adSlot, /npa \? \{ "data-npa"/);
+});
+
+test("ads.txt names the direct seller and owner without a false manager", async () => {
+  const ads = await readFile(new URL("../public/ads.txt", import.meta.url), "utf8");
+  assert.match(ads, /^google\.com, pub-7171402107622932, DIRECT, f08c47fec0942fa0$/m);
+  assert.match(ads, /^OWNERDOMAIN=mindchecktools\.com$/m);
+  assert.doesNotMatch(ads, /^MANAGERDOMAIN=/m);
+});
+
+test("public copy avoids absolute privacy and anonymity promises", async () => {
+  const sourceRoot = fileURLToPath(new URL("../src/", import.meta.url));
+  const files = await readSourceTree(sourceRoot);
+  for (const file of files) {
+    assert.doesNotMatch(
+      file.source,
+      /100% private|completely private|private\s*&(?:amp;)?\s*anonymous/i,
+      file.path,
+    );
+  }
 });

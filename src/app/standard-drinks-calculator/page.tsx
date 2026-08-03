@@ -83,11 +83,6 @@ export default function StandardDrinksPage() {
       </div>
 
 
-      <section className="sr-only">
-        <h2>What Is the Standard Drinks Calculator?</h2>
-        <h2>How Are Standard Drinks Calculated?</h2>
-        <h2>What Do My Standard Drink Results Mean?</h2>
-      </section>
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
         Last updated: March 16, 2026

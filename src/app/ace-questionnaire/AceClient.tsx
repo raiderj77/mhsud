@@ -191,7 +191,7 @@ export function AceClient({ faqData }: Props) {
                 <strong>There is no obligation to complete this questionnaire.</strong> If you are currently in crisis or working through trauma with a therapist, consider discussing this with them before proceeding.
               </p>
               <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed">
-                Your answers are completely private, they are scored in your browser and never sent anywhere.
+                Your answers are scored in your browser and are not sent to MindCheck Tools.
               </p>
             </div>
           </div>
@@ -266,7 +266,7 @@ export function AceClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+          Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
         </p>
       </div>
     );
@@ -684,7 +684,7 @@ export function AceClient({ faqData }: Props) {
         Answer each question based on your experiences <strong>before age 18</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        ~2-3 minutes &middot; 10 Yes/No questions &middot; Completely private
+        ~2-3 minutes &middot; 10 Yes/No questions &middot; private by design
       </p>
 
       <AdSlot position="tool-top" />
@@ -820,7 +820,7 @@ export function AceClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

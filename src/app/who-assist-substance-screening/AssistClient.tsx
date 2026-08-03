@@ -294,7 +294,7 @@ export function AssistClient({ faqData }: Props) {
           The Alcohol, Smoking and Substance Involvement Screening Test, a comprehensive substance use screening developed by the World Health Organization.
         </p>
         <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-          10 substance categories · ~5–10 minutes · Completely private · WHO ASSIST v3.1
+          10 substance categories · ~5–10 minutes · private by design · WHO ASSIST v3.1
         </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
@@ -344,7 +344,7 @@ export function AssistClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+          Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
         </p>
       </div>
     );

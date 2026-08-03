@@ -122,11 +122,6 @@ export default function BoxBreathingPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Box Breathing Exercise?</h2>
-        <h2>How Does Box Breathing Work?</h2>
-        <h2>What Are the Benefits of Box Breathing?</h2>
-      </section>
 <BoxBreathingClient faqData={FAQ_DATA} />
     </>
   );

@@ -539,7 +539,7 @@ export function PcPtsd5Client({ faqData }: Props) {
           A brief PTSD screen developed by the VA National Center for PTSD. 5 yes/no questions.
         </p>
         <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-          ~1 minute · Completely private · Public domain instrument
+          ~1 minute · private by design · Public domain instrument
         </p>
 
         {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active PTSD screening. */}

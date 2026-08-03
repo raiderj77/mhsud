@@ -131,11 +131,6 @@ export default function AcePage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the ACE Questionnaire?</h2>
-        <h2>How Is the ACE Score Calculated?</h2>
-        <h2>What Do My ACE Results Mean?</h2>
-      </section>
 <AceClient faqData={FAQ_DATA} />
 
       {/* Related Tools */}

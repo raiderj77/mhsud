@@ -281,7 +281,7 @@ export default function QuitDrinkingTimelinePage() {
             <p>
               If you are curious about where your current drinking patterns fall on the risk spectrum, our{" "}
               <Link href="/audit-alcohol-test">AUDIT alcohol screening tool</Link>{" "}
-              is a clinically validated, 10-question assessment used by healthcare providers worldwide. It takes about three minutes, is completely private, and your answers never leave your browser.
+              is a clinically validated, 10-question assessment used by healthcare providers worldwide. It takes about three minutes, is private by design, and your answers never leave your browser.
             </p>
             <p>
               For more information about alcohol use, treatment options, and support services, the{" "}

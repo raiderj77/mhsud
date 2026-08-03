@@ -616,7 +616,7 @@ export function SpinClient({ faqData }: Props) {
         A 17-item measure of social anxiety covering fear, avoidance, and physiological symptoms.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        17 questions · ~3 minutes · Completely private · Connor et al. (2000)
+        17 questions · ~3 minutes · private by design · Connor et al. (2000)
       </p>
 
       <AdSlot npa position="tool-top" />
@@ -739,7 +739,7 @@ export function SpinClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser. Nothing is stored or transmitted.
+        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
       </p>
     </div>
   );

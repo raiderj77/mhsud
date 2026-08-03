@@ -102,7 +102,7 @@ export default function CompassionFatigueTestPage() {
             Helpers &amp; Caregivers
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            🔒 100% Private
+            🔒 Answers Stay Local
           </span>
         </div>
 
@@ -127,7 +127,7 @@ export default function CompassionFatigueTestPage() {
           <p className="text-slate-600 dark:text-slate-300">
             This page uses MindCheck Tools&apos; original general burnout check-in. It is not tailored
             or validated specifically for compassion fatigue, does not administer ProQOL, and cannot
-            diagnose a condition. Your answers are scored entirely in your browser. Nothing is stored or shared.
+            diagnose a condition. Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -170,11 +170,6 @@ export default function CompassionFatigueTestPage() {
 </div>
       </div>
 
-      <section className="sr-only">
-        <h2>What Is the Compassion Fatigue Educational Check-In?</h2>
-        <h2>How Is the Compassion Fatigue Check-In Scored?</h2>
-        <h2>What Does My Compassion Fatigue Check-In Summary Mean?</h2>
-      </section>
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
         {/* Compassion Fatigue vs Burnout Table */}

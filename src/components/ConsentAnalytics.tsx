@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ADS_READY_EVENT,
   CONSENT_EVENT,
@@ -105,6 +105,12 @@ function loadGoogleAnalytics(pathname: string): void {
 
 function loadNonPersonalizedAds(): void {
   if (document.getElementById(ADS_SCRIPT_ID)) return;
+  const queue = window.adsbygoogle ?? [];
+  // Google documents this queue property for AdSense asynchronous tags. It
+  // must be set before the tag initializes; data-npa on an individual slot is
+  // retained as defense in depth but is not the primary NPA control.
+  queue.requestNonPersonalizedAds = 1;
+  window.adsbygoogle = queue;
   const script = document.createElement("script");
   script.id = ADS_SCRIPT_ID;
   script.async = true;
@@ -135,9 +141,9 @@ function removeOptionalServiceScripts(): void {
 function readStoredConsent(): PrivacyConsent | null {
   try {
     const parsed = JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) || "null") as Partial<PrivacyConsent> | null;
-    if (parsed?.version !== 1) return null;
+    if (parsed?.version !== 2) return null;
     if (typeof parsed.analytics !== "boolean" || typeof parsed.advertising !== "boolean") return null;
-    return { version: 1, analytics: parsed.analytics, advertising: parsed.advertising };
+    return { version: 2, analytics: parsed.analytics, advertising: parsed.advertising };
   } catch {
     return null;
   }
@@ -153,13 +159,14 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const [gpcActive, setGpcActive] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [advertising, setAdvertising] = useState(false);
+  const dialogRef = useRef<HTMLElement>(null);
 
   const applyConsent = useCallback((choice: PrivacyConsent, persist = true) => {
     const storedChoice = globalPrivacyControlIsActive()
-      ? { version: 1 as const, analytics: false, advertising: false }
+      ? { version: 2 as const, analytics: false, advertising: false }
       : { ...choice, advertising: adsenseEnabled && choice.advertising };
     const effectiveChoice = sensitive
-      ? { version: 1 as const, analytics: false, advertising: false }
+      ? { version: 2 as const, analytics: false, advertising: false }
       : storedChoice;
 
     window.__mindcheckConsent = effectiveChoice;
@@ -182,12 +189,12 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     const stored = readStoredConsent();
     setGpcActive(gpc);
     if (gpc) {
-      applyConsent({ version: 1, analytics: false, advertising: false });
+      applyConsent({ version: 2, analytics: false, advertising: false });
       setOpen(false);
     } else if (stored) {
       applyConsent(stored, false);
     } else {
-      applyConsent({ version: 1, analytics: false, advertising: false }, false);
+      applyConsent({ version: 2, analytics: false, advertising: false }, false);
       setOpen(true);
     }
     setReady(true);
@@ -198,6 +205,10 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     window.addEventListener(OPEN_CONSENT_EVENT, showChoices);
     return () => window.removeEventListener(OPEN_CONSENT_EVENT, showChoices);
   }, []);
+
+  useEffect(() => {
+    if (ready && open) dialogRef.current?.focus();
+  }, [open, ready]);
 
   useEffect(() => {
     if (sensitive) {
@@ -229,15 +240,18 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   return (
     <div className="fixed inset-0 z-[120] flex items-end bg-neutral-950/45 p-3 sm:items-center sm:justify-center" role="presentation">
       <section
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="privacy-choices-title"
+        aria-describedby="privacy-choices-description"
+        tabIndex={-1}
         className="w-full max-w-xl rounded-2xl border border-sand-200 bg-white p-5 shadow-2xl dark:border-neutral-700 dark:bg-night-800 sm:p-6"
       >
         <h2 id="privacy-choices-title" className="font-serif text-xl font-semibold text-neutral-900 dark:text-neutral-50">
           Your privacy choices
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+        <p id="privacy-choices-description" className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
           Optional services stay off until you choose. Screening answers, scores, and entries in private tools are never sent to analytics or advertising.
         </p>
 
@@ -256,7 +270,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
               />
               <span>
                 <span className="block text-sm font-semibold text-neutral-900 dark:text-neutral-100">Privacy-limited analytics</span>
-                <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Helps us understand which public pages are useful. URL inputs and tool results are excluded.</span>
+                <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Shares a sanitized public-page path, title, approximate region, device/browser details, and analytics identifier with Google. A page path can reveal the mental-health or substance-use topic you chose to view. URL inputs, questionnaire answers, and results are excluded.</span>
               </span>
             </label>
 
@@ -270,7 +284,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
                 />
                 <span>
                   <span className="block text-sm font-semibold text-neutral-900 dark:text-neutral-100">Non-personalized advertising</span>
-                  <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Allows context-based ads without ad personalization. Health-tool inputs and results are never included.</span>
+                  <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Allows context-based ads without ad personalization. Health-tool inputs and results are never included. Google&apos;s certified consent message may request additional choices where required.</span>
                 </span>
               </label>
             )}
@@ -278,14 +292,14 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
         )}
 
         <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-          Read the <Link href="/cookies" className="underline hover:text-sage-600">Cookie Policy</Link> or change this choice later from the site footer.
+          Read the <Link href="/cookies" className="underline hover:text-sage-600">Cookie Policy</Link> and <Link href="/consumer-health-data-privacy" className="underline hover:text-sage-600">Consumer Health Data Privacy Notice</Link>, or change this choice later from the site footer.
         </p>
 
         <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
           {!gpcActive && (
             <button
               type="button"
-              onClick={() => save({ version: 1, analytics: false, advertising: false })}
+              onClick={() => save({ version: 2, analytics: false, advertising: false })}
               className="btn-secondary text-sm"
             >
               Continue without optional services
@@ -293,7 +307,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
           )}
           <button
             type="button"
-            onClick={() => save({ version: 1, analytics, advertising })}
+            onClick={() => save({ version: 2, analytics, advertising })}
             className="btn-primary text-sm"
           >
             {gpcActive ? "Close" : "Save choices"}

@@ -141,7 +141,7 @@ export default function AnxietyTestForWomenPage() {
             Start the Anxiety Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 2 minutes. Completely private, nothing is stored or shared.
+            Takes about 2 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
           </p>
         </div>
 
@@ -376,11 +376,6 @@ export default function AnxietyTestForWomenPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is Anxiety Screening for Women?</h2>
-        <h2>How Is the Anxiety Test Scored?</h2>
-        <h2>What Do My Anxiety Screening Results Mean?</h2>
-      </section>
 <GAD7Client faqData={FAQ_DATA} />
       </div>
 

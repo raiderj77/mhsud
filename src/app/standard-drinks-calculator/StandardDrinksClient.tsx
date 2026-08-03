@@ -122,7 +122,7 @@ export function StandardDrinksClient({ faqData }: Props) {
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
-            { icon: "\uD83D\uDD12", text: "100% Private" },
+            { icon: "\uD83D\uDD12", text: "Answers Stay Local" },
             { icon: "\u23F1", text: "Instant" },
             { icon: "\uD83C\uDF7A", text: "14g = 1 Drink" },
           ].map((b) => (

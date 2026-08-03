@@ -130,11 +130,6 @@ export default function AISPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Athens Insomnia Scale?</h2>
-        <h2>How Is the Athens Insomnia Scale Scored?</h2>
-        <h2>What Do My Insomnia Screening Results Mean?</h2>
-      </section>
 <AISClient faqData={FAQ_DATA} />
     </>
   );

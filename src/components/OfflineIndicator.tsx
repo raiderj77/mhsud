@@ -8,7 +8,7 @@ import { useOnlineStatus } from "@/hooks/useOnlineStatus";
  *
  * Displays a dismissible banner when user is offline.
  * Shows crisis color (red) to signal importance while being helpful, not alarming.
- * Uses aria-live for screen reader announcements.
+ * Uses a polite live region for screen reader announcements.
  * Automatically re-appears when user goes offline again.
  *
  * Placement: Add near top of layout (before main content)
@@ -36,12 +36,12 @@ export function OfflineIndicator() {
 
   return (
     <div
-      role="alert"
+      role="status"
       aria-live="polite"
       aria-atomic="true"
       className="fixed top-0 left-0 right-0 z-50 animate-fade-in"
     >
-      <div className="bg-gradient-to-r from-crisis-600 to-crisis-700 dark:from-crisis-700 dark:to-crisis-800 text-white px-4 py-3 shadow-lg">
+      <div className="bg-gradient-to-r from-crisis-700 to-crisis-800 dark:from-crisis-700 dark:to-crisis-800 text-white px-4 py-3 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="text-xl" aria-hidden="true">
@@ -51,8 +51,8 @@ export function OfflineIndicator() {
               <p className="font-semibold text-sm md:text-base leading-tight">
                 You&apos;re offline
               </p>
-              <p className="text-xs md:text-sm opacity-95 mt-0.5">
-                Screening tools still work! Your results won&apos;t sync until you&apos;re online.
+              <p className="text-sm opacity-95 mt-0.5">
+                Some features and external resources may be unavailable until you reconnect.
               </p>
             </div>
           </div>
@@ -60,7 +60,7 @@ export function OfflineIndicator() {
           <button
             onClick={() => setDismissed(true)}
             aria-label="Dismiss offline notification"
-            className="ml-2 flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg
+            className="ml-2 flex-shrink-0 inline-flex items-center justify-center min-w-[44px] min-h-[44px] rounded-lg
               hover:bg-white/20 dark:hover:bg-white/10
               transition-colors duration-200
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"

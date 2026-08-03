@@ -123,11 +123,6 @@ export default function BRSPage() {
   </div>
 </div>
       </div>
-      <section className="sr-only">
-        <h2>What Is the Brief Resilience Scale?</h2>
-        <h2>How Is the Brief Resilience Scale Scored?</h2>
-        <h2>What Do My Resilience Results Mean?</h2>
-      </section>
 <BRSClient faqData={FAQ_DATA} />
     </>
   );

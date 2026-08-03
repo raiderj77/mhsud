@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "What confidential options exist for military alcohol screening?",
     answer:
-      "Several options exist outside the chain of command. Military OneSource provides up to 12 free confidential counseling sessions with no reporting to command. TRICARE covers substance use treatment. Online screening tools like MindCheck Tools are completely private, nothing is stored or reported. Chaplains provide absolute confidentiality, and some installations offer anonymous self-referral programs.",
+      "Support may be available through Military OneSource, TRICARE, chaplains, and installation programs. Eligibility, visit limits, confidentiality, and reporting rules depend on the service and situation, so verify them with the official provider before sharing sensitive information. MindCheck Tools scores screening answers in your browser and does not send them to MindCheck Tools, DOD, or a command.",
   },
   {
     question: "How does combat exposure relate to alcohol use?",

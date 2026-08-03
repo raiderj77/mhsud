@@ -124,7 +124,7 @@ export default function PostpartumDepressionTestPage() {
             New Parents
           </span>
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
-            100% Private
+            Answers Stay Local
           </span>
         </div>
 
@@ -259,11 +259,6 @@ export default function PostpartumDepressionTestPage() {
 </div>
         </div>
 
-        <section className="sr-only">
-          <h2>What Is the Postpartum Depression Test?</h2>
-          <h2>How Is the Postpartum Depression Test Scored?</h2>
-          <h2>What Do My Postpartum Depression Results Mean?</h2>
-        </section>
         <div id="screening"><PHQ9Client faqData={FAQ_DATA} /></div>
 
         <div className="mt-10 mb-8">

@@ -747,7 +747,7 @@ export function ReadinessClient({ faqData }: Props) {
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs entirely in your browser. No answers are stored, transmitted, or collected.
-          Your responses are completely private.
+          Your responses are private by design.
         </p>
       </footer>
     </div>
