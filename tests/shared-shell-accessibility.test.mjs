@@ -36,10 +36,43 @@ test("the shared disclaimer gate returns focus and scroll to the first questionn
   const gate = await read("src/components/DisclaimerGate.tsx");
 
   assert.match(gate, /requestAnimationFrame/);
+  assert.match(gate, /MutationObserver/);
+  assert.match(gate, /gate\?\.isConnected/);
+  assert.match(gate, /observer\.observe\(assessmentRoot/);
+  assert.match(gate, /fallbackAttempts >= 20/);
+  assert.match(gate, /window\.setTimeout\(retryMove, 100\)/);
   assert.match(gate, /prefers-reduced-motion: reduce/);
-  assert.match(gate, /nextContentTop - 80/);
-  assert.match(gate, /firstAnswer\?\.focus\(\{ preventScroll: true \}\)/);
+  assert.match(gate, /liveAnswerTop - questionContextOffset/);
+  assert.match(gate, /Math\.min\(320, window\.innerHeight \* 0\.4\)/);
+  assert.match(gate, /firstAnswer\.focus\(\{ preventScroll: true \}\)/);
   assert.match(gate, /behavior: reducedMotion \? "auto" : "smooth"/);
+});
+
+test("every consent-gated assessment uses the repaired shared transition", async () => {
+  const clients = [
+    "src/app/aq-10-autism-screening/AQ10Client.tsx",
+    "src/app/asrs-adhd-screening/ASRSClient.tsx",
+    "src/app/attachment-style-quiz/AttachmentStyleClient.tsx",
+    "src/app/audit-alcohol-test/AUDITClient.tsx",
+    "src/app/audit-c-alcohol-screen/AUDITCClient.tsx",
+    "src/app/big-five-personality-test/BigFiveClient.tsx",
+    "src/app/burnout-assessment-tool/BurnoutClient.tsx",
+    "src/app/cage-aid-substance-abuse-screening/CAGEAIDClient.tsx",
+    "src/app/dass-21-depression-anxiety-stress/DASS21Client.tsx",
+    "src/app/gad-7-anxiety-test/GAD7Client.tsx",
+    "src/app/mental-load-calculator/MentalLoadClient.tsx",
+    "src/app/msi-bpd-screening/MSIBPDClient.tsx",
+    "src/app/pcl-5-ptsd-screening/PCL5Client.tsx",
+    "src/app/phq-9-depression-test/PHQ9Client.tsx",
+    "src/app/scoff-eating-disorder-screening/SCOFFClient.tsx",
+    "src/app/sleep-and-mood-check/SleepMoodClient.tsx",
+    "src/app/work-stress-check/WorkStressClient.tsx",
+  ];
+
+  assert.equal(clients.length, 17);
+  for (const client of clients) {
+    assert.match(await read(client), /<DisclaimerGate/);
+  }
 });
 
 test("offline UI states the sensitive-route boundary without promising cached screeners or results", async () => {
