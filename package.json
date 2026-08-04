@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.18.1"
   },
   "scripts": {
     "dev": "next dev",
@@ -40,8 +40,9 @@
     "not dead"
   ],
   "overrides": {
+    "undici": "7.29.0",
     "next": {
-      "postcss": "8.5.19",
+      "postcss": "8.5.25",
       "sharp": "0.35.3"
     }
   }
