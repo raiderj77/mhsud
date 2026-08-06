@@ -22,6 +22,11 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-crisis-300 dark:border-crisis-700 bg-crisis-50/50 dark:bg-crisis-950/20",
     accent: "text-crisis-700 dark:text-crisis-400",
+    actions: [
+      { label: "Call 988", href: "tel:988", ariaLabel: "Call the 988 Suicide and Crisis Lifeline", external: false },
+      { label: "Text 988", href: "sms:988", ariaLabel: "Open a text message to the 988 Suicide and Crisis Lifeline", external: false },
+      { label: "Official 988 site", href: "https://988lifeline.org/get-help/", ariaLabel: "Visit the official 988 Lifeline help page", external: true },
+    ],
   },
   {
     name: "Crisis Text Line",
@@ -30,6 +35,10 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-warm-300 dark:border-warm-700 bg-warm-50/50 dark:bg-warm-950/20",
     accent: "text-warm-700 dark:text-warm-400",
+    actions: [
+      { label: "Open a text to 741741", href: "sms:741741", ariaLabel: "Open a text message to Crisis Text Line at 741741; type HOME to begin", external: false },
+      { label: "Official Crisis Text Line site", href: "https://www.crisistextline.org/", ariaLabel: "Visit the official Crisis Text Line website", external: true },
+    ],
   },
   {
     name: "SAMHSA National Helpline",
@@ -38,6 +47,10 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-sage-300 dark:border-sage-700 bg-sage-50/50 dark:bg-sage-950/20",
     accent: "text-sage-700 dark:text-sage-400",
+    actions: [
+      { label: "Call 1-800-662-4357", href: "tel:+18006624357", ariaLabel: "Call the SAMHSA National Helpline at 1-800-662-4357", external: false },
+      { label: "Official SAMHSA support page", href: "https://www.samhsa.gov/find-support", ariaLabel: "Visit SAMHSA's official support page", external: true },
+    ],
   },
   {
     name: "Veterans Crisis Line",
@@ -46,6 +59,11 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-sage-300 dark:border-sage-700 bg-sage-50/50 dark:bg-sage-950/20",
     accent: "text-sage-700 dark:text-sage-400",
+    actions: [
+      { label: "Call 988", href: "tel:988", ariaLabel: "Call 988, then press 1 for the Veterans Crisis Line", external: false },
+      { label: "Text 838255", href: "sms:838255", ariaLabel: "Open a text message to the Veterans Crisis Line at 838255", external: false },
+      { label: "Official Veterans Crisis Line site", href: "https://www.veteranscrisisline.net/", ariaLabel: "Visit the official Veterans Crisis Line website", external: true },
+    ],
   },
   {
     name: "Trevor Project (LGBTQ+ Youth)",
@@ -54,6 +72,11 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-sage-300 dark:border-sage-700 bg-sage-50/50 dark:bg-sage-950/20",
     accent: "text-sage-700 dark:text-sage-400",
+    actions: [
+      { label: "Call 1-866-488-7386", href: "tel:+18664887386", ariaLabel: "Call the Trevor Project at 1-866-488-7386", external: false },
+      { label: "Open a text to 678678", href: "sms:678678", ariaLabel: "Open a text message to the Trevor Project at 678678; type START to begin", external: false },
+      { label: "Official Trevor Project site", href: "https://www.thetrevorproject.org/get-help/", ariaLabel: "Visit the Trevor Project's official help page", external: true },
+    ],
   },
   {
     name: "National Domestic Violence Hotline",
@@ -62,6 +85,11 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-sand-300 dark:border-neutral-600 bg-sand-50/50 dark:bg-night-700/50",
     accent: "text-neutral-700 dark:text-neutral-300",
+    actions: [
+      { label: "Call 1-800-799-7233", href: "tel:+18007997233", ariaLabel: "Call the National Domestic Violence Hotline at 1-800-799-7233", external: false },
+      { label: "Open a text to 88788", href: "sms:88788", ariaLabel: "Open a text message to the National Domestic Violence Hotline at 88788; type START to begin", external: false },
+      { label: "Official Hotline site", href: "https://www.thehotline.org/", ariaLabel: "Visit the official National Domestic Violence Hotline website", external: true },
+    ],
   },
   {
     name: "Poison Control / Overdose",
@@ -70,19 +98,98 @@ const US_RESOURCES = [
     hours: "24/7",
     color: "border-sand-300 dark:border-neutral-600 bg-sand-50/50 dark:bg-night-700/50",
     accent: "text-neutral-700 dark:text-neutral-300",
+    actions: [
+      { label: "Call 1-800-222-1222", href: "tel:+18002221222", ariaLabel: "Call Poison Control at 1-800-222-1222", external: false },
+      { label: "Official Poison Control site", href: "https://www.poison.org/need-immediate-assistance", ariaLabel: "Visit the official Poison Control immediate assistance page", external: true },
+    ],
   },
 ];
 
 const INTL_RESOURCES = [
-  { country: "International", name: "Find A Helpline", contact: "findahelpline.com", detail: "Search engine for crisis hotlines in your country and language" },
-  { country: "United Kingdom", name: "Samaritans", contact: "116 123", detail: "Free, 24/7 emotional support" },
-  { country: "Canada", name: "988 Suicide Crisis Helpline", contact: "Call or text 988", detail: "24/7 crisis support in English and French" },
-  { country: "Australia", name: "Lifeline Australia", contact: "13 11 14", detail: "24/7 crisis support and suicide prevention" },
-  { country: "New Zealand", name: "Lifeline NZ", contact: "0800 543 354", detail: "24/7 counseling and support" },
-  { country: "Ireland", name: "Samaritans Ireland", contact: "116 123", detail: "Free, 24/7 emotional support" },
-  { country: "India", name: "iCall / AASRA", contact: "9820466726", detail: "Psychosocial helpline" },
-  { country: "South Africa", name: "SADAG", contact: "0800 567 567", detail: "South African Depression and Anxiety Group" },
+  {
+    country: "International",
+    name: "Find A Helpline",
+    contact: "findahelpline.com",
+    detail: "Search engine for crisis hotlines in your country and language",
+    actions: [
+      { label: "Find a local helpline", href: "https://findahelpline.com/", ariaLabel: "Visit Find A Helpline to find crisis support by country", external: true },
+    ],
+  },
+  {
+    country: "United Kingdom",
+    name: "Samaritans",
+    contact: "116 123",
+    detail: "Free, 24/7 emotional support",
+    actions: [
+      { label: "Call 116 123", href: "tel:116123", ariaLabel: "Call Samaritans in the United Kingdom at 116 123", external: false },
+      { label: "Official Samaritans site", href: "https://www.samaritans.org/how-we-can-help/contact-samaritan/talk-us-phone/", ariaLabel: "Visit the official Samaritans phone support page", external: true },
+    ],
+  },
+  {
+    country: "Canada",
+    name: "988 Suicide Crisis Helpline",
+    contact: "Call or text 988",
+    detail: "24/7 crisis support in English and French",
+    actions: [
+      { label: "Call 988", href: "tel:988", ariaLabel: "Call Canada's 988 Suicide Crisis Helpline", external: false },
+      { label: "Text 988", href: "sms:988", ariaLabel: "Open a text message to Canada's 988 Suicide Crisis Helpline", external: false },
+      { label: "Official Canada 988 site", href: "https://988.ca/", ariaLabel: "Visit Canada's official 988 Suicide Crisis Helpline website", external: true },
+    ],
+  },
+  {
+    country: "Australia",
+    name: "Lifeline Australia",
+    contact: "13 11 14",
+    detail: "24/7 crisis support and suicide prevention",
+    actions: [
+      { label: "Call 13 11 14", href: "tel:131114", ariaLabel: "Call Lifeline Australia at 13 11 14", external: false },
+      { label: "Official Lifeline Australia site", href: "https://www.lifeline.org.au/get-help/national-services/lifeline-crisis-support", ariaLabel: "Visit Lifeline Australia's official crisis support page", external: true },
+    ],
+  },
+  {
+    country: "New Zealand",
+    name: "Lifeline NZ",
+    contact: "0800 543 354",
+    detail: "24/7 counseling and support",
+    actions: [
+      { label: "Call 0800 543 354", href: "tel:0800543354", ariaLabel: "Call Lifeline New Zealand at 0800 543 354", external: false },
+      { label: "Official Lifeline NZ site", href: "https://www.lifeline.org.nz/services/lifeline-helpline", ariaLabel: "Visit Lifeline New Zealand's official helpline page", external: true },
+    ],
+  },
+  {
+    country: "Ireland",
+    name: "Samaritans Ireland",
+    contact: "116 123",
+    detail: "Free, 24/7 emotional support",
+    actions: [
+      { label: "Call 116 123", href: "tel:116123", ariaLabel: "Call Samaritans Ireland at 116 123", external: false },
+      { label: "Official Samaritans Ireland site", href: "https://www.samaritans.org/samaritans-ireland/", ariaLabel: "Visit the official Samaritans Ireland website", external: true },
+    ],
+  },
+  {
+    country: "India",
+    name: "AASRA",
+    contact: "+91-22-27546669",
+    detail: "24/7 emotional crisis and suicide-prevention helpline",
+    actions: [
+      { label: "Call +91-22-27546669", href: "tel:+912227546669", ariaLabel: "Call AASRA in India at plus 91 22 27546669", external: false },
+      { label: "Official AASRA site", href: "https://www.aasra.info/", ariaLabel: "Visit AASRA's official website", external: true },
+    ],
+  },
+  {
+    country: "South Africa",
+    name: "SADAG",
+    contact: "0800 567 567",
+    detail: "South African Depression and Anxiety Group",
+    actions: [
+      { label: "Call 0800 567 567", href: "tel:0800567567", ariaLabel: "Call SADAG's Suicide Crisis Helpline at 0800 567 567", external: false },
+      { label: "Official SADAG site", href: "https://sadag.org/?lang=en", ariaLabel: "Visit the official SADAG website", external: true },
+    ],
+  },
 ];
+
+const RESOURCE_ACTION_CLASS =
+  "inline-flex min-h-[44px] items-center rounded-lg border border-current/30 px-3 py-2 text-sm font-semibold underline decoration-current/40 underline-offset-2 transition-colors hover:bg-white/60 dark:hover:bg-black/20";
 
 export default function CrisisResourcesPage() {
   return (
@@ -129,6 +236,20 @@ export default function CrisisResourcesPage() {
                 </div>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{r.detail}</p>
                 <span className="inline-block mt-2 text-xs text-neutral-500 dark:text-neutral-400">{r.hours}</span>
+                <div className={`mt-3 flex flex-wrap gap-2 ${r.accent}`} role="group" aria-label={`${r.name} contact options`}>
+                  {r.actions.map((action) => (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      target={action.external ? "_blank" : undefined}
+                      rel={action.external ? "noopener noreferrer" : undefined}
+                      className={RESOURCE_ACTION_CLASS}
+                      aria-label={action.ariaLabel}
+                    >
+                      {action.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -174,18 +295,43 @@ export default function CrisisResourcesPage() {
           </h2>
           <div className="space-y-2">
             {INTL_RESOURCES.map((r) => (
-              <div key={r.country + r.name} className="card p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 w-28 flex-shrink-0 uppercase tracking-wide">{r.country}</span>
-                <div className="flex-1 min-w-0">
-                  <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.name}</span>
-                  <span className="text-sm text-neutral-500 dark:text-neutral-400">, {r.detail}</span>
+              <div key={r.country + r.name} className="card p-4 flex flex-col gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                  <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 w-28 flex-shrink-0 uppercase tracking-wide">{r.country}</span>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{r.name}</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400">, {r.detail}</span>
+                  </div>
+                  <span className="text-sm font-bold text-sage-600 dark:text-sage-400 whitespace-nowrap">{r.contact}</span>
                 </div>
-                <span className="text-sm font-bold text-sage-600 dark:text-sage-400 whitespace-nowrap">{r.contact}</span>
+                <div className="flex flex-wrap gap-2 text-sage-700 dark:text-sage-300" role="group" aria-label={`${r.name} contact options`}>
+                  {r.actions.map((action) => (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      target={action.external ? "_blank" : undefined}
+                      rel={action.external ? "noopener noreferrer" : undefined}
+                      className={RESOURCE_ACTION_CLASS}
+                      aria-label={action.ariaLabel}
+                    >
+                      {action.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4 leading-relaxed">
-            This is not a comprehensive list. For crisis resources in your specific country and language, visit <strong>findahelpline.com</strong>, a search engine for crisis lines worldwide.
+            This is not a comprehensive list. For crisis resources in your specific country and language, visit{" "}
+            <a
+              href="https://findahelpline.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[44px] items-center font-semibold text-sage-700 dark:text-sage-300 underline underline-offset-2"
+            >
+              findahelpline.com
+            </a>
+            , a search engine for crisis lines worldwide.
           </p>
         </section>
 

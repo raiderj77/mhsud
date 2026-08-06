@@ -1,89 +1,110 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import AnswerBlock from "@/components/AnswerBlock";
-import { AceClient } from "./AceClient";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/ace-questionnaire`;
+const PAGE_PATH = "/ace-questionnaire";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const CDC_STUDY_URL = "https://www.cdc.gov/violenceprevention/aces/about.html";
+const CDC_ACES_URL = "https://www.cdc.gov/aces/about/index.html";
 
 export const metadata: Metadata = createMetadata({
-  path: "/ace-questionnaire",
-  title: "ACE Questionnaire | Adverse Childhood Experiences",
+  path: PAGE_PATH,
+  title: "ACE Information, Research, and Questionnaire Boundary",
   description:
-    "Free ACE (Adverse Childhood Experiences) questionnaire based on the CDC-Kaiser study. 10 yes/no questions about childhood adversity. Private, no signup. Includes resilience resources.",
+    "Trauma-informed education about adverse childhood experiences, the CDC-Kaiser research, and why MindCheck Tools does not administer its former ACE form.",
   keywords: [
-    "ACE questionnaire", "adverse childhood experiences",
-    "ACE score", "ACE test", "childhood trauma screening",
-    "ACE study", "CDC Kaiser ACE", "childhood adversity",
-    "ACE score meaning", "trauma screening",
-    "adverse childhood experiences questionnaire",
-    "childhood trauma test",
+    "adverse childhood experiences information",
+    "ACE research",
+    "CDC Kaiser ACE study",
+    "ACE questionnaire versions",
+    "trauma informed education",
   ],
   openGraph: {
-    title: "ACE Questionnaire | Adverse Childhood Experiences",
+    title: "ACE Information, Research, and Questionnaire Boundary",
     description:
-      "Free ACE (Adverse Childhood Experiences) questionnaire based on the CDC-Kaiser study. 10 yes/no questions about childhood adversity. Private, no signup.",
-    url: TOOL_URL,
+      "Educational ACE information without questions, answer collection, scoring, cutoffs, or individualized risk interpretation.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
   {
-    question: "What is the ACE Questionnaire?",
+    question: "What are adverse childhood experiences?",
     answer:
-      "The ACE (Adverse Childhood Experiences) Questionnaire is a 10-item yes/no survey developed from the landmark CDC-Kaiser Permanente Adverse Childhood Experiences Study (1995-1997), one of the largest investigations of the link between childhood adversity and later-life health outcomes. The original study was led by Dr. Vincent Felitti and Dr. Robert Anda and involved over 17,000 participants. The questionnaire asks about 10 types of childhood adversity experienced before age 18, grouped into three categories: abuse (emotional, physical, sexual), neglect (emotional, physical), and household dysfunction (domestic violence, substance abuse, mental illness, parental separation, incarcerated household member).",
+      "The CDC describes adverse childhood experiences, or ACEs, as potentially traumatic events during childhood and aspects of a child's environment that can undermine safety, stability, and bonding. The examples are not a complete list of childhood adversity.",
   },
   {
-    question: "What does my ACE score mean?",
+    question: "Why is there no ACE questionnaire on this page?",
     answer:
-      "Your ACE score is simply the count of categories of adversity you experienced before age 18, ranging from 0 to 10. Research shows that higher ACE scores are statistically associated with increased risk for certain health outcomes later in life, but an ACE score is not a diagnosis, a prediction, or a destiny. Many people with high ACE scores live healthy, fulfilling lives, especially when protective factors like supportive relationships, community connection, and access to resources are present. Your ACE score is one piece of a much larger picture.",
+      "CDC makes identified study and surveillance questionnaires available without copyright fees, but the former MindCheck Tools simplified form was not matched exactly to one authoritative CDC version. The public questionnaire and scoring were removed until exact provenance, parity, and trauma-informed review are established.",
   },
   {
-    question: "Is a high ACE score a diagnosis?",
+    question: "Can ACE research predict an individual's health?",
     answer:
-      "No. An ACE score is not a clinical diagnosis or a measure of current mental health. It is a research-based count of childhood adversity categories. It does not capture the severity, duration, or timing of experiences, and it does not account for resilience factors, protective relationships, or healing that may have occurred since childhood. A high ACE score does not mean you are damaged or destined for poor health, it means you experienced more types of adversity, which research associates with increased statistical risk. Many people with high ACE scores thrive with appropriate support.",
+      "No. ACE research describes population-level associations. It cannot predict a person's future, diagnose a condition, or account fully for timing, context, protective relationships, community factors, or later support and healing.",
   },
   {
-    question: "Why does the questionnaire include a content warning?",
+    question: "Are PHQ-4, PHQ-9, or GAD-7 replacements for an ACE questionnaire?",
     answer:
-      "The ACE Questionnaire asks about sensitive topics including abuse, neglect, and household dysfunction. For some people, reflecting on these experiences can bring up difficult emotions or memories. The content warning is there so you can make an informed decision about whether this is a good time and place to take the questionnaire. If you are currently in crisis or working through trauma with a therapist, you may want to discuss the ACE questionnaire with them before completing it on your own.",
+      "No. They screen for recent depression or anxiety symptoms and do not measure childhood adversity. They are linked only as separate, publicly permitted ways to describe current symptoms before speaking with a qualified professional.",
   },
   {
-    question: "What are resilience factors?",
+    question: "Does this page provide an ACE score or interpretation?",
     answer:
-      "Resilience factors are protective experiences and resources that can buffer the impact of adverse childhood experiences. The CDC identifies several key resilience factors: having at least one stable, caring adult relationship during childhood; developing social and emotional skills; feeling a sense of belonging in a community; access to basic needs like food, housing, and healthcare; and having opportunities for meaningful participation in community life. Research shows that resilience is not a fixed trait, it can be developed at any age through supportive relationships, therapy, community connection, and intentional self-care.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. It displays no questionnaire, collects no answers, calculates no score, and provides no cutoff or individualized risk interpretation.",
   },
 ];
 
-export default function AcePage() {
+const ALTERNATIVES = [
+  {
+    href: "/phq-4-anxiety-depression-screen",
+    name: "PHQ-4 Quick Screen",
+    description:
+      "A brief screen for recent depression and generalized anxiety symptoms. It does not measure childhood adversity and is not an ACE replacement.",
+  },
+  {
+    href: "/phq-9-depression-test",
+    name: "PHQ-9 Depression Self-Check",
+    description:
+      "A publicly permitted depression symptom screen. It cannot explain whether symptoms relate to trauma or adverse experiences.",
+  },
+  {
+    href: "/gad-7-anxiety-test",
+    name: "GAD-7 Anxiety Self-Check",
+    description:
+      "A publicly permitted generalized-anxiety symptom screen. It does not measure adversity, trauma exposure, or resilience.",
+  },
+];
+
+export default function AceInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "ACE Questionnaire, Adverse Childhood Experiences",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "ACE Information, Research, and Questionnaire Boundary",
               description:
-                "A free online implementation of the ACE (Adverse Childhood Experiences) Questionnaire based on the CDC-Kaiser Permanente ACE Study. 10 yes/no questions about childhood adversity across three categories: abuse, neglect, and household dysfunction. Score 0-10 with resilience framing and protective factors.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+                "Trauma-informed education about adverse childhood experiences and the exact-version boundary for public questionnaire use.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
       />
       <script
         type="application/ld+json"
@@ -91,66 +112,135 @@ export default function AcePage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "ACE Questionnaire", url: TOOL_URL },
-            ])
+              { name: "ACE Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="A 10-question screening based on the CDC-Kaiser ACE Study that counts categories of adverse childhood experiences before age 18."
-          who="Adults who want to understand how childhood adversity may relate to their current health and wellbeing."
-          bottomLine="Your ACE score is one data point, not a destiny. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-<AceClient faqData={FAQ_DATA} />
-
-      {/* Related Tools */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <Link href="/ace-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">ACE Score Guide</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your ACE score means and resilience factors</p>
-          </Link>
-          <Link href="/pcl-5-ptsd-screening" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PCL-5 PTSD Screening</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Comprehensive PTSD symptom checklist</p>
-          </Link>
-          <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Test</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Screen for depression symptoms</p>
-          </Link>
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="flex flex-wrap gap-2 mb-5" aria-label="Page status">
+          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Educational information</span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">No questionnaire</span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">No scoring or risk estimate</span>
         </div>
-      </div>
+
+        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          ACE Information, Research, and Questionnaire Boundary
+        </h1>
+        <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
+          This page explains adverse childhood experiences and the CDC-Kaiser research without asking you to recall personal events or producing a score. It is educational, trauma-informed information, not an assessment or prediction.
+        </p>
+
+        <AnswerBlock
+          what="An educational overview of adverse childhood experiences, the CDC-Kaiser research, and the need to use an exact, verified questionnaire version."
+          who="People seeking trauma-informed ACE information without entering personal childhood history."
+          bottomLine="This page does not assess adversity or predict health. PHQ-4, PHQ-9, and GAD-7 address different, current symptom domains and are not ACE replacements."
+          lastUpdated="2026-08-05"
+        />
+
+        <section className="mt-8 rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5 sm:p-6" aria-labelledby="ace-version-boundary">
+          <h2 id="ace-version-boundary" className="font-serif text-xl font-bold text-amber-900 dark:text-amber-200 mb-3">
+            Why the former public questionnaire was removed
+          </h2>
+          <div className="space-y-3 text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+            <p>
+              CDC states that the identified CDC-Kaiser study questionnaires are not copyrighted and have no use fee. That permission applies to the actual published questionnaire versions; it does not establish that a separately simplified or rewritten form is an exact copy.
+            </p>
+            <p>
+              MindCheck Tools could not tie its former simplified form, wording, and interpretation to one exact authoritative CDC artifact. The questionnaire, answer capture, scoring, cutoffs, and individualized health-risk language are therefore unavailable while exact-version parity and trauma-informed clinical review remain unresolved.
+            </p>
+            <a href={CDC_STUDY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2">
+              Review the CDC-Kaiser study and questionnaire source
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="about-aces">
+          <h2 id="about-aces" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            What ACE research can and cannot show
+          </h2>
+          <div className="space-y-4 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            <p>
+              The original CDC-Kaiser study examined associations between reported childhood adversity and later health and well-being across a large insured adult sample. Later public-health research has studied ACEs in other populations and settings.
+            </p>
+            <p>
+              These findings describe patterns across groups. They do not determine an individual&apos;s future or capture every adverse experience, protective relationship, community condition, coping resource, or opportunity for recovery. A count is not a diagnosis, a measure of worth, or a treatment plan.
+            </p>
+            <p>
+              If childhood experiences continue to affect daily life, a trauma-informed healthcare professional can help explore current needs without requiring you to disclose more than you choose.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="ace-alternatives">
+          <h2 id="ace-alternatives" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            Separate options for current symptoms
+          </h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
+            These publicly permitted tools address recent symptoms, not childhood adversity. They cannot estimate an ACE result or explain the cause of symptoms.
+          </p>
+          <div className="grid grid-cols-1 gap-4">
+            {ALTERNATIVES.map((alternative) => (
+              <Link key={alternative.href} href={alternative.href} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <h3 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">{alternative.name}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{alternative.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/20 p-5" aria-labelledby="ace-privacy">
+          <h2 id="ace-privacy" className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">No-input privacy boundary</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            This page has no form and asks for no childhood history, symptoms, answers, or score. It calculates and stores no personal result. If you use a linked self-check, review its limits and the <Link href="/privacy" className="font-semibold underline">privacy policy</Link>, especially on a shared device.
+          </p>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-crisis-200 dark:border-crisis-800 bg-crisis-50 dark:bg-crisis-950/20 p-5" aria-labelledby="ace-help">
+          <h2 id="ace-help" className="font-serif text-xl font-bold text-crisis-900 dark:text-crisis-200 mb-2">If this topic brings up immediate distress</h2>
+          <p className="text-sm text-crisis-900 dark:text-crisis-200 leading-relaxed mb-4">
+            You can stop reading and seek support without completing any questionnaire. In the United States, call or text 988 for the Suicide &amp; Crisis Lifeline, or call 911 for immediate danger. Outside the United States, use local emergency or crisis services.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:988" className="inline-flex min-h-11 items-center rounded-lg bg-crisis-700 px-4 py-2 text-sm font-semibold text-white hover:bg-crisis-800">Call 988</a>
+            <a href="sms:988" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Text 988</a>
+            <a href="tel:911" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Call 911</a>
+            <Link href="/crisis-resources" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200 underline">View U.S. and international crisis resources</Link>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="ace-sources">
+          <h2 id="ace-sources" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources</h2>
+          <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <li>
+              Centers for Disease Control and Prevention. <a href={CDC_STUDY_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">About the CDC-Kaiser ACE Study</a>, including the identified public questionnaire versions and reuse statement.
+            </li>
+            <li>
+              Centers for Disease Control and Prevention. <a href={CDC_ACES_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">About Adverse Childhood Experiences</a>, updated March 2, 2026.
+            </li>
+            <li>
+              Felitti, V. J., et al. (1998). Relationship of childhood abuse and household dysfunction to leading causes of death in adults. <a href="https://pubmed.ncbi.nlm.nih.gov/9635069/" target="_blank" rel="noopener noreferrer" className="font-semibold underline">PubMed PMID 9635069</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div className="mt-10">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
+
+        <section className="mt-8 border-t border-sand-200 dark:border-neutral-700 pt-6" aria-labelledby="ace-faq">
+          <h2 id="ace-faq" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Frequently asked questions</h2>
+          <div className="space-y-5">
+            {FAQ_DATA.map((entry) => (
+              <div key={entry.question}>
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">{entry.question}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{entry.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </article>
     </>
   );
 }

@@ -105,8 +105,8 @@ export default function ContactPage() {
                 <p className="text-sm text-neutral-500 dark:text-neutral-400">Yes. All self-checks are completely free with no account required.</p>
               </div>
               <div className="p-4 card">
-                <h3 className="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Is my data stored anywhere?</h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">No. All screenings are scored entirely in your browser. Your answers are never sent to a server or stored anywhere.</p>
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">How are questionnaire answers handled?</h3>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records; see the Privacy Policy for copies, sync, and shared-device limits.</p>
               </div>
               <div className="p-4 card">
                 <h3 className="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Can I suggest a new screening tool?</h3>

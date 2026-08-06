@@ -169,7 +169,7 @@ export default function DepressionMenGuidePage() {
           <section>
             <h2>How the MindCheck Tools depression screening for men helps</h2>
             <p>
-              The <Link href="/depression-test-for-men" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for men</Link> is a free, private assessment designed to capture depression as it commonly presents in men. It takes under five minutes, runs entirely in your browser, and requires no account. No one sees your answers.
+              The <Link href="/depression-test-for-men" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for men</Link> is a free, private assessment designed to capture depression as it commonly presents in men. It takes under five minutes and requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Screening is particularly valuable for men because it provides structured, specific questions that bypass the vague &quot;how are you feeling?&quot; conversation that most men struggle with. Instead of being asked to identify emotions, you are asked about concrete, observable behaviors: sleep changes, energy levels, concentration, interest in activities, irritability. Many men who would never describe themselves as &quot;depressed&quot; will recognize their experience in these specific questions.
@@ -199,7 +199,7 @@ export default function DepressionMenGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a few minutes to check in on how you&apos;re feeling</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Your answers stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/depression-test-for-men" className="btn-primary text-sm">Men&apos;s Depression Screening</Link>
               <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>

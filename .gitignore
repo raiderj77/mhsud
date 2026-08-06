@@ -41,5 +41,9 @@ data_sources/cache/
 content/drafts/
 content/review-required/
 
+# Private owner measurement records. Keep aggregate acquisition baselines local
+# so low-volume health-topic queries and business telemetry are never published.
+/docs/search-console-baseline-*.md
+
 # Claude Code local settings (auto-edited every session, should not be tracked)
 .claude/settings.local.json

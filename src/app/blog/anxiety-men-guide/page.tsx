@@ -179,7 +179,7 @@ export default function AnxietyMenGuidePage() {
           <section>
             <h2>How the MindCheck Tools anxiety screening for men helps</h2>
             <p>
-              The <Link href="/anxiety-test-for-men" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for men</Link> is a free, private assessment that takes under five minutes. It runs entirely in your browser, no data is stored, and no account is needed. No one sees your answers.
+              The <Link href="/anxiety-test-for-men" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for men</Link> is a free, private assessment that takes under five minutes and requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Screening provides something that many men lack: language and structure for an experience they struggle to name. Instead of the vague question &quot;are you anxious?&quot;, the screening asks about specific, concrete experiences: how often you feel restless, whether you have trouble controlling worry, whether you feel on edge. These questions make anxiety recognizable in terms that men can relate to.
@@ -208,7 +208,7 @@ export default function AnxietyMenGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a few minutes to check in on how you&apos;re feeling</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Your answers stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/anxiety-test-for-men" className="btn-primary text-sm">Men&apos;s Anxiety Screening</Link>
               <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">GAD-7 Anxiety Check</Link>

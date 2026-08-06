@@ -149,7 +149,7 @@ export default function PtsdTestVeteransPage() {
             </a>
             , the same PTSD checklist
             used by the VA and military clinicians worldwide. It takes about 5 minutes, your
-            answers never leave your browser, and it can help you understand whether what
+            answers and scores are processed locally and are not intentionally sent to MindCheck Tools, and it can help you understand whether what
             you&apos;re feeling may be PTSD. This is <strong>not a diagnosis</strong> - but it
             can be the first step toward getting the support you earned.
           </p>
@@ -163,7 +163,7 @@ export default function PtsdTestVeteransPage() {
             Start the PTSD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 5 minutes. Answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -503,8 +503,7 @@ export default function PtsdTestVeteransPage() {
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only - it is not a diagnosis. Only a qualified
-            healthcare professional can assess PTSD. Your responses are processed entirely in your browser
-            and are never stored or transmitted. Always consult a qualified healthcare professional for
+            healthcare professional can assess PTSD. Your responses and score are processed locally and are not intentionally sent to MindCheck Tools. Always consult a qualified healthcare professional for
             medical advice.
           </p>
         </div>

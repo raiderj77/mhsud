@@ -93,7 +93,7 @@ export default function AnxietyTestForMenPage() {
 
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold text-base hover:bg-blue-700 transition-colors shadow-sm">Start the Anxiety Screening</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 2 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 2 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p>
         </div>
 
         <div className="mb-10">
@@ -176,7 +176,7 @@ export default function AnxietyTestForMenPage() {
           </ul>
         </div>
 
-        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified healthcare professional can assess anxiety disorders. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
+        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified healthcare professional can assess anxiety disorders. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH, CDC, and WHO. For anxiety evaluation, consult a licensed mental health professional.</p>

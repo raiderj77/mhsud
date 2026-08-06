@@ -86,7 +86,7 @@ export function ScoreInterpretationLayout({
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
           <Link href={toolPageHref} className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 font-medium">
             Take the {testAbbreviation} self-check now
-          </Link>{" "}, free, private, and results stay in your browser.
+          </Link>{" "}. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
         </p>
       </div>
 

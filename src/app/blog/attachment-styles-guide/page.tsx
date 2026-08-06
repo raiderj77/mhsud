@@ -187,7 +187,7 @@ export default function AttachmentStylesGuidePage() {
           <section>
             <h2>How the MindCheck Tools attachment style quiz can help</h2>
             <p>
-              The <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools attachment style quiz</Link> is a free, private self-assessment that helps you identify which attachment pattern most closely describes your relational tendencies. Your answers are scored in your browser and never stored or transmitted.
+              The <Link href="/attachment-style-quiz" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools attachment style quiz</Link> is a free, private self-assessment that helps you identify which attachment pattern most closely describes your relational tendencies. Answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Understanding your attachment style is not about labeling yourself or assigning blame. It is about recognizing patterns, why you react the way you do in certain relationship situations, what triggers your anxiety or withdrawal, and what you actually need from the people close to you.
@@ -239,7 +239,7 @@ export default function AttachmentStylesGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Curious about your attachment style?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private. Answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/attachment-style-quiz" className="btn-primary text-sm">Take the Attachment Style Quiz</Link>
             </div>

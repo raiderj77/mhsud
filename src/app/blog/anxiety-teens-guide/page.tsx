@@ -160,7 +160,7 @@ export default function AnxietyTeensGuidePage() {
           <section>
             <h2>How screening helps identify when anxiety has crossed a line</h2>
             <p>
-              The <Link href="/anxiety-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for teens</Link> is a free, private self-assessment that helps identify whether a teen&apos;s anxiety has moved beyond normal developmental worry into something that warrants professional attention. It takes a few minutes, runs entirely in the browser, and stores no data.
+              The <Link href="/anxiety-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for teens</Link> is a free, private self-assessment that helps identify whether a teen&apos;s anxiety has moved beyond normal developmental worry into something that warrants professional attention. It takes a few minutes. Questionnaire answers are processed locally in the browser and are not intentionally sent to MindCheck Tools. People with access to the device, browser profile, or copies created may see them.
             </p>
             <p>
               An anxiety screening provides structure. Instead of an abstract conversation about &quot;are you anxious?&quot; it asks specific, concrete questions about symptoms and their frequency. This makes it easier for teens who may struggle to articulate what they are feeling, and for parents who may not know the right questions to ask.

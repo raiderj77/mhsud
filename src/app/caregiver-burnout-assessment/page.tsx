@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/caregiver-burnout-assessment`;
 
@@ -147,7 +148,7 @@ export default function CaregiverBurnoutAssessmentPage() {
           <p className="text-slate-600 dark:text-slate-300">
             This educational check-in asks about energy and recovery, connection and patience,
             and confidence and meaning across a work or caregiving role. It is not tailored or validated specifically for caregivers and cannot determine a burnout level. The <a href="https://www.nia.nih.gov/health/caregiving" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline">National Institute on Aging</a> provides caregiver support and self-care resources. Your
-            answers are scored entirely in your browser. Nothing is stored or shared.
+            questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -189,6 +190,10 @@ export default function CaregiverBurnoutAssessmentPage() {
   </div>
 </div>
       </div>
+
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
 
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
@@ -275,7 +280,7 @@ export default function CaregiverBurnoutAssessmentPage() {
             This check-in is for educational purposes only and is not a diagnosis. Its original
             questions and site-defined score bands have not been clinically validated. A qualified
             healthcare professional can evaluate persistent or concerning experiences. Your
-            responses are processed entirely in your browser and are never stored or transmitted.
+            questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 

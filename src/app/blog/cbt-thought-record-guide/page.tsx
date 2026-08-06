@@ -196,7 +196,7 @@ export default function CbtThoughtRecordGuidePage() {
               The <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools thought record</Link> is a free, private digital tool that walks you through the 7-column process step by step. It is designed to be used whenever you notice a strong negative emotion and want to examine the thought behind it.
             </p>
             <p>
-              The tool runs entirely in your browser, nothing is stored on a server, no account is needed, and your entries are private by design. You can save or print your completed record to share with a therapist or keep for your own reference.
+              The tool processes entries locally in your browser and does not intentionally send them to MindCheck Tools. No account is needed. People with access to your device or browser profile may see entries, and copies you save, print, download, or share are controlled by your device and chosen services. You can save or print your completed record to share with a therapist or keep for your own reference.
             </p>
             <p>
               For the best results, try to complete a thought record as close to the triggering event as possible, while the thought and emotion are still fresh. Over time, you will start recognizing your most common distortions and generating alternative thoughts more quickly, even without writing them down.

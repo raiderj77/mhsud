@@ -1,9 +1,9 @@
 # MindCheck Tools, Complete Canonical Reference
 
 > MindCheck Tools provides browser-based screening instruments, self-reflection tools, calculators, guided exercises, and educational guides.
-> Some pages implement published validated instruments; other tools are educational or self-reflection resources. None provides a diagnosis or medical advice.
+> Some pages implement published instruments; rights-limited instruments remain public as educational information without questionnaire administration or scoring. Other tools are educational or self-reflection resources. None provides a diagnosis or medical advice.
 
-All interactive answers and scores are processed locally in the browser. Sensitive tool routes do not load analytics or advertising. Optional services on eligible public pages require consent. No account is required to use the tools.
+All interactive answers and scores are processed locally in the browser. Health-topic, instrument, result, crisis, privacy, and youth pages do not load optional analytics or advertising. Consented optional services are limited to the topic-neutral homepage. No account is required to use the tools.
 
 ## Editorial trust and scope
 
@@ -22,17 +22,17 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [GAD 7 Anxiety Test](https://mindchecktools.com/gad-7-anxiety-test)
 - [AUDIT Alcohol Test](https://mindchecktools.com/audit-alcohol-test)
 - [AUDIT C Alcohol Screen](https://mindchecktools.com/audit-c-alcohol-screen)
-- [Cage Aid Substance Abuse Screening](https://mindchecktools.com/cage-aid-substance-abuse-screening)
+- [CAGE-AID Substance Use Information](https://mindchecktools.com/cage-aid-substance-abuse-screening)
 - [PCL 5 PTSD Screening](https://mindchecktools.com/pcl-5-ptsd-screening)
 - [PC PTSD 5 Screening](https://mindchecktools.com/pc-ptsd-5-screening)
 - [ASRS ADHD Screening](https://mindchecktools.com/asrs-adhd-screening)
-- [DASS 21 Depression Anxiety Stress](https://mindchecktools.com/dass-21-depression-anxiety-stress)
+- [DASS 21 Information and Public Use Boundary](https://mindchecktools.com/dass-21-depression-anxiety-stress)
 - [WHO 5 Wellbeing Index](https://mindchecktools.com/who-5-wellbeing-index)
 - [K6 Distress Scale](https://mindchecktools.com/k6-distress-scale)
-- [SCOFF Eating Disorder Screening](https://mindchecktools.com/scoff-eating-disorder-screening)
-- [AQ 10 Autism Screening](https://mindchecktools.com/aq-10-autism-screening)
-- [MSI BPD Screening](https://mindchecktools.com/msi-bpd-screening)
-- [Attachment Style Quiz](https://mindchecktools.com/attachment-style-quiz)
+- [SCOFF Eating Disorder Screening Information](https://mindchecktools.com/scoff-eating-disorder-screening)
+- [Adult AQ-10 Information](https://mindchecktools.com/aq-10-autism-screening)
+- [MSI-BPD Screening Information](https://mindchecktools.com/msi-bpd-screening)
+- [ECR-R Attachment Information](https://mindchecktools.com/attachment-style-quiz)
 - [Big Five Personality Test](https://mindchecktools.com/big-five-personality-test)
 - [Sobriety Calculator](https://mindchecktools.com/sobriety-calculator)
 - [Money Saved Recovery Calculator](https://mindchecktools.com/money-saved-recovery-calculator)
@@ -53,15 +53,15 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [Work Stress Check](https://mindchecktools.com/work-stress-check)
 - [Mental Load Calculator](https://mindchecktools.com/mental-load-calculator)
 - [Sleep and Mood Check](https://mindchecktools.com/sleep-and-mood-check)
-- [Spin Social Anxiety Test](https://mindchecktools.com/spin-social-anxiety-test)
-- [WHO Assist Substance Screening](https://mindchecktools.com/who-assist-substance-screening)
-- [Crafft Substance Screening](https://mindchecktools.com/crafft-substance-screening)
-- [ACE Questionnaire](https://mindchecktools.com/ace-questionnaire)
-- [Holmes Rahe Stress Inventory](https://mindchecktools.com/holmes-rahe-stress-inventory)
+- [SPIN Social Anxiety Information](https://mindchecktools.com/spin-social-anxiety-test)
+- [WHO ASSIST Information](https://mindchecktools.com/who-assist-substance-screening)
+- [CRAFFT Youth Screening Information](https://mindchecktools.com/crafft-substance-screening)
+- [ACE Questionnaire Information](https://mindchecktools.com/ace-questionnaire)
+- [Holmes-Rahe Inventory Information](https://mindchecktools.com/holmes-rahe-stress-inventory)
 - [Rosenberg Self Esteem Scale](https://mindchecktools.com/rosenberg-self-esteem-scale)
-- [UCLA Loneliness Scale](https://mindchecktools.com/ucla-loneliness-scale)
-- [Athens Insomnia Scale](https://mindchecktools.com/athens-insomnia-scale)
-- [Brief Resilience Scale](https://mindchecktools.com/brief-resilience-scale)
+- [UCLA Loneliness Scale Information](https://mindchecktools.com/ucla-loneliness-scale)
+- [Athens Insomnia Scale Information](https://mindchecktools.com/athens-insomnia-scale)
+- [Brief Resilience Scale Information](https://mindchecktools.com/brief-resilience-scale)
 - [Box Breathing Exercise](https://mindchecktools.com/box-breathing-exercise)
 - [Five Senses Grounding](https://mindchecktools.com/five-senses-grounding)
 - [Cognitive Distortion Identifier](https://mindchecktools.com/cognitive-distortion-identifier)
@@ -76,13 +76,10 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [AUDIT Score Interpretation](https://mindchecktools.com/audit-score-interpretation)
 - [PCL 5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation)
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation)
-- [DASS 21 Score Interpretation](https://mindchecktools.com/dass-21-score-interpretation)
-- [ACE Score Interpretation](https://mindchecktools.com/ace-score-interpretation)
 - [AUDIT C Score Interpretation](https://mindchecktools.com/audit-c-score-interpretation)
 - [Maternal Mental Health](https://mindchecktools.com/maternal-mental-health)
 - [PHQ 9 vs. GAD 7](https://mindchecktools.com/phq-9-vs-gad-7)
 - [AUDIT vs. AUDIT C](https://mindchecktools.com/audit-vs-audit-c)
-- [DASS 21 vs. PHQ 9 and GAD 7](https://mindchecktools.com/dass-21-vs-phq-9-and-gad-7)
 - [PHQ 2 to PHQ 9 When to Escalate](https://mindchecktools.com/phq-2-to-phq-9-when-to-escalate)
 - [Caregiver Burnout Assessment](https://mindchecktools.com/caregiver-burnout-assessment)
 - [Compassion Fatigue Test](https://mindchecktools.com/compassion-fatigue-test)

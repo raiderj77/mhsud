@@ -33,7 +33,7 @@ const FAQ_DATA = [
   { question: "Is the GAD-7 test the same as a diagnosis?", answer: "No. The GAD-7 is a screening tool, not a diagnostic instrument. A high score indicates that anxiety symptoms are present and that talking to a mental health professional would be beneficial. Only a licensed clinician can provide a formal diagnosis." },
   { question: "Can anxiety and depression occur together?", answer: "Yes, anxiety and depression frequently co-occur. Research suggests that approximately 50% of people diagnosed with depression are also diagnosed with an anxiety disorder. If you score high on the GAD-7, taking the PHQ-9 depression screening may also be informative." },
   { question: "Does the GAD-7 only screen for generalized anxiety?", answer: "While developed for generalized anxiety disorder, research has shown the GAD-7 also has reasonable sensitivity for detecting panic disorder, social anxiety disorder, and post-traumatic stress disorder. However, it is not a specific diagnostic tool for any of these conditions." },
-  { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
+  { question: "How is my questionnaire data handled?", answer: "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary." },
   { question: "What should I do if my GAD-7 score is high?", answer: "A higher score suggests more anxiety symptoms, but does not mean you have a specific diagnosis. Consider talking with a healthcare provider, therapist, or counselor. If anxiety is significantly impacting your daily life, seeking help sooner is encouraged." },
   { question: "What does my anxiety assessment score mean?", answer: "Your GAD-7 score reflects the frequency of anxiety symptoms over the past two weeks. Scores of 0\u20134 indicate minimal anxiety, 5\u20139 mild, 10\u201314 moderate, and 15\u201321 severe. The score helps identify whether anxiety symptoms are present and how much they may be affecting your daily life. It is a snapshot, not a permanent label." },
   { question: "Is this anxiety test medically accurate?", answer: "The GAD-7 is one of the most extensively validated anxiety screening tools in clinical research. Studies demonstrate a sensitivity of 89% and specificity of 82% for generalized anxiety disorder at a cutoff score of 10. It is used by doctors, psychologists, and researchers worldwide. However, it is a screening tool, not a diagnostic instrument, and results should be discussed with a healthcare professional for proper context." },
@@ -208,9 +208,9 @@ export default function GAD7Page() {
             <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 vs. GAD-7</p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">Key differences between depression and anxiety screens</p>
           </Link>
-          <Link href="/dass-21-vs-phq-9-and-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 vs. PHQ-9 &amp; GAD-7</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">How the DASS-21 compares to the PHQ-9/GAD-7 pair</p>
+          <Link href="/dass-21-depression-anxiety-stress" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Information</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Public-use boundary and non-equivalent alternatives</p>
           </Link>
         </div>
       </div>

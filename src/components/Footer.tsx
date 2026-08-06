@@ -6,41 +6,41 @@ const SCREENING_TOOLS = [
   { heading: "Depression & Mood", links: [
     { href: "/phq-9-depression-test", label: "PHQ-9 Depression" },
     { href: "/ces-d-depression-scale", label: "CES-D Depression Scale" },
-    { href: "/dass-21-depression-anxiety-stress", label: "DASS-21" },
+    { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 Information" },
     { href: "/k6-distress-scale", label: "K6 Distress Scale" },
     { href: "/who-5-wellbeing-index", label: "WHO-5 Well-Being" },
   ]},
   { heading: "Anxiety", links: [
     { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety" },
-    { href: "/spin-social-anxiety-test", label: "SPIN Social Anxiety" },
+    { href: "/spin-social-anxiety-test", label: "SPIN Information" },
   ]},
   { heading: "PTSD & Trauma", links: [
     { href: "/pcl-5-ptsd-screening", label: "PCL-5 PTSD" },
     { href: "/pc-ptsd-5-screening", label: "PC-PTSD-5" },
-    { href: "/ace-questionnaire", label: "ACE Questionnaire" },
+    { href: "/ace-questionnaire", label: "ACE Information" },
   ]},
   { heading: "Substance Use", links: [
     { href: "/audit-alcohol-test", label: "AUDIT Alcohol" },
     { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
-{ href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID" },
-    { href: "/who-assist-substance-screening", label: "WHO ASSIST" },
-    { href: "/crafft-substance-screening", label: "CRAFFT (Teens)" },
+    { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Information" },
+    { href: "/who-assist-substance-screening", label: "WHO ASSIST Information" },
+    { href: "/crafft-substance-screening", label: "CRAFFT Information" },
   ]},
   { heading: "Other Conditions", links: [
     { href: "/asrs-adhd-screening", label: "ASRS ADHD" },
-    { href: "/scoff-eating-disorder-screening", label: "SCOFF Eating Disorder" },
-    { href: "/aq-10-autism-screening", label: "AQ-10 Autism" },
-    { href: "/msi-bpd-screening", label: "MSI-BPD Borderline" },
+    { href: "/scoff-eating-disorder-screening", label: "SCOFF Information" },
+    { href: "/aq-10-autism-screening", label: "AQ-10 Information" },
+    { href: "/msi-bpd-screening", label: "MSI-BPD Information" },
   ]},
 ];
 
 const WELLNESS_TOOLS = [
-  { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe Stress" },
+  { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe Information" },
   { href: "/burnout-assessment-tool", label: "Burnout Assessment" },
   { href: "/rosenberg-self-esteem-scale", label: "Self-Esteem Scale" },
-  { href: "/ucla-loneliness-scale", label: "UCLA Loneliness" },
-  { href: "/athens-insomnia-scale", label: "Athens Insomnia" },
-  { href: "/brief-resilience-scale", label: "Brief Resilience" },
+  { href: "/ucla-loneliness-scale", label: "UCLA Information" },
+  { href: "/athens-insomnia-scale", label: "Athens Information" },
+  { href: "/brief-resilience-scale", label: "Resilience Information" },
   { href: "/work-stress-check", label: "Work Stress Check" },
   { href: "/sleep-and-mood-check", label: "Sleep & Mood" },
   { href: "/mental-load-calculator", label: "Mental Load" },
@@ -49,10 +49,10 @@ const WELLNESS_TOOLS = [
   { href: "/cognitive-distortion-identifier", label: "Thought Patterns" },
   { href: "/safety-plan", label: "Safety Plan" },
   { href: "/cbt-thought-record", label: "Thought Record" },
-  { href: "/worry-time-scheduler", label: "Worry Time" },
+  { href: "/worry-time-scheduler", label: "Worry Time Scheduler" },
   { href: "/values-card-sort", label: "Values Card Sort" },
-  { href: "/dbt-crisis-skills", label: "DBT Skills Cards" },
-  { href: "/attachment-style-quiz", label: "Attachment Style Quiz" },
+  { href: "/dbt-crisis-skills", label: "DBT Crisis Skills" },
+  { href: "/attachment-style-quiz", label: "ECR-R Information" },
   { href: "/big-five-personality-test", label: "Big Five Personality" },
 ];
 
@@ -75,7 +75,7 @@ const RECOVERY_TOOLS = [
 ];
 
 const INFO_LINKS = [
-  { href: "/screening-tools", label: "All Screening Tools" },
+  { href: "/screening-tools", label: "All Tools & Information" },
   { href: "/about", label: "About" },
   { href: "/clinical-evidence", label: "Clinical Evidence" },
   { href: "/methodology", label: "Methodology" },
@@ -129,7 +129,7 @@ export function Footer() {
               <span className="font-serif font-bold text-neutral-800 dark:text-neutral-100">MindCheck Tools</span>
             </div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-5">
-              Free, private mental health self-checks. Answers are processed in your browser and are not sent to us.
+              Private mental health self-checks, calculators, and rights-aware instrument information. Interactive answers are processed in your browser and are not sent to us; information-only pages ask no assessment questions.
             </p>
 
             {/* Resources links */}
@@ -147,7 +147,7 @@ export function Footer() {
 
           {/* Screening Tools column */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Screening Tools</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Screening &amp; Instrument Information</h3>
             <div className="space-y-4">
               {SCREENING_TOOLS.map((group) => (
                 <div key={group.heading}>
@@ -237,7 +237,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-sand-200 dark:border-neutral-800 pt-6">
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto">
-            These screening tools are for informational purposes only and are not a substitute for professional medical or mental health advice. Always consult a qualified healthcare provider or licensed mental health professional regarding any mental health concerns. Answers are processed in your browser and are not sent to MindCheck Tools. Features that save information on your device say so before use.
+            Interactive self-checks and instrument-information pages are educational and are not a substitute for professional medical or mental health advice. Always consult a qualified healthcare provider or licensed mental health professional regarding any mental health concerns. Interactive answers are processed in your browser and are not sent to MindCheck Tools. Information-only pages ask no assessment questions and produce no score or result. Features that save information on your device say so before use.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto mt-2">
             If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), available 24/7.

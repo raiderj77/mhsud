@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "Can a teen take this test on their own?",
-    answer: "Yes. This screening is designed to be self-administered. Teens can take it privately in their browser, no data is stored or transmitted. However, if results suggest moderate or higher depression, we strongly encourage involving a trusted adult or healthcare professional.",
+    answer: "This screening is designed to be self-administered. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary. If results suggest moderate or higher depression, involve a trusted adult or healthcare professional.",
   },
   {
     question: "Are there crisis resources specifically for teens?",
@@ -145,7 +145,7 @@ export default function DepressionTestForTeensPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 3 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -398,7 +398,7 @@ export default function DepressionTestForTeensPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose depression. Your responses are processed entirely in your
-            browser and are never stored or transmitted. Always consult a qualified healthcare professional
+            browser and are not intentionally sent to MindCheck Tools. Always consult a qualified healthcare professional
             for medical advice.
           </p>
         </div>

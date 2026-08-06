@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               The short version
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>Your screening answers and scores never leave your browser.</strong> We do not collect or store them. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
+              <strong>Your screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</strong> We do not collect or store them in an application database. Ordinary page requests can create hosting records that include the requested URL and network information. If you choose to print, download, or copy a local reflection, that copy is handled by your browser, device, printer, and any sync or backup services you use. Access through a shared browser or device is outside this boundary. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
             </p>
           </div>
 
@@ -49,10 +49,10 @@ export default function PrivacyPage() {
           <section>
             <h2>What data do we collect from the self-check tools?</h2>
             <p>
-              <strong>None.</strong> All scoring and result calculations happen entirely in your browser using client-side JavaScript. Your responses to any questionnaire on this site, including the PHQ-9, GAD-7, AUDIT, and AUDIT-C, are processed locally on your device. No answer data is ever sent to our servers or any third-party server.
+              <strong>The questionnaire code does not intentionally submit answers or scores.</strong> Questionnaire answers and scores, including those for the PHQ-9, GAD-7, AUDIT, and AUDIT-C, are processed locally using client-side JavaScript and are not intentionally sent to MindCheck Tools. Ordinary page requests are separate and can create hosting records.
             </p>
             <p>
-              We have deliberately built our tools this way because we believe that mental health screening should be private. There is no technical mechanism on this site that captures, logs, or transmits your questionnaire responses.
+              We have deliberately built our tools this way because mental health screening calls for strong privacy safeguards. The assessment application has no configured endpoint or application-database write for questionnaire responses and does not intentionally submit them to MindCheck Tools, analytics, or advertising systems. Browser extensions, device software, shared-browser access, and any copy you deliberately create operate outside that application boundary.
             </p>
           </section>
 
@@ -86,10 +86,10 @@ export default function PrivacyPage() {
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
               <li><strong>Network information:</strong> IP address used to transmit the request and approximate geographic region derived by Google, not precise location</li>
               <li><strong>Usage data:</strong> sanitized page URL and path, page title, session timing, and the referring site&apos;s origin</li>
-              <li><strong>Cookie identifiers:</strong> anonymous identifiers set by Google Analytics after analytics consent</li>
+              <li><strong>Cookie identifiers:</strong> pseudonymous identifiers set by Google Analytics after analytics consent</li>
             </ul>
             <p>
-              <strong>None of this data includes your screening answers, scores, or results.</strong> Screening data never leaves your browser and is never accessible to analytics or advertising systems.
+              <strong>The application is not configured to add screening answers, scores, or results to this data.</strong> It does not intentionally send screening data to analytics or advertising systems. A local print or download that you deliberately create is outside those systems and is controlled by your browser, device, printer, and any sync or backup service you use.
             </p>
             <p>
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
               We retain data for the minimum period necessary:
             </p>
             <ul>
-              <li><strong>Screening answers and scores:</strong> Not retained. Never leaves your browser. Deleted when you close or refresh the page.</li>
+              <li><strong>Screening answers and scores:</strong> Not retained by MindCheck Tools. In-memory responses are removed when you close, refresh, or reset the page. A printout or downloaded reflection that you deliberately create is a separate local copy and remains until you or the relevant device/service deletes it.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
               <li><strong>Privacy choices:</strong> Stored in this browser until you change them or clear site data. The choice itself is not sent to a consent-management provider.</li>
               <li><strong>Google Analytics data:</strong> Retention follows the configured Google Analytics property setting and Google&apos;s service rules. The current account-side setting cannot be verified from public application code; you may request the current period at privacy@mindchecktools.com.</li>
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
               Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible advertising provider but was not active at the last review. Application code requires explicit publisher enablement, certified-CMP readiness, and strict-CSP readiness before the AdSense runtime can load.
             </p>
             <p>
-              <strong>Screening answers, scores, results, and browser-local tool entries are not passed to advertising systems.</strong> If advertising is enabled, MindCheck Tools requests non-personalized ads, requires an affirmative advertising choice, and excludes sensitive routes. Non-personalized ads can still use cookies or device identifiers for purposes such as frequency capping and aggregated reporting, which is why the advertising service remains consent-gated.
+              <strong>The application is not configured to pass screening answers, scores, results, or browser-local tool entries to advertising systems.</strong> A copy you deliberately create is controlled by your browser, device, and any service you use with that copy. If advertising is enabled, MindCheck Tools requests non-personalized ads, requires an affirmative advertising choice, and excludes sensitive routes. Non-personalized ads can still use cookies or device identifiers for purposes such as frequency capping and aggregated reporting, which is why the advertising service remains consent-gated.
             </p>
             <p>
               Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
@@ -173,7 +173,10 @@ export default function PrivacyPage() {
           <section>
             <h2>Reflection summaries</h2>
             <p>
-              Our screening tools offer a &quot;Download Reflection Summary&quot; feature that generates a summary of your results as an HTML file. This summary is generated <strong>entirely in your browser</strong> using client-side JavaScript. MindCheck Tools does not receive, store, or transmit your answers, scores, or reflection summaries. The file is created locally on your device and saved directly to your downloads folder.
+              Our screening tools offer a &quot;Download Reflection Summary&quot; feature that generates a summary of your results as an HTML file using client-side JavaScript. The application does not automatically upload the summary, answers, or score to a MindCheck Tools server or application database. Your browser creates the file locally, and your browser, device, downloads folder, and any sync or backup service you use may retain or process it.
+            </p>
+            <p>
+              A downloaded or printed summary can contain sensitive information. It may be accessible to other people using the device and may be processed by browser downloads, printers, cloud sync, backups, security software, or any app you choose to open it with. Tool-link sharing on MindCheck Tools is deliberately limited to the public tool name and canonical page URL; it does not include answers, scores, ratings, result labels, or summaries.
             </p>
           </section>
 
@@ -190,14 +193,14 @@ export default function PrivacyPage() {
           <section>
             <h2>Children&apos;s privacy</h2>
             <p>
-              MindCheck Tools is a general-audience educational site. Any youth-oriented tool identifies its intended age range and should be used with a parent, guardian, or qualified professional when appropriate. Screening answers remain in the browser, and subscription forms are suppressed on sensitive interactive routes. Children under 13 should not submit an email address or contact message. If you are a parent or guardian and believe a child provided personal information, contact privacy@mindchecktools.com so we can investigate and address it.
+              MindCheck Tools is a general-audience educational site. Any youth-oriented tool identifies its intended age range and should be used with a parent, guardian, or qualified professional when appropriate. The application processes screening answers locally and does not automatically send them to a MindCheck Tools server or application database; a screenshot, printout, download, or other copy a user creates is controlled by that user&apos;s browser, device, and chosen services. Subscription forms are suppressed on sensitive interactive routes. Children under 13 should not submit an email address or contact message. If you are a parent or guardian and believe a child provided personal information, contact privacy@mindchecktools.com so we can investigate and address it.
             </p>
           </section>
 
           <section>
             <h2>Data security</h2>
             <p>
-              Because we do not collect or store questionnaire responses, there is no application database of user answers. The site is served over HTTPS and uses restrictive response headers, a content security policy, no-store controls on sensitive routes and API responses, and dependency review. No security measure can eliminate every risk, especially risks from a shared device, browser extension, downloaded file, or software outside our control.
+              Assessment code does not automatically send questionnaire responses to a MindCheck Tools server or save them in an application database, so MindCheck Tools does not maintain an application database of those answers. Browser-local tool entries and user-created screenshots, printouts, or downloads can remain on a browser, device, printer, sync service, or backup. The site is served over HTTPS and uses restrictive response headers, a content security policy, no-store controls on sensitive routes and API responses, and dependency review. No security measure can eliminate every risk, especially risks from a shared device, browser extension, downloaded file, or software outside our control.
             </p>
           </section>
 
@@ -212,7 +215,7 @@ export default function PrivacyPage() {
               Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on your affirmative choice in our first-party privacy control before enabling analytics or advertising storage.
             </p>
             <p>
-              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results on MindCheck Tools are processed entirely in your browser and are not transmitted to our servers. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
+              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
             </p>
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
@@ -274,8 +277,9 @@ export default function PrivacyPage() {
               racial or ethnic origin, religious beliefs, union membership, contents of private
               communications, genetic data, biometric data, health or medical information, or sexual
               orientation. Mental health screening responses entered into our tools are processed
-              entirely client-side and are never transmitted to our servers, stored, or shared with
-              any third party including advertising systems.
+              locally and are not intentionally sent to our servers or shared
+              with any third party, including advertising systems. A local print or download that
+              you deliberately create is controlled by your device and chosen services.
             </p>
 
             <h3>Data Minimization</h3>

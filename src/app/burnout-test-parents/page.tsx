@@ -142,7 +142,7 @@ export default function BurnoutTestParentsPage() {
             Start the Burnout Assessment
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 5 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -202,7 +202,7 @@ export default function BurnoutTestParentsPage() {
                 <p><strong>Special needs parenting:</strong> Parents of children with disabilities, chronic illness, or behavioral challenges face additional demands that compound burnout risk. The advocacy, appointments, therapies, and emotional labor involved go far beyond typical parenting.</p>
                 <p><strong>Financial stress:</strong> Money worries amplify every other parenting stressor. When you are worried about paying for childcare, food, housing, or medical care, there is less emotional bandwidth available for everything else.</p>
                 <p><strong>Self-care without guilt:</strong> Self-care for parents is not spa days and bubble baths, it is basic human needs. Sleep, time alone, adult conversation, physical movement, and mental health support are not luxuries. They are requirements for sustainable parenting.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to anyone.</p>
+                <p><strong>Your privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -316,7 +316,7 @@ export default function BurnoutTestParentsPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This assessment tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess burnout or related conditions. Your responses are processed
-            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            locally and are not intentionally sent to MindCheck Tools. Always consult a qualified
             healthcare professional for medical advice.
           </p>
         </div>

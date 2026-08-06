@@ -149,7 +149,7 @@ export default function BpdSymptomsGuidePage() {
               A score of 7 or higher on the MSI-BPD suggests that further professional evaluation may be appropriate. The tool has demonstrated good sensitivity (correctly identifying people who have BPD) and specificity (correctly ruling out those who do not).
             </p>
             <p>
-              It is critical to understand that the MSI-BPD is a <strong>screening tool, not a diagnostic instrument</strong>. A positive screen does not mean you have BPD, it means the pattern of your responses warrants a closer look by a qualified professional. You can take the <Link href="/msi-bpd-screening" className="text-sage-600 dark:text-sage-400 underline">MSI-BPD screening</Link> on our site. It runs entirely in your browser, and your answers are never stored or transmitted.
+              It is critical to understand that the MSI-BPD is a <strong>screening tool, not a diagnostic instrument</strong>. A positive screen does not mean you have BPD, it means the pattern of your responses warrants a closer look by a qualified professional. You can take the <Link href="/msi-bpd-screening" className="text-sage-600 dark:text-sage-400 underline">MSI-BPD screening</Link> on our site. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -220,7 +220,7 @@ export default function BpdSymptomsGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Could BPD symptoms apply to you?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The MSI-BPD is a validated 10-question screening tool that can help you decide whether to seek a professional evaluation. Free, private, and completed entirely in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The MSI-BPD is a validated 10-question screening tool that can help you decide whether to seek a professional evaluation. Free, private, and completed locally in your browser without intentionally sending answers to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/msi-bpd-screening" className="btn-primary text-sm">Take the MSI-BPD Screening</Link>
           </div>
 

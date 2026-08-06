@@ -202,7 +202,7 @@ export default function HelpingFamilyMemberAddictionPage() {
               Our <Link href="/family-impact-assessment">Family Impact Assessment</Link> is a free, private screening designed to help you understand how a loved one&apos;s substance use may be affecting your family. It is not a diagnosis, it is a starting point for reflection. The screening looks at areas like emotional well-being, relationship quality, financial stress, and daily functioning.
             </p>
             <p>
-              All responses are processed in your browser and never stored or transmitted. The results may indicate areas where additional support could be helpful, and they can serve as a conversation starter with a therapist or counselor.
+              Responses are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. The results may indicate areas where additional support could be helpful, and they can serve as a conversation starter with a therapist or counselor.
             </p>
           </section>
 
@@ -262,7 +262,7 @@ export default function HelpingFamilyMemberAddictionPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">How is your family being affected?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Our free Family Impact Assessment can help you understand the ways a loved one&apos;s substance use may be affecting your family. Private, takes about 5 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Our free Family Impact Assessment can help you understand the ways a loved one&apos;s substance use may be affecting your family. Private, takes about 5 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/family-impact-assessment" className="btn-primary text-sm">Take the Family Impact Assessment</Link>
           </div>
 

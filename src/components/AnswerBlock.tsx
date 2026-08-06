@@ -39,13 +39,16 @@ export default function AnswerBlock({ what, who, bottomLine, lastUpdated }: Answ
       </dl>
       <time
         dateTime={lastUpdated}
-        className="block text-right text-xs text-neutral-400"
+        className="block text-right text-xs text-neutral-600 dark:text-neutral-300"
       >
         Last updated:{' '}
         {new Date(lastUpdated).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric',
+          // Date-only review values represent a calendar date, not an instant.
+          // UTC prevents western time zones from displaying the previous day.
+          timeZone: 'UTC',
         })}
       </time>
     </section>

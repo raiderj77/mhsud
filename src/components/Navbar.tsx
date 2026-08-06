@@ -17,7 +17,7 @@ const CATEGORIES: Category[] = [
     tools: [
       { href: "/phq-9-depression-test", label: "PHQ-9", sub: "Depression screening" },
       { href: "/ces-d-depression-scale", label: "CES-D", sub: "Depression scale (20 items)" },
-      { href: "/dass-21-depression-anxiety-stress", label: "DASS-21", sub: "Depression, anxiety & stress" },
+      { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 info", sub: "Public-use boundary" },
       { href: "/k6-distress-scale", label: "K6", sub: "Psychological distress" },
       { href: "/who-5-wellbeing-index", label: "WHO-5", sub: "Well-being index" },
     ],
@@ -28,7 +28,7 @@ const CATEGORIES: Category[] = [
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
     tools: [
       { href: "/gad-7-anxiety-test", label: "GAD-7", sub: "Generalized anxiety" },
-      { href: "/spin-social-anxiety-test", label: "SPIN", sub: "Social anxiety" },
+      { href: "/spin-social-anxiety-test", label: "SPIN info", sub: "Evidence and rights boundary" },
     ],
   },
   {
@@ -38,7 +38,7 @@ const CATEGORIES: Category[] = [
     tools: [
       { href: "/pcl-5-ptsd-screening", label: "PCL-5", sub: "PTSD checklist (20 items)" },
       { href: "/pc-ptsd-5-screening", label: "PC-PTSD-5", sub: "PTSD brief screen" },
-      { href: "/ace-questionnaire", label: "ACE", sub: "Adverse childhood experiences" },
+      { href: "/ace-questionnaire", label: "ACE info", sub: "Evidence and provenance boundary" },
     ],
   },
   {
@@ -48,9 +48,9 @@ const CATEGORIES: Category[] = [
     tools: [
       { href: "/audit-alcohol-test", label: "AUDIT", sub: "WHO alcohol screen (10 items)" },
       { href: "/audit-c-alcohol-screen", label: "AUDIT-C", sub: "Brief alcohol screen" },
-{ href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID", sub: "Alcohol & drug screen" },
-      { href: "/who-assist-substance-screening", label: "WHO ASSIST", sub: "Comprehensive substance screen" },
-      { href: "/crafft-substance-screening", label: "CRAFFT", sub: "Adolescent substance screen" },
+      { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID info", sub: "Evidence and rights boundary" },
+      { href: "/who-assist-substance-screening", label: "WHO ASSIST info", sub: "Public-use boundary" },
+      { href: "/crafft-substance-screening", label: "CRAFFT info", sub: "Youth approval boundary" },
     ],
   },
   {
@@ -59,9 +59,9 @@ const CATEGORIES: Category[] = [
     icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
     tools: [
       { href: "/asrs-adhd-screening", label: "ASRS", sub: "Adult ADHD screening" },
-      { href: "/scoff-eating-disorder-screening", label: "SCOFF", sub: "Eating disorder screen" },
-      { href: "/aq-10-autism-screening", label: "AQ-10", sub: "Autism spectrum screen" },
-      { href: "/msi-bpd-screening", label: "MSI-BPD", sub: "Borderline personality screen" },
+      { href: "/scoff-eating-disorder-screening", label: "SCOFF info", sub: "Evidence and rights boundary" },
+      { href: "/aq-10-autism-screening", label: "AQ-10 info", sub: "Electronic-use boundary" },
+      { href: "/msi-bpd-screening", label: "MSI-BPD info", sub: "Evidence and rights boundary" },
     ],
   },
   {
@@ -69,12 +69,12 @@ const CATEGORIES: Category[] = [
     name: "Stress & Well-Being",
     icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
     tools: [
-      { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe", sub: "Life stress inventory" },
+      { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe info", sub: "Evidence and rights boundary" },
       { href: "/burnout-assessment-tool", label: "Burnout", sub: "Burnout assessment" },
       { href: "/rosenberg-self-esteem-scale", label: "RSES", sub: "Self-esteem scale" },
-      { href: "/ucla-loneliness-scale", label: "UCLA", sub: "Loneliness scale" },
-      { href: "/athens-insomnia-scale", label: "AIS", sub: "Insomnia screening" },
-      { href: "/brief-resilience-scale", label: "BRS", sub: "Resilience scale" },
+      { href: "/ucla-loneliness-scale", label: "UCLA info", sub: "Research-use boundary" },
+      { href: "/athens-insomnia-scale", label: "AIS info", sub: "Permission boundary" },
+      { href: "/brief-resilience-scale", label: "BRS info", sub: "Unresolved rights status" },
       { href: "/work-stress-check", label: "Work Stress", sub: "Work stress & burnout" },
       { href: "/sleep-and-mood-check", label: "Sleep & Mood", sub: "Sleep-mood connection" },
       { href: "/mental-load-calculator", label: "Mental Load", sub: "Cognitive load check" },
@@ -83,10 +83,10 @@ const CATEGORIES: Category[] = [
       { href: "/cognitive-distortion-identifier", label: "Thought Patterns", sub: "CBT distortion identifier" },
       { href: "/safety-plan", label: "Safety Plan", sub: "Crisis safety planning tool" },
       { href: "/cbt-thought-record", label: "Thought Record", sub: "CBT thought diary worksheet" },
-      { href: "/worry-time-scheduler", label: "Worry Time", sub: "CBT worry postponement" },
+      { href: "/worry-time-scheduler", label: "Worry Time Scheduler", sub: "CBT worry postponement" },
       { href: "/values-card-sort", label: "Values Card Sort", sub: "Personal values exercise" },
-      { href: "/dbt-crisis-skills", label: "DBT Skills Cards", sub: "Crisis survival skills" },
-      { href: "/attachment-style-quiz", label: "Attachment Style", sub: "ECR-R relationship quiz" },
+      { href: "/dbt-crisis-skills", label: "DBT Crisis Skills", sub: "Crisis survival skills" },
+      { href: "/attachment-style-quiz", label: "ECR-R info", sub: "Commercial-use boundary" },
       { href: "/big-five-personality-test", label: "Big Five", sub: "IPIP-NEO-50 personality" },
     ],
   },

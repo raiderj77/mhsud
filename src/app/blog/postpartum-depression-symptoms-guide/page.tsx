@@ -172,7 +172,7 @@ export default function PostpartumDepressionGuidePage() {
               Screening is one of the most important steps in identifying postpartum depression early. ACOG recommends that all women be screened for depression at least once during the perinatal period using a validated tool.
             </p>
             <p>
-              The <Link href="/postpartum-depression-test" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools postpartum depression screening</Link> is free, private, and takes under five minutes. Your answers are scored entirely in your browser and are never stored or transmitted. The screening is based on clinically validated questions that assess the severity of depressive symptoms in the perinatal period.
+              The <Link href="/postpartum-depression-test" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools postpartum depression screening</Link> is free, private, and takes under five minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. The screening is based on clinically validated questions that assess the severity of depressive symptoms in the perinatal period.
             </p>
             <p>
               A screening result is not a diagnosis. It is a starting point, a structured way to understand what you are experiencing so you can have a more informed conversation with your healthcare provider. Many people find it helpful to bring their screening results to their first appointment.
@@ -229,7 +229,7 @@ export default function PostpartumDepressionGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to check in on how you&apos;re feeling?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and your answers never leave your browser. Takes under 5 minutes.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. Takes under 5 minutes.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/postpartum-depression-test" className="btn-primary text-sm">Take the Postpartum Depression Screening</Link>
               <Link href="/phq-9-depression-test" className="btn-primary text-sm">Take the PHQ-9 Depression Check</Link>

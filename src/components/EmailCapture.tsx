@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { isSensitiveRoute } from "@/lib/routePolicies";
+import { isOptionalServicesAllowedRoute } from "@/lib/routePolicies";
 
 export function EmailCapture() {
   const pathname = usePathname();
@@ -15,7 +15,7 @@ export function EmailCapture() {
   // Do not create a server-side email record in the context of a screening,
   // result, crisis, or other sensitive interactive route. This also prevents
   // temporal correlation between a health-tool request and a subscription.
-  if (isSensitiveRoute(pathname)) return null;
+  if (!isOptionalServicesAllowedRoute(pathname)) return null;
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();

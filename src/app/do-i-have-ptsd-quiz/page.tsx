@@ -58,7 +58,7 @@ const FAQ_DATA = [
   {
     question: "Is this quiz private?",
     answer:
-      "Yes. Your answers are scored entirely in your browser. Nothing is sent to any server, stored in a database, or connected to your identity. There is no account, no login, and no way for anyone to see your results.",
+      "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. No account is required. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function DoIHavePTSDQuizPage() {
             settings worldwide.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
+            Your answers and score are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -258,7 +258,7 @@ export default function DoIHavePTSDQuizPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This quiz is for educational and informational purposes only, it is not a diagnosis.
             Only a licensed healthcare professional can diagnose PTSD. Your responses are
-            processed entirely in your browser and are never stored or transmitted.
+            processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 

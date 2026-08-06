@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { PRIVATE_SHARE_NOTICE, sharePrivateToolLink } from "@/lib/privateToolSharing";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -290,12 +291,10 @@ export function TriggerWorksheetClient({ faqData }: Props) {
   const handlePrint = () => window.print();
 
   const handleShare = async () => {
-    const text = `I identified ${totalSelected} personal triggers across 6 categories using the Trigger Identification Worksheet on MindCheck Tools.`;
-    if (navigator.share) {
-      try { await navigator.share({ title: "Trigger Identification Worksheet", text, url: window.location.href }); } catch {}
-    } else {
-      try { await navigator.clipboard.writeText(`${text}\n${window.location.href}`); alert("Copied to clipboard!"); } catch {}
-    }
+    await sharePrivateToolLink({
+      toolName: "Trigger Identification Worksheet",
+      canonicalPath: "/trigger-identification-worksheet",
+    });
   };
 
   /* ── render ──────────────────────────────────────────── */
@@ -311,7 +310,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
         add your own, and get a personalized trigger profile with coping strategies.
       </p>
       <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
-        Your answers stay in your browser and are never stored or sent anywhere.
+        Your answers are processed locally and are not intentionally sent to MindCheck Tools. Copies, browser or device sync, backups, and shared-device access are outside this boundary.
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
@@ -542,7 +541,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                 Print Profile
               </button>
               <button onClick={handleShare} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
-                Share Profile
+                Share Tool Link
               </button>
               <button onClick={handleEdit} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
                 Edit Triggers
@@ -551,6 +550,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                 Start Over
               </button>
             </div>
+            <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 print:hidden">{PRIVATE_SHARE_NOTICE}</p>
           </section>
 
           {/* next step callout */}
@@ -726,7 +726,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           This tool runs in your browser. Its inputs are not sent to MindCheck Tools.
-          Your responses are private by design.
+          Your responses use local browser processing.
         </p>
       </footer>
     </div>

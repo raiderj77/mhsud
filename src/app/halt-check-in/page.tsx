@@ -13,11 +13,11 @@ export const metadata: Metadata = createMetadata({
     "Use a free 60-second HALT recovery check-in to notice hunger, anger, loneliness, and tiredness, then review practical next steps. Educational only.",
   keywords: [
     "HALT recovery tool", "HALT check in",
-    "relapse prevention tool", "am I at risk for relapse",
+    "recovery reflection tool", "recovery self check",
     "HALT acronym recovery", "hungry angry lonely tired",
     "daily recovery check in", "sobriety check in tool",
-    "relapse prevention check in", "HALT self assessment",
-    "recovery vulnerability check", "addiction recovery tools",
+    "HALT needs check in", "HALT self reflection",
+    "recovery support check in", "addiction recovery tools",
   ],
   openGraph: {
     title: "HALT Recovery Check-In: Hungry, Angry, Lonely, Tired",
@@ -28,11 +28,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQ_DATA = [
-  { question: "What does HALT stand for in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, Tired, four physical and emotional states that significantly increase vulnerability to relapse. The acronym is widely used in 12-step programs, SMART Recovery, and other recovery frameworks as a quick self-check. When you notice you are experiencing one or more of these states, it is a signal to pause and take care of your basic needs before making decisions. HALT is sometimes called the most important acronym in recovery because addressing these four states can prevent many relapses before they start." },
-  { question: "How do I use the HALT check-in?", answer: "Rate each of the four dimensions, Hungry, Angry, Lonely, Tired, on a scale of 1 to 5, where 1 means you are struggling in that area and 5 means you are doing well. The check-in takes less than 60 seconds. After rating all four, you will see a visual radar chart of your current state, an overall vulnerability level, and specific coping suggestions for any areas where you scored low. Many people in recovery do a HALT check-in once or twice a day, especially during early recovery or stressful periods." },
-  { question: "Why are hunger, anger, loneliness, and tiredness relapse triggers?", answer: "These four states compromise your ability to cope and make good decisions. Hunger causes low blood sugar, which impairs judgment and increases irritability. Anger and resentment build emotional pressure that substances once relieved. Loneliness removes the social support that is protective in recovery. Tiredness reduces willpower and emotional regulation. Research shows that basic physical and emotional needs must be met for people to maintain the cognitive resources needed for sustained behavior change. When multiple HALT factors are present simultaneously, vulnerability increases significantly." },
-  { question: "How often should I do a HALT check-in?", answer: "Many recovery programs recommend checking in with HALT at least once daily, often in the morning and evening. Some people check in whenever they notice cravings, feel off, or before making important decisions. During early recovery (the first 90 days), more frequent check-ins can be especially helpful. There is no wrong frequency. The goal is to build self-awareness so that you notice these vulnerability states before they lead to impulsive decisions. Over time, checking in with HALT becomes automatic, you will start recognizing these states without needing the tool." },
-  { question: "What should I do if I score low on multiple HALT dimensions?", answer: "If you score low (1-2) on multiple dimensions, that is an important signal to take immediate action. Start with the easiest one to fix, usually Hungry or Tired, since eating a meal or resting are concrete actions you can take right now. Then address the emotional dimensions: call your sponsor, a supportive friend, or attend a meeting if you are feeling lonely or angry. Multiple low scores mean your vulnerability is elevated, so this is not the time to test your willpower or make major decisions. Take care of your basic needs first, and the cravings or difficult feelings often become more manageable." },
+  { question: "What does HALT stand for in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, Tired. SAMHSA presents it as a memory aid for noticing important needs and choosing an appropriate response. It is not a validated relapse-risk scale, and this check-in cannot predict or prevent relapse." },
+  { question: "How do I use the HALT check-in?", answer: "Rate hungry, angry, lonely, and tired from 1 to 5 as a moment-in-time reflection. The page shows the four ratings separately and offers optional ideas for needs you marked as difficult. The ratings and suggestions are educational, not a clinical score or treatment recommendation." },
+  { question: "Does research show that HALT predicts relapse?", answer: "No validated HALT cutoff or composite relapse-risk score was identified. A 2026 peer-reviewed mini-review describes direct scientific research on HALT as scant and calls for more evaluation. SAMHSA includes HALT as a counseling memory aid, which is narrower than claiming it predicts an individual's relapse risk." },
+  { question: "How often should I do a HALT check-in?", answer: "There is no validated schedule. Some people use the mnemonic when stressed or experiencing a craving; others may not find it useful. Choose a frequency that supports reflection without replacing professional care or a recovery plan." },
+  { question: "What should I do if I rate multiple needs as difficult?", answer: "The ratings do not indicate a risk category. You can consider one practical need and contact a trusted support person or qualified professional. If you are experiencing cravings, thoughts of using, or a crisis, use professional or crisis support rather than relying on this check-in." },
   { question: "Is the HALT check-in a clinical assessment?", answer: "No. The HALT check-in is a self-reflection tool, not a validated clinical instrument. It is based on the HALT concept widely used in recovery programs, but this specific tool was created for educational and self-awareness purposes. It is not a substitute for professional assessment, and it cannot predict or prevent relapse on its own. If you are experiencing cravings, thoughts of using, or are in crisis, please contact SAMHSA at 1-800-662-4357 or call/text 988 for immediate support. The HALT check-in is most useful as one part of a broader recovery practice that includes professional support." },
 ];
 
@@ -45,10 +45,10 @@ export default function HALTPage() {
           __html: JSON.stringify(
             toolPageJsonLd({
               name: "HALT Check-In Tool",
-              description: "A free daily recovery check-in tool based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each dimension on a 1-5 scale and see your current vulnerability level with personalized coping suggestions.",
+              description: "An educational reflection based on the HALT acronym (Hungry, Angry, Lonely, Tired). Rate each need separately and review optional ideas; not a validated risk score.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: "2026-08-02",
+              dateModified: "2026-08-05",
             })
           ),
         }}
@@ -72,18 +72,18 @@ export default function HALTPage() {
       />
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: August 2, 2026
+        Last updated: August 5, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="An educational check-in for four states used in recovery reflection: hungry, angry, lonely, and tired."
           who="Adults in recovery who want to pause and notice basic physical or emotional needs before choosing a next step."
           bottomLine="HALT can support reflection, but it cannot predict or prevent relapse and is not a clinical assessment, treatment plan, or emergency service."
-          lastUpdated="2026-08-02"
+          lastUpdated="2026-08-05"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-08-02" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-08-05" />
       </div>
 
 <HALTClient faqData={FAQ_DATA} />

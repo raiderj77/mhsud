@@ -1,114 +1,204 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
+import Link from "next/link";
 import AnswerBlock from "@/components/AnswerBlock";
-import { AQ10Client } from "./AQ10Client";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/aq-10-autism-screening`;
+const PAGE_PATH = "/aq-10-autism-screening";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const ARC_URL = "https://www.autismresearchcentre.com/tests/autism-spectrum-quotient-10-items-aq-10-adult/";
+const VALIDATION_URL = "https://pubmed.ncbi.nlm.nih.gov/22265366/";
 
 export const metadata: Metadata = createMetadata({
-  path: "/aq-10-autism-screening",
-  title: "AQ-10 Autism Spectrum Screening",
+  path: PAGE_PATH,
+  title: "Adult AQ-10 Autism Screening Information",
   description:
-    "Take the free AQ-10 autism spectrum screening. 10 questions, 2 minutes. Validated screener for autism traits in adults. Private, instant results.",
+    "Educational information about the Adult AQ-10, its evidence, diagnostic limits, and commercial electronic-use boundary. No questionnaire or scoring.",
   keywords: [
-    "aq-10", "autism test", "autism screening", "autism spectrum test",
-    "aq-10 questionnaire", "do i have autism", "autism quiz",
-    "autism self-test", "adult autism screening", "autism spectrum quotient",
-    "asperger test", "autism traits test", "free autism test",
-    "autism assessment", "neurodivergent screening",
+    "AQ-10 information",
+    "Adult AQ-10 autism screening",
+    "Autism Spectrum Quotient information",
+    "AQ-10 licence",
   ],
   openGraph: {
-    title: "AQ-10 Autism Spectrum Screening",
-    description: "Take the free AQ-10 autism spectrum screening. 10 questions, 2 minutes. Validated screener for autism traits in adults.",
-    url: TOOL_URL,
+    title: "Adult AQ-10 Autism Screening Information",
+    description:
+      "Evidence and licensing information about the Adult AQ-10, without questionnaire content, scoring, or a personal result.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What is autism spectrum condition?", answer: "Autism spectrum condition (also called autism spectrum disorder or ASD) is a neurodevelopmental difference that affects how a person perceives and interacts with the world. It involves differences in social communication, sensory processing, and patterns of behavior or interests. Autism is a spectrum, meaning it presents very differently from person to person. Some autistic people need significant daily support, while others live independently and may not receive identification until adulthood. Autism is not an illness or something that needs to be cured, it is a natural variation in how human brains develop and function." },
-  { question: "Can adults be autistic without knowing it?", answer: "Yes. Many autistic adults were not identified in childhood, particularly those who learned to mask or camouflage their autistic traits to fit social expectations. This is especially common among women, people of color, and those with high intellectual ability. Late identification is increasingly recognized, many adults seek assessment in their 30s, 40s, or later after learning more about autism. Common experiences that prompt adults to seek assessment include lifelong social difficulties, sensory sensitivities, burnout from masking, or recognizing autistic traits after a child or family member is identified." },
-  { question: "What does the AQ-10 measure?", answer: "The AQ-10 measures traits associated with the autism spectrum across several domains: social skills, attention switching, attention to detail, communication, and imagination. It asks about preferences and tendencies in everyday situations. A score of 6 or above suggests that autistic traits are present at a level where further professional assessment may be helpful. The AQ-10 is the abbreviated version of the full 50-item Autism Spectrum Quotient (AQ), designed as a quick screening tool recommended by NICE (National Institute for Health and Care Excellence) guidelines." },
-  { question: "Is the AQ-10 accurate?", answer: "The AQ-10 was validated by Allison, Auyeung, and Baron-Cohen (2012) and is recommended by NICE guidelines as a first-step screening tool for adults. It has good sensitivity (identifying most autistic individuals) and reasonable specificity (correctly identifying most non-autistic individuals). However, like all screening tools, it can produce false positives and false negatives. People who have learned to mask autistic traits may score lower than expected. The AQ-10 is a screening tool, not a comprehensive assessment, a positive screen should always be followed by a full evaluation with a qualified professional." },
-  { question: "What should I do after a positive AQ-10 screen?", answer: "A positive screen (score of 6 or above) means your responses are consistent with patterns commonly seen in autistic adults, and a comprehensive evaluation may be helpful. Good next steps include: speaking with your primary care provider and requesting a referral for autism assessment; contacting the Autism Society helpline (1-800-328-8476) for guidance on finding evaluators in your area; seeking a psychologist, psychiatrist, or neuropsychologist who specializes in adult autism assessment. A comprehensive assessment typically involves a detailed developmental history, standardized testing, and clinical interview. Many adults find that understanding themselves through the lens of autism, regardless of formal identification, can be validating and helpful." },
-  { question: "What is the difference between autism and ADHD?", answer: "Autism and ADHD are both neurodevelopmental conditions, but they involve different core features. Autism primarily involves differences in social communication, sensory processing, and a tendency toward focused interests and routines. ADHD primarily involves differences in attention regulation, impulse control, and executive functioning. However, there is significant overlap, research suggests that 50-70% of autistic individuals also have ADHD traits, and many people are identified with both. The AQ-10 screens specifically for autism traits, while the ASRS screens for ADHD traits. If you relate to both sets of experiences, exploring both may be worthwhile." },
-  { question: "Where can I get evaluated for autism as an adult?", answer: "Adult autism assessment is typically conducted by psychologists, psychiatrists, or neuropsychologists who specialize in neurodevelopmental conditions. Start by asking your primary care provider for a referral. The Autism Society helpline (1-800-328-8476) can help locate specialists in your area. University-affiliated autism research centers often offer adult assessments. Some practitioners offer telehealth assessments. Wait times can be long (months to over a year in some areas), so it's worth getting on a waiting list early. A comprehensive evaluation typically involves clinical interview, developmental history, standardized measures, and sometimes input from family members. The cost varies; some insurance plans cover autism assessment for adults." },
+  {
+    question: "What is the Adult AQ-10?",
+    answer:
+      "The Adult AQ-10 is a brief autism-trait screening instrument developed by the University of Cambridge Autism Research Centre. It can inform a decision about fuller assessment, but it cannot diagnose or rule out autism.",
+  },
+  {
+    question: "Why is there no AQ-10 questionnaire on this page?",
+    answer:
+      "The Autism Research Centre permits specified non-profit research and educational uses but says commercial and information-technology uses may require a licence and fees. MindCheck Tools has no licence covering this public website on file, so this route is informational only.",
+  },
+  {
+    question: "Can a brief online screen identify autism?",
+    answer:
+      "No. Autism assessment considers development, current experiences, functioning, strengths, support needs, and possible overlapping explanations. A qualified professional can discuss whether a comprehensive assessment is appropriate.",
+  },
+  {
+    question: "Is the PHQ-4 an alternative autism screen?",
+    answer:
+      "No. The PHQ-4 addresses depression and anxiety symptoms, not autism. It is linked only as a separately permitted option for those different concerns.",
+  },
 ];
 
-export default function AQ10Page() {
+const PAGE_JSON_LD = {
+  ...medicalWebPageJsonLd({
+    name: "Adult AQ-10 Autism Screening Information",
+    description:
+      "Educational information about Adult AQ-10 validation, diagnostic limits, and commercial electronic-use licensing.",
+    url: PAGE_URL,
+    lastReviewed: "2026-08-02",
+  }),
+  mainEntity: {
+    "@type": "Thing",
+    name: "Adult Autism Spectrum Quotient, 10-item form",
+  },
+};
+
+export default function AQ10InformationPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "AQ-10 Autism Spectrum Screening Questionnaire",
-              description: "A free online implementation of the AQ-10 (Autism Spectrum Quotient - 10 item), a validated screening tool for autism spectrum traits in adults developed by Simon Baron-Cohen et al. at the Autism Research Centre, University of Cambridge.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
-            }),
-    }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PAGE_JSON_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "AQ-10 Autism Screening", url: TOOL_URL },
-            ])
+              { name: "AQ-10 Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="flex flex-wrap gap-2 mb-5" aria-label="Page status">
+          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Educational information</span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">No questionnaire</span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">No scoring</span>
+        </div>
+
+        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          Adult AQ-10 Autism Screening Information
+        </h1>
+        <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
+          MindCheck Tools does not reproduce, administer, score, or interpret the Adult AQ-10 on this public website. This page explains the evidence, limitations, and licensing boundary without creating a personal autism result.
+        </p>
+
         <AnswerBlock
-          what="The AQ-10, a brief 10-question autism screening tool developed by the Autism Research Centre at Cambridge University."
-          who="Adults who want a quick initial screening for autism spectrum traits before seeking a comprehensive evaluation."
-          bottomLine="The AQ-10 is a brief screener, not a diagnosis, a full evaluation by a specialist is needed for autism diagnosis. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="An educational overview of the Adult AQ-10 evidence base and the licensing boundary for commercial or information-technology use."
+          who="Adults seeking reliable information about the instrument or considering whether to ask a qualified professional about autism assessment."
+          bottomLine="This page cannot identify autism and provides no personal result. MindCheck Tools has no public commercial electronic-use licence for the AQ-10 on file."
+          lastUpdated="2026-08-05"
         />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
-        <ToolReviewerBio lastReviewed="August 2, 2026" />
-      </div>
-      <AQ10Client faqData={FAQ_DATA} />
+
+        <section className="mt-8 rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5 sm:p-6" aria-labelledby="aq-rights-boundary">
+          <h2 id="aq-rights-boundary" className="font-serif text-xl font-bold text-amber-900 dark:text-amber-200 mb-3">Why the public self-check is unavailable</h2>
+          <div className="space-y-3 text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+            <p>
+              The Autism Research Centre publishes the Adult AQ-10 and its use conditions. The centre permits specified non-profit research and educational use, while for-profit, commercial, and information-technology uses may require a licence and fees.
+            </p>
+            <p>
+              A public website with a potential commercial context should not assume that a non-profit permission applies. MindCheck Tools has no licence decision covering public electronic administration, scoring, and result delivery on file, so this page contains no instrument content or result mechanics.
+            </p>
+            <a href={ARC_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2">
+              Read the Autism Research Centre terms and instrument page
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="about-aq">
+          <h2 id="about-aq" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">What the evidence can and cannot establish</h2>
+          <div className="space-y-4 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            <p>
+              The validation study examined whether brief forms could help identify people who may benefit from fuller assessment. Group-level performance does not confirm or exclude autism for one person, and self-report results can be shaped by context, interpretation, masking, and overlapping conditions.
+            </p>
+            <p>
+              A comprehensive autism assessment may include developmental history, current experiences, strengths, support needs, and input from a clinician experienced in adult neurodevelopmental assessment. Seeking information does not obligate anyone to pursue a diagnosis. The site reviewer&apos;s stated credential is not specialist autism-assessment qualification.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="aq-next-steps">
+          <h2 id="aq-next-steps" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">Next steps and non-equivalent resources</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
+            MindCheck Tools currently offers no equivalent autism questionnaire with a verified public commercial electronic-use licence. These links provide professional-conversation guidance or address different concerns.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+              <h3 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">Prepare for an assessment conversation</h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300">A general guide for organizing questions and asking about an appropriate referral.</p>
+            </Link>
+            <Link href="/phq-4-anxiety-depression-screen" className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+              <h3 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">PHQ-4 mood and anxiety screen</h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300">A permitted screen for different symptoms. It does not assess autism or neurodevelopment.</p>
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/20 p-5" aria-labelledby="aq-privacy">
+          <h2 id="aq-privacy" className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">Privacy on this page</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            This page asks no trait questions, accepts no answers, calculates no score, and creates no assessment result. Review the <Link href="/privacy" className="font-semibold underline">privacy policy</Link> before using any other self-check, especially on a shared device.
+          </p>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-crisis-200 dark:border-crisis-800 bg-crisis-50 dark:bg-crisis-950/20 p-5" aria-labelledby="aq-urgent-help">
+          <h2 id="aq-urgent-help" className="font-serif text-xl font-bold text-crisis-900 dark:text-crisis-200 mb-2">Immediate support</h2>
+          <p className="text-sm text-crisis-900 dark:text-crisis-200 leading-relaxed mb-4">
+            In the United States, call or text 988 if you may act on thoughts of self-harm or cannot stay safe, or call 911 for immediate danger. Outside the United States, use local emergency or crisis services. This information page is not emergency care.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:988" className="inline-flex min-h-11 items-center rounded-lg bg-crisis-700 px-4 py-2 text-sm font-semibold text-white hover:bg-crisis-800">Call 988</a>
+            <a href="sms:988" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Text 988</a>
+            <a href="tel:911" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Call 911</a>
+            <Link href="/crisis-resources" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200 underline">U.S. and international crisis resources</Link>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="aq-sources">
+          <h2 id="aq-sources" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources</h2>
+          <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <li><a href={ARC_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">University of Cambridge Autism Research Centre: Adult AQ-10 instrument and use conditions</a>.</li>
+            <li>Allison, Auyeung, and Baron-Cohen. <a href={VALIDATION_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">Toward brief red flags for autism screening: the short Autism Spectrum Quotient forms</a>.</li>
+            <li><a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd" target="_blank" rel="noopener noreferrer" className="font-semibold underline">National Institute of Mental Health: Autism Spectrum Disorder</a>.</li>
+          </ul>
+        </section>
+
+        <div className="mt-10">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
+
+        <section className="mt-8 border-t border-sand-200 dark:border-neutral-700 pt-6" aria-labelledby="aq-faq">
+          <h2 id="aq-faq" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Frequently asked questions</h2>
+          <div className="space-y-5">
+            {FAQ_DATA.map((item) => (
+              <div key={item.question}>
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">{item.question}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </article>
     </>
   );
 }

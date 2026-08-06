@@ -10,7 +10,7 @@ import {
   OPEN_CONSENT_EVENT,
   type PrivacyConsent,
 } from "@/lib/privacyConsent";
-import { isSensitiveRoute } from "@/lib/routePolicies";
+import { isOptionalServicesAllowedRoute } from "@/lib/routePolicies";
 
 const MEASUREMENT_ID = "G-XKHQN1NJ2Z";
 const ANALYTICS_SCRIPT_ID = "consented-google-analytics";
@@ -18,6 +18,20 @@ const ADS_SCRIPT_ID = "consented-google-adsense";
 const ADSENSE_CLIENT = "ca-pub-7171402107622932";
 const SAFE_CAMPAIGN_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
 const SAFE_CAMPAIGN_VALUE = /^[a-zA-Z0-9._~-]{1,80}$/;
+const FOCUSABLE_SELECTOR = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled]):not([type='hidden'])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])",
+].join(",");
+
+function focusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
+    (element) => !element.hidden && element.getAttribute("aria-hidden") !== "true",
+  );
+}
 
 function globalPrivacyControlIsActive(): boolean {
   return Boolean(
@@ -153,25 +167,26 @@ type ConsentAnalyticsProps = { adsenseEnabled: boolean };
 
 export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const pathname = usePathname();
-  const sensitive = isSensitiveRoute(pathname);
+  const optionalServicesAllowed = isOptionalServicesAllowedRoute(pathname);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
   const [gpcActive, setGpcActive] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [advertising, setAdvertising] = useState(false);
   const dialogRef = useRef<HTMLElement>(null);
+  const modalRootRef = useRef<HTMLDivElement>(null);
 
   const applyConsent = useCallback((choice: PrivacyConsent, persist = true) => {
     const storedChoice = globalPrivacyControlIsActive()
       ? { version: 2 as const, analytics: false, advertising: false }
       : { ...choice, advertising: adsenseEnabled && choice.advertising };
-    const effectiveChoice = sensitive
-      ? { version: 2 as const, analytics: false, advertising: false }
-      : storedChoice;
+    const effectiveChoice = optionalServicesAllowed
+      ? storedChoice
+      : { version: 2 as const, analytics: false, advertising: false };
 
     window.__mindcheckConsent = effectiveChoice;
     updateGoogleConsent(effectiveChoice);
-    if (sensitive) removeOptionalServiceScripts();
+    if (!optionalServicesAllowed) removeOptionalServiceScripts();
     else if (effectiveChoice.analytics) loadGoogleAnalytics(pathname);
     else clearGoogleAnalytics();
     if (effectiveChoice.advertising) loadNonPersonalizedAds();
@@ -182,7 +197,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: effectiveChoice }));
     setAnalytics(effectiveChoice.analytics);
     setAdvertising(effectiveChoice.advertising);
-  }, [adsenseEnabled, pathname, sensitive]);
+  }, [adsenseEnabled, optionalServicesAllowed, pathname]);
 
   useEffect(() => {
     const gpc = globalPrivacyControlIsActive();
@@ -195,10 +210,13 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
       applyConsent(stored, false);
     } else {
       applyConsent({ version: 2, analytics: false, advertising: false }, false);
-      setOpen(true);
+      // Do not interrupt a health-topic visit with consent choices for services
+      // that cannot run there. The dialog appears on the homepage, or when a
+      // visitor explicitly opens Privacy Choices from the footer.
+      setOpen(optionalServicesAllowed);
     }
     setReady(true);
-  }, [applyConsent]);
+  }, [applyConsent, optionalServicesAllowed]);
 
   useEffect(() => {
     const showChoices = () => setOpen(true);
@@ -206,21 +224,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     return () => window.removeEventListener(OPEN_CONSENT_EVENT, showChoices);
   }, []);
 
-  useEffect(() => {
-    if (ready && open) dialogRef.current?.focus();
-  }, [open, ready]);
-
-  useEffect(() => {
-    if (sensitive) {
-      removeOptionalServiceScripts();
-      return;
-    }
-    if (ready && window.__mindcheckConsent?.analytics) loadGoogleAnalytics(pathname);
-  }, [pathname, ready, sensitive]);
-
-  if (!ready || !open) return null;
-
-  const save = (choice: PrivacyConsent) => {
+  const save = useCallback((choice: PrivacyConsent) => {
     const previous = window.__mindcheckConsent;
     const withdrewOptionalService = Boolean(
       previous &&
@@ -235,10 +239,120 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     // withdrawal as well so a previously executed analytics or advertising
     // runtime cannot remain active in the current document.
     if (withdrewOptionalService) window.location.reload();
-  };
+  }, [applyConsent]);
+
+  useEffect(() => {
+    if (!ready || !open) return;
+
+    const dialog = dialogRef.current;
+    const modalRoot = modalRootRef.current;
+    if (!dialog || !modalRoot) return;
+
+    const previouslyFocused = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
+    const backgroundState = new Map<HTMLElement, { inert: boolean; ariaHidden: string | null }>();
+    const previousOverflow = document.body.style.overflow;
+
+    const makeInert = (element: HTMLElement) => {
+      if (element === modalRoot || modalRoot.contains(element) || element.contains(modalRoot)) return;
+      if (!backgroundState.has(element)) {
+        backgroundState.set(element, {
+          inert: element.inert,
+          ariaHidden: element.getAttribute("aria-hidden"),
+        });
+      }
+      element.inert = true;
+      element.setAttribute("aria-hidden", "true");
+    };
+
+    // Inert every sibling along the modal's ancestor path. This keeps the
+    // isolation correct even if a framework wrapper is added around the modal.
+    let activeBranch: HTMLElement = modalRoot;
+    while (activeBranch.parentElement && activeBranch.parentElement !== document.body) {
+      for (const sibling of activeBranch.parentElement.children) {
+        if (sibling instanceof HTMLElement && sibling !== activeBranch) makeInert(sibling);
+      }
+      activeBranch = activeBranch.parentElement;
+    }
+    for (const sibling of document.body.children) {
+      if (sibling instanceof HTMLElement && sibling !== activeBranch) makeInert(sibling);
+    }
+
+    document.body.style.overflow = "hidden";
+
+    const observer = new MutationObserver((records) => {
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          if (node instanceof HTMLElement) makeInert(node);
+        }
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        event.stopPropagation();
+        save({ version: 2, analytics: false, advertising: false });
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const focusable = focusableElements(dialog);
+      if (focusable.length === 0) {
+        event.preventDefault();
+        dialog.focus({ preventScroll: true });
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const current = document.activeElement;
+      if (event.shiftKey && (current === first || current === dialog || !dialog.contains(current))) {
+        event.preventDefault();
+        last.focus({ preventScroll: true });
+      } else if (!event.shiftKey && (current === last || current === dialog || !dialog.contains(current))) {
+        event.preventDefault();
+        first.focus({ preventScroll: true });
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown, true);
+    const defaultAction = dialog.querySelector<HTMLElement>("[data-consent-default-action]");
+    (defaultAction ?? focusableElements(dialog)[0] ?? dialog).focus({ preventScroll: true });
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("keydown", handleKeyDown, true);
+      document.body.style.overflow = previousOverflow;
+      for (const [element, state] of backgroundState) {
+        element.inert = state.inert;
+        if (state.ariaHidden === null) element.removeAttribute("aria-hidden");
+        else element.setAttribute("aria-hidden", state.ariaHidden);
+      }
+      if (previouslyFocused && previouslyFocused !== document.body && previouslyFocused.isConnected) {
+        previouslyFocused.focus({ preventScroll: true });
+      }
+    };
+  }, [open, ready, save]);
+
+  useEffect(() => {
+    if (!optionalServicesAllowed) {
+      removeOptionalServiceScripts();
+      return;
+    }
+    if (ready && window.__mindcheckConsent?.analytics) loadGoogleAnalytics(pathname);
+  }, [optionalServicesAllowed, pathname, ready]);
+
+  if (!ready || !open) return null;
 
   return (
-    <div className="fixed inset-0 z-[120] flex items-end bg-neutral-950/45 p-3 sm:items-center sm:justify-center" role="presentation">
+    <div
+      ref={modalRootRef}
+      className="fixed inset-0 z-[120] flex items-end bg-neutral-950/45 p-3 sm:items-center sm:justify-center"
+      role="presentation"
+    >
       <section
         ref={dialogRef}
         role="dialog"
@@ -252,7 +366,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
           Your privacy choices
         </h2>
         <p id="privacy-choices-description" className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-          Optional services stay off until you choose. Screening answers, scores, and entries in private tools are never sent to analytics or advertising.
+          Optional services stay off until you choose. They are permitted only on the topic-neutral homepage; screening, result, crisis, condition-specific, privacy, youth, and rights-limited pages remain tag-free.
         </p>
 
         {gpcActive ? (
@@ -269,8 +383,8 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
                 className="mt-1 h-4 w-4 accent-sage-600"
               />
               <span>
-                <span className="block text-sm font-semibold text-neutral-900 dark:text-neutral-100">Privacy-limited analytics</span>
-                <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Shares a sanitized public-page path, title, approximate region, device/browser details, and analytics identifier with Google. A page path can reveal the mental-health or substance-use topic you chose to view. URL inputs, questionnaire answers, and results are excluded.</span>
+                <span className="block text-sm font-semibold text-neutral-900 dark:text-neutral-100">Homepage-only analytics</span>
+                <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">On the homepage only, shares the homepage path, title, approximate region, device/browser details, and an analytics identifier with Google. Questionnaire destinations, answers, scores, results, and health-topic paths are excluded.</span>
               </span>
             </label>
 
@@ -300,6 +414,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
             <button
               type="button"
               onClick={() => save({ version: 2, analytics: false, advertising: false })}
+              data-consent-default-action
               className="btn-secondary text-sm"
             >
               Continue without optional services
@@ -308,6 +423,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
           <button
             type="button"
             onClick={() => save({ version: 2, analytics, advertising })}
+            data-consent-default-action={gpcActive ? "true" : undefined}
             className="btn-primary text-sm"
           >
             {gpcActive ? "Close" : "Save choices"}

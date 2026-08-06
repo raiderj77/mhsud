@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "Is a sobriety calculator the same as a sobriety app?",
     answer:
-      "A sobriety calculator is typically a simple tool that counts days from your sobriety date. Full sobriety apps often include additional features like daily check-ins, community support, mood tracking, and milestone badges. The MindCheck Tools sobriety calculator is a free, private, no-account-needed counter that runs entirely in your browser.",
+      "A sobriety calculator is typically a simple tool that counts days from your sobriety date. Full sobriety apps often include additional features like daily check-ins, community support, mood tracking, and milestone badges. The MindCheck Tools sobriety calculator is a free, private, no-account-needed counter. Its inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function SobrietyCalculatorGuidePage() {
           <section>
             <h2>How the MindCheck Tools sobriety calculator works</h2>
             <p>
-              The <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools sobriety calculator</Link> is free, private, and requires no account. Enter your sobriety date and instantly see your total days, weeks, and months sober. Your data stays in your browser and is never stored or transmitted.
+              The <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools sobriety calculator</Link> is free, private, and requires no account. Enter your sobriety date and instantly see your total days, weeks, and months sober. Inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Unlike app-based trackers that require downloads and accounts, this is a simple, focused tool designed to answer one question: how long have I been sober? You can bookmark it and return anytime to check your count.

@@ -4,13 +4,13 @@ import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 const PAGE_URL = `${SITE_URL}/clinical-evidence`;
-const TODAY = "2026-08-02";
+const TODAY = "2026-08-05";
 
 export const metadata: Metadata = createMetadata({
   path: "/clinical-evidence",
-  title: "Clinical Evidence for Published Screening Instruments",
+  title: "Clinical Evidence and Rights Status for Published Instruments",
   description:
-    "Evidence directory for the published screening instruments documented by MindCheck Tools, including source studies, validation populations, reported accuracy, thresholds, and reuse notes.",
+    "Evidence and rights-status directory for published instruments documented by MindCheck Tools, including primary sources, validation populations, reuse boundaries, and whether a page is interactive or information-only.",
   keywords: [
     "clinical evidence",
     "validated screening instruments",
@@ -22,9 +22,9 @@ export const metadata: Metadata = createMetadata({
     "mental health screening evidence",
   ],
   openGraph: {
-    title: "Clinical Evidence for Published Screening Instruments",
+    title: "Clinical Evidence and Rights Status for Published Instruments",
     description:
-      "Source studies and validation details for the published screening instruments documented by MindCheck Tools.",
+      "Primary sources, validation context, and current public-site availability for published instruments documented by MindCheck Tools.",
     url: PAGE_URL,
     type: "article",
   },
@@ -40,6 +40,7 @@ type Instrument = {
   journal: string;
   pubmedUrl: string | null;
   pubmedId: string | null;
+  sourceLabel?: string;
   population: string;
   items: string;
   scoringRange: string;
@@ -47,9 +48,26 @@ type Instrument = {
   sensitivity: string;
   specificity: string;
   license: string;
-  citationStatus: "Verified on PubMed" | "Source verified (book, not on PubMed)";
+  citationStatus: "Verified on PubMed" | "Source verified (book, not on PubMed)" | "Primary source verified";
   notes?: string;
 };
+
+const INFORMATION_ONLY_SLUGS = new Set([
+  "cage-aid",
+  "crafft",
+  "scoff",
+  "ace",
+  "dass-21",
+  "msi-bpd",
+  "aq-10",
+  "spin",
+  "holmes-rahe",
+  "ucla-loneliness",
+  "ecr-r",
+  "brief-resilience",
+  "athens-insomnia",
+  "who-assist",
+]);
 
 const INSTRUMENTS: Instrument[] = [
   {
@@ -163,7 +181,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "1 or more is sometimes used to indicate need for further assessment; 2 or more is the more specific cut.",
     sensitivity: "Reported as more sensitive than the original CAGE; specific values reported in the paper.",
     specificity: "Reported as somewhat less specific than the original CAGE.",
-    license: "Free for clinical use.",
+    license: "Information only on this site. A University of Washington clinical source page is not a transferable grant for public commercial electronic administration; no rights-holder grant covering this implementation is on file.",
     citationStatus: "Verified on PubMed",
     notes: "Adapted from the original CAGE questionnaire (Ewing JA, JAMA 1984, PMID 6471323).",
   },
@@ -200,7 +218,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "2 or more indicates a positive screen.",
     sensitivity: "0.76 at the cut of 2 in the 2002 validation cohort.",
     specificity: "0.94 at the cut of 2 in the 2002 validation cohort.",
-    license: "Free for clinical use; copyright Children's Hospital Boston / John R. Knight, MD.",
+    license: "Information only on this site. Boston Children's Hospital requires submission of the intended reproduction and an official approval letter; no approval for this public electronic implementation is on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -219,7 +237,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "2 or more indicates a positive screen warranting further assessment.",
     sensitivity: "Originally reported at 100% for anorexia and bulimia in the development sample; has been lower in subsequent population samples. Refer to follow-up validation papers.",
     specificity: "Originally reported at 87.5%; varies in follow-up studies.",
-    license: "Free for clinical use; published in BMJ.",
+    license: "Information only on this site. Publication in BMJ establishes an evidence source, not a public commercial-web reproduction grant; current permission for this implementation is not on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -277,7 +295,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "An ACE score of 4 or more is frequently cited as a marker of substantially elevated risk for adult health problems, but this is a research-derived risk indicator, not a diagnostic threshold.",
     sensitivity: "Not applicable. The ACE questionnaire is a retrospective risk-factor inventory, not a diagnostic screening test.",
     specificity: "Not applicable.",
-    license: "Public domain. The ACE Questionnaire is freely distributed by the U.S. Centers for Disease Control and Prevention and the Felitti / Anda research collaboration.",
+    license: "Information only on this site. CDC identifies specific CDC-Kaiser questionnaire versions as not copyrighted and without a use fee, but the former simplified site form was not verified as an exact published version.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -292,11 +310,11 @@ const INSTRUMENTS: Instrument[] = [
     pubmedId: "16004657",
     population: "1,794 adults in a UK general-population sample.",
     items: "21 (7 per subscale: Depression, Anxiety, Stress)",
-    scoringRange: "0 to 63 total; subscale scores 0 to 21, multiplied by 2 for comparability with the original 42-item DASS.",
-    threshold: "Severity bands per the Lovibond DASS manual (Normal, Mild, Moderate, Severe, Extremely Severe).",
+    scoringRange: "Three separate dimensional subscales; scoring mechanics are not reproduced because this public site does not administer or score the DASS-21.",
+    threshold: "The official manual contains contextual severity labels; this site does not reproduce them or provide respondent-facing DASS interpretation.",
     sensitivity: "DASS-21 is psychometric rather than diagnostic; sens/spec values vary by comparator and threshold.",
     specificity: "Refer to the original paper and the DASS manual.",
-    license: "Free for research and clinical use; copyright the Psychology Foundation of Australia / Lovibond.",
+    license: "The form is public domain, but current UNSW guidance prohibits administration on a website or app open to the public and prohibits returning automated scores or interpretations to respondents. The linked route is informational only.",
     citationStatus: "Verified on PubMed",
     notes: "Original DASS-42: Lovibond SH & Lovibond PF, Behaviour Research and Therapy 1995, PMID 7726811.",
   },
@@ -333,7 +351,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "7 or more is the recommended cut.",
     sensitivity: "0.81 in the full sample at cut of 7; 0.90 in subjects 25 and younger.",
     specificity: "0.85 in the full sample at cut of 7; 0.93 in subjects 25 and younger.",
-    license: "Free for clinical use; copyright McLean Hospital / Zanarini.",
+    license: "Information only on this site. The validation publication is not a reuse licence, and no authoritative grant for public electronic reproduction, scoring, or commercial use is on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -388,7 +406,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "6 or more on the Adult, Adolescent, and Child AQ-10 forms.",
     sensitivity: "0.88 (Adult), 0.93 (Adolescent), 0.95 (Child) at the cut of 6.",
     specificity: "0.91 (Adult), 0.95 (Adolescent), 0.97 (Child) at the cut of 6.",
-    license: "Free for clinical use; copyright Autism Research Centre, University of Cambridge.",
+    license: "Information only on this site. The Autism Research Centre permits specified non-profit research and educational uses; commercial and information-technology uses may require a licence and fees, and no applicable licence is on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -407,7 +425,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "19 or higher distinguishes social phobia from controls in the original validation sample.",
     sensitivity: "Reported in the original paper; varies by threshold.",
     specificity: "Reported in the original paper; varies by threshold.",
-    license: "Copyright Connor & Davidson; free for clinical and research use.",
+    license: "Information only on this site. Current rights information directs prospective users to the copyright holder for permission and a possible user fee; no public electronic-use licence is on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -464,7 +482,7 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "Under 150 LCUs commonly considered low risk; 150 to 299 moderate; 300 or more major life crisis.",
     sensitivity: "Not applicable. The SRRS is a life-event index, not a diagnostic screen.",
     specificity: "Not applicable.",
-    license: "Free for educational and clinical use; widely reproduced in the public literature.",
+    license: "Information only on this site. The primary publication does not grant public-web reproduction rights, and no current rights-holder permission covering electronic administration, calculation, or commercial use is on file.",
     citationStatus: "Verified on PubMed",
   },
   {
@@ -503,9 +521,87 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "There is no formal diagnostic cutoff; higher scores indicate greater self-reported loneliness. Studies often dichotomize at the population mean for descriptive comparisons.",
     sensitivity: "Not applicable. Trait loneliness measure, not a diagnostic test.",
     specificity: "Not applicable.",
-    license: "Free for research use; copyright D. Russell / UCLA.",
+    license: "Information only on this site. The author-controlled resource permits specified nonprofit research use; no written grant covering this public consumer website and commercial context is on file.",
     citationStatus: "Verified on PubMed",
     notes: "Original 1978 UCLA Loneliness Scale: Russell D, Peplau LA, Ferguson ML, Journal of Personality Assessment, PMID 660402.",
+  },
+  {
+    slug: "ecr-r",
+    acronym: "ECR-R",
+    fullName: "Experiences in Close Relationships-Revised",
+    liveOn: "/attachment-style-quiz",
+    year: 2000,
+    authors: "Fraley RC, Waller NG, Brennan KA",
+    journal: "Journal of Personality and Social Psychology",
+    pubmedUrl: "https://doi.org/10.1037/0022-3514.78.2.350",
+    pubmedId: null,
+    sourceLabel: "Publisher DOI 10.1037/0022-3514.78.2.350",
+    population: "Adult attachment self-report data analyzed in the primary instrument-development publication.",
+    items: "Not reproduced on this site.",
+    scoringRange: "Not provided on this information-only page.",
+    sensitivity: "Not applicable. The ECR-R is a dimensional research measure, not a diagnostic test.",
+    specificity: "Not applicable.",
+    license: "Information only on this site. The author permits noncommercial academic research use without a separate request and requires permission for commercial use; no commercial public electronic-use grant is on file.",
+    citationStatus: "Primary source verified",
+    notes: "The author recommends dimensional interpretation and cautions against forcing results into attachment categories. This site provides no questionnaire, scoring, category, or personal result.",
+  },
+  {
+    slug: "brief-resilience",
+    acronym: "BRS",
+    fullName: "Brief Resilience Scale",
+    liveOn: "/brief-resilience-scale",
+    year: 2008,
+    authors: "Smith BW, Dalen J, Wiggins K, Tooley E, Christopher P, Bernard J",
+    journal: "International Journal of Behavioral Medicine",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/18696313/",
+    pubmedId: "18696313",
+    population: "Multiple adult samples described in the original validation publication.",
+    items: "Not reproduced on this site.",
+    scoringRange: "Not provided on this information-only page.",
+    sensitivity: "Not applicable. The BRS is a resilience research measure, not a diagnostic test.",
+    specificity: "Not applicable.",
+    license: "Information only on this site. The primary publication does not itself grant public consumer-web reproduction and automated-scoring rights, and no authoritative applicable grant is on file.",
+    citationStatus: "Verified on PubMed",
+    notes: "This site provides no questionnaire, score, resilience band, or personal result.",
+  },
+  {
+    slug: "athens-insomnia",
+    acronym: "AIS",
+    fullName: "Athens Insomnia Scale",
+    liveOn: "/athens-insomnia-scale",
+    year: 2000,
+    authors: "Soldatos CR, Dikeos DG, Paparrigopoulos TJ",
+    journal: "Sleep Medicine",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/11091029/",
+    pubmedId: "11091029",
+    population: "Adults evaluated in the original validation publication.",
+    items: "Not reproduced on this site.",
+    scoringRange: "Not provided on this information-only page.",
+    sensitivity: "Reported in the primary validation literature; not used to generate a result on this site.",
+    specificity: "Reported in the primary validation literature; not used to generate a result on this site.",
+    license: "Information only on this site. A University of Pennsylvania compilation records Elsevier permission for that publication, but that permission is not transferable; no written permission for this implementation is on file.",
+    citationStatus: "Verified on PubMed",
+    notes: "This site provides no questionnaire, score, threshold, severity label, or personal insomnia result.",
+  },
+  {
+    slug: "who-assist",
+    acronym: "WHO ASSIST",
+    fullName: "Alcohol, Smoking and Substance Involvement Screening Test",
+    liveOn: "/who-assist-substance-screening",
+    year: 2010,
+    authors: "World Health Organization",
+    journal: "The ASSIST-linked brief intervention for hazardous and harmful substance use: manual for use in primary care",
+    pubmedUrl: "https://www.who.int/publications/i/item/978924159938-2",
+    pubmedId: null,
+    sourceLabel: "Official WHO ASSIST manual",
+    population: "Designed by WHO for primary-care and treatment settings; see the official manual for development and validation context.",
+    items: "Not reproduced on this site.",
+    scoringRange: "Not provided on this information-only page.",
+    sensitivity: "See the official manual and cited validation literature; no result is generated on this site.",
+    specificity: "See the official manual and cited validation literature; no result is generated on this site.",
+    license: "Information only on this site. The official manual describes free use in specified primary-care and treatment settings, but no WHO grant covering direct-to-consumer public-web administration, automated results, or the site's commercial context is on file.",
+    citationStatus: "Primary source verified",
+    notes: "This site provides no questionnaire, score, intervention category, individualized guidance, or diagnosis.",
   },
 ];
 
@@ -513,9 +609,9 @@ function articleJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Clinical Evidence for Published Screening Instruments",
+    headline: "Clinical Evidence and Rights Status for Published Instruments",
     description:
-      "Source studies and validation details for the published screening instruments documented by MindCheck Tools.",
+      "Primary sources, validation context, and current public-site availability for published instruments documented by MindCheck Tools.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
     author: { "@type": "Organization", name: "MindCheck Tools" },
@@ -581,10 +677,10 @@ export default function ClinicalEvidencePage() {
 
         <header className="mb-8">
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-50 leading-tight mb-3">
-            Clinical Evidence for Published Screening Instruments
+            Clinical Evidence and Rights Status for Published Instruments
           </h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
-            Last updated: August 2, 2026. Reviewed by{" "}
+            Last updated: August 5, 2026. Reviewed by{" "}
             <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 underline">
               {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
             </Link>
@@ -598,8 +694,9 @@ export default function ClinicalEvidencePage() {
         >
           <p className="font-semibold mb-1">Clinical disclaimer</p>
           <p>
-            Screening tools are not diagnostic. They support conversations with
-            qualified mental health professionals; they do not replace them. If
+            Interactive screening tools are not diagnostic, and information-only
+            instrument pages do not administer a questionnaire or produce a result.
+            Both are educational and do not replace a qualified professional. If
             you are in crisis, call or text <strong>988</strong> (U.S. Suicide
             and Crisis Lifeline), text <strong>HOME</strong> to{" "}
             <strong>741741</strong> (Crisis Text Line), or call{" "}
@@ -621,11 +718,10 @@ export default function ClinicalEvidencePage() {
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             This page currently documents {INSTRUMENTS.length} instruments. Each
             entry identifies the developers, publication, validation population,
-            reported sensitivity and specificity where available, common
-            thresholds, and a source link. When a value is not reported in the
-            source available to us, the entry says so rather than estimating it.
-            Some entries are retained as evidence references even when MindCheck
-            Tools does not offer a live implementation.
+            public-site status, reuse boundary, and a primary-source link.
+            Instrument mechanics and validation metrics are shown only for
+            maintained interactive implementations. Information-only entries
+            intentionally omit questionnaire, score, cutoff, and result mechanics.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Reuse and license notes are informational, not legal permission.
@@ -686,8 +782,15 @@ export default function ClinicalEvidencePage() {
                       href={i.liveOn}
                       className="text-sage-700 dark:text-sage-400 hover:underline"
                     >
-                      Take the {i.acronym} self-check on this site
+                      {INFORMATION_ONLY_SLUGS.has(i.slug)
+                        ? `Read the ${i.acronym} information and rights-status page`
+                        : `Open the ${i.acronym} self-check page`}
                     </Link>
+                  </p>
+                )}
+                {INFORMATION_ONLY_SLUGS.has(i.slug) && (
+                  <p className="mt-2 inline-flex rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+                    Information only: no questionnaire, answers, score, cutoff, or personal result
                   </p>
                 )}
               </header>
@@ -697,14 +800,25 @@ export default function ClinicalEvidencePage() {
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">First published</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.year}</dd>
                 </div>
-                <div>
-                  <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Items</dt>
-                  <dd className="text-neutral-600 dark:text-neutral-300">{i.items}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Score range</dt>
-                  <dd className="text-neutral-600 dark:text-neutral-300">{i.scoringRange}</dd>
-                </div>
+                {INFORMATION_ONLY_SLUGS.has(i.slug) ? (
+                  <div className="sm:col-span-2">
+                    <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Public site status</dt>
+                    <dd className="text-neutral-600 dark:text-neutral-300">
+                      Information only. MindCheck Tools does not reproduce, administer, score, or interpret this instrument.
+                    </dd>
+                  </div>
+                ) : (
+                  <>
+                    <div>
+                      <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Items</dt>
+                      <dd className="text-neutral-600 dark:text-neutral-300">{i.items}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Score range</dt>
+                      <dd className="text-neutral-600 dark:text-neutral-300">{i.scoringRange}</dd>
+                    </div>
+                  </>
+                )}
               </dl>
 
               <dl className="mt-4 space-y-3 text-sm">
@@ -716,13 +830,21 @@ export default function ClinicalEvidencePage() {
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Population validated on</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.population}</dd>
                 </div>
-                {i.threshold && (
+                {!INFORMATION_ONLY_SLUGS.has(i.slug) && i.threshold && (
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Recommended threshold</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.threshold}</dd>
                 </div>
                 )}
-                <>
+                {INFORMATION_ONLY_SLUGS.has(i.slug) ? (
+                  <div>
+                    <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Validation evidence</dt>
+                    <dd className="text-neutral-600 dark:text-neutral-300">
+                      See the cited primary source for study-specific psychometrics. They are not used to generate an on-site result.
+                    </dd>
+                  </div>
+                ) : (
+                  <>
                   <div className="sm:inline-block sm:w-1/2 sm:pr-2 sm:align-top">
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Sensitivity</dt>
                     <dd className="text-neutral-600 dark:text-neutral-300">{i.sensitivity}</dd>
@@ -731,7 +853,8 @@ export default function ClinicalEvidencePage() {
                     <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Specificity</dt>
                     <dd className="text-neutral-600 dark:text-neutral-300">{i.specificity}</dd>
                   </div>
-                </>
+                  </>
+                )}
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Availability / reuse note</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.license}</dd>
@@ -742,14 +865,13 @@ export default function ClinicalEvidencePage() {
                     {i.authors}. {i.fullName}. <em>{i.journal}</em>, {i.year}.{" "}
                     {i.pubmedUrl ? (
                       <>
-                        PMID:{" "}
                         <a
                           href={i.pubmedUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sage-700 dark:text-sage-400 underline"
                         >
-                          {i.pubmedId}
+                          {i.sourceLabel ?? `PMID ${i.pubmedId}`}
                         </a>
                       </>
                     ) : (

@@ -48,7 +48,7 @@ const faqData = [
   },
   {
     question: "Are my results private?",
-    answer: "Yes. This tool runs entirely in your browser. No data is sent to any server, and no results are stored. Your privacy is protected, and you can feel comfortable answering honestly.",
+    answer: "The tool processes answers and results locally and does not intentionally send them to MindCheck Tools. Ordinary page requests can still create hosting records, and copies or shared-device access are outside this boundary.",
   },
 ];
 

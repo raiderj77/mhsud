@@ -6,6 +6,11 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import {
+  PRIVATE_SHARE_COPIED_MESSAGE,
+  PRIVATE_SHARE_NOTICE,
+  sharePrivateToolLink,
+} from "@/lib/privateToolSharing";
 
 /* ── Types & Data ─────────────────────────────────────── */
 
@@ -200,25 +205,17 @@ export function TreatmentCostClient({ faqData }: Props) {
   const selected = selectedKey ? TREATMENTS.find((t) => t.key === selectedKey) : null;
 
   const handlePrint = useCallback(() => window.print(), []);
-  const handleShare = useCallback(async (mode: "results" | "blank") => {
-    const url = "https://mindchecktools.com/treatment-cost-estimator";
-    if (mode === "blank" || !selected) {
-      if (navigator.share) {
-        try { await navigator.share({ title: "Treatment Cost Estimator", text: "See estimated costs for addiction treatment by type. Free and private.", url }); return; } catch { /* cancelled */ }
-      }
-      await navigator.clipboard.writeText(url);
-      setShareMessage("Link copied!");
+  const handleShare = useCallback(async (mode: "share" | "copy") => {
+    const outcome = await sharePrivateToolLink({
+      toolName: "Treatment Cost Estimator",
+      canonicalPath: "/treatment-cost-estimator",
+      mode,
+    });
+    if (outcome === "copied") {
+      setShareMessage(PRIVATE_SHARE_COPIED_MESSAGE);
       setTimeout(() => setShareMessage(""), 2500);
-      return;
     }
-    const summary = `Treatment Cost Estimate: ${selected.name}\nEstimated: ${formatCost(selected.costLow)} - ${formatCost(selected.costHigh)} ${selected.costPer}\nDuration: ${selected.duration}\n\nGet estimates for all treatment types: ${url}`;
-    if (navigator.share) {
-      try { await navigator.share({ title: "Treatment Cost Estimate", text: summary }); return; } catch { /* cancelled */ }
-    }
-    await navigator.clipboard.writeText(summary);
-    setShareMessage("Estimate copied!");
-    setTimeout(() => setShareMessage(""), 2500);
-  }, [selected]);
+  }, []);
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -389,13 +386,14 @@ export function TreatmentCostClient({ faqData }: Props) {
             <button onClick={handlePrint} className="btn-secondary text-sm flex-1 min-w-[120px] print:hidden">
               Print Estimate
             </button>
-            <button onClick={() => handleShare("results")} className="btn-secondary text-sm flex-1 min-w-[120px] print:hidden">
-              Share Estimate
+            <button onClick={() => handleShare("share")} className="btn-secondary text-sm flex-1 min-w-[120px] print:hidden">
+              Share Tool Link
             </button>
-            <button onClick={() => handleShare("blank")} className="btn-secondary text-sm flex-1 min-w-[120px] print:hidden">
-              Share Tool
+            <button onClick={() => handleShare("copy")} className="btn-secondary text-sm flex-1 min-w-[120px] print:hidden">
+              Copy Tool Link
             </button>
           </div>
+          <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 print:hidden">{PRIVATE_SHARE_NOTICE}</p>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in">{shareMessage}</p>
           )}

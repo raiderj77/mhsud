@@ -31,7 +31,7 @@ const FAQ_DATA = [
   {
     question: "What is TIPP in DBT?",
     answer:
-      "TIPP stands for Temperature, Intense exercise, Paced breathing, and Progressive relaxation. These four physiological interventions bring down extreme emotional arousal quickly. Temperature uses cold water on the face to trigger the dive reflex. Intense exercise burns off adrenaline. Paced breathing activates the parasympathetic nervous system. Progressive relaxation releases muscle tension.",
+      "TIPP stands for Temperature, Intense exercise, Paced breathing, and Progressive relaxation. The body-based components can affect heart rate, breathing, balance, and physical symptoms, so they should be adapted to a person's health and mobility. This article uses only low-intensity examples. Ask a qualified health professional or DBT clinician for an adapted version if you have a medical condition, take medication that affects heart rate, have a physical limitation or disordered-eating concern, or are unsure what is safe.",
   },
   {
     question: "Are DBT crisis skills only for people with BPD?",
@@ -125,21 +125,21 @@ export default function DbtCrisisSkillsGuidePage() {
           </section>
 
           <section>
-            <h2>TIPP: the fastest way to change your emotional state</h2>
+            <h2>TIPP: body-based skills require medical caution</h2>
             <p>
-              TIPP is the go-to skill when your emotional intensity is at its peak, a 9 or 10 out of 10. Each letter represents a physiological intervention that works within minutes:
+              TIPP groups four body-based distress-tolerance practices. Effects vary, and no technique is guaranteed to work quickly. Temperature changes and exercise can affect heart rate and physical symptoms. Use only a version that is safe and familiar for your health, mobility, treatment plan, and surroundings; ask a qualified health professional or DBT clinician for an adapted version if you are unsure.
             </p>
             <p>
-              <strong>T, Temperature.</strong> Submerge your face in cold water or hold ice packs to your cheeks and forehead for 30 seconds. This triggers the mammalian dive reflex, which automatically slows heart rate and redirects blood flow to vital organs. It is one of the fastest ways to reduce extreme emotional arousal. If you cannot submerge your face, holding ice cubes in your hands or placing a cold pack on the back of your neck achieves a similar effect.
+              <strong>T, Temperature.</strong> This educational article does not instruct extreme cold exposure or face immersion. If a temperature-based practice is medically safe for you, a low-intensity example is holding a comfortably cool cloth in your hands or washing your hands in comfortably cool water while noticing the sensation. Stop if you feel pain, numbness, dizziness, shortness of breath, or otherwise unwell.
             </p>
             <p>
-              <strong>I, Intense exercise.</strong> Engage in vigorous physical activity for 10&ndash;20 minutes. Running, jumping jacks, fast walking, or even doing burpees in your living room. Intense exercise burns off the adrenaline and cortisol flooding your system during acute distress, and releases endorphins that naturally shift your mood.
+              <strong>I, Intense exercise.</strong> Exercise can raise heart rate rapidly and is not safe for everyone. This article does not prescribe strenuous activity. If movement is already safe and familiar for you, consider a brief walk or gentle stretching within your usual limits. Skip physical activity and choose a nonphysical skill if you have pain, dizziness, shortness of breath, a medical or mobility limitation, a disordered-eating concern, take medication that affects heart rate, or are unsure.
             </p>
             <p>
-              <strong>P, Paced breathing.</strong> Slow your breathing rate to 5&ndash;6 breaths per minute. Breathe in for 4 seconds and out for 6&ndash;8 seconds, making the exhale longer than the inhale. This activates the parasympathetic nervous system via the vagus nerve, directly counteracting the fight-or-flight response. <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box breathing</Link> is one effective pacing method.
+              <strong>P, Paced breathing.</strong> Try a comfortable breath with a gently longer exhale, without forcing depth or holding your breath. Stop and return to normal breathing if you feel lightheaded, short of breath, or uncomfortable. The <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box-breathing page</Link> offers another educational breathing reference, but it is not appropriate for everyone.
             </p>
             <p>
-              <strong>P, Progressive (Paired muscle) relaxation.</strong> Systematically tense and release muscle groups throughout your body, starting from your feet and working upward. Tense each muscle group for 5 seconds, then release for 10 seconds. This technique directly addresses the muscle tension that accompanies emotional distress.
+              <strong>P, Progressive (Paired muscle) relaxation.</strong> Gently tense and release one comfortable muscle group at a time without straining. Skip injured or painful areas, and stop if the exercise increases pain or other symptoms.
             </p>
           </section>
 
@@ -151,13 +151,13 @@ export default function DbtCrisisSkillsGuidePage() {
               When emotions are intense but not at a crisis peak (a 6&ndash;8 out of 10), ACCEPTS provides structured distraction strategies. The goal is not to avoid your feelings permanently, it is to create enough distance to prevent impulsive actions while the emotional wave passes. Each letter represents a distraction category:
             </p>
             <ul>
-              <li><strong>Activities:</strong> Engage in absorbing tasks, cleaning, cooking, exercising, playing a game, doing a puzzle. Activities that require focus occupy the cognitive resources that would otherwise feed rumination.</li>
+              <li><strong>Activities:</strong> Engage in an absorbing task such as tidying a small area, playing a game, doing a puzzle, or taking gentle movement that is already safe for you.</li>
               <li><strong>Contributing:</strong> Do something for someone else. Send an encouraging text, volunteer, help a neighbor, or donate. Contributing shifts attention outward and activates reward circuits associated with prosocial behavior.</li>
               <li><strong>Comparisons:</strong> Compare your current situation to times when you have coped with something difficult before, or to people who are facing greater hardship. This is not about minimizing your pain, it is about accessing perspective when perspective feels impossible.</li>
               <li><strong>Emotions:</strong> Generate a different emotion intentionally. Watch a funny video, listen to upbeat music, read something inspiring, or look at photos of good memories. Emotions are not permanent states, you can shift them with deliberate input.</li>
               <li><strong>Pushing away:</strong> Mentally push the distressing situation away temporarily. Visualize putting the problem in a box and placing it on a shelf. You are not denying it exists, you are choosing to return to it when you are in a better emotional state to handle it.</li>
               <li><strong>Thoughts:</strong> Replace distressing thoughts with neutral mental tasks. Count backward from 100 by 7s, recite song lyrics, list state capitals, or describe a process step by step. Occupying working memory reduces rumination.</li>
-              <li><strong>Sensations:</strong> Create strong physical sensations to interrupt the emotional experience. Hold ice, snap a rubber band on your wrist, take a cold shower, eat something with a strong flavor (sour candy, hot sauce). The <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline">5-4-3-2-1 grounding exercise</Link> uses a related sensory approach.</li>
+              <li><strong>Sensations:</strong> Choose a mild, familiar, non-painful sensation and describe it in detail, such as the texture of an object, comfortably cool water on your hands, or three distinct sounds around you. The aim is to redirect attention briefly, not to shock or hurt your body. The <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline">5-4-3-2-1 grounding exercise</Link> offers another low-intensity sensory approach.</li>
             </ul>
           </section>
 

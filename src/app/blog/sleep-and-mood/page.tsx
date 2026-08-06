@@ -256,7 +256,7 @@ export default function SleepMoodPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Want to check how your sleep and mood connect?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 2 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/sleep-and-mood-check" className="btn-primary text-sm">Take the Sleep &amp; Mood Self-Check</Link>
             <Link href="/athens-insomnia-scale" className="btn-primary text-sm">Athens Insomnia Scale</Link>
           </div>

@@ -44,6 +44,12 @@ test("shared light-theme secondary text uses accessible contrast overrides", asy
   assert.match(source, /\.text-sage-600,[\s\S]*color: #0f766e/);
 });
 
+test("quick-answer review dates keep readable contrast in both themes", async () => {
+  const source = await readFile(path.join(root, "src", "components", "AnswerBlock.tsx"), "utf8");
+  assert.match(source, /text-neutral-600 dark:text-neutral-300/);
+  assert.doesNotMatch(source, /className="block text-right text-xs text-neutral-400"/);
+});
+
 test("scrollable tables are keyboard-focusable regions", async () => {
   const scoreLayout = await readFile(path.join(root, "src", "components", "ScoreInterpretationLayout.tsx"), "utf8");
   const cookies = await readFile(path.join(root, "src", "app", "cookies", "page.tsx"), "utf8");
@@ -119,12 +125,12 @@ test("retired blog links preserve intent through maintained canonical pages", as
     ["/blog/phq-9-guide", "/phq-9-score-interpretation"],
     ["/blog/what-does-phq-9-score-mean", "/phq-9-score-interpretation"],
     ["/blog/depression-vs-anxiety", "/phq-9-vs-gad-7"],
-    ["/blog/ace-score-meaning", "/ace-score-interpretation"],
-    ["/blog/dass-21-score-guide", "/dass-21-score-interpretation"],
+    ["/blog/ace-score-meaning", "/ace-questionnaire"],
+    ["/blog/dass-21-score-guide", "/dass-21-depression-anxiety-stress"],
     ["/blog/what-does-pcl-5-score-mean", "/pcl-5-score-interpretation"],
     ["/blog/what-does-asrs-score-mean", "/asrs-score-interpretation"],
-    ["/blog/what-does-dass-21-score-mean", "/dass-21-score-interpretation"],
-    ["/blog/what-does-ace-score-mean", "/ace-score-interpretation"],
+    ["/blog/what-does-dass-21-score-mean", "/dass-21-depression-anxiety-stress"],
+    ["/blog/what-does-ace-score-mean", "/ace-questionnaire"],
     ["/blog/what-does-pc-ptsd-5-score-mean", "/pc-ptsd-5-screening"],
     ["/blog/what-does-cage-aid-score-mean", "/cage-aid-substance-abuse-screening"],
     ["/blog/what-does-rosenberg-self-esteem-score-mean", "/rosenberg-self-esteem-scale"],
@@ -133,7 +139,6 @@ test("retired blog links preserve intent through maintained canonical pages", as
   const maintainedFiles = [
     "src/app/page.tsx",
     "src/app/about/jason-ramirez/page.tsx",
-    "src/app/ace-score-interpretation/page.tsx",
     "src/app/audit-alcohol-test/AUDITClient.tsx",
     "src/app/audit-score-interpretation/page.tsx",
     "src/app/dass-21-depression-anxiety-stress/page.tsx",

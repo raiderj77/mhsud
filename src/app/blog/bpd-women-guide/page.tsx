@@ -186,7 +186,7 @@ export default function BpdWomenGuidePage() {
               This stigma has real consequences. It delays help-seeking, erodes trust in the therapeutic relationship, and can worsen the very symptoms the person is trying to address. If you have had negative experiences with the mental health system, that is not a reflection of your worth or your capacity for change, it is a reflection of systemic shortcomings that the field is actively working to address.
             </p>
             <p>
-              The <Link href="/bpd-test-for-women" className="text-sage-600 dark:text-sage-400 underline">BPD screening for women</Link> offers a private, judgment-free starting point for self-assessment. Your results stay in your browser, and you can use them to guide a conversation with a provider you trust.
+              The <Link href="/bpd-test-for-women" className="text-sage-600 dark:text-sage-400 underline">BPD screening for women</Link> offers a private, judgment-free starting point for self-assessment. Results are generated locally and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them, and you can use them to guide a conversation with a provider you trust.
             </p>
           </section>
 

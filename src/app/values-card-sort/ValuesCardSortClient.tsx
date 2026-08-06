@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
@@ -88,6 +89,7 @@ const PILE_BADGE: Record<string, string> = {
 /* ── Component ───────────────────────────────────────── */
 
 export function ValuesCardSortClient({ faqData }: Props) {
+  const [accepted, setAccepted] = useState(false);
   const [step, setStep] = useState<Step>("sort");
   const [piles, setPiles] = useState<Record<string, Pile>>({});
   const [selected5, setSelected5] = useState<string[]>([]);
@@ -169,6 +171,18 @@ export function ValuesCardSortClient({ faqData }: Props) {
     { key: "profile", label: "Profile" },
   ];
 
+  if (!accepted) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
+        <DisclaimerGate
+          toolName="Values Card Sort"
+          toolDescription="Review the privacy and educational-use limits before using this self-reflection tool."
+          onAccept={() => setAccepted(true)}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 print:py-4">
       {/* Breadcrumb */}
@@ -178,9 +192,9 @@ export function ValuesCardSortClient({ faqData }: Props) {
         <span className="text-neutral-700 dark:text-neutral-200">Values Card Sort</span>
       </nav>
 
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-        Values Card Sort
-      </h1>
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
+        Sort the values that matter to you
+      </h2>
       <p className="text-neutral-600 dark:text-neutral-300 mb-6 max-w-2xl">
         Discover what matters most to you. Sort {totalValues} personal values into categories, narrow to your top 5, rank them, and reflect on how to live in alignment with what you truly care about.
       </p>
@@ -697,7 +711,7 @@ export function ValuesCardSortClient({ faqData }: Props) {
             This values card sort is an educational self-reflection exercise, not a clinical assessment or therapeutic intervention. It is not a substitute for professional counseling or therapy. If you are struggling with substance use, mental health challenges, or a life crisis, please reach out to a qualified healthcare professional.
           </p>
           <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mt-2">
-            All responses are processed entirely in your browser and are never stored or transmitted to any server.
+            Responses are processed locally and are not intentionally sent to MindCheck Tools. Copies, browser or device sync, and shared-device access are outside this boundary.
           </p>
         </div>
       </section>

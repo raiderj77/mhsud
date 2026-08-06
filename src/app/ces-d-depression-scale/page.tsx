@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { CesdClient } from "./CesdClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/ces-d-depression-scale`;
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/ces-d-depression-scale",
   title: "CES-D Depression Scale | Free Self-Check",
   description:
-    "Free CES-D depression screening. 20 items, past week. Developed by NIMH. Instant results with clinical cutoff. Private, no signup.",
+    "Free CES-D depression screening. 20 items, past week. Traditional follow-up threshold, non-diagnostic results, private, no signup.",
   keywords: [
     "CES-D", "CES-D depression scale", "CES-D test",
     "depression screening test", "CES-D online",
@@ -21,7 +22,7 @@ export const metadata: Metadata = createMetadata({
   openGraph: {
     title: "CES-D Depression Scale | Free Self-Check",
     description:
-      "Free CES-D depression screening. 20 items, past week. Developed by NIMH. Instant results with clinical cutoff. Private, no signup.",
+      "Free CES-D depression screening. 20 items, past week. Traditional follow-up threshold, non-diagnostic results, private, no signup.",
     url: TOOL_URL,
     type: "website",
   },
@@ -36,7 +37,7 @@ const FAQ_DATA = [
   {
     question: "How is the CES-D scored?",
     answer:
-      "Each of the 20 items is rated on a 4-point scale for the past week: 0 (Rarely or none of the time, less than 1 day), 1 (Some or a little of the time, 1-2 days), 2 (Occasionally or a moderate amount, 3-4 days), 3 (Most or all of the time, 5-7 days). Four items (#4, #8, #12, #16) are positively worded and reverse-scored: for these, the scoring is reversed (0 becomes 3, 1 becomes 2, etc.). The total score ranges from 0 to 60. A score of 16 or higher is the traditional cutoff suggesting clinically significant depressive symptoms.",
+      "Each of the 20 items is rated on a 4-point scale for the past week: 0 (Rarely or none of the time, less than 1 day), 1 (Some or a little of the time, 1-2 days), 2 (Occasionally or a moderate amount of the time, 3-4 days), 3 (Most or all of the time, 5-7 days). Four items (#4, #8, #12, #16) are positively worded and reverse-scored: for these, the scoring is reversed (0 becomes 3, 1 becomes 2, etc.). The total score ranges from 0 to 60. A score of 16 or higher is a traditional follow-up threshold, not a diagnosis or severity rating.",
   },
   {
     question: "What are the reverse-scored items?",
@@ -51,12 +52,12 @@ const FAQ_DATA = [
   {
     question: "What does a CES-D score of 16 or higher mean?",
     answer:
-      "A score of 16 or higher on the CES-D is the traditionally used cutoff suggesting clinically significant depressive symptoms. This threshold was established in Radloff's original 1977 validation study and has been replicated in many populations. However, exceeding this cutoff does not mean you have clinical depression, it means your symptom level warrants further evaluation. Many factors can elevate a CES-D score, including grief, stress, medical illness, or sleep deprivation. A qualified healthcare professional can help determine what your symptoms mean in context.",
+      "A score of 16 or higher on the CES-D is a traditionally used threshold for identifying people who may benefit from follow-up. It does not diagnose depression or assign a severity level. Many factors can affect a score, including grief, stress, medical illness, and sleep disruption. A qualified healthcare professional can help interpret symptoms in context.",
   },
   {
     question: "Is my data private?",
     answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "Scoring happens in your browser, and this application does not send your answers or score to its server. If you print, download, copy, or otherwise save information, that copy is handled by your browser, device, apps, sync, or backup settings. Review the privacy policy before using the tool on a shared device.",
   },
 ];
 
@@ -70,7 +71,7 @@ export default function CesdPage() {
       ...toolPageJsonLd({
               name: "CES-D Depression Scale",
               description:
-                "A free online implementation of the CES-D (Center for Epidemiologic Studies Depression Scale), a 20-item self-report depression screening tool developed by NIMH. Scores 0-60 with clinical cutoff at 16. Includes 4 reverse-scored positive-affect items. Public domain.",
+                "A free online implementation of the CES-D (Center for Epidemiologic Studies Depression Scale), a 20-item self-report depression screening tool developed by NIMH. Scores 0-60 with a traditional follow-up threshold at 16. Includes 4 reverse-scored positive-affect items. Public domain.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
@@ -96,14 +97,19 @@ export default function CesdPage() {
         }}
       />
 
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+          CES-D Depression Scale
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-3 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="The CES-D (Center for Epidemiologic Studies Depression Scale), a 20-item validated depression screening used in research and clinical settings."
-          who="Adults who want a comprehensive depression symptom assessment using a widely researched screening instrument."
-          bottomLine="The CES-D measures depressive symptoms over the past week, a high score warrants professional follow-up. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          what="The CES-D (Center for Epidemiologic Studies Depression Scale), a published 20-item depression screener used in research and some clinical settings."
+          who="People who want an educational snapshot of how often certain depressive symptoms occurred during the past week."
+          bottomLine="A score of 16 or higher is a traditional follow-up threshold, not a diagnosis or severity rating. This tool is informational and does not replace professional evaluation or treatment."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -131,6 +137,9 @@ export default function CesdPage() {
 </div>
       </div>
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="March 20, 2026" />
+      </div>
       <CesdClient faqData={FAQ_DATA} />
     </>
   );

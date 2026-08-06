@@ -1,117 +1,145 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AssistClient } from "./AssistClient";
-import AnswerBlock from "@/components/AnswerBlock";
-import { AuthorByline } from "@/components/AuthorByline";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
+import {
+  RightsBoundaryInformationPage,
+  type InformationFaq,
+} from "@/app/_components/RightsBoundaryInformationPage";
 
-const TOOL_URL = `${SITE_URL}/who-assist-substance-screening`;
+const PAGE_PATH = "/who-assist-substance-screening";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = createMetadata({
-  path: "/who-assist-substance-screening",
-  title: "WHO ASSIST Screening | Free Substance Use Test",
+  path: PAGE_PATH,
+  title: "WHO ASSIST Information and Public-Web Permission Boundary",
   description:
-    "Free WHO ASSIST substance use screening. 10 substance categories, past 3 months. Risk levels with intervention recommendations. Private, instant results.",
+    "Educational information about WHO ASSIST, why MindCheck Tools does not administer it publicly, and non-equivalent alcohol-screening options.",
   keywords: [
-    "WHO ASSIST", "ASSIST screening", "substance use screening",
-    "ASSIST test", "WHO substance use test", "drug screening test",
-    "alcohol screening", "substance involvement screening test",
-    "ASSIST score", "substance use risk assessment",
-    "ASSIST questionnaire", "substance abuse screening free",
+    "WHO ASSIST information",
+    "WHO ASSIST permission",
+    "substance involvement screening information",
+    "WHO ASSIST public use",
   ],
   openGraph: {
-    title: "WHO ASSIST Screening | Free Substance Use Test",
-    description:
-      "Free WHO ASSIST substance use screening. 10 substance categories, past 3 months. Risk levels with intervention recommendations. Private, instant results.",
-    url: TOOL_URL,
+    title: "WHO ASSIST Information and Permission Boundary",
+    description: "Official-source context without public questionnaire administration, scoring, or individualized intervention statements.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
-const FAQ_DATA = [
+const FAQ_DATA: InformationFaq[] = [
   {
-    question: "What is the WHO ASSIST?",
+    question: "What is WHO ASSIST?",
     answer:
-      "The ASSIST (Alcohol, Smoking and Substance Involvement Screening Test) is a screening tool developed by the World Health Organization to detect substance use and related problems in primary care settings. Version 3.1 covers 10 substance categories: tobacco, alcohol, cannabis, cocaine, amphetamine-type stimulants, inhalants, sedatives, hallucinogens, opioids, and other substances. It was developed through an international collaborative study across 8 countries and is available in many languages. The ASSIST is designed to be administered in about 5-10 minutes and produces a risk score for each substance used.",
+      "The World Health Organization developed ASSIST for trained use in health-care settings to identify substance-related concerns and support an appropriate clinical conversation or intervention.",
   },
   {
-    question: "How is the ASSIST scored?",
+    question: "Can I complete WHO ASSIST on MindCheck Tools?",
     answer:
-      "The ASSIST calculates a Substance-Specific Involvement Score for each substance you have used. This score is the sum of questions 2 through 7, which ask about frequency of use in the past 3 months, desire or urge to use, health/social/legal/financial problems, failure to meet obligations, concern expressed by others, and attempts to cut down or stop. Each question has different weighted response options reflecting its clinical significance. The maximum score per substance is 39. Scores are categorized into three risk levels with specific intervention recommendations.",
+      "No. The official manual describes free use in primary-care and treatment settings, but MindCheck Tools has not obtained a WHO grant covering direct-to-consumer public-web administration, automated scoring, or commercial-site use.",
   },
   {
-    question: "What do the risk levels mean?",
+    question: "Why are the questions, scores, and intervention categories omitted?",
     answer:
-      "Low risk (0-3 for most substances, 0-10 for alcohol) means your current use pattern carries minimal risk and no intervention is needed. Moderate risk (4-26 for most substances, 11-26 for alcohol) means you are at risk of health and other problems from your current use pattern and a brief intervention is recommended, this typically involves information, advice, and follow-up with a healthcare provider. High risk (27+ for all substances) indicates a high risk of severe problems and possible dependence, and intensive assessment and treatment by a specialist is strongly recommended.",
+      "Those materials are withheld until WHO grants the contemplated use. Automated respondent-facing interpretation also cannot replace a trained assessment of substance use, safety, withdrawal risk, medications, and other health factors.",
   },
   {
-    question: "Why are the alcohol risk cutoffs different?",
+    question: "Are AUDIT or AUDIT-C equivalent to WHO ASSIST?",
     answer:
-      "The WHO set different low-risk cutoffs for alcohol (0-10) compared to other substances (0-3) because alcohol is legal and widely consumed in most cultures. A person can score higher on alcohol questions simply because social drinking is normalized, scoring a 4 on alcohol does not carry the same clinical concern as scoring a 4 on cocaine or opioids. The higher threshold for alcohol ensures that the screening appropriately identifies people whose alcohol use has actually reached a concerning level, rather than flagging moderate social drinkers. The moderate and high risk thresholds are the same across all substances.",
+      "No. AUDIT and AUDIT-C address alcohol use only and have different scopes and scoring. They do not assess other substances and cannot reproduce an ASSIST result.",
   },
   {
-    question: "How is the ASSIST different from the AUDIT or DAST-10?",
+    question: "Can this page diagnose a substance use disorder?",
     answer:
-      "The AUDIT focuses exclusively on alcohol use and provides a detailed picture of drinking patterns, dependence, and harm. The DAST-10 focuses exclusively on drug use (excluding alcohol and tobacco). The ASSIST covers ALL substance categories in a single screening and provides separate risk scores for each substance. The ASSIST is particularly useful when you want a comprehensive overview across multiple substances, while the AUDIT and DAST-10 provide more focused information about alcohol or drugs specifically. If the ASSIST identifies high risk for a particular substance, a more specific screening like the AUDIT (for alcohol) may provide additional detail.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. This page collects no substance-use information and provides no result. Diagnosis requires an evaluation by an appropriately qualified healthcare professional.",
   },
 ];
 
-export default function AssistPage() {
+export default function WhoAssistInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            toolPageJsonLd({
-              name: "WHO ASSIST Substance Use Screening",
-              description:
-                "A free online implementation of the WHO ASSIST (Alcohol, Smoking and Substance Involvement Screening Test) v3.1. Covers 10 substance categories with per-substance risk scores (0-39). Three risk levels: low, moderate (brief intervention), high (intensive treatment). Stepped wizard interface.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
-            })
+            medicalWebPageJsonLd({
+              name: "WHO ASSIST Information and Public-Web Permission Boundary",
+              description: "Official-source educational and rights information without public questionnaire administration or scoring.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
+            }),
           ),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "WHO ASSIST Screening", url: TOOL_URL },
-            ])
+              { name: "WHO ASSIST Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The WHO ASSIST, a comprehensive substance screening covering tobacco, alcohol, cannabis, and eight other substance categories."
-          who="Anyone who uses any substances and wants a thorough, WHO-validated assessment of risk across all substance types."
-          bottomLine="The ASSIST scores each substance separately, you may have different risk levels for different substances. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
-      </div>
-
-<AssistClient faqData={FAQ_DATA} />
+      <RightsBoundaryInformationPage
+        title="WHO ASSIST Information"
+        intro="MindCheck Tools does not reproduce, administer, score, or interpret the WHO Alcohol, Smoking and Substance Involvement Screening Test. This page explains its clinical purpose and the current public-web permission boundary."
+        what="An educational overview of WHO ASSIST, its intended health-care context, limitations, and public electronic-use permission boundary."
+        who="People seeking official-source information about the instrument or a separately permitted alcohol-only screening option."
+        bottomLine="WHO permission for direct-to-consumer public-web administration is not on file. This page provides no questionnaire, score, or intervention category and cannot diagnose a substance use disorder."
+        boundaryHeading="Why the public questionnaire is not provided"
+        boundaryParagraphs={[
+          "WHO's official manual permits specified use in primary-care and treatment settings. That limited context does not clearly grant a commercial public website the right to reproduce the instrument and deliver automated results directly to consumers.",
+          "MindCheck Tools has not archived written WHO permission covering public electronic administration, scoring, respondent-facing interpretation, traffic, geography, modifications, or the site's commercial context.",
+          "The established URL therefore remains an ad-free informational resource while questionnaire content, substance-specific scoring, risk categories, and individualized intervention statements are withheld.",
+        ]}
+        overviewHeading="What WHO ASSIST was designed to support"
+        overviewParagraphs={[
+          "WHO developed ASSIST to help trained health-care workers identify substance involvement and guide a clinical conversation or appropriate intervention across more than one substance category.",
+          "A responsible evaluation also considers current intoxication or withdrawal, medications, physical and mental health, safety, pregnancy, age, and local treatment resources. An automated public result cannot supply that context.",
+        ]}
+        alternatives={[
+          {
+            href: "/audit-alcohol-test",
+            name: "AUDIT Alcohol Use Screen",
+            description: "A separately permitted, noncommercial alcohol-only screen. It does not assess other substances and is not equivalent to WHO ASSIST.",
+          },
+          {
+            href: "/audit-c-alcohol-screen",
+            name: "AUDIT-C Quick Alcohol Screen",
+            description: "A brief alcohol-consumption screen with a narrower purpose. It cannot replace the multi-substance ASSIST instrument.",
+          },
+        ]}
+        sources={[
+          {
+            href: "https://www.who.int/publications/i/item/978924159938-2",
+            label: "WHO: ASSIST manual",
+            detail: "Official manual describing the instrument's health-care setting and stated reproduction context.",
+          },
+          {
+            href: "https://www.who.int/about/policies/publishing/copyright",
+            label: "WHO copyright and licensing policy",
+            detail: "Official route for reuse requests beyond the permission stated in a WHO publication.",
+          },
+          {
+            href: "https://www.samhsa.gov/find-support",
+            label: "SAMHSA Find Support",
+            detail: "U.S. treatment and support information; it does not provide or replace an ASSIST result.",
+          },
+        ]}
+        faq={FAQ_DATA}
+        reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
+      />
     </>
   );
 }

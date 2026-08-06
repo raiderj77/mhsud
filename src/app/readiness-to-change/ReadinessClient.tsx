@@ -7,6 +7,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { PRIVATE_SHARE_NOTICE, sharePrivateToolLink } from "@/lib/privateToolSharing";
 
 
 /* ── types ─────────────────────────────────────────────── */
@@ -258,13 +259,10 @@ export function ReadinessClient({ faqData }: Props) {
   const handlePrint = () => window.print();
 
   const handleShare = async () => {
-    const info = STAGES[primaryStage];
-    const text = `I took the Readiness to Change Assessment on MindCheck Tools. My primary stage: ${info.label}, ${info.short}.`;
-    if (navigator.share) {
-      try { await navigator.share({ title: "Readiness to Change Assessment", text, url: window.location.href }); } catch {}
-    } else {
-      try { await navigator.clipboard.writeText(`${text}\n${window.location.href}`); alert("Copied to clipboard!"); } catch {}
-    }
+    await sharePrivateToolLink({
+      toolName: "Readiness to Change Assessment",
+      canonicalPath: "/readiness-to-change",
+    });
   };
 
   const stageInfo = STAGES[primaryStage];
@@ -554,12 +552,13 @@ export function ReadinessClient({ faqData }: Props) {
                 Print Results
               </button>
               <button onClick={handleShare} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors print:hidden">
-                Share Results
+                Share Tool Link
               </button>
               <button onClick={handleReset} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-500 dark:text-neutral-400 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors print:hidden">
                 Retake Assessment
               </button>
             </div>
+            <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 print:hidden">{PRIVATE_SHARE_NOTICE}</p>
           </section>
 
           {/* Reflection */}
@@ -746,8 +745,8 @@ export function ReadinessClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          This tool runs entirely in your browser. No answers are stored, transmitted, or collected.
-          Your responses are private by design.
+          Your answers and result are processed locally and are not intentionally sent to MindCheck Tools.
+          Copies, browser or device sync, and shared-device access are outside this boundary.
         </p>
       </footer>
     </div>

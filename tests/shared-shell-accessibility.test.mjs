@@ -32,6 +32,14 @@ test("shared shell preserves a keyboard skip target, visible focus, and reduced-
   assert.match(theme, /min-h-\[44px\][\s\S]*min-w-\[44px\]/);
 });
 
+test("date-only review metadata renders as the same calendar date in every time zone", async () => {
+  const answerBlock = await read("src/components/AnswerBlock.tsx");
+
+  assert.match(answerBlock, /new Date\(lastUpdated\)\.toLocaleDateString/);
+  assert.match(answerBlock, /timeZone: ['"]UTC['"]/);
+  assert.match(answerBlock, /dateTime=\{lastUpdated\}/);
+});
+
 test("the shared disclaimer gate returns focus and scroll to the first questionnaire answer", async () => {
   const gate = await read("src/components/DisclaimerGate.tsx");
 
@@ -46,33 +54,55 @@ test("the shared disclaimer gate returns focus and scroll to the first questionn
   assert.match(gate, /Math\.min\(320, window\.innerHeight \* 0\.4\)/);
   assert.match(gate, /firstAnswer\.focus\(\{ preventScroll: true \}\)/);
   assert.match(gate, /behavior: reducedMotion \? "auto" : "smooth"/);
+  assert.match(gate, /onChange=\{\(event\) => setChecked\(event\.currentTarget\.checked\)\}/);
 });
 
-test("every consent-gated assessment uses the repaired shared transition", async () => {
-  const clients = [
-    "src/app/aq-10-autism-screening/AQ10Client.tsx",
-    "src/app/asrs-adhd-screening/ASRSClient.tsx",
-    "src/app/attachment-style-quiz/AttachmentStyleClient.tsx",
-    "src/app/audit-alcohol-test/AUDITClient.tsx",
-    "src/app/audit-c-alcohol-screen/AUDITCClient.tsx",
-    "src/app/big-five-personality-test/BigFiveClient.tsx",
-    "src/app/burnout-assessment-tool/BurnoutClient.tsx",
-    "src/app/cage-aid-substance-abuse-screening/CAGEAIDClient.tsx",
-    "src/app/dass-21-depression-anxiety-stress/DASS21Client.tsx",
-    "src/app/gad-7-anxiety-test/GAD7Client.tsx",
-    "src/app/mental-load-calculator/MentalLoadClient.tsx",
-    "src/app/msi-bpd-screening/MSIBPDClient.tsx",
-    "src/app/pcl-5-ptsd-screening/PCL5Client.tsx",
-    "src/app/phq-9-depression-test/PHQ9Client.tsx",
-    "src/app/scoff-eating-disorder-screening/SCOFFClient.tsx",
-    "src/app/sleep-and-mood-check/SleepMoodClient.tsx",
-    "src/app/work-stress-check/WorkStressClient.tsx",
+test("all maintained interactive assessment routes require the shared educational-use gate", async () => {
+  const maintainedRoutes = [
+    ["/phq-9-depression-test", "src/app/phq-9-depression-test/PHQ9Client.tsx"],
+    ["/phq-4-anxiety-depression-screen", "src/app/phq-4-anxiety-depression-screen/PHQ4Client.tsx"],
+    ["/ces-d-depression-scale", "src/app/ces-d-depression-scale/CesdClient.tsx"],
+    ["/postpartum-depression-test", "src/app/phq-9-depression-test/PHQ9Client.tsx"],
+    ["/gad-7-anxiety-test", "src/app/gad-7-anxiety-test/GAD7Client.tsx"],
+    ["/pcl-5-ptsd-screening", "src/app/pcl-5-ptsd-screening/PCL5Client.tsx"],
+    ["/pc-ptsd-5-screening", "src/app/pc-ptsd-5-screening/PcPtsd5Client.tsx"],
+    ["/audit-alcohol-test", "src/app/audit-alcohol-test/AUDITClient.tsx"],
+    ["/audit-c-alcohol-screen", "src/app/audit-c-alcohol-screen/AUDITCClient.tsx"],
+    ["/asrs-adhd-screening", "src/app/asrs-adhd-screening/ASRSClient.tsx"],
+    ["/big-five-personality-test", "src/app/big-five-personality-test/BigFiveClient.tsx"],
+    ["/rosenberg-self-esteem-scale", "src/app/rosenberg-self-esteem-scale/RSESClient.tsx"],
+    ["/values-card-sort", "src/app/values-card-sort/ValuesCardSortClient.tsx"],
+    ["/k6-distress-scale", "src/app/k6-distress-scale/K6Client.tsx"],
+    ["/burnout-assessment-tool", "src/app/burnout-assessment-tool/BurnoutClient.tsx"],
+    ["/compassion-fatigue-test", "src/app/burnout-assessment-tool/BurnoutClient.tsx"],
+    ["/caregiver-burnout-assessment", "src/app/burnout-assessment-tool/BurnoutClient.tsx"],
+    ["/work-stress-check", "src/app/work-stress-check/WorkStressClient.tsx"],
+    ["/who-5-wellbeing-index", "src/app/who-5-wellbeing-index/Who5Client.tsx"],
+    ["/sleep-and-mood-check", "src/app/sleep-and-mood-check/SleepMoodClient.tsx"],
+    ["/grief-assessment", "src/app/phq-9-depression-test/PHQ9Client.tsx"],
   ];
+  const hub = await read("src/app/screening-tools/page.tsx");
 
-  assert.equal(clients.length, 17);
-  for (const client of clients) {
-    assert.match(await read(client), /<DisclaimerGate/);
+  assert.equal(
+    new Set(maintainedRoutes.map(([route]) => route)).size,
+    maintainedRoutes.length,
+  );
+
+  const clientSources = new Map();
+  for (const [route, client] of maintainedRoutes) {
+    assert.match(hub, new RegExp(`href: "${route}"`), `${route} must remain in the maintained directory`);
+    if (!clientSources.has(client)) clientSources.set(client, await read(client));
   }
+
+  for (const [client, source] of clientSources) {
+    assert.match(source, /import \{ DisclaimerGate \}/, `${client} must import the shared gate`);
+    assert.match(source, /const \[accepted, setAccepted\] = useState\(false\)/, `${client} must default to gated`);
+    assert.match(source, /<DisclaimerGate/, `${client} must render the shared gate`);
+    assert.match(source, /(?:if \(!accepted\)|\{!accepted\s*(?:&&|\?)\s*\()/, `${client} must block entry before consent`);
+    assert.match(source, /onAccept=\{\(\) =>/, `${client} must expose explicit acceptance`);
+  }
+
+  assert.match(await read("src/app/mental-load-calculator/MentalLoadClient.tsx"), /<DisclaimerGate/);
 });
 
 test("offline UI states the sensitive-route boundary without promising cached screeners or results", async () => {

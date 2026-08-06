@@ -12,11 +12,12 @@ const QUARANTINED_PATHS = new Set([
   "/stress-test-college-students", "/burnout-test-for-nurses", "/burnout-test-for-healthcare-workers",
   "/burnout-test-for-teachers", "/burnout-test-parents", "/loneliness-test-seniors",
   "/eating-disorder-test-athletes", "/bpd-test-for-women", "/bpd-screening-for-young-adults",
-  "/attachment-style-test-for-couples", "/blog",
+  "/attachment-style-test-for-couples", "/dass-21-score-interpretation", "/ace-score-interpretation",
+  "/dass-21-vs-phq-9-and-gad-7", "/blog",
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastUpdated = "2026-08-02T00:00:00.000Z";
+  const lastUpdated = "2026-08-05T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
 
   const staticPages = [
@@ -35,8 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/k6-distress-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/scoff-eating-disorder-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/aq-10-autism-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/msi-bpd-screening`, lastModified: "2026-03-08T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/attachment-style-quiz`, lastModified: "2026-03-08T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/msi-bpd-screening`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/attachment-style-quiz`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/big-five-personality-test`, lastModified: "2026-03-08T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/sobriety-calculator`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/money-saved-recovery-calculator`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
@@ -63,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/ace-questionnaire`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/holmes-rahe-stress-inventory`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/rosenberg-self-esteem-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${SITE_URL}/ucla-loneliness-scale`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/ucla-loneliness-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/athens-insomnia-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/brief-resilience-scale`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/box-breathing-exercise`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

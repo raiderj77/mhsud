@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, medicalWebPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { WorkStressClient } from "./WorkStressClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/work-stress-check`;
 
@@ -39,7 +40,7 @@ const FAQ_DATA = [
   {
     question: "Is my data stored?",
     answer:
-      "No. All scoring happens in your browser. Your answers are never sent to any server or stored anywhere.",
+      "Answers and results are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records, and copies, sync, backups, or shared-device access are outside this boundary.",
   },
   {
     question: "What should I do if my results suggest high stress?",
@@ -86,7 +87,7 @@ export default function WorkStressPage() {
             Most people who are burning out do not realize it until they are already running on empty. The warning signs are easy to rationalize: the exhaustion is just a tough week, the irritability is just stress, the loss of interest in work that used to matter is just a phase. By the time it is impossible to ignore, months of damage have already been done.
           </p>
           <p>
-            This 12-question self-check was designed to help you catch those patterns early. It covers the six domains most consistently linked to workplace burnout: demands, control, support, engagement, recovery, and physical impact. It takes about 3 minutes and your responses never leave your browser.
+            This 12-question self-check was designed to help you catch those patterns early. It covers the six domains most consistently linked to workplace burnout: demands, control, support, engagement, recovery, and physical impact. It takes about 3 minutes; answers and results are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
           <p>
             This is a reflection tool, not a clinical assessment. If your results raise concerns, the most useful next step is a conversation with a therapist, counselor, or your primary care provider - not more self-diagnosis.
@@ -163,7 +164,7 @@ export default function WorkStressPage() {
             <li>12 questions, rated on a 4-point frequency scale</li>
             <li>Results broken into the six domains above</li>
             <li>A summary with context and suggested next steps</li>
-            <li>No account, no email, nothing stored or transmitted</li>
+            <li>No account or email required; answers and results use local processing</li>
           </ul>
         </div>
 
@@ -201,6 +202,8 @@ export default function WorkStressPage() {
   </div>
 </div>
         </div>
+
+        <ToolReviewerBio lastReviewed="August 2, 2026" />
 
         <div id="screening"><WorkStressClient faqData={FAQ_DATA} /></div>
 

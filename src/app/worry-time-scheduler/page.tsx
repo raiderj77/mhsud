@@ -9,9 +9,9 @@ const TOOL_URL = `${SITE_URL}/worry-time-scheduler`;
 
 export const metadata: Metadata = createMetadata({
   path: "/worry-time-scheduler",
-  title: "Worry Time Scheduler | Free CBT Worry Postponement Tool",
+  title: "Worry Time & Worry Postponement | Free CBT Scheduler",
   description:
-    "Free worry time scheduler based on CBT worry postponement. Park worries during the day, process them in a guided session. Reduce anxiety by containing worry. No signup required.",
+    "Use a free, private worry time scheduler to park worries and practice CBT worry postponement in a structured 15-30 minute session. Educational; no signup.",
   keywords: [
     "worry time scheduler", "worry postponement CBT",
     "scheduled worry time", "worry period technique",
@@ -21,8 +21,8 @@ export const metadata: Metadata = createMetadata({
     "anxiety management tool", "worry time CBT technique",
   ],
   openGraph: {
-    title: "Worry Time Scheduler | Free CBT Worry Postponement Tool",
-    description: "Free CBT worry postponement tool. Park worries during the day, then process them in a guided worry time session. Reduce anxiety by containing worry to a set time.",
+    title: "Worry Time & Worry Postponement | Free CBT Scheduler",
+    description: "A free, private tool for practicing scheduled worry time and CBT worry postponement. Educational only; no signup required.",
     url: TOOL_URL,
     type: "website",
   },
@@ -31,23 +31,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is worry time and how does it work?",
-    answer: "Worry time (also called scheduled worry or stimulus control for worry) is a cognitive behavioral therapy technique where you designate a specific 15-30 minute period each day as your 'worry time.' When worries arise outside this period, you briefly write them down and postpone thinking about them until your scheduled session. During worry time, you work through each parked worry systematically. Research shows this technique reduces generalized anxiety by containing worry to a set time, rather than letting it dominate your entire day.",
+    answer: "Worry time (also called worry postponement or scheduled worry) is a cognitive behavioral technique where you designate a specific 15-30 minute period to revisit worries. When a worry arises outside that period, you briefly record it and return to it later. Studies of worry-postponement exercises have reported mixed results, so this educational tool should not be treated as therapy or as a guaranteed way to reduce anxiety.",
   },
   {
     question: "How long should my worry time session be?",
-    answer: "Most CBT protocols recommend 15-30 minutes. Start with 15 minutes and increase if you find you consistently need more time. The key is having a fixed endpoint, worry time should not extend indefinitely. If you finish early, that is a good sign. If you do not get through all worries, prioritize the most pressing ones and save the rest for tomorrow. Over time, many people find they need less worry time as their anxiety decreases.",
+    answer: "Some CBT protocols use a 15-30 minute period, but evidence does not establish one best duration for everyone. You can start with 15 minutes, keep a fixed endpoint, and adjust based on comfort. If you finish early, that only means no other entries need review at that time; it does not show that the exercise is working. Stop if the session increases distress.",
   },
   {
     question: "What if I cannot stop worrying outside of worry time?",
-    answer: "This is completely normal, especially when starting out. The goal is not perfection, it is practice. When a worry pops up, acknowledge it, write it down quickly (so your brain knows it will not be forgotten), and gently redirect your attention. Some people find it helpful to say to themselves: 'I see this worry. I have written it down. I will give it my full attention at [scheduled time].' If a worry feels truly urgent (involving immediate safety), address it right away. Otherwise, the act of postponing gets easier with practice.",
+    answer: "Postponing worry can be difficult. The goal is practice, not perfect control. When a worry appears, you can acknowledge it, write a brief reminder, and try returning attention to the present task. A note does not guarantee that the worry will feel less urgent. Address immediate safety concerns right away, and stop the exercise or seek professional support if it increases distress.",
   },
   {
     question: "When is the best time to schedule worry time?",
-    answer: "Choose a time that works consistently for your schedule, but avoid right before bed (worrying before sleep can cause insomnia) and the very start of your day (it may set a negative tone). Late afternoon or early evening works well for many people, it is late enough that you have collected the day's worries but early enough that you have time to decompress afterward. The most important factor is consistency: the same time each day helps your brain learn that worries have a designated time and place.",
+    answer: "There is no established best time for everyone. Choose a time you can remember and that does not interfere with important activities or rest. If reviewing worries near bedtime feels activating, choose an earlier time. A consistent reminder can support the routine, but it does not train the brain or guarantee an outcome.",
   },
   {
     question: "Is worry time the same as rumination?",
-    answer: "No, and this is a critical distinction. Rumination is passive, repetitive, unproductive thinking that goes in circles. Worry time is structured and goal-oriented. During worry time, you actively engage with each worry: Is it solvable? If yes, plan a concrete next step. If no, practice acceptance and letting go. The guided prompts in this tool help ensure your worry time stays productive rather than becoming rumination. If you find yourself going in circles on a worry, that is a signal to move on to the next one.",
+    answer: "They are not intended to be the same. This exercise uses a bounded review period and prompts about possible actions or acceptance, while rumination is repetitive thinking without a clear next step. The prompts cannot ensure that a session stays productive or reduces anxiety. If you find yourself going in circles or becoming more distressed, stop and consider professional support.",
   },
   {
     question: "Are my worries stored privately?",
@@ -67,7 +67,7 @@ export default function WorryTimeSchedulerPage() {
               description: "A free CBT worry postponement tool. Schedule a daily worry time, park worries throughout the day with a quick capture button, then process each worry in a guided session with structured prompts. Track worry patterns over time with stats. Based on the stimulus control and scheduled worry techniques from cognitive behavioral therapy for generalized anxiety disorder.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-05",
             }),
     }),
         }}
@@ -96,14 +96,14 @@ export default function WorryTimeSchedulerPage() {
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 5, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A CBT-based worry scheduling tool that helps you contain worry by setting aside dedicated time for it rather than worrying all day."
-          who="Anyone with chronic worry or generalized anxiety who wants a structured technique to reduce anxious rumination."
-          bottomLine="Scheduled worry time paradoxically reduces total worry by giving your brain a designated outlet. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="Worry time, also called worry postponement, is a CBT exercise that sets a planned 15-30 minute period to revisit worries recorded earlier in the day."
+          who="People who want a structured, private way to practice scheduled worry without creating an account."
+          bottomLine="Evidence for standalone and online worry-postponement exercises is mixed. This educational tool is not treatment, a diagnosis, or emergency care."
+          lastUpdated="2026-08-05"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -121,8 +121,8 @@ export default function WorryTimeSchedulerPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-02">
+          {new Date("2026-08-02T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>

@@ -1,9 +1,9 @@
 # MindCheck Tools
 
 > Browser-based screening instruments, self-reflection tools, calculators, and guided exercises.
-> Some screening pages implement published validated instruments; other tools are educational or self-reflection resources. None provides a diagnosis or medical advice.
+> Some pages implement published instruments; rights-limited instruments remain public as educational information without questionnaire administration or scoring. Other tools are educational or self-reflection resources. None provides a diagnosis or medical advice.
 
-All interactive answers and scores are processed locally in the browser. Sensitive tool routes do not load analytics or advertising. Optional services on eligible public pages require consent. No account is required to use the tools.
+All interactive answers and scores are processed locally in the browser. Health-topic, instrument, result, crisis, privacy, and youth pages do not load optional analytics or advertising. Consented optional services are limited to the topic-neutral homepage. No account is required to use the tools.
 
 ## Editorial trust and scope
 
@@ -22,30 +22,35 @@ All interactive answers and scores are processed locally in the browser. Sensiti
 - [How to talk to your doctor about mental health](https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health)
 - [Crisis resources](https://mindchecktools.com/crisis-resources)
 
-## Published screening and research instruments
+## Published instruments: interactive and information pages
 
-These are educational self-screens or research measures, not diagnostic services.
+Interactive entries are educational self-screens, not diagnostic services. Entries labeled information contain no questionnaire, scoring, or personal result.
 
 - [PHQ-9 depression self-check](https://mindchecktools.com/phq-9-depression-test)
 - [GAD-7 anxiety self-check](https://mindchecktools.com/gad-7-anxiety-test)
+- [SPIN social-anxiety information and licensing boundary](https://mindchecktools.com/spin-social-anxiety-test)
 - [AUDIT alcohol use screen](https://mindchecktools.com/audit-alcohol-test)
 - [AUDIT-C alcohol screen](https://mindchecktools.com/audit-c-alcohol-screen)
-- [CAGE-AID substance use screen](https://mindchecktools.com/cage-aid-substance-abuse-screening)
-- [DASS-21 depression, anxiety, and stress](https://mindchecktools.com/dass-21-depression-anxiety-stress)
+- [CAGE-AID substance-use information and rights boundary](https://mindchecktools.com/cage-aid-substance-abuse-screening)
+- [DASS-21 information and public-use boundary](https://mindchecktools.com/dass-21-depression-anxiety-stress)
+- [ACE Questionnaire information and provenance boundary](https://mindchecktools.com/ace-questionnaire)
 - [PCL-5 PTSD self-check](https://mindchecktools.com/pcl-5-ptsd-screening)
 - [PC-PTSD-5 screen](https://mindchecktools.com/pc-ptsd-5-screening)
 - [ASRS adult ADHD screen](https://mindchecktools.com/asrs-adhd-screening)
 - [WHO-5 well-being index](https://mindchecktools.com/who-5-wellbeing-index)
-- [WHO ASSIST substance use screen](https://mindchecktools.com/who-assist-substance-screening)
-- [CRAFFT substance use screen](https://mindchecktools.com/crafft-substance-screening)
-- [SCOFF eating-disorder screen](https://mindchecktools.com/scoff-eating-disorder-screening)
-- [AQ-10 autism-trait screen](https://mindchecktools.com/aq-10-autism-screening)
+- [WHO ASSIST information and public-use boundary](https://mindchecktools.com/who-assist-substance-screening)
+- [CRAFFT youth-screening information and approval boundary](https://mindchecktools.com/crafft-substance-screening)
+- [SCOFF eating-disorder screening information](https://mindchecktools.com/scoff-eating-disorder-screening)
+- [MSI-BPD screening information](https://mindchecktools.com/msi-bpd-screening)
+- [AQ-10 adult autism-screening information](https://mindchecktools.com/aq-10-autism-screening)
+- [ECR-R attachment information and commercial-use boundary](https://mindchecktools.com/attachment-style-quiz)
 - [CES-D depression scale](https://mindchecktools.com/ces-d-depression-scale)
 - [K6 distress scale](https://mindchecktools.com/k6-distress-scale)
-- [Athens insomnia scale](https://mindchecktools.com/athens-insomnia-scale)
-- [Brief resilience scale](https://mindchecktools.com/brief-resilience-scale)
+- [Holmes-Rahe inventory information](https://mindchecktools.com/holmes-rahe-stress-inventory)
+- [Athens Insomnia Scale information](https://mindchecktools.com/athens-insomnia-scale)
+- [Brief Resilience Scale information](https://mindchecktools.com/brief-resilience-scale)
 - [Rosenberg self-esteem scale](https://mindchecktools.com/rosenberg-self-esteem-scale)
-- [UCLA loneliness scale](https://mindchecktools.com/ucla-loneliness-scale)
+- [UCLA Loneliness Scale information](https://mindchecktools.com/ucla-loneliness-scale)
 
 ## Educational and self-reflection tools
 

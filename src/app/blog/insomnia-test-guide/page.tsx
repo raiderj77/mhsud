@@ -142,7 +142,7 @@ export default function InsomniaTestGuidePage() {
             <p>
               You can take the{" "}
               <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale self-assessment</Link>{" "}
-              on this site. It takes about 2 minutes, and your answers are scored in your browser, nothing is stored or transmitted.
+              on this site. It takes about 2 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -261,7 +261,7 @@ export default function InsomniaTestGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">How is your sleep affecting you?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Take a free, private insomnia screening. Your answers are scored in your browser and never stored.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Take a free, private insomnia screening. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/athens-insomnia-scale" className="btn-primary text-sm">Take the Athens Insomnia Scale</Link>
               <Link href="/sleep-and-mood-check" className="btn-primary text-sm">Take the Sleep &amp; Mood Check</Link>

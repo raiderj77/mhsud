@@ -200,7 +200,7 @@ export default function AdhdWomenGuidePage() {
           <section>
             <h2>Getting screened and what to do with your results</h2>
             <p>
-              If the patterns described in this article resonate with your experience, a structured ADHD screening is a useful next step. The <Link href="/adhd-test-women" className="text-sage-600 dark:text-sage-400 underline">ADHD screening for women</Link> on MindCheck Tools is free, private, and takes under ten minutes. It runs entirely in your browser and your answers are never stored.
+              If the patterns described in this article resonate with your experience, a structured ADHD screening is a useful next step. The <Link href="/adhd-test-women" className="text-sage-600 dark:text-sage-400 underline">ADHD screening for women</Link> on MindCheck Tools is free, private, and takes under ten minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               A screening is not an assessment. It identifies whether your symptom patterns are consistent with ADHD and whether further evaluation by a qualified professional is warranted. If your results suggest elevated ADHD symptoms, consider these next steps:

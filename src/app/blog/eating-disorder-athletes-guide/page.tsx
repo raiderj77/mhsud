@@ -201,7 +201,7 @@ export default function EatingDisorderAthletesGuidePage() {
           <section>
             <h2>How the MindCheck Tools eating disorder screening for athletes helps</h2>
             <p>
-              The <Link href="/eating-disorder-test-athletes" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools eating disorder screening for athletes</Link> is a free, private assessment that accounts for the unique context of competitive sport. It takes under five minutes, runs entirely in your browser, and requires no account or login.
+              The <Link href="/eating-disorder-test-athletes" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools eating disorder screening for athletes</Link> is a free, private assessment that accounts for the unique context of competitive sport. It takes under five minutes and requires no account or login. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               The screening helps identify patterns that competitive culture may normalize, rigid food rules, exercise beyond training, body preoccupation, and compensatory behaviors. Because sport culture makes it especially difficult to see your own behavior clearly, a structured screening provides an outside perspective grounded in clinical evidence rather than the distorted norms of your training environment.

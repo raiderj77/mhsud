@@ -6,9 +6,9 @@ import type { ToolCategory, Tool } from "@/components/ToolGrid";
 
 export const metadata: Metadata = createMetadata({
   path: "/",
-  title: "MindCheck Tools, Free, Private Mental Health Self-Checks",
+  title: "MindCheck Tools, Private Self-Checks and Information",
   description:
-    "Free, private mental health self-checks, PHQ-9, GAD-7, AUDIT & more. Scored in your browser, never stored. No signup required.",
+    "Free mental health and substance-use self-checks plus rights-aware instrument information. Interactive answers are processed in your browser; no signup is required.",
 });
 
 const TOOL_CATEGORIES: ToolCategory[] = [
@@ -57,22 +57,22 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/dass-21-depression-anxiety-stress",
-    title: "DASS-21 Depression/Anxiety/Stress",
-    description: "One test, three answers. Screens depression, anxiety, and stress simultaneously with separate severity ratings.",
-    badge: "3-in-1",
-    time: "~4 min",
-    questions: 21,
+    title: "DASS-21 Information",
+    description: "Why this site does not administer or score the DASS-21 publicly, with citations and non-equivalent screening alternatives.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Anxiety & Stress",
   },
   {
     href: "/spin-social-anxiety-test",
-    title: "SPIN Social Anxiety Test",
-    description: "17-item Social Phobia Inventory (Connor et al., 2000). Three subscales: fear, avoidance, and physiological symptoms. Total score 0-68; results are not diagnostic.",
-    badge: "Validated",
-    time: "~3 min",
-    questions: 17,
+    title: "SPIN Social Anxiety Information",
+    description: "Evidence, licensing limits, and non-equivalent permitted options without reproducing, administering, or scoring the SPIN.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Anxiety & Stress",
@@ -90,11 +90,11 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/holmes-rahe-stress-inventory",
-    title: "Holmes-Rahe Stress Inventory",
-    description: "43-item life stress checklist from Holmes & Rahe (1967). Check events from the past 12 months, scored in Life Change Units. Three risk tiers.",
-    badge: "Validated",
-    time: "~3 min",
-    questions: 43,
+    title: "Holmes-Rahe Inventory Information",
+    description: "Evidence and reuse limits for the Holmes-Rahe inventory without displaying events, weights, scores, or health-risk tiers.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Anxiety & Stress",
@@ -123,11 +123,11 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/ace-questionnaire",
-    title: "ACE Questionnaire",
-    description: "10-item Adverse Childhood Experiences questionnaire from the CDC-Kaiser study. Yes/no format with resilience framing and protective factors. Score 0-10.",
-    badge: "CDC",
-    time: "~2 min",
-    questions: 10,
+    title: "ACE Questionnaire Information",
+    description: "Trauma-informed evidence and provenance limits without collecting childhood-experience answers or calculating an ACE score.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "PTSD & Trauma",
@@ -156,33 +156,33 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/cage-aid-substance-abuse-screening",
-    title: "CAGE-AID Substance Use Screen",
-    description: "4-question validated screening for both alcohol and drug use concerns.",
-    badge: "Quick",
-    time: "~1 min",
-    questions: 4,
+    title: "CAGE-AID Screening Information",
+    description: "Evidence and reproduction-rights context without displaying questions, collecting substance-use answers, or returning a score.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Substance Use & Addiction",
   },
   {
     href: "/crafft-substance-screening",
-    title: "CRAFFT Screening for Teens",
-    description: "Validated substance use screening for ages 12-21 (CRAFFT 2.1+N). Part A gates Part B yes/no CRAFFT questions. Score of 2+ is positive screen. Includes nicotine screening.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
+    title: "CRAFFT Youth Screening Information",
+    description: "Youth-appropriate evidence and reproduction-approval requirements without administering or scoring the CRAFFT.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Substance Use & Addiction",
   },
   {
     href: "/who-assist-substance-screening",
-    title: "WHO ASSIST Substance Screening",
-    description: "Comprehensive WHO screening covering 10 substance categories. Stepped wizard with per-substance risk scores (0-39). Three risk levels with intervention recommendations.",
-    badge: "WHO",
-    time: "~5\u201310 min",
-    questions: 67,
+    title: "WHO ASSIST Information",
+    description: "Evidence and WHO public-use limits without reproducing the questionnaire, collecting answers, or returning intervention guidance.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Substance Use & Addiction",
@@ -223,55 +223,55 @@ const TOOLS: Tool[] = [
 
   {
     href: "/scoff-eating-disorder-screening",
-    title: "SCOFF Eating Disorder Screen",
-    description: "5-question validated screener for anorexia, bulimia, and other eating disorders. Quick Yes/No format.",
-    badge: "Quick",
-    time: "~1 min",
-    questions: 5,
+    title: "SCOFF Screening Information",
+    description: "Eating-disorder screening evidence and permissions context without displaying questions, collecting answers, or scoring.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Other Conditions",
   },
   {
     href: "/msi-bpd-screening",
-    title: "MSI-BPD Borderline Personality Screening",
-    description: "10-item validated screening for borderline personality features developed at McLean Hospital. Yes/No format. Cutoff of 7+ for positive screen.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
+    title: "MSI-BPD Screening Information",
+    description: "Evidence, limitations, and unresolved reuse terms without administering the MSI-BPD or assigning likelihood ranges.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Other Conditions",
   },
   {
     href: "/aq-10-autism-screening",
-    title: "AQ-10 Autism Spectrum Screen",
-    description: "10-item validated screening tool for autism spectrum traits in adults. Developed at the University of Cambridge.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 10,
+    title: "Adult AQ-10 Information",
+    description: "Evidence and commercial/electronic-use limits without reproducing questions, scoring traits, or returning an autism result.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Other Conditions",
   },
   {
     href: "/athens-insomnia-scale",
-    title: "Athens Insomnia Scale",
-    description: "8-item insomnia symptom measure based on ICD-10 criteria (Soldatos et al., 2000). Past month, score 0-24; results are not a sleep-disorder diagnosis.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 8,
+    title: "Athens Insomnia Scale Information",
+    description: "Validation and permissions context without displaying scale items, calculating a score, or assigning insomnia severity.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Other Conditions",
   },
   {
     href: "/ucla-loneliness-scale",
-    title: "UCLA Loneliness Scale",
-    description: "20-item research measure of subjective loneliness (Russell, 1996). Rated 1-4 with 9 reverse-scored items; higher scores reflect greater self-reported loneliness.",
-    badge: "Validated",
-    time: "~5 min",
-    questions: 20,
+    title: "UCLA Loneliness Scale Information",
+    description: "Evidence and noncommercial-use limits without reproducing the scale, collecting answers, or labeling a loneliness level.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Other Conditions",
@@ -344,11 +344,11 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/attachment-style-quiz",
-    title: "Attachment Style Quiz (ECR-R)",
-    description: "36-item validated questionnaire measuring attachment-related anxiety and avoidance. Identifies Secure, Preoccupied, Dismissing, or Fearful-Avoidant style.",
-    badge: "Validated",
-    time: "~5 min",
-    questions: 36,
+    title: "ECR-R Attachment Information",
+    description: "Dimensional attachment research and commercial-use limits without administering the ECR-R or assigning categorical styles.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Stress, Burnout & Well-Being",
@@ -366,11 +366,11 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/brief-resilience-scale",
-    title: "Brief Resilience Scale",
-    description: "6-item measure of ability to bounce back from stress (Smith et al., 2008). Mean score 1-5. Three reverse-scored items. Low resilience below 3.00.",
-    badge: "Validated",
-    time: "~2 min",
-    questions: 6,
+    title: "Brief Resilience Scale Information",
+    description: "Validation evidence and unresolved reuse terms without reproducing items, reverse keys, scores, or resilience tiers.",
+    badge: "Information",
+    time: "~3 min read",
+    questions: null,
     color: "sage",
     status: "live",
     category: "Stress, Burnout & Well-Being",
@@ -411,7 +411,7 @@ const TOOLS: Tool[] = [
   {
     href: "/halt-check-in",
     title: "HALT Check-In",
-    description: "Daily recovery check-in based on the HALT acronym. Rate Hungry, Angry, Lonely, Tired and see your vulnerability level with coping suggestions.",
+    description: "Educational HALT reflection for Hungry, Angry, Lonely, and Tired needs. Ratings stay separate and do not estimate relapse risk.",
     badge: "Original",
     time: "~1 min",
     questions: 4,
@@ -527,8 +527,8 @@ const FEATURES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
       </svg>
     ),
-    title: "Private by Design",
-    text: "Screening answers and scores stay in your browser and are not sent to MindCheck Tools. No account or login is required. As with any website, ordinary hosting records can still include the page you requested.",
+    title: "Local Browser Processing",
+    text: "Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools. No account or login is required. Ordinary website requests can still create hosting records that include the page requested.",
   },
   {
     icon: (
@@ -667,7 +667,7 @@ export default function HomePage() {
             for source studies and reported limitations.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            On MindCheck Tools, scoring happens in your browser and screening answers are not transmitted to us. A few optional worksheets and recovery tools save entries in local browser storage only when their page says so.
+            On MindCheck Tools, screening answers and scores are processed locally and are not intentionally sent to us. A few optional worksheets and recovery tools save entries in local browser storage only when their page says so.
           </p>
         </section>
 
@@ -691,7 +691,7 @@ export default function HomePage() {
             Are these screening tools free and confidential?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            Yes. Tools can be used without payment or an account. Screening answers are processed in your browser and are not transmitted to MindCheck Tools.
+            Yes. Tools can be used without payment or an account. Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Scoring logic runs locally using client-side JavaScript. Some optional worksheets and recovery trackers can retain entries in your browser so they work across visits; those pages disclose local storage before use.
@@ -754,10 +754,10 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
           <div className="max-w-xl mx-auto">
             <h2 className="font-serif text-2xl font-bold text-white mb-4">
-              Your privacy is not negotiable
+              How local processing works
             </h2>
             <p className="text-white/80 leading-relaxed mb-3">
-              Screening answers are processed entirely in your browser using client-side JavaScript. We do not receive or store them. Optional local-saving tools disclose when an entry can remain in your browser after the page closes.
+              Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Optional local-saving tools disclose when an entry can remain in this browser. Ordinary website requests can still create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared-browser or device access are outside this boundary.
             </p>
             <p className="text-white/60 text-sm">
               Optional analytics and advertising stay off unless you consent, and neither receives screening answers or scores. No account or login is required. Ordinary website request records are described in the notice below.

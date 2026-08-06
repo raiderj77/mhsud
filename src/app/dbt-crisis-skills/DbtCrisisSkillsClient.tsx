@@ -52,7 +52,7 @@ const SKILL_GROUPS: SkillGroup[] = [
         letter: "T",
         name: "Temperature",
         oneLiner: "Use a cool sensation only if it is medically safe for you",
-        instructions: "Temperature-based TIPP practice can change heart rate quickly and is not safe for everyone. Do not put ice directly on skin or submerge your face based only on this page. If you have a medical condition, temperature intolerance, take medication that affects heart rate, or are unsure, ask a health professional for an adapted version.",
+        instructions: "Temperature-based TIPP practice can affect heart rate and is not safe for everyone. This educational card does not instruct extreme cold exposure or face immersion. If you have a medical condition, temperature intolerance, take medication that affects heart rate, or are unsure, ask a health professional for an adapted version before trying a temperature-based practice.",
         examples: [
           "Hold a comfortably cool cloth in your hands and notice the sensation",
           "Splash your hands with cool, not painfully cold, water",
@@ -231,12 +231,12 @@ const SKILL_GROUPS: SkillGroup[] = [
       {
         letter: "S",
         name: "Sensations",
-        oneLiner: "Use physical sensations to interrupt emotional pain",
-        instructions: "Use strong physical sensations to ground yourself in the present moment and interrupt the emotional spiral. Intense but safe sensory input can redirect your nervous system's attention from emotional pain to physical sensation.",
+        oneLiner: "Notice a mild, non-painful sensation in the present moment",
+        instructions: "Choose a familiar sensation that is comfortable and non-painful, then describe it in detail. The aim is to redirect attention briefly, not to shock, hurt, or overwhelm your body.",
         examples: [
-          "Hold an ice cube in your hand and focus on the cold",
-          "Hold a textured object and describe what you feel",
-          "Eat something with a strong flavor, sour candy, hot sauce, peppermint",
+          "Hold a smooth or textured object and describe its shape and surface",
+          "Wash your hands in comfortably cool water and notice the sensation",
+          "Listen for three distinct sounds and describe each one",
         ],
       },
     ],
@@ -391,7 +391,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         DBT Crisis Survival Skills Cards
       </h1>
       <p className="text-neutral-600 dark:text-neutral-300 mb-6 max-w-2xl">
-        Evidence-based distress tolerance skills from Dialectical Behavior Therapy. Tap any card to see detailed instructions and examples. Use the random button when you need a skill fast.
+        Educational distress-tolerance skills adapted from Dialectical Behavior Therapy. Tap a card for instructions and cautions. These cards are not a complete DBT program or emergency care.
       </p>
 
       {/* Random Skill button */}
@@ -609,7 +609,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
         <div className="p-5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800">
           <h2 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">Important Disclaimer</h2>
           <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed">
-            These DBT distress tolerance skills are presented for educational purposes only. This tool is not a substitute for professional DBT therapy with a trained clinician. While these skills are evidence-based, learning them in the context of a therapeutic relationship provides much deeper understanding and more effective application. If you are experiencing a mental health crisis, please contact a professional or use the crisis resources on this page.
+            These DBT distress-tolerance skills are presented for educational purposes only. DBT is a studied multicomponent treatment, but these cards have not been evaluated as a standalone intervention. This tool is not a substitute for DBT with a trained clinician. If you are experiencing a mental health crisis, contact a professional or use the crisis resources on this page.
           </p>
           <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mt-2">
             Your selected cards are handled in your browser and are not sent to analytics. General page usage may be measured only if you consent to statistics cookies.

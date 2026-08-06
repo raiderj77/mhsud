@@ -209,7 +209,7 @@ export default function AdultAdhdSignsPage() {
               The ASRS is not a diagnostic tool, no self-report questionnaire can replace a clinical evaluation. What it does is help you determine whether your symptoms are consistent with ADHD and whether pursuing a comprehensive evaluation is warranted. It takes approximately five minutes to complete and is widely used by clinicians as a first step in the assessment process.
             </p>
             <p>
-              You can take our free <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS ADHD screening</Link> right now. Your answers are scored entirely in your browser and are never stored or transmitted.
+              You can take our free <Link href="/asrs-adhd-screening" className="text-sage-600 dark:text-sage-400 underline">ASRS ADHD screening</Link> right now. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -269,7 +269,7 @@ export default function AdultAdhdSignsPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Think you might have ADHD?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The ASRS is a validated screening tool developed by the WHO. Free, private, takes about 5 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The ASRS is a validated screening tool developed by the WHO. Free, private, takes about 5 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/asrs-adhd-screening" className="btn-primary text-sm">Take the ASRS ADHD Screening</Link>
           </div>
 

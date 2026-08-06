@@ -7,6 +7,11 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import {
+  PRIVATE_SHARE_COPIED_MESSAGE,
+  PRIVATE_SHARE_NOTICE,
+  sharePrivateToolLink,
+} from "@/lib/privateToolSharing";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -107,25 +112,17 @@ export function BACClient({ faqData }: Props) {
 
   const handlePrint = useCallback(() => window.print(), []);
 
-  const handleShare = useCallback(async (mode: "results" | "blank") => {
-    const url = "https://mindchecktools.com/bac-calculator";
-    if (mode === "blank") {
-      if (navigator.share) {
-        try { await navigator.share({ title: "BAC Calculator, Free & Private", text: "Estimate your blood alcohol content. See BAC level, effects, and time until sober.", url }); return; } catch { /* cancelled */ }
-      }
-      await navigator.clipboard.writeText(url);
-      setShareMessage("Link copied!");
+  const handleShare = useCallback(async (mode: "share" | "copy") => {
+    const outcome = await sharePrivateToolLink({
+      toolName: "BAC Calculator",
+      canonicalPath: "/bac-calculator",
+      mode,
+    });
+    if (outcome === "copied") {
+      setShareMessage(PRIVATE_SHARE_COPIED_MESSAGE);
       setTimeout(() => setShareMessage(""), 2500);
-      return;
     }
-    const summary = `BAC Calculator\nEstimated BAC: ${bac.toFixed(3)}%, ${effects.level}\nEst. time until sober: ${soberHours.toFixed(1)} hours\n\nThis is an ESTIMATE only. Never drive after drinking.\nCalculate yours: ${url}`;
-    if (navigator.share) {
-      try { await navigator.share({ title: "BAC Estimate", text: summary }); return; } catch { /* cancelled */ }
-    }
-    await navigator.clipboard.writeText(summary);
-    setShareMessage("Results copied!");
-    setTimeout(() => setShareMessage(""), 2500);
-  }, [bac, effects.level, soberHours]);
+  }, []);
 
   // Gauge position (capped at 0.40 for display)
   const gaugePercent = Math.min((bac / 0.40) * 100, 100);
@@ -474,19 +471,20 @@ export function BACClient({ faqData }: Props) {
           <div className="card p-4 mb-8">
             <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-3">Share</p>
             <div className="flex flex-wrap gap-2">
-              <button onClick={() => handleShare("results")} className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2">
+              <button onClick={() => handleShare("share")} className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
-                Copy My Estimate
+                Share Tool Link
               </button>
-              <button onClick={() => handleShare("blank")} className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2">
+              <button onClick={() => handleShare("copy")} className="btn-secondary text-sm px-4 py-2.5 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                 </svg>
-                Share This Tool
+                Copy Tool Link
               </button>
             </div>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">{PRIVATE_SHARE_NOTICE}</p>
             {shareMessage && (
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">{"\u2713"} {shareMessage}</p>
             )}

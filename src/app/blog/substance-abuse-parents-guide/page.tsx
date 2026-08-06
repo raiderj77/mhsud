@@ -43,7 +43,7 @@ const FAQ_DATA = [
   {
     question: "Will screening lead to involvement with child protective services?",
     answer:
-      "No. The MindCheck Tools screening runs entirely in your browser, collects no personal information, and stores nothing. No one can see your results. Self-screening is not a reportable event. If you later seek professional help, conversations with therapists are protected by confidentiality laws, with very limited exceptions involving imminent danger.",
+      "The MindCheck Tools screening processes questionnaire answers locally in your browser and does not intentionally send them to MindCheck Tools, an employer, school, clinician, or government agency. People with access to your device, browser profile, or copies you create may see them, and ordinary page requests may create limited hosting or security logs. If you later seek professional help, confidentiality and reporting rules vary by provider, jurisdiction, and situation; ask before sharing sensitive information.",
   },
   {
     question: "Where can parents get confidential help?",
@@ -124,7 +124,7 @@ export default function SubstanceAbuseParentsGuidePage() {
               <li>Noticing that your tolerance has increased, you need more to achieve the same effect</li>
             </ul>
             <p>
-              None of these patterns automatically indicate a substance use disorder. But they are worth examining honestly. The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> helps you evaluate these patterns in a structured, private way, no account required, no data stored, and no one sees your results.
+              None of these patterns automatically indicate a substance use disorder. But they are worth examining honestly. The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> helps you evaluate these patterns in a structured, private way with no account required. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools or an employer. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -158,7 +158,7 @@ export default function SubstanceAbuseParentsGuidePage() {
               Parents, especially mothers, face a double bind. Society normalizes heavy drinking as a parenting coping mechanism, then punishes parents who develop problems from doing exactly what the culture encouraged. The fear of being seen as a &quot;bad parent,&quot; of losing custody, of being judged by other parents, keeps many people stuck in patterns they want to change.
             </p>
             <p>
-              The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> exists precisely because of this barrier. It is designed for parents to evaluate their own patterns privately, without creating a record, without involving anyone else, and without judgment. Your answers stay in your browser. No one, not your partner, your doctor, your employer, or this website, ever sees them.
+              The <Link href="/substance-abuse-test-parents" className="text-sage-600 dark:text-sage-400 underline">substance use screening for parents</Link> exists precisely because of this barrier. It is designed for parents to evaluate their own patterns privately and without judgment. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools, your partner, doctor, employer, or a government agency. People with access to your device, browser profile, or copies you create may still see them, and ordinary page requests may create limited hosting or security logs.
             </p>
             <p>
               This screening is about your wellbeing AND your children&apos;s wellbeing. Recognizing that something may need to change is not a failure, it is responsible parenting.
@@ -182,7 +182,7 @@ export default function SubstanceAbuseParentsGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Screen your substance use patterns privately</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Answers are processed locally and are not intentionally sent to MindCheck Tools or an employer. Device users, copies, and ordinary hosting or security logs remain possible.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/substance-abuse-test-parents" className="btn-primary text-sm">Take the Parent Substance Use Screening</Link>
               <Link href="/family-impact-assessment" className="btn-primary text-sm">Family Impact Assessment</Link>

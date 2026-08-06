@@ -165,7 +165,7 @@ export default function GAD7ScoreInterpretationPage() {
         relatedTools={[
           { name: "Take the GAD-7", description: "Free, private 7-question anxiety self-check", href: "/gad-7-anxiety-test" },
           { name: "PHQ-9 Depression Self-Check", description: "9-question validated depression screening tool", href: "/phq-9-depression-test" },
-          { name: "DASS-21 Scale", description: "Measures depression, anxiety, and stress together", href: "/dass-21-depression-anxiety-stress" },
+          { name: "PHQ-4 Quick Screen", description: "Brief combined depression and anxiety symptom screen", href: "/phq-4-anxiety-depression-screen" },
         ]}
         sources={[
           { text: "Spitzer, R. L., Kroenke, K., Williams, J. B., & L\u00f6we, B. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med, 166(10), 1092\u20131097.", url: "https://pubmed.ncbi.nlm.nih.gov/16717171/" },

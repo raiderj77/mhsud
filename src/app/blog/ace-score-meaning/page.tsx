@@ -40,7 +40,7 @@ const FAQ_DATA = [
   },
   {
     question: "Should I take the ACE questionnaire?",
-    answer: "The ACE questionnaire is a useful self-reflection tool for understanding how childhood experiences may affect your current health. It is a brief, 10-item screening that takes only a few minutes. If reflecting on childhood adversity feels distressing, consider completing it with a therapist. Your answers are processed entirely in your browser and are never stored or transmitted.",
+    answer: "The ACE questionnaire is a useful self-reflection tool for understanding how childhood experiences may affect your current health. It is a brief, 10-item screening that takes only a few minutes. If reflecting on childhood adversity feels distressing, consider completing it with a therapist. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.",
   },
   {
     question: "What is trauma-informed care?",
@@ -267,7 +267,7 @@ export default function ACEScoreMeaningPage() {
               The ACE questionnaire is a brief, 10-item self-report screening tool. Each question asks about a specific category of adverse experience that may have occurred before your 18th birthday. You answer yes or no to each question, and the total number of &quot;yes&quot; responses is your ACE score.
             </p>
             <p>
-              The questionnaire takes only a few minutes to complete. On this site, your answers are processed entirely in your browser, nothing is stored, transmitted, or recorded. You can take the screening privately and use the results to inform a conversation with a healthcare professional if you choose.
+              The questionnaire takes only a few minutes to complete. On this site, questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. You can take the screening and use the results to inform a conversation with a healthcare professional if you choose.
             </p>
             <p>
               It is worth noting that the ACE questionnaire is a screening tool, not a clinical assessment. It may indicate areas that could benefit from further exploration with a qualified professional. A screening result is a starting point, not a conclusion.
@@ -302,7 +302,7 @@ export default function ACEScoreMeaningPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to take the ACE questionnaire?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/ace-questionnaire" className="btn-primary text-sm">Take the ACE Self-Check</Link>
           </div>
 

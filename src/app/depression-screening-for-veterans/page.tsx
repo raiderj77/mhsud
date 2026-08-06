@@ -42,7 +42,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results affect my VA benefits or disability rating?",
-    answer: "No. This screening is private by design and runs entirely in your browser. Nothing is stored, transmitted, or shared with anyone, including the VA. Your results here have no connection to your VA records, benefits, or disability claims.",
+    answer: "The questionnaire code processes answers locally and does not intentionally send them to MindCheck Tools or VA systems. The self-check is not connected to VA records, benefits, or disability claims. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.",
   },
   {
     question: "What veteran-specific mental health resources are available?",
@@ -130,7 +130,7 @@ export default function DepressionScreeningForVeteransPage() {
             Start the Depression Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools or VA systems.
+            Takes about 3 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools or VA systems.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export default function DepressionScreeningForVeteransPage() {
                 <p><strong>How it works:</strong> You&apos;ll answer 9 questions about how you&apos;ve been feeling over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day). Straightforward, no tricks.</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 27. Higher scores suggest more significant symptoms. You&apos;ll see the clinical ranges and what your score means in plain language.</p>
                 <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t distinguish between depression, PTSD, TBI-related symptoms, or grief. A healthcare provider can help sort that out, this gives you a starting point.</p>
-                <p><strong>Your privacy:</strong> This has no connection to the VA, DOD, or any government system. Nothing is stored or transmitted. No one can access your results, not the VA, not your chain of command, not anyone. When you close this page, your data is gone.</p>
+                <p><strong>Your privacy:</strong> This self-check is not connected to VA, DOD, or other government records. Its code does not intentionally send questionnaire answers or scores to MindCheck Tools, the VA, or a chain of command. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -375,7 +375,7 @@ export default function DepressionScreeningForVeteransPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can diagnose depression. Your responses are processed entirely in your
-            browser and are never stored or transmitted. Always consult a qualified healthcare professional
+            browser and are not intentionally sent to MindCheck Tools. Always consult a qualified healthcare professional
             for medical advice.
           </p>
         </div>

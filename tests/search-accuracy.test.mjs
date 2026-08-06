@@ -6,6 +6,7 @@ const urgePage = await readFile(new URL("../src/app/urge-surfing-timer/page.tsx"
 const urgeClient = await readFile(new URL("../src/app/urge-surfing-timer/UrgeSurfingClient.tsx", import.meta.url), "utf8");
 const dbtPage = await readFile(new URL("../src/app/dbt-crisis-skills/page.tsx", import.meta.url), "utf8");
 const dbtClient = await readFile(new URL("../src/app/dbt-crisis-skills/DbtCrisisSkillsClient.tsx", import.meta.url), "utf8");
+const dbtGuide = await readFile(new URL("../src/app/blog/dbt-crisis-skills-guide/page.tsx", import.meta.url), "utf8");
 const reflectionPrompts = await readFile(new URL("../src/lib/reflectionPrompts.ts", import.meta.url), "utf8");
 
 test("urge-surfing copy does not promise a fixed craving timeline or neurological result", () => {
@@ -28,13 +29,20 @@ test("urge-surfing reflection prompts do not assume a craving peaks or declines"
   assert.doesNotMatch(urgeReflection, /15[^\n]{0,3}30 minutes|15[^\n]{0,3}20 minutes|most cravings|naturally subsides|effective/i);
 });
 
-test("DBT physical skills include medical cautions and exclude risky unsupervised examples", () => {
-  const source = `${dbtPage}\n${dbtClient}`;
-  assert.match(source, /Temperature-based TIPP practice can change heart rate quickly/);
+test("DBT physical skills and public guide use medically bounded, low-risk examples", () => {
+  const source = `${dbtPage}\n${dbtClient}\n${dbtGuide}`;
+  assert.match(source, /Temperature-based TIPP practice can affect heart rate/);
   assert.match(source, /Exercise can raise heart rate rapidly/);
-  assert.doesNotMatch(source, /Fill a bowl with cold water|Run up and down stairs|burpees|Snap a rubber band/);
+  assert.match(source, /does not instruct extreme cold exposure or face immersion/);
+  assert.match(source, /mild, familiar, non-painful sensation/);
+  assert.doesNotMatch(
+    source,
+    /ice cubes?|ice packs?|hot sauce|rubber bands?|burpees?|submerge|cold shower|vigorous physical activity|run up and down stairs/i,
+  );
   assert.doesNotMatch(source, /one of the most extensively researched/i);
   assert.match(source, /mirecc\.va\.gov\/mirecc\/visn16\/docs\/DBT_Visual_Review_Flash_Cards\.pdf/);
+  assert.match(dbtGuide, /Call or text <strong>988<\/strong>/);
+  assert.match(dbtGuide, /If you are in immediate danger, call 911/);
 });
 
 test("tool privacy copy distinguishes private inputs from consented page analytics", () => {

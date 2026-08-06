@@ -250,7 +250,7 @@ export default function RelapsePreventionPlanGuidePage() {
           <section>
             <h2>Using the Relapse Prevention Plan Builder tool</h2>
             <p>
-              Our <Link href="/relapse-prevention-plan">Relapse Prevention Plan Builder</Link> walks you through each of these components in a structured, guided format. It helps you identify your triggers, list your warning signs, build your coping toolkit, record your emergency contacts, and create a complete written plan, all in your browser, with nothing stored on our servers.
+              Our <Link href="/relapse-prevention-plan">Relapse Prevention Plan Builder</Link> walks you through each of these components in a structured, guided format. It helps you identify your triggers, list your warning signs, build your coping toolkit, record your emergency contacts, and create a complete written plan. Entries are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device or browser profile may see them, and prints, downloads, screenshots, or shared copies may be retained by your device or chosen services.
             </p>
             <p>
               Having a written plan matters. Research on relapse prevention consistently shows that structured, documented plans are more effective than mental notes or vague intentions. The act of writing forces clarity, and the finished document gives you something concrete to refer back to when things get hard.
@@ -280,7 +280,7 @@ export default function RelapsePreventionPlanGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to build your relapse prevention plan?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, guided step-by-step. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, guided step-by-step. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/relapse-prevention-plan" className="btn-primary text-sm">Build Your Plan Now</Link>
           </div>
 

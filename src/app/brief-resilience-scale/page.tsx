@@ -1,129 +1,140 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import AnswerBlock from "@/components/AnswerBlock";
-import { BRSClient } from "./BRSClient";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
+import {
+  RightsBoundaryInformationPage,
+  type InformationFaq,
+} from "@/app/_components/RightsBoundaryInformationPage";
 
-const TOOL_URL = `${SITE_URL}/brief-resilience-scale`;
+const PAGE_PATH = "/brief-resilience-scale";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = createMetadata({
-  path: "/brief-resilience-scale",
-  title: "Brief Resilience Scale | Free Resilience Self-Check",
+  path: PAGE_PATH,
+  title: "Brief Resilience Scale Information and Rights Status",
   description:
-    "Free Brief Resilience Scale (BRS, Smith et al. 2008). 6 items, 3 reverse-scored. Mean score 1-5. Measures ability to bounce back from stress. Private, instant results.",
+    "Educational information about the Brief Resilience Scale, why MindCheck Tools does not administer it publicly, and non-equivalent public-use options.",
   keywords: [
-    "Brief Resilience Scale", "BRS", "resilience test",
-    "resilience questionnaire", "resilience screening",
-    "bounce back from stress", "resilience assessment",
-    "BRS score", "resilience scale free",
-    "Smith resilience scale", "stress resilience test",
-    "how resilient am I",
+    "Brief Resilience Scale information",
+    "BRS rights",
+    "resilience research measure",
+    "resilience scale permission",
   ],
   openGraph: {
-    title: "Brief Resilience Scale | Free Resilience Self-Check",
-    description:
-      "Free Brief Resilience Scale (BRS, Smith et al. 2008). 6 items, 3 reverse-scored. Mean score 1-5. Measures ability to bounce back from stress. Private, instant results.",
-    url: TOOL_URL,
+    title: "Brief Resilience Scale Information",
+    description: "Research context and the unresolved public-web reproduction boundary for the Brief Resilience Scale.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
-const FAQ_DATA = [
+const FAQ_DATA: InformationFaq[] = [
   {
     question: "What is the Brief Resilience Scale?",
     answer:
-      "The Brief Resilience Scale (BRS) is a 6-item self-report measure of resilience developed by Bruce Smith and colleagues and published in 2008 in the International Journal of Behavioral Medicine. Unlike other resilience scales that measure protective factors or resources, the BRS specifically measures the ability to bounce back or recover from stress. It is one of the most widely used resilience measures in psychological research and has been validated across diverse populations including college students, cardiac patients, chronic pain patients, and healthy adults.",
+      "It is a research measure developed by Bruce Smith and colleagues to study a person's perceived ability to recover or bounce back after stress.",
   },
   {
-    question: "How is the Brief Resilience Scale scored?",
+    question: "Can I complete the Brief Resilience Scale on MindCheck Tools?",
     answer:
-      "Each of the 6 items is rated on a 5-point scale from 1 (Strongly Disagree) to 5 (Strongly Agree). Items 2, 4, and 6 are negatively worded and reverse-scored, so that higher scores always indicate greater resilience. The final score is the mean (average) of all 6 items, ranging from 1.00 to 5.00. A mean score of 1.00-2.99 indicates low resilience, 3.00-4.30 indicates normal resilience, and 4.31-5.00 indicates high resilience. These cutoffs come from the original validation study by Smith et al. (2008).",
+      "No. MindCheck Tools found the primary research publication but did not find and archive an authoritative grant covering public consumer-web reproduction and automated scoring.",
   },
   {
-    question: "What does low resilience mean?",
+    question: "Why are there no questionnaire items, score, or resilience bands?",
     answer:
-      "A low resilience score (below 3.00) suggests that you may have more difficulty bouncing back from stressful events, setbacks, or adversity. This does not mean you are weak or flawed. Resilience is influenced by many factors including life circumstances, social support, mental health, physical health, and coping skills. Low resilience is associated with higher levels of depression, anxiety, and negative affect in research. The good news is that resilience is not a fixed trait, it can be developed and strengthened through therapy, social support, mindfulness practices, and building coping skills.",
+      "The site withholds those elements until ownership, version, scoring provenance, and public-use permission are resolved. It also avoids presenting unsupported bands as clinical cutoffs.",
   },
   {
-    question: "Can resilience be improved?",
+    question: "Are K6 or WHO-5 equivalent resilience scales?",
     answer:
-      "Yes. Research consistently shows that resilience is not a fixed personality trait but a dynamic process that can be strengthened. Effective strategies include: building strong social connections, developing problem-solving skills, practicing mindfulness and stress management, maintaining physical health through exercise and sleep, working with a therapist (especially cognitive-behavioral approaches), and gradually exposing yourself to manageable challenges. Even people who score low on resilience measures can develop greater resilience over time with the right support and practices.",
+      "No. K6 screens nonspecific distress and WHO-5 measures recent well-being. Neither measures resilience or produces a Brief Resilience Scale result.",
   },
   {
-    question: "How is resilience related to mental health?",
+    question: "Can a resilience score diagnose a condition or predict coping?",
     answer:
-      "Resilience and mental health are closely connected. Higher resilience is associated with lower rates of depression, anxiety, and PTSD following stressful events. People with higher resilience tend to recover more quickly from setbacks and are less likely to develop mental health conditions in response to adversity. However, resilience is not the absence of distress, resilient people still experience stress and pain, but they are able to recover more effectively. If your resilience score is low, you may also benefit from screening for depression (PHQ-9) or general distress (K6) to get a more complete picture.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. Resilience is context-dependent, and a self-report measure cannot diagnose a condition or predict how an individual will respond to future adversity.",
   },
 ];
 
-export default function BRSPage() {
+export default function BriefResilienceInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "Brief Resilience Scale (BRS)",
-              description:
-                "A free online implementation of the Brief Resilience Scale (Smith et al., 2008), a 6-item measure of the ability to bounce back from stress. Mean score 1-5 with 3 reverse-scored items. Low resilience below 3.00, normal 3.00-4.30, high 4.31-5.00.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Brief Resilience Scale Information and Rights Status",
+              description: "Educational research and rights information without public questionnaire administration or scoring.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Brief Resilience Scale", url: TOOL_URL },
-            ])
+              { name: "Brief Resilience Scale Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6"><AnswerBlock what="The Brief Resilience Scale (BRS), a 6-item validated tool that measures your ability to bounce back from stress and adversity." who="Anyone who wants to assess their resilience level and understand how well they recover from difficult experiences." bottomLine="Resilience is a skill that can be strengthened, your score reflects current capacity, not a fixed trait. This tool is for informational purposes only. Not a substitute for professional mental health treatment." lastUpdated="2026-03-20" /></div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-<BRSClient faqData={FAQ_DATA} />
+      <RightsBoundaryInformationPage
+        title="Brief Resilience Scale Information"
+        intro="MindCheck Tools does not reproduce, administer, score, or interpret the Brief Resilience Scale. This page explains the research purpose and unresolved public-use rights status."
+        what="An educational overview of the Brief Resilience Scale and the evidence and rights checks required before public electronic administration."
+        who="People seeking reliable information about resilience research or a separately permitted distress or well-being self-check."
+        bottomLine="No authoritative public-web reproduction grant is on file. This page provides no questionnaire, score, resilience band, or personal result and is not diagnostic."
+        boundaryHeading="Why the public scale is not provided"
+        boundaryParagraphs={[
+          "The primary validation publication establishes the research measure, but a published article is not by itself permission for a third party to reproduce and score the scale on a public consumer website.",
+          "MindCheck Tools has not identified and archived a current authoritative grant covering public electronic use, commercial context, modifications, or automated results.",
+          "The route remains a useful information page while the questionnaire, response choices, scoring, and unsupported resilience categories are withheld.",
+        ]}
+        overviewHeading="What the scale was designed to study"
+        overviewParagraphs={[
+          "The Brief Resilience Scale was designed to measure perceived ability to recover from stress rather than cataloging resources, personality traits, or a clinical disorder.",
+          "Resilience can change with context, health, support, resources, and experience. A self-report result should not be treated as a fixed trait, diagnosis, or forecast of future coping.",
+        ]}
+        alternatives={[
+          {
+            href: "/k6-distress-scale",
+            name: "K6 Psychological Distress Self-Check",
+            description: "A separately permitted screen for recent nonspecific distress. It does not measure resilience or coping capacity.",
+          },
+          {
+            href: "/who-5-wellbeing-index",
+            name: "WHO-5 Well-Being Index",
+            description: "A separately permitted noncommercial well-being measure. It is not a resilience scale and cannot reproduce a BRS result.",
+          },
+        ]}
+        sources={[
+          {
+            href: "https://pubmed.ncbi.nlm.nih.gov/18696313/",
+            label: "PubMed: The Brief Resilience Scale",
+            detail: "Primary 2008 validation publication record by Smith and colleagues.",
+          },
+          {
+            href: "https://doi.org/10.1080/10705500802222972",
+            label: "Publisher DOI record",
+            detail: "Original article record; publication access does not establish a public-web reproduction grant.",
+          },
+        ]}
+        faq={FAQ_DATA}
+        reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
+      />
     </>
   );
 }

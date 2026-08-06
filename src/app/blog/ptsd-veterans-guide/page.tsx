@@ -176,7 +176,7 @@ export default function PtsdVeteransGuidePage() {
               A PCL-5 screening is not an assessment, it is a structured way to identify whether your symptoms warrant further evaluation by a mental health professional. The tool measures symptom severity over the past month, giving you and your provider a concrete starting point for conversation.
             </p>
             <p>
-              You can take the <Link href="/ptsd-test-veterans" className="text-sage-600 dark:text-sage-400 underline">free, private PTSD screening for veterans</Link> here on MindCheck Tools. It runs entirely in your browser, requires no account, and your answers are never stored. If your results suggest elevated PTSD symptoms, the tool provides guidance on next steps, including how to connect with VA mental health services.
+              You can take the <Link href="/ptsd-test-veterans" className="text-sage-600 dark:text-sage-400 underline">free, private PTSD screening for veterans</Link> here on MindCheck Tools without an account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools or the VA. People with access to your device, browser profile, or copies you create may see them; ordinary page requests may also create limited hosting or security logs. If your results suggest elevated PTSD symptoms, the tool provides guidance on next steps, including how to connect with VA mental health services.
             </p>
             <p>
               For a shorter initial check, the <Link href="/pc-ptsd-5-screening" className="text-sage-600 dark:text-sage-400 underline">PC-PTSD-5</Link> is a five-question screener also used by the VA as a first-line assessment in primary care settings.
@@ -222,7 +222,7 @@ export default function PtsdVeteransGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a free, private PTSD screening</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Confidential. No account required. Results stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Confidential. No account required. Results are generated locally and are not intentionally sent to MindCheck Tools or the VA. Device users, copies, and ordinary hosting or security logs remain possible.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ptsd-test-veterans" className="btn-primary text-sm">PTSD Screening for Veterans</Link>
               <Link href="/pc-ptsd-5-screening" className="btn-primary text-sm">PC-PTSD-5 Quick Screen</Link>

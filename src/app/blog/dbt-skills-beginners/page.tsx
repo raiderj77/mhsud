@@ -273,7 +273,7 @@ export default function DbtSkillsBeginnersPage() {
               If you want to start practicing distress tolerance skills right away, our <Link href="/dbt-crisis-skills" className="text-sage-600 dark:text-sage-400 underline">DBT Crisis Survival Skills Cards</Link> tool provides quick, interactive reference cards for the major crisis survival techniques, including TIPP, STOP, and ACCEPTS. Each card explains the skill in simple terms and walks you through how to use it in the moment.
             </p>
             <p>
-              The tool runs entirely in your browser. Nothing is stored or transmitted. You can also pair it with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link> for guided paced breathing, one of the core components of the TIPP skill.
+              The tool processes entries locally in your browser and does not intentionally send them to MindCheck Tools. People with access to your device or browser profile may see entries, and copies you create may be retained by your device or chosen services. You can also pair it with our <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">Box Breathing Exercise</Link> for guided paced breathing, one of the core components of the TIPP skill.
             </p>
           </section>
 
@@ -296,7 +296,7 @@ export default function DbtSkillsBeginnersPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to practice DBT skills?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Our DBT Crisis Survival Skills Cards give you quick-reference guides for TIPP, STOP, ACCEPTS, and more. Free, private, runs entirely in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Our DBT Crisis Survival Skills Cards give you quick-reference guides for TIPP, STOP, ACCEPTS, and more. Free, private, with tool entries processed locally and not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/dbt-crisis-skills" className="btn-primary text-sm">Explore DBT Crisis Skills Cards</Link>
           </div>
 

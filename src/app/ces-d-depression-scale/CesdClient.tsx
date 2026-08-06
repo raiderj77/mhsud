@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
@@ -39,20 +40,20 @@ const ITEMS: Item[] = [
   { id: 16, text: "I enjoyed life", reverse: true },
   { id: 17, text: "I had crying spells", reverse: false },
   { id: 18, text: "I felt sad", reverse: false },
-  { id: 19, text: "I felt that people dislike me", reverse: false },
+  { id: 19, text: "I felt that people disliked me", reverse: false },
   { id: 20, text: "I could not get \u201Cgoing\u201D", reverse: false },
 ];
 
 const SCALE_LABELS = [
   "Rarely or none of the time (less than 1 day)",
   "Some or a little of the time (1\u20132 days)",
-  "Occasionally or a moderate amount of time (3\u20134 days)",
+  "Occasionally or a moderate amount of the time (3\u20134 days)",
   "Most or all of the time (5\u20137 days)",
 ];
 
 const SCALE_SHORT = ["< 1 day", "1\u20132 days", "3\u20134 days", "5\u20137 days"];
 
-interface Tier {
+interface ResultState {
   label: string;
   range: string;
   color: string;
@@ -65,9 +66,9 @@ interface Tier {
   message: string;
 }
 
-const TIERS: Tier[] = [
+const RESULT_STATES: ResultState[] = [
   {
-    label: "Minimal Symptoms",
+    label: "Below the traditional screening threshold",
     range: "0\u201315",
     color: "#22c55e",
     bgLight: "bg-green-50",
@@ -77,11 +78,11 @@ const TIERS: Tier[] = [
     borderLight: "border-green-200",
     borderDark: "dark:border-green-800",
     message:
-      "Your score is below the clinical cutoff of 16, suggesting minimal depressive symptoms over the past week. This is a positive result. However, if you have been feeling down, losing interest in activities, or struggling with daily life, those experiences are still worth discussing with a healthcare provider regardless of your score.",
+      "Your score is below the CES-D's traditional follow-up threshold of 16. A below-threshold score does not rule out depression and is not a diagnosis or a severity rating. If low mood, loss of interest, or daily-life difficulty is persistent or concerning, consider discussing it with a qualified healthcare professional regardless of this score.",
   },
   {
-    label: "Mild Symptoms",
-    range: "16\u201320",
+    label: "At or above the traditional screening threshold",
+    range: "16\u201360",
     color: "#f59e0b",
     bgLight: "bg-amber-50",
     bgDark: "dark:bg-amber-950/30",
@@ -90,41 +91,12 @@ const TIERS: Tier[] = [
     borderLight: "border-amber-200",
     borderDark: "dark:border-amber-800",
     message:
-      "Your score is at or above the clinical cutoff of 16, which suggests mild depressive symptoms that may warrant further evaluation. This does not mean you have clinical depression, but it is a signal to pay attention. Consider taking the PHQ-9 for a more specific depression screening, and consider speaking with a healthcare provider about how you have been feeling.",
-  },
-  {
-    label: "Moderate Symptoms",
-    range: "21\u201330",
-    color: "#f97316",
-    bgLight: "bg-orange-50",
-    bgDark: "dark:bg-orange-950/30",
-    textLight: "text-orange-700",
-    textDark: "dark:text-orange-300",
-    borderLight: "border-orange-200",
-    borderDark: "dark:border-orange-800",
-    message:
-      "Your score suggests moderate depressive symptoms over the past week. Symptoms at this level often affect daily functioning, relationships, and quality of life. We recommend taking the PHQ-9 depression screening for a more detailed assessment, and speaking with a qualified healthcare professional. Effective support is available, and reaching out is an important step.",
-  },
-  {
-    label: "Severe Symptoms",
-    range: "31\u201360",
-    color: "#ef4444",
-    bgLight: "bg-red-50",
-    bgDark: "dark:bg-red-950/30",
-    textLight: "text-red-700",
-    textDark: "dark:text-red-300",
-    borderLight: "border-red-200",
-    borderDark: "dark:border-red-800",
-    message:
-      "Your score suggests severe depressive symptoms over the past week. Symptoms at this level can significantly impair daily life and may require professional support. Please consider reaching out to a healthcare provider, therapist, or one of the crisis resources listed below. You do not have to go through this alone, effective help is available.",
+      "Your score is at or above the CES-D's traditional follow-up threshold of 16. This is a screening signal, not a diagnosis or a severity rating. Consider discussing your symptoms and circumstances with a qualified healthcare professional, especially if they are persistent, worsening, or affecting daily life.",
   },
 ];
 
-function getTier(score: number): Tier {
-  if (score <= 15) return TIERS[0];
-  if (score <= 20) return TIERS[1];
-  if (score <= 30) return TIERS[2];
-  return TIERS[3];
+function getResultState(score: number): ResultState {
+  return score < 16 ? RESULT_STATES[0] : RESULT_STATES[1];
 }
 
 function scoreItem(rawValue: number, reverse: boolean): number {
@@ -140,6 +112,7 @@ interface Props {
 }
 
 export function CesdClient({ faqData }: Props) {
+  const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
   const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -162,7 +135,7 @@ export function CesdClient({ faqData }: Props) {
     return sum + scoreItem(raw, item.reverse);
   }, 0);
 
-  const tier = getTier(totalScore);
+  const resultState = getResultState(totalScore);
 
   function handleSubmit() {
     if (!allAnswered) return;
@@ -176,6 +149,18 @@ export function CesdClient({ faqData }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  if (!accepted) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        <DisclaimerGate
+          toolName="CES-D"
+          toolDescription="Review the privacy and educational-use limits before answering this self-check."
+          onAccept={() => setAccepted(true)}
+        />
+      </div>
+    );
+  }
+
   /* ---------------------------------------------------------------- */
   /*  Results View                                                     */
   /* ---------------------------------------------------------------- */
@@ -184,32 +169,32 @@ export function CesdClient({ faqData }: Props) {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10" aria-live="polite">
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
           Your CES-D Results
-        </h1>
+        </h2>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Depression screening · Past week · {ITEMS.length} items
         </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
         {/* Score Card */}
-        <div className={`p-6 rounded-xl border-2 mb-8 ${tier.bgLight} ${tier.bgDark} ${tier.borderLight} ${tier.borderDark}`}>
+        <div className={`p-6 rounded-xl border-2 mb-8 ${resultState.bgLight} ${resultState.bgDark} ${resultState.borderLight} ${resultState.borderDark}`}>
           <div className="flex items-center justify-between mb-3">
-            <h2 className={`text-xl font-bold ${tier.textLight} ${tier.textDark}`}>
-              {tier.label}
+            <h2 className={`text-xl font-bold ${resultState.textLight} ${resultState.textDark}`}>
+              {resultState.label}
             </h2>
-            <span className={`text-2xl font-bold ${tier.textLight} ${tier.textDark}`}>
+            <span className={`text-2xl font-bold ${resultState.textLight} ${resultState.textDark}`}>
               {totalScore} / 60
             </span>
           </div>
           <div className="w-full h-3 bg-white/50 dark:bg-black/20 rounded-full overflow-hidden mb-4">
             <div
               className="h-full rounded-full transition-all duration-700"
-              style={{ width: `${(totalScore / 60) * 100}%`, backgroundColor: tier.color }}
+              style={{ width: `${(totalScore / 60) * 100}%`, backgroundColor: resultState.color }}
             />
           </div>
-          <p className={`text-sm leading-relaxed ${tier.textLight} ${tier.textDark}`}>
-            {tier.message}
+          <p className={`text-sm leading-relaxed ${resultState.textLight} ${resultState.textDark}`}>
+            {resultState.message}
           </p>
         </div>
 
@@ -217,16 +202,16 @@ export function CesdClient({ faqData }: Props) {
 
         {/* PHQ-9 Nudge */}
         {showPhq9Nudge && (
-          <div className={`mb-8 p-5 rounded-xl border-2 ${totalScore >= 31 ? "bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800" : "bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800"}`}>
-            <h2 className={`text-lg font-bold mb-2 ${totalScore >= 31 ? "text-red-700 dark:text-red-300" : "text-amber-700 dark:text-amber-300"}`}>
-              Further Screening Recommended
+          <div className="mb-8 p-5 rounded-xl border-2 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800">
+            <h2 className="text-lg font-bold mb-2 text-amber-700 dark:text-amber-300">
+              Consider follow-up
             </h2>
-            <p className={`text-sm mb-3 leading-relaxed ${totalScore >= 31 ? "text-red-700 dark:text-red-300" : "text-amber-700 dark:text-amber-300"}`}>
-              Your CES-D score is at or above the clinical cutoff of 16. The PHQ-9 is a widely-used, clinician-recommended depression screening tool that can provide a more specific severity assessment and is often used as a follow-up to the CES-D.
+            <p className="text-sm mb-3 leading-relaxed text-amber-700 dark:text-amber-300">
+              The CES-D threshold of 16 is a published follow-up screening signal, not a diagnosis or severity rating. If you want another structured way to describe recent symptoms before speaking with a qualified healthcare professional, the PHQ-9 is a widely used depression screener.
             </p>
             <Link
               href="/phq-9-depression-test"
-              className={`inline-block px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${totalScore >= 31 ? "bg-red-600 text-white hover:bg-red-700" : "bg-amber-600 text-white hover:bg-amber-700"}`}
+              className="inline-block px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors bg-amber-600 text-white hover:bg-amber-700"
             >
               Take the PHQ-9 Depression Screen →
             </Link>
@@ -295,10 +280,10 @@ export function CesdClient({ faqData }: Props) {
         {/* Score Guide */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-3">
-            Understanding the Score Ranges
+            Understanding the Published Threshold
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            {TIERS.map((t) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {RESULT_STATES.map((t) => (
               <div key={t.label} className={`p-3 rounded-lg text-center ${t.bgLight} ${t.bgDark}`}>
                 <p className={`text-xs font-bold ${t.textLight} ${t.textDark}`}>{t.label}</p>
                 <p className={`text-xs ${t.textLight} ${t.textDark}`}>{t.range}</p>
@@ -306,7 +291,7 @@ export function CesdClient({ faqData }: Props) {
             ))}
           </div>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
-            Clinical cutoff: 16+ suggests further evaluation
+            A score of 16 or higher is a traditional follow-up threshold, not a diagnosis or severity band.
           </p>
         </div>
 
@@ -318,6 +303,10 @@ export function CesdClient({ faqData }: Props) {
               <li>
                 Radloff, L. S. (1977). The CES-D Scale: A self-report depression scale for research in the general population.{" "}
                 <a href="https://pubmed.ncbi.nlm.nih.gov/1255891/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">PubMed, Original CES-D Paper</a>
+              </li>
+              <li>
+                SAMHSA. CES-D form and scoresheet in TIP 48.{" "}
+                <a href="https://www.ncbi.nlm.nih.gov/books/NBK572958/" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">NCBI Bookshelf, Public-Domain Form</a>
               </li>
               <li>
                 National Institute of Mental Health (NIMH). Depression.{" "}
@@ -341,9 +330,9 @@ export function CesdClient({ faqData }: Props) {
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">WHO-5 Well-Being Index →</span>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Positive wellbeing measure from the WHO</p>
             </Link>
-            <Link href="/dass-21-depression-anxiety-stress" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
-              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">DASS-21 →</span>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Measure depression, anxiety, and stress together</p>
+            <Link href="/phq-4-anxiety-depression-screen" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
+              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">PHQ-4 Depression/Anxiety Screen →</span>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Brief depression and anxiety symptom screen</p>
             </Link>
             <Link href="/gad-7-anxiety-test" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">GAD-7 Anxiety Self-Check →</span>
@@ -367,10 +356,10 @@ export function CesdClient({ faqData }: Props) {
           toolName="CES-D Depression Scale"
           toolUrl="https://mindchecktools.com/ces-d-depression-scale"
           score={totalScore}
-          severityLabel={tier.label}
-          scoreRange={tier.range}
-          interpretation={tier.message}
-          suggestion={totalScore >= 16 ? "Consider taking the PHQ-9 for a more specific depression screening, and consider speaking with a healthcare provider about how you have been feeling." : "If you notice depressive symptoms increasing or persisting, you can retake this screening at any time."}
+          severityLabel={resultState.label}
+          scoreRange={resultState.range}
+          interpretation={resultState.message}
+          suggestion={totalScore >= 16 ? "Consider discussing persistent or concerning symptoms with a qualified healthcare professional; the threshold is not a diagnosis." : "A below-threshold score does not rule out depression. Seek qualified support if symptoms persist, worsen, or concern you."}
           reflectionPrompts={REFLECTION_PROMPTS["ces-d-depression-scale"]?.prompts ?? []}
           responses={ITEMS.map((item) => ({
             question: item.text,
@@ -455,7 +444,7 @@ export function CesdClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
-          Your responses were scored entirely in your browser. Nothing was stored or transmitted.
+          Your responses and score were processed locally and were not intentionally sent to MindCheck Tools.
         </p>
 
         {/* FAQ */}
@@ -488,14 +477,14 @@ export function CesdClient({ faqData }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
-        CES-D Depression Scale
-      </h1>
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        Answer the CES-D questions
+      </h2>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         For each statement, select how often you have felt this way <strong>during the past week</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        20 questions · ~5 minutes · private by design · NIMH public domain instrument
+        20 questions · ~5 minutes · local browser processing · NIMH public domain instrument
       </p>
 
       {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active mental-health questionnaire. */}
@@ -547,7 +536,7 @@ export function CesdClient({ faqData }: Props) {
                   key={val}
                   onClick={() => handleAnswer(item.id, val)}
                   title={SCALE_LABELS[val]}
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  className={`min-h-11 min-w-11 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     answers[item.id] === val
                       ? "bg-sage-600 text-white"
                       : "bg-sand-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-sage-100 dark:hover:bg-sage-900/30"
@@ -609,7 +598,7 @@ export function CesdClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
+        Your responses and score are processed locally and are not intentionally sent to MindCheck Tools.
       </p>
     </div>
   );

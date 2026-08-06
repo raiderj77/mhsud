@@ -154,7 +154,7 @@ export default function PostpartumDepressionTestPage() {
               PHQ-9
             </a>
             , a validated depression measure used routinely in perinatal care. Your answers are
-            scored entirely in your browser. Nothing is stored or shared.
+            processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -352,7 +352,7 @@ export default function PostpartumDepressionTestPage() {
             This screening is for educational purposes only - it is not a diagnosis. Only a
             licensed healthcare professional can diagnose postpartum depression. If you are
             having thoughts of harming yourself or your baby, please seek immediate help.
-            Your responses are processed entirely in your browser and are never stored or transmitted.
+            Your responses and score are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
