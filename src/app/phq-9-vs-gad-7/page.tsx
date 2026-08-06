@@ -429,10 +429,10 @@ export default function Phq9VsGad7Page() {
               </li>
               <li className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold">
-                  DASS-21, Depression, Anxiety &amp; Stress →
+                  DASS-21 information and use boundary →
                 </Link>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                  Measures depression, anxiety, and stress simultaneously across 21 items.
+                  Explains why this site does not administer or score the DASS-21 publicly.
                 </p>
               </li>
             </ul>

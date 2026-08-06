@@ -47,7 +47,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
     faqEntries: [
       { question: "What do my CES-D depression scale results mean for me?", answer: "The CES-D measures depressive symptoms over the past week. A higher score suggests more frequent symptoms, but it is a screening tool, not a clinical assessment. Reflect on which specific items resonated most and consider discussing persistent patterns with a healthcare provider." },
-      { question: "Should I see a doctor after taking the CES-D depression screening?", answer: "If your score falls in the moderate or high range, or if you have noticed depressive symptoms lasting two weeks or more, it is worth speaking with a healthcare provider. You can bring your CES-D results to give them context about what you have been experiencing." },
+      { question: "Should I see a doctor after taking the CES-D depression screening?", answer: "If your score is at or above the traditional follow-up threshold, or if depressive symptoms persist, worsen, affect daily life, or concern you, consider speaking with a qualified healthcare professional. The threshold is a screening signal, not a diagnosis or severity rating." },
     ],
   },
 
@@ -65,21 +65,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What should I do after taking the GAD-7 anxiety test?", answer: "After completing the GAD-7, reflect on which worries feel most out of your control. Consider whether anxiety is affecting your daily functioning, sleep, work, or relationships. If your score suggests moderate or higher anxiety, or if symptoms have lasted several weeks, speaking with a healthcare provider can help you explore next steps." },
       { question: "How do I know if my GAD-7 anxiety score means I need professional help?", answer: "The GAD-7 is a screening tool, not a clinical assessment. Scores of 10 or above suggest moderate anxiety that may benefit from professional support. However, even lower scores warrant attention if anxiety is interfering with your quality of life. Trust your own sense of whether your worry feels manageable." },
-    ],
-  },
-
-  "spin-social-anxiety-test": {
-    toolName: "SPIN Social Anxiety Self-Check",
-    prompts: [
-      "Which social situations from the questionnaire cause you the most distress in your daily life?",
-      "Do you tend to avoid certain activities or events because of social anxiety, and how does that avoidance affect you?",
-      "Have you noticed whether your social anxiety has changed over the past year, gotten better, worse, or stayed the same?",
-      "Is there a social situation you wish you could handle more comfortably?",
-      "What is one small social interaction you could practice this week that feels slightly outside your comfort zone?",
-    ],
-    faqEntries: [
-      { question: "What does my SPIN social anxiety test score mean?", answer: "The SPIN measures how much social situations cause you fear, avoidance, and physical symptoms. Higher scores suggest greater social anxiety. Reflect on which specific situations feel most limiting and whether avoidance is affecting your work, relationships, or well-being." },
-      { question: "Is social anxiety something I should talk to a therapist about?", answer: "If social anxiety is causing you to avoid situations that matter to you, work presentations, friendships, everyday interactions, speaking with a therapist can help. Cognitive behavioral therapy (CBT) is one of the most effective approaches for social anxiety and can be accessed without a referral in most areas." },
     ],
   },
 
@@ -111,51 +96,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What does my AUDIT-C alcohol screening score indicate?", answer: "The AUDIT-C is a brief, 3-question screening that identifies potentially hazardous drinking. A score of 3 or higher for women, or 4 or higher for men, suggests patterns worth examining more closely. Consider taking the full AUDIT for a more detailed picture." },
       { question: "Is the AUDIT-C accurate enough to rely on?", answer: "The AUDIT-C is validated as a quick screening tool used widely in primary care settings. While it is not a comprehensive assessment, research shows it is effective at identifying people who may benefit from further evaluation. If your score concerns you, the full AUDIT provides more detail." },
-    ],
-  },
-
-  "cage-aid-substance-abuse-screening": {
-    toolName: "CAGE-AID Substance Use Screening",
-    prompts: [
-      "Were any of the four CAGE-AID questions harder to answer honestly than you expected?",
-      "Have you ever felt the need to cut down on your substance use, and what happened when you tried?",
-      "How do you feel when others comment on or question your use of alcohol or drugs?",
-      "What role does substance use play in your daily routine right now?",
-      "What would reaching out for support look like for you, a friend, a hotline, or a professional?",
-    ],
-    faqEntries: [
-      { question: "What does a positive CAGE-AID substance screening result mean?", answer: "Answering yes to two or more CAGE-AID questions suggests a pattern that may indicate a substance use concern. This brief screening does not provide a clinical assessment but highlights areas worth exploring further with a healthcare provider or counselor." },
-      { question: "How accurate is the CAGE-AID for detecting substance use problems?", answer: "The CAGE-AID is a widely used clinical screening tool adapted from the original CAGE questionnaire. It is designed to flag potential substance use concerns quickly, not to replace a comprehensive evaluation. If your results concern you, a professional assessment can provide more clarity." },
-    ],
-  },
-
-  "who-assist-substance-screening": {
-    toolName: "WHO ASSIST Substance Screening",
-    prompts: [
-      "Which substance or substances from the screening are you most concerned about right now?",
-      "How has your substance use changed over the past year, increased, decreased, or stayed about the same?",
-      "Have you experienced any health problems, social difficulties, or legal issues related to substance use?",
-      "What would motivate you most to make a change, health, relationships, finances, or something else?",
-      "What is one realistic step you could take this week to reduce potential harm from substance use?",
-    ],
-    faqEntries: [
-      { question: "What does the WHO ASSIST substance screening measure?", answer: "The ASSIST (Alcohol, Smoking, and Substance Involvement Screening Test) was developed by the World Health Organization to detect substance use and related problems across multiple substance categories. It provides a risk score for each substance, helping you understand which areas may need attention." },
-      { question: "What should I do if my ASSIST score shows high risk?", answer: "A high-risk ASSIST score for any substance suggests that your use may be causing significant harm. The WHO recommends speaking with a healthcare professional about your results. SAMHSA's helpline (1-800-662-4357) can connect you with local treatment options at no cost." },
-    ],
-  },
-
-  "crafft-substance-screening": {
-    toolName: "CRAFFT Substance Screening",
-    prompts: [
-      "Were any of the CRAFFT questions about riding in a car, using to relax, or using alone especially relevant to you?",
-      "How do your friends or peers influence your decisions about substance use?",
-      "Have you noticed substance use affecting your school, work, or family relationships?",
-      "Is there an adult you trust enough to talk to about what you are going through?",
-      "What activities or interests help you feel good without substances?",
-    ],
-    faqEntries: [
-      { question: "What does the CRAFFT substance screening test for?", answer: "The CRAFFT is a brief screening tool designed for adolescents and young adults to identify substance use-related risks. Each letter in CRAFFT stands for a key risk behavior: Car, Relax, Alone, Forget, Friends, Trouble. Two or more positive answers suggest a pattern worth discussing with a trusted adult or healthcare provider." },
-      { question: "Is the CRAFFT only for teenagers or can adults take it?", answer: "The CRAFFT was developed and validated primarily for people ages 12–21. While adults can take it, other screening tools like the AUDIT, DAST-10, or CAGE-AID may be more appropriate for adults. If you are over 21, consider trying one of those tools for a more applicable screening." },
     ],
   },
 
@@ -207,23 +147,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  /* ─── Multi-Condition ────────────────────────────────────────── */
-
-  "dass-21-depression-anxiety-stress": {
-    toolName: "DASS-21 Depression, Anxiety & Stress Scale",
-    prompts: [
-      "Which of the three domains, depression, anxiety, or stress, showed the highest score, and does that match how you have been feeling?",
-      "Are these symptoms mostly triggered by specific circumstances, or do they feel present most of the time?",
-      "How are depression, anxiety, and stress each affecting different parts of your life, work, relationships, physical health?",
-      "What coping strategies have you found helpful for managing any of these three areas?",
-      "If you could address one of the three areas first, which would make the biggest difference in your daily well-being?",
-    ],
-    faqEntries: [
-      { question: "What do my DASS-21 depression, anxiety, and stress scores mean?", answer: "The DASS-21 provides separate scores for depression, anxiety, and stress, each rated from normal to extremely severe. This helps you understand which emotional domain is most active. Since these conditions often overlap, the DASS-21 is useful for seeing the full picture rather than focusing on one area alone." },
-      { question: "Is the DASS-21 better than the PHQ-9 or GAD-7 for screening?", answer: "The DASS-21 measures three areas simultaneously (depression, anxiety, stress), while the PHQ-9 focuses on depression and the GAD-7 on anxiety. If you are unsure which area is most relevant, the DASS-21 provides a broader overview. For deeper assessment of one specific area, the PHQ-9 or GAD-7 may be more targeted." },
-    ],
-  },
-
   /* ─── Well-Being & Distress ──────────────────────────────────── */
 
   "who-5-wellbeing-index": {
@@ -257,37 +180,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
 
   /* ─── Eating Disorders ───────────────────────────────────────── */
 
-  "scoff-eating-disorder-screening": {
-    toolName: "SCOFF Eating Disorder Screening",
-    prompts: [
-      "Were any of the five SCOFF questions harder to answer honestly than you expected?",
-      "How does your relationship with food and body image affect your daily mood and energy?",
-      "Have you noticed changes in your eating habits during stressful periods?",
-      "Is there someone you trust enough to talk to about concerns related to eating or body image?",
-      "What would a healthier relationship with food look like for you?",
-    ],
-    faqEntries: [
-      { question: "What does a positive SCOFF eating disorder screening mean?", answer: "Answering yes to two or more SCOFF questions suggests possible disordered eating patterns that may warrant professional evaluation. The SCOFF screens for anorexia nervosa, bulimia nervosa, and related conditions. It is a starting point, not a clinical assessment." },
-      { question: "What kind of professional should I see about eating disorder concerns?", answer: "If your SCOFF results concern you, consider speaking with a therapist who specializes in eating disorders, a registered dietitian with eating disorder experience, or your primary care provider. The National Eating Disorders Association (NEDA) helpline (1-800-931-2237) offers free support and referrals." },
-    ],
-  },
-
   /* ─── Autism ─────────────────────────────────────────────────── */
-
-  "aq-10-autism-screening": {
-    toolName: "AQ-10 Autism Screening",
-    prompts: [
-      "Which aspects of social interaction or communication from the questionnaire felt most relevant to your experiences?",
-      "Have you always felt different from your peers in how you process social situations, sensory input, or routines?",
-      "How do your tendencies around patterns, routines, or focus affect your daily life, positively or negatively?",
-      "What accommodations or strategies have you naturally developed to navigate social or sensory challenges?",
-      "What would understanding more about your neurodevelopmental profile mean to you?",
-    ],
-    faqEntries: [
-      { question: "What does my AQ-10 autism screening score mean?", answer: "A score of 6 or above on the AQ-10 suggests autistic traits that may warrant a more comprehensive evaluation. The AQ-10 is a brief screening used in clinical settings to identify adults who might benefit from a full autism assessment. It does not confirm or rule out autism on its own." },
-      { question: "How do I get a formal autism evaluation as an adult?", answer: "Adult autism evaluations are typically conducted by psychologists or psychiatrists with experience in neurodevelopmental conditions. Ask your primary care provider for a referral, or search for autism evaluation centers in your area. Wait times can vary, so starting the process early is helpful." },
-    ],
-  },
 
   /* ─── Stress & Burnout ───────────────────────────────────────── */
 
@@ -321,21 +214,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "holmes-rahe-stress-inventory": {
-    toolName: "Holmes-Rahe Stress Inventory",
-    prompts: [
-      "Looking at the life events you checked, how many occurred in the past 12 months, and were you surprised by the total?",
-      "Which recent life changes have been the most emotionally demanding, even if they were positive events?",
-      "How are you currently coping with the cumulative stress from these life events?",
-      "What support systems, friends, family, professionals, are available to you during this period of change?",
-      "What is one proactive step you could take to protect your health during a high-stress period?",
-    ],
-    faqEntries: [
-      { question: "What does my Holmes-Rahe stress inventory score mean for my health?", answer: "The Holmes-Rahe scale assigns point values to common life events. A score above 300 suggests a high risk of stress-related illness within the next two years, based on the original research. Scores between 150–299 indicate moderate risk. This is a general indicator, not a prediction, many protective factors can reduce your actual risk." },
-      { question: "Can positive life events cause stress too?", answer: "Yes, the Holmes-Rahe inventory includes positive events like marriage, pregnancy, job promotions, and vacations because all significant life changes require adaptation, which creates physiological stress. Understanding that even good changes demand energy can help you plan recovery time and support." },
-    ],
-  },
-
   /* ─── Sleep, Mood & Mental Load ──────────────────────────────── */
 
   "sleep-and-mood-check": {
@@ -350,21 +228,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "How does sleep affect mental health and mood?", answer: "Sleep and mood are deeply connected. Poor sleep increases irritability, reduces emotional resilience, and worsens symptoms of anxiety and depression. Conversely, improving sleep quality is one of the most effective ways to support mental health. Even small changes, consistent wake times, reducing screen exposure, can make a noticeable difference." },
       { question: "Should I talk to a doctor about sleep problems affecting my mood?", answer: "If poor sleep is a recurring pattern that is affecting your mood, energy, or ability to function, speaking with a healthcare provider is worthwhile. Sleep disorders like insomnia or sleep apnea are treatable, and addressing them often improves mood and mental health symptoms significantly." },
-    ],
-  },
-
-  "athens-insomnia-scale": {
-    toolName: "Athens Insomnia Scale",
-    prompts: [
-      "Which aspect of sleep, falling asleep, staying asleep, or waking too early, is most disrupted for you?",
-      "How long have your insomnia symptoms been present, days, weeks, or months?",
-      "How is poor sleep affecting your daytime functioning, mood, or ability to concentrate?",
-      "Have you tried any sleep hygiene strategies, and which ones helped even a little?",
-      "What worries or thoughts tend to keep you awake at night?",
-    ],
-    faqEntries: [
-      { question: "What does my Athens Insomnia Scale score mean?", answer: "The Athens Insomnia Scale measures sleep difficulty over the past month. A score of 6 or above suggests clinically significant insomnia. The scale examines sleep onset, nighttime awakenings, early morning awakening, sleep quality, and daytime impact, giving you a comprehensive view of how sleep is affecting you." },
-      { question: "What is the most effective treatment for insomnia?", answer: "Cognitive Behavioral Therapy for Insomnia (CBT-I) is considered the first-line treatment, recommended over sleep medications by major medical organizations. CBT-I addresses the thoughts and behaviors that perpetuate insomnia and has lasting effects. Ask your healthcare provider about CBT-I programs or apps." },
     ],
   },
 
@@ -400,52 +263,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "ucla-loneliness-scale": {
-    toolName: "UCLA Loneliness Scale",
-    prompts: [
-      "Which aspects of loneliness from the questionnaire resonated most, lack of companionship, feeling left out, or emotional isolation?",
-      "Is your loneliness primarily about the quantity of relationships, the quality, or both?",
-      "How has loneliness affected your motivation to reach out to others or participate in social activities?",
-      "Are there connections in your life that could deepen if you invested more time or vulnerability?",
-      "What is one small step you could take this week to feel more connected, even briefly?",
-    ],
-    faqEntries: [
-      { question: "What does my UCLA Loneliness Scale score indicate?", answer: "Higher scores on the UCLA Loneliness Scale indicate greater feelings of loneliness and social isolation. Loneliness is increasingly recognized as a significant public health concern associated with depression, anxiety, cardiovascular disease, and cognitive decline. Your score helps you understand the extent of social disconnection you are experiencing." },
-      { question: "How can I reduce feelings of loneliness?", answer: "Research suggests that quality of connections matters more than quantity. Focus on deepening existing relationships rather than adding new ones. Volunteering, joining interest-based groups, and being open about your feelings can help. If loneliness is persistent and affecting your mental health, a therapist can help address underlying barriers to connection." },
-    ],
-  },
-
-  "brief-resilience-scale": {
-    toolName: "Brief Resilience Scale",
-    prompts: [
-      "How do you typically respond to stressful events, do you bounce back quickly, or does recovery take time?",
-      "What personal strengths or resources help you get through difficult periods?",
-      "Are there specific situations where your resilience feels strong, and others where it feels depleted?",
-      "What has a past experience of overcoming adversity taught you about yourself?",
-      "What is one thing you could do regularly to build your capacity to handle stress?",
-    ],
-    faqEntries: [
-      { question: "What does a low resilience score on the Brief Resilience Scale mean?", answer: "A low resilience score suggests you may find it harder to bounce back from stressful events. Resilience is not a fixed trait, it can be developed through practices like building social connections, developing problem-solving skills, maintaining physical health, and learning stress management techniques." },
-      { question: "Can resilience be improved over time?", answer: "Yes, research consistently shows that resilience is a skill that can be strengthened. Regular exercise, strong social connections, mindfulness practices, adequate sleep, and cognitive reframing all contribute to greater resilience. Therapy, particularly CBT, can also help build resilience by changing how you respond to adversity." },
-    ],
-  },
-
   /* ─── ACE & Family ───────────────────────────────────────────── */
-
-  "ace-questionnaire": {
-    toolName: "ACE (Adverse Childhood Experiences) Questionnaire",
-    prompts: [
-      "How did it feel to reflect on these childhood experiences, was anything surprising or difficult to acknowledge?",
-      "Have you noticed connections between your childhood experiences and your current emotional patterns or relationships?",
-      "What protective factors, supportive adults, skills, or inner strengths, helped you through difficult childhood experiences?",
-      "Are there areas of your life today where the effects of childhood adversity still show up?",
-      "What kind of support, therapy, community, self-care, might help you process these experiences?",
-    ],
-    faqEntries: [
-      { question: "What does my ACE score mean for my health?", answer: "ACE scores reflect the number of adverse childhood experiences you endorsed. Research by Felitti et al. (1998) found that higher ACE scores correlate with increased risk for chronic health conditions, mental health challenges, and substance use. However, an ACE score is not a destiny, protective factors, resilience, and support significantly modify outcomes." },
-      { question: "Should I see a therapist about my ACE score?", answer: "If your ACE score is 4 or higher, or if reflecting on childhood experiences brought up strong emotions, working with a trauma-informed therapist can be very helpful. Therapies like EMDR and trauma-focused CBT are specifically designed to help people process and heal from adverse childhood experiences." },
-    ],
-  },
 
   "family-impact-assessment": {
     toolName: "Family Impact Assessment",
@@ -544,7 +362,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
       "How has checking in with HALT helped you avoid reactive decisions?",
     ],
     faqEntries: [
-      { question: "What does HALT stand for and why is it used in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, and Tired, four basic states that increase vulnerability to relapse and poor decision-making. HALT is widely used in recovery programs because addressing these physical and emotional needs reduces the intensity of cravings and emotional reactivity." },
+      { question: "What does HALT stand for and why is it used in recovery?", answer: "HALT stands for Hungry, Angry, Lonely, and Tired. SAMHSA describes it as a memory aid for noticing needs and choosing an appropriate response. It is not a validated relapse-risk measure, and no rating can predict an individual outcome." },
       { question: "How often should I do a HALT check-in?", answer: "Ideally, check in with HALT at least once daily, and whenever you notice increased stress, cravings, or emotional volatility. Many people find it helpful to do HALT check-ins at transition points in their day, morning, after work, and before bed. The more regularly you practice, the more automatic self-awareness becomes." },
     ],
   },
@@ -780,38 +598,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What should I do after taking the Big Five personality test?", answer: "Reflect on how each trait shows up in your daily life. Consider whether your scores match your self-image or reveal blind spots. If you want deeper insight, a psychologist can administer the full NEO-PI-R (240 items) with professional interpretation. The reflection prompts on this page can help you organize your thoughts." },
       { question: "Can personality traits change over time?", answer: "Yes. Research shows personality is relatively stable but not fixed. People generally become more conscientious, agreeable, and emotionally stable with age. Intentional effort, life experiences, and therapy can also produce meaningful shifts in personality traits." },
-    ],
-  },
-
-  "attachment-style-quiz": {
-    toolName: "ECR-R Attachment Style Quiz",
-    prompts: [
-      "Which of the four attachment styles resonated most with how you experience close relationships?",
-      "Have you noticed patterns in how you respond when a partner pulls away or gets too close?",
-      "How do your early relationship experiences, with caregivers or first partners, show up in your current relationships?",
-      "What does feeling emotionally safe in a relationship look like for you?",
-      "Is there one relationship pattern you would like to understand or shift, even slightly?",
-      "If you could share one thing about your attachment style with a partner or therapist, what would it be?",
-    ],
-    faqEntries: [
-      { question: "What should I do after taking the ECR-R attachment style quiz?", answer: "After completing the ECR-R, reflect on which questions felt most true for you and whether your attachment patterns have changed over time. Consider sharing your results with a therapist who can help you explore how these patterns affect your relationships. The reflection prompts on this page can help you organize your thoughts." },
-      { question: "Can therapy help me develop a more secure attachment style?", answer: "Yes. Research consistently shows that attachment styles can become more secure through therapy, particularly approaches like Emotionally Focused Therapy (EFT), psychodynamic therapy, and attachment-based interventions. A therapist can help you understand your patterns and develop healthier ways of relating to others." },
-    ],
-  },
-
-  "msi-bpd-screening": {
-    toolName: "MSI-BPD Borderline Personality Disorder Screening",
-    prompts: [
-      "Which of the ten areas felt most relevant to your current experience, and has that changed over time?",
-      "Have you noticed patterns in your closest relationships that you would like to understand better?",
-      "When you experience intense emotions, what has helped you feel more grounded in the past?",
-      "Is there someone in your life, a friend, family member, or professional, you feel safe talking to about these experiences?",
-      "What would feel like one small, manageable step toward better understanding yourself this week?",
-      "If you could share one thing about your emotional experiences with a mental health professional, what would it be?",
-    ],
-    faqEntries: [
-      { question: "What should I do after taking the MSI-BPD screening?", answer: "After completing the MSI-BPD, take a moment to reflect on which items felt most relevant to your daily life. Consider writing down your score and any patterns you notice so you can share them with a mental health professional. The reflection prompts on this page can help you organize your thoughts before seeking further evaluation." },
-      { question: "How can I use my MSI-BPD results to talk to a therapist about borderline personality disorder?", answer: "You can download or print your results using the button on this page and bring them to your next appointment. You might say: 'I took an MSI-BPD screening online and scored [X], I would like to discuss what that means for me.' A qualified professional can help determine whether a comprehensive evaluation is appropriate." },
     ],
   },
 

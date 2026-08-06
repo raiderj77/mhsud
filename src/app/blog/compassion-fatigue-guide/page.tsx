@@ -238,7 +238,7 @@ export default function CompassionFatigueGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Want to check in on your compassion fatigue risk?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 3 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/compassion-fatigue-test" className="btn-primary text-sm">Take the Compassion Fatigue Self-Check</Link>
               <Link href="/burnout-assessment-tool" className="btn-primary text-sm">Take the Burnout Assessment</Link>

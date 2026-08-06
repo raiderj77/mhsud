@@ -308,14 +308,14 @@ export default function CognitiveDistortionsListPage() {
               If reading through this list made you recognize patterns in your own thinking, you are not alone. Most people regularly engage in several of these distortions without realizing it. Our free <Link href="/cognitive-distortion-identifier" className="text-sage-600 dark:text-sage-400 underline">Cognitive Distortion Identifier</Link> can help you explore which patterns may show up most in your thinking.
             </p>
             <p>
-              The tool is not a clinical assessment, it is a self-reflection exercise designed to build awareness. All of your responses are processed in your browser and are never stored or sent to a server. It takes about five minutes and may give you a useful starting point for conversations with a therapist or for your own personal growth.
+              The tool is not a clinical assessment; it is a self-reflection exercise designed to build awareness. Responses are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. It takes about five minutes and may give you a useful starting point for conversations with a therapist or for your own personal growth.
             </p>
           </section>
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Identify your thinking patterns</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The Cognitive Distortion Identifier is a free self-reflection tool. Private, takes about 5 minutes, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The Cognitive Distortion Identifier is a free self-reflection tool. Private, takes about 5 minutes, and Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/cognitive-distortion-identifier" className="btn-primary text-sm">Try the Cognitive Distortion Identifier</Link>
           </div>
 

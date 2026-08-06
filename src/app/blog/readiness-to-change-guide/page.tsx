@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "How does the readiness assessment work?",
     answer:
-      "The assessment asks questions about your current thoughts, feelings, and behaviors related to the change you are considering. Based on your responses, it identifies which stage of change best describes your position and provides tailored guidance with specific strategies matched to where you are. It is free, private, and processed entirely in your browser.",
+      "The assessment asks questions about your current thoughts, feelings, and behaviors related to the change you are considering. Based on your responses, it identifies which stage of change best describes your position and provides tailored guidance with specific strategies matched to where you are. It is free, private,. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.",
   },
 ];
 

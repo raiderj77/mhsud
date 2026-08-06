@@ -23,18 +23,18 @@ test("sensitive routes receive no-store and no-referrer response headers", async
   }
 });
 
-test("sensitive routes bypass tracking, advertising, affiliates, and assessment events", async () => {
+test("topical routes bypass tracking, advertising, affiliates, and assessment events", async () => {
   const [consent, ads, therapy, events] = await Promise.all([
     read("../src/components/ConsentAnalytics.tsx"),
     read("../src/components/AdSlot.tsx"),
     read("../src/components/TherapyCTA.tsx"),
     read("../src/lib/assessmentAnalytics.ts"),
   ]);
-  assert.match(consent, /sensitive[\s\S]*analytics: false, advertising: false/);
+  assert.match(consent, /optionalServicesAllowed[\s\S]*analytics: false, advertising: false/);
   assert.match(consent, /removeOptionalServiceScripts/);
-  assert.match(ads, /sensitive \|\| !runtimeEnabled/);
+  assert.match(ads, /!routeAllowed \|\| !runtimeEnabled/);
   assert.match(ads, /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true"/);
-  assert.match(therapy, /isSensitiveRoute\(pathname\)/);
+  assert.match(therapy, /isOptionalServicesAllowedRoute\(pathname\)/);
   assert.match(events, /isSensitiveBrowserLocation\(\)/);
 });
 
@@ -48,6 +48,7 @@ test("interactive health tools without generic screening words stay sensitive", 
     "box-breathing-exercise",
     "cognitive-distortion-identifier",
     "coping-skills-randomizer",
+    "crisis-resources",
     "dass-21-depression-anxiety-stress",
     "dbt-crisis-skills",
     "five-senses-grounding",
@@ -114,12 +115,11 @@ test("service worker privacy updates bypass stale script caches and activate pro
 });
 
 test("history restores reset state, result sharing is disabled, and printing requires a warning", async () => {
-  const [lifecycle, printing, css, phq, scoff] = await Promise.all([
+  const [lifecycle, printing, css, phq] = await Promise.all([
     read("../src/components/SensitiveRouteLifecycle.tsx"),
     read("../src/lib/sensitivePrinting.ts"),
     read("../src/app/globals.css"),
     read("../src/app/phq-9-depression-test/PHQ9Client.tsx"),
-    read("../src/app/scoff-eating-disorder-screening/SCOFFClient.tsx"),
   ]);
   assert.match(lifecycle, /event\.persisted/);
   assert.match(lifecycle, /window\.location\.reload\(\)/);
@@ -129,9 +129,7 @@ test("history restores reset state, result sharing is disabled, and printing req
   assert.match(printing, /window\.confirm/);
   assert.match(css, /data-sensitive-route="true".*print-approved/);
   assert.match(phq, /printSensitiveResults\(\)/);
-  assert.match(scoff, /printSensitiveResults\(\)/);
   assert.doesNotMatch(phq, /Copy My Results|PHQ-9 Self-Check Results/);
-  assert.doesNotMatch(scoff, /Copy My Results|SCOFF Eating Disorder Screening Results/);
 });
 
 test("screening consent has a stable accessible selector for synthetic monitoring", async () => {

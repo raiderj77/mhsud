@@ -173,7 +173,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
           <section>
             <h2>Confidential screening options that protect your career</h2>
             <p>
-              The <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools military alcohol screening</Link> is a free, private assessment that runs entirely in your browser. No data is stored, no account is needed, and no one, including your command, sees your answers or results. It takes under five minutes and provides a structured look at your drinking patterns.
+              The <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools military alcohol screening</Link> is a free, private assessment that requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools, DOD, or a command. People with access to your device, browser profile, or copies you create may see them; ordinary page requests may also create limited hosting or security logs. It takes under five minutes and provides a structured look at your drinking patterns.
             </p>
             <p>
               Beyond online self-screening, other confidential options include:
@@ -199,7 +199,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
               <li>Screening, Brief Intervention, and Referral to Treatment (SBIRT) has been implemented across military healthcare to identify at-risk drinking early before it reaches the level of alcohol use disorder</li>
             </ul>
             <p>
-              These policy changes are meaningful but implementation varies by command and installation. The cultural shift lags behind the policy shift, which is why confidential screening options remain essential. Taking the <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">military alcohol screening</Link> privately is a zero-risk way to get a clearer picture of your drinking patterns before deciding whether to seek further evaluation.
+              These policy changes are meaningful but implementation varies by command and installation. The cultural shift lags behind the policy shift, which is why understanding each option&apos;s privacy and reporting rules is essential. The <Link href="/alcohol-screening-military" className="text-sage-600 dark:text-sage-400 underline">military alcohol screening</Link> can help you reflect before deciding whether to seek further evaluation, but it cannot promise zero privacy or career risk.
             </p>
           </section>
 
@@ -224,7 +224,7 @@ export default function AlcoholScreeningMilitaryGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your drinking patterns, privately and confidentially</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Nothing is stored or reported.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account required. Answers are processed locally and are not intentionally sent to MindCheck Tools, DOD, or a command. Device users, copies, and ordinary hosting or security logs remain possible.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/alcohol-screening-military" className="btn-primary text-sm">Military Alcohol Screening</Link>
               <Link href="/audit-alcohol-test" className="btn-primary text-sm">AUDIT Alcohol Test</Link>

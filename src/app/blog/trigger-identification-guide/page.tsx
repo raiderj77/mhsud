@@ -131,7 +131,7 @@ export default function TriggerIdentificationGuidePage() {
           <section>
             <h2>How the MindCheck Tools trigger identification worksheet helps</h2>
             <p>
-              The <Link href="/trigger-identification-worksheet" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools trigger identification worksheet</Link> guides you through a structured process of naming your triggers across all four categories, rating their intensity, and planning specific coping responses for each one. It is free, private, and runs entirely in your browser.
+              The <Link href="/trigger-identification-worksheet" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools trigger identification worksheet</Link> guides you through a structured process of naming your triggers across all four categories, rating their intensity, and planning specific coping responses for each one. It is free and private. Entries are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device or browser profile may see them, and copies you create may be retained by your device or chosen services.
             </p>
             <p>
               The value of writing triggers down (rather than just thinking about them) is supported by research on implementation intentions, specific &quot;if-then&quot; plans are significantly more effective than general intentions. The worksheet helps you create these: &quot;If I encounter [trigger], then I will [specific coping response].&quot;
@@ -172,7 +172,7 @@ export default function TriggerIdentificationGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Map your triggers and build coping responses</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/trigger-identification-worksheet" className="btn-primary text-sm">Start the Trigger Worksheet</Link>
               <Link href="/relapse-prevention-plan" className="btn-primary text-sm">Build Your Prevention Plan</Link>

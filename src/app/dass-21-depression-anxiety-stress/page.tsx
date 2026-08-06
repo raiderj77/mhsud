@@ -1,65 +1,109 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
-import { DASS21Client } from "./DASS21Client";
 import AnswerBlock from "@/components/AnswerBlock";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/dass-21-depression-anxiety-stress`;
+const PAGE_PATH = "/dass-21-depression-anxiety-stress";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const DASS_FAQ_URL = "https://dass.psy.unsw.edu.au/DASSFAQ.htm";
 
 export const metadata: Metadata = createMetadata({
-  path: "/dass-21-depression-anxiety-stress",
-  title: "DASS-21 Depression Anxiety Stress Test",
+  path: PAGE_PATH,
+  title: "DASS-21 Information and Public-Use Boundary",
   description:
-    "Take the free DASS-21 screening. 21 questions, 4 minutes. Screens depression, anxiety, and stress in one test. Private, instant results.",
+    "Educational information about the DASS-21, why MindCheck Tools does not administer or score it publicly, and non-equivalent screening alternatives.",
   keywords: [
-    "dass-21", "dass 21 test", "depression anxiety stress test",
-    "dass-21 screening", "dass test online", "depression anxiety stress scales",
-    "dass-21 free", "dass-21 scoring", "stress test online",
-    "am i depressed or stressed", "anxiety and depression test",
-    "dass-21 questionnaire", "dass screening tool", "mental health screening",
-    "dass-21 self-assessment",
+    "DASS-21 information",
+    "DASS-21 public use",
+    "DASS-21 licensing",
+    "depression anxiety stress scales",
+    "PHQ-4 PHQ-9 GAD-7 alternatives",
   ],
   openGraph: {
-    title: "DASS-21 Depression Anxiety Stress Test",
-    description: "Take the free DASS-21 screening. 21 questions, 4 minutes. Screens depression, anxiety, and stress in one test.",
-    url: TOOL_URL,
+    title: "DASS-21 Information and Public-Use Boundary",
+    description:
+      "Why this site provides DASS-21 information without a public questionnaire, scoring, or automated interpretation.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What does the DASS-21 measure?", answer: "The DASS-21 (Depression Anxiety Stress Scales) simultaneously measures three related but distinct emotional states: depression (low mood, hopelessness, loss of interest), anxiety (physical arousal, panic, fear), and stress (tension, irritability, difficulty relaxing). Each is scored on a separate subscale with its own severity cutoffs. This makes the DASS-21 especially useful because many people experience overlapping symptoms and benefit from understanding which dimensions are most elevated." },
-  { question: "What is the difference between depression, anxiety, and stress?", answer: "While these conditions often co-occur and share some symptoms, they have distinct features. Depression is characterized by persistent low mood, loss of pleasure, hopelessness, and feelings of worthlessness. Anxiety involves excessive worry, physical symptoms of arousal (rapid heartbeat, breathing difficulty, trembling), and fear-based avoidance. Stress involves tension, irritability, difficulty relaxing, and feeling overwhelmed by demands. The DASS-21 helps differentiate these by measuring each dimension separately, which can guide more targeted conversations with healthcare providers." },
-  { question: "Why screen for all three at once?", answer: "Depression, anxiety, and stress frequently co-occur. Research shows that approximately 60% of people with depression also experience significant anxiety, and chronic stress is a risk factor for both conditions. Screening for all three simultaneously provides a more complete picture of emotional well-being and can help identify patterns that single-condition screens might miss. For example, someone might score low on depression but high on stress, suggesting a different conversation with their provider than someone who scores high on both." },
-  { question: "How is the DASS-21 scored?", answer: "The DASS-21 is the short form of the original 42-item DASS. Each of the 21 items is rated 0-3. The 7 items for each subscale are summed, then multiplied by 2 to match the full DASS-42 scale. This gives final scores of 0-42 for each subscale. Each subscale has its own severity cutoffs: for example, a depression score of 14-20 is moderate, while an anxiety score of 10-14 is moderate, the thresholds differ because the three conditions have different distributions in the population." },
-  { question: "Is the DASS-21 accurate?", answer: "The DASS-21 has been extensively validated across clinical and non-clinical populations worldwide (Lovibond & Lovibond, 1995; Antony et al., 1998). It demonstrates strong internal consistency, good test-retest reliability, and meaningful differentiation between its three subscales. It is widely used in both research and clinical settings. However, like all screening tools, it can produce false positives and false negatives, which is why professional evaluation is always recommended when scores are elevated." },
-  { question: "How is the DASS-21 different from the PHQ-9 or GAD-7?", answer: "The PHQ-9 screens specifically for depression and the GAD-7 screens specifically for generalized anxiety, each providing a detailed assessment of one condition. The DASS-21 screens for depression, anxiety, AND stress simultaneously, providing a broader snapshot of emotional well-being. The DASS-21 anxiety subscale also captures more physical anxiety symptoms (panic, trembling) compared to the GAD-7's focus on worry. The tools complement each other well: the DASS-21 provides a broad overview, while the PHQ-9 and GAD-7 provide deeper assessment of specific conditions." },
-  { question: "What should I do with my DASS-21 results?", answer: "If any of your three subscale scores fall in the moderate, severe, or extremely severe range, speaking with a healthcare provider or mental health professional is recommended. Your results can be a useful starting point for that conversation, the subscale breakdown helps identify which dimensions are most elevated. The SAMHSA National Helpline (1-800-662-4357) provides free, confidential referrals 24/7. If you are in crisis, call or text 988 to reach the Suicide and Crisis Lifeline." },
+  {
+    question: "What is the DASS-21?",
+    answer:
+      "The DASS-21 is a shortened form of the Depression Anxiety Stress Scales. It measures three related symptom dimensions for research and appropriately supervised assessment. It is not a diagnostic instrument.",
+  },
+  {
+    question: "Can I take the DASS-21 on MindCheck Tools?",
+    answer:
+      "No. The current official DASS guidance says a website or app open to the public may not administer the instrument. MindCheck Tools therefore provides educational information only and does not collect answers, calculate scores, or return DASS interpretations.",
+  },
+  {
+    question: "Why does this page not show DASS-21 scoring or severity results?",
+    answer:
+      "The official guidance says computed scores should not be returned directly to respondents and warns that automated interpretation may be misleading or unsafe. This page follows that boundary.",
+  },
+  {
+    question: "Are the PHQ-4, PHQ-9, and GAD-7 equivalent to the DASS-21?",
+    answer:
+      "No. They measure different constructs, use different timeframes and scoring systems, and should not be compared score-for-score. MindCheck Tools links them only as separately validated, publicly permitted screening options for specific depression or anxiety concerns.",
+  },
+  {
+    question: "Can this information diagnose depression, anxiety, or a stress disorder?",
+    answer:
+      "No. This page is educational. Only an appropriately qualified healthcare professional can evaluate symptoms in context and make a diagnosis.",
+  },
 ];
 
-export default function DASS21Page() {
+const ALTERNATIVES = [
+  {
+    href: "/phq-4-anxiety-depression-screen",
+    name: "PHQ-4 Quick Screen",
+    description:
+      "A four-item combined depression-and-anxiety symptom screener. It is brief, but it is not a DASS-21 substitute and does not reproduce the DASS stress construct.",
+  },
+  {
+    href: "/phq-9-depression-test",
+    name: "PHQ-9 Depression Self-Check",
+    description:
+      "A nine-item screener focused on depressive symptoms. It does not measure generalized anxiety or the DASS stress subscale.",
+  },
+  {
+    href: "/gad-7-anxiety-test",
+    name: "GAD-7 Anxiety Self-Check",
+    description:
+      "A seven-item screener focused on generalized anxiety symptoms. It is not interchangeable with a DASS-21 anxiety score.",
+  },
+];
+
+export default function DASS21InformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "DASS-21 Depression Anxiety Stress Screening Test",
-              description: "A free online implementation of the DASS-21 (Depression Anxiety Stress Scales), a validated 21-item screening tool that simultaneously measures depression, anxiety, and stress.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "DASS-21 Information and Public-Use Boundary",
+              description:
+                "Educational information about the DASS-21 and the official boundary against public online administration and automated respondent interpretation.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
       />
       <script
         type="application/ld+json"
@@ -67,88 +111,174 @@ export default function DASS21Page() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "DASS-21 Depression Anxiety Stress Test", url: TOOL_URL },
-            ])
+              { name: "DASS-21 Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...medicalWebPageJsonLd({
-              name: "DASS-21 Depression Anxiety Stress Screening Test",
-              description: "A free online implementation of the DASS-21 (Depression Anxiety Stress Scales), a validated 21-item screening tool that simultaneously measures depression, anxiety, and stress.",
-              url: TOOL_URL,
-              lastReviewed: "2026-03-07",
-            }),
-    }),
-        }}
-      />
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The DASS-21, a 21-item screening that simultaneously measures depression, anxiety, and stress severity on three separate scales."
-          who="Anyone who wants to assess depression, anxiety, and stress levels together using a single validated instrument."
-          bottomLine="The DASS-21 provides three separate scores, you may score differently on each subscale. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-
-
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
-        <ToolReviewerBio lastReviewed="August 2, 2026" />
-      </div>
-      <DASS21Client faqData={FAQ_DATA} />
-
-      {/* Related Tools */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-        <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <Link href="/dass-21-score-interpretation" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 Score Guide</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Understand what your DASS-21 scores mean</p>
-          </Link>
-          <Link href="/phq-9-depression-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">PHQ-9 Depression Test</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Focused depression screening tool</p>
-          </Link>
-          <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Test</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Focused anxiety screening tool</p>
-          </Link>
-          <Link href="/dass-21-vs-phq-9-and-gad-7" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-            <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">DASS-21 vs. PHQ-9 &amp; GAD-7</p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">How the DASS-21 compares to the PHQ-9/GAD-7 pair</p>
-          </Link>
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="flex flex-wrap gap-2 mb-5" aria-label="Page status">
+          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
+            Educational information
+          </span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">
+            No questionnaire
+          </span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">
+            No scoring
+          </span>
         </div>
-      </div>
+
+        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          DASS-21 Information and Public-Use Boundary
+        </h1>
+        <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
+          MindCheck Tools does not administer, score, or interpret the DASS-21 on this public website. This page explains why and offers separately validated screening options for specific depression or anxiety concerns.
+        </p>
+
+        <AnswerBlock
+          what="An educational overview of the DASS-21 and the official limits on public website administration and automated respondent interpretation."
+          who="People looking for accurate information about the DASS-21 or an appropriately licensed alternative self-check."
+          bottomLine="This page does not provide a DASS questionnaire or result. PHQ-4, PHQ-9, and GAD-7 are separate instruments, not equivalent replacements. No page result can provide a diagnosis."
+          lastUpdated="2026-08-05"
+        />
+
+        <section className="mt-8 rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5 sm:p-6" aria-labelledby="licensing-boundary">
+          <h2 id="licensing-boundary" className="font-serif text-xl font-bold text-amber-900 dark:text-amber-200 mb-3">
+            Why the public self-check was removed
+          </h2>
+          <div className="space-y-3 text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+            <p>
+              The DASS questionnaire may be copied as a public-domain form, but the instrument owner&apos;s current guidance draws a separate boundary around administration. It says an app or website open to the public may not administer the DASS.
+            </p>
+            <p>
+              The same guidance says electronic use is appropriate only for a defined group when results go to a clinician or researcher rather than directly to respondents. It also warns against returning computed scores or automated interpretations.
+            </p>
+            <p>
+              MindCheck Tools follows that distinction. Public access to this information page remains free, while the former questionnaire, automated scoring, severity labels, and results journey are not provided.
+            </p>
+            <a
+              href={DASS_FAQ_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2"
+            >
+              Read the official UNSW DASS administration guidance
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="about-dass">
+          <h2 id="about-dass" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            What the DASS-21 is designed to measure
+          </h2>
+          <div className="space-y-4 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            <p>
+              The DASS-21 is the shorter version of the Depression Anxiety Stress Scales developed by S. H. Lovibond and P. F. Lovibond. It produces separate dimensional measures of depression, anxiety, and stress symptoms. Those dimensions are not diagnoses.
+            </p>
+            <p>
+              Interpretation requires appropriate training in psychological science and assessment. The official guidance recommends qualified professional interpretation when a person is seeking help or experiencing high distress.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="alternatives">
+          <h2 id="alternatives" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            Separately permitted screening options
+          </h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
+            These instruments are linked under their owners&apos; published terms and required attribution. They are not equivalent to the DASS-21, do not reproduce all three DASS constructs, and cannot be compared with a DASS score.
+          </p>
+          <div className="grid grid-cols-1 gap-4">
+            {ALTERNATIVES.map((alternative) => (
+              <Link
+                key={alternative.href}
+                href={alternative.href}
+                className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors"
+              >
+                <h3 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">
+                  {alternative.name}
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                  {alternative.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/20 p-5" aria-labelledby="privacy-boundary">
+          <h2 id="privacy-boundary" className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
+            Privacy boundary
+          </h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            This page does not ask for symptoms, answers, or a score and does not calculate a personal result. If you follow a link to another self-check, review that page&apos;s limits and the <Link href="/privacy" className="font-semibold underline">privacy policy</Link> before answering, especially on a shared device.
+          </p>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-crisis-200 dark:border-crisis-800 bg-crisis-50 dark:bg-crisis-950/20 p-5" aria-labelledby="immediate-help">
+          <h2 id="immediate-help" className="font-serif text-xl font-bold text-crisis-900 dark:text-crisis-200 mb-2">
+            If you need immediate help
+          </h2>
+          <p className="text-sm text-crisis-900 dark:text-crisis-200 leading-relaxed mb-4">
+            An informational page or screening result cannot assess an emergency. In the United States, call or text 988 for the Suicide &amp; Crisis Lifeline, or call 911 for immediate danger. Outside the United States, use local emergency or crisis services.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:988" className="inline-flex min-h-11 items-center rounded-lg bg-crisis-700 px-4 py-2 text-sm font-semibold text-white hover:bg-crisis-800">
+              Call 988
+            </a>
+            <a href="sms:988" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">
+              Text 988
+            </a>
+            <a href="tel:911" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">
+              Call 911
+            </a>
+            <Link href="/crisis-resources" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200 underline">
+              View U.S. and international crisis resources
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="sources">
+          <h2 id="sources" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            Sources
+          </h2>
+          <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <li>
+              University of New South Wales. <a href={DASS_FAQ_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">DASS frequently asked questions</a>, including administration, interpretation, and public website/app guidance.
+            </li>
+            <li>
+              Henry, J. D., &amp; Crawford, J. R. (2005). The short-form version of the Depression Anxiety Stress Scales. <a href="https://pubmed.ncbi.nlm.nih.gov/16004657/" target="_blank" rel="noopener noreferrer" className="font-semibold underline">PubMed PMID 16004657</a>.
+            </li>
+            <li>
+              Lovibond, S. H., &amp; Lovibond, P. F. (1995). <em>Manual for the Depression Anxiety Stress Scales</em>, second edition.
+            </li>
+          </ul>
+        </section>
+
+        <div className="mt-10">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
+
+        <section className="mt-8 border-t border-sand-200 dark:border-neutral-700 pt-6" aria-labelledby="faq-heading">
+          <h2 id="faq-heading" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            Frequently asked questions
+          </h2>
+          <div className="space-y-5">
+            {FAQ_DATA.map((entry) => (
+              <div key={entry.question}>
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
+                  {entry.question}
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                  {entry.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </article>
     </>
   );
 }

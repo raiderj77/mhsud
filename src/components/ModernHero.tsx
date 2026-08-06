@@ -221,14 +221,14 @@ export function ModernHero() {
               Understanding Your Results
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
-              Each screening tool provides immediate feedback about your symptoms. Results are{" "}
-              <span className="font-semibold">never stored</span> without your consent and work entirely{" "}
-              <span className="font-semibold">offline</span>.
+              Each screening tool calculates feedback locally in your browser. Questionnaire answers and
+              scores are <span className="font-semibold">not intentionally sent to MindCheck Tools</span>.
+              Ordinary page requests can still create hosting records.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { icon: "🔒", title: "Private", desc: "Your data stays on your device" },
+                { icon: "🔒", title: "Local processing", desc: "Answers are processed in this browser" },
                 { icon: "🔍", title: "Accurate", desc: "Based on validated instruments" },
                 { icon: "🚀", title: "Fast", desc: "Instant results and guidance" },
               ].map((feature) => (

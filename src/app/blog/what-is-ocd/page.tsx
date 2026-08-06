@@ -303,7 +303,7 @@ export default function WhatIsOcdPage() {
           <div className="rounded-lg bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 p-6 text-center">
             <h2 className="text-lg font-semibold text-sage-900 dark:text-sage-100 mb-2">Check in on your mental health</h2>
             <p className="text-sm text-sage-700 dark:text-sage-400 mb-4">
-              Free, private screenings for depression and anxiety. Results stay in your browser.
+              Free, private screenings for depression and anxiety. Results are generated locally and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/phq-9-depression-test" className="inline-block rounded-md bg-sage-600 px-5 py-2 text-sm font-medium text-white hover:bg-sage-700 transition">PHQ-9 Depression Check</Link>

@@ -30,6 +30,7 @@ const SENSITIVE_TOOL_SEGMENT =
 
 const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "screening-tools",
+  "crisis-resources",
   "safety-plan",
   "readiness-to-change",
   "who-5-wellbeing-index",

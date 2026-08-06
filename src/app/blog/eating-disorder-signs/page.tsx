@@ -183,7 +183,7 @@ export default function EatingDisorderSignsPage() {
               A score of 2 or more &quot;yes&quot; answers may indicate a possible eating disorder and suggests further evaluation is warranted. The SCOFF is a screening tool, not a clinical assessment. It cannot tell you whether you have an eating disorder, but it can help you recognize patterns worth discussing with a healthcare provider.
             </p>
             <p>
-              You can take the <Link href="/scoff-eating-disorder-screening">SCOFF screening self-check</Link> on our site. It is free, private, and your answers never leave your browser.
+              You can take the <Link href="/scoff-eating-disorder-screening">SCOFF screening self-check</Link> on our site. It is free and private. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -229,7 +229,7 @@ export default function EatingDisorderSignsPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take the SCOFF Eating Disorder Screening</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 1 minute. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 1 minute. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/scoff-eating-disorder-screening" className="btn-primary text-sm">Take the SCOFF Self-Check</Link>
           </div>
 

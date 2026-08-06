@@ -211,7 +211,7 @@ export default function StandardDrinksBacGuidePage() {
               uses just three questions focused on consumption patterns. A positive screen on the AUDIT-C, scores of 4 or higher for men and 3 or higher for women (Bush et al., 1998, Arch Intern Med), suggests further evaluation may be helpful.
             </p>
             <p>
-              These screenings are not diagnostic tools. They indicate whether your drinking patterns may warrant a conversation with a healthcare provider who can offer personalized guidance. All screening results on MindCheck Tools are processed entirely in your browser and are never stored or transmitted.
+              These screenings are not diagnostic tools. They indicate whether your drinking patterns may warrant a conversation with a healthcare provider who can offer personalized guidance. Questionnaire answers and results are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -233,7 +233,7 @@ export default function StandardDrinksBacGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Know What You&apos;re Drinking</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Calculate the actual alcohol content of your beverages or estimate your BAC. Free, private, and your data never leaves your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Calculate the actual alcohol content of your beverages or estimate your BAC. Free, private. Inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/standard-drinks-calculator" className="btn-primary text-sm">Standard Drinks Calculator</Link>
               <Link href="/bac-calculator" className="btn-primary text-sm">BAC Calculator</Link>

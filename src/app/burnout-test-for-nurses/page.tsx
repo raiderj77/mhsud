@@ -142,7 +142,7 @@ export default function BurnoutTestForNursesPage() {
             Start the Burnout Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 5 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export default function BurnoutTestForNursesPage() {
                 <p><strong>Depersonalization:</strong> Feeling detached from patients, treating them as tasks rather than people, or developing a cynical attitude you didn&apos;t used to have.</p>
                 <p><strong>Reduced accomplishment:</strong> Feeling like your work doesn&apos;t matter, you&apos;re not making a difference, or you&apos;ve lost your sense of purpose.</p>
                 <p><strong>Your results:</strong> You&apos;ll see where you fall on each dimension and overall. There are no &quot;pass/fail&quot; answers, this is about understanding where you are right now.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, coworkers, or anyone else.</p>
+                <p><strong>Your privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools, your employer, or coworkers. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -389,7 +389,7 @@ export default function BurnoutTestForNursesPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess burnout or related conditions. Your responses are processed
-            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            locally and are not intentionally sent to MindCheck Tools. Always consult a qualified
             healthcare professional for medical advice.
           </p>
         </div>

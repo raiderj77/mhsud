@@ -175,7 +175,7 @@ export default function DepressionVeteransGuidePage() {
               The <Link href="/depression-screening-for-veterans" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for veterans</Link> is a free, private assessment that takes under five minutes. It is based on the PHQ-9, the same validated instrument used throughout the VA healthcare system for routine depression screening.
             </p>
             <p>
-              The screening runs entirely in your browser, no data is stored, no account is needed, and no one sees your answers. For veterans who are not ready to walk into a VA clinic or talk to a counselor, a private online screening provides a low-barrier entry point. It helps quantify what you may be experiencing and gives you something concrete to bring to a provider if you choose to seek help.
+              The screening requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools or the VA. People with access to your device, browser profile, or copies you create may see them; ordinary page requests may also create limited hosting or security logs. For veterans who are not ready to walk into a VA clinic or talk to a counselor, a private online screening provides a low-barrier entry point. It helps quantify what you may be experiencing and gives you something concrete to bring to a provider if you choose to seek help.
             </p>
             <p>
               If PTSD is also a concern, consider taking the <Link href="/pcl-5-ptsd-screening" className="text-sage-600 dark:text-sage-400 underline">PCL-5 PTSD screening</Link> alongside the <Link href="/depression-screening-for-veterans" className="text-sage-600 dark:text-sage-400 underline">depression screening</Link>. Understanding both conditions helps guide the conversation with a provider.
@@ -208,7 +208,7 @@ export default function DepressionVeteransGuidePage() {
             <ul>
               <li>Asking about specific behaviors: &quot;I&apos;ve noticed you haven&apos;t been sleeping well, how long has that been going on?&quot;</li>
               <li>Normalizing the experience: &quot;A lot of veterans deal with this after getting out&quot;</li>
-              <li>Sharing the screening tool: &quot;I came across this, it takes five minutes and it&apos;s private by design&quot;</li>
+              <li>Sharing the screening tool: &quot;I came across this, it takes five minutes and does not require an account; review the privacy note before entering anything sensitive&quot;</li>
               <li>Offering to help with logistics: &quot;I can help you make the appointment or drive you there&quot;</li>
               <li>Being persistent without being pushy: check in regularly, not just once</li>
             </ul>
@@ -219,7 +219,7 @@ export default function DepressionVeteransGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a few minutes to check in on how you&apos;re feeling</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Your answers stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools or the VA. Device users, copies, and ordinary hosting or security logs remain possible.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/depression-screening-for-veterans" className="btn-primary text-sm">Veteran Depression Screening</Link>
               <Link href="/pcl-5-ptsd-screening" className="btn-primary text-sm">PTSD Screening (PCL-5)</Link>

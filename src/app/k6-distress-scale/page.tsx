@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { K6Client } from "./K6Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/k6-distress-scale`;
 
@@ -56,7 +57,7 @@ const FAQ_DATA = [
   {
     question: "Is my data private?",
     answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. No account is required. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.",
   },
 ];
 
@@ -96,7 +97,12 @@ export default function K6Page() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+          K6 Psychological Distress Scale
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-3 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
@@ -131,7 +137,10 @@ export default function K6Page() {
 </div>
       </div>
 
-<K6Client faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="March 20, 2026" />
+      </div>
+      <K6Client faqData={FAQ_DATA} />
     </>
   );
 }

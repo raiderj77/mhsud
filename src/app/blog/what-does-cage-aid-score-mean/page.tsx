@@ -250,7 +250,7 @@ export default function WhatDoesCageAidScoreMeanPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Want a more detailed substance use picture?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Each screening takes under 5 minutes. Free, private, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Each screening takes under 5 minutes. Free and private. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/audit-alcohol-test" className="btn-primary text-sm">Take the AUDIT Alcohol Screening</Link>
               <Link href="/who-assist-substance-screening" className="btn-primary text-sm">Take the WHO-ASSIST Drug Screening</Link>

@@ -1,136 +1,145 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import AnswerBlock from "@/components/AnswerBlock";
-import { AISClient } from "./AISClient";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
+import {
+  RightsBoundaryInformationPage,
+  type InformationFaq,
+} from "@/app/_components/RightsBoundaryInformationPage";
 
-const TOOL_URL = `${SITE_URL}/athens-insomnia-scale`;
+const PAGE_PATH = "/athens-insomnia-scale";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = createMetadata({
-  path: "/athens-insomnia-scale",
-  title: "Athens Insomnia Scale | Free Insomnia Self-Check",
+  path: PAGE_PATH,
+  title: "Athens Insomnia Scale Information and Permission Boundary",
   description:
-    "Free Athens Insomnia Scale (AIS). 8 items, past month, score 0-24. Based on ICD-10 criteria (Soldatos et al., 2000). Score 6+ suggests insomnia. Private, instant results.",
+    "Educational information about the Athens Insomnia Scale, why it is not administered here, and non-equivalent public-use options for sleep and mood reflection.",
   keywords: [
-    "Athens insomnia scale", "AIS", "insomnia test",
-    "insomnia questionnaire", "insomnia screening",
-    "sleep disorder test", "insomnia self-check",
-    "Athens insomnia scale online", "insomnia assessment",
-    "sleep quality test", "do I have insomnia",
-    "insomnia scale free", "Soldatos insomnia",
+    "Athens Insomnia Scale information",
+    "Athens Insomnia Scale permission",
+    "insomnia research instrument",
+    "AIS rights",
   ],
   openGraph: {
-    title: "Athens Insomnia Scale | Free Insomnia Self-Check",
-    description:
-      "Free Athens Insomnia Scale (AIS). 8 items, past month, score 0-24. Based on ICD-10 criteria (Soldatos et al., 2000). Score 6+ suggests insomnia. Private, instant results.",
-    url: TOOL_URL,
+    title: "Athens Insomnia Scale Information",
+    description: "Research context and the permission boundary for public electronic administration of the Athens Insomnia Scale.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
-const FAQ_DATA = [
+const FAQ_DATA: InformationFaq[] = [
   {
     question: "What is the Athens Insomnia Scale?",
     answer:
-      "The Athens Insomnia Scale (AIS) is an 8-item self-report questionnaire designed to measure insomnia severity based on the ICD-10 diagnostic criteria. It was developed by Constantine Soldatos and colleagues at the University of Athens and published in 2000 in the Journal of Psychosomatic Research. The first five items assess nighttime sleep problems (difficulty falling asleep, nighttime awakenings, early morning awakening, total sleep duration, and overall sleep quality) and the last three items assess daytime consequences (well-being, functioning, and sleepiness). It is one of the most widely used insomnia screening instruments in clinical research.",
+      "It is a self-report research and clinical instrument developed by Constantin Soldatos and colleagues to assess insomnia-related sleep difficulty and daytime impact within its intended professional context.",
   },
   {
-    question: "How is the Athens Insomnia Scale scored?",
+    question: "Can I take the Athens Insomnia Scale on MindCheck Tools?",
     answer:
-      "Each of the 8 items is rated from 0 (no problem) to 3 (severe problem) based on your experience over the past month. The total score ranges from 0 to 24. A score of 6 or higher suggests the presence of insomnia. In the original validation study, this cutoff of 6 demonstrated 93% sensitivity and 85% specificity for identifying insomnia based on ICD-10 criteria. Higher scores indicate more severe insomnia: 6-9 is considered mild, 10-15 moderate, and 16-24 severe.",
+      "No. MindCheck Tools has not archived written permission from the current rights holder for public consumer-web reproduction, electronic administration, or automated scoring.",
   },
   {
-    question: "What is the difference between the AIS and other insomnia scales?",
+    question: "Why are the questions, score, and threshold omitted?",
     answer:
-      "The Athens Insomnia Scale is based specifically on ICD-10 diagnostic criteria for insomnia, which makes it clinically grounded. Other common insomnia measures include the Insomnia Severity Index (ISI), which is based on DSM criteria, and the Pittsburgh Sleep Quality Index (PSQI), which is a broader sleep quality measure. The AIS is shorter than the PSQI (8 items vs. 19) and uniquely includes daytime consequences as part of the core assessment. All three are validated and widely used; the AIS is particularly popular in European and international research.",
+      "Those elements are part of the instrument and are withheld until the appropriate electronic/public-use permission is documented. A self-report threshold also cannot establish an insomnia diagnosis.",
   },
   {
-    question: "How is insomnia related to mental health?",
+    question: "Is the Sleep and Mood Check an Athens Insomnia Scale substitute?",
     answer:
-      "Insomnia and mental health are deeply interconnected. Insomnia is both a symptom of and a risk factor for depression, anxiety, PTSD, and substance use disorders. Research shows that people with insomnia are approximately twice as likely to develop depression as those without sleep difficulties. Insomnia can also worsen existing mental health conditions by impairing emotion regulation, concentration, and stress tolerance. Conversely, treating insomnia often improves depression and anxiety symptoms even when those conditions are not directly treated. If your AIS score is elevated, it may be helpful to also screen for depression (PHQ-9) or anxiety (GAD-7).",
+      "No. It is an original educational reflection with different content and no validated insomnia cutoff. PHQ-4 is also a separate depression and anxiety screen, not a sleep-disorder assessment.",
   },
   {
-    question: "When should I see a doctor about insomnia?",
+    question: "How is insomnia diagnosed?",
     answer:
-      "Consider speaking with a healthcare provider if your sleep difficulties have persisted for more than a few weeks, if they are affecting your daytime functioning (work, relationships, safety), or if your AIS score is 6 or higher. The first-line treatment for chronic insomnia is Cognitive Behavioral Therapy for Insomnia (CBT-I), which has strong evidence and is recommended over medication by the American College of Physicians. A doctor can also rule out other conditions that may be affecting your sleep, such as sleep apnea, restless leg syndrome, or medical conditions.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "A qualified healthcare professional evaluates sleep pattern, duration, daytime effects, medical and medication factors, other sleep disorders, and the person's circumstances. An online self-check cannot complete that evaluation.",
   },
 ];
 
-export default function AISPage() {
+export default function AthensInsomniaInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "Athens Insomnia Scale (AIS)",
-              description:
-                "A free online implementation of the Athens Insomnia Scale (Soldatos et al., 2000), an 8-item measure of insomnia severity based on ICD-10 criteria. Score 0-24 with cutoff of 6+ for insomnia (93% sensitivity, 85% specificity).",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Athens Insomnia Scale Information and Permission Boundary",
+              description: "Educational research and rights information without public questionnaire administration or scoring.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Athens Insomnia Scale", url: TOOL_URL },
-            ])
+              { name: "Athens Insomnia Scale Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The Athens Insomnia Scale, a validated 8-item screening that measures insomnia severity based on ICD-10 diagnostic criteria."
-          who="Anyone experiencing sleep difficulties who wants to assess whether their insomnia symptoms reach clinical levels."
-          bottomLine="Chronic insomnia affects both mental and physical health, discuss persistent sleep problems with your doctor. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-<AISClient faqData={FAQ_DATA} />
+      <RightsBoundaryInformationPage
+        title="Athens Insomnia Scale Information"
+        intro="MindCheck Tools does not reproduce, administer, score, or interpret the Athens Insomnia Scale. This page preserves accurate research context and the current permission boundary."
+        what="An educational overview of the Athens Insomnia Scale, its intended purpose, limitations, and public electronic-use permission boundary."
+        who="People seeking accurate information about the instrument or a separately permitted educational sleep or symptom reflection."
+        bottomLine="Written public-web permission is not on file. This page provides no questionnaire, score, threshold, or insomnia result and cannot diagnose a sleep disorder."
+        boundaryHeading="Why the public scale is not provided"
+        boundaryParagraphs={[
+          "The primary publication establishes the instrument's evidence base but does not grant third parties a right to reproduce it on a public website.",
+          "A University of Pennsylvania clinical compilation records that its reproduction was made with Elsevier permission. That permission applies to that publication and does not transfer to MindCheck Tools.",
+          "Until the current rights holder grants the contemplated electronic use, this route remains informational and withholds questionnaire content, response choices, scoring, thresholds, and automated interpretation.",
+        ]}
+        overviewHeading="What the instrument was designed to assess"
+        overviewParagraphs={[
+          "The Athens Insomnia Scale was developed to assess sleep difficulty and related daytime effects within a standardized professional framework.",
+          "Sleep problems can have medical, medication, circadian, breathing-related, behavioral, or mental-health contributors. A questionnaire result cannot determine the cause or replace a clinical sleep history.",
+        ]}
+        alternatives={[
+          {
+            href: "/sleep-and-mood-check",
+            name: "Sleep and Mood Check",
+            description: "An original educational reflection with no validated insomnia cutoff. It does not reproduce or replace the Athens scale.",
+          },
+          {
+            href: "/phq-4-anxiety-depression-screen",
+            name: "PHQ-4 Depression and Anxiety Screen",
+            description: "A separately permitted symptom screen for depression and anxiety concerns. It is not a sleep assessment.",
+          },
+        ]}
+        sources={[
+          {
+            href: "https://pubmed.ncbi.nlm.nih.gov/11091029/",
+            label: "PubMed: Athens Insomnia Scale validation",
+            detail: "Primary publication record by Soldatos and colleagues.",
+          },
+          {
+            href: "https://doi.org/10.1016/S1389-9457(00)00055-X",
+            label: "Publisher DOI record",
+            detail: "Original Sleep Medicine article record; publication access is not a public-web reproduction grant.",
+          },
+          {
+            href: "https://www.med.upenn.edu/cbti/assets/user-content/documents/Sleep_Instruments_book_3_.pdf",
+            label: "University of Pennsylvania sleep-instruments compilation",
+            detail: "Records Elsevier permission for that compilation, demonstrating that its permission is publication-specific.",
+          },
+        ]}
+        faq={FAQ_DATA}
+        reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
+      />
     </>
   );
 }

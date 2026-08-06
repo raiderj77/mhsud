@@ -176,7 +176,7 @@ export default function LonelinessSeniorsGuidePage() {
           <section>
             <h2>How the MindCheck Tools loneliness assessment helps</h2>
             <p>
-              The <Link href="/loneliness-test-seniors" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools loneliness assessment for seniors</Link> is a free, private screening that measures the subjective experience of loneliness, not just how many social contacts you have, but how connected you actually feel. It takes under five minutes, runs entirely in your browser, and requires no account or login.
+              The <Link href="/loneliness-test-seniors" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools loneliness assessment for seniors</Link> is a free, private screening that measures the subjective experience of loneliness, not just how many social contacts you have, but how connected you actually feel. It takes under five minutes and requires no account or login. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Loneliness is inherently subjective, which makes self-assessment uniquely valuable. Only you can describe the gap between the connection you want and what you have. A structured screening provides language for that experience and creates a measurable baseline that can be tracked over time or shared with a healthcare provider.

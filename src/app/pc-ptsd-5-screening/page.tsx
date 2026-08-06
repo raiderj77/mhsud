@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { PcPtsd5Client } from "./PcPtsd5Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/pc-ptsd-5-screening`;
 
@@ -55,7 +56,7 @@ const FAQ_DATA = [
   {
     question: "Is my data private?",
     answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. No account or login is required. Ordinary page requests can create hosting records, and prints, downloads, copies, sync, backups, or shared-device access are outside this boundary.",
   },
 ];
 
@@ -95,7 +96,12 @@ export default function PcPtsd5Page() {
         }}
       />
 
-      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+          PC-PTSD-5 Primary Care PTSD Screen
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-3 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
@@ -130,6 +136,9 @@ export default function PcPtsd5Page() {
 </div>
       </div>
 
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="March 20, 2026" />
+      </div>
       <PcPtsd5Client faqData={FAQ_DATA} />
     </>
   );

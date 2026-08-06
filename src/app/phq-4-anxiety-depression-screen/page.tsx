@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, medicalWebPageJsonLd, SITE_URL } from "@/lib/metadata";
 import { PHQ4Client } from "./PHQ4Client";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/phq-4-anxiety-depression-screen`;
 
@@ -27,11 +28,11 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   { question: "What is the PHQ-4?", answer: "The PHQ-4 (Patient Health Questionnaire-4) is a validated ultra-brief screening tool that checks for both anxiety and depression using just 4 questions. It combines the first 2 items of the GAD-7 (anxiety) with the first 2 items of the PHQ-9 (depression). It is widely used in primary care, research, and population health settings." },
-  { question: "How is the PHQ-4 scored?", answer: "Each of the 4 questions is scored 0–3 (Not at all, Several days, More than half the days, Nearly every day). Total scores range from 0–12: 0–2 is minimal, 3–5 is mild, 6–8 is moderate, and 9–12 is severe. The anxiety subscale (questions 1–2) and depression subscale (questions 3–4) each range from 0–6, with a score of 3 or higher suggesting possible difficulty in that area." },
+  { question: "How is the PHQ-4 scored?", answer: "Each of the 4 questions is scored 0–3 (Not at all, Several days, More than half the days, Nearly every day). Total scores range from 0–12: 0–2 is minimal, 3–5 is mild, 6–8 is moderate, and 9–12 is severe. The anxiety subscale (questions 1–2) and depression subscale (questions 3–4) each range from 0–6. A subscale score of 3 or higher is a published screening threshold for follow-up questions, not a diagnosis." },
   { question: "Is the PHQ-4 clinically validated?", answer: "Yes. The PHQ-4 was validated by Kroenke, Spitzer, Williams, and Löwe (2009) in a study of over 6,000 patients. It has strong psychometric properties for detecting anxiety and depressive disorders. However, it is a screening instrument, not a diagnostic tool." },
-  { question: "When should I use the PHQ-4 vs. the full PHQ-9 or GAD-7?", answer: "The PHQ-4 is ideal as a first-step screener when time is limited or when you want a quick overall check. If the PHQ-4 indicates possible anxiety or depression (subscale score of 3 or higher), following up with the full GAD-7 or PHQ-9 provides a more detailed assessment of symptom severity." },
+  { question: "When should I use the PHQ-4 vs. the full PHQ-9 or GAD-7?", answer: "The PHQ-4 is an ultra-brief first-step screener. If either subscale reaches the published threshold of 3, the GAD-7 or PHQ-9 can ask more detailed symptom questions. None of these self-report screens provides a diagnosis." },
   { question: "Can this tool diagnose anxiety or depression?", answer: "No. The PHQ-4 is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can provide a diagnosis through a comprehensive evaluation. A positive screen is a starting point for a conversation with your doctor." },
-  { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
+  { question: "How are my answers handled?", answer: "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records, and prints, downloads, copies, sync, backups, or shared-device access are outside this boundary." },
   { question: "How often should I take the PHQ-4?", answer: "Some people find it helpful to complete the PHQ-4 periodically (e.g., every 2–4 weeks) to notice patterns over time. You can share results with your healthcare provider to support ongoing conversations about your mental health." },
 ];
 
@@ -83,14 +84,19 @@ export default function PHQ4Page() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+          PHQ-4: Ultra-Brief Anxiety &amp; Depression Screen
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-3 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="The PHQ-4, an ultra-brief 4-question screening that simultaneously checks for both anxiety and depression."
           who="Anyone who wants the quickest possible validated check for both anxiety and depression symptoms."
-          bottomLine="The PHQ-4 takes under a minute, a positive result on either subscale suggests taking the full GAD-7 or PHQ-9. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="A subscale score of 3 or higher is a screening threshold for follow-up questions, not evidence of a disorder. This tool is informational and not a diagnosis or substitute for professional care."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -118,7 +124,10 @@ export default function PHQ4Page() {
 </div>
       </div>
 
-<PHQ4Client faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="March 20, 2026" />
+      </div>
+      <PHQ4Client faqData={FAQ_DATA} />
     </>
   );
 }

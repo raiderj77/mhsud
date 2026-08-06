@@ -87,8 +87,8 @@ export default function AdhdTestForTeensPage() {
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free screening can help you understand what you&apos;re experiencing. It is <strong>not
-            a diagnosis</strong>, it&apos;s a starting point. Your answers stay in your browser and are not sent to MindCheck Tools. Your
-            answers are processed in your browser and never stored or shared with anyone.
+            a diagnosis</strong>, it&apos;s a starting point. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
+            Anything copied, synced, or left visible in a shared browser or device is outside this boundary.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function AdhdTestForTeensPage() {
 
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold text-base hover:bg-amber-700 transition-colors shadow-sm">Start the ADHD Screening</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 3 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p>
         </div>
 
         <div className="mb-10">
@@ -255,7 +255,7 @@ export default function AdhdTestForTeensPage() {
           </ul>
         </div>
 
-        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. The ASRS was designed for adults; teens should discuss results with a healthcare provider. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
+        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. The ASRS was designed for adults; teens should discuss results with a healthcare provider. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p></div>
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from NIMH and CDC. For ADHD evaluation, consult a licensed psychologist or psychiatrist.</p>

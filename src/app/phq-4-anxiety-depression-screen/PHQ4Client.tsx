@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import Link from "next/link";
+import { DisclaimerGate } from "@/components/DisclaimerGate";
 
 const QUESTIONS = [
   {
@@ -45,6 +46,7 @@ function getResult(total: number, anxiety: number, depression: number) {
 }
 
 export function PHQ4Client({ faqData }: { faqData: { question: string; answer: string }[] }) {
+  const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -53,6 +55,45 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
   const anxiety = (answers[1] ?? 0) + (answers[2] ?? 0);
   const depression = (answers[3] ?? 0) + (answers[4] ?? 0);
   const result = submitted ? getResult(total, anxiety, depression) : null;
+
+  const setAnswer = (questionId: number, value: number) => {
+    setAnswers((previous) => ({ ...previous, [questionId]: value }));
+  };
+
+  const handleRadioKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    questionId: number,
+    value: number,
+  ) => {
+    let nextValue = value;
+    if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      nextValue = value === 0 ? OPTIONS.length - 1 : value - 1;
+    } else if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      nextValue = value === OPTIONS.length - 1 ? 0 : value + 1;
+    } else if (event.key === "Home") {
+      nextValue = 0;
+    } else if (event.key === "End") {
+      nextValue = OPTIONS.length - 1;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    setAnswer(questionId, nextValue);
+    document.getElementById(`phq4-${questionId}-${nextValue}`)?.focus();
+  };
+
+  if (!accepted) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
+        <DisclaimerGate
+          toolName="PHQ-4"
+          toolDescription="Review the privacy and educational-use limits before answering this self-check."
+          onAccept={() => setAccepted(true)}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
@@ -69,10 +110,9 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         </span>
       </div>
 
-      {/* H1 */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-        PHQ-4: Ultra-Brief Anxiety &amp; Depression Screen
-      </h1>
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+        Answer the four PHQ-4 questions
+      </h2>
 
       <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
         The PHQ-4 is a validated 4-question screening tool that checks for both anxiety and
@@ -84,7 +124,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
       {/* Clinical Disclaimer Banner */}
       <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-6 text-sm text-amber-800 dark:text-amber-300">
         <strong>Educational tool only.</strong> This is a screening instrument, not a diagnosis.
-        Answers are scored in your browser and never stored or transmitted.
+        Answers are scored in your browser and are not automatically sent to MindCheck Tools.
       </div>
 
       {/* Questions */}
@@ -101,12 +141,18 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
                 </span>
                 <p className="text-slate-900 dark:text-white font-medium">{q.text}</p>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2" role="radiogroup" aria-label={`${q.cluster}: ${q.text}`}>
                 {OPTIONS.map((opt) => (
                   <button
                     key={opt.value}
-                    onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.value }))}
-                    className={`px-3 py-2 rounded-lg text-sm border transition-colors ${
+                    id={`phq4-${q.id}-${opt.value}`}
+                    type="button"
+                    role="radio"
+                    aria-checked={answers[q.id] === opt.value}
+                    tabIndex={answers[q.id] === opt.value || (answers[q.id] === undefined && opt.value === 0) ? 0 : -1}
+                    onClick={() => setAnswer(q.id, opt.value)}
+                    onKeyDown={(event) => handleRadioKeyDown(event, q.id, opt.value)}
+                    className={`min-h-11 px-3 py-2 rounded-lg text-sm border transition-colors ${
                       answers[q.id] === opt.value
                         ? "bg-sage-600 text-white border-sage-600"
                         : "border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-sage-400"
@@ -131,7 +177,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
 
       {/* Results */}
       {result && (
-        <div id="printable-results" className="mb-8">
+        <div id="printable-results" className="mb-8" role="status" aria-live="polite" tabIndex={-1}>
           <div className="bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl p-6 mb-6">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
               Your PHQ-4 Results
@@ -147,12 +193,12 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
               <div className={`rounded-lg p-3 border ${result.anxietyFlag ? "bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700"}`}>
                 <div className="text-sm font-medium text-slate-700 dark:text-slate-300">Anxiety Subscale</div>
                 <div className="text-2xl font-bold text-slate-900 dark:text-white">{anxiety}/6</div>
-                {result.anxietyFlag && <div className="text-xs text-amber-700 dark:text-amber-400 mt-1">Score ≥3 suggests possible anxiety</div>}
+                {result.anxietyFlag && <div className="text-xs text-amber-700 dark:text-amber-400 mt-1">Score ≥3 meets the follow-up screening threshold; not a diagnosis</div>}
               </div>
               <div className={`rounded-lg p-3 border ${result.depressionFlag ? "bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800" : "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700"}`}>
                 <div className="text-sm font-medium text-slate-700 dark:text-slate-300">Depression Subscale</div>
                 <div className="text-2xl font-bold text-slate-900 dark:text-white">{depression}/6</div>
-                {result.depressionFlag && <div className="text-xs text-amber-700 dark:text-amber-400 mt-1">Score ≥3 suggests possible depression</div>}
+                {result.depressionFlag && <div className="text-xs text-amber-700 dark:text-amber-400 mt-1">Score ≥3 meets the follow-up screening threshold; not a diagnosis</div>}
               </div>
             </div>
           </div>
@@ -160,13 +206,13 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
           <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5 mb-6">
             <h3 className="font-semibold text-slate-900 dark:text-white mb-3">What to do next</h3>
             {total <= 2 && (
-              <p className="text-sm text-slate-600 dark:text-slate-300">Your score suggests minimal symptoms. Continue monitoring if you have concerns, and use the full PHQ-9 or GAD-7 for a more detailed assessment.</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300">This score falls in the published minimal range. A score cannot rule out a concern; consider a full PHQ-9, GAD-7, or professional conversation if symptoms are affecting you.</p>
             )}
             {total >= 3 && total <= 5 && (
-              <p className="text-sm text-slate-600 dark:text-slate-300">Your score suggests mild symptoms. Consider taking the full PHQ-9 or GAD-7 for a more detailed picture. Lifestyle factors like sleep, exercise, and social connection can help with mild symptoms.</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300">This score falls in the published mild range. A full PHQ-9 or GAD-7 can ask more detailed symptom questions; a healthcare professional can interpret symptoms in context.</p>
             )}
             {total >= 6 && (
-              <p className="text-sm text-slate-600 dark:text-slate-300">Your score suggests moderate to severe symptoms. Consider speaking with your primary care doctor or a mental health professional. A full PHQ-9 or GAD-7 assessment would provide more detail about your specific symptoms.</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300">This score falls in a published moderate-to-severe range. Consider speaking with a primary-care or mental-health professional. A full PHQ-9 or GAD-7 can provide more symptom detail but still cannot diagnose a condition.</p>
             )}
           </div>
 
@@ -208,7 +254,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">0–2</td>
                 <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Minimal</td>
-                <td className="px-4 py-3 text-slate-600 dark:text-slate-300">No action needed; monitor if concerned</td>
+                <td className="px-4 py-3 text-slate-600 dark:text-slate-300">A low score does not rule out a concern; seek support if needed</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">3–5</td>
@@ -223,13 +269,13 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">9–12</td>
                 <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Severe</td>
-                <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Professional evaluation recommended</td>
+                <td className="px-4 py-3 text-slate-600 dark:text-slate-300">Consider discussing symptoms with a healthcare professional</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-          Subscale: Anxiety score ≥3 or Depression score ≥3 suggests possible disorder in that domain.
+          Subscale: Anxiety score ≥3 or Depression score ≥3 is a published threshold for follow-up screening in that domain; it does not establish a disorder.
           Source: Kroenke K, Spitzer RL, Williams JBW, Löwe B. (2009). <em>Psychosomatics</em>, 50(6):613–621.
         </p>
       </div>
@@ -276,7 +322,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
         <p className="text-sm text-slate-500 dark:text-slate-400 italic">
           This screening tool is for educational purposes only, it is not a diagnosis. Only a
           licensed healthcare professional can diagnose anxiety or depression. Your responses are
-          processed entirely in your browser and are never stored or transmitted.
+          processed locally and are not intentionally sent to MindCheck Tools.
         </p>
       </div>
 
@@ -299,7 +345,7 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
           Full GAD-7 Anxiety Test →
         </Link>
         <Link href="/dass-21-depression-anxiety-stress" className="text-sky-600 dark:text-sky-400 hover:underline">
-          DASS-21 (Depression + Anxiety + Stress) →
+          DASS-21 information and public-use boundary →
         </Link>
         <Link href="/phq-9-vs-gad-7" className="text-sky-600 dark:text-sky-400 hover:underline">
           PHQ-9 vs. GAD-7 Guide →

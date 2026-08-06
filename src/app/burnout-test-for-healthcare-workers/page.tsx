@@ -149,7 +149,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
             Start the Burnout Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 5 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -235,7 +235,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
                 <p><strong>Emotional exhaustion:</strong> Feeling drained, depleted, and like you have nothing left to give, compounded by shift work, patient deaths, and the relentless pace of healthcare.</p>
                 <p><strong>Depersonalization:</strong> Feeling detached from patients, treating them as cases rather than people, or developing a cynicism that doesn&apos;t feel like you.</p>
                 <p><strong>Reduced accomplishment:</strong> Feeling like your work doesn&apos;t matter, that the system swallows your effort, or that you&apos;ve lost the purpose that brought you to healthcare.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your employer, licensing board, or anyone else.</p>
+                <p><strong>Your privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools, your employer, or a licensing board. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -357,7 +357,7 @@ export default function BurnoutTestForHealthcareWorkersPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess burnout or related conditions. Your responses are processed
-            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            locally and are not intentionally sent to MindCheck Tools. Always consult a qualified
             healthcare professional for medical advice.
           </p>
         </div>

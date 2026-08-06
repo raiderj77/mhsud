@@ -230,7 +230,7 @@ export default function BipolarYoungAdultsGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on your mental health</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings. Results stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings. Answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>
               <Link href="/dass-21-depression-anxiety-stress" className="btn-primary text-sm">DASS-21 Assessment</Link>

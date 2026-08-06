@@ -142,7 +142,7 @@ export default function RelapsePreventionGuidePage() {
           <section>
             <h2>How the MindCheck Tools relapse prevention plan helps</h2>
             <p>
-              The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools relapse prevention plan builder</Link> walks you through creating a personalized, written plan that includes your triggers, warning signs, coping strategies, and emergency contacts. It is free, private, and runs entirely in your browser.
+              The <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools relapse prevention plan builder</Link> walks you through creating a personalized, written plan that includes your triggers, warning signs, coping strategies, and emergency contacts. It is free and private. Entries are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device or browser profile may see them, and copies you create may be retained by your device or chosen services.
             </p>
             <p>
               A written plan removes the need to think clearly in a crisis, the plan has already done the thinking for you. Relapse-prevention planning is a core component of evidence-based treatment models including Cognitive Behavioral Therapy and Marlatt &amp; Gordon&apos;s Relapse Prevention Therapy.
@@ -168,7 +168,7 @@ export default function RelapsePreventionGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Build your relapse prevention plan now</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/relapse-prevention-plan" className="btn-primary text-sm">Build Your Plan</Link>
               <Link href="/trigger-identification-worksheet" className="btn-primary text-sm">Identify Your Triggers</Link>

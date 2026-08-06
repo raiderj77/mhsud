@@ -48,7 +48,7 @@ const FAQ_DATA = [
   {
     question: "How do I calculate my savings?",
     answer:
-      "Estimate your average daily or weekly spending on alcohol before getting sober, then multiply by the number of days since your sobriety date. The MindCheck Tools money saved in recovery calculator does this automatically. Enter your sobriety date and estimated previous spending to see your total savings instantly. Your data stays in your browser.",
+      "Estimate your average daily or weekly spending on alcohol before getting sober, then multiply by the number of days since your sobriety date. The MindCheck Tools money saved in recovery calculator does this automatically. Enter your sobriety date and estimated previous spending to see your total savings instantly. Inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function MoneySavedRecoveryGuidePage() {
               What makes this tool useful is not the math itself, it is the visibility. Seeing a specific dollar amount grow over time provides a concrete, positive reinforcement for sobriety. Research on behavioral economics shows that making abstract benefits tangible significantly increases motivation for behavior change (Thaler &amp; Sunstein, 2008).
             </p>
             <p>
-              The calculator runs entirely in your browser. Your data is never stored or transmitted, and no account is required.
+              Calculator inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. No account is required. People with access to your device or browser profile may see inputs, and copies you create may be retained by your device or chosen services.
             </p>
           </section>
 

@@ -40,26 +40,27 @@ const REVIEWED_TOOLS = [
   { name: "GAD-7 Anxiety Test", href: "/gad-7-anxiety-test" },
   { name: "AUDIT Alcohol Use Screen", href: "/audit-alcohol-test" },
   { name: "AUDIT-C Quick Alcohol Screen", href: "/audit-c-alcohol-screen" },
-  { name: "CAGE-AID Substance Use Screen", href: "/cage-aid-substance-abuse-screening" },
+  { name: "CAGE-AID Information and Rights Boundary", href: "/cage-aid-substance-abuse-screening" },
   { name: "PCL-5 PTSD Screening", href: "/pcl-5-ptsd-screening" },
   { name: "PC-PTSD-5 PTSD Screen", href: "/pc-ptsd-5-screening" },
   { name: "ASRS ADHD Screening", href: "/asrs-adhd-screening" },
-  { name: "DASS-21 Depression, Anxiety, and Stress", href: "/dass-21-depression-anxiety-stress" },
+  { name: "DASS-21 Information and Use Boundary", href: "/dass-21-depression-anxiety-stress" },
   { name: "WHO-5 Well-Being Index", href: "/who-5-wellbeing-index" },
   { name: "K6 Psychological Distress Scale", href: "/k6-distress-scale" },
-  { name: "SPIN Social Anxiety Test", href: "/spin-social-anxiety-test" },
-  { name: "SCOFF Eating Disorder Screen", href: "/scoff-eating-disorder-screening" },
-  { name: "AQ-10 Autism Spectrum Screen", href: "/aq-10-autism-screening" },
-  { name: "MSI-BPD Screening", href: "/msi-bpd-screening" },
-  { name: "ACE Questionnaire", href: "/ace-questionnaire" },
-  { name: "WHO ASSIST Substance Screening", href: "/who-assist-substance-screening" },
-  { name: "CRAFFT Screening for Teens", href: "/crafft-substance-screening" },
+  { name: "SPIN Social Anxiety Information", href: "/spin-social-anxiety-test" },
+  { name: "SCOFF Eating-Disorder Information", href: "/scoff-eating-disorder-screening" },
+  { name: "AQ-10 Autism-Measure Information", href: "/aq-10-autism-screening" },
+  { name: "MSI-BPD Information and Rights Boundary", href: "/msi-bpd-screening" },
+  { name: "ACE Information and Provenance Boundary", href: "/ace-questionnaire" },
+  { name: "WHO ASSIST Information and Public-Use Boundary", href: "/who-assist-substance-screening" },
+  { name: "CRAFFT Youth-Screening Information", href: "/crafft-substance-screening" },
   { name: "CES-D Depression Scale", href: "/ces-d-depression-scale" },
-  { name: "Holmes-Rahe Stress Inventory", href: "/holmes-rahe-stress-inventory" },
+  { name: "Holmes-Rahe Inventory Information", href: "/holmes-rahe-stress-inventory" },
   { name: "Rosenberg Self-Esteem Scale", href: "/rosenberg-self-esteem-scale" },
-  { name: "UCLA Loneliness Scale", href: "/ucla-loneliness-scale" },
-  { name: "Athens Insomnia Scale", href: "/athens-insomnia-scale" },
-  { name: "Brief Resilience Scale", href: "/brief-resilience-scale" },
+  { name: "UCLA Loneliness Scale Information", href: "/ucla-loneliness-scale" },
+  { name: "Athens Insomnia Scale Information", href: "/athens-insomnia-scale" },
+  { name: "Brief Resilience Scale Information", href: "/brief-resilience-scale" },
+  { name: "ECR-R Attachment Information", href: "/attachment-style-quiz" },
 ];
 
 const REVIEWED_GUIDES = [
@@ -68,8 +69,7 @@ const REVIEWED_GUIDES = [
   { name: "AUDIT Score Guide", href: "/audit-score-interpretation" },
   { name: "PCL-5 Score Guide", href: "/pcl-5-score-interpretation" },
   { name: "ASRS Score Guide", href: "/asrs-score-interpretation" },
-  { name: "DASS-21 Score Guide", href: "/dass-21-score-interpretation" },
-  { name: "ACE Score Guide", href: "/ace-score-interpretation" },
+  { name: "DASS-21 Public-Use Information", href: "/dass-21-depression-anxiety-stress" },
   { name: "PHQ-9 vs GAD-7", href: "/phq-9-vs-gad-7" },
   { name: "How to Talk to Your Doctor", href: "/how-to-talk-to-your-doctor-about-mental-health" },
 ];
@@ -123,8 +123,8 @@ export default function JasonRamirezPage() {
               concerns, and SBIRT (Screening, Brief Intervention, and Referral to Treatment).
             </p>
             <p>
-              For MindCheck Tools, Jason reviews maintained screening pages for source fidelity, scoring alignment,
-              educational rather than diagnostic wording, safety language, and appropriate limitations. Source
+              For MindCheck Tools, Jason reviews maintained interactive screening and instrument-information pages for source fidelity, scoring alignment where applicable,
+              educational rather than diagnostic wording, safety language, rights boundaries, and appropriate limitations. Source
               publications and public-health guidance remain the authority for each instrument.
             </p>
             <p>
@@ -159,7 +159,7 @@ export default function JasonRamirezPage() {
           </section>
 
           <section>
-            <h2>Reviewed screening tools</h2>
+            <h2>Reviewed screening and instrument-information pages</h2>
             <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-2 my-6">
               {REVIEWED_TOOLS.map((tool) => (
                 <Link

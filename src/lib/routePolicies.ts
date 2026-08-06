@@ -3,6 +3,7 @@ const SENSITIVE_TOOL_SEGMENT =
 
 const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "screening-tools",
+  "crisis-resources",
   "safety-plan",
   "readiness-to-change",
   "who-5-wellbeing-index",
@@ -26,8 +27,24 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "withdrawal-timeline",
 ]);
 
+// Optional third-party services use a positive allowlist. A new route is
+// therefore tag-free by default until privacy, rights, crisis, and clinical
+// review explicitly clear it. Search Console remains the source of page-level
+// acquisition data; consented GA is limited to the topic-neutral homepage.
+const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set(["/"]);
+
+function cleanPathname(pathname: string): string {
+  const cleanPath = pathname.split(/[?#]/, 1)[0] || "/";
+  if (cleanPath === "/") return cleanPath;
+  return cleanPath.replace(/\/+$/, "") || "/";
+}
+
+export function isOptionalServicesAllowedRoute(pathname: string): boolean {
+  return OPTIONAL_SERVICE_ALLOWED_ROUTES.has(cleanPathname(pathname));
+}
+
 export function isSensitiveRoute(pathname: string): boolean {
-  const cleanPath = pathname.split(/[?#]/, 1)[0] ?? "/";
+  const cleanPath = cleanPathname(pathname);
   const firstSegment = cleanPath.split("/").filter(Boolean)[0]?.toLowerCase();
 
   if (!firstSegment || firstSegment === "blog") return false;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { ValuesCardSortClient } from "./ValuesCardSortClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/values-card-sort`;
 
@@ -89,14 +90,19 @@ export default function ValuesCardSortPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+          Values Card Sort
+        </h1>
+      </div>
+      <p className="text-sm text-gray-500 mt-3 mb-0 text-center">
         Last updated: March 16, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="An interactive values card sort exercise that helps you identify and rank your core personal values."
           who="Anyone in therapy, recovery, or personal growth who wants to clarify what matters most to them."
-          bottomLine="Living in alignment with your values improves mental health, knowing what they are comes first. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          bottomLine="The exercise can help you name priorities for reflection and decision-making. It does not measure mental health, predict outcomes, or replace professional guidance."
           lastUpdated="2026-03-20"
         />
       </div>
@@ -124,7 +130,10 @@ export default function ValuesCardSortPage() {
 </div>
       </div>
 
-<ValuesCardSortClient faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="March 20, 2026" />
+      </div>
+      <ValuesCardSortClient faqData={FAQ_DATA} />
     </>
   );
 }

@@ -1,28 +1,37 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { SpinClient } from "./SpinClient";
+import Link from "next/link";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/spin-social-anxiety-test`;
+const PAGE_PATH = "/spin-social-anxiety-test";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const APTA_SPIN_URL =
+  "https://www.apta.org/patient-care/evidence-based-practice-resources/test-measures/social-phobia-inventory-spin";
 
 export const metadata: Metadata = createMetadata({
-  path: "/spin-social-anxiety-test",
-  title: "SPIN Social Anxiety Test | Free Social Phobia Screen",
+  path: PAGE_PATH,
+  title: "SPIN Social Anxiety Information and Licensing Boundary",
   description:
-    "Free 17-item Social Phobia Inventory (SPIN) based on Connor et al. (2000). Check social anxiety symptoms privately in your browser.",
+    "Educational information about the Social Phobia Inventory (SPIN), why MindCheck Tools does not administer or score it publicly, and non-equivalent options.",
   keywords: [
-    "SPIN", "Social Phobia Inventory", "SPIN social anxiety test",
-    "social anxiety screening", "social phobia test",
-    "SPIN questionnaire", "social anxiety disorder test",
-    "SPIN score", "social anxiety self-check",
-    "social phobia screening", "SPIN test online free",
-    "social anxiety assessment",
+    "SPIN information",
+    "Social Phobia Inventory licensing",
+    "social anxiety education",
+    "SPIN public use",
+    "social anxiety screening options",
   ],
   openGraph: {
-    title: "SPIN Social Anxiety Test | Free Social Phobia Screen",
+    title: "SPIN Social Anxiety Information and Licensing Boundary",
     description:
-      "Free 17-item Social Phobia Inventory (SPIN) based on Connor et al. (2000). Check social anxiety symptoms privately in your browser.",
-    url: TOOL_URL,
+      "Why this site provides SPIN information without a public questionnaire, scoring, or automated interpretation.",
+    url: PAGE_URL,
     type: "website",
   },
 });
@@ -31,58 +40,65 @@ const FAQ_DATA = [
   {
     question: "What is the SPIN?",
     answer:
-      "The Social Phobia Inventory (SPIN) is a 17-item self-report questionnaire developed by Connor, Davidson, Churchill, Sherwood, Foa, and Weisler (2000) at Duke University Medical Center. It was designed to measure the severity of social anxiety disorder across three symptom domains: fear of social situations, avoidance of social situations, and physiological symptoms (blushing, sweating, trembling, heart palpitations). It is one of the most widely used and well-validated measures of social anxiety in both clinical and research settings.",
+      "The Social Phobia Inventory (SPIN) is a published self-report measure developed to assess social-anxiety symptoms. It is a screening and severity measure, not a diagnosis.",
   },
   {
-    question: "How is the SPIN scored?",
+    question: "Can I take the SPIN on MindCheck Tools?",
     answer:
-      "Each of the 17 items is rated on a 5-point scale from 0 (Not at all) to 4 (Extremely) based on how much the statement has bothered you during the past week. The total score ranges from 0 to 68. Higher scores indicate more severe social anxiety. The three subscale scores are: Fear (6 items, range 0-24), Avoidance (7 items, range 0-28), and Physiological (4 items, range 0-16). A total score of 19 or higher is the recommended clinical cutoff for social anxiety disorder.",
+      "No. The current rights information directs users to the copyright holder for permission and a possible user fee. MindCheck Tools has not archived a licence for public electronic administration, so this page does not display questions, collect answers, calculate a score, or return an interpretation.",
   },
   {
-    question: "What do the severity levels mean?",
+    question: "Why does this page not explain SPIN scores or cutoffs?",
     answer:
-      "SPIN total scores fall into five severity ranges: 0-20 is none to mild, 21-30 is moderate, 31-40 is severe, 41-50 is very severe, and 51-68 is extremely severe. A score of 19 or higher has been identified as the optimal cutoff for distinguishing people with social anxiety disorder from those without it, with good sensitivity (73%) and specificity (80%). These cutoffs are guidelines, only a qualified professional can make a clinical determination.",
+      "Scoring and interpretation are part of the licensed instrument journey. They are intentionally omitted while public electronic reproduction rights and qualified clinical review remain unresolved.",
   },
   {
-    question: "What are the three subscales?",
+    question: "Are the GAD-7 or PHQ-4 equivalent to the SPIN?",
     answer:
-      "The SPIN measures three dimensions of social anxiety: (1) Fear, anxiety or fear triggered by social situations like being judged, criticized, or being the center of attention; (2) Avoidance, the tendency to avoid social situations, speaking up, or doing things where others might watch; (3) Physiological, physical symptoms like blushing, sweating, trembling, and heart palpitations in social situations. Looking at your subscale scores can help you understand which aspects of social anxiety are most prominent for you.",
+      "No. They focus on generalized anxiety and broader depression-and-anxiety symptoms rather than social anxiety specifically. They are linked only as separately validated, publicly permitted options and cannot be compared score-for-score with the SPIN.",
   },
   {
-    question: "How is the SPIN different from the GAD-7?",
+    question: "Can this page diagnose social anxiety disorder?",
     answer:
-      "The GAD-7 measures generalized anxiety, persistent, excessive worry about many different things. The SPIN specifically measures social anxiety, fear, avoidance, and physical symptoms in social or performance situations. Someone can score high on one and low on the other. The GAD-7 is a broader anxiety screen, while the SPIN provides focused information about social anxiety specifically. If you score high on the SPIN, taking the GAD-7 as well can help clarify whether your anxiety extends beyond social situations.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. This page is educational and does not assess you. A qualified healthcare professional can evaluate symptoms, duration, impairment, medical factors, and other possible explanations.",
   },
 ];
 
-export default function SpinPage() {
+const ALTERNATIVES = [
+  {
+    href: "/gad-7-anxiety-test",
+    name: "GAD-7 Anxiety Self-Check",
+    description:
+      "A publicly permitted screen for generalized anxiety symptoms. It is not specific to social anxiety and is not a SPIN substitute.",
+  },
+  {
+    href: "/phq-4-anxiety-depression-screen",
+    name: "PHQ-4 Quick Screen",
+    description:
+      "A brief, publicly permitted screen covering depression and generalized anxiety symptoms. It does not measure the same construct as the SPIN.",
+  },
+];
+
+export default function SpinInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "SPIN Social Phobia Inventory",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "SPIN Social Anxiety Information and Licensing Boundary",
               description:
-                "A free online implementation of the Social Phobia Inventory (SPIN), a 17-item measure of social anxiety developed by Connor et al. (2000). Scores 0-68 with three subscales: Fear, Avoidance, and Physiological. Clinical cutoff of 19+ for social anxiety disorder.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+                "Educational information about the SPIN and the permission boundary for public electronic administration.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
       />
       <script
         type="application/ld+json"
@@ -90,48 +106,142 @@ export default function SpinPage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "SPIN Social Anxiety Test", url: TOOL_URL },
-            ])
+              { name: "SPIN Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The SPIN (Social Phobia Inventory), a 17-item validated screening for social anxiety disorder severity."
-          who="Anyone who experiences significant anxiety in social situations and wants to assess the severity of their social phobia."
-          bottomLine="The SPIN measures social anxiety across fear, avoidance, and physiological domains. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="flex flex-wrap gap-2 mb-5" aria-label="Page status">
+          <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">
+            Educational information
+          </span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">
+            No questionnaire
+          </span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300">
+            No scoring
+          </span>
+        </div>
 
-<SpinClient faqData={FAQ_DATA} />
+        <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          SPIN Social Anxiety Information and Licensing Boundary
+        </h1>
+        <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
+          MindCheck Tools does not administer, score, or interpret the Social Phobia Inventory on this public website. This page explains the evidence and rights boundary without reproducing the instrument.
+        </p>
+
+        <AnswerBlock
+          what="An educational overview of the Social Phobia Inventory and the current permission requirement for public electronic use."
+          who="People seeking reliable SPIN information or a separately permitted anxiety self-check."
+          bottomLine="This page does not provide a SPIN questionnaire or result. GAD-7 and PHQ-4 are different instruments, not equivalent replacements, and no self-check can diagnose social anxiety disorder."
+          lastUpdated="2026-08-05"
+        />
+
+        <section className="mt-8 rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5 sm:p-6" aria-labelledby="spin-rights-boundary">
+          <h2 id="spin-rights-boundary" className="font-serif text-xl font-bold text-amber-900 dark:text-amber-200 mb-3">
+            Why the public self-check is unavailable
+          </h2>
+          <div className="space-y-3 text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+            <p>
+              The American Physical Therapy Association&apos;s current SPIN record says users should contact the copyright holder for permission and a user fee. MindCheck Tools does not have an archived licence covering a public consumer website, electronic administration, scoring, or results.
+            </p>
+            <p>
+              Public access to this educational page remains available, but the questionnaire, answer capture, scoring keys, cutoffs, severity bands, and automated interpretation are not provided.
+            </p>
+            <a href={APTA_SPIN_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2">
+              Review APTA&apos;s SPIN rights and cost record
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="about-spin">
+          <h2 id="about-spin" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            What the SPIN was developed to assess
+          </h2>
+          <div className="space-y-4 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            <p>
+              Connor and colleagues introduced the SPIN as a self-report measure of social-anxiety symptoms. The validation study supports its use as a clinical and research measure, but a questionnaire result alone cannot establish a diagnosis.
+            </p>
+            <p>
+              Social anxiety can involve persistent fear of scrutiny, avoidance, physical distress, and disruption to school, work, relationships, or daily activities. A clinician can consider those experiences alongside duration, context, other health conditions, and possible alternative explanations.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="spin-alternatives">
+          <h2 id="spin-alternatives" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            Separately permitted, non-equivalent options
+          </h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
+            These self-checks measure different symptom patterns. They do not reproduce the SPIN and should not be used to estimate or translate a SPIN result.
+          </p>
+          <div className="grid grid-cols-1 gap-4">
+            {ALTERNATIVES.map((alternative) => (
+              <Link key={alternative.href} href={alternative.href} className="card p-5 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <h3 className="font-semibold text-sage-700 dark:text-sage-400 mb-2">{alternative.name}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{alternative.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-sage-200 dark:border-sage-800 bg-sage-50 dark:bg-sage-950/20 p-5" aria-labelledby="spin-privacy">
+          <h2 id="spin-privacy" className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
+            No-input privacy boundary
+          </h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            This informational page has no form and asks for no symptoms, answers, or score. It calculates no personal result. Review the <Link href="/privacy" className="font-semibold underline">privacy policy</Link> before using any linked self-check, especially on a shared device.
+          </p>
+        </section>
+
+        <section className="mt-10 rounded-xl border border-crisis-200 dark:border-crisis-800 bg-crisis-50 dark:bg-crisis-950/20 p-5" aria-labelledby="spin-help">
+          <h2 id="spin-help" className="font-serif text-xl font-bold text-crisis-900 dark:text-crisis-200 mb-2">
+            If anxiety feels overwhelming or unsafe
+          </h2>
+          <p className="text-sm text-crisis-900 dark:text-crisis-200 leading-relaxed mb-4">
+            This page cannot assess an emergency. In the United States, call or text 988 for the Suicide &amp; Crisis Lifeline, or call 911 for immediate danger. Outside the United States, use local emergency or crisis services.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:988" className="inline-flex min-h-11 items-center rounded-lg bg-crisis-700 px-4 py-2 text-sm font-semibold text-white hover:bg-crisis-800">Call 988</a>
+            <a href="sms:988" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Text 988</a>
+            <a href="tel:911" className="inline-flex min-h-11 items-center rounded-lg border border-crisis-700 px-4 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200">Call 911</a>
+            <Link href="/crisis-resources" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-semibold text-crisis-800 dark:text-crisis-200 underline">View U.S. and international crisis resources</Link>
+          </div>
+        </section>
+
+        <section className="mt-10" aria-labelledby="spin-sources">
+          <h2 id="spin-sources" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources</h2>
+          <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <li>
+              American Physical Therapy Association. <a href={APTA_SPIN_URL} target="_blank" rel="noopener noreferrer" className="font-semibold underline">Social Phobia Inventory record</a>, including the direction to contact the copyright holder for permission and a user fee.
+            </li>
+            <li>
+              Connor, K. M., et al. (2000). Psychometric properties of the Social Phobia Inventory. <a href="https://pubmed.ncbi.nlm.nih.gov/10827888/" target="_blank" rel="noopener noreferrer" className="font-semibold underline">PubMed PMID 10827888</a>.
+            </li>
+            <li>
+              National Institute of Mental Health. <a href="https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness" target="_blank" rel="noopener noreferrer" className="font-semibold underline">Social Anxiety Disorder: More Than Just Shyness</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div className="mt-10">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
+
+        <section className="mt-8 border-t border-sand-200 dark:border-neutral-700 pt-6" aria-labelledby="spin-faq">
+          <h2 id="spin-faq" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Frequently asked questions</h2>
+          <div className="space-y-5">
+            {FAQ_DATA.map((entry) => (
+              <div key={entry.question}>
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-1">{entry.question}</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{entry.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </article>
     </>
   );
 }

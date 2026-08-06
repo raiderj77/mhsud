@@ -170,7 +170,7 @@ export default function DepressionTeensGuidePage() {
           <section>
             <h2>How screening helps parents and teens</h2>
             <p>
-              The <Link href="/depression-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for teens</Link> is a free, private self-assessment that helps identify patterns of depressive symptoms. It takes just a few minutes, runs entirely in the browser, and no data is stored or shared.
+              The <Link href="/depression-test-for-teens" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for teens</Link> is a free, private self-assessment that helps identify patterns of depressive symptoms. It takes just a few minutes. Questionnaire answers are processed locally in the browser and are not intentionally sent to MindCheck Tools. People with access to the device, browser profile, or copies created may see them.
             </p>
             <p>
               A screening is not a substitute for professional evaluation. What it does is provide a structured starting point, a way to move beyond &quot;I think something might be wrong&quot; to &quot;here are the specific patterns I&apos;m noticing.&quot; You can take the screening together with your teen or have them take it privately and discuss the results afterward.

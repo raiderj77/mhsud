@@ -173,7 +173,7 @@ export default function AnxietyWomenGuidePage() {
           <section>
             <h2>How the MindCheck Tools anxiety screening for women helps</h2>
             <p>
-              The <Link href="/anxiety-test-for-women" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for women</Link> is a free, private assessment that takes under five minutes. It runs entirely in your browser, requires no account, and your answers are never stored.
+              The <Link href="/anxiety-test-for-women" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools anxiety screening for women</Link> is a free, private assessment that takes under five minutes and requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               The screening helps quantify what you may be experiencing, putting numbers to the worry, restlessness, and physical tension that women often minimize or attribute to &quot;just being stressed.&quot; A structured result can help you communicate more effectively with a provider, or simply help you recognize that what you are experiencing warrants attention.
@@ -200,7 +200,7 @@ export default function AnxietyWomenGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a few minutes to check in on how you&apos;re feeling</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Your answers stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, no account needed. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/anxiety-test-for-women" className="btn-primary text-sm">Women&apos;s Anxiety Screening</Link>
               <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">GAD-7 Anxiety Check</Link>

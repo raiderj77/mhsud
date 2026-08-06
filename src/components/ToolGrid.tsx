@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { trackPrivateToolLaunch } from "@/lib/privacySafeAcquisitionAnalytics";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -22,7 +23,7 @@ export interface Tool {
   description: string;
   badge: string;
   time: string;
-  questions: number;
+  questions: number | null;
   color: "sage";
   status: "live" | "coming";
   category: ToolCategory;
@@ -110,10 +111,10 @@ export function ToolGrid({
       <section id="tools" className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
         <div className="mb-8">
           <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-            Free Mental Health Self-Check Tools
+            Free Mental Health Tools and Information
           </h2>
           <p className="text-neutral-500 dark:text-neutral-400">
-            Choose a screening tool to get started. Each one runs entirely in your browser.
+            Choose a screening tool or read an instrument information page. Interactive self-check answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -307,7 +308,7 @@ function ToolCard({
         {tool.description}
       </p>
       <div className="flex gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-        <span>{tool.questions} questions</span>
+        <span>{tool.questions === null ? "No questionnaire" : `${tool.questions} questions`}</span>
         <span>{tool.time}</span>
         <span>&#128274; Private</span>
       </div>
@@ -325,6 +326,7 @@ function ToolCard({
   return (
     <Link
       href={tool.href}
+      onClick={trackPrivateToolLaunch}
       className="card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700"
     >
       {content}
@@ -336,6 +338,7 @@ function TargetedCard({ item }: { item: TargetedScreening }) {
   return (
     <Link
       href={item.href}
+      onClick={trackPrivateToolLaunch}
       className="card p-5 group hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 transition-all"
     >
       <span className="badge bg-sky-50 dark:bg-sky-950/30 text-sky-700 dark:text-sky-400 mb-3 inline-block">

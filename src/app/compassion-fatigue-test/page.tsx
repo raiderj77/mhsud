@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { BurnoutClient } from "../burnout-assessment-tool/BurnoutClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/compassion-fatigue-test`;
 
@@ -127,7 +128,7 @@ export default function CompassionFatigueTestPage() {
           <p className="text-slate-600 dark:text-slate-300">
             This page uses MindCheck Tools&apos; original general burnout check-in. It is not tailored
             or validated specifically for compassion fatigue, does not administer ProQOL, and cannot
-            diagnose a condition. Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
+            diagnose a condition. Your answers and score are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -169,6 +170,10 @@ export default function CompassionFatigueTestPage() {
   </div>
 </div>
       </div>
+
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <ToolReviewerBio lastReviewed="August 2, 2026" />
+        </div>
 
 <div id="screening"><BurnoutClient faqData={FAQ_DATA} embedded /></div>
 
@@ -263,7 +268,7 @@ export default function CompassionFatigueTestPage() {
             This check-in is for educational purposes only and is not a diagnosis. Its original
             questions and site-defined score bands have not been clinically validated. A qualified
             healthcare professional can evaluate compassion-fatigue experiences or related concerns.
-            Your responses are processed entirely in your browser and are never stored or transmitted.
+            Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 

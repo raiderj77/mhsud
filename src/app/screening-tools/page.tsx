@@ -5,11 +5,11 @@ import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
 
 const PAGE_PATH = "/screening-tools";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const TODAY = "2026-08-02";
+const TODAY = "2026-08-05";
 
 export const metadata: Metadata = createMetadata({
   path: PAGE_PATH,
-  title: "All Free Mental Health Screening Tools and Self-Checks",
+  title: "Mental Health Screening Tools, Information, and Self-Checks",
   description:
     "Browse maintained mental health and substance use screening instruments, educational self-checks, calculators, and coping tools. Each page states its source, purpose, and limits.",
   keywords: [
@@ -61,6 +61,10 @@ const EVIDENCE_ANCHORS: Record<string, string> = {
   "/holmes-rahe-stress-inventory": "holmes-rahe",
   "/who-5-wellbeing-index": "who-5",
   "/ucla-loneliness-scale": "ucla-loneliness",
+  "/attachment-style-quiz": "ecr-r",
+  "/brief-resilience-scale": "brief-resilience",
+  "/athens-insomnia-scale": "athens-insomnia",
+  "/who-assist-substance-screening": "who-assist",
 };
 
 const PUBLISHED_MEASURE_PATHS = new Set([
@@ -72,7 +76,25 @@ const PUBLISHED_MEASURE_PATHS = new Set([
   "/athens-insomnia-scale",
 ]);
 
+const INFORMATION_ONLY_PATHS = new Set([
+  "/dass-21-depression-anxiety-stress",
+  "/spin-social-anxiety-test",
+  "/ace-questionnaire",
+  "/cage-aid-substance-abuse-screening",
+  "/crafft-substance-screening",
+  "/scoff-eating-disorder-screening",
+  "/msi-bpd-screening",
+  "/aq-10-autism-screening",
+  "/attachment-style-quiz",
+  "/holmes-rahe-stress-inventory",
+  "/ucla-loneliness-scale",
+  "/brief-resilience-scale",
+  "/athens-insomnia-scale",
+  "/who-assist-substance-screening",
+]);
+
 function toolBasis(href: string) {
+  if (INFORMATION_ONLY_PATHS.has(href)) return "Information only";
   if (href === "/postpartum-depression-test") return "PHQ-9-based adaptation";
   if (href === "/grief-assessment") return "PHQ-9 depression screener";
   if (PUBLISHED_MEASURE_PATHS.has(href)) return "Published measure";
@@ -94,37 +116,37 @@ const CATEGORIES: Category[] = [
   },
   {
     id: "anxiety",
-    title: "Anxiety",
+    title: "Anxiety and stress",
     intro:
-      "Generalized anxiety, social anxiety, and combined depression-anxiety-stress checks. Useful as a starting point for a conversation with a clinician about anxious symptoms.",
+      "A maintained generalized-anxiety self-check plus information about rights-limited DASS-21 and social-anxiety instruments. None can diagnose an anxiety or stress-related disorder.",
     tools: [
       { name: "GAD-7 Anxiety Test", acronym: "GAD-7", href: "/gad-7-anxiety-test", scoreInterpHref: "/gad-7-score-interpretation", description: "Seven-item generalized anxiety screen used widely in primary care.", population: "General adults", items: "7 items", time: "About 2 minutes" },
-      { name: "DASS-21 Depression, Anxiety, and Stress Scale", acronym: "DASS-21", href: "/dass-21-depression-anxiety-stress", scoreInterpHref: "/dass-21-score-interpretation", description: "Twenty-one-item scale that scores depression, anxiety, and stress separately.", population: "General adults", items: "21 items", time: "About 5 minutes" },
-      { name: "SPIN Social Anxiety Test", acronym: "SPIN", href: "/spin-social-anxiety-test", description: "Seventeen-item screen for social anxiety symptoms across fear, avoidance, and physiologic items.", population: "General adults", items: "17 items", time: "About 4 minutes" },
+      { name: "DASS-21 Information and Public-Use Boundary", acronym: "DASS-21", href: "/dass-21-depression-anxiety-stress", description: "Evidence and public-use limits without questionnaire administration, automated scoring, or interpretation.", population: "People researching depression, anxiety, and stress measures", items: "No questionnaire", time: "About 3 minutes to read" },
+      { name: "SPIN Social Anxiety Information", acronym: "SPIN", href: "/spin-social-anxiety-test", description: "Evidence and licensing limits without public questionnaire administration or scoring.", population: "People researching social-anxiety screening", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "trauma-ptsd",
     title: "Trauma and PTSD",
     intro:
-      "Post-traumatic stress symptom checks plus a screen for adverse childhood experiences. PTSD diagnosis requires a clinical interview, not a self-report screen.",
+      "Interactive post-traumatic stress symptom checks plus trauma-informed ACE research information without an ACE questionnaire or score. PTSD diagnosis requires a clinical interview.",
     tools: [
       { name: "PCL-5 PTSD Checklist", acronym: "PCL-5", href: "/pcl-5-ptsd-screening", scoreInterpHref: "/pcl-5-score-interpretation", description: "Twenty-item DSM-5-aligned PTSD symptom checklist.", population: "General adults", items: "20 items", time: "About 6 minutes" },
       { name: "PC-PTSD-5 Primary Care PTSD Screen", acronym: "PC-PTSD-5", href: "/pc-ptsd-5-screening", description: "Five-item brief PTSD screen used in primary care.", population: "General adults", items: "5 items", time: "Under 2 minutes" },
-      { name: "ACE Questionnaire", acronym: "ACE", href: "/ace-questionnaire", scoreInterpHref: "/ace-score-interpretation", description: "Ten-item Adverse Childhood Experiences screen used in trauma-informed care.", population: "Adults reflecting on childhood before age 18", items: "10 items", time: "About 4 minutes" },
+      { name: "ACE Questionnaire Information", acronym: "ACE", href: "/ace-questionnaire", description: "Trauma-informed evidence and exact-version limits without collecting childhood-experience answers or producing a score.", population: "People researching adverse childhood experiences", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "alcohol-substance",
     title: "Alcohol and substance use",
     intro:
-      "Brief screens used in primary care, addiction medicine, and recovery support. Screening identifies risk patterns, not a substance use disorder diagnosis.",
+      "Maintained alcohol screens plus information-only pages for rights-limited substance-use instruments. Information entries ask no substance-use questions and produce no score or result.",
     tools: [
       { name: "AUDIT Alcohol Use Disorders Identification Test", acronym: "AUDIT", href: "/audit-alcohol-test", scoreInterpHref: "/audit-score-interpretation", description: "Ten-item alcohol use screen developed by the World Health Organization.", population: "General adults", items: "10 items", time: "About 3 minutes" },
       { name: "AUDIT-C Quick Alcohol Screen", acronym: "AUDIT-C", href: "/audit-c-alcohol-screen", scoreInterpHref: "/audit-c-score-interpretation", description: "Three-item brief version of the AUDIT focused on consumption.", population: "General adults", items: "3 items", time: "Under 2 minutes" },
-      { name: "CAGE-AID Substance Use Screen", acronym: "CAGE-AID", href: "/cage-aid-substance-abuse-screening", description: "Four-item screen for alcohol and other drug problems.", population: "General adults", items: "4 items", time: "Under 2 minutes" },
-{ name: "CRAFFT Substance Use Screen", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Adolescent substance use screen used in pediatric and school-based care.", population: "Adolescents 12 to 21", items: "6 to 9 items", time: "About 3 minutes" },
-      { name: "WHO ASSIST Substance Use Screen", acronym: "ASSIST", href: "/who-assist-substance-screening", description: "World Health Organization screen across tobacco, alcohol, and other substances.", population: "General adults", items: "Up to 8 items per substance", time: "5 to 10 minutes" },
+      { name: "CAGE-AID Screening Information", acronym: "CAGE-AID", href: "/cage-aid-substance-abuse-screening", description: "Evidence and reproduction-rights context without displaying questions, collecting answers, or scoring.", population: "People researching substance-use screening", items: "No questionnaire", time: "About 3 minutes to read" },
+      { name: "CRAFFT Youth Screening Information", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Youth-screening evidence and the approval required before a third-party electronic implementation.", population: "Young people, caregivers, educators, and clinicians", items: "No questionnaire", time: "About 3 minutes to read" },
+      { name: "WHO ASSIST Information", acronym: "ASSIST", href: "/who-assist-substance-screening", description: "WHO evidence and public-use limits without questionnaire reproduction, scoring, or individualized intervention guidance.", population: "People researching multi-substance screening", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
@@ -140,37 +162,37 @@ const CATEGORIES: Category[] = [
     id: "eating-disorders",
     title: "Eating disorders",
     intro:
-      "Brief screens to surface possible disordered eating. Eating disorder diagnosis requires evaluation by a clinician with training in eating disorders.",
+      "Evidence and permissions information about eating-disorder screening without an on-site questionnaire or result. Diagnosis requires evaluation by a trained clinician.",
     tools: [
-      { name: "SCOFF Eating Disorder Screen", acronym: "SCOFF", href: "/scoff-eating-disorder-screening", description: "Five-item brief screen for anorexia nervosa and bulimia nervosa.", population: "General adults and adolescents", items: "5 items", time: "Under 2 minutes" },
+      { name: "SCOFF Screening Information", acronym: "SCOFF", href: "/scoff-eating-disorder-screening", description: "Eating-disorder screening evidence and permissions context without displaying or scoring the instrument.", population: "People researching eating-disorder screening", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "bpd",
     title: "Borderline personality",
     intro:
-      "Brief screens for borderline personality traits. BPD diagnosis requires a structured clinical interview and longitudinal observation, not a self-report screen.",
+      "Evidence and rights-status information about the MSI-BPD without an on-site questionnaire or result. BPD diagnosis requires a structured clinical evaluation and longitudinal context.",
     tools: [
-      { name: "MSI-BPD McLean Screening Instrument for BPD", acronym: "MSI-BPD", href: "/msi-bpd-screening", description: "Ten-item brief screen for borderline personality features.", population: "General adults", items: "10 items", time: "About 3 minutes" },
+      { name: "MSI-BPD Screening Information", acronym: "MSI-BPD", href: "/msi-bpd-screening", description: "Validation evidence and unresolved reuse terms without questionnaire administration or diagnostic-sounding ranges.", population: "People researching BPD screening", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "autism",
     title: "Autism spectrum",
     intro:
-      "Adult autism screening. A positive screen suggests further evaluation by a clinician experienced in autism spectrum assessment, not a diagnosis.",
+      "Adult AQ-10 evidence and licensing information without an on-site questionnaire or autism result. Autism assessment requires a qualified clinician and broader developmental context.",
     tools: [
-      { name: "AQ-10 Autism Spectrum Quotient (Short)", acronym: "AQ-10", href: "/aq-10-autism-screening", description: "Ten-item brief autism spectrum screen for adults.", population: "Adults 16+", items: "10 items", time: "About 3 minutes" },
+      { name: "Adult AQ-10 Information", acronym: "AQ-10", href: "/aq-10-autism-screening", description: "Validation and commercial/electronic-use limits without collecting answers or returning an autism result.", population: "Adults and people researching autism screening", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "personality",
     title: "Personality and self-concept",
     intro:
-      "Educational self-reflection tools. These are not clinical diagnostics. They are intended for personal insight and conversation, not for hiring, custody, or other consequential decisions.",
+      "Educational self-reflection tools plus an information-only ECR-R entry. These are not clinical diagnostics and should not be used for hiring, custody, or other consequential decisions.",
     tools: [
       { name: "Big Five Personality Test", href: "/big-five-personality-test", description: "Trait-level personality reflection across openness, conscientiousness, extraversion, agreeableness, and neuroticism.", population: "General adults", items: "About 50 items", time: "About 8 minutes" },
-      { name: "Attachment Style Quiz", href: "/attachment-style-quiz", description: "Educational reflection on attachment patterns in close relationships.", population: "General adults", items: "About 30 items", time: "About 6 minutes" },
+      { name: "ECR-R Attachment Information", href: "/attachment-style-quiz", description: "Dimensional attachment research and commercial-use limits without administering the ECR-R or assigning categorical styles.", population: "People researching adult attachment measures", items: "No questionnaire", time: "About 3 minutes to read" },
       { name: "Rosenberg Self-Esteem Scale", acronym: "RSES", href: "/rosenberg-self-esteem-scale", description: "Ten-item global self-esteem scale, widely used in research and education.", population: "Adolescents and adults", items: "10 items", time: "About 3 minutes" },
       { name: "Values Card Sort", href: "/values-card-sort", description: "Reflective sort of personal values, used in motivational interviewing and ACT-based work.", population: "General adults", items: "Card sort", time: "About 10 minutes" },
     ],
@@ -179,11 +201,11 @@ const CATEGORIES: Category[] = [
     id: "stress-burnout",
     title: "Stress, burnout, and resilience",
     intro:
-      "Stress load, burnout, and resilience checks. Burnout is a workplace phenomenon described by the World Health Organization, not a medical diagnosis on its own.",
+      "Interactive distress and burnout reflections plus information-only Holmes-Rahe and resilience entries. Information entries contain no inventory, questionnaire, score, or result.",
     tools: [
       { name: "K6 Psychological Distress Scale", acronym: "K6", href: "/k6-distress-scale", description: "Six-item nonspecific psychological distress scale used in population health.", population: "General adults", items: "6 items", time: "Under 2 minutes" },
-      { name: "Holmes-Rahe Life Stress Inventory", href: "/holmes-rahe-stress-inventory", description: "Life-events stress inventory totaling Life Change Units across the past year.", population: "General adults", items: "43 events", time: "About 5 minutes" },
-      { name: "Brief Resilience Scale", acronym: "BRS", href: "/brief-resilience-scale", description: "Six-item scale of bounce-back style resilience.", population: "General adults", items: "6 items", time: "Under 2 minutes" },
+      { name: "Holmes-Rahe Inventory Information", href: "/holmes-rahe-stress-inventory", description: "Evidence and reuse limits without displaying events, weights, scores, or future-health risk tiers.", population: "People researching life-event stress measures", items: "No inventory", time: "About 3 minutes to read" },
+      { name: "Brief Resilience Scale Information", acronym: "BRS", href: "/brief-resilience-scale", description: "Validation evidence and unresolved reuse terms without reproducing items, scoring keys, or resilience tiers.", population: "People researching resilience measures", items: "No questionnaire", time: "About 3 minutes to read" },
       { name: "Burnout Reflection", href: "/burnout-assessment-tool", description: "Original educational self-check covering exhaustion, detachment, and sense of effectiveness. Its score bands are not clinical cutoffs.", population: "Working adults", items: "15 items", time: "About 5 minutes" },
       { name: "Compassion Fatigue Reflection", href: "/compassion-fatigue-test", description: "General educational reflection for people in helping roles; not a validated compassion-fatigue instrument.", population: "Helping professionals and caregivers", items: "15 items", time: "About 5 minutes" },
       { name: "Caregiver Burnout Reflection", href: "/caregiver-burnout-assessment", description: "General educational self-check for unpaid family or chosen-family caregivers; not a validated caregiver-burnout instrument.", population: "Family caregivers", items: "15 items", time: "About 5 minutes" },
@@ -203,18 +225,18 @@ const CATEGORIES: Category[] = [
     id: "loneliness",
     title: "Loneliness and social",
     intro:
-      "Loneliness self-checks. The UCLA scale is the most cited measure of loneliness in research.",
+      "Research and permissions information about the UCLA Loneliness Scale without an on-site questionnaire, score, or loneliness label.",
     tools: [
-      { name: "UCLA Loneliness Scale (Version 3)", href: "/ucla-loneliness-scale", description: "Twenty-item self-report scale of loneliness across connection, belonging, and isolation.", population: "Adolescents and adults", items: "20 items", time: "About 5 minutes" },
+      { name: "UCLA Loneliness Scale Information", href: "/ucla-loneliness-scale", description: "Evidence and noncommercial-use limits without reproducing the scale, collecting answers, or labeling a loneliness level.", population: "People researching loneliness measures", items: "No questionnaire", time: "About 3 minutes to read" },
     ],
   },
   {
     id: "sleep",
     title: "Sleep",
     intro:
-      "Brief sleep self-checks. Insomnia diagnosis requires a clinical interview that includes sleep schedule, daytime impairment, and rule-outs.",
+      "An educational sleep-and-mood reflection plus Athens Insomnia Scale information without an on-site questionnaire or result. Insomnia diagnosis requires clinical evaluation.",
     tools: [
-      { name: "Athens Insomnia Scale", acronym: "AIS", href: "/athens-insomnia-scale", description: "Eight-item insomnia symptom scale aligned with ICD-10 sleep criteria.", population: "Adolescents and adults", items: "8 items", time: "Under 3 minutes" },
+      { name: "Athens Insomnia Scale Information", acronym: "AIS", href: "/athens-insomnia-scale", description: "Validation and permissions context without displaying items, calculating a score, or assigning insomnia severity.", population: "People researching insomnia screening", items: "No questionnaire", time: "About 3 minutes to read" },
       { name: "Sleep and Mood Check", href: "/sleep-and-mood-check", description: "Combined sleep and mood reflection for tracking the bidirectional link between the two.", population: "General adults", items: "About 12 items", time: "About 3 minutes" },
     ],
   },
@@ -263,7 +285,6 @@ const CLINICAL_GUIDES = [
   { name: "PHQ-2 to PHQ-9: When to Continue", href: "/phq-2-to-phq-9-when-to-escalate", description: "How the two-item depression screen is used before the full PHQ-9." },
   { name: "PHQ-9 vs GAD-7", href: "/phq-9-vs-gad-7", description: "Choose the depression screen, anxiety screen, or both based on the concern." },
   { name: "AUDIT vs AUDIT-C", href: "/audit-vs-audit-c", description: "Compare the three-item alcohol screen with the full ten-item AUDIT." },
-  { name: "DASS-21 vs PHQ-9 and GAD-7", href: "/dass-21-vs-phq-9-and-gad-7", description: "Compare a three-domain research scale with condition-specific clinical screeners." },
   { name: "How to Talk to Your Doctor", href: "/how-to-talk-to-your-doctor-about-mental-health", description: "Turn a screening result into a clear, practical clinical conversation." },
 ];
 
@@ -318,10 +339,10 @@ const TOOL_CHOOSER_ROWS = [
     evidence: "audit-c",
   },
   {
-    concern: "Possible problems involving alcohol or other drug use",
-    tool: "CAGE-AID",
+    concern: "Learning about brief screening for alcohol or other drug-use concerns",
+    tool: "CAGE-AID information",
     href: "/cage-aid-substance-abuse-screening",
-    detail: "A published four-item screen covering alcohol and other drugs.",
+    detail: "An informational overview only; MindCheck Tools does not administer or score this rights-unresolved instrument.",
     evidence: "cage-aid",
   },
   {
@@ -337,9 +358,9 @@ function articleJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "All Free Mental Health Screening Tools and Self-Checks",
+    headline: "Mental Health Screening Tools, Information, and Self-Checks",
     description:
-      "Index of maintained published screeners and educational self-checks on MindCheck Tools, organized by topic with population, length, limitations, and score-guide links.",
+      "Index of maintained interactive screeners, rights-limited instrument information, and educational self-checks on MindCheck Tools, organized by topic and limitations.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
     author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -365,8 +386,8 @@ function itemListJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Free Mental Health Screening Tools",
-    description: "Maintained published screening instruments and educational self-checks indexed on MindCheck Tools.",
+    name: "Mental Health Screening Tools, Information, and Self-Checks",
+    description: "Maintained interactive screeners, instrument information pages, and educational self-checks indexed on MindCheck Tools.",
     itemListOrder: "https://schema.org/ItemListUnordered",
     numberOfItems: items.length,
     itemListElement: items,
@@ -378,7 +399,7 @@ export default function ScreeningToolsIndexPage() {
     { name: "Home", url: SITE_URL },
     { name: "Screening tools", url: PAGE_URL },
   ]);
-  const totalScreeners = CATEGORIES.reduce((acc, c) => acc + c.tools.length, 0);
+  const totalEntries = CATEGORIES.reduce((acc, c) => acc + c.tools.length, 0);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
@@ -407,10 +428,10 @@ export default function ScreeningToolsIndexPage() {
       </nav>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight mb-3">
-        All Free Mental Health Screening Tools and Self-Checks
+        Mental Health Screening Tools, Information, and Self-Checks
       </h1>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-        Last updated: August 2, 2026. Reviewed by{" "}
+        Last updated: August 5, 2026. Reviewed by{" "}
         <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 hover:underline">
           {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
         </Link>
@@ -440,18 +461,20 @@ export default function ScreeningToolsIndexPage() {
         role="note"
         className="mb-8 px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 text-sm text-amber-800 dark:text-amber-300"
       >
-        <strong>Important:</strong> This directory includes both published
-        screening instruments and original educational self-checks. Each tool
-        page identifies its basis and limits. No result is a diagnosis.
+        <strong>Important:</strong> This directory includes interactive published
+        screeners, public information pages for rights-limited instruments, and
+        original educational self-checks. Information pages contain no questionnaire
+        or score. It distinguishes published screening instruments and original educational self-checks,
+        while labeling rights-limited entries as information only. Original educational self-checks do not claim clinical validation. No result is a diagnosis.
       </div>
 
       <section className="mb-10 prose-medical text-neutral-700 dark:text-neutral-300 leading-relaxed">
         <p>
-          MindCheck Tools currently lists {totalScreeners} maintained screening
-          and self-check pages, plus practical calculators, worksheets, and
-          coping-skill tools. Some pages implement published screening
-          instruments; others are explicitly labeled educational reflection
-          tools and do not claim clinical validation.
+          MindCheck Tools currently lists {totalEntries} maintained screening,
+          instrument-information, and self-check pages, plus practical calculators,
+          worksheets, and coping-skill tools. A rights-limited instrument URL remains
+          publicly useful as an informational page unless and until its exact web-use
+          permission and clinical review are archived.
         </p>
         <p>
           For source studies, validated populations, reported accuracy, and
@@ -613,7 +636,7 @@ export default function ScreeningToolsIndexPage() {
                 </dl>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <Link href={tool.href} className="text-sage-700 dark:text-sage-400 hover:underline font-medium">
-                    Take the self-check
+                    {INFORMATION_ONLY_PATHS.has(tool.href) ? "Read instrument information" : "Take the self-check"}
                   </Link>
                   {tool.scoreInterpHref && (
                     <Link href={tool.scoreInterpHref} className="text-sage-700 dark:text-sage-400 hover:underline">

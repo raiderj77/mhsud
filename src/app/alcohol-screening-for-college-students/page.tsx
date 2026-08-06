@@ -39,7 +39,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will my results be shared with my school?",
-    answer: "No. This tool scores answers in your browser and does not send them to MindCheck Tools, your school, or another third party. When you close this page, the on-screen responses are gone.",
+    answer: "The questionnaire code processes answers locally and does not intentionally send them to MindCheck Tools or your school. Ordinary page requests can still create hosting records, and copies, browser or device sync, and shared-device access are outside this boundary.",
   },
   {
     question: "I only drink on weekends, can that still be a problem?",
@@ -128,7 +128,7 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools or your school.
+            Takes about 3 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools or your school.
           </p>
         </div>
 
@@ -181,8 +181,8 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
               <div className="space-y-2 text-sm">
                 <p><strong>How it works:</strong> You&apos;ll answer 10 questions about your drinking frequency, quantity, and any consequences you&apos;ve experienced. The questions cover the past year of your drinking.</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 40. Scores of 8 or above suggest hazardous or harmful drinking patterns. You&apos;ll see exactly what your score means and what the clinical thresholds are.</p>
-                <p><strong>Be honest:</strong> This only works if you&apos;re honest with yourself. Nobody else sees your answers. There&apos;s no &quot;right&quot; answer, just your actual experience.</p>
-                <p><strong>Your privacy:</strong> This runs entirely in your browser. Nothing is stored, sent to a server, or shared with your school, parents, or anyone else. When you close the page, it&apos;s gone.</p>
+                <p><strong>Be honest:</strong> There&apos;s no &quot;right&quot; answer, just your actual experience.</p>
+                <p><strong>Your privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools, your school, or your parents. Ordinary page requests can still create hosting records, and copied, synced, printed, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -411,8 +411,8 @@ export default function AlcoholScreeningForCollegeStudentsPage() {
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
-            healthcare professional can diagnose an alcohol use disorder. Your responses are processed
-            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            healthcare professional can diagnose an alcohol use disorder. Questionnaire answers and scores
+            are processed locally and are not intentionally sent to MindCheck Tools. Always consult a qualified
             healthcare professional for medical advice.
           </p>
         </div>

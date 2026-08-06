@@ -13,6 +13,11 @@ import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 import { printSensitiveResults } from "@/lib/sensitivePrinting";
+import {
+  PRIVATE_SHARE_COPIED_MESSAGE,
+  PRIVATE_SHARE_NOTICE,
+  sharePrivateToolLink,
+} from "@/lib/privateToolSharing";
 
 
 // ── Data ────────────────────────────────────────────────────────────────
@@ -117,18 +122,14 @@ export function PHQ9Client({ faqData }: Props) {
   }, []);
 
   const handleShare = useCallback(async () => {
-    const url = "https://mindchecktools.com/phq-9-depression-test";
-    const shareData = {
-      title: "PHQ-9 Depression Self-Check, Free & Private",
-      text: "Take a free, private PHQ-9 depression self-check. Your answers never leave your browser.",
-      url,
-    };
-    if (navigator.share) {
-      try { await navigator.share(shareData); return; } catch { /* user cancelled */ }
+    const outcome = await sharePrivateToolLink({
+      toolName: "PHQ-9 Depression Self-Check",
+      canonicalPath: "/phq-9-depression-test",
+    });
+    if (outcome === "copied") {
+      setShareMessage(PRIVATE_SHARE_COPIED_MESSAGE);
+      setTimeout(() => setShareMessage(""), 2500);
     }
-    await navigator.clipboard.writeText(url);
-    setShareMessage("Link copied!");
-    setTimeout(() => setShareMessage(""), 2500);
   }, []);
 
   return (
@@ -143,7 +144,7 @@ export function PHQ9Client({ faqData }: Props) {
           PHQ-9 Depression Self-Check
         </h2>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          A widely used, validated screening questionnaire that helps you reflect on depressive symptoms over the past two weeks. Your answers stay in your browser and are never stored.
+          A widely used, validated screening questionnaire that helps you reflect on depressive symptoms over the past two weeks. Your answers and score are processed locally and are not intentionally sent to MindCheck Tools.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -416,9 +417,10 @@ export function PHQ9Client({ faqData }: Props) {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
-                Share Blank Test
+                Share Tool Link
               </button>
             </div>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">{PRIVATE_SHARE_NOTICE}</p>
             {shareMessage && (
               <p className="text-xs text-sage-600 dark:text-sage-400 font-medium mt-2 animate-fade-in">
                 ✓ {shareMessage}

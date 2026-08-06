@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
@@ -133,6 +134,7 @@ interface Props {
 }
 
 export function Who5Client({ faqData }: Props) {
+  const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
   const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -165,6 +167,18 @@ export function Who5Client({ faqData }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  if (!accepted) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        <DisclaimerGate
+          toolName="WHO-5"
+          toolDescription="Review the privacy and educational-use limits before answering this self-check."
+          onAccept={() => setAccepted(true)}
+        />
+      </div>
+    );
+  }
+
   /* ---------------------------------------------------------------- */
   /*  Results View                                                     */
   /* ---------------------------------------------------------------- */
@@ -174,9 +188,9 @@ export function Who5Client({ faqData }: Props) {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10" aria-live="polite">
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
           Your WHO-5 Results
-        </h1>
+        </h2>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Well-Being Index · Past 2 weeks
         </p>
@@ -315,9 +329,9 @@ export function Who5Client({ faqData }: Props) {
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">GAD-7 Anxiety Self-Check →</span>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">7-question validated anxiety screener</p>
             </Link>
-            <Link href="/dass-21-depression-anxiety-stress" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
-              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">DASS-21 →</span>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Measure depression, anxiety, and stress together</p>
+            <Link href="/phq-4-anxiety-depression-screen" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
+              <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">PHQ-4 Depression/Anxiety Screen →</span>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">Brief depression and anxiety symptom screen</p>
             </Link>
             <Link href="/sleep-and-mood-check" className="block p-3 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-lg hover:border-sage-400 dark:hover:border-sage-600 transition-colors">
               <span className="text-sm font-semibold text-sage-700 dark:text-sage-400">Sleep &amp; Mood Reflection →</span>
@@ -432,7 +446,7 @@ export function Who5Client({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
-          Your responses were scored entirely in your browser. Nothing was stored or transmitted.
+          Your responses and score were processed locally and were not intentionally sent to MindCheck Tools.
         </p>
 
         {/* FAQ */}
@@ -465,14 +479,14 @@ export function Who5Client({ faqData }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
-        WHO-5 Well-Being Index
-      </h1>
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        Answer the WHO-5 questions
+      </h2>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         Rate each statement for how you have been feeling over the <strong>last two weeks</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        5 questions · ~2 minutes · private by design · WHO public domain instrument
+        5 questions · ~2 minutes · local browser processing · WHO public domain instrument
       </p>
 
       {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active wellbeing questionnaire. */}
@@ -520,7 +534,7 @@ export function Who5Client({ faqData }: Props) {
                 <button
                   key={opt.value}
                   onClick={() => handleAnswer(item.id, opt.value)}
-                  className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors text-center ${
+                  className={`min-h-11 min-w-11 px-3 py-2 rounded-lg text-xs font-medium transition-colors text-center ${
                     answers[item.id] === opt.value
                       ? "bg-sage-600 text-white"
                       : "bg-sand-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-sage-100 dark:hover:bg-sage-900/30"
@@ -580,7 +594,7 @@ export function Who5Client({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
+        Your responses and score are processed locally and are not intentionally sent to MindCheck Tools.
       </p>
     </div>
   );

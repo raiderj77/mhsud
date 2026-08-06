@@ -1,142 +1,145 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { UCLAClient } from "./UCLAClient";
-import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
+import {
+  RightsBoundaryInformationPage,
+  type InformationFaq,
+} from "@/app/_components/RightsBoundaryInformationPage";
 
-const TOOL_URL = `${SITE_URL}/ucla-loneliness-scale`;
+const PAGE_PATH = "/ucla-loneliness-scale";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = createMetadata({
-  path: "/ucla-loneliness-scale",
-  title: "UCLA Loneliness Scale | Free Loneliness Self-Check",
+  path: PAGE_PATH,
+  title: "UCLA Loneliness Scale Information and Permission Boundary",
   description:
-    "Free UCLA Loneliness Scale (Version 3, Russell 1996). 20 items, 9 reverse-scored. Score 20-80. Research cutoff 44+ for elevated loneliness. Private, instant results.",
+    "Educational information about the UCLA Loneliness Scale, its public-web permission boundary, and non-equivalent public-use screening options.",
   keywords: [
-    "UCLA loneliness scale", "loneliness test", "loneliness questionnaire",
-    "UCLA loneliness scale version 3", "Russell loneliness scale",
-    "loneliness screening", "loneliness assessment",
-    "UCLA loneliness score", "am I lonely test",
-    "loneliness scale free", "social isolation test",
-    "UCLA loneliness scale online",
+    "UCLA Loneliness Scale information",
+    "UCLA Loneliness Scale permission",
+    "loneliness research measure",
+    "subjective loneliness information",
   ],
   openGraph: {
-    title: "UCLA Loneliness Scale | Free Loneliness Self-Check",
-    description:
-      "Free UCLA Loneliness Scale (Version 3, Russell 1996). 20 items, 9 reverse-scored. Score 20-80. Research cutoff 44+ for elevated loneliness. Private, instant results.",
-    url: TOOL_URL,
+    title: "UCLA Loneliness Scale Information",
+    description: "Research context and the permission boundary for public electronic administration of the UCLA Loneliness Scale.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
-const FAQ_DATA = [
+const FAQ_DATA: InformationFaq[] = [
   {
     question: "What is the UCLA Loneliness Scale?",
     answer:
-      "The UCLA Loneliness Scale (Version 3) is a 20-item self-report measure of subjective feelings of loneliness and social isolation. It was developed by Daniel Russell at UCLA and published in its current form in 1996. It is the most widely used loneliness measure in psychological research, cited in thousands of studies. The scale measures how often you experience feelings of disconnection, lack of companionship, and social isolation. It includes both negatively worded items (e.g., 'How often do you feel alone?') and positively worded items (e.g., 'How often do you feel close to people?') to reduce response bias.",
+      "It is a self-report research measure developed to study subjective loneliness and perceived social disconnection. The author-controlled UCLA page describes its research use and available versions.",
   },
   {
-    question: "How is the UCLA Loneliness Scale scored?",
+    question: "Can I take the UCLA Loneliness Scale on MindCheck Tools?",
     answer:
-      "Each of the 20 items is rated on a 4-point scale: Never (1), Rarely (2), Sometimes (3), or Always (4). Nine items are positively worded and reverse-scored, meaning that answering 'Always' to a positive item scores 1 instead of 4. The total score ranges from 20 to 80. Higher scores indicate greater loneliness. A score of 44 or higher is commonly used in research as a threshold for elevated loneliness, though there is no single universally agreed-upon clinical cutoff.",
+      "No. The author's published permission covers specified nonprofit research uses, but MindCheck Tools has not obtained a written grant for this public consumer website and commercial-site context.",
   },
   {
-    question: "What does an elevated loneliness score mean?",
+    question: "Why does this page omit questions, scoring, and a loneliness cutoff?",
     answer:
-      "An elevated score on the UCLA Loneliness Scale means you are experiencing a higher-than-typical level of subjective loneliness. Loneliness is the feeling that your social connections are not meeting your needs, it is about perceived quality of relationships, not just quantity. You can feel lonely in a crowd or while in a relationship. Research has linked chronic loneliness to increased risk of depression, anxiety, cardiovascular disease, cognitive decline, and weakened immune function. An elevated score does not mean something is wrong with you, but it may be worth exploring what is contributing to these feelings, whether through self-reflection, social changes, or speaking with a therapist.",
+      "Those materials are not reproduced without the appropriate rights grant. The research measure also does not provide a universal diagnostic cutoff for an individual's loneliness or mental health.",
   },
   {
-    question: "Is loneliness the same as being alone?",
+    question: "Are K6 or PHQ-4 replacements for the UCLA Loneliness Scale?",
     answer:
-      "No. Loneliness and being alone (solitude) are different things. Solitude is an objective state, you are physically by yourself. Loneliness is a subjective emotional experience, the feeling that your social needs are not being met. Some people enjoy solitude and do not feel lonely. Others feel deeply lonely despite being surrounded by people. The UCLA Loneliness Scale measures subjective loneliness, not how much time you spend alone. Research consistently shows that the quality of social connections matters more than the quantity.",
+      "No. They screen different symptom domains and do not measure or score loneliness. They are linked only as separately permitted options for people concerned about distress, depression, or anxiety.",
   },
   {
-    question: "How is loneliness related to depression and anxiety?",
+    question: "Does feeling lonely mean I have a mental health diagnosis?",
     answer:
-      "Loneliness and mental health conditions like depression and anxiety frequently co-occur and can reinforce each other. Loneliness increases the risk of developing depression, and depression can lead to social withdrawal that deepens loneliness. Similarly, social anxiety can prevent people from forming the connections they need, leading to loneliness. If your loneliness score is elevated, it may be helpful to also take a depression screening (like the PHQ-9) or an anxiety screening (like the GAD-7) to get a more complete picture of what you are experiencing.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. Loneliness is an experience, not a diagnosis by itself. Persistent distress or changes in daily functioning can be discussed with a qualified healthcare professional.",
   },
 ];
 
-export default function UCLAPage() {
+export default function UCLALonelinessInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "UCLA Loneliness Scale (Version 3)",
-              description:
-                "A free online implementation of the UCLA Loneliness Scale Version 3 (Russell, 1996), a 20-item measure of subjective loneliness and social isolation. Score 20-80 with 9 reverse-scored items. Research cutoff of 44+ for elevated loneliness.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "UCLA Loneliness Scale Information and Permission Boundary",
+              description: "Educational research and rights information without public questionnaire administration or scoring.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "UCLA Loneliness Scale", url: TOOL_URL },
-            ])
+              { name: "UCLA Loneliness Scale Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-8">
-        <h1 className="font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">
-          UCLA Loneliness Scale
-        </h1>
-      </div>
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The UCLA Loneliness Scale, a 20-item validated measure of subjective loneliness and social isolation."
-          who="Anyone who feels disconnected or isolated and wants to measure their loneliness using a validated research tool."
-          bottomLine="Loneliness is a health risk factor as serious as smoking, recognizing it is the first step to addressing it. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-
-<UCLAClient faqData={FAQ_DATA} />
+      <RightsBoundaryInformationPage
+        title="UCLA Loneliness Scale Information"
+        intro="MindCheck Tools does not reproduce, administer, score, or interpret the UCLA Loneliness Scale. This page explains the measure's purpose and the permission boundary while keeping the established URL publicly useful."
+        what="An educational overview of the UCLA Loneliness Scale, its research purpose, limitations, and public-use permission boundary."
+        who="People seeking reliable context about loneliness research or a separately permitted symptom self-check."
+        bottomLine="A public commercial-web permission grant is not on file. This page has no questionnaire, score, cutoff, or personal loneliness result and cannot provide a diagnosis."
+        boundaryHeading="Why the public questionnaire is not provided"
+        boundaryParagraphs={[
+          "The author-controlled UCLA resource permits use without permission for specified nonprofit research purposes. That statement does not grant a commercial public website the right to reproduce and score the scale for consumers.",
+          "MindCheck Tools has not archived written permission covering public electronic administration, automated scoring, traffic, adaptations, or the site's commercial context.",
+          "Until that permission exists, this route remains informational and withholds questionnaire text, response choices, scoring, thresholds, and respondent-facing interpretation.",
+        ]}
+        overviewHeading="What the scale was designed to measure"
+        overviewParagraphs={[
+          "The UCLA Loneliness Scale is used in research to measure subjective loneliness: the perceived gap between the social connection a person wants and experiences.",
+          "Loneliness and objective social isolation are related but not identical. A research score is not a diagnosis and should not be used by itself to make medical, employment, educational, or relationship decisions.",
+        ]}
+        alternatives={[
+          {
+            href: "/k6-distress-scale",
+            name: "K6 Psychological Distress Self-Check",
+            description: "A separately permitted screen for recent nonspecific distress. It does not assess loneliness or social connection.",
+          },
+          {
+            href: "/phq-4-anxiety-depression-screen",
+            name: "PHQ-4 Depression and Anxiety Screen",
+            description: "A brief, separately permitted symptom screen. It is not a loneliness scale and cannot reproduce a UCLA result.",
+          },
+        ]}
+        sources={[
+          {
+            href: "https://peplau.psych.ucla.edu/loneliness/",
+            label: "UCLA author-controlled loneliness resource",
+            detail: "Describes the measure and its nonprofit research-use permission boundary.",
+          },
+          {
+            href: "https://pubmed.ncbi.nlm.nih.gov/8576833/",
+            label: "PubMed: UCLA Loneliness Scale Version 3",
+            detail: "Primary reliability, validity, and factor-structure publication record.",
+          },
+          {
+            href: "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+            label: "U.S. Surgeon General advisory on social connection",
+            detail: "Public-health context for loneliness and social connection; it is not a substitute for the instrument.",
+          },
+        ]}
+        faq={FAQ_DATA}
+        reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
+      />
     </>
   );
 }

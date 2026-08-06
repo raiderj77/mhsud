@@ -278,7 +278,7 @@ export default function PTSDScreeningGuidePage() {
               <li><strong>Lack of awareness</strong>, not recognizing that symptoms may be connected to a past traumatic experience</li>
             </ul>
             <p>
-              Self-administered screening tools can help overcome some of these barriers by providing a private, anonymous first step. Your answers are processed entirely in your browser and are never stored or transmitted.
+              Self-administered screening tools can help overcome some of these barriers by providing a self-directed first step. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -305,7 +305,7 @@ export default function PTSDScreeningGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to take the PCL-5?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 5 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, takes about 5 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <Link href="/pcl-5-ptsd-screening" className="btn-primary text-sm">Take the PCL-5 Self-Check</Link>
           </div>
 

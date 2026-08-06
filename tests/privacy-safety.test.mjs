@@ -62,7 +62,7 @@ test("newsletter form does not collect the screener name", async () => {
   assert.doesNotMatch(component, /toolName|source:/);
   assert.doesNotMatch(route, /toolName|userGroup|body\.source/);
   assert.match(component, /referrerPolicy:\s*"no-referrer"/);
-  assert.match(component, /isSensitiveRoute\(pathname\)\) return null/);
+  assert.match(component, /!isOptionalServicesAllowedRoute\(pathname\)\) return null/);
   assert.match(route, /origin !== new URL\(req\.url\)\.origin/);
   assert.match(route, /fetchSite && fetchSite !== "same-origin"/);
   assert.ok(
@@ -152,13 +152,15 @@ test("publisher and named reviewer identities remain separate, public, and priva
   }
 });
 
-test("youth substance screener contains no affiliate therapy promotion", async () => {
+test("the youth CRAFFT information page contains no affiliate or assessment flow", async () => {
   const crafft = await readFile(
-    new URL("../src/app/crafft-substance-screening/CrafftClient.tsx", import.meta.url),
+    new URL("../src/app/crafft-substance-screening/page.tsx", import.meta.url),
     "utf8",
   );
-  assert.doesNotMatch(crafft, /TherapyCTA|THERAPY_AFFILIATE_URL/);
-  assert.match(crafft, /Crisis Resources/);
+  assert.doesNotMatch(crafft, /TherapyCTA|THERAPY_AFFILIATE_URL|CrafftClient/);
+  assert.doesNotMatch(crafft, /<form|<input|type="radio"/);
+  assert.match(crafft, /written-approval requirement/i);
+  assert.match(crafft, /View crisis resources/);
 });
 
 test("tracking and advertising require consent and Clarity is absent", async () => {
@@ -188,7 +190,8 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.match(consentAnalytics, /SAFE_CAMPAIGN_KEYS/);
   assert.match(consentAnalytics, /page_path: pathname/);
   assert.match(consentAnalytics, /version !== 2/);
-  assert.match(consentAnalytics, /page path can reveal the mental-health or substance-use topic/);
+  assert.match(consentAnalytics, /topic-neutral homepage/);
+  assert.match(consentAnalytics, /health-topic paths are excluded/);
   assert.match(consentAnalytics, /Consumer Health Data Privacy Notice/);
   assert.match(consentAnalytics, /consented-google-adsense/);
   assert.match(consentAnalytics, /queue\.requestNonPersonalizedAds = 1/);
@@ -198,7 +201,7 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.match(adSlot, /NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true"/);
   assert.match(adSlot, /!adSlot\) return null/);
   assert.match(adSlot, /adsbygoogle\.requestNonPersonalizedAds = 1/);
-  assert.match(adSlot, /sensitive \|\| !runtimeEnabled \|\| !allowed \|\| !adSlot/);
+  assert.match(adSlot, /!routeAllowed \|\| !runtimeEnabled \|\| !allowed \|\| !adSlot/);
   assert.match(adSlot, /data-npa="1"/);
   assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
   assert.doesNotMatch(layout, /data-georegions/);
@@ -255,7 +258,7 @@ test("scaled content stays quarantined from search and internal discovery", asyn
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   const sitemap = await readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");
   const homepage = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
-  const attachmentQuiz = await readFile(new URL("../src/app/attachment-style-quiz/AttachmentStyleClient.tsx", import.meta.url), "utf8");
+  const attachmentPage = await readFile(new URL("../src/app/attachment-style-quiz/page.tsx", import.meta.url), "utf8");
   const attachmentGuide = await readFile(new URL("../src/app/blog/attachment-styles-guide/page.tsx", import.meta.url), "utf8");
   const screeningTools = await readFile(new URL("../src/app/screening-tools/page.tsx", import.meta.url), "utf8");
   const llms = await readFile(new URL("../public/llms.txt", import.meta.url), "utf8");
@@ -267,7 +270,7 @@ test("scaled content stays quarantined from search and internal discovery", asyn
   assert.doesNotMatch(sitemap, /BLOG_POSTS/);
   assert.match(sitemap, /QUARANTINED_PATHS/);
   assert.match(homepage, /targetedScreenings=\{\[\]\}/);
-  for (const source of [attachmentQuiz, attachmentGuide, screeningTools, llms, llmsFull, llmsFullRoute]) {
+  for (const source of [attachmentPage, attachmentGuide, screeningTools, llms, llmsFull, llmsFullRoute]) {
     assert.doesNotMatch(source, /attachment-style-test-for-couples/);
   }
 });
@@ -302,8 +305,9 @@ test("AI discovery files use maintained canonical URLs and scoped clinical claim
     assert.doesNotMatch(content, /all tools[^\n.]*clinically validated/i);
   }
 
-  assert.match(llms, /Some screening pages implement published validated instruments/);
-  assert.match(llmsFull, /other tools are educational or self-reflection resources/);
+  assert.match(llms, /Some pages implement published instruments/);
+  assert.match(llms, /rights-limited instruments remain public as educational information without questionnaire administration or scoring/);
+  assert.match(llmsFull, /Other tools are educational or self-reflection resources/);
   assert.match(llmsFullRoute, /readFileSync/);
   assert.match(llmsFullRoute, /public[\s\S]*llms-full\.txt/);
   assert.doesNotMatch(llmsFullRoute, /https:\/\/mindchecktools\.com/);

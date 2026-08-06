@@ -154,7 +154,7 @@ export default function UrgeSurfingGuidePage() {
               <li><strong>Visual evidence:</strong> Watching the timer count up provides concrete proof that you are getting through it, something that feels impossible to believe mid-craving.</li>
             </ul>
             <p>
-              The timer is free, private, and runs entirely in your browser. No data is stored or transmitted. You can use it alongside other coping strategies from the <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> or pair it with a <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline">HALT check-in</Link> to identify whether hunger, anger, loneliness, or tiredness is amplifying your craving.
+              The timer is free and private. Timer inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device or browser profile may see inputs, and copies you create may be retained by your device or chosen services. You can use it alongside other coping strategies from the <Link href="/coping-skills-randomizer" className="text-sage-600 dark:text-sage-400 underline">coping skills randomizer</Link> or pair it with a <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 underline">HALT check-in</Link> to identify whether hunger, anger, loneliness, or tiredness is amplifying your craving.
             </p>
           </section>
 

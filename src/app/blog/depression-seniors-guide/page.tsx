@@ -144,7 +144,7 @@ export default function DepressionSeniorsGuidePage() {
           <section>
             <h2>How the MindCheck Tools depression screening for seniors helps</h2>
             <p>
-              The <Link href="/depression-test-for-seniors" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for seniors</Link> is a free, private self-assessment adapted for older adults. It takes under five minutes, runs entirely in your browser, and requires no account.
+              The <Link href="/depression-test-for-seniors" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools depression screening for seniors</Link> is a free, private self-assessment adapted for older adults. It takes under five minutes and requires no account. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               A screening provides a structured starting point, something concrete to bring to a doctor&apos;s appointment or share with a family member who has noticed changes. Many older adults resist the idea of depression because of generational stigma; a screening result can reframe the conversation from &quot;are you depressed?&quot; to &quot;your responses suggest it may be worth discussing this with your doctor.&quot;

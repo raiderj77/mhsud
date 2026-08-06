@@ -252,7 +252,7 @@ export function GroundingClient({ faqData }: Props) {
                 Typing out what you notice helps anchor you in the present moment.
               </p>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-                Takes about 3-5 minutes. Your responses stay in your browser and are never stored.
+                Takes about 3-5 minutes. Your responses are processed locally and are not intentionally sent to MindCheck Tools.
               </p>
             </div>
 
@@ -605,7 +605,7 @@ export function GroundingClient({ faqData }: Props) {
       {/* ── Privacy ── */}
       <div className="text-center mb-6">
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          Your privacy matters. This tool runs entirely in your browser. Nothing you type is stored, collected, or transmitted.
+          Your entries are processed locally and are not intentionally sent to MindCheck Tools. Copies, browser or device sync, and shared-device access are outside this boundary.
         </p>
       </div>
 

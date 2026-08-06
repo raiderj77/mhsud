@@ -141,7 +141,7 @@ export default function AnxietyTestForWomenPage() {
             Start the Anxiety Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 2 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 2 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export default function AnxietyTestForWomenPage() {
                 <p><strong>How it works:</strong> You&apos;ll answer 7 questions about how often you&apos;ve been bothered by specific anxiety symptoms over the past two weeks. Each answer is scored from 0 (not at all) to 3 (nearly every day).</p>
                 <p><strong>Your score:</strong> Ranges from 0 to 21. Scores of 5, 10, and 15 represent mild, moderate, and severe anxiety thresholds. You&apos;ll see exactly what your score means.</p>
                 <p><strong>What it&apos;s not:</strong> This is a screening, not a diagnosis. It can&apos;t tell you <em>why</em> you&apos;re anxious (hormones, life stress, a clinical disorder, or all three). A healthcare provider can help you figure that out.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Your answers are never stored, transmitted, or visible to anyone but you.</p>
+                <p><strong>Your privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary.</p>
               </div>
             </div>
           </div>
@@ -432,8 +432,8 @@ export default function AnxietyTestForWomenPage() {
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
-            healthcare professional can diagnose an anxiety disorder. Your responses are processed entirely in
-            your browser and are never stored or transmitted. Always consult a qualified healthcare professional
+            healthcare professional can diagnose an anxiety disorder. Questionnaire answers and scores are processed locally and
+            are not intentionally sent to MindCheck Tools. Always consult a qualified healthcare professional
             for medical advice.
           </p>
         </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   { question: "Is this a sleep disorder diagnostic tool?", answer: "No. This is a self-reflection tool that helps you think about patterns in your sleep and mood. It cannot diagnose insomnia, sleep apnea, or any other sleep disorder. If you suspect a sleep disorder, please consult a healthcare provider." },
   { question: "How are sleep and mood connected?", answer: "Research consistently shows a bidirectional relationship between sleep and mental health. Poor sleep can worsen anxiety and depression, while anxiety and depression can disrupt sleep. This tool helps you notice whether these patterns may be present in your life." },
-  { question: "Is my data stored?", answer: "No. All processing happens in your browser. Your responses are never sent to any server." },
+  { question: "How are my answers handled?", answer: "Answers and results are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records, and copies, sync, backups, or shared-device access are outside this boundary." },
   { question: "How much sleep do I need?", answer: "Most adults need 7-9 hours per night, though individual needs vary. This tool doesn't prescribe a specific amount, it asks about your experience of sleep quality, daytime energy, and mood to help you reflect on whether your current sleep pattern is working for you." },
   { question: "What if my results suggest problems?", answer: "Consider talking with your healthcare provider about your sleep. Good sleep hygiene practices can help many people, but persistent sleep problems often benefit from professional assessment to rule out underlying causes." },
 ];

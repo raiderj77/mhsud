@@ -181,7 +181,7 @@ export default function WorryTimeGuidePage() {
             <ul>
               <li><strong>Box breathing:</strong> When a worry arises outside your scheduled window and you feel the urge to engage with it, use <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing</Link> (4&ndash;4&ndash;4&ndash;4) to calm your nervous system before postponing the worry.</li>
               <li><strong>Thought records:</strong> During worry time, use a <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">CBT thought record</Link> to examine your most persistent worries for cognitive distortions like catastrophizing, fortune-telling, or probability overestimation.</li>
-              <li><strong>The worry time scheduler:</strong> The <Link href="/worry-time-scheduler" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools worry time scheduler</Link> provides a structured digital space for capturing worries throughout the day and reviewing them during your scheduled session. It runs entirely in your browser with no data stored.</li>
+              <li><strong>The worry time scheduler:</strong> The <Link href="/worry-time-scheduler" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools worry time scheduler</Link> provides a structured digital space for capturing worries and reviewing them later. It saves worry text and settings in this browser&apos;s localStorage and does not automatically send those entries to a MindCheck Tools application server or database. Anyone with access to the same browser profile may be able to read them. A copy or screenshot you create is controlled by your device and any app, sync, or backup service you use.</li>
             </ul>
             <p>
               The combination of behavioral containment (worry time), physiological regulation (breathing), and cognitive restructuring (thought records) addresses anxiety at multiple levels simultaneously, which is why CBT remains the gold-standard treatment for anxiety disorders.
@@ -223,7 +223,7 @@ export default function WorryTimeGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to schedule your worry time?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private, and no account needed. Capture worries and review them on your schedule.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">No account is needed. Entries remain in this browser&apos;s localStorage until you delete them or clear site data; any copy you create is controlled by your device and chosen services.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/worry-time-scheduler" className="btn-primary text-sm">Open the Worry Time Scheduler</Link>
               <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Anxiety Screening</Link>

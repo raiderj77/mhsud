@@ -654,7 +654,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
 
       <div className="text-center mb-6">
         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-          Your privacy matters. This tool runs entirely in your browser. Nothing you type is stored, collected, or transmitted.
+          Your entries are processed locally and are not intentionally sent to MindCheck Tools. Copies, browser or device sync, and shared-device access are outside this boundary.
         </p>
       </div>
 

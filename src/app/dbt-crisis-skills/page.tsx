@@ -7,9 +7,9 @@ const TOOL_URL = `${SITE_URL}/dbt-crisis-skills`;
 
 export const metadata: Metadata = createMetadata({
   path: "/dbt-crisis-skills",
-  title: "DBT Crisis Skills: TIPP, STOP, ACCEPTS & IMPROVE",
+  title: "DBT Crisis Survival Skills | TIPP, STOP & ACCEPTS",
   description:
-    "Explore DBT crisis-skill cards for TIPP, STOP, ACCEPTS, and IMPROVE, with medical cautions and 988 links. Educational only; not emergency care.",
+    "Explore educational DBT crisis-survival and distress-tolerance skill cards for TIPP, STOP, ACCEPTS, and IMPROVE. Includes cautions and 988 links; not emergency care.",
   keywords: [
     "DBT skills cards", "distress tolerance skills",
     "DBT crisis skills", "TIPP skills DBT",
@@ -19,7 +19,7 @@ export const metadata: Metadata = createMetadata({
     "DBT coping skills", "Marsha Linehan DBT",
   ],
   openGraph: {
-    title: "DBT Crisis Skills: TIPP, STOP, ACCEPTS & IMPROVE",
+    title: "DBT Crisis Survival Skills | TIPP, STOP & ACCEPTS",
     description: "Interactive DBT distress-tolerance cards with medical cautions and crisis-support links. Educational only; not DBT treatment or emergency care.",
     url: TOOL_URL,
     type: "website",
@@ -65,7 +65,7 @@ export default function DbtCrisisSkillsPage() {
               description: "Free interactive DBT distress tolerance skills cards. 22 crisis survival skills organized by four acronyms: TIPP (Temperature, Intense exercise, Paced breathing, Progressive relaxation), STOP (Stop, Take a step back, Observe, Proceed mindfully), ACCEPTS (Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations), and IMPROVE (Imagery, Meaning, Prayer, Relaxation, One thing at a time, Vacation, Encouragement). Each card shows detailed instructions and concrete examples. Random skill button for crisis moments. Based on Dialectical Behavior Therapy by Dr. Marsha Linehan.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-08-02",
+              dateModified: "2026-08-05",
             }),
     }),
         }}
@@ -89,14 +89,14 @@ export default function DbtCrisisSkillsPage() {
       />
 
             <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: August 2, 2026
+        Last updated: August 5, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="An educational reference for DBT distress-tolerance skills, including TIPP, STOP, ACCEPTS, and IMPROVE."
+          what="DBT crisis-survival skills are distress-tolerance practices intended to help a person pause and avoid making a high-distress situation worse. This reference covers TIPP, STOP, ACCEPTS, and IMPROVE."
           who="Adults learning DBT skills who want a structured reference during non-emergency distress. For immediate danger, call emergency services."
           bottomLine="A skill may help create a pause, but it cannot make a crisis safe. This page is not DBT treatment, medical advice, or emergency care."
-          lastUpdated="2026-08-02"
+          lastUpdated="2026-08-05"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">

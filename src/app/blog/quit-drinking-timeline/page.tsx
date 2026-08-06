@@ -281,7 +281,7 @@ export default function QuitDrinkingTimelinePage() {
             <p>
               If you are curious about where your current drinking patterns fall on the risk spectrum, our{" "}
               <Link href="/audit-alcohol-test">AUDIT alcohol screening tool</Link>{" "}
-              is a clinically validated, 10-question assessment used by healthcare providers worldwide. It takes about three minutes, is private by design, and your answers never leave your browser.
+              is a clinically validated, 10-question assessment used by healthcare providers worldwide. It takes about three minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               For more information about alcohol use, treatment options, and support services, the{" "}
@@ -299,7 +299,7 @@ export default function QuitDrinkingTimelinePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">See Your Personal Recovery Timeline</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Enter your quit date and visualize your body&apos;s healing milestones. Free, private, and your data never leaves your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Enter your quit date and visualize your body&apos;s healing milestones. Free, private. Inputs are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/health-recovery-timeline" className="btn-primary text-sm">Health Recovery Timeline</Link>
               <Link href="/audit-alcohol-test" className="btn-secondary text-sm">AUDIT Alcohol Screening</Link>

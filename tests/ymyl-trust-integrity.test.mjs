@@ -132,6 +132,21 @@ test("screening hub exposes only maintained canonical routes and every maintaine
       .map((redirect) => [redirect.source, redirect]),
   );
 
+  const categoriesBlock = hub.match(/const CATEGORIES:[\s\S]*?const PRACTICAL_TOOLS/)?.[0] ?? "";
+  const categoryRoutes = [
+    ...categoriesBlock.matchAll(/\{\s*name:\s*"[^"]+"(?:,\s*acronym:\s*"[^"]+")?,\s*href:\s*"(\/[^"]+)"/g),
+  ].map((match) => match[1]);
+  const informationOnlyBlock = hub.match(/const INFORMATION_ONLY_PATHS = new Set\(\[([\s\S]*?)\]\);/)?.[1] ?? "";
+  const informationOnlyRoutes = [
+    ...informationOnlyBlock.matchAll(/"(\/[^"]+)"/g),
+  ].map((match) => match[1]);
+  assert.equal(categoryRoutes.length, 35, "hub must list all 35 maintained assessment and information routes");
+  assert.equal(new Set(categoryRoutes).size, 35, "hub category routes must be unique");
+  assert.equal(informationOnlyRoutes.length, 14, "rights-limited information inventory must stay explicit");
+  for (const route of informationOnlyRoutes) {
+    assert.equal(categoryRoutes.includes(route), true, `${route} is missing from the primary directory categories`);
+  }
+
   for (const route of quarantined) {
     const redirect = exactRedirects.get(route);
     assert.ok(redirect, `${route} has no exact canonical redirect`);
@@ -228,13 +243,11 @@ test("interactive YMYL tools expose the reviewer before the gated client experie
   const routes = [
     ["pcl-5-ptsd-screening", "PCL5Client"],
     ["asrs-adhd-screening", "ASRSClient"],
-    ["dass-21-depression-anxiety-stress", "DASS21Client"],
-    ["scoff-eating-disorder-screening", "SCOFFClient"],
-    ["aq-10-autism-screening", "AQ10Client"],
-    ["msi-bpd-screening", "MSIBPDClient"],
-    ["attachment-style-quiz", "AttachmentStyleClient"],
     ["big-five-personality-test", "BigFiveClient"],
     ["burnout-assessment-tool", "BurnoutClient"],
+    ["compassion-fatigue-test", "BurnoutClient"],
+    ["caregiver-burnout-assessment", "BurnoutClient"],
+    ["work-stress-check", "WorkStressClient"],
     ["mental-load-calculator", "MentalLoadClient"],
     ["sleep-and-mood-check", "SleepMoodClient"],
     ["safety-plan", "SafetyPlanClient"],

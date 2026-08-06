@@ -147,7 +147,7 @@ export default function BurnoutNursesGuidePage() {
           <section>
             <h2>How the MindCheck Tools burnout screening for nurses helps</h2>
             <p>
-              The <Link href="/burnout-test-for-nurses" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout test for nurses</Link> is a free, private screening that measures burnout across emotional exhaustion, depersonalization, and reduced personal accomplishment. It takes under five minutes and runs entirely in your browser, no login, no data stored.
+              The <Link href="/burnout-test-for-nurses" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout test for nurses</Link> is a free, private screening that measures burnout across emotional exhaustion, depersonalization, and reduced personal accomplishment. It takes under five minutes and requires no login. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Naming burnout is the first step toward addressing it. The screening gives you a structured picture of where you stand, which you can bring to your EAP, a therapist, or a trusted colleague. If you are also concerned about compassion fatigue specifically, the <Link href="/compassion-fatigue-test" className="text-sage-600 dark:text-sage-400 underline">compassion fatigue test</Link> focuses on that dimension.

@@ -152,7 +152,7 @@ export default function DrugScreeningTeensGuidePage() {
               <li><strong>T</strong>, Have you ever gotten into <strong>Trouble</strong> while you were using alcohol or drugs?</li>
             </ul>
             <p>
-              A score of 2 or higher on the CRAFFT questions indicates patterns that may warrant further evaluation. The screening is free, takes a few minutes, runs entirely in the browser, and stores no data. You can take it together with your teen as a conversation starter, or a teen can take it privately.
+              A score of 2 or higher on the CRAFFT questions indicates patterns that may warrant further evaluation. The screening is free and takes a few minutes. Questionnaire answers are processed locally in the browser and are not intentionally sent to MindCheck Tools. People with access to the device, browser profile, or copies created may see them. You can take it together with your teen as a conversation starter, or a teen can take it privately.
             </p>
           </section>
 

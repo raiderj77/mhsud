@@ -170,7 +170,7 @@ export default function PHQ9ScoreInterpretationPage() {
         relatedTools={[
           { name: "Take the PHQ-9", description: "Free, private 9-question depression self-check", href: "/phq-9-depression-test" },
           { name: "GAD-7 Anxiety Self-Check", description: "7-question validated anxiety screening tool", href: "/gad-7-anxiety-test" },
-          { name: "DASS-21 Scale", description: "Measures depression, anxiety, and stress together", href: "/dass-21-depression-anxiety-stress" },
+          { name: "PHQ-4 Quick Screen", description: "Brief combined depression and anxiety symptom screen", href: "/phq-4-anxiety-depression-screen" },
         ]}
         sources={[
           { text: "Kroenke, K., Spitzer, R. L., & Williams, J. B. (2001). The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med, 16(9), 606–613.", url: "https://pubmed.ncbi.nlm.nih.gov/11556941/" },

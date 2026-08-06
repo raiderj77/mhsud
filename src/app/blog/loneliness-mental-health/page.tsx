@@ -191,7 +191,7 @@ export default function LonelinessMentalHealthPage() {
               The scale is useful because loneliness can be difficult to self-identify. Many people experience chronic loneliness without labeling it as such, they may describe feeling &quot;empty,&quot; &quot;disconnected,&quot; or simply &quot;off&quot; without connecting those feelings to a lack of meaningful social connection. A structured screening can help bring clarity.
             </p>
             <p>
-              You can take the <Link href="/ucla-loneliness-scale" className="text-sage-600 dark:text-sage-400 underline">UCLA Loneliness Scale screening</Link> on this site. It is free, private (your responses are processed entirely in your browser and never stored), and takes about 3 minutes. The results may help you understand your experience and decide whether to seek additional support.
+              You can take the <Link href="/ucla-loneliness-scale" className="text-sage-600 dark:text-sage-400 underline">UCLA Loneliness Scale screening</Link> on this site. It is free, private, and takes about 3 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them. The results may help you understand your experience and decide whether to seek additional support.
             </p>
           </section>
 
@@ -253,7 +253,7 @@ export default function LonelinessMentalHealthPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">How connected do you feel?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The UCLA Loneliness Scale is a validated screening used in research worldwide. Free, private, and takes about 3 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The UCLA Loneliness Scale is a validated screening used in research worldwide. Free, private, and takes about 3 minutes. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/ucla-loneliness-scale" className="btn-primary text-sm">Take the UCLA Loneliness Scale Screening</Link>
           </div>
 

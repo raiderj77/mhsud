@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ADS_READY_EVENT, CONSENT_EVENT, getCurrentConsent } from "@/lib/privacyConsent";
-import { isSensitiveRoute } from "@/lib/routePolicies";
+import { isOptionalServicesAllowedRoute } from "@/lib/routePolicies";
 
 interface AdSlotProps {
   position: string;
@@ -36,7 +36,7 @@ export function AdSlot({
   adFormat = "auto",
 }: AdSlotProps) {
   const pathname = usePathname();
-  const sensitive = isSensitiveRoute(pathname);
+  const routeAllowed = isOptionalServicesAllowedRoute(pathname);
   const adRef = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
   const [allowed, setAllowed] = useState(false);
@@ -46,11 +46,11 @@ export function AdSlot({
     process.env.NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true";
 
   useEffect(() => {
-    const refresh = () => setAllowed(!sensitive && getCurrentConsent()?.advertising === true);
+    const refresh = () => setAllowed(routeAllowed && getCurrentConsent()?.advertising === true);
     refresh();
     window.addEventListener(CONSENT_EVENT, refresh);
     return () => window.removeEventListener(CONSENT_EVENT, refresh);
-  }, [sensitive]);
+  }, [routeAllowed]);
 
   useEffect(() => {
     if (!allowed) return;
@@ -78,7 +78,7 @@ export function AdSlot({
   // The asynchronous AdSense manual-unit API requires a configured slot ID.
   // When no ID is supplied, render nothing and let the consent-gated global
   // script handle account-side Auto ads instead of pushing an invalid unit.
-  if (sensitive || !runtimeEnabled || !allowed || !adSlot) return null;
+  if (!routeAllowed || !runtimeEnabled || !allowed || !adSlot) return null;
 
   return (
     <div

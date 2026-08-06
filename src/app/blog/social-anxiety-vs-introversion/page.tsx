@@ -276,7 +276,7 @@ export default function SocialAnxietyVsIntroversionPage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Is it introversion or social anxiety?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The SPIN takes about 3 minutes. Free, private, and your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The SPIN takes about 3 minutes. Free and private. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/spin-social-anxiety-test" className="btn-primary text-sm">Take the SPIN Social Anxiety Screening</Link>
               <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Anxiety Check</Link>

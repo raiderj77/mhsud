@@ -6,6 +6,11 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import {
+  PRIVATE_SHARE_COPIED_MESSAGE,
+  PRIVATE_SHARE_NOTICE,
+  sharePrivateToolLink,
+} from "@/lib/privateToolSharing";
 
 /* ── Suggestion chips ─────────────────────────────────── */
 
@@ -170,14 +175,14 @@ export function RelapsePlanClient({ faqData }: Props) {
   const handlePrint = useCallback(() => window.print(), []);
 
   const handleShare = useCallback(async () => {
-    const url = "https://mindchecktools.com/relapse-prevention-plan";
-    const text = "Build your own relapse prevention plan, identify triggers, warning signs, coping strategies, emergency contacts, and a craving action plan. Free and private.";
-    if (navigator.share) {
-      try { await navigator.share({ title: "Relapse Prevention Plan Builder", text, url }); return; } catch { /* cancelled */ }
+    const outcome = await sharePrivateToolLink({
+      toolName: "Relapse Prevention Plan Builder",
+      canonicalPath: "/relapse-prevention-plan",
+    });
+    if (outcome === "copied") {
+      setShareMessage(PRIVATE_SHARE_COPIED_MESSAGE);
+      setTimeout(() => setShareMessage(""), 2500);
     }
-    await navigator.clipboard.writeText(url);
-    setShareMessage("Link copied!");
-    setTimeout(() => setShareMessage(""), 2500);
   }, []);
 
   const handleReset = () => {
@@ -199,7 +204,7 @@ export function RelapsePlanClient({ faqData }: Props) {
           Relapse Prevention Plan Builder
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Build a personalized relapse prevention plan you can print and keep. Fill in each section below, your answers stay in your browser and are never stored.
+          Build a personalized relapse prevention plan you can print and keep. Entries are processed locally and are not intentionally sent to MindCheck Tools. A print or saved copy is handled by your browser, device, printer, and any sync or backup services you use.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {[
@@ -527,12 +532,13 @@ export function RelapsePlanClient({ faqData }: Props) {
               Print Plan
             </button>
             <button onClick={handleShare} className="btn-secondary text-sm flex-1 min-w-[120px]">
-              Share Tool
+              Share Tool Link
             </button>
             <button onClick={handleReset} className="btn-secondary text-sm flex-1 min-w-[120px] text-crisis-600 dark:text-crisis-400 hover:bg-crisis-50 dark:hover:bg-crisis-950/20">
               Start Over
             </button>
           </div>
+          <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 print:hidden">{PRIVATE_SHARE_NOTICE}</p>
           {shareMessage && (
             <p className="text-center text-sm font-medium text-sage-600 dark:text-sage-400 animate-fade-in print:hidden">{shareMessage}</p>
           )}
@@ -620,8 +626,7 @@ export function RelapsePlanClient({ faqData }: Props) {
             This tool is most effective when used alongside professional support from a counselor, therapist, or sponsor.
           </p>
           <p>
-            <strong>Your data is never stored.</strong> Everything you enter is processed in your browser only. When you close this page,
-            your plan data is gone. Print or save your plan before leaving.
+            <strong>This form uses local processing.</strong> Entries are not intentionally sent to MindCheck Tools. Prints, saved copies, browser or device sync, backups, and shared-device access are outside this boundary.
           </p>
           <ToolReviewerBio />
         </div>

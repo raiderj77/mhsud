@@ -154,7 +154,7 @@ export default function AutismScreeningAdultsGuidePage() {
               The AQ-10 consists of 10 statements about social interaction, communication patterns, attention to detail, and flexibility. You rate each statement based on how strongly you agree or disagree. A score of 6 or higher suggests that further evaluation for autism may be warranted.
             </p>
             <p>
-              It is important to understand what the AQ-10 is, and what it is not. It is a screening tool, not a diagnostic instrument. A high score does not mean you are autistic; a low score does not mean you are not. What it does is help you decide whether pursuing a fuller assessment makes sense for you. You can take our free <Link href="/aq-10-autism-screening" className="text-sage-600 dark:text-sage-400 underline">AQ-10 autism screening</Link> right now. Your answers are processed entirely in your browser and are never stored or shared.
+              It is important to understand what the AQ-10 is, and what it is not. It is a screening tool, not a diagnostic instrument. A high score does not mean you are autistic; a low score does not mean you are not. What it does is help you decide whether pursuing a fuller assessment makes sense for you. You can take our free <Link href="/aq-10-autism-screening" className="text-sage-600 dark:text-sage-400 underline">AQ-10 autism screening</Link> right now. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
           </section>
 
@@ -213,7 +213,7 @@ export default function AutismScreeningAdultsGuidePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Wondering if you might be autistic?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The AQ-10 is a validated screening tool developed at the University of Cambridge. Free, private, takes about 2 minutes. Your answers never leave your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The AQ-10 is a validated screening tool developed at the University of Cambridge. Free, private, takes about 2 minutes. Answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
             <Link href="/aq-10-autism-screening" className="btn-primary text-sm">Take the AQ-10 Autism Screening</Link>
           </div>
 

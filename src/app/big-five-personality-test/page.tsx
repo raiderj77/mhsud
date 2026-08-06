@@ -34,7 +34,7 @@ const FAQ_DATA = [
   { question: "How is the test scored?", answer: "Each of the five traits is measured by 10 items rated 1-5. Some items are reverse-scored (6 minus the raw score). Each trait score ranges from 10 to 50. Higher scores indicate stronger presence of that trait." },
   { question: "Can my personality change over time?", answer: "Yes. Research shows personality traits can shift across the lifespan. People generally become more conscientious and agreeable and less neurotic as they age. Major life events, therapy, and intentional effort can also produce changes." },
   { question: "How is this different from Myers-Briggs (MBTI)?", answer: "The Big Five is the dominant model in academic personality research with decades of validation. Unlike MBTI, which sorts people into 16 types, the Big Five measures five continuous dimensions. Research consistently shows the Big Five has stronger reliability, validity, and predictive power than MBTI." },
-  { question: "Is my data stored or shared?", answer: "No. All scoring happens entirely in your browser using client-side JavaScript. Your answers are never sent to any server, stored in any database, or shared with anyone. When you close or reset this page, your responses are gone." },
+  { question: "How is my questionnaire data handled?", answer: "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary." },
 ];
 
 export default function BigFivePersonalityTestPage() {

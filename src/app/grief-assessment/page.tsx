@@ -120,7 +120,7 @@ export default function GriefAssessmentPage() {
             discussing with a qualified healthcare professional.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            Your answers are scored entirely in your browser and are not sent to MindCheck Tools.
+            Your answers and score are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -258,7 +258,7 @@ export default function GriefAssessmentPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This assessment is for educational purposes only, it is not a diagnosis. Only a
             licensed healthcare professional can diagnose complicated grief or related conditions.
-            Your responses are processed entirely in your browser and are never stored or transmitted.
+            Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 

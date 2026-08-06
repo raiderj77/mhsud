@@ -146,7 +146,7 @@ export default function BurnoutHealthcareWorkersGuidePage() {
           <section>
             <h2>How the MindCheck Tools burnout screening helps</h2>
             <p>
-              The <Link href="/burnout-test-for-healthcare-workers" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout screening for healthcare workers</Link> is a free, private self-assessment that measures burnout across the three Maslach dimensions. It takes under five minutes, runs entirely in your browser, and requires no account or login.
+              The <Link href="/burnout-test-for-healthcare-workers" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools burnout screening for healthcare workers</Link> is a free, private self-assessment that measures burnout across the three Maslach dimensions. It takes under five minutes and requires no account or login. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               A burnout screening gives you a structured snapshot, objective data that cuts through the &quot;everyone feels this way&quot; normalization common in healthcare culture. You can bring your results to a therapist, your EAP, or a trusted colleague as a conversation starter.

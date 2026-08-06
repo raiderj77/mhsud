@@ -181,7 +181,7 @@ export default function AdhdAdultsGuidePage() {
               This is not coincidental. ADHD has a strong genetic component, heritability is estimated at 74%, making it one of the most heritable psychiatric conditions. If your child has ADHD, there is a significant probability that a biological parent does as well. The child&apos;s assessment creates a mirror in which the parent can finally see their own patterns clearly.
             </p>
             <p>
-              If you are in this situation, the <Link href="/adhd-test-adults" className="text-sage-600 dark:text-sage-400 underline">adult ADHD screening</Link> is a reasonable next step. It takes under five minutes, is private by design, and can help you determine whether your own patterns warrant professional evaluation.
+              If you are in this situation, the <Link href="/adhd-test-adults" className="text-sage-600 dark:text-sage-400 underline">adult ADHD screening</Link> is a reasonable next step. It takes under five minutes, requires no account, and can help you determine whether your own patterns warrant professional evaluation.
             </p>
           </section>
 

@@ -50,7 +50,7 @@ export default function BurnoutTestForTeachersPage() {
         </div>
         <div className="mb-10">
           <a href="#screening" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-600 text-white font-semibold text-base hover:bg-amber-700 transition-colors shadow-sm">Start the Burnout Assessment</a>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 5 minutes. Answers stay in your browser and are not sent to MindCheck Tools.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Takes about 5 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p>
         </div>
 
         {/* Why This Matters */}
@@ -122,7 +122,7 @@ export default function BurnoutTestForTeachersPage() {
             <div className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
               <p>This tool uses questions drawn from established burnout research to measure all three Maslach dimensions. You will answer questions about how often you feel emotionally drained, how connected you feel to your students, and whether your work feels effective and meaningful.</p>
               <p><strong>Scoring:</strong> Results are returned across the three dimensions, emotional exhaustion, depersonalization, and personal accomplishment, so you can see which areas are most affected rather than receiving a single opaque number.</p>
-              <p><strong>Privacy:</strong> Everything runs in your browser. Nothing is stored, transmitted, or shared. No employer, union, or administration has access to your results.</p>
+              <p><strong>Privacy:</strong> Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools, an employer, union, or school administration. Ordinary page requests can still create hosting records, and copied, synced, or shared-device content is outside this boundary.</p>
               <p><strong>What it is not:</strong> This is a screening, not a clinical diagnosis. A psychologist or counselor can provide a comprehensive assessment and a personalized recovery plan. This tool can help you decide whether that conversation is warranted.</p>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function BurnoutTestForTeachersPage() {
             <li><strong>SAMHSA National Helpline:</strong> <strong>1-800-662-4357</strong></li>
           </ul>
         </div>
-        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. Your responses are processed entirely in your browser and are never stored or transmitted.</p></div>
+        <div className="mb-6"><p className="text-sm text-slate-500 dark:text-slate-400 italic">This screening tool is for educational purposes only, it is not a diagnosis. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</p></div>
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from WHO, CDC NIOSH, and NIMH. This is a self-reflection tool, not a clinical assessment.</p>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: May 2026</p>

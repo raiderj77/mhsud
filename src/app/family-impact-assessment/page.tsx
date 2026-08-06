@@ -63,7 +63,7 @@ const FAQ_DATA = [
   {
     question: "Is my data private?",
     answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool. Your privacy is especially important given the sensitive nature of these questions.",
+      "Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. No account is required. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.",
   },
 ];
 

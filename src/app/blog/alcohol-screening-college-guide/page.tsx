@@ -116,7 +116,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
           <section>
             <h2>How the MindCheck Tools alcohol screening helps</h2>
             <p>
-              The <Link href="/alcohol-screening-for-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools alcohol screening for college students</Link> is a free, private assessment based on validated clinical questions. It takes under five minutes, runs entirely in your browser, and no one sees your results but you.
+              The <Link href="/alcohol-screening-for-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools alcohol screening for college students</Link> is a free, private assessment based on validated clinical questions. It takes under five minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools or a school. People with access to your device, browser profile, or copies you create may see them; ordinary page requests may also create limited hosting or security logs.
             </p>
             <p>
               The screening is not about labeling you or telling you what to do. It gives you a structured, honest picture of your drinking patterns, something that is difficult to see clearly when heavy drinking is normalized around you. You can use your results as a private reflection tool or bring them to a campus counselor.
@@ -155,7 +155,7 @@ export default function AlcoholScreeningCollegeGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check your drinking patterns privately</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, anonymous, and no one sees your results but you.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free; no account required. Answers are processed locally and are not intentionally sent to MindCheck Tools or a school. Device users and copies you create may expose them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/alcohol-screening-for-college-students" className="btn-primary text-sm">College Alcohol Screening</Link>
               <Link href="/audit-alcohol-test" className="btn-primary text-sm">Full AUDIT Screening</Link>

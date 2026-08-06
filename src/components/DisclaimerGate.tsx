@@ -106,7 +106,7 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
           id="educational-use-consent"
           type="checkbox"
           checked={checked}
-          onChange={() => setChecked(!checked)}
+          onChange={(event) => setChecked(event.currentTarget.checked)}
           className="mt-0.5 w-5 h-5 accent-sage-600 rounded cursor-pointer"
         />
         <span className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">

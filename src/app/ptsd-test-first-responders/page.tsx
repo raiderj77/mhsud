@@ -156,7 +156,7 @@ export default function PTSDTestFirstRespondersPage() {
             Start the PTSD Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 5–10 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 5–10 minutes. Answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export default function PTSDTestFirstRespondersPage() {
                 <p><strong>Sleep disruption:</strong> Shift work combined with PTSD creates severe sleep disruption. Nightmares, hypervigilance at bedtime, and irregular schedules compound each other. Sleep restoration is often a critical early focus of treatment.</p>
                 <p><strong>Substance use as coping:</strong> First responders have elevated rates of alcohol and substance use, often as a way to manage symptoms they cannot or will not address directly. If you are using substances to cope with what you have seen, that pattern is important to examine honestly.</p>
                 <p><strong>Peer support matters:</strong> Talking to someone who has been on similar calls and understands the culture can be more effective than general therapy. Many departments now have formal peer support teams, and organizations like Safe Call Now provide confidential support from fellow first responders.</p>
-                <p><strong>Your privacy:</strong> Everything happens in your browser. Nothing is stored, transmitted, or visible to your department, command staff, or anyone else.</p>
+                <p><strong>Your privacy:</strong> Answers and scores are processed locally and are not intentionally sent to MindCheck Tools. The tool does not ask for your department, unit, or command. Ordinary page requests can still create hosting records.</p>
               </div>
             </div>
           </div>
@@ -382,7 +382,7 @@ export default function PTSDTestFirstRespondersPage() {
               <p className="text-sm text-slate-700 dark:text-slate-300">
                 <strong>1-206-459-3020</strong>, a 24/7 crisis line staffed by and for first
                 responders. They understand the job, the culture, and the specific challenges
-                you face. Completely confidential. You can also visit safecallnow.org.
+                you face. Review the service&apos;s privacy terms before sharing personal information. You can also visit safecallnow.org.
               </p>
             </div>
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
@@ -429,7 +429,7 @@ export default function PTSDTestFirstRespondersPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
             healthcare professional can assess PTSD or related conditions. Your responses are processed
-            entirely in your browser and are never stored or transmitted. Always consult a qualified
+            locally and are not intentionally sent to MindCheck Tools. Always consult a qualified
             healthcare professional for medical advice.
           </p>
         </div>

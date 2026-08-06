@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
@@ -119,6 +120,7 @@ interface Props {
 }
 
 export function RSESClient({ faqData }: Props) {
+  const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
   const questionRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -155,6 +157,18 @@ export function RSESClient({ faqData }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  if (!accepted) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        <DisclaimerGate
+          toolName="Rosenberg Self-Esteem Scale"
+          toolDescription="Review the privacy and educational-use limits before answering this self-check."
+          onAccept={() => setAccepted(true)}
+        />
+      </div>
+    );
+  }
+
   /* ---------------------------------------------------------------- */
   /*  Results View                                                     */
   /* ---------------------------------------------------------------- */
@@ -163,9 +177,9 @@ export function RSESClient({ faqData }: Props) {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10" aria-live="polite">
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
           Your Self-Esteem Results
-        </h1>
+        </h2>
         <p className="text-center text-neutral-500 dark:text-neutral-400 mb-8">
           Rosenberg Self-Esteem Scale &middot; {ITEMS.length} items &middot; Score 0&ndash;30
         </p>
@@ -423,7 +437,7 @@ export function RSESClient({ faqData }: Props) {
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 mb-10">
-          Your responses were scored entirely in your browser. Nothing was stored or transmitted.
+          Your responses and score were processed locally and were not intentionally sent to MindCheck Tools.
         </p>
 
         {/* FAQ */}
@@ -456,14 +470,14 @@ export function RSESClient({ faqData }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
-        Rosenberg Self-Esteem Scale
-      </h1>
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 text-center">
+        Answer the Rosenberg scale questions
+      </h2>
       <p className="text-center text-neutral-500 dark:text-neutral-400 mb-2 max-w-2xl mx-auto">
         A widely used measure of global self-esteem developed by Morris Rosenberg (1965).
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        10 questions &middot; ~2 minutes &middot; private by design &middot; Public domain instrument
+        10 questions &middot; ~2 minutes &middot; local browser processing &middot; Public domain instrument
       </p>
 
       <AdSlot position="tool-top" />
@@ -518,7 +532,7 @@ export function RSESClient({ faqData }: Props) {
                 <button
                   key={opt.value}
                   onClick={() => handleAnswer(item.id, opt.value)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                  className={`min-h-11 min-w-11 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                     answers[item.id] === opt.value
                       ? "bg-sage-600 text-white"
                       : "bg-sand-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-sage-100 dark:hover:bg-sage-900/30"
@@ -578,7 +592,7 @@ export function RSESClient({ faqData }: Props) {
       </div>
 
       <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-        Your responses are scored entirely in your browser and are not sent to MindCheck Tools.
+        Your responses and score are processed locally and are not intentionally sent to MindCheck Tools.
       </p>
     </div>
   );

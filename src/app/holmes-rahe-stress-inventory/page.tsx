@@ -1,137 +1,145 @@
 import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { HolmesRaheClient } from "./HolmesRaheClient";
-import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
+import {
+  breadcrumbJsonLd,
+  createMetadata,
+  faqJsonLd,
+  medicalWebPageJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
+import {
+  RightsBoundaryInformationPage,
+  type InformationFaq,
+} from "@/app/_components/RightsBoundaryInformationPage";
 
-const TOOL_URL = `${SITE_URL}/holmes-rahe-stress-inventory`;
+const PAGE_PATH = "/holmes-rahe-stress-inventory";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 export const metadata: Metadata = createMetadata({
-  path: "/holmes-rahe-stress-inventory",
-  title: "Holmes-Rahe Stress Inventory | Life Stress Self-Check",
+  path: PAGE_PATH,
+  title: "Holmes-Rahe Stress Inventory Information and Rights Boundary",
   description:
-    "Free Holmes-Rahe Social Readjustment Rating Scale. 43-item life stress checklist with Life Change Units scoring. Check events from the past 12 months. Private, no signup.",
+    "Educational information about the Holmes-Rahe Social Readjustment Rating Scale, why it is not administered here, and non-equivalent public-use options.",
   keywords: [
-    "Holmes-Rahe stress inventory", "social readjustment rating scale",
-    "life stress test", "Holmes and Rahe", "life change units",
-    "stress scale", "life events stress", "Holmes-Rahe scale",
-    "stress screening", "life stress checklist",
-    "stressful life events questionnaire",
-    "stress risk assessment",
+    "Holmes-Rahe information",
+    "Social Readjustment Rating Scale",
+    "Holmes-Rahe rights",
+    "life events stress research",
   ],
   openGraph: {
-    title: "Holmes-Rahe Stress Inventory | Life Stress Self-Check",
-    description:
-      "Free Holmes-Rahe Social Readjustment Rating Scale. 43-item life stress checklist with Life Change Units scoring. Private, no signup.",
-    url: TOOL_URL,
+    title: "Holmes-Rahe Stress Inventory Information",
+    description: "Research context and the public-web reproduction boundary for the Holmes-Rahe scale.",
+    url: PAGE_URL,
     type: "website",
   },
 });
 
-const FAQ_DATA = [
+const FAQ_DATA: InformationFaq[] = [
   {
-    question: "What is the Holmes-Rahe Stress Inventory?",
+    question: "What is the Holmes-Rahe Social Readjustment Rating Scale?",
     answer:
-      "The Holmes-Rahe Social Readjustment Rating Scale is a 43-item life stress checklist developed by psychiatrists Thomas Holmes and Richard Rahe in 1967. It measures stress by assigning Life Change Units (LCU) to major life events. The scale was developed by studying over 5,000 medical patients and correlating life events with illness onset. It remains one of the most widely cited stress measurement tools in psychological research.",
+      "It is a research instrument developed by Thomas Holmes and Richard Rahe to study associations between accumulated life changes and later illness. It describes population-level associations and cannot predict an individual's health outcome.",
   },
   {
-    question: "How is the Holmes-Rahe Scale scored?",
+    question: "Can I complete the Holmes-Rahe inventory on MindCheck Tools?",
     answer:
-      "You check all life events that have occurred in the past 12 months. Each event has a pre-assigned Life Change Unit (LCU) value ranging from 11 to 100. Your total score is the sum of all checked events. Scores below 150 suggest low susceptibility to stress-related illness. Scores of 150-299 suggest about a 50% chance of a major health breakdown in the next 2 years. Scores of 300 or more suggest about an 80% chance, though these are statistical associations, not certainties.",
+      "No. MindCheck Tools has not archived permission covering public electronic reproduction, automated calculation, or respondent-facing interpretation, so this route is educational only.",
   },
   {
-    question: "What are Life Change Units (LCU)?",
+    question: "Why are there no event weights, score bands, or health-risk percentages here?",
     answer:
-      "Life Change Units are numerical values assigned to each life event based on the amount of readjustment that event typically requires. Holmes and Rahe determined these values by surveying thousands of people about the relative amount of adjustment each event demanded. Death of a spouse received the highest value (100 LCU), while minor violations of the law received the lowest (11 LCU). Importantly, both positive and negative events receive LCU values because all major life changes require adaptation.",
+      "Those elements are part of the instrument and its interpretation. Reproducing them without documented permission would cross the site's rights boundary, and applying population associations to an individual can also be misleading.",
   },
   {
-    question: "Is this a medical test?",
+    question: "Are the K6 or PHQ-4 equivalent to Holmes-Rahe?",
     answer:
-      "No. The Holmes-Rahe Stress Inventory is a self-reflection and educational tool, not a clinical diagnosis or medical test. It identifies statistical associations between accumulated life changes and health risk at the population level, it does not predict what will happen to any individual. Many people with high scores remain healthy, and many factors (coping skills, social support, physical health) influence outcomes. Always consult a healthcare professional for health concerns.",
+      "No. K6 asks about nonspecific psychological distress and PHQ-4 screens recent depression and anxiety symptoms. Neither measures life-event readjustment or produces a Holmes-Rahe result.",
   },
   {
-    question: "Why are positive events included in the scale?",
+    question: "Can this page diagnose a stress-related condition?",
     answer:
-      "The Holmes-Rahe Scale measures life change and readjustment, not just negative stress. Events like marriage, retirement, pregnancy, and outstanding personal achievement all require significant adaptation and adjustment, even though they are positive. The research behind the scale found that any major life change, whether welcome or unwelcome, contributes to the overall stress load on the body and mind. This is why positive events like vacation (13 LCU) and Christmas (12 LCU) appear on the list.",
-  },
-  {
-    question: "Is my data private?",
-    answer:
-      "Yes, completely. All scoring happens in your browser using JavaScript. Your answers are never sent to a server, stored in a database, or accessible to anyone. When you close this page, your responses are gone. We do not use accounts, logins, or any form of data collection for this tool.",
+      "No. This page is educational and does not assess symptoms, illness risk, or a diagnosis. A qualified healthcare professional can evaluate concerns in context.",
   },
 ];
 
-export default function HolmesRahePage() {
+export default function HolmesRaheInformationPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-      ...toolPageJsonLd({
-              name: "Holmes-Rahe Life Stress Inventory",
-              description:
-                "A free online implementation of the Holmes-Rahe Social Readjustment Rating Scale (1967). 43-item life stress checklist where users check life events from the past 12 months. Each event has assigned Life Change Units (LCU). Three risk tiers: Low (0-149), Moderate (150-299), High (300+).",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+          __html: JSON.stringify(
+            medicalWebPageJsonLd({
+              name: "Holmes-Rahe Stress Inventory Information and Rights Boundary",
+              description: "Educational research and rights information without questionnaire administration or scoring.",
+              url: PAGE_URL,
+              lastReviewed: "2026-08-02",
             }),
-    }),
+          ),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", url: SITE_URL },
-              { name: "Holmes-Rahe Stress Inventory", url: TOOL_URL },
-            ])
+              { name: "Holmes-Rahe Information", url: PAGE_URL },
+            ]),
           ),
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="The Holmes-Rahe Stress Inventory, a validated tool that measures accumulated life change stress by summing Life Change Units from major events."
-          who="Anyone who has experienced multiple life changes recently and wants to understand their cumulative stress level."
-          bottomLine="High life-change scores are associated with increased illness risk, awareness helps you take preventive action. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime="2025-01-01">
-          {new Date("2025-01-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-      </div>
-
-<HolmesRaheClient faqData={FAQ_DATA} />
+      <RightsBoundaryInformationPage
+        title="Holmes-Rahe Stress Inventory Information"
+        intro="MindCheck Tools does not reproduce, administer, score, or interpret the Holmes-Rahe Social Readjustment Rating Scale. This page preserves the public URL as a research and rights explainer."
+        what="An educational overview of the Holmes-Rahe instrument, its research purpose, limitations, and public-web reproduction boundary."
+        who="People seeking accurate context about the scale or a separately permitted way to reflect on recent distress."
+        bottomLine="No public electronic reproduction permission is on file, so this page provides no inventory, weights, score, risk band, or individualized prediction. It is not diagnostic."
+        boundaryHeading="Why the public inventory is not provided"
+        boundaryParagraphs={[
+          "The original publication is copyrighted and does not itself grant third parties permission to reproduce the instrument on a public consumer website.",
+          "APA guidance also distinguishes research or teaching access from permission to post a test online. MindCheck Tools has not archived a rights-holder grant covering public electronic administration, scoring, or commercial context.",
+          "The URL therefore remains publicly useful as an informational page while the protected inventory, event values, calculated result, and future-health claims are withheld.",
+        ]}
+        overviewHeading="What the research instrument was designed to study"
+        overviewParagraphs={[
+          "Holmes and Rahe developed the Social Readjustment Rating Scale to study whether accumulated life changes were associated with later illness across groups of people.",
+          "An association observed in a research population is not a personal forecast. Health is influenced by many factors, and an inventory result cannot establish that stress caused or will cause an illness.",
+        ]}
+        alternatives={[
+          {
+            href: "/k6-distress-scale",
+            name: "K6 Psychological Distress Self-Check",
+            description: "A separately permitted screen for recent nonspecific distress. It does not measure life events or predict illness.",
+          },
+          {
+            href: "/phq-4-anxiety-depression-screen",
+            name: "PHQ-4 Depression and Anxiety Screen",
+            description: "A brief, separately permitted symptom screener. It is not a life-change inventory and is not interchangeable with Holmes-Rahe.",
+          },
+        ]}
+        sources={[
+          {
+            href: "https://pubmed.ncbi.nlm.nih.gov/6059863/",
+            label: "PubMed: The Social Readjustment Rating Scale",
+            detail: "Primary 1967 publication record by Holmes and Rahe.",
+          },
+          {
+            href: "https://www.sciencedirect.com/science/article/pii/0022399967900104",
+            label: "Elsevier: original article",
+            detail: "Publisher record; access does not provide a public-web reproduction grant.",
+          },
+          {
+            href: "https://blog.apapubs.org/2016/12/21/how-permissions-work-in-psyctests/",
+            label: "APA PsycTests permissions guidance",
+            detail: "Explains why permission for research or teaching does not automatically authorize online posting.",
+          },
+        ]}
+        faq={FAQ_DATA}
+        reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
+      />
     </>
   );
 }

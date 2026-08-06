@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: screening answers are processed entirely in your browser and are not transmitted to our servers. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. Analytics is consent-controlled and disabled on sensitive routes. Advertising remains behind separate publisher, certified-CMP, consent, non-personalized, and route-safety gates.
+              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared browser or device access are outside this boundary. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. Analytics is consent-controlled and disabled on sensitive routes. Advertising remains behind separate publisher, certified-CMP, consent, non-personalized, and route-safety gates.
             </p>
           </section>
 
@@ -118,7 +118,7 @@ export default function TermsPage() {
               If you are located in the EEA or UK, you have rights under the General Data Protection Regulation (GDPR) including:
             </p>
             <p>
-              <strong>Right to access:</strong> You can request information about what personal data we process. Screening answers stay in your browser. If you subscribed to resource emails, the subscriber record contains your email address.
+              <strong>Right to access:</strong> You can request information about what personal data we process. Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools. If you subscribed to resource emails, the subscriber record contains your email address.
             </p>
             <p>
               <strong>Right to erasure:</strong> You can request deletion of your subscriber record by contacting privacy@mindchecktools.com. You can also unsubscribe from any marketing email, clear browser storage, and use our cookie controls to withdraw cookie consent. Service providers may retain limited records where required for suppression, security, backup, or legal obligations.
@@ -146,7 +146,7 @@ export default function TermsPage() {
               <strong>Right to know:</strong> You can request information about what personal information we collect, use, and disclose. Our data practices are described in our <Link href="/privacy">Privacy Policy</Link> and <Link href="/cookies">Cookie Policy</Link>.
             </p>
             <p>
-              <strong>Right to delete:</strong> Screening answers are not stored by us. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
+              <strong>Right to delete:</strong> The questionnaire code is not configured to submit screening answers to a MindCheck Tools application database. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
               <strong>Right to opt out of sale/sharing:</strong> We do not &quot;sell&quot; personal information in the traditional sense. However, certain cookie-based analytics or advertising data may constitute &quot;sharing&quot; under the CPRA. You can opt out via our cookie banner or by using a browser that sends the Global Privacy Control (GPC) signal. We honor GPC signals.

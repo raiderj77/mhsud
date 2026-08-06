@@ -259,7 +259,7 @@ export default function WhatOCDLooksLikePage() {
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Check in on anxiety and mood</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings for anxiety and depression. Results stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Free, private screenings for anxiety and depression. Results are generated locally and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">GAD-7 Anxiety Check</Link>
               <Link href="/phq-9-depression-test" className="btn-primary text-sm">PHQ-9 Depression Check</Link>

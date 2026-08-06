@@ -175,7 +175,7 @@ export default function PtsdFirstRespondersGuidePage() {
           <section>
             <h2>Screening for PTSD: why it matters for first responders</h2>
             <p>
-              The <Link href="/ptsd-test-first-responders" className="text-sage-600 dark:text-sage-400 underline">PTSD screening for first responders</Link> on MindCheck Tools uses the PCL-5, a validated 20-item measure that assesses PTSD symptom severity across all four clusters. It takes under ten minutes, runs entirely in your browser, and your responses are never stored or shared.
+              The <Link href="/ptsd-test-first-responders" className="text-sage-600 dark:text-sage-400 underline">PTSD screening for first responders</Link> on MindCheck Tools uses the PCL-5, a validated 20-item measure that assesses PTSD symptom severity across all four clusters. It takes under ten minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools or an employer. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               Screening serves several purposes for first responders specifically. It provides an objective measure that cuts through the normalization of symptoms (&quot;I thought everyone felt this way&quot;). It creates a structured record you can bring to a therapist or peer support contact. And it validates what you may have been experiencing privately for years.
@@ -224,7 +224,7 @@ export default function PtsdFirstRespondersGuidePage() {
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a free, private PTSD screening</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Confidential. No account required. Results stay in your browser.</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Confidential. No account required. Results are generated locally and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ptsd-test-first-responders" className="btn-primary text-sm">First Responder PTSD Screening</Link>
               <Link href="/pc-ptsd-5-screening" className="btn-primary text-sm">PC-PTSD-5 Quick Screen</Link>

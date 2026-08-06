@@ -51,7 +51,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is this screening confidential?",
-    answer: "Yes, completely. This screening runs entirely in your browser. No data is stored, transmitted, or accessible to the military, the VA, your command, or anyone else. Your answers never leave your device. This is a private self-check that only you can see.",
+    answer: "The questionnaire code processes answers locally and does not intentionally send them to MindCheck Tools, the military, the VA, or your command. Ordinary page requests can still create hosting records, and copied, printed, synced, or shared-device content is outside this boundary.",
   },
   {
     question: "What counts as binge drinking in the military?",
@@ -139,9 +139,9 @@ export default function AlcoholScreeningMilitaryPage() {
           <p className="text-lg text-slate-600 dark:text-slate-300">
             This free, browser-local screening uses the AUDIT (Alcohol Use Disorders
             Identification Test), a tool developed by the World Health Organization and used
-            worldwide. It is <strong>not a diagnosis</strong>, and no one, not your command,
-            the VA, or anyone else, will see your answers. Everything stays in your browser.
-            This is between you and the screen.
+            worldwide. It is <strong>not a diagnosis</strong>. The questionnaire code does not intentionally
+            send your answers or score to MindCheck Tools, your command, or the VA. Ordinary page requests
+            can still create hosting records, and shared-browser or device access is outside this boundary.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function AlcoholScreeningMilitaryPage() {
             Start the Alcohol Screening
           </a>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-            Takes about 3 minutes. Answers stay in your browser and are not sent to MindCheck Tools.
+            Takes about 3 minutes. Questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
         </div>
 
@@ -260,7 +260,7 @@ export default function AlcoholScreeningMilitaryPage() {
             <p>
               Confidential options do exist. Military OneSource provides up to 12 non-medical
               counseling sessions that are not reported to your command. The AUDIT screening
-              you&apos;re about to take runs entirely in your browser, no records, no tracking.
+              you&apos;re about to take processes answers and scores locally and does not intentionally send them to MindCheck Tools. It does not ask for a unit, command, VA record, or military identifier. Ordinary page requests can still create hosting records.
               Chaplains offer privileged communication. And self-referral for substance use
               treatment is protected under DOD policy and is generally viewed more favorably than
               a command-directed referral after an incident. Reaching out early gives you the
@@ -383,8 +383,8 @@ export default function AlcoholScreeningMilitaryPage() {
         <div className="mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400 italic">
             This screening tool is for educational purposes only, it is not a diagnosis. Only a qualified
-            healthcare professional can assess alcohol use disorders. Your responses are processed entirely
-            in your browser and are never stored or transmitted. This screening is not affiliated with the
+            healthcare professional can assess alcohol use disorders. Questionnaire answers and scores are
+            processed locally and are not intentionally sent to MindCheck Tools. This screening is not affiliated with the
             Department of Defense, the VA, or any military branch. Always consult a qualified healthcare
             professional for medical advice.
           </p>

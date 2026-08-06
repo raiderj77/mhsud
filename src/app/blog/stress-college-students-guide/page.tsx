@@ -163,7 +163,7 @@ export default function StressCollegeStudentsGuidePage() {
           <section>
             <h2>How the MindCheck Tools college stress screening helps</h2>
             <p>
-              The <Link href="/stress-test-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools stress screening for college students</Link> is a free, private self-assessment designed specifically for the stressors college students face. It takes under five minutes, runs entirely in your browser, and requires no account or login.
+              The <Link href="/stress-test-college-students" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools stress screening for college students</Link> is a free, private self-assessment designed specifically for the stressors college students face. It takes under five minutes and requires no account or login. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools or a school. People with access to your device, browser profile, or copies you create may see them.
             </p>
             <p>
               A screening provides a structured snapshot of your stress level, objective data that cuts through the normalization of &quot;everyone is stressed&quot; in college culture. It can help you determine whether your stress is within a typical range or whether it has reached a level that would benefit from professional support.
