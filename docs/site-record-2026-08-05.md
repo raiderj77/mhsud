@@ -199,15 +199,25 @@ The informational routes remain public directory and sitemap destinations, but d
 
 The production-aligned monetization plan treats assessment, result, crisis, youth, condition-specific, privacy, and rights-limited surfaces as tag-free; permits only unlinked aggregate measurement; and separates professional readiness review, AdSense, static sponsorship, ethical affiliate, professional licensing/API, and paid original educational products with channel-specific release and account gates.
 
+### Local professional monetization foundation, not published
+
+- A proposed `/for-professionals` page targets digital-health and behavioral-health software teams with a fixed-scope implementation-readiness review using public or fictional staging evidence only.
+- A proposed printable screening-implementation checklist contains no instrument items and cites official FTC health-app and breach guidance, Google publisher policy, WCAG 2.2, the NIST Secure Software Development Framework, official 988 help, and SAMHSA implementation guidance.
+- Both pages explicitly reject patient records, assessment answers, scores, diagnoses, legal or clinical certification, instrument permission claims, and guaranteed compliance.
+- Internal discovery is limited to general About, Contact, and Methodology pages plus the sitemap. The global footer and sensitive routes contain no professional-service CTA.
+- A local `/.well-known/security.txt` implementation closes the recorded 404 gap with an HTTPS contact path, canonical URL, expiry, and language. Production remains unchanged.
+- The local aggregate gate now passes **122/122 repository tests**, the optimized production build, content and predeploy checks, both production and all-dependency audits with **0 vulnerabilities**, and `git diff --check`. The build renders both proposed professional routes statically. These results are local evidence, not production evidence.
+
 ## Prioritized backlog
 
 1. **P1, production policy:** keep every canonical instrument URL freely and publicly useful. Preserve the 14 rights-limited routes as indexable informational pages unless and until authoritative permission, exact-version parity, and qualified review support a future interactive journey.
 2. **P1:** reconcile exact items, anchors, reverse keys, algorithms, cutoffs, every result branch, crisis copy, and one canonical review date against durable approval artifacts for the 21 remaining interactive routes.
 3. **P1/P2:** finish question-associated selection semantics, result focus/announcements, and keyboard-complete fictional journeys across the remaining clients.
 4. **P2:** align evidence anchors and one canonical review date across the 21 remaining interactive pages, schema, and evidence records; the directory, `llms` files, and pre-gate reviewer links are reconciled in production.
-5. **P2:** add `security.txt` and plan CSP nonce migration before any ad activation.
+5. **P2:** release and production-verify the local `security.txt` implementation through the normal gate; plan CSP nonce migration before any ad activation.
 6. **P2 acquisition:** after a complete post-release comparison window, compare non-overlapping 28-day Search Console windows and measure only aggregate homepage tool launches; keep sensitive routes analytics-free.
+7. **P2 monetization:** obtain scope-appropriate legal and clinical review of the local professional offer and checklist; publish only after exact owner release approval. Validate demand before setting price or building a hosted product.
 
 ## Single next logical action
 
-Choose the first buyer segment for the bounded professional screening-implementation readiness review and approve or reject the proposed scope in `docs/professional-review-service-brief-2026-08-06.md`. Any public offer, pricing, legal or clinical review spend, outreach, contract, payment account, provider/CMP/account change, or monetization activation remains a separate owner-approved decision.
+Approve or reject opening a draft pull request for the local professional-services page, printable checklist, general-page internal links, and `security.txt`. Public release still requires scope-appropriate legal and clinical review plus exact owner approval. Pricing, outreach, contracts, payment accounts, provider/CMP/account changes, and monetization activation remain separate decisions.

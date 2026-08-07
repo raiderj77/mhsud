@@ -1,0 +1,61 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import test from "node:test";
+
+const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+
+test("professional pages use a no-health-data service boundary", async () => {
+  const [service, checklist] = await Promise.all([
+    read("src/app/for-professionals/page.tsx"),
+    read("src/app/for-professionals/screening-implementation-checklist/page.tsx"),
+  ]);
+
+  for (const source of [service, checklist]) {
+    assert.match(source, /patient records/i);
+    assert.match(source, /assessment answers/i);
+    assert.match(source, /scores/i);
+    assert.match(source, /not (?:a )?legal/i);
+    assert.doesNotMatch(source, /HIPAA[- ]compliant|guaranteed compliance|clinically safe/i);
+    assert.doesNotMatch(source, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
+  }
+});
+
+test("the free checklist cites primary sources and contains no instrument mechanics", async () => {
+  const checklist = await read("src/app/for-professionals/screening-implementation-checklist/page.tsx");
+
+  for (const source of [
+    /ftc\.gov\/business-guidance\/resources\/mobile-health-app-developers-ftc-best-practices/,
+    /ftc\.gov\/business-guidance\/resources\/complying-ftcs-health-breach-notification-rule-0/,
+    /support\.google\.com\/publisherpolicies\/answer\/15101728/,
+    /w3\.org\/TR\/WCAG22/,
+    /csrc\.nist\.gov\/pubs\/sp\/800\/218\/final/,
+    /988lifeline\.org\/get-help/,
+    /samhsa\.gov\/resource\/ebp\/ready-set-go-review/,
+  ]) assert.match(checklist, source);
+
+  assert.match(checklist, /contains no instrument items/i);
+  assert.doesNotMatch(checklist, /PHQ-9 item|GAD-7 item|DASS-21 item|reverse-scored item \d/i);
+});
+
+test("professional discovery stays off sensitive and global commercial surfaces", async () => {
+  const [about, contact, methodology, footer, policies] = await Promise.all([
+    read("src/app/about/page.tsx"),
+    read("src/app/contact/page.tsx"),
+    read("src/app/methodology/page.tsx"),
+    read("src/components/Footer.tsx"),
+    read("src/lib/routePolicies.ts"),
+  ]);
+
+  for (const source of [about, contact, methodology]) assert.match(source, /for-professionals/);
+  assert.doesNotMatch(footer, /for-professionals|implementation review/i);
+  assert.match(policies, /const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set\(\["\/"\]\)/);
+});
+
+test("security.txt publishes a canonical, dated, web-only contact path", async () => {
+  const security = await read("src/app/.well-known/security.txt/route.ts");
+
+  assert.match(security, /Contact: \$\{SITE_URL\}\/contact/);
+  assert.match(security, /Expires: 2027-08-06T00:00:00\.000Z/);
+  assert.match(security, /Canonical: \$\{SITE_URL\}\/\.well-known\/security\.txt/);
+  assert.doesNotMatch(security, /mailto:|tel:/i);
+});

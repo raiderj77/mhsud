@@ -1,12 +1,12 @@
 # Professional Screening-Implementation Review: Decision Brief
 
-**Status:** Local concept and validation brief. Not published, offered, priced, or available for purchase.
+**Status:** Locally implemented website draft and validation brief. Not pushed, published, offered, priced, or available for purchase.
 
 **Objective:** Create the lowest-risk path from MindCheckTools' strict-YMYL operating work to revenue without advertising beside health content, collecting assessment data, or prematurely building a hosted clinical platform.
 
 ## Recommendation
 
-Validate a fixed-scope **technical screening-implementation readiness review** before building a paid printable, hosted API, or licensed platform. The service would review public or fictional staging journeys and return a prioritized evidence register. It would not receive patient records, assessment answers, scores, or production health data.
+Validate a fixed-scope **technical screening-implementation readiness review** before building a paid printable, hosted API, or licensed platform. The proposed service reviews public or fictional staging journeys and returns a prioritized evidence register. It does not receive patient records, assessment answers, scores, or production health data. The first local buyer segment is digital-health and behavioral-health software teams.
 
 This is the best first monetization hypothesis because it uses work MindCheckTools already has to maintain, can produce direct buyer conversations, and can reveal which professional workflow is worth productizing. It also avoids competing directly with free government implementation toolkits and avoids the security, legal, support, and instrument-rights burden of a hosted measurement-based-care product.
 
@@ -18,6 +18,7 @@ This is the best first monetization hypothesis because it uses work MindCheckToo
 - Commercial behavioral-health platforms already sell assessment, EHR, reporting, and implementation workflows to providers. Public examples use subscription, usage-based, or custom-quote models, which supports a professional software market but does not establish demand for MindCheckTools specifically.
 - MindCheckTools now has a production-tested workflow for public-route inventory, instrument-rights classification, citation review, crisis and non-diagnostic QA, privacy-safe browser processing, sensitive-route isolation, accessibility checks, and crawl/index verification.
 - The current site does not need to receive answers or scores to review those implementation controls.
+- A local `/for-professionals` service page and primary-source-backed printable implementation checklist now implement the no-health-data offer boundary. They are discoverable only from general About, Contact, and Methodology pages; no commercial link was added to the global footer or any sensitive route.
 
 ### Inference
 
@@ -56,7 +57,7 @@ This is the best first monetization hypothesis because it uses work MindCheckToo
 
 ## Validation sequence
 
-1. Approve one buyer segment and one fixed-scope deliverable.
+1. Use digital-health and behavioral-health software teams as the first local validation segment.
 2. Obtain scope review from an appropriate lawyer and topic-qualified clinical reviewer before public claims or delivery.
 3. Draft a private sample report using MindCheckTools itself and fictional/non-sensitive evidence.
 4. Validate demand through owner-approved one-to-one conversations or an approved marketplace listing; do not mass-message or automate outreach.
@@ -71,7 +72,7 @@ This is the best first monetization hypothesis because it uses work MindCheckToo
 
 ## Genuine owner decisions
 
-1. Choose the first buyer segment and approve the bounded service scope.
+1. Approve or reject publishing the local professional page and free checklist after qualified scope review.
 2. Approve any legal, clinical, privacy, security, insurance, or accessibility review spend.
 3. Approve the exact public offer, price, terms, refund policy, and publication.
 4. Approve each outreach message, marketplace listing, contract, payment account, or customer engagement before external action.

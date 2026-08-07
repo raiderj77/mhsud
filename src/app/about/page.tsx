@@ -140,6 +140,29 @@ export default function AboutPage() {
           </section>
 
           <section>
+            <h2>For product and implementation teams</h2>
+            <p>
+              MindCheck Tools documents a proposed fixed-scope implementation
+              readiness review for digital-health and behavioral-health
+              software teams. It uses public or fictional staging evidence and
+              does not accept patient records, assessment answers, scores, or
+              diagnoses.
+            </p>
+            <ul>
+              <li>
+                Review the <Link href="/for-professionals">professional review scope</Link>.
+              </li>
+              <li>
+                Use the free, printable{" "}
+                <Link href="/for-professionals/screening-implementation-checklist">
+                  screening implementation checklist
+                </Link>
+                .
+              </li>
+            </ul>
+          </section>
+
+          <section>
             <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose">
               <h2 className="font-serif text-xl font-semibold text-sage-700 dark:text-sage-400 mb-3">
                 If you need immediate help

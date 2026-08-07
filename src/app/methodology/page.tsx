@@ -306,6 +306,15 @@ export default function MethodologyPage() {
             </Link>{" "}
             for immediate help.
           </li>
+          <li>
+            <Link
+              href="/for-professionals/screening-implementation-checklist"
+              className="text-sage-700 dark:text-sage-400 hover:underline"
+            >
+              Screening implementation checklist
+            </Link>{" "}
+            for product and implementation teams.
+          </li>
         </ul>
       </article>
     </div>

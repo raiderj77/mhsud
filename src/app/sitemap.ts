@@ -18,6 +18,7 @@ const QUARANTINED_PATHS = new Set([
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastUpdated = "2026-08-05T00:00:00.000Z";
+  const aug6 = "2026-08-06T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
 
   const staticPages = [
@@ -133,6 +134,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/grief-assessment`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/phq-4-anxiety-depression-screen`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/contact`, lastModified: "2026-03-03T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.4 },
+    { url: `${SITE_URL}/for-professionals`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/for-professionals/screening-implementation-checklist`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/blog`, lastModified: lastUpdated, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/crisis-resources`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.6 },
