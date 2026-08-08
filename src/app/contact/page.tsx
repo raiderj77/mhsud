@@ -66,6 +66,20 @@ export default function ContactPage() {
                   support@mindchecktools.com
                 </a>
               </div>
+              <div className="p-5 card sm:col-span-2">
+                <h3 className="font-semibold text-neutral-900 dark:text-neutral-50 mb-1">Professional Implementation Reviews</h3>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-3">
+                  Fixed-scope technical and content readiness for digital-health and behavioral-health software teams. Do not send patient records, answers, scores, diagnoses, or other health information.
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm font-medium">
+                  <Link href="/for-professionals" className="text-sage-600 dark:text-sage-400 hover:underline">
+                    Review the proposed scope
+                  </Link>
+                  <a href="mailto:hello@mindchecktools.com?subject=Professional%20screening%20implementation%20review" className="text-sage-600 dark:text-sage-400 hover:underline">
+                    Email hello@mindchecktools.com
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
 

@@ -1,6 +1,6 @@
 # MindCheckTools Monetization Plan
 
-**Status:** Local release-control artifact, researched 2026-08-05
+**Status:** Production-aligned release-control artifact, researched 2026-08-05 and verified 2026-08-06
 
 **Scope:** Strict-YMYL monetization and privacy controls for `mindchecktools.com`
 
@@ -8,17 +8,17 @@
 
 ## Verdict
 
-**Do not place advertising or third-party measurement code on an assessment, result, crisis, youth, condition-specific, or rights-boundary informational route. AdSense activation remains blocked.** If monetization proceeds later, it should begin with original paid educational products or static, first-party sponsorship on a separately approved small allowlist of genuinely general pages. Professional self-hosted licensing is the best longer-term fit. Affiliate links should be narrow and manually vetted. AdSense should be last and limited to contextual or non-personalized ads on an owner-approved general-page allowlist.
+**Do not place advertising or third-party measurement code on an assessment, result, crisis, youth, condition-specific, or rights-boundary informational route. AdSense activation remains blocked.** The best first monetization hypothesis is a fixed-scope professional implementation-readiness review that receives no patient data and turns repeated findings into buyer evidence. Original paid educational products should follow only when interviews identify a gap not already covered by free authoritative toolkits. Professional self-hosted licensing is the best higher-upside product path after demand, rights, clinical, privacy, security, and contract gates pass. Static first-party sponsorship and narrow affiliate use remain secondary. AdSense should be last and limited to contextual or non-personalized ads on an owner-approved general-page allowlist.
 
 This is a deliberately stricter MindCheckTools policy than the minimum described by an advertising platform. It keeps assessment activity and health inferences away from advertising systems, minimizes trust damage, and reduces exposure under health-data privacy rules.
 
 ## Evidence status
 
 - **Verified evidence:** Google classifies physical and mental-health content as a sensitive interest category. Google Publisher Policies prohibit using Google code or audience data for personalized advertising based on inferred or actual health information. Google also states that partner integrations send information including the viewed URL and IP address. Non-personalized ads may still use cookies or mobile identifiers for fraud prevention, frequency capping, and aggregate reporting. Google Analytics policies prohibit sending data that reveals sensitive information about an identifiable user.
-- **Verified local implementation, not deployed:** optional third-party services use a positive allowlist containing only `/`, the topic-neutral homepage. All assessment, result, crisis, youth, condition-specific, privacy, reviewer, and rights-boundary informational routes are tag-free by default. The only explicit tool-acquisition event in local source is the consented homepage-only `private_tool_launch`, which passes no instrument, route, category, answer, score, result, referrer, session, user, or device parameter. Production code still serializes `adsenseEnabled:false`.
+- **Verified production implementation:** optional third-party services use a positive allowlist containing only `/`, the topic-neutral homepage. All assessment, result, crisis, youth, condition-specific, privacy, reviewer, and rights-boundary informational routes are tag-free by default. The only explicit tool-acquisition event in source is the consented homepage-only `private_tool_launch`, which passes no instrument, route, category, answer, score, result, referrer, session, user, or device parameter. Production serializes `adsenseEnabled:false`.
 - **Conservative MindCheckTools policy:** turning personalization off, obtaining consent, hiding an ad, or omitting custom event parameters does not make an ad or analytics tag acceptable on a sensitive route. Expanding optional services beyond the homepage requires a new route-specific rights, clinical, privacy, crisis, and network review plus owner approval.
 - **Inference requiring legal review:** A condition-specific route, assessment start, result label, or crisis interaction may constitute or enable an inference about health. Third-party disclosure could implicate consumer-health-data or general privacy law even where HIPAA does not apply.
-- **Unknowns:** production parity with the local allowlist, downstream provider-added parameters, current AdSense account eligibility, provider configuration, consent-platform state, legal applicability by jurisdiction, sponsor or affiliate availability, commercial demand, conversion, revenue, tax treatment, and the price or terms of any instrument licence. None may be inferred from this plan.
+- **Unknowns:** downstream provider-added parameters, current AdSense account eligibility, provider configuration, consent-platform state, legal applicability by jurisdiction, sponsor or affiliate availability, commercial demand, conversion, revenue, tax treatment, and the price or terms of any instrument licence. None may be inferred from this plan.
 
 ## Authoritative policy evidence
 
@@ -35,7 +35,7 @@ This is a deliberately stricter MindCheckTools policy than the minimum described
 
 ## Strict tag-free boundary
 
-The local implementation uses an explicit optional-services **allowlist**, not a sensitive-page denylist. It currently contains only the homepage. Anything else is tag-free by default; future expansion is a release-gated owner decision.
+The production implementation uses an explicit optional-services **allowlist**, not a sensitive-page denylist. It currently contains only the homepage. Anything else is tag-free by default; future expansion is a release-gated owner decision.
 
 ### Always tag-free
 
@@ -66,7 +66,7 @@ The local implementation uses an explicit optional-services **allowlist**, not a
 
 ## Privacy-safe aggregate measurement
 
-**Current local state, not deployed:** the only explicit tool-acquisition event is the parameter-free `private_tool_launch` on the consented homepage. It measures a generic launch from the topic-neutral homepage, not which assessment was chosen and not whether an assessment started or completed. Consented homepage analytics may still perform provider-standard page measurement; downstream provider-added parameters remain unknown. Assessment and informational destination routes remain tag-free. Exact Search Console and GA before-state metrics are retained only in the ignored local owner record and are intentionally absent here.
+**Current production state:** the only explicit tool-acquisition event is the parameter-free `private_tool_launch` on the consented homepage. It measures a generic launch from the topic-neutral homepage, not which assessment was chosen and not whether an assessment started or completed. Consented homepage analytics may still perform provider-standard page measurement; downstream provider-added parameters remain unknown. Assessment and informational destination routes remain tag-free. Exact Search Console and GA before-state metrics are retained only in the ignored local owner record and are intentionally absent here.
 
 The designs below define what may be considered in a future approved implementation. They do not claim that first-party tool-start or completion counters currently exist.
 
@@ -90,6 +90,7 @@ The designs below define what may be considered in a future approved implementat
 
 | Channel | Recommended use | Mandatory controls | Launch gate | Exact owner/account-side approval |
 |---|---|---|---|---|
+| **Professional readiness review** | Recommended first revenue test: a fixed-scope technical and content QA review using public or fictional staging evidence only. | No patient data, answers, scores, diagnoses, or production health records; explicit limits on legal, clinical, security, accessibility, and licensing conclusions; qualified escalation where needed. | One buyer segment, one sample deliverable, scope-appropriate legal and clinical review, terms, insurance decision, and demand validation. | Approve segment, scope, public claims, price, terms, reviewers/spend, publication, outreach, contracts, payment, and each customer engagement. |
 | **AdSense** | Last-priority pilot. Manual contextual or non-personalized units on a small allowlist of genuinely general educational pages only. | Auto Ads off; user-based/personalized ads off; no GA audience linkage or remarketing; certified CMP/TCF where applicable; privacy/cookie disclosures; no code on sensitive routes. | Instrument-rights boundary complete; counsel review; consent QA; `ads.txt`; Policy Center review; mobile/desktop network proof that excluded routes load no ad code. | Approve use/addition of the site in AdSense, account terms, personalization settings, CMP configuration, privacy copy, `ads.txt`, payment/tax profile, and each placement. |
 | **Direct sponsorship** | Preferred first advertising-style pilot: a static, first-party sponsor card on a general resource page. | No sponsor script, pixel, iframe, cookie, result targeting, route targeting, or visitor-data access. Label `Advertisement` or `Paid sponsor`; preserve editorial independence; substantiate all health claims. | Exact sponsor/product due diligence, clinical and claims review, written no-data contract, disclosure/accessibility QA, and placement allowlist. | Approve the exact sponsor, product, copy, claim, rate, placement, contract, data terms, and any outreach before contact. |
 | **Ethical affiliate** | Narrow use in non-sensitive resource guides; never a result-driven recommendation. | Plain link only; `rel="sponsored nofollow noopener noreferrer"`; no network JavaScript/pixel; generic campaign ID; visible commission disclosure beside the link. Exclude supplements, cures, crisis products, predatory services, and unsubstantiated treatment claims. | Merchant/product evidence review, FTC disclosure QA, privacy/network QA, editorial review, and aggregate-only reporting. | Approve each merchant/program, application, agreement, product, claim, disclosure, payment/tax setup, and external enrollment. |
@@ -120,11 +121,19 @@ All must pass before any monetization release:
 
 ## Exact owner and account-side decisions remaining
 
-1. Approve or reject the permanent tag-free boundary and the recommended order: paid original education, static sponsorship, self-hosted professional licensing, narrow affiliate, then AdSense last.
+1. **Selected locally, not launched:** use digital-health and behavioral-health software teams as the first segment for the bounded professional readiness review. Approve or reject publishing the implemented page and free checklist only after scope-appropriate review.
 2. Authorize legal review of FTC HBNR, Washington MHMDA, CCPA and other state laws, GDPR/UK GDPR, youth/COPPA scope, and HIPAA/BAA applicability.
 3. Decide whether the homepage-only optional-services boundary should remain permanent. Any proposed additional general page must be named and separately cleared before code changes; no assessment, informational instrument, condition, youth, crisis, privacy, or reviewer route is eligible.
 4. If the preceding legal, rights, clinical, privacy, and network gates ever pass, separately approve AdSense site/account activity, CMP, ad settings, privacy copy, `ads.txt`, payment, tax configuration, and each exact placement. AdSense is currently blocked.
 5. Approve each sponsor, affiliate, instrument-licence counterparty, paid product, contract, fee, application, and external contact separately.
 6. Decide whether professional licensing is self-hosted/customer-controlled or a hosted API, and approve the associated security and legal budget.
 7. Name qualified clinical, crisis, privacy, and legal reviewers and approve their scope and fees.
-8. Approve the bounded non-monetized safety release only after full local tests, production build, lint/content checks, dependency audit, and fictional/non-sensitive mobile/desktop browser-network QA pass. The release must preserve 21 interactive plus 14 informational routes, homepage-only optional services, and disabled AdSense. Monetization activation is a later, separate decision; this document grants neither approval.
+8. The bounded non-monetized safety release is now deployed and production-verified with 21 interactive plus 14 informational routes, homepage-only optional services, and disabled AdSense. Monetization activation remains a later, separate decision; this document grants neither approval.
+
+## Local monetization implementation, not published
+
+- `/for-professionals` defines a fixed-scope technical and content-readiness review for digital-health and behavioral-health software teams.
+- `/for-professionals/screening-implementation-checklist` provides an original, printable resource covering rights, evidence, privacy, crisis safeguards, accessibility, discovery, and fictional release QA with official FTC, Google, W3C, NIST, 988, and SAMHSA links.
+- Both pages prohibit patient records, assessment answers, scores, diagnoses, and other health information. Neither loads ad, affiliate, email-capture, analytics-event, or session-replay components.
+- Internal discovery is limited to the general About, Contact, and Methodology pages plus the sitemap. No professional or commercial CTA was added to the global footer, assessment routes, results, crisis pages, or rights-boundary informational routes.
+- `/.well-known/security.txt` now has a local canonical, dated, HTTPS contact-path implementation. It is not production evidence until an approved release is deployed and rechecked.
