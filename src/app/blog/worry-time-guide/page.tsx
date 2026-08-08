@@ -1,27 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
+import AnswerBlock from "@/components/AnswerBlock";
+import {
+  createMetadata,
+  articleJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+  SITE_URL,
+} from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/worry-time-guide`;
-const POST_DATA = BLOG_POSTS.find((p) => p.slug === "worry-time-guide")!;
+const POST_DATA = BLOG_POSTS.find((post) => post.slug === "worry-time-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/worry-time-guide",
-  title: "Worry Time: How Scheduling Your Worries Reduces Anxiety",
+  title: "Worry Time: Scheduled Worry Guide & Free Private Tool",
   description:
-    "Worry time is a CBT technique where you schedule 15-30 minutes daily for focused worrying and postpone worries outside that window. Learn how it reduces anxiety by 35-50%.",
+    "Learn what worry time and worry postponement mean, how to try the exercise, what randomized studies found, and how to use a private browser-based scheduler.",
   keywords: [
     "worry time",
     "scheduled worry time",
     "worry postponement",
-    "anxiety technique worry time",
-    "how to stop worrying",
     "worry time CBT",
+    "worry time exercise",
+    "worry time scheduler",
   ],
   openGraph: {
     type: "article",
+    title: "Worry Time: Scheduled Worry Guide & Free Private Tool",
+    description:
+      "A source-checked guide to worry postponement, including evidence limits, practical steps, privacy notes, and a free browser-based scheduler.",
+    url: ARTICLE_URL,
     publishedTime: POST_DATA.publishedDate,
     modifiedTime: POST_DATA.modifiedDate,
   },
@@ -29,279 +39,188 @@ export const metadata: Metadata = createMetadata({
 
 const FAQ_DATA = [
   {
-    question: "Does worry time actually reduce anxiety?",
+    question: "What is worry time?",
     answer:
-      "Yes. Research by Borkovec and colleagues showed stimulus control for worry reduces generalized anxiety by 35\u201350% in controlled trials. By containing worry to a specific window, the brain learns worry has a designated time, which reduces intrusive worrying during the rest of the day.",
+      "Worry time, also called scheduled worry or worry postponement, is a structured exercise. You briefly note worries that arise during the day and return to them during a planned, time-limited review period. It is an educational self-help exercise, not a diagnosis or a replacement for care.",
   },
   {
-    question: "How long should worry time last?",
+    question: "Does worry postponement reduce anxiety?",
     answer:
-      "Most clinicians recommend 15\u201330 minutes. Shorter sessions may not allow meaningful processing, while longer sessions risk becoming rumination. Start with 15 minutes and adjust as needed. Consistency is key, same time, same place, every day, so your brain learns the routine.",
+      "The research is mixed. A small 2024 waitlist-controlled trial reported lower worry scores for participants with generalized anxiety disorder who received a two-session metacognitive intervention. A larger 2016 randomized online trial found no advantage over recording worries alone. Neither study proves that a self-guided web tool treats anxiety.",
   },
   {
-    question: "What if I can't stop worrying outside of worry time?",
+    question: "How long should scheduled worry time last?",
     answer:
-      "This is normal, especially in the first two weeks. When a worry arises, acknowledge it briefly, write it down, and remind yourself you will address it during worry time. Writing it down reassures your brain the worry will not be forgotten. With practice, postponing becomes easier.",
+      "Public self-help guidance and research protocols use different durations, commonly about 10 to 30 minutes. Evidence does not establish one best duration for everyone. Choose a bounded period that feels manageable, and stop if the exercise increases distress.",
   },
   {
-    question: "Is worry time the same as journaling?",
+    question: "Does the MindCheck Tools scheduler keep my entries private?",
     answer:
-      "Not exactly. Journaling is open-ended reflection covering emotions, events, and goals. Worry time is a structured CBT technique with specific rules: a fixed daily window, active postponement of worries outside it, and focused engagement during the session. Writing may be used, but is not required.",
+      "The scheduler saves worry text and settings in this browser's local storage and is not configured to send those entries to MindCheck Tools application servers, analytics, or advertising systems. Anyone with access to the same browser profile may be able to read them, and device sync, backups, extensions, screenshots, and copies are outside that boundary.",
   },
 ];
+
+const SOURCE_LINK_CLASS = "underline hover:text-sage-600 dark:hover:text-sage-400";
 
 export default function WorryTimeGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Worry Time: How Scheduling Your Worries Reduces Anxiety", description: "Learn how scheduled worry time reduces anxiety by 35-50%, how to practice it, and why giving yourself permission to worry makes worrying less intrusive.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }) }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleJsonLd({
+              title: "Worry Time: Scheduled Worry Guide & Free Private Tool",
+              description:
+                "A source-checked guide to worry postponement, including mixed research findings, practical steps, safety limits, and privacy notes.",
+              url: ARTICLE_URL,
+              datePublished: POST_DATA.publishedDate,
+              dateModified: POST_DATA.modifiedDate,
+            })
+          ),
+        }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Worry Time Guide", url: ARTICLE_URL }])) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", url: SITE_URL },
+              { name: "Blog", url: `${SITE_URL}/blog` },
+              { name: "Worry Time Guide", url: ARTICLE_URL },
+            ])
+          ),
+        }}
+      />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-        <header className="mb-10">
-          <div className="flex items-center gap-2 mb-4">
+        <header className="mb-8">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">Education</span>
-            <span className="text-xs text-neutral-500 dark:text-neutral-400">9 min read</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">7 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Worry Time: How Scheduling Your Worries Reduces Anxiety
+            Worry Time and Worry Postponement: A Source-Checked Guide
           </h1>
-          <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
-  <div className="flex flex-col gap-1">
-    <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-      Published by MindCheck Tools
-    </p>
-    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-      <span>
-        Published:{" "}
-        <time dateTime={POST_DATA.publishedDate}>
-          {new Date(POST_DATA.publishedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-      <span>
-        Last reviewed:{" "}
-        <time dateTime={POST_DATA.modifiedDate}>
-          {new Date(POST_DATA.modifiedDate + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-        </time>
-      </span>
-    </div>
-  </div>
-</div>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            What if the best way to worry less was to schedule your worrying? Worry time, also called stimulus control for worry, is a cognitive behavioral therapy (CBT) technique where you designate a specific 15&ndash;30 minute period each day for focused worrying, and actively postpone any worries that arise outside that window. It sounds counterintuitive, but research shows it works: giving yourself permission to worry at a set time makes worrying less intrusive the rest of the day.
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            Published March 17, 2026 · Updated August 8, 2026
           </p>
         </header>
 
+        <AnswerBlock
+          what="Worry time is a structured exercise that sets a short period for revisiting worries recorded earlier in the day."
+          who="Adults looking for a bounded educational practice, with the option to use a private browser-based scheduler."
+          bottomLine="Authoritative self-help services describe the technique, but randomized evidence is mixed. It is not treatment, diagnosis, or emergency care."
+          lastUpdated="2026-08-08"
+        />
+
+        <p className="mb-8 text-sm text-neutral-600 dark:text-neutral-300">
+          Quarantined editorial draft. A named clinical/editorial review is required before any future publication.
+        </p>
+
         <div className="prose-mh space-y-8">
-          {/* Crisis Resources */}
-          <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">
-            <p className="text-sm font-semibold text-red-800 dark:text-red-400 mb-2">If you are in crisis</p>
-            <ul className="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><strong>988 Suicide &amp; Crisis Lifeline</strong>, Call or text <strong>988</strong> (US, 24/7)</li>
-              <li><strong>Crisis Text Line</strong>, Text <strong>HOME</strong> to <strong>741741</strong> (free, 24/7)</li>
-              <li><strong>SAMHSA National Helpline</strong>, <strong>1-800-662-4357</strong> (free, confidential, 24/7)</li>
-            </ul>
-          </div>
-
-          {/* Clinical Disclaimer */}
-          <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
-            <p className="text-sm font-semibold text-amber-800 dark:text-amber-400 mb-2">Clinical Disclaimer</p>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              This article is for informational and educational purposes only and does not constitute medical or mental health advice. Always consult a qualified healthcare professional for personalized guidance on anxiety or mental health concerns.
-            </p>
-          </div>
-
-          <section>
-            <h2>What is worry time and how does it work?</h2>
-            <p>
-              Worry time is a structured behavioral intervention developed from the stimulus control research of Thomas Borkovec and colleagues at Penn State University. The principle is straightforward: rather than trying to suppress or eliminate worry (which paradoxically increases it), you contain it within a predictable, bounded time period.
-            </p>
-            <p>
-              The technique works through two mechanisms. First, it disrupts the pattern of constant, low-level worry that characterizes generalized anxiety by giving worries a designated outlet. Second, it leverages a psychological phenomenon called the Zeigarnik effect, unfinished tasks occupy the mind, but the act of writing a worry down and scheduling time to address it signals to the brain that the task is &quot;captured&quot; and can be set aside.
-            </p>
-            <p>
-              Research by Borkovec et al. demonstrated that participants who practiced stimulus control for worry experienced a 35&ndash;50% reduction in generalized worry compared to control groups. This effect has been replicated across multiple studies and is now a standard component of CBT protocols for generalized anxiety disorder.
+          <section className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">
+            <h2 className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">Educational, not individualized care</h2>
+            <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              This guide cannot tell whether the exercise is appropriate for you or whether you have an anxiety disorder. Stop if it increases distress. For persistent or disruptive worry, consider speaking with a qualified healthcare professional.
             </p>
           </section>
 
           <section>
-            <h2>How to practice worry time: step by step</h2>
+            <h2>What is scheduled worry time?</h2>
             <p>
-              Setting up a worry time practice takes minimal effort, but consistency is what makes it effective. Here is how to get started:
+              Worry time, worry postponement, and scheduled worry are names used for a structured exercise: notice a worry, make a brief note, return attention to the present task when possible, and review the note during a planned period later.
             </p>
             <p>
-              <strong>Step 1: Choose your time and place.</strong> Pick a consistent 15&ndash;30 minute window each day, ideally in the late afternoon or early evening, not right before bed, as this can interfere with sleep. Choose a specific location where you will sit and worry. This physical consistency helps your brain associate worry with that specific context.
+              The NHS includes worry time in its public self-help guidance and suggests separating worries that can lead to a practical action from hypothetical concerns that cannot be acted on now. That is a description of a coping exercise, not proof that every person will benefit.
             </p>
             <p>
-              <strong>Step 2: Catch and postpone.</strong> Throughout the day, when a worry arises, notice it without engaging. Write it down briefly in a notebook, phone note, or the <Link href="/worry-time-scheduler" className="text-sage-600 dark:text-sage-400 underline">worry time scheduler</Link>. Then tell yourself: &quot;I will think about this during worry time.&quot; Return your attention to what you were doing.
-            </p>
-            <p>
-              <strong>Step 3: Use your worry time fully.</strong> When your scheduled time arrives, sit down and review your list. For each worry, ask: Is this still bothering me? Is there anything I can actually do about it? If yes, write down one concrete action step. If no, acknowledge the worry and move on. Many worries will have lost their urgency by the time you revisit them, this is one of the most powerful parts of the technique.
-            </p>
-            <p>
-              <strong>Step 4: Stop when time is up.</strong> When your window closes, stop worrying. If unfinished worries remain, they go on tomorrow&apos;s list. This boundary is essential, it teaches your brain that worry has limits.
-            </p>
-          </section>
-
-          <AdSlot position="Blog In-Content 1" className="my-8" />
-
-          <section>
-            <h2>Why the paradox works: giving yourself permission to worry</h2>
-            <p>
-              One of the most striking findings in anxiety research is that trying to suppress thoughts makes them more frequent and intense. This is known as the ironic process theory, described by Daniel Wegner in his classic &quot;white bear&quot; experiments, when people were told not to think about a white bear, they thought about it more than those who were given no instruction at all.
-            </p>
-            <p>
-              Worry time sidesteps this paradox entirely. You are not telling yourself to stop worrying. You are telling yourself to worry later. This distinction matters because postponement does not trigger the rebound effect that suppression does. Your brain registers that the worry will be addressed, which reduces the urgency and allows you to disengage from the worry cycle.
-            </p>
-            <p>
-              Over time, something remarkable happens: many people find that their worry list shrinks. When you review your captured worries during worry time, you discover that 50&ndash;80% of them no longer feel pressing. This repeated experience erodes the belief that every worry demands immediate attention, a core cognitive distortion in generalized anxiety.
+              <a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/" className={SOURCE_LINK_CLASS} target="_blank" rel="noopener noreferrer">Read the NHS worry-time guidance</a>
             </p>
           </section>
 
           <section>
-            <h2>Worry time and generalized anxiety disorder</h2>
-            <p>
-              Generalized anxiety disorder (GAD) is characterized by chronic, excessive worry about multiple areas of life, health, finances, relationships, work, and more. What distinguishes GAD from normal worry is that the worry feels uncontrollable, disproportionate to the actual situation, and persists for six months or longer.
-            </p>
-            <p>
-              Worry time is particularly effective for GAD because it directly targets the &quot;uncontrollable&quot; dimension. People with GAD often believe they cannot control their worry, and this belief becomes self-reinforcing. Each time they successfully postpone a worry to their scheduled window, they gather evidence that worry is controllable, challenging the core belief that drives the disorder.
-            </p>
-            <p>
-              If you suspect you may be experiencing generalized anxiety, the <Link href="/gad-7-anxiety-test" className="text-sage-600 dark:text-sage-400 underline">GAD-7 anxiety screening</Link> can help you assess the severity of your symptoms. Worry time works well as a self-management strategy alongside professional support.
-            </p>
-          </section>
-
-          <AdSlot position="Blog In-Content 2" className="my-8" />
-
-          <section>
-            <h2>Combining worry time with other anxiety tools</h2>
-            <p>
-              Worry time is most effective as part of a broader anxiety management toolkit. Several complementary techniques can enhance its benefits:
-            </p>
-            <ul>
-              <li><strong>Box breathing:</strong> When a worry arises outside your scheduled window and you feel the urge to engage with it, use <Link href="/box-breathing-exercise" className="text-sage-600 dark:text-sage-400 underline">box breathing</Link> (4&ndash;4&ndash;4&ndash;4) to calm your nervous system before postponing the worry.</li>
-              <li><strong>Thought records:</strong> During worry time, use a <Link href="/cbt-thought-record" className="text-sage-600 dark:text-sage-400 underline">CBT thought record</Link> to examine your most persistent worries for cognitive distortions like catastrophizing, fortune-telling, or probability overestimation.</li>
-              <li><strong>The worry time scheduler:</strong> The <Link href="/worry-time-scheduler" className="text-sage-600 dark:text-sage-400 underline">MindCheck Tools worry time scheduler</Link> provides a structured digital space for capturing worries and reviewing them later. It saves worry text and settings in this browser&apos;s localStorage and does not automatically send those entries to a MindCheck Tools application server or database. Anyone with access to the same browser profile may be able to read them. A copy or screenshot you create is controlled by your device and any app, sync, or backup service you use.</li>
-            </ul>
-            <p>
-              The combination of behavioral containment (worry time), physiological regulation (breathing), and cognitive restructuring (thought records) addresses anxiety at multiple levels simultaneously, which is why CBT remains the gold-standard treatment for anxiety disorders.
-            </p>
-          </section>
-
-          <section>
-            <h2>Common mistakes and how to avoid them</h2>
-            <p>
-              Worry time is a simple technique, but there are common pitfalls that reduce its effectiveness:
-            </p>
-            <ul>
-              <li><strong>Scheduling worry time right before bed.</strong> Engaging with worries at night can activate your stress response and interfere with sleep. Schedule your window at least 2&ndash;3 hours before bedtime.</li>
-              <li><strong>Skipping days.</strong> Consistency is critical. If you skip your worry time, your brain loses trust in the system and reverts to worrying throughout the day. Even on low-worry days, sit down for your scheduled window, you can always end early.</li>
-              <li><strong>Using worry time for rumination.</strong> The goal is productive engagement, not spiraling. For each worry, ask: &quot;Can I do something about this?&quot; If yes, identify one action. If no, practice acceptance and move to the next item.</li>
-              <li><strong>Expecting instant results.</strong> Most people need 1&ndash;2 weeks of consistent practice before worry postponement becomes natural. The technique works, but it requires patience as your brain forms the new habit.</li>
-            </ul>
-          </section>
-
-          <AdSlot position="Blog In-Content 3" className="my-8" />
-
-          <section>
-            <h2>When to seek professional support</h2>
-            <p>
-              Worry time is an effective self-management strategy for mild to moderate worry, but it is not a replacement for professional care when anxiety is severe or significantly impacting your daily life. Consider speaking with a therapist or counselor if:
-            </p>
-            <ul>
-              <li>Your worry persists despite 2&ndash;3 weeks of consistent practice</li>
-              <li>Anxiety is interfering with work, relationships, or daily activities</li>
-              <li>You are experiencing physical symptoms like chronic muscle tension, headaches, or sleep disruption</li>
-              <li>Worry is accompanied by panic attacks or avoidance behaviors</li>
-              <li>You feel overwhelmed by the volume or intensity of your worries</li>
-            </ul>
-            <p>
-              A trained CBT therapist can help you implement worry time within a comprehensive treatment plan and address underlying patterns that self-help alone may not reach. SAMHSA&apos;s National Helpline (1-800-662-4357) provides free, confidential referrals to local treatment facilities and support groups.
-            </p>
-          </section>
-
-          {/* CTA */}
-          <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Ready to schedule your worry time?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">No account is needed. Entries remain in this browser&apos;s localStorage until you delete them or clear site data; any copy you create is controlled by your device and chosen services.</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/worry-time-scheduler" className="btn-primary text-sm">Open the Worry Time Scheduler</Link>
-              <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Anxiety Screening</Link>
+            <h2>What does the research show?</h2>
+            <p>The available studies do not support a guaranteed outcome, and they do not establish that this website&apos;s self-guided scheduler is a treatment.</p>
+            <div className="not-prose grid gap-4 sm:grid-cols-2">
+              <div className="card p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-sage-700 dark:text-sage-400 mb-2">Positive signal, limited study</p>
+                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                  A 2024 waitlist-controlled trial enrolled people with generalized anxiety disorder or hypochondriasis. The two-session metacognitive intervention produced lower worry scores in the GAD group, while effects for hypochondriasis were limited. The study was small and used more support than a standalone web page.
+                </p>
+              </div>
+              <div className="card p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-sage-700 dark:text-sage-400 mb-2">Null online finding</p>
+                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                  A 2016 randomized online trial asked 996 adults to record worries; 361 completed the study. Adding a 30-minute worry-postponement period did not reduce worry or subjective health complaints more than recording worries alone.
+                </p>
+              </div>
             </div>
-          </div>
-
-          {/* Author Bio */}
-          <div className="card p-5 sm:p-6 mb-8 border-sage-200 dark:border-sage-800 bg-sage-50/50 dark:bg-sage-950/20">
-  <div className="flex gap-4 items-start">
-    <div className="w-12 h-12 rounded-full bg-sage-100 dark:bg-sage-900 flex items-center justify-center flex-shrink-0">
-      <span className="text-sage-600 dark:text-sage-400 text-lg">&#x1F4BB;</span>
-    </div>
-    <div>
-      <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-1">
-        MindCheck Tools
-      </h3>
-      <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-        Published by MindCheck Tools and reviewed by Jason Ramirez, CADC-II.
-      </p>
-      <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-        Reviewed for source alignment, screening limitations, and safety language. This editorial review is not diagnosis or individual care.
-      </p>
-    </div>
-  </div>
-</div>
-
-          {/* FAQ */}
-          <section className="not-prose mt-12">
-            <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
-            {FAQ_DATA.map((faq, i) => (
-              <details key={i} className="card mb-2 group">
-                <summary className="p-4 cursor-pointer flex justify-between items-center text-sm font-semibold text-neutral-700 dark:text-neutral-200 list-none">
-                  {faq.question}
-                  <svg className="w-4 h-4 text-neutral-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                </summary>
-                <div className="px-4 pb-4">
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{faq.answer}</p>
-                </div>
-              </details>
-            ))}
+            <p>The most accurate conclusion is that worry postponement is a recognized educational exercise with mixed research findings, especially when delivered online without clinical support.</p>
           </section>
 
-          {/* Related Tools */}
-          <section className="not-prose mt-10">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/worry-time-scheduler" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Worry Time Scheduler</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Schedule and contain your daily worrying</p>
-              </Link>
-              <Link href="/gad-7-anxiety-test" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">GAD-7 Anxiety Screening</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Assess your anxiety symptom severity</p>
-              </Link>
-              <Link href="/box-breathing-exercise" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Box Breathing Exercise</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Calm your nervous system with 4-4-4-4 breathing</p>
-              </Link>
-              <Link href="/cbt-thought-record" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CBT Thought Record</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Challenge negative thinking patterns</p>
-              </Link>
+          <section>
+            <h2>How to try the exercise</h2>
+            <ol>
+              <li><strong>Choose a bounded review period.</strong> Public guidance and studies use different durations, often 10 to 30 minutes. There is no proven best duration for everyone.</li>
+              <li><strong>Record only a brief reminder.</strong> Do not add identifying details you would not want another person using the same device to see.</li>
+              <li><strong>Return to the present task when you can.</strong> Postponement may feel difficult, and difficulty does not mean you are doing it incorrectly.</li>
+              <li><strong>Review for possible action.</strong> If something can be acted on safely, write one small next step. If it cannot be acted on now, acknowledge that limit rather than forcing a solution.</li>
+              <li><strong>Stop at the endpoint.</strong> End early if the exercise becomes repetitive, overwhelming, or more distressing.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>Private browser-based option</h2>
+            <p>
+              The MindCheck Tools scheduler stores entries in this browser&apos;s localStorage. It does not automatically send worry text, action notes, or session details to MindCheck Tools analytics, advertising systems, or an application database. Anyone with the same browser profile may be able to read them. A copy or screenshot you create is controlled by your device and any extension, sync, backup, or sharing service you use.
+            </p>
+            <div className="not-prose card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
+              <h2 className="font-serif text-xl font-semibold text-sage-800 dark:text-sage-300 mb-2">Try the free Worry Time Scheduler</h2>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">No account or email is required. Clear the log or site data when finished if you use a shared device.</p>
+              <Link href="/worry-time-scheduler" className="btn-primary inline-flex min-h-11 items-center text-sm">Open the private scheduler</Link>
             </div>
           </section>
 
-          {/* Related Guides */}
-          <section className="not-prose mt-6">
-            <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Guides</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/blog/cbt-thought-record-guide" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">CBT Thought Records Guide</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">How to challenge negative thinking patterns</p>
-              </Link>
-              <Link href="/blog/anxiety-coping-strategies" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
-                <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Evidence-Based Anxiety Coping Strategies</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Clinical guide to managing anxiety symptoms</p>
-              </Link>
+          <section>
+            <h2>When to stop or seek support</h2>
+            <p>Stop the exercise if it makes worry more intense, turns into an unbounded review, or interferes with sleep or daily responsibilities. A qualified professional can help assess persistent worry in the context of your health, circumstances, and goals.</p>
+            <p>
+              If you might act on thoughts of harming yourself or someone else, or you are in immediate danger, use emergency help now. In the United States, call or text <strong>988</strong>; elsewhere, use your local emergency number or crisis service. MindCheck Tools is not a crisis service.
+            </p>
+            <p><Link href="/crisis-resources" className="underline font-semibold text-crisis-800 dark:text-crisis-200">View U.S. and international crisis resources</Link></p>
+          </section>
+
+          <section>
+            <h2>Related educational tools</h2>
+            <ul>
+              <li><Link href="/cbt-thought-record" className="underline">CBT thought record</Link> for a structured look at a specific thought; browser-local and non-diagnostic.</li>
+              <li><Link href="/cognitive-distortion-identifier" className="underline">Cognitive distortion identifier</Link> for educational pattern recognition, not diagnosis.</li>
+              <li><Link href="/how-to-talk-to-your-doctor-about-mental-health" className="underline">How to talk with a healthcare professional</Link> if worry is persistent or affecting daily life.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Frequently asked questions</h2>
+            <div className="not-prose space-y-3">
+              {FAQ_DATA.map((item) => (
+                <details key={item.question} className="card p-4">
+                  <summary className="cursor-pointer font-semibold text-neutral-800 dark:text-neutral-100">{item.question}</summary>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">{item.answer}</p>
+                </details>
+              ))}
             </div>
+          </section>
+
+          <section>
+            <h2>Sources</h2>
+            <ul>
+              <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11303915/" className={SOURCE_LINK_CLASS} target="_blank" rel="noopener noreferrer">Krzikalla et al. (2024), randomized waitlist-controlled trial of worry postponement</a></li>
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/26511764/" className={SOURCE_LINK_CLASS} target="_blank" rel="noopener noreferrer">Versluis et al. (2016), randomized online worry-postponement trial</a></li>
+              <li><a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/" className={SOURCE_LINK_CLASS} target="_blank" rel="noopener noreferrer">NHS Every Mind Matters, Tackling your worries</a></li>
+              <li><a href="https://www.nimh.nih.gov/health/topics/generalized-anxiety-disorder-gad" className={SOURCE_LINK_CLASS} target="_blank" rel="noopener noreferrer">National Institute of Mental Health, Generalized Anxiety Disorder</a></li>
+            </ul>
           </section>
         </div>
       </article>

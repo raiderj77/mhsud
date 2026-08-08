@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
@@ -247,7 +246,6 @@ export function WorryTimeClient({ faqData }: Props) {
         that worries will resolve or that anxiety will decrease.
       </p>
 
-      <AdSlot position="above-tool" />
 
       {/* ── Tool Card ── */}
       <div className="bg-white dark:bg-night-800 rounded-2xl shadow-lg border border-sand-200 dark:border-neutral-700 p-6 sm:p-8 mb-8">
@@ -403,7 +401,7 @@ export function WorryTimeClient({ faqData }: Props) {
               </h3>
               {todayWorries.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400">No worries parked today. That can be a good thing.</p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400">No worries parked today.</p>
                 </div>
               ) : (
                 <div className="space-y-2">
@@ -684,7 +682,6 @@ export function WorryTimeClient({ faqData }: Props) {
         )}
       </div>
 
-      <AdSlot position="below-tool" />
 
       {/* ── How to Use ── */}
       <section className="mb-12">
@@ -728,8 +725,6 @@ export function WorryTimeClient({ faqData }: Props) {
           </ul>
         </div>
       </section>
-
-      <AdSlot position="in-content" />
 
       {/* ── FAQ ── */}
       <section className="mb-12">
