@@ -37,6 +37,24 @@ test("the free checklist cites primary sources and contains no instrument mechan
   assert.doesNotMatch(checklist, /PHQ-9 item|GAD-7 item|DASS-21 item|reverse-scored item \d/i);
 });
 
+test("the public instrument-rights guide is source-linked and reproduces no instrument mechanics", async () => {
+  const guide = await read("src/app/for-professionals/screening-instrument-rights-guide/page.tsx");
+
+  for (const source of [
+    /phqscreeners\.com\/select-screener/,
+    /ptsd\.va\.gov\/professional\/assessment/,
+    /who\.int\/publications/,
+    /dass\.psy\.unsw\.edu\.au\/DASSFAQ\.htm/,
+    /autismresearchcentre\.com\/tests/,
+  ]) assert.match(guide, source);
+
+  assert.match(guide, /not legal advice/i);
+  assert.match(guide, /contains no instrument items/i);
+  assert.match(guide, /patient records/i);
+  assert.doesNotMatch(guide, /item\s*9\s*(?:asks|reads|says)|score\s*[>=]+\s*\d|reverse-scored item \d/i);
+  assert.doesNotMatch(guide, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
+});
+
 test("professional discovery stays off sensitive and global commercial surfaces", async () => {
   const [about, contact, methodology, footer, policies] = await Promise.all([
     read("src/app/about/page.tsx"),

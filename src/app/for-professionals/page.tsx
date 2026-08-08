@@ -153,6 +153,9 @@ export default function ForProfessionalsPage() {
             <Link href="/for-professionals/screening-implementation-checklist" className="btn-secondary">
               Use the free checklist
             </Link>
+            <Link href="/for-professionals/screening-instrument-rights-guide" className="btn-secondary">
+              Check instrument rights
+            </Link>
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
             Do not email patient records, assessment answers, scores, diagnoses, or other health information.

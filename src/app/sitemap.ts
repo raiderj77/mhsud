@@ -136,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/contact`, lastModified: "2026-03-03T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/for-professionals`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/for-professionals/screening-implementation-checklist`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/for-professionals/screening-instrument-rights-guide`, lastModified: "2026-08-07T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/blog`, lastModified: lastUpdated, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/crisis-resources`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.6 },
