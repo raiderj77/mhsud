@@ -559,14 +559,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "worry-time-scheduler": {
     toolName: "Worry Time Scheduler",
     prompts: [
-      "How does scheduling a specific time to worry change how much you worry throughout the rest of the day?",
+      "What, if anything, do you notice about your worries outside the scheduled review period?",
       "Which worries feel productive (leading to problem-solving) and which feel unproductive (circular and repetitive)?",
       "What strategies help you postpone worry when it comes up outside your scheduled worry time?",
-      "Has structured worry time helped you realize that some concerns feel less urgent when you return to them later?",
+      "When you return to a worry later, does it feel the same, less pressing, or more pressing?",
     ],
     faqEntries: [
-      { question: "What is worry time and does it actually help with anxiety?", answer: "Worry time is a CBT technique where you designate a specific 15–30 minute period each day to focus on your worries. Outside that window, you postpone worry to the scheduled time. Research shows this reduces overall worry frequency and duration because it gives the brain a structured alternative to constant, uncontrolled worrying." },
-      { question: "How do I set up an effective worry time routine?", answer: "Choose a consistent 15–30 minute window (not before bed). When worries arise outside this time, write them down and postpone. During worry time, review your list, many worries will have resolved or feel less urgent. For remaining worries, distinguish between solvable problems (make an action plan) and unsolvable concerns (practice acceptance)." },
+      { question: "What is worry time and does it actually help with anxiety?", answer: "Worry time is a structured exercise where you briefly record worries and return to them during a planned review period. Research on worry postponement is mixed: a small supported intervention reported benefit for one group, while a larger online trial found no advantage over recording worries alone. This scheduler is educational and is not established as a treatment for anxiety." },
+      { question: "How do I set up a worry time routine?", answer: "Choose a bounded period that feels manageable; public guidance and research protocols commonly use about 10 to 30 minutes, but there is no proven best duration for everyone. Briefly record worries, review them later for a possible action or an acceptance step, and stop if the exercise becomes repetitive or increases distress." },
     ],
   },
 

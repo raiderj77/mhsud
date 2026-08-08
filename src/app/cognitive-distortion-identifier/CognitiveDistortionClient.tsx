@@ -610,7 +610,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
             { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety Test", desc: "7-question anxiety screening" },
             { href: "/phq-9-depression-test", label: "PHQ-9 Depression Test", desc: "9-question depression screening" },
             { href: "/coping-skills-randomizer", label: "Coping Skills Randomizer", desc: "Random healthy coping strategy" },
-            { href: "/rosenberg-self-esteem-scale", label: "Self-Esteem Scale", desc: "Rosenberg self-esteem check" },
+            { href: "/worry-time-scheduler", label: "Worry Time Scheduler", desc: "Browser-local worry postponement exercise" },
           ].map((tool) => (
             <Link
               key={tool.href}
