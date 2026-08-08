@@ -270,7 +270,7 @@ const COPING_TOOLS = [
   { name: "DBT Crisis Skills", href: "/dbt-crisis-skills", description: "DBT distress tolerance and TIP skills reference for high-distress moments." },
   { name: "Urge Surfing Timer", href: "/urge-surfing-timer", description: "Timer-based urge surfing practice from relapse prevention work." },
   { name: "HALT Check-In", href: "/halt-check-in", description: "Hungry, angry, lonely, tired self-check used in recovery support." },
-  { name: "Worry Time Scheduler", href: "/worry-time-scheduler", description: "CBT-based stimulus-control technique for chronic worry." },
+  { name: "Worry Time Scheduler", href: "/worry-time-scheduler", description: "Structured worry-postponement exercise with mixed online evidence." },
   { name: "Daily Recovery Check-In", href: "/daily-recovery-check-in", description: "Brief daily reflection on cravings, triggers, gratitude, and plan." },
   { name: "Coping Skills Randomizer", href: "/coping-skills-randomizer", description: "Random prompt across distraction, soothing, and connection categories." },
   { name: "Trigger Identification Worksheet", href: "/trigger-identification-worksheet", description: "Map internal and external triggers and pair them with planned responses." },

@@ -9,9 +9,9 @@ const TOOL_URL = `${SITE_URL}/worry-time-scheduler`;
 
 export const metadata: Metadata = createMetadata({
   path: "/worry-time-scheduler",
-  title: "Worry Time & Worry Postponement | Free CBT Scheduler",
+  title: "Worry Time Scheduler | Free Browser-Local CBT Tool",
   description:
-    "Use a free, private worry time scheduler to park worries and practice CBT worry postponement in a structured 15-30 minute session. Educational; no signup.",
+    "Try scheduled worry with a free browser-local scheduler. Record brief reminders, review them during a bounded session, and clear them anytime. Mixed evidence; educational.",
   keywords: [
     "worry time scheduler", "worry postponement CBT",
     "scheduled worry time", "worry period technique",
@@ -21,8 +21,8 @@ export const metadata: Metadata = createMetadata({
     "anxiety management tool", "worry time CBT technique",
   ],
   openGraph: {
-    title: "Worry Time & Worry Postponement | Free CBT Scheduler",
-    description: "A free, private tool for practicing scheduled worry time and CBT worry postponement. Educational only; no signup required.",
+    title: "Worry Time Scheduler | Free Browser-Local CBT Tool",
+    description: "A browser-local scheduler for practicing worry postponement. No signup; mixed evidence; educational only.",
     url: TOOL_URL,
     type: "website",
   },
@@ -67,7 +67,7 @@ export default function WorryTimeSchedulerPage() {
               description: "A free CBT worry postponement tool. Schedule a daily worry time, park worries throughout the day with a quick capture button, then process each worry in a guided session with structured prompts. Track worry patterns over time with stats. Based on the stimulus control and scheduled worry techniques from cognitive behavioral therapy for generalized anxiety disorder.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-08-05",
+              dateModified: "2026-08-08",
             }),
     }),
         }}
@@ -92,18 +92,18 @@ export default function WorryTimeSchedulerPage() {
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 text-center">
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100">
-          Worry Time Scheduler
+          Worry Time Scheduler and Worry Postponement Tool
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: August 5, 2026
+        Last updated: August 8, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="Worry time, also called worry postponement, is a CBT exercise that sets a planned 15-30 minute period to revisit worries recorded earlier in the day."
-          who="People who want a structured, private way to practice scheduled worry without creating an account."
+          who="People who want a structured, browser-local way to practice scheduled worry without creating an account."
           bottomLine="Evidence for standalone and online worry-postponement exercises is mixed. This educational tool is not treatment, a diagnosis, or emergency care."
-          lastUpdated="2026-08-05"
+          lastUpdated="2026-08-08"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">

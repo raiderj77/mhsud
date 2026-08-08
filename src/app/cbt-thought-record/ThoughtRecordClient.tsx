@@ -804,7 +804,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding", desc: "Sensory grounding for anxiety" },
               { href: "/gad-7-anxiety-test", label: "GAD-7 Anxiety Test", desc: "7-question anxiety screening" },
               { href: "/phq-9-depression-test", label: "PHQ-9 Depression Test", desc: "9-question depression screening" },
-              { href: "/rosenberg-self-esteem-scale", label: "Self-Esteem Scale", desc: "Rosenberg self-esteem check" },
+              { href: "/worry-time-scheduler", label: "Worry Time Scheduler", desc: "Browser-local worry postponement exercise" },
             ].map((tool) => (
               <Link key={tool.href} href={tool.href} className="block p-4 rounded-xl border border-sand-200 dark:border-neutral-700 hover:border-sage-400 dark:hover:border-sage-600 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors">
                 <p className="font-semibold text-sm text-neutral-700 dark:text-neutral-200">{tool.label}</p>
