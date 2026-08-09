@@ -430,14 +430,14 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "trigger-identification-worksheet": {
     toolName: "Trigger Identification Worksheet",
     prompts: [
-      "Which triggers surprised you, were there patterns you had not consciously recognized before?",
-      "How do emotional triggers (stress, loneliness, boredom) differ from situational triggers (places, people, times) for you?",
-      "For your top three triggers, what is one specific coping strategy you could use for each?",
-      "How can you modify your environment or routine to reduce exposure to your strongest triggers?",
+      "Did any cue category raise a question you would like to discuss with a qualified professional?",
+      "Which selected cues feel safe and useful to describe with fictional or de-identified wording?",
+      "Which general response ideas, if any, would you want a counselor to help you evaluate?",
+      "Who could you contact if completing this worksheet brings up a difficult urge?",
     ],
     faqEntries: [
-      { question: "Why is identifying triggers important for recovery?", answer: "Triggers are people, places, emotions, or situations that increase the urge to use substances or engage in unhealthy behaviors. Identifying your personal triggers is a foundational step in recovery because it allows you to prepare coping responses in advance rather than reacting impulsively in the moment." },
-      { question: "What are common triggers for substance use relapse?", answer: "Common triggers include: stress, negative emotions (anger, loneliness, boredom), social pressure, being in places associated with past use, celebrations, financial problems, relationship conflict, and physical pain. Triggers are highly individual, which is why a personal identification exercise is more valuable than a general list." },
+      { question: "What is a substance-use cue?", answer: "A cue is something a person associates with an urge to use a substance, such as a place, time, thought, emotion, physical sensation, or social situation. A cue does not predict a person's behavior or establish relapse risk." },
+      { question: "Is this a relapse-risk assessment?", answer: "No. The selections and counts only organize entries. They do not measure severity, diagnose a condition, or predict relapse. A qualified healthcare professional or substance-use counselor can help interpret concerns in context." },
     ],
   },
 
