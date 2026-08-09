@@ -71,3 +71,36 @@ Scores use 1 (weak/low) to 5 (strong/high). Risk is inverse: 1 is lowest YMYL ri
 4. Display ads remain off. Any future activation requires the publisher account to be approved, a Google-certified CMP, strict CSP validation, non-personalized serving, and a narrowly approved route allowlist that excludes all health-topic, assessment, result, crisis, and local-data pages.
 
 The next genuine owner/account-side decision is whether to publish this tested branch. After publication and a measurement window, the next commercial decision is whether to define a price and checkout path for the professional implementation review offer; outreach, sponsorship, affiliates, and ads remain separately approval-gated.
+
+## Parallel acquisition workstream: cognitive-distortion tool
+
+The worry-time measurement dates are checkpoints, not a freeze on other acquisition work. A separate before-state identifies `/cognitive-distortion-identifier` as the next qualified existing-page opportunity: 17 clicks, 580 impressions, 2.9% CTR, and average position 15.7 in the same three-month Search Console window. These are page-level aggregates; query strings and health data are not stored here.
+
+### Verified before-state
+
+- The route was already indexable, canonical, in the sitemap, and linked from the screening hub, CBT thought record, worry-time scheduler, global navigation, and other maintained tools.
+- The page offered a browser-local, self-guided pattern-selection and reframing exercise with no automated score.
+- It made unsupported claims about typical distortion counts, practice frequency, clinical outcomes, and specific disorder-pattern relationships.
+- It rendered three ad-slot call sites around the thought-entry journey, despite the site's current global ad restrictions.
+- The privacy boundary appeared after the exercise rather than before the free-text field.
+
+### Evidence and competitive interpretation
+
+- The Beck Institute describes CBT as a structured psychotherapy in which trained therapists help clients identify distressing thoughts and evaluate how realistic they are.
+- NHS Every Mind Matters describes a thought record as a common CBT exercise using a situation, thoughts and feelings, evidence, and a more realistic or neutral alternative.
+- Current competing pages commonly lead with a test, AI analysis, automatic classification, or account-based journaling. A transparent no-AI, no-score, browser-local exercise is a meaningful product distinction. This is an inference from current competitor pages, not a ranking guarantee.
+
+### Implemented locally
+
+- Aligned the title, H1, visible quick answer, description, and structured data around the actual `cognitive distortion identifier` and guided reframing task.
+- Added a just-in-time privacy notice before the free-text field, encouraged fictional or de-identified examples, and disabled autocomplete on the field.
+- Moved the descriptive H1 and named reviewer credentials ahead of the entry journey and connected the privacy guidance to the text field's accessible description.
+- Removed unsupported efficacy, frequency, quantity, and disorder-association claims from visible copy, FAQs, and shared reflection content.
+- Clarified that the tool is not a questionnaire, validated assessment, automated analysis, score, diagnosis, treatment, or substitute for therapy.
+- Replaced a medical catastrophizing example with a non-medical fictional example.
+- Removed all page-level ad-slot call sites and replaced result-oriented clinician copy with neutral discussion guidance.
+- Updated primary-source links and the screening-hub description while preserving named reviewer credentials, crisis guidance, non-diagnostic language, and browser-local privacy limits.
+
+### Independent measurement
+
+If released, compare this page's clicks, impressions, CTR, and average position at 28, 56, and 84 days. Continue separate, non-overlapping acquisition work during that period; avoid repeated edits to this route unless safety, accuracy, or technical evidence requires them. No health-route analytics, answers, selected labels, free text, or result-like state should be added to measurement.

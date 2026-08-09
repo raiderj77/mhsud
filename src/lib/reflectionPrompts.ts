@@ -514,15 +514,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "cognitive-distortion-identifier": {
     toolName: "Cognitive Distortion Identifier",
     prompts: [
-      "Which cognitive distortions, all-or-nothing thinking, catastrophizing, mind reading, do you recognize in your own thought patterns?",
-      "How do these distorted thoughts affect your mood, decisions, and relationships?",
-      "Can you think of a recent situation where you caught yourself using one of these thinking patterns?",
-      "What would a more balanced version of your most frequent distorted thought sound like?",
-      "How might recognizing these patterns change how you respond to stressful situations?",
+      "Which descriptions, if any, seemed useful when you considered the example?",
+      "What feelings, decisions, or actions did you notice alongside the thought?",
+      "Can you use a fictional or de-identified situation to explore one of these patterns?",
+      "What might a more balanced version of the thought sound like?",
+      "Would considering another perspective change how you might respond to the situation?",
     ],
     faqEntries: [
-      { question: "What are cognitive distortions and how do they affect mental health?", answer: "Cognitive distortions are automatic, biased patterns of thinking that reinforce negative emotions. Common examples include catastrophizing (assuming the worst), all-or-nothing thinking, and personalization (blaming yourself for everything). These distortions are a central focus of cognitive behavioral therapy because changing them leads to significant improvements in mood and behavior." },
-      { question: "How can I stop cognitive distortions?", answer: "You do not need to stop thoughts entirely, the goal is to recognize them and reframe them. When you notice a distorted thought, ask yourself: 'What is the evidence for and against this thought?' and 'What would I say to a friend thinking this?' With practice, you develop the habit of catching distortions before they spiral into strong negative emotions." },
+      { question: "What are cognitive distortions?", answer: "The term cognitive distortions refers to biased or unhelpful patterns in how someone interprets a situation. Common examples include catastrophizing, all-or-nothing thinking, and personalization. A pattern label can prompt reflection, but it is not a diagnosis and does not prove that a thought is false." },
+      { question: "How can I examine an unhelpful thought?", answer: "A thought record may ask what evidence supports and does not support a thought, then invite a more realistic or neutral alternative. This educational exercise is not therapy, and it is reasonable to pause if reflection increases distress or self-criticism." },
     ],
   },
 

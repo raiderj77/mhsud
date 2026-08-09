@@ -5,6 +5,7 @@ import { useId, useState } from "react";
 interface Props {
   prompts: string[];
   toolName: string;
+  mode?: "results" | "exercise";
 }
 
 /**
@@ -12,8 +13,9 @@ interface Props {
  * Displayed after screening results on all tool pages.
  * Toggle is keyboard-accessible (Space + Enter) with aria-expanded.
  */
-export function ReflectionPrompts({ prompts, toolName }: Props) {
+export function ReflectionPrompts({ prompts, toolName, mode = "results" }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const isExercise = mode === "exercise";
   const componentId = useId();
   const panelId = `${componentId}-reflection-prompts`;
   const buttonId = `${componentId}-reflection-prompts-button`;
@@ -44,7 +46,7 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
             />
           </svg>
           <span className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100">
-            Reflect on Your Results
+            {isExercise ? "Reflect on This Exercise" : "Reflect on Your Results"}
             <span className="sr-only"> for {toolName}</span>
           </span>
         </span>
@@ -73,7 +75,9 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
       >
         <div className="px-5 pb-5">
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 leading-relaxed">
-            Take a moment to consider these questions. There are no right or wrong answers, they are meant to help you make sense of your results.
+            {isExercise
+              ? "These optional questions can help you consider what you noticed. There are no right or wrong answers."
+              : "Take a moment to consider these questions. There are no right or wrong answers, they are meant to help you make sense of your results."}
           </p>
 
           <ol className="space-y-3">
@@ -91,7 +95,9 @@ export function ReflectionPrompts({ prompts, toolName }: Props) {
           </ol>
 
           <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-5 leading-relaxed border-t border-sand-200 dark:border-neutral-700 pt-4">
-            These questions are for personal reflection only. If your results concern you, please share them with a qualified healthcare provider.
+            {isExercise
+              ? "These questions are for personal reflection only. Pause if the exercise increases distress or self-criticism; a qualified healthcare provider can offer individual guidance."
+              : "These questions are for personal reflection only. If your results concern you, please share them with a qualified healthcare provider."}
           </p>
         </div>
       </div>
