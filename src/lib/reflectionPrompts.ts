@@ -544,15 +544,15 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
   "cbt-thought-record": {
     toolName: "CBT Thought Record",
     prompts: [
-      "What situation triggered the negative thought you recorded, and how intense was the emotion on a scale of 1–10?",
-      "What evidence supports the negative thought, and what evidence challenges it?",
-      "After completing the thought record, did the intensity of the emotion change?",
-      "What patterns do you notice in the types of situations or thoughts that recur most often?",
-      "How could you use thought records regularly to build awareness of your thinking patterns?",
+      "What specific situation did you choose to examine?",
+      "Which details are observations, and which are interpretations?",
+      "What evidence supports the thought, and what evidence does not support it?",
+      "Can you write an alternative view that is realistic rather than automatically positive?",
+      "Would it be helpful to discuss this entry with a qualified professional?",
     ],
     faqEntries: [
-      { question: "What is a CBT thought record and how do I use it?", answer: "A CBT thought record is a structured worksheet used in cognitive behavioral therapy to examine and challenge negative automatic thoughts. You record the triggering situation, the automatic thought, the emotion it caused, evidence for and against the thought, and a more balanced alternative. With practice, this process becomes more automatic." },
-      { question: "How often should I fill out a CBT thought record?", answer: "Start by completing a thought record whenever you notice a strong negative emotion or unhelpful thought pattern. Many therapists recommend 1–3 per week during active CBT treatment. Over time, the process of examining thoughts becomes more automatic and you may need written records less frequently." },
+      { question: "What is a CBT thought record and how do I use it?", answer: "A CBT thought record is a structured exercise for noting a situation, thoughts and feelings, evidence that supports and does not support a thought, and a more realistic or neutral alternative. This educational worksheet does not analyze, score, or diagnose what you enter." },
+      { question: "How often should I fill out a CBT thought record?", answer: "There is no required schedule on this page. You can use the worksheet when you want to examine a specific recent situation. If a clinician suggested the exercise, follow the plan you agreed with them, and pause if the exercise increases distress or self-criticism." },
     ],
   },
 

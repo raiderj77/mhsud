@@ -27,7 +27,7 @@ const COOKIE_TABLE = [
     category: "Browser storage (not cookies)",
     consent: "Tool choice",
     cookies: [
-      { name: "mct-safety-plan, mct-thought-records, mct-worry-*", purpose: "Keeps a safety plan, thought records, or worry log available in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
+      { name: "mct-safety-plan, mct-thought-records, mct-worry-*", purpose: "Keeps a safety plan, optionally saved thought records, or a worry log available in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
       { name: "mct-recovery-checkins, mindcheck_sobriety_*", purpose: "Keeps recovery check-ins, sobriety date, and optional spending estimate in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
     ],
   },

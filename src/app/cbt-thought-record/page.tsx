@@ -9,9 +9,9 @@ const TOOL_URL = `${SITE_URL}/cbt-thought-record`;
 
 export const metadata: Metadata = createMetadata({
   path: "/cbt-thought-record",
-  title: "Free CBT Thought Record: 7-Column Online Worksheet",
+  title: "CBT Thought Record Worksheet | Free 7-Step Tool",
   description:
-    "Use a free 7-column CBT thought record to identify automatic thoughts, compare evidence, and draft a balanced alternative. Local browser save; no signup.",
+    "Use a free CBT thought record worksheet to note a situation, thoughts, feelings, evidence, and an alternative view. Optional browser-local save; no signup.",
   keywords: [
     "CBT thought record", "thought record worksheet",
     "CBT worksheet online", "thought diary",
@@ -22,8 +22,8 @@ export const metadata: Metadata = createMetadata({
     "Aaron Beck thought record",
   ],
   openGraph: {
-    title: "Free CBT Thought Record: 7-Column Online Worksheet",
-    description: "Work through a 7-column CBT thought record, compare evidence, and draft a balanced alternative thought. Optional local browser save; no signup.",
+    title: "CBT Thought Record Worksheet | Free 7-Step Tool",
+    description: "Work through a seven-step CBT thought record. Optional browser-local save; no signup, diagnosis, or automated analysis.",
     url: TOOL_URL,
     type: "website",
   },
@@ -32,23 +32,23 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What is a CBT thought record?",
-    answer: "A CBT thought record (also called a dysfunctional thought record or thought diary) is a structured worksheet used in cognitive behavioral therapy. It breaks down a distressing experience into columns: the situation, your automatic thought, the emotions you felt, evidence for the thought, evidence against it, a balanced alternative thought, and a re-rating of your emotions. By working through these columns, you learn to distinguish between facts and feelings, challenge distorted thinking, and develop more balanced perspectives. It was developed by Aaron Beck and refined by David Burns and Christine Padesky.",
+    answer: "A CBT thought record (also called a thought diary) is a structured exercise for noting a situation, thoughts and feelings, evidence that supports or does not support a thought, and a more realistic or neutral alternative. This page offers an independent educational implementation of that general technique; it is not an official Beck Institute worksheet or a clinical assessment.",
   },
   {
-    question: "How often should I complete a thought record?",
-    answer: "During active CBT treatment, therapists typically recommend completing at least one thought record per day, especially when you notice strong negative emotions. Even 2-3 per week can build the cognitive restructuring skill over time. The key is consistency, regular practice trains your brain to automatically question distorted thoughts. Many people find it helpful to set a daily time (like the evening) to reflect on the most distressing moment of their day and work through it. Over time, you will start catching and challenging negative thoughts in real time without needing to write them down.",
+    question: "When might I use a thought record?",
+    answer: "You might use one when you want to slow down and examine a recent difficult situation. There is no required schedule on this page. If a clinician has suggested thought records, follow the plan you agreed with them. Pause if the exercise increases distress or self-criticism.",
   },
   {
     question: "What if my emotions do not change after completing a thought record?",
-    answer: "It is completely normal for emotion ratings to not change dramatically, especially in the beginning. The goal is not to eliminate negative emotions, it is to make your thinking more accurate and reduce the intensity somewhat. Even a 10-point reduction (e.g., anxiety from 80 to 70) is meaningful. If you consistently find no change, it may mean the balanced thought does not feel convincing yet, which is common. Try asking: 'What would I tell a friend in this situation?' or 'What will I think about this in a year?' If emotions remain very intense, this is worth discussing with a therapist who can help you develop the skill further.",
+    answer: "An emotion rating may decrease, stay the same, or increase. The worksheet does not grade that change or determine whether the exercise worked. A realistic alternative thought should acknowledge the available evidence rather than force a positive conclusion. A qualified professional can help if you feel stuck or the exercise is distressing.",
   },
   {
     question: "What is the difference between a thought and an emotion?",
-    answer: "This is one of the most important distinctions in CBT. Emotions are single words that describe how you feel: anxious, sad, angry, guilty, ashamed, frustrated, hopeless. Thoughts are sentences or images that go through your mind: 'I'm going to fail,' 'Nobody likes me,' 'This is hopeless.' A common mistake is listing a thought as an emotion. For example, 'I feel like a failure' is actually a thought (containing the cognitive distortion of labeling), while the emotion might be 'ashamed' or 'sad.' The thought record separates these so you can challenge the thought while validating the emotion.",
+    answer: "An emotion is a feeling word, such as anxious, sad, angry, or frustrated. A thought is a sentence or image that passes through your mind, such as 'I might fail.' The worksheet separates them to make the reflection easier to organize; it does not decide whether a thought is true or label it automatically.",
   },
   {
     question: "Is this tool the same as seeing a therapist?",
-    answer: "No. This tool is an educational self-help exercise based on the CBT thought record technique. While thought records are a core CBT tool, working with a trained therapist provides much more than a worksheet: a therapist helps you identify patterns you might miss, guides you through stuck points, provides accountability, and tailors the approach to your specific needs. If you are experiencing significant anxiety, depression, or other mental health challenges, this tool can be a helpful supplement but should not replace professional care.",
+    answer: "No. This is an educational self-reflection worksheet, not therapy, diagnosis, treatment, or individualized medical advice. A qualified professional can consider your circumstances, help with difficult parts of the exercise, and discuss whether CBT or another approach is appropriate.",
   },
   {
     question: "Are my thought records private?",
@@ -65,10 +65,10 @@ export default function CbtThoughtRecordPage() {
           __html: JSON.stringify({
       ...toolPageJsonLd({
               name: "CBT Thought Record Worksheet",
-              description: "A free interactive 7-column CBT thought record worksheet. Record situations, automatic thoughts, emotions with intensity ratings, evidence for and against, balanced alternative thoughts, and re-rate emotions. Before/after emotion comparison. Save entries to browser for a private thought journal. Printable output. Based on the work of Aaron Beck, David Burns, and Christine Padesky.",
+              description: "A free independent educational CBT thought record worksheet with seven prompts for a situation, thoughts, emotions, evidence, an alternative thought, and an optional emotion re-rating. Entries can be saved to the current browser profile only when the visitor opts in.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-08-02",
+              dateModified: "2026-08-09",
             }),
     }),
         }}
@@ -93,18 +93,18 @@ export default function CbtThoughtRecordPage() {
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 text-center">
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100">
-          CBT Thought Record
+          CBT Thought Record Worksheet
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: August 2, 2026
+        Last updated: August 9, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A seven-column educational worksheet for recording a situation, automatic thoughts, emotions, evidence, and a more balanced alternative thought."
+          what="A seven-step educational worksheet for recording a situation, thoughts, emotions, supporting and contrary evidence, and a more realistic or neutral alternative."
           who="Adults learning CBT concepts who want a structured reflection exercise; it is not a substitute for working with a qualified professional."
           bottomLine="The worksheet can organize reflection, but it does not assess, diagnose, or treat a mental health condition. Optional saves remain in this browser profile."
-          lastUpdated="2026-08-02"
+          lastUpdated="2026-08-09"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -131,7 +131,7 @@ export default function CbtThoughtRecordPage() {
 </div>
       </div>
 
-      <LocalStorageNotice dataDescription="your thought-record entries" />
+      <LocalStorageNotice dataDescription="your thought-record entries" optional />
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>
