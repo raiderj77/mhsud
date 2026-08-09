@@ -83,6 +83,6 @@ test("consumer-health notice and entity metadata are discoverable without duplic
   }
   assert.doesNotMatch(home, /organizationJsonLd|websiteJsonLd/);
   assert.match(metadata, /"@type": "WebApplication"/);
-  assert.match(metadata, /alternateName: "Free Mental Health Screening Tools"/);
+  assert.match(metadata, /alternateName: "MindCheck"/);
   assert.match(metadata, /"max-snippet": -1/);
 });
