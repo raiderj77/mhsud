@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
-import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { printSensitiveResults } from "@/lib/sensitivePrinting";
 
 /* ── Types ────────────────────────────────────────────── */
 
@@ -74,12 +73,14 @@ export function ThoughtRecordClient({ faqData }: Props) {
   const [evidenceAgainst, setEvidenceAgainst] = useState(["", "", ""]);
   const [balancedThought, setBalancedThought] = useState("");
   const [balancedBelief, setBalancedBelief] = useState(50);
+  const [saveToBrowser, setSaveToBrowser] = useState(false);
 
   /* journal */
   const [savedRecords, setSavedRecords] = useState<ThoughtRecord[]>([]);
   const [expandedRecord, setExpandedRecord] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const summaryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setSavedRecords(loadRecords());
@@ -88,6 +89,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    if (step === "review") summaryRef.current?.focus();
   }, [step]);
 
   /* ── Helpers ───────────────────────────────────────── */
@@ -158,11 +160,12 @@ export function ThoughtRecordClient({ faqData }: Props) {
     setEvidenceAgainst(["", "", ""]);
     setBalancedThought("");
     setBalancedBelief(50);
+    setSaveToBrowser(false);
     setStep(1);
   }
 
   function handlePrint() {
-    window.print();
+    printSensitiveResults();
   }
 
   const filledEmotions = emotions.filter((e) => e.name.trim());
@@ -184,7 +187,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
               <div key={label} className="flex items-center gap-1">
                 <button
                   onClick={() => setStep(sNum as AppStep)}
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold transition-all ${
+                  className={`w-11 h-11 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                     done
                       ? "bg-sage-600 text-white"
                       : active
@@ -223,14 +226,14 @@ export function ThoughtRecordClient({ faqData }: Props) {
     return (
       <div className="flex items-center justify-between mt-6">
         {back ? (
-          <button onClick={() => setStep(back)} className="px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+          <button onClick={() => setStep(back)} className="min-h-[44px] px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
             Back
           </button>
         ) : <div />}
         <button
           onClick={() => setStep(next)}
           disabled={nextDisabled}
-          className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+          className={`min-h-[44px] px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
             nextDisabled
               ? "bg-sage-200 dark:bg-sage-900 text-sage-400 dark:text-sage-700 cursor-not-allowed"
               : "bg-sage-600 hover:bg-sage-700 text-white"
@@ -283,14 +286,19 @@ export function ThoughtRecordClient({ faqData }: Props) {
         Start a Thought Record
       </h2>
       <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-8">
-        The 7-column thought record is one of the most effective tools in cognitive behavioral therapy.
-        Challenge negative thinking patterns by examining the evidence and building more balanced thoughts.
+        Use seven prompts to organize a situation, your thoughts and feelings, the available evidence,
+        and a more realistic or neutral alternative. This exercise does not analyze or score what you enter.
       </p>
-
-      <AdSlot position="above-tool" />
 
       {/* ── Tool Card ── */}
       <div className="bg-white dark:bg-night-800 rounded-2xl shadow-lg border border-sand-200 dark:border-neutral-700 p-6 sm:p-8 mb-8 print:shadow-none print:border-0 print:p-0">
+
+        <div id="thought-record-entry-privacy" className="mb-6 rounded-xl border border-sage-200 bg-sage-50 p-4 text-sm text-sage-900 dark:border-sage-800 dark:bg-sage-950/30 dark:text-sage-100">
+          <p className="font-semibold">Protect identifying details before you type</p>
+          <p className="mt-1 leading-relaxed">
+            Use a fictional or de-identified example when possible. Entries are processed in this browser and are not intentionally sent to MindCheck Tools. Browser extensions, sync, backups, copied text, printed copies, and anyone with access to this browser profile are outside that boundary.
+          </p>
+        </div>
 
         {typeof step === "number" && <StepIndicator />}
 
@@ -306,6 +314,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
               value={situation}
               onChange={(e) => setSituation(e.target.value)}
               rows={4}
+              autoComplete="off"
+              spellCheck={false}
+              aria-describedby="thought-record-entry-privacy"
               placeholder='e.g. "Monday morning. Got an email from my boss asking to talk. I was at my desk."'
               className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 resize-none"
             />
@@ -325,6 +336,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
               value={automaticThought}
               onChange={(e) => setAutomaticThought(e.target.value)}
               rows={3}
+              autoComplete="off"
+              spellCheck={false}
+              aria-describedby="thought-record-entry-privacy"
               placeholder={"e.g. \"I'm going to get fired. I must have done something wrong.\""}
               className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 resize-none"
             />
@@ -379,6 +393,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
                       value={em.name}
                       onChange={(e) => updateEmotion(i, "name", e.target.value)}
                       placeholder="Emotion name"
+                      autoComplete="off"
+                      spellCheck={false}
+                      aria-describedby="thought-record-entry-privacy"
                       className="flex-1 px-3 py-2 rounded-lg border border-sand-200 dark:border-neutral-600 bg-white dark:bg-night-800 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
                       aria-label={`Emotion ${i + 1} name`}
                     />
@@ -430,6 +447,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
                   aria-label={`Evidence supporting the thought ${i + 1}`}
                   type="text"
                   value={val}
+                  autoComplete="off"
+                  spellCheck={false}
+                  aria-describedby="thought-record-entry-privacy"
                   onChange={(e) => updateEvidence("evidenceFor", i, e.target.value)}
                   placeholder={`Evidence ${i + 1}`}
                   className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
@@ -461,6 +481,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
                   aria-label={`Evidence against the thought ${i + 1}`}
                   type="text"
                   value={val}
+                  autoComplete="off"
+                  spellCheck={false}
+                  aria-describedby="thought-record-entry-privacy"
                   onChange={(e) => updateEvidence("evidenceAgainst", i, e.target.value)}
                   placeholder={`Counter-evidence ${i + 1}`}
                   className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
@@ -508,6 +531,9 @@ export function ThoughtRecordClient({ faqData }: Props) {
               value={balancedThought}
               onChange={(e) => setBalancedThought(e.target.value)}
               rows={3}
+              autoComplete="off"
+              spellCheck={false}
+              aria-describedby="thought-record-entry-privacy"
               placeholder={"e.g. \"My boss might want to discuss something routine. Even if there's a problem, one conversation doesn't mean I'm getting fired.\""}
               className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 resize-none"
             />
@@ -566,15 +592,27 @@ export function ThoughtRecordClient({ faqData }: Props) {
               })}
             </div>
 
+            <label className="flex items-start gap-3 rounded-xl border border-sand-200 dark:border-neutral-700 p-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <input
+                type="checkbox"
+                checked={saveToBrowser}
+                onChange={(event) => setSaveToBrowser(event.target.checked)}
+                className="mt-0.5 h-5 w-5 accent-sage-600"
+              />
+              <span>
+                Save this entry in this browser profile. This is optional and off by default. Anyone with access to this profile may be able to read saved entries.
+              </span>
+            </label>
+
             <div className="flex items-center justify-between mt-6">
-              <button onClick={() => setStep(6)} className="px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+              <button onClick={() => setStep(6)} className="min-h-[44px] px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
                 Back
               </button>
               <button
-                onClick={() => { handleSaveRecord(); setStep("review"); }}
-                className="px-6 py-2.5 rounded-xl text-sm font-semibold bg-sage-600 hover:bg-sage-700 text-white transition-colors"
+                onClick={() => { if (saveToBrowser) handleSaveRecord(); setStep("review"); }}
+                className="min-h-[44px] px-6 py-2.5 rounded-xl text-sm font-semibold bg-sage-600 hover:bg-sage-700 text-white transition-colors"
               >
-                See Results
+                View Worksheet Summary
               </button>
             </div>
           </div>
@@ -582,7 +620,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
 
         {/* ── Review ── */}
         {step === "review" && (
-          <div className="space-y-6" id="thought-record-printable" aria-live="polite">
+          <div ref={summaryRef} tabIndex={-1} className="space-y-6 outline-none" id="thought-record-printable" aria-live="polite">
             <div className="text-center">
               <div className="w-14 h-14 rounded-full bg-sage-100 dark:bg-sage-900/40 flex items-center justify-center mx-auto mb-3">
                 <svg className="w-7 h-7 text-sage-600 dark:text-sage-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -590,7 +628,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
                 </svg>
               </div>
               <p className="text-xl font-serif font-bold text-sage-700 dark:text-sage-400 mb-1">Thought Record Complete</p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">Here&apos;s your before and after.</p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">This is an organizational summary, not a score, diagnosis, or clinical result.</p>
             </div>
 
             {/* Before / after emotions */}
@@ -626,24 +664,26 @@ export function ThoughtRecordClient({ faqData }: Props) {
             </details>
 
             <div className="flex flex-wrap gap-3 justify-center print:hidden">
-              <button onClick={handlePrint} className="px-6 py-2.5 rounded-xl bg-sage-600 text-white font-medium text-sm hover:bg-sage-700 transition-colors flex items-center gap-2">
+              <button onClick={handlePrint} className="min-h-[44px] px-6 py-2.5 rounded-xl bg-sage-600 text-white font-medium text-sm hover:bg-sage-700 transition-colors flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                 </svg>
                 Print
               </button>
-              <button onClick={handleNewRecord} className="px-6 py-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+              <button onClick={handleNewRecord} className="min-h-[44px] px-6 py-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
                 New Thought Record
               </button>
               {savedRecords.length > 0 && (
-                <button onClick={() => setStep("journal")} className="px-6 py-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+                <button onClick={() => setStep("journal")} className="min-h-[44px] px-6 py-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
                   My Past Records ({savedRecords.length})
                 </button>
               )}
             </div>
 
             <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center print:hidden">
-              This record has been saved to your browser. It will be here when you come back.
+              {saveToBrowser
+                ? "You chose to save this entry in this browser profile."
+                : "This entry was not saved. Printing may create a copy outside the browser-local privacy boundary."}
             </p>
           </div>
         )}
@@ -653,7 +693,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
           <div className="space-y-5">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-serif font-bold text-neutral-800 dark:text-neutral-100">My Past Records</h2>
-              <button onClick={handleNewRecord} className="text-sm text-sage-600 dark:text-sage-400 hover:underline">
+              <button onClick={handleNewRecord} className="min-h-[44px] text-sm text-sage-600 dark:text-sage-400 hover:underline">
                 + New Record
               </button>
             </div>
@@ -692,7 +732,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
                             <EmotionBar key={i} label={em.name} before={em.before} after={em.after} />
                           ))}
                         </div>
-                        <button onClick={() => deleteRecord(rec.id)} className="text-xs text-crisis-600 dark:text-crisis-400 hover:underline mt-2">
+                        <button onClick={() => deleteRecord(rec.id)} className="min-h-[44px] text-xs text-crisis-600 dark:text-crisis-400 hover:underline mt-2">
                           Delete this record
                         </button>
                       </div>
@@ -702,16 +742,14 @@ export function ThoughtRecordClient({ faqData }: Props) {
               </div>
             )}
 
-            <button onClick={() => setStep("review")} className="px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
-              Back to Results
+            <button onClick={() => setStep("review")} className="min-h-[44px] px-5 py-2.5 rounded-xl text-sm font-medium bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+              Back to Summary
             </button>
           </div>
         )}
       </div>
 
       <div className="print:hidden">
-        <AdSlot position="below-tool" />
-
         {/* ── How to Use ── */}
         <section className="mb-12">
           <h2 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -724,7 +762,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
             <li><strong>List evidence for the thought</strong>, What objective facts support this thought? Stick to facts, not interpretations.</li>
             <li><strong>List evidence against the thought</strong>, What contradicts it? What would you tell a friend thinking this?</li>
             <li><strong>Write a balanced thought</strong>, Considering all the evidence, what is a more accurate, fair perspective?</li>
-            <li><strong>Re-rate your emotions</strong>, After reframing, how intense are your emotions now? Most people see a noticeable decrease.</li>
+            <li><strong>Optionally re-rate your emotions</strong>, Note their intensity now without treating any change as a score or pass/fail outcome.</li>
           </ol>
         </section>
 
@@ -735,31 +773,29 @@ export function ThoughtRecordClient({ faqData }: Props) {
           </h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
             <p>
-              A thought record (also called a dysfunctional thought record or thought diary) is one of the foundational tools of <strong>cognitive behavioral therapy (CBT)</strong>. Developed by psychiatrist <strong>Aaron Beck</strong> in the 1960s and refined by psychologist <strong>David Burns</strong> and therapist <strong>Christine Padesky</strong>, the thought record is designed to help you examine your automatic thoughts, the quick, often unconscious interpretations your mind makes in response to events, and evaluate whether they are accurate and helpful.
+              A thought record (also called a thought diary) is a common <strong>cognitive behavioral therapy (CBT)</strong> exercise. It offers a structured way to note a situation, thoughts and feelings, the evidence you can identify, and a more realistic or neutral alternative view.
             </p>
             <p>
-              The core insight behind CBT is that <strong>situations do not directly cause emotions</strong>. Instead, it is your <em>interpretation</em> of the situation, your automatic thought, that determines how you feel. Two people can experience the same event and feel completely different emotions depending on how they interpret it. The thought record makes this process visible by breaking it into structured columns, allowing you to see the connection between situations, thoughts, and emotions clearly.
+              CBT considers how thoughts, feelings, physical sensations, and actions can affect one another. A thought record focuses on one part of that broader model. It does not prove that a thought is inaccurate, and a balanced response does not need to be positive; it should account for the available evidence.
             </p>
             <p>
-              Research strongly supports the effectiveness of thought records. A 2012 meta-analysis in <em>Cognitive Therapy and Research</em> found that completing thought records was associated with significant reductions in depression and anxiety. A 2015 study in <em>Behaviour Research and Therapy</em> found that the evidence-weighing columns (4 and 5) were the most therapeutically active components, they force you to step outside your automatic thinking pattern and consider the situation from a more objective perspective.
+              NHS Every Mind Matters presents a seven-prompt thought record as a self-help CBT exercise. Beck Institute also publishes clinician-facing thought-record resources and notes that the worksheet can be harder than it appears and may not suit everyone. This page is an independent educational implementation, not a reproduction of either organization&apos;s worksheet and not an official or affiliated clinical product.
             </p>
 
             <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
-              Why Thought Records Work
+              How This Worksheet Is Organized
             </h3>
             <ul className="list-disc list-inside space-y-1">
-              <li><strong>They slow down your thinking</strong>, Writing forces you to examine thoughts you would normally accept without question.</li>
-              <li><strong>They separate facts from feelings</strong>, The evidence columns teach you to distinguish between objective reality and emotional interpretation.</li>
-              <li><strong>They build a new habit</strong>, Over time, you start automatically questioning distorted thoughts before they spiral.</li>
-              <li><strong>They create a written record</strong>, Reviewing past entries shows you patterns in your thinking and progress over time.</li>
+              <li><strong>Use a specific situation</strong>, a narrow example is usually easier to examine than a broad conclusion.</li>
+              <li><strong>Separate parts of the experience</strong>, write thoughts and feelings in their own fields.</li>
+              <li><strong>Consider more than one side</strong>, note evidence that supports the thought and evidence that does not.</li>
+              <li><strong>Draft a realistic alternative</strong>, aim for a view that fits the evidence rather than forced positivity.</li>
             </ul>
             <p>
-              This tool works best when used regularly, therapists typically recommend completing at least one thought record per day during active CBT treatment. Even 2-3 per week can build the cognitive restructuring skill over time.
+              There is no required frequency on this page. If a clinician suggested this exercise, follow the plan you agreed together. Stop and seek support if the exercise increases distress, rumination, or self-criticism.
             </p>
           </div>
         </section>
-
-        <AdSlot position="in-content" />
 
         {/* ── FAQ ── */}
         <section className="mb-12">
@@ -791,6 +827,7 @@ export function ThoughtRecordClient({ faqData }: Props) {
           <ReflectionPrompts
             prompts={REFLECTION_PROMPTS["cbt-thought-record"].prompts}
             toolName={REFLECTION_PROMPTS["cbt-thought-record"].toolName}
+            mode="exercise"
           />
         )}
 
@@ -824,47 +861,50 @@ export function ThoughtRecordClient({ faqData }: Props) {
             <div className="flex flex-col sm:flex-row gap-3 text-sm">
               <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
                 <p className="font-semibold text-amber-800 dark:text-amber-200">988 Suicide & Crisis Lifeline</p>
-                <p className="text-amber-700 dark:text-amber-300">Call or text 988, 24/7, free & confidential</p>
+                <p className="text-amber-700 dark:text-amber-300">
+                  <a href="tel:988" className="underline">Call 988</a> or <a href="sms:988" className="underline">text 988</a>, 24/7
+                </p>
               </div>
               <div className="bg-white/60 dark:bg-amber-900/30 rounded-lg p-3 flex-1">
                 <p className="font-semibold text-amber-800 dark:text-amber-200">SAMHSA National Helpline</p>
-                <p className="text-amber-700 dark:text-amber-300">1-800-662-4357, Treatment referral & info</p>
+                <p className="text-amber-700 dark:text-amber-300"><a href="tel:18006624357" className="underline">Call 1-800-662-4357</a> for treatment referral information</p>
               </div>
             </div>
+            <p className="mt-3 text-sm text-amber-700 dark:text-amber-300">
+              If there is immediate danger, call <a href="tel:911" className="underline">911</a> or your local emergency service. See the <Link href="/crisis-resources" className="underline">full crisis resources page</Link> for additional options.
+            </p>
           </div>
         </section>
 
         <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
           <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
-            Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+            Want support using this worksheet? Prepare for a conversation with a healthcare professional &rarr;
           </Link>
         </div>
 
         <div className="text-center mb-6">
           <p className="text-xs text-neutral-500 dark:text-neutral-400">
-            Thought records are saved in this browser&apos;s local storage and are not intentionally sent
-            to MindCheck Tools servers. Anyone using this browser profile may be able to view them.
+            Entries are saved in this browser&apos;s local storage only when you opt in and are not intentionally sent
+            to MindCheck Tools servers. Anyone using this browser profile may be able to view saved entries.
           </p>
         </div>
-
-        <ToolReviewerBio />
 
         <section className="mt-8 mb-4">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">Authoritative Sources</h2>
           <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
             <li>
-              <a href="https://beckinstitute.org/about/dr-aaron-t-beck/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Beck Institute, Aaron T. Beck, MD: Founder of Cognitive Therapy
+              <a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+                NHS Every Mind Matters: Thought record CBT exercise
               </a>
             </li>
             <li>
-              <a href="https://www.apa.org/ptsd-guideline/patients-and-families/cognitive-behavioral" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                American Psychological Association, What Is Cognitive Behavioral Therapy?
+              <a href="https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+                NHS: Cognitive behavioural therapy (CBT)
               </a>
             </li>
             <li>
-              <a href="https://www.padesky.com/clinical-corner/publications/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-                Christine Padesky, PhD, CBT Clinical Resources
+              <a href="https://beckinstitute.org/cbt-resources/resources-for-professionals-and-students/cbtresources/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+                Beck Institute: CBT worksheets and clinical resources
               </a>
             </li>
           </ul>

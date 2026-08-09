@@ -174,3 +174,42 @@ The homepage measurement dates are checkpoints, not a freeze on other acquisitio
 ### Independent measurement
 
 If released, compare this page's clicks, impressions, CTR, and average position at 28, 56, and 84 days. Do not add route, answer, selected-cue, custom-entry, summary, crisis-click, or other health-related parameters to analytics or advertising systems. Continue separate non-overlapping acquisition work during the measurement window; no ranking, traffic, conversion, or revenue outcome is guaranteed.
+
+## Parallel acquisition workstream: CBT thought-record worksheet
+
+The trigger-worksheet measurement dates are checkpoints, not a freeze on other acquisition work. A fresh signed-in Search Console read on August 9, 2026 identifies `/cbt-thought-record` as the next distinct non-crisis route with existing visibility and a material trust repair opportunity.
+
+### Verified before-state
+
+- Search Console, three months ending August 7: 9 clicks, 1,204 impressions, 0.7% CTR, and average position 34.8 for the canonical page.
+- Exact thought-record and thought-diary intent accounted for visible impressions but generally ranked well beyond page one. Smaller source- and method-oriented intent appeared closer to page one. This supports a relevance and trust repair; it does not guarantee a ranking or CTR gain.
+- The route was indexable, canonical, present in the sitemap, globally linked, and already connected from the maintained screening hub, CBT guide, worry-time scheduler, and cognitive-distortion tool.
+- The interactive journey rendered three ad-slot call sites around sensitive free-text entry and its summary, although global site policy currently blocks ad delivery there.
+- Completing the worksheet automatically wrote the entry to local storage. The visible page described saving as optional, so the behavior did not match the privacy promise.
+- Free-text fields had no just-in-time instruction to remove identifying details, autocomplete was not disabled, and printing exposed the entry without a sensitive-content confirmation.
+- The page made unsupported claims about effectiveness, expected emotion changes, required practice frequency, study outcomes, and named contributors without directly supporting those claims or clearly separating this independent implementation from published worksheets.
+
+No Search Console query strings, analytics identifiers, health answers, scores, or browser-local entries are recorded in this file. Values presented by a browser SEO extension were excluded from the evidence set.
+
+### Evidence-backed interpretation
+
+- [NHS Every Mind Matters](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/) describes a thought record as a common CBT exercise and presents seven prompts covering a situation, feelings, thoughts, supporting and contrary evidence, an alternative thought, and feelings afterward.
+- [NHS guidance on CBT](https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/) describes CBT as a talking therapy and notes that people may be asked to practise skills using a worksheet or diary between sessions.
+- [Beck Institute's professional resources](https://beckinstitute.org/cbt-resources/resources-for-professionals-and-students/cbtresources/) provides official thought-record materials for clinicians and students. The site's route should explain the general technique without representing itself as an official Beck Institute worksheet or reproducing copyrighted item wording.
+- The existing exact-intent impressions make title, H1, answer-first copy, and source alignment a qualified opportunity. Search demand, future crawling, rankings, snippets, and CTR remain outside the site's control.
+
+### Implemented locally
+
+- Aligned the title, H1, description, answer block, FAQs, and structured data around a free seven-step CBT thought-record worksheet while preserving the canonical URL.
+- Clearly labeled the page as an independent educational implementation, not an official Beck Institute worksheet, clinical assessment, diagnosis, treatment, or automated analysis.
+- Removed all three route-level ad-slot call sites from the entry, summary, and educational journey.
+- Changed browser persistence from automatic to explicit opt-in, off by default, and made the summary state accurately disclose whether the visitor chose to save.
+- Added a just-in-time privacy notice before the first free-text field, encouraged fictional or de-identified wording, disabled autocomplete and spellcheck, and connected every free-text field to the notice for assistive technology.
+- Replaced direct printing with the sensitive-content confirmation helper and moved keyboard focus to the generated worksheet summary.
+- Removed unsupported efficacy, expected-change, study-outcome, contributor, and required-frequency claims from visible copy, FAQs, and shared reflection prompts.
+- Added direct official-source links, actionable 988 and emergency links, the full crisis-resources route, and neutral professional-support language.
+- Preserved the named public reviewer and credentials ahead of the interactive journey. No health-route measurement or sharing payload was added.
+
+### Independent measurement
+
+If released, compare page-level clicks, impressions, CTR, and average position at 28, 56, and 84 days. Continue separate non-overlapping acquisition work during that period. Do not add route, free-text, emotion, evidence, rating, summary, save state, crisis action, or other health-related parameters to analytics or advertising systems. No ranking, traffic, conversion, or revenue outcome is guaranteed.
