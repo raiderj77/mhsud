@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
-import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
@@ -111,9 +109,9 @@ const DISTORTIONS: Distortion[] = [
     id: "catastrophizing",
     name: "Catastrophizing",
     description: "Expecting the worst-case scenario. Taking a small problem and imagining it snowballing into a complete disaster.",
-    example: '"I have a headache. What if it\'s a brain tumor? What if I\'m dying?"',
+    example: '"My train is delayed. I\'ll miss the meeting, lose the client, and get fired."',
     reframePrompt: "What is the most likely outcome? What is the evidence for and against the worst case?",
-    reframeExample: '"Headaches are common and usually harmless. If it persists, I can see a doctor. No need to jump to the worst case."',
+    reframeExample: '"The train is delayed, so I can message the organizer and explain. I do not yet know how they will respond."',
   },
   {
     id: "blaming",
@@ -243,15 +241,13 @@ export function CognitiveDistortionClient({ faqData }: Props) {
   /* ── Render ────────────────────────────────────────── */
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 text-center">
-        Cognitive Distortion Identifier
-      </h1>
-      <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-2xl mx-auto mb-8">
-        A free CBT-based educational tool. Write down a negative thought, identify which thinking patterns may apply, and practice reframing it with a more balanced perspective.
-      </p>
-
-      <AdSlot position="above-tool" />
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-8">
+      <div className="mb-6 rounded-xl border border-sage-200 bg-sage-50/70 p-4 text-sm text-neutral-700 dark:border-sage-800 dark:bg-sage-950/20 dark:text-neutral-300">
+        <p className="font-semibold text-sage-800 dark:text-sage-300">Before you type</p>
+        <p id="thought-privacy-notice" className="mt-1">
+          What you type stays in this page&apos;s memory and is not intentionally sent to MindCheck Tools or analyzed by AI. Avoid names or identifying details, especially on a shared device. Browser extensions, device sync, and copied text are outside this boundary.
+        </p>
+      </div>
 
       {/* ── Tool Card ── */}
       <div className="bg-white dark:bg-night-800 rounded-2xl shadow-lg border border-sand-200 dark:border-neutral-700 p-6 sm:p-8 mb-8">
@@ -262,17 +258,19 @@ export function CognitiveDistortionClient({ faqData }: Props) {
           <div className="space-y-5">
             <div>
               <label htmlFor="thought-input" className="block text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">
-                What negative thought is on your mind?
+                What thought would you like to examine?
               </label>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
-                Write it exactly as it sounds in your head. Don&apos;t filter or soften it.
+              <p id="thought-input-guidance" className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
+                A fictional or de-identified example is enough. Avoid names and other identifying details.
               </p>
               <textarea
                 id="thought-input"
                 value={thought}
                 onChange={(e) => setThought(e.target.value)}
                 rows={4}
-                placeholder='e.g. "I always mess everything up. Nobody actually likes me."'
+                placeholder='e.g. "I made one mistake, so the whole presentation was a disaster."'
+                autoComplete="off"
+                aria-describedby="thought-privacy-notice thought-input-guidance"
                 className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 resize-none"
               />
             </div>
@@ -300,7 +298,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
             </div>
 
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Read through the 16 common cognitive distortions below. <strong>Select every one that might apply</strong> to your thought. Most thoughts involve more than one.
+              Read through the 16 common cognitive distortions below. <strong>Select any that might apply</strong>, or go back if none feel useful. There is no required number and this is not a score.
             </p>
 
             {/* Distortion cards */}
@@ -428,6 +426,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                 onChange={(e) => setBalancedThought(e.target.value)}
                 rows={4}
                 placeholder="Write your balanced thought here..."
+                autoComplete="off"
                 className="w-full px-4 py-3 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-neutral-800 dark:text-neutral-200 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-400 resize-none"
               />
             </div>
@@ -465,10 +464,10 @@ export function CognitiveDistortionClient({ faqData }: Props) {
                 </svg>
               </div>
               <p className="text-2xl font-serif font-bold text-sage-700 dark:text-sage-400 mb-2">
-                Nice Work
+                Reflection Complete
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 max-w-md mx-auto">
-                You identified thinking patterns and practiced reframing. This is a core CBT skill that gets easier with practice.
+                You compared a thought with common pattern descriptions and drafted a possible alternative. This summary is for reflection only, not a clinical result.
               </p>
             </div>
 
@@ -508,16 +507,14 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         )}
       </div>
 
-      <AdSlot position="below-tool" />
-
       {/* ── How to Use ── */}
       <section className="mb-12">
         <h2 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
           How to Use This Tool
         </h2>
         <ol className="list-decimal list-inside space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          <li><strong>Write your thought</strong>, Enter a negative or distressing thought exactly as it sounds in your head. Don&apos;t soften or edit it.</li>
-          <li><strong>Identify distortions</strong>, Read through the 16 common cognitive distortions. Select every one that might apply to your thought. Most thoughts involve 2-4 distortions.</li>
+          <li><strong>Write or invent an example</strong>, Use a brief thought without names or identifying details.</li>
+          <li><strong>Compare patterns</strong>, Review the 16 descriptions and select any that seem useful. There is no required number and no score.</li>
           <li><strong>Expand examples</strong>, Click &quot;Show example&quot; on any card to see how that distortion sounds in real life.</li>
           <li><strong>Reframe your thought</strong>, For each distortion you selected, the tool provides a reframing question and an example of a balanced alternative. Use these prompts to write your own balanced thought.</li>
           <li><strong>Review your work</strong>, The summary shows your original thought, the distortions you found, and your new balanced perspective side by side.</li>
@@ -531,32 +528,26 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         </h2>
         <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4">
           <p>
-            Cognitive distortions are <strong>systematic errors in thinking</strong> that cause you to perceive reality inaccurately. They were first identified and catalogued by psychiatrist <strong>Aaron Beck</strong> in the 1960s as part of his development of cognitive therapy, and later expanded by psychologist <strong>David Burns</strong> in his influential book <em>Feeling Good: The New Mood Therapy</em> (1980). Cognitive distortions are not a sign of weakness or mental illness, everyone experiences them. They become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety, depression, and low self-esteem.
+            The term <strong>cognitive distortions</strong> refers to biased or unhelpful ways of interpreting a situation. Examples include all-or-nothing thinking, catastrophizing, mind reading, and emotional reasoning. A label can help organize reflection, but it is not a diagnosis and does not prove that a thought is false.
           </p>
           <p>
-            The core idea behind <strong>cognitive behavioral therapy (CBT)</strong> is that your thoughts influence your emotions, which in turn influence your behavior. When your thinking is distorted, your emotions and actions follow suit. For example, if you automatically think &quot;I always fail at everything&quot; (overgeneralization), you are likely to feel hopeless and avoid trying new things. By learning to recognize these thinking patterns, you can interrupt the cycle and replace distorted thoughts with more balanced, accurate ones.
+            The Beck Institute describes CBT as a structured psychotherapy in which trained therapists help people identify distressing thoughts and evaluate how realistic they are. The NHS describes a thought record as a common CBT exercise that examines a situation, thoughts and feelings, evidence for and against an unhelpful thought, and a more realistic or neutral alternative.
           </p>
           <p>
-            This tool is based on the CBT thought record technique, which is one of the most evidence-based exercises in psychotherapy. A 2012 meta-analysis published in <em>Cognitive Therapy and Research</em> found that identifying and challenging cognitive distortions was associated with significant reductions in depression and anxiety symptoms. Importantly, you do not need to replace negative thoughts with positive ones, the goal is <strong>accuracy and balance</strong>, not forced positivity.
+            This page offers only the pattern-identification and reframing portions of that process. It does not automatically analyze your words, assess a condition, or provide treatment. The aim is to consider a <strong>more balanced possibility</strong>, not to force positive thinking or dismiss real problems.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-neutral-800 dark:text-neutral-100">
-            How Cognitive Distortions Relate to Mental Health
+            How This Tool Differs From a Test
           </h3>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Depression</strong>, often involves all-or-nothing thinking, labeling, mental filter, and disqualifying the positive</li>
-            <li><strong>Anxiety</strong>, often involves catastrophizing, fortune telling, and magnification</li>
-            <li><strong>Low self-esteem</strong>, often involves labeling, should statements, and personalization</li>
-            <li><strong>Relationship conflict</strong>, often involves mind reading, blaming, and always being right</li>
-            <li><strong>Addiction and recovery</strong>, often involves emotional reasoning, all-or-nothing thinking, and fortune telling</li>
+            <li><strong>No questionnaire:</strong> you provide an example in your own words.</li>
+            <li><strong>No automated interpretation:</strong> you choose any labels that feel useful.</li>
+            <li><strong>No score or cutoff:</strong> the number selected has no clinical meaning.</li>
+            <li><strong>No diagnosis or treatment:</strong> the exercise cannot tell you whether you have a condition or what care you need.</li>
           </ul>
-          <p>
-            Learning to spot these patterns is a skill that improves with practice. The more you use tools like this, the more naturally you will begin to catch distorted thoughts in real time, before they spiral into overwhelming emotions.
-          </p>
         </div>
       </section>
-
-      <AdSlot position="in-content" />
 
       {/* ── FAQ ── */}
       <section className="mb-12">
@@ -595,6 +586,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         <ReflectionPrompts
           prompts={REFLECTION_PROMPTS["cognitive-distortion-identifier"].prompts}
           toolName={REFLECTION_PROMPTS["cognitive-distortion-identifier"].toolName}
+          mode="exercise"
         />
       )}
 
@@ -648,7 +640,7 @@ export function CognitiveDistortionClient({ faqData }: Props) {
 
       <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
         <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
-          Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+          Want professional context? Learn how to discuss mental health concerns with a clinician &rarr;
         </Link>
       </div>
 
@@ -658,8 +650,6 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         </p>
       </div>
 
-      <ToolReviewerBio />
-
       {/* ── Authoritative Sources ── */}
       <section className="mt-8 mb-4">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
@@ -667,13 +657,13 @@ export function CognitiveDistortionClient({ faqData }: Props) {
         </h2>
         <ul className="space-y-1 text-sm text-neutral-500 dark:text-neutral-400">
           <li>
-            <a href="https://beckinstitute.org/about/dr-aaron-t-beck/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              Beck Institute, Aaron T. Beck, MD: Founder of Cognitive Therapy
+            <a href="https://beckinstitute.org/about/understanding-cbt/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+              Beck Institute: Understanding Cognitive Behavior Therapy
             </a>
           </li>
           <li>
-            <a href="https://feelinggood.com/about/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
-              David Burns, MD, Feeling Good: The New Mood Therapy
+            <a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/" className="underline hover:text-sage-600 dark:hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+              NHS Every Mind Matters: Thought Record CBT Exercise
             </a>
           </li>
           <li>

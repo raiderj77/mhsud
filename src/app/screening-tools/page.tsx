@@ -266,7 +266,7 @@ const COPING_TOOLS = [
   { name: "Box Breathing Exercise", href: "/box-breathing-exercise", description: "Four-by-four breath pacing used in stress regulation." },
   { name: "Five Senses Grounding", href: "/five-senses-grounding", description: "Sensory grounding exercise for acute distress and dissociation." },
   { name: "CBT Thought Record", href: "/cbt-thought-record", description: "Structured CBT worksheet for situation, thought, feeling, evidence, and balanced thought." },
-  { name: "Cognitive Distortion Identifier", href: "/cognitive-distortion-identifier", description: "Spot common cognitive distortions in your own thinking." },
+  { name: "Cognitive Distortion Identifier", href: "/cognitive-distortion-identifier", description: "Explore 16 common thinking patterns with examples and guided reframing prompts." },
   { name: "DBT Crisis Skills", href: "/dbt-crisis-skills", description: "DBT distress tolerance and TIP skills reference for high-distress moments." },
   { name: "Urge Surfing Timer", href: "/urge-surfing-timer", description: "Timer-based urge surfing practice from relapse prevention work." },
   { name: "HALT Check-In", href: "/halt-check-in", description: "Hungry, angry, lonely, tired self-check used in recovery support." },

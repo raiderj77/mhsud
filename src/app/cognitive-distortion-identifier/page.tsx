@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { CognitiveDistortionClient } from "./CognitiveDistortionClient";
 import AnswerBlock from "@/components/AnswerBlock";
+import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 
 const TOOL_URL = `${SITE_URL}/cognitive-distortion-identifier`;
 
 export const metadata: Metadata = createMetadata({
   path: "/cognitive-distortion-identifier",
-  title: "Cognitive Distortion Identifier | Free CBT Thought Tool",
+  title: "Cognitive Distortion Identifier | Free Browser-Local CBT Tool",
   description:
-    "Identify cognitive distortions in your thinking with this free CBT-based tool. 16 common thinking errors with examples and guided reframing prompts. No signup required.",
+    "Explore 16 common cognitive distortions with examples and guided reframing prompts. Free browser-local educational CBT tool; no AI, signup, score, or diagnosis.",
   keywords: [
     "cognitive distortions list", "thinking errors CBT",
     "cognitive distortion worksheet", "cognitive distortions examples",
@@ -20,8 +21,8 @@ export const metadata: Metadata = createMetadata({
     "David Burns cognitive distortions",
   ],
   openGraph: {
-    title: "Cognitive Distortion Identifier | Free CBT Thought Tool",
-    description: "Free CBT-based tool to identify cognitive distortions. Write a thought, identify thinking errors from 16 patterns, and practice reframing. No signup.",
+    title: "Cognitive Distortion Identifier | Free Browser-Local CBT Tool",
+    description: "Explore 16 common thinking patterns and practice a balanced reframe. Educational only, with no AI, signup, score, or diagnosis.",
     url: TOOL_URL,
     type: "website",
   },
@@ -30,19 +31,19 @@ export const metadata: Metadata = createMetadata({
 const FAQ_DATA = [
   {
     question: "What are cognitive distortions?",
-    answer: "Cognitive distortions are systematic errors in thinking that cause you to perceive reality inaccurately. They were first identified by psychiatrist Aaron Beck in the 1960s and later expanded by psychologist David Burns in his book Feeling Good. Common examples include all-or-nothing thinking, catastrophizing, and emotional reasoning. Everyone experiences cognitive distortions, they become a problem when they are frequent, automatic, and unchallenged, leading to persistent negative emotions like anxiety and depression.",
+    answer: "The term cognitive distortions refers to biased or unhelpful patterns that can shape how someone interprets a situation. Examples include all-or-nothing thinking, catastrophizing, mind reading, and emotional reasoning. A pattern label is a prompt for reflection, not a diagnosis or proof that a thought is false.",
   },
   {
     question: "Is this tool the same as therapy or AI?",
     answer: "No. This tool does not use AI and is not a substitute for therapy. It is an educational self-reflection exercise based on the CBT thought record technique. You write your own thought, you identify the distortions yourself from a provided list, and you write your own reframing. The tool structures the process but does not analyze your thoughts or provide personalized clinical advice. If you are struggling with persistent negative thinking, a licensed therapist trained in CBT can provide much more comprehensive support.",
   },
   {
-    question: "How many cognitive distortions should I expect to find in one thought?",
-    answer: "Most negative thoughts involve 2-4 cognitive distortions at once. For example, the thought 'I failed the test, so I'm an idiot and I'll never graduate' contains all-or-nothing thinking (total failure from one test), labeling (calling yourself an idiot), fortune telling (predicting you'll never graduate), and overgeneralization (one test defines your future). Finding multiple distortions in a single thought is completely normal and does not mean something is wrong with you, it just means the thought is doing a lot of distorting.",
+    question: "Can one thought fit more than one cognitive distortion?",
+    answer: "Yes. One thought may resemble one pattern, several patterns, or none of the listed patterns. There is no required number and this tool does not calculate a score. Select only the labels that help you examine the thought more carefully.",
   },
   {
     question: "What is a CBT thought record?",
-    answer: "A CBT thought record (also called a dysfunctional thought record) is a structured worksheet used in cognitive behavioral therapy. The basic version involves writing down a situation, the automatic thought that came to mind, the emotions you felt, the cognitive distortions present, and then a more balanced alternative thought. This tool is a simplified, interactive version of that exercise. Thought records are one of the most evidence-based tools in CBT and are routinely assigned as homework between therapy sessions.",
+    answer: "A thought record is a common CBT exercise for writing down a situation, thoughts and feelings, evidence for and against an unhelpful thought, and a more realistic or neutral alternative. This tool offers a simplified educational pattern-identification and reframing exercise; it is not a complete thought record or a replacement for therapy.",
   },
   {
     question: "Does identifying cognitive distortions mean my thoughts are wrong?",
@@ -50,7 +51,7 @@ const FAQ_DATA = [
   },
   {
     question: "How often should I practice identifying cognitive distortions?",
-    answer: "Research suggests that regular practice produces the best results. Many CBT therapists recommend completing a thought record at least once per day, especially during periods of high stress, anxiety, or depression. Even 2-3 times per week can build the skill. Over time, you will start catching distortions automatically in real time, before they spiral into overwhelming emotions. Think of it like a muscle: the more you exercise it, the stronger and more natural it becomes.",
+    answer: "There is no single schedule that is right for everyone. Use the exercise only when it feels constructive, and pause if it increases distress or self-criticism. If you are receiving care, a qualified professional can help you decide whether and how a thought record fits your plan.",
   },
 ];
 
@@ -63,10 +64,10 @@ export default function CognitiveDistortionPage() {
           __html: JSON.stringify({
       ...toolPageJsonLd({
               name: "Cognitive Distortion Identifier",
-              description: "A free CBT-based educational tool for identifying cognitive distortions. Write a negative thought, identify which of 16 common thinking errors apply from a guided list with descriptions and examples, then practice reframing with balanced alternative prompts. Based on the work of Aaron Beck and David Burns.",
+              description: "A free browser-local educational tool for exploring 16 common cognitive distortions with examples and guided reframing prompts. It does not use AI, score responses, diagnose, or replace therapy.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-08",
             }),
     }),
         }}
@@ -89,15 +90,23 @@ export default function CognitiveDistortionPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-8 text-center">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-3">
+          Cognitive Distortion Identifier and Reframing Tool
+        </h1>
+        <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+          Explore 16 common thinking patterns and draft a more balanced alternative. This free educational tool does not use AI, calculate a score, or provide a diagnosis.
+        </p>
+      </div>
+      <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
+        Last updated: August 8, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A tool that helps you identify common cognitive distortions like catastrophizing, all-or-nothing thinking, and mind reading in your own thought patterns."
-          who="Anyone working on CBT skills who wants to recognize which thinking traps they fall into most often."
-          bottomLine="Identifying cognitive distortions is the first step to challenging them, awareness creates space for change. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="A browser-local educational tool for comparing a thought with 16 common cognitive-distortion descriptions and drafting a more balanced alternative."
+          who="Adults exploring CBT concepts independently or alongside guidance from a qualified professional."
+          bottomLine="This is a self-guided reflection exercise, not a validated assessment. It does not use AI, score or diagnose you, or determine whether a thought is true."
+          lastUpdated="2026-08-08"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -115,13 +124,16 @@ export default function CognitiveDistortionPage() {
       </span>
       <span>
         Last reviewed:{" "}
-        <time dateTime="2026-03-20">
-          {new Date("2026-03-20T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        <time dateTime="2026-08-08">
+          {new Date("2026-08-08T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
   </div>
 </div>
+      </div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <ToolReviewerBio lastReviewed="August 2026" />
       </div>
 
 <CognitiveDistortionClient faqData={FAQ_DATA} />
