@@ -8,32 +8,48 @@ const TOOL_URL = `${SITE_URL}/trigger-identification-worksheet`;
 
 export const metadata: Metadata = createMetadata({
   path: "/trigger-identification-worksheet",
-  title: "Trigger Identification Worksheet | Free Tool",
+  title: "Addiction Trigger Identification Worksheet | Free Browser Tool",
   description:
-    "Identify your personal addiction triggers across 6 categories: people, places, emotions, situations, times, and sensory cues. Free worksheet with coping strategies. Private and printable.",
+    "Use a browser-local worksheet to organize substance-use cues across six practical categories and review general response ideas. No signup; not a relapse-risk assessment.",
   keywords: [
     "addiction triggers worksheet", "identify my triggers",
-    "relapse triggers list", "trigger identification tool",
-    "addiction trigger categories", "substance abuse triggers",
-    "emotional triggers addiction", "people places things triggers",
-    "relapse trigger worksheet", "coping strategies for triggers",
-    "free trigger worksheet", "printable trigger worksheet",
+    "relapse triggers list", "trigger identification worksheet",
+    "substance use triggers", "recovery trigger worksheet",
+    "people places things triggers", "coping plan for triggers",
   ],
   openGraph: {
-    title: "Trigger Identification Worksheet | Free Tool",
-    description: "Identify your addiction triggers across 6 categories and get personalized coping strategies. Free, private, and printable.",
+    title: "Addiction Trigger Identification Worksheet",
+    description: "Organize substance-use cues and review general response-planning ideas in a browser-local worksheet. Not a relapse-risk assessment.",
     url: TOOL_URL,
     type: "website",
   },
 });
 
 const FAQ_DATA = [
-  { question: "What are addiction triggers?", answer: "Triggers are people, places, emotions, situations, times, or sensory experiences that activate a craving or urge to use substances. They work through conditioned associations, your brain has learned to connect certain cues with the reward of using, so encountering those cues produces an automatic urge. Triggers can be external (a specific bar, a friend who uses, a billboard ad) or internal (stress, loneliness, boredom, anxiety). Understanding your personal triggers is one of the most important steps in relapse prevention, because once you know what sets off a craving, you can plan how to respond before it happens." },
-  { question: "Why are there six categories of triggers?", answer: "Triggers are complex and come from many sources. The six categories in this worksheet, People, Places, Emotional, Situational, Time-Based, and Sensory, cover the full range of trigger types identified in addiction research. People and places are the most commonly discussed (the classic 'people, places, and things'), but emotional triggers like stress, loneliness, and boredom are often the most powerful. Time-based triggers (Friday nights, paydays) and sensory triggers (the smell of alcohol, the sound of a lighter) are frequently overlooked but can be just as strong. By checking all six categories, you get a complete picture of your trigger landscape." },
-  { question: "How do I use the coping strategies this tool suggests?", answer: "Each trigger in your profile is paired with coping strategies specific to its category. The goal is not to memorize every strategy but to have a few go-to responses ready for each type of trigger. For people triggers, the key strategies involve boundaries and exit plans. For emotional triggers, the focus is on recognizing the emotion early and using techniques like the HALT check-in or urge surfing. Write down your top strategies and put them in your relapse prevention plan, your phone, or wherever you will see them when you need them most." },
-  { question: "Can triggers change over time?", answer: "Yes. Triggers evolve as your life changes. Some triggers weaken over time as your brain builds new associations, a bar you used to frequent may lose its pull after months of sobriety. But new triggers can also appear: a new stressful job, a breakup, moving to a new city, or even positive events like celebrations. This is why it is important to revisit your trigger worksheet periodically, every few months during the first year of recovery, and at least annually after that. Many people review their triggers with a counselor or sponsor during regular check-ins." },
-  { question: "What if I have triggers I cannot avoid?", answer: "Some triggers are unavoidable, you cannot quit your job because a coworker drinks, or avoid all family gatherings because a relative uses. For unavoidable triggers, the strategy shifts from avoidance to preparation. This means having a plan before you encounter the trigger: who will you call if a craving hits? What is your exit strategy if things get too intense? What coping technique will you use in the moment? Practice your response in advance so it feels automatic when you need it. Many people rehearse difficult scenarios with a therapist or sponsor using role-playing." },
-  { question: "Should I share my trigger list with anyone?", answer: "Sharing your trigger list with trusted people in your support network is strongly recommended. When your sponsor, therapist, close friends, or family members know your triggers, they can help you avoid them, warn you when they notice you heading toward one, and support you in the moment. You do not have to share everything with everyone, choose what feels appropriate for each person. Some people share their full list with their therapist or sponsor and a shorter version with family members. The important thing is that someone besides you knows what to watch for." },
+  {
+    question: "What are substance-use triggers?",
+    answer: "A trigger or cue is something associated with an urge to use a substance. NIAAA describes external triggers such as people, places, things, and times of day, and internal triggers such as thoughts, emotions, and physical sensations. A trigger does not predict what you will do, and this worksheet does not estimate relapse risk.",
+  },
+  {
+    question: "Why does this worksheet use six categories?",
+    answer: "People, places, emotions, situations, times, and sensory cues are practical organizing labels used by this MindCheck Tools worksheet. They are not a validated clinical scale or an exhaustive scientific classification. A cue can fit more than one category, and you may add a de-identified cue that is not listed.",
+  },
+  {
+    question: "How should I use the response ideas?",
+    answer: "Treat them as general prompts, not personalized treatment advice. NIAAA suggests recognizing cues, planning ahead, talking with someone you trust, choosing an alternative activity, and leaving a tempting situation when appropriate. A healthcare professional or substance-use counselor can help you decide what is safe and realistic for your circumstances.",
+  },
+  {
+    question: "Can triggers change over time?",
+    answer: "Your experiences and circumstances can change, so a list created today may not describe a later situation. There is no required schedule for repeating this worksheet. Review it when it is useful to you or with a qualified professional as part of a broader support or treatment plan.",
+  },
+  {
+    question: "What if thinking about a trigger brings up a strong urge?",
+    answer: "Pause the worksheet and use a support option that is appropriate for you. NIAAA cautions that recalling an urge experience can itself bring up an urge and recommends completing this kind of activity with a therapist, doctor, or trusted person if you are unsure about doing it alone. Immediate help links are provided below.",
+  },
+  {
+    question: "Should I share or print my worksheet?",
+    answer: "Only if you choose to, and only with someone you trust. The share button sends the tool name and link, not your entries. Printing or saving a copy can expose sensitive information to people with access to the printer, file, device, backups, or sync services, so use fictional or de-identified wording when possible.",
+  },
 ];
 
 export default function TriggerWorksheetPage() {
@@ -44,20 +60,18 @@ export default function TriggerWorksheetPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             toolPageJsonLd({
-              name: "Trigger Identification Worksheet",
-              description: "A free interactive worksheet for identifying personal addiction triggers across six categories: people, places, emotional, situational, time-based, and sensory. Generates a personalized trigger profile with category-specific coping strategy suggestions. Printable output.",
+              name: "Addiction Trigger Identification Worksheet",
+              description: "A browser-local educational worksheet for organizing substance-use cues across six practical categories and reviewing general response-planning ideas. It is not a clinical assessment or relapse-risk score.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-09",
             })
           ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }}
       />
       <script
         type="application/ld+json"
@@ -71,22 +85,23 @@ export default function TriggerWorksheetPage() {
         }}
       />
 
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
+          Addiction Trigger Identification Worksheet
+        </h1>
+        <p className="text-neutral-600 dark:text-neutral-300 text-center max-w-2xl mx-auto mb-6 leading-relaxed">
+          Organize substance-use cues across six practical categories, then review general response-planning ideas. This educational worksheet is not a diagnostic test, treatment plan, or relapse-risk score.
+        </p>
         <AnswerBlock
-          what="A structured worksheet for identifying personal triggers, emotional responses, and effective coping strategies."
-          who="Anyone in recovery or managing mental health who wants to map their triggers and build a response plan."
-          bottomLine="Knowing your triggers before they happen gives you the power to choose a different response. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          what="A browser-local educational worksheet for organizing substance-use cues and reviewing general response-planning ideas."
+          who="Adults who want a structured reflection aid for themselves or to discuss with a qualified professional."
+          bottomLine="The item and category counts are organizational only. They do not measure severity, predict relapse, or replace professional care."
+          lastUpdated="2026-08-09"
         />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-08-09" />
       </div>
 
-<TriggerWorksheetClient faqData={FAQ_DATA} />
+      <TriggerWorksheetClient faqData={FAQ_DATA} />
     </>
   );
 }

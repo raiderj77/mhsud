@@ -273,7 +273,7 @@ const COPING_TOOLS = [
   { name: "Worry Time Scheduler", href: "/worry-time-scheduler", description: "Structured worry-postponement exercise with mixed online evidence." },
   { name: "Daily Recovery Check-In", href: "/daily-recovery-check-in", description: "Brief daily reflection on cravings, triggers, gratitude, and plan." },
   { name: "Coping Skills Randomizer", href: "/coping-skills-randomizer", description: "Random prompt across distraction, soothing, and connection categories." },
-  { name: "Trigger Identification Worksheet", href: "/trigger-identification-worksheet", description: "Map internal and external triggers and pair them with planned responses." },
+  { name: "Addiction Trigger Identification Worksheet", href: "/trigger-identification-worksheet", description: "Organize substance-use cues and review general planning ideas; not a relapse-risk assessment." },
   { name: "Relapse Prevention Plan", href: "/relapse-prevention-plan", description: "Build a written plan covering warning signs, supports, and steps." },
   { name: "Safety Plan", href: "/safety-plan", description: "Stanley-Brown style suicide safety plan template." },
   { name: "Readiness to Change", href: "/readiness-to-change", description: "Stages of change reflection used in motivational interviewing." },

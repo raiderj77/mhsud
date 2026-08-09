@@ -477,8 +477,8 @@ const TOOLS: Tool[] = [
   },
   {
     href: "/trigger-identification-worksheet",
-    title: "Trigger Identification Worksheet",
-    description: "Identify your personal triggers across 6 categories: people, places, emotions, situations, times, and sensory cues. Get a printable trigger profile with coping strategies.",
+    title: "Addiction Trigger Identification Worksheet",
+    description: "Organize substance-use cues across six practical categories and review general response-planning ideas. Educational worksheet, not a relapse-risk assessment.",
     badge: "Original",
     time: "~8 min",
     questions: 6,

@@ -139,3 +139,38 @@ No Search Console query strings, analytics identifiers, health answers, scores, 
 ### Independent measurement
 
 If released, compare homepage clicks, impressions, CTR, average position, and the aggregate privacy-safe tool-launch count at 28, 56, and 84 days. Continue other non-overlapping acquisition work in parallel, and avoid repeated homepage title or identity edits during the window unless safety, accuracy, or technical evidence requires them.
+
+## Parallel acquisition workstream: trigger-identification worksheet
+
+The homepage measurement dates are checkpoints, not a freeze on other acquisition work. The next distinct, non-crisis route in the same fresh Search Console page report is `/trigger-identification-worksheet`.
+
+### Verified before-state
+
+- Search Console, three months ending August 7: 16 clicks, 433 impressions, 3.7% CTR, and average position 20.8 for the canonical page.
+- This is page-level aggregate evidence. The signed-in query view was not available for a reliable fresh export during implementation, so exact query intent is unknown and no query strings are recorded here.
+- The route was indexable, canonical, listed on the homepage and screening-tools index, and present in the sitemap.
+- The page rendered two ad-slot call sites within a substance-use reflection journey, even though the global route policy currently blocks ad delivery there.
+- It described an algorithmically paired response idea as a personalized trigger profile and included unsupported claims about trigger categories, relapse outcomes, brain mechanisms, and required review frequency.
+- Custom free text appeared without a just-in-time warning to avoid names or other identifying details. Printing had no sensitive-content confirmation.
+
+### Evidence and interpretation
+
+- [NIAAA's alcohol-craving worksheet](https://rethinkingdrinking.niaaa.nih.gov/tools/worksheets-more/how-stop-alcohol-cravings) distinguishes external cues such as people, places, things, and times from internal cues such as thoughts, emotions, and physical sensations. It presents recognize, avoid, and cope ideas as self-help support, not individualized care.
+- [NIAAA's planning worksheet](https://rethinkingdrinking.niaaa.nih.gov/tools/worksheets-more/handling-urges-drink/plan-your-strategies) warns that recalling urge experiences can itself bring up an urge and advises using the activity with a therapist, doctor, or trusted person when someone is unsure about doing it alone.
+- [SAMHSA TIP 35](https://store.samhsa.gov/sites/default/files/SAMHSA_Digital_Download/PEP20-02-01_004.pdf) discusses triggers and coping strategies in the context of counseling. It does not validate the site's six categories as a relapse-risk scale.
+- The route name and page-level visibility support preserving the exact canonical URL while aligning the title and H1 to the worksheet's actual substance-use context. Because the fresh query mix is unknown, this is a relevance and trust improvement, not a claim about a specific query or ranking outcome.
+
+### Implemented locally
+
+- Removed both page-level ad-slot call sites, preserving the no-commercial-pressure boundary for a substance-use entry and summary journey.
+- Aligned the title, H1, description, visible quick answer, structured data, homepage card, and screening-tools link around an educational addiction trigger-identification worksheet.
+- Moved the descriptive H1, answer-first explanation, update date, and named public reviewer credentials ahead of the interactive journey.
+- Reframed the generated surface as an organizational worksheet summary rather than a personalized profile, and stated that counts are not scores, severity levels, clinical results, or relapse-risk estimates.
+- Added a just-in-time warning before custom entry, encouraged fictional or de-identified wording, disabled autocomplete and spellcheck, and connected the input to the warning for assistive technology.
+- Added keyboard focus to the generated summary, 44-pixel controls, a confirmation before printing sensitive entries, and static-link-only sharing that excludes selections.
+- Replaced unsupported efficacy and brain-mechanism claims with cautious official-source explanations and neutral general planning ideas.
+- Made SAMHSA, 988, Crisis Text Line, 911, and the full crisis-resources route directly actionable while preserving non-diagnostic and professional-support language.
+
+### Independent measurement
+
+If released, compare this page's clicks, impressions, CTR, and average position at 28, 56, and 84 days. Do not add route, answer, selected-cue, custom-entry, summary, crisis-click, or other health-related parameters to analytics or advertising systems. Continue separate non-overlapping acquisition work during the measurement window; no ranking, traffic, conversion, or revenue outcome is guaranteed.

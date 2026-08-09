@@ -2,11 +2,10 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
-import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { PRIVATE_SHARE_NOTICE, sharePrivateToolLink } from "@/lib/privateToolSharing";
+import { printSensitiveResults } from "@/lib/sensitivePrinting";
 
 /* ── types ─────────────────────────────────────────────── */
 
@@ -53,14 +52,11 @@ const CATEGORIES: Category[] = [
       "People who pressure or criticize me",
     ],
     copingStrategies: [
-      "Set a clear boundary before interacting with this person.",
-      "Practice saying \u201Cno\u201D in advance, rehearse the exact words you will use.",
-      "Bring a sober support person when you know you will see them.",
-      "Have an exit plan ready: know how you will leave if a craving starts.",
-      "Limit contact to phone or text instead of in-person meetings.",
-      "Ask your sponsor or therapist for help navigating this relationship.",
-      "Remember: you can love someone and still protect your recovery by keeping distance.",
-      "Tell a trusted person you are about to see this trigger person so they can check in on you after.",
+      "Consider discussing a boundary or support plan with someone you trust.",
+      "Practice a brief refusal phrase before a situation where substances may be offered.",
+      "If it feels safe and useful, ask a trusted person to accompany you.",
+      "Consider how you could leave or contact support if an urge becomes difficult to manage.",
+      "Ask a qualified counselor how to navigate a relationship connected with substance use.",
     ],
   },
   {
@@ -84,14 +80,11 @@ const CATEGORIES: Category[] = [
       "Gas stations or convenience stores",
     ],
     copingStrategies: [
-      "Avoid this location entirely if possible, take a different route.",
-      "If you must go, bring a sober support person with you.",
-      "Set a time limit: decide in advance how long you will stay and stick to it.",
-      "Have a specific exit plan: know where the door is and have a ride ready.",
-      "Replace this location with a new one, find a new coffee shop, gym, or hangout.",
-      "If you drive past it regularly, plan an alternate route even if it takes longer.",
-      "Call someone from your support network before and after visiting this place.",
-      "Remind yourself why you stopped going there, write it on a card you carry.",
+      "If appropriate, consider an alternate route or location.",
+      "If you need to visit, consider asking a trusted person to come with you.",
+      "Think through a time limit, transportation, and an exit option in advance.",
+      "Consider contacting someone in your support network before or after the visit.",
+      "A counselor can help you plan for places that cannot be avoided.",
     ],
   },
   {
@@ -116,15 +109,10 @@ const CATEGORIES: Category[] = [
     ],
     copingStrategies: [
       "Do a HALT check-in: are you Hungry, Angry, Lonely, or Tired?",
-      "Use urge surfing: observe the emotion like a wave, it will rise, peak, and pass.",
-      "Practice box breathing: 4 seconds in, hold 4, out 4, hold 4.",
-      "Call someone from your support network and tell them how you feel.",
-      "Write in a journal: name the emotion and describe it without judgment.",
-      "Go for a walk or do physical activity, movement changes brain chemistry.",
-      "Use the 5-4-3-2-1 grounding technique to bring yourself to the present moment.",
-      "Remind yourself: the emotion is real, but the craving is not a command.",
-      "Ask: what do I actually need right now? Often the answer is not a substance.",
-      "Do something kind for yourself, a warm drink, a shower, a favorite show.",
+      "Consider describing the emotion without judging it or treating an urge as a command.",
+      "Talk with someone you trust about what you are experiencing.",
+      "Choose an alternative activity that is safe and available to you.",
+      "Use a coping skill from an existing professional support or treatment plan.",
     ],
   },
   {
@@ -148,16 +136,11 @@ const CATEGORIES: Category[] = [
       "Before or after appointments",
     ],
     copingStrategies: [
-      "Plan ahead: if you know this situation is coming, rehearse your response.",
-      "Have a prepared phrase for being offered substances: \u201CNo thanks, I\u2019m good.\u201D",
-      "Automate your money on paydays: set up auto-transfers to savings before you can spend.",
-      "Build structure into unstructured time, schedule activities in advance.",
-      "Call your sponsor or a support person before the situation, not just after.",
-      "Keep your relapse prevention plan accessible, on your phone or in your wallet.",
-      "Identify one safe person you can text a code word when you feel triggered.",
-      "Leave early. You do not owe anyone an explanation for protecting your recovery.",
-      "After the situation passes, acknowledge that you got through it. That matters.",
-      "Debrief with your therapist or sponsor, what worked, what was hard, what to do differently next time.",
+      "If you know the situation is coming, consider rehearsing a response or exit option.",
+      "Prepare a brief phrase for declining an offer of substances.",
+      "Consider scheduling a safe alternative activity or support check-in.",
+      "Keep an existing professional support or treatment plan accessible if you have one.",
+      "Afterward, consider discussing what happened with a qualified counselor or trusted support person.",
     ],
   },
   {
@@ -179,14 +162,11 @@ const CATEGORIES: Category[] = [
       "Paydays",
     ],
     copingStrategies: [
-      "Schedule a specific activity during this time every week, fill the void before it appears.",
-      "Build a new routine: replace the old habit with a healthy one at the same time.",
-      "Plan a support check-in call during your vulnerable times.",
-      "Go to a meeting, group, or social activity during this time slot.",
-      "Change your environment during vulnerable times: go to a library, gym, or coffee shop.",
-      "Set a phone reminder to check in with yourself during trigger times.",
-      "Create a \u201CFriday night plan\u201D or \u201Choliday plan\u201D in advance so you are never caught unprepared.",
-      "If bedtime is a trigger, develop a wind-down routine: no screens, herbal tea, reading, breathing.",
+      "Consider planning a safe alternative activity for this time.",
+      "Ask someone you trust whether a support check-in would be useful.",
+      "Consider spending the time in a setting that supports your goals.",
+      "Use a reminder for a coping step from your professional support or treatment plan.",
+      "A counselor can help you plan around recurring times or events.",
     ],
   },
   {
@@ -208,14 +188,11 @@ const CATEGORIES: Category[] = [
       "Seeing others drink or use",
     ],
     copingStrategies: [
-      "Use the 5-4-3-2-1 grounding technique: name 5 things you see, 4 you hear, 3 you touch, 2 you smell, 1 you taste.",
-      "Change your environment immediately, walk to a different room or go outside.",
-      "Replace the sensory association: listen to new music, find new scents you enjoy.",
-      "Mute, skip, or block alcohol and drug advertisements on social media and streaming services.",
-      "Carry something with a strong, pleasant scent (essential oil, mint) to redirect your senses.",
-      "Practice urge surfing: notice the sensory trigger, observe the craving, let it pass.",
-      "Tell someone nearby what you are experiencing: \u201CI just got hit by a craving.\u201D",
-      "Remind yourself: the trigger is a cue, not a command. You can notice it without obeying it.",
+      "If it is safe to do so, consider moving to a different environment.",
+      "Mute or skip media that contains substance-related cues when that option is available.",
+      "Notice the cue and choose a coping step from an existing professional support plan.",
+      "Tell a trusted person that a cue brought up an urge if you want support.",
+      "A cue is information, not a prediction or command.",
     ],
   },
 ];
@@ -271,7 +248,10 @@ export function TriggerWorksheetClient({ faqData }: Props) {
 
   const handleGenerate = () => {
     setShowProfile(true);
-    setTimeout(() => profileRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
+    setTimeout(() => {
+      profileRef.current?.focus();
+      profileRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   const handleEdit = () => {
@@ -288,7 +268,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handlePrint = () => window.print();
+  const handlePrint = () => printSensitiveResults();
 
   const handleShare = async () => {
     await sharePrivateToolLink({
@@ -300,21 +280,21 @@ export function TriggerWorksheetClient({ faqData }: Props) {
   /* ── render ──────────────────────────────────────────── */
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      {/* H1 */}
-      <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3 text-center">
-        Trigger Identification Worksheet
-      </h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-10">
       <p className="text-neutral-500 dark:text-neutral-400 text-center max-w-xl mx-auto mb-2 leading-relaxed">
-        Identify your personal triggers across six categories. Check off the ones that apply to you,
-        add your own, and get a personalized trigger profile with coping strategies.
+        Select cues that feel relevant, add fictional or de-identified examples if needed, and review
+        general response-planning ideas. You can edit or clear the worksheet at any time.
       </p>
-      <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-8">
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mb-6">
         Your answers are processed locally and are not intentionally sent to MindCheck Tools. Copies, browser or device sync, backups, and shared-device access are outside this boundary.
       </p>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
-      <AdSlot position="triggers-top" />
+      <div id="trigger-entry-privacy" className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
+        <p className="font-semibold mb-1">Before adding a custom cue</p>
+        <p className="leading-relaxed">
+          Use a fictional or de-identified phrase when possible. Do not enter names, contact details, or information you would not want someone with access to this device or a printed copy to see.
+        </p>
+      </div>
 
       {/* ─── WORKSHEET ─────────────────────────────────── */}
       {!showProfile && (
@@ -342,7 +322,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                     return (
                       <label
                         key={key}
-                        className={`flex items-start gap-2.5 p-2.5 rounded-lg cursor-pointer transition-colors ${
+                        className={`flex min-h-[44px] items-start gap-2.5 p-2.5 rounded-lg cursor-pointer transition-colors ${
                           checked[key]
                             ? `${cat.bgLight} ${cat.bgDark}`
                             : "hover:bg-sand-50 dark:hover:bg-night-800"
@@ -370,7 +350,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                       return (
                         <label
                           key={key}
-                          className={`flex items-start gap-2.5 p-2.5 rounded-lg cursor-pointer transition-colors ${
+                          className={`flex min-h-[44px] items-start gap-2.5 p-2.5 rounded-lg cursor-pointer transition-colors ${
                             checked[key]
                               ? `${cat.bgLight} ${cat.bgDark}`
                               : "hover:bg-sand-50 dark:hover:bg-night-800"
@@ -397,17 +377,20 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                     <input
                       type="text"
                       aria-label={`Custom ${cat.label} trigger`}
+                      aria-describedby="trigger-entry-privacy"
+                      autoComplete="off"
+                      spellCheck={false}
                       value={customInput[cat.key]}
                       onChange={(e) => setCustomInput((prev) => ({ ...prev, [cat.key]: e.target.value }))}
                       onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addCustom(cat.key); } }}
                       placeholder="Add a custom trigger\u2026"
-                      className="flex-1 px-3 py-2 rounded-lg border border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-sm text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-500"
+                      className="min-h-[44px] flex-1 px-3 py-2 rounded-lg border border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 text-sm text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-500"
                       maxLength={80}
                     />
                     <button
                       onClick={() => addCustom(cat.key)}
                       disabled={!customInput[cat.key].trim()}
-                      className="px-4 py-2 rounded-lg bg-sand-200 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-300 dark:hover:bg-night-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                      className="min-h-[44px] px-4 py-2 rounded-lg bg-sand-200 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-300 dark:hover:bg-night-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                       Add
                     </button>
@@ -427,6 +410,9 @@ export function TriggerWorksheetClient({ faqData }: Props) {
             </p>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               across {CATEGORIES.filter((c) => getSelectedForCategory(c).length > 0).length} of 6 categories
+            </p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-4">
+              These counts organize your selections. They are not assessment scores, severity levels, or relapse-risk estimates.
             </p>
 
             {/* mini breakdown */}
@@ -453,27 +439,30 @@ export function TriggerWorksheetClient({ faqData }: Props) {
               disabled={totalSelected === 0}
               className={`btn-primary text-base px-8 py-3 ${totalSelected === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
             >
-              Generate My Trigger Profile
+              Review Selected Triggers
             </button>
             {totalSelected === 0 && (
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
-                Select at least one trigger to generate your profile.
+                Select at least one cue to create a worksheet summary.
               </p>
             )}
           </div>
         </section>
       )}
 
-      {/* ─── TRIGGER PROFILE ───────────────────────────── */}
+      {/* Worksheet summary */}
       {showProfile && (
-        <div ref={profileRef}>
-          <section className="card p-6 sm:p-8 mb-6 print:shadow-none print:border-0" aria-label="Your trigger profile" aria-live="polite">
+        <div ref={profileRef} tabIndex={-1}>
+          <section className="card p-6 sm:p-8 mb-6 print:shadow-none print:border-0" aria-label="Your worksheet summary" aria-live="polite">
             <div className="text-center mb-6">
               <h2 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-1">
-                Your Trigger Profile
+                Your Worksheet Summary
               </h2>
               <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                {totalSelected} trigger{totalSelected !== 1 ? "s" : ""} identified &middot; Generated {new Date().toLocaleDateString()}
+                {totalSelected} cue{totalSelected !== 1 ? "s" : ""} selected &middot; Created {new Date().toLocaleDateString()}
+              </p>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">
+                This is an organizational summary, not a clinical result, severity rating, or relapse prediction.
               </p>
             </div>
 
@@ -526,7 +515,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                           <svg className="w-3.5 h-3.5 mt-0.5 shrink-0 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          <span><strong className="text-sage-700 dark:text-sage-400">Coping:</strong> {getCopingForTrigger(cat, idx)}</span>
+                          <span><strong className="text-sage-700 dark:text-sage-400">General planning idea:</strong> {getCopingForTrigger(cat, idx)}</span>
                         </p>
                       </div>
                     ))}
@@ -537,16 +526,16 @@ export function TriggerWorksheetClient({ faqData }: Props) {
 
             {/* actions */}
             <div className="flex flex-wrap justify-center gap-3 pt-6 border-t border-sand-200 dark:border-neutral-700 mt-8 print:hidden">
-              <button onClick={handlePrint} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
-                Print Profile
+              <button onClick={handlePrint} className="min-h-[44px] px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
+                Print Summary
               </button>
-              <button onClick={handleShare} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
+              <button onClick={handleShare} className="min-h-[44px] px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
                 Share Tool Link
               </button>
-              <button onClick={handleEdit} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
-                Edit Triggers
+              <button onClick={handleEdit} className="min-h-[44px] px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-600 dark:text-neutral-300 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
+                Edit Selections
               </button>
-              <button onClick={handleReset} className="px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-500 dark:text-neutral-400 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
+              <button onClick={handleReset} className="min-h-[44px] px-5 py-2 rounded-xl bg-sand-100 dark:bg-night-800 text-neutral-500 dark:text-neutral-400 text-sm font-medium hover:bg-sand-200 dark:hover:bg-night-700 transition-colors">
                 Start Over
               </button>
             </div>
@@ -559,8 +548,7 @@ export function TriggerWorksheetClient({ faqData }: Props) {
               Next Step: Build Your Relapse Prevention Plan
             </p>
             <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-3 max-w-md mx-auto leading-relaxed">
-              Now that you know your triggers, put them into a written plan with coping strategies,
-              emergency contacts, and a craving action plan.
+              If a written plan is appropriate for you, organize support contacts and response ideas you can review with a qualified professional.
             </p>
             <Link href="/relapse-prevention-plan" className="btn-primary text-sm px-6 py-2">
               Build My Plan
@@ -569,30 +557,33 @@ export function TriggerWorksheetClient({ faqData }: Props) {
         </div>
       )}
 
-      <AdSlot position="triggers-mid" />
-
       {/* ─── EDUCATIONAL CONTENT ───────────────────────── */}
       <section className="prose-custom mb-12">
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          What Are Addiction Triggers?
+          What are substance-use triggers?
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          A <strong>trigger</strong> is any person, place, emotion, situation, time, or sensory experience
-          that activates a craving or urge to use substances. Triggers work through <strong>conditioned
-          association</strong>, your brain has learned to link certain cues with the reward of using, so
-          encountering those cues produces an automatic urge, even if you consciously want to stay sober.
+          A trigger or cue is something associated with an urge to use a substance. The U.S. National
+          Institute on Alcohol Abuse and Alcoholism (NIAAA) describes <strong>external cues</strong> such as
+          people, places, things, and times of day, and <strong>internal cues</strong> such as thoughts,
+          emotions, and physical sensations. The examples here extend that organizing idea beyond alcohol,
+          but this worksheet does not determine what caused an urge or predict what will happen next.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Triggers are often divided into <strong>external triggers</strong> (people, places, situations,
-          sensory cues) and <strong>internal triggers</strong> (emotions, physical states, thought patterns).
-          Research published in <em>Drug and Alcohol Dependence</em> found that internal triggers, especially
-          negative emotions like stress, anger, and loneliness, are the most common precursors to relapse,
-          accounting for the majority of relapse episodes.
+          NIAAA&apos;s self-help material suggests recognizing cues, planning ahead, talking with someone you
+          trust, choosing an alternative activity, and leaving a tempting situation when appropriate. It
+          also cautions that recalling urge experiences can itself bring up an urge. If you are unsure about
+          doing this alone, pause and complete it with a therapist, doctor, or trusted person.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          The critical insight is that <strong>you cannot eliminate all triggers</strong>, but you can
-          identify them, prepare for them, and develop specific coping responses for each one. This is the
-          foundation of evidence-based relapse prevention.
+          Sources: {" "}
+          <a href="https://rethinkingdrinking.niaaa.nih.gov/tools/worksheets-more/how-stop-alcohol-cravings" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">
+            NIAAA: How to Stop Alcohol Cravings
+          </a>{" "}
+          and {" "}
+          <a href="https://rethinkingdrinking.niaaa.nih.gov/tools/worksheets-more/handling-urges-drink/plan-your-strategies" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">
+            NIAAA: Plan Your Strategies
+          </a>.
         </p>
 
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -605,31 +596,30 @@ export function TriggerWorksheetClient({ faqData }: Props) {
                 <span aria-hidden="true">{cat.icon}</span> {cat.label}
               </h3>
               <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                {cat.key === "people" && "Specific individuals whose presence, behavior, or memory triggers cravings. Often the hardest category because it involves relationships you may care about."}
-                {cat.key === "places" && "Locations associated with past substance use. Your brain encodes spatial memories strongly, which is why walking past a bar or driving through an old neighborhood can produce powerful cravings."}
-                {cat.key === "emotional" && "Internal feeling states that historically led to substance use. Often the most powerful triggers and the hardest to avoid, because you carry them with you everywhere."}
-                {cat.key === "situational" && "Specific circumstances or events that create vulnerability. These are often predictable, which means they are plannable."}
-                {cat.key === "time" && "Certain days, times, or periods associated with past use. Your brain has an internal clock that can trigger cravings at habitual use times."}
-                {cat.key === "sensory" && "Sights, sounds, smells, and tastes that activate craving through sensory memory. Often the most sudden and unexpected type of trigger."}
+                {cat.key === "people" && "People you associate with past or current substance use, offers, pressure, or difficult interactions."}
+                {cat.key === "places" && "Locations you associate with substance use or an urge to use."}
+                {cat.key === "emotional" && "Feelings you notice before or alongside an urge. Emotions alone do not determine behavior."}
+                {cat.key === "situational" && "Events or circumstances you associate with an urge or with difficulty following your goals."}
+                {cat.key === "time" && "Times, dates, or recurring periods you associate with substance use or an urge."}
+                {cat.key === "sensory" && "Sights, sounds, smells, or tastes you associate with substance use or an urge."}
               </p>
             </div>
           ))}
         </div>
 
         <h2 className="font-serif text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-          From Identification to Action
+          From identification to a support plan
         </h2>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-          Identifying your triggers is the first step, but the real value comes from <strong>building a
-          specific response plan for each one</strong>. This is what a relapse prevention plan does: it takes
-          your trigger list and pairs each trigger with a concrete coping strategy, so that when the trigger
-          appears, you already know what to do.
+          A list can help you prepare questions for a healthcare professional or substance-use counselor.
+          General planning ideas may include avoiding a cue when that is safe and practical, preparing a
+          refusal or exit option, contacting someone you trust, or choosing another activity.
         </p>
         <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-          Research by Marlatt and Gordon found that people who could identify their triggers and had
-          pre-planned coping responses were significantly less likely to relapse than those who relied on
-          willpower alone. The reason is simple: in the moment of a craving, your brain is flooded with
-          urges and it is difficult to think clearly. Having a written plan means you do not need to think, you just follow the plan.
+          These ideas are not personalized recommendations. NIAAA notes that activities like this can be
+          used with counseling or therapy and are not substitutes for professional help. If reducing or
+          stopping a substance could cause withdrawal, seek medical guidance; do not use this worksheet as
+          a withdrawal plan.
         </p>
 
         {/* internal links */}
@@ -640,21 +630,21 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           <ul className="space-y-2 text-sm">
             <li>
               <Link href="/relapse-prevention-plan" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
-                Relapse Prevention Plan
+                Recovery Planning Worksheet
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Turn your triggers into a written action plan</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Organize support contacts and response ideas</span>
             </li>
             <li>
               <Link href="/urge-surfing-timer" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 Urge Surfing Timer
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Ride out cravings with guided mindfulness</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Try a structured mindfulness exercise without a promised outcome</span>
             </li>
             <li>
               <Link href="/halt-check-in" className="text-sage-600 dark:text-sage-400 hover:underline font-medium">
                 HALT Check-In
               </Link>{" "}
-              <span className="text-neutral-500 dark:text-neutral-400">, Check if hunger, anger, loneliness, or tiredness is driving your craving</span>
+              <span className="text-neutral-500 dark:text-neutral-400">, Reflect on hunger, anger, loneliness, and tiredness</span>
             </li>
           </ul>
         </div>
@@ -700,11 +690,10 @@ export function TriggerWorksheetClient({ faqData }: Props) {
           <p className="font-semibold text-neutral-700 dark:text-neutral-300 mb-1">Clinical Disclaimer</p>
           <p className="leading-relaxed">
             This worksheet is for educational and self-reflection purposes only. It is not a clinical
-            assessment or a substitute for professional counseling. Identifying triggers is one component
-            of a comprehensive approach to recovery. Always work with a qualified healthcare professional
-            or counselor for personalized support.
+            assessment, relapse-risk score, withdrawal plan, treatment plan, or substitute for professional
+            counseling. A qualified healthcare professional or substance-use counselor can help you decide
+            what support is appropriate for your circumstances.
           </p>
-          <ToolReviewerBio />
         </div>
 
         <div className="bg-crisis-50 dark:bg-crisis-950/30 rounded-xl p-5 border border-crisis-200 dark:border-crisis-800">
@@ -712,21 +701,24 @@ export function TriggerWorksheetClient({ faqData }: Props) {
             Need Help Now?
           </p>
           <ul className="space-y-1 text-crisis-600 dark:text-crisis-400">
-            <li><strong>SAMHSA National Helpline:</strong> 1-800-662-4357 (free, 24/7)</li>
-            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text 988</li>
-            <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+            <li><strong>SAMHSA National Helpline:</strong> <a className="underline" href="tel:18006624357">call 1-800-662-4357</a> for treatment information and referrals</li>
+            <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> <a className="underline" href="tel:988">call 988</a> or <a className="underline" href="sms:988">text 988</a></li>
+            <li><strong>Crisis Text Line:</strong> <a className="underline" href="sms:741741?body=HOME">text HOME to 741741</a></li>
           </ul>
+          <p className="mt-3">
+            If you or someone else is in immediate danger, call 911. See all <Link href="/crisis-resources" className="underline font-medium">crisis resources</Link>.
+          </p>
         </div>
 
         <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
           <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
-            Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
+            How to discuss recovery concerns with a healthcare professional &rarr;
           </Link>
         </div>
 
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
-          This tool runs in your browser. Its inputs are not sent to MindCheck Tools.
-          Your responses use local browser processing.
+          This tool uses browser-local state. Entries are not intentionally sent to MindCheck Tools.
+          Copies, device or browser sync, backups, and shared-device access are outside this boundary.
         </p>
       </footer>
     </div>
