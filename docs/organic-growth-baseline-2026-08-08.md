@@ -104,3 +104,38 @@ The worry-time measurement dates are checkpoints, not a freeze on other acquisit
 ### Independent measurement
 
 If released, compare this page's clicks, impressions, CTR, and average position at 28, 56, and 84 days. Continue separate, non-overlapping acquisition work during that period; avoid repeated edits to this route unless safety, accuracy, or technical evidence requires them. No health-route analytics, answers, selected labels, free text, or result-like state should be added to measurement.
+
+## Parallel acquisition workstream: homepage brand search fit
+
+The cognitive-distortion measurement dates are checkpoints, not a freeze on other acquisition work. A fresh Search Console read on August 9, 2026 identifies the homepage as the next safe existing-route opportunity after excluding the just-released routes, the crisis-adjacent route, the quarantined blog, and the already strong mental-load page.
+
+### Verified before-state
+
+- Search Console, three months ending August 7: 102 clicks, 3,263 impressions, 3.1% CTR, and average position 16.7 for the homepage.
+- The tractable homepage visibility is concentrated in the site's own name variants, which average around positions 4 to 5 but have low-single-digit CTR. Broad generic mental-health terms remain far from page one.
+- The current public search result still reflects older homepage copy. Google's crawl lag means that result is not proof of the currently deployed page or of how a future result will be rendered.
+- The page is indexable, canonical, present in the sitemap, linked throughout the maintained site, and limited to aggregate, consented, topic-neutral acquisition measurement.
+- The deployed homepage H1 described the category but did not contain the exact public site name. `WebSite` structured data used a generic alternate name rather than the concise brand form already visible in the navigation.
+
+No Search Console query strings, analytics identifiers, health answers, scores, or browser-local entries are recorded in this file.
+
+### Evidence-backed interpretation
+
+- [Google's site-name guidance](https://developers.google.com/search/docs/appearance/site-names) recommends a unique, concise name used consistently on the homepage and allows a commonly recognized alternative through `alternateName`; it warns against generic site names.
+- [Google's title-link guidance](https://developers.google.com/search/docs/appearance/title-link) recommends concise, descriptive, non-repetitive titles that match the page's visible main title.
+- [Google's snippet guidance](https://developers.google.com/search/docs/appearance/snippet) says snippets primarily come from page content and may use a page-specific meta description when it describes the page accurately.
+- The name-variant CTR gap is a qualified opportunity, but title links, snippets, crawling, positions, and CTR remain controlled by Google and user intent. Improvement is not guaranteed.
+
+### Implemented locally
+
+- Aligned the homepage title, H1, visible answer-first summary, and structured data around the exact `MindCheck Tools` identity and concise `MindCheck` alternative.
+- Replaced the generic structured-data alternate name with the non-generic brand form already used in site navigation.
+- Added a visible answer to “What is MindCheck Tools?” that distinguishes published screeners, original educational tools, and worksheets while preserving non-diagnostic and browser-local privacy boundaries.
+- Made the named reviewer and credential visible near the main heading and linked to the public reviewer profile.
+- Added descriptive crawlable links to the maintained tool index, methodology, clinical evidence, and separately labeled professional implementation resources.
+- Replaced undefined homepage typography utilities so the H1 and major section headings render with an accessible responsive hierarchy instead of body-size text.
+- Preserved the homepage-only optional-services allowlist, consent requirement, crisis guidance, public credentials, no-signup model, and prohibition on sending answers or scores to analytics or advertising systems. Advertising remains disabled.
+
+### Independent measurement
+
+If released, compare homepage clicks, impressions, CTR, average position, and the aggregate privacy-safe tool-launch count at 28, 56, and 84 days. Continue other non-overlapping acquisition work in parallel, and avoid repeated homepage title or identity edits during the window unless safety, accuracy, or technical evidence requires them.

@@ -97,7 +97,7 @@ export function organizationJsonLd() {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: SITE_NAME,
-        alternateName: "Free Mental Health Screening Tools",
+        alternateName: "MindCheck",
         inLanguage: "en-US",
         description:
           "Free published screening instruments and clearly labeled educational mental health and substance use self-checks. No account required.",
@@ -252,7 +252,7 @@ export function websiteJsonLd() {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
-    alternateName: "Free Mental Health Screening Tools",
+    alternateName: "MindCheck",
     url: SITE_URL,
     inLanguage: "en-US",
     description: SITE_DESCRIPTION,

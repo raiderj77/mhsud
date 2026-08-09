@@ -3,12 +3,13 @@ import type { Metadata } from "next";
 import { createMetadata, breadcrumbJsonLd, faqJsonLd, SITE_URL } from "@/lib/metadata";
 import { ToolGrid } from "@/components/ToolGrid";
 import type { ToolCategory, Tool } from "@/components/ToolGrid";
+import { SITE_AUTHOR } from "@/config/author";
 
 export const metadata: Metadata = createMetadata({
   path: "/",
-  title: "MindCheck Tools, Private Self-Checks and Information",
+  title: "MindCheck Tools | Free, Private Mental Health Self-Checks",
   description:
-    "Free mental health and substance-use self-checks plus rights-aware instrument information. Interactive answers are processed in your browser; no signup is required.",
+    "Free mental health screening and self-reflection tools from MindCheck Tools. No signup; interactive answers are processed in your browser and not intentionally sent to us.",
 });
 
 const TOOL_CATEGORIES: ToolCategory[] = [
@@ -570,7 +571,7 @@ export default function HomePage() {
             "@type": "WebApplication",
             "@id": `${SITE_URL}/#application`,
             name: "MindCheck Tools",
-            alternateName: "Free Mental Health Screening Tools",
+            alternateName: "MindCheck",
             url: SITE_URL,
             applicationCategory: "HealthApplication",
             operatingSystem: "Any",
@@ -580,7 +581,7 @@ export default function HomePage() {
               price: "0",
               priceCurrency: "USD",
             },
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-09",
             description:
               "Free, private published screening instruments and original educational self-checks. Screening answers are processed in the browser and are not sent to MindCheck Tools.",
             provider: {
@@ -597,21 +598,22 @@ export default function HomePage() {
             <span className="w-1.5 h-1.5 rounded-full bg-sage-500 animate-pulse" />
             Free &amp; Private
           </div>
-          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
-            Mental health self-checks you can{" "}
-            <span className="text-sage-600 dark:text-sage-400">trust</span>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            MindCheck Tools: private mental health{" "}
+            <span className="text-sage-600 dark:text-sage-400">self-checks</span>
           </h1>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
             MindCheck Tools provides published mental health and substance use screening instruments alongside original educational self-checks and practical tools. Each page identifies its basis, sources, scoring approach, and limits.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
-            Published and maintained by MindCheck Tools. Content reviewed for accuracy.{" "}
+            Maintained by MindCheck Tools. Screening content is reviewed within the stated credential scope by{" "}
             <Link
-              href="/about"
+              href="/about/jason-ramirez"
               className="underline hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
             >
-              Learn more &rarr;
+              {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
             </Link>
+            .
           </p>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
             Use published screeners and clearly labeled educational tools in the privacy of your browser. No account or login is required, and screening answers are not sent to MindCheck Tools.
@@ -643,6 +645,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Answer-first brand and navigation summary */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16" aria-labelledby="what-is-mindcheck-tools">
+        <div className="card p-6 sm:p-8">
+          <h2 id="what-is-mindcheck-tools" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+            What is MindCheck Tools?
+          </h2>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-3">
+            MindCheck Tools is a free, no-signup collection of published mental health and substance use screeners, clearly labeled educational self-reflection tools, and practical worksheets. Interactive answers are processed in your browser and are not intentionally sent to MindCheck Tools.
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-5">
+            These resources provide education and screening context, not a diagnosis, medical advice, treatment, or emergency care. Instrument sources, reuse boundaries, scoring methods, and limitations are disclosed on the relevant pages.
+          </p>
+          <nav aria-label="MindCheck Tools overview" className="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+            <Link href="/screening-tools" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
+              Browse all maintained tools
+            </Link>
+            <Link href="/methodology" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
+              How content is reviewed
+            </Link>
+            <Link href="/clinical-evidence" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
+              Review source evidence
+            </Link>
+            <Link href="/for-professionals" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
+              Professional implementation resources
+            </Link>
+          </nav>
+        </div>
+      </section>
+
 
       {/* Tools Grid + Targeted Screenings (client component for search/filter) */}
       <ToolGrid
@@ -655,7 +686,7 @@ export default function HomePage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
         <section>
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             How do mental health screening tools work?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
@@ -672,7 +703,7 @@ export default function HomePage() {
         </section>
 
         <section>
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             What is the difference between a screening tool and a diagnosis?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
@@ -687,7 +718,7 @@ export default function HomePage() {
         </section>
 
         <section>
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             Are these screening tools free and confidential?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
@@ -699,7 +730,7 @@ export default function HomePage() {
         </section>
 
         <section>
-          <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
             When should I seek immediate help?
           </h2>
           <p className="text-base font-semibold text-red-700 dark:text-red-400 leading-relaxed mb-4">
@@ -777,7 +808,7 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
-        <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-8">
+        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-8">
           Frequently Asked Questions About Mental Health Screenings
         </h2>
         <script
