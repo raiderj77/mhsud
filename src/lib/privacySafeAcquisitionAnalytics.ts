@@ -9,5 +9,7 @@ export function trackPrivateToolLaunch(): void {
   if (window.location.pathname !== "/") return;
   if (getCurrentConsent()?.analytics !== true) return;
 
-  window.gtag?.("event", "private_tool_launch");
+  window.gtag?.("event", "private_tool_launch", {
+    transport_type: "beacon",
+  });
 }

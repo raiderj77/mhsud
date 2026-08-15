@@ -6,6 +6,7 @@ import {
   isOptionalServicesAllowedRoute,
   isSensitiveRoute,
 } from "@/lib/routePolicies";
+import { trackPrivateToolLaunch } from "@/lib/privacySafeAcquisitionAnalytics";
 
 export function SensitiveRouteLifecycle() {
   const pathname = usePathname();
@@ -46,8 +47,13 @@ export function SensitiveRouteLifecycle() {
           !isOptionalServicesAllowedRoute(destination.pathname)
         ) {
           // Prevent a consented homepage runtime from seeing a health-topic URL
-          // during a client-side transition. A new document starts tag-free.
+          // during a client-side transition. Record only the generic, topic-free
+          // launch before navigation when the clicked card is explicitly marked.
+          // A new document then starts tag-free.
           event.preventDefault();
+          if (anchor.dataset.privateToolLaunch === "true") {
+            trackPrivateToolLaunch();
+          }
           window.location.assign(destination.href);
         }
       };
