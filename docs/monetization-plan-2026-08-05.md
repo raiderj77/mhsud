@@ -130,6 +130,8 @@ All must pass before any monetization release:
 7. Name qualified clinical, crisis, privacy, and legal reviewers and approve their scope and fees.
 8. The bounded non-monetized safety release is now deployed and production-verified with 21 interactive plus 14 informational routes, homepage-only optional services, and disabled AdSense. Monetization activation remains a later, separate decision; this document grants neither approval.
 
+Current affiliate candidates and the privacy-safe measurement boundary are maintained in [Privacy-safe measurement and affiliate readiness](./privacy-safe-measurement-and-affiliate-readiness-2026-08-14.md). That matrix does not authorize an application, account change, merchant contact, affiliate link, or release.
+
 ## Local monetization implementation, not published
 
 - `/for-professionals` defines a fixed-scope technical and content-readiness review for digital-health and behavioral-health software teams.
