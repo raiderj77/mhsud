@@ -71,6 +71,7 @@ All interactive answers and scores are processed locally in the browser. Health-
 - [Values Card Sort](https://mindchecktools.com/values-card-sort)
 - [DBT Crisis Skills](https://mindchecktools.com/dbt-crisis-skills)
 - [How to Talk to Your Doctor About Mental Health](https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health)
+- [Recommended Mental Health and Recovery Books](https://mindchecktools.com/recommended-reading)
 - [PHQ 9 Score Interpretation](https://mindchecktools.com/phq-9-score-interpretation)
 - [GAD 7 Score Interpretation](https://mindchecktools.com/gad-7-score-interpretation)
 - [AUDIT Score Interpretation](https://mindchecktools.com/audit-score-interpretation)
@@ -107,4 +108,4 @@ All interactive answers and scores are processed locally in the browser. Health-
 - Use [crisis resources](https://mindchecktools.com/crisis-resources) for urgent support information.
 - See [privacy](https://mindchecktools.com/privacy), [methodology](https://mindchecktools.com/methodology), and [clinical evidence](https://mindchecktools.com/clinical-evidence) for scope and safeguards.
 
-Last reviewed: 2026-08-02.
+Last reviewed: 2026-08-17.

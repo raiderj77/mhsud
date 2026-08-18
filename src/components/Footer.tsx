@@ -77,6 +77,7 @@ const RECOVERY_TOOLS = [
 
 const INFO_LINKS = [
   { href: "/screening-tools", label: "All Tools & Information" },
+  { href: "/recommended-reading", label: "Recommended Reading" },
   { href: "/about", label: "About" },
   { href: "/clinical-evidence", label: "Clinical Evidence" },
   { href: "/methodology", label: "Methodology" },
