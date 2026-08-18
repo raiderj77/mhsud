@@ -20,6 +20,7 @@ All interactive answers and scores are processed locally in the browser. Health-
 - [Clinical evidence](https://mindchecktools.com/clinical-evidence)
 - [Methodology](https://mindchecktools.com/methodology)
 - [How to talk to your doctor about mental health](https://mindchecktools.com/how-to-talk-to-your-doctor-about-mental-health)
+- [Recommended mental-health and recovery books](https://mindchecktools.com/recommended-reading): Six edition-specific educational resources with selection reasons, limits, and affiliate disclosure.
 - [Crisis resources](https://mindchecktools.com/crisis-resources)
 
 ## Published instruments: interactive and information pages
@@ -84,4 +85,4 @@ Interactive entries are educational self-screens, not diagnostic services. Entri
 - [Disclaimer](https://mindchecktools.com/disclaimer)
 - [Accessibility](https://mindchecktools.com/accessibility)
 
-Last reviewed: 2026-08-02.
+Last reviewed: 2026-08-17.
