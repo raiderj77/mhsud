@@ -2,7 +2,7 @@
 
 Date: 2026-08-14
 
-Status: Local implementation and research only. No analytics-account change, affiliate application, merchant contact, affiliate link, publication, deployment, or monetization activation is authorized by this document.
+Status: The Bookshop.org application was owner-approved and submitted on 2026-08-16. Bookshop.org confirmed acceptance on 2026-08-17. No affiliate link, public book list, analytics-account change, publication, deployment, or monetization activation is authorized by this document.
 
 ## Measurement boundary
 
@@ -53,6 +53,6 @@ The candidates below have current official public program evidence. They are can
 - Guest-post networks, paid backlinks, directories that sell placement, link exchanges, and affiliate programs requiring a tracking pixel on MindCheckTools.
 - Any merchant that cannot provide current terms, disclosure requirements, privacy information, and a legitimate application route.
 
-## Single next owner decision
+## Current gate
 
-Approve or reject **Bookshop.org as the first application**. It has the cleanest trust fit and the simplest product class. If approved, the next work is an application/account review and a small, independently reviewed reading-list concept; no affiliate link should be published until the exact titles and disclosure pass the standard release gate.
+Bookshop.org is the approved first program. Bookshop.org emailed `affiliate@mindchecktools.com` on 2026-08-17 confirming that the MindCheck Tools affiliate store was accepted (affiliate ID `127434`). Do not publish affiliate links or a public book list until the exact titles pass the editorial review in `bookshop-post-approval-package-2026-08-16.md`, signed-out attribution is verified, and the ordinary release gate is explicitly approved.
