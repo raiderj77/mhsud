@@ -56,7 +56,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 2, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 18, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -80,7 +80,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              Our first-party privacy control keeps analytics and advertising services off until you make an affirmative choice. The inline Consent Mode default queues a denied state locally and does not contact Google by itself. A Google service script loads only after the corresponding choice. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools.
+              Our first-party privacy control keeps Google Analytics and advertising services off until you make an affirmative choice. The inline Consent Mode default queues a denied state locally and does not contact Google by itself. A Google service script loads only after the corresponding choice. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
             </p>
           </section>
 
@@ -150,6 +150,16 @@ export default function CookiePolicyPage() {
             </p>
             <p>
               You can also opt out of Google Analytics entirely by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> at tools.google.com/dlpage/gaoptout.
+            </p>
+          </section>
+
+          <section>
+            <h2>Cookie-free aggregate measurement</h2>
+            <p>
+              Vercel Web Analytics counts aggregate visitors and page views without setting cookies. It runs only on a fixed allowlist of topic-neutral trust, policy, professional, and commercial pages. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded.
+            </p>
+            <p>
+              The implementation removes query strings and fragments, sends no custom events, and suppresses events when Global Privacy Control is active. Vercel documents that it determines a visitor with a request-derived hash that resets after 24 hours. Because this service does not place a cookie, it is not listed in the cookie table above.
             </p>
           </section>
 

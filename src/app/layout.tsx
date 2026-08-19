@@ -11,6 +11,7 @@ import { SwUpdateNotification } from "@/components/SwUpdateNotification";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { AppInstallPrompt } from "@/components/AppInstallPrompt";
 import { ConsentAnalytics } from "@/components/ConsentAnalytics";
+import { PrivacySafeAggregateAnalytics } from "@/components/PrivacySafeAggregateAnalytics";
 import { SensitiveRouteLifecycle } from "@/components/SensitiveRouteLifecycle";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
@@ -157,6 +158,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SensitiveRouteLifecycle />
+        <PrivacySafeAggregateAnalytics />
         <ConsentAnalytics adsenseEnabled={adsenseEnabled} />
         <ThemeProvider>
           <ScrollToTop />

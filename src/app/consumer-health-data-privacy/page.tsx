@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, createMetadata, SITE_URL } from "@/lib/metadata";
 
-const LAST_REVIEWED = "2026-08-02";
+const LAST_REVIEWED = "2026-08-18";
 
 export const metadata: Metadata = createMetadata({
   path: "/consumer-health-data-privacy",
@@ -40,7 +40,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             supplements our <Link href="/privacy">Privacy Policy</Link>.
           </p>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-            Last reviewed: <time dateTime={LAST_REVIEWED}>August 2, 2026</time>
+            Last reviewed: <time dateTime={LAST_REVIEWED}>August 18, 2026</time>
           </p>
         </header>
 
@@ -80,6 +80,14 @@ export default function ConsumerHealthDataPrivacyPage() {
                 affirmative analytics choice and is used to understand aggregate site use.
               </li>
               <li>
+                <strong>Cookie-free aggregate measurement:</strong> Vercel Web Analytics counts
+                visitors and page views only on a positive allowlist of topic-neutral and
+                professional pages. Query strings, fragments, and custom events are excluded;
+                Global Privacy Control suppresses events. Assessment, result, crisis,
+                condition-specific, blog-detail, and interactive-tool routes do not send Web
+                Analytics events.
+              </li>
+              <li>
                 <strong>Resource-email subscription:</strong> if you independently subscribe, we
                 collect the email address and your affirmative subscription choice. We intentionally
                 exclude the source page, tool name, answers, score, diagnosis, and crisis information.
@@ -109,7 +117,9 @@ export default function ConsumerHealthDataPrivacyPage() {
             <ul>
               <li>
                 <strong>Vercel:</strong> website request and security information, including the
-                requested path, for hosting, delivery, reliability, and abuse prevention.
+                requested path, for hosting, delivery, reliability, and abuse prevention. Vercel
+                also processes cookie-free aggregate events from the narrow non-sensitive route
+                allowlist. Its documented visitor hash resets after 24 hours.
               </li>
               <li>
                 <strong>Google Analytics:</strong> the limited public-page analytics described above,
@@ -152,8 +162,9 @@ export default function ConsumerHealthDataPrivacyPage() {
             <h2>Your choices and requests</h2>
             <ul>
               <li>
-                Use <Link href="/cookies">Privacy Choices</Link> to deny or withdraw optional
-                analytics and advertising. Global Privacy Control also keeps those optional services off.
+                Use <Link href="/cookies">Privacy Choices</Link> to deny or withdraw Google
+                Analytics and advertising. Global Privacy Control also suppresses Vercel Web
+                Analytics events.
               </li>
               <li>
                 Clear or reset browser-local tool data on the device where it is stored. MindCheck
@@ -180,10 +191,11 @@ export default function ConsumerHealthDataPrivacyPage() {
             <p>
               Browser-local health entries remain on your device until you reset the tool, clear site
               data, or the browser removes them. Hosting/security log retention follows Vercel&apos;s
-              configured service limits and legitimate security or legal needs. Analytics retention
-              follows the configured Google Analytics property setting. Newsletter addresses remain
-              while subscribed or until no longer needed, subject to limited suppression, security,
-              backup, and legal records.
+              configured service limits and legitimate security or legal needs. Google Analytics retention
+              follows the configured property setting. Vercel documents that its Web Analytics visitor
+              hash resets after 24 hours; aggregate reporting retention follows the project and plan
+              settings. Newsletter addresses remain while subscribed or until no longer needed,
+              subject to limited suppression, security, backup, and legal records.
             </p>
             <p>
               Sensitive routes use no-store and no-referrer response controls, bypass optional
