@@ -33,6 +33,29 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
 // acquisition data; consented GA is limited to the topic-neutral homepage.
 const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set(["/"]);
 
+// Cookie-free aggregate measurement uses a separate, narrow allowlist. These
+// routes are topic-neutral policy, trust, professional, or commercial pages.
+// Assessment, result, crisis, condition-specific, blog-detail, and interactive
+// tool routes are excluded. New routes stay excluded until privacy review.
+const PRIVACY_SAFE_AGGREGATE_ANALYTICS_ROUTES = new Set([
+  "/",
+  "/about",
+  "/about/jason-ramirez",
+  "/accessibility",
+  "/clinical-evidence",
+  "/consumer-health-data-privacy",
+  "/contact",
+  "/cookies",
+  "/disclaimer",
+  "/for-professionals",
+  "/for-professionals/screening-implementation-checklist",
+  "/for-professionals/screening-instrument-rights-guide",
+  "/methodology",
+  "/privacy",
+  "/recommended-reading",
+  "/terms",
+]);
+
 function cleanPathname(pathname: string): string {
   const cleanPath = pathname.split(/[?#]/, 1)[0] || "/";
   if (cleanPath === "/") return cleanPath;
@@ -41,6 +64,10 @@ function cleanPathname(pathname: string): string {
 
 export function isOptionalServicesAllowedRoute(pathname: string): boolean {
   return OPTIONAL_SERVICE_ALLOWED_ROUTES.has(cleanPathname(pathname));
+}
+
+export function isPrivacySafeAggregateAnalyticsRoute(pathname: string): boolean {
+  return PRIVACY_SAFE_AGGREGATE_ANALYTICS_ROUTES.has(cleanPathname(pathname));
 }
 
 export function isSensitiveRoute(pathname: string): boolean {
