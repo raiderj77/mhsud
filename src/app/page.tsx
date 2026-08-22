@@ -619,13 +619,50 @@ export default function HomePage() {
             Use published screeners and clearly labeled educational tools in the privacy of your browser. No account or login is required, and screening answers are not sent to MindCheck Tools.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/phq-9-depression-test" className="btn-primary text-base">
-              Take the PHQ-9
+            <Link href="/screening-tools#alcohol-substance" className="btn-primary text-base">
+              Substance use &amp; recovery
             </Link>
-            <Link href="#tools" className="btn-secondary text-base">
-              View All Tools
+            <Link href="/screening-tools" className="btn-secondary text-base">
+              Browse screening tools
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16" aria-labelledby="choose-a-path">
+        <h2 id="choose-a-path" className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+          Choose the path that fits what you need
+        </h2>
+        <p className="max-w-3xl text-neutral-600 dark:text-neutral-300 leading-relaxed mb-7">
+          Start with a published screener, an original educational exercise, practical recovery support, or implementation resources for professional teams. Every tool states its evidence, ownership, privacy behavior, and limits.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <article className="rounded-2xl border-2 border-sage-500 bg-sage-50 p-6 shadow-sm dark:border-sage-600 dark:bg-sage-950/30 md:row-span-2">
+            <p className="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-300">Primary focus</p>
+            <h3 className="mt-2 font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Substance use and recovery</h3>
+            <p className="mt-3 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              Use rights-aware alcohol screening information, browser-local recovery planning tools, withdrawal-safety education, and practical worksheets. These resources do not diagnose a substance use disorder or replace treatment.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/screening-tools#alcohol-substance" className="btn-primary">Alcohol and substance-use tools</Link>
+              <Link href="/screening-tools#recovery-tools" className="btn-secondary">Recovery calculators and plans</Link>
+            </div>
+          </article>
+          <article className="card p-6">
+            <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50">Published mental-health screeners</h3>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Explore source-linked screeners and information-only instrument pages. A screening result is not a diagnosis.</p>
+            <Link href="/screening-tools#choose-a-tool" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-sage-700 hover:underline dark:text-sage-400">Choose a screener &rarr;</Link>
+          </article>
+          <article className="card p-6">
+            <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50">Educational self-checks and skills</h3>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Use clearly labeled original exercises for reflection, coping practice, planning, and everyday well-being.</p>
+            <Link href="/screening-tools#coping" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-sage-700 hover:underline dark:text-sage-400">Browse educational tools &rarr;</Link>
+          </article>
+          <article className="card p-6 md:col-start-2">
+            <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50">For professional teams</h3>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Review a fixed-scope, no-health-data screening implementation readiness service and a fictional sample deliverable.</p>
+            <Link href="/for-professionals" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-sage-700 hover:underline dark:text-sage-400">Professional resources &rarr;</Link>
+          </article>
         </div>
       </section>
 

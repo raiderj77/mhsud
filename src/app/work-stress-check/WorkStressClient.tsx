@@ -3,12 +3,10 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
-import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 const QUESTIONS = [
@@ -33,23 +31,10 @@ const OPTIONS = [
   { label: "Nearly always", value: 3 },
 ];
 
-const RANGES = [
-  { min: 0, max: 9, level: "Lower Stress", key: "low", description: "Your responses suggest relatively lower levels of work-related stress in the areas covered by this check.", suggestion: "Continue maintaining healthy boundaries and recovery habits. If specific areas stood out, they may still be worth reflecting on." },
-  { min: 10, max: 18, level: "Moderate Stress", key: "moderate", description: "Your responses suggest moderate work stress across several areas. Some of these patterns, especially if persistent, may be worth paying attention to.", suggestion: "Consider which domains scored highest. Talking with a trusted colleague, manager, or counselor about specific stressors may help. Small changes in boundaries or routines can sometimes make a meaningful difference." },
-  { min: 19, max: 27, level: "High Stress", key: "high", description: "Your responses suggest high levels of work-related stress. Multiple areas of your work life appear to be significantly impacted.", suggestion: "Speaking with a healthcare provider, therapist, or employee assistance program (EAP) is strongly encouraged. Work stress at this level often benefits from professional support and may also warrant conversations about workload or working conditions." },
-  { min: 28, max: 36, level: "Very High Stress", key: "very-high", description: "Your responses suggest very high levels of work stress affecting most areas covered by this check. This pattern is often associated with burnout risk.", suggestion: "Please consider reaching out to a mental health professional. If your workplace has an EAP, they can provide confidential support. If work stress is also affecting your physical health, a medical checkup is a good idea." },
-];
-
-function getRange(score: number) {
-  return RANGES.find((r) => score >= r.min && score <= r.max)!;
-}
-
-const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = {
-  low:         { text: "text-sage-700 dark:text-sage-400",     bg: "bg-sage-50 dark:bg-sage-950/30",     bar: "from-sage-400 to-sage-600" },
-  moderate:    { text: "text-warm-700 dark:text-warm-400",     bg: "bg-warm-50 dark:bg-warm-950/30",     bar: "from-warm-400 to-warm-600" },
-  high:        { text: "text-orange-700 dark:text-orange-400", bg: "bg-orange-50 dark:bg-orange-950/30", bar: "from-orange-400 to-orange-600" },
-  "very-high": { text: "text-crisis-700 dark:text-crisis-400", bg: "bg-crisis-50 dark:bg-crisis-950/30", bar: "from-crisis-400 to-crisis-600" },
-};
+const RESULT_CONTEXT =
+  "This site-defined total only summarizes how often you endorsed these 12 prompts. It has no validated severity bands or clinical cutoff and cannot determine whether you have burnout or another condition.";
+const NEXT_STEP =
+  "Review the individual prompts and areas that stood out. If work-related distress is persistent, affects your health or safety, or is difficult to manage, consider speaking with a qualified healthcare professional or employee assistance program.";
 
 const DOMAINS = ["Demands", "Control", "Support", "Engagement", "Recovery", "Impact"];
 
@@ -67,8 +52,6 @@ export function WorkStressClient({ faqData }: Props) {
 
   const totalScore = answers.reduce<number>((s, a) => s + (a ?? 0), 0);
   const allAnswered = answers.every((a) => a !== null);
-  const range = getRange(totalScore);
-  const colors = RANGE_COLORS[range.key];
   const progress = (answers.filter((a) => a !== null).length / 12) * 100;
   const furthestAnswered = answers.findLastIndex((a) => a !== null);
 
@@ -116,7 +99,7 @@ export function WorkStressClient({ faqData }: Props) {
             <span key={b.text} className="badge bg-sage-50/80 dark:bg-sage-950/20 text-sage-700 dark:text-sage-400">{b.icon} {b.text}</span>
           ))}
         </div>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Content updated: August 22, 2026. Reviewer scope and date are shown on this page.</p>
       </header>
 
       {!accepted && (
@@ -181,20 +164,20 @@ export function WorkStressClient({ faqData }: Props) {
       {showResults && (
         <div id="printable-results" ref={resultsRef} className="animate-fade-in" aria-live="polite">
           <div className="card overflow-hidden mb-5">
-            <div className={`${colors.bg} p-6 sm:p-8 text-center`}>
-              <p className={`text-xs font-semibold uppercase tracking-widest ${colors.text} mb-2`}>Your Work Stress Score</p>
-              <p className={`font-serif text-6xl font-bold ${colors.text} leading-none mb-2`}>{totalScore}</p>
-              <p className={`text-sm font-semibold ${colors.text}`}>out of 36, {range.level}</p>
+            <div className="bg-sage-50 p-6 text-center dark:bg-sage-950/30 sm:p-8">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-sage-700 dark:text-sage-400">Your reflection total</p>
+              <p className="mb-2 font-serif text-6xl font-bold leading-none text-sage-700 dark:text-sage-400">{totalScore}</p>
+              <p className="text-sm font-semibold text-sage-700 dark:text-sage-400">out of 36, with no clinical band</p>
               <div className="mt-6">
                 <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
-                  <div className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-700`} style={{ width: `${(totalScore / 36) * 100}%` }} />
+                  <div className="h-full rounded-full bg-gradient-to-r from-sage-400 to-sage-600 transition-all duration-700" style={{ width: `${(totalScore / 36) * 100}%` }} />
                 </div>
               </div>
             </div>
             <div className="p-5 sm:p-6 space-y-4">
-              <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{range.description}</p>
+              <p className="text-[15px] text-neutral-600 dark:text-neutral-300 leading-relaxed">{RESULT_CONTEXT}</p>
               <div className="bg-sand-50 dark:bg-night-700 rounded-xl p-4">
-                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"><strong>What you can consider next:</strong> {range.suggestion}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"><strong>What you can consider next:</strong> {NEXT_STEP}</p>
               </div>
             </div>
           </div>
@@ -223,8 +206,6 @@ export function WorkStressClient({ faqData }: Props) {
             </p>
           </div>
 
-          <TherapyCTA show={["moderate", "high", "very-high"].includes(range.key)} />
-
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>
             <button
@@ -242,10 +223,10 @@ export function WorkStressClient({ faqData }: Props) {
             toolName="Work Stress Self-Check"
             toolUrl="https://mindchecktools.com/work-stress-check"
             score={totalScore}
-            severityLabel={range.level}
-            scoreRange={`${range.min}–${range.max}`}
-            interpretation={range.description}
-            suggestion={range.suggestion}
+            severityLabel="No clinical band"
+            scoreRange="0–36 site-defined total"
+            interpretation={RESULT_CONTEXT}
+            suggestion={NEXT_STEP}
             reflectionPrompts={REFLECTION_PROMPTS["work-stress-check"]?.prompts ?? []}
             responses={QUESTIONS.map((q, i) => ({
               question: q.text,
@@ -263,8 +244,6 @@ export function WorkStressClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="Below Results" className="mb-8" />
-
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
             <div className="space-y-2">
@@ -279,8 +258,6 @@ export function WorkStressClient({ faqData }: Props) {
               ))}
             </div>
           </section>
-
-          <AdSlot position="Mid Content" className="mb-8" />
 
           <section className="mb-8">
             <h3 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Mental Health Tools</h3>
@@ -297,8 +274,6 @@ export function WorkStressClient({ faqData }: Props) {
               ))}
             </div>
           </section>
-
-          <AdSlot position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h3>

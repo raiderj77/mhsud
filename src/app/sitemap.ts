@@ -135,6 +135,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/phq-4-anxiety-depression-screen`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/contact`, lastModified: "2026-03-03T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.4 },
     { url: `${SITE_URL}/for-professionals`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${SITE_URL}/for-professionals/sample-readiness-review`, lastModified: "2026-08-22T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/for-professionals/screening-implementation-checklist`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/for-professionals/screening-instrument-rights-guide`, lastModified: "2026-08-07T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/recommended-reading`, lastModified: "2026-08-17T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.6 },

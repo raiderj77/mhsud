@@ -5,12 +5,13 @@ import test from "node:test";
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("professional pages use a no-health-data service boundary", async () => {
-  const [service, checklist] = await Promise.all([
+  const [service, checklist, sample] = await Promise.all([
     read("src/app/for-professionals/page.tsx"),
     read("src/app/for-professionals/screening-implementation-checklist/page.tsx"),
+    read("src/app/for-professionals/sample-readiness-review/page.tsx"),
   ]);
 
-  for (const source of [service, checklist]) {
+  for (const source of [service, checklist, sample]) {
     assert.match(source, /patient records/i);
     assert.match(source, /assessment answers/i);
     assert.match(source, /scores/i);
@@ -18,6 +19,30 @@ test("professional pages use a no-health-data service boundary", async () => {
     assert.doesNotMatch(source, /HIPAA[- ]compliant|guaranteed compliance|clinically safe/i);
     assert.doesNotMatch(source, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
   }
+});
+
+test("the founding review offer is bounded, priced, and honest", async () => {
+  const [service, sample] = await Promise.all([
+    read("src/app/for-professionals/page.tsx"),
+    read("src/app/for-professionals/sample-readiness-review/page.tsx"),
+  ]);
+
+  assert.match(service, /Founding-client offer/i);
+  assert.match(service, /\$495 fixed scope/);
+  assert.match(service, /five business days/i);
+  assert.match(service, /up to five public or fictional staging routes/i);
+  assert.match(service, /one follow-up email/i);
+  assert.match(service, /Organization and website URL/);
+  assert.match(service, /your name and role/i);
+  assert.match(service, /primary goal and desired timeline/i);
+  assert.doesNotMatch(service, /buy now|checkout|guaranteed|certified compliant/i);
+
+  assert.match(sample, /Fictional sample/i);
+  assert.match(sample, /invented/i);
+  assert.match(sample, /no patient records[\s\S]*real client information/i);
+  assert.match(sample, /Prioritized findings/i);
+  assert.match(sample, /Release gate/i);
+  assert.doesNotMatch(sample, /testimonial|case study/i);
 });
 
 test("the free checklist cites primary sources and contains no instrument mechanics", async () => {
@@ -55,7 +80,7 @@ test("the public instrument-rights guide is source-linked and reproduces no inst
   assert.doesNotMatch(guide, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
 });
 
-test("professional discovery stays off sensitive and global commercial surfaces", async () => {
+test("professional discovery is limited to general trust and navigation surfaces", async () => {
   const [about, contact, methodology, footer, policies] = await Promise.all([
     read("src/app/about/page.tsx"),
     read("src/app/contact/page.tsx"),
@@ -65,7 +90,7 @@ test("professional discovery stays off sensitive and global commercial surfaces"
   ]);
 
   for (const source of [about, contact, methodology]) assert.match(source, /for-professionals/);
-  assert.doesNotMatch(footer, /for-professionals|implementation review/i);
+  assert.match(footer, /for-professionals/i);
   assert.match(policies, /const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set\(\["\/"\]\)/);
 });
 

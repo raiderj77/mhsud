@@ -9,7 +9,7 @@ const TOOL_URL = `${SITE_URL}/work-stress-check`;
 
 export const metadata: Metadata = createMetadata({
   path: "/work-stress-check",
-  title: "Work Stress & Burnout Self-Check | Free & Private",
+  title: "Work Stress Reflection | Original Educational Check",
   description:
     "Reflect on work stress with this original 12-question, browser-local self-check. About 3 minutes. Not a clinical tool; for personal reflection only.",
   keywords: [
@@ -35,7 +35,7 @@ const FAQ_DATA = [
   {
     question: "What's the difference between work stress and clinical burnout?",
     answer:
-      "Work stress is a normal response to workplace demands. Clinical burnout is a state of chronic physical and emotional exhaustion, often accompanied by cynicism and reduced professional efficacy. The distinction typically requires professional assessment. This tool can help you notice patterns, but cannot determine where stress ends and burnout begins.",
+      "Work stress can involve harmful physical or emotional responses when job demands do not match a worker's capabilities, resources, or needs. WHO describes burnout as an occupational phenomenon, not a medical condition. This original tool can help you notice patterns, but it cannot determine whether you have burnout or another condition.",
   },
   {
     question: "Is my data stored?",
@@ -63,10 +63,10 @@ export default function WorkStressPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      ...toolPageJsonLd({ name: "Work Stress & Burnout Self-Check", description: "Original 12-question work stress reflection tool. Private, free, not a diagnosis.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-05-14" }),
+      ...toolPageJsonLd({ name: "Work Stress Reflection", description: "Original 12-question work stress reflection tool. Private, free, not a diagnosis.", url: TOOL_URL, datePublished: "2025-02-01", dateModified: "2026-08-22" }),
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-      ...medicalWebPageJsonLd({ name: "Work Stress & Burnout Self-Check", description: "A free 12-question self-reflection tool covering workplace demands, control, support, engagement, recovery, and physical impact. For personal reflection only.", url: TOOL_URL, lastReviewed: "2026-05-14" }),
+      ...medicalWebPageJsonLd({ name: "Work Stress Reflection", description: "A free original 12-question self-reflection tool covering site-defined areas of workplace demands, control, support, engagement, recovery, and impact. For personal reflection only.", url: TOOL_URL, lastReviewed: "2026-08-02" }),
     }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Work Stress & Burnout Self-Check", url: TOOL_URL }])) }} />
@@ -84,10 +84,10 @@ export default function WorkStressPage() {
 
         <div className="mb-6 space-y-4 text-slate-600 dark:text-slate-300">
           <p className="text-lg">
-            Most people who are burning out do not realize it until they are already running on empty. The warning signs are easy to rationalize: the exhaustion is just a tough week, the irritability is just stress, the loss of interest in work that used to matter is just a phase. By the time it is impossible to ignore, months of damage have already been done.
+            Work stress can develop gradually, and people may notice changes in energy, sleep, concentration, relationships, or their sense of control at different times. These experiences have many possible causes, so an online reflection cannot determine whether they amount to burnout or another health concern.
           </p>
           <p>
-            This 12-question self-check was designed to help you catch those patterns early. It covers the six domains most consistently linked to workplace burnout: demands, control, support, engagement, recovery, and physical impact. It takes about 3 minutes; answers and results are processed locally and are not intentionally sent to MindCheck Tools.
+            This original 12-question check groups prompts into six site-defined areas: demands, control, support, engagement, recovery, and impact. These groupings and the 0–36 total are educational reflection aids, not validated domains, severity bands, or clinical cutoffs. It takes about 3 minutes; answers and results are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
           <p>
             This is a reflection tool, not a clinical assessment. If your results raise concerns, the most useful next step is a conversation with a therapist, counselor, or your primary care provider - not more self-diagnosis.
@@ -104,35 +104,35 @@ export default function WorkStressPage() {
         <div className="mb-6 space-y-4 text-slate-600 dark:text-slate-300">
           <p>
             The{" "}
-            <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
-              WHO classifies burnout
+            <a href="https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+              WHO describes burnout
             </a>{" "}
             as an occupational phenomenon (not a medical diagnosis) defined by three dimensions: feelings of energy depletion or exhaustion, increased mental distance from your job, and reduced professional efficacy. In plain terms: you are drained, you have mentally checked out, and you feel like you are not doing your job well even when you are working harder than ever.
           </p>
           <p>
-            What makes burnout hard to catch is that it builds slowly. A{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/31693056/" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
-              2019 Gallup study of nearly 7,500 full-time workers
-            </a>{" "}
-            found that 23% reported feeling burned out very often or always, while another 44% reported feeling burned out sometimes. That means roughly two-thirds of workers are experiencing meaningful burnout symptoms at any given time. The{" "}
+            Work-related mental-health risks can include excessive workloads, limited job control, long or inflexible hours, limited support, and conflicting home and work demands, according to the{" "}
+            <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
+              World Health Organization
+            </a>
+            . The{" "}
             <a href="https://www.cdc.gov/niosh/stress/about/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">
               CDC notes
             </a>{" "}
-            that workplace stress is linked to cardiovascular disease, musculoskeletal disorders, and compromised immune function.
+            that job stress can lead to poor health and injury and studies how work organization relates to stress, illness, and injury.
           </p>
           <p>
-            Burnout is not just about working too many hours. People in low-demand jobs can burn out from a chronic lack of control or recognition. People in high-passion roles burn out when the meaning of the work stops compensating for the toll it takes. This check looks at all of these dimensions, not just workload.
+            This page does not claim that its six areas predict burnout. They are a practical way to review several workplace and recovery experiences described in WHO and NIOSH guidance, while keeping the result non-diagnostic.
           </p>
         </div>
 
         <div className="grid grid-cols-3 gap-3 mb-8">
           <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 text-center">
-            <p className="text-2xl font-bold text-slate-900 dark:text-white">23%</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">of workers report burnout nearly always</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-white">12</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">original reflection prompts</p>
           </div>
           <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 text-center">
             <p className="text-2xl font-bold text-slate-900 dark:text-white">6</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">domains this check measures</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">site-defined areas for reflection</p>
           </div>
           <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 text-center">
             <p className="text-2xl font-bold text-slate-900 dark:text-white">3 min</p>
@@ -144,7 +144,7 @@ export default function WorkStressPage() {
           The Six Dimensions This Check Covers
         </h2>
         <div className="mb-8 space-y-3 text-slate-600 dark:text-slate-300">
-          <p>Research on occupational stress consistently points to six areas that predict burnout risk:</p>
+          <p>This original check organizes its prompts into six site-defined areas. They are not a validated model and do not predict burnout risk:</p>
           <ul className="list-disc list-inside space-y-2 text-sm ml-2">
             <li><strong>Demands</strong> - workload, time pressure, the gap between what is expected and what is humanly possible</li>
             <li><strong>Control</strong> - your ability to influence how and when your work gets done</li>
@@ -154,7 +154,7 @@ export default function WorkStressPage() {
             <li><strong>Impact</strong> - whether work stress is spilling into your physical health and personal life</li>
           </ul>
           <p>
-            When multiple domains are strained simultaneously, the combined pattern can be a practical signal that work stress deserves attention. This check helps you see which dimensions are most affected so you can target your attention and conversations.
+            The breakdown shows where you selected more frequent responses. It is not a clinical profile. You can use individual prompts to organize a conversation with a healthcare professional, employee assistance program, or workplace support when appropriate.
           </p>
         </div>
 
@@ -169,14 +169,14 @@ export default function WorkStressPage() {
         </div>
 
         <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-          Last updated: May 14, 2026
+          Content updated: August 22, 2026
         </p>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
           <AnswerBlock
-            what="A workplace stress assessment that measures job-related stressors, burnout risk, and work-life balance indicators across six domains."
-            who="Working professionals who feel their job stress has become unmanageable and want to assess the severity."
-            bottomLine="Chronic work stress damages both mental and physical health - your score can guide a conversation with HR or a therapist. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-            lastUpdated="2026-05-14"
+            what="An original 12-prompt educational reflection covering six site-defined areas. It is not a validated workplace stress or burnout instrument."
+            who="Adults who want to organize observations about work demands, control, support, engagement, recovery, and impact."
+            bottomLine="The 0–36 total has no validated severity bands or clinical cutoff. Review the individual prompts; seek qualified support for persistent distress, health effects, or safety concerns."
+            lastUpdated="2026-08-22"
           />
         </div>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
@@ -193,9 +193,9 @@ export default function WorkStressPage() {
         </time>
       </span>
       <span>
-        Last reviewed:{" "}
-        <time dateTime="2026-05-14">
-          {new Date("2026-05-14T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        Content updated:{" "}
+        <time dateTime="2026-08-22">
+          {new Date("2026-08-22T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
       </span>
     </div>
@@ -249,7 +249,7 @@ export default function WorkStressPage() {
 
         <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-4 mb-8">
           <p className="text-sm text-slate-600 dark:text-slate-400">Compiled by Jason Ramirez, CADC-II. Clinical content drawn from WHO, CDC NIOSH, NIMH, and PubMed. This is a self-reflection tool, not a clinical assessment.</p>
-          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Last reviewed: May 2026</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Content updated August 22, 2026. Reviewer scope and date are shown above.</p>
         </div>
 
         <div className="flex flex-wrap gap-3 mb-8 text-sm">
