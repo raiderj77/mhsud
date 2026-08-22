@@ -258,7 +258,6 @@ export function Footer() {
           <nav aria-label="More free tools" className="mt-4 text-center">
             <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">More Free Tools</p>
             <ul className="mt-2 flex flex-wrap items-center justify-center gap-1">
-              <li><a href="https://fibertools.app" className={SISTER_SITE_LINK_CLASS}>FiberTools</a></li>
               <li><a href="https://flipmycase.com" className={SISTER_SITE_LINK_CLASS}>FlipMyCase</a></li>
               <li><CreatorRevenueLink href="https://creatorrevenuecalculator.com" className={SISTER_SITE_LINK_CLASS} /></li>
               <li><a href="https://contractextract.com" className={SISTER_SITE_LINK_CLASS}>ContractExtract</a></li>
