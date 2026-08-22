@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CreatorRevenueLink } from "./CreatorRevenueLink";
 import { FooterCookieButton } from "./FooterCookieButton";
 
 /* ─── Categorized tool links for footer ─── */
@@ -260,7 +259,6 @@ export function Footer() {
             <ul className="mt-2 flex flex-wrap items-center justify-center gap-1">
               <li><a href="https://fibertools.app" className={SISTER_SITE_LINK_CLASS}>FiberTools</a></li>
               <li><a href="https://flipmycase.com" className={SISTER_SITE_LINK_CLASS}>FlipMyCase</a></li>
-              <li><CreatorRevenueLink href="https://creatorrevenuecalculator.com" className={SISTER_SITE_LINK_CLASS} /></li>
               <li><a href="https://contractextract.com" className={SISTER_SITE_LINK_CLASS}>ContractExtract</a></li>
               <li><a href="https://medicalbillreader.com" className={SISTER_SITE_LINK_CLASS}>Medical Bill Reader</a></li>
               <li><a href="https://taxbreaktools.com" className={SISTER_SITE_LINK_CLASS}>TaxBreakTools</a></li>
