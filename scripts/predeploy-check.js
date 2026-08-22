@@ -134,7 +134,6 @@ check("Cross-site links", () => {
   const sisterSites = [
     "fibertools.app",
     "flipmycase.com",
-    "creatorrevenuecalculator.com",
     "contractextract.com",
     "medicalbillreader.com",
   ];
