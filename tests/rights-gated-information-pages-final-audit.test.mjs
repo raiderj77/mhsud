@@ -62,7 +62,7 @@ const routes = [
   {
     route: "/athens-insomnia-scale",
     shared: true,
-    citations: ["pubmed.ncbi.nlm.nih.gov/11091029", "doi.org/10.1016/S1389-9457(00)00055-X"],
+    citations: ["pubmed.ncbi.nlm.nih.gov/11033374", "doi.org/10.1016/S0022-3999(00)00095-7"],
   },
   {
     route: "/who-assist-substance-screening",
