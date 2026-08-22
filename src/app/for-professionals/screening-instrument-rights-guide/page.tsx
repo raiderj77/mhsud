@@ -71,7 +71,7 @@ const GROUPS: RightsGroup[] = [
       { name: "UCLA Loneliness Scale v3", source: "https://peplau.psych.ucla.edu/loneliness/", sourceLabel: "UCLA author-controlled page", note: "The posted permission is for nonprofit research, not public commercial administration." },
       { name: "ECR-R attachment measure", source: "https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm", sourceLabel: "Author-controlled ECR-R page", note: "Commercial use requires permission; the author also favors dimensional rather than categorical scoring." },
       { name: "Brief Resilience Scale", source: "https://pubmed.ncbi.nlm.nih.gov/18696313/", sourceLabel: "PubMed validation record", note: "No current authoritative public-web reproduction grant is on file." },
-      { name: "Athens Insomnia Scale", source: "https://pubmed.ncbi.nlm.nih.gov/11091029/", sourceLabel: "PubMed validation record", note: "A validation record does not grant electronic reproduction rights." },
+      { name: "Athens Insomnia Scale", source: "https://pubmed.ncbi.nlm.nih.gov/11033374/", sourceLabel: "PubMed validation record", note: "A validation record does not grant electronic reproduction rights." },
       { name: "WHO ASSIST v3.1", source: "https://www.who.int/publications/i/item/978924159938-2", sourceLabel: "World Health Organization", note: "The manual's primary-care permission does not clearly grant public consumer-web or commercial use." },
     ],
   },
