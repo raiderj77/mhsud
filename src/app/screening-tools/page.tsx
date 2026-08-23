@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/metadata";
 import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
+import { getToolClassification } from "@/lib/toolClassifications";
 
 const PAGE_PATH = "/screening-tools";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
@@ -67,15 +68,6 @@ const EVIDENCE_ANCHORS: Record<string, string> = {
   "/who-assist-substance-screening": "who-assist",
 };
 
-const PUBLISHED_MEASURE_PATHS = new Set([
-  ...Object.keys(EVIDENCE_ANCHORS),
-  "/ces-d-depression-scale",
-  "/big-five-personality-test",
-  "/attachment-style-quiz",
-  "/brief-resilience-scale",
-  "/athens-insomnia-scale",
-]);
-
 const INFORMATION_ONLY_PATHS = new Set([
   "/dass-21-depression-anxiety-stress",
   "/spin-social-anxiety-test",
@@ -94,11 +86,7 @@ const INFORMATION_ONLY_PATHS = new Set([
 ]);
 
 function toolBasis(href: string) {
-  if (INFORMATION_ONLY_PATHS.has(href)) return "Information only";
-  if (href === "/postpartum-depression-test") return "PHQ-9-based adaptation";
-  if (href === "/grief-assessment") return "PHQ-9 depression screener";
-  if (PUBLISHED_MEASURE_PATHS.has(href)) return "Published measure";
-  return "Educational self-check";
+  return getToolClassification(href)?.classification ?? "Manual classification required";
 }
 
 const CATEGORIES: Category[] = [
@@ -576,8 +564,8 @@ export default function ScreeningToolsIndexPage() {
             </a>
           </li>
           <li>
-            <a href="#practical" className="text-sage-700 dark:text-sage-400 hover:underline">
-              Calculators and practical tools
+            <a href="#recovery-tools" className="text-sage-700 dark:text-sage-400 hover:underline">
+              Recovery calculators and practical tools
             </a>
           </li>
           <li>
@@ -684,14 +672,12 @@ export default function ScreeningToolsIndexPage() {
         </ul>
       </section>
 
-      <section id="practical" className="mb-12 scroll-mt-24">
+      <section id="recovery-tools" className="mb-12 scroll-mt-24">
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
-          Calculators and practical tools
+          Recovery calculators and practical tools
         </h2>
         <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
-          Educational calculators and reference timelines. These are not
-          screening instruments and do not produce a score against published
-          cutoffs.
+          Browser-local planning calculators and source-linked recovery reference timelines, plus one household mental-load calculator. These are not screening instruments and do not produce a score against published clinical cutoffs.
         </p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {PRACTICAL_TOOLS.map((t) => (

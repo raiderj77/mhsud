@@ -13,6 +13,7 @@ import { AppInstallPrompt } from "@/components/AppInstallPrompt";
 import { ConsentAnalytics } from "@/components/ConsentAnalytics";
 import { PrivacySafeAggregateAnalytics } from "@/components/PrivacySafeAggregateAnalytics";
 import { SensitiveRouteLifecycle } from "@/components/SensitiveRouteLifecycle";
+import { ToolClassificationNotice } from "@/components/ToolClassificationNotice";
 import { createMetadata, organizationJsonLd } from "@/lib/metadata";
 
 const dmSans = DM_Sans({
@@ -186,6 +187,7 @@ export default function RootLayout({
           <AppInstallPrompt />
           <Navbar />
           <main id="main-content" tabIndex={-1} className="flex-1 scroll-mt-20 focus:outline-none">
+            <ToolClassificationNotice />
             {children}
           </main>
           <Footer />

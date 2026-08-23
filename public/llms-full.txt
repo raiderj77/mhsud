@@ -13,6 +13,8 @@ All interactive answers and scores are processed locally in the browser. Health-
 - [Reviewer profile and credential scope](https://mindchecktools.com/about/jason-ramirez)
 - [Editorial methodology](https://mindchecktools.com/methodology)
 - [Clinical evidence and source notes](https://mindchecktools.com/clinical-evidence)
+- [Privacy and Screening Readiness Review](https://mindchecktools.com/for-professionals)
+- [Fictional readiness review sample](https://mindchecktools.com/for-professionals/sample-readiness-review)
 
 ## Maintained canonical pages
 

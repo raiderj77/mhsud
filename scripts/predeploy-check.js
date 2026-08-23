@@ -1,6 +1,6 @@
 /**
  * predeploy-check.js — Empire Build Standards compliance check for mindchecktools.com
- * Validates: ads.txt, robots.txt, llms.txt, legal pages, cross-site links, security headers
+ * Validates: ads.txt, robots.txt, llms.txt, legal pages, focused footer links, security headers
  * Exit code 1 on failure, 0 on pass.
  */
 
@@ -124,25 +124,33 @@ check("Legal pages", () => {
 });
 
 // ---------------------------------------------------------------------------
-// 5. Cross-site sister links
+// 5. MindCheckTools-focused footer boundary
 // ---------------------------------------------------------------------------
-check("Cross-site links", () => {
+check("Focused footer links", () => {
   const footerPath = resolve(ROOT, "src/components/Footer.tsx");
   if (!existsSync(footerPath)) return fail("Footer.tsx not found");
   const footer = readFileSync(footerPath, "utf-8");
 
-  const sisterSites = [
+  const unrelatedPortfolioSites = [
     "fibertools.app",
     "flipmycase.com",
     "contractextract.com",
     "medicalbillreader.com",
+    "creatorrevenuecalculator.com",
+    "taxbreaktools.com",
+    "524tracker.com",
+    "aibusinessalternative.com",
   ];
-  for (const site of sisterSites) {
-    if (footer.includes(site)) {
-      pass(`Link to ${site}`);
+  for (const site of unrelatedPortfolioSites) {
+    if (!footer.includes(site)) {
+      pass(`No unrelated portfolio link to ${site}`);
     } else {
-      fail(`Missing cross-site link to ${site} in Footer`);
+      fail(`Unrelated portfolio link to ${site} remains in Footer`);
     }
+  }
+  for (const route of ["/screening-tools", "/for-professionals", "/clinical-evidence", "/methodology", "/crisis-resources", "/privacy"]) {
+    if (footer.includes(route)) pass(`Focused footer route ${route}`);
+    else fail(`Missing focused footer route ${route}`);
   }
 });
 

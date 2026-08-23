@@ -256,7 +256,7 @@ export function Navbar() {
               aria-expanded={toolsOpen}
               aria-controls="desktop-tools-menu"
             >
-              Tools
+              Screening Tools
               <svg
                 className={`w-3.5 h-3.5 transition-transform ${toolsOpen ? "rotate-180" : ""}`}
                 fill="none"
@@ -272,6 +272,19 @@ export function Navbar() {
                 />
               </svg>
             </button>
+
+            <Link
+              href="/screening-tools#alcohol-substance"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-sage-700 dark:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+            >
+              Recovery
+            </Link>
+            <Link
+              href="/for-professionals"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+            >
+              Professionals
+            </Link>
 
             <Link
               href="/clinical-evidence"
@@ -296,7 +309,7 @@ export function Navbar() {
             </Link>
             <Link
               href="/about"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
+              className="px-3 py-2.5 min-h-[44px] hidden xl:flex items-center rounded-lg text-sm font-medium
                 text-neutral-600 dark:text-neutral-300
                 hover:text-sage-700 dark:hover:text-sage-400
                 hover:bg-sage-50 dark:hover:bg-sage-950/30
@@ -304,6 +317,12 @@ export function Navbar() {
                 transition-colors"
             >
               About
+            </Link>
+            <Link
+              href="/methodology"
+              className="px-3 py-2.5 min-h-[44px] hidden lg:flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+            >
+              Methodology
             </Link>
             <div className="ml-2 border-l border-sand-200 dark:border-neutral-700 pl-2">
               <DarkModeToggle />
@@ -638,6 +657,27 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
         {/* Static nav links */}
         <div className="border-t border-sand-200 dark:border-neutral-700 mt-3 pt-3 space-y-0.5">
           <Link
+            href="/screening-tools#alcohol-substance"
+            onClick={onClose}
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-sage-700 dark:text-sage-300 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+          >
+            Substance Use &amp; Recovery
+          </Link>
+          <Link
+            href="/screening-tools"
+            onClick={onClose}
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+          >
+            All Screening Tools
+          </Link>
+          <Link
+            href="/for-professionals"
+            onClick={onClose}
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+          >
+            For Professionals
+          </Link>
+          <Link
             href="/clinical-evidence"
             onClick={onClose}
             className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
@@ -658,6 +698,13 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
               transition-colors"
           >
             About
+          </Link>
+          <Link
+            href="/methodology"
+            onClick={onClose}
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+          >
+            Methodology
           </Link>
           <Link
             href="/crisis-resources"

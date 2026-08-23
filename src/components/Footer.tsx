@@ -80,6 +80,7 @@ const INFO_LINKS = [
   { href: "/about", label: "About" },
   { href: "/clinical-evidence", label: "Clinical Evidence" },
   { href: "/methodology", label: "Methodology" },
+  { href: "/for-professionals", label: "For Professionals" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/consumer-health-data-privacy", label: "Consumer Health Data Privacy" },
@@ -91,9 +92,6 @@ const INFO_LINKS = [
 
 const FOOTER_LINK_CLASS =
   "inline-flex min-h-[44px] min-w-[44px] items-center text-sm text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors";
-
-const SISTER_SITE_LINK_CLASS =
-  "inline-flex min-h-[44px] items-center rounded-lg px-2 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-sand-200 dark:hover:bg-night-800 hover:text-sage-600 dark:hover:text-sage-400 transition-colors";
 
 export function Footer() {
   return (
@@ -253,19 +251,6 @@ export function Footer() {
               Do Not Sell or Share My Personal Information
             </Link>
           </div>
-          {/* Sister Sites */}
-          <nav aria-label="More free tools" className="mt-4 text-center">
-            <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">More Free Tools</p>
-            <ul className="mt-2 flex flex-wrap items-center justify-center gap-1">
-              <li><a href="https://fibertools.app" className={SISTER_SITE_LINK_CLASS}>FiberTools</a></li>
-              <li><a href="https://flipmycase.com" className={SISTER_SITE_LINK_CLASS}>FlipMyCase</a></li>
-              <li><a href="https://contractextract.com" className={SISTER_SITE_LINK_CLASS}>ContractExtract</a></li>
-              <li><a href="https://medicalbillreader.com" className={SISTER_SITE_LINK_CLASS}>Medical Bill Reader</a></li>
-              <li><a href="https://taxbreaktools.com" className={SISTER_SITE_LINK_CLASS}>TaxBreakTools</a></li>
-              <li><a href="https://524tracker.com" className={SISTER_SITE_LINK_CLASS}>524Tracker</a></li>
-              <li><a href="https://aibusinessalternative.com" className={SISTER_SITE_LINK_CLASS}>AI Business Alternative</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </footer>

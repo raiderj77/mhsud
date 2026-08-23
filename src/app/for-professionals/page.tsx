@@ -4,7 +4,17 @@ import { breadcrumbJsonLd, createMetadata, faqJsonLd, SITE_NAME, SITE_URL } from
 
 const PAGE_PATH = "/for-professionals";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const LAST_UPDATED = "2026-08-06";
+const LAST_UPDATED = "2026-08-22";
+const INQUIRY_SUBJECT = "Privacy and Screening Readiness Review inquiry";
+const INQUIRY_BODY = `Organization and website URL:
+Your name and role:
+Public site or fictional staging URL:
+Approximate number of routes to review:
+Screening instruments involved, if known:
+Primary goal and desired timeline:
+
+I confirm this message contains no patient records, assessment answers, scores, diagnoses, or other health information.`;
+const INQUIRY_MAILTO = `mailto:hello@mindchecktools.com?subject=${encodeURIComponent(INQUIRY_SUBJECT)}&body=${encodeURIComponent(INQUIRY_BODY)}`;
 
 const FAQS = [
   {
@@ -25,7 +35,7 @@ const FAQS = [
   {
     question: "What does the deliverable include?",
     answer:
-      "The proposed deliverable is a prioritized evidence register covering public routes, instrument-rights records, citations, crisis and non-diagnostic safeguards, privacy and third-party requests, accessibility, crawlability, and release gates.",
+      "A concise readiness report with a route inventory, evidence and rights register, prioritized findings, and a release-gate checklist. The founding scope covers up to five public routes and one follow-up email.",
   },
 ];
 
@@ -47,7 +57,7 @@ function serviceJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Mental Health Screening Implementation Readiness Review",
+    name: "Privacy and Screening Readiness Review",
     description:
       "A bounded technical and content-readiness review using public or fictional staging evidence without patient records, assessment answers, or scores.",
     url: PAGE_URL,
@@ -60,6 +70,13 @@ function serviceJsonLd() {
     audience: {
       "@type": "BusinessAudience",
       audienceType: "Digital-health and behavioral-health software teams",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "495",
+      priceCurrency: "USD",
+      description: "Founding-client fixed price for the stated scope; work begins only after written scope confirmation.",
+      availability: "https://schema.org/LimitedAvailability",
     },
     dateModified: LAST_UPDATED,
   };
@@ -127,10 +144,10 @@ export default function ForProfessionalsPage() {
             For digital-health and behavioral-health software teams
           </p>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-5">
-            Screening implementation readiness review
+            Privacy and Screening Readiness Review
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
-            A fixed-scope technical and content review for public-facing mental-health or substance-use screening journeys. The review uses public pages or fictional staging evidence and returns a prioritized evidence register.
+            A fixed-scope technical and content review for public-facing mental-health or substance-use screening journeys. The review uses public pages or fictional staging evidence and returns a practical readiness report without accepting health data.
           </p>
           <div className="grid gap-3 sm:grid-cols-3 mb-8 text-sm">
             {[
@@ -145,10 +162,10 @@ export default function ForProfessionalsPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             <a
-              href="mailto:hello@mindchecktools.com?subject=Professional%20screening%20implementation%20review"
+              href={INQUIRY_MAILTO}
               className="btn-primary"
             >
-              Request a scope review
+              Ask about a review
             </a>
             <Link href="/for-professionals/screening-implementation-checklist" className="btn-secondary">
               Use the free checklist
@@ -156,11 +173,49 @@ export default function ForProfessionalsPage() {
             <Link href="/for-professionals/screening-instrument-rights-guide" className="btn-secondary">
               Check instrument rights
             </Link>
+            <Link href="/for-professionals/sample-readiness-review" className="btn-secondary">
+              View a fictional sample
+            </Link>
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
             Do not email patient records, assessment answers, scores, diagnoses, or other health information.
           </p>
         </header>
+
+        <section aria-labelledby="founding-offer" className="mb-14 rounded-2xl border-2 border-sage-300 bg-sage-50 p-6 dark:border-sage-800 dark:bg-sage-950/20 sm:p-8">
+          <div className="grid gap-7 lg:grid-cols-[1fr_auto] lg:items-start">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-sage-700 dark:text-sage-300">Founding-client offer</p>
+              <h2 id="founding-offer" className="mt-2 font-serif text-3xl font-bold text-neutral-900 dark:text-neutral-50">$495 fixed scope</h2>
+              <p className="mt-3 max-w-2xl text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                Written scope confirmation comes first. The review is normally delivered within five business days after the agreed public or fictional staging access is available.
+              </p>
+            </div>
+            <Link href="/for-professionals/sample-readiness-review" className="btn-secondary">See the sample deliverable</Link>
+          </div>
+          <div className="mt-7 grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Included</h3>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-neutral-300">
+                <li>Up to five public or fictional staging routes</li>
+                <li>One named screening journey or instrument family</li>
+                <li>Desktop and mobile entry-state review without real answers or scores</li>
+                <li>Evidence, rights, privacy, crisis, accessibility, crawl, and release-gate findings</li>
+                <li>Prioritized written report and one follow-up email</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Not included</h3>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-neutral-300">
+                <li>Legal advice, regulatory certification, or an instrument licence</li>
+                <li>Clinical validation, diagnosis, treatment guidance, or topic-specialist sign-off</li>
+                <li>Penetration testing, formal WCAG conformance, code remediation, or deployment</li>
+                <li>Review of patient records, production health data, answers, scores, or diagnoses</li>
+                <li>Guarantees of safety, compliance, approval, traffic, or business results</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         <section aria-labelledby="review-areas" className="mb-14">
           <h2 id="review-areas" className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-6">
@@ -230,11 +285,15 @@ export default function ForProfessionalsPage() {
             Describe the product, public routes, and business question. Do not include patient records, assessment answers, scores, diagnoses, or other health information.
           </p>
           <a
-            href="mailto:hello@mindchecktools.com?subject=Professional%20screening%20implementation%20review"
+            href={INQUIRY_MAILTO}
             className="inline-flex min-h-[44px] items-center rounded-lg bg-white px-5 py-2.5 font-semibold text-sage-800 hover:bg-sage-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Email MindCheck Tools
           </a>
+          <div className="mt-6 border-t border-white/20 pt-5 text-sm text-sage-50">
+            <p className="font-semibold">Include only these non-health details:</p>
+            <p className="mt-2">Organization and website URL, your name and role, public or fictional staging URL, approximate route count, instrument names if known, primary goal, and desired timeline. Confirm that no patient or health information is included.</p>
+          </div>
         </section>
       </div>
     </>

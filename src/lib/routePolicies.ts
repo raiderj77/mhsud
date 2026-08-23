@@ -48,6 +48,7 @@ const PRIVACY_SAFE_AGGREGATE_ANALYTICS_ROUTES = new Set([
   "/cookies",
   "/disclaimer",
   "/for-professionals",
+  "/for-professionals/sample-readiness-review",
   "/for-professionals/screening-implementation-checklist",
   "/for-professionals/screening-instrument-rights-guide",
   "/methodology",

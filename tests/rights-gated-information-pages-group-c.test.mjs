@@ -27,7 +27,7 @@ const ROUTES = [
   {
     route: "athens-insomnia-scale",
     client: "AISClient.tsx",
-    citations: ["11091029", "S1389-9457(00)00055-X", "Sleep_Instruments_book_3_"],
+    citations: ["11033374", "S0022-3999(00)00095-7", "Sleep_Instruments_book_3_"],
     alternatives: ["/sleep-and-mood-check", "/phq-4-anxiety-depression-screen"],
   },
   {
