@@ -19,5 +19,6 @@ test("work stress total has no invented clinical bands or monetization surface",
   assert.doesNotMatch(client, /const RANGES|Very High Stress|Moderate Stress|Lower Stress|burnout risk/i);
   assert.match(client, /no validated severity bands or clinical cutoff/i);
   assert.match(client, /No clinical band/);
+  assert.doesNotMatch(client, /d\.pct\s*>=/);
   assert.doesNotMatch(client, /AdSlot|TherapyCTA|EmailCapture|affiliate|sponsor/i);
 });

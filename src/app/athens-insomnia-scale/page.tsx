@@ -122,14 +122,14 @@ export default function AthensInsomniaInformationPage() {
         ]}
         sources={[
           {
-            href: "https://pubmed.ncbi.nlm.nih.gov/11091029/",
+            href: "https://pubmed.ncbi.nlm.nih.gov/11033374/",
             label: "PubMed: Athens Insomnia Scale validation",
             detail: "Primary publication record by Soldatos and colleagues.",
           },
           {
-            href: "https://doi.org/10.1016/S1389-9457(00)00055-X",
+            href: "https://doi.org/10.1016/S0022-3999(00)00095-7",
             label: "Publisher DOI record",
-            detail: "Original Sleep Medicine article record; publication access is not a public-web reproduction grant.",
+            detail: "Original Journal of Psychosomatic Research article record; publication access is not a public-web reproduction grant.",
           },
           {
             href: "https://www.med.upenn.edu/cbti/assets/user-content/documents/Sleep_Instruments_book_3_.pdf",

@@ -42,9 +42,16 @@ export function ToolClassificationNotice() {
             ["Purpose", record.purpose],
             ["Source and ownership", record.sourceOwnership],
             ["Rights status", record.rightsStatus],
+            ["Scoring source", record.scoringSource],
             ["Scoring and cutoffs", record.scoringCutoffStatus],
+            ["Crisis relevance", record.crisisRelevance],
             ["Review status", record.clinicalReviewStatus],
             ["Privacy behavior", record.privacyBehavior],
+            ["Optional analytics", record.analyticsPermitted ? "Permitted" : "Not permitted"],
+            ["Advertising", record.adsPermitted ? "Permitted" : "Not permitted"],
+            ["Local print", record.printAvailable ? "Available" : "No dedicated print action"],
+            ["Browser-local save", record.localSaveAvailable ? "Available" : "Not available"],
+            ["Server export", record.serverExportAvailable ? "Available" : "Not available"],
             ["Last verified", record.lastVerifiedDate],
           ].map(([term, description]) => (
             <div key={term}>

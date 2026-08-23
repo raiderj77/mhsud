@@ -39,8 +39,8 @@ const GROUPS: RightsGroup[] = [
     instruments: [
       { name: "PHQ-9, PHQ-4 and GAD-7", source: "https://www.phqscreeners.com/select-screener", sourceLabel: "PHQ Screeners", note: "Reproduction, display and distribution terms are published by the official screener source." },
       { name: "PCL-5 and PC-PTSD-5", source: "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp", sourceLabel: "VA National Center for PTSD", note: "Public-domain status is stated, but VA describes qualified professionals and researchers as the intended users." },
-      { name: "ASRS v1.1 six-question screener", source: "https://www.hcp.med.harvard.edu/ncs/asrs.php", sourceLabel: "National Comorbidity Survey", note: "The source permits electronic recreation when exact wording, response choices, scoring and shading are preserved." },
-      { name: "Rosenberg Self-Esteem Scale", source: "https://socy.umd.edu/about-us/rosenberg-self-esteem-scale", sourceLabel: "University of Maryland", note: "The university identifies the scale as public domain and requests attribution." },
+      { name: "ASRS v1.1 six-question screener", source: "https://license.tov.med.nyu.edu/product/asrs6Qscreener", sourceLabel: "NYU Langone Technology Opportunities & Ventures", note: "The current source permits clinical, nonclinical and commercial use with attribution, while allowing no modification other than electronic recreation." },
+      { name: "Rosenberg Self-Esteem Scale", source: "https://socy.umd.edu/about-us/using-rosenberg-self-esteem-scale", sourceLabel: "University of Maryland", note: "The university identifies the scale as public domain and requests attribution." },
       { name: "K6", source: "https://www.hcp.med.harvard.edu/ncs/k6_scales.php", sourceLabel: "National Comorbidity Survey", note: "Use is described as free without formal permission, subject to citation and notice requirements." },
       { name: "CES-D, exact SAMHSA/NCBI version", source: "https://www.ncbi.nlm.nih.gov/books/NBK572958/", sourceLabel: "NCBI Bookshelf", note: "The source marks the exact appendix version as public domain." },
       { name: "IPIP Big Five measure", source: "https://ipip.ori.org/newPermission.htm", sourceLabel: "IPIP", note: "The official permission page permits commercial and noncommercial online administration." },
@@ -71,16 +71,16 @@ const GROUPS: RightsGroup[] = [
       { name: "UCLA Loneliness Scale v3", source: "https://peplau.psych.ucla.edu/loneliness/", sourceLabel: "UCLA author-controlled page", note: "The posted permission is for nonprofit research, not public commercial administration." },
       { name: "ECR-R attachment measure", source: "https://labs.psychology.illinois.edu/~rcfraley/measures/ecrr.htm", sourceLabel: "Author-controlled ECR-R page", note: "Commercial use requires permission; the author also favors dimensional rather than categorical scoring." },
       { name: "Brief Resilience Scale", source: "https://pubmed.ncbi.nlm.nih.gov/18696313/", sourceLabel: "PubMed validation record", note: "No current authoritative public-web reproduction grant is on file." },
-      { name: "Athens Insomnia Scale", source: "https://pubmed.ncbi.nlm.nih.gov/11091029/", sourceLabel: "PubMed validation record", note: "A validation record does not grant electronic reproduction rights." },
+      { name: "Athens Insomnia Scale", source: "https://pubmed.ncbi.nlm.nih.gov/11033374/", sourceLabel: "PubMed validation record", note: "The original validation record does not grant electronic reproduction rights." },
       { name: "WHO ASSIST v3.1", source: "https://www.who.int/publications/i/item/978924159938-2", sourceLabel: "World Health Organization", note: "The manual's primary-care permission does not clearly grant public consumer-web or commercial use." },
     ],
   },
   {
     heading: "Public administration blocked by current terms",
-    meaning: "The current owner guidance does not permit an open public questionnaire. Keep only an original educational explainer unless the owner provides a written exception.",
+    meaning: "The current owner guidance does not permit an open public questionnaire or respondent-facing automated score or interpretation. Keep an original educational explainer unless the owner provides a written exception.",
     tone: "border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50",
     instruments: [
-      { name: "DASS-21", source: "https://dass.psy.unsw.edu.au/DASSFAQ.htm", sourceLabel: "UNSW DASS FAQ", note: "UNSW says a website or app open to the public may not administer the DASS." },
+      { name: "DASS-21", source: "https://dass.psy.unsw.edu.au/DASSFAQ.htm", sourceLabel: "UNSW DASS FAQ", note: "The questionnaire is public domain, but UNSW prohibits administration on a website or app open to the public and prohibits respondent-facing automated scores or interpretation." },
     ],
   },
 ];

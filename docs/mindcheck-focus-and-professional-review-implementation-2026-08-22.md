@@ -35,8 +35,8 @@ This record separates verified evidence from inference and unknowns. It document
 
 - `src/lib/toolClassifications.ts` defines three user-facing labels: `Published Screener`, `Original Educational Tool`, and `Information Only`.
 - The registry covers 58 maintained tool and instrument-information routes.
-- Every record contains route, name, intended audience, purpose, source or ownership, rights status, validation status, scoring or cutoff status, diagnostic limits, clinical-review status, privacy behavior, citation links, related-guide links, last-verified date, and a manual-review flag.
-- `ToolClassificationNotice` displays the classification and limits before tool content, with expandable source, scoring, privacy, and review details.
+- Every record contains route, name, intended audience, purpose, source or ownership, rights status, validation status, scoring source and cutoff status, diagnostic limits, crisis relevance, clinical-review status, privacy behavior, analytics and advertising permission, print/local-save/server-export availability, citation links, related-guide links, last-verified date, and a manual-review flag.
+- `ToolClassificationNotice` displays the classification and limits before tool content, with expandable source, scoring, crisis, privacy, measurement, advertising, export, and review details.
 - The screening directory obtains its tool-basis label from the same registry rather than maintaining an independent classification list.
 
 ### Work Stress repair
@@ -45,6 +45,7 @@ This record separates verified evidence from inference and unknowns. It document
 - Current sources are the WHO mental-health-at-work fact sheet, WHO burnout classification guidance, and the CDC/NIOSH work-stress overview.
 - The page now states that its six areas and 0-36 total are site-defined educational aids, not validated domains, prediction rules, severity bands, or clinical cutoffs.
 - Automated lower/moderate/high/very-high labels were removed. Results show a raw reflection total with no clinical band and general, non-score-driven next steps.
+- Domain bars use one neutral visual treatment and do not imply severity thresholds at arbitrary percentages.
 - Advertising and affiliate-style therapy promotion were removed from the Work Stress client.
 - The content-update date is 2026-08-22. The separate reviewer date remains 2026-08-02; this change does not represent a new clinical review.
 
@@ -53,6 +54,13 @@ Primary sources:
 - WHO, Mental health at work: https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work
 - WHO, Burn-out an occupational phenomenon: https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon
 - CDC/NIOSH, About stress at work: https://www.cdc.gov/niosh/stress/about/index.html
+
+### Athens citation and current rights revalidation
+
+- The prior Athens citation PMIDs `11311689` and `11091029` resolve to unrelated biomedical papers. The active site and registry now cite the original Athens validation paper, PMID `11033374`, and do not use the former unsupported severity tiers.
+- Athens remains an information-only route with no questionnaire, automated scoring, cutoff, or result journey while public electronic-administration rights remain unresolved.
+- The current ASRS v1.1 6Q rights source is NYU Langone, not the stale Harvard permissions page. The registry records the current attribution, no-modification, and electronic-recreation conditions without treating exact implementation parity as verified.
+- `docs/instrument-rights-revalidation-2026-08-22.md` rechecks all 27 distinct rights decisions covering the 29 published or rights-gated instruments. It does not overwrite the dated historical matrices and reproduces no copyrighted instrument items.
 
 ### Professional offer
 
@@ -78,7 +86,9 @@ Only public entry states were inspected. No disclaimer was accepted on a tool pa
 - Desktop checks at a 1365 by 768 viewport: `/`, `/screening-tools`, `/work-stress-check`, `/for-professionals`, and `/for-professionals/sample-readiness-review` had no horizontal overflow and contained no FiberTools, Medical Bill Reader, BuildMetric, or CaliforniaMailer domain.
 - Mobile checks at the browser's effective 375-pixel viewport: the same routes had no horizontal overflow. Crisis, non-diagnostic, and privacy language remained present.
 - Work Stress displayed `Original Educational Tool`, `Manual review remains required`, its source and scoring limits, and crisis guidance before any assessment interaction.
+- Expanding the Work Stress classification disclosure after the production build showed the scoring source, crisis relevance, optional-analytics, advertising, print, browser-local-save, and server-export fields. No assessment was started.
 - The professional page displayed $495 pricing, five-business-day timing, one follow-up email, exclusions, a no-health-data instruction, and a link to the fictional sample.
+- A separate production availability check requested all 58 registry routes without entering assessment data: 58 returned HTTP 200, none returned `noindex`, and all returned `X-Robots-Tag: noarchive`.
 
 ## Validation results
 
@@ -103,10 +113,11 @@ Focused regression coverage now checks classification completeness, Work Stress 
 
 - No qualified topic specialist has approved every mental-health instrument implementation or the Work Stress revision.
 - The registry reflects the current repository rights records; it is not legal advice and does not resolve open or changing instrument-license terms.
+- Instrument parity and licensing terms can change. Routes classified as permission-required, paid-license-required, public-administration-prohibited, or unresolved remain blocked from interactive publication until the exact required evidence is archived.
 - Customer terms, professional liability coverage, invoicing, payment collection, taxes, cancellation policy, data-processing terms, and service-capacity limits require owner and, where appropriate, professional advice before accepting paid work.
 - The $495 founding price is an owner-approved implementation target in the attached scope, not evidence of market demand or conversion.
 - Production behavior will remain unchanged until a later merge and deployment authorization.
-- Draft PR #120 overlaps the portfolio-link removal. Draft PR #119 independently addresses the Athens source; neither was modified or closed here.
+- Other open pull requests were not modified or closed here. GitHub must be rechecked immediately before merge to avoid overlapping changes.
 
 ## Manual review flags
 

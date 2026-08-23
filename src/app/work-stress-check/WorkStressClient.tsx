@@ -193,7 +193,7 @@ export function WorkStressClient({ faqData }: Props) {
                     <span className="text-xs text-neutral-500 dark:text-neutral-400">{d.score}/{d.max}</span>
                   </div>
                   <div className="h-2 bg-sand-200 dark:bg-night-700 rounded-full overflow-hidden">
-                    <div className={`h-full rounded-full transition-all duration-500 ${d.pct >= 67 ? "bg-gradient-to-r from-crisis-400 to-crisis-600" : d.pct >= 34 ? "bg-gradient-to-r from-warm-400 to-warm-600" : "bg-gradient-to-r from-sage-400 to-sage-600"}`} style={{ width: `${d.pct}%` }} />
+                    <div className="h-full rounded-full bg-gradient-to-r from-sage-400 to-sage-600 transition-all duration-500" style={{ width: `${d.pct}%` }} />
                   </div>
                 </div>
               ))}

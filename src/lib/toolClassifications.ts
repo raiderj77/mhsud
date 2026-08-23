@@ -17,10 +17,17 @@ export type ToolClassificationRecord = {
   sourceOwnership: string;
   rightsStatus: string;
   validationStatus: string;
+  scoringSource: string;
   scoringCutoffStatus: string;
   diagnosticLimits: string;
+  crisisRelevance: string;
   clinicalReviewStatus: string;
   privacyBehavior: string;
+  analyticsPermitted: boolean;
+  adsPermitted: boolean;
+  printAvailable: boolean;
+  localSaveAvailable: boolean;
+  serverExportAvailable: boolean;
   citationLinks: ToolReference[];
   relatedGuideLinks: ToolReference[];
   lastVerifiedDate: string;
@@ -39,6 +46,18 @@ const ORIGINAL_SOURCE =
   "MindCheck Tools original content; it is not a reproduced published screening instrument.";
 const ORIGINAL_LIMIT =
   "For education and personal reflection only. It cannot diagnose, rule out, or treat any condition.";
+const ORIGINAL_PRINT_ROUTES = new Set([
+  "/work-stress-check", "/burnout-assessment-tool", "/mental-load-calculator", "/sleep-and-mood-check",
+  "/bac-calculator", "/standard-drinks-calculator", "/safety-plan", "/cbt-thought-record",
+  "/values-card-sort", "/sobriety-calculator", "/money-saved-recovery-calculator",
+  "/health-recovery-timeline", "/halt-check-in", "/withdrawal-timeline", "/treatment-cost-estimator",
+  "/relapse-prevention-plan", "/readiness-to-change", "/trigger-identification-worksheet",
+  "/family-impact-assessment",
+]);
+const ORIGINAL_LOCAL_SAVE_ROUTES = new Set([
+  "/safety-plan", "/cbt-thought-record", "/worry-time-scheduler", "/sobriety-calculator",
+  "/daily-recovery-check-in",
+]);
 
 const published = (seed: ToolSeed): ToolClassificationRecord => ({
   intendedAudience: "Adults seeking a brief, private orientation before speaking with a qualified professional.",
@@ -46,10 +65,17 @@ const published = (seed: ToolSeed): ToolClassificationRecord => ({
   sourceOwnership: "Published instrument; ownership and attribution are identified in the linked source record.",
   rightsStatus: "Public use is limited to the terms documented by the instrument owner or publisher.",
   validationStatus: "Published validation evidence exists; accuracy varies by population and setting.",
+  scoringSource: "The linked instrument-owner and validation sources govern scoring; exact implementation parity remains manually review-gated.",
   scoringCutoffStatus: "Uses the source-based scoring described on the tool page; a threshold is a screening signal, not a diagnosis.",
   diagnosticLimits: "A score cannot diagnose or rule out a condition and does not replace a comprehensive evaluation.",
+  crisisRelevance: "Screening can surface distress or safety concerns. Crisis resources are available, but the tool cannot assess or respond to an emergency.",
   clinicalReviewStatus: "Source alignment and safety language reviewed within the stated CADC-II credential scope; topic-specialist sign-off is not represented unless explicitly documented.",
   privacyBehavior: LOCAL_PRIVACY,
+  analyticsPermitted: false,
+  adsPermitted: false,
+  printAvailable: true,
+  localSaveAvailable: false,
+  serverExportAvailable: false,
   citationLinks: [{ label: "Clinical evidence directory", href: "/clinical-evidence" }],
   relatedGuideLinks: [{ label: "How MindCheck Tools reviews tools", href: "/methodology" }],
   lastVerifiedDate: VERIFIED_DATE,
@@ -64,10 +90,17 @@ const original = (seed: ToolSeed): ToolClassificationRecord => ({
   sourceOwnership: ORIGINAL_SOURCE,
   rightsStatus: "MindCheck Tools owns the original page content; cited external resources remain subject to their own terms.",
   validationStatus: "Not clinically validated and not presented as a published screening instrument.",
+  scoringSource: "Any calculation is defined by MindCheck Tools for education and is not a published or validated clinical scoring system.",
   scoringCutoffStatus: "Any calculation or reflection range is site-defined and is not a validated clinical cutoff.",
   diagnosticLimits: ORIGINAL_LIMIT,
+  crisisRelevance: "Crisis resources remain available because some topics can be sensitive; this tool cannot provide emergency assessment or response.",
   clinicalReviewStatus: "Reviewed for educational and safety framing within the stated CADC-II credential scope; no broader clinical certification is claimed.",
   privacyBehavior: LOCAL_PRIVACY,
+  analyticsPermitted: false,
+  adsPermitted: false,
+  printAvailable: ORIGINAL_PRINT_ROUTES.has(seed.route),
+  localSaveAvailable: ORIGINAL_LOCAL_SAVE_ROUTES.has(seed.route),
+  serverExportAvailable: false,
   citationLinks: [{ label: "Methodology and review limits", href: "/methodology" }],
   relatedGuideLinks: [{ label: "Browse tools by purpose", href: "/screening-tools" }],
   lastVerifiedDate: VERIFIED_DATE,
@@ -82,10 +115,17 @@ const information = (seed: ToolSeed): ToolClassificationRecord => ({
   sourceOwnership: "The named instrument belongs to its owner or publisher; MindCheck Tools provides original explanatory content only.",
   rightsStatus: "Public administration is prohibited, permission-gated, paid, noncommercial-only, or unresolved as described on the page.",
   validationStatus: "The page discusses published evidence but does not validate a MindCheck Tools questionnaire because no questionnaire is offered.",
+  scoringSource: "None. This page does not administer or score the named instrument.",
   scoringCutoffStatus: "No questionnaire, automated score, cutoff, severity band, or result journey is provided.",
   diagnosticLimits: "The page provides general education only and cannot diagnose, screen, or rule out a condition.",
+  crisisRelevance: "No health input is collected. General crisis resources remain available because the subject matter can be sensitive.",
   clinicalReviewStatus: "Rights, sources, and safety framing reviewed within the stated CADC-II credential scope; topic-specialist approval is not implied.",
   privacyBehavior: INFORMATION_PRIVACY,
+  analyticsPermitted: false,
+  adsPermitted: false,
+  printAvailable: false,
+  localSaveAvailable: false,
+  serverExportAvailable: false,
   citationLinks: [{ label: "Instrument evidence and rights", href: "/clinical-evidence" }],
   relatedGuideLinks: [{ label: "Instrument rights guide", href: "/for-professionals/screening-instrument-rights-guide" }],
   lastVerifiedDate: VERIFIED_DATE,
@@ -109,13 +149,13 @@ const records: ToolClassificationRecord[] = [
   published({ route: "/pc-ptsd-5-screening", name: "PC-PTSD-5 Screen", intendedAudience: "Adults; the VA identifies qualified health professionals and researchers as intended users, so direct-to-consumer use requires manual trauma-specialist review.", citationLinks: [VA_PCPTSD_SOURCE] }),
   published({ route: "/audit-alcohol-test", name: "AUDIT Alcohol Use Screen", rightsStatus: "WHO permits the documented noncommercial use; this route must remain ad-free and outside paid or affiliate flows.", citationLinks: [{ label: "WHO AUDIT manual", href: "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" }] }),
   published({ route: "/audit-c-alcohol-screen", name: "AUDIT-C Quick Screen", rightsStatus: "Conservatively treated under the WHO AUDIT noncommercial boundary pending written clarification.", citationLinks: [{ label: "NIAAA screening guidance", href: "https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/screen-and-assess-use-quick-effective-methods" }] }),
-  published({ route: "/asrs-adhd-screening", name: "ASRS v1.1 Six-Question Screener", rightsStatus: "The six-question screener may be recreated electronically only with exact wording, response options, scoring, and shading preserved.", citationLinks: [{ label: "Official ASRS terms", href: "https://www.hcp.med.harvard.edu/ncs/asrs.php" }] }),
-  published({ route: "/rosenberg-self-esteem-scale", name: "Rosenberg Self-Esteem Scale", citationLinks: [{ label: "University of Maryland source", href: "https://socy.umd.edu/about-us/rosenberg-self-esteem-scale" }] }),
+  published({ route: "/asrs-adhd-screening", name: "ASRS v1.1 Six-Question Screener", rightsStatus: "NYU permits clinical, nonclinical, and commercial use with attribution. Only electronic recreation is permitted; wording, response options, scoring, and patient-facing shading must remain unchanged.", citationLinks: [{ label: "Official NYU ASRS v1.1 6Q terms", href: "https://license.tov.med.nyu.edu/product/asrs6Qscreener" }] }),
+  published({ route: "/rosenberg-self-esteem-scale", name: "Rosenberg Self-Esteem Scale", citationLinks: [{ label: "University of Maryland source", href: "https://socy.umd.edu/about-us/using-rosenberg-self-esteem-scale" }] }),
   published({ route: "/k6-distress-scale", name: "K6 Psychological Distress Scale", citationLinks: [{ label: "Official K6 and K10 source", href: "https://www.hcp.med.harvard.edu/ncs/k6_scales.php" }] }),
   published({ route: "/who-5-wellbeing-index", name: "WHO-5 Well-Being Index", rightsStatus: "WHO publishes the form under a noncommercial licence; this route must remain ad-free and outside paid or affiliate flows.", citationLinks: [{ label: "WHO-5 form and scoring guide", href: "https://www.who.int/publications/m/item/WHO-UCN-MSD-MHE-2024.01" }] }),
   published({ route: "/big-five-personality-test", name: "IPIP Big Five Personality Measure", diagnosticLimits: "A personality-trait estimate is not a mental-health diagnosis and should not be used for employment, education, or other high-stakes decisions.", citationLinks: [{ label: "International Personality Item Pool", href: "https://ipip.ori.org/" }] }),
 
-  information({ route: "/dass-21-depression-anxiety-stress", name: "DASS-21 Information", rightsStatus: "UNSW prohibits administration on a website or app open to the public; this route must remain information-only.", citationLinks: [{ label: "UNSW DASS FAQ", href: "https://dass.psy.unsw.edu.au/DASSFAQ.htm" }] }),
+  information({ route: "/dass-21-depression-anxiety-stress", name: "DASS-21 Information", rightsStatus: "The DASS is public domain, but UNSW prohibits administration on a website or app open to the public and says electronic programs must not return computed scores or automated interpretation to respondents. This route therefore remains information-only.", citationLinks: [{ label: "UNSW DASS FAQ", href: "https://dass.psy.unsw.edu.au/DASSFAQ.htm" }] }),
   information({ route: "/spin-social-anxiety-test", name: "SPIN Information", rightsStatus: "Public electronic use requires permission and a user fee; no licence is on file.", citationLinks: [{ label: "APTA SPIN record", href: "https://www.apta.org/patient-care/evidence-based-practice-resources/test-measures/social-phobia-inventory-spin" }] }),
   information({ route: "/ace-questionnaire", name: "ACE Questionnaire Information", rightsStatus: "The site's former simplified version has not been matched exactly to an authoritative public-domain form.", citationLinks: [{ label: "CDC ACE study", href: "https://www.cdc.gov/violenceprevention/aces/about.html" }] }),
   information({ route: "/cage-aid-substance-abuse-screening", name: "CAGE-AID Information", rightsStatus: "No authoritative grant for public commercial electronic reproduction is on file.", citationLinks: [{ label: "University of Washington overview", href: "https://www.hiv.uw.edu/page/substance-use/cage-aid" }] }),
@@ -127,10 +167,10 @@ const records: ToolClassificationRecord[] = [
   information({ route: "/holmes-rahe-stress-inventory", name: "Holmes-Rahe Information", rightsStatus: "No public-web reproduction grant for the inventory and weights is on file.", citationLinks: [{ label: "Original publisher record", href: "https://www.sciencedirect.com/science/article/pii/0022399967900104" }] }),
   information({ route: "/ucla-loneliness-scale", name: "UCLA Loneliness Scale Information", rightsStatus: "The author-controlled permission covers nonprofit research, not this commercial-site context.", citationLinks: [{ label: "UCLA author source", href: "https://peplau.psych.ucla.edu/loneliness/" }] }),
   information({ route: "/brief-resilience-scale", name: "Brief Resilience Scale Information", rightsStatus: "Public electronic commercial-use rights remain unresolved.", citationLinks: [{ label: "Validation record", href: "https://pubmed.ncbi.nlm.nih.gov/18696313/" }] }),
-  information({ route: "/athens-insomnia-scale", name: "Athens Insomnia Scale Information", rightsStatus: "A transferable public electronic reproduction grant is not on file.", citationLinks: [{ label: "Correct validation record", href: "https://pubmed.ncbi.nlm.nih.gov/11311689/" }] }),
+  information({ route: "/athens-insomnia-scale", name: "Athens Insomnia Scale Information", rightsStatus: "A transferable public electronic reproduction grant is not on file.", citationLinks: [{ label: "Original validation record", href: "https://pubmed.ncbi.nlm.nih.gov/11033374/" }] }),
   information({ route: "/who-assist-substance-screening", name: "WHO ASSIST Information", rightsStatus: "WHO's primary-care photocopy permission does not establish public consumer-web or commercial administration rights.", citationLinks: [{ label: "WHO ASSIST manual", href: "https://www.who.int/publications/i/item/978924159938-2" }] }),
 
-  original({ route: "/work-stress-check", name: "Work Stress Reflection", purpose: "Reflect on twelve site-written prompts about demands, control, support, engagement, recovery, and impact.", scoringCutoffStatus: "A site-defined 0–36 reflection total is shown without severity bands or clinical cutoffs; higher totals only mean more frequent endorsement of these prompts.", manualReviewRequired: true, citationLinks: [{ label: "WHO mental health at work", href: "https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work" }, { label: "NIOSH stress and work", href: "https://www.cdc.gov/niosh/stress/about/index.html" }] }),
+  original({ route: "/work-stress-check", name: "Work Stress Reflection", purpose: "Reflect on twelve site-written prompts about demands, control, support, engagement, recovery, and impact.", scoringSource: "MindCheck Tools sums twelve site-written 0–3 frequency prompts into a 0–36 reflection total; WHO and NIOSH sources provide context, not validation of this calculation.", scoringCutoffStatus: "A site-defined 0–36 reflection total is shown without severity bands or clinical cutoffs; higher totals only mean more frequent endorsement of these prompts.", manualReviewRequired: true, citationLinks: [{ label: "WHO mental health at work", href: "https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work" }, { label: "NIOSH stress and work", href: "https://www.cdc.gov/niosh/stress/about/index.html" }] }),
   original({ route: "/burnout-assessment-tool", name: "Burnout Educational Check-In", manualReviewRequired: true }),
   original({ route: "/compassion-fatigue-test", name: "Compassion Fatigue Educational Check-In", manualReviewRequired: true }),
   original({ route: "/caregiver-burnout-assessment", name: "Caregiver Burnout Educational Check-In", manualReviewRequired: true }),
