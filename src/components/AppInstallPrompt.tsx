@@ -1,6 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import {
+  getPrivacyChoiceStatus,
+  PRIVACY_CHOICE_STATUS_EVENT,
+  type PrivacyChoiceStatus,
+} from "@/lib/privacyConsent";
 
 /**
  * AppInstallPrompt Component
@@ -11,6 +16,7 @@ import { useState, useEffect } from "react";
  * Features:
  * - Only shows on supporting browsers (Chrome, Edge, Samsung)
  * - Respects user's install preference (doesn't show if already installed)
+ * - Waits for privacy choices and stays hidden while that dialog is open
  * - Non-intrusive, dismissible design
  * - Works on iOS/Android
  * - Tracks installation completion
@@ -27,6 +33,9 @@ export function AppInstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [privacyChoiceStatus, setPrivacyChoiceStatus] = useState<PrivacyChoiceStatus>(
+    getPrivacyChoiceStatus,
+  );
 
   useEffect(() => {
     // Check if app is already installed
@@ -55,12 +64,20 @@ export function AppInstallPrompt() {
       setDeferredPrompt(null);
     };
 
+    const handlePrivacyChoiceStatus = () => {
+      setPrivacyChoiceStatus(getPrivacyChoiceStatus());
+    };
+
+    handlePrivacyChoiceStatus();
+
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
+    window.addEventListener(PRIVACY_CHOICE_STATUS_EVENT, handlePrivacyChoiceStatus);
 
     return () => {
       window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
       window.removeEventListener("appinstalled", handleAppInstalled);
+      window.removeEventListener(PRIVACY_CHOICE_STATUS_EVENT, handlePrivacyChoiceStatus);
     };
   }, []);
 
@@ -96,8 +113,14 @@ export function AppInstallPrompt() {
     console.log("[AppInstallPrompt] User dismissed prompt");
   };
 
-  // Don't show if already installed or not supported
-  if (isInstalled || !showPrompt || !deferredPrompt) {
+  // Do not compete with unresolved or open privacy choices.
+  if (
+    isInstalled ||
+    !showPrompt ||
+    !deferredPrompt ||
+    !privacyChoiceStatus.completed ||
+    privacyChoiceStatus.dialogOpen
+  ) {
     return null;
   }
 
