@@ -8,6 +8,7 @@ import {
   CONSENT_EVENT,
   CONSENT_STORAGE_KEY,
   OPEN_CONSENT_EVENT,
+  publishPrivacyChoiceStatus,
   type PrivacyConsent,
 } from "@/lib/privacyConsent";
 import { isOptionalServicesAllowedRoute } from "@/lib/routePolicies";
@@ -170,6 +171,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const optionalServicesAllowed = isOptionalServicesAllowedRoute(pathname);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
+  const [choiceCompleted, setChoiceCompleted] = useState(false);
   const [gpcActive, setGpcActive] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [advertising, setAdvertising] = useState(false);
@@ -205,11 +207,14 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     setGpcActive(gpc);
     if (gpc) {
       applyConsent({ version: 2, analytics: false, advertising: false });
+      setChoiceCompleted(true);
       setOpen(false);
     } else if (stored) {
       applyConsent(stored, false);
+      setChoiceCompleted(true);
     } else {
       applyConsent({ version: 2, analytics: false, advertising: false }, false);
+      setChoiceCompleted(false);
       // Do not interrupt a health-topic visit with consent choices for services
       // that cannot run there. The dialog appears on the homepage, or when a
       // visitor explicitly opens Privacy Choices from the footer.
@@ -219,10 +224,18 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   }, [applyConsent, optionalServicesAllowed]);
 
   useEffect(() => {
-    const showChoices = () => setOpen(true);
+    if (!ready) return;
+    publishPrivacyChoiceStatus({ completed: choiceCompleted, dialogOpen: open });
+  }, [choiceCompleted, open, ready]);
+
+  useEffect(() => {
+    const showChoices = () => {
+      publishPrivacyChoiceStatus({ completed: choiceCompleted, dialogOpen: true });
+      setOpen(true);
+    };
     window.addEventListener(OPEN_CONSENT_EVENT, showChoices);
     return () => window.removeEventListener(OPEN_CONSENT_EVENT, showChoices);
-  }, []);
+  }, [choiceCompleted]);
 
   const save = useCallback((choice: PrivacyConsent) => {
     const previous = window.__mindcheckConsent;
@@ -233,6 +246,8 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     );
 
     applyConsent(choice);
+    publishPrivacyChoiceStatus({ completed: true, dialogOpen: false });
+    setChoiceCompleted(true);
     setOpen(false);
 
     // Consent updates stop future Google events immediately. Reload after a
