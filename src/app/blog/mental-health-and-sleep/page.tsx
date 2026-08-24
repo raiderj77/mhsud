@@ -230,7 +230,7 @@ export default function MentalHealthAndSleepPage() {
               <strong>Sleep hygiene:</strong> Consistent wake time (the single most powerful anchor for the circadian system), limiting caffeine after noon, and managing light exposure.
             </p>
             <p>
-              If you are unsure whether your sleep difficulties have reached a clinically significant level, the <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale</Link> provides a validated self-assessment that takes about 2 minutes. The <Link href="/sleep-and-mood-check" className="text-sage-600 dark:text-sage-400 underline">Sleep &amp; Mood Check</Link> can help you explore how your sleep and mental health may be interacting.
+              If sleep difficulties are persistent or affecting daily life, a healthcare professional can evaluate possible causes and next steps. MindCheck Tools provides an <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">informational Athens Insomnia Scale page</Link>, but does not reproduce, administer, score, or interpret that instrument. The separate <Link href="/sleep-and-mood-check" className="text-sage-600 dark:text-sage-400 underline">Sleep &amp; Mood Check</Link> is an original educational reflection, not an Athens scale substitute or diagnostic tool.
             </p>
           </section>
 
@@ -353,7 +353,7 @@ export default function MentalHealthAndSleepPage() {
               </Link>
               <Link href="/athens-insomnia-scale" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Athens Insomnia Scale</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated 8-item insomnia self-assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Research context, limitations, and public-use permission boundary</p>
               </Link>
             </div>
           </section>
