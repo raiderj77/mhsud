@@ -187,7 +187,8 @@ test("tracking and advertising require consent and Clarity is absent", async () 
   assert.match(consentAnalytics, /document\.createElement\("script"\)/);
   assert.match(consentAnalytics, /globalPrivacyControlIsActive/);
   assert.match(consentAnalytics, /G-XKHQN1NJ2Z/);
-  assert.match(consentAnalytics, /SAFE_CAMPAIGN_KEYS/);
+  assert.doesNotMatch(consentAnalytics, /SAFE_CAMPAIGN_KEYS|safe\.searchParams\.set/);
+  assert.match(consentAnalytics, /return new URL\(current\.pathname, current\.origin\)\.toString\(\)/);
   assert.match(consentAnalytics, /page_path: pathname/);
   assert.match(consentAnalytics, /version !== 2/);
   assert.match(consentAnalytics, /topic-neutral homepage/);

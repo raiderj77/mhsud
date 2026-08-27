@@ -9,9 +9,9 @@ const POST_DATA = BLOG_POSTS.find((p) => p.slug === "insomnia-test-guide")!;
 
 export const metadata: Metadata = createMetadata({
   path: "/blog/insomnia-test-guide",
-  title: "Insomnia Screening: Signs, Self-Assessment, and the Athens Insomnia Scale",
+  title: "Insomnia Signs and Athens Insomnia Scale Information",
   description:
-    "Chronic insomnia affects about 10% of adults. Learn the signs, how the Athens Insomnia Scale works as a validated self-assessment, and when to seek professional help.",
+    "Learn common insomnia signs, when to seek professional help, and why MindCheck Tools provides Athens Insomnia Scale information without administering or scoring it.",
   keywords: [
     "insomnia test",
     "insomnia symptoms",
@@ -34,9 +34,9 @@ const FAQ_DATA = [
       "The DSM-5 defines insomnia disorder as difficulty initiating or maintaining sleep, occurring at least 3 nights per week for 3 or more months, that causes significant distress or daytime impairment. Occasional sleep difficulty due to stress or schedule changes is common and does not meet the clinical threshold.",
   },
   {
-    question: "Is the Athens Insomnia Scale clinically validated?",
+    question: "Is the Athens Insomnia Scale available on MindCheck Tools?",
     answer:
-      "Yes. The Athens Insomnia Scale was developed by Soldatos et al. in 2000 and validated in multiple clinical populations. It is an 8-item questionnaire based on ICD-10 insomnia criteria. A score of 6 or higher indicates clinically significant insomnia, with strong internal consistency and test-retest reliability.",
+      "No. The primary publication describes the instrument's research evidence, but MindCheck Tools has not archived written permission for public consumer-web reproduction, electronic administration, or automated scoring. The informational page provides research and rights context without the questionnaire, score, threshold, or result.",
   },
   {
     question: "Can insomnia cause depression?",
@@ -53,7 +53,7 @@ const FAQ_DATA = [
 export default function InsomniaTestGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Insomnia Screening: Signs, Self-Assessment, and the Athens Insomnia Scale", description: "Chronic insomnia affects about 10% of adults. Learn the signs, how the Athens Insomnia Scale works as a validated self-assessment, and when to seek professional help.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...articleJsonLd({ title: "Insomnia Signs and Athens Insomnia Scale Information", description: "Learn common insomnia signs, when to seek professional help, and why MindCheck Tools provides Athens Insomnia Scale information without administering or scoring it.", url: ARTICLE_URL, datePublished: POST_DATA.publishedDate, dateModified: POST_DATA.modifiedDate }) }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: "Insomnia Screening Guide", url: ARTICLE_URL }])) }} />
 
@@ -64,7 +64,7 @@ export default function InsomniaTestGuidePage() {
             <span className="text-xs text-neutral-500 dark:text-neutral-400">10 min read</span>
           </div>
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Insomnia Screening: Signs, Self-Assessment, and the Athens Insomnia Scale
+            Insomnia Signs and Athens Insomnia Scale Information
           </h1>
           <div className="border-l-4 border-sage-200 dark:border-sage-800 pl-4 my-6">
   <div className="flex flex-col gap-1">
@@ -88,7 +88,7 @@ export default function InsomniaTestGuidePage() {
   </div>
 </div>
           <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Chronic insomnia affects roughly 10% of adults, and occasional insomnia symptoms, trouble falling asleep, staying asleep, or waking too early, affect 30&ndash;35%. If you&apos;ve been struggling with sleep, a validated self-assessment like the Athens Insomnia Scale can help you understand whether your difficulties may warrant professional attention.
+            Chronic insomnia affects roughly 10% of adults, and occasional insomnia symptoms, trouble falling asleep, staying asleep, or waking too early, affect 30&ndash;35%. This guide explains common patterns, when professional evaluation may help, and why MindCheck Tools provides information about the Athens Insomnia Scale without administering or scoring it.
           </p>
         </header>
 
@@ -114,8 +114,7 @@ export default function InsomniaTestGuidePage() {
               <li><strong>Early morning awakening</strong>, waking 2&ndash;3 hours before the intended wake time and being unable to fall back asleep. This pattern has a well-documented association with depression.</li>
             </ul>
             <p>
-              Many people experience more than one type simultaneously. All three types can be assessed using the{" "}
-              <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale</Link>.
+              Many people experience more than one type simultaneously. A healthcare professional can assess the pattern, duration, daytime effects, medical contributors, and whether another sleep disorder may be involved.
             </p>
           </section>
 
@@ -123,26 +122,17 @@ export default function InsomniaTestGuidePage() {
           <section>
             <h2>What is the Athens Insomnia Scale?</h2>
             <p>
-              The Athens Insomnia Scale (AIS) is an 8-item self-report questionnaire developed by Soldatos et al. in 2000, based on the International Classification of Diseases (ICD-10) criteria for insomnia. It is one of the most widely used validated insomnia screening instruments in clinical research and practice.
-            </p>
-            <p>The AIS covers eight domains:</p>
-            <ul>
-              <li><strong>Sleep induction</strong>, how long it takes to fall asleep</li>
-              <li><strong>Awakenings during the night</strong>, frequency and difficulty returning to sleep</li>
-              <li><strong>Early morning awakening</strong>, waking earlier than desired</li>
-              <li><strong>Total sleep duration</strong>, whether total sleep time feels sufficient</li>
-              <li><strong>Sleep quality</strong>, overall satisfaction with sleep</li>
-              <li><strong>Well-being during the day</strong>, how rested and functional you feel</li>
-              <li><strong>Functioning during the day</strong>, cognitive and physical performance</li>
-              <li><strong>Sleepiness during the day</strong>, excessive daytime drowsiness</li>
-            </ul>
-            <p>
-              Each item is scored 0&ndash;3, producing a total score of 0&ndash;24. A score of <strong>6 or higher</strong> indicates clinically significant insomnia. The AIS is not a diagnostic tool, it is a screening instrument that can help you and your healthcare provider determine whether further evaluation is appropriate.
+              The Athens Insomnia Scale is a self-report research and clinical instrument developed by Soldatos and colleagues to assess insomnia-related sleep difficulty and daytime impact within its intended professional context. The{" "}
+              <a href="https://pubmed.ncbi.nlm.nih.gov/11033374/" target="_blank" rel="noopener noreferrer" className="text-sage-600 dark:text-sage-400 underline">primary publication record</a>{" "}
+              describes its development and evidence base.
             </p>
             <p>
-              You can take the{" "}
-              <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale self-assessment</Link>{" "}
-              on this site. It takes about 2 minutes. Questionnaire answers are processed locally in your browser and are not intentionally sent to MindCheck Tools. People with access to your device, browser profile, or copies you create may see them.
+              MindCheck Tools does not reproduce the questionnaire, response choices, scoring instructions, threshold, or automated interpretation because written permission for public consumer-web administration is not on file. A self-report score also cannot diagnose insomnia or determine its cause.
+            </p>
+            <p>
+              Read the{" "}
+              <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale information and permission boundary</Link>{" "}
+              for source links, limitations, and clearly labeled non-equivalent alternatives.
             </p>
           </section>
 
@@ -229,9 +219,9 @@ export default function InsomniaTestGuidePage() {
               <li>Sleep problems are accompanied by significant mood changes, anxiety, or other mental health symptoms</li>
             </ul>
             <p>
-              A validated self-assessment like the{" "}
-              <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale</Link>{" "}
-              can be a useful starting point for that conversation, bringing your results to your provider gives them concrete information about the nature and severity of your sleep difficulties.
+              Before an appointment, you may find it useful to note when the problem began, how often it occurs, how it affects your day, and any medications or substances that may affect sleep. The{" "}
+              <Link href="/athens-insomnia-scale" className="text-sage-600 dark:text-sage-400 underline">Athens Insomnia Scale information page</Link>{" "}
+              explains why MindCheck Tools does not provide that questionnaire or a result.
             </p>
           </section>
 
@@ -260,10 +250,10 @@ export default function InsomniaTestGuidePage() {
 
           {/* CTA */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
-            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">How is your sleep affecting you?</h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Take a free, private insomnia screening. Questionnaire answers are processed locally and are not intentionally sent to MindCheck Tools. Device users or copies you create may expose them.</p>
+            <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Learn about sleep concerns and next steps</h3>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">The Athens page is informational only. The separate Sleep &amp; Mood Check is an original educational reflection with no validated insomnia cutoff and is not an Athens scale substitute.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/athens-insomnia-scale" className="btn-primary text-sm">Take the Athens Insomnia Scale</Link>
+              <Link href="/athens-insomnia-scale" className="btn-secondary text-sm">Read about the Athens scale</Link>
               <Link href="/sleep-and-mood-check" className="btn-primary text-sm">Take the Sleep &amp; Mood Check</Link>
             </div>
           </div>
@@ -310,7 +300,7 @@ export default function InsomniaTestGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link href="/athens-insomnia-scale" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Athens Insomnia Scale</p>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400">Validated 8-item insomnia self-assessment</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Research context, limitations, and public-use permission boundary</p>
               </Link>
               <Link href="/sleep-and-mood-check" className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                 <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">Sleep &amp; Mood Check</p>

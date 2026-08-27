@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import {
   isOptionalServicesAllowedRoute,
+  isPrivacySafeAggregateAnalyticsRoute,
   isSensitiveRoute,
 } from "@/lib/routePolicies";
 import { trackPrivateToolLaunch } from "@/lib/privacySafeAcquisitionAnalytics";
@@ -14,6 +15,8 @@ export function SensitiveRouteLifecycle() {
   useEffect(() => {
     const sensitive = isSensitiveRoute(pathname);
     const optionalServicesAllowed = isOptionalServicesAllowedRoute(pathname);
+    const aggregateServicesAllowed = isPrivacySafeAggregateAnalyticsRoute(pathname);
+    const aggregateScriptLoaded = document.querySelector('script[src*="/_vercel/insights/script.js"], script[src*="vercel-scripts.com/v1/script"]');
     const optionalScriptLoaded =
       document.getElementById("consented-google-analytics") ||
       document.getElementById("consented-google-adsense");
@@ -26,7 +29,13 @@ export function SensitiveRouteLifecycle() {
       return;
     }
 
-    if (optionalServicesAllowed) {
+    if (!aggregateServicesAllowed && aggregateScriptLoaded) {
+      aggregateScriptLoaded.remove();
+      window.location.replace(pathname);
+      return;
+    }
+
+    if (optionalServicesAllowed || aggregateServicesAllowed) {
       const forceCleanTopicalNavigation = (event: MouseEvent) => {
         if (
           event.defaultPrevented ||

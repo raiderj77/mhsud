@@ -4,6 +4,18 @@ import test from "node:test";
 
 const read = (file) => readFile(new URL(`../${file}`, import.meta.url), "utf8");
 
+test("homepage and footer identify U.S. crisis services and international options", async () => {
+  const [home, footer] = await Promise.all([read("src/app/page.tsx"), read("src/components/Footer.tsx")]);
+  for (const source of [home, footer]) {
+    assert.match(source, /In the United States/);
+    assert.match(source, /Outside the U\.S\./);
+    assert.match(source, /local emergency number/);
+    assert.match(source, /href="\/crisis-resources"/);
+  }
+  assert.match(home, /href="sms:988"/);
+  assert.doesNotMatch(footer, /Call or text 988 &bull;/);
+});
+
 test("global crisis banner offers direct, body-free mobile contact actions", async () => {
   const banner = await read("src/components/CrisisBanner.tsx");
 

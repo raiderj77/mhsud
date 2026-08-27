@@ -771,25 +771,28 @@ export default function HomePage() {
             When should I seek immediate help?
           </h2>
           <p className="text-base font-semibold text-red-700 dark:text-red-400 leading-relaxed mb-4">
-            If you are experiencing thoughts of suicide or self-harm, please contact the 988 Suicide and Crisis Lifeline immediately by calling or texting 988.
+            In the United States, call or text the 988 Suicide &amp; Crisis Lifeline for crisis support. If there is immediate danger, call your local emergency number. Outside the U.S., use local crisis services.
           </p>
           <ul className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed space-y-2 mb-6">
             <li>
-              <strong>988 Suicide and Crisis Lifeline</strong>, call or text{" "}
+              <strong>988 Suicide and Crisis Lifeline (U.S.)</strong>, call{" "}
               <a href="tel:988" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">988</a>
-              {" "}(free, 24/7)
+              {" "}or <a href="sms:988" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">text 988</a> (free, 24/7)
             </li>
             <li>
-              <strong>Crisis Text Line</strong>, text HOME to{" "}
+              <strong>Crisis Text Line (U.S.)</strong>, text HOME to{" "}
               <a href="sms:741741" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">741741</a>
               {" "}(free, 24/7)
             </li>
             <li>
-              <strong>SAMHSA National Helpline</strong>, {" "}
+              <strong>SAMHSA National Helpline (U.S.)</strong>, {" "}
               <a href="tel:18006624357" className="text-sage-600 dark:text-sage-400 underline underline-offset-2">1-800-662-4357</a>
               {" "}(free, confidential, 24/7 treatment referrals)
             </li>
           </ul>
+          <p className="text-sm mb-6">
+            <a href="/crisis-resources" className="inline-flex min-h-[44px] items-center underline underline-offset-2">Find U.S. and international crisis resources</a>
+          </p>
           <div className="border-t border-neutral-200 dark:border-neutral-700 pt-6">
             <h3 className="font-semibold text-neutral-700 dark:text-neutral-300 text-sm mb-3">Further reading</h3>
             <ul className="text-sm space-y-1">
@@ -867,11 +870,11 @@ export default function HomePage() {
                 },
                 {
                   question: "Who should use these mental health screening tools?",
-                  answer: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. If you are in crisis, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988.",
+                  answer: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. In the United States, call or text 988 for crisis support. Elsewhere, use local crisis services. In immediate danger, call your local emergency number.",
                 },
                 {
                   question: "What should I do if my screening score is high?",
-                  answer: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+                  answer: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or, in the United States, calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential treatment referrals.",
                 },
               ])
             ),
@@ -893,11 +896,11 @@ export default function HomePage() {
             },
             {
               q: "Who should use these mental health screening tools?",
-              a: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. If you are in crisis, please contact the 988 Suicide and Crisis Lifeline by calling or texting 988.",
+              a: "These tools are for adults who want to better understand their mental health or substance use patterns. They are not intended for use by children, as diagnostic tools, or as a replacement for professional clinical assessment. In the United States, call or text 988 for crisis support. Elsewhere, use local crisis services. In immediate danger, call your local emergency number.",
             },
             {
               q: "What should I do if my screening score is high?",
-              a: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential referrals.",
+              a: "A high score indicates that your symptoms may warrant professional evaluation, it does not mean you have a diagnosis. We recommend sharing your results with a licensed mental health professional, your primary care physician, or, in the United States, calling SAMHSA's National Helpline at 1-800-662-4357 for free, confidential treatment referrals.",
             },
           ].map((faq) => (
             <div key={faq.q} className="card p-5 sm:p-6">

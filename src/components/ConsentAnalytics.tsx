@@ -17,8 +17,6 @@ const MEASUREMENT_ID = "G-XKHQN1NJ2Z";
 const ANALYTICS_SCRIPT_ID = "consented-google-analytics";
 const ADS_SCRIPT_ID = "consented-google-adsense";
 const ADSENSE_CLIENT = "ca-pub-7171402107622932";
-const SAFE_CAMPAIGN_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
-const SAFE_CAMPAIGN_VALUE = /^[a-zA-Z0-9._~-]{1,80}$/;
 const FOCUSABLE_SELECTOR = [
   "a[href]",
   "button:not([disabled])",
@@ -63,12 +61,9 @@ function updateGoogleConsent(consent: PrivacyConsent): void {
 
 function safePageLocation(): string {
   const current = new URL(window.location.href);
-  const safe = new URL(current.pathname, current.origin);
-  for (const key of SAFE_CAMPAIGN_KEYS) {
-    const value = current.searchParams.get(key);
-    if (value && SAFE_CAMPAIGN_VALUE.test(value)) safe.searchParams.set(key, value);
-  }
-  return safe.toString();
+  // Even an ordinary-looking campaign value is arbitrary visitor-supplied
+  // text. Never forward any query parameter or fragment to analytics.
+  return new URL(current.pathname, current.origin).toString();
 }
 
 function safeReferrer(): string {
@@ -93,6 +88,9 @@ function sendSanitizedPageView(pathname: string): void {
 }
 
 function loadGoogleAnalytics(pathname: string): void {
+  // The vendor can read the document URL independently of our page_view.
+  // Fail closed on decorated URLs instead of trusting event sanitization alone.
+  if (window.location.search || window.location.hash || globalPrivacyControlIsActive()) return;
   ensureGtag();
   (window as unknown as Record<string, unknown>)[`ga-disable-${MEASUREMENT_ID}`] = false;
 
@@ -106,12 +104,15 @@ function loadGoogleAnalytics(pathname: string): void {
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
   script.addEventListener("load", () => {
+    if (window.__mindcheckConsent?.analytics !== true || globalPrivacyControlIsActive() || window.location.pathname !== "/") return;
     window.gtag?.("js", new Date());
     window.gtag?.("config", MEASUREMENT_ID, {
       anonymize_ip: true,
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       send_page_view: false,
+      page_location: safePageLocation(),
+      page_referrer: safeReferrer(),
     });
     sendSanitizedPageView(pathname);
   }, { once: true });

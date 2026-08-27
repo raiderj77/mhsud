@@ -99,7 +99,7 @@ export function Footer() {
       {/* 988 Crisis Lifeline Banner */}
       <div className="bg-crisis-50 dark:bg-crisis-950/40 border-b border-crisis-200 dark:border-crisis-800 py-3 px-4 text-center">
         <p className="text-base text-crisis-700 dark:text-crisis-300">
-          If you or someone you know is in crisis, call or text{" "}
+          In the United States, if you or someone you know is in crisis, call or text{" "}
           <strong className="font-semibold">988</strong> (Suicide &amp; Crisis Lifeline) or visit{" "}
           <a
             href="https://988lifeline.org"
@@ -109,6 +109,7 @@ export function Footer() {
           >
             988lifeline.org
           </a>
+          . Outside the U.S., use your local crisis service. In immediate danger, call your local emergency number.
         </p>
       </div>
 
@@ -198,7 +199,7 @@ export function Footer() {
         {/* Crisis Resources */}
         <div className="border-t border-amber-200 dark:border-amber-800 pt-6 mb-6">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-3 text-center">
-            Crisis Resources
+            U.S. Crisis and Treatment Resources
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             <a href="tel:988" className="block min-h-[44px] text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors">
@@ -206,7 +207,7 @@ export function Footer() {
                 988 Suicide &amp; Crisis Lifeline
               </p>
               <p className="text-sm text-amber-700 dark:text-amber-300">
-                Call or text 988 &bull; 24/7 free &amp; confidential support
+                Call 988 &bull; 24/7 free &amp; confidential support
               </p>
             </a>
             <a href="sms:741741" className="block min-h-[44px] text-center p-3 bg-amber-50 dark:bg-amber-900/30 rounded-lg hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors">
@@ -239,7 +240,7 @@ export function Footer() {
             Interactive self-checks and instrument-information pages are educational and are not a substitute for professional medical or mental health advice. Always consult a qualified healthcare provider or licensed mental health professional regarding any mental health concerns. Interactive answers are processed in your browser and are not sent to MindCheck Tools. Information-only pages ask no assessment questions and produce no score or result. Features that save information on your device say so before use.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-center max-w-2xl mx-auto mt-2">
-            If you are in crisis, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), available 24/7.
+            In the United States, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), available 24/7. Outside the U.S., use local crisis services.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
             Advertising is currently disabled. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.

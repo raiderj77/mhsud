@@ -116,7 +116,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     status: "published",
     publishedDate: "2025-02-10",
-    modifiedDate: "2026-03-08",
+    modifiedDate: "2026-08-23",
   },
   {
     slug: "seasonal-affective-disorder",
@@ -498,7 +498,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "13 min read",
     status: "published",
     publishedDate: "2026-03-10",
-    modifiedDate: "2026-03-10",
+    modifiedDate: "2026-08-23",
   },
   {
     slug: "what-is-bipolar-disorder",
@@ -728,15 +728,15 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "insomnia-test-guide",
-    title: "Insomnia Screening: Signs, Self-Assessment, and the Athens Insomnia Scale",
-    excerpt: "Chronic insomnia affects about 10% of adults. Learn the signs, how the Athens Insomnia Scale works as a validated self-assessment, and when to seek professional help.",
+    title: "Insomnia Signs and Athens Insomnia Scale Information",
+    excerpt: "Learn common insomnia signs, when to seek professional help, and why MindCheck Tools provides Athens Insomnia Scale information without administering or scoring it.",
     category: "Education",
     toolSlug: "/athens-insomnia-scale",
     date: "2026-03-17",
     readTime: "10 min read",
     status: "published",
     publishedDate: "2026-03-17",
-    modifiedDate: "2026-03-17",
+    modifiedDate: "2026-08-23",
   },
   {
     slug: "compassion-fatigue-guide",
