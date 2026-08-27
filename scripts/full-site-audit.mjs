@@ -1,244 +1,123 @@
 #!/usr/bin/env node
-/**
- * Full-site post-deployment audit.
- *
- * Fetches the live sitemap, walks every <loc>, and verifies on each page:
- *   - HTTP 200
- *   - <title> present + non-empty
- *   - <meta name="description"> present
- *   - <link rel="canonical"> matches the URL's path
- *   - at least one <script type="application/ld+json"> JSON-LD block
- *
- * For screening tool routes (matching the slug patterns the YMYL pages live
- * under), additionally asserts the string `data-npa="1"` is present in the
- * HTML — non-personalized AdSense is a hard policy requirement on health
- * screening pages.
- *
- * Run:  node scripts/full-site-audit.mjs
+/** Read-only HTTP entry-state audit. No forms, result navigation, or clinical certification.
+ * Run: node scripts/full-site-audit.mjs [--report=docs/entry-audit.json]
+ * AUDIT_ORIGIN may target a local production server; canonicals stay public.
  */
 import * as cheerio from "cheerio";
+import { readFile, writeFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
+import ts from "typescript";
 
 const SITE_ORIGIN = "https://mindchecktools.com";
-const SITEMAP_URL = `${SITE_ORIGIN}/sitemap.xml`;
-const CONCURRENCY = 6;
-const RETRY_DELAY_MS = 750;
+const policySource = await readFile(new URL("../src/lib/routePolicies.ts", import.meta.url), "utf8");
+const policy = await import("data:text/javascript;base64," + Buffer.from(ts.transpile(policySource, { module: ts.ModuleKind.ESNext })).toString("base64"));
 
-// ANSI colors — disabled if NO_COLOR is set or stdout isn't a TTY
-const useColor = !process.env.NO_COLOR && process.stdout.isTTY;
-const c = (code) => (s) => (useColor ? `\x1b[${code}m${s}\x1b[0m` : s);
-const green = c("32");
-const red = c("31");
-const yellow = c("33");
-const dim = c("2");
-const bold = c("1");
-
-const SCREENING_PATTERNS = [
-  /-test(\b|\/|$)/,
-  /-screening(\b|\/|$)/,
-  /-scale(\b|\/|$)/,
-  /-calculator(\b|\/|$)/,
-  /-questionnaire(\b|\/|$)/,
-  /-inventory(\b|\/|$)/,
-];
-
-function isScreeningRoute(url) {
-  const path = new URL(url).pathname;
-  // Blog posts that mention "-screening" or "-test" in their slug are
-  // informational guides, not screening tools — they don't render AdSlots
-  // with NPA, so don't apply the NPA check to them.
-  if (path.startsWith("/blog/")) return false;
-  return SCREENING_PATTERNS.some((re) => re.test(path));
-}
-
-async function fetchText(url, attempt = 1) {
+export function safeEntryUrl(value, origin = SITE_ORIGIN) {
   try {
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent": "MindCheckTools-Audit/1.0 (+https://mindchecktools.com)",
-        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-      },
-      redirect: "follow",
-    });
-    const text = await res.text();
-    return { status: res.status, text, finalUrl: res.url };
-  } catch (err) {
-    if (attempt < 3) {
-      await new Promise((r) => setTimeout(r, RETRY_DELAY_MS * attempt));
-      return fetchText(url, attempt + 1);
-    }
-    return { status: 0, text: "", finalUrl: url, error: err.message };
-  }
+    const url = new URL(value, origin);
+    if (url.origin !== origin || url.search || url.hash || url.username || url.password) return null;
+    if (/(^|\/)(?:api|results?)(?:\/|$)/i.test(url.pathname)) return null;
+    return url.href;
+  } catch { return null; }
 }
 
-async function loadSitemapUrls() {
-  const { status, text } = await fetchText(SITEMAP_URL);
-  if (status !== 200) {
-    throw new Error(`Sitemap fetch failed with status ${status}`);
-  }
-  // Cheerio with xmlMode parses sitemap.xml fine; <loc> selectors return text
-  const $ = cheerio.load(text, { xmlMode: true });
-  const urls = [];
-  $("loc").each((_, el) => {
-    const u = $(el).text().trim();
-    if (u) urls.push(u);
-  });
-  return urls;
-}
-
-function auditHtml(url, status, html) {
+export function auditHtml(url, status, html, { finalUrl = url, headers = {} } = {}) {
   const checks = [];
-  let pass = true;
-
-  if (status !== 200) {
-    return { pass: false, checks: [{ name: "http-200", ok: false, detail: `status ${status}` }] };
-  }
-  checks.push({ name: "http-200", ok: true });
-
+  const check = (name, ok) => checks.push({ name, ok });
+  check("http-200", status === 200);
+  if (status !== 200) return { pass: false, checks, links: [] };
+  check("no-redirect", finalUrl === url);
   const $ = cheerio.load(html);
-
-  // <title>
-  const title = $("head > title").first().text().trim();
-  const titleOk = title.length > 0;
-  checks.push({ name: "title", ok: titleOk, detail: titleOk ? null : "missing or empty" });
-  pass &&= titleOk;
-
-  // <meta name="description">
-  const desc = $('head > meta[name="description"]').attr("content")?.trim() ?? "";
-  const descOk = desc.length > 0;
-  checks.push({ name: "meta-description", ok: descOk, detail: descOk ? null : "missing or empty" });
-  pass &&= descOk;
-
-  // <link rel="canonical"> matches URL path
-  const canonical = $('head > link[rel="canonical"]').attr("href")?.trim() ?? "";
-  const expectedPath = new URL(url).pathname.replace(/\/$/, "");
-  let canonicalOk = false;
-  let canonicalDetail = null;
-  if (!canonical) {
-    canonicalDetail = "missing";
-  } else {
+  check("title", $("head > title").text().trim().length > 0);
+  check("meta-description", Boolean($('head > meta[name="description"]').attr("content")?.trim()));
+  check("single-h1", $("h1").length === 1);
+  const expected = new URL(new URL(url).pathname, SITE_ORIGIN).href;
+  let canonicalMatches = false;
+  try { canonicalMatches = new URL($('head > link[rel="canonical"]').attr("href")).href === expected; } catch { /* missing or relative canonical */ }
+  check("canonical", canonicalMatches);
+  const robots = [...$('meta[name="robots"], meta[name="googlebot"]').map((_, el) => $(el).attr("content")).get(), headers["x-robots-tag"] || ""].join(",");
+  check("index-policy", !/\b(?:noindex|none)\b/i.test(robots));
+  const blocks = $('script[type="application/ld+json"]').toArray();
+  check("json-ld", blocks.length > 0 && blocks.every(el => {
+    try { const value = JSON.parse($(el).text()); return value !== null && typeof value === "object"; } catch { return false; }
+  }));
+  const path = new URL(url).pathname;
+  const scripts = $("script[src]").map((_, el) => $(el).attr("src")).get().join(" ");
+  if (!policy.isOptionalServicesAllowedRoute(path)) {
+    check("no-ad-or-google-tags", !/googletagmanager\.com|google-analytics\.com|googlesyndication\.com|doubleclick\.net/i.test(scripts) && $("ins.adsbygoogle").length === 0);
+  }
+  if (!policy.isPrivacySafeAggregateAnalyticsRoute(path)) {
+    check("no-aggregate-tag", !/_vercel\/insights|vercel-scripts\.com/i.test(scripts));
+  }
+  if (policy.isSensitiveRoute(path)) {
+    check("sensitive-no-store", /no-store/i.test(headers["cache-control"] || ""));
+    check("sensitive-no-referrer", headers["referrer-policy"] === "no-referrer");
+  }
+  check("frame-protection", /deny/i.test(headers["x-frame-options"] || ""));
+  check("content-type-protection", headers["x-content-type-options"] === "nosniff");
+  const links = new Set();
+  $("a[href]").each((_, el) => {
     try {
-      const canonicalPath = new URL(canonical, SITE_ORIGIN).pathname.replace(/\/$/, "");
-      canonicalOk = canonicalPath === expectedPath;
-      if (!canonicalOk) canonicalDetail = `points to ${canonicalPath}, expected ${expectedPath}`;
-    } catch {
-      canonicalDetail = `invalid URL: ${canonical}`;
-    }
-  }
-  checks.push({ name: "canonical", ok: canonicalOk, detail: canonicalDetail });
-  pass &&= canonicalOk;
-
-  // JSON-LD
-  const jsonLdCount = $('script[type="application/ld+json"]').length;
-  const jsonLdOk = jsonLdCount > 0;
-  checks.push({
-    name: "json-ld",
-    ok: jsonLdOk,
-    detail: jsonLdOk ? null : "no <script type=\"application/ld+json\"> block",
+      const target = new URL($(el).attr("href"), url);
+      target.search = ""; target.hash = "";
+      const safe = safeEntryUrl(target.href, new URL(url).origin);
+      if (safe) links.add(safe);
+    } catch { /* Invalid URLs require separate content review. */ }
   });
-  pass &&= jsonLdOk;
-
-  // Screening-tool routes intentionally gate <AdSlot npa /> behind
-  // {showResults && ...} so no ads ever render alongside the active
-  // questionnaire (YMYL / sensitive-input policy). The data-npa attribute
-  // is therefore absent from the SSR HTML by design and only appears in
-  // the live DOM after submit. Static crawlers cannot observe it; we mark
-  // these as SKIP rather than FAIL.
-  if (isScreeningRoute(url)) {
-    checks.push({
-      name: "npa",
-      skipped: true,
-      detail: "AdSlot is client-side rendered post-submission to protect sensitive input",
-    });
-  }
-
-  return { pass, checks };
+  return { pass: checks.every(c => c.ok), checks, links: [...links] };
 }
 
-async function runConcurrent(items, limit, worker) {
-  const results = [];
+async function fetchEntry(url) {
+  try {
+    const res = await fetch(url, { redirect: "manual", signal: AbortSignal.timeout(20000), headers: { "User-Agent": "MindCheckTools-EntryAudit/2.0", Accept: "text/html,application/xml" } });
+    return { status: res.status, html: await res.text(), headers: Object.fromEntries(res.headers) };
+  } catch { return { status: 0, html: "", headers: {} }; }
+}
+
+async function concurrent(items, worker) {
   let next = 0;
-  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
-    while (true) {
-      const i = next++;
-      if (i >= items.length) return;
-      results[i] = await worker(items[i], i);
-    }
-  });
-  await Promise.all(workers);
+  const results = [];
+  await Promise.all(Array.from({ length: Math.min(6, items.length) }, async () => {
+    while (next < items.length) { const i = next++; results[i] = await worker(items[i]); }
+  }));
   return results;
 }
 
-function formatLine(url, result) {
-  const tag = result.pass ? green("[PASS]") : red("[FAIL]");
-  const skipped = result.checks.filter((c) => c.skipped);
-  const lines = [`${tag}  ${url}`];
-  for (const s of skipped) {
-    lines.push(
-      `       ${yellow("[SKIP]")} ${bold(s.name)}${s.detail ? dim(` — ${s.detail}`) : ""}`
-    );
-  }
-  if (!result.pass) {
-    const failed = result.checks
-      .filter((c) => !c.ok && !c.skipped)
-      .map((c) => `       ${red("✗")} ${bold(c.name)}${c.detail ? dim(` — ${c.detail}`) : ""}`)
-      .join("\n");
-    if (failed) lines.push(failed);
-  }
-  return lines.join("\n");
+export async function runAudit(origin = SITE_ORIGIN) {
+  if (![SITE_ORIGIN, "http://localhost:3000", "http://localhost:3100", "http://127.0.0.1:3100"].includes(origin)) throw new Error("Out-of-scope audit origin");
+  const sitemap = await fetchEntry(origin + "/sitemap.xml");
+  if (sitemap.status !== 200) throw new Error("Sitemap status " + sitemap.status);
+  const $ = cheerio.load(sitemap.html, { xmlMode: true });
+  const entries = $("loc").map((_, el) => $(el).text().trim()).get();
+  if (!entries.length || entries.some(url => !safeEntryUrl(url))) throw new Error("Sitemap has empty or unsafe entry scope");
+  const paths = entries.map(url => new URL(url).pathname);
+  if (new Set(paths).size !== paths.length) throw new Error("Duplicate sitemap URLs");
+  const results = await concurrent(paths, async path => {
+    const url = origin + path;
+    const response = await fetchEntry(url);
+    return { path, ...auditHtml(url, response.status, response.html, response) };
+  });
+  const known = new Set(paths);
+  const extra = [...new Set(results.flatMap(r => r.links))].filter(url => !known.has(new URL(url).pathname));
+  const extraLinks = await concurrent(extra, async url => {
+    const response = await fetchEntry(url);
+    return { path: new URL(url).pathname, status: response.status, ok: response.status === 200, redirect: Boolean(response.headers.location) };
+  });
+  const failed = results.filter(r => !r.pass).length + extraLinks.filter(r => !r.ok).length;
+  return { checkedAt: new Date().toISOString(), origin, scope: "HTTP entry states only; no assessment interaction, clinical certification, or browser-network proof", total: results.length, failed, results: results.map(({ links, ...r }) => r), extraLinks };
 }
 
-(async () => {
-  console.log(bold("\nMindCheck Tools — Full Site Audit\n"));
-  console.log(dim(`Sitemap: ${SITEMAP_URL}`));
-  console.log(dim(`Concurrency: ${CONCURRENCY}\n`));
-
-  let urls;
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
-    urls = await loadSitemapUrls();
-  } catch (err) {
-    console.error(red(`Failed to load sitemap: ${err.message}`));
-    process.exit(2);
-  }
-  console.log(dim(`Found ${urls.length} URLs in sitemap.\n`));
-
-  const results = await runConcurrent(urls, CONCURRENCY, async (url) => {
-    const { status, text, error } = await fetchText(url);
-    if (error) {
-      return { url, pass: false, checks: [{ name: "fetch", ok: false, detail: error }] };
-    }
-    const audit = auditHtml(url, status, text);
-    return { url, ...audit };
-  });
-
-  let passed = 0;
-  let failed = 0;
-  let npaSkipped = 0;
-
-  for (const r of results) {
-    if (r.pass) passed++;
-    else failed++;
-    if (r.checks.some((c) => c.name === "npa" && c.skipped)) npaSkipped++;
-    console.log(formatLine(r.url, r));
-  }
-
-  console.log(bold("\nSummary"));
-  console.log(`  Total:     ${results.length}`);
-  console.log(`  ${green("Passed")}:    ${passed}`);
-  console.log(`  ${failed > 0 ? red("Failed") : "Failed"}:    ${failed}`);
-  console.log(
-    `  ${yellow("NPA skipped")}: ${npaSkipped} screening pages (AdSlot is post-submit-gated by design)`
-  );
-
-  // Detailed failure list
-  if (failed > 0) {
-    console.log(bold(yellow("\nFailing URLs:")));
-    for (const r of results) {
-      if (!r.pass) {
-        const reasons = r.checks.filter((c) => !c.ok).map((c) => c.name).join(", ");
-        console.log(`  - ${r.url}  ${dim(`(${reasons})`)}`);
-      }
-    }
-  }
-
-  process.exit(failed > 0 ? 1 : 0);
-})();
+    const report = await runAudit(process.env.AUDIT_ORIGIN || SITE_ORIGIN);
+    for (const row of report.results) console.log((row.pass ? "PASS " : "FAIL ") + row.path + (row.pass ? "" : ": " + row.checks.filter(c => !c.ok).map(c => c.name).join(", ")));
+    console.log(JSON.stringify({ total: report.total, failed: report.failed, extraLinks: report.extraLinks, scope: report.scope }));
+    const reportArg = process.argv.find(arg => arg.startsWith("--report="));
+    if (reportArg) await writeFile(reportArg.slice(9), JSON.stringify({
+      ...report,
+      checksApplied: [...new Set(report.results.flatMap(row => row.checks.map(check => check.name)))],
+      results: report.results.map(({ path, pass, checks }) => ({ path, pass, failedChecks: checks.filter(check => !check.ok).map(check => check.name) })),
+    }, null, 2) + "\n");
+    process.exitCode = report.failed ? 1 : 0;
+  } catch (error) { console.error(error.message); process.exitCode = 2; }
+}
