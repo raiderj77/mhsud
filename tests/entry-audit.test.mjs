@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { auditHtml, safeEntryUrl } from "../scripts/full-site-audit.mjs";
+import { auditHtml, isAllowedAuditOrigin, safeEntryUrl } from "../scripts/full-site-audit.mjs";
 
 const url = "https://mindchecktools.com/athens-insomnia-scale";
 const html = `<html><head><title>Information</title><meta name="description" content="An educational overview"><link rel="canonical" href="${url}"><script type="application/ld+json">{"@type":"WebPage"}</script></head><body><h1>Information</h1></body></html>`;
@@ -19,4 +19,9 @@ test("crawler refuses query strings, external hosts, APIs, and result journeys",
 });
 test("homepage canonical treats an empty path and slash as equivalent", () => {
   assert.equal(auditHtml("https://mindchecktools.com/", 200, html.replace(url, "https://mindchecktools.com"), options).pass, true);
+});
+
+test("audit origin requires exact parsed equality and rejects lookalike URLs", () => {
+  for (const origin of ["https://mindchecktools.com", "http://localhost:3000", "http://localhost:3100", "http://127.0.0.1:3100"]) assert.equal(isAllowedAuditOrigin(origin), true);
+  for (const origin of ["https://mindchecktools.com.example.org", "https://example.org/https://mindchecktools.com", "https://mindchecktools.com@example.org", "https://mindchecktools.com?fixture=true", "https://mindchecktools.com#fixture", "http://localhost:3100/path", "not a URL"]) assert.equal(isAllowedAuditOrigin(origin), false);
 });

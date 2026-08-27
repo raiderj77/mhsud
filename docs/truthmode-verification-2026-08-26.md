@@ -30,11 +30,12 @@ This is not an error-free, clinical-safety, legal-compliance, or WCAG certificat
 
 ## Validation results
 
-- Full unit/regression suite: **163 passing tests** on final test set; includes executable synthetic URL/GPC/filter cases, audit false-positive fixtures, privacy, instrument-rights, sharing, non-diagnostic, and accessibility regressions.
+- Full unit/regression suite: **164 passing tests** on final test set; includes executable synthetic URL/GPC/filter cases, audit false-positive fixtures, privacy, instrument-rights, sharing, non-diagnostic, and accessibility regressions.
 - ESLint: no warnings/errors. Content lint and predeploy gates passed.
 - Production build passed, including type checks and 238 generated pages. Generated route count includes quarantined source routes and is not the number of public indexed pages. Framework notices about deprecated `next lint` and edge-runtime static generation remain non-fatal.
 - `npm audit` and production-only audit: zero known reported vulnerabilities at run time; not a penetration test or a guarantee against unknown vulnerabilities.
 - Local production-server entry audit: **88/88 passed**. Production audit repeated independently: **88/88 passed**. `git diff --check` passed.
+- GitHub flagged the audit script's array-membership URL check as incomplete substring sanitization. It was replaced with explicit parsed-origin equality, with additional tests rejecting lookalike hosts, credentials, paths, queries, and fragments. The alert was not dismissed or the security gate bypassed; the corrected commit requires fresh CI.
 - Evidence: `production-entry-audit-2026-08-26.json`, `local-entry-audit-2026-08-26.json`, and `browser-entry-audit-2026-08-26.json` in this directory. Timestamps use UTC; the run date is Pacific time.
 
 ## Inferences

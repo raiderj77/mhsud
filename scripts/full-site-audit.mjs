@@ -83,8 +83,21 @@ async function concurrent(items, worker) {
   return results;
 }
 
+export function isAllowedAuditOrigin(origin) {
+  try {
+    const parsed = new URL(origin);
+    // Reject paths, credentials, queries, fragments, and lookalike hosts.
+    // Use exact origin equality, never a URL substring comparison.
+    if (parsed.origin !== origin) return false;
+    return parsed.origin === SITE_ORIGIN ||
+      parsed.origin === "http://localhost:3000" ||
+      parsed.origin === "http://localhost:3100" ||
+      parsed.origin === "http://127.0.0.1:3100";
+  } catch { return false; }
+}
+
 export async function runAudit(origin = SITE_ORIGIN) {
-  if (![SITE_ORIGIN, "http://localhost:3000", "http://localhost:3100", "http://127.0.0.1:3100"].includes(origin)) throw new Error("Out-of-scope audit origin");
+  if (!isAllowedAuditOrigin(origin)) throw new Error("Out-of-scope audit origin");
   const sitemap = await fetchEntry(origin + "/sitemap.xml");
   if (sitemap.status !== 200) throw new Error("Sitemap status " + sitemap.status);
   const $ = cheerio.load(sitemap.html, { xmlMode: true });
