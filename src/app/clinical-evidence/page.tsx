@@ -939,6 +939,14 @@ export default function ClinicalEvidencePage() {
           </p>
         </section>
 
+        <section className="mt-10 rounded-xl border border-sand-200 dark:border-neutral-800 bg-white dark:bg-night-900 p-5" aria-labelledby="awareness-guides">
+          <h2 id="awareness-guides" className="text-lg font-bold text-neutral-900 dark:text-neutral-50 mb-2">Related public-education guides</h2>
+          <ul className="list-disc pl-5 space-y-3">
+            <li><Link href="/awareness/fentanyl-prevention-awareness-day" className="text-sage-700 dark:text-sage-400 underline">August 21: Fentanyl Prevention and Awareness Day</Link></li>
+            <li><Link href="/awareness/overdose-awareness-month-day" className="text-sage-700 dark:text-sage-400 underline">Overdose awareness in August: dates and respectful action</Link></li>
+          </ul>
+        </section>
+
         <section className="mt-10 rounded-xl border border-sand-200 dark:border-neutral-800 bg-white dark:bg-night-900 p-5">
           <h2 className="text-lg font-bold text-neutral-900 dark:text-neutral-50 mb-2">
             About this review

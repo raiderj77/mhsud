@@ -29,6 +29,7 @@ const SENSITIVE_TOOL_SEGMENT =
   /(?:^|-)(?:test|screen|screening|assessment|questionnaire|scale|inventory|calculator|check|check-in|record|scheduler)(?:-|$)/i;
 
 const EXPLICIT_SENSITIVE_ROUTES = new Set([
+  "awareness",
   "screening-tools",
   "crisis-resources",
   "safety-plan",

@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
+import { awarenessArticlePath, getAwarenessRelease, getReleasedAwarenessArticles } from "@/lib/awarenessArticles";
 
 const QUARANTINED_PATHS = new Set([
   "/depression-test-for-teens", "/depression-test-for-seniors", "/depression-test-for-new-moms",
@@ -77,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/values-card-sort`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/dbt-crisis-skills`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     // Guides
+    ...getReleasedAwarenessArticles().map((article) => ({
+      url: `${SITE_URL}${awarenessArticlePath(article.slug)}`,
+      lastModified: getAwarenessRelease(article.slug)!.publishedOn,
+      changeFrequency: "yearly" as const,
+      priority: 0.6,
+    })),
     { url: `${SITE_URL}/how-to-talk-to-your-doctor-about-mental-health`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     // Score interpretation guides
     { url: `${SITE_URL}/phq-9-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
