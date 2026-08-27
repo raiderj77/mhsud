@@ -2,38 +2,39 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AWARENESS_HUB_PATH, awarenessArticles, awarenessArticlePath, getAwarenessArticle, articleSourceKeys, awarenessSources } from "@/lib/awarenessArticles";
-import { awarenessMetadata, awarenessArticleJsonLd, DraftNotice, SafetyNote, PrivacyNote, sourceLinks } from "../shared";
+import { awarenessArticlePath, getReleasedAwarenessArticle, getReleasedAwarenessArticles, getAwarenessRelease, articleSourceKeys, awarenessSources } from "@/lib/awarenessArticles";
+import { awarenessMetadata, awarenessArticleJsonLd, ReviewNotice, SafetyNote, PrivacyNote, sourceLinks } from "../shared";
 import styles from "../awareness.module.css";
 
 // Unknown slugs reach our explicit notFound() guard. The pinned Next version's
 // dynamicParams:false fallback logged an internal error for an ordinary 404.
 export const dynamicParams = true;
-export function generateStaticParams() { return awarenessArticles.map(({ slug }) => ({ slug })); }
+export function generateStaticParams() { return getReleasedAwarenessArticles().map(({ slug }) => ({ slug })); }
 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
-  const article = getAwarenessArticle((await params).slug);
+  const article = getReleasedAwarenessArticle((await params).slug);
   if (!article) notFound();
   return awarenessMetadata(awarenessArticlePath(article.slug), article.seoTitle, article.description, { url: article.image, alt: article.imageAlt });
 }
 
 export default async function AwarenessArticlePage({ params }: Props) {
-  const article = getAwarenessArticle((await params).slug);
+  const article = getReleasedAwarenessArticle((await params).slug);
   if (!article) notFound();
+  const release = getAwarenessRelease(article.slug)!;
   const jsonLd = [awarenessArticleJsonLd(article), breadcrumbJsonLd([
-    { name: "Home", url: SITE_URL }, { name: "August awareness calendar", url: `${SITE_URL}${AWARENESS_HUB_PATH}` },
+    { name: "Home", url: SITE_URL },
     { name: article.observance, url: `${SITE_URL}${awarenessArticlePath(article.slug)}` },
   ])];
   return <article>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-    <nav aria-label="Breadcrumb"><Link href={AWARENESS_HUB_PATH}>August awareness calendar</Link><span aria-hidden="true"> / </span><span>{article.dateLabel}</span></nav>
+    <nav aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true"> / </span><span>{article.dateLabel}</span></nav>
     <header>
       <p className={styles.eyebrow}>Awareness, without the pressure · {article.dateLabel}</p>
       <h1>{article.title}</h1>
       <p className={styles.lede}>{article.description}</p>
     </header>
-    <DraftNotice />
+    <ReviewNotice release={release} />
     <SafetyNote emergency={article.emergency} />
     <section className={styles.answer} aria-labelledby="quick-answer"><h2 id="quick-answer">Quick answer</h2><p>{article.answer}</p>{sourceLinks(article.answerSources)}</section>
     <figure className={styles.figure}>
@@ -53,7 +54,7 @@ export default async function AwarenessArticlePage({ params }: Props) {
         <section id="sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources and related reading</h2>
           <p>Primary-source dates and education are cited below. The planning examples are original editorial suggestions, not validated clinical interventions. Source checking is separate from qualified clinical review.</p>
           <ul>{articleSourceKeys(article).map((key) => <li key={key}><a href={awarenessSources[key].url} rel="noreferrer" referrerPolicy="no-referrer">{awarenessSources[key].title}</a></li>)}</ul>
-          <h3>Related awareness guides</h3><ul>{article.related.map((slug) => { const related = getAwarenessArticle(slug)!; return <li key={slug}><Link href={awarenessArticlePath(slug)}>{related.title}</Link></li>; })}<li><Link href={AWARENESS_HUB_PATH}>August mental-health and addiction awareness calendar</Link></li></ul>
+          <h3>Related awareness guides</h3><ul>{article.related.map((slug) => { const related = getReleasedAwarenessArticle(slug); return related ? <li key={slug}><Link href={awarenessArticlePath(slug)}>{related.title}</Link></li> : null; })}</ul>
           <p>For organizations considering online screening, see the <Link href="/for-professionals/screening-implementation-checklist">free screening-implementation safety checklist</Link>. It is a technical planning resource, not permission to administer an instrument or a clinical endorsement.</p>
         </section>
         <PrivacyNote />

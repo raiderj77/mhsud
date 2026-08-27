@@ -3,6 +3,7 @@ import test from "node:test";
 import { readFile, stat } from "node:fs/promises";
 import ts from "typescript";
 import sharp from "sharp";
+import { createHash } from "node:crypto";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 async function loadTs(path) {
@@ -11,6 +12,18 @@ async function loadTs(path) {
 }
 const data = await loadTs("src/lib/awarenessArticles.ts");
 const policies = await loadTs("src/lib/routePolicies.ts");
+
+test("approved addiction article content matches the revision Jason reviewed", () => {
+  // Source revision 83c344c. Any substantive edit requires a new review record,
+  // not merely replacing these hashes to make a test pass.
+  const reviewedContent = {
+    "fentanyl-prevention-awareness-day": "53feaf344ea6f2b7e338653d99ff7718dddf5674480ac396f60656d9529e0bf7",
+    "overdose-awareness-month-day": "c2791d97c17b8afde6b8f5ab26709f1690bece9be785ba66f5739d5a0cfae39b",
+  };
+  for (const [slug, hash] of Object.entries(reviewedContent)) {
+    assert.equal(createHash("sha256").update(JSON.stringify(data.getAwarenessArticle(slug))).digest("hex"), hash, slug);
+  }
+});
 
 test("four distinct awareness guides have resolvable citations and related routes", () => {
   assert.equal(data.awarenessArticles.length, 4);
@@ -43,24 +56,44 @@ test("observance dates and uncertainty remain explicit", () => {
   assert.equal(data.getAwarenessArticle("fentanyl-prevention-awareness-day").emergency, true);
 });
 
-test("review drafts cannot inherit indexable metadata or invented human review", async () => {
-  const [layout, shared, sitemap, page] = await Promise.all([
+test("only the two explicitly approved addiction articles are released", async () => {
+  const [layout, shared, sitemap, page, hub] = await Promise.all([
     read("src/app/awareness/layout.tsx"), read("src/app/awareness/shared.tsx"),
-    read("src/app/sitemap.ts"), read("src/app/awareness/[slug]/page.tsx"),
+    read("src/app/sitemap.ts"), read("src/app/awareness/[slug]/page.tsx"), read("src/app/awareness/august/page.tsx"),
   ]);
-  assert.equal(data.AWARENESS_REVIEW_STATUS, "pending-qualified-review");
+  assert.equal(data.AWARENESS_REVIEW_STATUS, "addiction-articles-approved");
+  assert.deepEqual(data.getReleasedAwarenessArticles().map(a => a.slug), ["fentanyl-prevention-awareness-day", "overdose-awareness-month-day"]);
+  for (const slug of ["national-wellness-month", "national-grief-awareness-day", "august", "unlisted", "toString", "__proto__"]) {
+    assert.equal(data.getAwarenessRelease(slug), undefined);
+    assert.equal(data.getReleasedAwarenessArticle(slug), undefined);
+  }
+  assert.equal(data.AWARENESS_HUB_RELEASED, false);
+  assert.match(hub, /if \(!AWARENESS_HUB_RELEASED\) notFound\(\)/);
+  for (const release of data.awarenessReleases) {
+    assert.equal(release.reviewedOn, "2026-08-26");
+    assert.equal(release.publishedOn, "2026-08-26");
+  }
   for (const file of [layout, shared]) {
     assert.match(file, /index: false, follow: false, noimageindex: true/);
     assert.match(file, /googleBot: \{ index: false/);
   }
-  assert.doesNotMatch(sitemap, /awareness/);
+  assert.match(sitemap, /getReleasedAwarenessArticles\(\)\.map/);
+  assert.match(shared, /robots: released/);
+  assert.match(shared, /index: true, follow: true/);
   assert.match(page, /dynamicParams = true/);
   assert.match(page, /if \(!article\) notFound\(\)/);
+  assert.match(page, /getReleasedAwarenessArticle\(\(await params\)\.slug\)/);
+  assert.match(page, /getReleasedAwarenessArticles\(\)\.map/);
+  assert.doesNotMatch(page, /AWARENESS_HUB_PATH|<DraftNotice|\bgetAwarenessArticle\(/);
+  assert.match(page, /getReleasedAwarenessArticle\(slug\)/);
   assert.match(shared, /has not been clinically reviewed/);
   assert.match(shared, /SITE_AUTHOR.name/);
   assert.match(shared, /SITE_AUTHOR.credential/);
-  assert.doesNotMatch(shared.replace(/^\s*\/\/.*$/gm, ""), /reviewedBy\s*:|datePublished\s*:|AUTHOR_SCHEMA|ToolReviewerBio|AuthorByline/);
-  assert.match(shared, /creativeWorkStatus: "Draft"/);
+  assert.match(shared, /Addiction-related educational content reviewed and approved by/);
+  assert.match(shared, /review is limited to addiction-related education/);
+  assert.doesNotMatch(shared.replace(/^\s*\/\/.*$/gm, ""), /reviewedBy\s*:|AUTHOR_SCHEMA|ToolReviewerBio|AuthorByline/);
+  assert.match(shared, /creativeWorkStatus: release \? "Published" : "Draft"/);
+  assert.match(shared, /release \? \{ datePublished: release.publishedOn/);
 });
 
 test("all awareness routes are isolated from analytics, referrers and service-worker page caches", async () => {

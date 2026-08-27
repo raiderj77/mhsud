@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AWARENESS_HUB_PATH, awarenessArticles, awarenessArticlePath } from "@/lib/awarenessArticles";
+import { AWARENESS_HUB_PATH, AWARENESS_HUB_RELEASED, awarenessArticles, awarenessArticlePath } from "@/lib/awarenessArticles";
 import { awarenessMetadata, DraftNotice, SafetyNote, PrivacyNote, sourceLinks } from "../shared";
 import styles from "../awareness.module.css";
 
@@ -10,6 +11,7 @@ const DESCRIPTION = "August awareness dates: wellness month, fentanyl awareness 
 export const metadata = awarenessMetadata(AWARENESS_HUB_PATH, TITLE, DESCRIPTION);
 
 export default function AugustAwarenessPage() {
+  if (!AWARENESS_HUB_RELEASED) notFound();
   const jsonLd = [
     { "@context": "https://schema.org", "@type": "CollectionPage", name: TITLE, description: DESCRIPTION, url: `${SITE_URL}${AWARENESS_HUB_PATH}`, creativeWorkStatus: "Draft", hasPart: awarenessArticles.map((article) => ({ "@type": "Article", name: article.title, url: `${SITE_URL}${awarenessArticlePath(article.slug)}` })) },
     breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "August awareness calendar", url: `${SITE_URL}${AWARENESS_HUB_PATH}` }]),

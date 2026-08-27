@@ -1,7 +1,15 @@
-/** Source-checked editorial drafts, not evidence of human or clinical approval. */
+/** Source-checked articles; only the explicit release list has owner-confirmed review. */
 export const AWARENESS_SOURCE_CHECKED = "2026-08-26";
-export const AWARENESS_REVIEW_STATUS = "pending-qualified-review";
+export const AWARENESS_REVIEW_STATUS = "addiction-articles-approved";
 export const AWARENESS_HUB_PATH = "/awareness/august";
+// Owner approval is limited to addiction-related articles, not the mixed-topic hub.
+export const AWARENESS_HUB_RELEASED = false;
+export const awarenessReleases = [
+  { slug: "fentanyl-prevention-awareness-day", reviewedOn: "2026-08-26", publishedOn: "2026-08-26" },
+  { slug: "overdose-awareness-month-day", reviewedOn: "2026-08-26", publishedOn: "2026-08-26" },
+] as const;
+export type AwarenessRelease = (typeof awarenessReleases)[number];
+export function getAwarenessRelease(slug: string) { return awarenessReleases.find((release) => release.slug === slug); }
 
 export const awarenessSources = {
   wellness: { title: "U.S. Government Publishing Office: National Wellness Month", url: "https://govbooktalk.gpo.gov/2022/08/22/national-wellness-month/" },
@@ -309,6 +317,8 @@ export const awarenessArticles: AwarenessArticle[] = [
 
 export function awarenessArticlePath(slug: string) { return `/awareness/${slug}`; }
 export function getAwarenessArticle(slug: string) { return awarenessArticles.find((article) => article.slug === slug); }
+export function getReleasedAwarenessArticles() { return awarenessArticles.filter((article) => getAwarenessRelease(article.slug)); }
+export function getReleasedAwarenessArticle(slug: string) { return getAwarenessRelease(slug) ? getAwarenessArticle(slug) : undefined; }
 
 export function articleSourceKeys(article: AwarenessArticle): AwarenessSourceKey[] {
   return [...new Set([...article.answerSources, ...article.sections.flatMap((section) => section.sources ?? []), ...article.faqs.flatMap((faq) => faq.sources ?? [])])];

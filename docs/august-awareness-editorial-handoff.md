@@ -1,6 +1,22 @@
 # August awareness articles — research and release gate
 
-Prepared August 26, 2026. Status: editorial drafts, qualified human review pending. No production release or indexing submission authorized in this task.
+Prepared August 26, 2026. Updated status: owner release approval received; Jason Ramirez, CADC-II, confirmed approval of all addiction-related articles in the dedicated task. Only the fentanyl and overdose-awareness articles are cleared by that statement. The wellness, grief, and mixed-topic calendar remain unapproved. Earlier draft-stage evidence below is historical and superseded where this release record says otherwise.
+
+## Addiction-only review and release record
+
+- Reviewer: Jason Ramirez, CADC-II, the site's existing named owner/reviewer. Approval received August 26, 2026 (America/Los_Angeles), for the addiction-related articles. This is the owner's review confirmation, not a newly performed external credential verification or medical certification.
+- Reviewed content revision: `83c344cd994913c3c0913e398563d1b3803909fd`. The two approved article objects, citations, FAQs, and illustration references are unchanged; focused SHA-256 regression tests protect that exact reviewed content. Public changes are limited to review attribution, release metadata, privacy-preserving route gates, sitemap entries, and internal discovery.
+- Approved routes: `/awareness/fentanyl-prevention-awareness-day` and `/awareness/overdose-awareness-month-day`.
+- Not approved: `/awareness/august`, `/awareness/national-wellness-month`, `/awareness/national-grief-awareness-day`. Their source drafts and artwork are retained, but routes return 404 and no public links/sitemap entries point to them. Noindex alone is not used as an unpublished-content boundary.
+- Visible credit is limited to addiction-related educational review. MindCheck Tools remains the publisher; AI assistance is disclosed. No physician review, independent endorsement, new credential, or authorship is claimed.
+- Release target date: August 26, 2026 (Pacific). The exact deployed SHA and deployment must be verified after merging. Owner approval is already received; do not ask again unless scope or substantive content changes.
+- The two released pages retain no-store/no-referrer, network-only service-worker handling, and exclusion from optional analytics/ads. Review dates, approved title/description, large image previews, Article metadata, and canonical URLs are explicit. The default awareness-layout metadata remains noindex; only the exact release allowlist overrides it.
+- The articles link only to released related guides. A small descriptive link section on `/clinical-evidence` supplies public discovery without a commercial or crisis conversion prompt. Only the two approved URLs enter the sitemap.
+- No new GSC traffic evidence has been obtained. Existing IndexNow automation submits the homepage only; a green run is not evidence that these article URLs were submitted or indexed. Do not claim search indexing from an HTTP 200, sitemap entry, or successful deployment.
+
+Current release checks: run `npm run build`, `npm run lint`, `npx tsc --noEmit`, `npm audit --omit=dev`, then `node scripts/audit-awareness-drafts.mjs` against the local production build. The same read-only script accepts only one additional fixed origin, `https://mindchecktools.com`, for post-release verification. It checks two public article entries and three withheld 404 routes, never assessment answers/results.
+
+Verified for the addiction-only release candidate: 171/171 tests; production build; TypeScript no-emit; ESLint; content/predeploy gates; runtime-dependency audit with zero known vulnerabilities. Local entry audit passed both indexable articles, seven internal destinations, original images, exact canonicals, limited review attribution, direct crisis links, and absence of optional tracking tags/forms. All three unapproved routes and an unknown slug returned 404; the sitemap and incoming links include only the approved pair. Browser checks at 390 x 844 and 1440 x 1000 passed one H1, no horizontal overflow, no forms/tracking tags, visible review credit, and no unapproved links. This is not a full accessibility/security certification.
 
 ## Verified before-state
 
@@ -56,7 +72,7 @@ Unknown: current Search Console property access, query volume, impressions, CTR,
 
 Google's [people-first content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) emphasizes useful, trustworthy content, particularly for YMYL. Its [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) says there are no special AI markup requirements beyond established SEO practices. [Article markup guidance](https://developers.google.com/search/docs/appearance/structured-data/article) and [image guidance](https://developers.google.com/search/docs/appearance/google-images) inform implementation, not a guarantee of a particular search appearance.
 
-## Publication and indexing gate — currently HOLD
+## Initial draft-stage publication and indexing gate (historical)
 
 All five routes deliberately return `noindex, nofollow, noimageindex` and are absent from the public sitemap and existing public navigation. They are review drafts, not currently index-eligible articles. Noindex is not authentication or confidentiality; never add private reviewer information or health data to these files.
 
@@ -103,4 +119,4 @@ The last command only reads local informational entry pages, links, and image re
 - Four WebP assets total 599,166 bytes, each 1536 × 1024. Originals were visually inspected; no campaign branding, medical diagrams, people, or embedded claims are present.
 - Existing assessment routes were not answered and no result screen was opened. No production, Search Console, analytics-account, email, or monetization setting was changed.
 
-Human review and owner release approval remain outstanding. The next action is qualified review of the four article drafts and calendar, not an indexing submission.
+At the initial draft stage, human review and owner release approval were outstanding. The addiction-only release record at the top now supersedes that status for the two specifically approved articles; all other drafts remain held.
