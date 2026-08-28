@@ -129,7 +129,7 @@ export default function AboutPage() {
               Screening answers are processed in the browser. Some worksheets
               offer an explicit local-save option; those entries remain in that
               browser profile. Health-related answers and scores are not sent to
-              analytics or advertising services. Read the{" "}
+              analytics or advertising services. MindCheck Tools does not display ads. Read the{" "}
               <Link href="/privacy">privacy policy</Link> for the complete data
               flow and consent details.
             </p>

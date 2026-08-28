@@ -2,7 +2,6 @@
 
 import { useState, useCallback, type KeyboardEvent } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -255,7 +254,6 @@ export function HALTClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
-      <AdSlot position="halt-top" className="mb-6" />
 
       {/* Check-In Card */}
       <div className="card p-4 sm:p-8 mb-6">
@@ -396,7 +394,6 @@ export function HALTClient({ faqData }: Props) {
 
           <EmailCapture />
 
-          <AdSlot position="halt-results" className="mt-6" />
         </div>
       )}
 

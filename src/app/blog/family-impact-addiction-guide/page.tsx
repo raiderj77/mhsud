@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -109,7 +108,6 @@ export default function FamilyImpactAddictionGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Codependency: when helping becomes harmful</h2>
@@ -144,7 +142,6 @@ export default function FamilyImpactAddictionGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Financial, emotional, and relational damage</h2>
@@ -173,7 +170,6 @@ export default function FamilyImpactAddictionGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>Family recovery is possible</h2>

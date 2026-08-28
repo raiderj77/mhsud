@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/anxiety-coping-strategies`;
@@ -145,7 +144,6 @@ export default function AnxietyCopingStrategiesPage() {
           </Link>
         </div>
 
-        <AdSlot position="article_top" className="my-8" />
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <div className="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 dark:border-amber-400 p-6 my-8 rounded-r">
@@ -600,7 +598,6 @@ export default function AnxietyCopingStrategiesPage() {
           <Link href="/gad-7-anxiety-test" className="btn-primary text-sm">Take the GAD-7 Anxiety Self-Check</Link>
         </div>
 
-        <AdSlot position="article_bottom" className="my-8" />
 
         <div className="mt-12">
           <h3 className="text-xl font-semibold mb-6">Related Articles</h3>

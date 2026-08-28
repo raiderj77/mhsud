@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -252,7 +251,6 @@ export function TreatmentCostClient({ faqData }: Props) {
         </p>
       </div>
 
-      <AdSlot position="cost-top" className="mb-6" />
 
       {/* Treatment Type Selector */}
       <div className="card p-6 sm:p-8 mb-6">
@@ -406,7 +404,6 @@ export function TreatmentCostClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="cost-results" className="mt-6" />
         </div>
       )}
 

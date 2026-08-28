@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -134,7 +133,6 @@ export default function SudRiskScreeningToolsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Which tool works best when the concern involves drugs other than alcohol?</h2>
@@ -162,7 +160,6 @@ export default function SudRiskScreeningToolsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>What tool should be used when screening adolescents?</h2>
@@ -190,7 +187,6 @@ export default function SudRiskScreeningToolsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>What should you do after a positive screen?</h2>

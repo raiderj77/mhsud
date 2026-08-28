@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "codex/no-display-advertising-2026-08-28": false
+    }
+  },
   "redirects": [
     {
       "source": "/(.*)",

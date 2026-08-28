@@ -1,5 +1,7 @@
 # EMPIRE BUILD STANDARDS
 
+> **MindCheckTools override — August 27, 2026:** No display advertising or ad networks, on any route. This supersedes all conflicting ad setup, CPM, placement, revenue and release instructions below. Preserve GPC, consented analytics, security, rights controls and free safety resources. Historical metrics are not current evidence. See the repository policy at `docs/no-display-advertising.md`. Other portfolio sites are outside this override.
+
 > **Read this file before making ANY changes to ANY Empire site.**
 > This is the single source of truth for all development, compliance, and deployment decisions across the Empire portfolio.
 > Last updated: March 13, 2026
@@ -98,10 +100,10 @@ Every Empire site must have these pages:
 ### mindchecktools.com
 - **Type**: Utility (ad-supported) | **Tier**: Full YMYL
 - **Purpose**: Mental health screening tools (PHQ-9, GAD-7, AUDIT, AUDIT-C, Mental Load Calculator)
-- **Monetization**: AdSense only (NO affiliate links on health content). Consider non-personalized ads on screening pages. No ads adjacent to crisis resources.
+- **MindCheckTools monetization**: No display advertising. Keep public tools free; validate bounded professional services. Separately disclosed affiliates must remain outside sensitive journeys.
 - **Attribution**: "Reviewed by Jason Ramirez, CADC-II" with a link to the public reviewer profile and CCAPP registry. Use the official credential name, "Certified Alcohol and Drug Counselor Level II (CADC-II)," and do not describe it as a medical or independent mental health license.
 - **Schema Types**: Organization, WebSite, WebApplication (per tool), FAQPage, Person (reviewer), BreadcrumbList
-- **Consent manager**: first-party privacy choices stored locally in the browser. Analytics and advertising scripts must not load before the matching affirmative choice; GPC forces optional services off. AdSense pub ID: `pub-7171402107622932`.
+- **Consent manager**: first-party Google Analytics choice stored locally; homepage-only opt-in analytics, separate aggregate allowlist, and GPC suppression. No ad consent or ad activation.
 - **Validated Instruments** (NEVER modify questions or scoring):
   - PHQ-9: 9 questions, scored 0-27 (0-4 minimal, 5-9 mild, 10-14 moderate, 15-19 moderately severe, 20-27 severe)
   - GAD-7: 7 questions, scored 0-21 (0-4 minimal, 5-9 mild, 10-14 moderate, 15-21 severe)

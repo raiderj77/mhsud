@@ -19,6 +19,8 @@ export function SensitiveRouteLifecycle() {
     const aggregateScriptLoaded = document.querySelector('script[src*="/_vercel/insights/script.js"], script[src*="vercel-scripts.com/v1/script"]');
     const optionalScriptLoaded =
       document.getElementById("consented-google-analytics") ||
+      // Keep removal of a legacy script from an older/cached release. This is
+      // a privacy safeguard, not a remaining ad integration or activation path.
       document.getElementById("consented-google-adsense");
 
     // Client-side navigation away from the homepage must not carry a running

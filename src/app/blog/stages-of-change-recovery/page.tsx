@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -137,7 +136,6 @@ export default function StagesOfChangeRecoveryPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h3>4. Action: &quot;I&apos;m doing it&quot;</h3>
@@ -170,7 +168,6 @@ export default function StagesOfChangeRecoveryPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>What Helps at Each Stage</h2>
@@ -228,7 +225,6 @@ export default function StagesOfChangeRecoveryPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>The Non-Linear Nature of Recovery</h2>

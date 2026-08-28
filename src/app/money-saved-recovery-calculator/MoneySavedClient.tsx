@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -437,7 +436,6 @@ export function MoneySavedClient({ faqData }: Props) {
             </Link>
           </div>
 
-          <AdSlot position="Below Results" className="mb-8" />
 
           {/* Educational Content */}
           <section className="mb-8">
@@ -488,7 +486,6 @@ export function MoneySavedClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Mid Content" className="mb-8" />
 
           {/* Related Tools */}
           <section className="mb-8">
@@ -507,7 +504,6 @@ export function MoneySavedClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Footer" className="mb-8" />
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">

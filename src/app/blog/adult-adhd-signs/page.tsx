@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/adult-adhd-signs`;
@@ -111,7 +110,6 @@ export default function AdultAdhdSignsPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>How ADHD presents differently in adults vs. children</h2>
@@ -172,7 +170,6 @@ export default function AdultAdhdSignsPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>ADHD vs. normal distraction</h2>
@@ -213,7 +210,6 @@ export default function AdultAdhdSignsPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>Getting a comprehensive evaluation</h2>

@@ -831,7 +831,7 @@ export default function HomePage() {
               Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Optional local-saving tools disclose when an entry can remain in this browser. Ordinary website requests can still create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared-browser or device access are outside this boundary.
             </p>
             <p className="text-white/60 text-sm">
-              Optional analytics and advertising stay off unless you consent, and neither receives screening answers or scores. No account or login is required. Ordinary website request records are described in the notice below.
+              MindCheck Tools does not display ads. Homepage Google Analytics stays off unless you consent; cookie-free aggregate measurement is limited to selected non-sensitive pages. Neither receives screening answers or scores. No account or login is required. Ordinary website request records are described in the notice below.
             </p>
             <p className="mt-4 text-sm">
               <Link

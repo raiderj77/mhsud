@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -211,7 +210,6 @@ export function UrgeSurfingClient({ faqData }: Props) {
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: July 17, 2026</p>
 
-      <AdSlot position="urge-surfing-top" />
 
       {/* ─── SETUP SCREEN ─────────────────────────────── */}
       {phase === "setup" && (
@@ -411,7 +409,6 @@ export function UrgeSurfingClient({ faqData }: Props) {
         </section>
       )}
 
-      <AdSlot position="urge-surfing-mid" />
 
       {/* ─── EDUCATIONAL CONTENT ─────────────────────── */}
       <section className="prose-custom mb-12">

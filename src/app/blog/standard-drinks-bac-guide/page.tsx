@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -111,7 +110,6 @@ export default function StandardDrinksBacGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Why Most People Underestimate Their Alcohol Intake</h2>
@@ -158,7 +156,6 @@ export default function StandardDrinksBacGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>What Factors Affect Your BAC?</h2>
@@ -215,7 +212,6 @@ export default function StandardDrinksBacGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           {/* Crisis Resources */}
           <div className="card p-5 border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 not-prose">

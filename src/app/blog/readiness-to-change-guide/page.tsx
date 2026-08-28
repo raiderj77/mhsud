@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -119,7 +118,6 @@ export default function ReadinessToChangeGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Stage 2: Contemplation, thinking about change</h2>
@@ -154,7 +152,6 @@ export default function ReadinessToChangeGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Stage 4: Action, making the change</h2>
@@ -190,7 +187,6 @@ export default function ReadinessToChangeGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>Why readiness fluctuates, and that is normal</h2>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/ptsd-veterans-guide`;
@@ -138,7 +137,6 @@ export default function PtsdVeteransGuidePage() {
             <p><strong>Hyperarousal:</strong> Being constantly on edge, scanning for threats in civilian environments, difficulty sleeping, exaggerated startle responses, irritability, and angry outbursts. Many veterans describe never being able to fully &quot;stand down.&quot;</p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Delayed onset: why symptoms may emerge years later</h2>
@@ -183,7 +181,6 @@ export default function PtsdVeteransGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Evidence-based treatments for veteran PTSD</h2>
@@ -218,7 +215,6 @@ export default function PtsdVeteransGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a free, private PTSD screening</h3>

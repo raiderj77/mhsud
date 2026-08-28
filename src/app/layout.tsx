@@ -65,7 +65,6 @@ export const metadata: Metadata = {
     google: "2ieYhzyPUNxUGKoS_QEQUvsuojYLusDJdHBsNIs6UCU",
   },
   other: {
-    "google-adsense-account": "ca-pub-7171402107622932",
     "msvalidate.01": "C4C9B6256BDEDED169E4DE01CA953390",
     "p:domain_verify": "ecdd00e78a1c7734db06450b3540c3dc",
   },
@@ -85,14 +84,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // AdSense stays fail-closed until the publisher has enabled ads, confirmed
-  // the certified CMP, and completed the nonce-based strict-CSP migration.
-  // Account-side review/CMP state cannot be established by application code.
-  const adsenseEnabled =
-    process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" &&
-    process.env.NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true" &&
-    process.env.NEXT_PUBLIC_ADSENSE_STRICT_CSP_READY === "true";
-
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
@@ -160,7 +151,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SensitiveRouteLifecycle />
         <PrivacySafeAggregateAnalytics />
-        <ConsentAnalytics adsenseEnabled={adsenseEnabled} />
+        <ConsentAnalytics />
         <ThemeProvider>
           <ScrollToTop />
           <script

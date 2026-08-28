@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -199,7 +198,6 @@ export function ValuesCardSortClient({ faqData }: Props) {
         Discover what matters most to you. Sort {totalValues} personal values into categories, narrow to your top 5, rank them, and reflect on how to live in alignment with what you truly care about.
       </p>
 
-      <AdSlot position="top-banner" className="mb-6 print:hidden" />
 
       {/* Step indicator */}
       <div className="flex items-center gap-2 mb-8 print:hidden" aria-label="Progress">
@@ -607,7 +605,6 @@ export function ValuesCardSortClient({ faqData }: Props) {
         </section>
       )}
 
-      <AdSlot position="mid-content" className="my-8 print:hidden" />
 
       {/* ── Educational Content ──────────────────────── */}
       <section className="mt-12 print:hidden">
@@ -701,7 +698,6 @@ export function ValuesCardSortClient({ faqData }: Props) {
         </div>
       </section>
 
-      <AdSlot position="bottom-content" className="mt-8 print:hidden" />
 
       {/* ── Clinical Disclaimer ──────────────────────── */}
       <section className="mt-12 print:mt-6">

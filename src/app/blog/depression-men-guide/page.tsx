@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/depression-men-guide`;
@@ -138,7 +137,6 @@ export default function DepressionMenGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Why men do not seek help</h2>
@@ -164,7 +162,6 @@ export default function DepressionMenGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>How the MindCheck Tools depression screening for men helps</h2>
@@ -195,7 +192,6 @@ export default function DepressionMenGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Take a few minutes to check in on how you&apos;re feeling</h3>

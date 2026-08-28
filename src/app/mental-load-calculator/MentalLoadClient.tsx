@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -313,7 +312,6 @@ export function MentalLoadClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="Below Results" className="mb-8" />
 
           <section className="card p-5 sm:p-6 mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-4">Understanding Mental Load</h2>
@@ -389,7 +387,6 @@ export function MentalLoadClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot position="Footer" className="mb-8" />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">Need Support Right Now?</h2>

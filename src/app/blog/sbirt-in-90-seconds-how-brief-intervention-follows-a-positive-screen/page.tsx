@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -120,7 +119,6 @@ export default function SbirtIn90SecondsHowBriefInterventionFollowsAPositiveScre
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>How Long Does a Full Brief Intervention Take?</h2>
@@ -148,7 +146,6 @@ export default function SbirtIn90SecondsHowBriefInterventionFollowsAPositiveScre
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>What Does &quot;Referral to Treatment&quot; Actually Look Like?</h2>

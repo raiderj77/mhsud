@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/grounding-techniques-guide`;
@@ -146,7 +145,6 @@ export default function GroundingTechniquesGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>The neuroscience behind grounding</h2>
@@ -175,7 +173,6 @@ export default function GroundingTechniquesGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Other grounding techniques beyond 5-4-3-2-1</h2>
@@ -203,7 +200,6 @@ export default function GroundingTechniquesGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>When to seek professional support</h2>

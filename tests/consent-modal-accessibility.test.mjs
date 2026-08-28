@@ -19,7 +19,7 @@ test("consent dialog traps forward and reverse keyboard focus", () => {
 test("Escape applies the privacy-protective choice without enabling optional services", () => {
   const escapeHandler = source.match(/if \(event\.key === "Escape"\) \{([\s\S]*?)\n      \}/)?.[1] ?? "";
   assert.match(escapeHandler, /event\.preventDefault\(\)/);
-  assert.match(escapeHandler, /save\(\{ version: 2, analytics: false, advertising: false \}\)/);
+  assert.match(escapeHandler, /save\(\{ version: 3, analytics: false \}\)/);
   assert.doesNotMatch(escapeHandler, /analytics: true|advertising: true|loadGoogle/);
 });
 
@@ -32,4 +32,9 @@ test("open consent dialog isolates and restores the background and invoking focu
   assert.match(source, /document\.body\.style\.overflow = previousOverflow/);
   assert.match(source, /previouslyFocused\.focus\(\{ preventScroll: true \}\)/);
   assert.match(source, /data-consent-default-action/);
+});
+
+test("consent content scrolls inside short mobile viewports without clipping the heading", () => {
+  assert.match(source, /max-h-\[calc\(100dvh-1\.5rem\)\]/);
+  assert.match(source, /overflow-y-auto/);
 });

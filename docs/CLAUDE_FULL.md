@@ -1,5 +1,7 @@
 # MindCheck Tools — CLAUDE.md
 
+> **MindCheckTools override — August 27, 2026:** No display advertising or ad networks, on any route. This supersedes all conflicting ad setup, CPM, placement, revenue and release instructions below. Preserve GPC, consented analytics, security, rights controls and free safety resources. Historical metrics are not current evidence. See the repository policy at `docs/no-display-advertising.md`. Other portfolio sites are outside this override.
+
 > Source of truth for Claude Code on this project. Last updated: 2026-03-09
 
 ## Before Doing Anything
@@ -25,17 +27,13 @@
 - Client components for interactive tools, server components for pages
 - Config-driven architecture: adding a tool to config auto-populates nav, footer, sitemap
 
-## 1. AdSense & Monetization
+## 1. No Display Advertising & Commercial Separation
 
-- **Publisher ID**: `ca-pub-7171402107622932`
-- **ads.txt** at `public/ads.txt`: `google.com, pub-7171402107622932, DIRECT, f08c47fec0942fa0`
-- Include OWNERDOMAIN directive per IAB ads.txt v1.1
-- Ads must never exceed content volume on any page
-- Reserve explicit width/height on ad containers (prevents CLS)
-- Mobile: follow Better Ads Standard
-- Google Consent Mode v2: configure all 6 parameters (ad_storage, ad_user_data, ad_personalization, analytics_storage, functionality_storage, personalization_storage)
-- For EEA/UK visitors: Google-certified CMP with IAB TCF v2.2 required
-- Standard AdSense only — no affiliate links on health content. Consider non-personalized ads on screening pages. No ads adjacent to crisis resources.
+- No display ads or advertising networks; no seller file, ad loader, activation flag, or ad consent option.
+- Keep core tools, interpretation and crisis/safety information free.
+- Disclosed affiliates and professional services stay separate from sensitive journeys; never target from results.
+- Preserve homepage-only opt-in Google Analytics, aggregate route allowlists, GPC, and permanently denied Google ad signals.
+- Do not add a CMP, paid vendor, new tracking or commercial product without explicit approval.
 
 ## 2. SEO — Google Search Essentials
 
@@ -54,9 +52,8 @@ Target thresholds (at 75th percentile):
 How to maintain these:
 - Use `next/image` with width/height props (prevents CLS)
 - Use `next/font` (prevents font-loading shifts)
-- Reserve dimensions on all ad containers
 - Leverage Vercel ISR/SSR for LCP optimization
-- Audit third-party scripts (especially AdSense) for INP impact
+- Audit remaining third-party scripts for INP impact without expanding tracking
 
 ## 4. E-E-A-T Content Standards
 
@@ -136,7 +133,7 @@ Configure in `public/robots.txt`. Allow all search-facing AI crawlers:
 
 ### Privacy Policy Must Include
 - Data controller identity, lawful basis, data categories, retention periods
-- Third-party recipients (including Google for AdSense)
+- Actual third-party recipients (hosting, consented analytics and voluntary email); no advertising network
 - Consumer rights (access, delete, correct, opt-out)
 - CCPA: "Do Not Sell or Share" link on homepage
 - Honor Global Privacy Control (GPC) signals
@@ -144,7 +141,7 @@ Configure in `public/robots.txt`. Allow all search-facing AI crawlers:
 ### Cookie Consent
 - EU/EEA/UK: Opt-in model (consent before tracking)
 - US: Opt-out model (honor GPC)
-- First-party consent manager. Analytics and advertising scripts must not load before the matching affirmative choice; GPC forces optional services off.
+- First-party consent manager. Google Analytics must not load before explicit analytics consent or outside the homepage; GPC suppresses both Google and aggregate analytics. Display ads are prohibited regardless of consent.
 
 ### Health Data Privacy (CRITICAL)
 - Treat ALL screening data as sensitive requiring explicit consent
@@ -178,17 +175,12 @@ Configure in `vercel.json` or `next.config.js` headers:
 ```
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
-X-Frame-Options: SAMEORIGIN  (DENY breaks AdSense iframes — SAMEORIGIN is required for ad rendering)
+X-Frame-Options: DENY
 Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()
 ```
 
-CSP (AdSense-compatible — unsafe-eval required by AdSense):
-```
-Content-Security-Policy: object-src 'none'; script-src 'nonce-{random}' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:; base-uri 'none'
-```
-
-Do NOT enable strict COEP/COOP on pages with ads (breaks ad rendering).
+CSP: use the current `next.config.mjs` policy. Keep ad origins absent, `frame-src` and `frame-ancestors` at `none`, and `unsafe-eval` absent. Preserve required analytics sources and existing application behavior. A nonce migration needs its own review; do not weaken headers for advertising.
 
 Use Referrer-Policy: no-referrer on screening pages to prevent health URLs leaking to third parties.
 
@@ -227,7 +219,7 @@ Footer links to all sister sites (exclude self):
 
 ### Pre-Deploy Checklist
 1. `npm run build` passes
-2. ads.txt present and correct
+2. Display-ad seller file, metadata, loader and activation settings absent
 3. robots.txt has AI crawler rules
 4. llms.txt present and current
 5. All legal pages render
@@ -238,7 +230,7 @@ Footer links to all sister sites (exclude self):
 ## Warnings — Things Claude Code Must NEVER Do
 
 1. Never use personal name in body copy, headings, code comments, or non-YMYL metadata. Named byline attribution IS required on YMYL pages (see E-E-A-T section). JSON-LD Person schema on author pages always permitted.
-2. Never modify ads.txt unless explicitly asked
+2. Never reintroduce display-ad infrastructure or seller declarations
 3. Never remove legal pages (privacy, terms)
 4. Never hardcode API keys — use environment variables
 5. Never push to main without testing build

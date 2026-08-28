@@ -3,7 +3,6 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
@@ -297,7 +296,6 @@ export function PcPtsd5Client({ faqData }: Props) {
 
         <TherapyCTA show={isPositiveScreen} />
 
-        <AdSlot npa position="results-top" />
 
         {/* Symptom Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -404,7 +402,6 @@ export function PcPtsd5Client({ faqData }: Props) {
           </div>
         </div>
 
-        <AdSlot npa position="results-middle" />
 
         {/* What Research Is This Based On? */}
         <section className="mb-8">
@@ -556,7 +553,6 @@ export function PcPtsd5Client({ faqData }: Props) {
           ~1 minute · local browser processing · Public domain instrument
         </p>
 
-        {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active PTSD screening. */}
 
         <div className="p-6 bg-white dark:bg-night-800 border border-sand-200 dark:border-neutral-700 rounded-xl mb-8">
           <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">

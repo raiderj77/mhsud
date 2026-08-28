@@ -1,5 +1,7 @@
 # Phase 2 PWA Implementation Checklist
 
+> **MindCheckTools override — August 27, 2026:** No display advertising or ad networks, on any route. This supersedes all conflicting ad setup, CPM, placement, revenue and release instructions below. Preserve GPC, consented analytics, security, rights controls and free safety resources. Historical metrics are not current evidence. See the repository policy at `docs/no-display-advertising.md`. Other portfolio sites are outside this override.
+
 **Project:** MindCheck Tools  
 **Status:** ✅ Components Ready  
 **Date:** April 17, 2026
@@ -323,7 +325,7 @@ npm run build
 - [ ] Lint passes: `npm run lint` (if configured)
 - [ ] All tests pass: `npm test` (if applicable)
 - [ ] No secret API keys in code
-- [ ] ads.txt unchanged
+- [ ] No display-ad seller declaration, metadata, loader, or activation setting
 - [ ] robots.txt unchanged
 - [ ] manifest.json present in public/
 - [ ] Service worker configured

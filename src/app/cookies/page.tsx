@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/cookies",
   title: "Cookie Policy, What Cookies We Use and Why",
   description:
-    "MindCheck Tools cookie policy. Details on analytics and advertising cookies, how to manage your preferences, and your rights under GDPR and CCPA.",
+    "MindCheck Tools cookie and browser-storage policy: analytics choices, Global Privacy Control, local tool storage, and no display advertising.",
   keywords: [
     "cookie policy", "cookie consent", "analytics cookies",
     "GDPR cookie compliance", "CCPA cookie disclosure",
@@ -19,7 +19,7 @@ const COOKIE_TABLE = [
     consent: "Not required",
     cookies: [
       { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
-      { name: "mindchecktools:privacy-consent", purpose: "Stores the analytics and advertising choices you make", duration: "Until changed or site data is cleared (localStorage)", provider: "MindCheck Tools" },
+      { name: "mindchecktools:privacy-consent", purpose: "Stores your Google Analytics choice; older advertising choices are discarded", duration: "Until changed or site data is cleared (localStorage)", provider: "MindCheck Tools" },
       { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so optional services stay off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
     ],
   },
@@ -39,13 +39,6 @@ const COOKIE_TABLE = [
       { name: "_ga_XKHQN1NJ2Z", purpose: "Maintains session state for Google Analytics", duration: "2 years", provider: "Google" },
     ],
   },
-  {
-    category: "Advertising",
-    consent: "Required",
-    cookies: [
-      { name: "Google advertising cookies and storage", purpose: "Non-personalized ad delivery, frequency capping, fraud prevention, and aggregated reporting. Not active at the last review.", duration: "Varies by Google service and consent choice", provider: "Google AdSense" },
-    ],
-  },
 ];
 
 export default function CookiePolicyPage() {
@@ -56,14 +49,14 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 18, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 28, 2026 (no-display-advertising policy)</p>
         </header>
 
         <div className="prose-mh space-y-8">
           <section>
             <h2>What are cookies?</h2>
             <p>
-              Cookies are small text files placed on your device by websites you visit. They are used for various purposes including remembering preferences, understanding how visitors use a site, and serving relevant advertising. Some cookies are &quot;first-party&quot; (set by the site you&apos;re visiting) and some are &quot;third-party&quot; (set by other services like analytics or ad networks).
+              Cookies are small text files placed on your device by websites you visit. They can remember preferences or help measure site use. Some cookies are &quot;first-party&quot; (set by the site you&apos;re visiting) and some are &quot;third-party&quot; (set by other services). MindCheck Tools does not display ads or load advertising networks.
             </p>
           </section>
 
@@ -80,7 +73,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              Our first-party privacy control keeps Google Analytics and advertising services off until you make an affirmative choice. The inline Consent Mode default queues a denied state locally and does not contact Google by itself. A Google service script loads only after the corresponding choice. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
+              Our first-party privacy control keeps Google Analytics off until you make an affirmative choice. It can run only on the homepage. The inline Consent Mode default queues a denied state locally and does not contact Google by itself; advertising signals always remain denied. If you continue without Google Analytics, its script is not loaded and no Google Analytics cookies are placed by MindCheck Tools. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
             </p>
           </section>
 
@@ -172,14 +165,14 @@ export default function CookiePolicyPage() {
               <strong>If you are in California:</strong> Under the CCPA/CPRA, you have the right to opt out of the &quot;sale&quot; or &quot;sharing&quot; of personal information, which may include certain cookie-based data collection. We honor the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we treat it as a request to opt out.
             </p>
             <p>
-              <strong>Everywhere else:</strong> We believe cookie consent is a matter of respect regardless of jurisdiction. Our consent banner is shown to all visitors worldwide.
+              <strong>Everywhere else:</strong> The same controls apply regardless of jurisdiction. Visitors without a saved choice see the Google Analytics choice on the homepage, unless GPC already keeps analytics off. Privacy Choices can also be opened from the footer; visiting a tool does not require a consent prompt.
             </p>
           </section>
 
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              We will update this policy whenever we add or change cookies, particularly before advertising is activated. Google&apos;s European-regulations message was verified published on August 2, 2026, while the AdSense site review was still &quot;Getting ready.&quot; AdSense remains blocked until publisher enablement, certified-CMP readiness, and strict-CSP readiness are confirmed in addition to the visitor&apos;s advertising choice. The &quot;Last updated&quot; date at the top reflects the most recent revision.
+              We will update this policy when cookie or storage practices change. MindCheck Tools has a no-display-advertising policy; there is no advertising consent option. Existing, valid Google Analytics choices are preserved when old preferences are updated, while advertising choices are discarded. The &quot;Last updated&quot; date reflects the most recent revision.
             </p>
           </section>
 

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/adhd-teens-guide`;
@@ -124,7 +123,6 @@ export default function AdhdTeensGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Why ADHD in teen girls is often missed</h2>
@@ -152,7 +150,6 @@ export default function AdhdTeensGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Co-occurring conditions in teens with ADHD</h2>
@@ -189,7 +186,6 @@ export default function AdhdTeensGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>Supporting a teenager with ADHD</h2>

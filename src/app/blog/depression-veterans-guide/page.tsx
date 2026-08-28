@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/depression-veterans-guide`;
@@ -135,7 +134,6 @@ export default function DepressionVeteransGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Military culture and the stigma barrier</h2>
@@ -167,7 +165,6 @@ export default function DepressionVeteransGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>How the MindCheck Tools depression screening for veterans helps</h2>
@@ -198,7 +195,6 @@ export default function DepressionVeteransGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>What family members and fellow veterans can do</h2>

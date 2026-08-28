@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/cognitive-distortions-list`;
@@ -146,7 +145,6 @@ export default function CognitiveDistortionsListPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>The 15 Common Cognitive Distortions</h2>
@@ -197,7 +195,6 @@ export default function CognitiveDistortionsListPage() {
             <p><em>&quot;There is no point in applying, I will definitely not get in.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;I cannot predict the outcome. The only way to find out is to try.&quot;</p>
 
-            <AdSlot position="Blog In-Content 2" className="my-8" />
 
             <h3>6. Magnification and Minimization</h3>
             <p>
@@ -234,7 +231,6 @@ export default function CognitiveDistortionsListPage() {
             <p><em>&quot;My kid got a bad grade, I must be a terrible parent.&quot;</em></p>
             <p><strong>Reframe:</strong> &quot;Many factors affect a child&apos;s performance. This is not entirely about my parenting.&quot;</p>
 
-            <AdSlot position="Blog In-Content 3" className="my-8" />
 
             <h3>11. Catastrophizing</h3>
             <p>

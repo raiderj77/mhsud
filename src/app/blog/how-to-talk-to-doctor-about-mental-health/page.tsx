@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/how-to-talk-to-doctor-about-mental-health`;
@@ -186,7 +185,6 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           {/* Section 4 */}
           <section>
@@ -255,7 +253,6 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           {/* Section 6 */}
           <section>
@@ -291,7 +288,6 @@ export default function HowToTalkToDoctorAboutMentalHealthPage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           {/* Clinical Disclaimer */}
           <div className="card p-5 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 not-prose">

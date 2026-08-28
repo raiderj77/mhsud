@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Terms of Use</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 2, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 28, 2026 (no-display-advertising policy)</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -149,7 +149,7 @@ export default function TermsPage() {
               <strong>Right to delete:</strong> The questionnaire code is not configured to submit screening answers to a MindCheck Tools application database. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
-              <strong>Right to opt out of sale/sharing:</strong> We do not &quot;sell&quot; personal information in the traditional sense. However, certain cookie-based analytics or advertising data may constitute &quot;sharing&quot; under the CPRA. You can opt out via our cookie banner or by using a browser that sends the Global Privacy Control (GPC) signal. We honor GPC signals.
+              <strong>Right to opt out of sale/sharing:</strong> We do not sell personal information or use it for targeted advertising. MindCheck Tools does not display ads or load advertising networks. You can deny or withdraw Google Analytics through Privacy Choices. We honor Global Privacy Control (GPC) by suppressing Google Analytics and Vercel Web Analytics events; ordinary hosting and security processing still occurs.
             </p>
             <p>
               <strong>Right to non-discrimination:</strong> We will not discriminate against you for exercising your CCPA/CPRA rights. All tools remain fully functional regardless of your cookie preferences.
@@ -162,7 +162,7 @@ export default function TermsPage() {
           <section id="do-not-sell">
             <h2>Do Not Sell or Share My Personal Information</h2>
             <p>
-              In accordance with the CCPA/CPRA, we provide this notice: MindCheck Tools does not sell your personal information. If analytics or advertising cookies constitute &quot;sharing&quot; under applicable law, you may opt out via our cookie consent banner, our <Link href="/cookies">Cookie Policy</Link>, or by enabling the Global Privacy Control (GPC) in your browser. We honor GPC signals.
+              MindCheck Tools does not sell your personal information or use it for targeted advertising. Display advertising is absent regardless of consent. You can manage Google Analytics through Privacy Choices and read our <Link href="/cookies">Cookie Policy</Link> for the separate cookie-free aggregate measurement boundary. We honor the Global Privacy Control (GPC) signal. Contact us to exercise applicable privacy rights.
             </p>
           </section>
 

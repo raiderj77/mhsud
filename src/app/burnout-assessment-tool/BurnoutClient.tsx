@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { TherapyCTA } from "@/components/TherapyCTA";
@@ -224,7 +223,6 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last updated: August 2, 2026</p>
       </header>
 
-      <AdSlot position="burnout-top" className="mb-8" />
 
       {!accepted ? (
         <DisclaimerGate
@@ -494,7 +492,6 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
             prompts={BURNOUT_REFLECTION_PROMPTS}
           />
 
-          <AdSlot position="burnout-middle" className="my-8" />
 
           {/* FAQ */}
           <section className="mb-12">
@@ -687,7 +684,6 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
             </div>
           </section>
 
-          <AdSlot position="burnout-bottom" className="mb-8" />
 
           {/* Disclaimer */}
           <div className="text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-night-700 pt-6">

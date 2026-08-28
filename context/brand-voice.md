@@ -3,7 +3,7 @@
 ## Site Overview
 mindchecktools.com is a free mental health and substance use screening tool suite.
 Tools: PHQ-9 (depression), GAD-7 (anxiety), AUDIT (alcohol use), Mental Load Calculator, and more.
-Monetization: Google AdSense planned but currently disabled. First-party, consent-gated privacy choices are installed.
+Monetization: No display advertising or advertising networks. Keep public resources free; validate professional services. Disclosed affiliates remain separate from sensitive journeys. Preserve first-party analytics consent and GPC. See docs/no-display-advertising.md.
 YMYL site — all content requires extra care and clinical accuracy.
 
 ## Target Audience

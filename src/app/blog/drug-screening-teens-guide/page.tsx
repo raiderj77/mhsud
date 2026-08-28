@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -118,7 +117,6 @@ export default function DrugScreeningTeensGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Risk factors for teen substance use</h2>
@@ -156,7 +154,6 @@ export default function DrugScreeningTeensGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>How to talk to your teen about substance use</h2>
@@ -188,7 +185,6 @@ export default function DrugScreeningTeensGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 not-prose text-center">
             <h3 className="font-serif text-lg font-semibold text-sage-700 dark:text-sage-400 mb-2">Screen for teen substance use patterns</h3>

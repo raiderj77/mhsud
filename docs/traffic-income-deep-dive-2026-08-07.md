@@ -1,5 +1,7 @@
 # MindCheck Tools traffic and income deep dive
 
+> **Historical document — superseded August 27, 2026.** All display-ad recommendations, revenue assumptions, approval tasks and activation plans below are withdrawn for MindCheckTools. Preserve this document as dated evidence, not current instructions. See `docs/no-display-advertising.md`.
+
 **Evidence date:** August 7, 2026
 **Decision rule:** strict YMYL safety, rights, privacy, and qualified-review gates outrank traffic or revenue.
 

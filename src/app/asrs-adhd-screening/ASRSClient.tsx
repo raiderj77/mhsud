@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -551,7 +550,6 @@ export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
             </div>
           )}
 
-          <AdSlot npa position="Below Results" className="mb-8" />
 
           {/* Educational Content */}
           <section className="mb-8">
@@ -614,7 +612,6 @@ export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -654,7 +651,6 @@ export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Footer" className="mb-8" />
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">

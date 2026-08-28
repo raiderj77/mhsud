@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { BLOG_POSTS } from "@/lib/blog";
 
 const ARTICLE_URL = `${SITE_URL}/blog/autism-screening-adults-guide`;
@@ -115,7 +114,6 @@ export default function AutismScreeningAdultsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Why many adults go undiagnosed: masking and camouflaging</h2>
@@ -143,7 +141,6 @@ export default function AutismScreeningAdultsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>What is the AQ-10 screening tool?</h2>
@@ -171,7 +168,6 @@ export default function AutismScreeningAdultsGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>How to pursue a formal evaluation</h2>

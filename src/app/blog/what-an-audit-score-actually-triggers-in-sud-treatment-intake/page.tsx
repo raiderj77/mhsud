@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -126,7 +125,6 @@ export default function WhatAnAuditScoreActuallyTriggersInSudTreatmentIntakePage
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Does a High AUDIT Score Mean a Person Has Alcohol Use Disorder?</h2>
@@ -151,7 +149,6 @@ export default function WhatAnAuditScoreActuallyTriggersInSudTreatmentIntakePage
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>How Should Counselors Document an AUDIT Score at Intake?</h2>

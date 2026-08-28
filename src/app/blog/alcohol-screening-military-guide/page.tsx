@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, articleJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AdSlot } from "@/components/AdSlot";
 import { AuthorBio } from "@/components/AuthorBio";
 import { AuthorByline } from "@/components/AuthorByline";
 import { BLOG_POSTS } from "@/lib/blog";
@@ -124,7 +123,6 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             </ul>
           </section>
 
-          <AdSlot position="Blog In-Content 1" className="my-8" />
 
           <section>
             <h2>Why military service creates unique alcohol risk</h2>
@@ -154,7 +152,6 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 2" className="my-8" />
 
           <section>
             <h2>Barriers to seeking help in the military</h2>
@@ -203,7 +200,6 @@ export default function AlcoholScreeningMilitaryGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Blog In-Content 3" className="my-8" />
 
           <section>
             <h2>Supporting a service member or veteran with alcohol concerns</h2>
