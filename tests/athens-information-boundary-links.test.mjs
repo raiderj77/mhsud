@@ -28,7 +28,8 @@ test("the Athens route remains information-only rather than an available assessm
 
   assert.match(page, /This page provides no questionnaire, score, threshold, or insomnia result/i);
   assert.match(page, /withholds questionnaire content, response choices, scoring, thresholds, and automated interpretation/i);
-  assert.doesNotMatch(page, /take the Athens Insomnia Scale/i);
+  assert.match(page, /Can I take the Athens Insomnia Scale on MindCheck Tools\?/i);
+  assert.match(page, /No\. MindCheck Tools has not archived written permission/i);
   assert.doesNotMatch(page, /Athens Insomnia Scale self-assessment/i);
   assert.doesNotMatch(page, /validated 8-item insomnia self-assessment/i);
 });

@@ -33,7 +33,8 @@ test("DBT physical skills use medically bounded, low-risk examples", () => {
   assert.match(source, /Temperature-based TIPP practice can affect heart rate/);
   assert.match(source, /Exercise can raise heart rate rapidly/);
   assert.match(source, /does not instruct extreme cold exposure or face immersion/);
-  assert.match(source, /mild, familiar, non-painful sensation/);
+  assert.match(source, /mild, non-painful sensation/);
+  assert.match(source, /familiar sensation that is comfortable and non-painful/);
   assert.doesNotMatch(
     source,
     /ice cubes?|ice packs?|hot sauce|rubber bands?|burpees?|submerge|cold shower|vigorous physical activity|run up and down stairs/i,
