@@ -3,40 +3,31 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import {
-  isOptionalServicesAllowedRoute,
   isPrivacySafeAggregateAnalyticsRoute,
   isSensitiveRoute,
 } from "@/lib/routePolicies";
-import { trackPrivateToolLaunch } from "@/lib/privacySafeAcquisitionAnalytics";
 
 export function SensitiveRouteLifecycle() {
   const pathname = usePathname();
 
   useEffect(() => {
     const sensitive = isSensitiveRoute(pathname);
-    const optionalServicesAllowed = isOptionalServicesAllowedRoute(pathname);
-    const aggregateServicesAllowed = isPrivacySafeAggregateAnalyticsRoute(pathname);
-    const aggregateScriptLoaded = document.querySelector('script[src*="/_vercel/insights/script.js"], script[src*="vercel-scripts.com/v1/script"]');
-    const optionalScriptLoaded =
-      document.getElementById("consented-google-analytics") ||
-      document.getElementById("consented-google-adsense");
+    const aggregateAllowed = isPrivacySafeAggregateAnalyticsRoute(pathname);
+    const aggregateScriptLoaded = document.querySelector(
+      'script[src*="/_vercel/insights/script.js"], script[src*="vercel-scripts.com/v1/script"]',
+    );
 
-    // Client-side navigation away from the homepage must not carry a running
-    // Google runtime into a topical page, even when that page is informational.
-    if (!optionalServicesAllowed && optionalScriptLoaded) {
-      optionalScriptLoaded.remove();
-      window.location.replace(pathname);
-      return;
-    }
-
-    if (!aggregateServicesAllowed && aggregateScriptLoaded) {
+    // Vercel aggregate analytics is limited to a small neutral-route allowlist.
+    // If a client-side transition leaves that allowlist, start a fresh document
+    // so the analytics runtime cannot observe the excluded destination path.
+    if (!aggregateAllowed && aggregateScriptLoaded) {
       aggregateScriptLoaded.remove();
       window.location.replace(pathname);
       return;
     }
 
-    if (optionalServicesAllowed || aggregateServicesAllowed) {
-      const forceCleanTopicalNavigation = (event: MouseEvent) => {
+    if (aggregateAllowed) {
+      const forceCleanExcludedNavigation = (event: MouseEvent) => {
         if (
           event.defaultPrevented ||
           event.button !== 0 ||
@@ -53,22 +44,15 @@ export function SensitiveRouteLifecycle() {
         const destination = new URL(anchor.href, window.location.href);
         if (
           destination.origin === window.location.origin &&
-          !isOptionalServicesAllowedRoute(destination.pathname)
+          !isPrivacySafeAggregateAnalyticsRoute(destination.pathname)
         ) {
-          // Prevent a consented homepage runtime from seeing a health-topic URL
-          // during a client-side transition. Record only the generic, topic-free
-          // launch before navigation when the clicked card is explicitly marked.
-          // A new document then starts tag-free.
           event.preventDefault();
-          if (anchor.dataset.privateToolLaunch === "true") {
-            trackPrivateToolLaunch();
-          }
           window.location.assign(destination.href);
         }
       };
 
-      document.addEventListener("click", forceCleanTopicalNavigation, true);
-      return () => document.removeEventListener("click", forceCleanTopicalNavigation, true);
+      document.addEventListener("click", forceCleanExcludedNavigation, true);
+      return () => document.removeEventListener("click", forceCleanExcludedNavigation, true);
     }
 
     if (!sensitive) {
@@ -79,27 +63,14 @@ export function SensitiveRouteLifecycle() {
 
     document.body.dataset.sensitiveRoute = "true";
 
-    // A client-side transition can arrive from a public page where optional
-    // Google code was already loaded. Force one clean document load so that
-    // sensitive routes never inherit a running analytics or ads runtime.
-    // Remove any sensitive navigation response cached by an older worker
-    // before the network-only policy reached the browser.
-    if ("caches" in window) {
-      void caches.keys().then((names) =>
-        Promise.all(
-          names
-            .filter((name) => name.startsWith("mindcheck-tools-"))
-            .map((name) => caches.delete(name)),
-        ),
-      );
-    }
-
-    // Sensitive routes do not retain query strings or fragments that could
+    // Sensitive routes never retain query strings or fragments that could
     // accidentally encode or disclose an answer, score, or result.
     if (window.location.search || window.location.hash) {
       window.history.replaceState(window.history.state, "", pathname);
     }
 
+    // Reload a sensitive page restored from the back-forward cache so private
+    // in-memory state is not silently resurrected after history navigation.
     const resetAfterHistoryRestore = (event: PageTransitionEvent) => {
       if (event.persisted) window.location.reload();
     };

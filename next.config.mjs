@@ -63,27 +63,20 @@ const canonicalBlogRedirects = [
 ].map(([source, destination]) => ({ source, destination, permanent: true }));
 
 const nextConfig = {
-  // Performance
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
 
-
-  // Aggressive image optimization
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 365,
   },
 
-  // Security & caching headers
   async headers() {
     return [
       {
         source: "/(.*)",
         headers: [
-          // Security
-          // X-Frame-Options governs whether this site can be embedded. Ad
-          // frames embedded by this site are controlled by CSP frame-src.
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-DNS-Prefetch-Control", value: "off" },
@@ -103,26 +96,16 @@ const nextConfig = {
               "form-action 'self'",
               "manifest-src 'self'",
               "worker-src 'self'",
-              // Optional Google analytics and advertising services. This
-              // domain allowlist is not represented as future-proof for
-              // AdSense; the ad runtime remains gated until a separate
-              // nonce-based strict-CSP migration passes report-only testing.
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googleadservices.com https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google",
+              "script-src 'self' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline'",
               "font-src 'self'",
-              // AdSense ad images and tracking pixels
-              "img-src 'self' data: https: https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://www.googletagmanager.com",
-              // AdSense + Analytics connections
-              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
-              // AdSense iframes (required for ad rendering)
-              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
+              "img-src 'self' data: https:",
+              "connect-src 'self'",
             ].join("; "),
           },
         ],
       },
       {
-        // Subscription responses can reveal whether an address was accepted
-        // and must never be stored by a browser, CDN, or shared cache.
         source: "/api/:path*",
         headers: [
           { key: "Cache-Control", value: "private, no-store, max-age=0, must-revalidate" },
@@ -132,22 +115,20 @@ const nextConfig = {
         ],
       },
       {
-        // Health content pages: no-referrer to prevent health URLs leaking to third parties
+        // Health content pages use no-referrer so topic URLs are not disclosed
+        // when a user follows an external link.
         source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|spin-social-anxiety-test|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator|maternal-mental-health)",
         headers: [
           { key: "Referrer-Policy", value: "no-referrer" },
         ],
       },
       {
-        // Cache static assets aggressively
         source: "/(.*)\\.(js|css|woff2|woff|ttf|ico|png|jpg|svg)",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       {
-        // The service-worker URL is stable, so it must never inherit the
-        // immutable JavaScript policy used for fingerprinted build assets.
         source: "/service-worker.js",
         headers: [
           { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
@@ -158,10 +139,8 @@ const nextConfig = {
     ];
   },
 
-  // Redirects for SEO
   async redirects() {
     return [
-      // Common misspellings / variants
       { source: "/phq9", destination: "/phq-9-depression-test", permanent: true },
       { source: "/gad7", destination: "/gad-7-anxiety-test", permanent: true },
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },

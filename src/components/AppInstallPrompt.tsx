@@ -1,28 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import {
-  getPrivacyChoiceStatus,
-  PRIVACY_CHOICE_STATUS_EVENT,
-  type PrivacyChoiceStatus,
-} from "@/lib/privacyConsent";
-
-/**
- * AppInstallPrompt Component
- *
- * Listens to beforeinstallprompt event and shows an attractive banner
- * prompting users to add the app to their home screen on mobile devices.
- *
- * Features:
- * - Only shows on supporting browsers (Chrome, Edge, Samsung)
- * - Respects user's install preference (doesn't show if already installed)
- * - Waits for privacy choices and stays hidden while that dialog is open
- * - Non-intrusive, dismissible design
- * - Works on iOS/Android
- * - Tracks installation completion
- *
- * Placement: Add near top of layout (after OfflineIndicator)
- */
+import { useEffect, useState } from "react";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -33,96 +11,52 @@ export function AppInstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-  const [privacyChoiceStatus, setPrivacyChoiceStatus] = useState<PrivacyChoiceStatus>(
-    getPrivacyChoiceStatus,
-  );
 
   useEffect(() => {
-    // Check if app is already installed
     if (window.matchMedia("(display-mode: standalone)").matches) {
       setIsInstalled(true);
       return;
     }
 
-    const handleBeforeInstallPrompt = (e: Event) => {
-      // Prevent the mini-infobar from appearing
-      e.preventDefault();
-
-      const promptEvent = e as BeforeInstallPromptEvent;
-      setDeferredPrompt(promptEvent);
-
-      // Show our custom prompt
+    const handleBeforeInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      setDeferredPrompt(event as BeforeInstallPromptEvent);
       setShowPrompt(true);
-
-      console.log("[AppInstallPrompt] Install prompt available");
     };
 
     const handleAppInstalled = () => {
-      console.log("[AppInstallPrompt] App installed");
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
     };
 
-    const handlePrivacyChoiceStatus = () => {
-      setPrivacyChoiceStatus(getPrivacyChoiceStatus());
-    };
-
-    handlePrivacyChoiceStatus();
-
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
-    window.addEventListener(PRIVACY_CHOICE_STATUS_EVENT, handlePrivacyChoiceStatus);
 
     return () => {
       window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
       window.removeEventListener("appinstalled", handleAppInstalled);
-      window.removeEventListener(PRIVACY_CHOICE_STATUS_EVENT, handlePrivacyChoiceStatus);
     };
   }, []);
 
   const handleInstall = async () => {
-    if (!deferredPrompt) {
-      return;
-    }
+    if (!deferredPrompt) return;
 
     try {
-      // Show the native install prompt
       await deferredPrompt.prompt();
-
-      // Wait for user choice
       const { outcome } = await deferredPrompt.userChoice;
-
-      if (outcome === "accepted") {
-        console.log("[AppInstallPrompt] User accepted install");
-        setIsInstalled(true);
-      } else {
-        console.log("[AppInstallPrompt] User dismissed install");
-      }
-
-      // Clear the prompt
+      if (outcome === "accepted") setIsInstalled(true);
+    } finally {
       setDeferredPrompt(null);
       setShowPrompt(false);
-    } catch (error) {
-      console.error("[AppInstallPrompt] Install failed:", error);
     }
   };
 
   const handleDismiss = () => {
     setShowPrompt(false);
-    console.log("[AppInstallPrompt] User dismissed prompt");
   };
 
-  // Do not compete with unresolved or open privacy choices.
-  if (
-    isInstalled ||
-    !showPrompt ||
-    !deferredPrompt ||
-    !privacyChoiceStatus.completed ||
-    privacyChoiceStatus.dialogOpen
-  ) {
-    return null;
-  }
+  if (isInstalled || !showPrompt || !deferredPrompt) return null;
 
   return (
     <div
@@ -132,14 +66,10 @@ export function AppInstallPrompt() {
     >
       <div className="mx-auto max-w-lg bg-white dark:bg-night-800 rounded-xl shadow-lg border border-sand-200 dark:border-neutral-700 overflow-hidden">
         <div className="p-4 md:p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          {/* Icon */}
           <div className="flex-shrink-0 hidden sm:flex items-center justify-center w-12 h-12 rounded-lg bg-sage-100 dark:bg-sage-900">
-            <span className="text-2xl" aria-hidden="true">
-              📱
-            </span>
+            <span className="text-2xl" aria-hidden="true">📱</span>
           </div>
 
-          {/* Content */}
           <div className="flex-1 min-w-0">
             <h3 id="app-install-title" className="font-semibold text-neutral-900 dark:text-white mb-1">
               Install MindCheck Tools
@@ -149,16 +79,10 @@ export function AppInstallPrompt() {
             </p>
           </div>
 
-          {/* Actions */}
           <div className="flex gap-2 flex-shrink-0 w-full sm:w-auto">
             <button
               onClick={handleDismiss}
-              className="flex-1 sm:flex-none min-h-[44px] px-4 py-2.5 rounded-lg text-sm font-medium
-                text-neutral-700 dark:text-neutral-300
-                bg-sand-100 dark:bg-night-700
-                hover:bg-sand-200 dark:hover:bg-night-600
-                transition-colors duration-200
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500"
+              className="flex-1 sm:flex-none min-h-[44px] px-4 py-2.5 rounded-lg text-sm font-medium text-neutral-700 dark:text-neutral-300 bg-sand-100 dark:bg-night-700 hover:bg-sand-200 dark:hover:bg-night-600 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-500"
               type="button"
               aria-label="Not now"
             >
@@ -167,13 +91,7 @@ export function AppInstallPrompt() {
 
             <button
               onClick={handleInstall}
-              className="flex-1 sm:flex-none min-h-[44px] px-4 py-2.5 rounded-lg text-sm font-semibold
-                text-white
-                bg-gradient-to-br from-sage-700 to-sage-800
-                hover:from-sage-800 hover:to-sage-900
-                transition-all duration-200
-                shadow-md hover:shadow-lg
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex-1 sm:flex-none min-h-[44px] px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-br from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 transition-all duration-200 shadow-md hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               type="button"
               aria-label="Install MindCheck Tools app"
             >

@@ -1,11 +1,10 @@
-import { getCurrentConsent } from "@/lib/privacyConsent";
-import { isSensitiveBrowserLocation } from "@/lib/routePolicies";
+export type AssessmentEvent = "assessment_started" | "assessment_completed";
 
-type AssessmentEvent = "assessment_started" | "assessment_completed";
-
-export function trackAssessmentEvent(eventName: AssessmentEvent): void {
-  if (typeof window === "undefined") return;
-  if (isSensitiveBrowserLocation()) return;
-  if (getCurrentConsent()?.analytics !== true) return;
-  window.gtag?.("event", eventName);
-}
+/**
+ * Compatibility no-op.
+ *
+ * MindCheckTools does not send assessment funnel events to analytics. Existing
+ * callers are retained temporarily to avoid broad changes inside validated
+ * screening clients. Remove the call sites in the final micro-cleanup stage.
+ */
+export function trackAssessmentEvent(_eventName: AssessmentEvent): void {}
