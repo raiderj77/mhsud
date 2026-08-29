@@ -4,189 +4,83 @@ import { CookieSettingsButton } from "./CookieSettingsButton";
 
 export const metadata: Metadata = createMetadata({
   path: "/cookies",
-  title: "Cookie Policy, What Cookies We Use and Why",
+  title: "Cookie & Browser Storage Policy",
   description:
-    "MindCheck Tools cookie policy. Details on analytics and advertising cookies, how to manage your preferences, and your rights under GDPR and CCPA.",
-  keywords: [
-    "cookie policy", "cookie consent", "analytics cookies",
-    "GDPR cookie compliance", "CCPA cookie disclosure",
-  ],
+    "How MindCheck Tools uses browser-local storage, Global Privacy Control, and privacy-safe aggregate analytics.",
 });
 
-const COOKIE_TABLE = [
-  {
-    category: "Essential",
-    consent: "Not required",
-    cookies: [
-      { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
-      { name: "mindchecktools:privacy-consent", purpose: "Stores the analytics and advertising choices you make", duration: "Until changed or site data is cleared (localStorage)", provider: "MindCheck Tools" },
-      { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so optional services stay off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
-    ],
-  },
-  {
-    category: "Browser storage (not cookies)",
-    consent: "Tool choice",
-    cookies: [
-      { name: "mct-safety-plan, mct-thought-records, mct-worry-*", purpose: "Keeps a safety plan, optionally saved thought records, or a worry log available in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
-      { name: "mct-recovery-checkins, mindcheck_sobriety_*", purpose: "Keeps recovery check-ins, sobriety date, and optional spending estimate in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
-    ],
-  },
-  {
-    category: "Analytics",
-    consent: "Required",
-    cookies: [
-      { name: "_ga", purpose: "Distinguishes unique users for Google Analytics", duration: "2 years", provider: "Google" },
-      { name: "_ga_XKHQN1NJ2Z", purpose: "Maintains session state for Google Analytics", duration: "2 years", provider: "Google" },
-    ],
-  },
-  {
-    category: "Advertising",
-    consent: "Required",
-    cookies: [
-      { name: "Google advertising cookies and storage", purpose: "Non-personalized ad delivery, frequency capping, fraud prevention, and aggregated reporting. Not active at the last review.", duration: "Varies by Google service and consent choice", provider: "Google AdSense" },
-    ],
-  },
-];
-
-export default function CookiePolicyPage() {
+export default function CookiesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Cookie Policy", url: `${SITE_URL}/cookies` }])) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", url: SITE_URL },
+              { name: "Cookie & Browser Storage Policy", url: `${SITE_URL}/cookies` },
+            ]),
+          ),
+        }}
+      />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
-          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 18, 2026</p>
+          <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            Cookie &amp; Browser Storage Policy
+          </h1>
+          <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
+            Last reviewed: August 28, 2026
+          </p>
         </header>
 
         <div className="prose-mh space-y-8">
           <section>
-            <h2>What are cookies?</h2>
+            <h2>The short version</h2>
             <p>
-              Cookies are small text files placed on your device by websites you visit. They are used for various purposes including remembering preferences, understanding how visitors use a site, and serving relevant advertising. Some cookies are &quot;first-party&quot; (set by the site you&apos;re visiting) and some are &quot;third-party&quot; (set by other services like analytics or ad networks).
+              MindCheck Tools does not use Google Analytics, Google AdSense, or display-advertising cookies. Screening answers and scores are processed in your browser and are not intentionally sent to analytics. Some tools deliberately use browser-local storage so a plan, journal, check-in, or preference can remain on your device.
             </p>
           </section>
 
           <section>
-            <h2>How we use cookies</h2>
+            <h2>Browser-local storage</h2>
             <p>
-              MindCheck Tools uses a minimal number of cookies. Importantly, <strong>cookies are never used to track, store, or access your screening responses</strong>. All questionnaire scoring happens in client-side JavaScript and no answer data is ever transmitted.
+              The site uses <strong>localStorage</strong> for the light/dark theme preference and for tools that explicitly say they save information in the browser. Examples include the safety plan, CBT thought record, worry-time scheduler, daily recovery check-in, and sobriety calculator.
             </p>
             <p>
-              LocalStorage is browser storage, not a cookie. The safety plan, CBT thought record,
-              worry-time scheduler, daily recovery check-in, and sobriety calculator use it only
-              after you choose to enter or save tool data. That information stays available to the
-              browser profile until you reset the tool or clear site data, and other users of the
-              same browser profile may be able to see it.
-            </p>
-            <p>
-              Our first-party privacy control keeps Google Analytics and advertising services off until you make an affirmative choice. The inline Consent Mode default queues a denied state locally and does not contact Google by itself. A Google service script loads only after the corresponding choice. If you continue without optional services, those scripts are not loaded and no non-essential Google cookies are placed by MindCheck Tools. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
+              Browser-local records remain available to the same browser profile until you use the tool&apos;s delete/reset control, clear site data, or the browser removes them. Someone with access to the same browser profile may be able to view them. Screenshots, downloads, device backups, browser extensions, and other software are outside the application&apos;s browser-local storage boundary.
             </p>
           </section>
 
           <section>
-            <h2>Cookies we use</h2>
-            <div className="not-prose space-y-6">
-              {COOKIE_TABLE.map((cat) => (
-                <div key={cat.category}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <h3 className="text-base font-semibold text-neutral-800 dark:text-neutral-100">{cat.category}</h3>
-                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${cat.consent === "Not required" ? "bg-sage-50 dark:bg-sage-950/30 text-sage-600 dark:text-sage-400" : "bg-warm-50 dark:bg-warm-950/30 text-warm-600 dark:text-warm-400"}`}>
-                      Consent: {cat.consent}
-                    </span>
-                  </div>
-                  <div
-                    className="overflow-x-auto"
-                    role="region"
-                    aria-label={`${cat.category} cookie details`}
-                    tabIndex={0}
-                  >
-                    <table className="w-full text-sm border border-sand-200 dark:border-neutral-700 rounded-lg overflow-hidden">
-                      <thead>
-                        <tr className="bg-sand-100 dark:bg-night-700">
-                          <th className="text-left p-3 font-semibold text-neutral-700 dark:text-neutral-200">Cookie</th>
-                          <th className="text-left p-3 font-semibold text-neutral-700 dark:text-neutral-200">Purpose</th>
-                          <th className="text-left p-3 font-semibold text-neutral-700 dark:text-neutral-200">Duration</th>
-                          <th className="text-left p-3 font-semibold text-neutral-700 dark:text-neutral-200">Provider</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {cat.cookies.map((c) => (
-                          <tr key={c.name} className="border-t border-sand-200 dark:border-neutral-700">
-                            <td className="p-3 font-mono text-xs text-neutral-600 dark:text-neutral-300">{c.name}</td>
-                            <td className="p-3 text-neutral-500 dark:text-neutral-400">{c.purpose}</td>
-                            <td className="p-3 text-neutral-500 dark:text-neutral-400">{c.duration}</td>
-                            <td className="p-3 text-neutral-500 dark:text-neutral-400">{c.provider}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2>Managing your preferences</h2>
+            <h2>Aggregate analytics</h2>
             <p>
-              You can change your privacy choices at any time by clicking the button below. You can also clear cookies and local storage through your browser settings.
-            </p>
-            <div className="not-prose mt-4">
-              <CookieSettingsButton />
-            </div>
-          </section>
-
-          <section>
-            <h2>Google Analytics and Consent Mode</h2>
-            <p>
-              We use Google Analytics (GA4, measurement ID: G-XKHQN1NJ2Z) with Google Consent Mode v2. This means:
+              MindCheck Tools uses Vercel Web Analytics only on a fixed allowlist of topic-neutral and professional pages. The application does not send custom screening events, answers, scores, severity labels, crisis states, recovery entries, or journal content to that analytics service. Query strings and URL fragments are excluded from the analytics path, and analytics is suppressed when Global Privacy Control is active.
             </p>
             <p>
-              If you <strong>accept</strong> analytics cookies, Google Analytics sets cookies to distinguish users and sessions and processes privacy-limited usage data such as sanitized public-page URLs, traffic-source origin, device/browser information, and approximate geographic region. Analytics remains disabled on sensitive routes and never receives questionnaire answers, scores, or browser-local entries.
-            </p>
-            <p>
-              If you <strong>decline</strong> analytics cookies, the Google Analytics script remains blocked and no Google Analytics cookies are set by MindCheck Tools.
-            </p>
-            <p>
-              You can also opt out of Google Analytics entirely by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> at tools.google.com/dlpage/gaoptout.
+              Vercel Web Analytics is configured as cookie-free aggregate measurement. Ordinary hosting requests are separate from Web Analytics and may create infrastructure records as described in the Privacy Policy.
             </p>
           </section>
 
           <section>
-            <h2>Cookie-free aggregate measurement</h2>
+            <h2>Global Privacy Control</h2>
             <p>
-              Vercel Web Analytics counts aggregate visitors and page views without setting cookies. It runs only on a fixed allowlist of topic-neutral trust, policy, professional, and commercial pages. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded.
-            </p>
-            <p>
-              The implementation removes query strings and fragments, sends no custom events, and suppresses events when Global Privacy Control is active. Vercel documents that it determines a visitor with a request-derived hash that resets after 24 hours. Because this service does not place a cookie, it is not listed in the cookie table above.
+              When a browser sends the Global Privacy Control request header, MindCheck Tools middleware may set a small first-party <code>empire_gpc=1</code> cookie so the browser-side application can continue honoring that signal. It does not contain screening answers, scores, or health-tool entries.
             </p>
           </section>
 
-          <section>
-            <h2>Your rights</h2>
+          <section id="browser-controls">
+            <h2>Your browser controls</h2>
             <p>
-              <strong>If you are in the European Economic Area (EEA) or United Kingdom:</strong> Under the GDPR and ePrivacy Directive, we are required to obtain your explicit consent before placing non-essential cookies. Our cookie banner does this. You have the right to withdraw consent at any time.
+              You can clear MindCheck Tools site data through your browser&apos;s privacy or site-data settings. Clearing site data can also remove browser-local plans, journals, check-ins, theme preferences, and other information you intentionally saved on this device.
             </p>
-            <p>
-              <strong>If you are in California:</strong> Under the CCPA/CPRA, you have the right to opt out of the &quot;sale&quot; or &quot;sharing&quot; of personal information, which may include certain cookie-based data collection. We honor the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we treat it as a request to opt out.
-            </p>
-            <p>
-              <strong>Everywhere else:</strong> We believe cookie consent is a matter of respect regardless of jurisdiction. Our consent banner is shown to all visitors worldwide.
-            </p>
+            <CookieSettingsButton />
           </section>
 
           <section>
-            <h2>Changes to this policy</h2>
+            <h2>No display advertising</h2>
             <p>
-              We will update this policy whenever we add or change cookies, particularly before advertising is activated. Google&apos;s European-regulations message was verified published on August 2, 2026, while the AdSense site review was still &quot;Getting ready.&quot; AdSense remains blocked until publisher enablement, certified-CMP readiness, and strict-CSP readiness are confirmed in addition to the visitor&apos;s advertising choice. The &quot;Last updated&quot; date at the top reflects the most recent revision.
-            </p>
-          </section>
-
-          <section>
-            <h2>Contact</h2>
-            <p>
-              Questions about our cookie practices? Email us at <strong>privacy@mindchecktools.com</strong>.
+              MindCheck Tools does not use display advertising. The application does not load Google AdSense, advertising pixels, retargeting scripts, or an advertising consent runtime.
             </p>
           </section>
         </div>

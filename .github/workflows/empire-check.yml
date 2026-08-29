@@ -1,4 +1,4 @@
-name: Empire Compliance Check
+name: MindCheckTools Compliance Check
 
 on:
   push:
@@ -9,9 +9,6 @@ permissions:
   contents: read
 
 jobs:
-  # ────────────────────────────────────────────────────────────────
-  # Job 1 — Build (runs in parallel with compliance)
-  # ────────────────────────────────────────────────────────────────
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -29,66 +26,51 @@ jobs:
           npm ci
           npm run build
 
-  # ────────────────────────────────────────────────────────────────
-  # Job 2 — Empire compliance gates (no Node required)
-  # ────────────────────────────────────────────────────────────────
   compliance:
     name: Compliance Gates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      # ── Check 2: Required public files ──────────────────────────
       - name: Required public files exist
         run: |
-          # Files may live in public/ (Next.js layout) OR at repo root (flat static sites).
-          # We accept either location.
           FAILED=0
-          for STEM in ads robots llms; do
+          for STEM in robots llms; do
             if [ -f "public/${STEM}.txt" ]; then
               echo "✓ public/${STEM}.txt"
             elif [ -f "${STEM}.txt" ]; then
               echo "✓ ${STEM}.txt (root)"
             else
-              echo "::error::MISSING — ${STEM}.txt required at public/${STEM}.txt or ./${STEM}.txt. Empire Standard requires this on every site."
+              echo "::error::MISSING — ${STEM}.txt is required."
               FAILED=1
             fi
           done
           [ "$FAILED" -eq 0 ] || exit 1
 
-      # ── Check 3: AdSense publisher ID ───────────────────────────
-      - name: AdSense publisher ID in ads.txt
+      - name: Display ads and GA stay removed
         run: |
-          ADS_FILE=""
-          if [ -f public/ads.txt ]; then ADS_FILE="public/ads.txt"
-          elif [ -f ads.txt ]; then ADS_FILE="ads.txt"
-          fi
-          if [ -z "$ADS_FILE" ]; then
-            echo "::warning::Skipping AdSense check — ads.txt missing (caught above)"
-            exit 0
-          fi
-          if ! grep -qF "pub-7171402107622932" "$ADS_FILE"; then
-            echo "::error file=$ADS_FILE::ADSENSE FAIL — $ADS_FILE must contain 'pub-7171402107622932'."
-            cat "$ADS_FILE"
+          if [ -f public/ads.txt ] || [ -f ads.txt ]; then
+            echo "::error::MindCheckTools does not use display advertising. ads.txt must not exist."
             exit 1
           fi
-          echo "✓ AdSense publisher ID confirmed in $ADS_FILE"
 
-      # ── Check 4: AI crawler rules in robots.txt ─────────────────
+          if grep -rEIn \
+            --include='*.ts' --include='*.tsx' --include='*.js' --include='*.mjs' \
+            'ca-pub-[0-9]+|G-[A-Z0-9]{8,}|googlesyndication|adsbygoogle|google-adsense-account|googletagmanager\.com/gtag|NEXT_PUBLIC_ADSENSE_|NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY' \
+            src next.config.mjs .env.example 2>/dev/null; then
+            echo "::error::Google analytics or display-ad runtime identifiers were found in production source."
+            exit 1
+          fi
+          echo "✓ No display-ad or GA runtime identifiers"
+
       - name: AI crawler rules in robots.txt
         run: |
-          ROBOTS_FILE=""
-          if [ -f public/robots.txt ]; then ROBOTS_FILE="public/robots.txt"
-          elif [ -f robots.txt ]; then ROBOTS_FILE="robots.txt"
-          fi
-          if [ -z "$ROBOTS_FILE" ]; then
-            echo "::warning::Skipping robots.txt check — file missing (caught above)"
-            exit 0
-          fi
+          ROBOTS_FILE="public/robots.txt"
+          [ -f "$ROBOTS_FILE" ] || ROBOTS_FILE="robots.txt"
           FAILED=0
-          for BOT in GPTBot ClaudeBot PerplexityBot Google-Extended; do
+          for BOT in OAI-SearchBot ChatGPT-User Claude-SearchBot PerplexityBot; do
             if ! grep -q "^User-agent: ${BOT}" "$ROBOTS_FILE"; then
-              echo "::error file=$ROBOTS_FILE::ROBOTS FAIL — Missing 'User-agent: ${BOT}'."
+              echo "::error file=$ROBOTS_FILE::Missing User-agent: ${BOT}"
               FAILED=1
             else
               echo "✓ User-agent: ${BOT}"
@@ -96,11 +78,9 @@ jobs:
           done
           [ "$FAILED" -eq 0 ] || exit 1
 
-      # ── Check 5: IndexNow key file ───────────────────────────────
       - name: IndexNow key file exists
         run: |
           KEY_FILE=""
-          # Search public/ first, then repo root.
           for SEARCH in public . ; do
             while IFS= read -r F; do
               STEM=$(basename "$F" .txt)
@@ -111,41 +91,27 @@ jobs:
             done < <(find "$SEARCH" -maxdepth 1 -name "*.txt" 2>/dev/null || true)
           done
           if [ -z "$KEY_FILE" ]; then
-            echo "::error::INDEXNOW FAIL — No IndexNow key file found. Expected a 32-hex-char .txt file at public/ or repo root."
+            echo "::error::No IndexNow key file found."
             exit 1
           fi
           echo "✓ IndexNow key file: $KEY_FILE"
 
-      # ── Check 6: Author byline policy (updated 2026-05-11) ─────
-      # Policy: MindCheck Tools is the publisher. Jason Ramirez is the named
-      # clinical reviewer for MindCheck Tools, within CADC-II scope. Keep the
-      # public reviewer name and credential, but never publish LLC, residential
-      # location/address, or unrelated personal-history details.
-      - name: Publisher and reviewer attribution present (informational)
-        env:
-          REPO: ${{ github.repository }}
+      - name: Publisher and reviewer attribution present
         run: |
           SEARCH_DIRS=()
-          for DIR in src app components lib hooks types config public content; do
+          for DIR in src app components lib hooks types config public; do
             [ -d "$DIR" ] && SEARCH_DIRS+=("$DIR")
           done
-
-          if [ "${#SEARCH_DIRS[@]}" -eq 0 ]; then
-            echo "ℹ No standard source directories — skipping byline check"
-            exit 0
-          fi
 
           PUBLISHER_MATCHES=$(grep -rl "MindCheck Tools" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
           REVIEWER_MATCHES=$(grep -rl "Jason Ramirez" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
           CREDENTIAL_MATCHES=$(grep -rl "Certified Alcohol and Drug Counselor Level II (CADC-II)" "${SEARCH_DIRS[@]}" 2>/dev/null | wc -l || echo 0)
 
-          if [ "$PUBLISHER_MATCHES" -eq 0 ]; then
-            echo "::warning::No 'MindCheck Tools' publisher attribution found."
-          fi
+          [ "$PUBLISHER_MATCHES" -gt 0 ] || echo "::warning::No MindCheck Tools publisher attribution found."
           if [ "$REVIEWER_MATCHES" -eq 0 ] || [ "$CREDENTIAL_MATCHES" -eq 0 ]; then
-            echo "::warning::Named reviewer attribution is incomplete. Keep Jason Ramirez and the exact CADC-II credential public on the reviewer profile and reviewed content."
+            echo "::warning::Named CADC-II reviewer attribution is incomplete."
           else
-            echo "✓ MindCheck Tools publisher and named CADC-II reviewer attribution present"
+            echo "✓ Publisher and scoped CADC-II reviewer attribution present"
           fi
 
           if grep -rEql "Your Friendly Developer|Prunedale|Salinas|PostalAddress|recovering addict|storage shed" "${SEARCH_DIRS[@]}" 2>/dev/null; then

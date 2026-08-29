@@ -1,16 +1,16 @@
 /**
- * predeploy-check.js — Empire Build Standards compliance check for mindchecktools.com
- * Validates: ads.txt, robots.txt, llms.txt, legal pages, focused footer links, security headers
+ * predeploy-check.js — MindCheckTools release guard
+ * Validates privacy, public discovery files, legal pages, focused navigation,
+ * security headers, review-date hygiene, and maintained external references.
  * Exit code 1 on failure, 0 on pass.
  */
 
 import { readFileSync, existsSync, readdirSync } from "fs";
-import { resolve, dirname } from "path";
+import { resolve, dirname, relative } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-
 let failures = 0;
 
 function pass(msg) {
@@ -27,28 +27,52 @@ function check(label, fn) {
   fn();
 }
 
-// ---------------------------------------------------------------------------
-// 1. ads.txt
-// ---------------------------------------------------------------------------
-check("ads.txt", () => {
-  const p = resolve(ROOT, "public/ads.txt");
-  if (!existsSync(p)) return fail("public/ads.txt missing");
-  const content = readFileSync(p, "utf-8");
-  if (content.includes("pub-7171402107622932")) {
-    pass("Publisher ID present");
-  } else {
-    fail("Publisher ID pub-7171402107622932 not found in ads.txt");
+function walkFiles(dir, pattern = /\.(ts|tsx|js|mjs)$/) {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = resolve(dir, entry.name);
+    if (entry.isDirectory()) return walkFiles(full, pattern);
+    return entry.isFile() && pattern.test(entry.name) ? [full] : [];
+  });
+}
+
+check("No display-ad or GA runtime", () => {
+  const adsTxt = resolve(ROOT, "public/ads.txt");
+  if (existsSync(adsTxt)) fail("public/ads.txt must not exist; MindCheckTools does not use display advertising");
+  else pass("ads.txt absent");
+
+  const runtimeFiles = [
+    ...walkFiles(resolve(ROOT, "src")),
+    resolve(ROOT, "next.config.mjs"),
+    resolve(ROOT, ".env.example"),
+  ].filter(existsSync);
+
+  const forbidden = [
+    /ca-pub-[0-9]+/i,
+    /G-[A-Z0-9]{8,}/,
+    /googlesyndication/i,
+    /adsbygoogle/i,
+    /google-adsense-account/i,
+    /googletagmanager\.com\/gtag/i,
+    /NEXT_PUBLIC_ADSENSE_/,
+    /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY/,
+  ];
+
+  const hits = [];
+  for (const file of runtimeFiles) {
+    const source = readFileSync(file, "utf-8");
+    for (const pattern of forbidden) {
+      if (pattern.test(source)) hits.push(`${relative(ROOT, file)} matches ${pattern}`);
+    }
   }
-  if (/OWNERDOMAIN/i.test(content)) {
-    pass("OWNERDOMAIN directive present");
-  } else {
-    fail("OWNERDOMAIN directive missing from ads.txt");
+
+  if (hits.length === 0) pass("No GA4/AdSense runtime identifiers found");
+  else {
+    for (const hit of hits) console.error(`  ${hit}`);
+    fail("Google analytics/display-ad runtime identifiers remain in production source");
   }
 });
 
-// ---------------------------------------------------------------------------
-// 2. robots.txt — AI crawlers + Bingbot crawl-delay
-// ---------------------------------------------------------------------------
 check("robots.txt", () => {
   const p = resolve(ROOT, "public/robots.txt");
   if (!existsSync(p)) return fail("public/robots.txt missing");
@@ -64,68 +88,39 @@ check("robots.txt", () => {
     "Amazonbot",
   ];
   for (const crawler of requiredCrawlers) {
-    if (content.includes(crawler)) {
-      pass(`${crawler} rule present`);
-    } else {
-      fail(`${crawler} rule missing from robots.txt`);
-    }
+    if (content.includes(crawler)) pass(`${crawler} rule present`);
+    else fail(`${crawler} rule missing from robots.txt`);
   }
 
-  const blockedCrawlers = ["Bytespider", "Meta-ExternalAgent"];
-  for (const crawler of blockedCrawlers) {
-    if (content.includes(crawler)) {
-      pass(`${crawler} blocked`);
-    } else {
-      fail(`${crawler} not blocked in robots.txt`);
-    }
+  for (const crawler of ["Bytespider", "Meta-ExternalAgent"]) {
+    if (content.includes(crawler)) pass(`${crawler} blocked`);
+    else fail(`${crawler} not blocked in robots.txt`);
   }
 
-  if (/Bingbot[\s\S]*?Crawl-delay:\s*10/i.test(content)) {
-    pass("Bingbot Crawl-delay: 10");
-  } else {
-    fail("Bingbot Crawl-delay: 10 missing");
-  }
+  if (/Bingbot[\s\S]*?Crawl-delay:\s*10/i.test(content)) pass("Bingbot Crawl-delay: 10");
+  else fail("Bingbot Crawl-delay: 10 missing");
 
-  if (content.includes("sitemap.xml")) {
-    pass("Sitemap reference present");
-  } else {
-    fail("Sitemap reference missing from robots.txt");
-  }
+  if (content.includes("sitemap.xml")) pass("Sitemap reference present");
+  else fail("Sitemap reference missing from robots.txt");
 });
 
-// ---------------------------------------------------------------------------
-// 3. llms.txt
-// ---------------------------------------------------------------------------
 check("llms.txt", () => {
   const p = resolve(ROOT, "public/llms.txt");
   if (!existsSync(p)) return fail("public/llms.txt missing");
   const content = readFileSync(p, "utf-8");
-  if (content.length > 100) {
-    pass("llms.txt present and has content");
-  } else {
-    fail("llms.txt exists but appears empty or too short");
-  }
+  if (content.length > 100) pass("llms.txt present and has content");
+  else fail("llms.txt exists but appears empty or too short");
 });
 
-// ---------------------------------------------------------------------------
-// 4. Legal pages (privacy, terms)
-// ---------------------------------------------------------------------------
 check("Legal pages", () => {
-  const pages = ["privacy", "terms"];
-  for (const page of pages) {
+  for (const page of ["privacy", "terms", "consumer-health-data-privacy", "cookies"]) {
     const tsx = resolve(ROOT, `src/app/${page}/page.tsx`);
     const jsx = resolve(ROOT, `src/app/${page}/page.jsx`);
-    if (existsSync(tsx) || existsSync(jsx)) {
-      pass(`/${page} page exists`);
-    } else {
-      fail(`/${page} page missing (no src/app/${page}/page.tsx)`);
-    }
+    if (existsSync(tsx) || existsSync(jsx)) pass(`/${page} page exists`);
+    else fail(`/${page} page missing`);
   }
 });
 
-// ---------------------------------------------------------------------------
-// 5. MindCheckTools-focused footer boundary
-// ---------------------------------------------------------------------------
 check("Focused footer links", () => {
   const footerPath = resolve(ROOT, "src/components/Footer.tsx");
   if (!existsSync(footerPath)) return fail("Footer.tsx not found");
@@ -142,11 +137,8 @@ check("Focused footer links", () => {
     "aibusinessalternative.com",
   ];
   for (const site of unrelatedPortfolioSites) {
-    if (!footer.includes(site)) {
-      pass(`No unrelated portfolio link to ${site}`);
-    } else {
-      fail(`Unrelated portfolio link to ${site} remains in Footer`);
-    }
+    if (!footer.includes(site)) pass(`No unrelated portfolio link to ${site}`);
+    else fail(`Unrelated portfolio link to ${site} remains in Footer`);
   }
   for (const route of ["/screening-tools", "/for-professionals", "/clinical-evidence", "/methodology", "/crisis-resources", "/privacy"]) {
     if (footer.includes(route)) pass(`Focused footer route ${route}`);
@@ -154,11 +146,7 @@ check("Focused footer links", () => {
   }
 });
 
-// ---------------------------------------------------------------------------
-// 6. Security headers
-// ---------------------------------------------------------------------------
 check("Security headers", () => {
-  // Check next.config.mjs or next.config.js
   let configContent = "";
   for (const name of ["next.config.mjs", "next.config.js", "next.config.ts"]) {
     const p = resolve(ROOT, name);
@@ -169,43 +157,22 @@ check("Security headers", () => {
   }
   if (!configContent) return fail("No next.config file found");
 
-  const requiredHeaders = [
+  for (const header of [
     "Strict-Transport-Security",
     "X-Content-Type-Options",
     "X-Frame-Options",
     "Referrer-Policy",
     "Permissions-Policy",
     "Content-Security-Policy",
-  ];
-  for (const header of requiredHeaders) {
-    if (configContent.includes(header)) {
-      pass(`${header} configured`);
-    } else {
-      fail(`${header} missing from next.config`);
-    }
+  ]) {
+    if (configContent.includes(header)) pass(`${header} configured`);
+    else fail(`${header} missing from next.config`);
   }
 });
 
-// ---------------------------------------------------------------------------
-// 7. No dynamic dateModified in source files
-// ---------------------------------------------------------------------------
 check("Dynamic dateModified guard", () => {
-  function walkSync(dir) {
-    let results = [];
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      const full = resolve(dir, entry.name);
-      if (entry.isDirectory()) {
-        results = results.concat(walkSync(full));
-      } else if (entry.isFile() && (entry.name.endsWith(".ts") || entry.name.endsWith(".tsx"))) {
-        results.push(full);
-      }
-    }
-    return results;
-  }
-
-  const files = walkSync(resolve(ROOT, "src"));
+  const files = walkFiles(resolve(ROOT, "src"), /\.(ts|tsx)$/);
   const hits = [];
-
   for (const file of files) {
     const lines = readFileSync(file, "utf-8").split("\n");
     for (let i = 0; i < lines.length; i++) {
@@ -214,32 +181,20 @@ check("Dynamic dateModified guard", () => {
         (line.includes("dateModified") && line.includes("new Date(")) ||
         line.includes("modifiedDate={new Date(")
       ) {
-        const rel = file.slice(ROOT.length + 1).replace(/\\/g, "/");
-        hits.push(`${rel}:${i + 1}  ${line.trim()}`);
+        hits.push(`${relative(ROOT, file)}:${i + 1}  ${line.trim()}`);
       }
     }
   }
 
-  if (hits.length === 0) {
-    pass("No dynamic dateModified found");
-  } else {
-    for (const hit of hits) {
-      console.error(`  ${hit}`);
-    }
-    fail("Dynamic dateModified detected. Use static YYYY-MM-DD string. See CLAUDE.md.");
+  if (hits.length === 0) pass("No dynamic dateModified found");
+  else {
+    for (const hit of hits) console.error(`  ${hit}`);
+    fail("Dynamic dateModified detected. Use a static YYYY-MM-DD review date.");
   }
 });
 
 check("Maintained external references", () => {
-  function walkSource(dir) {
-    return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-      const full = resolve(dir, entry.name);
-      if (entry.isDirectory()) return walkSource(full);
-      return entry.isFile() && /\.(ts|tsx)$/.test(entry.name) ? [full] : [];
-    });
-  }
-
-  const content = walkSource(resolve(ROOT, "src"))
+  const content = walkFiles(resolve(ROOT, "src"), /\.(ts|tsx)$/)
     .map((file) => readFileSync(file, "utf-8"))
     .join("\n");
   const retiredUrls = [
@@ -255,20 +210,14 @@ check("Maintained external references", () => {
     "cdc.gov/reproductivehealth/depression",
     "who.int/news-room/fact-sheets/detail/maternal-mental-health",
   ];
-  for (const retiredUrl of retiredUrls) {
-    if (content.includes(retiredUrl)) fail(`Retired external destination remains: ${retiredUrl}`);
-  }
-  if (!retiredUrls.some((retiredUrl) => content.includes(retiredUrl))) pass("Retired external destinations are absent");
+  const hits = retiredUrls.filter((url) => content.includes(url));
+  for (const url of hits) fail(`Retired external destination remains: ${url}`);
+  if (hits.length === 0) pass("Retired external destinations are absent");
 });
 
-// ---------------------------------------------------------------------------
-// Summary
-// ---------------------------------------------------------------------------
 console.log("\n" + "=".repeat(50));
 if (failures > 0) {
   console.error(`\n💥 ${failures} check(s) FAILED — fix before deploying.\n`);
   process.exit(1);
-} else {
-  console.log("\n🎉 All predeploy checks passed.\n");
-  process.exit(0);
 }
+console.log("\n🎉 All predeploy checks passed.\n");

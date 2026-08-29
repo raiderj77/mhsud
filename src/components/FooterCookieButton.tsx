@@ -1,15 +1,12 @@
-"use client";
-
-import { OPEN_CONSENT_EVENT } from "@/lib/privacyConsent";
+import Link from "next/link";
 
 export function FooterCookieButton() {
   return (
-    <button
-      type="button"
-      onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
+    <Link
+      href="/cookies"
       className="inline-flex min-h-[44px] min-w-[44px] items-center text-xs text-neutral-500 dark:text-neutral-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors"
     >
-      Privacy Choices
-    </button>
+      Privacy &amp; Cookies
+    </Link>
   );
 }
