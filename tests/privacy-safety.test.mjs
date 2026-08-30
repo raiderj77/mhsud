@@ -191,7 +191,7 @@ test("assessment funnel events are compatibility no-ops with no analytics transp
     "utf8",
   );
   assert.match(analytics, /"assessment_started" \| "assessment_completed"/);
-  assert.match(analytics, /trackAssessmentEvent\(_eventName: AssessmentEvent\): void \{\}/);
+  assert.match(analytics, /trackAssessmentEvent\(eventName: AssessmentEvent\): void \{\s*void eventName;\s*\}/);
   assert.doesNotMatch(analytics, /gtag|fetch\(|sendBeacon|Analytics/);
 
   for (const path of [
