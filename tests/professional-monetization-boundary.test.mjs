@@ -35,7 +35,12 @@ test("the founding review offer is bounded, priced, and honest", async () => {
   assert.match(service, /Organization and website URL/);
   assert.match(service, /your name and role/i);
   assert.match(service, /primary goal and desired timeline/i);
+  assert.match(service, /Best fit—and when to choose someone else/i);
+  assert.match(service, /This site does not collect payment/i);
+  assert.match(service, /payment terms, and cancellation terms are confirmed in writing/i);
+  assert.match(service, /Never email card or bank details/i);
   assert.doesNotMatch(service, /buy now|checkout|guaranteed|certified compliant/i);
+  assert.doesNotMatch(service, /LimitedAvailability/);
 
   assert.match(sample, /Fictional sample/i);
   assert.match(sample, /invented/i);

@@ -73,7 +73,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm font-medium">
                   <Link href="/for-professionals" className="text-sage-600 dark:text-sage-400 hover:underline">
-                    Review the proposed scope
+                    Review the scope and price
                   </Link>
                   <a href="mailto:hello@mindchecktools.com?subject=Professional%20screening%20implementation%20review" className="text-sage-600 dark:text-sage-400 hover:underline">
                     Email hello@mindchecktools.com
