@@ -50,6 +50,19 @@ test("the founding review offer is bounded, priced, and honest", async () => {
   assert.doesNotMatch(sample, /testimonial|case study/i);
 });
 
+test("the internal review runbook preserves the fixed no-health-data operating boundary", async () => {
+  const runbook = await read("docs/professional-review-operations-runbook.md");
+
+  assert.match(runbook, /public pages or a fictional, non-sensitive staging environment/i);
+  assert.match(runbook, /Never request or accept patient records, assessment answers, scores, results, diagnoses/i);
+  assert.match(runbook, /Inspect assessment entry states only/i);
+  assert.match(runbook, /Do not reproduce restricted questionnaire items/i);
+  assert.match(runbook, /No work begins until the written scope and owner-approved payment terms are accepted/i);
+  assert.match(runbook, /Do not claim deletion, containment, confidentiality, or regulatory handling unless that action has been verified/i);
+  assert.match(runbook, /does not authorize accepting payment or starting customer work/i);
+  assert.doesNotMatch(runbook, /HIPAA[- ]compliant|guaranteed compliance|clinically safe|certified accessible/i);
+});
+
 test("the free checklist cites primary sources and contains no instrument mechanics", async () => {
   const checklist = await read("src/app/for-professionals/screening-implementation-checklist/page.tsx");
 
