@@ -1,5 +1,9 @@
 # MindCheck Tools organic growth baseline
 
+> Dated traffic baseline, not current analytics configuration. Google Analytics
+> was removed in the August 29, 2026 privacy cleanup. Current aggregate measurement
+> uses only the restricted Vercel Web Analytics boundary described in `AGENTS.md`.
+
 Date: August 8, 2026
 
 Scope: growth and revenue evidence only; this does not repeat the Site Record or assessment audit.

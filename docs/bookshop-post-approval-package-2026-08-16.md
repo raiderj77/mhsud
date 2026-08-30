@@ -88,7 +88,11 @@ Reject titles that promote supplements, detoxes, cures, diagnostic devices, coer
 
 ## Privacy-safe measurement
 
-Preferred first release: measure aggregate outbound clicks on the non-sensitive resource page only. Do not measure impressions or behavior on assessments, results, crisis, youth, privacy, or other sensitive routes.
+> Measurement note updated August 29, 2026: the GA4 proposal below is historical
+> and was not implemented. Google Analytics and the custom event runtime have been
+> removed. Do not recreate this event without a separate privacy review and owner approval.
+
+The original proposal was to measure aggregate outbound clicks on the non-sensitive resource page only. It is retained below as dated decision context, not current behavior. Do not measure impressions or behavior on assessments, results, crisis, youth, privacy, or other sensitive routes.
 
 If owner-approved and technically implemented, the only permitted event is:
 

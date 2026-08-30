@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -10,7 +9,6 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { SwUpdateNotification } from "@/components/SwUpdateNotification";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { AppInstallPrompt } from "@/components/AppInstallPrompt";
-import { ConsentAnalytics } from "@/components/ConsentAnalytics";
 import { PrivacySafeAggregateAnalytics } from "@/components/PrivacySafeAggregateAnalytics";
 import { SensitiveRouteLifecycle } from "@/components/SensitiveRouteLifecycle";
 import { ToolClassificationNotice } from "@/components/ToolClassificationNotice";
@@ -44,20 +42,20 @@ export const metadata: Metadata = {
     siteName: "MindCheck Tools",
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
-      "Free, private mental health and substance use self-checks. Screening answers are scored in your browser and are not sent to MindCheck Tools.",
+      "Free, private mental health and substance use self-checks. Screening answers are processed in your browser and are not intentionally sent to MindCheck Tools.",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
-      "Free, private mental health and substance use self-checks. Screening answers are scored in your browser and are not sent to MindCheck Tools.",
+      "Free, private mental health and substance use self-checks. Screening answers are processed in your browser and are not intentionally sent to MindCheck Tools.",
     images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   alternates: {
     canonical: "/",
     languages: {
-      "en": "https://mindchecktools.com",
+      en: "https://mindchecktools.com",
       "x-default": "https://mindchecktools.com",
     },
   },
@@ -87,43 +85,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
-        {/* Consent Mode v2 defaults run before any optional Google service. */}
-        <Script
-          id="consent-mode"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied',
-                'functionality_storage': 'granted',
-                'personalization_storage': 'denied',
-                'security_storage': 'granted'
-              });
-              // GPC override: runs before any analytics tag can initialize.
-              // Checks navigator.globalPrivacyControl (browser-native signal) AND the
-              // empire_gpc cookie set by middleware from the sec-gpc request header.
-              // Only overrides the signals that GPC requires; does not affect non-GPC visitors.
-              if (
-                navigator.globalPrivacyControl ||
-                document.cookie.indexOf('empire_gpc=1') !== -1
-              ) {
-                gtag('consent', 'update', {
-                  'ad_storage': 'denied',
-                  'ad_user_data': 'denied',
-                  'ad_personalization': 'denied',
-                  'analytics_storage': 'denied',
-                  'personalization_storage': 'denied',
-                });
-              }
-            `,
-          }}
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
@@ -151,7 +112,6 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SensitiveRouteLifecycle />
         <PrivacySafeAggregateAnalytics />
-        <ConsentAnalytics />
         <ThemeProvider>
           <ScrollToTop />
           <script

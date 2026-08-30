@@ -1,5 +1,10 @@
 # No-display-ad cleanup: local validation
 
+> Historical branch record. The later privacy cleanup removes Google Analytics,
+> the consent dialog, and the generic tool-launch event. Current behavior is
+> governed by `AGENTS.md` and `docs/no-display-advertising.md`; the observations
+> below must not be read as the current production measurement design.
+
 Verified August 28, 2026. Base: `640657211b79f992104aafb168dfdcaada97ba3d`.
 Branch: `codex/no-display-advertising-2026-08-28`.
 

@@ -73,13 +73,6 @@ export default function ConsumerHealthDataPrivacyPage() {
                 the service. A health-topic path may indicate an interest in that topic.
               </li>
               <li>
-                <strong>Consented public-page analytics:</strong> on routes that are not classified
-                as sensitive, Google Analytics may receive a sanitized page URL, page title, the
-                referring site&apos;s origin, device/browser information, network information,
-                approximate region, and analytics cookie identifiers. This happens only after an
-                affirmative analytics choice and is used to understand aggregate site use.
-              </li>
-              <li>
                 <strong>Cookie-free aggregate measurement:</strong> Vercel Web Analytics counts
                 visitors and page views only on a positive allowlist of topic-neutral and
                 professional pages. Query strings, fragments, and custom events are excluded;
@@ -122,10 +115,6 @@ export default function ConsumerHealthDataPrivacyPage() {
                 allowlist. Its documented visitor hash resets after 24 hours.
               </li>
               <li>
-                <strong>Google Analytics:</strong> the limited public-page analytics described above,
-                only after analytics consent. Google Analytics is disabled on sensitive routes.
-              </li>
-              <li>
                 <strong>Loops:</strong> an email address submitted with affirmative resource-email
                 consent. No tool name, source page, answer, score, diagnosis, or crisis information
                 is included in the provider payload.
@@ -158,9 +147,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             <h2>Your choices and requests</h2>
             <ul>
               <li>
-                Use <Link href="/cookies">Privacy Choices</Link> to deny or withdraw Google
-                Analytics. Display advertising is absent regardless of your choice. Global Privacy Control also suppresses Vercel Web
-                Analytics events.
+                Use browser controls to clear local storage and cookies. MindCheck Tools does not use Google Analytics or display advertising. Global Privacy Control suppresses Vercel Web Analytics events.
               </li>
               <li>
                 Clear or reset browser-local tool data on the device where it is stored. MindCheck
@@ -187,8 +174,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             <p>
               Browser-local health entries remain on your device until you reset the tool, clear site
               data, or the browser removes them. Hosting/security log retention follows Vercel&apos;s
-              configured service limits and legitimate security or legal needs. Google Analytics retention
-              follows the configured property setting. Vercel documents that its Web Analytics visitor
+              configured service limits and legitimate security or legal needs. Vercel documents that its Web Analytics visitor
               hash resets after 24 hours; aggregate reporting retention follows the project and plan
               settings. Newsletter addresses remain while subscribed or until no longer needed,
               subject to limited suppression, security, backup, and legal records.

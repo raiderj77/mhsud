@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
@@ -24,16 +24,18 @@ test("sensitive routes receive no-store and no-referrer response headers", async
 });
 
 test("topical routes bypass tracking, advertising, affiliates, and assessment events", async () => {
-  const [consent, therapy, events] = await Promise.all([
-    read("../src/components/ConsentAnalytics.tsx"),
+  const [therapy, events, aggregate] = await Promise.all([
     read("../src/components/TherapyCTA.tsx"),
     read("../src/lib/assessmentAnalytics.ts"),
+    read("../src/components/PrivacySafeAggregateAnalytics.tsx"),
   ]);
-  assert.match(consent, /optionalServicesAllowed[\s\S]*analytics: false/);
-  assert.match(consent, /removeOptionalServiceScripts/);
-  assert.doesNotMatch(consent, /loadNonPersonalizedAds|adsbygoogle|advertising: true/);
+  await assert.rejects(access(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url)), { code: "ENOENT" });
+  await assert.rejects(access(new URL("../src/components/AdSlot.tsx", import.meta.url)), { code: "ENOENT" });
   assert.match(therapy, /isOptionalServicesAllowedRoute\(pathname\)/);
-  assert.match(events, /isSensitiveBrowserLocation\(\)/);
+  assert.match(events, /Compatibility no-op/);
+  assert.doesNotMatch(events, /gtag|fetch\(|sendBeacon/);
+  assert.match(aggregate, /isPrivacySafeAggregateAnalyticsRoute/);
+  assert.match(aggregate, /globalPrivacyControlIsActive/);
 });
 
 test("interactive health tools without generic screening words stay sensitive", async () => {
@@ -72,11 +74,11 @@ test("interactive health tools without generic screening words stay sensitive", 
   assert.match(worker, /const CACHE_VERSION = "2\.0\.0"/);
 });
 
-test("withdrawing optional consent reloads a clean document", async () => {
-  const consent = await read("../src/components/ConsentAnalytics.tsx");
-  assert.match(consent, /const previous = window\.__mindcheckConsent/);
-  assert.match(consent, /previous\.analytics && !choice\.analytics/);
-  assert.match(consent, /if \(withdrewOptionalService\) window\.location\.reload\(\)/);
+test("obsolete Google consent state cannot reactivate optional tracking", async () => {
+  await assert.rejects(access(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url)), { code: "ENOENT" });
+  await assert.rejects(access(new URL("../src/lib/privacyConsent.ts", import.meta.url)), { code: "ENOENT" });
+  const layout = await read("../src/app/layout.tsx");
+  assert.doesNotMatch(layout, /ConsentAnalytics|googletagmanager|gtag|G-[A-Z0-9]{10}/);
 });
 
 test("service worker never caches sensitive routes or optional Google services", async () => {

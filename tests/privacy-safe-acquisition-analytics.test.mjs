@@ -1,40 +1,24 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-const helperUrl = new URL(
-  "../src/lib/privacySafeAcquisitionAnalytics.ts",
-  import.meta.url,
-);
-const gridUrl = new URL("../src/components/ToolGrid.tsx", import.meta.url);
-const lifecycleUrl = new URL(
-  "../src/components/SensitiveRouteLifecycle.tsx",
-  import.meta.url,
-);
-
-test("homepage launch measurement is consented, aggregate, and topic-free", async () => {
-  const helper = await readFile(helperUrl, "utf8");
-
-  assert.match(helper, /window\.location\.pathname !== "\/"/);
-  assert.match(helper, /getCurrentConsent\(\)\?\.analytics !== true/);
-  assert.match(helper, /window\.gtag\?\.\("event", "private_tool_launch", \{/);
-  assert.match(helper, /transport_type: "beacon"/);
-  assert.doesNotMatch(helper, /href|destination|tool_name|category|score|answer|result/i);
+test("obsolete GA acquisition event is removed", async () => {
+  await assert.rejects(
+    access(new URL("../src/lib/privacySafeAcquisitionAnalytics.ts", import.meta.url)),
+    { code: "ENOENT" },
+  );
+  const grid = await readFile(new URL("../src/components/ToolGrid.tsx", import.meta.url), "utf8");
+  const lifecycle = await readFile(new URL("../src/components/SensitiveRouteLifecycle.tsx", import.meta.url), "utf8");
+  assert.doesNotMatch(grid, /data-private-tool-launch|trackPrivateToolLaunch/);
+  assert.doesNotMatch(lifecycle, /private_tool_launch|trackPrivateToolLaunch|gtag/);
 });
 
-test("homepage tool cards are measured before the privacy-safe hard navigation", async () => {
-  const [grid, lifecycle] = await Promise.all([
-    readFile(gridUrl, "utf8"),
-    readFile(lifecycleUrl, "utf8"),
-  ]);
-
-  assert.equal((grid.match(/data-private-tool-launch="true"/g) ?? []).length, 2);
-  assert.doesNotMatch(grid, /onClick=\{trackPrivateToolLaunch\}/);
-  assert.match(lifecycle, /anchor\.dataset\.privateToolLaunch === "true"/);
-  assert.match(lifecycle, /trackPrivateToolLaunch\(\)/);
-  assert.ok(
-    lifecycle.indexOf("trackPrivateToolLaunch();")
-      < lifecycle.indexOf("window.location.assign(destination.href)"),
-    "the aggregate event must be queued before the clean navigation",
+test("clean navigation to excluded routes remains enforced", async () => {
+  const lifecycle = await readFile(
+    new URL("../src/components/SensitiveRouteLifecycle.tsx", import.meta.url),
+    "utf8",
   );
+  assert.match(lifecycle, /isPrivacySafeAggregateAnalyticsRoute\(destination\.pathname\)/);
+  assert.match(lifecycle, /event\.preventDefault\(\)/);
+  assert.match(lifecycle, /window\.location\.assign\(destination\.href\)/);
 });

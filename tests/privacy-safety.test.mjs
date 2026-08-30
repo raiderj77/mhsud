@@ -100,13 +100,13 @@ test("consumer-health-data notice discloses limited request data and service pro
   const privacy = await readFile(new URL("../src/app/privacy/page.tsx", import.meta.url), "utf8");
   for (const required of [
     /Website request data/,
-    /Consented public-page analytics/,
+    /Cookie-free aggregate measurement/,
     /Resource-email subscription/,
     /Vercel/,
-    /Google Analytics/,
     /Loops/,
     /Consumer Health Data Request/,
   ]) assert.match(notice, required);
+  assert.match(notice, /does not use Google Analytics/i);
   assert.match(notice, /do not sell consumer health data/i);
   assert.match(notice, /Questionnaire answers, scores[\s\S]*are not collected/);
   assert.match(privacy, /requested health-topic path can appear in ordinary hosting data/);
@@ -163,43 +163,16 @@ test("the youth CRAFFT information page contains no affiliate or assessment flow
   assert.match(crafft, /View crisis resources/);
 });
 
-test("Google Analytics requires consent, advertising is absent, and Clarity is absent", async () => {
+test("Google Analytics, display advertising, and Clarity runtimes are absent", async () => {
   const layout = await readFile(new URL("../src/app/layout.tsx", import.meta.url), "utf8");
-  const consentAnalytics = await readFile(
-    new URL("../src/components/ConsentAnalytics.tsx", import.meta.url),
-    "utf8",
-  );
   assert.equal(existsSync(new URL("../src/components/AdSlot.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/lib/privacyConsent.ts", import.meta.url)), false);
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
-  assert.match(layout, /'analytics_storage': 'denied'/);
-  assert.doesNotMatch(layout, /ADSENSE|GOOGLE_CERTIFIED_CMP|google-adsense-account/);
-  assert.match(layout, /<ConsentAnalytics \/>/);
-  assert.doesNotMatch(layout, /googletagmanager\.com\/gtag\/js/);
-  assert.doesNotMatch(layout, /Cookiebot|consent\.cookiebot|data-cookieconsent/i);
-  assert.match(consentAnalytics, /CONSENT_STORAGE_KEY/);
-  assert.match(consentAnalytics, /version: 3, analytics: false/);
-  assert.match(consentAnalytics, /analytics_storage: consent\.analytics \? "granted" : "denied"/);
-  assert.match(consentAnalytics, /ad_storage: "denied"/);
-  assert.match(consentAnalytics, /ad_user_data: "denied"/);
-  assert.match(consentAnalytics, /ad_personalization: "denied"/);
-  assert.match(consentAnalytics, /document\.createElement\("script"\)/);
-  assert.match(consentAnalytics, /globalPrivacyControlIsActive/);
-  assert.match(consentAnalytics, /G-XKHQN1NJ2Z/);
-  assert.doesNotMatch(consentAnalytics, /SAFE_CAMPAIGN_KEYS|safe\.searchParams\.set/);
-  assert.match(consentAnalytics, /return new URL\(current\.pathname, current\.origin\)\.toString\(\)/);
-  assert.match(consentAnalytics, /page_path: pathname/);
-  assert.match(consentAnalytics, /parseStoredPrivacyConsent\(localStorage\.getItem\(CONSENT_STORAGE_KEY\)\)/);
-  assert.match(consentAnalytics, /topic-neutral homepage/);
-  assert.match(consentAnalytics, /health-topic paths are excluded/);
-  assert.match(consentAnalytics, /Consumer Health Data Privacy Notice/);
-  assert.match(consentAnalytics, /consented-google-adsense/);
-  assert.doesNotMatch(consentAnalytics, /adsbygoogle|loadNonPersonalizedAds|effectiveChoice\.advertising/);
+  assert.match(layout, /<PrivacySafeAggregateAnalytics \/>/);
+  assert.doesNotMatch(layout, /ConsentAnalytics|gtag|googletagmanager|G-[A-Z0-9]{8,}|ADSENSE|google-adsense-account/i);
   assert.doesNotMatch(layout, /clarity\.ms|microsoft-clarity/i);
-  assert.doesNotMatch(layout, /data-georegions/);
-  assert.doesNotMatch(layout, /rel="preconnect" href="https:\/\/www\.googletagmanager\.com"/);
-  assert.doesNotMatch(layout, /rel="preconnect" href="https:\/\/pagead2\.googlesyndication\.com"/);
-  assert.doesNotMatch(layout, /13971731025ec697-s\.p\.woff2/);
-  assert.doesNotMatch(nextConfig, /consent\.cookiebot|consentcdn\.cookiebot/i);
+  assert.doesNotMatch(nextConfig, /google|googlesyndication|doubleclick|consent\.cookiebot/i);
   assert.doesNotMatch(nextConfig, /unsafe-eval/);
   for (const directive of [
     /X-Frame-Options", value: "DENY/,
@@ -212,15 +185,14 @@ test("Google Analytics requires consent, advertising is absent, and Clarity is a
   assert.match(nextConfig, /source: "\/api\/:path\*"[\s\S]*?private, no-store/);
 });
 
-test("assessment funnel events require analytics consent and contain no health data", async () => {
+test("assessment funnel events are compatibility no-ops with no analytics transport", async () => {
   const analytics = await readFile(
     new URL("../src/lib/assessmentAnalytics.ts", import.meta.url),
     "utf8",
   );
-  assert.match(analytics, /getCurrentConsent\(\)\?\.analytics !== true/);
   assert.match(analytics, /"assessment_started" \| "assessment_completed"/);
-  assert.match(analytics, /gtag\?\.\("event", eventName\)/);
-  assert.doesNotMatch(analytics, /answers|score|severity|email|pathname|page_path/i);
+  assert.match(analytics, /trackAssessmentEvent\(eventName: AssessmentEvent\): void \{\s*void eventName;\s*\}/);
+  assert.doesNotMatch(analytics, /gtag|fetch\(|sendBeacon|Analytics/);
 
   for (const path of [
     "../src/app/mental-load-calculator/MentalLoadClient.tsx",
@@ -306,14 +278,9 @@ test("AI discovery files use maintained canonical URLs and scoped clinical claim
   assert.match(navbar, /href="\/clinical-evidence"/);
 });
 
-test("Google ad consent signals are permanently denied even when analytics is allowed", async () => {
-  const consent = await readFile(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url), "utf8");
-  for (const key of ["ad_storage", "ad_user_data", "ad_personalization"]) {
-    assert.match(consent, new RegExp(`${key}: "denied"`));
-    assert.doesNotMatch(consent, new RegExp(`${key}: [^\\n]*granted`));
-  }
-  assert.match(consent, /allow_google_signals: false/);
-  assert.match(consent, /allow_ad_personalization_signals: false/);
+test("Google consent and advertising runtimes are removed rather than conditionally enabled", () => {
+  assert.equal(existsSync(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/lib/privacyConsent.ts", import.meta.url)), false);
 });
 
 test("no authorized display-ad seller declaration is published", () => {

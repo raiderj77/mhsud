@@ -325,7 +325,6 @@ function ToolCard({
   return (
     <Link
       href={tool.href}
-      data-private-tool-launch="true"
       className="card p-6 group transition-all hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700"
     >
       {content}
@@ -337,7 +336,6 @@ function TargetedCard({ item }: { item: TargetedScreening }) {
   return (
     <Link
       href={item.href}
-      data-private-tool-launch="true"
       className="card p-5 group hover:shadow-md hover:border-sage-300 dark:hover:border-sage-700 transition-all"
     >
       <span className="badge bg-sky-50 dark:bg-sky-950/30 text-sky-700 dark:text-sky-400 mb-3 inline-block">

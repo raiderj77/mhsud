@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/privacy",
   title: "Privacy Policy, How We Protect Your Data",
   description:
-    "How MindCheck Tools handles browser-local screening data, hosting requests, optional analytics, subscriptions, and privacy choices.",
+    "How MindCheck Tools handles browser-local screening data, hosting requests, privacy-safe aggregate analytics, subscriptions, and privacy rights.",
 });
 
 export default function PrivacyPage() {
@@ -64,41 +64,24 @@ export default function PrivacyPage() {
             <p>
               Browser-local entries are not intentionally transmitted to MindCheck Tools application servers, but they remain available to this browser profile until you use the tool&apos;s reset/delete control, clear site data, or the browser removes them. Anyone with access to the same browser profile may be able to read them. Use a private window or clear the tool on a shared device. Browser extensions, device software, screenshots, downloads, and backups are outside our control.
             </p>
-            <p>
-              The following controls and optional third-party services may use browser storage on this site:
-            </p>
+            <p>The following first-party browser storage may be used on this site:</p>
             <ul>
-              <li><strong>MindCheck Tools privacy choices</strong>, our first-party consent control. It stores your Google Analytics choice in this browser. An older advertising choice is discarded when saved preferences are updated.</li>
-              <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
-              <li><strong>Vercel Web Analytics</strong>, cookie-free aggregate visitor and page-view measurement on a fixed allowlist of topic-neutral and professional pages. It is excluded from assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes.</li>
+              <li><strong>Theme preference</strong>, which remembers the selected color theme.</li>
+              <li><strong>Clearly identified local tools</strong>, which may preserve a journal, plan, check-in, or calculator preference in this browser.</li>
+              <li><strong>Global Privacy Control signal</strong>, which middleware may remember in a short-lived first-party cookie so browser-side analytics remain suppressed.</li>
             </ul>
             <p>
-              You can manage your choices at any time through the Privacy Choices link in the site footer or through your browser settings.
+              You can remove these items through each tool&apos;s reset control or your browser settings. MindCheck Tools does not use Google Analytics.
             </p>
           </section>
 
           <section>
             <h2>What data is collected through analytics?</h2>
             <p>
-              Google Analytics (GA4), when you consent on the homepage, may process the following categories of information through cookies and standard web protocols. It is excluded from all other routes. MindCheck Tools does not display ads or load advertising networks.
-            </p>
-            <ul>
-              <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
-              <li><strong>Network information:</strong> IP address used to transmit the request and approximate geographic region derived by Google, not precise location</li>
-              <li><strong>Usage data:</strong> sanitized page URL and path, page title, session timing, and the referring site&apos;s origin</li>
-              <li><strong>Cookie identifiers:</strong> pseudonymous identifiers set by Google Analytics after analytics consent</li>
-            </ul>
-            <p>
-              <strong>The application is not configured to add screening answers, scores, or results to this data.</strong> It does not intentionally send screening data to analytics or advertising systems. A local print or download that you deliberately create is outside those systems and is controlled by your browser, device, printer, and any sync or backup service you use.
-            </p>
-            <p>
               Vercel Web Analytics separately counts visits and page views without cookies. It is configured with a positive route allowlist, removes query strings and fragments, sends no custom events, and returns no event when Global Privacy Control is active. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded. Vercel determines a visitor with a request-derived hash that resets after 24 hours and reports only aggregated analytics; ordinary hosting requests remain subject to the separate hosting-log disclosure below.
             </p>
             <p>
-              You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
-            </p>
-            <p>
-              <strong>Current application status:</strong> Google Analytics is available only on the homepage after consent and is disabled on sensitive routes. Display advertising is absent regardless of consent. Cookie-free aggregate measurement has the separate allowlist and GPC controls described above.
+              <strong>The application is not configured to add screening answers, scores, results, or browser-local entries to analytics.</strong> MindCheck Tools does not use Google Analytics or display advertising. A print, download, screenshot, or other copy that you deliberately create is controlled by your browser, device, printer, and any sync or backup service you use.
             </p>
           </section>
 
@@ -140,8 +123,6 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Screening answers and scores:</strong> Not retained by MindCheck Tools. In-memory responses are removed when you close, refresh, or reset the page. A printout or downloaded reflection that you deliberately create is a separate local copy and remains until you or the relevant device/service deletes it.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
-              <li><strong>Privacy choices:</strong> Stored in this browser until you change them or clear site data. The choice itself is not sent to a consent-management provider.</li>
-              <li><strong>Google Analytics data:</strong> Retention follows the configured Google Analytics property setting and Google&apos;s service rules. The current account-side setting cannot be verified from public application code; you may request the current period at privacy@mindchecktools.com.</li>
               <li><strong>Vercel Web Analytics:</strong> Vercel documents that its cookie-free visitor hash resets after 24 hours. Aggregated reporting retention follows the Vercel project and plan settings. Sensitive routes do not send Web Analytics events.</li>
               <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
               <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
@@ -205,7 +186,7 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on your affirmative choice in our first-party privacy control before enabling Google Analytics. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages, uses aggregate reporting without persistent identifiers, and is suppressed when Global Privacy Control is active.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. MindCheck Tools does not use Google Analytics. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages and is suppressed when Global Privacy Control is active.
             </p>
             <p>
               <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
@@ -213,7 +194,7 @@ export default function PrivacyPage() {
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
             <p>
-              Washington law can treat reasonably linkable information that identifies a person&apos;s interest in seeking health care as consumer health data. MindCheck Tools does not collect questionnaire answers, scores, journal entries, or locally saved plans, but a requested health-topic path can appear in ordinary hosting data. Health-topic routes are excluded from both Google Analytics and Vercel Web Analytics. Our dedicated <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> describes the categories, purposes, sources, service providers, and request process we apply to that limited data.
+              Washington law can treat reasonably linkable information that identifies a person&apos;s interest in seeking health care as consumer health data. MindCheck Tools does not collect questionnaire answers, scores, journal entries, or locally saved plans, but a requested health-topic path can appear in ordinary hosting data. Health-topic routes are excluded from Vercel Web Analytics. Our dedicated <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> describes the categories, purposes, sources, service providers, and request process we apply to that limited data.
             </p>
 
             <h3>Maryland Online Data Privacy Act (MODPA)</h3>
@@ -231,7 +212,7 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing Google Analytics and Vercel Web Analytics events; you do not need to interact with the privacy-choice dialog for those services to remain off. Display advertising is absent regardless of consent or GPC. Ordinary hosting and security processing still occurs to deliver and protect the site.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing Vercel Web Analytics events. MindCheck Tools does not use Google Analytics or display advertising. Ordinary hosting and security processing still occurs to deliver and protect the site.
             </p>
             <p>
               <strong>We do not sell sensitive personal data.</strong> We also do not use consumer health data for targeted advertising or profiling.
@@ -257,8 +238,8 @@ export default function PrivacyPage() {
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, consented Google Analytics cookie identifiers, and Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages.</li>
-              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, sanitized consented Google Analytics page data, allowlisted cookie-free aggregate page data, and referring-site origin.</li>
+              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages.</li>
+              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, allowlisted cookie-free aggregate page data, and referring-site origin.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
@@ -304,7 +285,7 @@ export default function PrivacyPage() {
             <p>
               We do not sell personal information or use it for targeted advertising. You may use a
               <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
-              browser to suppress analytics. Our first-party Privacy Choices control also lets you deny or withdraw Google Analytics consent.
+              browser to suppress Vercel Web Analytics. MindCheck Tools does not use Google Analytics.
             </p>
 
             <h3>How to Submit a Request</h3>
@@ -331,8 +312,7 @@ export default function PrivacyPage() {
               required by the applicable law.
             </p>
             <p>
-              Regardless of location, our Privacy Choices control can keep Google Analytics
-              off. We honor Global Privacy Control by disabling Google Analytics and
+              Regardless of location, MindCheck Tools does not use Google Analytics. We honor Global Privacy Control by
               suppressing Vercel Web Analytics events, do not sell personal information, and do not
               use consumer health data for targeted advertising.
             </p>

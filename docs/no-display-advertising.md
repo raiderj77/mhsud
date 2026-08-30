@@ -28,15 +28,15 @@ directive can change this rule; vendor approval or an environment flag cannot.
 | AdSlot and its imports/placements | REMOVE | Ad-only; retain surrounding tools, questionnaire logic, sources, and redirects |
 | Ad loader, queue, ready event, activation props/flags | REMOVE | No path may reactivate display advertising |
 | Seller ads.txt and AdSense account metadata | REMOVE | No authorized display-ad sellers; update CI/predeploy in the same change |
-| Ad-only CSP origins and frames | REMOVE | No non-ad iframe consumer found in source; retain analytics origins and existing general image policy |
-| Consent implementation and saved preferences | REWRITE | Version 3 keeps only explicit analytics consent; valid version 2 choices migrate without granting anything new |
+| Ad-only and Google Analytics CSP origins and frames | REMOVE | No active consumer remains; retain the existing security directives and general image policy |
+| Obsolete Google consent implementation and saved preferences | REMOVE | Google Analytics is not used; no consent state may reactivate a retired tracker |
 | Policies, footer, homepage, AI discovery summaries | REWRITE | State no display ads, not temporary disablement; preserve ordinary-data disclosures |
 | Build gates and regression tests | REWRITE | Require ad absence rather than publisher setup |
 | Active operating guidance | REWRITE | Remove MindCheck ad recommendations; give shared/historical content an explicit supersession notice |
-| GPC, GA opt-in, aggregate allowlist, keyboard modal controls | KEEP | Required for remaining non-ad functions |
+| GPC and the Vercel aggregate route allowlist | KEEP | Required for the remaining privacy-safe, cookie-free aggregate measurement boundary |
 | Sensitive navigation cleanup, no-store/no-referrer, service-worker rules | KEEP | Prevent inherited analytics and stale-page exposure |
 | Legacy ad script-ID removal | KEEP | Defensive cleanup only, never a loader or activation path |
-| Google ad consent denials and disabled advertising signals | KEEP | Defense in depth for the existing opt-in Google Analytics integration |
+| Negative Google/ad runtime tests | KEEP | Prevent a retired tracker or advertising system from returning |
 | Negative ad tests, rights records, historical evidence | KEEP | Safety/rights boundaries and dated history remain useful |
 
 No runtime dependency, paid vendor, patient-data store, or new analytics event is
@@ -46,8 +46,8 @@ No display ads is not blanket commercial permission for published instruments.
 ## Verification and release gate
 
 Run `npm test`, `npm run lint:predeploy`, `npm run lint:content`, type checking,
-ESLint, and a production build. Verify fresh/legacy/rejected consent, GPC,
-query/hash isolation, withdrawal, keyboard focus, sensitive entry states,
+ESLint, and a production build. Verify GPC, aggregate-route allowlisting,
+query/hash isolation, clean navigation, sensitive entry states,
 absence of ad metadata/requests/frames, and retained crisis navigation.
 Do not answer assessment questions, submit assessments, or open results.
 
@@ -62,7 +62,7 @@ settings and old deployed versions are not changed by this local cleanup.
 
 ## Technical references checked August 28, 2026
 
-- [Google consent-mode documentation](https://developers.google.com/tag-platform/security/guides/consent): retain default denial and timely consent updates for the remaining analytics integration; do not adopt vendor suggestions that broaden this site's route scope.
+- [Vercel Web Analytics documentation](https://vercel.com/docs/analytics): implementation reference for the remaining cookie-free aggregate measurement service; MindCheckTools applies a narrower route allowlist and GPC suppression in application code.
 - [MDN CSP frame-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src): frame source restrictions are separate from frame-ancestors/X-Frame-Options.
 - [Vercel Git configuration](https://vercel.com/docs/project-configuration/git-configuration): branch-specific deployment suppression; unspecified branches retain the default behavior.
 

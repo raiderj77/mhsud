@@ -63,26 +63,20 @@ const canonicalBlogRedirects = [
 ].map(([source, destination]) => ({ source, destination, permanent: true }));
 
 const nextConfig = {
-  // Performance
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
 
-
-  // Aggressive image optimization
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 365,
   },
 
-  // Security & caching headers
   async headers() {
     return [
       {
         source: "/(.*)",
         headers: [
-          // Security
-          // No embedding of this site; no embedded third-party frames.
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-DNS-Prefetch-Control", value: "off" },
@@ -102,23 +96,17 @@ const nextConfig = {
               "form-action 'self'",
               "manifest-src 'self'",
               "worker-src 'self'",
-              // Retain only the existing opt-in analytics vendor origins.
-              // Inline scripts remain necessary for the current Next.js build;
-              // this is not a nonce-based CSP migration or certification.
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+              "script-src 'self' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline'",
               "font-src 'self'",
-              // Preserve the existing general image policy in this narrow cleanup.
               "img-src 'self' data: https:",
-              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com",
+              "connect-src 'self'",
               "frame-src 'none'",
             ].join("; "),
           },
         ],
       },
       {
-        // Subscription responses can reveal whether an address was accepted
-        // and must never be stored by a browser, CDN, or shared cache.
         source: "/api/:path*",
         headers: [
           { key: "Cache-Control", value: "private, no-store, max-age=0, must-revalidate" },
@@ -128,22 +116,20 @@ const nextConfig = {
         ],
       },
       {
-        // Health content pages: no-referrer to prevent health URLs leaking to third parties
+        // Health content pages use no-referrer so topic URLs are not disclosed
+        // when a user follows an external link.
         source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|spin-social-anxiety-test|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator|maternal-mental-health)",
         headers: [
           { key: "Referrer-Policy", value: "no-referrer" },
         ],
       },
       {
-        // Cache static assets aggressively
         source: "/(.*)\\.(js|css|woff2|woff|ttf|ico|png|jpg|svg)",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       {
-        // The service-worker URL is stable, so it must never inherit the
-        // immutable JavaScript policy used for fingerprinted build assets.
         source: "/service-worker.js",
         headers: [
           { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
@@ -154,10 +140,8 @@ const nextConfig = {
     ];
   },
 
-  // Redirects for SEO
   async redirects() {
     return [
-      // Common misspellings / variants
       { source: "/phq9", destination: "/phq-9-depression-test", permanent: true },
       { source: "/gad7", destination: "/gad-7-anxiety-test", permanent: true },
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },

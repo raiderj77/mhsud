@@ -6,9 +6,9 @@ export const metadata: Metadata = createMetadata({
   path: "/cookies",
   title: "Cookie Policy, What Cookies We Use and Why",
   description:
-    "MindCheck Tools cookie and browser-storage policy: analytics choices, Global Privacy Control, local tool storage, and no display advertising.",
+    "MindCheck Tools cookie and browser-storage policy: Global Privacy Control, local tool storage, privacy-safe aggregate analytics, and no display advertising.",
   keywords: [
-    "cookie policy", "cookie consent", "analytics cookies",
+    "cookie policy", "browser storage", "privacy controls",
     "GDPR cookie compliance", "CCPA cookie disclosure",
   ],
 });
@@ -19,7 +19,6 @@ const COOKIE_TABLE = [
     consent: "Not required",
     cookies: [
       { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
-      { name: "mindchecktools:privacy-consent", purpose: "Stores your Google Analytics choice; older advertising choices are discarded", duration: "Until changed or site data is cleared (localStorage)", provider: "MindCheck Tools" },
       { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so optional services stay off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
     ],
   },
@@ -29,14 +28,6 @@ const COOKIE_TABLE = [
     cookies: [
       { name: "mct-safety-plan, mct-thought-records, mct-worry-*", purpose: "Keeps a safety plan, optionally saved thought records, or a worry log available in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
       { name: "mct-recovery-checkins, mindcheck_sobriety_*", purpose: "Keeps recovery check-ins, sobriety date, and optional spending estimate in this browser", duration: "Until reset or site data is cleared", provider: "MindCheck Tools" },
-    ],
-  },
-  {
-    category: "Analytics",
-    consent: "Required",
-    cookies: [
-      { name: "_ga", purpose: "Distinguishes unique users for Google Analytics", duration: "2 years", provider: "Google" },
-      { name: "_ga_XKHQN1NJ2Z", purpose: "Maintains session state for Google Analytics", duration: "2 years", provider: "Google" },
     ],
   },
 ];
@@ -73,7 +64,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              Our first-party privacy control keeps Google Analytics off until you make an affirmative choice. It can run only on the homepage. The inline Consent Mode default queues a denied state locally and does not contact Google by itself; advertising signals always remain denied. If you continue without Google Analytics, its script is not loaded and no Google Analytics cookies are placed by MindCheck Tools. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
+              MindCheck Tools does not use Google Analytics or display advertising. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
             </p>
           </section>
 
@@ -123,7 +114,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Managing your preferences</h2>
             <p>
-              You can change your privacy choices at any time by clicking the button below. You can also clear cookies and local storage through your browser settings.
+              You can clear cookies and local storage through your browser settings. Each persistent local tool also provides an appropriate reset or delete control.
             </p>
             <div className="not-prose mt-4">
               <CookieSettingsButton />
@@ -131,19 +122,8 @@ export default function CookiePolicyPage() {
           </section>
 
           <section>
-            <h2>Google Analytics and Consent Mode</h2>
-            <p>
-              We use Google Analytics (GA4, measurement ID: G-XKHQN1NJ2Z) with Google Consent Mode v2. This means:
-            </p>
-            <p>
-              If you <strong>accept</strong> analytics cookies, Google Analytics sets cookies to distinguish users and sessions and processes privacy-limited usage data such as sanitized public-page URLs, traffic-source origin, device/browser information, and approximate geographic region. Analytics remains disabled on sensitive routes and never receives questionnaire answers, scores, or browser-local entries.
-            </p>
-            <p>
-              If you <strong>decline</strong> analytics cookies, the Google Analytics script remains blocked and no Google Analytics cookies are set by MindCheck Tools.
-            </p>
-            <p>
-              You can also opt out of Google Analytics entirely by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> at tools.google.com/dlpage/gaoptout.
-            </p>
+            <h2>Google Analytics and advertising</h2>
+            <p>MindCheck Tools does not use Google Analytics, Google Consent Mode, or display advertising. There is no analytics or advertising consent cookie.</p>
           </section>
 
           <section>
@@ -159,20 +139,20 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Your rights</h2>
             <p>
-              <strong>If you are in the European Economic Area (EEA) or United Kingdom:</strong> Under the GDPR and ePrivacy Directive, we are required to obtain your explicit consent before placing non-essential cookies. Our cookie banner does this. You have the right to withdraw consent at any time.
+              <strong>If you are in the European Economic Area (EEA) or United Kingdom:</strong> MindCheck Tools does not place Google Analytics or advertising cookies. Applicable privacy rights and ordinary hosting disclosures are described in the Privacy Policy.
             </p>
             <p>
               <strong>If you are in California:</strong> Under the CCPA/CPRA, you have the right to opt out of the &quot;sale&quot; or &quot;sharing&quot; of personal information, which may include certain cookie-based data collection. We honor the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we treat it as a request to opt out.
             </p>
             <p>
-              <strong>Everywhere else:</strong> The same controls apply regardless of jurisdiction. Visitors without a saved choice see the Google Analytics choice on the homepage, unless GPC already keeps analytics off. Privacy Choices can also be opened from the footer; visiting a tool does not require a consent prompt.
+              <strong>Everywhere else:</strong> The same controls apply regardless of jurisdiction. MindCheck Tools does not show an analytics consent prompt because Google Analytics is not used. Global Privacy Control suppresses Vercel Web Analytics.
             </p>
           </section>
 
           <section>
             <h2>Changes to this policy</h2>
             <p>
-              We will update this policy when cookie or storage practices change. MindCheck Tools has a no-display-advertising policy; there is no advertising consent option. Existing, valid Google Analytics choices are preserved when old preferences are updated, while advertising choices are discarded. The &quot;Last updated&quot; date reflects the most recent revision.
+              We will update this policy when cookie or storage practices change. MindCheck Tools does not use Google Analytics or display advertising. The &quot;Last updated&quot; date reflects the most recent revision.
             </p>
           </section>
 

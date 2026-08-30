@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared browser or device access are outside this boundary. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. Google Analytics is consent-controlled and disabled on sensitive routes. Cookie-free Vercel Web Analytics is restricted to a positive allowlist of topic-neutral and professional pages, strips query strings and fragments, sends no custom events, and honors Global Privacy Control. Advertising remains behind separate publisher, certified-CMP, consent, non-personalized, and route-safety gates.
+              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared browser or device access are outside this boundary. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. If you separately subscribe to resource emails, we send only your email address to our email service provider; we do not attach the tool you used, answers, score, diagnosis, crisis information, or source page. MindCheck Tools does not use Google Analytics or display advertising. Cookie-free Vercel Web Analytics is restricted to a positive allowlist of topic-neutral and professional pages, strips query strings and fragments, sends no custom events, and honors Global Privacy Control.
             </p>
           </section>
 
@@ -149,7 +149,7 @@ export default function TermsPage() {
               <strong>Right to delete:</strong> The questionnaire code is not configured to submit screening answers to a MindCheck Tools application database. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. If you subscribed to resource emails, contact privacy@mindchecktools.com to request deletion of the subscriber record or unsubscribe using any email.
             </p>
             <p>
-              <strong>Right to opt out of sale/sharing:</strong> We do not sell personal information or use it for targeted advertising. MindCheck Tools does not display ads or load advertising networks. You can deny or withdraw Google Analytics through Privacy Choices. We honor Global Privacy Control (GPC) by suppressing Google Analytics and Vercel Web Analytics events; ordinary hosting and security processing still occurs.
+              <strong>Right to opt out of sale/sharing:</strong> We do not sell personal information or use it for targeted advertising. MindCheck Tools does not display ads or use Google Analytics. We honor Global Privacy Control (GPC) by suppressing Vercel Web Analytics events; ordinary hosting and security processing still occurs.
             </p>
             <p>
               <strong>Right to non-discrimination:</strong> We will not discriminate against you for exercising your CCPA/CPRA rights. All tools remain fully functional regardless of your cookie preferences.
@@ -162,7 +162,7 @@ export default function TermsPage() {
           <section id="do-not-sell">
             <h2>Do Not Sell or Share My Personal Information</h2>
             <p>
-              MindCheck Tools does not sell your personal information or use it for targeted advertising. Display advertising is absent regardless of consent. You can manage Google Analytics through Privacy Choices and read our <Link href="/cookies">Cookie Policy</Link> for the separate cookie-free aggregate measurement boundary. We honor the Global Privacy Control (GPC) signal. Contact us to exercise applicable privacy rights.
+              MindCheck Tools does not sell your personal information or use it for targeted advertising. Display advertising and Google Analytics are absent. Read our <Link href="/cookies">Cookie Policy</Link> for the cookie-free aggregate measurement boundary and browser controls. We honor the Global Privacy Control (GPC) signal. Contact us to exercise applicable privacy rights.
             </p>
           </section>
 
