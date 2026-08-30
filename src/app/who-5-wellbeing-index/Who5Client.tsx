@@ -3,7 +3,6 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
@@ -223,7 +222,6 @@ export function Who5Client({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot npa position="results-top" />
 
         {/* PHQ-9 Suggestion */}
         {showPhq9Nudge && (
@@ -280,7 +278,6 @@ export function Who5Client({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot npa position="results-middle" />
 
         {/* Score Guide */}
         <div className="mb-8">
@@ -489,7 +486,6 @@ export function Who5Client({ faqData }: Props) {
         5 questions · ~2 minutes · local browser processing · WHO public domain instrument
       </p>
 
-      {/* AdSlot intentionally omitted pre-submit, YMYL: no ads alongside an active wellbeing questionnaire. */}
 
       {/* Progress */}
       <div className="mb-6">

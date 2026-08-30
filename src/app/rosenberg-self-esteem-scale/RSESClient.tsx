@@ -3,7 +3,6 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -206,7 +205,6 @@ export function RSESClient({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
 
         {/* Low self-esteem follow-up */}
         {isLow && (
@@ -271,7 +269,6 @@ export function RSESClient({ faqData }: Props) {
           })}
         </div>
 
-        <AdSlot position="results-middle" />
 
         {/* Score Guide */}
         <div className="mb-8">
@@ -480,7 +477,6 @@ export function RSESClient({ faqData }: Props) {
         10 questions &middot; ~2 minutes &middot; local browser processing &middot; Public domain instrument
       </p>
 
-      <AdSlot position="tool-top" />
 
       {/* Instructions */}
       <div className="mb-6 p-4 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">

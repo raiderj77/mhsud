@@ -82,8 +82,7 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           // Security
-          // X-Frame-Options governs whether this site can be embedded. Ad
-          // frames embedded by this site are controlled by CSP frame-src.
+          // No embedding of this site; no embedded third-party frames.
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-DNS-Prefetch-Control", value: "off" },
@@ -103,19 +102,16 @@ const nextConfig = {
               "form-action 'self'",
               "manifest-src 'self'",
               "worker-src 'self'",
-              // Optional Google analytics and advertising services. This
-              // domain allowlist is not represented as future-proof for
-              // AdSense; the ad runtime remains gated until a separate
-              // nonce-based strict-CSP migration passes report-only testing.
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googleadservices.com https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com https://ep2.adtrafficquality.google",
+              // Retain only the existing opt-in analytics vendor origins.
+              // Inline scripts remain necessary for the current Next.js build;
+              // this is not a nonce-based CSP migration or certification.
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
               "style-src 'self' 'unsafe-inline'",
               "font-src 'self'",
-              // AdSense ad images and tracking pixels
-              "img-src 'self' data: https: https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://www.googletagmanager.com",
-              // AdSense + Analytics connections
-              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
-              // AdSense iframes (required for ad rendering)
-              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
+              // Preserve the existing general image policy in this narrow cleanup.
+              "img-src 'self' data: https:",
+              "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com",
+              "frame-src 'none'",
             ].join("; "),
           },
         ],

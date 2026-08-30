@@ -1,6 +1,6 @@
 /**
  * predeploy-check.js — Empire Build Standards compliance check for mindchecktools.com
- * Validates: ads.txt, robots.txt, llms.txt, legal pages, focused footer links, security headers
+ * Validates: no-display-ad policy, robots.txt, llms.txt, legal pages, focused footer links, security headers
  * Exit code 1 on failure, 0 on pass.
  */
 
@@ -28,22 +28,19 @@ function check(label, fn) {
 }
 
 // ---------------------------------------------------------------------------
-// 1. ads.txt
+// 1. No display advertising
 // ---------------------------------------------------------------------------
-check("ads.txt", () => {
-  const p = resolve(ROOT, "public/ads.txt");
-  if (!existsSync(p)) return fail("public/ads.txt missing");
-  const content = readFileSync(p, "utf-8");
-  if (content.includes("pub-7171402107622932")) {
-    pass("Publisher ID present");
-  } else {
-    fail("Publisher ID pub-7171402107622932 not found in ads.txt");
+check("No display advertising", () => {
+  for (const file of ["public/ads.txt", "ads.txt", "src/components/AdSlot.tsx"]) {
+    if (existsSync(resolve(ROOT, file))) fail(`Display-ad artifact must remain absent: ${file}`);
   }
-  if (/OWNERDOMAIN/i.test(content)) {
-    pass("OWNERDOMAIN directive present");
-  } else {
-    fail("OWNERDOMAIN directive missing from ads.txt");
+  for (const file of ["src/app/layout.tsx", "src/components/ConsentAnalytics.tsx", "next.config.mjs", ".env.example"]) {
+    const content = readFileSync(resolve(ROOT, file), "utf-8");
+    if (/google-adsense-account|adsbygoogle|googlesyndication|doubleclick|fundingchoicesmessages|adtrafficquality|NEXT_PUBLIC_(?:ADSENSE|GOOGLE_CERTIFIED_CMP)/i.test(content)) {
+      fail(`Display-ad activation or vendor integration remains in ${file}`);
+    }
   }
+  if (failures === 0) pass("No ad seller, component, activation flag or vendor integration");
 });
 
 // ---------------------------------------------------------------------------

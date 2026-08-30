@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -366,7 +365,6 @@ export function ReadinessClient({ faqData }: Props) {
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
-      <AdSlot position="readiness-top" />
 
       {/* ─── ASSESSMENT ────────────────────────────────── */}
       {!showResults && (
@@ -595,7 +593,6 @@ export function ReadinessClient({ faqData }: Props) {
         </div>
       )}
 
-      <AdSlot position="readiness-mid" />
 
       {/* ─── EDUCATIONAL CONTENT ───────────────────────── */}
       <section className="prose-custom mb-12">

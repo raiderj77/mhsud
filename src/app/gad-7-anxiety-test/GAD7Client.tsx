@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -220,7 +219,7 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
 
       {showResults && (
         <div ref={resultsRef} className="animate-fade-in" aria-live="polite">
-          {/* Severe-bracket crisis routing (YMYL safety), placed above AdSlot and next steps */}
+          {/* Severe-bracket crisis routing (YMYL safety), placed above next steps */}
           {range.key === "severe" && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5" role="alert">
               <h3 className="font-serif text-lg font-semibold text-crisis-800 dark:text-crisis-300 mb-2">
@@ -411,7 +410,6 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
 
           <EmailCapture />
 
-          <AdSlot npa position="Below Results" className="mb-8" />
 
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>
@@ -432,7 +430,6 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -471,7 +468,6 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Footer" className="mb-8" />
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">

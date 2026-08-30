@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -216,7 +215,6 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
         </p>
       </div>
 
-      <AdSlot position="withdrawal-top" className="mb-6" />
 
       {/* Substance Selector */}
       <div className="card p-6 sm:p-8 mb-6">
@@ -371,7 +369,6 @@ export function WithdrawalTimelineClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="withdrawal-results" className="mt-6" />
         </div>
       )}
 

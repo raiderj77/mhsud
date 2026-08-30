@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
-import { AdSlot } from "@/components/AdSlot";
 
 /* ─── Types ────────────────────────────────────────────────────── */
 
@@ -139,7 +138,6 @@ export function ScoreInterpretationLayout({
         </div>
       </section>
 
-      <AdSlot position="Below Results" className="mb-8" />
 
       {/* Score-specific subsections */}
       {scoreBands.map((band, i) => (
@@ -173,7 +171,6 @@ export function ScoreInterpretationLayout({
         </div>
       </section>
 
-      <AdSlot position="Mid Content" className="mb-8" />
 
       {/* How to use this score in a conversation with your doctor */}
       <section className="mb-10">
@@ -253,7 +250,6 @@ export function ScoreInterpretationLayout({
         </p>
       )}
 
-      <AdSlot position="Footer" className="mb-8" />
 
       {/* Crisis Resources */}
       <div className="card p-5 sm:p-6 mb-5">

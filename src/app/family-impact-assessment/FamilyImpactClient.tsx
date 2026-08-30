@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -354,7 +353,6 @@ export function FamilyImpactClient({ faqData }: Props) {
           </p>
         </div>
 
-        <AdSlot position="results-top" />
 
         {/* Validation Message */}
         <div className="mb-8 p-5 bg-sage-50 dark:bg-sage-950/30 border border-sage-200 dark:border-sage-800 rounded-xl">
@@ -423,7 +421,6 @@ export function FamilyImpactClient({ faqData }: Props) {
           </div>
         </div>
 
-        <AdSlot position="results-middle" />
 
         {/* Next Steps */}
         <div className="mb-8">
@@ -746,7 +743,6 @@ export function FamilyImpactClient({ faqData }: Props) {
         {STATEMENTS.length} questions · ~5 minutes · local browser processing
       </p>
 
-      <AdSlot position="tool-top" />
 
       {/* Progress */}
       <div className="mb-6">

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  ADS_READY_EVENT,
   CONSENT_EVENT,
   CONSENT_STORAGE_KEY,
   OPEN_CONSENT_EVENT,
+  parseStoredPrivacyConsent,
   publishPrivacyChoiceStatus,
   type PrivacyConsent,
 } from "@/lib/privacyConsent";
@@ -15,8 +15,6 @@ import { isOptionalServicesAllowedRoute } from "@/lib/routePolicies";
 
 const MEASUREMENT_ID = "G-XKHQN1NJ2Z";
 const ANALYTICS_SCRIPT_ID = "consented-google-analytics";
-const ADS_SCRIPT_ID = "consented-google-adsense";
-const ADSENSE_CLIENT = "ca-pub-7171402107622932";
 const FOCUSABLE_SELECTOR = [
   "a[href]",
   "button:not([disabled])",
@@ -50,7 +48,8 @@ function updateGoogleConsent(consent: PrivacyConsent): void {
   ensureGtag();
   window.gtag?.("consent", "update", {
     analytics_storage: consent.analytics ? "granted" : "denied",
-    ad_storage: consent.advertising ? "granted" : "denied",
+    // Google Analytics remains opt-in; advertising signals are always denied.
+    ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
     personalization_storage: "denied",
@@ -119,23 +118,6 @@ function loadGoogleAnalytics(pathname: string): void {
   document.head.appendChild(script);
 }
 
-function loadNonPersonalizedAds(): void {
-  if (document.getElementById(ADS_SCRIPT_ID)) return;
-  const queue = window.adsbygoogle ?? [];
-  // Google documents this queue property for AdSense asynchronous tags. It
-  // must be set before the tag initializes; data-npa on an individual slot is
-  // retained as defense in depth but is not the primary NPA control.
-  queue.requestNonPersonalizedAds = 1;
-  window.adsbygoogle = queue;
-  const script = document.createElement("script");
-  script.id = ADS_SCRIPT_ID;
-  script.async = true;
-  script.crossOrigin = "anonymous";
-  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
-  script.addEventListener("load", () => window.dispatchEvent(new Event(ADS_READY_EVENT)), { once: true });
-  document.head.appendChild(script);
-}
-
 function clearGoogleAnalytics(): void {
   (window as unknown as Record<string, unknown>)[`ga-disable-${MEASUREMENT_ID}`] = true;
   window.__mindcheckLastTrackedPath = undefined;
@@ -150,24 +132,21 @@ function clearGoogleAnalytics(): void {
 
 function removeOptionalServiceScripts(): void {
   document.getElementById(ANALYTICS_SCRIPT_ID)?.remove();
-  document.getElementById(ADS_SCRIPT_ID)?.remove();
+  // Defensive cleanup for a document inherited from an older release, not an
+  // advertising integration. SensitiveRouteLifecycle also forces a clean load.
+  document.getElementById("consented-google-adsense")?.remove();
   clearGoogleAnalytics();
 }
 
 function readStoredConsent(): PrivacyConsent | null {
   try {
-    const parsed = JSON.parse(localStorage.getItem(CONSENT_STORAGE_KEY) || "null") as Partial<PrivacyConsent> | null;
-    if (parsed?.version !== 2) return null;
-    if (typeof parsed.analytics !== "boolean" || typeof parsed.advertising !== "boolean") return null;
-    return { version: 2, analytics: parsed.analytics, advertising: parsed.advertising };
+    return parseStoredPrivacyConsent(localStorage.getItem(CONSENT_STORAGE_KEY));
   } catch {
     return null;
   }
 }
 
-type ConsentAnalyticsProps = { adsenseEnabled: boolean };
-
-export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
+export function ConsentAnalytics() {
   const pathname = usePathname();
   const optionalServicesAllowed = isOptionalServicesAllowedRoute(pathname);
   const [ready, setReady] = useState(false);
@@ -175,46 +154,44 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
   const [choiceCompleted, setChoiceCompleted] = useState(false);
   const [gpcActive, setGpcActive] = useState(false);
   const [analytics, setAnalytics] = useState(false);
-  const [advertising, setAdvertising] = useState(false);
   const dialogRef = useRef<HTMLElement>(null);
   const modalRootRef = useRef<HTMLDivElement>(null);
 
   const applyConsent = useCallback((choice: PrivacyConsent, persist = true) => {
     const storedChoice = globalPrivacyControlIsActive()
-      ? { version: 2 as const, analytics: false, advertising: false }
-      : { ...choice, advertising: adsenseEnabled && choice.advertising };
+      ? { version: 3 as const, analytics: false }
+      : { version: 3 as const, analytics: choice.analytics };
     const effectiveChoice = optionalServicesAllowed
       ? storedChoice
-      : { version: 2 as const, analytics: false, advertising: false };
+      : { version: 3 as const, analytics: false };
 
     window.__mindcheckConsent = effectiveChoice;
     updateGoogleConsent(effectiveChoice);
     if (!optionalServicesAllowed) removeOptionalServiceScripts();
     else if (effectiveChoice.analytics) loadGoogleAnalytics(pathname);
     else clearGoogleAnalytics();
-    if (effectiveChoice.advertising) loadNonPersonalizedAds();
 
     if (persist) {
       try { localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(storedChoice)); } catch {}
     }
     window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: effectiveChoice }));
     setAnalytics(effectiveChoice.analytics);
-    setAdvertising(effectiveChoice.advertising);
-  }, [adsenseEnabled, optionalServicesAllowed, pathname]);
+  }, [optionalServicesAllowed, pathname]);
 
   useEffect(() => {
     const gpc = globalPrivacyControlIsActive();
     const stored = readStoredConsent();
     setGpcActive(gpc);
     if (gpc) {
-      applyConsent({ version: 2, analytics: false, advertising: false });
+      applyConsent({ version: 3, analytics: false });
       setChoiceCompleted(true);
       setOpen(false);
     } else if (stored) {
-      applyConsent(stored, false);
+      // Persist the normalized version, dropping legacy advertising choices.
+      applyConsent(stored);
       setChoiceCompleted(true);
     } else {
-      applyConsent({ version: 2, analytics: false, advertising: false }, false);
+      applyConsent({ version: 3, analytics: false }, false);
       setChoiceCompleted(false);
       // Do not interrupt a health-topic visit with consent choices for services
       // that cannot run there. The dialog appears on the homepage, or when a
@@ -240,11 +217,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
 
   const save = useCallback((choice: PrivacyConsent) => {
     const previous = window.__mindcheckConsent;
-    const withdrewOptionalService = Boolean(
-      previous &&
-        ((previous.analytics && !choice.analytics) ||
-          (previous.advertising && !choice.advertising)),
-    );
+    const withdrewOptionalService = Boolean(previous && previous.analytics && !choice.analytics);
 
     applyConsent(choice);
     publishPrivacyChoiceStatus({ completed: true, dialogOpen: false });
@@ -252,7 +225,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
     setOpen(false);
 
     // Consent updates stop future Google events immediately. Reload after a
-    // withdrawal as well so a previously executed analytics or advertising
+    // withdrawal as well so a previously executed analytics
     // runtime cannot remain active in the current document.
     if (withdrewOptionalService) window.location.reload();
   }, [applyConsent]);
@@ -310,7 +283,7 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
       if (event.key === "Escape") {
         event.preventDefault();
         event.stopPropagation();
-        save({ version: 2, analytics: false, advertising: false });
+        save({ version: 3, analytics: false });
         return;
       }
 
@@ -376,18 +349,18 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
         aria-labelledby="privacy-choices-title"
         aria-describedby="privacy-choices-description"
         tabIndex={-1}
-        className="w-full max-w-xl rounded-2xl border border-sand-200 bg-white p-5 shadow-2xl dark:border-neutral-700 dark:bg-night-800 sm:p-6"
+        className="max-h-[calc(100dvh-1.5rem)] w-full max-w-xl overflow-y-auto rounded-2xl border border-sand-200 bg-white p-5 shadow-2xl dark:border-neutral-700 dark:bg-night-800 sm:p-6"
       >
         <h2 id="privacy-choices-title" className="font-serif text-xl font-semibold text-neutral-900 dark:text-neutral-50">
           Your privacy choices
         </h2>
         <p id="privacy-choices-description" className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-          Optional services stay off until you choose. They are permitted only on the topic-neutral homepage; screening, result, crisis, condition-specific, privacy, youth, and rights-limited pages remain tag-free.
+          Google Analytics stays off until you choose and is permitted only on the topic-neutral homepage. MindCheck Tools does not display ads. Separate cookie-free aggregate measurement runs on an allowlist of non-sensitive public pages; neither service runs on screening, result, crisis, or interactive-tool routes.
         </p>
 
         {gpcActive ? (
           <div className="mt-4 rounded-xl bg-sage-50 p-4 text-sm text-sage-800 dark:bg-sage-950/40 dark:text-sage-200">
-            Global Privacy Control was detected, so optional analytics and advertising remain off.
+            Global Privacy Control was detected, so Google Analytics and cookie-free aggregate measurement remain off.
           </div>
         ) : (
           <div className="mt-5 space-y-4">
@@ -404,20 +377,6 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
               </span>
             </label>
 
-            {adsenseEnabled && (
-              <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-sand-200 p-4 dark:border-neutral-700">
-                <input
-                  type="checkbox"
-                  checked={advertising}
-                  onChange={(event) => setAdvertising(event.target.checked)}
-                  className="mt-1 h-4 w-4 accent-sage-600"
-                />
-                <span>
-                  <span className="block text-sm font-semibold text-neutral-900 dark:text-neutral-100">Non-personalized advertising</span>
-                  <span className="mt-1 block text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">Allows context-based ads without ad personalization. Health-tool inputs and results are never included. Google&apos;s certified consent message may request additional choices where required.</span>
-                </span>
-              </label>
-            )}
           </div>
         )}
 
@@ -429,16 +388,16 @@ export function ConsentAnalytics({ adsenseEnabled }: ConsentAnalyticsProps) {
           {!gpcActive && (
             <button
               type="button"
-              onClick={() => save({ version: 2, analytics: false, advertising: false })}
+              onClick={() => save({ version: 3, analytics: false })}
               data-consent-default-action
               className="btn-secondary text-sm"
             >
-              Continue without optional services
+              Continue without Google Analytics
             </button>
           )}
           <button
             type="button"
-            onClick={() => save({ version: 2, analytics, advertising })}
+            onClick={() => save({ version: 3, analytics })}
             data-consent-default-action={gpcActive ? "true" : undefined}
             className="btn-primary text-sm"
           >

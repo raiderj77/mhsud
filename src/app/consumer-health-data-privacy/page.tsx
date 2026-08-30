@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, createMetadata, SITE_URL } from "@/lib/metadata";
 
-const LAST_REVIEWED = "2026-08-18";
+const LAST_UPDATED = "2026-08-28";
 
 export const metadata: Metadata = createMetadata({
   path: "/consumer-health-data-privacy",
@@ -40,7 +40,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             supplements our <Link href="/privacy">Privacy Policy</Link>.
           </p>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-            Last reviewed: <time dateTime={LAST_REVIEWED}>August 18, 2026</time>
+            Last updated: <time dateTime={LAST_UPDATED}>August 28, 2026</time> (no-display-advertising policy)
           </p>
         </header>
 
@@ -144,17 +144,13 @@ export default function ConsumerHealthDataPrivacyPage() {
           </section>
 
           <section>
-            <h2>Advertising status</h2>
+            <h2>No display advertising</h2>
             <p>
-              Advertising is currently disabled. At the last review, Google&apos;s European-regulations
-              message was published, the AdSense site review was still &quot;Getting ready,&quot; and no
-              ads were eligible to serve. Application code keeps the AdSense runtime off unless the
-              publisher enablement, certified-CMP readiness, and strict-CSP readiness gates are all
-              enabled. If advertising is activated, it remains excluded from sensitive
-              routes, requires an affirmative advertising choice, and requests non-personalized ads.
-              Non-personalized advertising can still use identifiers for functions such as frequency
-              capping and aggregated reporting; details must be presented by the applicable consent
-              layer before activation.
+              MindCheck Tools does not display ads or load advertising networks on any page.
+              We do not use screening activity, answers, scores, or other consumer health information
+              for advertising, retargeting, or commercial profiling. Disclosed affiliate links and
+              professional services remain separate from sensitive tool journeys. Hosting, optional
+              analytics, voluntary email, and local copies retain the boundaries described in this notice.
             </p>
           </section>
 
@@ -163,7 +159,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             <ul>
               <li>
                 Use <Link href="/cookies">Privacy Choices</Link> to deny or withdraw Google
-                Analytics and advertising. Global Privacy Control also suppresses Vercel Web
+                Analytics. Display advertising is absent regardless of your choice. Global Privacy Control also suppresses Vercel Web
                 Analytics events.
               </li>
               <li>

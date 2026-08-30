@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -302,7 +301,7 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           )}
 
-          {/* Severe-bracket crisis routing (YMYL safety), placed above AdSlot and next steps */}
+          {/* Severe-bracket crisis routing (YMYL safety), placed above next steps */}
           {range.key === "severe" && (
             <div className="bg-crisis-50 dark:bg-crisis-950/30 border-2 border-crisis-300 dark:border-crisis-800 rounded-2xl p-5 sm:p-6 mb-5" role="alert">
               <h3 className="font-serif text-lg font-semibold text-crisis-800 dark:text-crisis-300 mb-2">
@@ -529,7 +528,6 @@ export function PHQ9Client({ faqData }: Props) {
 
           <EmailCapture />
 
-          <AdSlot npa position="Below Results" className="mb-8" />
 
           {/* FAQ */}
           <section className="mb-8">
@@ -559,7 +557,6 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -599,7 +596,6 @@ export function PHQ9Client({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Footer" className="mb-8" />
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">

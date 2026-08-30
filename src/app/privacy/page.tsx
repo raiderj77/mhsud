@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last Reviewed: August 18, 2026
+            Effective Date: January 1, 2026 | Last updated: August 28, 2026 (no-display-advertising policy)
           </p>
         </header>
 
@@ -68,10 +68,9 @@ export default function PrivacyPage() {
               The following controls and optional third-party services may use browser storage on this site:
             </p>
             <ul>
-              <li><strong>MindCheck Tools privacy choices</strong>, our first-party consent control. It stores only your analytics and advertising choices in this browser.</li>
+              <li><strong>MindCheck Tools privacy choices</strong>, our first-party consent control. It stores your Google Analytics choice in this browser. An older advertising choice is discarded when saved preferences are updated.</li>
               <li><strong>Google Analytics (GA4)</strong>, anonymized usage analytics. Measurement ID: G-XKHQN1NJ2Z.</li>
               <li><strong>Vercel Web Analytics</strong>, cookie-free aggregate visitor and page-view measurement on a fixed allowlist of topic-neutral and professional pages. It is excluded from assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes.</li>
-              <li><strong>Google AdSense</strong>, planned advertising provider. AdSense is not currently enabled because the site has not been approved to show ads.</li>
             </ul>
             <p>
               You can manage your choices at any time through the Privacy Choices link in the site footer or through your browser settings.
@@ -79,9 +78,9 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>What data is collected through analytics and advertising?</h2>
+            <h2>What data is collected through analytics?</h2>
             <p>
-              Google Analytics (GA4), when you consent, may process the following categories of information through cookies and standard web protocols on routes that are not classified as sensitive. Google AdSense was disabled at the last review and is protected by separate publisher, certified-CMP, strict-CSP, consent, and route-safety gates.
+              Google Analytics (GA4), when you consent on the homepage, may process the following categories of information through cookies and standard web protocols. It is excluded from all other routes. MindCheck Tools does not display ads or load advertising networks.
             </p>
             <ul>
               <li><strong>Device and browser information:</strong> browser type, operating system, screen resolution, device type</li>
@@ -99,7 +98,7 @@ export default function PrivacyPage() {
               You can opt out of Google Analytics by installing the <strong>Google Analytics Opt-out Browser Add-on</strong> (available at tools.google.com/dlpage/gaoptout) or by using a browser extension that blocks tracking scripts.
             </p>
             <p>
-              <strong>Current application status:</strong> Google Analytics (measurement ID: G-XKHQN1NJ2Z) is available only after consent and is disabled on sensitive routes. Google&apos;s European-regulations message was verified published on August 2, 2026, but the AdSense site review was still &quot;Getting ready.&quot; AdSense stays fail-closed unless publisher enablement, certified-CMP readiness, and strict-CSP readiness are all explicitly confirmed.
+              <strong>Current application status:</strong> Google Analytics is available only on the homepage after consent and is disabled on sensitive routes. Display advertising is absent regardless of consent. Cookie-free aggregate measurement has the separate allowlist and GPC controls described above.
             </p>
           </section>
 
@@ -152,26 +151,15 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>Advertising</h2>
+            <h2>No display advertising</h2>
             <p>
-              Google AdSense (publisher ID: ca-pub-7171402107622932) is configured as a possible advertising provider but was not active at the last review. Application code requires explicit publisher enablement, certified-CMP readiness, and strict-CSP readiness before the AdSense runtime can load.
+              MindCheck Tools does not display ads or load advertising networks. This applies across the site, including public education, screening, result, professional, and crisis pages. We do not use retargeting or health-interest advertising.
             </p>
             <p>
-              <strong>The application is not configured to pass screening answers, scores, results, or browser-local tool entries to advertising systems.</strong> A copy you deliberately create is controlled by your browser, device, and any service you use with that copy. If advertising is enabled, MindCheck Tools requests non-personalized ads, requires an affirmative advertising choice, and excludes sensitive routes. Non-personalized ads can still use cookies or device identifiers for purposes such as frequency capping and aggregated reporting, which is why the advertising service remains consent-gated.
+              <strong>The application is not configured to pass screening answers, scores, results, or browser-local tool entries to advertising systems.</strong> Ordinary hosting, optional analytics, voluntary email, and local copies still have the privacy boundaries described in this policy. No display ads does not mean zero data collection.
             </p>
             <p>
-              Ads are never placed adjacent to crisis resources (988 Suicide &amp; Crisis Lifeline, Crisis Text Line, SAMHSA Helpline). We will never place ads in a way that exploits distress or interferes with access to help.
-            </p>
-            <p>
-              You can opt out of personalized advertising by visiting{" "}
-              <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">
-                My Ad Center
-              </a>{" "}
-              or the{" "}
-              <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">
-                Digital Advertising Alliance opt-out portal
-              </a>
-              .
+              Separately disclosed affiliate links and professional services are not display advertising. They must not use answers, scores, or sensitive tool activity to target an offer. Essential screening context, crisis resources, and safety information remain free. External destinations have their own privacy practices.
             </p>
           </section>
 
@@ -217,7 +205,7 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on your affirmative choice in our first-party privacy control before enabling Google Analytics or advertising storage. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages, uses aggregate reporting without persistent identifiers, and is suppressed when Global Privacy Control is active.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. We rely on your affirmative choice in our first-party privacy control before enabling Google Analytics. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages, uses aggregate reporting without persistent identifiers, and is suppressed when Global Privacy Control is active.
             </p>
             <p>
               <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
@@ -243,7 +231,7 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing Google Analytics, Vercel Web Analytics events, and advertising services; you do not need to interact with the privacy-choice dialog for those services to remain off. Ordinary hosting and security processing still occurs to deliver and protect the site.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing Google Analytics and Vercel Web Analytics events; you do not need to interact with the privacy-choice dialog for those services to remain off. Display advertising is absent regardless of consent or GPC. Ordinary hosting and security processing still occurs to deliver and protect the site.
             </p>
             <p>
               <strong>We do not sell sensitive personal data.</strong> We also do not use consumer health data for targeted advertising or profiling.
@@ -296,7 +284,6 @@ export default function PrivacyPage() {
 
             <h3>How We Use Your Information</h3>
             <ul>
-              <li>To display non-personalized advertising through Google AdSense after approval and consent, if advertising is enabled in the future</li>
               <li>To analyze site traffic and improve user experience via analytics</li>
               <li>To maintain site security and prevent fraud</li>
               <li>To send occasional resource emails when a subscriber has expressly consented</li>
@@ -315,9 +302,9 @@ export default function PrivacyPage() {
 
             <h3>Do Not Sell or Share My Personal Information</h3>
             <p>
-              We do not sell personal information. To opt out of sharing for advertising purposes,
-              you may use a <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
-              browser. Our first-party Privacy Choices control also provides separate analytics and advertising choices.
+              We do not sell personal information or use it for targeted advertising. You may use a
+              <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
+              browser to suppress analytics. Our first-party Privacy Choices control also lets you deny or withdraw Google Analytics consent.
             </p>
 
             <h3>How to Submit a Request</h3>
@@ -344,8 +331,8 @@ export default function PrivacyPage() {
               required by the applicable law.
             </p>
             <p>
-              Regardless of location, our Privacy Choices control can keep Google Analytics and
-              advertising off. We honor Global Privacy Control by disabling those services and
+              Regardless of location, our Privacy Choices control can keep Google Analytics
+              off. We honor Global Privacy Control by disabling Google Analytics and
               suppressing Vercel Web Analytics events, do not sell personal information, and do not
               use consumer health data for targeted advertising.
             </p>

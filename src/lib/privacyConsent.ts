@@ -1,22 +1,16 @@
 export const CONSENT_STORAGE_KEY = "mindchecktools:privacy-consent";
 export const CONSENT_EVENT = "mindcheck:consent-change";
 export const OPEN_CONSENT_EVENT = "mindcheck:open-privacy-choices";
-export const ADS_READY_EVENT = "mindcheck:ads-ready";
 export const PRIVACY_CHOICE_STATUS_EVENT = "mindcheck:privacy-choice-status";
 
 export type PrivacyConsent = {
-  version: 2;
+  version: 3;
   analytics: boolean;
-  advertising: boolean;
 };
 
 export type PrivacyChoiceStatus = {
   completed: boolean;
   dialogOpen: boolean;
-};
-
-export type AdsByGoogleQueue = unknown[] & {
-  requestNonPersonalizedAds?: 1;
 };
 
 declare global {
@@ -26,7 +20,22 @@ declare global {
     __mindcheckLastTrackedPath?: string;
     dataLayer?: unknown[][];
     gtag?: (...args: unknown[]) => void;
-    adsbygoogle?: AdsByGoogleQueue;
+  }
+}
+
+// Preserve only a valid, explicit analytics choice from the old two-choice
+// format. Advertising permission is discarded, never mapped to analytics.
+export function parseStoredPrivacyConsent(raw: string | null): PrivacyConsent | null {
+  try {
+    const parsed: unknown = JSON.parse(raw || "null");
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+    const choice = parsed as Record<string, unknown>;
+    if (typeof choice.analytics !== "boolean") return null;
+    if (choice.version === 2 && typeof choice.advertising !== "boolean") return null;
+    if (choice.version !== 2 && choice.version !== 3) return null;
+    return { version: 3, analytics: choice.analytics };
+  } catch {
+    return null;
   }
 }
 

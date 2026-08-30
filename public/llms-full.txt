@@ -3,7 +3,7 @@
 > MindCheck Tools provides browser-based screening instruments, self-reflection tools, calculators, guided exercises, and educational guides.
 > Some pages implement published instruments; rights-limited instruments remain public as educational information without questionnaire administration or scoring. Other tools are educational or self-reflection resources. None provides a diagnosis or medical advice.
 
-All interactive answers and scores are processed locally in the browser. Health-topic, instrument, result, crisis, privacy, and youth pages do not load optional analytics or advertising. Consented optional services are limited to the topic-neutral homepage. No account is required to use the tools.
+All interactive answers and scores are processed locally in the browser. MindCheck Tools does not display ads or load advertising networks. Google Analytics is opt-in and homepage-only; separate cookie-free aggregate measurement is limited to an explicit allowlist of non-sensitive public pages and is suppressed by Global Privacy Control. Health-tool, instrument, result, crisis, and youth routes are excluded from analytics. Ordinary hosting requests still occur. No account is required to use the tools.
 
 ## Editorial trust and scope
 

@@ -44,7 +44,7 @@ jobs:
           # Files may live in public/ (Next.js layout) OR at repo root (flat static sites).
           # We accept either location.
           FAILED=0
-          for STEM in ads robots llms; do
+          for STEM in robots llms; do
             if [ -f "public/${STEM}.txt" ]; then
               echo "✓ public/${STEM}.txt"
             elif [ -f "${STEM}.txt" ]; then
@@ -56,23 +56,16 @@ jobs:
           done
           [ "$FAILED" -eq 0 ] || exit 1
 
-      # ── Check 3: AdSense publisher ID ───────────────────────────
-      - name: AdSense publisher ID in ads.txt
+      # ── Check 3: MindCheckTools permanent no-display-ad rule ────
+      - name: Display-ad artifacts remain absent
         run: |
-          ADS_FILE=""
-          if [ -f public/ads.txt ]; then ADS_FILE="public/ads.txt"
-          elif [ -f ads.txt ]; then ADS_FILE="ads.txt"
-          fi
-          if [ -z "$ADS_FILE" ]; then
-            echo "::warning::Skipping AdSense check — ads.txt missing (caught above)"
-            exit 0
-          fi
-          if ! grep -qF "pub-7171402107622932" "$ADS_FILE"; then
-            echo "::error file=$ADS_FILE::ADSENSE FAIL — $ADS_FILE must contain 'pub-7171402107622932'."
-            cat "$ADS_FILE"
-            exit 1
-          fi
-          echo "✓ AdSense publisher ID confirmed in $ADS_FILE"
+          for FILE in public/ads.txt ads.txt src/components/AdSlot.tsx; do
+            if [ -f "$FILE" ]; then
+              echo "::error file=$FILE::MindCheckTools does not permit display advertising. Remove this artifact."
+              exit 1
+            fi
+          done
+          echo "✓ No display-ad seller declaration or component"
 
       # ── Check 4: AI crawler rules in robots.txt ─────────────────
       - name: AI crawler rules in robots.txt

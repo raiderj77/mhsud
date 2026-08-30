@@ -24,16 +24,14 @@ test("sensitive routes receive no-store and no-referrer response headers", async
 });
 
 test("topical routes bypass tracking, advertising, affiliates, and assessment events", async () => {
-  const [consent, ads, therapy, events] = await Promise.all([
+  const [consent, therapy, events] = await Promise.all([
     read("../src/components/ConsentAnalytics.tsx"),
-    read("../src/components/AdSlot.tsx"),
     read("../src/components/TherapyCTA.tsx"),
     read("../src/lib/assessmentAnalytics.ts"),
   ]);
-  assert.match(consent, /optionalServicesAllowed[\s\S]*analytics: false, advertising: false/);
+  assert.match(consent, /optionalServicesAllowed[\s\S]*analytics: false/);
   assert.match(consent, /removeOptionalServiceScripts/);
-  assert.match(ads, /!routeAllowed \|\| !runtimeEnabled/);
-  assert.match(ads, /NEXT_PUBLIC_GOOGLE_CERTIFIED_CMP_READY === "true"/);
+  assert.doesNotMatch(consent, /loadNonPersonalizedAds|adsbygoogle|advertising: true/);
   assert.match(therapy, /isOptionalServicesAllowedRoute\(pathname\)/);
   assert.match(events, /isSensitiveBrowserLocation\(\)/);
 });
@@ -78,7 +76,6 @@ test("withdrawing optional consent reloads a clean document", async () => {
   const consent = await read("../src/components/ConsentAnalytics.tsx");
   assert.match(consent, /const previous = window\.__mindcheckConsent/);
   assert.match(consent, /previous\.analytics && !choice\.analytics/);
-  assert.match(consent, /previous\.advertising && !choice\.advertising/);
   assert.match(consent, /if \(withdrewOptionalService\) window\.location\.reload\(\)/);
 });
 

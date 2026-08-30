@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
@@ -542,7 +541,6 @@ export function BigFiveClient({ faqData }: Props) {
               </div>
             </div>
 
-            <AdSlot npa position="After Results Header" className="mb-5" />
 
             {/* Radar Chart */}
             <div className="card p-5 sm:p-6 mb-5">
@@ -610,7 +608,6 @@ export function BigFiveClient({ faqData }: Props) {
               })}
             </div>
 
-            <AdSlot npa position="Mid Results" className="mb-5" />
 
             {/* Print-only footer */}
             <div className="hidden print:block text-center text-xs text-neutral-400 mt-4 pb-4 border-t border-neutral-200 pt-3">
@@ -760,7 +757,6 @@ export function BigFiveClient({ faqData }: Props) {
             </Link>
           </div>
 
-          <AdSlot npa position="Below Results" className="mb-8" />
 
           {/* FAQ */}
           <section className="mb-8">
@@ -789,7 +785,6 @@ export function BigFiveClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Mid Content" className="mb-8" />
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">
@@ -831,7 +826,6 @@ export function BigFiveClient({ faqData }: Props) {
             </div>
           </section>
 
-          <AdSlot npa position="Footer" className="mb-8" />
 
           {/* Attribution */}
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
