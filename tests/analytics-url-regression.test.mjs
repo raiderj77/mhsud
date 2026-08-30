@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { runInNewContext } from "node:vm";
 import test from "node:test";
 import ts from "typescript";
@@ -12,14 +12,16 @@ const functionSource = (source, name) => {
   return ts.transpile(source.slice(start, end + 2));
 };
 
-test("GA page locations strip every query and fragment, including ordinary campaign text", async () => {
-  const source = await read("src/components/ConsentAnalytics.tsx");
-  const implementation = functionSource(source, "safePageLocation");
-  for (const suffix of ["?utm_source=fixture&utm_campaign=example#section", "?unknown=fixture", "#example", ""]) {
-    assert.equal(runInNewContext(`${implementation}; safePageLocation()`, {
-      URL, window: { location: { href: `https://mindchecktools.com/${suffix}` } },
-    }), "https://mindchecktools.com/");
+test("Google analytics and consent runtimes remain absent", async () => {
+  for (const path of [
+    "../src/components/ConsentAnalytics.tsx",
+    "../src/lib/privacyConsent.ts",
+    "../src/lib/privacySafeAcquisitionAnalytics.ts",
+  ]) {
+    await assert.rejects(access(new URL(path, import.meta.url)), { code: "ENOENT" });
   }
+  const layout = await read("src/app/layout.tsx");
+  assert.doesNotMatch(layout, /ConsentAnalytics|gtag|googletagmanager|G-[A-Z0-9]{8,}/);
 });
 
 test("GPC and unknown browser state block aggregate analytics", async () => {
@@ -32,25 +34,13 @@ test("GPC and unknown browser state block aggregate analytics", async () => {
   assert.match(source, /if \(!privacyChecked/);
 });
 
-test("GA refuses decorated URLs and rechecks consent before initialization", async () => {
-  const source = await read("src/components/ConsentAnalytics.tsx");
-  const implementation = functionSource(source, "loadGoogleAnalytics");
-  for (const [search, hash, gpc] of [["?utm_source=fixture", "", false], ["", "#fixture", false], ["", "", true]]) {
-    // No DOM or gtag is provided: reaching script initialization would fail.
-    runInNewContext(`${implementation}; loadGoogleAnalytics('/')`, {
-      window: { location: { search, hash } }, globalPrivacyControlIsActive: () => gpc,
-    });
-  }
-  assert.match(source, /window\.__mindcheckConsent\?\.analytics !== true/);
-  assert.match(source, /send_page_view: false,[\s\S]*?page_location: safePageLocation\(\)/);
-});
-
-test("public-to-sensitive navigation also disposes of the aggregate runtime", async () => {
+test("public-to-sensitive navigation disposes of the aggregate runtime", async () => {
   const source = await read("src/components/SensitiveRouteLifecycle.tsx");
   assert.match(source, /isPrivacySafeAggregateAnalyticsRoute\(pathname\)/);
-  assert.match(source, /!aggregateServicesAllowed && aggregateScriptLoaded/);
+  assert.match(source, /!aggregateAllowed && aggregateScriptLoaded/);
   assert.match(source, /aggregateScriptLoaded\.remove\(\)/);
-  assert.match(source, /optionalServicesAllowed \|\| aggregateServicesAllowed/);
+  assert.match(source, /aggregateAllowed/);
+  assert.match(source, /window\.location\.assign\(destination\.href\)/);
 });
 
 test("aggregate event filter strips URL details and rejects excluded routes and GPC", async () => {

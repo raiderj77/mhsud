@@ -8,6 +8,6 @@ test("the public footer states the current advertising state accurately", async 
     "utf8",
   );
 
-  assert.match(footer, /Advertising is currently disabled\./);
-  assert.doesNotMatch(footer, /may display ads/i);
+  assert.match(footer, /MindCheck Tools does not display ads\./);
+  assert.doesNotMatch(footer, /may display ads|currently disabled/i);
 });

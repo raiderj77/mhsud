@@ -338,7 +338,7 @@ main li a:not([class*="btn-"]) {
     display: none !important;
   }
 
-  /* Hide anything tagged .no-print (Navbar, Footer, AdSlots, etc.) */
+  /* Hide anything tagged .no-print (Navbar, Footer, and other screen-only UI). */
   .no-print {
     display: none !important;
   }

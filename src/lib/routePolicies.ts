@@ -33,7 +33,7 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
 // Optional third-party services use a positive allowlist. A new route is
 // therefore tag-free by default until privacy, rights, crisis, and clinical
 // review explicitly clear it. Search Console remains the source of page-level
-// acquisition data; consented GA is limited to the topic-neutral homepage.
+// acquisition data. GA4 is not used by MindCheckTools.
 const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set(["/"]);
 
 // Cookie-free aggregate measurement uses a separate, narrow allowlist. These

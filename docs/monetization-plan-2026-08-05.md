@@ -1,5 +1,7 @@
 # MindCheckTools Monetization Plan
 
+> **Historical document — superseded August 27, 2026.** All display-ad recommendations, revenue assumptions, approval tasks and activation plans below are withdrawn for MindCheckTools. Preserve this document as dated evidence, not current instructions. See `docs/no-display-advertising.md`.
+
 **Status:** Production-aligned release-control artifact, researched 2026-08-05 and verified 2026-08-06
 
 **Scope:** Strict-YMYL monetization and privacy controls for `mindchecktools.com`

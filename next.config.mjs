@@ -101,6 +101,7 @@ const nextConfig = {
               "font-src 'self'",
               "img-src 'self' data: https:",
               "connect-src 'self'",
+              "frame-src 'none'",
             ].join("; "),
           },
         ],

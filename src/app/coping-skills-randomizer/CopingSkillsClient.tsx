@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -211,7 +210,6 @@ export function CopingSkillsClient({ faqData }: Props) {
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
-      <AdSlot position="coping-top" />
 
       {/* ─── CATEGORY FILTERS ──────────────────────────── */}
       <section className="mb-6" aria-label="Category filters">
@@ -320,7 +318,6 @@ export function CopingSkillsClient({ faqData }: Props) {
         </section>
       )}
 
-      <AdSlot position="coping-mid" />
 
       {/* ─── BROWSE ALL ────────────────────────────────── */}
       <section className="mb-12">

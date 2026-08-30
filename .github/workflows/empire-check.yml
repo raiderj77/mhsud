@@ -49,10 +49,12 @@ jobs:
 
       - name: Display ads and GA stay removed
         run: |
-          if [ -f public/ads.txt ] || [ -f ads.txt ]; then
-            echo "::error::MindCheckTools does not use display advertising. ads.txt must not exist."
-            exit 1
-          fi
+          for FILE in public/ads.txt ads.txt src/components/AdSlot.tsx; do
+            if [ -f "$FILE" ]; then
+              echo "::error file=$FILE::MindCheckTools does not permit display advertising. Remove this artifact."
+              exit 1
+            fi
+          done
 
           if grep -rEIn \
             --include='*.ts' --include='*.tsx' --include='*.js' --include='*.mjs' \

@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Accessibility Statement</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: February 17, 2026</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 28, 2026 (no-display-advertising policy)</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -85,7 +85,7 @@ export default function AccessibilityPage() {
               While we strive for full accessibility, we are aware of the following limitations:
             </p>
             <p>
-              <strong>Third-party content:</strong> When advertising becomes active on our site, ad content is provided by third-party networks. We cannot guarantee that all ad content meets WCAG AA standards, though we will select ad partners with accessibility commitments where possible.
+              <strong>No display advertising:</strong> MindCheck Tools does not display ads or load advertising networks. This does not establish that every page or interaction meets accessibility standards; please report barriers through the contact options below.
             </p>
             <p>
               <strong>External links:</strong> Our <Link href="/crisis-resources">crisis resources page</Link> links to external hotlines and organizations. We cannot control the accessibility of those external websites, though we link only to established, reputable services.

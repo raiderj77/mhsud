@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -227,7 +226,6 @@ export function StandardDrinksClient({ faqData }: Props) {
         )}
       </div>
 
-      <AdSlot position="Mid Tool" className="mb-6" />
 
       {/* Presets Comparison */}
       <div id="printable-results" className="card p-5 sm:p-6 mb-6">
@@ -395,7 +393,6 @@ export function StandardDrinksClient({ faqData }: Props) {
         </Link>
       </div>
 
-      <AdSlot position="Below Results" className="mb-8" />
 
       {/* Educational Content */}
       <section className="mb-8">
@@ -452,7 +449,6 @@ export function StandardDrinksClient({ faqData }: Props) {
         </div>
       </section>
 
-      <AdSlot position="Mid Content" className="mb-8" />
 
       {/* Related Tools */}
       <section className="mb-8">
@@ -471,7 +467,6 @@ export function StandardDrinksClient({ faqData }: Props) {
         </div>
       </section>
 
-      <AdSlot position="Footer" className="mb-8" />
 
       {/* Attribution */}
       <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">

@@ -1,5 +1,11 @@
 # Privacy-safe measurement and affiliate readiness
 
+> Historical measurement record. Google Analytics, its consent runtime, and the
+> `private_tool_launch` event were removed by the August 29, 2026 privacy cleanup.
+> Current measurement is limited to GPC-suppressed, URL-minimized Vercel Web
+> Analytics on an explicit non-sensitive route allowlist. The affiliate controls
+> below remain applicable.
+
 Date: 2026-08-14
 
 Status: The Bookshop.org application was owner-approved and submitted on 2026-08-16. Bookshop.org confirmed acceptance on 2026-08-17. No affiliate link, public book list, analytics-account change, publication, deployment, or monetization activation is authorized by this document.

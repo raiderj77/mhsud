@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -241,7 +240,6 @@ export function DailyCheckInClient({ faqData }: Props) {
       </p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
-      <AdSlot position="daily-top" />
 
       {/* ─── CHECK-IN FORM ─────────────────────────────── */}
       {view === "form" && (
@@ -518,7 +516,6 @@ export function DailyCheckInClient({ faqData }: Props) {
         </div>
       )}
 
-      <AdSlot position="daily-mid" />
 
       {/* ─── EDUCATIONAL CONTENT ───────────────────────── */}
       <section className="prose-custom mb-12">

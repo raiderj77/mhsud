@@ -63,6 +63,18 @@ export function SensitiveRouteLifecycle() {
 
     document.body.dataset.sensitiveRoute = "true";
 
+    // Remove sensitive responses cached by an older service worker before the
+    // current network-only policy reached this browser.
+    if ("caches" in window) {
+      void caches.keys().then((names) =>
+        Promise.all(
+          names
+            .filter((name) => name.startsWith("mindcheck-tools-"))
+            .map((name) => caches.delete(name)),
+        ),
+      );
+    }
+
     // Sensitive routes never retain query strings or fragments that could
     // accidentally encode or disclose an answer, score, or result.
     if (window.location.search || window.location.hash) {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, createMetadata, SITE_URL } from "@/lib/metadata";
 
-const LAST_REVIEWED = "2026-08-28";
+const LAST_UPDATED = "2026-08-28";
 
 export const metadata: Metadata = createMetadata({
   path: "/consumer-health-data-privacy",
@@ -35,10 +35,12 @@ export default function ConsumerHealthDataPrivacyPage() {
             Consumer Health Data Privacy Notice
           </h1>
           <p className="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-300">
-            This notice explains how MindCheck Tools handles information that may be treated as consumer health data under laws such as Washington&apos;s My Health My Data Act. It supplements our <Link href="/privacy">Privacy Policy</Link>.
+            This notice explains how MindCheck Tools handles information that may be treated as
+            consumer health data under laws such as Washington&apos;s My Health My Data Act. It
+            supplements our <Link href="/privacy">Privacy Policy</Link>.
           </p>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-            Last reviewed: <time dateTime={LAST_REVIEWED}>August 28, 2026</time>
+            Last updated: <time dateTime={LAST_UPDATED}>August 28, 2026</time> (no-display-advertising policy)
           </p>
         </header>
 
@@ -48,10 +50,16 @@ export default function ConsumerHealthDataPrivacyPage() {
               The most important distinction
             </h2>
             <p>
-              <strong>Questionnaire answers, scores, journal entries, safety plans, and other browser-local tool entries are not intentionally collected by the MindCheck Tools application.</strong> Screening and scoring happen in your browser. Tools that intentionally save entries in the browser say so before use.
+              <strong>Questionnaire answers, scores, journal entries, safety plans, and locally
+              saved tool data are not collected by MindCheck Tools.</strong> Screening and scoring
+              happen in your browser. Tools that intentionally save entries in your browser say so
+              before use.
             </p>
             <p>
-              Visiting a mental-health or substance-use page can itself suggest an interest in a health topic. Ordinary hosting requests therefore deserve careful treatment even though they do not contain questionnaire answers or scores. This notice describes that limited request and service data conservatively.
+              Visiting a mental-health or substance-use page can itself suggest an interest in a
+              health topic. Ordinary hosting requests therefore deserve careful treatment even
+              though they do not contain your answers or score. This notice describes that limited
+              request and service data conservatively.
             </p>
           </section>
 
@@ -59,16 +67,29 @@ export default function ConsumerHealthDataPrivacyPage() {
             <h2>Categories collected and why</h2>
             <ul>
               <li>
-                <strong>Website request data:</strong> requested path, IP address, user-agent or browser information, time, response status, and security events. Vercel processes this information to deliver the page, prevent abuse, diagnose failures, and protect the service. A health-topic path may indicate an interest in that topic.
+                <strong>Website request data:</strong> requested path, IP address, user-agent or
+                browser information, time, response status, and security events. Vercel processes
+                this information to deliver the page, prevent abuse, diagnose failures, and protect
+                the service. A health-topic path may indicate an interest in that topic.
               </li>
               <li>
-                <strong>Cookie-free aggregate measurement:</strong> Vercel Web Analytics counts visits only on a fixed allowlist of topic-neutral and professional pages. Query strings, fragments, and custom screening events are excluded. Global Privacy Control suppresses Web Analytics. Assessment, result, crisis, condition-specific, and interactive-tool routes do not send Web Analytics events.
+                <strong>Cookie-free aggregate measurement:</strong> Vercel Web Analytics counts
+                visitors and page views only on a positive allowlist of topic-neutral and
+                professional pages. Query strings, fragments, and custom events are excluded;
+                Global Privacy Control suppresses events. Assessment, result, crisis,
+                condition-specific, blog-detail, and interactive-tool routes do not send Web
+                Analytics events.
               </li>
               <li>
-                <strong>Resource-email subscription:</strong> if you independently subscribe, we collect the email address and affirmative subscription choice. The subscription payload is designed to exclude source page, tool name, answers, score, diagnosis, and crisis information.
+                <strong>Resource-email subscription:</strong> if you independently subscribe, we
+                collect the email address and your affirmative subscription choice. We intentionally
+                exclude the source page, tool name, answers, score, diagnosis, and crisis information.
+                Subscription forms are suppressed on sensitive interactive routes.
               </li>
               <li>
-                <strong>Messages you send:</strong> we receive the contents of messages you choose to send. Please do not email screening answers, diagnoses, or other sensitive health details.
+                <strong>Messages you send:</strong> we receive the contents of messages you choose
+                to send. Please do not email screening answers, diagnoses, or other sensitive health
+                details.
               </li>
             </ul>
           </section>
@@ -76,7 +97,10 @@ export default function ConsumerHealthDataPrivacyPage() {
           <section>
             <h2>Sources</h2>
             <p>
-              Request data comes from your browser, device, and network when you visit the site. Subscription and contact information comes directly from you when you choose to submit it. We do not buy health data, enrich visitor profiles with data-broker health information, or infer a diagnosis from site activity.
+              Request and analytics data comes from your browser, device, and network when you visit
+              the site. Subscription and contact information comes directly from you when you choose
+              to submit it. We do not buy health data, enrich visitor profiles with broker data, or
+              infer a diagnosis from site activity.
             </p>
           </section>
 
@@ -85,24 +109,37 @@ export default function ConsumerHealthDataPrivacyPage() {
             <p>We do not sell consumer health data. Limited information is processed by:</p>
             <ul>
               <li>
-                <strong>Vercel:</strong> website request and security information for hosting, delivery, reliability, and abuse prevention. Vercel also processes cookie-free aggregate events from the narrow neutral-route allowlist.
+                <strong>Vercel:</strong> website request and security information, including the
+                requested path, for hosting, delivery, reliability, and abuse prevention. Vercel
+                also processes cookie-free aggregate events from the narrow non-sensitive route
+                allowlist. Its documented visitor hash resets after 24 hours.
               </li>
               <li>
-                <strong>Loops:</strong> an email address submitted with affirmative resource-email consent. The provider payload is designed not to include tool name, source page, answer, score, diagnosis, or crisis information.
+                <strong>Loops:</strong> an email address submitted with affirmative resource-email
+                consent. No tool name, source page, answer, score, diagnosis, or crisis information
+                is included in the provider payload.
               </li>
               <li>
-                <strong>Email delivery providers:</strong> message contents and routing metadata when you choose to contact us by email.
+                <strong>Email delivery providers:</strong> message contents and routing metadata when
+                you choose to contact us by email.
               </li>
             </ul>
             <p>
-              External links do not append screening answers or scores. Sensitive health routes use no-referrer controls where appropriate. A destination may collect information after you choose to visit it under its own privacy policy.
+              No MindCheck Tools corporate affiliate receives consumer health data. External links,
+              including disclosed affiliate links, use a no-referrer policy and do not append answers
+              or scores. The destination may collect information after you choose to visit it under
+              its own privacy policy.
             </p>
           </section>
 
           <section>
             <h2>No display advertising</h2>
             <p>
-              MindCheck Tools does not use display advertising. The application does not load Google AdSense, retargeting pixels, behavioral-advertising scripts, or an advertising consent runtime. Consumer health data is not used for targeted advertising or profiling.
+              MindCheck Tools does not display ads or load advertising networks on any page.
+              We do not use screening activity, answers, scores, or other consumer health information
+              for advertising, retargeting, or commercial profiling. Disclosed affiliate links and
+              professional services remain separate from sensitive tool journeys. Hosting, optional
+              analytics, voluntary email, and local copies retain the boundaries described in this notice.
             </p>
           </section>
 
@@ -110,42 +147,62 @@ export default function ConsumerHealthDataPrivacyPage() {
             <h2>Your choices and requests</h2>
             <ul>
               <li>
-                Global Privacy Control suppresses Vercel Web Analytics. See the <Link href="/cookies">Cookie &amp; Browser Storage Policy</Link> for browser controls.
+                Use browser controls to clear local storage and cookies. MindCheck Tools does not use Google Analytics or display advertising. Global Privacy Control suppresses Vercel Web Analytics events.
               </li>
               <li>
-                Clear or reset browser-local tool data on the device where it is stored. MindCheck Tools cannot retrieve or delete information that remains only in your browser.
+                Clear or reset browser-local tool data on the device where it is stored. MindCheck
+                Tools cannot retrieve or delete data that remains only in your browser.
               </li>
               <li>
-                Email <strong>privacy@mindchecktools.com</strong> with the subject &quot;Consumer Health Data Request&quot; to ask whether we hold covered data about you, request access or deletion, request information about third parties or affiliates with which covered data has been shared or sold, or withdraw consent where applicable. We may request limited information needed to authenticate the request.
+                Email <strong>privacy@mindchecktools.com</strong> with the subject
+                &quot;Consumer Health Data Request&quot; to ask whether we hold covered data about you,
+                request access or deletion, request a list of the third parties and affiliates with
+                which covered data has been shared or sold, or withdraw consent. You do not need to
+                create an account. We may request limited information needed to authenticate the request.
               </li>
             </ul>
             <p>
-              We will respond within the period required by applicable law. If an applicable law provides an appeal right and a request is denied, you may reply with the subject &quot;Consumer Health Data Appeal.&quot;
+              We will respond without undue delay and within the period required by applicable law.
+              If we deny a request, you may appeal by replying with the subject &quot;Consumer Health
+              Data Appeal.&quot; We will explain the outcome and, when required, how to contact the
+              appropriate regulator.
             </p>
           </section>
 
           <section>
             <h2>Retention and security</h2>
             <p>
-              Browser-local health entries remain on your device until you reset the tool, clear site data, or the browser removes them. Hosting and security log retention follows Vercel settings and legitimate security, backup, and legal needs. Aggregate Web Analytics retention follows the Vercel project and plan settings. Newsletter addresses remain while needed for the subscription, subject to provider suppression, security, backup, and legal records.
+              Browser-local health entries remain on your device until you reset the tool, clear site
+              data, or the browser removes them. Hosting/security log retention follows Vercel&apos;s
+              configured service limits and legitimate security or legal needs. Vercel documents that its Web Analytics visitor
+              hash resets after 24 hours; aggregate reporting retention follows the project and plan
+              settings. Newsletter addresses remain while subscribed or until no longer needed,
+              subject to limited suppression, security, backup, and legal records.
             </p>
             <p>
-              Sensitive routes exclude optional Web Analytics and use privacy controls including no-referrer behavior, removal of query strings and fragments from browser history, and service-worker rules that do not cache sensitive requests.
+              Sensitive routes use no-store and no-referrer response controls, bypass optional
+              analytics, advertising, affiliate calls to action, and service-worker caching, and remove
+              query strings or fragments from browser history.
             </p>
           </section>
 
           <section>
             <h2>Changes and contact</h2>
             <p>
-              We will update this notice when site behavior materially changes or when notice is required before a materially different collection, use, or sharing practice. Questions and requests can be sent to <strong>privacy@mindchecktools.com</strong>.
+              We will update this notice before collecting, using, or sharing an additional category
+              of consumer health data or using it for a materially different purpose when notice or
+              consent is required. Questions and requests can be sent to
+              <strong> privacy@mindchecktools.com</strong>.
             </p>
             <p>
-              For official information, see the Washington Legislature&apos;s{" "}
-              <a href="https://app.leg.wa.gov/RCW/default.aspx?cite=19.373" target="_blank" rel="noopener noreferrer">
+              For official information, see the Washington Legislature&apos;s{
+              " "
+              }<a href="https://app.leg.wa.gov/RCW/default.aspx?cite=19.373" target="_blank" rel="noopener noreferrer">
                 My Health My Data Act
               </a>{" "}
-              and the{" "}
-              <a href="https://www.atg.wa.gov/protecting-washingtonians-personal-health-data-and-privacy" target="_blank" rel="noopener noreferrer">
+              and the{
+              " "
+              }<a href="https://www.atg.wa.gov/protecting-washingtonians-personal-health-data-and-privacy" target="_blank" rel="noopener noreferrer">
                 Washington Attorney General&apos;s guidance
               </a>.
             </p>

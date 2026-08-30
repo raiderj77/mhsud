@@ -243,7 +243,7 @@ export function Footer() {
             In the United States, call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline), available 24/7. Outside the U.S., use local crisis services.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center mt-3">
-            Advertising is currently disabled. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
+            MindCheck Tools does not display ads. &middot; &copy; {new Date().getFullYear()} MindCheck Tools. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
             <FooterCookieButton />

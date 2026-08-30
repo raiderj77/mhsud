@@ -8,7 +8,6 @@ import {
   SITE_URL,
 } from "@/lib/metadata";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
-import { AdSlot } from "@/components/AdSlot";
 
 const PAGE_URL = `${SITE_URL}/how-to-talk-to-your-doctor-about-mental-health`;
 
@@ -223,7 +222,6 @@ export default function DoctorGuidePage() {
             </p>
           </section>
 
-          <AdSlot position="Below Results" className="my-8" />
 
           {/* Section 3: What to Expect */}
           <section>
@@ -291,7 +289,6 @@ export default function DoctorGuidePage() {
             </div>
           </section>
 
-          <AdSlot position="Mid Content" className="my-8" />
 
           {/* Section 6: After the Appointment */}
           <section>

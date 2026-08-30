@@ -37,9 +37,10 @@ function walkFiles(dir, pattern = /\.(ts|tsx|js|mjs)$/) {
 }
 
 check("No display-ad or GA runtime", () => {
-  const adsTxt = resolve(ROOT, "public/ads.txt");
-  if (existsSync(adsTxt)) fail("public/ads.txt must not exist; MindCheckTools does not use display advertising");
-  else pass("ads.txt absent");
+  for (const file of ["public/ads.txt", "ads.txt", "src/components/AdSlot.tsx"]) {
+    if (existsSync(resolve(ROOT, file))) fail(`Display-ad artifact must not exist: ${file}`);
+  }
+  if (failures === 0) pass("Ad seller files and component absent");
 
   const runtimeFiles = [
     ...walkFiles(resolve(ROOT, "src")),

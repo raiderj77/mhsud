@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
@@ -220,7 +219,6 @@ export function RelapsePlanClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
       </header>
 
-      <AdSlot position="plan-top" className="mb-6" />
 
       {/* Builder Sections */}
       {!showPlan && (
@@ -551,7 +549,6 @@ export function RelapsePlanClient({ faqData }: Props) {
             />
           )}
 
-          <AdSlot position="plan-results" className="mt-6 print:hidden" />
         </div>
       )}
 
