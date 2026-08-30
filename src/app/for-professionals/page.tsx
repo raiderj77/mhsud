@@ -4,7 +4,7 @@ import { breadcrumbJsonLd, createMetadata, faqJsonLd, SITE_NAME, SITE_URL } from
 
 const PAGE_PATH = "/for-professionals";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const LAST_UPDATED = "2026-08-22";
+const LAST_UPDATED = "2026-08-29";
 const INQUIRY_SUBJECT = "Privacy and Screening Readiness Review inquiry";
 const INQUIRY_BODY = `Organization and website URL:
 Your name and role:
@@ -20,7 +20,7 @@ const FAQS = [
   {
     question: "Does the review require patient records or assessment results?",
     answer:
-      "No. The proposed review uses public pages or a fictional, non-sensitive staging environment. Do not send patient records, assessment answers, scores, diagnoses, or other health information.",
+      "No. The review uses public pages or a fictional, non-sensitive staging environment. Do not send patient records, assessment answers, scores, diagnoses, or other health information.",
   },
   {
     question: "Is this a legal, clinical, security, or accessibility certification?",
@@ -36,6 +36,11 @@ const FAQS = [
     question: "What does the deliverable include?",
     answer:
       "A concise readiness report with a route inventory, evidence and rights register, prioritized findings, and a release-gate checklist. The founding scope covers up to five public routes and one follow-up email.",
+  },
+  {
+    question: "How is payment handled?",
+    answer:
+      "MindCheck Tools does not collect payment on this website. If the review is a fit, the written scope, price, timing, deliverables, payment terms, and cancellation terms are confirmed before work begins. Do not email card or bank details, patient records, or other sensitive health information.",
   },
 ];
 
@@ -76,7 +81,6 @@ function serviceJsonLd() {
       price: "495",
       priceCurrency: "USD",
       description: "Founding-client fixed price for the stated scope; work begins only after written scope confirmation.",
-      availability: "https://schema.org/LimitedAvailability",
     },
     dateModified: LAST_UPDATED,
   };
@@ -219,7 +223,7 @@ export default function ForProfessionalsPage() {
 
         <section aria-labelledby="review-areas" className="mb-14">
           <h2 id="review-areas" className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-6">
-            What the proposed review covers
+            What the review covers
           </h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {REVIEW_AREAS.map((area) => (
@@ -248,6 +252,44 @@ export default function ForProfessionalsPage() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section aria-labelledby="fit" className="mb-14 max-w-4xl">
+          <h2 id="fit" className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-6">
+            Best fit—and when to choose someone else
+          </h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            <article className="card p-6">
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-3">Best fit</h3>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>A digital-health or behavioral-health software team has a small public screening journey to review.</li>
+                <li>The team needs evidence gaps and release blockers organized before specialist sign-off or release.</li>
+                <li>The work can be completed from public pages or fictional, non-sensitive staging states.</li>
+              </ul>
+            </article>
+            <article className="card p-6">
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-3">Choose a qualified specialist instead</h3>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-neutral-600 dark:text-neutral-300">
+                <li>You need legal advice, regulatory certification, a penetration test, or formal WCAG conformance.</li>
+                <li>You need clinical validation, crisis-program design, or permission to use a published instrument.</li>
+                <li>The work requires access to patient records, real answers, scores, diagnoses, or production health data.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="before-work" className="mb-14 max-w-4xl rounded-2xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 sm:p-8">
+          <h2 id="before-work" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
+            Before work begins
+          </h2>
+          <ol className="list-decimal space-y-2 pl-6 text-sm text-neutral-700 dark:text-neutral-300">
+            <li>The public or fictional staging routes and exact review boundary are confirmed in writing.</li>
+            <li>The fixed price, timing, deliverables, payment terms, and cancellation terms are confirmed in writing.</li>
+            <li>No work begins until both sides accept that written scope and the agreed payment terms.</li>
+          </ol>
+          <p className="mt-4 text-sm font-medium text-neutral-800 dark:text-neutral-200">
+            This site does not collect payment. Never email card or bank details, patient records, assessment answers, scores, diagnoses, or other health information.
+          </p>
         </section>
 
         <section aria-labelledby="limits" className="mb-14 rounded-2xl border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/20 p-6 sm:p-8">
