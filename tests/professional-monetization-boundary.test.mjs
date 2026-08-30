@@ -63,6 +63,35 @@ test("the internal review runbook preserves the fixed no-health-data operating b
   assert.doesNotMatch(runbook, /HIPAA[- ]compliant|guaranteed compliance|clinically safe|certified accessible/i);
 });
 
+test("the first-sale record requires hosted invoicing and preserves owner-side business gates", async () => {
+  const record = await read("docs/professional-review-first-sale-readiness-2026-08-29.md");
+
+  assert.match(record, /Do not build website checkout/i);
+  assert.match(record, /written scope and customer terms/i);
+  assert.match(record, /one-time hosted invoice/i);
+  assert.match(record, /customer-controlled business folder or portal/i);
+  assert.match(record, /Accept no more than one paid review at a time/i);
+  assert.match(record, /must not accept payment or start customer work/i);
+  assert.match(record, /not a determination for MindCheckTools/i);
+  assert.doesNotMatch(record, /MindCheckTools (?:is|will be) (?:sales-tax exempt|insured|certified compliant)|guarantees (?:safety|compliance|results)/i);
+});
+
+test("the professional sales ledger contains business metrics and no health-data fields", async () => {
+  const ledger = await read("docs/professional-review-business-ledger.csv");
+
+  for (const field of [
+    "inquiry_id",
+    "qualification_status",
+    "quoted_amount_usd",
+    "payment_status",
+    "paid_amount_usd",
+    "active_delivery_hours",
+    "repeat_work_requested",
+  ]) assert.match(ledger, new RegExp(`(?:^|,)${field}(?:,|$)`));
+
+  assert.doesNotMatch(ledger, /patient|answer|score|diagnos|crisis|symptom|email_address|user_id/i);
+});
+
 test("the free checklist cites primary sources and contains no instrument mechanics", async () => {
   const checklist = await read("src/app/for-professionals/screening-implementation-checklist/page.tsx");
 
