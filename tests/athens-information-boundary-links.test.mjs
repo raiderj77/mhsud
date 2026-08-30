@@ -6,32 +6,30 @@ import test from "node:test";
 const root = process.cwd();
 const read = (relativePath) => readFile(path.join(root, relativePath), "utf8");
 
-const linkedArticles = [
-  "src/app/blog/insomnia-test-guide/page.tsx",
-  "src/app/blog/mental-health-and-sleep/page.tsx",
-  "src/app/blog/sleep-and-mood/page.tsx",
-];
+test("the maintained Athens information page preserves the evidence and permission boundary", async () => {
+  const [page, nextConfig] = await Promise.all([
+    read("src/app/athens-insomnia-scale/page.tsx"),
+    read("next.config.mjs"),
+  ]);
 
-test("Athens links describe the route as information rather than an available assessment", async () => {
-  const sources = await Promise.all(linkedArticles.map(read));
-  const combined = sources.join("\n");
+  assert.match(page, /pubmed\.ncbi\.nlm\.nih\.gov\/11033374/);
+  assert.match(page, /does not reproduce, administer, score, or interpret the Athens Insomnia Scale/i);
+  assert.match(page, /Written public-web permission is not on file/i);
+  assert.match(page, /cannot diagnose a sleep disorder/i);
+  assert.doesNotMatch(page, /score of 6|total score of 0|AIS covers eight domains/i);
 
-  assert.doesNotMatch(combined, /take the Athens Insomnia Scale/i);
-  assert.doesNotMatch(combined, /Athens Insomnia Scale self-assessment/i);
-  assert.doesNotMatch(combined, /validated 8-item insomnia self-assessment/i);
-  assert.doesNotMatch(combined, /provides a validated self-assessment/i);
-  assert.match(combined, /informational Athens Insomnia Scale page/i);
-  assert.match(combined, /Athens scale information/i);
+  // Retired blog URLs are handled by the permanent catch-all instead of
+  // retaining duplicate health-content source files.
+  assert.match(nextConfig, /source: "\/blog\/:path\*", destination: "\/screening-tools"/);
 });
 
-test("the insomnia guide preserves the Athens evidence and permission boundary", async () => {
-  const guide = await read("src/app/blog/insomnia-test-guide/page.tsx");
-  const catalog = await read("src/lib/blog.ts");
+test("the Athens route remains information-only rather than an available assessment", async () => {
+  const page = await read("src/app/athens-insomnia-scale/page.tsx");
 
-  assert.match(guide, /pubmed\.ncbi\.nlm\.nih\.gov\/11033374/);
-  assert.match(guide, /does not reproduce the questionnaire, response choices, scoring instructions, threshold, or automated interpretation/i);
-  assert.match(guide, /written permission for public consumer-web administration is not on file/i);
-  assert.match(guide, /cannot diagnose insomnia or determine its cause/i);
-  assert.doesNotMatch(guide, /score of 6|total score of 0|AIS covers eight domains/i);
-  assert.match(catalog, /title: "Insomnia Signs and Athens Insomnia Scale Information"/);
+  assert.match(page, /This page provides no questionnaire, score, threshold, or insomnia result/i);
+  assert.match(page, /withholds questionnaire content, response choices, scoring, thresholds, and automated interpretation/i);
+  assert.match(page, /Can I take the Athens Insomnia Scale on MindCheck Tools\?/i);
+  assert.match(page, /No\. MindCheck Tools has not archived written permission/i);
+  assert.doesNotMatch(page, /Athens Insomnia Scale self-assessment/i);
+  assert.doesNotMatch(page, /validated 8-item insomnia self-assessment/i);
 });

@@ -93,12 +93,18 @@ test("consent migration persists a normalized choice and preserves GPC and withd
 });
 
 test("active operating guidance explicitly supersedes legacy ad instructions", async () => {
-  for (const file of ["CLAUDE.md", "EMPIRE_BUILD_STANDARDS.md", "docs/CLAUDE_FULL.md",
+  const agents = await read("AGENTS.md");
+  const bridge = await read("CLAUDE.md");
+
+  assert.match(agents, /Permanent no-display-ad rule/);
+  assert.match(agents, /MindCheckTools does not use display advertising/);
+  assert.match(bridge, /AGENTS\.md.*single MindCheckTools source of truth/s);
+  assert.match(bridge, /re-enable display advertising/);
+
+  for (const file of ["EMPIRE_BUILD_STANDARDS.md", "docs/CLAUDE_FULL.md",
     "agents/competitor-watcher.md", "agents/data-analyst.md", "agents/optimist.md",
     "agents/risk-auditor.md", "agents/ux-auditor.md", "PHASE2_IMPLEMENTATION_CHECKLIST.md"]) {
-    const source = await read(file);
-    assert.match(source.slice(0, 1000), /No display advertising or ad networks/);
-    assert.match(source.slice(0, 1000), /supersedes all conflicting/);
+    await assert.rejects(read(file), { code: "ENOENT" });
   }
 });
 
