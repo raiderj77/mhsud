@@ -24,7 +24,7 @@ Verified for the addiction-only release candidate: 171/171 tests; production bui
 - Original checkout was clean and remains untouched. Work is isolated on `codex/august-awareness-articles-2026-08-26` in a new worktree.
 - Vercel inspection returned project `mhsud-sdpt`, READY, production, with both `mindchecktools.com` and `www.mindchecktools.com` aliases. This task does not change production.
 - Open PRs at orientation: dependency PRs #112, #113, #114; no overlapping editorial PR found.
-- No existing `/awareness` section. Existing `/blog/*` routes are redirected; the new guides intentionally use a separate route namespace.
+- No existing `/awareness` section. Retired blog URLs use explicit route-by-route redirect or not-found decisions; unknown `/blog/*` URLs are not soft-redirected. The new guides intentionally use a separate route namespace.
 - Optional services are allowlisted only on the homepage. Aggregate analytics uses a separate narrow public-route allowlist. Neither includes awareness routes. The new section is also explicitly sensitive for no-store/no-referrer and service-worker network-only handling.
 
 ## Deliverables and search intent

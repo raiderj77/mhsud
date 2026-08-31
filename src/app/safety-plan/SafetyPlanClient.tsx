@@ -28,7 +28,7 @@ function CrisisBar() {
         </div>
         <div className="bg-white/70 dark:bg-crisis-900/40 rounded-lg p-3">
           <p className="text-sm font-bold text-crisis-800 dark:text-crisis-200">Veterans Crisis Line</p>
-          <p className="text-xs text-crisis-700 dark:text-crisis-300">Call <strong>1-800-273-8255</strong>, Press 1</p>
+          <p className="text-xs text-crisis-700 dark:text-crisis-300">Dial <strong>988</strong>, then Press 1</p>
           <p className="text-xs text-crisis-600 dark:text-crisis-400">Or text 838255</p>
         </div>
       </div>
@@ -107,14 +107,91 @@ const STEP_TITLES = [
 /* ── Helpers ──────────────────────────────────────────── */
 
 const STORAGE_KEY = "mct-safety-plan";
+const MAX_PLAN_LIST_ITEMS = 50;
 
-function loadPlan(): PlanData {
-  if (typeof window === "undefined") return defaultPlan();
+interface LoadedPlan {
+  plan: PlanData;
+  recovered: boolean;
+}
+
+function normalizeStringList(value: unknown, fallback: string[]): string[] {
+  const candidate = Array.isArray(value) ? value.slice(0, MAX_PLAN_LIST_ITEMS) : [];
+  const length = Math.max(candidate.length, fallback.length);
+  return Array.from({ length }, (_, index) =>
+    typeof candidate[index] === "string" ? candidate[index] : (fallback[index] ?? ""),
+  );
+}
+
+function normalizeContacts(value: unknown, fallback: ContactEntry[]): ContactEntry[] {
+  const candidate = Array.isArray(value) ? value.slice(0, MAX_PLAN_LIST_ITEMS) : [];
+  const length = Math.max(candidate.length, fallback.length);
+  return Array.from({ length }, (_, index) => {
+    const item = candidate[index];
+    const record = item && typeof item === "object" && !Array.isArray(item)
+      ? item as Record<string, unknown>
+      : {};
+    return {
+      name: typeof record.name === "string" ? record.name : (fallback[index]?.name ?? ""),
+      phone: typeof record.phone === "string" ? record.phone : (fallback[index]?.phone ?? ""),
+    };
+  });
+}
+
+function hasCompletePlanSchema(value: unknown): value is PlanData {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const plan = value as Record<string, unknown>;
+  const stringList = (item: unknown, minimum: number) =>
+    Array.isArray(item) && item.length >= minimum && item.every((entry) => typeof entry === "string");
+  const contactList = (item: unknown, minimum: number) =>
+    Array.isArray(item)
+    && item.length >= minimum
+    && item.every((entry) => {
+      if (!entry || typeof entry !== "object" || Array.isArray(entry)) return false;
+      const contact = entry as Record<string, unknown>;
+      return typeof contact.name === "string" && typeof contact.phone === "string";
+    });
+  return stringList(plan.warningSigns, 3)
+    && stringList(plan.copingStrategies, 3)
+    && contactList(plan.distractionPeople, 3)
+    && contactList(plan.helpPeople, 3)
+    && contactList(plan.professionals, 5)
+    && stringList(plan.environmentSteps, 0)
+    && typeof plan.environmentNotes === "string"
+    && typeof plan.reasonsToLive === "string";
+}
+
+function normalizePlan(value: unknown): PlanData {
+  const fallback = defaultPlan();
+  const record = value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : {};
+  return {
+    warningSigns: normalizeStringList(record.warningSigns, fallback.warningSigns),
+    copingStrategies: normalizeStringList(record.copingStrategies, fallback.copingStrategies),
+    distractionPeople: normalizeContacts(record.distractionPeople, fallback.distractionPeople),
+    helpPeople: normalizeContacts(record.helpPeople, fallback.helpPeople),
+    professionals: normalizeContacts(record.professionals, fallback.professionals),
+    environmentSteps: normalizeStringList(record.environmentSteps, fallback.environmentSteps),
+    environmentNotes: typeof record.environmentNotes === "string" ? record.environmentNotes : "",
+    reasonsToLive: typeof record.reasonsToLive === "string" ? record.reasonsToLive : "",
+  };
+}
+
+function loadPlan(): LoadedPlan {
+  if (typeof window === "undefined") return { plan: defaultPlan(), recovered: false };
+  let saved: string | null;
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return JSON.parse(saved);
-  } catch { /* ignore */ }
-  return defaultPlan();
+    saved = localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return { plan: defaultPlan(), recovered: false };
+  }
+  if (!saved) return { plan: defaultPlan(), recovered: false };
+  try {
+    const parsed: unknown = JSON.parse(saved);
+    return { plan: normalizePlan(parsed), recovered: !hasCompletePlanSchema(parsed) };
+  } catch {
+    return { plan: defaultPlan(), recovered: true };
+  }
 }
 
 function defaultPlan(): PlanData {
@@ -134,7 +211,7 @@ function defaultPlan(): PlanData {
     professionals: [
       { name: "988 Suicide & Crisis Lifeline", phone: "988" },
       { name: "Crisis Text Line", phone: "Text HOME to 741741" },
-      { name: "Veterans Crisis Line", phone: "1-800-273-8255 (Press 1)" },
+      { name: "Veterans Crisis Line", phone: "Dial 988, then Press 1; or text 838255" },
       { name: "", phone: "" },
       { name: "", phone: "" },
     ],
@@ -151,10 +228,14 @@ export function SafetyPlanClient({ faqData }: Props) {
   const [step, setStep] = useState<AppStep>(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [storageState, setStorageState] = useState<"checking" | "saved" | "unavailable">("checking");
+  const [storageRecoveryWarning, setStorageRecoveryWarning] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
-    setPlan(loadPlan());
+    const loadedPlan = loadPlan();
+    setPlan(loadedPlan.plan);
+    setStorageRecoveryWarning(loadedPlan.recovered);
     setLoaded(true);
   }, []);
 
@@ -162,7 +243,10 @@ export function SafetyPlanClient({ faqData }: Props) {
   const savePlan = useCallback((data: PlanData) => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    } catch { /* ignore */ }
+      setStorageState("saved");
+    } catch {
+      setStorageState("unavailable");
+    }
   }, []);
 
   useEffect(() => {
@@ -226,6 +310,10 @@ export function SafetyPlanClient({ faqData }: Props) {
   }
 
   function handleClearPlan() {
+    const confirmed = window.confirm(
+      "Delete every entry in this locally saved safety plan and start over? This cannot be undone.",
+    );
+    if (!confirmed) return;
     const fresh = defaultPlan();
     setPlan(fresh);
     setStep(1);
@@ -323,6 +411,26 @@ export function SafetyPlanClient({ faqData }: Props) {
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2">Last reviewed: March 2026</p>
 
       <CrisisBar />
+
+      {storageState === "unavailable" && (
+        <div
+          className="mb-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-100 print:hidden"
+          role="alert"
+        >
+          <strong>This browser cannot save your plan.</strong> Keep this tab open while you finish.
+          On the Review step, print a copy before closing or reloading this page.
+        </div>
+      )}
+      {storageRecoveryWarning && (
+        <div
+          className="mb-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-100 print:hidden"
+          role="alert"
+        >
+          <strong>Part of the saved plan could not be read safely.</strong> Unreadable fields were
+          restored to blank or built-in defaults. Review every step and print a current copy before
+          relying on this plan during a crisis.
+        </div>
+      )}
 
       {/* ── Tool Card ── */}
       <div className="bg-white dark:bg-night-800 rounded-2xl shadow-lg border border-sand-200 dark:border-neutral-700 p-6 sm:p-8 mb-8 print:shadow-none print:border-0 print:p-0">
@@ -772,7 +880,7 @@ export function SafetyPlanClient({ faqData }: Props) {
             <div className="border-2 border-crisis-300 dark:border-crisis-700 rounded-xl p-4 text-center print:border-black">
               <p className="text-sm font-bold text-crisis-800 dark:text-crisis-200 mb-1 print:text-black">Emergency: 911</p>
               <p className="text-sm text-crisis-700 dark:text-crisis-300 print:text-neutral-700">
-                988 Suicide &amp; Crisis Lifeline: <strong>988</strong> | Crisis Text Line: Text <strong>HOME</strong> to <strong>741741</strong> | Veterans: <strong>1-800-273-8255</strong> (Press 1)
+                988 Suicide &amp; Crisis Lifeline: <strong>988</strong> | Crisis Text Line: Text <strong>HOME</strong> to <strong>741741</strong> | Veterans: Dial <strong>988</strong>, then Press 1, or text <strong>838255</strong>
               </p>
             </div>
 
@@ -795,14 +903,26 @@ export function SafetyPlanClient({ faqData }: Props) {
               </button>
               <button
                 onClick={handleClearPlan}
-                className="px-6 py-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors"
+                className="px-6 py-2.5 rounded-xl border border-crisis-300 bg-crisis-50 text-crisis-800 dark:border-crisis-700 dark:bg-crisis-950/40 dark:text-crisis-200 font-semibold text-sm hover:bg-crisis-100 dark:hover:bg-crisis-950/70 transition-colors"
               >
-                Start Over
+                Delete Saved Plan &amp; Start Over
               </button>
             </div>
 
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center print:hidden">
-              Your plan is automatically saved in your browser. It will be here when you come back.
+            <p
+              className={`text-xs text-center print:hidden ${
+                storageState === "unavailable"
+                  ? "font-semibold text-crisis-700 dark:text-crisis-300"
+                  : "text-neutral-500 dark:text-neutral-400"
+              }`}
+              role="status"
+              aria-live="polite"
+            >
+              {storageState === "unavailable"
+                ? "This browser could not save your plan. Print a copy now so you do not lose it."
+                : storageState === "saved"
+                  ? "Saved in this browser profile. Print a copy so you are not relying on browser storage or an internet connection during a crisis."
+                  : "Checking whether this browser can save your plan..."}
             </p>
           </div>
         )}
@@ -819,7 +939,7 @@ export function SafetyPlanClient({ faqData }: Props) {
             <li><strong>Be specific</strong>, Names, phone numbers, and concrete actions are more helpful during a crisis than vague ideas.</li>
             <li><strong>Fill in what you can</strong>, Not every field needs to be filled. Even a partially completed plan is valuable.</li>
             <li><strong>Print your plan</strong>, Keep a paper copy in your wallet, on your fridge, or next to your bed. Give a copy to someone you trust.</li>
-            <li><strong>Your plan auto-saves</strong>, It is stored in your browser so you can come back and update it anytime.</li>
+            <li><strong>Check the save status</strong>, When browser storage is available, the plan auto-saves to this browser profile. Print a copy for reliable offline access.</li>
             <li><strong>Review and update regularly</strong>, Your plan should evolve as your life changes. Update it with your therapist or on your own.</li>
           </ol>
         </section>
@@ -834,7 +954,21 @@ export function SafetyPlanClient({ faqData }: Props) {
               This tool is based on the <strong>Stanley-Brown Safety Planning Intervention</strong>, developed by Dr. Barbara Stanley and Dr. Gregory Brown. It is one of the most widely used and evidence-based approaches to suicide prevention in the world. The Safety Planning Intervention is recommended by the <strong>Suicide Prevention Resource Center (SPRC)</strong>, the <strong>U.S. Department of Veterans Affairs</strong>, the <strong>Joint Commission</strong>, and the <strong>National Action Alliance for Suicide Prevention</strong>.
             </p>
             <p>
-              A safety plan is different from a &quot;no-suicide contract&quot; or &quot;safety contract.&quot; Research has shown that no-suicide contracts are <strong>not effective</strong> at preventing suicide, while safety plans <strong>are</strong>. A 2012 study by Stanley and Brown published in the <em>American Journal of Preventive Medicine</em> found that the Safety Planning Intervention, combined with follow-up contact, reduced suicidal behavior by approximately 45% compared to usual care.
+              A safety plan is different from a &quot;no-suicide contract&quot; or &quot;safety contract.&quot;
+              A contract is not a substitute for risk assessment, collaborative safety planning, or
+              care. In a 2018 <em>JAMA Psychiatry</em> cohort comparison, a clinician-delivered Safety
+              Planning Intervention plus structured follow-up was associated with 45% fewer suicidal
+              behaviors over six months among adult Veterans Health Administration emergency-department
+              patients than usual care. That finding does not establish that this standalone web tool
+              prevents suicide. See the{" "}
+              <a
+                href="https://pubmed.ncbi.nlm.nih.gov/29998307/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sage-600 dark:text-sage-400 underline underline-offset-2"
+              >
+                primary study record
+              </a>.
             </p>
             <p>
               The plan is structured as a series of steps to follow in order during a crisis. The idea is to start with the simplest coping strategies (things you can do alone) and escalate to more intensive support (calling a professional or going to an emergency room) only if earlier steps are not enough. This graduated approach gives you multiple opportunities to interrupt a crisis before it escalates.
@@ -945,7 +1079,7 @@ export function SafetyPlanClient({ faqData }: Props) {
               </div>
               <div className="bg-white/70 dark:bg-crisis-900/40 rounded-lg p-4">
                 <p className="text-sm font-bold text-crisis-800 dark:text-crisis-200">Veterans Crisis Line</p>
-                <p className="text-sm text-crisis-700 dark:text-crisis-300">Call <strong>1-800-273-8255</strong>, Press 1</p>
+                <p className="text-sm text-crisis-700 dark:text-crisis-300">Dial <strong>988</strong>, then Press 1</p>
                 <p className="text-xs text-crisis-600 dark:text-crisis-400">Or text 838255. For veterans, service members, and their families.</p>
               </div>
               <div className="bg-white/70 dark:bg-crisis-900/40 rounded-lg p-4">
@@ -982,8 +1116,9 @@ export function SafetyPlanClient({ faqData }: Props) {
 
         <div className="text-center mb-6">
           <p className="text-xs text-neutral-500 dark:text-neutral-400">
-            Your safety plan is stored in this browser&apos;s local storage and is not intentionally sent
-            to MindCheck Tools servers. Anyone using this browser profile may be able to view it.
+            When browser storage is available, your safety plan is stored in this browser profile and
+            is not intentionally sent to MindCheck Tools servers. Anyone using this browser profile may
+            be able to view it. Print a copy before relying on it during a crisis.
           </p>
         </div>
 

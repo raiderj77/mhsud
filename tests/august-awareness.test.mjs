@@ -99,7 +99,6 @@ test("only the two explicitly approved addiction articles are released", async (
 test("all awareness routes are isolated from analytics, referrers and service-worker page caches", async () => {
   for (const route of [data.AWARENESS_HUB_PATH, ...data.awarenessArticles.map(a => data.awarenessArticlePath(a.slug))]) {
     for (const suffix of ["", "/", "?fixture=non-sensitive#section"]) {
-      assert.equal(policies.isOptionalServicesAllowedRoute(route + suffix), false);
       assert.equal(policies.isPrivacySafeAggregateAnalyticsRoute(route + suffix), false);
       assert.equal(policies.isSensitiveRoute(route + suffix), true);
     }

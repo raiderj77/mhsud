@@ -70,3 +70,20 @@ test("crisis resource cards preserve contact details and expose verified action 
   assert.match(page, /rel=\{action\.external \? "noopener noreferrer" : undefined\}/);
   assert.doesNotMatch(page, /sms:[^"']*[?&](?:body|subject)=/i);
 });
+
+test("Veterans Crisis Line copy uses the current 988 routing", async () => {
+  const sources = await Promise.all([
+    read("src/app/safety-plan/SafetyPlanClient.tsx"),
+    read("src/app/pcl-5-ptsd-screening/PCL5Client.tsx"),
+    read("src/app/pcl-5-ptsd-screening/page.tsx"),
+    read("src/app/pc-ptsd-5-screening/PcPtsd5Client.tsx"),
+    read("src/app/pc-ptsd-5-screening/page.tsx"),
+  ]);
+
+  for (const source of sources) {
+    assert.doesNotMatch(source, /1-800-273-8255/);
+  }
+  assert.ok(sources.every((source) => /988/.test(source)));
+  assert.match(sources.join("\n"), /Press 1/);
+  assert.match(sources.join("\n"), /838255/);
+});

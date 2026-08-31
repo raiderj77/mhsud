@@ -14,6 +14,13 @@ test("install prompt has no obsolete analytics-consent dependency", () => {
   assert.match(source, /setDeferredPrompt/);
 });
 
+test("install promotion is limited to the neutral home route", () => {
+  assert.match(source, /usePathname\(\)/);
+  assert.match(source, /const INSTALL_PROMPT_ALLOWED_ROUTES = new Set\(\["\/"\]\)/);
+  assert.match(source, /if \(!isInstallPromptAllowedRoute\(window\.location\.pathname\)\) return/);
+  assert.match(source, /!isInstallPromptAllowedRoute\(pathname\)/);
+});
+
 test("only an explicit accessible Install action opens the native prompt", () => {
   assert.match(source, /const handleInstall = async/);
   assert.match(source, /await deferredPrompt\.prompt\(\)/);

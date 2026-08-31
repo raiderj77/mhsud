@@ -7,7 +7,6 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -51,10 +50,9 @@ function getPositiveThresholdLabel(qi: number): string {
 
 interface Props {
   faqData: { question: string; answer: string }[];
-  hideTherapyCTA?: boolean;
 }
 
-export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
+export function ASRSClient({ faqData }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(6).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -540,16 +538,6 @@ export function ASRSClient({ faqData, hideTherapyCTA = false }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
-
-          {!hideTherapyCTA && screenPositive && (
-            <div className="mb-8">
-              <h3 className="font-serif text-base font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-                Professional Support Options
-              </h3>
-              <TherapyCTA show={true} />
-            </div>
-          )}
-
 
           {/* Educational Content */}
           <section className="mb-8">

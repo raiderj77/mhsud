@@ -6,7 +6,7 @@ export const metadata: Metadata = createMetadata({
   path: "/privacy",
   title: "Privacy Policy, How We Protect Your Data",
   description:
-    "How MindCheck Tools handles browser-local screening data, hosting requests, privacy-safe aggregate analytics, subscriptions, and privacy rights.",
+    "How MindCheck Tools handles browser-local screening data, hosting requests, privacy-safe aggregate analytics, and privacy rights.",
 });
 
 export default function PrivacyPage() {
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last updated: August 28, 2026 (no-display-advertising policy)
+            Effective Date: January 1, 2026 | Last updated: August 30, 2026 (privacy architecture cleanup)
           </p>
         </header>
 
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               The short version
             </h2>
             <p className="text-lg leading-relaxed">
-              <strong>Your screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</strong> We do not collect or store them in an application database. Ordinary page requests can create hosting records that include the requested URL and network information. If you choose to print, download, or copy a local reflection, that copy is handled by your browser, device, printer, and any sync or backup services you use. Access through a shared browser or device is outside this boundary. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. If you separately choose to subscribe to resource emails, we collect only your email address for that purpose.
+              <strong>Your screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.</strong> We do not collect or store them in an application database. Ordinary page requests can create hosting records that include the requested URL and network information. If you choose to print, download, or copy a local reflection, that copy is handled by your browser, device, printer, and any sync or backup services you use. Access through a shared browser or device is outside this boundary. Separate journaling, safety-plan, worry-log, recovery check-in, and sobriety tools save entries in your browser when their page says so. You can use every tool without an account or email. The site does not offer a newsletter signup.
             </p>
           </div>
 
@@ -78,7 +78,9 @@ export default function PrivacyPage() {
           <section>
             <h2>What data is collected through analytics?</h2>
             <p>
-              Vercel Web Analytics separately counts visits and page views without cookies. It is configured with a positive route allowlist, removes query strings and fragments, sends no custom events, and returns no event when Global Privacy Control is active. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded. Vercel determines a visitor with a request-derived hash that resets after 24 hours and reports only aggregated analytics; ordinary hosting requests remain subject to the separate hosting-log disclosure below.
+              Vercel Web Analytics separately counts visits and page views without cookies. It is configured with a positive route allowlist, removes query strings and fragments from the event URL, sends no custom events, and returns no event when Global Privacy Control is active. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded. For an allowed page view, Vercel&apos;s{" "}
+              <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer">Web Analytics privacy documentation</a>{" "}
+              says a data point may include the event time, allowlisted page path and route, referrer supplied by the browser, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version. Vercel determines a visitor with a request-derived hash that resets after 24 hours and reports analytics in aggregate; ordinary hosting requests remain subject to the separate hosting-log disclosure below.
             </p>
             <p>
               <strong>The application is not configured to add screening answers, scores, results, or browser-local entries to analytics.</strong> MindCheck Tools does not use Google Analytics or display advertising. A print, download, screenshot, or other copy that you deliberately create is controlled by your browser, device, printer, and any sync or backup service you use.
@@ -105,10 +107,7 @@ export default function PrivacyPage() {
           <section>
             <h2>Do you collect personal information?</h2>
             <p>
-              We do not require an account, registration, or email address to use our tools. If you voluntarily subscribe to resource emails, we collect your email address and send it to <strong>Loops</strong>, our email service provider. We do not send Loops the screening tool you used, your answers, score, diagnosis, crisis information, or the page where you subscribed.
-            </p>
-            <p>
-              Authorized MindCheck Tools administrators and Loops, acting as our service provider, can access subscriber records as needed to operate the mailing list. We use the address only for the emails you consented to receive. Every marketing email includes an unsubscribe link. We do not sell subscriber information or share it for advertising.
+              We do not require an account, registration, or email address to use our tools. The current site has no newsletter signup or email-marketing submission endpoint.
             </p>
             <p>
               If you contact us voluntarily, we receive the information you choose to include in your message. Please do not send screening answers or other sensitive health information by email.
@@ -124,8 +123,7 @@ export default function PrivacyPage() {
               <li><strong>Screening answers and scores:</strong> Not retained by MindCheck Tools. In-memory responses are removed when you close, refresh, or reset the page. A printout or downloaded reflection that you deliberately create is a separate local copy and remains until you or the relevant device/service deletes it.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
               <li><strong>Vercel Web Analytics:</strong> Vercel documents that its cookie-free visitor hash resets after 24 hours. Aggregated reporting retention follows the Vercel project and plan settings. Sensitive routes do not send Web Analytics events.</li>
-              <li><strong>Newsletter email address:</strong> Retained while you are subscribed or until it is no longer needed for the mailing list. You may unsubscribe from any email or request deletion at privacy@mindchecktools.com. Loops may retain limited suppression, security, backup, or legal records under its own obligations; we do not promise immediate deletion from every backup.</li>
-              <li><strong>Contact emails:</strong> Retained only as long as necessary to respond to your inquiry, then deleted.</li>
+              <li><strong>Contact emails:</strong> Retained only as long as reasonably needed to respond, maintain security, or meet legal obligations. Mail systems and backups may retain limited records beyond the active correspondence.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
               <li><strong>Hosting and security logs:</strong> Retention follows Vercel settings and legitimate security, backup, and legal requirements; it may change and is not represented as zero retention.</li>
             </ul>
@@ -137,7 +135,7 @@ export default function PrivacyPage() {
               MindCheck Tools does not display ads or load advertising networks. This applies across the site, including public education, screening, result, professional, and crisis pages. We do not use retargeting or health-interest advertising.
             </p>
             <p>
-              <strong>The application is not configured to pass screening answers, scores, results, or browser-local tool entries to advertising systems.</strong> Ordinary hosting, optional analytics, voluntary email, and local copies still have the privacy boundaries described in this policy. No display ads does not mean zero data collection.
+              <strong>The application is not configured to pass screening answers, scores, results, or browser-local tool entries to advertising systems.</strong> Ordinary hosting, allowlisted aggregate analytics, contact messages, and local copies still have the privacy boundaries described in this policy. No display ads does not mean zero data collection.
             </p>
             <p>
               Separately disclosed affiliate links and professional services are not display advertising. They must not use answers, scores, or sensitive tool activity to target an offer. Essential screening context, crisis resources, and safety information remain free. External destinations have their own privacy practices.
@@ -160,21 +158,21 @@ export default function PrivacyPage() {
               Our site may link to external resources such as crisis hotlines, professional organizations, and educational materials. These external sites have their own privacy policies. We are not responsible for their content or data practices, but we only link to resources we believe are reputable.
             </p>
             <p>
-              Some therapist links are affiliate links, which means we may earn a commission if you sign up. These links are configured not to send the referring page. We do not add your screening answers, score, diagnosis, crisis information, email address, or other identifiers to an affiliate link. The external provider may collect information after you choose to visit its site under its own privacy policy.
+              The recommended-reading page contains clearly disclosed Bookshop.org affiliate links, which means we may earn a commission from an eligible purchase. These links use a no-referrer policy and do not add screening answers, scores, diagnoses, crisis information, email addresses, or other identifiers. The external provider may collect information after you choose to visit under its own privacy policy.
             </p>
           </section>
 
           <section>
             <h2>Children&apos;s privacy</h2>
             <p>
-              MindCheck Tools is a general-audience educational site. Any youth-oriented tool identifies its intended age range and should be used with a parent, guardian, or qualified professional when appropriate. The application processes screening answers locally and does not automatically send them to a MindCheck Tools server or application database; a screenshot, printout, download, or other copy a user creates is controlled by that user&apos;s browser, device, and chosen services. Subscription forms are suppressed on sensitive interactive routes. Children under 13 should not submit an email address or contact message. If you are a parent or guardian and believe a child provided personal information, contact privacy@mindchecktools.com so we can investigate and address it.
+              MindCheck Tools is a general-audience educational site. Any youth-oriented tool identifies its intended age range and should be used with a parent, guardian, or qualified professional when appropriate. The application processes screening answers locally and does not automatically send them to a MindCheck Tools server or application database; a screenshot, printout, download, or other copy a user creates is controlled by that user&apos;s browser, device, and chosen services. The site does not offer a newsletter signup. Children under 13 should not send a contact message. If you are a parent or guardian and believe a child provided personal information, contact privacy@mindchecktools.com so we can investigate and address it.
             </p>
           </section>
 
           <section>
             <h2>Data security</h2>
             <p>
-              Assessment code does not automatically send questionnaire responses to a MindCheck Tools server or save them in an application database, so MindCheck Tools does not maintain an application database of those answers. Browser-local tool entries and user-created screenshots, printouts, or downloads can remain on a browser, device, printer, sync service, or backup. The site is served over HTTPS and uses restrictive response headers, a content security policy, no-store controls on sensitive routes and API responses, and dependency review. No security measure can eliminate every risk, especially risks from a shared device, browser extension, downloaded file, or software outside our control.
+              Assessment code does not automatically send questionnaire responses to a MindCheck Tools server or save them in an application database, so MindCheck Tools does not maintain an application database of those answers. Browser-local tool entries and user-created screenshots, printouts, or downloads can remain on a browser, device, printer, sync service, or backup. The site is served over HTTPS and uses restrictive response headers, a content security policy, no-store controls on sensitive routes, and dependency review. No security measure can eliminate every risk, especially risks from a shared device, browser extension, downloaded file, or software outside our control.
             </p>
           </section>
 
@@ -189,12 +187,12 @@ export default function PrivacyPage() {
               Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. MindCheck Tools does not use Google Analytics. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages and is suppressed when Global Privacy Control is active.
             </p>
             <p>
-              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. Newsletter subscriptions are deliberately separated from tool names, answers, scores, diagnoses, and crisis information.
+              <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. The site does not offer a newsletter signup.
             </p>
 
             <h3>Washington My Health My Data Act (MHMDA)</h3>
             <p>
-              Washington law can treat reasonably linkable information that identifies a person&apos;s interest in seeking health care as consumer health data. MindCheck Tools does not collect questionnaire answers, scores, journal entries, or locally saved plans, but a requested health-topic path can appear in ordinary hosting data. Health-topic routes are excluded from Vercel Web Analytics. Our dedicated <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> describes the categories, purposes, sources, service providers, and request process we apply to that limited data.
+              Washington law can treat reasonably linkable information that identifies a person&apos;s interest in seeking health care as consumer health data. MindCheck Tools does not intentionally collect questionnaire answers, scores, journal entries, or locally saved plans through its assessment or browser-storage application code. Information a person voluntarily includes in a contact message is outside that boundary, and a requested health-topic path can appear in ordinary hosting data. Health-topic routes are excluded from Vercel Web Analytics. Our dedicated <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link> describes the categories, purposes, sources, service providers, and request process we apply to that limited data.
             </p>
 
             <h3>Maryland Online Data Privacy Act (MODPA)</h3>
@@ -238,8 +236,8 @@ export default function PrivacyPage() {
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> Email address if you voluntarily subscribe, plus IP address, browser type, and Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages.</li>
-              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, allowlisted cookie-free aggregate page data, and referring-site origin.</li>
+              <li><strong>Identifiers:</strong> IP address and browser information in ordinary hosting records, Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages, and an email address, name, or other identifiers you voluntarily include when contacting us.</li>
+              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, and, on allowlisted non-sensitive pages, cookie-free analytics fields that may include path and route, browser-supplied referrer, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
@@ -267,7 +265,7 @@ export default function PrivacyPage() {
             <ul>
               <li>To analyze site traffic and improve user experience via analytics</li>
               <li>To maintain site security and prevent fraud</li>
-              <li>To send occasional resource emails when a subscriber has expressly consented</li>
+              <li>To respond to contact messages and privacy requests you choose to send</li>
             </ul>
             <p>We do not sell your personal information and do not use consumer health data for cross-context behavioral advertising.</p>
 
@@ -293,11 +291,9 @@ export default function PrivacyPage() {
 
             <h3>Data Retention</h3>
             <p>
-              Screening responses are not retained because processing is client-side only. Browser-local
+              Screening responses are not retained in a MindCheck Tools application database because processing is client-side. Browser-local
               journal and planning data remains on the device until the visitor deletes it. Analytics and
               server-log retention follow the periods described above and our configured service settings.
-              Newsletter addresses are retained while subscribed or until no longer needed, subject to the
-              limited provider records described above.
             </p>
           </section>
 
@@ -345,7 +341,7 @@ export default function PrivacyPage() {
           {/* Final reassurance */}
           <div className="card p-6 sm:p-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800">
             <p className="text-sm text-sage-700 dark:text-sage-400 leading-relaxed m-0">
-              <strong>Our commitment:</strong> We built MindCheck Tools because we believe mental health screening should be free, private, and accessible. That mission only works if you trust us. We will always err on the side of collecting less data, not more.
+              <strong>Our commitment:</strong> We built MindCheck Tools because we believe mental health screening should be free, private, and accessible. Our operating policy is to collect only data needed to deliver, secure, and improve the site within the boundaries described above.
             </p>
           </div>
         </div>

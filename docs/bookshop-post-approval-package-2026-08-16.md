@@ -88,28 +88,13 @@ Reject titles that promote supplements, detoxes, cures, diagnostic devices, coer
 
 ## Privacy-safe measurement
 
-> Measurement note updated August 29, 2026: the GA4 proposal below is historical
-> and was not implemented. Google Analytics and the custom event runtime have been
-> removed. Do not recreate this event without a separate privacy review and owner approval.
-
-The original proposal was to measure aggregate outbound clicks on the non-sensitive resource page only. It is retained below as dated decision context, not current behavior. Do not measure impressions or behavior on assessments, results, crisis, youth, privacy, or other sensitive routes.
-
-If owner-approved and technically implemented, the only permitted event is:
-
-```text
-event: affiliate_outbound_click
-partner: bookshop
-placement: reading_list
-```
-
-The event must not contain or derive a title, ISBN, condition, assessment name, answer, score, result, crisis action, query string, full referring URL, user ID, advertising ID, email address, device fingerprint, or merchant transaction data. Do not add Bookshop tracking parameters beyond the partner's verified affiliate mechanism. Prefer daily aggregate reporting and keep GA4 off all sensitive routes under the existing consent boundary.
+Google Analytics, custom site events, and a consent banner are absent. Do not add a site-side affiliate-click event. Measurement is limited to provider-side aggregate reports that do not depend on a screening, result, crisis, youth, privacy, or other sensitive journey.
 
 Minimum decision metrics after release:
 
 - qualified organic visits to the editorial page from Search Console;
-- consented, aggregate `affiliate_outbound_click` count on that page, if separately approved;
 - Bookshop's aggregate attributed clicks, orders, and commissions;
-- zero affiliate elements or analytics requests observed on excluded sensitive routes.
+- zero affiliate elements or Web Analytics requests observed on excluded sensitive routes.
 
 Do not describe a click as a sale, a sale as profit, or Bookshop reporting as proof that a specific visitor used an assessment.
 
@@ -123,7 +108,7 @@ Do not describe a click as a sale, a sale as profit, or Bookshop reporting as pr
 | Exact titles and editions | Local review complete | Six editions have publisher, ISBN, author-fit, limitations, public availability, and conflict checks recorded in the local page. Owner approval remains pending. |
 | Disclosure and placement | Verified locally | Disclosure precedes all six commercial links; affiliate content ends before the dedicated crisis section. Exact release still requires owner approval. |
 | Accessibility and responsive QA | Complete locally | One H1, semantic regions, no horizontal overflow at 320px, no browser warnings, and a successful production build on 2026-08-17. Production verification remains pending until an approved release. |
-| Privacy-safe measurement | Designed only | No implementation or account change is authorized. |
+| Privacy-safe measurement | Current boundary | Search Console and Bookshop aggregate reporting only; no site-side click event or Google Analytics runtime. |
 | Website publication | Not authorized | Requires a separate release approval after all prior gates pass. |
 
 ## Next action

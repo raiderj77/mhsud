@@ -124,7 +124,9 @@ test("screening hub exposes only maintained canonical routes and every maintaine
   const maintained = maintainedSitemapPaths(sitemapSource, quarantined);
   const hubLinks = literalInternalLinks(hub);
   const configUrl = `${pathToFileURL(path.join(root, "next.config.mjs")).href}?ymyl=${Date.now()}`;
-  const nextConfig = (await import(configUrl)).default;
+  const configModule = await import(configUrl);
+  const nextConfig = configModule.default;
+  const honestNotFound = new Set(configModule.retiredNonBlogNotFoundPaths);
   const redirects = await nextConfig.redirects();
   const exactRedirects = new Map(
     redirects
@@ -149,6 +151,10 @@ test("screening hub exposes only maintained canonical routes and every maintaine
 
   for (const route of quarantined) {
     const redirect = exactRedirects.get(route);
+    if (honestNotFound.has(route)) {
+      assert.equal(redirect, undefined, `${route} should be an honest not-found response`);
+      continue;
+    }
     assert.ok(redirect, `${route} has no exact canonical redirect`);
     assert.equal(redirect.permanent, true, `${route} redirect is not permanent`);
     assert.equal(quarantined.has(redirect.destination), false, `${route} redirects to another quarantined route`);

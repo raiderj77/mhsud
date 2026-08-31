@@ -58,9 +58,10 @@ test("public disclosures state no Google Analytics or display ads and preserve o
     assert.doesNotMatch(source, /\bG-[A-Z0-9]{10}\b/, file);
   }
   const privacy = await read("src/app/privacy/page.tsx");
-  for (const boundary of [/hosting/i, /Loops/, /Vercel/, /affiliate/i, /local/i, /Global Privacy Control/]) {
+  for (const boundary of [/hosting/i, /Vercel/, /affiliate/i, /local/i, /Global Privacy Control/]) {
     assert.match(privacy, boundary);
   }
+  assert.doesNotMatch(privacy, /Loops|resource-email subscription|Newsletter email address/i);
 });
 
 test("Vercel aggregate analytics stays allowlisted, URL-minimized, and GPC-blocked", async () => {

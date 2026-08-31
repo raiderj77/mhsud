@@ -3,12 +3,10 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
-import { TherapyCTA } from "@/components/TherapyCTA";
 
 
 /* ------------------------------------------------------------------ */
@@ -243,8 +241,6 @@ export function Who5Client({ faqData }: Props) {
           </div>
         )}
 
-        <TherapyCTA show={pctScore < 50} />
-
         {/* Item Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
           Item Breakdown
@@ -374,8 +370,6 @@ export function Who5Client({ faqData }: Props) {
             prompts={REFLECTION_PROMPTS["who-5-wellbeing-index"].prompts}
           />
         )}
-
-        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">

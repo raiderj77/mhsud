@@ -128,17 +128,15 @@ test("the public instrument-rights guide is source-linked and reproduces no inst
 });
 
 test("professional discovery is limited to general trust and navigation surfaces", async () => {
-  const [about, contact, methodology, footer, policies] = await Promise.all([
+  const [about, contact, methodology, footer] = await Promise.all([
     read("src/app/about/page.tsx"),
     read("src/app/contact/page.tsx"),
     read("src/app/methodology/page.tsx"),
     read("src/components/Footer.tsx"),
-    read("src/lib/routePolicies.ts"),
   ]);
 
   for (const source of [about, contact, methodology]) assert.match(source, /for-professionals/);
   assert.match(footer, /for-professionals/i);
-  assert.match(policies, /const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set\(\["\/"\]\)/);
 });
 
 test("security.txt publishes a canonical, dated, web-only contact path", async () => {

@@ -2,6 +2,7 @@
   "name": "mh-tools",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=20.18.1"
   },
@@ -10,7 +11,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "test": "node --test tests/*.test.mjs",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.mjs,.ts,.tsx --max-warnings=0",
     "test:hydration": "node --test tests/hydration-regression.test.mjs",
     "lint:content": "node scripts/content-lint.js",
     "lint:predeploy": "node scripts/predeploy-check.js",

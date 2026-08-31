@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
-import { EmailCapture } from "@/components/EmailCapture";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -391,8 +390,6 @@ export function HALTClient({ faqData }: Props) {
               />
             </>
           )}
-
-          <EmailCapture />
 
         </div>
       )}

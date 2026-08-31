@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/safety-plan",
   title: "Safety Plan | Free Crisis Safety Planning Tool",
   description:
-    "Create a personal safety plan based on the Stanley-Brown model. 6-step crisis planning tool with printable output. Free, private, and always available. Call 988 if in crisis.",
+    "Create a personal safety plan based on the Stanley-Brown model. Entries can be saved in this browser, and you can print a copy for offline access. Call 988 if in crisis.",
   keywords: [
     "safety plan", "safety plan template", "suicide safety plan",
     "Stanley-Brown safety plan", "crisis safety plan",
@@ -21,7 +21,7 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     title: "Safety Plan | Free Crisis Safety Planning Tool",
-    description: "Create a personal 6-step safety plan based on the Stanley-Brown model. Free, private, printable, and always available. If you are in crisis, call or text 988.",
+    description: "Create a personal 6-step safety plan based on the Stanley-Brown model. Entries can be saved in this browser, and you can print a copy for offline access. If you are in crisis, call or text 988.",
     url: TOOL_URL,
     type: "website",
   },
@@ -34,7 +34,7 @@ const FAQ_DATA = [
   },
   {
     question: "Is a safety plan the same as a no-suicide contract?",
-    answer: "No, and this is an important distinction. A no-suicide contract (or 'safety contract') is a verbal or written agreement in which a person promises not to harm themselves. Research has shown that no-suicide contracts are NOT effective at preventing suicide and may actually be harmful because they create a false sense of security. A safety plan is fundamentally different, it is a set of concrete, actionable steps that a person can take during a crisis. Multiple studies, including a 2012 study by Stanley and Brown in the American Journal of Preventive Medicine, have shown that safety plans ARE effective at reducing suicidal behavior.",
+    answer: "No. A no-suicide contract is a promise not to self-harm; it is not a substitute for risk assessment, collaborative safety planning, or care. A safety plan instead organizes concrete coping and support steps. In a 2018 JAMA Psychiatry cohort comparison, a clinician-delivered Safety Planning Intervention plus structured follow-up was associated with 45% fewer suicidal behaviors over six months among adult Veterans Health Administration emergency-department patients than usual care. That finding does not establish that this standalone web tool prevents suicide.",
   },
   {
     question: "Should I create a safety plan with a therapist?",
@@ -63,10 +63,10 @@ export default function SafetyPlanPage() {
           __html: JSON.stringify({
       ...toolPageJsonLd({
               name: "Safety Plan",
-              description: "A free safety planning tool based on the Stanley-Brown Safety Planning Intervention. Create a personalized 6-step crisis safety plan: warning signs, internal coping strategies, people for distraction, people to ask for help, professional and crisis contacts (988 Lifeline, Crisis Text Line, Veterans Crisis Line), and making your environment safer. Printable output. Auto-saves in browser.",
+              description: "A free safety planning tool based on the Stanley-Brown Safety Planning Intervention. Create a personalized 6-step crisis safety plan: warning signs, internal coping strategies, people for distraction, people to ask for help, professional and crisis contacts (988 Lifeline, Crisis Text Line, Veterans Crisis Line), and making your environment safer. Uses browser-local storage when available and provides printable output.",
               url: TOOL_URL,
               datePublished: "2026-03-05",
-              dateModified: "2026-05-12",
+              dateModified: "2026-08-30",
             }),
     }),
         }}
@@ -95,14 +95,14 @@ export default function SafetyPlanPage() {
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
+        Last updated: August 30, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
           what="A guided safety planning tool based on the Stanley-Brown Safety Plan that creates a personalized crisis response strategy."
           who="Anyone who experiences suicidal thoughts or emotional crises and wants a structured plan for staying safe."
-          bottomLine="A safety plan can be life-saving, complete it when you are calm and keep it accessible. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
+          bottomLine="A safety plan can organize practical crisis steps. Complete it when you are calm, review it with a qualified professional when possible, and keep a printed copy accessible. This standalone tool is not crisis care or a substitute for treatment."
+          lastUpdated="2026-08-30"
         />
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">

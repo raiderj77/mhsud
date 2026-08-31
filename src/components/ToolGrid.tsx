@@ -307,7 +307,11 @@ function ToolCard({
         {tool.description}
       </p>
       <div className="flex gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-        <span>{tool.questions === null ? "No questionnaire" : `${tool.questions} questions`}</span>
+        <span>
+          {tool.questions === null
+            ? "No questionnaire"
+            : `${tool.questions} ${tool.questions === 1 ? "question" : "questions"}`}
+        </span>
         <span>{tool.time}</span>
         <span>&#128274; Private</span>
       </div>

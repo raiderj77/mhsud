@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Our commitment to making free mental health self-checks usable by everyone, including people with disabilities.",
   keywords: [
-    "accessibility statement", "web accessibility", "WCAG compliance",
+    "accessibility statement", "web accessibility", "WCAG accessibility",
     "accessible mental health tools", "screen reader compatible",
   ],
 });
@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Accessibility Statement</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 28, 2026 (no-display-advertising policy)</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 30, 2026</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -38,7 +38,7 @@ export default function AccessibilityPage() {
           <section>
             <h2>Standards we follow</h2>
             <p>
-              We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> standard. WCAG is developed by the World Wide Web Consortium (W3C) and is the most widely adopted accessibility standard for web content. Level AA conformance addresses the most common barriers for users with disabilities.
+              We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 Level AA</strong> standard. WCAG is developed by the World Wide Web Consortium (W3C). This is an ongoing target, not a claim that every page has completed manual conformance testing.
             </p>
           </section>
 
@@ -51,16 +51,16 @@ export default function AccessibilityPage() {
               <strong>Semantic HTML:</strong> Our pages use proper heading hierarchy (h1 through h4), landmark regions (nav, main, footer), and meaningful link text to support screen readers and assistive technology.
             </p>
             <p>
-              <strong>Keyboard navigation:</strong> All interactive elements, including tool questions, buttons, toggles, and navigation, are accessible via keyboard. You can use Tab to move between elements and Enter or Space to activate them.
+              <strong>Keyboard navigation:</strong> Tool questions, buttons, toggles, and navigation are designed for keyboard use. You can use Tab to move between controls and Enter or Space to activate applicable controls. Please report any keyboard barrier you encounter.
             </p>
             <p>
-              <strong>Color contrast:</strong> We maintain a minimum contrast ratio of 4.5:1 for body text and 3:1 for large text in both light and dark modes, consistent with WCAG AA requirements.
+              <strong>Color contrast:</strong> Our design targets WCAG AA contrast ratios in light and dark modes. We test changes and treat any reported contrast failure as an accessibility defect.
             </p>
             <p>
               <strong>Dark mode:</strong> A system-aware dark mode is available to reduce eye strain and improve readability in low-light conditions. You can toggle it manually using the theme button in the navigation bar.
             </p>
             <p>
-              <strong>Responsive design:</strong> Our site is fully responsive and usable on devices of all sizes, from mobile phones to desktop screens.
+              <strong>Responsive design:</strong> Our site is designed for mobile through desktop layouts without requiring horizontal scrolling in core flows.
             </p>
             <p>
               <strong>No time limits:</strong> Our screening tools have no time limits. You can take as long as you need to complete any questionnaire.
@@ -72,10 +72,10 @@ export default function AccessibilityPage() {
               <strong>Focus management:</strong> When you complete a screening tool, focus is moved to the results section so screen readers announce your score and interpretation immediately.
             </p>
             <p>
-              <strong>ARIA attributes:</strong> We use ARIA roles, labels, and states where native HTML semantics are insufficient, for example, on toggle switches in our cookie consent banner and progress indicators in our tools.
+              <strong>ARIA attributes:</strong> We use ARIA roles, labels, states, and live regions where native HTML semantics are insufficient, including tool progress and status feedback.
             </p>
             <p>
-              <strong>No auto-play:</strong> Our site does not auto-play audio, video, or animations that cannot be paused. The only animation is a subtle pulse indicator on the homepage, which is purely decorative.
+              <strong>Motion and media:</strong> The site does not intentionally auto-play audio or video. Interface motion should respect reduced-motion preferences and must not delay crisis or safety information.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function AccessibilityPage() {
               Accessibility is not a one-time project, it is an ongoing practice. We are committed to:
             </p>
             <p>
-              Regularly testing our site with screen readers and keyboard-only navigation. Reviewing new content and features for accessibility before deployment. Monitoring WCAG guidelines for updates and incorporating new best practices. Responding promptly to accessibility feedback from our users.
+              Expanding manual screen-reader and keyboard testing of core flows. Reviewing new content and features before deployment. Monitoring WCAG guidance. Responding promptly to accessibility feedback from users.
             </p>
           </section>
 
