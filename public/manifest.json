@@ -1,28 +1,16 @@
 {
   "name": "MindCheck Tools, Mental Health Screening",
   "short_name": "MindCheck",
-  "description": "Free, private mental health and substance use self-checks. Scored in your browser, never stored. PHQ-9, GAD-7, AUDIT, and more.",
+  "description": "Free mental health and substance-use self-checks. Screening answers are processed in your browser and are not intentionally sent to MindCheck Tools.",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "background_color": "#faf8f5",
   "theme_color": "#1a1b1e",
   "categories": ["health", "medical"],
-  "screenshots": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "form_factor": "wide"
-    }
-  ],
   "icons": [
     {
       "src": "/icon-192.png",

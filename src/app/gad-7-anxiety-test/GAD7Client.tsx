@@ -7,13 +7,11 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
   sharePrivateToolLink,
 } from "@/lib/privateToolSharing";
-import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 
@@ -55,10 +53,9 @@ const RANGE_COLORS: Record<string, { text: string; bg: string; bar: string }> = 
 
 interface Props {
   faqData: { question: string; answer: string }[];
-  suppressTherapyCTA?: boolean;
 }
 
-export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
+export function GAD7Client({ faqData }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(7).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -329,9 +326,6 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
             </div>
           </div>
 
-          {/* Therapist CTA — positioned after all crisis resources, shown only for moderate anxiety (not severe) */}
-          <TherapyCTA show={!suppressTherapyCTA && range.key === "moderate"} />
-
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
             <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
@@ -407,9 +401,6 @@ export function GAD7Client({ faqData, suppressTherapyCTA = false }: Props) {
               prompts={REFLECTION_PROMPTS["gad-7-anxiety-test"].prompts}
             />
           )}
-
-          <EmailCapture />
-
 
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>

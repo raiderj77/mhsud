@@ -1,30 +1,30 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const read = (file) => readFile(new URL(`../${file}`, import.meta.url), "utf8");
 
-test("affiliate and email services use a homepage-only positive allowlist", async () => {
+test("dormant therapy affiliate and email subscription services are removed", async () => {
   const policies = await read("src/lib/routePolicies.ts");
-  const allowlist = policies.match(
-    /const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set\(\[([\s\S]*?)\]\)/,
-  )?.[1] ?? "";
-  const routes = [...allowlist.matchAll(/["']([^"']+)["']/g)].map((match) => match[1]);
-  assert.deepEqual(routes, ["/"]);
-  assert.match(policies, /export function isOptionalServicesAllowedRoute/);
+  const env = await read(".env.example");
+  for (const path of [
+    "../src/components/TherapyCTA.tsx",
+    "../src/components/EmailCapture.tsx",
+    "../src/app/api/subscribe/route.ts",
+    "../src/lib/subscription.mjs",
+  ]) {
+    await assert.rejects(access(new URL(path, import.meta.url)), { code: "ENOENT" });
+  }
+  assert.doesNotMatch(policies, /OPTIONAL_SERVICE_ALLOWED_ROUTES|isOptionalServicesAllowedRoute/);
+  assert.doesNotMatch(env, /NEXT_PUBLIC_THERAPY_AFFILIATE_URL|LOOPS_API_KEY/);
 });
 
-test("affiliate, email, and aggregate navigation enforce their separate allowlists", async () => {
-  const [therapy, email, lifecycle] = await Promise.all([
-    read("src/components/TherapyCTA.tsx"),
-    read("src/components/EmailCapture.tsx"),
-    read("src/components/SensitiveRouteLifecycle.tsx"),
-  ]);
-  assert.match(therapy, /!isOptionalServicesAllowedRoute\(pathname\)/);
-  assert.match(email, /!isOptionalServicesAllowedRoute\(pathname\)/);
+test("aggregate navigation keeps its independent positive allowlist", async () => {
+  const lifecycle = await read("src/components/SensitiveRouteLifecycle.tsx");
   assert.match(lifecycle, /isPrivacySafeAggregateAnalyticsRoute/);
   assert.match(lifecycle, /forceCleanExcludedNavigation/);
+  assert.match(lifecycle, /data-sdkn\^=/);
   assert.match(lifecycle, /document\.addEventListener\("click", forceCleanExcludedNavigation, true\)/);
-  assert.match(lifecycle, /window\.location\.assign\(destination\.href\)/);
+  assert.match(lifecycle, /window\.location\.assign\(cleanInternalDestination\(destination\)\)/);
   assert.doesNotMatch(lifecycle, /ConsentAnalytics|consented-google-analytics|trackPrivateToolLaunch|gtag/);
 });

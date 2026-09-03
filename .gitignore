@@ -35,7 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Empire SEO Machine
+# Empire SEO Machine working state stays local and review-gated.
 data_sources/config/
 data_sources/cache/
 content/drafts/

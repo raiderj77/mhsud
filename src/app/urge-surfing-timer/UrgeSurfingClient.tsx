@@ -544,7 +544,7 @@ export function UrgeSurfingClient({ faqData }: Props) {
         {/* privacy */}
         <p className="text-xs text-center text-neutral-500 dark:text-neutral-400">
           Your timer choice and session details stay in your browser and are not sent to analytics.
-          General page usage may be measured only if you consent to statistics cookies.
+          This interactive health route is excluded from Vercel Web Analytics.
         </p>
       </footer>
     </div>

@@ -42,6 +42,7 @@ test("privacy notices describe the aggregate measurement boundary", async () => 
     assert.match(source, /Vercel Web Analytics/);
     assert.match(source, /cookie-free/i);
     assert.match(source, /Global Privacy Control/i);
+    assert.match(source, /when enabled|if Vercel Web Analytics is enabled/i);
   }
 
   assert.match(privacy, /hash that resets after 24 hours/);

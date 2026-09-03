@@ -1,6 +1,16 @@
+import { legacyBlogRedirects } from "./config/legacy-blog-routes.mjs";
+
+export const retiredNonBlogNotFoundPaths = Object.freeze([
+  "/depression-test-for-teens",
+  "/anxiety-test-for-teens",
+  "/adhd-test-for-teens",
+  "/dast-10-drug-screening",
+  "/audit-vs-dast-10",
+  "/dast-10-score-interpretation",
+]);
+
 /** @type {import('next').NextConfig} */
 const quarantinedRedirects = [
-  ["/depression-test-for-teens", "/phq-9-depression-test"],
   ["/depression-test-for-seniors", "/phq-9-depression-test"],
   ["/depression-test-for-new-moms", "/phq-9-depression-test"],
   ["/depression-screening-for-veterans", "/phq-9-depression-test"],
@@ -8,14 +18,12 @@ const quarantinedRedirects = [
   ["/depression-screening-for-men", "/phq-9-depression-test"],
   ["/am-i-depressed-quiz", "/phq-9-depression-test"],
   ["/anxiety-test-for-women", "/gad-7-anxiety-test"],
-  ["/anxiety-test-for-teens", "/gad-7-anxiety-test"],
   ["/anxiety-test-for-men", "/gad-7-anxiety-test"],
   ["/ptsd-test-veterans", "/pcl-5-ptsd-screening"],
   ["/ptsd-test-first-responders", "/pcl-5-ptsd-screening"],
   ["/do-i-have-ptsd-quiz", "/pcl-5-ptsd-screening"],
   ["/adhd-test-adults", "/asrs-adhd-screening"],
   ["/adhd-test-women", "/asrs-adhd-screening"],
-  ["/adhd-test-for-teens", "/asrs-adhd-screening"],
   ["/social-anxiety-test-college", "/spin-social-anxiety-test"],
   ["/alcohol-screening-for-college-students", "/audit-alcohol-test"],
   ["/alcohol-screening-for-women", "/audit-alcohol-test"],
@@ -36,30 +44,6 @@ const quarantinedRedirects = [
   ["/bpd-test-for-women", "/msi-bpd-screening"],
   ["/bpd-screening-for-young-adults", "/msi-bpd-screening"],
   ["/attachment-style-test-for-couples", "/attachment-style-quiz"],
-].map(([source, destination]) => ({ source, destination, permanent: true }));
-
-// Preserve useful legacy article URLs by sending them to maintained pages with
-// the same user intent. These must remain ahead of the generic blog catch-all.
-const canonicalBlogRedirects = [
-  ["/blog/audit-guide", "/audit-score-interpretation"],
-  ["/blog/what-does-audit-score-mean", "/audit-score-interpretation"],
-  ["/blog/quit-drinking-timeline", "/health-recovery-timeline"],
-  ["/blog/gad-7-guide", "/gad-7-score-interpretation"],
-  ["/blog/what-does-gad-7-score-mean", "/gad-7-score-interpretation"],
-  ["/blog/anxiety-coping-strategies", "/five-senses-grounding"],
-  ["/blog/phq-9-guide", "/phq-9-score-interpretation"],
-  ["/blog/what-does-phq-9-score-mean", "/phq-9-score-interpretation"],
-  ["/blog/depression-vs-anxiety", "/phq-9-vs-gad-7"],
-  ["/blog/ace-score-meaning", "/ace-questionnaire"],
-  ["/blog/dass-21-score-guide", "/dass-21-depression-anxiety-stress"],
-  ["/blog/what-does-pcl-5-score-mean", "/pcl-5-score-interpretation"],
-  ["/blog/what-does-asrs-score-mean", "/asrs-score-interpretation"],
-  ["/blog/what-does-dass-21-score-mean", "/dass-21-depression-anxiety-stress"],
-  ["/blog/what-does-ace-score-mean", "/ace-questionnaire"],
-  ["/blog/what-does-pc-ptsd-5-score-mean", "/pc-ptsd-5-screening"],
-  ["/blog/what-does-cage-aid-score-mean", "/cage-aid-substance-abuse-screening"],
-  ["/blog/what-does-rosenberg-self-esteem-score-mean", "/rosenberg-self-esteem-scale"],
-  ["/blog/phq-9-vs-gad-7", "/phq-9-vs-gad-7"],
 ].map(([source, destination]) => ({ source, destination, permanent: true }));
 
 const nextConfig = {
@@ -147,25 +131,10 @@ const nextConfig = {
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },
       { source: "/depression-test", destination: "/phq-9-depression-test", permanent: true },
       { source: "/anxiety-test", destination: "/gad-7-anxiety-test", permanent: true },
-      { source: "/dast-10-drug-screening", destination: "/audit-alcohol-test", permanent: true },
-      { source: "/mdq-bipolar-screening", destination: "/blog/what-is-bipolar-disorder", permanent: true },
-      { source: "/oci-r-ocd-screening", destination: "/blog/what-is-ocd", permanent: true },
-      { source: "/ocd-test-teens", destination: "/blog/what-is-ocd", permanent: true },
-      { source: "/bipolar-test-young-adults", destination: "/blog/what-is-bipolar-disorder", permanent: true },
-      { source: "/blog/what-does-oci-r-score-mean", destination: "/blog/what-is-ocd", permanent: true },
-      { source: "/mdq-score-interpretation", destination: "/blog/what-is-bipolar-disorder", permanent: true },
-      { source: "/audit-vs-dast-10", destination: "/audit-alcohol-test", permanent: true },
-      { source: "/dast-10-score-interpretation", destination: "/audit-alcohol-test", permanent: true },
-      { source: "/blog/dast-10-guide", destination: "/audit-alcohol-test", permanent: true },
       ...quarantinedRedirects,
-      ...canonicalBlogRedirects,
-      {
-        source: "/blog/how-to-talk-to-doctor-about-mental-health",
-        destination: "/how-to-talk-to-your-doctor-about-mental-health",
-        permanent: true,
-      },
-      { source: "/blog/:path*", destination: "/screening-tools", permanent: true },
-      { source: "/blog", destination: "/screening-tools", permanent: true },
+      // Next normalizes redirect objects in place, so hand it mutable copies
+      // while the audited decision manifest remains immutable.
+      ...legacyBlogRedirects.map((redirect) => ({ ...redirect })),
     ];
   },
 };

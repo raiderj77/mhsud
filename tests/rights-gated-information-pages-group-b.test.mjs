@@ -71,7 +71,10 @@ test("group B canonical routes are server-rendered, indexable information pages"
   for (const entry of routes) {
     const source = await readFile(path.join(root, entry.page), "utf8");
 
-    assert.match(source, new RegExp(`const PAGE_PATH = ["']${entry.route}["']`));
+    assert.ok(
+      source.includes(`const PAGE_PATH = "${entry.route}"`) || source.includes(`const PAGE_PATH = '${entry.route}'`),
+      `${entry.route} does not declare its exact page path`,
+    );
     assert.match(source, /path: PAGE_PATH/);
     assert.match(source, /createMetadata\(/);
     assert.match(source, /medicalWebPageJsonLd\(/);
@@ -83,7 +86,7 @@ test("group B canonical routes are server-rendered, indexable information pages"
     assert.match(source, /No scoring/);
     assert.doesNotMatch(source, /noindex|index:\s*false|follow:\s*false/i);
     assert.doesNotMatch(source, /["']use client["']|useState\(|<form\b|<input\b|<button\b|type="(?:radio|checkbox)"/);
-    assert.doesNotMatch(source, new RegExp(entry.clientName));
+    assert.equal(source.includes(entry.clientName), false, `${entry.route} references retired ${entry.clientName}`);
     assert.doesNotMatch(source, /toolPageJsonLd|DisclaimerGate|sharePrivateToolLink|printSensitiveResults/);
   }
 });
@@ -105,7 +108,7 @@ test("group B pages preserve rights, privacy, crisis, and non-equivalence safegu
     assert.match(source, /asks no .*questions|accepts no answers/i);
 
     for (const citation of entry.citations) {
-      assert.match(source, new RegExp(citation.replaceAll(".", "\\.")));
+      assert.ok(source.includes(citation), `${entry.route} is missing citation ${citation}`);
     }
   }
 });

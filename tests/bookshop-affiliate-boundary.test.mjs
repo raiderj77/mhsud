@@ -22,10 +22,7 @@ test("recommended reading is a small, disclosed, source-linked list", async () =
 });
 
 test("affiliate links stay separate from tracking and crisis content", async () => {
-  const [page, policies] = await Promise.all([
-    read("src/app/recommended-reading/page.tsx"),
-    read("src/lib/routePolicies.ts"),
-  ]);
+  const page = await read("src/app/recommended-reading/page.tsx");
 
   for (const forbidden of [
     /AdSlot/,
@@ -37,7 +34,6 @@ test("affiliate links stay separate from tracking and crisis content", async () 
     /onClick=/,
   ]) assert.doesNotMatch(page, forbidden);
 
-  assert.match(policies, /const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set\(\["\/"\]\)/);
   assert.ok(
     page.lastIndexOf("View this edition at Bookshop.org") < page.indexOf("Need help now?"),
     "affiliate offers must end before the dedicated crisis section",

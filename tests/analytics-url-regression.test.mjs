@@ -37,10 +37,56 @@ test("GPC and unknown browser state block aggregate analytics", async () => {
 test("public-to-sensitive navigation disposes of the aggregate runtime", async () => {
   const source = await read("src/components/SensitiveRouteLifecycle.tsx");
   assert.match(source, /isPrivacySafeAggregateAnalyticsRoute\(pathname\)/);
-  assert.match(source, /!aggregateAllowed && aggregateScriptLoaded/);
-  assert.match(source, /aggregateScriptLoaded\.remove\(\)/);
-  assert.match(source, /aggregateAllowed/);
-  assert.match(source, /window\.location\.assign\(destination\.href\)/);
+  assert.match(source, /script\[data-sdkn\^=\\?"@vercel\/analytics\\?"\]/);
+  assert.match(source, /querySelectorAll<HTMLScriptElement>/);
+  assert.match(source, /scripts\.forEach\(\(script\) => script\.remove\(\)\)/);
+  assert.match(source, /previousAggregateAllowed\.current/);
+  assert.match(source, /previouslyAggregateAllowed === true \|\| aggregateScriptRemoved/);
+  assert.match(source, /requiresCleanDocument\(aggregateAllowed, previouslyAggregateAllowed, aggregateScriptRemoved\)/);
+  assert.match(source, /window\.location\.replace\(pathname\)/);
+  assert.match(source, /destination\.search = ""/);
+  assert.match(source, /destination\.hash = ""/);
+  assert.match(source, /window\.location\.assign\(cleanInternalDestination\(destination\)\)/);
+});
+
+test("hashed Vercel loader removal and clean-document decisions are executable", async () => {
+  const source = await read("src/components/SensitiveRouteLifecycle.tsx");
+  const removeImplementation = functionSource(source, "removeVercelAnalyticsScripts");
+  const decisionImplementation = functionSource(source, "requiresCleanDocument");
+  const cleanDestinationImplementation = functionSource(source, "cleanInternalDestination");
+  const removed = [];
+  const selectors = [];
+  const removeResult = runInNewContext(
+    `${removeImplementation}; removeVercelAnalyticsScripts()`,
+    {
+      VERCEL_ANALYTICS_SCRIPT_SELECTOR: 'script[data-sdkn^="@vercel/analytics"]',
+      document: {
+        querySelectorAll(selector) {
+          selectors.push(selector);
+          return [{ remove: () => removed.push("first") }, { remove: () => removed.push("second") }];
+        },
+      },
+    },
+  );
+  assert.equal(removeResult, true);
+  assert.deepEqual(selectors, ['script[data-sdkn^="@vercel/analytics"]']);
+  assert.deepEqual(removed, ["first", "second"]);
+
+  const decide = (allowed, previouslyAllowed, scriptRemoved) => runInNewContext(
+    `${decisionImplementation}; requiresCleanDocument(${JSON.stringify(allowed)}, ${JSON.stringify(previouslyAllowed)}, ${JSON.stringify(scriptRemoved)})`,
+  );
+  assert.equal(decide(false, true, false), true, "programmatic transitions from allowlisted pages reload");
+  assert.equal(decide(false, null, true), true, "a stray aggregate script on direct entry reloads");
+  assert.equal(decide(false, null, false), false, "a clean direct entry does not loop");
+  assert.equal(decide(true, true, true), false, "an allowlisted route remains eligible");
+
+  assert.equal(
+    runInNewContext(
+      `${cleanDestinationImplementation}; cleanInternalDestination(destination)`,
+      { URL, destination: new URL("https://mindchecktools.com/phq-9-depression-test?score=fixture#result") },
+    ),
+    "https://mindchecktools.com/phq-9-depression-test",
+  );
 });
 
 test("aggregate event filter strips URL details and rejects excluded routes and GPC", async () => {

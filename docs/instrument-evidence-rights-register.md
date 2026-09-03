@@ -13,10 +13,7 @@ The owner requirement is that every instrument URL remain freely and publicly us
 
 ## Release policy
 
-**ADSENSE ACTIVATION IS BLOCKED; PUBLIC ACCESS IS NOT.** Do not activate AdSense or another commercial monetization surface until every instrument below is either:
-
-1. cleared with an authoritative, instrument-specific grant covering the exact items, scoring, public-web delivery, and commercial use; or
-2. kept freely public behind a documented ad-free/non-commercial boundary that excludes the instrument from monetized page context.
+**DISPLAY ADVERTISING IS PERMANENTLY PROHIBITED; PUBLIC ACCESS IS NOT.** AGENTS.md permanently prohibits AdSense, display-ad scripts, and equivalent display-ad monetization across MindCheckTools. Instrument rights remain an independent gate: every instrument below still needs an authoritative, instrument-specific grant covering its exact public use or a documented information-only/noncommercial boundary.
 
 A validation paper proves neither copyright status nor permission. A source-code claim such as "public domain" or "free for clinical use" is not a rights artifact. `BLOCKED` below is a gate for a new release, expansion, or monetization involving that instrument; it is not an instruction to deploy, remove, or change the current site.
 
@@ -116,7 +113,7 @@ These routes are **LOCALLY RESOLVED, RELEASE-GATED** in their current informatio
 3. No remaining interactive instrument has a stored, current approval of every possible result label, interpretation, referral statement, crisis escalation, and treatment-related sentence. The informational routes have no result branches, but their rights-boundary, crisis, privacy, citation, alternative-link, and reviewer-scope copy still requires release parity.
 4. The configured reviewer and CADC-II credential are visible, but topic-qualified review is unknown outside the documented credential scope. A single canonical review date is also unresolved across page copy, reviewer components, schema, and sitemap metadata.
 5. Translations, adaptations, demographic variants, downloadable/printable copies, and derivative score-guide pages are not cleared by this register unless the authoritative rights artifact explicitly covers them.
-6. Current production parity, provider state, and actual AdSense account status are outside this source-only register and must not be inferred from it. AdSense remains blocked in code and policy; optional third-party services are locally allowlisted only on the homepage.
+6. Current production parity and provider state are outside this source-only register and must not be inferred from it. Display advertising remains permanently prohibited by AGENTS.md; optional third-party services are governed separately by the route allowlist and privacy policy.
 
 ## Required evidence to change a row from BLOCKED
 

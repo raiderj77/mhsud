@@ -5,12 +5,6 @@ import { join } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import {
-  buildEmailProviderPayload,
-  MAX_SUBSCRIPTION_BODY_BYTES,
-  parseSubscriptionBody,
-} from "../src/lib/subscription.mjs";
-
 async function readSourceTree(directory) {
   const files = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -24,51 +18,15 @@ async function readSourceTree(directory) {
   return files;
 }
 
-test("subscription requires explicit consent", () => {
-  assert.equal(parseSubscriptionBody(JSON.stringify({ email: "person@example.com" })).ok, false);
-});
-
-test("subscription rejects malformed email, honeypot, and oversized bodies", () => {
-  assert.equal(parseSubscriptionBody(JSON.stringify({ email: "bad", consent: true })).ok, false);
-  assert.equal(
-    parseSubscriptionBody(
-      JSON.stringify({ email: "person@example.com", consent: true, website: "spam" }),
-    ).ok,
-    false,
-  );
-  assert.equal(parseSubscriptionBody("x".repeat(MAX_SUBSCRIPTION_BODY_BYTES + 1)).status, 413);
-});
-
-test("provider receives email only, never screener or health context", () => {
-  const payload = buildEmailProviderPayload("person@example.com");
-  assert.deepEqual(payload, { email: "person@example.com", subscribed: true });
-  assert.equal("source" in payload, false);
-  assert.equal("userGroup" in payload, false);
-  assert.equal("score" in payload, false);
-});
-
-test("affiliate links suppress referrer data and disclose the relationship", async () => {
-  const component = await readFile(new URL("../src/components/TherapyCTA.tsx", import.meta.url), "utf8");
-  assert.match(component, /referrerPolicy="no-referrer"/);
-  assert.match(component, /noreferrer/);
-  assert.match(component, /Affiliate Disclosure/);
-  assert.match(component, /answers and score are not sent/);
-  assert.match(component, /url\.protocol === "https:"/);
-});
-
-test("newsletter form does not collect the screener name", async () => {
-  const component = await readFile(new URL("../src/components/EmailCapture.tsx", import.meta.url), "utf8");
-  const route = await readFile(new URL("../src/app/api/subscribe/route.ts", import.meta.url), "utf8");
-  assert.doesNotMatch(component, /toolName|source:/);
-  assert.doesNotMatch(route, /toolName|userGroup|body\.source/);
-  assert.match(component, /referrerPolicy:\s*"no-referrer"/);
-  assert.match(component, /!isOptionalServicesAllowedRoute\(pathname\)\) return null/);
-  assert.match(route, /origin !== new URL\(req\.url\)\.origin/);
-  assert.match(route, /fetchSite && fetchSite !== "same-origin"/);
-  assert.ok(
-    route.indexOf("parseSubscriptionBody(rawBody)") < route.indexOf("if (!LOOPS_KEY)"),
-    "request validation must run before provider configuration checks",
-  );
+test("dormant email-capture and therapy-affiliate infrastructure stays removed", () => {
+  for (const relativePath of [
+    "../src/components/TherapyCTA.tsx",
+    "../src/components/EmailCapture.tsx",
+    "../src/app/api/subscribe/route.ts",
+    "../src/lib/subscription.mjs",
+  ]) {
+    assert.equal(existsSync(new URL(relativePath, import.meta.url)), false, relativePath);
+  }
 });
 
 test("browser-local health records are disclosed where they are stored", async () => {
@@ -101,23 +59,56 @@ test("consumer-health-data notice discloses limited request data and service pro
   for (const required of [
     /Website request data/,
     /Cookie-free aggregate measurement/,
-    /Resource-email subscription/,
     /Vercel/,
-    /Loops/,
     /Consumer Health Data Request/,
   ]) assert.match(notice, required);
+  assert.doesNotMatch(notice, /Resource-email subscription|Loops/i);
   assert.match(notice, /does not use Google Analytics/i);
   assert.match(notice, /do not sell consumer health data/i);
-  assert.match(notice, /Questionnaire answers, scores[\s\S]*are not collected/);
+  assert.match(notice, /Questionnaire answers, scores[\s\S]*processed in your browser[\s\S]*not intentionally sent/);
+  assert.match(notice, /Ordinary page requests[\s\S]*hosting records/);
   assert.match(privacy, /requested health-topic path can appear in ordinary hosting data/);
+  assert.match(privacy, /coarse city\/region\/country/);
+  assert.match(privacy, /operating system and version/);
+  assert.match(privacy, /browser and version/);
+  assert.match(privacy, /device type/);
+  assert.match(privacy, /analytics-script version/);
+  assert.match(notice, /cleanup cannot[\s\S]*guaranteed if JavaScript or hydration fails/);
   assert.doesNotMatch(privacy, /MindCheck Tools does not collect, store, or share health data/);
   assert.match(privacy, /MODPA took effect October 1, 2025/);
+});
+
+test("homepage describes its privacy boundary without calling tools confidential", async () => {
+  const homepage = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
+  assert.match(homepage, /what is the privacy boundary/i);
+  assert.doesNotMatch(homepage, /screening tools free and confidential/i);
 });
 
 test("unused public indexing proxy and false search action stay removed", async () => {
   const metadata = await readFile(new URL("../src/lib/metadata.ts", import.meta.url), "utf8");
   assert.equal(existsSync(new URL("../src/app/api/indexnow/route.ts", import.meta.url)), false);
   assert.doesNotMatch(metadata, /SearchAction|search_term_string/);
+});
+
+test("IndexNow retains one canonical public verification key and no fake secret knob", async () => {
+  const key = "55d118ba976fb26d19c6f5c6f5b1816d";
+  const publicFiles = await readdir(new URL("../public/", import.meta.url));
+  const keyFiles = publicFiles.filter((name) => /^[0-9a-f]{32}\.txt$/.test(name));
+  const [contents, workflow, envExample] = await Promise.all([
+    readFile(new URL(`../public/${key}.txt`, import.meta.url), "utf8"),
+    readFile(new URL("../.github/workflows/empire-check.yml", import.meta.url), "utf8"),
+    readFile(new URL("../.env.example", import.meta.url), "utf8"),
+  ]);
+
+  assert.deepEqual(keyFiles, [`${key}.txt`]);
+  assert.equal(contents.trim(), key);
+  assert.match(workflow, /Expected exactly one public IndexNow key file/);
+  assert.ok(workflow.includes(key));
+  assert.doesNotMatch(envExample, /INDEXNOW_API_KEY/);
+});
+
+test("dead trust-marketing hero cannot be accidentally revived", () => {
+  assert.equal(existsSync(new URL("../src/components/ModernHero.tsx", import.meta.url)), false);
 });
 
 test("publisher and named reviewer identities remain separate, public, and private by scope", async () => {
@@ -217,23 +208,30 @@ test("the previously missing result pages offer local browser printing", async (
   }
 });
 
-test("scaled content stays quarantined from search and internal discovery", async () => {
+test("retired content stays out of search and internal discovery", async () => {
   const nextConfig = await readFile(new URL("../next.config.mjs", import.meta.url), "utf8");
   const sitemap = await readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8");
   const homepage = await readFile(new URL("../src/app/page.tsx", import.meta.url), "utf8");
   const attachmentPage = await readFile(new URL("../src/app/attachment-style-quiz/page.tsx", import.meta.url), "utf8");
-  const attachmentGuide = await readFile(new URL("../src/app/blog/attachment-styles-guide/page.tsx", import.meta.url), "utf8");
   const screeningTools = await readFile(new URL("../src/app/screening-tools/page.tsx", import.meta.url), "utf8");
   const llms = await readFile(new URL("../public/llms.txt", import.meta.url), "utf8");
   const llmsFull = await readFile(new URL("../public/llms-full.txt", import.meta.url), "utf8");
   const llmsFullRoute = await readFile(new URL("../src/app/llms-full.txt/route.ts", import.meta.url), "utf8");
 
-  assert.match(nextConfig, /source: "\/blog\/:path\*", destination: "\/screening-tools"/);
-  assert.match(nextConfig, /"\/depression-test-for-teens", "\/phq-9-depression-test"/);
+  assert.match(nextConfig, /legacyBlogRedirects/);
+  assert.doesNotMatch(nextConfig, /source: "\/blog\/:path\*"/);
+  assert.match(nextConfig, /retiredNonBlogNotFoundPaths/);
+  assert.doesNotMatch(nextConfig, /"\/depression-test-for-teens", "\/phq-9-depression-test"/);
+  assert.equal(existsSync(new URL("../src/app/depression-test-for-teens/page.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/app/anxiety-test-for-teens/page.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/app/adhd-test-for-teens/page.tsx", import.meta.url)), false);
   assert.doesNotMatch(sitemap, /BLOG_POSTS/);
+  assert.doesNotMatch(sitemap, /SITE_URL\}\/blog/);
   assert.match(sitemap, /QUARANTINED_PATHS/);
+  assert.equal(existsSync(new URL("../src/app/blog/attachment-styles-guide/page.tsx", import.meta.url)), false);
+  assert.equal(existsSync(new URL("../src/lib/blog.ts", import.meta.url)), false);
   assert.match(homepage, /targetedScreenings=\{\[\]\}/);
-  for (const source of [attachmentPage, attachmentGuide, screeningTools, llms, llmsFull, llmsFullRoute]) {
+  for (const source of [attachmentPage, screeningTools, llms, llmsFull, llmsFullRoute]) {
     assert.doesNotMatch(source, /attachment-style-test-for-couples/);
   }
 });

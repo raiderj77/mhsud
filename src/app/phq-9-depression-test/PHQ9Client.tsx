@@ -7,8 +7,6 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
-import { TherapyCTA } from "@/components/TherapyCTA";
-import { EmailCapture } from "@/components/EmailCapture";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 import { printSensitiveResults } from "@/lib/sensitivePrinting";
@@ -518,16 +516,6 @@ export function PHQ9Client({ faqData }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
-
-          <TherapyCTA
-            show={
-              ["moderate", "mod-severe", "severe"].includes(range.key) &&
-              answers[8] === 0
-            }
-          />
-
-          <EmailCapture />
-
 
           {/* FAQ */}
           <section className="mb-8">

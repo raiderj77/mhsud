@@ -24,14 +24,14 @@ test("sensitive routes receive no-store and no-referrer response headers", async
 });
 
 test("topical routes bypass tracking, advertising, affiliates, and assessment events", async () => {
-  const [therapy, events, aggregate] = await Promise.all([
-    read("../src/components/TherapyCTA.tsx"),
+  const [events, aggregate] = await Promise.all([
     read("../src/lib/assessmentAnalytics.ts"),
     read("../src/components/PrivacySafeAggregateAnalytics.tsx"),
   ]);
   await assert.rejects(access(new URL("../src/components/ConsentAnalytics.tsx", import.meta.url)), { code: "ENOENT" });
   await assert.rejects(access(new URL("../src/components/AdSlot.tsx", import.meta.url)), { code: "ENOENT" });
-  assert.match(therapy, /isOptionalServicesAllowedRoute\(pathname\)/);
+  await assert.rejects(access(new URL("../src/components/TherapyCTA.tsx", import.meta.url)), { code: "ENOENT" });
+  await assert.rejects(access(new URL("../src/components/EmailCapture.tsx", import.meta.url)), { code: "ENOENT" });
   assert.match(events, /Compatibility no-op/);
   assert.doesNotMatch(events, /gtag|fetch\(|sendBeacon/);
   assert.match(aggregate, /isPrivacySafeAggregateAnalyticsRoute/);
@@ -71,7 +71,7 @@ test("interactive health tools without generic screening words stay sensitive", 
   const policyPattern = policies.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
   const workerPattern = worker.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
   assert.equal(workerPattern, policyPattern, "sensitive slug patterns must stay identical");
-  assert.match(worker, /const CACHE_VERSION = "2\.0\.0"/);
+  assert.match(worker, /const CACHE_VERSION = "3\.0\.0"/);
 });
 
 test("obsolete Google consent state cannot reactivate optional tracking", async () => {
@@ -83,11 +83,12 @@ test("obsolete Google consent state cannot reactivate optional tracking", async 
 
 test("service worker never caches sensitive routes or optional Google services", async () => {
   const worker = await read("../public/service-worker.js");
-  assert.match(worker, /url\.pathname\.startsWith\("\/api\/"\) \|\| isSensitivePath\(url\.pathname\)/);
+  assert.match(worker, /if \(url\.pathname\.startsWith\("\/api\/"\)\) \{[\s\S]*?fetch\(request, \{ cache: "no-store" \}\)[\s\S]*?return;[\s\S]*?\}/);
+  assert.match(worker, /if \(isSensitivePath\(url\.pathname\)\) \{[\s\S]*?networkOnlySensitive\(request\)[\s\S]*?return;[\s\S]*?\}/);
+  assert.match(worker, /isAggregateAnalyticsPath\(url\.pathname\)/);
   assert.match(worker, /fetch\(request, \{ cache: "no-store" \}\)/);
   assert.doesNotMatch(worker, /mindcheck-analytics/);
   assert.doesNotMatch(worker, /importScripts|storage\.googleapis\.com|googletagmanager|googlesyndication/i);
-  assert.doesNotMatch(worker, /url\.pathname\.startsWith\("\/api\/"\)[\s\S]*caches\.open/);
   assert.doesNotMatch(worker, /process\.env/);
   assert.match(worker, /const MAX_STATIC_ENTRIES = 120/);
   assert.match(worker, /const MAX_PAGE_ENTRIES = 60/);

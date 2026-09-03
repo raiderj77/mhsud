@@ -1,6 +1,6 @@
 # MindCheckTools AGENTS.md
 
-Last reviewed: 2026-08-28
+Last reviewed: 2026-08-30
 Site: https://mindchecktools.com
 Repository: raiderj77/mhsud
 
@@ -38,6 +38,8 @@ Prioritize, in order:
 Do not trade safety, rights, privacy, or trust for traffic, conversion, backlinks, publication speed, or short-term revenue.
 
 If a critical fact is unknown, do not guess.
+
+Protect the owner's private life. Do not publish or expose owner home or location details, private addresses or contact information, LLC records, or unrelated personal history. A deliberately approved professional or reviewer identity may appear only when it is relevant, accurately scoped, and supported.
 
 ## Product boundary
 
@@ -182,7 +184,7 @@ Crisis behavior must be deterministic and separate from ordinary SEO, conversion
 
 When a response requires an immediate safety state, safety content outranks the normal result.
 
-For U.S. users, clearly surface 988 and emergency services for immediate danger. Provide an international support path where appropriate.
+For U.S. users, clearly surface the 988 Suicide & Crisis Lifeline, Crisis Text Line (text HOME to 741741), and the SAMHSA National Helpline (1-800-662-4357), plus emergency services for immediate danger. Provide an international support path where appropriate.
 
 H4 states must:
 - load without display ads
@@ -537,6 +539,8 @@ Keep:
 - fictional test data only
 
 Do not use real user health data in development, CI, screenshots, examples, or tests.
+
+Never hard-code or commit API keys, tokens, passwords, credentials, or other secrets. Use approved deployment secret storage and keep examples fictional. Public verification values that are designed to be disclosed, such as the IndexNow key file, are not secrets; retain exactly one canonical value and do not reuse this exception for private credentials.
 
 Every third-party script must have a documented purpose, routes, exposed data, storage, retention, privacy impact, security impact, and removal path.
 

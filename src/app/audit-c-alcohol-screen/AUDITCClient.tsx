@@ -7,8 +7,6 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
-import { EmailCapture } from "@/components/EmailCapture";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -352,11 +350,6 @@ export function AUDITCClient({ faqData }: Props) {
               prompts={REFLECTION_PROMPTS["audit-c-alcohol-screen"].prompts}
             />
           )}
-
-          <TherapyCTA show={["above", "high"].includes(range.key)} />
-
-          <EmailCapture />
-
 
           <section className="mb-8">
             <h2 className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-5">Frequently Asked Questions</h2>

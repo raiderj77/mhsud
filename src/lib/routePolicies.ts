@@ -30,12 +30,6 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "withdrawal-timeline",
 ]);
 
-// Optional third-party services use a positive allowlist. A new route is
-// therefore tag-free by default until privacy, rights, crisis, and clinical
-// review explicitly clear it. Search Console remains the source of page-level
-// acquisition data. GA4 is not used by MindCheckTools.
-const OPTIONAL_SERVICE_ALLOWED_ROUTES = new Set(["/"]);
-
 // Cookie-free aggregate measurement uses a separate, narrow allowlist. These
 // routes are topic-neutral policy, trust, professional, or commercial pages.
 // Assessment, result, crisis, condition-specific, blog-detail, and interactive
@@ -64,10 +58,6 @@ function cleanPathname(pathname: string): string {
   const cleanPath = pathname.split(/[?#]/, 1)[0] || "/";
   if (cleanPath === "/") return cleanPath;
   return cleanPath.replace(/\/+$/, "") || "/";
-}
-
-export function isOptionalServicesAllowedRoute(pathname: string): boolean {
-  return OPTIONAL_SERVICE_ALLOWED_ROUTES.has(cleanPathname(pathname));
 }
 
 export function isPrivacySafeAggregateAnalyticsRoute(pathname: string): boolean {

@@ -14,8 +14,9 @@ export function middleware(request: NextRequest) {
   }
   const gpc = request.headers.get('sec-gpc') === '1'
   if (gpc) {
-    // empire_gpc is readable by the first-party privacy-choice manager.
-    // httpOnly: false is intentional, the consent banner JS must read this value.
+    // The browser-side analytics gate reads this first-party value so a GPC
+    // signal observed by middleware keeps Vercel Web Analytics suppressed.
+    // httpOnly: false is intentional; there is no consent-banner dependency.
     response.cookies.set('empire_gpc', '1', {
       httpOnly: false,
       sameSite: 'lax',

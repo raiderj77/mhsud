@@ -756,10 +756,10 @@ export default function HomePage() {
 
         <section>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">
-            Are these screening tools free and confidential?
+            Are these screening tools free, and what is the privacy boundary?
           </h2>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            Yes. Tools can be used without payment or an account. Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
+            Tools can be used without payment or an account. Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
             Scoring logic runs locally using client-side JavaScript. Some optional worksheets and recovery trackers can retain entries in your browser so they work across visits; those pages disclose local storage before use.

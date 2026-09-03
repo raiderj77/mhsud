@@ -51,7 +51,7 @@ const FAQ_DATA = [
   {
     question: "Can I use this tool for a veteran or service member?",
     answer:
-      "Yes. The PC-PTSD-5 was originally developed for use in VA primary care settings and is widely used with veterans and active-duty service members. However, it is validated for use with anyone, not just veterans. If you are a veteran or are supporting a veteran who screens positive, the Veterans Crisis Line (1-800-273-8255, Press 1) and VA mental health services are specifically designed to help. The VA offers specialized PTSD treatment programs at no cost to eligible veterans.",
+      "Yes. The PC-PTSD-5 was originally developed for use in VA primary care settings and is widely used with veterans and active-duty service members. However, it is validated for use with anyone, not just veterans. If you are a veteran or are supporting a veteran who screens positive, Dial 988 then Press 1, or text 838255, for the Veterans Crisis Line. VA mental health services also offer specialized PTSD treatment programs to eligible veterans.",
   },
   {
     question: "Is my data private?",

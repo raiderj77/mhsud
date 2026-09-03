@@ -43,11 +43,11 @@ export function auditHtml(url, status, html, { finalUrl = url, headers = {} } = 
   }));
   const path = new URL(url).pathname;
   const scripts = $("script[src]").map((_, el) => $(el).attr("src")).get().join(" ");
-  if (!policy.isOptionalServicesAllowedRoute(path)) {
-    check("no-ad-or-google-tags", !/googletagmanager\.com|google-analytics\.com|googlesyndication\.com|doubleclick\.net/i.test(scripts) && $("ins.adsbygoogle").length === 0);
-  }
+  check("no-ad-or-google-tags", !/googletagmanager\.com|google-analytics\.com|googlesyndication\.com|doubleclick\.net/i.test(scripts) && $("ins.adsbygoogle").length === 0);
   if (!policy.isPrivacySafeAggregateAnalyticsRoute(path)) {
-    check("no-aggregate-tag", !/_vercel\/insights|vercel-scripts\.com/i.test(scripts));
+    const hasAggregateScript = $('script[data-sdkn^="@vercel/analytics"]').length > 0
+      || /_vercel\/insights|vercel-scripts\.com/i.test(scripts);
+    check("no-aggregate-tag", !hasAggregateScript);
   }
   if (policy.isSensitiveRoute(path)) {
     check("sensitive-no-store", /no-store/i.test(headers["cache-control"] || ""));
@@ -117,7 +117,12 @@ export async function runAudit(origin = SITE_ORIGIN) {
     return { path: new URL(url).pathname, status: response.status, ok: response.status === 200, redirect: Boolean(response.headers.location) };
   });
   const failed = results.filter(r => !r.pass).length + extraLinks.filter(r => !r.ok).length;
-  return { checkedAt: new Date().toISOString(), origin, scope: "HTTP entry states only; no assessment interaction, clinical certification, or browser-network proof", total: results.length, failed, results: results.map(({ links, ...r }) => r), extraLinks };
+  const publicResults = results.map((result) => {
+    const publicResult = { ...result };
+    delete publicResult.links;
+    return publicResult;
+  });
+  return { checkedAt: new Date().toISOString(), origin, scope: "HTTP entry states only; no assessment interaction, clinical certification, or browser-network proof", total: results.length, failed, results: publicResults, extraLinks };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
