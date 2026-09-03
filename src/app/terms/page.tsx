@@ -21,7 +21,7 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Terms of Use</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 30, 2026 (privacy architecture cleanup)</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: September 2, 2026 (provider-status clarification)</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -108,7 +108,7 @@ export default function TermsPage() {
           <section>
             <h2>Privacy and data practices</h2>
             <p>
-              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared browser or device access are outside this boundary. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. The site does not offer a newsletter signup. MindCheck Tools does not use Google Analytics or display advertising. Cookie-free Vercel Web Analytics is restricted to a positive allowlist of topic-neutral and professional pages, strips query strings and fragments, sends no custom events, and honors Global Privacy Control.
+              Our <Link href="/privacy">Privacy Policy</Link>, <Link href="/consumer-health-data-privacy">Consumer Health Data Privacy Notice</Link>, and <Link href="/cookies">Cookie Policy</Link> describe how we handle data. In summary: questionnaire answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records. Prints, downloads, copies, device or browser sync, backups, and shared browser or device access are outside this boundary. Journaling, planning, recovery check-in, and sobriety tools may save entries in this browser when the page displays a local-storage notice. The site does not offer a newsletter signup. MindCheck Tools does not use Google Analytics or display advertising. When enabled for the production project, cookie-free Vercel Web Analytics is restricted to a positive allowlist of topic-neutral and professional pages, strips query strings and fragments, sends no custom events, and honors Global Privacy Control.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function TermsPage() {
               <strong>Right to erasure:</strong> You can ask us to delete eligible personal information we hold by contacting privacy@mindchecktools.com. You can clear browser-local tool data through the tool&apos;s reset control or your browser settings. Legal, security, and technical exceptions may apply.
             </p>
             <p>
-              <strong>Right to object:</strong> You may object to eligible processing by contacting us. Global Privacy Control suppresses Vercel Web Analytics, and browser controls can block or clear site storage. There is no analytics consent banner; the <Link href="/cookies">Cookie Policy</Link> describes the actual browser-storage and measurement boundary.
+              <strong>Right to object:</strong> You may object to eligible processing by contacting us. Global Privacy Control suppresses any enabled Vercel Web Analytics, and browser controls can block or clear site storage. There is no analytics consent banner; the <Link href="/cookies">Cookie Policy</Link> describes the actual browser-storage and measurement boundary.
             </p>
             <p>
               <strong>Right to lodge a complaint:</strong> You have the right to lodge a complaint with your local Data Protection Authority if you believe your data rights have been violated.
@@ -149,7 +149,7 @@ export default function TermsPage() {
               <strong>Right to delete:</strong> The questionnaire code is not configured to submit screening answers to a MindCheck Tools application database. Clearing cookies and localStorage removes browser-held preferences and any locally saved journal, plan, check-in, or sobriety data. Contact privacy@mindchecktools.com to request deletion of eligible personal information we hold.
             </p>
             <p>
-              <strong>Right to opt out of sale/sharing:</strong> We do not sell personal information or use it for targeted advertising. MindCheck Tools does not display ads or use Google Analytics. We honor Global Privacy Control (GPC) by suppressing Vercel Web Analytics events; ordinary hosting and security processing still occurs.
+              <strong>Right to opt out of sale/sharing:</strong> We do not sell personal information or use it for targeted advertising. MindCheck Tools does not display ads or use Google Analytics. We honor Global Privacy Control (GPC) by suppressing any enabled Vercel Web Analytics events; ordinary hosting and security processing still occurs.
             </p>
             <p>
               <strong>Right to non-discrimination:</strong> We will not discriminate against you for exercising your CCPA/CPRA rights. All tools remain fully functional when Global Privacy Control is active.

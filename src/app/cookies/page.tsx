@@ -19,7 +19,7 @@ const COOKIE_TABLE = [
     consent: "Not required",
     cookies: [
       { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
-      { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so Vercel Web Analytics stays off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
+      { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so any enabled Vercel Web Analytics stays off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
     ],
   },
   {
@@ -40,7 +40,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: August 30, 2026 (privacy architecture cleanup)</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: September 2, 2026 (provider-status clarification)</p>
         </header>
 
         <div className="prose-mh space-y-8">
@@ -64,7 +64,7 @@ export default function CookiePolicyPage() {
               same browser profile may be able to see it.
             </p>
             <p>
-              MindCheck Tools does not use Google Analytics or display advertising. Cookie-free Vercel Web Analytics is described separately below because it does not set a browser cookie.
+              MindCheck Tools does not use Google Analytics or display advertising. The application&apos;s cookie-free Vercel Web Analytics configuration is described separately below because, when enabled for the production project, it does not set a browser cookie.
             </p>
           </section>
 
@@ -129,7 +129,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Cookie-free aggregate measurement</h2>
             <p>
-              Vercel Web Analytics counts aggregate visitors and page views without setting cookies. It runs only on a fixed allowlist of topic-neutral trust, policy, professional, and commercial pages. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded.
+              When enabled for the production project, Vercel Web Analytics counts aggregate visitors and page views without setting cookies. The application permits it only on a fixed allowlist of topic-neutral trust, policy, professional, and commercial pages. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded.
             </p>
             <p>
               The implementation removes query strings and fragments from the event URL, sends no custom events, and suppresses events when Global Privacy Control is active. Vercel documents that an allowed page-view data point may include event time, path and route, browser-supplied referrer, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version. Vercel also documents that it determines a visitor with a request-derived hash that resets after 24 hours. Because this service does not place a cookie, it is not listed in the cookie table above.
@@ -145,7 +145,7 @@ export default function CookiePolicyPage() {
               <strong>If you are in California:</strong> Under the CCPA/CPRA, you have the right to opt out of the &quot;sale&quot; or &quot;sharing&quot; of personal information, which may include certain cookie-based data collection. We honor the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we treat it as a request to opt out.
             </p>
             <p>
-              <strong>Everywhere else:</strong> The same technical controls apply regardless of jurisdiction. There is no analytics consent banner. Vercel Web Analytics runs only on the fixed non-sensitive allowlist described above, and Global Privacy Control suppresses it.
+              <strong>Everywhere else:</strong> The same technical controls apply regardless of jurisdiction. There is no analytics consent banner. If Vercel Web Analytics is enabled, it runs only on the fixed non-sensitive allowlist described above, and Global Privacy Control suppresses it.
             </p>
           </section>
 

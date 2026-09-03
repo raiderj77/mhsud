@@ -320,17 +320,19 @@ test("manifest and offline artifact are truthful, installable, and self-containe
 });
 
 test("safety-plan storage recovery and destructive reset fail safely", async () => {
-  const [page, client] = await Promise.all([
+  const [page, client, storage] = await Promise.all([
     read("src/app/safety-plan/page.tsx"),
     read("src/app/safety-plan/SafetyPlanClient.tsx"),
+    read("src/lib/safetyPlanStorage.ts"),
   ]);
 
-  assert.match(client, /function normalizePlan\(value: unknown\): PlanData/);
-  assert.match(client, /function hasCompletePlanSchema\(value: unknown\): value is PlanData/);
-  assert.match(client, /recovered: !hasCompletePlanSchema\(parsed\)/);
+  assert.match(storage, /function normalizePlan\(value: unknown\): PlanData/);
+  assert.match(storage, /function hasCompletePlanSchema\(value: unknown\): value is PlanData/);
+  assert.match(storage, /recovered: !hasCompletePlanSchema\(value\)/);
+  assert.doesNotMatch(storage, /slice\(0, MAX_PLAN_LIST_ITEMS\)/);
   assert.match(client, /Part of the saved plan could not be read safely/);
   assert.match(client, /window\.confirm\(/);
-  assert.match(client, /if \(!confirmed\) return/);
+  assert.match(storage, /if \(!confirmed\) return \{ cleared: false, storageAvailable: true \}/);
   assert.match(client, /Delete Saved Plan &amp; Start Over/);
   assert.match(client, /This cannot be undone/);
 

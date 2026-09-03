@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, createMetadata, SITE_URL } from "@/lib/metadata";
 
-const LAST_UPDATED = "2026-08-30";
+const LAST_UPDATED = "2026-09-02";
 
 export const metadata: Metadata = createMetadata({
   path: "/consumer-health-data-privacy",
@@ -40,7 +40,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             supplements our <Link href="/privacy">Privacy Policy</Link>.
           </p>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-            Last updated: <time dateTime={LAST_UPDATED}>August 30, 2026</time> (privacy architecture cleanup)
+            Last updated: <time dateTime={LAST_UPDATED}>September 2, 2026</time> (provider-status clarification)
           </p>
         </header>
 
@@ -73,8 +73,8 @@ export default function ConsumerHealthDataPrivacyPage() {
                 the service. A health-topic path may indicate an interest in that topic.
               </li>
               <li>
-                <strong>Cookie-free aggregate measurement:</strong> Vercel Web Analytics counts
-                visitors and page views only on a positive allowlist of topic-neutral and
+                <strong>Cookie-free aggregate measurement:</strong> When enabled for the production
+                project, Vercel Web Analytics counts visitors and page views only on a positive allowlist of topic-neutral and
                 professional pages. Its documented data-point fields can include event time,
                 allowlisted page path and route, browser-supplied referrer, coarse city/region/country,
                 operating system and version, browser and version, device type, and analytics-script
@@ -94,8 +94,9 @@ export default function ConsumerHealthDataPrivacyPage() {
           <section>
             <h2>Sources</h2>
             <p>
-              Request and analytics data comes from your browser, device, and network when you visit
-              the site. Contact information comes directly from you when you choose to send it. We
+              Request data comes from your browser, device, and network when you visit the site. If
+              analytics is enabled, analytics data comes from the same sources on allowlisted pages.
+              Contact information comes directly from you when you choose to send it. We
               do not buy health data, enrich visitor profiles with broker data, or
               infer a diagnosis from site activity.
             </p>
@@ -109,7 +110,7 @@ export default function ConsumerHealthDataPrivacyPage() {
                 <strong>Vercel:</strong> website request and security information, including the
                 requested path, for hosting, delivery, reliability, and abuse prevention. Vercel
                 also processes cookie-free aggregate events from the narrow non-sensitive route
-                allowlist. Its documented visitor hash resets after 24 hours.
+                allowlist when Vercel Web Analytics is enabled. Its documented visitor hash resets after 24 hours.
               </li>
               <li>
                 <strong>Email delivery providers:</strong> message contents and routing metadata when
@@ -130,8 +131,8 @@ export default function ConsumerHealthDataPrivacyPage() {
               MindCheck Tools does not display ads or load advertising networks on any page.
               We do not use screening activity, answers, scores, or other consumer health information
               for advertising, retargeting, or commercial profiling. Disclosed affiliate links and
-              professional services remain separate from sensitive tool journeys. Hosting, allowlisted
-              aggregate analytics, contact messages, and local copies retain the boundaries described in this notice.
+              professional services remain separate from sensitive tool journeys. Hosting, any enabled
+              allowlisted aggregate analytics, contact messages, and local copies retain the boundaries described in this notice.
             </p>
           </section>
 
@@ -139,7 +140,7 @@ export default function ConsumerHealthDataPrivacyPage() {
             <h2>Your choices and requests</h2>
             <ul>
               <li>
-                Use browser controls to clear local storage and cookies. MindCheck Tools does not use Google Analytics or display advertising. Global Privacy Control suppresses Vercel Web Analytics events.
+                Use browser controls to clear local storage and cookies. MindCheck Tools does not use Google Analytics or display advertising. Global Privacy Control suppresses any enabled Vercel Web Analytics events.
               </li>
               <li>
                 Clear or reset browser-local tool data on the device where it is stored. MindCheck
@@ -166,9 +167,9 @@ export default function ConsumerHealthDataPrivacyPage() {
             <p>
               Browser-local health entries remain on your device until you reset the tool, clear site
               data, or the browser removes them. Hosting/security log retention follows Vercel&apos;s
-              configured service limits and legitimate security or legal needs. Vercel documents that its Web Analytics visitor
-              hash resets after 24 hours; aggregate reporting retention follows the project and plan
-              settings.
+              configured service limits and legitimate security or legal needs. When Web Analytics is
+              enabled, Vercel documents that its visitor hash resets after 24 hours; aggregate reporting
+              retention follows the project and plan settings.
             </p>
             <p>
               Sensitive routes use no-store and no-referrer response controls and bypass optional

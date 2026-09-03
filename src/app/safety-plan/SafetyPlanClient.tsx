@@ -6,6 +6,13 @@ import Link from "next/link";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import {
+  clearStoredSafetyPlan,
+  defaultSafetyPlan,
+  loadStoredSafetyPlan,
+  type LoadedSafetyPlan,
+  type PlanData,
+} from "@/lib/safetyPlanStorage";
 
 /* ── Crisis contacts (always visible) ────────────────── */
 
@@ -71,24 +78,6 @@ const ENVIRONMENT_OPTIONS = [
   "I have removed or limited access to things I could use to harm myself",
 ];
 
-/* ── Types ────────────────────────────────────────────── */
-
-interface ContactEntry {
-  name: string;
-  phone: string;
-}
-
-interface PlanData {
-  warningSigns: string[];
-  copingStrategies: string[];
-  distractionPeople: ContactEntry[];
-  helpPeople: ContactEntry[];
-  professionals: ContactEntry[];
-  environmentSteps: string[];
-  environmentNotes: string;
-  reasonsToLive: string;
-}
-
 interface Props {
   faqData: { question: string; answer: string }[];
 }
@@ -107,135 +96,36 @@ const STEP_TITLES = [
 /* ── Helpers ──────────────────────────────────────────── */
 
 const STORAGE_KEY = "mct-safety-plan";
-const MAX_PLAN_LIST_ITEMS = 50;
-
-interface LoadedPlan {
-  plan: PlanData;
-  recovered: boolean;
-}
-
-function normalizeStringList(value: unknown, fallback: string[]): string[] {
-  const candidate = Array.isArray(value) ? value.slice(0, MAX_PLAN_LIST_ITEMS) : [];
-  const length = Math.max(candidate.length, fallback.length);
-  return Array.from({ length }, (_, index) =>
-    typeof candidate[index] === "string" ? candidate[index] : (fallback[index] ?? ""),
-  );
-}
-
-function normalizeContacts(value: unknown, fallback: ContactEntry[]): ContactEntry[] {
-  const candidate = Array.isArray(value) ? value.slice(0, MAX_PLAN_LIST_ITEMS) : [];
-  const length = Math.max(candidate.length, fallback.length);
-  return Array.from({ length }, (_, index) => {
-    const item = candidate[index];
-    const record = item && typeof item === "object" && !Array.isArray(item)
-      ? item as Record<string, unknown>
-      : {};
+function loadPlan(): LoadedSafetyPlan {
+  if (typeof window === "undefined") {
     return {
-      name: typeof record.name === "string" ? record.name : (fallback[index]?.name ?? ""),
-      phone: typeof record.phone === "string" ? record.phone : (fallback[index]?.phone ?? ""),
+      plan: defaultSafetyPlan(),
+      recovered: false,
+      veteransContactMigrated: false,
+      storageAvailable: false,
     };
-  });
-}
-
-function hasCompletePlanSchema(value: unknown): value is PlanData {
-  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
-  const plan = value as Record<string, unknown>;
-  const stringList = (item: unknown, minimum: number) =>
-    Array.isArray(item) && item.length >= minimum && item.every((entry) => typeof entry === "string");
-  const contactList = (item: unknown, minimum: number) =>
-    Array.isArray(item)
-    && item.length >= minimum
-    && item.every((entry) => {
-      if (!entry || typeof entry !== "object" || Array.isArray(entry)) return false;
-      const contact = entry as Record<string, unknown>;
-      return typeof contact.name === "string" && typeof contact.phone === "string";
-    });
-  return stringList(plan.warningSigns, 3)
-    && stringList(plan.copingStrategies, 3)
-    && contactList(plan.distractionPeople, 3)
-    && contactList(plan.helpPeople, 3)
-    && contactList(plan.professionals, 5)
-    && stringList(plan.environmentSteps, 0)
-    && typeof plan.environmentNotes === "string"
-    && typeof plan.reasonsToLive === "string";
-}
-
-function normalizePlan(value: unknown): PlanData {
-  const fallback = defaultPlan();
-  const record = value && typeof value === "object" && !Array.isArray(value)
-    ? value as Record<string, unknown>
-    : {};
-  return {
-    warningSigns: normalizeStringList(record.warningSigns, fallback.warningSigns),
-    copingStrategies: normalizeStringList(record.copingStrategies, fallback.copingStrategies),
-    distractionPeople: normalizeContacts(record.distractionPeople, fallback.distractionPeople),
-    helpPeople: normalizeContacts(record.helpPeople, fallback.helpPeople),
-    professionals: normalizeContacts(record.professionals, fallback.professionals),
-    environmentSteps: normalizeStringList(record.environmentSteps, fallback.environmentSteps),
-    environmentNotes: typeof record.environmentNotes === "string" ? record.environmentNotes : "",
-    reasonsToLive: typeof record.reasonsToLive === "string" ? record.reasonsToLive : "",
-  };
-}
-
-function loadPlan(): LoadedPlan {
-  if (typeof window === "undefined") return { plan: defaultPlan(), recovered: false };
-  let saved: string | null;
-  try {
-    saved = localStorage.getItem(STORAGE_KEY);
-  } catch {
-    return { plan: defaultPlan(), recovered: false };
   }
-  if (!saved) return { plan: defaultPlan(), recovered: false };
-  try {
-    const parsed: unknown = JSON.parse(saved);
-    return { plan: normalizePlan(parsed), recovered: !hasCompletePlanSchema(parsed) };
-  } catch {
-    return { plan: defaultPlan(), recovered: true };
-  }
-}
-
-function defaultPlan(): PlanData {
-  return {
-    warningSigns: ["", "", ""],
-    copingStrategies: ["", "", ""],
-    distractionPeople: [
-      { name: "", phone: "" },
-      { name: "", phone: "" },
-      { name: "", phone: "" },
-    ],
-    helpPeople: [
-      { name: "", phone: "" },
-      { name: "", phone: "" },
-      { name: "", phone: "" },
-    ],
-    professionals: [
-      { name: "988 Suicide & Crisis Lifeline", phone: "988" },
-      { name: "Crisis Text Line", phone: "Text HOME to 741741" },
-      { name: "Veterans Crisis Line", phone: "Dial 988, then Press 1; or text 838255" },
-      { name: "", phone: "" },
-      { name: "", phone: "" },
-    ],
-    environmentSteps: [],
-    environmentNotes: "",
-    reasonsToLive: "",
-  };
+  return loadStoredSafetyPlan(() => localStorage.getItem(STORAGE_KEY));
 }
 
 /* ── Component ────────────────────────────────────────── */
 
 export function SafetyPlanClient({ faqData }: Props) {
-  const [plan, setPlan] = useState<PlanData>(defaultPlan);
+  const [plan, setPlan] = useState<PlanData>(defaultSafetyPlan);
   const [step, setStep] = useState<AppStep>(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [storageState, setStorageState] = useState<"checking" | "saved" | "unavailable">("checking");
   const [storageRecoveryWarning, setStorageRecoveryWarning] = useState(false);
+  const [veteransContactMigrationNotice, setVeteransContactMigrationNotice] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
     const loadedPlan = loadPlan();
     setPlan(loadedPlan.plan);
     setStorageRecoveryWarning(loadedPlan.recovered);
+    setVeteransContactMigrationNotice(loadedPlan.veteransContactMigrated);
+    if (!loadedPlan.storageAvailable) setStorageState("unavailable");
     setLoaded(true);
   }, []);
 
@@ -313,11 +203,17 @@ export function SafetyPlanClient({ faqData }: Props) {
     const confirmed = window.confirm(
       "Delete every entry in this locally saved safety plan and start over? This cannot be undone.",
     );
-    if (!confirmed) return;
-    const fresh = defaultPlan();
+    const clearResult = clearStoredSafetyPlan(
+      confirmed,
+      () => localStorage.removeItem(STORAGE_KEY),
+    );
+    if (!clearResult.cleared) return;
+    const fresh = defaultSafetyPlan();
     setPlan(fresh);
     setStep(1);
-    try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+    setStorageRecoveryWarning(false);
+    setVeteransContactMigrationNotice(false);
+    if (!clearResult.storageAvailable) setStorageState("unavailable");
   }
 
   const numericStep = typeof step === "number" ? step : 7;
@@ -429,6 +325,16 @@ export function SafetyPlanClient({ faqData }: Props) {
           <strong>Part of the saved plan could not be read safely.</strong> Unreadable fields were
           restored to blank or built-in defaults. Review every step and print a current copy before
           relying on this plan during a crisis.
+        </div>
+      )}
+      {veteransContactMigrationNotice && (
+        <div
+          className="mb-6 rounded-xl border border-sage-300 bg-sage-50 p-4 text-sm leading-relaxed text-sage-950 dark:border-sage-700 dark:bg-sage-950/40 dark:text-sage-100 print:hidden"
+          role="status"
+          aria-live="polite"
+        >
+          <strong>Veterans Crisis Line contact updated.</strong> The former built-in phone entry now
+          says to dial 988, then press 1, or text 838255. Your other saved contacts were left unchanged.
         </div>
       )}
 

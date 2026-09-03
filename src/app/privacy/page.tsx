@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            Effective Date: January 1, 2026 | Last updated: August 30, 2026 (privacy architecture cleanup)
+            Effective Date: January 1, 2026 | Last updated: September 2, 2026 (provider-status clarification)
           </p>
         </header>
 
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
           <section>
             <h2>What data is collected through analytics?</h2>
             <p>
-              Vercel Web Analytics separately counts visits and page views without cookies. It is configured with a positive route allowlist, removes query strings and fragments from the event URL, sends no custom events, and returns no event when Global Privacy Control is active. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded. For an allowed page view, Vercel&apos;s{" "}
+              When enabled for the production project, Vercel Web Analytics separately counts visits and page views without cookies. The application uses a positive route allowlist, removes query strings and fragments from the event URL, sends no custom events, and returns no event when Global Privacy Control is active. Assessment, result, crisis, condition-specific, blog-detail, and interactive-tool routes are excluded. For an allowed page view, Vercel&apos;s{" "}
               <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer">Web Analytics privacy documentation</a>{" "}
               says a data point may include the event time, allowlisted page path and route, referrer supplied by the browser, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version. Vercel determines a visitor with a request-derived hash that resets after 24 hours and reports analytics in aggregate; ordinary hosting requests remain subject to the separate hosting-log disclosure below.
             </p>
@@ -122,7 +122,7 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Screening answers and scores:</strong> Not retained by MindCheck Tools. In-memory responses are removed when you close, refresh, or reset the page. A printout or downloaded reflection that you deliberately create is a separate local copy and remains until you or the relevant device/service deletes it.</li>
               <li><strong>Browser-local journals and tool data:</strong> Retained in your browser until you delete/reset it, clear site data, or the browser removes it. MindCheck Tools cannot retrieve or delete data that remains only on your device.</li>
-              <li><strong>Vercel Web Analytics:</strong> Vercel documents that its cookie-free visitor hash resets after 24 hours. Aggregated reporting retention follows the Vercel project and plan settings. Sensitive routes do not send Web Analytics events.</li>
+              <li><strong>Vercel Web Analytics, when enabled:</strong> Vercel documents that its cookie-free visitor hash resets after 24 hours. Aggregated reporting retention follows the Vercel project and plan settings. Sensitive routes do not send Web Analytics events.</li>
               <li><strong>Contact emails:</strong> Retained only as long as reasonably needed to respond, maintain security, or meet legal obligations. Mail systems and backups may retain limited records beyond the active correspondence.</li>
               <li><strong>Dark mode preference:</strong> Stored in your browser&apos;s localStorage indefinitely until you clear browser data.</li>
               <li><strong>Hosting and security logs:</strong> Retention follows Vercel settings and legitimate security, backup, and legal requirements; it may change and is not represented as zero retention.</li>
@@ -184,7 +184,7 @@ export default function PrivacyPage() {
 
             <h3>GDPR (EEA/UK residents)</h3>
             <p>
-              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. MindCheck Tools does not use Google Analytics. Cookie-free Vercel Web Analytics is limited to allowlisted non-sensitive pages and is suppressed when Global Privacy Control is active.
+              Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to processing of your personal data. MindCheck Tools does not use Google Analytics. If cookie-free Vercel Web Analytics is enabled, it is limited to allowlisted non-sensitive pages and is suppressed when Global Privacy Control is active.
             </p>
             <p>
               <strong>GDPR Article 9, Special category data:</strong> Health data is classified as special category data under Article 9 of the GDPR. Screening results are processed in your browser, and the application does not automatically send them to a MindCheck Tools server or application database. A screenshot, printout, download, or other copy you create is controlled by your browser, device, and chosen services. The site does not offer a newsletter signup.
@@ -210,7 +210,7 @@ export default function PrivacyPage() {
               <li><strong>Right to portability</strong> of your data in a machine-readable format</li>
             </ul>
             <p>
-              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing Vercel Web Analytics events. MindCheck Tools does not use Google Analytics or display advertising. Ordinary hosting and security processing still occurs to deliver and protect the site.
+              We honor the <strong>Global Privacy Control (GPC)</strong> browser signal by automatically suppressing any enabled Vercel Web Analytics events. MindCheck Tools does not use Google Analytics or display advertising. Ordinary hosting and security processing still occurs to deliver and protect the site.
             </p>
             <p>
               <strong>We do not sell sensitive personal data.</strong> We also do not use consumer health data for targeted advertising or profiling.
@@ -236,8 +236,8 @@ export default function PrivacyPage() {
             <h3>Information We Collect</h3>
             <p>In the past 12 months we have collected the following categories of personal information:</p>
             <ul>
-              <li><strong>Identifiers:</strong> IP address and browser information in ordinary hosting records, Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages, and an email address, name, or other identifiers you voluntarily include when contacting us.</li>
-              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, response status, and, on allowlisted non-sensitive pages, cookie-free analytics fields that may include path and route, browser-supplied referrer, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version.</li>
+              <li><strong>Identifiers:</strong> IP address and browser information in ordinary hosting records, an email address, name, or other identifiers you voluntarily include when contacting us, and, if Vercel Web Analytics is enabled, Vercel&apos;s short-lived daily visitor hash on allowlisted non-sensitive pages.</li>
+              <li><strong>Internet or network activity:</strong> Requested paths, timestamps, and response status, plus, if Vercel Web Analytics is enabled, cookie-free analytics fields on allowlisted non-sensitive pages that may include path and route, browser-supplied referrer, coarse city/region/country, operating system and version, browser and version, device type, and analytics-script version.</li>
             </ul>
 
             <h3>Sensitive Personal Information</h3>
@@ -263,7 +263,7 @@ export default function PrivacyPage() {
 
             <h3>How We Use Your Information</h3>
             <ul>
-              <li>To analyze site traffic and improve user experience via analytics</li>
+              <li>When aggregate analytics is enabled, to analyze non-sensitive site traffic and improve user experience</li>
               <li>To maintain site security and prevent fraud</li>
               <li>To respond to contact messages and privacy requests you choose to send</li>
             </ul>
@@ -283,7 +283,7 @@ export default function PrivacyPage() {
             <p>
               We do not sell personal information or use it for targeted advertising. You may use a
               <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer">Global Privacy Control (GPC)</a>-enabled
-              browser to suppress Vercel Web Analytics. MindCheck Tools does not use Google Analytics.
+              browser to suppress any enabled Vercel Web Analytics. MindCheck Tools does not use Google Analytics.
             </p>
 
             <h3>How to Submit a Request</h3>
@@ -292,8 +292,8 @@ export default function PrivacyPage() {
             <h3>Data Retention</h3>
             <p>
               Screening responses are not retained in a MindCheck Tools application database because processing is client-side. Browser-local
-              journal and planning data remains on the device until the visitor deletes it. Analytics and
-              server-log retention follow the periods described above and our configured service settings.
+              journal and planning data remains on the device until the visitor deletes it. When analytics is enabled,
+              analytics retention follows the project settings; server-log retention follows the periods described above and configured service settings.
             </p>
           </section>
 
@@ -309,7 +309,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               Regardless of location, MindCheck Tools does not use Google Analytics. We honor Global Privacy Control by
-              suppressing Vercel Web Analytics events, do not sell personal information, and do not
+              suppressing any enabled Vercel Web Analytics events, do not sell personal information, and do not
               use consumer health data for targeted advertising.
             </p>
           </section>

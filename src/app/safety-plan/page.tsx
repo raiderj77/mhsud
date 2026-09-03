@@ -95,7 +95,7 @@ export default function SafetyPlanPage() {
         </h1>
       </div>
       <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: August 30, 2026
+        Last updated: September 2, 2026
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
