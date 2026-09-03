@@ -45,9 +45,10 @@ test("DBT physical skills use medically bounded, low-risk examples", () => {
   assert.match(dbtPage, /immediate danger/i);
 });
 
-test("tool privacy copy distinguishes private inputs from consented page analytics", () => {
+test("tool privacy copy distinguishes private inputs from excluded page analytics", () => {
   for (const source of [urgeClient, dbtClient]) {
     assert.match(source, /not sent to analytics/);
-    assert.match(source, /only if you consent to statistics cookies/);
+    assert.match(source, /interactive health route is excluded from Vercel Web Analytics/);
+    assert.doesNotMatch(source, /statistics cookies|consent banner/i);
   }
 });

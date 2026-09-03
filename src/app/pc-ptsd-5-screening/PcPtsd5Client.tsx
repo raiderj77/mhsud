@@ -3,11 +3,9 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
-import { EmailCapture } from "@/components/EmailCapture";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -232,7 +230,7 @@ export function PcPtsd5Client({ faqData }: Props) {
             Veterans Crisis Line
           </p>
           <p className="text-lg font-bold text-blue-800 dark:text-blue-200">
-            1-800-273-8255, Press 1
+            Dial 988, then Press 1, or text 838255
           </p>
           <p className="text-xs text-blue-600 dark:text-blue-400">
             Call, text 838255, or chat at VeteransCrisisLine.net · 24/7 · Confidential
@@ -293,9 +291,6 @@ export function PcPtsd5Client({ faqData }: Props) {
               : "Your score of " + totalScore + " out of 5 is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress or difficulty functioning after a traumatic experience, those concerns are still worth discussing with a healthcare provider."}
           </p>
         </div>
-
-        <TherapyCTA show={isPositiveScreen} />
-
 
         {/* Symptom Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
@@ -396,7 +391,7 @@ export function PcPtsd5Client({ faqData }: Props) {
                 Confidential support for Veterans and their families. 24/7.
               </p>
               <p className="text-xs font-bold text-purple-700 dark:text-purple-300">
-                1-800-273-8255, Press 1
+                Dial 988, then Press 1, or text 838255
               </p>
             </div>
           </div>
@@ -484,8 +479,6 @@ export function PcPtsd5Client({ faqData }: Props) {
             prompts={REFLECTION_PROMPTS["pc-ptsd-5-screening"].prompts}
           />
         )}
-
-        <EmailCapture />
 
         {/* Educational Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none mb-10">
@@ -717,7 +710,7 @@ function YmylFooter({ faqData }: { faqData: { question: string; answer: string }
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-amber-700 dark:text-amber-300">
           <div>
             <p className="font-bold">Veterans Crisis Line</p>
-            <p>1-800-273-8255, Press 1 · 24/7</p>
+            <p>Dial 988, then Press 1, or text 838255 · 24/7</p>
           </div>
           <div>
             <p className="font-bold">988 Suicide &amp; Crisis Lifeline</p>

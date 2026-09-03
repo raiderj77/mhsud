@@ -5,7 +5,6 @@ import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -408,8 +407,6 @@ export function BurnoutClient({ faqData, embedded = false }: Props) {
                   </p>
                 </div>
               </div>
-
-              <TherapyCTA show />
 
               <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-night-700">
                 <button

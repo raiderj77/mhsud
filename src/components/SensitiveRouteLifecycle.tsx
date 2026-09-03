@@ -1,27 +1,56 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {
   isPrivacySafeAggregateAnalyticsRoute,
   isSensitiveRoute,
 } from "@/lib/routePolicies";
 
+const VERCEL_ANALYTICS_SCRIPT_SELECTOR = [
+  'script[data-sdkn^="@vercel/analytics"]',
+  'script[src*="/_vercel/insights/script.js"]',
+  'script[src*="vercel-scripts.com/v1/script"]',
+].join(", ");
+
+function removeVercelAnalyticsScripts(): boolean {
+  const scripts = document.querySelectorAll<HTMLScriptElement>(
+    VERCEL_ANALYTICS_SCRIPT_SELECTOR,
+  );
+  scripts.forEach((script) => script.remove());
+  return scripts.length > 0;
+}
+
+function requiresCleanDocument(
+  aggregateAllowed: boolean,
+  previouslyAggregateAllowed: boolean | null,
+  aggregateScriptRemoved: boolean,
+): boolean {
+  return !aggregateAllowed && (previouslyAggregateAllowed === true || aggregateScriptRemoved);
+}
+
+function cleanInternalDestination(destination: URL): string {
+  destination.search = "";
+  destination.hash = "";
+  return destination.href;
+}
+
 export function SensitiveRouteLifecycle() {
   const pathname = usePathname();
+  const previousAggregateAllowed = useRef<boolean | null>(null);
 
   useEffect(() => {
     const sensitive = isSensitiveRoute(pathname);
     const aggregateAllowed = isPrivacySafeAggregateAnalyticsRoute(pathname);
-    const aggregateScriptLoaded = document.querySelector(
-      'script[src*="/_vercel/insights/script.js"], script[src*="vercel-scripts.com/v1/script"]',
-    );
+    const previouslyAggregateAllowed = previousAggregateAllowed.current;
+    previousAggregateAllowed.current = aggregateAllowed;
+    const aggregateScriptRemoved = !aggregateAllowed && removeVercelAnalyticsScripts();
 
     // Vercel aggregate analytics is limited to a small neutral-route allowlist.
-    // If a client-side transition leaves that allowlist, start a fresh document
-    // so the analytics runtime cannot observe the excluded destination path.
-    if (!aggregateAllowed && aggregateScriptLoaded) {
-      aggregateScriptLoaded.remove();
+    // Start a fresh document after any client-side transition out of that
+    // allowlist. The stable SDK data attribute recognizes Vercel's current
+    // same-origin hashed loader without depending on a deployment-specific URL.
+    if (requiresCleanDocument(aggregateAllowed, previouslyAggregateAllowed, aggregateScriptRemoved)) {
       window.location.replace(pathname);
       return;
     }
@@ -47,7 +76,7 @@ export function SensitiveRouteLifecycle() {
           !isPrivacySafeAggregateAnalyticsRoute(destination.pathname)
         ) {
           event.preventDefault();
-          window.location.assign(destination.href);
+          window.location.assign(cleanInternalDestination(destination));
         }
       };
 

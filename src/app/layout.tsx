@@ -6,7 +6,6 @@ import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { SwUpdateNotification } from "@/components/SwUpdateNotification";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { AppInstallPrompt } from "@/components/AppInstallPrompt";
 import { PrivacySafeAggregateAnalytics } from "@/components/PrivacySafeAggregateAnalytics";
@@ -95,14 +94,11 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/service-worker.js', { updateViaCache: 'none' }).then(
-                    function(registration) {
-                      console.log('Service Worker registered successfully:', registration);
-                    },
-                    function(err) {
-                      console.log('Service Worker registration failed:', err);
-                    }
-                  );
+                  navigator.serviceWorker
+                    .register('/service-worker.js', { updateViaCache: 'none' })
+                    .catch(function() {
+                      // The site remains fully usable online if registration is unavailable.
+                    });
                 });
               }
             `,
@@ -134,7 +130,6 @@ export default function RootLayout({
           </a>
           <OfflineIndicator />
           <CrisisBanner />
-          <SwUpdateNotification />
           <AppInstallPrompt />
           <Navbar />
           <main id="main-content" tabIndex={-1} className="flex-1 scroll-mt-20 focus:outline-none">

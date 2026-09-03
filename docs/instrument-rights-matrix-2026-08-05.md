@@ -18,13 +18,13 @@ No owner or rights-holder contact is required merely to release those 14 origina
 
 The rights class below is only one release gate. An interactive journey also requires exact-version and scoring parity, source-linked result language, non-diagnostic wording, crisis QA where applicable, privacy QA, accessibility QA, and named topic-qualified review with a canonical date.
 
-MindCheckTools should apply a stricter advertising rule than an instrument licence may require:
+MindCheckTools applies a permanent no-display-advertising rule independent of what an instrument licence may permit:
 
-- No ads or ad-tech scripts on questionnaire, answer-entry, score/result, crisis, or immediate-help surfaces.
+- No AdSense, display ads, or display-ad-tech scripts on any route.
 - Never send answers, scores, result labels, instrument selections that reveal a condition, crisis interactions, or inferred health status to an advertising system.
 - Do not build ad audiences, retargeting segments, or conversion events from assessment behavior.
-- Treat `A-NC`, `B`, `C`, `D`, and `E` routes as ad-free and noncommercial until a written grant says otherwise. A public informational route may remain available.
-- An `A` classification removes the identified instrument-rights blocker; it does not override the no-ads-near-assessment policy or any clinical release gate.
+- Treat `A-NC`, `B`, `C`, `D`, and `E` routes as noncommercial until a written grant says otherwise. A public informational route may remain available.
+- An `A` classification removes the identified instrument-rights blocker; it does not override the permanent no-display-ad rule or any clinical release gate.
 
 ## Evidence notation and classification key
 
@@ -105,5 +105,5 @@ No contact, purchase, account change, deployment, or publication is authorized b
 4. **Commercial-boundary decision:** decide whether AUDIT, AUDIT-C, WHO-5, and any other noncommercial-only journey will remain technically and economically segregated from ads, sponsorships, affiliates, paid products, and APIs, or whether WHO permission will be sought. The local release should preserve the ad-free boundary.
 5. **Clinical operating model:** name suitably qualified reviewers and approve their scope and fees before any direct-to-consumer trauma, pediatric, eating-disorder, substance-use, sleep, autism, personality-disorder, or other identity-sensitive instrument is interactive. Rights clearance alone is insufficient.
 6. **Remaining interactive-route clearance:** the 13 interactive routes in this register, plus the eight maintained interactive original/adapted self-check routes outside it, still require route-appropriate exact-source/scoring review, result-language review, crisis/privacy/accessibility QA, and one canonical reviewer date before any unrestricted YMYL release claim.
-7. **Monetization and account actions:** AdSense remains blocked. Any AdSense/CMP/publisher/payment/tax change, sponsor or affiliate enrollment, outreach, external contract, or paid-product launch requires its own explicit owner approval; optional third-party services remain locally allowlisted only on the homepage.
+7. **Monetization and account actions:** Display advertising remains permanently prohibited. Any CMP/publisher/payment/tax change, sponsor or affiliate enrollment, outreach, external contract, or paid-product launch requires its own explicit owner approval; optional third-party services remain governed by the route allowlist and privacy policy.
 8. **Release gate:** after full repository tests, production build, lint/content checks, dependency audit, and fictional/non-sensitive mobile/desktop browser-network QA pass, obtain explicit owner approval before merge or deployment and independently verify the 21-interactive/14-informational production state afterward.

@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface BeforeInstallPromptEvent extends Event {
@@ -7,7 +8,17 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
+// Installation is a convenience promotion, so it belongs only on the neutral
+// home page. It must never compete with an assessment, result, safety-plan, or
+// crisis task for attention.
+const INSTALL_PROMPT_ALLOWED_ROUTES = new Set(["/"]);
+
+function isInstallPromptAllowedRoute(pathname: string) {
+  return INSTALL_PROMPT_ALLOWED_ROUTES.has(pathname);
+}
+
 export function AppInstallPrompt() {
+  const pathname = usePathname();
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -20,6 +31,7 @@ export function AppInstallPrompt() {
 
     const handleBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
+      if (!isInstallPromptAllowedRoute(window.location.pathname)) return;
       setDeferredPrompt(event as BeforeInstallPromptEvent);
       setShowPrompt(true);
     };
@@ -56,7 +68,12 @@ export function AppInstallPrompt() {
     setShowPrompt(false);
   };
 
-  if (isInstalled || !showPrompt || !deferredPrompt) return null;
+  if (
+    isInstalled ||
+    !isInstallPromptAllowedRoute(pathname) ||
+    !showPrompt ||
+    !deferredPrompt
+  ) return null;
 
   return (
     <div

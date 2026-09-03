@@ -612,7 +612,7 @@ export function DbtCrisisSkillsClient({ faqData }: Props) {
             These DBT distress-tolerance skills are presented for educational purposes only. DBT is a studied multicomponent treatment, but these cards have not been evaluated as a standalone intervention. This tool is not a substitute for DBT with a trained clinician. If you are experiencing a mental health crisis, contact a professional or use the crisis resources on this page.
           </p>
           <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mt-2">
-            Your selected cards are handled in your browser and are not sent to analytics. General page usage may be measured only if you consent to statistics cookies.
+            Your selected cards are handled in your browser and are not sent to analytics. This interactive health route is excluded from Vercel Web Analytics.
           </p>
         </div>
       </section>

@@ -7,8 +7,6 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
-import { EmailCapture } from "@/components/EmailCapture";
-import { TherapyCTA } from "@/components/TherapyCTA";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
@@ -68,7 +66,7 @@ const RANGES = [
   { min: 0, max: 10, level: "Minimal", key: "minimal", description: "Your responses suggest minimal levels of PTSD-related symptoms over the past month.", suggestion: "Continue to be mindful of how you are feeling. If you notice changes, consider checking in again." },
   { min: 11, max: 20, level: "Mild", key: "mild", description: "Your responses suggest mild levels of PTSD-related symptoms over the past month, indicating some distress related to a stressful experience.", suggestion: "Consider monitoring your symptoms over the coming weeks. If they persist or worsen, speaking with a healthcare provider can be helpful." },
   { min: 21, max: 32, level: "Moderate", key: "moderate", description: "Your responses suggest moderate levels of PTSD-related symptoms over the past month. Professional evaluation may be beneficial.", suggestion: "Consider reaching out to a mental health professional to discuss how you have been feeling. Early conversations can make a real difference in recovery." },
-  { min: 33, max: 80, level: "Probable PTSD", key: "probable", description: "Your total score meets or exceeds the clinically significant cutoff of 33, which suggests a probable PTSD presentation. Professional evaluation is strongly recommended.", suggestion: "Speaking with a mental health professional who specializes in trauma is strongly encouraged. Veterans can contact the Veterans Crisis Line at 1-800-273-8255 (Press 1). The SAMHSA Helpline (1-800-662-4357) provides free referrals 24/7." },
+  { min: 33, max: 80, level: "Probable PTSD", key: "probable", description: "Your total score meets or exceeds the clinically significant cutoff of 33, which suggests a probable PTSD presentation. Professional evaluation is strongly recommended.", suggestion: "Speaking with a mental health professional who specializes in trauma is strongly encouraged. Veterans can Dial 988 then Press 1, or text 838255, for the Veterans Crisis Line. The SAMHSA Helpline (1-800-662-4357) provides free referrals 24/7." },
 ];
 
 function getRange(score: number) {
@@ -93,10 +91,9 @@ const CLUSTER_COLORS: Record<string, string> = {
 
 interface Props {
   faqData: { question: string; answer: string }[];
-  hideTherapyCTA?: boolean;
 }
 
-export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
+export function PCL5Client({ faqData }: Props) {
   const [accepted, setAccepted] = useState(false);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(20).fill(null));
   const [showResults, setShowResults] = useState(false);
@@ -330,7 +327,7 @@ export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
                   </p>
                   <div className="bg-crisis-100/50 dark:bg-crisis-900/30 rounded-xl p-4 space-y-1.5">
                     <p className="text-xs font-semibold text-crisis-700 dark:text-crisis-400 mb-1">Resources:</p>
-                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>Veterans:</strong> Veterans Crisis Line, Call <strong>1-800-273-8255 (Press 1)</strong> or text <strong>838255</strong></p>
+                    <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>Veterans:</strong> Veterans Crisis Line, Dial <strong>988</strong> then Press 1, or text <strong>838255</strong></p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> 988 Suicide &amp; Crisis Lifeline, Call or text <strong>988</strong></p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> SAMHSA National Helpline, Call <strong>1-800-662-4357</strong> (free, confidential, 24/7)</p>
                     <p className="text-sm text-crisis-700 dark:text-crisis-400"><strong>US:</strong> Crisis Text Line, Text <strong>HOME</strong> to <strong>741741</strong></p>
@@ -564,7 +561,7 @@ export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
             </p>
             <div className="space-y-2.5">
               {[
-                { label: "Veterans Crisis Line (US)", detail: "1-800-273-8255 (Press 1) or text 838255, 24/7", color: "text-blue-600 dark:text-blue-400" },
+                { label: "Veterans Crisis Line (US)", detail: "Dial 988 then Press 1, or text 838255, 24/7", color: "text-blue-600 dark:text-blue-400" },
                 { label: "988 Suicide & Crisis Lifeline (US)", detail: "Call or text 988, available 24/7", color: "text-crisis-600 dark:text-crisis-400" },
                 { label: "SAMHSA National Helpline (US)", detail: "1-800-662-4357, free referrals 24/7", color: "text-sage-600 dark:text-sage-400" },
                 { label: "Crisis Text Line (US)", detail: "Text HOME to 741741", color: "text-warm-600 dark:text-warm-400" },
@@ -583,9 +580,6 @@ export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
-
-          <EmailCapture />
-
 
           {/* Educational Content */}
           <section className="mb-8">
@@ -647,9 +641,6 @@ export function PCL5Client({ faqData, hideTherapyCTA = false }: Props) {
               ))}
             </div>
           </section>
-
-          <TherapyCTA show={!hideTherapyCTA} />
-
 
           {/* What Research Is This Based On? */}
           <section className="mb-8">

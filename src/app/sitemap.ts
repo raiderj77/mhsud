@@ -14,7 +14,7 @@ const QUARANTINED_PATHS = new Set([
   "/burnout-test-for-teachers", "/burnout-test-parents", "/loneliness-test-seniors",
   "/eating-disorder-test-athletes", "/bpd-test-for-women", "/bpd-screening-for-young-adults",
   "/attachment-style-test-for-couples", "/dass-21-score-interpretation", "/ace-score-interpretation",
-  "/dass-21-vs-phq-9-and-gad-7", "/blog",
+  "/dass-21-vs-phq-9-and-gad-7",
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -146,7 +146,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/for-professionals/screening-implementation-checklist`, lastModified: aug6, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/for-professionals/screening-instrument-rights-guide`, lastModified: "2026-08-07T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/recommended-reading`, lastModified: "2026-08-17T00:00:00.000Z", changeFrequency: "monthly" as const, priority: 0.6 },
-    { url: `${SITE_URL}/blog`, lastModified: lastUpdated, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/crisis-resources`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/about/jason-ramirez`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.6 },
