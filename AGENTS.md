@@ -1,28 +1,21 @@
-# MindCheckTools AGENTS.md
+# MindCheckTools Codex Instructions
 
-Last reviewed: 2026-08-30
+Last reviewed: 2026-09-03
 Site: https://mindchecktools.com
 Repository: raiderj77/mhsud
 
 ## Authority
 
-This file is the single project-specific source of truth for AI agents and automated development work on MindCheckTools.
+This is Codex's complete root instruction file for MindCheckTools. Detailed rules live in the focused policies below and load only when their subject is involved.
 
-If another repository instruction conflicts with this file, this file wins for MindCheckTools.
+Current owner instructions control scope and outcome. They do not erase safety, rights, privacy, evidence, or repository protections unless the owner authorizes the exact protected action and required evidence exists.
 
-Priority:
-1. AGENTS.md
-2. Explicit current owner instruction
-3. CLAUDE.md
-4. Other repository docs, historical prompts, and portfolio standards
+Do not create another root or nested `AGENTS.md` or `AGENTS.override.md`. If a critical fact is unknown, do not guess. Mark it `UNSPECIFIED`, `REVIEW REQUIRED`, or `BLOCKED`.
 
-Do not duplicate this rulebook into another long governance file. Keep CLAUDE.md as a short bridge to AGENTS.md.
+## Stakeholder order
 
-## Stakeholder standard
+Treat MindCheckTools as a long-term owned asset. Prioritize:
 
-Treat MindCheckTools as a long-term owned asset.
-
-Prioritize, in order:
 1. User safety
 2. Clinical and factual accuracy
 3. Instrument rights
@@ -34,656 +27,158 @@ Prioritize, in order:
 9. Maintainability
 10. Low operating cost
 11. Sustainable revenue
+12. Token efficiency
 
-Do not trade safety, rights, privacy, or trust for traffic, conversion, backlinks, publication speed, or short-term revenue.
-
-If a critical fact is unknown, do not guess.
-
-Protect the owner's private life. Do not publish or expose owner home or location details, private addresses or contact information, LLC records, or unrelated personal history. A deliberately approved professional or reviewer identity may appear only when it is relevant, accurately scoped, and supported.
+Correctness, safety, evidence, and complete validation always outrank token savings.
 
 ## Product boundary
 
-MindCheckTools is an educational screening, self-reflection, recovery-support, and health-information site.
+MindCheckTools provides educational screening, self-reflection, recovery support, and health information. It is not a diagnostic, medical, psychotherapy, emergency, or treatment service.
 
-It is not a diagnostic service, medical provider, psychotherapy provider, emergency service, treatment provider, or substitute for a qualified professional.
+Never:
 
-A screening score remains a screening score. Never convert it into a diagnosis.
+- turn a screening result into a diagnosis;
+- call an original self-check validated without evidence for the exact tool;
+- alter protected instrument wording, order, anchors, scoring, cutoffs, bands, or crisis triggers without authoritative evidence and required approval;
+- infer instrument permission from silence;
+- send assessment answers, scores, crisis disclosures, recovery logs, journal text, or similar health data to URLs, analytics, ads, logs, email, referrals, CRM, or remote AI;
+- let generative AI determine scoring, diagnosis, medication guidance, rights status, or emergency action;
+- re-enable display advertising or GA4;
+- weaken crisis, privacy, accessibility, security, rights, or browser-local controls for growth or convenience.
 
-Original MindCheckTools self-checks must not appear clinically validated unless formal validation supports the exact tool.
+WHO ASSIST v3.1 remains information-only unless authoritative permission supports the exact public consumer-web implementation. While non-interactive, it must not expose a questionnaire, scoring, personalized results, or an assessment-start action.
+
+Crisis behavior stays deterministic. Safety content outranks ordinary results, search, affiliates, newsletters, and conversion content.
 
 ## Content and route classes
 
-Every health page or tool must use one content type:
+Use one applicable content type: `published_screener`, `instrument_information_only`, `original_educational_self_check`, `recovery_tool`, `browser_local_record`, `clinical_evidence`, `rights_information`, `crisis_resource`, `professional_resource`, `editorial_article`, or `trust_legal`.
 
-- published_screener
-- instrument_information_only
-- original_educational_self_check
-- recovery_tool
-- browser_local_record
-- clinical_evidence
-- rights_information
-- crisis_resource
-- professional_resource
-- editorial_article
-- trust_legal
+Use one route risk class:
 
-Every route must have a risk class:
-
-- N0: neutral trust, company, methodology, accessibility, professional, or legal content
-- H1: health information
-- H2: browser-local health or recovery tool
-- H3: validated screening and result flow
-- H4: crisis, self-harm, immediate-risk, or emergency-support state
+- `N0`: neutral trust, company, methodology, accessibility, professional, or legal content
+- `H1`: health information
+- `H2`: browser-local health or recovery tool
+- `H3`: validated screening and result flow
+- `H4`: crisis, self-harm, immediate-risk, or emergency-support state
 
 New routes default to the more restrictive reasonable class until reviewed.
 
-## Instrument rights are a release gate
+## Focused policy routing
 
-Never reproduce, administer, score, monetize, translate, adapt, or publicly display a published instrument until rights for the exact version and use are verified from an authoritative source.
+Read this complete file first. Then load every matching policy. Cross-category work loads all matching policies.
 
-Maintain an instrument registry with:
-- exact instrument/version
-- owner and primary source
-- rights holder
-- public administration status
-- commercial-use status
-- reproduction/electronic/scoring rights
-- modification and translation restrictions
-- required attribution
-- intended and validation populations
-- scoring method and cutoffs
-- limitations
-- reviewer and reviewer scope
-- rights/evidence review dates
-- next review date
-- current site status
+| Work | Required policy |
+| --- | --- |
+| Instruments, scoring, results, claims, rights, evidence, crisis, health AI, adults or youth | `docs/codex/CLINICAL_RIGHTS_CRISIS.md` |
+| Health data, storage, analytics, consent, headers, service workers, security, privacy, email, accessibility, performance | `docs/codex/PRIVACY_SECURITY_ACCESSIBILITY.md` |
+| Public copy, SEO, AEO, GEO, metadata, schema, links, articles, attribution, referrals, monetization | `docs/codex/CONTENT_SEARCH_MONETIZATION.md` |
+| Repository structure, dependencies, workflows, branches, pull requests, deployment, production, automation, Codex tooling | `docs/codex/REPOSITORY_RELEASE.md` |
 
-Allowed statuses:
-- APPROVED_INTERACTIVE
-- INFORMATION_ONLY
-- WRITTEN_PERMISSION_REQUIRED
-- BLOCKED
-- RETIRED
+Exact current source, tests, rights records, review records, route policy, and owner-approved release records outrank summaries.
 
-Only APPROVED_INTERACTIVE may expose protected questionnaire items, answer choices, scoring, cutoffs, personalized results, or an assessment-start action.
+## Protected areas and risk
 
-Never infer permission from silence. Academic availability is not commercial web permission. Paper rights do not automatically cover electronic administration.
+Protected areas include instrument and rights records, validated definitions, scoring and results, crisis logic, privacy and health-data flow, analytics and storage policy, legal disclosures, security headers and service workers, reviewer credentials, deployment workflows, and health-facing AI instructions.
 
-### WHO ASSIST v3.1
+Risk defaults:
 
-Treat WHO ASSIST v3.1 as INFORMATION_ONLY until authoritative permission supports the exact public consumer-web implementation.
+- Low: isolated internal or non-health change, no protected area, no public behavior change.
+- Medium: multi-file work, neutral public copy, ordinary UI, search, performance, or maintainability work without a protected area.
+- High: any protected area, H3 or H4 behavior, rights, scoring, crisis, health data, minors, legal or medical claims, security boundaries, production release, or deployment controls.
 
-Until then:
-- no interactive questionnaire
-- no scoring
-- no personalized results
-- no Begin Assessment action
-- retain educational information, evidence, limitations, sources, and rights explanation
-- add a regression guard preventing interactive administration while status remains non-interactive
+When uncertain, choose the higher risk.
 
-This is a P0 release issue.
+## Codex work protocol
 
-## Protected validated content
+Before editing:
 
-Never rewrite validated question text for SEO, readability, UX, conversion, tone, or design.
+1. Verify `raiderj77/mhsud`, current `origin/main`, branch, worktree, relevant commits, open pull requests, branch protection, and required checks.
+2. Never work directly on `main`. Use a current branch or isolated worktree based on current `origin/main`.
+3. Read only matching policies and the smallest exact source, record, and test set needed.
+4. Start medium and high-risk work with no more than 12 evidence-based files where feasible. Find them through exact routes, symbols, imports, references, records, and tests. Twelve is a starting target, not a hard cap.
+5. Use one main agent for ordinary work. One temporary read-only explorer may map unfamiliar code when targeted search fails. Close it after handoff before reviewer or verifier work.
+6. Use `.codex/TASK.md` for medium, high-risk, unclear, cross-cutting, or multi-session work. Keep it local, concise, and free of raw logs or sensitive data.
+7. Reproduce defects and add a failing regression test first when practical. Do not edit production code from an unproven guess.
+8. Make the smallest complete change. Avoid unrelated cleanup and broad refactors.
+9. Run focused tests while editing. Run broad applicable checks once after stabilization. Repeat after a relevant edit or failure.
+10. Preserve unrelated work. Never weaken a test, gate, allowlist, registry, source, or safety control merely to pass.
 
-Never alter question order, answer anchors, scales, time periods, scoring, reverse scoring, cutoffs, severity bands, or missing-response behavior without authoritative evidence and approval.
+## Review rules
 
-Keep validated instrument definitions separate from editorial copy.
+Use `mc_reviewer` for substantial medium-risk work.
 
-Use snapshots or hashes to detect accidental item changes.
+Use both `mc_reviewer` and `mc_verifier` for high-risk work and final release-sensitive review. The reviewer finds defects. The verifier maps acceptance criteria to direct evidence and required checks without repairing the implementation.
 
-Every validated screener needs golden tests for:
-- minimum score
-- maximum score
-- every cutoff boundary
-- one point below and above each cutoff
-- missing-answer handling
-- high-risk response handling
-- representative known combinations
+AI review does not replace required human clinical, rights, privacy, legal, accessibility, or owner approval.
 
-A scoring regression blocks release.
+Classify findings:
 
-## Clinical language
+- `P0`: safety, rights, privacy, security, data-loss, or release-blocking defect
+- `P1`: material correctness, accessibility, regression, or maintainability defect
+- `P2`: bounded improvement that does not block the stated outcome
 
-Preferred terms:
-- screening
-- screening result
-- score
-- score range
-- educational interpretation
-- symptoms reported
-- discuss with a qualified professional
+Never hide a material defect to keep output short.
 
-Do not tell a user a screener proves a diagnosis, rules one out, proves safety, or determines whether treatment is needed.
+## Evidence and release state
 
-Every result page must clearly explain what the result does not establish.
+The current `package.json`, `.github/workflows/`, exact feature records, and matching tests are command authorities.
 
-## Evidence and review
+For material claims, separate `Verified`, `Inferred`, `Unknown`, `Blocked`, and `Not tested`.
 
-Consequential health claims must trace to approved evidence.
+Report release evidence as separate stages:
 
-Prefer:
-1. government health agencies
-2. instrument owners
-3. original validation studies
-4. professional organizations
-5. systematic reviews
-6. strong peer-reviewed research
-7. high-quality secondary sources only when primary material is unavailable
+1. local change;
+2. focused tests;
+3. complete applicable local checks;
+4. commit and pushed branch;
+5. pull request and required checks;
+6. merge;
+7. deployment tied to the expected commit;
+8. direct production verification.
 
-Do not invent prevalence, accuracy, validation, prognosis, or treatment-effect numbers.
+Never infer a later stage from an earlier one. A build or preview does not prove merge, production, provider readiness, customers, demand, revenue, payment, referral delivery, or clinical approval. A P0 failure blocks release.
 
-Reviewer credentials must match the reviewed subject. Do not portray a substance-use counseling credential as psychiatric, psychological, neurological, or medical validation.
+## Owner-controlled actions
 
-Record reviewer, credential, review scope, date, and limitations.
+Do not merge, deploy, publish, change DNS, activate providers, spend money, process real payments, contact users, alter production data, or make a public clinical, rights, legal, or credential claim without exact owner authorization.
 
-## Crisis safety
+Implementation approval does not equal release approval.
 
-Crisis behavior must be deterministic and separate from ordinary SEO, conversion, affiliate, or AI logic.
+## Token and cost discipline
 
-When a response requires an immediate safety state, safety content outranks the normal result.
+Use fewer tokens through scope control, not reduced rigor:
 
-For U.S. users, clearly surface the 988 Suicide & Crisis Lifeline, Crisis Text Line (text HOME to 741741), and the SAMHSA National Helpline (1-800-662-4357), plus emergency services for immediate danger. Provide an international support path where appropriate.
+- keep durable rules here and detail in focused policies;
+- search exact routes and symbols before broad reading;
+- use `scripts/codex/repo-map.mjs` for a bounded path map;
+- use concise task state instead of replaying conversations;
+- keep raw logs local and return only material lines;
+- use deterministic scripts and tests before model review;
+- use side threads only for disposable research;
+- close subagents after capturing results;
+- avoid full-repository prompt bundles;
+- do not install a model router, outside provider, MCP context framework, lossy output filter, or repository-wide agent framework without a measured benchmark, security review, removal path, and owner approval.
 
-H4 states must:
-- load without display ads
-- load without optional analytics
-- contain no affiliate or newsletter CTA
-- remain keyboard and screen-reader accessible
-- work well on mobile
-- place safety content before ordinary interpretation
-- avoid unnecessary animation
-- never depend on generative AI
+Do not set a blind tool-output token cap. Focus commands and preserve raw-output access when diagnostics matter.
 
-Never track individual crisis-resource clicks.
+## Definition of done
 
-## Privacy architecture
-
-Preserve no-account, browser-local screening wherever feasible.
-
-Questionnaire answers and scores must not intentionally enter:
-- URLs, query strings, or fragments
-- analytics
-- advertising systems
-- server logs
-- error-monitoring payloads
-- CRM
-- email
-- affiliate or referral URLs
-- remote AI prompts
-
-Do not add server-side storage for screening answers without a separate privacy, security, regulatory, legal, and product review.
-
-Use accurate privacy language such as:
-"Your screening answers and scores are processed locally and are not intentionally sent to MindCheckTools."
-
-Avoid absolute promises such as "100% private" or "nothing ever leaves your device."
-
-## Browser storage
-
-Validated screener answers should normally remain memory-only.
-
-Only intentionally persistent tools may use localStorage.
-
-For every local record:
-- disclose what is stored
-- disclose that it remains in the browser
-- explain shared-device risk
-- provide a clear delete/reset control
-- inventory every storage key
-
-No undocumented storage keys.
-
-## Sensitive-route protection
-
-Preserve:
-- Referrer-Policy: no-referrer on sensitive routes where appropriate
-- private/no-store behavior for state-bearing sensitive responses
-- no sensitive caching by service workers
-- BFCache regression testing
-- no sensitive content in telemetry or error reporting
-
-Do not weaken security headers to add marketing technology.
-
-## Analytics
-
-Use one lightweight privacy-safe aggregate analytics system.
-
-Current preferred implementation:
-- Vercel Web Analytics
-- neutral allowlisted routes only
-- no custom sensitive events
-- no query strings or fragments
-- suppress when Global Privacy Control is active
-
-Do not run GA4 on MindCheckTools.
-
-Sensitive health routes default to analytics off.
-
-Never send answers, scores, severity, diagnosis, crisis state, recovery logs, journal content, or instrument responses to analytics.
-
-Prefer Search Console, Bing Webmaster Tools, and aggregate search data for growth analysis.
-
-## Permanent no-display-ad rule
-
-MindCheckTools does not use display advertising.
-
-Do not add or reactivate:
-- Google AdSense
-- programmatic display ads
-- behavioral advertising
-- retargeting pixels
-- mental-health audience building
-- condition-based advertising
-- score-based advertising
-- crisis-based advertising
-
-Remove dormant advertising code, consent branches, CSP domains, policy text, ads.txt, metadata, and tests after dependency checks pass.
-
-## Health referrals and monetization
-
-Never route a paid healthcare recommendation from answers, score, severity, inferred diagnosis, crisis status, or substance disclosed.
-
-Never pass health-state information to referral partners.
-
-Any compensated healthcare referral arrangement requires qualified legal review before launch.
-
-Any approved affiliate relationship must remain separate from scoring and crisis flows and receive no sensitive data.
-
-Long-term monetization should favor professional resources, B2B tools, organization licensing where rights permit, and other products that do not depend on selling user distress.
-
-## AI policy
-
-Do not send assessment answers, scores, crisis disclosures, recovery logs, or journal text to remote generative models.
-
-Do not use AI to diagnose users, override validated scoring, change crisis logic, or improvise emergency instructions.
-
-AI may assist internally with:
-- source research
-- claims QA
-- rights-review assistance
-- SEO/AEO/GEO review
-- accessibility review
-- code review
-- test generation
-- broken-link checks
-- content-gap research
-
-AI must never independently alter:
-- protected validated questions
-- response anchors
-- scoring
-- cutoffs
-- severity bands
-- crisis triggers
-- medication guidance
-- instrument-rights determinations
-
-If evidence is missing: UNSPECIFIED
-If rights are unclear: BLOCKED: RIGHTS UNVERIFIED
-If evidence conflicts: REVIEW REQUIRED
-
-## Adults and youth
-
-Every instrument must state intended age range.
-
-Interactive tools default to adults unless the exact youth implementation passes rights, evidence, population, privacy, clinical, crisis, and legal review.
-
-Do not solicit identifying or health information from children under 13 without an explicitly reviewed COPPA-compliant architecture.
-
-## UI and UX
-
-Target WCAG 2.2 AA.
-
-Core flows require automated checks plus manual keyboard and screen-reader review.
-
-Design for users who may be anxious, depressed, distracted, overwhelmed, intoxicated, withdrawing, distressed, or cognitively fatigued.
-
-Use:
-- plain language
-- short paragraphs
-- clear headings
-- consistent controls
-- large touch targets
-- visible focus
-- predictable Back behavior
-- clear progress
-- one primary task at a time
-- reduced-motion support
-
-Avoid:
-- countdowns
-- artificial urgency
-- confetti
-- symptom/severity streaks
-- competitive scoring
-- scare tactics
-- guilt
-- manipulative conversion design
-- unnecessary animation
-
-Validated screening UX must preserve instrument fidelity.
-
-Result pages should present:
-1. tool name
-2. score
-3. validated range
-4. plain-language meaning
-5. what the result does not mean
-6. safety information when applicable
-7. evidence-based next step
-8. instrument source
-9. evidence/methodology links
-10. privacy reminder
-11. reviewer scope
-12. last review date
-
-Do not lead result pages with marketing, affiliate links, newsletter capture, or conversion pressure.
-
-Users must immediately distinguish:
-- Published Screener
-- Information Only
-- Original Educational Tool
-- Recovery Tool
-
-## Mobile and performance
-
-Mobile first.
-
-Preserve:
-- single-column usability
-- large controls
-- readable line length
-- no horizontal scroll
-- reliable Back behavior
-- fast loading
-- accessible crisis actions
-
-Core Web Vitals targets at the 75th percentile:
-- LCP <= 2.5 seconds
-- INP <= 200 ms
-- CLS <= 0.1
-
-Keep third-party JavaScript near zero on health routes.
-
-Do not delay safety information behind large client bundles.
-
-## SEO
-
-MindCheckTools is YMYL. Evidence and trust outrank content volume.
-
-Do not create:
-- mass AI health articles
-- thin condition pages
-- near-duplicate symptom pages
-- fake local pages
-- keyword-stuffed pages
-- search-only pages
-- programmatic health-content farms
-- unreviewed AI medical content
-- automated backlink spam
-- fake testimonials
-
-Every indexable health page needs a distinct user purpose.
-
-No arbitrary minimum word count.
-
-Important health pages should include, where applicable:
-- clear H1
-- direct answer
-- purpose and audience
-- what the tool measures
-- what it does not establish
-- evidence
-- limitations
-- primary source
-- reviewer scope
-- last review date
-- appropriate next step
-- methodology/privacy links
-- crisis support when relevant
-
-Technical SEO:
-- unique factual title and description
-- self-referencing canonical
-- crawlable HTML
-- correct status code
-- appropriate internal links
-- public canonical URLs only in sitemap
-- no result, preview, admin, error, sensitive share, or crisis-state URLs in sitemap
-- never put sensitive data in canonical URLs
-
-## AEO
-
-Answer the primary question near the beginning.
-
-Make source-supported answers easy to extract for:
-- what the tool measures
-- intended population
-- scoring
-- score meaning
-- diagnostic limitations
-- next steps
-- privacy
-- instrument provenance
-- validation status
-
-Do not remove material limitations to make snippets more attractive.
-
-## GEO
-
-Generative Engine Optimization is evidence quality and citation clarity, not tricks.
-
-Improve citation eligibility with:
-- clear factual statements
-- primary sources
-- instrument provenance
-- original methodology
-- transparent reviewer scope
-- limitations
-- source dates
-- stable URLs
-- consistent organization/reviewer identity
-- useful tables and definitions
-
-Allow OAI-SearchBot on public indexable pages when ChatGPT search visibility is desired.
-
-Training-crawler access is a separate decision.
-
-llms.txt is optional. Keep it only while it remains accurate and low-maintenance. Do not maintain duplicate llms-full content unless evidence shows a need.
-
-## Structured data
-
-Only mark up visible facts.
-
-Use conservative schema such as:
-- Organization
-- WebSite
-- WebPage
-- Article or BlogPosting
-- BreadcrumbList
-- Person where appropriate
-
-Do not invent clinical rich-result types, ratings, credentials, or unsupported FAQ markup.
-
-## Legal and regulatory governance
-
-Legal pages must describe actual behavior.
-
-Maintain applicable Privacy Policy, Terms, Disclaimer, Accessibility Statement, consumer-health-data disclosures, privacy choices, and instrument-rights information.
-
-Do not claim HIPAA compliance, FDA approval, clinical approval, medical review, or legal compliance without documented support.
-
-HIPAA applicability is business-model dependent. Reassess before provider, hospital, health-plan, EHR, employer, white-label clinical, or business-associate integrations.
-
-Maintain a legal/privacy applicability matrix for relevant FTC health/privacy rules, state consumer-health laws, California privacy requirements, GDPR/UK GDPR where applicable, and COPPA where youth is implicated.
-
-Material uncertainty requires qualified review.
-
-## Security
-
-Preserve strong security controls.
-
-Use OWASP ASVS and NIST CSF as reference frameworks.
-
-Keep:
-- HTTPS
-- restrictive CSP
-- frame protection
-- content-type protection
-- HSTS
-- dependency scanning
-- secret scanning
-- code/security workflows that add material value
-- fictional test data only
-
-Do not use real user health data in development, CI, screenshots, examples, or tests.
-
-Never hard-code or commit API keys, tokens, passwords, credentials, or other secrets. Use approved deployment secret storage and keep examples fictional. Public verification values that are designed to be disclosed, such as the IndexNow key file, are not secrets; retain exactly one canonical value and do not reuse this exception for private credentials.
-
-Every third-party script must have a documented purpose, routes, exposed data, storage, retention, privacy impact, security impact, and removal path.
-
-## Email
-
-Do not combine newsletter identity with health state.
-
-Never record that a subscriber took a specific screener, received a specific score, viewed a sensitive condition page, or used crisis help.
-
-Suppress email capture during active assessment and crisis states.
-
-## Automation and cost discipline
-
-Automate low-risk repetitive work:
-- broken links
-- uptime
-- crisis-resource availability
-- source-change alerts
-- rights-review reminders
-- dependency/security scans
-- accessibility checks
-- sitemap/canonical/schema checks
-- search summaries
-- review reminders
-
-Do not auto-publish clinical content, alter validated items/scoring, change crisis language, make legal conclusions, approve rights, or create compensated healthcare referrals.
-
-Prefer free or low-cost infrastructure until traffic/revenue justify added spend.
-
-Do not add overlapping SaaS products.
-
-## Repository simplicity
-
-Keep the repository small and understandable.
-
-Before adding a dependency, service, agent, command, document, or workflow, answer:
-- What live problem does it solve?
-- Is the same function already present?
-- Is it referenced?
-- What maintenance cost does it add?
-- What user or health data could it touch?
-- What is the removal path?
-
-Prefer one source of truth over duplicate documents.
-
-Historical implementation documents belong in Git history, not the active root, unless they remain operationally necessary.
-
-Do not retain dead ad code, dead tracking code, obsolete consent systems, duplicate analytics, unused AI agents, abandoned phase docs, duplicate IndexNow keys, or stale policy text.
-
-Do not remove anything tied to runtime, build, deployment, verification, privacy, accessibility, PWA, SEO, safety, rights, or governance until usage is verified.
-
-## Protected areas
-
-Treat these as protected:
-- instrument registry
-- validated question definitions
-- scoring logic
-- result interpretation
-- rights registry
-- crisis logic and resources
-- privacy route policy
-- analytics policy
-- local-storage definitions
-- clinical claims registry
-- legal pages
-- security headers
-- service worker
-- AI system instructions
-- deployment workflows
-
-Consequential changes require owner approval.
-
-## Release gate
-
-Before high-risk release, run applicable:
-- rights-status validation
-- protected item snapshots
-- golden scoring tests
-- cutoff boundary tests
-- crisis-state tests
-- URL leakage tests
-- tracker/network tests
-- localStorage tests
-- cache/referrer/BFCache tests
-- canonical/sitemap/schema checks
-- broken-link checks
-- automated accessibility checks
-- keyboard smoke test
-- screen-reader smoke test
-- responsive test
-- performance test
-- security scans
-- production build
-
-A P0 failure blocks release.
+Work is complete only when:
+
+- scope and every acceptance item are satisfied;
+- no unresolved P0 or P1 remains;
+- applicable checks pass;
+- protected facts and policies remain intact;
+- the complete diff has no material unrequested work;
+- rollback or fail-closed behavior is documented where needed;
+- local, pull-request, merge, deployment, and production states are reported separately;
+- unresolved risks and untested areas are stated plainly.
 
 ## TRUTHMODE: MINDCHECKTOOLS
 
-Before consequential work, review:
-- clinical validity
-- exact instrument version
-- scoring integrity
-- instrument rights
-- commercial-use rights
-- intended population
-- crisis implications
-- privacy and health-data exposure
-- analytics
-- monetization/referrals
-- minors
-- accessibility
-- security and caching
-- AI risk
-- legal/regulatory impact
-- SEO
-- AEO
-- GEO
-- structured data
-- reviewer scope
-- brand trust
-- rollback plan
+For consequential work, check clinical validity, exact instrument version, scoring, rights, commercial use, population, crisis behavior, privacy, health-data exposure, analytics, monetization, minors, accessibility, security, caching, AI risk, legal impact, SEO, AEO, GEO, schema, reviewer scope, brand trust, rollback, and release evidence.
 
-Return:
-PASS
-REVISE
-STOP
+Return `PASS`, `REVISE`, or `STOP`.
 
-Unknown critical evidence never equals PASS.
-
-## Final decision test
-
-For every material change ask:
-- Is it safe?
-- Is it accurate?
-- Is it supported?
-- Do we have rights to do it?
-- Does it protect privacy?
-- Is it accessible?
-- Is it useful?
-- Is it search-durable?
-- Is it maintainable?
-- Is it legally defensible?
-- Does it strengthen MindCheckTools?
-- Would we still make this decision if organic traffic disappeared tomorrow?
-
-If a critical answer is no, stop the affected change.
+Unknown critical evidence never equals `PASS`.
