@@ -159,10 +159,19 @@ Run \`$mc-run\`.
 test("repository map emits at most twelve path-only results", () => {
   const result = run("scripts/codex/repo-map.mjs", ["--query", "routePolicies privacy", "--max", "12"]);
   assert.equal(result.status, 0, result.stderr);
-  const lines = result.stdout.split(/\r?\n/).filter((line) => line.startsWith("- "));
+  const lines = result.stdout
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith("- "));
   assert.ok(lines.length <= 12);
+  const allowedReasons = new Set(["path match", "text reference", "test", "record or workflow"]);
   lines.forEach((line) => {
-    assert.match(line, /^- [^:]+: (?:path match|text reference|test|record or workflow)(?:, (?:path match|text reference|test|record or workflow))*$/);
+    const separator = line.lastIndexOf(": ");
+    assert.ok(separator > 2, line);
+    assert.ok(line.slice(2, separator).trim(), line);
+    const reasons = line.slice(separator + 2).split(", ").map((reason) => reason.trim());
+    assert.ok(reasons.length > 0, line);
+    reasons.forEach((reason) => assert.ok(allowedReasons.has(reason), `${line}: ${reason}`));
     assert.doesNotMatch(line, /function\s|const\s|=>|import\s/);
   });
 });
