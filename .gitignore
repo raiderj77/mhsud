@@ -47,3 +47,6 @@ content/review-required/
 
 # Claude Code local settings (auto-edited every session, should not be tracked)
 .claude/settings.local.json
+
+# Local Codex task state. Never commit working plans or raw session evidence.
+/.codex/TASK.md
