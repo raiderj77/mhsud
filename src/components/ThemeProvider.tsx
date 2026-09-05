@@ -19,8 +19,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem("mh-theme") as Theme | null;
-    if (stored) {
+    let stored: string | null = null;
+    try {
+      stored = localStorage.getItem("mh-theme");
+    } catch {
+      // Storage can be denied on shared/private devices. Theme persistence must
+      // never prevent the health tools or crisis resources from hydrating.
+    }
+    if (stored === "light" || stored === "dark") {
       setTheme(stored);
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
@@ -35,7 +41,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.remove("dark");
     }
-    localStorage.setItem("mh-theme", theme);
+    try {
+      localStorage.setItem("mh-theme", theme);
+    } catch {
+      // Continue with an in-memory preference when storage is unavailable.
+    }
   }, [theme, mounted]);
 
   const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
