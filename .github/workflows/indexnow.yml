@@ -2,11 +2,15 @@ name: IndexNow Submit
 on:
   push:
     branches: [main]
+permissions:
+  contents: read
 jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Submit to IndexNow
         run: |
           RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
