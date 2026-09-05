@@ -225,7 +225,7 @@ export function GAD7Client({ faqData }: Props) {
               <p className="text-sm text-crisis-700 dark:text-crisis-400 leading-relaxed mb-3">
                 A score of 15 or above on the GAD-7 indicates severe anxiety symptoms. Talking with a healthcare professional or contacting a crisis service is strongly encouraged.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/crisis-resources"
                 className="inline-block bg-crisis-600 hover:bg-crisis-700 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors"
               >
@@ -254,10 +254,10 @@ export function GAD7Client({ faqData }: Props) {
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-2"><strong>What you can consider next:</strong> {range.suggestion}</p>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Learn more:{" "}
-                  <Link href="/gad-7-score-interpretation" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                  <Link prefetch={false} href="/gad-7-score-interpretation" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
                     GAD-7 score interpretation
                   </Link>{" "}·{" "}
-                  <Link href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
+                  <Link prefetch={false} href="/five-senses-grounding" className="text-sage-600 dark:text-sage-400 underline hover:text-sage-800">
                     Anxiety grounding exercise
                   </Link>
                 </p>
@@ -327,7 +327,7 @@ export function GAD7Client({ faqData }: Props) {
           </div>
 
           <div className="card p-4 mb-8 bg-sage-50 dark:bg-sage-950/20 border-sage-200 dark:border-sage-800 text-center">
-            <Link href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
+            <Link prefetch={false} href="/how-to-talk-to-your-doctor-about-mental-health" className="text-sm font-medium text-sage-600 dark:text-sage-400 hover:underline">
               Ready to take the next step? Here&apos;s how to bring your results to your doctor &rarr;
             </Link>
           </div>
@@ -451,7 +451,7 @@ export function GAD7Client({ faqData }: Props) {
                 { name: "AUDIT Alcohol Use Screen", desc: "10-item WHO alcohol screening tool", href: "/audit-alcohol-test" },
                 { name: "AUDIT-C Quick Screen", desc: "3-question brief alcohol screen", href: "/audit-c-alcohol-screen" },
               ].map((t) => (
-                <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
+                <Link prefetch={false} key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">
                   <p className="text-sm font-semibold text-sage-600 dark:text-sage-400 mb-1">{t.name}</p>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{t.desc}</p>
                 </Link>
@@ -474,3 +474,4 @@ export function GAD7Client({ faqData }: Props) {
     </div>
   );
 }
+

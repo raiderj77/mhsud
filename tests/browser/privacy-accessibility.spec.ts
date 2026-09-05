@@ -40,12 +40,20 @@ test('rights-gated WHO entry cannot administer or score an assessment', async ({
 
 test('synthetic screener choices stay memory-only and reset after reload', async ({ page }) => {
   const transmissions: string[] = [];
-  page.on('request', request => {
-    if (request.method() !== 'GET' || /analytics|insights|collect|tracking/i.test(request.url())) transmissions.push('unexpected transport');
-  });
   await page.goto('/gad-7-anxiety-test');
   await page.getByRole('checkbox').check();
   await page.getByRole('button', { name: /begin/i }).click();
+  await page.waitForLoadState('networkidle');
+  // After entry, only immutable application assets may load. In particular,
+  // same-origin GET requests can leak answers into server logs just like POSTs.
+  const observe = (request: import('@playwright/test').Request) => {
+    const url = new URL(request.url());
+    if (request.method() !== 'GET' || url.origin !== 'http://127.0.0.1:4311' ||
+        !url.pathname.startsWith('/_next/static/') || url.search || request.postData()) {
+      transmissions.push('unexpected transport');
+    }
+  };
+  page.on('request', observe);
   const groups = page.getByRole('radiogroup');
   await expect(groups).toHaveCount(7);
   for (let i = 0; i < 7; i++) await groups.nth(i).getByRole('radio').first().click();
@@ -57,7 +65,11 @@ test('synthetic screener choices stay memory-only and reset after reload', async
   expect(storage.local.filter(k => /gad|answer|score|assessment/i.test(k))).toEqual([]);
   expect(storage.session.filter(k => /gad|answer|score|assessment/i.test(k))).toEqual([]);
   expect(transmissions).toEqual([]);
+  page.off('request', observe);
   await page.reload();
+  await page.getByRole('checkbox').check();
+  await page.getByRole('button', { name: /begin/i }).click();
+  await expect(groups).toHaveCount(7);
   await expect(page.locator('[role="radio"][aria-checked="true"]')).toHaveCount(0);
 });
 
@@ -115,3 +127,5 @@ test('denied browser storage keeps the crisis plan usable with an explicit warni
   await page.locator('input[type="text"]').first().fill('SYNTHETIC VOLATILE ENTRY');
   await expect(page.locator('input[type="text"]').first()).toHaveValue('SYNTHETIC VOLATILE ENTRY');
 });
+
+
