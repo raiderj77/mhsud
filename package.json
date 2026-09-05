@@ -15,7 +15,8 @@
     "test:hydration": "node --test tests/hydration-regression.test.mjs",
     "lint:content": "node scripts/content-lint.js",
     "lint:predeploy": "node scripts/predeploy-check.js",
-    "prebuild": "npm test && npm run lint:predeploy && npm run lint:content"
+    "prebuild": "npm test && npm run lint:predeploy && npm run lint:content",
+    "test:browser": "playwright test"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -24,6 +25,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1",
     "@types/node": "^20",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
