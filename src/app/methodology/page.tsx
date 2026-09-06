@@ -1,36 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL, SITE_NAME } from "@/lib/metadata";
-import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
+import { SITE_AUTHOR } from "@/config/author";
 
 const PAGE_PATH = "/methodology";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const TODAY = "2026-08-02";
+const TODAY = "2026-09-05";
 
 export const metadata: Metadata = createMetadata({
   path: PAGE_PATH,
   title: "Methodology: How MindCheck Tools Selects and Scores Screening Instruments",
   description:
-    "How MindCheck Tools chooses validated screening instruments, preserves official scoring, protects health data, and what the site is and is not. Reviewed by Jason Ramirez, CADC-II.",
+    "How MindCheck Tools distinguishes published screeners from original educational tools, checks intended-use rights, protects browser-local responses, and describes review limits.",
   keywords: [
     "screening tool methodology",
     "validated mental health screeners",
     "PHQ-9 GAD-7 scoring",
-    "clinical reviewer mental health",
+    "screening editorial review scope",
     "screening instrument standards",
   ],
 });
-
-function authorPersonJsonLd() {
-  return {
-    ...AUTHOR_SCHEMA,
-    worksFor: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
-  };
-}
 
 function articleJsonLd() {
   return {
@@ -38,7 +27,7 @@ function articleJsonLd() {
     "@type": "Article",
     headline: "Methodology: How MindCheck Tools Selects and Scores Screening Instruments",
     description:
-      "Selection criteria, scoring fidelity, privacy practices, and the role of the clinical reviewer for MindCheck Tools.",
+      "Evidence, intended-use rights, privacy practices, and editorial review limits for MindCheck Tools.",
     datePublished: "2026-04-26",
     dateModified: TODAY,
     author: {
@@ -46,7 +35,6 @@ function articleJsonLd() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    reviewedBy: authorPersonJsonLd(),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -89,7 +77,7 @@ export default function MethodologyPage() {
       </h1>
 
       <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
-        Last updated: {TODAY}. Reviewed by Jason Ramirez, CADC-II.
+        Editorial corrections: {TODAY}. Site owner: Jason Ramirez, CADC-II.
       </p>
 
       <div
@@ -98,10 +86,15 @@ export default function MethodologyPage() {
       >
         <strong>Important:</strong> Screeners on this site are educational. They
         are not diagnostic instruments and they do not replace evaluation by a
-        qualified clinician. If you are in crisis, call or text{" "}
-        <strong>988</strong> in the United States, text{" "}
-        <strong>HOME to 741741</strong>, or call SAMHSA at{" "}
-        <strong>1-800-662-4357</strong>.
+        qualified clinician. For immediate crisis support in the United States,{" "}
+        <a href="tel:988" className="underline">call 988</a> or <a href="sms:988" className="underline">text 988</a>,
+        or text <strong>HOME to 741741</strong>. For immediate danger, call{" "}
+        <a href="tel:911" className="underline">911</a> in the U.S. or your local emergency number elsewhere.
+        <p className="mt-2">For U.S. treatment referral and information,{" "}
+          <a href="tel:18006624357" className="underline">call 1-800-662-4357</a>{" "}
+          (<a href="https://www.samhsa.gov/find-help/helplines/national-helpline" className="underline" referrerPolicy="no-referrer">SAMHSA National Helpline</a>).
+          This is not crisis counseling. <Link href="/crisis-resources" className="underline">Find crisis and international support resources.</Link>
+        </p>
       </div>
 
       <article className="prose-medical text-neutral-700 dark:text-neutral-300 leading-relaxed">
@@ -112,22 +105,26 @@ export default function MethodologyPage() {
           Mental health screening is a high-stakes context. People who reach
           this site are often worried about themselves or someone they love.
           They deserve to know exactly what they are using, who reviewed it,
-          and what the limits are. This page documents the standards every
-          screening tool on MindCheck Tools is held to before it goes live.
+          and what the limits are. This page describes the site&apos;s editorial
+          standards; it does not certify every implementation or replace a
+          page-specific evidence and review record.
         </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">
           How instruments are selected
         </h2>
         <p>
-          A page is labeled as a validated screening instrument only when it
-          meets all of the following criteria:
+          Published instruments are assessed separately for evidence, rights,
+          implementation fidelity, and suitability for this public setting:
         </p>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Peer-reviewed validation.</strong> The instrument has at
             least one validation study published in a peer-reviewed journal,
-            with reported sensitivity and specificity in a defined population.
+            in a defined population. Relevant measures differ by purpose:
+            not every well-being or research scale has diagnostic sensitivity
+            and specificity. Evidence for an instrument does not validate this
+            website&apos;s implementation or every population.
           </li>
           <li>
             <strong>Established use.</strong> It is in active clinical or
@@ -136,10 +133,13 @@ export default function MethodologyPage() {
             association, or a public agency.
           </li>
           <li>
-            <strong>Permissive licensing.</strong> The instrument is in the
-            public domain, released under a free-use license by the developers,
-            or otherwise permitted for non-commercial public-facing screening
-            use. Items requiring a paid license are not hosted.
+            <strong>Intended-use rights.</strong> Terms must cover the exact version,
+            reproduction, electronic administration, scoring, and the site&apos;s
+            actual commercial context. Free access does not by itself mean
+            noncommercial use. Permission for one version or setting does not
+            transfer automatically to another. Unresolved permission is not
+            clearance; information-only pages do not administer the instrument.
+            See the <Link href="/for-professionals/screening-instrument-rights-guide" className="text-sage-700 dark:text-sage-400 underline">instrument-rights guide</Link>.
           </li>
           <li>
             <strong>Traceable source.</strong> The original publication can be
@@ -166,20 +166,19 @@ export default function MethodologyPage() {
           How scoring is preserved
         </h2>
         <p>
-          The items, response options, and scoring algorithm of each instrument
-          are reproduced as published. Wording, item order, response anchors,
-          reverse-scored items, and threshold cutoffs are kept faithful to the
-          source paper or the developer-distributed version. The site does not
-          shorten validated instruments, swap items, alter the response scale,
-          or invent new severity bands.
+          For an interactive published instrument, the implementation should be
+          checked against its exact authorized source version: wording, order,
+          response options, reverse scoring, and interpretation boundaries.
+          Automated tests check defined software behavior; they do not establish
+          clinical validity or prove that every implementation detail has been
+          independently reviewed. Information-only pages do not score responses.
         </p>
         <p>
-          Where multiple recognized cutoffs exist (for example, the AUDIT cutoff
-          of 8 versus 7 for women and adults over 65, or the PHQ-9 cutoff of 10
-          versus DSM-based algorithms), the site reports the cutoff used and
-          notes the alternatives. Score interpretation pages describe what each
-          band means in plain language without converting a screening score
-          into a diagnosis.
+          Interpretation depends on the exact instrument, study population,
+          setting, and purpose. Page-specific sources and limitations matter;
+          a screening result is not a diagnosis. Changing instrument items,
+          response scales, thresholds, or scoring requires a separate rights
+          and qualified-review check, not merely an editorial update.
         </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">
@@ -194,36 +193,36 @@ export default function MethodologyPage() {
           option, in which case the data stays in your own browser storage.
         </p>
         <p>
-          No health-related answers from any screener on this site are sent to
-          advertising networks, social platforms, or third-party trackers.
-          Aggregate site analytics, where present, are limited to standard page
-          metrics and never include the content of your responses.
+          MindCheck Tools does not use display advertising. Optional Vercel Web
+          Analytics is restricted to an explicit neutral-page allowlist, strips
+          query strings and fragments, and is suppressed under Global Privacy
+          Control. Screening, condition-specific education, and crisis pages are excluded.
+          Ordinary hosting and security requests still occur. See the{" "}
+          <Link href="/privacy" className="text-sage-700 dark:text-sage-400 underline">privacy policy</Link> for the limits of browser-local processing.
         </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">
-          The clinical reviewer
+          Editorial oversight and review limits
         </h2>
         <p>
-          Maintained screening pages and their accompanying score interpretation
-          guides are reviewed by{" "}
+          The site is maintained by{" "}
           <Link
             href="/about/jason-ramirez"
             className="text-sage-700 dark:text-sage-400 hover:underline"
           >
             Jason Ramirez, CADC-II
           </Link>
-          , a {SITE_AUTHOR.credentialFull} with {SITE_AUTHOR.experience}. The review
-          checks that items match the published instrument, that the scoring
-          and bands match the source paper, that the language used to describe
-          results stays educational rather than diagnostic, and that crisis
-          resources are present where they are needed.
+          , a {SITE_AUTHOR.credentialFull}. His role and stated experience are
+          described on his profile. A named reviewer, review date, and scope
+          should be recorded for the specific content reviewed; ownership or
+          a site-wide byline is not evidence of review of every page.
         </p>
         <p>
           CADC-II is a substance use counseling certification, not a physician,
           psychologist, psychiatrist, or independent mental health license.
-          Clinical review does not turn an educational screener into a diagnostic
-          test. It is a quality-control step on top of source fidelity, not a
-          substitute for evaluation by your own clinician.
+          Source checking and software tests do not replace topic-qualified
+          clinical review. The September 5 editorial corrections do not claim
+          a new clinical review or independent credential verification.
         </p>
 
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-8 mb-3">
@@ -285,15 +284,14 @@ export default function MethodologyPage() {
             >
               Clinical evidence
             </Link>{" "}
-            with the source study, validated population, and cutoffs for each
-            instrument.
+            with source studies, populations, limitations, and rights notes.
           </li>
           <li>
             <Link
               href="/about/jason-ramirez"
               className="text-sage-700 dark:text-sage-400 hover:underline"
             >
-              About the clinical reviewer
+              About the site owner and review scope
             </Link>
             .
           </li>
