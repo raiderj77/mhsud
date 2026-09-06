@@ -13,12 +13,13 @@ async function loadTs(path) {
 const data = await loadTs("src/lib/awarenessArticles.ts");
 const policies = await loadTs("src/lib/routePolicies.ts");
 
-test("approved addiction article content matches the revision Jason reviewed", () => {
-  // Source revision 83c344c. Any substantive edit requires a new review record,
-  // not merely replacing these hashes to make a test pass.
+test("approved addiction articles match the recorded review and authorized source correction", () => {
+  // Original review: 83c344c. September 5 owner-authorized overdose source/date
+  // correction is documented in docs/august-awareness-editorial-handoff.md.
+  // Neither changing a hash nor an automated source check is clinical review.
   const reviewedContent = {
     "fentanyl-prevention-awareness-day": "53feaf344ea6f2b7e338653d99ff7718dddf5674480ac396f60656d9529e0bf7",
-    "overdose-awareness-month-day": "c2791d97c17b8afde6b8f5ab26709f1690bece9be785ba66f5739d5a0cfae39b",
+    "overdose-awareness-month-day": "6759e5b932c184f8623ffdefcaa3fb700e8ab2cd418b840f61211f8317481dd2",
   };
   for (const [slug, hash] of Object.entries(reviewedContent)) {
     assert.equal(createHash("sha256").update(JSON.stringify(data.getAwarenessArticle(slug))).digest("hex"), hash, slug);
@@ -50,8 +51,11 @@ test("observance dates and uncertainty remain explicit", () => {
   assert.equal(data.getAwarenessArticle("fentanyl-prevention-awareness-day").dateLabel, "August 21");
   const overdose = data.getAwarenessArticle("overdose-awareness-month-day");
   assert.match(overdose.dateLabel, /August 31/);
-  assert.match(JSON.stringify(overdose), /exact 2026 week date range has not been verified/);
-  assert.match(JSON.stringify(overdose), /not a universal federal designation/);
+  assert.match(JSON.stringify(overdose), /August 25 through August 31, 2026/);
+  assert.match(JSON.stringify(overdose), /not evidence of a universal federal designation/);
+  assert.match(JSON.stringify(overdose), /not a permanent annual date rule/);
+  assert.doesNotMatch(JSON.stringify(overdose), /date range has not been verified|has not verified an exact 2026|maintains an Overdose Awareness Week toolkit/);
+  assert.equal(data.awarenessSources.overdoseWeek.url, "https://www.samhsa.gov/blog/convening-highlights-samhsa-commitment-help-states-sud-treatment-recovery-support-services");
   assert.equal(overdose.emergency, true);
   assert.equal(data.getAwarenessArticle("fentanyl-prevention-awareness-day").emergency, true);
 });
@@ -73,6 +77,11 @@ test("only the two explicitly approved addiction articles are released", async (
     assert.equal(release.reviewedOn, "2026-08-26");
     assert.equal(release.publishedOn, "2026-08-26");
   }
+  assert.equal(data.getAwarenessRelease("overdose-awareness-month-day").sourceCorrectedOn, "2026-09-05");
+  assert.equal(data.getAwarenessRelease("fentanyl-prevention-awareness-day").sourceCorrectedOn, undefined);
+  assert.match(shared, /This is not a new clinical review/);
+  assert.match(shared, /dateModified: release.sourceCorrectedOn \?\? release.publishedOn/);
+  assert.match(sitemap, /sourceCorrectedOn \?\? getAwarenessRelease/);
   for (const file of [layout, shared]) {
     assert.match(file, /index: false, follow: false, noimageindex: true/);
     assert.match(file, /googleBot: \{ index: false/);
@@ -107,6 +116,16 @@ test("all awareness routes are isolated from analytics, referrers and service-wo
   const shared = await read("src/app/awareness/shared.tsx");
   assert.match(shared, /referrerPolicy="no-referrer"/);
   assert.match(shared, /Ordinary hosting requests still occur/);
+});
+
+test("new-article guidance keeps alcohol and drug scope distinct from future LCSW review", async () => {
+  const instructions = await read("AGENTS.md");
+  const handoff = await read("docs/august-awareness-editorial-handoff.md");
+  assert.match(instructions, /New articles must be strictly about alcohol or drugs/);
+  assert.match(instructions, /until an LCSW joins the team and the owner reopens that lane/);
+  assert.match(instructions, /Employment alone is not clinical review/);
+  assert.match(handoff, /alcohol\/drug-only new-article scope/);
+  assert.match(handoff, /earlier proposal saying the range was unverified is superseded/);
 });
 
 test("articles preserve direct crisis actions without forms or commercial CTAs", async () => {

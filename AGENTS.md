@@ -178,6 +178,12 @@ Reviewer credentials must match the reviewed subject. Do not portray a substance
 
 Record reviewer, credential, review scope, date, and limitations.
 
+### New-article scope (owner decision, September 5, 2026)
+
+New articles must be strictly about alcohol or drugs: substance-use education, recovery support, prevention, or finding appropriate services. Match Jason Ramirez's stated CADC-II credentials without claiming they authorize every clinical or medical topic. Do not draft or publish new general mental-health, mental-load, depression, anxiety, ADHD, grief-treatment, or other psychotherapy articles until an LCSW joins the team and the owner reopens that lane. This does not authorize deleting existing public resources or withholding safety maintenance.
+
+Before that future lane opens, verify the LCSW's active credential, relevant subject expertise, and actual review of the exact article. Employment alone is not clinical review. Medication, detoxification/withdrawal protocols, individualized treatment, and other medically consequential claims still require an appropriately qualified reviewer; an addiction topic or LCSW title is not blanket clearance. Preserve source verification, instrument rights, privacy, crisis safeguards, and exact-content approval gates for every new article.
+
 ## Crisis safety
 
 Crisis behavior must be deterministic and separate from ordinary SEO, conversion, affiliate, or AI logic.

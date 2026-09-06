@@ -24,6 +24,7 @@ export function ReviewNotice({ release }: { release: AwarenessRelease }) {
   return <aside className={styles.notice} aria-label="Editorial review and ownership">
     <p><strong>Addiction-related educational content reviewed and approved by <Link href="/about/jason-ramirez">{SITE_AUTHOR.name}, {SITE_AUTHOR.credential}</Link></strong> on <time dateTime={release.reviewedOn}>{displayDate(release.reviewedOn)}</time>. Jason also owns MindCheck Tools. This review is limited to addiction-related education, not a medical certification or individualized advice.</p>
     <p>AI-assisted research and writing were used; the illustration is AI-generated. Source check: <time dateTime={AWARENESS_SOURCE_CHECKED}>{displayDate(AWARENESS_SOURCE_CHECKED)}</time>. Published: <time dateTime={release.publishedOn}>{displayDate(release.publishedOn)}</time>.</p>
+    {release.sourceCorrectedOn && <p>Source/date correction: <time dateTime={release.sourceCorrectedOn}>{displayDate(release.sourceCorrectedOn)}</time>. Updated the month/week explanation, source link, and date FAQ after rechecking the original sources. This is not a new clinical review; the original addiction-education review date above is unchanged.</p>}
   </aside>;
 }
 
@@ -58,7 +59,7 @@ export function awarenessArticleJsonLd(article: AwarenessArticle) {
     headline: article.title, description: article.description, mainEntityOfPage: url, url,
     image: `${SITE_URL}${article.image}`, inLanguage: "en-US", isAccessibleForFree: true,
     creativeWorkStatus: release ? "Published" : "Draft", dateCreated: AWARENESS_SOURCE_CHECKED,
-    ...(release ? { datePublished: release.publishedOn, dateModified: release.publishedOn } : {}),
+    ...(release ? { datePublished: release.publishedOn, dateModified: release.sourceCorrectedOn ?? release.publishedOn } : {}),
     author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/about` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     // The limited reviewer credit is visible on the page, not invented authorship.
