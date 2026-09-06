@@ -49,6 +49,13 @@ for (const route of routes) {
   assert.equal(articleSchemas.length, 1);
   assert.equal(articleSchemas[0].creativeWorkStatus, "Published");
   assert.equal(articleSchemas[0].datePublished, "2026-08-26");
+  const release = getAwarenessRelease(route.split("/").at(-1));
+  assert.equal(articleSchemas[0].dateModified, release.sourceCorrectedOn ?? release.publishedOn);
+  if (release.sourceCorrectedOn) {
+    assert.ok($("main").text().includes("This is not a new clinical review"));
+    assert.ok($("main").text().includes("August 25 through August 31, 2026"));
+    assert.ok(!$("main").text().includes("SAMHSA also maintains an Overdose Awareness Week toolkit"));
+  }
   for (const el of $("main img")) {
     assert.ok($(el).attr("alt")?.length > 20);
     const src = new URL($(el).attr("src"), origin);

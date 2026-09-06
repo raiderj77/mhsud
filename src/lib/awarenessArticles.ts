@@ -4,11 +4,16 @@ export const AWARENESS_REVIEW_STATUS = "addiction-articles-approved";
 export const AWARENESS_HUB_PATH = "/awareness/august";
 // Owner approval is limited to addiction-related articles, not the mixed-topic hub.
 export const AWARENESS_HUB_RELEASED = false;
-export const awarenessReleases = [
+export type AwarenessRelease = {
+  slug: string;
+  reviewedOn: string;
+  publishedOn: string;
+  sourceCorrectedOn?: string;
+};
+export const awarenessReleases: readonly AwarenessRelease[] = [
   { slug: "fentanyl-prevention-awareness-day", reviewedOn: "2026-08-26", publishedOn: "2026-08-26" },
-  { slug: "overdose-awareness-month-day", reviewedOn: "2026-08-26", publishedOn: "2026-08-26" },
+  { slug: "overdose-awareness-month-day", reviewedOn: "2026-08-26", publishedOn: "2026-08-26", sourceCorrectedOn: "2026-09-05" },
 ] as const;
-export type AwarenessRelease = (typeof awarenessReleases)[number];
 export function getAwarenessRelease(slug: string) { return awarenessReleases.find((release) => release.slug === slug); }
 
 export const awarenessSources = {
@@ -21,7 +26,7 @@ export const awarenessSources = {
   overdoseResponse: { title: "CDC: What to Do If You Think Someone Is Overdosing", url: "https://www.cdc.gov/stop-overdose/response/index.html" },
   overdoseDay: { title: "CDC: International Overdose Awareness Day toolkit", url: "https://www.cdc.gov/overdose-prevention/php/toolkits/ioad.html" },
   overdoseMonth: { title: "End Overdose: its August 2026 awareness campaign", url: "https://endoverdose.net/campaign/" },
-  overdoseWeek: { title: "SAMHSA: Overdose Awareness Week", url: "https://www.samhsa.gov/about/digital-toolkits/overdose-awareness-week" },
+  overdoseWeek: { title: "SAMHSA: treatment and recovery support announcement (August 31, 2026)", url: "https://www.samhsa.gov/blog/convening-highlights-samhsa-commitment-help-states-sud-treatment-recovery-support-services" },
   campaign: { title: "Penington Institute: official IOAD campaign resources", url: "https://www.overdoseday.com/campaign-resources/" },
   events: { title: "Penington Institute: IOAD event tips", url: "https://www.overdoseday.com/event-tips/" },
   mentalHealthMonth: { title: "SAMHSA: Mental Health Awareness Month", url: "https://www.samhsa.gov/about/digital-toolkits/mental-health-awareness-month" },
@@ -265,7 +270,7 @@ export const awarenessArticles: AwarenessArticle[] = [
         id: "month-week-day", title: "Month, week, and day: what is verified?",
         paragraphs: [
           "The annual international observance is August 31. CDC and Penington Institute's campaign resources confirm that date. Penington Institute coordinates the international campaign; its website is the place to check current campaign materials and event information.",
-          "End Overdose describes its own August 2026 campaign as Overdose Awareness Month. This establishes organizational use of the name, not a universal federal designation for the whole month. SAMHSA also maintains an Overdose Awareness Week toolkit. The exact 2026 week date range has not been verified for this guide, so it is deliberately not printed here.",
+          "End Overdose describes its own August 2026 campaign as Overdose Awareness Month. This documents an organizational campaign, not evidence of a universal federal designation for the whole month. In its August 31, 2026 announcement, SAMHSA identifies Overdose Awareness Week as August 25 through August 31, 2026. That date range is specific to the cited 2026 announcement; it should not be assumed for another year or every local campaign.",
           "When preparing a flyer, name the particular observance and its source. Keep your local event's date and time separate. An event held earlier in August can support the campaign without suggesting that the international day has moved.",
         ], sources: ["overdoseDay", "campaign", "overdoseMonth", "overdoseWeek"],
       },
@@ -308,7 +313,7 @@ export const awarenessArticles: AwarenessArticle[] = [
     ],
     faqs: [
       { question: "Is August officially Overdose Awareness Month everywhere?", answer: "No universal designation has been verified here. Organizations such as End Overdose use August for a month-long campaign. The independently confirmed annual international day is August 31.", sources: ["overdoseMonth", "overdoseDay"] },
-      { question: "What are the dates of Overdose Awareness Week in 2026?", answer: "This guide has not verified an exact 2026 date range. Check the current SAMHSA toolkit or an applicable official proclamation before printing a week range.", sources: ["overdoseWeek"] },
+      { question: "What are the dates of Overdose Awareness Week in 2026?", answer: "SAMHSA's August 31, 2026 announcement identifies Overdose Awareness Week as August 25 through August 31, 2026. This is a year-specific source, not a permanent annual date rule. International Overdose Awareness Day is August 31; local events may take place on another date.", sources: ["overdoseWeek", "overdoseDay", "events"] },
       { question: "Can we hold an event on a different day?", answer: "The official IOAD event guide allows a locally suitable event date. Label that date clearly and keep August 31 as the date of the international observance.", sources: ["events"] },
     ],
     related: ["fentanyl-prevention-awareness-day", "national-grief-awareness-day"],

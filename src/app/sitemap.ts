@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides
     ...getReleasedAwarenessArticles().map((article) => ({
       url: `${SITE_URL}${awarenessArticlePath(article.slug)}`,
-      lastModified: getAwarenessRelease(article.slug)!.publishedOn,
+      lastModified: getAwarenessRelease(article.slug)!.sourceCorrectedOn ?? getAwarenessRelease(article.slug)!.publishedOn,
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),
