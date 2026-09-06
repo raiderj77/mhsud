@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { AUTHOR_SCHEMA, SITE_AUTHOR } from "@/config/author";
+import { SITE_AUTHOR } from "@/config/author";
 
 const PAGE_URL = `${SITE_URL}/clinical-evidence`;
-const TODAY = "2026-08-05";
+const TODAY = "2026-09-05";
 
 export const metadata: Metadata = createMetadata({
   path: "/clinical-evidence",
@@ -48,6 +48,7 @@ type Instrument = {
   sensitivity: string;
   specificity: string;
   license: string;
+  rightsSources?: { label: string; url: string }[];
   citationStatus: "Verified on PubMed" | "Source verified (book, not on PubMed)" | "Primary source verified";
   notes?: string;
 };
@@ -99,7 +100,7 @@ const INSTRUMENTS: Instrument[] = [
     journal: "Psychosomatics",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/19996233/",
     pubmedId: "19996233",
-    population: "Validated in a German general-population sample of 2,149 adults.",
+    population: "2,149 patients from 15 U.S. primary-care clinics in the cited 2009 study.",
     items: "4 (two PHQ-2 depression items plus two GAD-2 anxiety items)",
     scoringRange: "0 to 12 (each subscale 0 to 6)",
     threshold: "A score of 3 or higher on either the depression or anxiety subscale is commonly used as a positive screen.",
@@ -143,7 +144,11 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "Cut of 8 for hazardous drinking in men; the WHO manual recommends a lower cut (7) for women and adults over 65.",
     sensitivity: "92% of harmful drinkers had AUDIT scores of 8 or more (per original paper)",
     specificity: "94% of non-hazardous drinkers had AUDIT scores under 8",
-    license: "WHO public domain.",
+    license: "The WHO manual and current WHO permissions policy must be considered for the intended use. Public availability is not a blanket commercial-use grant. Conflicting public-domain and noncommercial-use descriptions require rights-holder clarification before commercial reuse.",
+    rightsSources: [
+      { label: "WHO AUDIT manual", url: "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a" },
+      { label: "WHO permissions policy", url: "https://www.who.int/about/policies/publishing/copyright" },
+    ],
     citationStatus: "Verified on PubMed",
   },
   {
@@ -162,7 +167,8 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "4 or higher in men, 3 or higher in women (commonly used in U.S. VA practice).",
     sensitivity: "Area under the ROC curve of 0.88 to 0.89 in the original sample; cut-specific sensitivity varies by population.",
     specificity: "Cut-specific specificity varies; see original paper.",
-    license: "WHO public domain (derived from AUDIT).",
+    license: "AUDIT-C derives from AUDIT, but rights for one version or setting must not be assumed to cover another. MindCheck Tools keeps this resource outside commercial offers; that separation alone does not establish commercial-use permission.",
+    rightsSources: [{ label: "WHO permissions policy", url: "https://www.who.int/about/policies/publishing/copyright" }],
     citationStatus: "Verified on PubMed",
   },
   {
@@ -387,7 +393,8 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "4 or more darkly-shaded responses on the 6-item screener indicates likelihood of adult ADHD.",
     sensitivity: "68.7% (6-item screener); 56.3% (18-item full).",
     specificity: "99.5% (6-item screener); 98.3% (18-item full).",
-    license: "WHO public domain.",
+    license: "Copyright NYU and Harvard, not public domain. NYU permits clinical, nonclinical, and commercial use of the exact ASRS v1.1 six-question screener with attribution; modifications other than electronic recreation are not permitted. This does not grant rights to the 18-question checklist or ASRS-5.",
+    rightsSources: [{ label: "NYU: ASRS v1.1 six-question terms", url: "https://license.tov.med.nyu.edu/product/asrs6Qscreener" }],
     citationStatus: "Verified on PubMed",
   },
   {
@@ -463,7 +470,11 @@ const INSTRUMENTS: Instrument[] = [
     threshold: "A score of 50 or below (raw 13 or below) is commonly used to suggest poor wellbeing or to prompt depression screening.",
     sensitivity: "Described as sensitive and specific for depression screening across the reviewed literature; cut-specific values reported in the cited primary studies.",
     specificity: "Refer to the primary studies cited within the systematic review.",
-    license: "WHO public domain.",
+    license: "WHO publishes a 2024 edition with edition-specific licensing conditions. Check that form and WHO's permissions policy rather than assuming public-domain status. Commercial use requires permission covering the intended context; a free webpage alone does not establish that permission.",
+    rightsSources: [
+      { label: "WHO: 2024 WHO-5 edition", url: "https://www.who.int/publications/m/item/WHO-UCN-MSD-MHE-2024.01" },
+      { label: "WHO permissions policy", url: "https://www.who.int/about/policies/publishing/copyright" },
+    ],
     citationStatus: "Verified on PubMed",
   },
   {
@@ -615,7 +626,6 @@ function articleJsonLd() {
     datePublished: "2026-04-26",
     dateModified: TODAY,
     author: { "@type": "Organization", name: "MindCheck Tools" },
-    reviewedBy: AUTHOR_SCHEMA,
     publisher: {
       "@type": "Organization",
       name: "MindCheck Tools",
@@ -680,7 +690,7 @@ export default function ClinicalEvidencePage() {
             Clinical Evidence and Rights Status for Published Instruments
           </h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
-            Last updated: August 5, 2026. Reviewed by{" "}
+            Editorial corrections: {TODAY}. Site owner:{" "}
             <Link href="/about/jason-ramirez" className="text-sage-700 dark:text-sage-400 underline">
               {SITE_AUTHOR.name}, {SITE_AUTHOR.credential}
             </Link>
@@ -697,10 +707,15 @@ export default function ClinicalEvidencePage() {
             Interactive screening tools are not diagnostic, and information-only
             instrument pages do not administer a questionnaire or produce a result.
             Both are educational and do not replace a qualified professional. If
-            you are in crisis, call or text <strong>988</strong> (U.S. Suicide
-            and Crisis Lifeline), text <strong>HOME</strong> to{" "}
-            <strong>741741</strong> (Crisis Text Line), or call{" "}
-            <strong>1-800-662-4357</strong> (SAMHSA National Helpline).
+            you need immediate crisis support in the United States, <a href="tel:988" className="underline">call 988</a> or{" "}
+            <a href="sms:988" className="underline">text 988</a>, or text <strong>HOME</strong> to{" "}
+            <strong>741741</strong> (Crisis Text Line). For immediate danger, call{" "}
+            <a href="tel:911" className="underline">911</a> in the U.S. or your local emergency number elsewhere.
+          </p>
+          <p className="mt-2">
+            For U.S. treatment referral and information, <a href="tel:18006624357" className="underline">call 1-800-662-4357</a>{" "}
+            (<a href="https://www.samhsa.gov/find-help/helplines/national-helpline" className="underline" referrerPolicy="no-referrer">SAMHSA National Helpline</a>).
+            This is not crisis counseling. <Link href="/crisis-resources" className="underline">Find crisis and international support resources.</Link>
           </p>
         </div>
 
@@ -730,7 +745,7 @@ export default function ClinicalEvidencePage() {
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             For an overview of how the site uses these instruments, including
-            scoring, privacy, and the role of the clinical reviewer, see the{" "}
+            scoring, privacy, and the limits of editorial review, see the{" "}
             <Link href="/methodology" className="text-sage-700 dark:text-sage-400 underline">
               methodology page
             </Link>
@@ -858,6 +873,11 @@ export default function ClinicalEvidencePage() {
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Availability / reuse note</dt>
                   <dd className="text-neutral-600 dark:text-neutral-300">{i.license}</dd>
+                  {i.rightsSources && <dd className="mt-1 text-neutral-600 dark:text-neutral-300">
+                    Rights sources: {i.rightsSources.map((source, index) => <span key={source.url}>
+                      {index > 0 && "; "}<a href={source.url} className="underline" referrerPolicy="no-referrer">{source.label}</a>
+                    </span>)}. Checked September 5, 2026; source checking is not legal clearance.
+                  </dd>}
                 </div>
                 <div>
                   <dt className="font-semibold text-neutral-700 dark:text-neutral-200">Primary source citation</dt>
@@ -901,26 +921,17 @@ export default function ClinicalEvidencePage() {
             Why this matters
           </h2>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            Peer-reviewed validation is what separates a clinical screening
-            tool from an internet quiz. A validated instrument has been
-            administered to a defined population, scored against an external
-            reference standard (often a structured diagnostic interview), and
-            published with reported psychometric properties such as
-            sensitivity and specificity at specific cut points. Other
-            researchers and clinicians can then use that evidence to decide
-            whether the instrument fits their setting and to interpret a
-            patient&apos;s score within a known error band.
+            Validation evidence is specific to the instrument, its purpose,
+            and the population studied. Consult the linked publication for
+            what was tested and its limitations. A published study does not
+            establish that every website implementation or population has
+            been validated.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-            Sensitivity is the proportion of people with the condition whose
-            score falls at or above the cut point: a high-sensitivity test is
-            useful for ruling out a condition when the score is low.
-            Specificity is the proportion of people without the condition
-            whose score falls below the cut point: a high-specificity test is
-            useful for confirming a positive screen warrants further
-            evaluation. No screening test is both perfectly sensitive and
-            perfectly specific. That is one reason a positive screen is the
-            beginning of a clinical conversation, not the end of one.
+            Study-level statistics are not a personal diagnosis or a guarantee
+            about an individual result. A low screening score does not rule
+            out a condition. If concerns remain, speak with a qualified
+            professional rather than relying on a score alone.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
             Availability varies by instrument, version, use case, and rights
@@ -963,7 +974,7 @@ export default function ClinicalEvidencePage() {
               methodology page
             </Link>
             . Review covers source alignment, scoring limitations, and safety
-            language. Clinical reviewer:{" "}
+            language. Editorial oversight:{" "}
             <Link
               href="/about/jason-ramirez"
               className="text-sage-700 dark:text-sage-400 underline"
@@ -971,6 +982,11 @@ export default function ClinicalEvidencePage() {
               Jason Ramirez, CADC-II
             </Link>
             .
+          </p>
+          <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
+            The September 5 corrections address source population, reuse wording, and support routing.
+            They are not a new clinical review, an instrument-fidelity certification, or legal permission.
+            CADC-II is a substance use counseling credential, not a physician, psychologist, or psychiatrist license.
           </p>
         </section>
       </article>

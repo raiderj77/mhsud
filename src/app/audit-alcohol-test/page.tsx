@@ -35,18 +35,19 @@ const FAQ_DATA = [
   { question: "What should I do if I score high on the AUDIT?", answer: "A high AUDIT score is a signal worth taking seriously. Consider speaking with your primary care doctor or a licensed substance use counselor. Many people find that even a brief conversation with a professional leads to meaningful changes. You can also explore SAMHSA's National Helpline at 1-800-662-4357 for free, confidential support." },
   { question: "Can this tool diagnose an alcohol use disorder?", answer: "No. The AUDIT is a screening instrument, not a diagnostic tool. Only a qualified healthcare professional can diagnose an alcohol use disorder through a comprehensive evaluation." },
   { question: "What if I'm concerned about withdrawal?", answer: "If you drink heavily and are considering reducing or stopping, please talk to a healthcare professional first. Alcohol withdrawal can be medically dangerous and sometimes requires supervised care. Do not attempt to stop suddenly without medical guidance if you have been drinking heavily." },
-  { question: "Who created the AUDIT?", answer: "The AUDIT was developed by the World Health Organization as a simple method of screening for excessive drinking. It has been validated across many countries and cultures and is in the public domain." },
+  { question: "Who created the AUDIT?", answer: "The AUDIT was developed through a World Health Organization collaborative project. Its evidence and reuse conditions are separate questions: consult the WHO manual and current permissions policy for the exact intended use rather than assuming that public availability grants commercial reuse rights." },
 ];
 
 export default function AUDITPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: "2026-05-12" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, datePublished: "2025-01-01", dateModified: "2026-09-05" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_DATA)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "AUDIT Alcohol Test", url: TOOL_URL }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd({ name: "AUDIT Alcohol Screening Test", description: "A free online implementation of the AUDIT (Alcohol Use Disorders Identification Test), the World Health Organization's gold-standard 10-question alcohol screening tool.", url: TOOL_URL, lastReviewed: "2026-03-07" })) }} />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate={"2026-05-12"} />
+        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-09-05" />
+        <p className="text-sm text-neutral-600 dark:text-neutral-300">September 5 correction: reuse wording only; no new clinical review or scoring change.</p>
       </div>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
@@ -55,9 +56,6 @@ export default function AUDITPage() {
           bottomLine="AUDIT scores help identify drinking patterns on a standardized scale, results are informational and not a clinical diagnosis."
           lastUpdated="2026-03-20"
         />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
       </div>
 <AUDITClient faqData={FAQ_DATA} />
 

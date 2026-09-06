@@ -1,5 +1,32 @@
 # August awareness articles — research and release gate
 
+## September 5, 2026 source-drift follow-up (not new publication approval)
+
+The existing layout, original images, explicit release allowlist, and exact-content review hashes remain the publication mechanism. Do not build another CMS or replace the approval hashes just to pass a test. The three unapproved routes remain intentionally unavailable.
+
+The former SAMHSA Overdose Awareness Week toolkit URL now redirects to the generic Digital Toolkits directory, which no longer substantiates the published article's present-tense claim that a week toolkit is maintained. This is a source-drift correction, not evidence for a new 2026 week designation. The prior August 26 approval does not certify a newly edited paragraph.
+
+Proposed replacement for the month/week paragraph, pending Jason's scoped editorial review:
+
+> End Overdose describes its own August 2026 campaign as Overdose Awareness Month. That documents an organizational campaign, not a universal federal designation for August. This guide has not verified an official 2026 Overdose Awareness Week date range, so no week range is listed.
+
+At the same time, remove the obsolete week-toolkit reference from the source list and replace the FAQ's instruction to check it with: "This guide has not verified an official 2026 week date range. International Overdose Awareness Day is August 31; a local event may take place on another date." Preserve the existing CDC and Penington sources for that statement. These proposed edits are not yet applied to the approved article object or its review hash.
+
+### Repeatable publication checklist
+
+Use this checklist with AGENTS.md; it does not replace that authority or create new permissions.
+
+1. Record one reader question, intended audience, canonical route, and the page's distinct value. Check existing pages first; improve one if a new page would duplicate it. Prefer privacy-safe, aggregate GSC page evidence. Mark unavailable metrics UNKNOWN. Never use individual screening behavior to choose a topic.
+2. Draft in the existing article data/template, outside the release allowlist. Give an early source-supported answer, clear headings, practical original value, limitations, and descriptive internal links. Do not expose unreviewed medical content through a merely noindexed public route.
+3. Check primary sources in context, including final redirect destinations. Record source checks separately from the actual human review date. Preserve version-specific instrument rights; do not reproduce questionnaire items in an article without clearance.
+4. Obtain documented review of the exact new content from a person whose expertise fits it. Jason's CADC-II scope is addiction education, not an invented physician or independent mental-health review. AI-assisted text and illustrations are disclosed; generated images are not evidence or an endorsement.
+5. Reuse the existing responsive image and Article/Breadcrumb metadata. Keep dates truthful, image descriptions useful, sources adjacent to claims, crisis support distinct from treatment referral, and all health articles outside analytics/commercial flows. No special AI schema, word count, or SEO/AEO/GEO incantation is required.
+6. Run tests, zero-warning lint, types, content/predeploy gates, build, entry-only browser accessibility/privacy checks, and the article audit. Review the actual diff and approvals before intentionally updating release metadata and hashes. Verify final production SHA, canonical HTTP 200, sitemap membership, images, links, and privacy headers after an authorized release.
+7. Inspect the exact canonical page in GSC after release. The current IndexNow workflow submits only the homepage and exits successfully even on an HTTP rejection; it does not prove an article was submitted or indexed. Do not cite green CI as indexing evidence. A future notification-workflow fix can be separate from article authorship.
+8. Record publication date/SHA and page-level search clicks, impressions, CTR and position. Review comparable complete windows at 28/56/84 days without pausing other worthwhile work. Account for seasonality. AI impressions/citations are not visits or sales. Never turn unavailable GSC AI export cells into asserted zero activity.
+
+Current primary search references, checked September 5, 2026: [Google's AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), [Article metadata](https://developers.google.com/search/docs/appearance/structured-data/article), [GSC AI report](https://support.google.com/webmasters/answer/16984139), [IndexNow FAQ](https://www.indexnow.org/faq). Google reports that FAQ rich results ended May 7, 2026 in its [documentation updates](https://developers.google.com/search/updates); helpful visible questions and answers may remain, but do not promise that discontinued appearance. Neither indexing, rankings, nor AI citations are guaranteed.
+
 Prepared August 26, 2026. Updated status: owner release approval received; Jason Ramirez, CADC-II, confirmed approval of all addiction-related articles in the dedicated task. Only the fentanyl and overdose-awareness articles are cleared by that statement. The wellness, grief, and mixed-topic calendar remain unapproved. Earlier draft-stage evidence below is historical and superseded where this release record says otherwise.
 
 ## Addiction-only review and release record

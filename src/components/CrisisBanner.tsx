@@ -36,15 +36,15 @@ export function CrisisBanner() {
           >
             text HOME to 741741
           </a>
-          ), or the{" "}
+          ). For U.S. treatment referral and information, call the{" "}
           <a
             href="tel:+18006624357"
             className={crisisLinkClass}
-            aria-label="Call the United States SAMHSA National Helpline at 1-800-662-4357"
+            aria-label="Call the United States SAMHSA National Helpline for treatment referral and information at 1-800-662-4357"
           >
             SAMHSA National Helpline at 1-800-662-4357
           </a>
-          .{" "}
+          . This is not crisis counseling.{" "}
           <a
             href="https://988lifeline.org/get-help/"
             target="_blank"
