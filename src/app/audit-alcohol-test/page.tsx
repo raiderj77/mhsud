@@ -60,6 +60,7 @@ export default function AUDITPage() {
 <AUDITClient faqData={FAQ_DATA} />
 
       {/* Related Tools */}
+      <p className="max-w-2xl mx-auto px-4 mt-6"><Link href="/substance-use/screening-limits" className="underline">What screening can and cannot tell you</Link> · <Link href="/substance-use/find-support" className="underline">Finding alcohol or drug support</Link></p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
         <h2 className="font-serif text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Related Screening Tools &amp; Guides</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

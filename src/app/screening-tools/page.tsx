@@ -243,11 +243,11 @@ const PRACTICAL_TOOLS = [
   { name: "Mental Load Calculator", href: "/mental-load-calculator", description: "Estimate the cognitive and emotional load you carry across household and care domains." },
   { name: "Sobriety Calculator", href: "/sobriety-calculator", description: "Track days, months, and years sober from a chosen quit date." },
   { name: "Money Saved Recovery Calculator", href: "/money-saved-recovery-calculator", description: "Estimate money saved by stopping or reducing alcohol or other drug use." },
-  { name: "Treatment Cost Estimator", href: "/treatment-cost-estimator", description: "Ballpark estimate for inpatient, outpatient, and ongoing treatment costs in the United States." },
+  { name: "Treatment Cost Estimator", href: "/treatment-cost-estimator", description: "Questions to help obtain and compare provider estimates and insurer information." },
   { name: "BAC Calculator", href: "/bac-calculator", description: "Educational estimate of blood alcohol concentration based on drinks, weight, and time. Not a substitute for a breathalyzer." },
   { name: "Standard Drinks Calculator", href: "/standard-drinks-calculator", description: "Convert beer, wine, and spirits into United States standard drink units." },
-  { name: "Withdrawal Timeline", href: "/withdrawal-timeline", description: "Educational timeline of typical withdrawal phases for several substances." },
-  { name: "Health Recovery Timeline", href: "/health-recovery-timeline", description: "Educational timeline of physical recovery milestones after stopping alcohol or other drug use." },
+  { name: "Withdrawal Timeline", href: "/withdrawal-timeline", description: "Withdrawal safety information, limits and authoritative support sources." },
+  { name: "Health Recovery Timeline", href: "/health-recovery-timeline", description: "Limits of recovery timelines and questions for a qualified professional." },
 ];
 
 const COPING_TOOLS = [
