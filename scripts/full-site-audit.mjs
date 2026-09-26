@@ -64,7 +64,23 @@ export function auditHtml(url, status, html, { finalUrl = url, headers = {} } = 
       if (safe) links.add(safe);
     } catch { /* Invalid URLs require separate content review. */ }
   });
-  return { pass: checks.every(c => c.ok), checks, links: [...links] };
+  return { pass: checks.every(c => c.ok), checks, links: [...links], metadata: {
+    title: $("head > title").text().trim(), description: $('head > meta[name="description"]').attr("content")?.trim() || "",
+  } };
+}
+
+export function markDuplicateMetadata(results) {
+  for (const field of ["title", "description"]) {
+    const counts = new Map();
+    const key = row => (row.metadata?.[field] || "").replace(/\s+/g, " ").toLowerCase();
+    for (const row of results) if (key(row)) counts.set(key(row), (counts.get(key(row)) || 0) + 1);
+    for (const row of results) {
+      const ok = Boolean(key(row)) && counts.get(key(row)) === 1;
+      row.checks.push({ name: `unique-${field}`, ok });
+      row.pass = row.pass && ok;
+    }
+  }
+  return results;
 }
 
 async function fetchEntry(url) {
@@ -110,6 +126,7 @@ export async function runAudit(origin = SITE_ORIGIN) {
     const response = await fetchEntry(url);
     return { path, ...auditHtml(url, response.status, response.html, response) };
   });
+  markDuplicateMetadata(results);
   const known = new Set(paths);
   const extra = [...new Set(results.flatMap(r => r.links))].filter(url => !known.has(new URL(url).pathname));
   const extraLinks = await concurrent(extra, async url => {

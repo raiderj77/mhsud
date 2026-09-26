@@ -1,92 +1,33 @@
-import type { Metadata } from "next";
-import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
-import { HealthTimelineClient } from "./HealthTimelineClient";
-import AnswerBlock from "@/components/AnswerBlock";
-import { AuthorByline } from "@/components/AuthorByline";
+import Link from "next/link";
+import { createMetadata, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 
-const TOOL_URL = `${SITE_URL}/health-recovery-timeline`;
-
-export const metadata: Metadata = createMetadata({
+export const metadata = createMetadata({
   path: "/health-recovery-timeline",
-  title: "Health Recovery Timeline After Quitting",
-  description:
-    "See what happens to your body after you stop drinking, smoking, or using drugs. Interactive timeline based on medical research. Free, private, instant.",
-  keywords: [
-    "what happens when you stop drinking timeline",
-    "body recovery after quitting alcohol", "health benefits of sobriety timeline",
-    "quit smoking timeline", "quitting alcohol timeline",
-    "body after quitting drinking", "nicotine recovery timeline",
-    "health recovery from alcohol", "opioid recovery timeline",
-    "body healing after quitting smoking",
-  ],
-  openGraph: {
-    title: "Health Recovery Timeline After Quitting",
-    description: "See what happens to your body after you stop drinking, smoking, or using. Interactive timeline based on medical research.",
-    url: TOOL_URL,
-    type: "website",
-  },
+  title: "Health Recovery Timelines: What Dates Cannot Tell You",
+  description: "Understand the limits of recovery timelines, find primary health sources, and prepare questions for a qualified professional. No personal prognosis or quit-date scoring.",
 });
-
-const FAQ_DATA = [
-  { question: "How long does it take for your body to recover from alcohol?", answer: "Recovery from alcohol follows a gradual timeline. Within 24 hours, blood sugar begins normalizing. Within the first week, sleep quality starts improving. By 2-3 weeks, blood pressure starts normalizing and liver fat begins reducing. By 1 month, skin appearance improves. By 3 months, liver function shows measurable improvement. By 1 year, liver inflammation is substantially reduced. Full recovery of certain organs can take years, and some effects of long-term heavy use may not be completely reversible. However, significant health improvement begins within days of stopping." },
-  { question: "What happens when you quit smoking?", answer: "The body begins recovering from smoking remarkably quickly. Within 20 minutes, heart rate drops to normal. Within 12 hours, carbon monoxide levels in the blood normalize. Between 2 weeks and 3 months, circulation and lung function improve. By 1-9 months, coughing and shortness of breath decrease. By 1 year, heart disease risk is halved. By 5 years, stroke risk drops to non-smoker levels. By 10 years, lung cancer death risk is about half that of a current smoker. By 15 years, heart disease risk equals that of someone who never smoked." },
-  { question: "Is it dangerous to stop drinking suddenly?", answer: "For people with significant alcohol dependence, stopping suddenly (going 'cold turkey') can be medically dangerous and in rare cases fatal. Alcohol withdrawal can cause seizures, delirium tremens (DTs), and other serious complications. This is why medical supervision is recommended when stopping heavy alcohol use. A healthcare provider can assess withdrawal risk and may recommend a medically supervised detox with medications to manage symptoms safely. If you drink heavily and want to stop, please consult a healthcare provider first. SAMHSA's helpline (1-800-662-4357) can help connect you with appropriate resources." },
-  { question: "How long does opioid recovery take?", answer: "Physical withdrawal from opioids typically peaks at 1-3 days and acute symptoms subside within about a week. However, full recovery is a longer process. Sleep patterns may take a month to normalize. Brain chemistry continues rebalancing for about 3 months. Cognitive function improves over 6 months. Hormonal balance may take up to a year to fully restore. Post-acute withdrawal symptoms (PAWS) such as mood swings, sleep difficulties, and cravings can persist for months. Medication-assisted treatment (MAT) with medications like buprenorphine or naltrexone is considered the gold standard for opioid use disorder and can significantly support recovery." },
-  { question: "Does your brain recover after substance use?", answer: "Yes, the brain has remarkable ability to heal and rewire itself (neuroplasticity). Research using brain imaging shows that many changes caused by substance use begin reversing after abstinence. Dopamine receptor density, which decreases with chronic substance use, begins recovering within months. Cognitive functions like attention, memory, and decision-making improve progressively. The speed and extent of recovery depends on the substance, duration and severity of use, and individual factors. Some recovery occurs within weeks, while full neurological recovery may take 1-2 years or longer for some individuals." },
-  { question: "Is this timeline the same for everyone?", answer: "No. This timeline shows general patterns based on medical research, but individual experiences vary considerably. Factors that influence recovery speed include: age, overall health, genetics, how long and how heavily the substance was used, co-occurring health conditions, nutrition and exercise habits, and whether recovery is supported by medical care and social support. Some people experience faster recovery, while others may take longer. The timelines shown are based on averages from published research and should be treated as general guides rather than exact predictions." },
-];
 
 export default function HealthTimelinePage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            toolPageJsonLd({
-              name: "Health Recovery Timeline",
-              description: "An interactive visual timeline showing what happens to your body after you stop using alcohol, cigarettes, or opioids. Based on medical research. Shows which health milestones you have already reached.",
-              url: TOOL_URL,
-              datePublished: "2025-01-01",
-              dateModified: "2026-05-12",
-            })
-          ),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(FAQ_DATA)),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([
-              { name: "Home", url: SITE_URL },
-              { name: "Health Recovery Timeline", url: TOOL_URL },
-            ])
-          ),
-        }}
-      />
-
-            <p className="text-sm text-gray-500 mt-6 mb-0 text-center">
-        Last updated: March 16, 2026
-      </p>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
-        <AnswerBlock
-          what="A timeline showing the physical health improvements that occur at each stage of sobriety from 24 hours to 15 years."
-          who="Anyone in recovery from alcohol or substance use who wants to see the tangible health benefits of continued sobriety."
-          bottomLine="Your body begins healing within hours of stopping, every day sober brings measurable improvements. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
-          lastUpdated="2026-03-20"
-        />
-      </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
-      </div>
-
-<HealthTimelineClient faqData={FAQ_DATA} />
-    </>
+    <article className="prose-mh max-w-3xl mx-auto px-4 sm:px-6 py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: SITE_URL }, { name: "Recovery timeline limits", url: `${SITE_URL}/health-recovery-timeline` }])) }} />
+      <h1 className="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-5">Health recovery timelines: what dates cannot tell you</h1>
+      <p>A date alone cannot establish how your body has recovered after alcohol or drug use. This educational guide does not measure organ function, predict recovery, diagnose a condition, or tell you that withdrawal is over.</p>
+      <p>The previous quit-date display could make general statements look like personal health milestones. It has been replaced with source links and questions for a qualified professional. You do not need to enter a substance, date, answer or score.</p>
+      <h2>Use the source for the question you have</h2>
+      <ul>
+        <li><a href="https://www.cdc.gov/tobacco/about/benefits-of-quitting.html" rel="noreferrer">CDC: benefits of quitting smoking</a> describes changes observed after stopping smoking. Its population-level information cannot confirm that an individual has reached a health milestone, and it should not be generalized to every nicotine product.</li>
+        <li><a href="https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-alcohol-use-disorder" rel="noreferrer">NIAAA: understanding alcohol use disorder</a> explains assessment and treatment options. A sobriety date is not a substitute for a clinical assessment.</li>
+        <li><a href="https://medlineplus.gov/ency/article/000949.htm" rel="noreferrer">MedlinePlus: opioid withdrawal</a> discusses withdrawal and care. This site does not turn that information into an individual recovery schedule.</li>
+      </ul>
+      <h2>Bring useful questions to an appointment</h2>
+      <p>You can ask which changes need assessment, what follow-up is appropriate for your circumstances, and whom to contact between appointments. You do not need a particular screening score to ask for help. For help locating alcohol care, use the <a href="https://alcoholtreatment.niaaa.nih.gov/how-to-find-alcohol-treatment" rel="noreferrer">NIAAA Alcohol Treatment Navigator</a>.</p>
+      <h2>Do not use a timeline to decide whether withdrawal is safe</h2>
+      <p><a href="https://medlineplus.gov/ency/article/000764.htm" rel="noreferrer">MedlinePlus describes alcohol withdrawal as potentially life-threatening</a>. Seek medical advice promptly if you think you may be in withdrawal. In immediate danger, call emergency services. See <Link href="/withdrawal-timeline">withdrawal safety and support</Link> and <Link href="/crisis-resources">crisis resources</Link>.</p>
+      <h2>Sources, review scope and privacy</h2>
+      <p>Source alignment checked September 26, 2026 by Codex as an editorial aid. This is not a clinician review or a new claim of review by Jason Ramirez. Individual medical questions require an appropriately qualified professional. Sources describe their own evidence and limitations.</p>
+      <p>This page collects no answers and produces no result. Ordinary page requests can create hosting records. Read the <Link href="/privacy">privacy policy</Link> and <Link href="/methodology">review methodology</Link>.</p>
+      <p>U.S. support: call or text <a href="tel:988">988</a>; text HOME to <a href="sms:741741">741741</a>; or call SAMHSA at <a href="tel:18006624357">1-800-662-4357</a> for treatment information. <Link href="/crisis-resources">International support options</Link> are also listed.</p>
+    </article>
   );
 }

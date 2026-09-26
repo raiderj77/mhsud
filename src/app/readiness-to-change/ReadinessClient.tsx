@@ -88,7 +88,7 @@ const STAGES: Record<Stage, StageInfo> = {
       { href: "/audit-alcohol-test", label: "AUDIT Alcohol Screen", desc: "Reflect on your relationship with alcohol" },
       { href: "/who-assist-substance-screening", label: "WHO-ASSIST Drug Screening", desc: "WHO multi-substance drug use screening" },
       { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Screen", desc: "Quick 4-question substance use check" },
-      { href: "/health-recovery-timeline", label: "Health Recovery Timeline", desc: "See what happens to your body when you quit" },
+      { href: "/health-recovery-timeline", label: "Health Recovery Timeline", desc: "Recovery timeline limits and sources" },
     ],
   },
   contemplation: {
@@ -105,11 +105,11 @@ const STAGES: Record<Stage, StageInfo> = {
       "Write a pros-and-cons list: what are the benefits of changing vs. the benefits of staying the same?",
       "Talk to a counselor or therapist, even one session can help clarify your thinking. Motivational interviewing is especially effective in this stage.",
       "Explore what treatment options and costs look like, having information reduces the fear of the unknown.",
-      "Look at our Health Recovery Timeline to see the concrete health benefits of change at different time points.",
+      "Read about the limits of recovery timelines and prepare questions for a qualified professional.",
     ],
     resources: [
-      { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator", desc: "See what recovery support options cost" },
-      { href: "/health-recovery-timeline", label: "Health Recovery Timeline", desc: "What happens to your body when you quit" },
+      { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator", desc: "Plan treatment-cost questions" },
+      { href: "/health-recovery-timeline", label: "Health Recovery Timeline", desc: "Recovery timeline limits and sources" },
       { href: "/money-saved-recovery-calculator", label: "Money Saved Calculator", desc: "See the financial impact of change" },
     ],
   },
@@ -133,7 +133,7 @@ const STAGES: Record<Stage, StageInfo> = {
     resources: [
       { href: "/relapse-prevention-plan", label: "Relapse Prevention Plan", desc: "Build your personalized written plan" },
       { href: "/halt-check-in", label: "HALT Check-In", desc: "Learn to check in with yourself daily" },
-      { href: "/withdrawal-timeline", label: "Withdrawal Timeline", desc: "Know what to expect during withdrawal" },
+      { href: "/withdrawal-timeline", label: "Withdrawal Timeline", desc: "Withdrawal safety and support" },
       { href: "/treatment-cost-estimator", label: "Treatment Cost Estimator", desc: "Explore your support options" },
     ],
   },

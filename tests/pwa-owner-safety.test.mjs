@@ -177,25 +177,28 @@ test("install and activation migrate every prior managed cache and sanitize curr
   await harness.dispatchExtendable("install");
 
   assert.equal(harness.skipWaitingCalls, 1);
-  assert.ok(harness.stores.has("mindcheck-static-3.0.0"));
-  assert.ok(harness.stores.has("mindcheck-offline-safety-3.0.0"));
+  assert.ok(harness.stores.has("mindcheck-static-3.0.1"));
+  assert.ok(harness.stores.has("mindcheck-offline-safety-3.0.1"));
   assert.ok(
-    harness.stores.get("mindcheck-offline-safety-3.0.0").entries.has(`${ORIGIN}/offline-crisis.html`),
+    harness.stores.get("mindcheck-offline-safety-3.0.1").entries.has(`${ORIGIN}/offline-crisis.html`),
   );
 
   const oldTools = await harness.caches.open("mindcheck-tools-1.0.0");
   const oldPages = await harness.caches.open("mindcheck-pages-2.0.0");
+  const priorPages = await harness.caches.open("mindcheck-pages-3.0.0");
+  await priorPages.put(`${ORIGIN}/substance-use/find-support`, basicResponse());
   const oldWorkbox = await harness.caches.open("workbox-precache-v1");
   const unrelated = await harness.caches.open("unrelated-cache");
   for (const cache of [oldTools, oldPages, oldWorkbox, unrelated]) {
     await cache.put(`${ORIGIN}/synthetic`, basicResponse());
   }
 
-  const currentPages = await harness.caches.open("mindcheck-pages-3.0.0");
+  const currentPages = await harness.caches.open("mindcheck-pages-3.0.1");
   await currentPages.put(`${ORIGIN}/phq-9-depression-test?audit_probe=1`, basicResponse());
   await currentPages.put(`${ORIGIN}/about?audit_probe=1`, basicResponse());
   await currentPages.put(`${ORIGIN}/api/synthetic`, basicResponse());
   await currentPages.put(`${ORIGIN}/6defa80148a409e9/script.js`, basicResponse());
+  await currentPages.put(`${ORIGIN}/substance-use/find-support`, basicResponse());
   await currentPages.put(`${ORIGIN}/about`, basicResponse());
 
   await harness.dispatchExtendable("activate");
@@ -203,6 +206,7 @@ test("install and activation migrate every prior managed cache and sanitize curr
   assert.equal(harness.claimCalls, 1);
   assert.equal(harness.stores.has("mindcheck-tools-1.0.0"), false);
   assert.equal(harness.stores.has("mindcheck-pages-2.0.0"), false);
+  assert.equal(harness.stores.has("mindcheck-pages-3.0.0"), false);
   assert.equal(harness.stores.has("workbox-precache-v1"), false);
   assert.equal(harness.stores.has("unrelated-cache"), true);
   assert.deepEqual([...currentPages.entries.keys()], [`${ORIGIN}/about`]);

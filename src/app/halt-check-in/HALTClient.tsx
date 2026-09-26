@@ -427,7 +427,7 @@ export function HALTClient({ faqData }: Props) {
               <li><strong>Seek support:</strong> If cravings or distress feel hard to manage, contact a trusted support person or qualified professional rather than relying on this tool.</li>
             </ul>
             <p>
-              You can also use the <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> to track your recovery days alongside daily HALT check-ins, or the <Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Health Recovery Timeline</Link> to see how your body is healing.
+              You can also use the <Link href="/sobriety-calculator" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Sobriety Calculator</Link> to track your recovery days alongside daily HALT check-ins, or the <Link href="/health-recovery-timeline" className="text-sage-600 dark:text-sage-400 underline hover:no-underline">Health Recovery Timeline</Link> to understand what dates cannot tell you about recovery.
             </p>
           </div>
         </div>
