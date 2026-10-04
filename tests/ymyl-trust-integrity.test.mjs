@@ -184,8 +184,9 @@ test("screening hub exposes only maintained canonical routes and every maintaine
   }
   assert.deepEqual(missingTools, []);
 
-  assert.match(hub, /published\s+screening instruments and original educational self-checks/i);
-  assert.match(hub, /do not claim clinical validation/i);
+  assert.match(hub, /Published screeners offer a questionnaire/i);
+  assert.match(hub, /Information-only pages explain an instrument but have no questionnaire or score/i);
+  assert.match(hub, /Original educational self-checks support reflection and are not clinically validated/i);
   assert.match(hub, /No result is a diagnosis/i);
   assert.match(hub, /SITE_AUTHOR\.name/);
   assert.match(hub, /SITE_AUTHOR\.credential/);
