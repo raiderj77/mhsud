@@ -34,7 +34,9 @@ test('every published sitemap page renders at mobile and desktop widths', async 
       try {
         await page.setViewportSize({ width: 390, height: 844 });
         const response = await page.goto(path);
-        expect(response?.status(), path).toBe(200);
+        // The installed service worker deliberately serves its crisis fallback
+        // with 503 to distinguish offline help from a live successful response.
+        expect(response?.status(), path).toBe(path === '/offline-crisis.html' ? 503 : 200);
         await expect(page.locator('h1').first(), path).toBeVisible();
         await page.evaluate(() => document.fonts.ready);
         for (const width of [390, 1280]) {
