@@ -10,7 +10,7 @@ export const metadata: Metadata = createMetadata({
   path: "/bac-calculator",
   title: "BAC Calculator, Blood Alcohol Estimator",
   description:
-    "Estimate your blood alcohol content with our free BAC calculator. Enter drinks, weight, and time for an instant estimate. Never drive impaired.",
+    "Explore an approximate BAC estimate. Not a breath or blood test, and never a way to decide whether driving is safe or legal. Free and accountless.",
   keywords: [
     "bac calculator", "blood alcohol calculator", "blood alcohol content calculator",
     "how drunk am i calculator", "when will i be sober calculator",
