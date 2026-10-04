@@ -117,6 +117,7 @@ test('trigger worksheet: selection, summary and reset', async ({ page }) => {
   await page.getByRole('checkbox').first().check();
   await page.getByRole('button', { name: 'Review Selected Triggers', exact: true }).click();
   await expect(page.getByRole('region', { name: 'Your worksheet summary' })).toBeVisible();
+  page.once('dialog', dialog => dialog.accept());
   await page.getByRole('button', { name: 'Start Over', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Review Selected Triggers', exact: true })).toBeDisabled();
 });
@@ -192,7 +193,7 @@ test('health recovery timeline: select, display and reset', async ({ page }) => 
 });
 
 for (const [path, choice, reset] of [
-  ['treatment-cost-estimator', /Outpatient Counseling/, 'Compare Options'],
+  ['treatment-cost-estimator', /^Outpatient \$/, 'Compare Options'],
   ['withdrawal-timeline', /^Alcohol/, 'Choose Another'],
 ] as const) {
   test(`${path}: open a reference panel and return`, async ({ page }) => {
@@ -291,7 +292,7 @@ test('worry scheduler: park and delete a fictional worry', async ({ page }) => {
   await page.goto('/worry-time-scheduler');
   const input = page.getByRole('textbox', { name: 'Enter a worry to park', exact: true });
   await input.fill('SYNTHETIC TEST');
-  await page.getByRole('button', { name: 'Park It', exact: true }).click();
+  await page.getByRole('button', { name: 'Park this worry', exact: true }).click();
   await expect(input).toHaveValue('');
   await expect(page.getByRole('button', { name: 'Delete worry', exact: true })).toHaveCount(1);
   await page.getByRole('button', { name: 'Delete worry', exact: true }).click();

@@ -293,10 +293,11 @@ export function WorryTimeClient({ faqData }: Props) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">
+                <label htmlFor="daily-worry-time" className="block text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">
                   Daily worry time
                 </label>
                 <input
+                  id="daily-worry-time"
                   type="time"
                   value={settings.time}
                   onChange={(e) => setSettings((s) => ({ ...s, time: e.target.value }))}
@@ -390,7 +391,7 @@ export function WorryTimeClient({ faqData }: Props) {
                     : "bg-amber-200 dark:bg-amber-900 text-amber-400 dark:text-amber-700 cursor-not-allowed"
                 }`}
               >
-                Park It
+                Park this worry
               </button>
             </div>
 
