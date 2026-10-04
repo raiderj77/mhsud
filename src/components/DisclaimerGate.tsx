@@ -90,7 +90,7 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
         <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">Please understand:</p>
         <ul className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed space-y-1.5 list-disc pl-5">
           <li>This is <strong>not a diagnosis</strong> and does not replace professional evaluation.</li>
-          <li>Results are <strong>educational only</strong>, they describe symptom levels, not clinical conditions.</li>
+          <li>This tool and its results are <strong>educational only</strong>. They do not establish whether you have a clinical condition.</li>
           <li>Only a qualified healthcare professional can diagnose or treat conditions.</li>
           <li>Your answers are processed <strong>entirely in your browser</strong> and are not sent to MindCheck Tools. Pages that offer optional local saving say so before use.</li>
           <li>If you are in <strong>immediate danger</strong> or having thoughts of self-harm, please contact emergency services or a crisis hotline now.</li>
@@ -110,7 +110,7 @@ export function DisclaimerGate({ toolName, toolDescription, onAccept }: Disclaim
           className="mt-0.5 w-5 h-5 accent-sage-600 rounded cursor-pointer"
         />
         <span className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-          I understand that the <strong>{toolName}</strong> is a screening tool for educational purposes only, not a diagnosis or treatment recommendation. I understand I should seek professional help for any mental health concerns.
+          I understand that the <strong>{toolName}</strong> is an educational tool, not a diagnosis or treatment recommendation. I understand I should seek professional help for any mental health concerns.
         </span>
       </label>
 

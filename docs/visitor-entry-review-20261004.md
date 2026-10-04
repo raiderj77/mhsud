@@ -25,3 +25,9 @@ Two additional verified description inconsistencies are corrected: ASRS introduc
 Remaining findings: multiple unexplained review/update dates occur on more than PHQ-9 (including ASRS, CES-D, PC-PTSD-5 and several recovery tools); generic disclaimer wording calls values-card sorting and other original exercises a screening tool and describes symptom results; the visible manual-review warning needs clearer scope, without hiding unmet review requirements. These are recorded findings, not new clinical sign-off. The large crisis banner remains unchanged. External links, all result branches and actual assistive-technology review remain outside this initial all-page pass.
 
 Release remains blocked by the existing OSV dependency findings. No scanner suppression, dependency exception, merge or production deployment is implied by this audit.
+
+## Shared tool entry and repeatable page coverage
+
+The shared consent gate now describes educational tools without classifying original reflection exercises as symptom screeners. Diagnosis, professional-care, crisis, browser-local processing and optional-saving limitations remain. Consent remains required; no instrument or scoring text changes.
+
+A browser regression now reads the built site's sitemap and visits every published route at mobile and desktop widths, checking successful responses, visible main headings, document overflow and uncaught page errors. It also verifies consent still gates the original values exercise. This is entry/render coverage, not exhaustive clinical or result-branch acceptance. New tests must pass on the exact revised head before release.
