@@ -123,7 +123,7 @@ test("history restores reset state, result sharing is disabled, and printing req
   ]);
   assert.match(lifecycle, /event\.persisted/);
   assert.match(lifecycle, /window\.location\.reload\(\)/);
-  assert.match(lifecycle, /window\.location\.replace\(pathname\)/);
+  assert.match(lifecycle, /window\.location\.replace\(pathname \+ publicSectionHash/);
   assert.match(lifecycle, /caches\.delete/);
   assert.match(lifecycle, /window\.history\.replaceState/);
   assert.match(printing, /window\.confirm/);
