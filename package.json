@@ -46,7 +46,7 @@
     "not dead"
   ],
   "overrides": {
-    "undici": "7.29.0",
+    "undici": "7.29.1",
     "next": {
       "postcss": "8.5.25",
       "sharp": "0.35.4"
