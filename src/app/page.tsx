@@ -191,7 +191,7 @@ const TOOLS: Tool[] = [
   {
     href: "/bac-calculator",
     title: "BAC Calculator",
-    description: "Estimate blood alcohol content using the Widmark formula. See BAC level, effects, legal status, and time until sober.",
+    description: "Explore an approximate blood alcohol estimate. This is not a breath or blood test and cannot establish whether it is safe or legal to drive.",
     badge: "Original",
     time: "~1 min",
     questions: 4,
@@ -537,7 +537,7 @@ const FEATURES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    title: "Evidence-Based",
+    title: "Sources and Limits Explained",
     text: "Core pages implement published screening instruments such as the PHQ-9, GAD-7, and AUDIT, with sources and limitations shown.",
   },
   {
@@ -592,10 +592,10 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-10">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400 rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide uppercase mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-sage-500 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
             Free &amp; Private
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-neutral-900 dark:text-neutral-50 mb-3">
@@ -603,8 +603,16 @@ export default function HomePage() {
             <span className="text-sage-600 dark:text-sage-400">self-checks</span>
           </h1>
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-            MindCheck Tools provides published mental health and substance use screening instruments alongside original educational self-checks and practical tools. Each page identifies its basis, sources, scoring approach, and limits.
+            Find a free mental health self-check, learn about alcohol and substance use, or try a practical recovery tool. No account is needed. Screening is not a diagnosis.
           </p>
+          <div className="flex flex-wrap gap-3 mb-5">
+            <Link href="/screening-tools#choose-a-tool" className="btn-primary text-base">
+              Find a tool
+            </Link>
+            <Link href="/screening-tools#recovery-tools" className="btn-secondary text-base">
+              Recovery tools
+            </Link>
+          </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
             Maintained by MindCheck Tools. Screening content is reviewed within the stated credential scope by{" "}
             <Link
@@ -615,17 +623,9 @@ export default function HomePage() {
             </Link>
             .
           </p>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl">
-            Use published screeners and clearly labeled educational tools in the privacy of your browser. No account or login is required, and screening answers are not sent to MindCheck Tools.
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-xl">
+            Screening answers and scores are processed locally and are not intentionally sent to MindCheck Tools. Each tool explains its sources, limits, and any optional saving on your device.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/screening-tools#alcohol-substance" className="btn-primary text-base">
-              Substance use &amp; recovery
-            </Link>
-            <Link href="/screening-tools" className="btn-secondary text-base">
-              Browse screening tools
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -641,7 +641,7 @@ export default function HomePage() {
             <p className="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-300">Primary focus</p>
             <h3 className="mt-2 font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Substance use and recovery</h3>
             <p className="mt-3 text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              Use rights-aware alcohol screening information, browser-local recovery planning tools, withdrawal-safety education, and practical worksheets. These resources do not diagnose a substance use disorder or replace treatment.
+              Explore alcohol screening information, recovery planning tools, withdrawal-safety education, and practical worksheets. These resources do not diagnose a substance use disorder or replace treatment.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/screening-tools#alcohol-substance" className="btn-primary">Alcohol and substance-use tools</Link>

@@ -449,20 +449,18 @@ export default function ScreeningToolsIndexPage() {
         role="note"
         className="mb-8 px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 text-sm text-amber-800 dark:text-amber-300"
       >
-        <strong>Important:</strong> This directory includes interactive published
-        screeners, public information pages for rights-limited instruments, and
-        original educational self-checks. Information pages contain no questionnaire
-        or score. It distinguishes published screening instruments and original educational self-checks,
-        while labeling rights-limited entries as information only. Original educational self-checks do not claim clinical validation. No result is a diagnosis.
+        <strong>Choose by page type:</strong> Published screeners offer a questionnaire.
+        Information-only pages explain an instrument but have no questionnaire or score.
+        Original educational self-checks support reflection and are not clinically validated.
+        No result is a diagnosis.
       </div>
 
       <section className="mb-10 prose-medical text-neutral-700 dark:text-neutral-300 leading-relaxed">
         <p>
           MindCheck Tools currently lists {totalEntries} maintained screening,
           instrument-information, and self-check pages, plus practical calculators,
-          worksheets, and coping-skill tools. A rights-limited instrument URL remains
-          publicly useful as an informational page unless and until its exact web-use
-          permission and clinical review are archived.
+          worksheets, and coping-skill tools. Some instruments are information-only
+          because permission to offer their questionnaire online has not been established.
         </p>
         <p>
           For source studies, validated populations, reported accuracy, and

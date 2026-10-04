@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
   ],
   openGraph: {
     title: "BAC Calculator, Blood Alcohol Estimator",
-    description: "Estimate your blood alcohol content. See BAC level, effects, and time until sober. Free, private, instant.",
+    description: "Explore an approximate BAC estimate. Not a breath or blood test, and never a way to decide whether driving is safe or legal. Free and accountless.",
     url: TOOL_URL,
     type: "website",
   },
@@ -45,7 +45,7 @@ export default function BACCalculatorPage() {
           __html: JSON.stringify(
             toolPageJsonLd({
               name: "BAC Calculator, Blood Alcohol Content Estimator",
-              description: "A free BAC calculator using the Widmark formula. Estimates blood alcohol content based on sex, weight, drinks consumed, and time elapsed. Includes effects at each BAC level and estimated time until sober.",
+              description: "A free educational BAC estimate using the Widmark formula. Not a breath or blood test and cannot establish whether it is safe or legal to drive.",
               url: TOOL_URL,
               datePublished: "2025-01-01",
               dateModified: "2026-05-12",
@@ -81,10 +81,7 @@ export default function BACCalculatorPage() {
           lastUpdated="2026-03-20"
         />
       </div>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-4">
-        <AuthorByline publishedDate="2025-01-01" modifiedDate="2026-03-20" />
-      </div>
-<BACClient faqData={FAQ_DATA} />
+      <BACClient faqData={FAQ_DATA} />
     </>
   );
 }
