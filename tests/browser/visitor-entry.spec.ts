@@ -19,3 +19,13 @@ test('BAC entry has one reviewer block and does not promise driving clearance in
   await expect(page.locator('main').getByRole('link', { name: 'Jason Ramirez, CADC-II', exact: true })).toHaveCount(1);
   await expect(page.getByRole('button', { name: 'Estimate My BAC', exact: true })).toBeDisabled();
 });
+
+test('directory navigation strips arbitrary data and assessment fragments remain forbidden', async ({ page }) => {
+  await page.goto('/screening-tools?answer=fictional#choose-a-tool');
+  await expect.poll(() => new URL(page.url()).search).toBe('');
+  await expect(page).toHaveURL(/\/screening-tools#choose-a-tool$/);
+  await page.goto('/screening-tools#choose-a-tool-answer-fictional');
+  await expect.poll(() => new URL(page.url()).hash).toBe('');
+  await page.goto('/phq-9-depression-test?answer=fictional#choose-a-tool');
+  await expect.poll(() => new URL(page.url()).search + new URL(page.url()).hash).toBe('');
+});
