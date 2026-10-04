@@ -184,8 +184,9 @@ test("screening hub exposes only maintained canonical routes and every maintaine
   }
   assert.deepEqual(missingTools, []);
 
-  assert.match(hub, /published\s+screening instruments and original educational self-checks/i);
-  assert.match(hub, /do not claim clinical validation/i);
+  assert.match(hub, /Published screeners offer a questionnaire/i);
+  assert.match(hub, /Information-only pages explain an instrument but have no questionnaire or score/i);
+  assert.match(hub, /Original educational self-checks support reflection and are not clinically validated/i);
   assert.match(hub, /No result is a diagnosis/i);
   assert.match(hub, /SITE_AUTHOR\.name/);
   assert.match(hub, /SITE_AUTHOR\.credential/);
@@ -296,7 +297,8 @@ test("homepage distinguishes published screeners from original tools and states 
     source("src/lib/metadata.ts"),
   ]);
 
-  assert.match(home, /published mental health and substance use screening instruments alongside original educational self-checks/i);
+  assert.match(home, /implement published screening instruments with their source-based questions and scoring/i);
+  assert.match(home, /Other pages are explicitly labeled as original educational self-checks/i);
   assert.match(home, /optional worksheets and recovery tools save entries in local browser storage/i);
   assert.match(home, /title: "Burnout Reflection"[\s\S]{0,300}badge: "Original"/);
   assert.doesNotMatch(home, /Every assessment uses the published scoring methodology/i);

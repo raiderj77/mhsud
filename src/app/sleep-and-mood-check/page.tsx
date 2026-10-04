@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Reflect on how sleep relates to mood and energy with this browser-local, 10-question educational tool. About 2 minutes. Not a diagnostic tool.",
   keywords: [
-    "sleep and mood tracker", "sleep quality check", "insomnia self-check",
+    "sleep and mood reflection", "sleep quality check", "insomnia self-check",
     "sleep habits and mental health", "sleep mood connection", "sleep assessment",
     "am i sleeping enough", "sleep quality quiz", "sleep and anxiety",
     "sleep and depression", "sleep reflection tool", "sleep hygiene check",
@@ -40,9 +40,9 @@ export default function SleepMoodPage() {
       </p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-6">
         <AnswerBlock
-          what="A tool that helps you track the relationship between your sleep quality and mood patterns over time."
-          who="Anyone who suspects their sleep is affecting their mental health and wants to track the connection."
-          bottomLine="Sleep and mood are deeply connected, tracking both helps identify patterns you can address. This tool is for informational purposes only. Not a substitute for professional mental health treatment."
+          what="A one-time, 10-question educational reflection on sleep, mood, and daytime energy. It does not save a sleep diary or track changes over time."
+          who="Adults who want to reflect on their current sleep experience before discussing concerns with a healthcare professional."
+          bottomLine="This original self-reflection tool is not clinically validated and cannot diagnose a sleep or mood condition. Answers are processed in your browser; this is not an ongoing tracking service."
           lastUpdated="2026-03-20"
         />
       </div>

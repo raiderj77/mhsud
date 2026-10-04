@@ -323,6 +323,8 @@ export function CopingSkillsClient({ faqData }: Props) {
       <section className="mb-12">
         <button
           onClick={() => setShowBrowse(!showBrowse)}
+          aria-expanded={showBrowse}
+          aria-controls="coping-skills-browser"
           className="flex items-center justify-between w-full p-4 card hover:bg-sand-50 dark:hover:bg-night-800 transition-colors"
         >
           <span className="font-serif font-bold text-neutral-800 dark:text-neutral-100">
@@ -337,7 +339,7 @@ export function CopingSkillsClient({ faqData }: Props) {
         </button>
 
         {showBrowse && (
-          <div className="mt-4 space-y-6">
+          <div id="coping-skills-browser" className="mt-4 space-y-6">
             {CATEGORY_ORDER.map((cat) => {
               const info = CATEGORY_INFO[cat];
               const catSkills = SKILLS.filter((s) => s.category === cat);
@@ -349,22 +351,27 @@ export function CopingSkillsClient({ faqData }: Props) {
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {catSkills.map((skill) => (
-                      <button
+                      <div
                         key={skill.id}
-                        onClick={() => { setCurrentSkill(skill); setLastSkillId(skill.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                        className={`flex items-center justify-between p-3 rounded-xl text-left text-sm transition-colors ${info.bgLight} ${info.bgDark} hover:opacity-80`}
+                        className={`flex items-center justify-between rounded-xl text-left text-sm ${info.bgLight} ${info.bgDark}`}
                       >
-                        <span className="text-neutral-700 dark:text-neutral-200 font-medium pr-2">
-                          {skill.name}
-                        </span>
                         <button
-                          onClick={(e) => { e.stopPropagation(); toggleFavorite(skill.id); }}
-                          className={`shrink-0 text-base ${favorites.has(skill.id) ? "text-amber-400" : "text-neutral-300 dark:text-neutral-600"}`}
-                          aria-label={favorites.has(skill.id) ? "Remove from favorites" : "Add to favorites"}
+                          type="button"
+                          onClick={() => { setCurrentSkill(skill); setLastSkillId(skill.id); window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }}
+                          className="flex-1 min-h-11 p-3 text-left text-neutral-700 dark:text-neutral-200 font-medium rounded-xl hover:opacity-80"
+                        >
+                          {skill.name}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => toggleFavorite(skill.id)}
+                          className={`shrink-0 min-h-11 min-w-11 text-base ${favorites.has(skill.id) ? "text-amber-400" : "text-neutral-300 dark:text-neutral-600"}`}
+                          aria-label={`${favorites.has(skill.id) ? "Remove from favorites" : "Add to favorites"}: ${skill.name}`}
+                          aria-pressed={favorites.has(skill.id)}
                         >
                           {favorites.has(skill.id) ? "\u2605" : "\u2606"}
                         </button>
-                      </button>
+                      </div>
                     ))}
                   </div>
                 </div>

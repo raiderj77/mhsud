@@ -46,7 +46,8 @@
     "not dead"
   ],
   "overrides": {
-    "undici": "7.29.0",
+    "braces": "npm:@dieub/braces-depth-guard@3.0.3-pn.3",
+    "undici": "7.29.1",
     "next": {
       "postcss": "8.5.25",
       "sharp": "0.35.4"

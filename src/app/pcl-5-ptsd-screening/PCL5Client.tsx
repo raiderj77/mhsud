@@ -277,7 +277,7 @@ export function PCL5Client({ faqData }: Props) {
                             {OPTIONS.map((opt) => (
                               <button
                                 key={opt.value}
-                                onClick={() => handleAnswer(qi, opt.value)}
+                                aria-pressed={answers[qi] === opt.value} onClick={() => handleAnswer(qi, opt.value)}
                                 className={`min-h-11 min-w-11 p-2 rounded-xl border-2 text-center transition-all text-xs sm:text-sm leading-tight ${
                                   answers[qi] === opt.value
                                     ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold"

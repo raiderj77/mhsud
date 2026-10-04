@@ -543,7 +543,7 @@ export function K6Client({ faqData }: Props) {
               {SCALE_OPTIONS.map((opt) => (
                 <button
                   key={opt.value}
-                  onClick={() => handleAnswer(item.id, opt.value)}
+                  aria-pressed={answers[item.id] === opt.value} onClick={() => handleAnswer(item.id, opt.value)}
                   className={`min-h-11 min-w-11 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                     answers[item.id] === opt.value
                       ? "bg-sage-600 text-white"

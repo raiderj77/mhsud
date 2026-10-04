@@ -488,7 +488,7 @@ export function BigFiveClient({ faqData }: Props) {
                         {OPTIONS.map((opt) => (
                           <button
                             key={opt.value}
-                            onClick={() => handleAnswer(qi, opt.value)}
+                            aria-pressed={answers[qi] === opt.value} onClick={() => handleAnswer(qi, opt.value)}
                             title={opt.label}
                             className={`p-2 min-h-[44px] rounded-xl border-2 text-center transition-all text-sm leading-tight ${
                               answers[qi] === opt.value

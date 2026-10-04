@@ -23,6 +23,6 @@ test("clean navigation to excluded routes remains enforced", async () => {
   assert.match(lifecycle, /previouslyAggregateAllowed === true/);
   assert.match(lifecycle, /event\.preventDefault\(\)/);
   assert.match(lifecycle, /destination\.search = ""/);
-  assert.match(lifecycle, /destination\.hash = ""/);
+  assert.match(lifecycle, /destination\.hash = publicSectionHash\(destination\.pathname, destination\.hash\)/);
   assert.match(lifecycle, /window\.location\.assign\(cleanInternalDestination\(destination\)\)/);
 });

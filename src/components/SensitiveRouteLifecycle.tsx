@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { publicSectionHash } from "@/lib/publicSectionNavigation";
 import {
   isPrivacySafeAggregateAnalyticsRoute,
   isSensitiveRoute,
@@ -31,7 +32,7 @@ function requiresCleanDocument(
 
 function cleanInternalDestination(destination: URL): string {
   destination.search = "";
-  destination.hash = "";
+  destination.hash = publicSectionHash(destination.pathname, destination.hash);
   return destination.href;
 }
 
@@ -51,7 +52,7 @@ export function SensitiveRouteLifecycle() {
     // allowlist. The stable SDK data attribute recognizes Vercel's current
     // same-origin hashed loader without depending on a deployment-specific URL.
     if (requiresCleanDocument(aggregateAllowed, previouslyAggregateAllowed, aggregateScriptRemoved)) {
-      window.location.replace(pathname);
+      window.location.replace(pathname + publicSectionHash(pathname, window.location.hash));
       return;
     }
 
@@ -104,11 +105,19 @@ export function SensitiveRouteLifecycle() {
       );
     }
 
-    // Sensitive routes never retain query strings or fragments that could
-    // accidentally encode or disclose an answer, score, or result.
-    if (window.location.search || window.location.hash) {
-      window.history.replaceState(window.history.state, "", pathname);
-    }
+    // Only fixed public directory section names may survive. Query strings,
+    // assessment fragments, and unknown directory fragments are always removed.
+    const clearPrivateUrlState = () => {
+      const currentPathname = window.location.pathname;
+      if (!isSensitiveRoute(currentPathname)) return;
+      if (window.location.search || window.location.hash) {
+        window.history.replaceState(window.history.state, "", currentPathname + publicSectionHash(currentPathname, window.location.hash));
+      }
+    };
+    clearPrivateUrlState();
+    // Fragment-only navigation does not change usePathname or rerun this effect.
+    window.addEventListener("hashchange", clearPrivateUrlState);
+    window.addEventListener("popstate", clearPrivateUrlState);
 
     // Reload a sensitive page restored from the back-forward cache so private
     // in-memory state is not silently resurrected after history navigation.
@@ -119,6 +128,8 @@ export function SensitiveRouteLifecycle() {
 
     return () => {
       window.removeEventListener("pageshow", resetAfterHistoryRestore);
+      window.removeEventListener("hashchange", clearPrivateUrlState);
+      window.removeEventListener("popstate", clearPrivateUrlState);
       delete document.body.dataset.sensitiveRoute;
       document.body.classList.remove("print-approved");
     };
