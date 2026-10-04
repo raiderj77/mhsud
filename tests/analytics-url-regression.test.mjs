@@ -43,9 +43,9 @@ test("public-to-sensitive navigation disposes of the aggregate runtime", async (
   assert.match(source, /previousAggregateAllowed\.current/);
   assert.match(source, /previouslyAggregateAllowed === true \|\| aggregateScriptRemoved/);
   assert.match(source, /requiresCleanDocument\(aggregateAllowed, previouslyAggregateAllowed, aggregateScriptRemoved\)/);
-  assert.match(source, /window\.location\.replace\(pathname\)/);
+  assert.match(source, /window\.location\.replace\(pathname \+ publicSectionHash/);
   assert.match(source, /destination\.search = ""/);
-  assert.match(source, /destination\.hash = ""/);
+  assert.match(source, /destination\.hash = publicSectionHash\(destination\.pathname, destination\.hash\)/);
   assert.match(source, /window\.location\.assign\(cleanInternalDestination\(destination\)\)/);
 });
 
@@ -54,6 +54,7 @@ test("hashed Vercel loader removal and clean-document decisions are executable",
   const removeImplementation = functionSource(source, "removeVercelAnalyticsScripts");
   const decisionImplementation = functionSource(source, "requiresCleanDocument");
   const cleanDestinationImplementation = functionSource(source, "cleanInternalDestination");
+  const sectionImplementation = ts.transpile((await read("src/lib/publicSectionNavigation.ts")).replace("export function", "function"));
   const removed = [];
   const selectors = [];
   const removeResult = runInNewContext(
@@ -82,11 +83,25 @@ test("hashed Vercel loader removal and clean-document decisions are executable",
 
   assert.equal(
     runInNewContext(
-      `${cleanDestinationImplementation}; cleanInternalDestination(destination)`,
+      `${sectionImplementation}; ${cleanDestinationImplementation}; cleanInternalDestination(destination)`,
       { URL, destination: new URL("https://mindchecktools.com/phq-9-depression-test?score=fixture#result") },
     ),
     "https://mindchecktools.com/phq-9-depression-test",
   );
+  for (const [path, expected] of [
+    ['/screening-tools?answer=fixture#choose-a-tool', '/screening-tools#choose-a-tool'],
+    ['/screening-tools#recovery-tools', '/screening-tools#recovery-tools'],
+    ['/screening-tools#choose-a-tool&answer=fixture', '/screening-tools'],
+    ['/screening-tools#%63hoose-a-tool', '/screening-tools'],
+    ['/screening-tools/#choose-a-tool', '/screening-tools/'],
+    ['/phq-9-depression-test#choose-a-tool', '/phq-9-depression-test'],
+    ['/safety-plan?draft=fixture#recovery-tools', '/safety-plan'],
+  ]) {
+    assert.equal(runInNewContext(
+      `${sectionImplementation}; ${cleanDestinationImplementation}; cleanInternalDestination(destination)`,
+      { URL, destination: new URL(path, 'https://mindchecktools.com') },
+    ), `https://mindchecktools.com${expected}`);
+  }
 });
 
 test("aggregate event filter strips URL details and rejects excluded routes and GPC", async () => {
