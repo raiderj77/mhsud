@@ -107,9 +107,15 @@ export function SensitiveRouteLifecycle() {
 
     // Only fixed public directory section names may survive. Query strings,
     // assessment fragments, and unknown directory fragments are always removed.
-    if (window.location.search || window.location.hash) {
-      window.history.replaceState(window.history.state, "", pathname + publicSectionHash(pathname, window.location.hash));
-    }
+    const clearPrivateUrlState = () => {
+      if (window.location.search || window.location.hash) {
+        window.history.replaceState(window.history.state, "", pathname + publicSectionHash(pathname, window.location.hash));
+      }
+    };
+    clearPrivateUrlState();
+    // Fragment-only navigation does not change usePathname or rerun this effect.
+    window.addEventListener("hashchange", clearPrivateUrlState);
+    window.addEventListener("popstate", clearPrivateUrlState);
 
     // Reload a sensitive page restored from the back-forward cache so private
     // in-memory state is not silently resurrected after history navigation.
@@ -120,6 +126,8 @@ export function SensitiveRouteLifecycle() {
 
     return () => {
       window.removeEventListener("pageshow", resetAfterHistoryRestore);
+      window.removeEventListener("hashchange", clearPrivateUrlState);
+      window.removeEventListener("popstate", clearPrivateUrlState);
       delete document.body.dataset.sensitiveRoute;
       document.body.classList.remove("print-approved");
     };
