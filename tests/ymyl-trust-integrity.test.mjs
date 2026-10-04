@@ -296,7 +296,8 @@ test("homepage distinguishes published screeners from original tools and states 
     source("src/lib/metadata.ts"),
   ]);
 
-  assert.match(home, /published mental health and substance use screening instruments alongside original educational self-checks/i);
+  assert.match(home, /implement published screening instruments with their source-based questions and scoring/i);
+  assert.match(home, /Other pages are explicitly labeled as original educational self-checks/i);
   assert.match(home, /optional worksheets and recovery tools save entries in local browser storage/i);
   assert.match(home, /title: "Burnout Reflection"[\s\S]{0,300}badge: "Original"/);
   assert.doesNotMatch(home, /Every assessment uses the published scoring methodology/i);
