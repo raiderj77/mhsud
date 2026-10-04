@@ -259,6 +259,42 @@ test('values sorting reaches a profile', async ({ page }) => {
   await expect(page.getByRole('button', { name: 'Print Profile', exact: true })).toBeVisible();
 });
 
+test('cognitive distortion worksheet: fictional thought through reframe and reset', async ({ page }) => {
+  await page.goto('/cognitive-distortion-identifier');
+  await page.locator('#thought-input').fill('SYNTHETIC TEST');
+  await page.getByRole('button', { name: 'Next: Identify Distortions', exact: true }).click();
+  await page.locator('main button[aria-pressed]').first().click();
+  await page.getByRole('button', { name: 'Next: Reframe', exact: true }).click();
+  await page.locator('#balanced-thought').fill('SYNTHETIC REFRAME');
+  await page.getByRole('button', { name: 'Finish', exact: true }).click();
+  await page.getByRole('button', { name: 'Try Another Thought', exact: true }).click();
+  await expect(page.locator('#thought-input')).toHaveValue('');
+});
+
+test('CBT thought record: all seven steps reach the summary without saving by default', async ({ page }) => {
+  await page.goto('/cbt-thought-record');
+  for (const name of ['Situation', 'Automatic thought', 'Emotion 1 name', 'Evidence supporting the thought 1', 'Evidence against the thought 1', 'Balanced thought']) {
+    await page.getByRole('textbox', { name, exact: true }).fill('SYNTHETIC TEST');
+    await page.getByRole('button', { name: 'Next', exact: true }).click();
+  }
+  await expect(page.getByRole('checkbox')).not.toBeChecked();
+  await page.getByRole('button', { name: 'View Worksheet Summary', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'New Thought Record', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'New Thought Record', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: 'Situation', exact: true })).toHaveValue('');
+});
+
+test('worry scheduler: park and delete a fictional worry', async ({ page }) => {
+  await page.goto('/worry-time-scheduler');
+  const input = page.getByRole('textbox', { name: 'Enter a worry to park', exact: true });
+  await input.fill('SYNTHETIC TEST');
+  await page.getByRole('button', { name: 'Park It', exact: true }).click();
+  await expect(input).toHaveValue('');
+  await expect(page.getByRole('button', { name: 'Delete worry', exact: true })).toHaveCount(1);
+  await page.getByRole('button', { name: 'Delete worry', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Delete worry', exact: true })).toHaveCount(0);
+});
+
 for (const [path, start, end, restart] of [
   ['box-breathing-exercise', 'Start Breathing Exercise', 'End Session', 'Start Again'],
   ['urge-surfing-timer', 'Begin Urge Surfing', 'End Early', 'Start Another Session'],
