@@ -1,0 +1,93 @@
+route,kind,source,verification_scope,status
+/about/jason-ramirez,static,src/app/about/jason-ramirez/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/about,static,src/app/about/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/accessibility,static,src/app/accessibility/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/ace-questionnaire,static,src/app/ace-questionnaire/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/aq-10-autism-screening,static,src/app/aq-10-autism-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/asrs-adhd-screening,static,src/app/asrs-adhd-screening/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/asrs-score-interpretation,static,src/app/asrs-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/athens-insomnia-scale,static,src/app/athens-insomnia-scale/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/attachment-style-quiz,static,src/app/attachment-style-quiz/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/audit-alcohol-test,static,src/app/audit-alcohol-test/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/audit-c-alcohol-screen,static,src/app/audit-c-alcohol-screen/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/audit-c-score-interpretation,static,src/app/audit-c-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/audit-score-interpretation,static,src/app/audit-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/audit-vs-audit-c,static,src/app/audit-vs-audit-c/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/awareness/[slug],dynamic,src/app/awareness/[slug]/page.tsx,2 released articles rendered; unreleased/unknown slugs 404,PENDING exact-head CI
+/awareness/august,unreleased,src/app/awareness/august/page.tsx,intentional 404,PENDING exact-head CI
+/bac-calculator,static,src/app/bac-calculator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/big-five-personality-test,static,src/app/big-five-personality-test/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/box-breathing-exercise,static,src/app/box-breathing-exercise/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/brief-resilience-scale,static,src/app/brief-resilience-scale/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/burnout-assessment-tool,static,src/app/burnout-assessment-tool/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/cage-aid-substance-abuse-screening,static,src/app/cage-aid-substance-abuse-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/caregiver-burnout-assessment,static,src/app/caregiver-burnout-assessment/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/cbt-thought-record,static,src/app/cbt-thought-record/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/ces-d-depression-scale,static,src/app/ces-d-depression-scale/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/clinical-evidence,static,src/app/clinical-evidence/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/cognitive-distortion-identifier,static,src/app/cognitive-distortion-identifier/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/compassion-fatigue-test,static,src/app/compassion-fatigue-test/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/consumer-health-data-privacy,static,src/app/consumer-health-data-privacy/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/contact,static,src/app/contact/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/cookies,static,src/app/cookies/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/coping-skills-randomizer,static,src/app/coping-skills-randomizer/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/crafft-substance-screening,static,src/app/crafft-substance-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/crisis-resources,static,src/app/crisis-resources/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/daily-recovery-check-in,static,src/app/daily-recovery-check-in/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/dass-21-depression-anxiety-stress,static,src/app/dass-21-depression-anxiety-stress/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/dbt-crisis-skills,static,src/app/dbt-crisis-skills/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/disclaimer,static,src/app/disclaimer/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/family-impact-assessment,static,src/app/family-impact-assessment/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/five-senses-grounding,static,src/app/five-senses-grounding/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/for-professionals,static,src/app/for-professionals/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/for-professionals/sample-readiness-review,static,src/app/for-professionals/sample-readiness-review/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/for-professionals/screening-implementation-checklist,static,src/app/for-professionals/screening-implementation-checklist/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/for-professionals/screening-instrument-rights-guide,static,src/app/for-professionals/screening-instrument-rights-guide/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/gad-7-anxiety-test,static,src/app/gad-7-anxiety-test/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/gad-7-score-interpretation,static,src/app/gad-7-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/grief-assessment,static,src/app/grief-assessment/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/halt-check-in,static,src/app/halt-check-in/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/health-recovery-timeline,static,src/app/health-recovery-timeline/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/holmes-rahe-stress-inventory,static,src/app/holmes-rahe-stress-inventory/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/how-to-talk-to-your-doctor-about-mental-health,static,src/app/how-to-talk-to-your-doctor-about-mental-health/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/k6-distress-scale,static,src/app/k6-distress-scale/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/maternal-mental-health,static,src/app/maternal-mental-health/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/mental-load-calculator,static,src/app/mental-load-calculator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/methodology,static,src/app/methodology/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/money-saved-recovery-calculator,static,src/app/money-saved-recovery-calculator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/msi-bpd-screening,static,src/app/msi-bpd-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/offline,static,src/app/offline/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/,static,src/app/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/pc-ptsd-5-screening,static,src/app/pc-ptsd-5-screening/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/pcl-5-ptsd-screening,static,src/app/pcl-5-ptsd-screening/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/pcl-5-score-interpretation,static,src/app/pcl-5-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/phq-2-to-phq-9-when-to-escalate,static,src/app/phq-2-to-phq-9-when-to-escalate/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/phq-4-anxiety-depression-screen,static,src/app/phq-4-anxiety-depression-screen/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/phq-9-depression-test,static,src/app/phq-9-depression-test/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/phq-9-score-interpretation,static,src/app/phq-9-score-interpretation/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/phq-9-vs-gad-7,static,src/app/phq-9-vs-gad-7/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/postpartum-depression-test,static,src/app/postpartum-depression-test/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/privacy,static,src/app/privacy/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/readiness-to-change,static,src/app/readiness-to-change/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/recommended-reading,static,src/app/recommended-reading/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/relapse-prevention-plan,static,src/app/relapse-prevention-plan/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/rosenberg-self-esteem-scale,static,src/app/rosenberg-self-esteem-scale/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/safety-plan,static,src/app/safety-plan/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/scoff-eating-disorder-screening,static,src/app/scoff-eating-disorder-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/screening-tools,static,src/app/screening-tools/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/sleep-and-mood-check,static,src/app/sleep-and-mood-check/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/sobriety-calculator,static,src/app/sobriety-calculator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/spin-social-anxiety-test,static,src/app/spin-social-anxiety-test/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/standard-drinks-calculator,static,src/app/standard-drinks-calculator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/terms,static,src/app/terms/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/treatment-cost-estimator,static,src/app/treatment-cost-estimator/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/trigger-identification-worksheet,static,src/app/trigger-identification-worksheet/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/ucla-loneliness-scale,static,src/app/ucla-loneliness-scale/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/urge-surfing-timer,static,src/app/urge-surfing-timer/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/values-card-sort,static,src/app/values-card-sort/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/who-5-wellbeing-index,static,src/app/who-5-wellbeing-index/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/who-assist-substance-screening,static,src/app/who-assist-substance-screening/page.tsx,mobile and desktop entry rendering,PENDING exact-head CI
+/withdrawal-timeline,static,src/app/withdrawal-timeline/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/work-stress-check,static,src/app/work-stress-check/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/worry-time-scheduler,static,src/app/worry-time-scheduler/page.tsx,mobile and desktop entry rendering; synthetic primary tool journey,PENDING exact-head CI
+/offline-crisis.html,static fallback,public/offline-crisis.html,rendered fallback and offline safety contacts,PENDING exact-head CI

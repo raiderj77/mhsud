@@ -34,7 +34,10 @@ for (const [path, answer, count, role] of cases) {
     await expect(choices).toHaveCount(count);
     const submit = page.getByRole('button', { name: /^(View|See) My Results|^Answer All Questions to Continue/ });
     await expect(submit).toBeDisabled();
-    for (let index = 0; index < count; index++) await choices.nth(index).click();
+    for (let index = 0; index < count; index++) {
+      await choices.nth(index).click();
+      await expect(choices.nth(index)).toHaveAttribute(role === 'radio' ? 'aria-checked' : 'aria-pressed', 'true');
+    }
     await expect(submit).toBeEnabled();
     await submit.focus();
     await page.keyboard.press('Enter');

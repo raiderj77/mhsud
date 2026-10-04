@@ -171,7 +171,7 @@ export function MentalLoadClient({ faqData }: Props) {
                       <p className="text-[14px] text-neutral-700 dark:text-neutral-200 mb-2.5">{task}</p>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                         {RESPONSIBILITY_OPTIONS.map((opt) => (
-                          <button key={opt.label} onClick={() => handleAnswer(key, opt.value)} className={`p-2 rounded-lg border text-center transition-all text-xs leading-tight ${answers[key] === opt.value ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold" : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-500 dark:text-neutral-400 hover:border-sage-300 dark:hover:border-sage-700"}`}>
+                          <button key={opt.label} aria-pressed={answers[key] === opt.value} onClick={() => handleAnswer(key, opt.value)} className={`p-2 rounded-lg border text-center transition-all text-xs leading-tight ${answers[key] === opt.value ? "border-sage-400 dark:border-sage-600 bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-300 font-semibold" : "border-sand-200 dark:border-neutral-700 bg-sand-50 dark:bg-night-700 text-neutral-500 dark:text-neutral-400 hover:border-sage-300 dark:hover:border-sage-700"}`}>
                             {opt.label}
                           </button>
                         ))}

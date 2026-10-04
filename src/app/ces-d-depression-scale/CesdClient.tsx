@@ -527,7 +527,7 @@ export function CesdClient({ faqData }: Props) {
               {SCALE_SHORT.map((label, val) => (
                 <button
                   key={val}
-                  onClick={() => handleAnswer(item.id, val)}
+                  aria-pressed={answers[item.id] === val} onClick={() => handleAnswer(item.id, val)}
                   title={SCALE_LABELS[val]}
                   className={`min-h-11 min-w-11 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                     answers[item.id] === val

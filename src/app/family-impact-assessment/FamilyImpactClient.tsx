@@ -788,7 +788,7 @@ export function FamilyImpactClient({ faqData }: Props) {
                 {SCALE_LABELS.map((label, val) => (
                   <button
                     key={val}
-                    onClick={() => handleAnswer(stmt.id, val)}
+                    aria-pressed={answers[stmt.id] === val} onClick={() => handleAnswer(stmt.id, val)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                       answers[stmt.id] === val
                         ? "bg-sage-600 text-white"

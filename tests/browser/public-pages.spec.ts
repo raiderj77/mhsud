@@ -25,6 +25,7 @@ test('every published sitemap page renders at mobile and desktop widths', async 
   // every static page source, while preserving intentionally unreleased pages.
   const staticPages = sourcePages().filter(path => !path.includes('[') && path !== '/awareness/august');
   const allPages = [...new Set([...paths, ...staticPages, '/offline-crisis.html'])];
+  console.log(`Public route coverage: ${allPages.length} rendered pages; ${sourcePages().length} page source files accounted for, including the dynamic awareness template and unreleased hub.`);
 
   for (const path of allPages) {
     await test.step(path, async () => {
@@ -77,6 +78,7 @@ test('every configured legacy route and unpublished awareness page has its inten
   for (const path of missing) {
     await test.step(path, async () => expect((await request.get(path)).status(), path).toBe(404));
   }
+  console.log(`Legacy route coverage: ${redirects.length} redirects; ${missing.size} intentional not-found routes.`);
 });
 
 test('an original reflection exercise keeps educational consent without claiming symptom screening', async ({ page }) => {
