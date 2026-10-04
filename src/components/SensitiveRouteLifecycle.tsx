@@ -108,8 +108,10 @@ export function SensitiveRouteLifecycle() {
     // Only fixed public directory section names may survive. Query strings,
     // assessment fragments, and unknown directory fragments are always removed.
     const clearPrivateUrlState = () => {
+      const currentPathname = window.location.pathname;
+      if (!isSensitiveRoute(currentPathname)) return;
       if (window.location.search || window.location.hash) {
-        window.history.replaceState(window.history.state, "", pathname + publicSectionHash(pathname, window.location.hash));
+        window.history.replaceState(window.history.state, "", currentPathname + publicSectionHash(currentPathname, window.location.hash));
       }
     };
     clearPrivateUrlState();

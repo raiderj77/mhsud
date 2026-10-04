@@ -28,4 +28,6 @@ test('directory navigation strips arbitrary data and assessment fragments remain
   await expect.poll(() => new URL(page.url()).hash).toBe('');
   await page.goto('/phq-9-depression-test?answer=fictional#choose-a-tool');
   await expect.poll(() => new URL(page.url()).search + new URL(page.url()).hash).toBe('');
+  await page.goBack();
+  await expect(page).toHaveURL(/\/screening-tools$/);
 });
