@@ -85,8 +85,8 @@ export default function SampleReadinessReviewPage() {
 
       <section className="mb-10">
         <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">3. Prioritized findings</h2>
-        <div className="mt-5 overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700">
-          <table className="min-w-[900px] w-full border-collapse text-left text-sm">
+        <div className="mt-5 overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700 print:overflow-visible">
+          <table className="min-w-[900px] w-full border-collapse text-left text-sm print:min-w-0 print:table-fixed print:break-words print:text-xs">
             <thead className="bg-sand-100 dark:bg-night-800"><tr>{["Priority", "Area", "Verified fictional evidence", "Why it matters", "Recommended action"].map((heading) => <th key={heading} scope="col" className="px-4 py-3 font-semibold">{heading}</th>)}</tr></thead>
             <tbody className="divide-y divide-sand-200 dark:divide-neutral-700">{findings.map((finding) => (
               <tr key={`${finding.priority}-${finding.area}`} className="align-top">
@@ -107,7 +107,7 @@ export default function SampleReadinessReviewPage() {
         <p className="mt-3">Do not publish the fictional interactive journey until rights, clinical, privacy, crisis, accessibility, security, and owner approval gates are documented. A later review would verify the repaired entry states and network boundary without using real health data.</p>
       </section>
 
-      <footer className="border-t border-sand-200 pt-6 text-sm text-neutral-600 dark:border-neutral-700 dark:text-neutral-300">
+      <footer className="border-t border-sand-200 pt-6 text-sm text-neutral-600 dark:border-neutral-700 dark:text-neutral-300 print:block">
         <p><strong>Sample limitation:</strong> This document demonstrates format only. It is not legal advice, clinical validation, an instrument licence, a penetration test, formal accessibility certification, or a representation that any real product is compliant or safe.</p>
         <p className="mt-3 no-print"><Link href="/for-professionals" className="font-semibold text-sage-700 hover:underline dark:text-sage-400">Return to the review scope and founding price</Link></p>
       </footer>
