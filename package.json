@@ -48,9 +48,11 @@
   "overrides": {
     "braces": "npm:@dieub/braces-depth-guard@3.0.3-pn.3",
     "undici": "7.29.1",
+    "postcss-selector-parser": "7.1.6",
+    "source-map-js": "1.2.2",
     "next": {
       "postcss": "8.5.25",
-      "sharp": "0.35.4"
+      "sharp": "0.35.5"
     }
   }
 }
