@@ -46,7 +46,7 @@ const findings = [
 
 export default function SampleReadinessReviewPage() {
   return (
-    <article className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-16">
+    <article className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-16 print:[&_h2]:break-after-avoid">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([
         { name: "Home", url: SITE_URL },
         { name: "For Professionals", url: `${SITE_URL}/for-professionals` },
@@ -86,7 +86,14 @@ export default function SampleReadinessReviewPage() {
       <section className="mb-10">
         <h2 className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">3. Prioritized findings</h2>
         <div className="mt-5 overflow-x-auto rounded-xl border border-sand-200 dark:border-neutral-700 print:overflow-visible">
-          <table className="min-w-[900px] w-full border-collapse text-left text-sm print:min-w-0 print:table-fixed print:break-words print:text-xs">
+          <table className="min-w-[900px] w-full border-collapse text-left text-sm print:min-w-0 print:table-fixed print:break-words print:text-xs print:[&_th]:px-2 print:[&_td]:px-2 print:[&_tr]:break-inside-avoid">
+            <colgroup>
+              <col className="print:w-[10%]" />
+              <col className="print:w-[16%]" />
+              <col className="print:w-[24%]" />
+              <col className="print:w-[23%]" />
+              <col className="print:w-[27%]" />
+            </colgroup>
             <thead className="bg-sand-100 dark:bg-night-800"><tr>{["Priority", "Area", "Verified fictional evidence", "Why it matters", "Recommended action"].map((heading) => <th key={heading} scope="col" className="px-4 py-3 font-semibold">{heading}</th>)}</tr></thead>
             <tbody className="divide-y divide-sand-200 dark:divide-neutral-700">{findings.map((finding) => (
               <tr key={`${finding.priority}-${finding.area}`} className="align-top">

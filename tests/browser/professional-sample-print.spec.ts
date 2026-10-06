@@ -2,6 +2,26 @@ import { expect, test } from '@playwright/test';
 
 const samplePath = '/for-professionals/sample-readiness-review';
 
+test('offline printing hides the status overlay while preserving crisis support and screen behavior', async ({ page, context }) => {
+  await page.goto(samplePath);
+  await context.setOffline(true);
+  const offlineNotice = page.getByRole('status').filter({ hasText: "You're offline" });
+  const crisisSupport = page.getByRole('complementary', { name: 'Clinical disclaimer and crisis support' });
+  await expect(offlineNotice).toBeVisible();
+  await expect(crisisSupport).toBeVisible();
+
+  await page.emulateMedia({ media: 'print' });
+  await expect(offlineNotice).toBeHidden();
+  await expect(crisisSupport).toBeVisible();
+  await expect(crisisSupport.getByRole('link', { name: 'Call the United States 988 Suicide and Crisis Lifeline', exact: true })).toBeVisible();
+  await expect(page.locator('article > footer')).toBeVisible();
+
+  await page.emulateMedia({ media: 'screen' });
+  await expect(offlineNotice).toBeVisible();
+  await page.getByRole('button', { name: 'Dismiss offline notification' }).click();
+  await expect(offlineNotice).toBeHidden();
+});
+
 test('printing the fictional sample preserves its limitations and hides screen controls', async ({ page }) => {
   await page.goto(samplePath);
   const limitation = page.locator('article > footer');
