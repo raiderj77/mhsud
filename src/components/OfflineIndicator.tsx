@@ -39,7 +39,7 @@ export function OfflineIndicator() {
       role="status"
       aria-live="polite"
       aria-atomic="true"
-      className="fixed top-0 left-0 right-0 z-50 animate-fade-in"
+      className="no-print fixed top-0 left-0 right-0 z-50 animate-fade-in"
     >
       <div className="bg-gradient-to-r from-crisis-700 to-crisis-800 dark:from-crisis-700 dark:to-crisis-800 text-white px-4 py-3 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
