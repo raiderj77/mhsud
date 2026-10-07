@@ -91,7 +91,7 @@ export function GroundingClient({ faqData }: Props) {
   /* focus first input when step changes */
   useEffect(() => {
     if (appPhase === "active") {
-      setTimeout(() => firstInputRef.current?.focus(), 100);
+      firstInputRef.current?.focus();
     }
   }, [stepIndex, appPhase]);
 
