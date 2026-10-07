@@ -1,0 +1,16 @@
+@media print {
+  /* Scope the paper canvas and shared safety banner to this fictional report. */
+  :global(html):has(.sample),
+  :global(body):has(.sample),
+  .sample,
+  .sample *,
+  :global(body):has(.sample) > :global(aside[aria-label="Clinical disclaimer and crisis support"]),
+  :global(body):has(.sample) > :global(aside[aria-label="Clinical disclaimer and crisis support"]) * {
+    /* Remain readable even when the printer omits background graphics. */
+    color: #000 !important;
+    background: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+}
