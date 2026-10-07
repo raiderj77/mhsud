@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, createMetadata, SITE_URL } from "@/lib/metadata";
 import { PrintSampleButton } from "./PrintSampleButton";
+import styles from "./sample-print.module.css";
 
 const PAGE_PATH = "/for-professionals/sample-readiness-review";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
@@ -46,7 +47,7 @@ const findings = [
 
 export default function SampleReadinessReviewPage() {
   return (
-    <article className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-16 print:[&_h2]:break-after-avoid">
+    <article className={`${styles.sample} mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-16 print:[&_h2]:break-after-avoid`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([
         { name: "Home", url: SITE_URL },
         { name: "For Professionals", url: `${SITE_URL}/for-professionals` },
