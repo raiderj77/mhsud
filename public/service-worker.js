@@ -11,7 +11,7 @@
  * - query strings and fragments are never used as cache keys.
  */
 
-const CACHE_VERSION = "3.0.0";
+const CACHE_VERSION = "3.0.1";
 const STATIC_CACHE = `mindcheck-static-${CACHE_VERSION}`;
 const PAGE_CACHE = `mindcheck-pages-${CACHE_VERSION}`;
 const OFFLINE_SAFETY_CACHE = `mindcheck-offline-safety-${CACHE_VERSION}`;
@@ -34,6 +34,7 @@ const SENSITIVE_TOOL_SEGMENT =
 
 const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "awareness",
+  "substance-use",
   "screening-tools",
   "crisis-resources",
   "safety-plan",

@@ -493,7 +493,7 @@ export function MoneySavedClient({ faqData }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { name: "Sobriety Calculator", desc: "Track days sober and recovery milestones", href: "/sobriety-calculator" },
-                { name: "Health Recovery Timeline", desc: "What happens to your body after you quit", href: "/health-recovery-timeline" },
+                { name: "Health Recovery Timeline", desc: "Recovery timeline limits and sources", href: "/health-recovery-timeline" },
                 { name: "AUDIT Alcohol Screen", desc: "10-item WHO alcohol screening tool", href: "/audit-alcohol-test" },
               ].map((t) => (
                 <Link key={t.name} href={t.href} className="card p-4 hover:border-sage-300 dark:hover:border-sage-700 transition-colors">

@@ -5,6 +5,7 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   // Awareness articles can concern grief and overdose. Keep the whole section
   // outside tracking and referrer/caching flows, including its calendar hub.
   "awareness",
+  "substance-use",
   "screening-tools",
   "crisis-resources",
   "safety-plan",

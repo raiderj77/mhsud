@@ -1,11 +1,22 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { auditHtml, isAllowedAuditOrigin, safeEntryUrl } from "../scripts/full-site-audit.mjs";
+import { auditHtml, isAllowedAuditOrigin, safeEntryUrl, markDuplicateMetadata } from "../scripts/full-site-audit.mjs";
 
 const url = "https://mindchecktools.com/athens-insomnia-scale";
 const html = `<html><head><title>Information</title><meta name="description" content="An educational overview"><link rel="canonical" href="${url}"><script type="application/ld+json">{"@type":"WebPage"}</script></head><body><h1>Information</h1></body></html>`;
 const options = { headers: { "cache-control": "private, no-store", "referrer-policy": "no-referrer", "x-frame-options": "DENY", "x-content-type-options": "nosniff" } };
 test("entry audit accepts a compliant information page", () => assert.equal(auditHtml(url, 200, html, options).pass, true));
+test("entry audit rejects duplicate titles and descriptions across otherwise valid pages", () => {
+  const rows = [
+    { pass: true, checks: [], metadata: { title: "Same Title", description: "Distinct first description" } },
+    { pass: true, checks: [], metadata: { title: "same   title", description: "Distinct second description" } },
+    { pass: true, checks: [], metadata: { title: "Unique", description: "Distinct second description" } },
+  ];
+  markDuplicateMetadata(rows);
+  assert.equal(rows.filter(row => row.pass).length, 0);
+  assert.equal(rows[0].checks.find(check => check.name === "unique-description").ok, true);
+  assert.equal(rows[2].checks.find(check => check.name === "unique-title").ok, true);
+});
 test("entry audit rejects misleading previous false positives", () => {
   for (const mutated of [html.replace(url, "https://example.com/athens-insomnia-scale"), html.replace('{"@type":"WebPage"}', "broken json"), html.replace("</head>", '<meta name="robots" content="noindex"></head>'), html.replace("</body>", '<ins class="adsbygoogle"></ins></body>'), html.replace("</body>", '<script src="/_vercel/insights/script.js"></script></body>')]) {
     assert.equal(auditHtml(url, 200, mutated, options).pass, false);

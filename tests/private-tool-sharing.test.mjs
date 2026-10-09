@@ -11,7 +11,6 @@ const centralizedClients = [
   ["burnout-assessment-tool/BurnoutClient.tsx", "/burnout-assessment-tool"],
   ["gad-7-anxiety-test/GAD7Client.tsx", "/gad-7-anxiety-test"],
   ["halt-check-in/HALTClient.tsx", "/halt-check-in"],
-  ["health-recovery-timeline/HealthTimelineClient.tsx", "/health-recovery-timeline"],
   ["mental-load-calculator/MentalLoadClient.tsx", "/mental-load-calculator"],
   ["money-saved-recovery-calculator/MoneySavedClient.tsx", "/money-saved-recovery-calculator"],
   ["pcl-5-ptsd-screening/PCL5Client.tsx", "/pcl-5-ptsd-screening"],
@@ -21,9 +20,7 @@ const centralizedClients = [
   ["sleep-and-mood-check/SleepMoodClient.tsx", "/sleep-and-mood-check"],
   ["sobriety-calculator/SobrietyClient.tsx", "/sobriety-calculator"],
   ["standard-drinks-calculator/StandardDrinksClient.tsx", "/standard-drinks-calculator"],
-  ["treatment-cost-estimator/TreatmentCostClient.tsx", "/treatment-cost-estimator"],
   ["trigger-identification-worksheet/TriggerWorksheetClient.tsx", "/trigger-identification-worksheet"],
-  ["withdrawal-timeline/WithdrawalTimelineClient.tsx", "/withdrawal-timeline"],
 ];
 
 test("the sensitive share-client inventory is explicit and complete", async () => {

@@ -311,19 +311,6 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "health-recovery-timeline": {
-    toolName: "Health Recovery Timeline",
-    prompts: [
-      "Which health improvements on the timeline are you most looking forward to experiencing?",
-      "Have you already noticed any physical or mental health changes since reducing or stopping use?",
-      "How does understanding the timeline of recovery affect your patience with the process?",
-      "What health goals would you like to set for yourself over the next three months?",
-    ],
-    faqEntries: [
-      { question: "How long does it take for your body to recover after quitting alcohol or drugs?", answer: "Recovery timelines vary by substance and individual factors, but many positive changes begin within hours to days. Liver function, cardiovascular health, sleep quality, and cognitive function improve progressively over weeks and months. The health recovery timeline shows you what to expect at each stage based on published research." },
-      { question: "What physical health improvements happen first after quitting?", answer: "In the first week, most people notice improved sleep, better hydration, reduced blood pressure, and improved appetite. Within 2–4 weeks, liver enzymes begin normalizing and energy levels increase. Within 3–6 months, significant improvements in immune function, skin health, and cognitive clarity are common." },
-    ],
-  },
 
   "bac-calculator": {
     toolName: "BAC (Blood Alcohol Content) Calculator",
@@ -367,33 +354,7 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
-  "withdrawal-timeline": {
-    toolName: "Withdrawal Timeline",
-    prompts: [
-      "Which withdrawal symptoms are you most concerned about or currently experiencing?",
-      "Do you have medical support available during the withdrawal process?",
-      "What comfort measures or coping strategies have you prepared for the most difficult days?",
-      "Who can you call for support if withdrawal symptoms become overwhelming?",
-    ],
-    faqEntries: [
-      { question: "How long do withdrawal symptoms last?", answer: "Withdrawal timelines vary significantly by substance. Alcohol withdrawal typically peaks at 24–72 hours and resolves within 5–7 days. Opioid withdrawal peaks at 36–72 hours and lasts 7–10 days. Benzodiazepine withdrawal can last weeks to months. Individual factors like duration of use and overall health also affect the timeline." },
-      { question: "Is it dangerous to quit alcohol or drugs without medical supervision?", answer: "Withdrawal from alcohol, benzodiazepines, and certain other substances can be medically dangerous and potentially life-threatening. If you have been using heavily or for a long period, medical supervision during withdrawal is strongly recommended. SAMHSA's helpline (1-800-662-4357) can help you find medically supervised detox programs." },
-    ],
-  },
 
-  "treatment-cost-estimator": {
-    toolName: "Treatment Cost Estimator",
-    prompts: [
-      "Were the estimated treatment costs higher or lower than you expected?",
-      "How does understanding the cost breakdown help you plan for getting help?",
-      "Are there financial barriers to treatment, and have you explored insurance coverage, sliding scale options, or free programs?",
-      "What is the cost of NOT getting treatment, in health, relationships, and lost potential?",
-    ],
-    faqEntries: [
-      { question: "How much does mental health or substance use treatment cost?", answer: "Treatment costs vary widely: outpatient therapy typically ranges from $100–250 per session (often covered by insurance), intensive outpatient programs $5,000–10,000, and residential treatment $10,000–30,000+. Many options exist for reducing costs including insurance coverage, sliding scale fees, state-funded programs, and SAMHSA-funded treatment centers." },
-      { question: "Can I get free or low-cost mental health treatment?", answer: "Yes, SAMHSA's treatment locator (findtreatment.gov) lists free and low-cost options. Community mental health centers offer sliding scale fees. Many therapists offer reduced rates for uninsured clients. State Medicaid programs cover mental health and substance use treatment in all 50 states." },
-    ],
-  },
 
   "relapse-prevention-plan": {
     toolName: "Relapse Prevention Plan Builder",

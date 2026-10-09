@@ -140,6 +140,7 @@ export default function WhoAssistInformationPage() {
         faq={FAQ_DATA}
         reviewer={<ToolReviewerBio lastReviewed="August 2, 2026" />}
       />
+      <p className="max-w-3xl mx-auto px-4 pb-8"><a href="/substance-use/screening-limits" className="underline">What substance-use screening measures and leaves unanswered</a></p>
     </>
   );
 }

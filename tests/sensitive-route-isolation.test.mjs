@@ -71,7 +71,7 @@ test("interactive health tools without generic screening words stay sensitive", 
   const policyPattern = policies.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
   const workerPattern = worker.match(/const SENSITIVE_TOOL_SEGMENT\s*=\s*(\/[^\n]+\/i)/)?.[1];
   assert.equal(workerPattern, policyPattern, "sensitive slug patterns must stay identical");
-  assert.match(worker, /const CACHE_VERSION = "3\.0\.0"/);
+  assert.match(worker, /const CACHE_VERSION = "3\.0\.1"/);
 });
 
 test("obsolete Google consent state cannot reactivate optional tracking", async () => {

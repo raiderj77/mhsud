@@ -359,7 +359,7 @@ export default function CrisisResourcesPage() {
             This page is for informational purposes only. MindCheck Tools is not a crisis service and cannot provide emergency support. If you are in danger, please contact emergency services or a crisis hotline directly.
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mt-2">
-            Resource information is believed to be accurate as of the date of publication. If you notice outdated information, please contact us at hello@mindchecktools.com.
+            September 26, 2026: Codex checked the official 988 and Crisis Text Line pages and SAMHSA&apos;s indexed helpline listing. This was an editorial source check, not a test call or verification of every listed service. Other listings still need individual rechecking. If you notice outdated information, please contact us at hello@mindchecktools.com.
           </p>
         </div>
       </div>

@@ -401,7 +401,7 @@ const TOOLS: Tool[] = [
   {
     href: "/health-recovery-timeline",
     title: "Health Recovery Timeline",
-    description: "See what happens to your body after you quit. Interactive timeline based on medical research for alcohol, nicotine, and opioids.",
+    description: "Understand what recovery dates cannot establish, with primary sources and questions for a qualified professional.",
     badge: "Original",
     time: "~1 min",
     questions: 2,
@@ -423,7 +423,7 @@ const TOOLS: Tool[] = [
   {
     href: "/withdrawal-timeline",
     title: "Withdrawal Timeline",
-    description: "See what to expect during withdrawal from alcohol, opioids, benzos, stimulants, meth, cannabis, or nicotine. Phase-by-phase symptoms with severity ratings.",
+    description: "Why a timeline cannot establish withdrawal safety, with medical information and support resources.",
     badge: "Original",
     time: "~2 min",
     questions: 1,
@@ -434,7 +434,7 @@ const TOOLS: Tool[] = [
   {
     href: "/treatment-cost-estimator",
     title: "Treatment Cost Estimator",
-    description: "See estimated costs for addiction treatment: outpatient, IOP, residential rehab, detox, MAT, and sober living. Insurance and financial aid info included.",
+    description: "Prepare questions for providers and insurers to obtain a comparable treatment-cost estimate.",
     badge: "Original",
     time: "~2 min",
     questions: 1,
