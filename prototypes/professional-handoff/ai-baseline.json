@@ -1,0 +1,188 @@
+{
+  "taskId": "MCT-PRIVATE-HANDOFF-20261011",
+  "role": "Product and measurement comparator; private synthetic sample",
+  "timing": {
+    "startUtc": "2026-10-11T11:01:10Z",
+    "endUtc": "2026-10-11T11:01:43Z",
+    "elapsedSeconds": 33,
+    "measurement": "One batch, including permitted source reads and answer assessment; no feedback rounds",
+    "metadataCaveat": "tasks.json states frozenAt 2026-10-11T11:03:00Z, later than the observed batch clock. That field is not evidence of an observation date."
+  },
+  "sourcesRead": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "prototypes/professional-handoff/tasks.json",
+    "src/app/for-professionals/sample-readiness-review/page.tsx",
+    "docs/professional-review-operations-runbook.md",
+    "docs/professional-review-first-sale-readiness-2026-08-29.md"
+  ],
+  "answers": [
+    {
+      "id": "T01",
+      "answer": {
+        "baselineScope": {
+          "organization": "Harbor Lantern Digital Health, fictional",
+          "routes": "Homepage plus four fictional staging routes, five total",
+          "instrument": "One unnamed published adult screener; no items reproduced",
+          "inspectionBoundary": "Public mobile and desktop entry states only",
+          "serviceBoundary": "Readiness report and gap register, not remediation, deployment, clinical validation, legal advice, licence grant, penetration testing, or formal accessibility certification"
+        },
+        "missing": [
+          "Five exact canonical route URLs and route-level coverage",
+          "Exact instrument name and version",
+          "Named authorized customer contact and accepted written scope",
+          "Named action owners, reviewers, acceptance authority and completed handoff records",
+          "Review dates, source revisions and supporting evidence references"
+        ],
+        "proposedRolesNotBaselineAssignments": [
+          "Customer product owner: confirm scope and coordinate remediation ownership",
+          "Software and privacy engineers: address third-party requests and verify the network boundary",
+          "Rights coordinator: obtain authoritative exact-use evidence; only the instrument owner or authorized publisher can grant rights",
+          "Topic-qualified clinical reviewer: review exact non-diagnostic wording within documented competence",
+          "Accessibility engineer or specialist: perform bounded observations and verification",
+          "Review lead: maintain evidence, limitations and finding status",
+          "Business owner: resolve commercial decisions and document applicable release approval"
+        ]
+      }
+    },
+    {
+      "id": "T02",
+      "answer": {
+        "firstPriority": "P0 privacy: the fictional analytics request on a condition-named questionnaire route. The baseline recommends removing optional third-party code from sensitive route classes and verifying with a browser-network test.",
+        "retainedFindings": [
+          {
+            "priority": "P0",
+            "area": "Privacy",
+            "finding": "Fictional analytics tag loads on a condition-named questionnaire route before consent."
+          },
+          {
+            "priority": "P1",
+            "area": "Instrument rights",
+            "finding": "A validation paper exists, but owner terms permitting public electronic administration are missing."
+          },
+          {
+            "priority": "P1",
+            "area": "Clinical limits",
+            "finding": "The fictional result wording treats a screening threshold as a diagnosis."
+          },
+          {
+            "priority": "P2",
+            "area": "Accessibility",
+            "finding": "Fictional answer controls are 36 pixels high and expose no selected state to assistive technology."
+          }
+        ],
+        "releaseStatus": "The fictional interactive journey remains RED. Addressing the P0 does not clear the other findings or the documented rights, clinical, privacy, crisis, accessibility, security and owner approval gates."
+      }
+    },
+    {
+      "id": "T03",
+      "answer": {
+        "observedThisBatch": "The permitted source code contains a sample explicitly stating that its company, product, routes, evidence and findings are invented.",
+        "fictionalAssertionsInBaseline": [
+          "Public entry routes respond and render one H1.",
+          "The fictional assessment requests an unapproved third-party domain.",
+          "The fictional evidence folder lacks a written electronic-use grant."
+        ],
+        "whatThisProves": "These statements and four findings are present in the sample document. It demonstrates a report format.",
+        "whatItDoesNotProve": [
+          "That a real route was inspected or that any real product behaves this way",
+          "That diagnostic wording was personally observed",
+          "That evidence files, permission grants, repairs or acceptance checks exist",
+          "That a real product is compliant, safe, ready to launch or commercially validated"
+        ],
+        "inferenceBoundary": "The risks and recommended actions are reasoned interpretations within an invented scenario, not measured customer outcomes."
+      }
+    },
+    {
+      "id": "T04",
+      "answer": {
+        "permission": "No. The baseline explicitly distinguishes validation evidence from reproduction, commercial-use and public electronic-administration permission.",
+        "nextAction": "Keep the public URL information-only. Identify the exact instrument version and authoritative owner or authorized publisher, then obtain and archive terms or written permission covering the intended electronic, reproduction, scoring and commercial uses, with applicable attribution and modification restrictions.",
+        "limits": "Do not reproduce protected items while researching. Missing rights remain BLOCKED: RIGHTS UNVERIFIED. No permission was obtained or verified in this batch."
+      }
+    },
+    {
+      "id": "T05",
+      "answer": {
+        "personallyObserved": false,
+        "basis": "The diagnostic-language claim is an invented finding in source text. The stated inspection boundary covers entry states only; it does not establish observation of a result branch.",
+        "safeNextStep": "Request an authorized, non-sensitive documentation record supporting the wording claim, with exact branch/source provenance, for a topic-qualified reviewer. It must exclude answers, scores, personalized results, patient information and protected instrument items. If that evidence cannot be obtained within the accepted boundary, retain UNKNOWN and arrange a separately scoped qualified review.",
+        "prohibitedVerification": "Do not answer or submit an assessment or open a result screen under this runbook.",
+        "completion": "No verification or qualified sign-off occurred in this batch."
+      }
+    },
+    {
+      "id": "T06",
+      "answer": {
+        "baselineRecommendation": "Semantic radio controls, 44-pixel targets, visible focus, and announced validation and result states.",
+        "boundedFollowUp": [
+          "Record route, date, environment, viewport and assistive technology used.",
+          "Inspect permitted entry states for semantic control names, grouping, selected-state exposure, keyboard order, visible focus and touch-target dimensions.",
+          "Check narrow-screen layout, headings and landmarks using fictional or empty states.",
+          "Verify validation and result-state behavior only through a separately authorized, non-sensitive fixture or qualified review that respects the entry-state-only boundary; do not submit an assessment or open a result screen in this service."
+        ],
+        "acceptanceLimit": "Document reproducible observations and retest evidence. Neither the sample dimensions nor these checks establish formal WCAG conformance. No accessibility test was run in this batch."
+      }
+    },
+    {
+      "id": "T07",
+      "answer": {
+        "recommendedActionClosesFinding": false,
+        "baselineStatus": "The baseline provides recommendations, not repair or closure evidence.",
+        "proposedAcceptanceRequirement": "For each finding, link the affected in-scope routes, responsible owner, completed change, dated verification evidence, remaining limitations and appropriate acceptance decision. Preserve all four findings until their individual dispositions are supported.",
+        "partialCoverage": "A check covering only some routes supports only those routes. It cannot establish completion of the five-route scope or the claim that every sensitive route is clear. Explicitly report untested routes and keep affected acceptance pending.",
+        "danglingReferences": "An unavailable or unresolvable evidence reference cannot substantiate closure. Repair the reference or mark the supporting evidence missing and the affected conclusion UNKNOWN.",
+        "observationLimit": "The permitted baseline lacks an exact route/evidence register. No specific dangling reference or actual closure was verified."
+      }
+    },
+    {
+      "id": "T08",
+      "answer": {
+        "baselineDates": {
+          "sampleEvidenceDate": "Missing",
+          "sampleSourceRevision": "Missing",
+          "runbookPublicOfferCheck": "2026-08-29",
+          "firstSaleEvidenceCheck": "2026-08-29"
+        },
+        "handling": "Record missing dates and revisions as UNKNOWN. Preserve historical dates as historical checks; do not substitute the file-read date, document date or task freeze date for the underlying observation date.",
+        "nextVerification": "Before relying on changing rights terms, provider pricing, legal applicability or other consequential facts, recheck the relevant authoritative source and record its URL, date checked, exact version or revision where available, claim supported and implementation effect.",
+        "acceptance": "Unresolved critical evidence blocks the affected release decision. Do not invent a universal expiry period or imply the August checks are current.",
+        "batchLimit": "No source was refreshed over the network."
+      }
+    },
+    {
+      "id": "T09",
+      "answer": {
+        "sixthRouteOrSecondFamily": "Outside the fixed five-route, one-family scope. Either reduce the request to the accepted boundary or obtain a separately reviewed written scope before quoting, accepting payment or beginning the expanded work.",
+        "remediationOrDeployment": "Explicitly excluded from the fixed review. Record recommendations and hand them to an appropriately authorized implementation owner; do not perform changes or deployment under this review.",
+        "commercialEffect": "Do not assume the $495 price or five-business-day target applies to expanded work. Reconfirm scope, timing, capacity, terms and required specialist review.",
+        "independentWork": "Preparation within an already authorized safe scope may continue; expanded work receives no implied authorization."
+      }
+    },
+    {
+      "id": "T10",
+      "answer": {
+        "permitsSaleOrLaunch": false,
+        "sampleMeaning": "Completion demonstrates a private synthetic sample only. It establishes no customer acceptance, payment, product readiness or release permission.",
+        "remainingOwnerDecisionsFromBaseline": [
+          "Selling legal/business identity",
+          "Correctly titled invoicing account and provider",
+          "Customer terms, cancellation/refund rules and acceptance method",
+          "Applicable tax/accounting treatment",
+          "Insurance decision and acceptable coverage",
+          "Approved report-delivery provider and retention schedule",
+          "Capacity for one five-business-day engagement"
+        ],
+        "additionalConditions": "Accepted written scope and owner-approved payment terms are required before customer work. Qualified review remains necessary where applicable. Interactive product release separately requires documented rights, clinical, privacy, crisis, accessibility, security and owner approval gates.",
+        "commercialEvidence": "The permitted files provide no evidence of received payment or revenue. A sample, inquiry, accepted scope or unpaid invoice is not revenue."
+      }
+    }
+  ],
+  "limitations": {
+    "method": "One in-session AI source-reading comparison, not a human usability study or strongest-model comparison",
+    "reads": "Only the six permitted files were read. Initial combined output was truncated; narrower rereads of permitted files recovered the required material.",
+    "notRead": "oracle.json, PLAN.md, other prototype or implementation files, customer data, ledgers and credentials",
+    "notPerformed": "Writes, network access, browser inspection, tests, provider-account access, external actions, deployment or separate paid calls",
+    "cost": "No separate paid action was initiated; in-session model cost was not measured."
+  }
+}

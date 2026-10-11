@@ -1,0 +1,178 @@
+{
+  "taskId": "MCT-PRIVATE-HANDOFF-20261011",
+  "recordedAt": "2026-10-11 11:08:16 UTC",
+  "states": {
+    "prepared": true,
+    "tested": true,
+    "deployed": false,
+    "verifiedLive": false,
+    "commerciallyValidated": false
+  },
+  "base": "53b106d19501fc5d460d0ae3169d7d2f89cb3860",
+  "branch": "codex/mindcheck-private-handoff-20261011",
+  "scope": "Private original fictional handoff only. All new files under prototypes/professional-handoff. No production integration.",
+  "authority": "Latest direct owner existing-site assignment; no spend/deploy/public changes. Existing first-sale gates not cleared.",
+  "sourceEvidence": {
+    "canonical": "C:/Users/jason/Documents/mhsud",
+    "canonicalHead": "fd6d2b46def933a19be88851b546fc061896dbad",
+    "canonicalClean": true,
+    "remoteMainFresh": true,
+    "unrelatedOpenPRs": [
+      147,
+      145,
+      144,
+      140,
+      135
+    ],
+    "agentsSha256": "be2900a56e354102214d060f5d2c4aefe20e642a4383f112769b1e5ea1d97f42",
+    "runbookSha256": "eff10a17dfed89b7babb0ae114366ca6436055ed9ad2aa239005b83f3b22e1b7",
+    "samplePageSha256": "74f829906e7361de2e538967177b418cf4baa544370969278e8dabcb56a17a05"
+  },
+  "frozenOracleSha256": "e47376a00dcf1cfe7bd1d592a9b3a066b56f856cfacf61b70f52555952f0f190",
+  "originalQuestionsFileSha256": "fed6083009b40069cd9a18196c659ad69eb1ab0cf5c9d3d1962995caf0e9afa9",
+  "questionsMetadataCorrection": "Initial guessed frozenAt 11:03 was later than AI clock11:01:10; removed. Question content unchanged; original comparator caveat preserved. No exact freeze time claimed.",
+  "tests": {
+    "artifact": {
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    "existingProfessionalBoundary": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "runtime": "Node22.22.3 credential-free WSL mount/network/PID namespace, staged explicit allowlist, readonly source, no ledger/dependencies/network",
+    "rawLog": "C:/Users/jason/.codex/tmp/mct-private-handoff-tests-20261011.log",
+    "rawLogSha256": "99961c9e0ce0ed67cf8f0cbf3c5fb5b29de3f2ff835ccc7fc001f8086cd8835e",
+    "initialAttempt": "Stopped before tests: Windows Git worktree pointer invalid in WSL. Explicit GIT_DIR/GIT_WORK_TREE fixed invocation; namespace unchanged.",
+    "unrun": [
+      "production build",
+      "browser UI",
+      "live provider/site tests",
+      "clinical/scoring suite",
+      "human accessibility",
+      "actual customer work"
+    ]
+  },
+  "comparison": {
+    "method": "Untimed independent AI document assessment against ten pre-code decisions, plus one blind in-session AI source-reading batch. Not a human or live product trial.",
+    "rows": [
+      {
+        "id": "T01",
+        "currentSource": "PARTIAL",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T02",
+        "currentSource": "PASS",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T03",
+        "currentSource": "PASS_WITH_AMBIGUOUS_WORDING",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T04",
+        "currentSource": "PASS",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T05",
+        "currentSource": "PARTIAL",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T06",
+        "currentSource": "PARTIAL",
+        "prototype": "PASS",
+        "blindAI": "PARTIAL"
+      },
+      {
+        "id": "T07",
+        "currentSource": "PARTIAL",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T08",
+        "currentSource": "PARTIAL",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T09",
+        "currentSource": "PASS",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      },
+      {
+        "id": "T10",
+        "currentSource": "PASS",
+        "prototype": "PASS",
+        "blindAI": "PASS"
+      }
+    ],
+    "baselineMeaning": "Five partials are missing filled handoff/reconciliation details, not evidence that humans or AI cannot solve tasks.",
+    "aiPartial": "T06 did not explicitly distinguish44px design target from universal requirement or confine initial selected-state check to generic synthetic fixture. Later limits preserve no-assessment boundary. Strict oracle grading, not a major safety failure.",
+    "aiStart": "2026-10-11T11:01:10Z",
+    "aiEnd": "2026-10-11T11:01:43Z",
+    "aiBatchSeconds": 33,
+    "aiFeedbackRounds": 0,
+    "aiReceiptSha256": "49e4e1138c7871195a436b879880044483231f7e0fa2c544fbf8cb00ac998c28",
+    "humanTime": "UNTESTED",
+    "correctionEffort": "UNTESTED",
+    "strongestAccessibleModelComparison": "UNTESTED; model ranking not verified",
+    "advantage": "UNKNOWN; no general AI-superiority claim"
+  },
+  "reviews": {
+    "oracleAndIndependentArtifactVerifier": {
+      "agent": "mct_package_gap",
+      "result": "10/10 decisions PASS within private artifact scope; corrected PLAN structural/customer-task conflation; no material privacy/authority defect",
+      "testsIndependentlyRerun": false
+    },
+    "separateReviewer": {
+      "agent": "mct_package_reviewer",
+      "result": "PASS core and final documentation scope after correcting the demand-protocol order contradiction; no material findings. AI review, not qualified sign-off.",
+      "qualifiedProfessionalSignoff": false
+    },
+    "rootSelfReview": "PASS exact local diff and test evidence; factual hashes reconciled from files. No production code or external integration."
+  },
+  "costs": {
+    "newPurchasesUSD": 0,
+    "paidAPICalls": 0,
+    "newReservationsUSD": 0,
+    "newCommitmentsUSD": 0,
+    "totalEconomicCost": "UNKNOWN",
+    "revenue": "UNKNOWN",
+    "demand": "UNTESTED"
+  },
+  "demandProtocol": {
+    "id": "MCT-HANDOFF-DEMAND-20261011-v1",
+    "state": "PREPARED_NOT_STARTED",
+    "requires": "Available experiment slot after FT pin review plus exact recruitment/private-sharing authorization; no sale authorization",
+    "minimum": 8,
+    "windowDays": 14,
+    "followupDaysPerParticipant": 7,
+    "activeHoursMax": 4,
+    "newCashCeilingUSD": 0,
+    "primaryMetric": "Qualified written-scope requests at existing495USD scope; not payments",
+    "success": "At least2 with complete8sessions/observation",
+    "failure": "0 with complete8sessions/observation",
+    "inconclusive": "1 request or missing/incomplete/unreliable coverage"
+  },
+  "remaining": [
+    "real demand and effort untested",
+    "all findings unresolved, retests unperformed",
+    "no current host/provider audit",
+    "first-sale owner/specialist gates unresolved",
+    "two formats need semantic review"
+  ],
+  "rollback": "Retain branch or revert local sample commit; no production rollback needed."
+}

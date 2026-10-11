@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "taskId": "MCT-PRIVATE-HANDOFF-20261011",
+  "mode": "PRIVATE_FICTIONAL_SAMPLE",
+  "authority": "NONE",
+  "preparedDate": "2026-10-11",
+  "sourceRevision": "53b106d19501fc5d460d0ae3169d7d2f89cb3860",
+  "sourcePaths": [
+    "src/app/for-professionals/sample-readiness-review/page.tsx",
+    "docs/professional-review-operations-runbook.md",
+    "docs/professional-review-first-sale-readiness-2026-08-29.md"
+  ],
+  "scope": {
+    "organization": "Harbor Lantern Digital Health (invented)",
+    "environment": "Fictional staging; no actual site was inspected",
+    "states": "ENTRY_ONLY",
+    "instrumentFamilies": ["UNNAMED_FICTIONAL_FAMILY"],
+    "routes": [
+      {"id":"R01","label":"Homepage entry","path":"/"},
+      {"id":"R02","label":"Screening entry","path":"/screening"},
+      {"id":"R03","label":"Instrument information","path":"/information"},
+      {"id":"R04","label":"Privacy entry","path":"/privacy"},
+      {"id":"R05","label":"Support entry","path":"/support"}
+    ],
+    "routeProvenance": "These exact paths are newly invented planning identifiers; the original sample names only homepage plus four fictional staging routes.",
+    "excluded": ["assessment administration", "result-state inspection", "code remediation", "deployment", "customer health data", "credentials", "instrument item reproduction", "certification"]
+  },
+  "evidence": [
+    {"id":"E01","kind":"SCENARIO_ASSUMPTION","sourcePath":"src/app/for-professionals/sample-readiness-review/page.tsx","sourceFinding":"Privacy","observedAt":null,"runtimeVerified":false,"summary":"Inherited invented analytics request on a sensitive route; no network capture exists in this sample."},
+    {"id":"E02","kind":"SCENARIO_ASSUMPTION","sourcePath":"src/app/for-professionals/sample-readiness-review/page.tsx","sourceFinding":"Instrument rights","observedAt":null,"runtimeVerified":false,"summary":"Inherited invented validation paper without electronic-use terms; permission remains unresolved."},
+    {"id":"E03","kind":"SCENARIO_ASSUMPTION","sourcePath":"src/app/for-professionals/sample-readiness-review/page.tsx","sourceFinding":"Clinical limits","observedAt":null,"runtimeVerified":false,"summary":"Inherited invented result-copy narrative only; no result was opened and no clinical wording or score is reproduced."},
+    {"id":"E04","kind":"SCENARIO_ASSUMPTION","sourcePath":"src/app/for-professionals/sample-readiness-review/page.tsx","sourceFinding":"Accessibility","observedAt":null,"runtimeVerified":false,"summary":"Inherited invented control behavior; no keyboard or assistive-technology observation was performed."}
+  ],
+  "findings": [
+    {"id":"F01","priority":"P0","area":"Privacy","routes":["R02"],"evidence":["E01"],"action":"A01","status":"UNRESOLVED"},
+    {"id":"F02","priority":"P1","area":"Instrument rights","routes":["R02","R03"],"evidence":["E02"],"action":"A02","status":"UNRESOLVED"},
+    {"id":"F03","priority":"P1","area":"Clinical limits","routes":["R02"],"evidence":["E03"],"action":"A03","status":"UNRESOLVED"},
+    {"id":"F04","priority":"P2","area":"Accessibility","routes":["R02"],"evidence":["E04"],"action":"A04","status":"UNRESOLVED"}
+  ],
+  "actions": [
+    {
+      "id":"A01","finding":"F01","ownerRole":"Customer product engineer; privacy reviewer reviews evidence","assignment":"PROPOSED_ROLE_ONLY",
+      "deliverable":"Proposed removal of optional third-party code from the fictional sensitive entry plus a bounded entry-network retest record.",
+      "requiredRoutes":["R02"],
+      "retest":{"status":"UNPERFORMED","coveredRoutes":[],"evidenceIds":[],"observedAt":null},
+      "acceptance":"For the same supplied revision, inspect the empty synthetic R02 entry in a clean browser context; record request destination categories and storage behavior without payloads, queries, answers or results. Optional third-party requests on this sensitive entry must be absent. Record browser/version and limitations. No claim about uninspected result or other routes.",
+      "remaining":"Privacy claims, other sensitive-route coverage and any qualified determination need separate evidence; a recommendation is not a repair."
+    },
+    {
+      "id":"A02","finding":"F02","ownerRole":"Customer product lead; authorized rights holder decides permissions","assignment":"PROPOSED_ROLE_ONLY",
+      "deliverable":"Proposed exact-version rights-source register, without questionnaire items.",
+      "requiredRoutes":["R02","R03"],
+      "retest":{"status":"UNPERFORMED","coveredRoutes":[],"evidenceIds":[],"observedAt":null},
+      "acceptance":"Request the authoritative owner/publisher source naming exact version, intended use and limits. Record checked date and unresolved restrictions. Retain information-only handling while permission is unresolved; check both R02 and R03 entry boundaries. A validation paper is not a rights grant.",
+      "remaining":"No owner source or permission was supplied; qualified interpretation and rights-holder decisions remain outside this sample."
+    },
+    {
+      "id":"A03","finding":"F03","ownerRole":"Customer content lead; topic-qualified clinician reviews supplied copy","assignment":"PROPOSED_ROLE_ONLY",
+      "deliverable":"Request a non-sensitive copy artifact and appropriate source/qualified-review record; this is a proposal only.",
+      "requiredRoutes":["R02"],
+      "retest":{"status":"UNPERFORMED","coveredRoutes":[],"evidenceIds":[],"observedAt":null},
+      "acceptance":"Record the supplied copy artifact revision and whether source-aligned non-diagnostic wording and each relevant branch have qualified review. Keep approval UNKNOWN without that review. Inspect only R02 entry limitations within this engagement; do not answer an assessment or open results to verify the inherited narrative.",
+      "remaining":"Result wording is inherited invented narrative, not a personal observation. Artifact, specialist review and result-state verification are unperformed."
+    },
+    {
+      "id":"A04","finding":"F04","ownerRole":"Customer accessibility engineer; specialist reviews remaining gaps","assignment":"PROPOSED_ROLE_ONLY",
+      "deliverable":"Proposed entry keyboard/focus check and separate generic synthetic-control evidence request.",
+      "requiredRoutes":["R02"],
+      "retest":{"status":"UNPERFORMED","coveredRoutes":[],"evidenceIds":[],"observedAt":null},
+      "acceptance":"For R02 entry, record keyboard reachability, accessible names and visible focus. Request a separate generic synthetic radio-control fixture for selected-state semantics and target-size evidence; do not administer a screener. The sample's 44 CSS-pixel target is a design target, not a universal WCAG rule. Record browser, viewport and assistive technology used or UNTESTED.",
+      "remaining":"No manual screen-reader, keyboard or formal conformance assessment has occurred. Automated checks alone cannot certify conformance."
+    }
+  ],
+  "rightsPermission": "UNRESOLVED",
+  "releaseStatus": "NOT_ASSESSED_NO_AUTHORITY",
+  "unknowns": ["current runtime", "observation dates", "rights permission", "qualified clinical review", "formal accessibility conformance", "customer terms", "payment method", "delivery and retention approval", "capacity", "demand", "revenue", "total cost"],
+  "decisionRules": {
+    "missingOrStaleEvidence":"Observation time/current applicability UNKNOWN; recheck exact source revision. Preparation time is not observation time.",
+    "partialCoverage":"Uncovered required routes remain unverified; no full closure. Broken or duplicate references require correction before accepting a handoff claim.",
+    "scopeChange":"A sixth route, second family, remediation or deployment is outside this fixed review. Isolate a proposal; no implicit acceptance, action or billing.",
+    "commercialGate":"Private sample completion permits no sale or launch. Accepted scope, terms, payment/delivery arrangements and relevant specialist/owner decisions remain separate."
+  }
+}

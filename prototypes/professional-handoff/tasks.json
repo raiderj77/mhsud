@@ -1,0 +1,16 @@
+{
+  "taskId": "MCT-PRIVATE-HANDOFF-20261011",
+  "freezeEvidence": "Questions and independent oracle were written and hashed before implementation. The initial guessed 11:03 timestamp was invalid (later than comparator start 11:01:10) and removed; question content is unchanged. Use tool ordering and recorded hashes, not a guessed timestamp.",
+  "questions": [
+    {"id":"T01","question":"Identify the precise scope and responsible handoff roles. State what is missing."},
+    {"id":"T02","question":"Choose what must be addressed first and retain all four findings."},
+    {"id":"T03","question":"What does the evidence actually prove? Distinguish invented assumptions from observations."},
+    {"id":"T04","question":"Does a validation paper permit public electronic administration? What is the next action?"},
+    {"id":"T05","question":"Was diagnostic result wording personally observed? Specify a safe next verification step."},
+    {"id":"T06","question":"Specify bounded accessibility follow-up without asserting formal conformance."},
+    {"id":"T07","question":"Does a recommended action close a finding? How do partial route coverage or dangling references affect acceptance?"},
+    {"id":"T08","question":"How should missing or stale evidence dates and source revisions be handled?"},
+    {"id":"T09","question":"Handle a sixth route, a second instrument family, or requested remediation/deployment."},
+    {"id":"T10","question":"Does completion of this private sample permit a sale or launch? Identify remaining decisions."}
+  ]
+}

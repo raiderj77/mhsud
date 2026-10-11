@@ -1,0 +1,15 @@
+{
+  "provenance": "Independent read-only mct_package_gap review before implementation; human customer decisions, not software release decisions.",
+  "cases": [
+    {"id":"T01","expected":"Five fictional routes maximum, one unnamed family, entry states only; roles named per action without granting credentials or authority.","baseline":"Scope stated; route IDs and action-role mapping absent."},
+    {"id":"T02","expected":"Privacy P0, rights and clinical limits P1, accessibility P2; four retained findings.","baseline":"Answerable."},
+    {"id":"T03","expected":"All findings are invented scenario assumptions. Provenance references are not runtime evidence, permission or retests.","baseline":"Fictional label present; verified fictional evidence wording ambiguous."},
+    {"id":"T04","expected":"Permission unresolved. Information-only handling; authoritative rights-holder decision, no questionnaire reproduction.","baseline":"Answerable."},
+    {"id":"T05","expected":"No personal observation; inherited narrative only. Obtain a non-sensitive copy artifact and qualified review, no assessment/result administration.","baseline":"Result assertion conflicts with entry-only scope if read as observed."},
+    {"id":"T06","expected":"Evidence for semantics, selected state, focus and usable targets; sample 44px target is a design target, not universal WCAG certification; use a generic synthetic control fixture.","baseline":"Recommendations present; evidence/role links absent."},
+    {"id":"T07","expected":"No closure; four unresolved, retests unperformed. Partial coverage leaves uncovered routes unverified; missing references prevent accepting the handoff claim.","baseline":"No retest records; QA described in runbook."},
+    {"id":"T08","expected":"Observation time/current applicability UNKNOWN when missing or stale. Preparation date is not observation time. Recheck changed revisions.","baseline":"No dated observation records; invent none."},
+    {"id":"T09","expected":"Out of scope. Isolate proposed scope change; no implicit acceptance, remediation, deployment or billing.","baseline":"Answerable."},
+    {"id":"T10","expected":"No sale/launch authority. Accepted scope, customer terms/payment/delivery and relevant specialist/owner decisions remain separate. No invoice/deploy/certification/revenue claim.","baseline":"Answerable."}
+  ]
+}
