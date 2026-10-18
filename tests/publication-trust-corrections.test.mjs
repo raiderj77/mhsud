@@ -45,3 +45,14 @@ test('maternal mental-health guidance uses the current ACOG treatment source', a
   assert.match(source, /ACOG&apos;s treatment and management guideline/);
   assert.doesNotMatch(source, /href="https:\/\/www\.acog\.org\/programs\/perinatal-mental-health\/assessment-and-treatment-of-perinatal-mental-health-conditions"/);
 });
+
+test('K6 rights sources use the verified archived National Comorbidity Survey page', async () => {
+  for (const path of [
+    'src/lib/toolClassifications.ts',
+    'src/app/for-professionals/screening-instrument-rights-guide/page.tsx',
+  ]) {
+    const source = await read(path);
+    assert.match(source, /https:\/\/web\.archive\.org\/web\/20260616094556\/https:\/\/www\.hcp\.med\.harvard\.edu\/ncs\/k6_scales\.php/);
+    assert.doesNotMatch(source, /["']https:\/\/www\.hcp\.med\.harvard\.edu\/ncs\/k6_scales\.php["']/);
+  }
+});
