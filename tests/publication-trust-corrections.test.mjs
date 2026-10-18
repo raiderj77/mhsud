@@ -37,3 +37,11 @@ test('trust corrections never fabricate a new clinical review or imply free mean
     for (const action of ['tel:988', 'sms:988', 'tel:911', 'tel:18006624357', '/crisis-resources']) assert.ok(source.includes(action));
   }
 });
+
+test('maternal mental-health guidance uses the current ACOG treatment source', async () => {
+  const source = await read('src/app/maternal-mental-health/page.tsx');
+
+  assert.match(source, /href="https:\/\/www\.acog\.org\/clinical\/guidance\/clinical-practice-guideline\/2023\/06\/treatment-and-management-of-mental-health-conditions-during-pregnancy-and-postpartum"/);
+  assert.match(source, /ACOG&apos;s treatment and management guideline/);
+  assert.doesNotMatch(source, /href="https:\/\/www\.acog\.org\/programs\/perinatal-mental-health\/assessment-and-treatment-of-perinatal-mental-health-conditions"/);
+});
