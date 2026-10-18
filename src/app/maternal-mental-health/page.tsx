@@ -282,7 +282,7 @@ export default function MaternalMentalHealthPage() {
               <div className="border-l-4 border-sky-400 pl-4">
                 <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-1">Medication</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Medication decisions during pregnancy and breastfeeding are individualized. Benefits, untreated-illness risks, pregnancy stage, feeding plans, prior response, and the specific medicine all matter. Do not start, stop, or change medication without guidance from your obstetric and prescribing clinicians. See <a href="https://www.acog.org/programs/perinatal-mental-health/assessment-and-treatment-of-perinatal-mental-health-conditions" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG&apos;s assessment and treatment resources</a>.
+                  Medication decisions during pregnancy and breastfeeding are individualized. Benefits, untreated-illness risks, pregnancy stage, feeding plans, prior response, and the specific medicine all matter. Do not start, stop, or change medication without guidance from your obstetric and prescribing clinicians. See <a href="https://www.acog.org/clinical/guidance/clinical-practice-guideline/2023/06/treatment-and-management-of-mental-health-conditions-during-pregnancy-and-postpartum" className="text-sky-600 dark:text-sky-400 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">ACOG&apos;s treatment and management guideline</a>.
                 </p>
               </div>
               <div className="border-l-4 border-sky-400 pl-4">
