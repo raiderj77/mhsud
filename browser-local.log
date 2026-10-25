@@ -1,0 +1,31 @@
+
+> mh-tools@0.1.0 test:browser
+> playwright test --grep-invert synthetic screener choices
+
+
+[WebServer] (node:24072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:16596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 13 tests using 1 worker
+
+(node:6552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/13] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /who-assist-substance-screening
+[2/13] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /crisis-resources
+[3/13] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /gad-7-anxiety-test
+[4/13] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /safety-plan
+[5/13] tests\browser\privacy-accessibility.spec.ts:34:1 › rights-gated WHO entry cannot administer or score an assessment
+[6/13] tests\browser\privacy-accessibility.spec.ts:76:1 › GPC suppresses neutral analytics and sensitive navigation removes URL state
+[7/13] tests\browser\privacy-accessibility.spec.ts:94:1 › offline crisis fallback remains available without a network
+[8/13] tests\browser\privacy-accessibility.spec.ts:104:1 › a fictional local plan survives reload and confirmed deletion clears its entries
+[9/13] tests\browser\privacy-accessibility.spec.ts:122:1 › denied browser storage keeps the crisis plan usable with an explicit warning
+[10/13] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /methodology, 390
+[11/13] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /clinical-evidence, 390
+[12/13] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /methodology, 1440
+[13/13] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /clinical-evidence, 1440
+  13 passed (27.2s)

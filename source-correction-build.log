@@ -1,0 +1,433 @@
+
+> mh-tools@0.1.0 prebuild
+> npm test && npm run lint:predeploy && npm run lint:content
+
+
+> mh-tools@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ Google analytics and consent runtimes remain absent (5.035ms)
+✔ GPC and unknown browser state block aggregate analytics (32.3443ms)
+✔ public-to-sensitive navigation disposes of the aggregate runtime (0.8179ms)
+✔ hashed Vercel loader removal and clean-document decisions are executable (13.4787ms)
+✔ aggregate event filter strips URL details and rejects excluded routes and GPC (10.2709ms)
+✔ definite undersized assessment answers enforce 44px height and width (4.9255ms)
+✔ the maintained Athens information page preserves the evidence and permission boundary (3.5741ms)
+✔ the Athens route remains information-only rather than an available assessment (0.786ms)
+✔ WHO item-level AUDIT guidance raises support by exactly one level (0.5448ms)
+✔ lower item responses preserve the total-score support level (0.1016ms)
+✔ withdrawal safety guidance is not limited to a total score of 20 (0.1265ms)
+✔ approved addiction articles match the recorded review and authorized source correction (0.9092ms)
+✔ four distinct awareness guides have resolvable citations and related routes (0.3019ms)
+✔ observance dates and uncertainty remain explicit (0.266ms)
+✔ only the two explicitly approved addiction articles are released (4.8184ms)
+✔ all awareness routes are isolated from analytics, referrers and service-worker page caches (2.088ms)
+✔ new-article guidance keeps alcohol and drug scope distinct from future LCSW review (0.9442ms)
+✔ articles preserve direct crisis actions without forms or commercial CTAs (0.9139ms)
+✔ each original illustration is local, optimized, and described (4.0045ms)
+✔ recommended reading is a small, disclosed, source-linked list (4.5905ms)
+✔ affiliate links stay separate from tracking and crisis content (0.9359ms)
+✔ recommended reading is crawlable from maintained public surfaces (1.7499ms)
+✔ CBT thought record matches its search promise without creating a clinical result (4.1055ms)
+✔ sensitive thought-record entry is protected before input and storage is opt-in (1.3776ms)
+✔ CBT thought record retains reviewer, primary sources, crisis actions, and summary focus (1.5017ms)
+✔ cognitive-distortion page matches its search promise without clinical overreach (4.5981ms)
+✔ cognitive-distortion free text is protected before entry and never monetized (1.3356ms)
+✔ cognitive-distortion page retains trust, crisis, privacy, and primary-source signals (1.1952ms)
+✔ obsolete analytics consent dialog is removed (4.2667ms)
+✔ browser privacy controls remain keyboard-accessible links (1.5452ms)
+✔ the footer omits unrelated portfolio backlinks (3.7738ms)
+✔ homepage and footer identify U.S. crisis services and international options (5.8055ms)
+✔ global crisis banner offers direct, body-free mobile contact actions (0.7656ms)
+✔ crisis resource cards preserve contact details and expose verified action links (1.8422ms)
+✔ Veterans Crisis Line copy uses the current 988 routing (1.4029ms)
+✔ entry audit accepts a compliant information page (5.4661ms)
+✔ entry audit rejects misleading previous false positives (4.7376ms)
+✔ crawler refuses query strings, external hosts, APIs, and result journeys (0.2567ms)
+✔ homepage canonical treats an empty path and slash as equivalent (0.488ms)
+✔ audit origin requires exact parsed equality and rejects lookalike URLs (0.2061ms)
+✔ homepage and shared navigation expose four focused paths (4.7901ms)
+✔ canonical production URLs use the apex HTTPS domain (1.7564ms)
+✔ HALT rating controls reflow without fixed endpoint columns and preserve radio semantics (3.5631ms)
+✔ HALT sharing uses the centralized static-name and canonical-link boundary (0.7901ms)
+✔ HALT remains a sourced reflection and never emits an invented relapse-risk score (3.1954ms)
+✔ interactive local-storage tools render their H1 on the server (7.0512ms)
+✔ embedded assessments do not introduce a second H1 (2.3125ms)
+✔ gated assessment entry pages expose one server H1 throughout the journey (2.9242ms)
+✔ homepage presents one consistent, non-generic MindCheck identity (4.3149ms)
+✔ homepage answer block preserves strict YMYL and privacy boundaries (1.0175ms)
+✔ standard drinks print date is populated only after hydration (0.5427ms)
+✔ install prompt has no obsolete analytics-consent dependency (0.5629ms)
+✔ install promotion is limited to the neutral home route (0.1031ms)
+✔ only an explicit accessible Install action opens the native prompt (0.1275ms)
+✔ DASS-21 remains an indexable information page without public administration or scoring (4.1643ms)
+✔ CES-D matches the public-domain SAMHSA form and avoids unsupported severity tiers (1.8678ms)
+✔ legacy blog manifest covers the exact 115-route retirement set (1.6761ms)
+✔ unsupported youth and DAST routes remain honest not-found responses (1.1551ms)
+✔ only explicitly equivalent legacy articles redirect (0.6396ms)
+✔ redirect graph is one hop and every legacy destination is maintained (2.7494ms)
+✔ retired blog source and compatibility shim stay deleted (0.1871ms)
+✔ redirected non-blog wrappers retain no latent page implementation (1.1743ms)
+✔ the public footer states the current advertising state accurately (3.1762ms)
+✔ application source contains no GA4 or display-ad runtime (65.9325ms)
+✔ CSP drops Google and ad origins while preserving security protections (0.383ms)
+✔ public disclosures state no Google Analytics or display ads and preserve ordinary-data boundaries (2.6526ms)
+✔ Vercel aggregate analytics stays allowlisted, URL-minimized, and GPC-blocked (0.8659ms)
+✔ active operating guidance keeps analytics and advertising boundaries explicit (0.7697ms)
+✔ review branch does not change main deployment behavior (0.5595ms)
+✔ dormant therapy affiliate and email subscription services are removed (7.2645ms)
+✔ aggregate navigation keeps its independent positive allowlist (0.8807ms)
+✔ PHQ-4 choices expose complete keyboard radio behavior, 44px targets, and announced results (4.6047ms)
+✔ PHQ-4 result language keeps screening thresholds non-diagnostic (1.0255ms)
+✔ tracked public source contains no absolute confidentiality or transmission promises (210.5085ms)
+✔ primary privacy surfaces state the complete local-processing boundary (1.0757ms)
+✔ homepage gives the concise boundary without implying invisible page requests (0.649ms)
+✔ privacy policy distinguishes local processing from user-created exports (6.651ms)
+✔ obsolete GA acquisition event is removed (4.5812ms)
+✔ clean navigation to excluded routes remains enforced (0.6735ms)
+✔ cookie-free aggregate analytics is fail-closed and strips URL detail (6.4168ms)
+✔ privacy notices describe the aggregate measurement boundary (1.2906ms)
+✔ dormant email-capture and therapy-affiliate infrastructure stays removed (1.057ms)
+✔ browser-local health records are disclosed where they are stored (6.3611ms)
+✔ consumer-health-data notice discloses limited request data and service providers (1.143ms)
+✔ homepage describes its privacy boundary without calling tools confidential (0.6566ms)
+✔ unused public indexing proxy and false search action stay removed (0.6133ms)
+✔ IndexNow retains one canonical public verification key and no fake secret knob (1.4407ms)
+✔ dead trust-marketing hero cannot be accidentally revived (0.2193ms)
+✔ publisher and named reviewer identities remain separate, public, and private by scope (73.8588ms)
+✔ the youth CRAFFT information page contains no affiliate or assessment flow (1.5956ms)
+✔ Google Analytics, display advertising, and Clarity runtimes are absent (1.4173ms)
+✔ assessment funnel events are compatibility no-ops with no analytics transport (1.2847ms)
+✔ the previously missing result pages offer local browser printing (0.685ms)
+✔ retired content stays out of search and internal discovery (1.9962ms)
+✔ AI discovery files use maintained canonical URLs and scoped clinical claims (1.2516ms)
+✔ Google consent and advertising runtimes are removed rather than conditionally enabled (0.2225ms)
+✔ no authorized display-ad seller declaration is published (0.1359ms)
+✔ public copy avoids absolute privacy and anonymity promises (62.5138ms)
+✔ the sensitive share-client inventory is explicit and complete (41.1111ms)
+✔ all centralized clients share only their static tool identity and canonical path (19.7613ms)
+✔ the sharing boundary emits only a tool name and clean canonical URL (2.2179ms)
+✔ HALT remains covered by its dedicated privacy and mobile regression (1.2853ms)
+✔ professional pages use a no-health-data service boundary (6.1278ms)
+✔ the founding review offer is bounded, priced, and honest (2.094ms)
+✔ the internal review runbook preserves the fixed no-health-data operating boundary (0.9877ms)
+✔ the first-sale record requires hosted invoicing and preserves owner-side business gates (0.8876ms)
+✔ the professional sales ledger contains business metrics and no health-data fields (0.9339ms)
+✔ the free checklist cites primary sources and contains no instrument mechanics (0.7431ms)
+✔ the public instrument-rights guide is source-linked and reproduces no instrument mechanics (0.9937ms)
+✔ professional discovery is limited to general trust and navigation surfaces (1.3386ms)
+✔ security.txt publishes a canonical, dated, web-only contact path (1.2044ms)
+✔ axe and the browser runner resolve the same pinned Playwright API (12.4783ms)
+✔ the global banner separates treatment referral from crisis counseling (3.473ms)
+✔ evidence directory preserves the study population and conditional reuse sources (2.5939ms)
+✔ trust corrections never fabricate a new clinical review or imply free means noncommercial (4.1766ms)
+✔ one registration path silently activates updates without reloading active work (55.6039ms)
+✔ install and activation migrate every prior managed cache and sanitize current caches (23.5311ms)
+✔ offline sensitive navigation receives only the static crisis-safe fallback (11.4424ms)
+✔ sensitive subresources fail closed and same-origin analytics never enter Cache Storage (3.3976ms)
+✔ install promotion is home-only and cannot render during sensitive work (0.6432ms)
+✔ manifest and offline artifact are truthful, installable, and self-contained (5.5849ms)
+✔ safety-plan storage recovery and destructive reset fail safely (3.743ms)
+✔ all 14 canonical routes are source-level indexable information pages (24.0484ms)
+✔ all 14 routes contain the strict YMYL information-only safeguards (14.4945ms)
+✔ all 14 routes exclude questionnaire and result mechanics (14.3697ms)
+✔ the shared reviewer surface publishes a bounded name and credential (2.4881ms)
+✔ group B canonical routes are server-rendered, indexable information pages (5.649ms)
+✔ group B pages preserve rights, privacy, crisis, and non-equivalence safeguards (3.7161ms)
+✔ group B pages do not expose instrument mechanics or protected clients (4.5522ms)
+✔ group C rights-gated routes are server-rendered, indexable information pages (8.516ms)
+✔ group C questionnaire and scoring clients stay removed (2.4513ms)
+✔ shared information surface contains the privacy, diagnostic, and crisis boundaries (0.7296ms)
+✔ legacy senior-loneliness wrapper no longer embeds the protected client (0.5086ms)
+✔ group A routes remain indexable server-rendered information pages (7.0401ms)
+✔ group A questionnaire clients and wrapper page implementations are removed (0.7233ms)
+✔ group A legacy URLs use exact permanent canonical redirects (2.5373ms)
+✔ only the exact former built-in Veterans contact migrates, once (78.7644ms)
+✔ similar or customized Veterans contacts remain unchanged (21.4267ms)
+✔ more than 50 valid entries survive load and JSON save (14.4708ms)
+✔ malformed storage recovers safely without showing a migration (12.109ms)
+✔ denied storage and destructive-reset cancellation fail safely (9.69ms)
+✔ the one-time migration notice is an accessible status separate from recovery (2.9246ms)
+✔ urge-surfing copy does not promise a fixed craving timeline or neurological result (1.8246ms)
+✔ urge-surfing answers and visible guidance cite current federal sources (0.1962ms)
+✔ urge-surfing reflection prompts do not assume a craving peaks or declines (0.2645ms)
+✔ DBT physical skills use medically bounded, low-risk examples (0.8982ms)
+✔ tool privacy copy distinguishes private inputs from excluded page analytics (0.2609ms)
+✔ sensitive routes receive no-store and no-referrer response headers (7.5765ms)
+✔ topical routes bypass tracking, advertising, affiliates, and assessment events (4.1626ms)
+✔ interactive health tools without generic screening words stay sensitive (3.336ms)
+✔ obsolete Google consent state cannot reactivate optional tracking (1.408ms)
+✔ service worker never caches sensitive routes or optional Google services (1.2945ms)
+✔ service worker privacy updates bypass stale script caches and activate promptly (0.9863ms)
+✔ history restores reset state, result sharing is disabled, and printing requires a warning (0.8438ms)
+✔ screening consent has a stable accessible selector for synthetic monitoring (0.9238ms)
+✔ page source contains no crawler-only screen-reader sections (61.5706ms)
+✔ quick answers are visible and use description-list semantics (2.0102ms)
+✔ PHQ-9 score bands do not prescribe treatment from a score (3.369ms)
+✔ screening hub provides an answer-first, evidence-linked tool chooser (1.2566ms)
+✔ consumer-health notice and entity metadata are discoverable without duplicate homepage entities (0.9933ms)
+✔ shared navigation exposes disclosure state, names search fields, and restores focus (8.8302ms)
+✔ shared shell preserves a keyboard skip target, visible focus, and reduced-motion support (1.9608ms)
+✔ date-only review metadata renders as the same calendar date in every time zone (0.7397ms)
+✔ the shared disclaimer gate returns focus and scroll to the first questionnaire answer (0.7543ms)
+✔ all maintained interactive assessment routes require the shared educational-use gate (8.9431ms)
+✔ offline UI states the sensitive-route boundary without promising cached screeners or results (1.5571ms)
+✔ footer navigation exposes the consumer-health notice and usable touch targets (1.1771ms)
+✔ homepage tool filters use button state rather than incomplete tab semantics (0.7682ms)
+✔ the persistent clinical disclaimer is a static landmark, not an assertive alert (0.6627ms)
+✔ reflection disclosure relies on native button keyboard behavior and hides collapsed content (0.6342ms)
+✔ the central tool registry has the required classification fields (5.7904ms)
+✔ every maintained navigation tool has a registry record and one visible disclosure (2.7786ms)
+✔ classification disclosure is not a monetization or measurement surface (1.077ms)
+✔ trigger worksheet matches its search promise without creating a clinical result (4.6332ms)
+✔ custom trigger entry is protected before input and the journey is not monetized (1.5244ms)
+✔ trigger worksheet retains reviewer, official sources, crisis actions, and accessible summary focus (1.1888ms)
+✔ the root layout is the only main landmark (62.1844ms)
+✔ the recovery savings calculator names every mode-specific field (0.5939ms)
+✔ shared light-theme secondary text uses accessible contrast overrides (0.4571ms)
+✔ quick-answer review dates keep readable contrast in both themes (0.4173ms)
+✔ scrollable tables are keyboard-focusable regions (0.7643ms)
+✔ clinical evidence description-list groups are direct children (0.576ms)
+✔ public source does not link to retired or nonexistent tool routes (77.9985ms)
+✔ doctor-guide links use the maintained canonical route (65.1103ms)
+✔ maintained source does not link into the retired blog namespace (90.2603ms)
+✔ primary PHQ-9 and GAD-7 assessments appear before long clinical content (3.5182ms)
+✔ long-form assessment pages provide an early jump to the tool (2.0804ms)
+✔ multi-step worksheet fields keep explicit accessible names (3.607ms)
+✔ tool cards use a singular question label when the count is one (0.5174ms)
+✔ work stress content uses relevant primary sources and no false study citation (9.0865ms)
+✔ work stress total has no invented clinical bands or monetization surface (3.6959ms)
+✔ worry-time scheduler presents mixed evidence across the whole surface (4.6179ms)
+✔ privacy surfaces distinguish browser storage from automatic transmission and user copies (3.2344ms)
+✔ public reviewer identity is exact, scoped, and centrally represented (7.5508ms)
+✔ health-page schema cannot replace the shared reviewer with a thin inline Person (49.1923ms)
+✔ public application content excludes unrelated private identity details (56.778ms)
+✔ screening hub exposes only maintained canonical routes and every maintained tool (23.6158ms)
+✔ maintained application sources do not link back into the quarantine (79.2068ms)
+✔ maintained YMYL routes expose the named reviewer in visible page composition (48.364ms)
+✔ interactive YMYL tools expose the reviewer before the gated client experience (3.6026ms)
+✔ custom burnout pages disclose original educational scoring without clinical validation claims (2.1047ms)
+✔ homepage distinguishes published screeners from original tools and states storage accurately (1.1884ms)
+✔ grief route identifies its PHQ-9 boundary instead of claiming to assess prolonged grief (0.8126ms)
+✔ published-instrument evidence links to every instrument advertised by the hub map (1.0753ms)
+ℹ tests 204
+ℹ suites 0
+ℹ pass 204
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16446.7935
+
+> mh-tools@0.1.0 lint:predeploy
+> node scripts/predeploy-check.js
+
+
+🔍 No display-ad or GA runtime
+  ✅ Ad seller files and component absent
+  ✅ No GA4/AdSense runtime identifiers found
+
+🔍 robots.txt
+  ✅ OAI-SearchBot rule present
+  ✅ ChatGPT-User rule present
+  ✅ Claude-SearchBot rule present
+  ✅ PerplexityBot rule present
+  ✅ Applebot-Extended rule present
+  ✅ DuckAssistBot rule present
+  ✅ Amazonbot rule present
+  ✅ Bytespider blocked
+  ✅ Meta-ExternalAgent blocked
+  ✅ Bingbot Crawl-delay: 10
+  ✅ Sitemap reference present
+
+🔍 llms.txt
+  ✅ llms.txt present and has content
+
+🔍 Legal pages
+  ✅ /privacy page exists
+  ✅ /terms page exists
+  ✅ /consumer-health-data-privacy page exists
+  ✅ /cookies page exists
+
+🔍 Focused footer links
+  ✅ No unrelated portfolio link to fibertools.app
+  ✅ No unrelated portfolio link to flipmycase.com
+  ✅ No unrelated portfolio link to contractextract.com
+  ✅ No unrelated portfolio link to medicalbillreader.com
+  ✅ No unrelated portfolio link to creatorrevenuecalculator.com
+  ✅ No unrelated portfolio link to taxbreaktools.com
+  ✅ No unrelated portfolio link to 524tracker.com
+  ✅ No unrelated portfolio link to aibusinessalternative.com
+  ✅ Focused footer route /screening-tools
+  ✅ Focused footer route /for-professionals
+  ✅ Focused footer route /clinical-evidence
+  ✅ Focused footer route /methodology
+  ✅ Focused footer route /crisis-resources
+  ✅ Focused footer route /privacy
+
+🔍 Security headers
+  ✅ Strict-Transport-Security configured
+  ✅ X-Content-Type-Options configured
+  ✅ X-Frame-Options configured
+  ✅ Referrer-Policy configured
+  ✅ Permissions-Policy configured
+  ✅ Content-Security-Policy configured
+
+🔍 Dynamic dateModified guard
+  ✅ No dynamic dateModified found
+
+🔍 Maintained external references
+  ✅ Retired external destinations are absent
+
+==================================================
+
+🎉 All predeploy checks passed.
+
+
+> mh-tools@0.1.0 lint:content
+> node scripts/content-lint.js
+
+🧠 MindCheck Tools content lint
+
+  Scanning 0 content files and 178 source files...
+
+
+==================================================
+
+🎉 All content checks passed.
+
+
+> mh-tools@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.24 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 229ms
+ ✓ Compiled successfully in 6.9s
+   Linting and checking validity of types ...
+   Collecting page data ...
+ ⚠ Using edge runtime on a page currently disables static generation for that page
+   Generating static pages (0/98) ...
+   Generating static pages (24/98) 
+   Generating static pages (48/98) 
+   Generating static pages (73/98) 
+ ✓ Generating static pages (98/98)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                   Size  First Load JS
+┌ ○ /                                                      2.62 kB         151 kB
+├ ○ /_not-found                                                0 B         148 kB
+├ ƒ /.well-known/llms.txt                                      0 B            0 B
+├ ƒ /.well-known/security.txt                                  0 B            0 B
+├ ○ /about                                                     0 B         148 kB
+├ ○ /about/jason-ramirez                                       0 B         148 kB
+├ ○ /accessibility                                             0 B         148 kB
+├ ○ /ace-questionnaire                                         0 B         148 kB
+├ ○ /aq-10-autism-screening                                    0 B         148 kB
+├ ○ /asrs-adhd-screening                                   12.5 kB         178 kB
+├ ○ /asrs-score-interpretation                                 0 B         148 kB
+├ ○ /athens-insomnia-scale                                     0 B         148 kB
+├ ○ /attachment-style-quiz                                     0 B         148 kB
+├ ○ /audit-alcohol-test                                      12 kB         178 kB
+├ ○ /audit-c-alcohol-screen                                10.8 kB         177 kB
+├ ○ /audit-c-score-interpretation                              0 B         148 kB
+├ ○ /audit-score-interpretation                                0 B         148 kB
+├ ○ /audit-vs-audit-c                                          0 B         148 kB
+├ ● /awareness/[slug]                                          0 B         154 kB
+├   ├ /awareness/fentanyl-prevention-awareness-day
+├   └ /awareness/overdose-awareness-month-day
+├ ○ /awareness/august                                          0 B         154 kB
+├ ○ /bac-calculator                                        11.1 kB         177 kB
+├ ○ /big-five-personality-test                               13 kB         179 kB
+├ ○ /box-breathing-exercise                                7.52 kB         173 kB
+├ ○ /brief-resilience-scale                                    0 B         148 kB
+├ ○ /burnout-assessment-tool                                   0 B         158 kB
+├ ○ /cage-aid-substance-abuse-screening                        0 B         148 kB
+├ ○ /caregiver-burnout-assessment                              0 B         158 kB
+├ ○ /cbt-thought-record                                    9.22 kB         175 kB
+├ ○ /ces-d-depression-scale                                10.7 kB         177 kB
+├ ○ /clinical-evidence                                         0 B         148 kB
+├ ○ /cognitive-distortion-identifier                       8.76 kB         175 kB
+├ ○ /compassion-fatigue-test                                   0 B         158 kB
+├ ○ /consumer-health-data-privacy                              0 B         148 kB
+├ ○ /contact                                                   0 B         148 kB
+├ ○ /cookies                                                   0 B         148 kB
+├ ○ /coping-skills-randomizer                              11.3 kB         177 kB
+├ ○ /crafft-substance-screening                                0 B         148 kB
+├ ○ /crisis-resources                                          0 B         148 kB
+├ ○ /daily-recovery-check-in                               7.12 kB         173 kB
+├ ○ /dass-21-depression-anxiety-stress                         0 B         148 kB
+├ ○ /dbt-crisis-skills                                     10.7 kB         177 kB
+├ ○ /disclaimer                                                0 B         148 kB
+├ ○ /family-impact-assessment                              12.2 kB         178 kB
+├ ○ /five-senses-grounding                                 7.77 kB         174 kB
+├ ○ /for-professionals                                         0 B         148 kB
+├ ○ /for-professionals/sample-readiness-review               271 B         148 kB
+├ ○ /for-professionals/screening-implementation-checklist    272 B         148 kB
+├ ○ /for-professionals/screening-instrument-rights-guide       0 B         148 kB
+├ ○ /gad-7-anxiety-test                                    11.1 kB         177 kB
+├ ○ /gad-7-score-interpretation                                0 B         148 kB
+├ ○ /grief-assessment                                          0 B         178 kB
+├ ○ /halt-check-in                                         7.17 kB         173 kB
+├ ○ /health-recovery-timeline                              7.79 kB         174 kB
+├ ○ /holmes-rahe-stress-inventory                              0 B         148 kB
+├ ○ /how-to-talk-to-your-doctor-about-mental-health            0 B         148 kB
+├ ○ /k6-distress-scale                                     10.5 kB         176 kB
+├ ƒ /llms-full.txt                                             0 B            0 B
+├ ○ /maternal-mental-health                                    0 B         148 kB
+├ ○ /mental-load-calculator                                11.6 kB         177 kB
+├ ○ /methodology                                               0 B         148 kB
+├ ○ /money-saved-recovery-calculator                       9.65 kB         176 kB
+├ ○ /msi-bpd-screening                                         0 B         148 kB
+├ ƒ /offline                                                   0 B         148 kB
+├ ƒ /opengraph-image                                           0 B            0 B
+├ ○ /pc-ptsd-5-screening                                   11.2 kB         177 kB
+├ ○ /pcl-5-ptsd-screening                                  13.6 kB         180 kB
+├ ○ /pcl-5-score-interpretation                                0 B         148 kB
+├ ○ /phq-2-to-phq-9-when-to-escalate                           0 B         148 kB
+├ ○ /phq-4-anxiety-depression-screen                       5.46 kB         154 kB
+├ ○ /phq-9-depression-test                                     0 B         178 kB
+├ ○ /phq-9-score-interpretation                                0 B         148 kB
+├ ○ /phq-9-vs-gad-7                                            0 B         148 kB
+├ ○ /postpartum-depression-test                                0 B         178 kB
+├ ○ /privacy                                                   0 B         148 kB
+├ ○ /readiness-to-change                                   12.6 kB         179 kB
+├ ○ /recommended-reading                                       0 B         148 kB
+├ ○ /relapse-prevention-plan                               7.97 kB         174 kB
+├ ○ /rosenberg-self-esteem-scale                           10.7 kB         177 kB
+├ ○ /safety-plan                                           11.3 kB         177 kB
+├ ○ /scoff-eating-disorder-screening                           0 B         148 kB
+├ ○ /screening-tools                                           0 B         148 kB
+├ ○ /sitemap.xml                                               0 B            0 B
+├ ○ /sleep-and-mood-check                                  10.4 kB         176 kB
+├ ○ /sobriety-calculator                                   10.5 kB         176 kB
+├ ○ /spin-social-anxiety-test                                  0 B         148 kB
+├ ○ /standard-drinks-calculator                            6.76 kB         173 kB
+├ ○ /terms                                                     0 B         148 kB
+├ ○ /treatment-cost-estimator                              8.49 kB         174 kB
+├ ○ /trigger-identification-worksheet                      8.84 kB         175 kB
+├ ○ /ucla-loneliness-scale                                     0 B         148 kB
+├ ○ /urge-surfing-timer                                    5.97 kB         172 kB
+├ ○ /values-card-sort                                      9.59 kB         175 kB
+├ ○ /who-5-wellbeing-index                                 10.5 kB         176 kB
+├ ○ /who-assist-substance-screening                            0 B         148 kB
+├ ○ /withdrawal-timeline                                   10.5 kB         176 kB
+├ ○ /work-stress-check                                     8.79 kB         175 kB
+└ ○ /worry-time-scheduler                                  8.09 kB         174 kB
++ First Load JS shared by all                               165 kB
+  ├ chunks/424c4e7099e23325.js                             28.6 kB
+  ├ chunks/4bd37aa19022a91f.js                             19.9 kB
+  └ chunks/7eedea31edc1acf7.js                             59.6 kB
+  ├ chunks/a24f84baa06f1e50.js                             17.5 kB
+  ├ chunks/37128b84a8743fd7.css                            16.2 kB
+  └ other shared chunks (total)                            23.6 kB
+
+
+ƒ Middleware                                               39.8 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

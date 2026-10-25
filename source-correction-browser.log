@@ -1,0 +1,35 @@
+
+> mh-tools@0.1.0 test:browser
+> playwright test --grep-invert synthetic screener choices
+
+
+[WebServer] (node:17388) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:24900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 17 tests using 1 worker
+
+
+(node:27368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/17] tests\browser\overdose-source-correction.spec.ts:10:5 › overdose source correction preserves privacy and review scope: 390, GPC true
+[2/17] tests\browser\overdose-source-correction.spec.ts:10:5 › overdose source correction preserves privacy and review scope: 390, GPC false
+[3/17] tests\browser\overdose-source-correction.spec.ts:10:5 › overdose source correction preserves privacy and review scope: 1440, GPC true
+[4/17] tests\browser\overdose-source-correction.spec.ts:10:5 › overdose source correction preserves privacy and review scope: 1440, GPC false
+[5/17] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /who-assist-substance-screening
+[6/17] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /crisis-resources
+[7/17] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /gad-7-anxiety-test
+[8/17] tests\browser\privacy-accessibility.spec.ts:18:3 › mobile accessibility and sensitive headers: /safety-plan
+[9/17] tests\browser\privacy-accessibility.spec.ts:34:1 › rights-gated WHO entry cannot administer or score an assessment
+[10/17] tests\browser\privacy-accessibility.spec.ts:76:1 › GPC suppresses neutral analytics and sensitive navigation removes URL state
+[11/17] tests\browser\privacy-accessibility.spec.ts:94:1 › offline crisis fallback remains available without a network
+[12/17] tests\browser\privacy-accessibility.spec.ts:104:1 › a fictional local plan survives reload and confirmed deletion clears its entries
+[13/17] tests\browser\privacy-accessibility.spec.ts:122:1 › denied browser storage keeps the crisis plan usable with an explicit warning
+[14/17] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /methodology, 390
+[15/17] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /clinical-evidence, 390
+[16/17] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /methodology, 1440
+[17/17] tests\browser\publication-trust.spec.ts:12:5 › public trust corrections are readable and accessible: /clinical-evidence, 1440
+  17 passed (27.2s)
