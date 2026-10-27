@@ -60,6 +60,14 @@ const FAQ_DATA: InformationFaq[] = [
     answer:
       "No. Resilience is context-dependent, and a self-report measure cannot diagnose a condition or predict how an individual will respond to future adversity.",
   },
+  {
+    question: "How are resilience resources different from perceived recovery?",
+    answer: "Resources are the supports and circumstances someone can draw on, such as dependable relationships, time, practical help, or a stable place to rest. Perceived recovery concerns how someone understands their ability to recover after stress. These are related topics, but they are not interchangeable. Having support does not mean a difficult experience will feel easy, and a person's account of coping does not reveal every resource available to them.",
+  },
+  {
+    question: "Why would one number leave out important support needs?",
+    answer: "A single summary cannot describe whether help is accessible, whether daily demands have changed, or what kind of support someone wants. It also cannot explain barriers such as competing responsibilities or an unsafe environment. For a conversation with a qualified professional, concrete descriptions of current demands and available help may provide useful context. No score is needed to ask for support, and this page does not calculate or interpret one.",
+  },
 ];
 
 export default function BriefResilienceInformationPage() {
@@ -107,6 +115,9 @@ export default function BriefResilienceInformationPage() {
         overviewParagraphs={[
           "The Brief Resilience Scale was designed to measure perceived ability to recover from stress rather than cataloging resources, personality traits, or a clinical disorder.",
           "Resilience can change with context, health, support, resources, and experience. A self-report result should not be treated as a fixed trait, diagnosis, or forecast of future coping.",
+          "Thinking about resilience as a process leaves room for changing circumstances. Recovering after one difficult experience does not mean that another experience will feel manageable, and struggling during a demanding period is not a character judgment. There is a difference between describing how recovery feels at a particular time and explaining everything that makes recovery possible. A useful discussion can include what happened, what demands remain, what support is available, and what the person considers recovery to mean. None of those questions requires assigning someone a permanent label such as strong or weak.",
+          "Self-report offers a person's perspective rather than a direct observation of every part of their life. Someone answering during an unsettled week may have different experiences in mind than someone reflecting after a period of stability. People can also understand words such as recovery differently: returning to a routine, feeling less overwhelmed, or being able to ask for help are not identical experiences. When reading resilience research, look for the population studied, the setting, and the timing of measurement. Those details help explain what the findings address and where their relevance may be limited. A brief measure alone cannot supply that missing context.",
+          "In general, research measures turn a defined concept into something investigators can examine consistently across participants. That can support questions about relationships between perceived recovery and other reported experiences, while leaving important questions unanswered about causes and individual needs. Reading the original study is therefore different from taking a public self-check: a study has a particular purpose, participant group, and method. Educational discussion should keep those boundaries visible rather than treating the existence of a research measure as proof that everyone needs a personal result. This page is not a substitute for professional care; concerns about coping can be discussed with a qualified professional without completing this instrument.",
         ]}
         alternatives={[
           {
