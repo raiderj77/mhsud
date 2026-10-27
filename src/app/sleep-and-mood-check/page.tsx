@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { SleepMoodClient } from "./SleepMoodClient";
 import AnswerBlock from "@/components/AnswerBlock";
@@ -25,6 +26,14 @@ const FAQ_DATA = [
   { question: "How are my answers handled?", answer: "Answers and results are processed locally and are not intentionally sent to MindCheck Tools. Ordinary page requests can create hosting records, and copies, sync, backups, or shared-device access are outside this boundary." },
   { question: "How much sleep do I need?", answer: "Most adults need 7-9 hours per night, though individual needs vary. This tool doesn't prescribe a specific amount, it asks about your experience of sleep quality, daytime energy, and mood to help you reflect on whether your current sleep pattern is working for you." },
   { question: "What if my results suggest problems?", answer: "Consider talking with your healthcare provider about your sleep. Good sleep hygiene practices can help many people, but persistent sleep problems often benefit from professional assessment to rule out underlying causes." },
+  {
+    question: "Do I need exact sleep times for a useful conversation?",
+    answer: "No. Approximate times and plain descriptions can help explain your experience without pretending to be precise measurements. If you are unsure about an entry, mark it as an estimate rather than filling in details you do not remember. Follow any specific recording guidance your healthcare professional gives you.",
+  },
+  {
+    question: "Should I repeat the tool every day to create a trend?",
+    answer: "This tool does not save entries or provide a validated way to compare changes over time. Repeated results are not evidence that a condition is improving or worsening. A separate simple note can support discussion, but concerns deserve attention even without a complete log.",
+  },
 ];
 
 export default function SleepMoodPage() {
@@ -74,6 +83,24 @@ export default function SleepMoodPage() {
         <ToolReviewerBio lastReviewed="August 2, 2026" />
       </div>
       <SleepMoodClient faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-10 mb-12 space-y-8 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+        <section aria-labelledby="sleep-and-mood-check-guide-0" className="space-y-4">
+          <h2 id="sleep-and-mood-check-guide-0" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Keeping a simple sleep and mood log</h2>
+          <p>This page offers a one-time reflection, not a saved diary. If you want to look across several days, you could keep a separate brief paper note in a private place. Record approximate sleep and waking times, how rested you felt, and a few words about mood or daytime energy. Estimates are enough for reflection; there is no need to monitor every minute.</p>
+          <p>Use similar wording when possible so later entries are easier to compare. A short note such as “restless night, low energy in the afternoon” may be more useful than a long explanation written from memory. You can include ordinary context such as a changed work schedule or an interrupted night. Avoid turning the log into a daily performance grade.</p>
+        </section>
+        <section aria-labelledby="sleep-and-mood-check-guide-1" className="space-y-4">
+          <h2 id="sleep-and-mood-check-guide-1" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Looking back over a week of entries</h2>
+          <p>Read the entries together and look for repeated experiences rather than deciding what any one night means. Do difficult mornings appear alongside later bedtimes, or do low-energy days happen after several different kinds of nights? Notice exceptions too. A rested morning after disrupted sleep is part of the picture, not an entry to discard because it does not fit an emerging idea.</p>
+          <p>Write a question rather than a conclusion: “I noticed several tired afternoons; what else should I consider?” A week is a convenient review period, not a validated observation window or proof of a cause. If you speak with a healthcare professional, a few concrete examples can explain what has been bothering you and how it affects ordinary activities.</p>
+        </section>
+        <section aria-labelledby="sleep-and-mood-check-guide-2" className="space-y-4">
+          <h2 id="sleep-and-mood-check-guide-2" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Limitations and choosing a next step</h2>
+          <p>Self-reported notes depend on memory and personal judgment. Work hours, caregiving, surroundings, physical discomfort, substance use, and other circumstances may all be relevant to a discussion about sleep and mood. A log cannot separate those influences or determine which one explains a pattern. Do not use entries to adjust medication or to decide whether a health concern needs attention.</p>
+          <p>Keep any separate record somewhere you are comfortable storing personal information, especially on a shared device or in a shared household. This tool does not store that log for you. If tracking becomes burdensome or makes you preoccupied with getting sleep “right,” it is reasonable to stop. Reflection should serve a useful conversation, not become another demand.</p>
+          <p>The <Link href="/work-stress-check" className="font-semibold underline">work stress check</Link> offers a separate look at work demands, while the <Link href="/daily-recovery-check-in" className="font-semibold underline">daily recovery check-in</Link> provides a recovery-focused reflection. For a brief change of focus, consider <Link href="/five-senses-grounding" className="font-semibold underline">five-senses grounding</Link>. None establishes why sleep or mood has changed or replaces professional care. Persistent or concerning difficulties can be discussed with a qualified healthcare professional. If support is urgent, visit <Link href="/crisis-resources" className="font-semibold underline">crisis resources</Link>.</p>
+        </section>
+      </div>
     </>
   );
 }

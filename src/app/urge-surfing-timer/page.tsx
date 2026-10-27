@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { createMetadata, toolPageJsonLd, faqJsonLd, breadcrumbJsonLd, SITE_URL } from "@/lib/metadata";
 import { UrgeSurfingClient } from "./UrgeSurfingClient";
 import AnswerBlock from "@/components/AnswerBlock";
@@ -40,6 +41,14 @@ const FAQ_DATA = [
   {
     question: "What should I do if the urge is still strong?",
     answer: "Pause the exercise and follow your treatment or relapse-prevention plan, change to a safer environment, or contact a trusted support person or qualified professional. If you may harm yourself or someone else, call emergency services. In the United States, call or text 988 for crisis support.",
+  },
+  {
+    question: "Can I practice when I am not experiencing a craving?",
+    answer: "You can explore the controls and practice gently noticing ordinary sensations during a settled moment. This can help you decide whether the format feels usable. It does not establish how you will respond during a future craving, and there is no need to deliberately trigger an urge.",
+  },
+  {
+    question: "Do I need to close my eyes or follow the breathing prompts?",
+    answer: "No. Keep your eyes open if that feels more comfortable, and breathe naturally if paced breathing is unpleasant. The exercise is optional. You can stop or choose another source of support at any point without completing the interval.",
   },
 ];
 
@@ -89,6 +98,24 @@ export default function UrgeSurfingPage() {
       </div>
 
       <UrgeSurfingClient faqData={FAQ_DATA} />
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 mt-10 mb-12 space-y-8 text-neutral-600 dark:text-neutral-300 leading-relaxed">
+        <section aria-labelledby="urge-surfing-timer-guide-0" className="space-y-4">
+          <h2 id="urge-surfing-timer-guide-0" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Practicing urge surfing step by step</h2>
+          <p>Begin in a place where pausing is reasonably safe. If access to alcohol or drugs makes the situation harder to manage, consider moving away from that setting or contacting support first. Choose an interval that feels manageable, rather than a duration you feel obliged to finish. The timer is a practice aid, not a test of willpower.</p>
+          <p>Notice where the urge is most apparent. You might describe a sensation in ordinary words such as tight, restless, warm, or shifting, without deciding what it proves. Let breathing remain natural. If it feels comfortable, observe whether the sensation stays the same, moves, or changes in intensity. There is no requirement to find a clear wave or to feel calmer.</p>
+          <p>At the end, pause before choosing what comes next. Ask whether your surroundings feel safe enough and whether another person could help. An urge that remains present does not mean the exercise was done incorrectly. You can stop early, use a different coping skill, or follow the next step in an existing recovery plan.</p>
+        </section>
+        <section aria-labelledby="urge-surfing-timer-guide-1" className="space-y-4">
+          <h2 id="urge-surfing-timer-guide-1" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">Common difficulties</h2>
+          <p>Attention may wander to plans, worries, or thoughts about using. When you notice this, gently return to a sensation or to something you can see around you. Repeatedly bringing attention back can be part of practice; there is no need to restart the timer or criticize yourself for losing focus.</p>
+          <p>If an urge feels too strong to observe comfortably, do not make finishing the exercise the priority. Reach out to a trusted support person or qualified professional and use your established support plan. If breathing prompts feel uncomfortable, skip them and breathe normally. You can keep your eyes open, notice your feet on the floor, or leave the exercise altogether.</p>
+        </section>
+        <section aria-labelledby="urge-surfing-timer-guide-2" className="space-y-4">
+          <h2 id="urge-surfing-timer-guide-2" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50">How this fits with other coping tools</h2>
+          <p>A <Link href="/halt-check-in" className="font-semibold underline">HALT check-in</Link> offers a separate prompt to notice basic needs. A <Link href="/relapse-prevention-plan" className="font-semibold underline">relapse-prevention plan</Link> can help organize support contacts and practical responses before a difficult moment. Neither requires waiting for an urge to reach a particular level.</p>
+          <p>If inward attention is unhelpful, <Link href="/five-senses-grounding" className="font-semibold underline">five-senses grounding</Link> offers an outward focus. The <Link href="/box-breathing-exercise" className="font-semibold underline">box breathing exercise</Link> is another optional practice if paced breathing feels comfortable; it is not a required next step. These educational tools are not a substitute for professional care. For urgent support, use <Link href="/crisis-resources" className="font-semibold underline">U.S. and international crisis resources</Link> rather than continuing a timer.</p>
+        </section>
+      </div>
     </>
   );
 }

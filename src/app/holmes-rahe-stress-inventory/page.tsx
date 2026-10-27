@@ -60,6 +60,14 @@ const FAQ_DATA: InformationFaq[] = [
     answer:
       "No. This page is educational and does not assess symptoms, illness risk, or a diagnosis. A qualified healthcare professional can evaluate concerns in context.",
   },
+  {
+    question: "Is life change the same thing as feeling distressed?",
+    answer: "No. Life change describes adjustment demands, while distress describes an experience that someone reports. A person may need to reorganize routines without feeling overwhelmed, or may feel distressed by ongoing circumstances that a checklist does not describe well. Neither topic can stand in for the other. A qualified professional can consider both experiences and circumstances without treating them as equivalent measurements.",
+  },
+  {
+    question: "What context is useful beyond a list of changes?",
+    answer: "Useful context can include which demands are still active, what daily tasks have become harder, and whether practical or social support is available. It can also include what the person finds manageable and what help they would welcome. These are open conversation topics, not substitute questionnaire items or a way to estimate an inventory result. They support a fuller account without assigning weights, calculating a total, or forecasting illness.",
+  },
 ];
 
 export default function HolmesRaheInformationPage() {
@@ -107,6 +115,9 @@ export default function HolmesRaheInformationPage() {
         overviewParagraphs={[
           "Holmes and Rahe developed the Social Readjustment Rating Scale to study whether accumulated life changes were associated with later illness across groups of people.",
           "An association observed in a research population is not a personal forecast. Health is influenced by many factors, and an inventory result cannot establish that stress caused or will cause an illness.",
+          "Life-event research asks a different question from a conversation about how someone feels today. Its focus is on changes that call for adjustment across a period of life. The general idea of life change units was to describe readjustment demands in a common research framework, rather than assuming that only changes a person dislikes require adaptation. This page discusses that idea without reproducing event descriptions, numerical values, or a calculation method. A common framework can help organize a research question, but it cannot make different people's circumstances equivalent or establish what a particular change means for one person.",
+          "Appraisal and context matter when thinking about life changes. Appraisal means how someone understands an experience: whether it feels manageable, uncertain, welcome, threatening, or some mixture of these. Context includes the resources, relationships, and ongoing demands around the experience. Two people can describe a similar change while facing very different practical consequences. Even for one person, the timing of a change may affect what support is available. These distinctions are useful when reading life-event research because a checklist description cannot include the full meaning of an experience. They also explain why a conversation should leave room for the person's own account rather than treating a category as a complete story.",
+          "Checklist totals compress information. They can leave out how long a difficulty has continued, whether several demands overlap, and whether circumstances have settled or remain uncertain. Remembering past events also involves judgment about timing and significance. When considering a research finding, ask who participated, what period was examined, and how health outcomes were established. An observed relationship does not by itself explain a mechanism or show that changing a checklist total would change an outcome. For personal reflection, describing current demands and practical support needs is a separate activity from administering this instrument. It does not require reconstructing a protected inventory, and it is not a substitute for professional care.",
         ]}
         alternatives={[
           {
