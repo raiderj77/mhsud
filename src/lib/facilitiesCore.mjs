@@ -331,3 +331,28 @@ export function attachCaLicenses(facilities, licenses) {
   }
   return matched;
 }
+
+// ------------------------------------------------------------ work email
+// The claim route originally validated the work email with
+// /^[^\s@]+@[^\s@]+\.[^\s@]+$/. That pattern backtracks quadratically on
+// malformed dot-heavy domains (CodeQL js/polynomial-redos), and the route
+// imposed no length bound, so a large crafted body could stall the
+// endpoint. This structural check accepts exactly the same strings as the
+// old pattern -- no whitespace, exactly one "@", a non-empty local part,
+// and a domain dot with at least one character on each side of it -- in
+// linear time, and rejects anything over the RFC 5321 254-character path
+// maximum before doing any scanning.
+export const MAX_WORK_EMAIL_LENGTH = 254;
+
+export function isValidWorkEmail(email) {
+  if (typeof email !== "string") return false;
+  if (email.length === 0 || email.length > MAX_WORK_EMAIL_LENGTH) return false;
+  if (/\s/.test(email)) return false;
+  const at = email.indexOf("@");
+  if (at <= 0 || at !== email.lastIndexOf("@")) return false;
+  const domain = email.slice(at + 1);
+  // A dot strictly inside the domain -- at least one character on each
+  // side of it -- is exactly what the old pattern's [^\s@]+\.[^\s@]+
+  // required.
+  return domain.slice(1, -1).includes(".");
+}

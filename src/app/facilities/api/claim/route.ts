@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCaLicenses, getFacility, type Facility } from "@/lib/facilities";
-import { evaluateSoberEligibility, evaluateSudEligibility } from "@/lib/facilitiesCore.mjs";
+import { evaluateSoberEligibility, evaluateSudEligibility, isValidWorkEmail } from "@/lib/facilitiesCore.mjs";
 
 export const dynamic = "force-dynamic";
 
@@ -26,8 +26,6 @@ const ALLOWED_FIELDS = new Set([
   "affiliateName",
 ]);
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
   try {
@@ -49,7 +47,7 @@ export async function POST(request: Request) {
   const operatorName = String(body.operatorName ?? "").trim();
   const operatorRole = String(body.operatorRole ?? "").trim();
   const workEmail = String(body.workEmail ?? "").trim();
-  if (!segment || !operatorName || !operatorRole || !EMAIL_RE.test(workEmail)) {
+  if (!segment || !operatorName || !operatorRole || !isValidWorkEmail(workEmail)) {
     return NextResponse.json(
       { error: "Segment, your name, your role, and a valid work email are required." },
       { status: 400 },
