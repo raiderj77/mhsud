@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import { getDirectoryIndex, getFacility } from "@/lib/facilities";
+import { telDigits } from "@/lib/facilitiesCore.mjs";
 import { ClaimCta, ProvenanceNote } from "@/components/FacilityDirectory";
 
 interface Params {
@@ -42,8 +43,8 @@ export default async function FacilityPage({ params }: Params) {
   const facility = await getFacility(state, city, slug);
   if (!facility) notFound();
   const index = getDirectoryIndex();
-  const tel = facility.phone ? facility.phone.replace(/[^0-9+]/g, "") : null;
-  const intakeTel = facility.intakePhone ? facility.intakePhone.replace(/[^0-9+]/g, "") : null;
+  const tel = facility.phone ? telDigits(facility.phone) : null;
+  const intakeTel = facility.intakePhone ? telDigits(facility.intakePhone) : null;
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">

@@ -3,9 +3,13 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import {
   PRICING,
+  attachCaLicenses,
   computeFindings,
   evaluateSoberEligibility,
   evaluateSudEligibility,
+  normPhone,
+  splitPhoneExtension,
+  telDigits,
 } from "../src/lib/facilitiesCore.mjs";
 
 const read = (file) => readFile(new URL(`../${file}`, import.meta.url), "utf8");
@@ -238,4 +242,151 @@ test("eligibility: sober living requires NARR-affiliate certification", () => {
     evaluateSoberEligibility({ narrCertified: true, affiliateName: "" }).status,
     "not-eligible",
   );
+});
+
+// ------------------------------------------------------------------ phones
+test("phones: extensions are never glued onto the base number", () => {
+  assert.equal(splitPhoneExtension("907-562-4155 x143").extension, "143");
+  assert.equal(splitPhoneExtension("907-562-4155").extension, null);
+  assert.equal(telDigits("907-562-4155 x143"), "9075624155");
+  assert.equal(telDigits("(907) 562-4155 ext. 42"), "9075624155");
+  assert.equal(telDigits("907-562-4155"), "9075624155");
+  assert.equal(normPhone("907-562-4155 x143"), "9075624155");
+  assert.equal(normPhone("1-907-562-4155 x9"), "9075624155");
+});
+
+test("phones: live-data regression — the Anchorage record carrying an extension", async () => {
+  const ak = await readJson("src/data/facilities/by-state/AK.json");
+  const f = ak.find((x) => x.slug === "chugachmiut" && x.citySlug === "anchorage");
+  assert.ok(f, "Chugachmiut record must exist");
+  assert.match(f.phone, /x143/);
+  assert.equal(telDigits(f.phone), "9075624155", "tel: digits must stop at the base number");
+});
+
+test("findings: an extension on one side is not a phone mismatch", () => {
+  const f = {
+    ...baseFacility,
+    phone: "559-555-0100 x12",
+    license: {
+      applicationType: "Licensed",
+      programCode: "RES",
+      licenseExpiration: "2027-01-31",
+      rosterFacilityName: "Example Recovery Center",
+      legalEntityName: "Example Recovery Center Inc",
+      rosterPhone: "559-555-0100",
+      rosterStreet1: "100 Main Street",
+    },
+  };
+  const findings = computeFindings(f, { retrievedAt: "2026-11-01" });
+  assert.ok(!findings.some((x) => x.id === "phone-mismatch"));
+});
+
+// ------------------------------------------------------- license matching
+const licRecord = (over = {}) => ({
+  applicationNumber: "010001DN",
+  legalEntityName: "Example Recovery Center Inc",
+  facilityName: "Example Recovery Center",
+  street1: "100 Main Street",
+  city: "Fresno",
+  zip: "93710",
+  phone: "559-555-0100",
+  applicationType: "Licensed",
+  programCode: "RES",
+  treatmentCapacity: 30,
+  licenseExpiration: "2027-06-30",
+  ...over,
+});
+const caFacility = (over = {}) => ({
+  name: "Example Recovery Center",
+  street1: "100 Main Street",
+  city: "Fresno",
+  zip: "93710",
+  state: "CA",
+  phone: "559-555-0100",
+  license: undefined,
+  ...over,
+});
+
+test("matching: same name and ZIP at a different street is NOT a match", () => {
+  const fs = [caFacility({ street1: "200 Other Avenue", phone: "559-555-0777" })];
+  assert.equal(attachCaLicenses(fs, [licRecord()]), 0);
+  assert.equal(fs[0].license, null);
+});
+
+test("matching: same name and city but a different ZIP is NOT a match", () => {
+  const fs = [caFacility({ zip: "93711" })];
+  assert.equal(attachCaLicenses(fs, [licRecord()]), 0);
+  assert.equal(fs[0].license, null);
+});
+
+test("matching: a corroborated match attaches with its basis recorded", () => {
+  const fs = [caFacility()];
+  assert.equal(attachCaLicenses(fs, [licRecord()]), 1);
+  assert.equal(fs[0].license.matchBasis, "name + ZIP + street number");
+  assert.equal(fs[0].license.rosterStreet1, "100 Main Street");
+});
+
+test("matching: one roster record cannot fan out to two different locations", () => {
+  const fs = [caFacility(), caFacility({ street1: "900 Far Road", phone: "559-555-0999" })];
+  attachCaLicenses(fs, [licRecord()]);
+  assert.ok(fs[0].license);
+  assert.equal(fs[1].license, null);
+});
+
+test("matching: phone corroborates when either side lacks a street number", () => {
+  const fs = [caFacility({ street1: "Main Street" })];
+  assert.equal(attachCaLicenses(fs, [licRecord()]), 1);
+  assert.equal(fs[0].license.matchBasis, "name + ZIP + phone");
+});
+
+test("matching: two distinct corroborating records are ambiguity — no match", () => {
+  const fs = [caFacility()];
+  const records = [licRecord(), licRecord({ applicationNumber: "020002DN", programCode: "DETOX" })];
+  assert.equal(attachCaLicenses(fs, records), 0);
+  assert.equal(fs[0].license, null);
+});
+
+test("matching: non-CA facilities never get a CA license attached", () => {
+  const fs = [caFacility({ state: "TX" })];
+  assert.equal(attachCaLicenses(fs, [licRecord()]), 0);
+  assert.equal(fs[0].license, null);
+});
+
+// ------------------------------------------------- eligibility date paths
+test("eligibility: the license-number path also checks expiration", () => {
+  const expired = evaluateSudEligibility({
+    facility: baseFacility,
+    licenseNumber: "010001DN",
+    caLicenses: [
+      {
+        applicationNumber: "010001DN",
+        facilityName: "Cherry Hill",
+        applicationType: "Licensed",
+        licenseExpiration: "2025-01-01",
+      },
+    ],
+    today: "2026-11-01",
+  });
+  assert.equal(expired.status, "manual-review");
+
+  const valid = evaluateSudEligibility({
+    facility: baseFacility,
+    licenseNumber: "010001DN",
+    caLicenses: [
+      {
+        applicationNumber: "010001DN",
+        facilityName: "Cherry Hill",
+        applicationType: "Licensed",
+        licenseExpiration: "2027-01-01",
+      },
+    ],
+    today: "2026-11-01",
+  });
+  assert.equal(valid.status, "eligible");
+});
+
+test("claim route: eligibility is judged against the current date", async () => {
+  const route = await read("src/app/facilities/api/claim/route.ts");
+  assert.doesNotMatch(route, /today\s*=\s*index\.generatedAt/);
+  assert.match(route, /new Date\(\)\.toISOString\(\)/);
 });
