@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getCaLicenses, getDirectoryIndex, getFacility, type Facility } from "@/lib/facilities";
+import { getCaLicenses, getFacility, type Facility } from "@/lib/facilities";
 import { evaluateSoberEligibility, evaluateSudEligibility } from "@/lib/facilitiesCore.mjs";
 
 export const dynamic = "force-dynamic";
@@ -56,8 +56,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const index = getDirectoryIndex();
-  const today = index.generatedAt;
+  // Eligibility is judged against the current date, never the data-build
+  // date: a roster expiration is in the past relative to today, not
+  // relative to whenever the directory snapshot happened to be generated.
+  const today = new Date().toISOString().slice(0, 10);
   let result: { status: string; reasons: string[] };
   let facilityName: string | null = null;
 

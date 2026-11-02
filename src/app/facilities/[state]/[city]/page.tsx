@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import { getDirectoryIndex, getStateFacilities } from "@/lib/facilities";
+import { telDigits } from "@/lib/facilitiesCore.mjs";
 
 interface Params {
   params: Promise<{ state: string; city: string }>;
@@ -70,7 +71,7 @@ export default async function CityPage({ params }: Params) {
             {f.phone && (
               <p className="mt-1 text-slate-700">
                 Phone:{" "}
-                <a className="underline" href={`tel:${f.phone.replace(/[^0-9+]/g, "")}`}>
+                <a className="underline" href={`tel:${telDigits(f.phone)}`}>
                   {f.phone}
                 </a>
               </p>

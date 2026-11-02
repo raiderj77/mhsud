@@ -23,6 +23,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readXlsx } from "./lib/xlsx-lite.mjs";
+import { attachCaLicenses } from "../src/lib/facilitiesCore.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SAMHSA_URL =
@@ -231,46 +232,6 @@ function loadDhcs(path) {
   return records;
 }
 
-function matchLicenses(facilities, licenses) {
-  const byNameZip = new Map();
-  const byNameCity = new Map();
-  for (const lic of licenses) {
-    for (const nm of [lic.facilityName, lic.legalEntityName]) {
-      const key = normName(nm);
-      if (!key) continue;
-      if (!byNameZip.has(`${key}|${lic.zip}`)) byNameZip.set(`${key}|${lic.zip}`, lic);
-      const cityKey = `${key}|${lic.city.toUpperCase()}`;
-      if (!byNameCity.has(cityKey)) byNameCity.set(cityKey, lic);
-    }
-  }
-  let matched = 0;
-  for (const f of facilities) {
-    if (f.state !== "CA") {
-      f.license = null;
-      continue;
-    }
-    const key = normName(f.name);
-    const lic =
-      byNameZip.get(`${key}|${f.zip.slice(0, 5)}`) ??
-      byNameCity.get(`${key}|${f.city.toUpperCase()}`) ??
-      null;
-    f.license = lic
-      ? {
-          applicationType: lic.applicationType,
-          programCode: lic.programCode,
-          licenseExpiration: lic.licenseExpiration,
-          treatmentCapacity: lic.treatmentCapacity,
-          rosterFacilityName: lic.facilityName,
-          legalEntityName: lic.legalEntityName,
-          rosterPhone: lic.phone,
-          rosterStreet1: lic.street1,
-          matchBasis: "name + ZIP" ,
-        }
-      : null;
-    if (lic) matched++;
-  }
-  return matched;
-}
 
 // ---------------------------------------------------------------------- main
 function main() {
@@ -279,7 +240,7 @@ function main() {
 
   const facilities = loadSamhsa(samhsaPath);
   const licenses = loadDhcs(dhcsPath);
-  const caMatched = matchLicenses(facilities, licenses);
+  const caMatched = attachCaLicenses(facilities, licenses);
 
   // Slugs, unique within state+city.
   const used = new Map();

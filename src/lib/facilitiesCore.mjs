@@ -40,9 +40,28 @@ export function normName(text) {
     .trim();
 }
 
+/**
+ * Split a phone string into its base number and optional extension.
+ * Source data writes extensions inline ("907-562-4155 x143", "ext. 42",
+ * "extension 42"). The extension must never be glued onto the base
+ * number: digits stripped naively produce a longer, wrong number
+ * ("9075624155143") that a tel: link would dial as-is.
+ */
+export function splitPhoneExtension(text) {
+  const raw = (text ?? "").trim();
+  const m = /^(.*?)[\s,;]*(?:x|ext\.?|extension)\s*(\d+)\s*$/i.exec(raw);
+  if (m) return { base: m[1].trim(), extension: m[2] };
+  return { base: raw, extension: null };
+}
+
 export function normPhone(text) {
-  const digits = (text ?? "").replace(/\D/g, "");
+  const digits = splitPhoneExtension(text).base.replace(/\D/g, "");
   return digits.length === 11 && digits.startsWith("1") ? digits.slice(1) : digits;
+}
+
+/** Digits for a tel: href — the base number only, extension never appended. */
+export function telDigits(text) {
+  return splitPhoneExtension(text).base.replace(/\D/g, "");
 }
 
 function streetNumber(text) {
@@ -190,6 +209,12 @@ export function evaluateSudEligibility({ facility = null, licenseNumber = "", ca
       (l) => (l.applicationNumber ?? "").replace(/[\s-]/g, "").toUpperCase() === wanted,
     );
     if (hit) {
+      if (hit.licenseExpiration && hit.licenseExpiration < today) {
+        reasons.push(
+          `The license/application number matched a CA DHCS roster record for "${hit.facilityName}" (${hit.applicationType}), but its expiration on file (${hit.licenseExpiration}) is in the past. Current status must be confirmed with DHCS before paid services can begin.`,
+        );
+        return { status: "manual-review", reasons };
+      }
       reasons.push(
         `License/application number matched a CA DHCS roster record for "${hit.facilityName}" (${hit.applicationType}). Eligibility is confirmed once the claim identity check passes.`,
       );
@@ -232,4 +257,77 @@ export function evaluateSoberEligibility({ narrCertified = false, affiliateName 
       "Paid tiers for sober living homes require current certification through a NARR state affiliate (for example CCAPP in California, GARR in Georgia, NCARR in North Carolina). An uncertified home may hold a free operator-listed page, clearly marked \"certification not verified,\" but cannot buy listing services.",
     ],
   };
+}
+
+/**
+ * Attach CA DHCS license records to CA facilities (ingest-time matching,
+ * also re-runnable against the baked data store).
+ *
+ * A license match is a legal-status assertion about one specific
+ * location, so the bar is corroboration, not resemblance: normalized
+ * name and ZIP must agree AND the location must be corroborated by
+ * street number — or, when either side has no street number, by the
+ * base phone number. More than one distinct corroborating roster record
+ * is ambiguity and resolves to NO match: a wrong-location match
+ * presented as verified is worse than no match at all.
+ *
+ * @param {object[]} facilities normalized facility records (mutated: .license)
+ * @param {object[]} licenses CA DHCS roster records (loadDhcs shape)
+ * @returns {number} how many facilities got a license attached
+ */
+export function attachCaLicenses(facilities, licenses) {
+  let matched = 0;
+  for (const f of facilities) {
+    f.license = null;
+    if (f.state !== "CA") continue;
+    const key = normName(f.name);
+    if (!key) continue;
+    const zip = (f.zip ?? "").slice(0, 5);
+    const candidates = licenses.filter(
+      (l) =>
+        (l.zip ?? "").slice(0, 5) === zip &&
+        (normName(l.facilityName) === key || normName(l.legalEntityName) === key),
+    );
+    if (!candidates.length) continue;
+    const distinct = (list) => {
+      const seen = new Map();
+      for (const l of list) seen.set(`${l.applicationNumber ?? ""}|${l.programCode ?? ""}`, l);
+      return [...seen.values()];
+    };
+    const fStreet = streetNumber(f.street1);
+    const streetOk = distinct(
+      candidates.filter(
+        (l) => fStreet && streetNumber(l.street1) && streetNumber(l.street1) === fStreet,
+      ),
+    );
+    let chosen = null;
+    let basis = null;
+    if (streetOk.length === 1) {
+      chosen = streetOk[0];
+      basis = "name + ZIP + street number";
+    } else if (streetOk.length === 0) {
+      const fPhone = normPhone(f.phone);
+      const phoneOk = distinct(
+        candidates.filter((l) => fPhone && l.phone && normPhone(l.phone) === fPhone),
+      );
+      if (phoneOk.length === 1) {
+        chosen = phoneOk[0];
+        basis = "name + ZIP + phone";
+      }
+    }
+    if (!chosen) continue;
+    f.license = {
+      applicationType: chosen.applicationType,
+      programCode: chosen.programCode,
+      licenseExpiration: chosen.licenseExpiration,
+      treatmentCapacity: chosen.treatmentCapacity,
+      rosterFacilityName: chosen.facilityName,
+      legalEntityName: chosen.legalEntityName,
+      rosterPhone: chosen.phone,
+      rosterStreet1: chosen.street1,
+      matchBasis: basis,
+    };
+    matched++;
+  }
+  return matched;
 }
