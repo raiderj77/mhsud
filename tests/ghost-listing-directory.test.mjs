@@ -2,11 +2,13 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import {
+  MAX_WORK_EMAIL_LENGTH,
   PRICING,
   attachCaLicenses,
   computeFindings,
   evaluateSoberEligibility,
   evaluateSudEligibility,
+  isValidWorkEmail,
   normPhone,
   splitPhoneExtension,
   telDigits,
@@ -389,4 +391,92 @@ test("claim route: eligibility is judged against the current date", async () => 
   const route = await read("src/app/facilities/api/claim/route.ts");
   assert.doesNotMatch(route, /today\s*=\s*index\.generatedAt/);
   assert.match(route, /new Date\(\)\.toISOString\(\)/);
+});
+
+// ------------------------------------------------------- work email check
+// The retired claim-route pattern, kept here only as the equivalence
+// oracle for the structural validator that replaced it (CodeQL
+// js/polynomial-redos: it backtracked quadratically on dot-heavy input).
+const RETIRED_EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+test("claim email: structural validator matches the retired pattern on ordinary inputs", () => {
+  const cases = [
+    "jane.doe@facility.org",
+    "ops+intake@recover.example.com",
+    "a@b.co",
+    "a@b..c", // consecutive domain dots: the old pattern accepted these
+    "a@.b.c", // leading domain dot with a later interior dot: accepted
+    "plainaddress",
+    "a@b", // no domain dot
+    "a@b.", // dot with nothing after it
+    "a@.b", // dot with nothing before it
+    "@b.c", // empty local part
+    "a@@b.c", // two @ signs
+    "a b@c.d", // interior whitespace
+    "a@c.d e",
+    "a@b@c.d",
+    "",
+    "a@",
+    "@",
+    "a@.",
+    "a@..",
+    "a@...",
+    "x@y.zw ",
+    " x@y.zw",
+  ];
+  for (const input of cases) {
+    // The route trims before validating; compare on the trimmed value.
+    const trimmed = input.trim();
+    assert.equal(
+      isValidWorkEmail(trimmed),
+      RETIRED_EMAIL_RE.test(trimmed),
+      `validator disagreed with retired pattern on ${JSON.stringify(input)}`,
+    );
+  }
+});
+
+test("claim email: structural validator matches the retired pattern on generated inputs", () => {
+  // Deterministic LCG so the generated corpus is stable run to run.
+  let seed = 20261101;
+  const rand = () => (seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+  const alphabet = ["a", "b", ".", "@", " ", "-", "_", "!", "c"];
+  for (let i = 0; i < 5000; i++) {
+    const len = Math.floor(rand() * 28);
+    let s = "";
+    for (let j = 0; j < len; j++) s += alphabet[Math.floor(rand() * alphabet.length)];
+    assert.equal(isValidWorkEmail(s), RETIRED_EMAIL_RE.test(s), `mismatch on ${JSON.stringify(s)}`);
+  }
+});
+
+test("claim email: inputs over the 254-character maximum are rejected before scanning", () => {
+  const atMax = `${"a".repeat(64)}@${"b".repeat(185)}.com`;
+  assert.equal(atMax.length, MAX_WORK_EMAIL_LENGTH);
+  assert.equal(RETIRED_EMAIL_RE.test(atMax), true);
+  assert.equal(isValidWorkEmail(atMax), true);
+  assert.equal(isValidWorkEmail(`${atMax}x`), false);
+  assert.equal(isValidWorkEmail(undefined), false);
+  assert.equal(isValidWorkEmail(null), false);
+  assert.equal(isValidWorkEmail(42), false);
+});
+
+test("claim email: dot-heavy malformed inputs are rejected without backtracking", () => {
+  // The shapes that drove the retired pattern quadratic (measured ~2.3s
+  // at 64k characters, growing ~4x per doubling of length). The length
+  // cap plus the linear scan must dispose of them immediately.
+  const shapes = [(n) => "a@" + "a.".repeat(n) + "@", (n) => "a@" + "a.".repeat(n) + " b"];
+  for (const gen of shapes) {
+    for (const n of [4000, 32000, 200000]) {
+      const input = gen(n);
+      const started = performance.now();
+      assert.equal(isValidWorkEmail(input), false);
+      const elapsed = performance.now() - started;
+      assert.ok(elapsed < 1000, `validation took ${elapsed.toFixed(1)}ms for ${input.length} chars`);
+    }
+  }
+});
+
+test("claim route: work email validation is structural, not the retired regex", async () => {
+  const route = await read("src/app/facilities/api/claim/route.ts");
+  assert.doesNotMatch(route, /EMAIL_RE/);
+  assert.match(route, /isValidWorkEmail\(workEmail\)/);
 });
