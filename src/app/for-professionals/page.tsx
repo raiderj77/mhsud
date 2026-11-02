@@ -321,6 +321,28 @@ export default function ForProfessionalsPage() {
           </div>
         </section>
 
+        <section aria-labelledby="listing-service" className="max-w-3xl mb-14">
+          <h2 id="listing-service" className="font-serif text-heading font-bold text-neutral-900 dark:text-neutral-50 mb-6">
+            For treatment program operators
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-200 leading-relaxed">
+            MindCheck Tools also runs a public directory of substance use treatment programs built
+            from the SAMHSA National Directory and state licensing rosters. Operators can run a
+            free listing check, claim their listing, and — after a license match is verified —
+            buy a flat-fee correction service. The directory never collects personal information
+            from people seeking treatment; they contact programs directly.
+          </p>
+          <p className="mt-4">
+            <Link href="/facilities" className="font-semibold text-sage-800 underline dark:text-sage-200">
+              Visit the facilities directory
+            </Link>
+            {" · "}
+            <Link href="/facilities/check" className="font-semibold text-sage-800 underline dark:text-sage-200">
+              Run the free listing check
+            </Link>
+          </p>
+        </section>
+
         <section aria-labelledby="next-step" className="max-w-3xl rounded-2xl bg-sage-700 dark:bg-sage-900 p-7 sm:p-9 text-white">
           <h2 id="next-step" className="font-serif text-2xl font-bold mb-3">Start with the scope, not sensitive data</h2>
           <p className="text-sage-50 leading-relaxed mb-5">

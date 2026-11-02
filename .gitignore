@@ -51,3 +51,6 @@ content/review-required/
 # Synthetic browser checks retain no screenshots, traces, or health inputs.
 test-results/
 playwright-report/
+
+# raw ingest downloads (regenerable via scripts/ingest-facilities.mjs)
+/data-raw/
