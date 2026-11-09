@@ -1,3 +1,4 @@
+import { DirectoryContext } from "@/components/DirectoryContext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `Substance Use Treatment Programs in ${summary.name}`,
       description: `${summary.facilityCount} substance use treatment programs listed in ${summary.name} from the SAMHSA National Directory, with licensing cross-checks where state roster data is integrated.`,
     }),
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -47,8 +48,9 @@ export default async function StatePage({ params }: Params) {
         {summary.code === "CA" &&
           ` California licensing records (DHCS roster) are integrated: ${licensed.toLocaleString()} of these programs matched a state license record in the data we hold.`}
         {summary.code !== "CA" &&
-          " This state's licensing roster is not yet integrated, so license cross-checks for these programs are done manually during a Listing Sprint."}
+          " This dataset contains SAMHSA records only for this state; its licensing roster has not been cross-checked."}
       </p>
+      <DirectoryContext facilities={facilities} state={summary.code} />
       <h2 className="mt-8 text-2xl font-semibold text-slate-900">Cities</h2>
       <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
         {summary.cities.map((c) => (

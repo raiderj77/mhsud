@@ -1,7 +1,8 @@
+import { DirectoryContext } from "@/components/DirectoryContext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, SITE_URL } from "@/lib/metadata";
-import { getDirectoryIndex } from "@/lib/facilities";
+import { getDirectoryIndex, getAllFacilities } from "@/lib/facilities";
 import { ProvenanceNote } from "@/components/FacilityDirectory";
 
 const PAGE_PATH = "/facilities";
@@ -14,11 +15,12 @@ export const metadata: Metadata = {
     description:
       "A public directory of substance use treatment programs built from the SAMHSA National Directory and state licensing rosters, with a free listing check and flat-fee correction service for operators.",
   }),
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
-export default function FacilitiesHubPage() {
+export default async function FacilitiesHubPage() {
   const index = getDirectoryIndex();
+  const facilities = await getAllFacilities();
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
       <p className="text-sm text-slate-600">Last updated {LAST_UPDATED}</p>
@@ -28,13 +30,9 @@ export default function FacilitiesHubPage() {
       <p className="mt-4 text-lg text-slate-800">
         This directory lists {index.totals.facilities.toLocaleString()} substance use treatment
         programs across {index.totals.states} states and territories, built from the federal
-        SAMHSA directory and state licensing rosters. It exists for one reason:{" "}
-        <strong>
-          the federal treatment locator refreshes its data once a year, and nobody tells a
-          program when its public listing goes stale.
-        </strong>{" "}
-        A program that moves, changes its phone number, or changes services can sit wrong in the
-        record families and referral sources use — for months.
+        SAMHSA directory and state licensing rosters. This is a dated snapshot, not a live availability service. A program may
+        move, change its phone number, or change services after the source was collected.
+        Confirm current details with the program directly.
       </p>
 
       <h2 className="mt-8 text-2xl font-semibold text-slate-900">For program operators</h2>
@@ -96,6 +94,7 @@ export default function FacilitiesHubPage() {
         .
       </p>
 
+      <DirectoryContext facilities={facilities} />
       <h2 className="mt-8 text-2xl font-semibold text-slate-900">Browse programs by state</h2>
       <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
         {index.states.map((s) => (

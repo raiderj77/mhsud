@@ -60,6 +60,7 @@ export function ProvenanceNote({ facility }: { facility?: Facility }) {
           </li>
         )}
       </ul>
+      {facility && <p className="mt-2">Dataset generated {index.generatedAt}. {facility.state === "CA" ? (facility.license ? "California DHCS roster record matched; current status not independently verified." : "No California DHCS roster match found; this does not prove the program is unlicensed.") : "State licensing not cross-checked; SAMHSA record only."}</p>}
       <p className="mt-2">
         Listing information is republished from public registries and is not independently
         verified by MindCheck Tools. MindCheck Tools is not affiliated with{" "}
