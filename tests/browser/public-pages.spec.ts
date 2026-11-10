@@ -14,7 +14,10 @@ function sourcePages(directory = 'src/app'): string[] {
 }
 
 test('every published sitemap page renders at mobile and desktop widths', async ({ page, request }) => {
-  test.setTimeout(300_000);
+  // Run 3 grew the sitemap to 12,709 URLs. A full sweep of every page at two
+  // widths measured over 15 minutes locally, so the old 300s budget cannot
+  // finish. Every check still runs on every page; only the clock grew.
+  test.setTimeout(1_800_000);
   const sitemap = await request.get('/sitemap.xml');
   expect(sitemap.ok()).toBe(true);
   const paths = [...(await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g)]
