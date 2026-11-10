@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-import { getDirectoryIndex, getFacility } from "@/lib/facilities";
+import { getDirectoryIndex, getFacility, getFacilityIndexPolicy } from "@/lib/facilities";
 import { telDigits } from "@/lib/facilitiesCore.mjs";
 import { ClaimCta, ProvenanceNote } from "@/components/FacilityDirectory";
 
@@ -14,13 +14,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { state, city, slug } = await params;
   const facility = await getFacility(state, city, slug);
   if (!facility) return {};
+  const policy = await getFacilityIndexPolicy(facility);
   return {
     ...createMetadata({
-      path: facility.path,
+      path: policy.canonical,
       title: `${facility.name} — ${facility.city}, ${facility.state}`,
       description: `Public listing record for ${facility.name} in ${facility.city}, ${facility.stateName}: address, phone, services, and payment options from the SAMHSA National Directory. Contact the program directly.`,
     }),
-    robots: { index: false, follow: true },
+    robots: { index: policy.index, follow: true },
   };
 }
 

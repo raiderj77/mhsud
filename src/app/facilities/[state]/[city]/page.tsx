@@ -1,3 +1,4 @@
+import { DirectoryContext } from "@/components/DirectoryContext";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `Substance Use Treatment Programs in ${r.citySummary.name}, ${r.summary.code}`,
       description: `${r.citySummary.count} substance use treatment programs in ${r.citySummary.name}, ${r.summary.name}, listed from the SAMHSA National Directory. Contact each program directly.`,
     }),
-    robots: { index: false, follow: true },
+    robots: { index: r.facilities.length >= 3, follow: true },
   };
 }
 
@@ -58,6 +59,7 @@ export default async function CityPage({ params }: Params) {
         information from people seeking treatment, and programs are listed in alphabetical
         order, never by payment.
       </p>
+      <DirectoryContext facilities={facilities} state={summary.code} />
       <ul className="mt-6 space-y-3">
         {facilities.map((f) => (
           <li key={f.slug} className="rounded-lg border border-slate-300 p-4">

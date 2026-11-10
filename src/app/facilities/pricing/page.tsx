@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       "Flat-fee pricing for the treatment program listing service: free listing check, $99 Listing Sprint and $49/month Directory Care per location; $49 Sprint and $29/month for certified sober living homes.",
   }),
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const LAST_UPDATED = "2026-11-01";

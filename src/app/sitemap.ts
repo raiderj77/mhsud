@@ -1,3 +1,5 @@
+import { getAllFacilities, getDirectoryIndex } from "@/lib/facilities";
+import { directoryPaths } from "@/lib/facilityIndexing.mjs";
 import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 import { awarenessArticlePath, getAwarenessRelease, getReleasedAwarenessArticles } from "@/lib/awarenessArticles";
@@ -17,7 +19,7 @@ const QUARANTINED_PATHS = new Set([
   "/dass-21-vs-phq-9-and-gad-7",
 ]);
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastUpdated = "2026-08-05T00:00:00.000Z";
   const aug6 = "2026-08-06T00:00:00.000Z";
   const may14 = "2026-05-14T00:00:00.000Z";
@@ -160,8 +162,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/disclaimer`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.4 },
   ];
 
-  return staticPages.filter(({ url }) => {
+  const index = getDirectoryIndex();
+  const directory = directoryPaths(index, await getAllFacilities()).map(path => ({ url: `${SITE_URL}${path}`, lastModified: index.generatedAt }));
+  if (staticPages.length + directory.length >= 45000) throw new Error("Sitemap requires splitting before release");
+  return [...staticPages.filter(({ url }) => {
     const path = new URL(url).pathname.replace(/\/$/, "") || "/";
     return !QUARANTINED_PATHS.has(path);
-  });
+  }), ...directory];
 }

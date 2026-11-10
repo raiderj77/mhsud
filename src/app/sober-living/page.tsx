@@ -7,9 +7,9 @@ export const metadata: Metadata = {
     path: "/sober-living",
     title: "Sober Living Homes — Certification & Listings",
     description:
-      "How sober living homes are listed and verified: no national registry exists, so listing starts with NARR-affiliate certification or an operator claim. Flat-fee listing services for certified homes.",
+      "Recovery residence certification resources and listing requirements. No certified-home records have been imported into this directory snapshot.",
   }),
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 const LAST_UPDATED = "2026-11-01";
@@ -27,13 +27,13 @@ const AFFILIATES = [
     state: "California",
     name: "CCAPP — California Consortium of Addiction Programs and Professionals",
     url: "https://ccapp.us",
-    note: "California's NARR affiliate. California has no state license or registry for sober living homes; CCAPP certification is voluntary.",
+    note: "California certification resource. Confirm current certification requirements and registry details directly with CCAPP.",
   },
   {
     state: "Georgia",
     name: "GARR — Georgia Association of Recovery Residences",
     url: "https://thegarrnetwork.org",
-    note: "Georgia's NARR affiliate. Georgia does not license sober living homes; GARR certification is voluntary.",
+    note: "Georgia recovery residence certification resource. Confirm current registry details directly with GARR.",
   },
   {
     state: "North Carolina",
@@ -57,10 +57,11 @@ export default function SoberLivingPage() {
         Sober living homes: certification first, listings second
       </h1>
       <p className="mt-4 text-lg text-slate-800">
-        There is no national registry of sober living homes, and most states do not license them
-        — in California, the state health department states plainly that it does not license,
-        certify, or investigate sober living homes. So this directory does not publish a bulk
-        list of homes it cannot verify. Instead:
+        This directory snapshot contains treatment-program records from SAMHSA and a
+        California DHCS licensing roster. It does not yet contain an imported certified-home
+        registry. Treatment-program counts elsewhere on this site are not sober living counts.
+        Use the certification resources below to check a home directly with its certifying body.
+        Listing requirements are:
       </p>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800">
         <li>
