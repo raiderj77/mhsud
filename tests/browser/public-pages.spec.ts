@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type APIRequestContext } from '@playwright/test';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import nextConfig, { retiredNonBlogNotFoundPaths } from '../../next.config.mjs';
@@ -13,11 +13,7 @@ function sourcePages(directory = 'src/app'): string[] {
   });
 }
 
-test('every published sitemap page renders at mobile and desktop widths', async ({ page, request }) => {
-  // Run 3 grew the sitemap to 12,709 URLs. A full sweep of every page at two
-  // widths measured over 15 minutes locally, so the old 300s budget cannot
-  // finish. Every check still runs on every page; only the clock grew.
-  test.setTimeout(1_800_000);
+async function publishedPaths(request: APIRequestContext): Promise<string[]> {
   const sitemap = await request.get('/sitemap.xml');
   expect(sitemap.ok()).toBe(true);
   const paths = [...(await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g)]
@@ -27,35 +23,51 @@ test('every published sitemap page renders at mobile and desktop widths', async 
   // A sitemap-only check silently misses working noindex pages. Account for
   // every static page source, while preserving intentionally unreleased pages.
   const staticPages = sourcePages().filter(path => !path.includes('[') && path !== '/awareness/august');
-  const allPages = [...new Set([...paths, ...staticPages, '/offline-crisis.html'])];
-  console.log(`Public route coverage: ${allPages.length} rendered pages; ${sourcePages().length} page source files accounted for, including the dynamic awareness template and unreleased hub.`);
+  return [...new Set([...paths, ...staticPages, '/offline-crisis.html'])];
+}
 
-  for (const path of allPages) {
-    await test.step(path, async () => {
-      const errors: string[] = [];
-      const captureError = (error: Error) => errors.push(error.message);
-      page.on('pageerror', captureError);
-      try {
-        await page.setViewportSize({ width: 390, height: 844 });
-        const response = await page.goto(path);
-        // The installed service worker deliberately serves its crisis fallback
-        // with 503 to distinguish offline help from a live successful response.
-        expect(response?.status(), path).toBe(path === '/offline-crisis.html' ? 503 : 200);
-        await expect(page.locator('h1').first(), path).toBeVisible();
-        await page.evaluate(() => document.fonts.ready);
-        for (const width of [390, 1280]) {
-          await page.setViewportSize({ width, height: 844 });
-          await expect.poll(async () => page.evaluate(() =>
-            document.documentElement.scrollWidth <= window.innerWidth + 1,
-          ), { message: `${path} must fit a ${width}px viewport` }).toBe(true);
+// Run 3 grew the sitemap to 12,709 URLs. One browser context also slows down
+// over thousands of navigations (measured at about 56ms per page early in a
+// session and about 101ms per page by page 2,000), so a single-test sweep
+// cannot finish its clock. The sweep therefore runs in parts, and Playwright
+// gives each part a fresh context. Every check still runs on every page.
+const SWEEP_PARTS = 4;
+
+for (let part = 0; part < SWEEP_PARTS; part++) {
+  test(`every published sitemap page renders at mobile and desktop widths (part ${part + 1} of ${SWEEP_PARTS})`, async ({ page, request }) => {
+    test.setTimeout(900_000);
+    const allPages = await publishedPaths(request);
+    if (part === 0) {
+      console.log(`Public route coverage: ${allPages.length} rendered pages; ${sourcePages().length} page source files accounted for, including the dynamic awareness template and unreleased hub.`);
+    }
+    const chunk = allPages.filter((_, i) => i % SWEEP_PARTS === part);
+    for (const path of chunk) {
+      await test.step(path, async () => {
+        const errors: string[] = [];
+        const captureError = (error: Error) => errors.push(error.message);
+        page.on('pageerror', captureError);
+        try {
+          await page.setViewportSize({ width: 390, height: 844 });
+          const response = await page.goto(path);
+          // The installed service worker deliberately serves its crisis fallback
+          // with 503 to distinguish offline help from a live successful response.
+          expect(response?.status(), path).toBe(path === '/offline-crisis.html' ? 503 : 200);
+          await expect(page.locator('h1').first(), path).toBeVisible();
+          await page.evaluate(() => document.fonts.ready);
+          for (const width of [390, 1280]) {
+            await page.setViewportSize({ width, height: 844 });
+            await expect.poll(async () => page.evaluate(() =>
+              document.documentElement.scrollWidth <= window.innerWidth + 1,
+            ), { message: `${path} must fit a ${width}px viewport` }).toBe(true);
+          }
+          expect(errors, `${path} browser errors`).toEqual([]);
+        } finally {
+          page.off('pageerror', captureError);
         }
-        expect(errors, `${path} browser errors`).toEqual([]);
-      } finally {
-        page.off('pageerror', captureError);
-      }
-    });
-  }
-});
+      });
+    }
+  });
+}
 
 test('every configured legacy route and unpublished awareness page has its intended disposition', async ({ request }) => {
   test.setTimeout(180_000);
