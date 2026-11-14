@@ -605,7 +605,9 @@ export default function HomePage() {
           <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
             Find a free mental health self-check, learn about alcohol and substance use, or try a practical recovery tool. No account is needed. Screening is not a diagnosis.
           </p>
+          <p className="text-lg text-neutral-800 dark:text-neutral-200 mb-4">Find a treatment program near you.</p>
           <div className="flex flex-wrap gap-3 mb-5">
+            <Link href="/facilities" className="btn-primary text-base">Find treatment</Link>
             <Link href="/screening-tools#choose-a-tool" className="btn-primary text-base">
               Find a tool
             </Link>

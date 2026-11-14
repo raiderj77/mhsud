@@ -1,50 +1,60 @@
-# What changed (file by file)
+# Navigation fix handoff
 
-Each entry is PROVEN by the named file and this session's edit commands.
+## What changed (file by file)
 
-- PROVEN — `src/lib/facilityIndexing.mjs`: shared completeness, location-scoped duplicate/primary selection and sitemap eligibility policy.
-- PROVEN — `src/lib/facilities.ts`: all-record loading and cached state-level indexing policies.
-- PROVEN — `src/components/DirectoryContext.tsx`: data-derived counts, service mix, field coverage, source dates and licensing limitations.
-- PROVEN — `src/components/FacilityDirectory.tsx`: explicit detail-page cross-check status and generated date in provenance.
-- PROVEN — `src/app/facilities/page.tsx`: national context and indexable hub; replaced unsupported introductory claims with snapshot limitations.
-- PROVEN — `src/app/facilities/[state]/page.tsx`: state context and indexable metadata.
-- PROVEN — `src/app/facilities/[state]/[city]/page.tsx`: city context; indexing requires at least three records.
-- PROVEN — `src/app/facilities/[state]/[city]/[slug]/page.tsx`: selective facility indexing and primary canonical targets.
-- PROVEN — `src/app/facilities/pricing/page.tsx`: indexable metadata.
-- PROVEN — `src/app/sober-living/page.tsx`: indexable resource page; clarified that certified-home records have not been imported and removed broad licensing assertions from introductory/CA/GA copy.
-- PROVEN — `src/app/sitemap.ts`: eligible directory URLs with dataset lastModified; retained core entries.
-- PROVEN — `scripts/ingest-facility-supplements.mjs`: offline CSV staging for reviewed NPPES, state-license and certified-home sources; no runtime publication.
-- PROVEN — `tests/facility-indexing.test.mjs`: four policy/data/parser regression checks.
-- PROVEN — `INDEXING-REPORT-RUN3.md`: per-phase evidence, counts, blocked sources, offline instructions, scoped security review and verbatim test/lint outputs.
-- PROVEN — `HANDOFF.md`: this handoff.
+- **PROVEN** `src/components/Navbar.tsx:277` and `:675`: added “Find treatment” → `/facilities` to desktop and mobile navigation, using adjacent link styling.
+- **PROVEN** `src/app/page.tsx:608`: added “Find a treatment program near you.” and the treatment action before the existing tool actions. Existing screening hero text and compliance paragraphs remain (`:601–630`).
+- **PROVEN** `src/components/Footer.tsx:78`: added the treatment link to Resources.
+- **PROVEN** `src/app/facilities/page.tsx:39`: seeker section renders before browsing and operator content. The complete operator pitch moved below browsing (`:62`); statistics moved below task content (`:101`).
+- **PROVEN** `src/app/facilities/[state]/page.tsx:46`: cities and their filter precede the existing dataset summary and `DirectoryContext` (`:56`). This template has city links, not a facility list; no new facility-list UI was introduced.
+- **PROVEN** `src/app/facilities/[state]/[city]/page.tsx:62`: existing facility listings precede the complete `DirectoryContext` (`:91`).
+- **PROVEN** `src/components/DirectoryBrowse.tsx:1`: new shared client component for state/city links. Empty initial query renders every link on the server; filtering uses supplied static labels, with a visible label, result count, empty state, and focus styling. No fetch, storage, backend, or URL-state code appears in this component.
+- **PROVEN** `src/components/ToolGrid.tsx:80` and `:244`: separates all 14 Information cards from the homepage main tool list into “About restricted instruments”; existing card data and destinations remain in `src/app/page.tsx`.
+- **PROVEN** `src/app/screening-tools/page.tsx:577`: groups the existing information-only entries into the same clearly labeled section. Original category anchors and introductory content remain, including links to the restricted section for categories with no interactive cards.
+- **PROVEN** `HANDOFF.md`: this requested report. Source comparison found exactly nine changed/new source files, listed above (`/tmp/mindcheck-source.log`).
 
-# Evidence (PROVEN or ASSERTED, with sources)
+## Evidence (PROVEN or ASSERTED, with sources)
 
-- PROVEN — Local sitemap execution emitted **12,709 unique URLs**: 90 core + 1,237 Wave 1 + 11,382 Wave 2. Directory lastModified is `2026-11-02`. Source: `/tmp/mhsud-run3-verify.log`, reproduced in `INDEXING-REPORT-RUN3.md` under Phase 6 and verification output; `src/app/sitemap.ts`.
-- PROVEN — Wave 2 holds **818 records**: 808 non-primaries and 10 incomplete primaries. Settled duplicate policy yields 554 clusters. Sources: `tests/facility-indexing.test.mjs`; policy-count command output reproduced in the Run 3 report's Phases 1–3.
-- PROVEN — All nine source-discovery requests failed DNS resolution; no new records or NPIs were imported. Exact export endpoints and terms remain unverified. Sources: `/tmp/mhsud-run3-sources.json`, reproduced in the Run 3 report; importer source only stages reviewed local inputs.
-- PROVEN — Scoped security review identified existing API rate/body-validation concerns and a header-coverage gap for nested business API routes; no security patch was applied. Sources: `INDEXING-REPORT-RUN3.md` SECURITY-REPORT, `src/app/facilities/api/{check,claim}/route.ts`, `src/middleware.ts`, `next.config.mjs`. Exploitability remains ASSERTED pending further evidence; no live testing was performed.
-- PROVEN — Decision is **REVISE**, pending coordinator build/rendered checks and separate review of API concerns. Source: `INDEXING-REPORT-RUN3.md`, decision and Phase 6. Local metadata execution does not establish HTTP status or production rendering.
-- ASSERTED — Coordinator verified the unchanged baseline build outside the sandbox, per `BRIEF.md`. This agent did not run a build; the final changed-tree build remains unverified.
+- **PROVEN — recon:** working directory from `pwd`: `/Users/jasonramirez/muse-runs/20261113-224508-mindcheck-nav-build2/worktree`. BRIEF.md’s coordinator-supplied preflight records branch `main`, HEAD and origin/main `d963c76b87e08aee5082056c3616a04df117af35`, zero modified source files, and three untracked tool directories. These repository-state claims are accepted from that explicitly authorized preflight, not independently queried.
+- **PROVEN — comparison method:** copied `src` to `/tmp/mindcheck-nav-baseline/src` before edits; used `diff -ru`, byte comparisons, and `/tmp/mindcheck-source-check.py`, not git. Diff is `/tmp/mindcheck-nav.diff`. All nine source changes concern the six fixes.
+- **PROVEN — content preservation:** `/tmp/mindcheck-source.log` reports `PASS operator pitch byte-identical`; the shared `DirectoryContext.tsx` is byte-identical. The diff shows relocated blocks, not removal of statistics/provenance. The tool data objects remain unchanged.
+- **PROVEN — sitemap:** `/tmp/mindcheck-sitemap.cjs` transpiled and executed both baseline/current sitemap functions using their respective source trees. `/tmp/mindcheck-sitemap.log`: `PASS baseline 12709; current 12709; added 0; removed 0`. Built sitemap independently contains 12,709 `<loc>` entries (`/tmp/mindcheck-dom.log`).
+- **PROVEN — rendered routes:** Next.js production request handler with its `createRequestResponseMocks` rendered `/`, `/facilities`, `/facilities/ca`, `/facilities/ca/san-jose` in process, without opening a listening socket. `/tmp/mindcheck-render.log` reports HTTP 200 and body sizes 212622, 119640, 200939, 113709 bytes respectively. HTML is in `/tmp/mindcheck-render_*.html`.
+- **PROVEN — DOM:** `/tmp/mindcheck-dom.log` reports 23 passing checks: crisis markup with 988 and SAMHSA before main on all four routes; zero Stripe/checkout links on those routes; homepage hero action; 14 separately grouped homepage cards; seeker section first; state/city ordering; server-rendered full browsing lists; filter inputs; San Jose present; sitemap count. Separate command output: `PASS tools index: 14 restricted cards; 0 broken section anchors; 2 checks passed` from `.next/server/app/screening-tools.html`.
+- **PROVEN — payment-link scan:** source-diff scan found zero added Stripe/checkout references (`/tmp/mindcheck-source.log`). Recursive built HTML scan output: `Built HTML scan: 96 files; 0 Stripe/checkout hrefs`. Four dynamic route responses were additionally checked above.
+- **ASSERTED — interaction/layout intent:** the local filter is intended to narrow San Jose to one city, and the hero action is intended to be visible above the fold. Browser execution was blocked, so neither interaction nor viewport placement is claimed verified.
+- **PROVEN — copy review:** new hero sentence and action identify the existing directory, whose data access remains in `src/app/facilities/page.tsx:23–25`. Applied checklist items: plain language, answer-first action, existing substance-use directory purpose. Dropped as inapplicable: new clinical evidence, instrument changes, reviewer credentials, diagnostic claims, article schema, and article publication. No new health article was created (nine-file source inventory).
+- **ASSERTED — TRUTHMODE decision: REVISE for release verification.** Source/DOM evidence supports the scoped implementation; missing normal build and browser verification prevents a full PASS. No rights, scoring, crisis-policy, legal, analytics, or clinical-content approval is inferred.
 
-# Tests and checks run (with counts, and any failed or skipped check named)
+## Tests and checks run (with counts, and any failed or skipped check named)
 
-- PROVEN — `npm ci`: exit 0, 384 packages installed. Source: installation command output; Run 3 report Phase 0.
-- PROVEN — Baseline `npm test`: **246 passed / 0 failed / 0 skipped**; final: **250 passed / 0 failed / 0 skipped**. Sources: `/tmp/mhsud-run3-test.log`, `/tmp/mhsud-run3-final-test.log`, copied verbatim into the Run 3 report.
-- PROVEN — Baseline and final lint: **2 runs, both exit 0**. TypeScript check: exit 0. Sources: `/tmp/mhsud-run3-{lint,final-lint,types}.log` and command outputs; report Phase 6.
-- PROVEN — Server-free checks covered **12,200 facility**, **4,180 city**, and **54 state** metadata objects, sitemap uniqueness/cap and facility canonicals. Source: `/tmp/mhsud-run3-verify.log`. First temporary loader attempt failed resolving `.tsx`; corrected loader then passed. Source: session command outputs and report Phase 6.
-- PROVEN — **15 directory source files** passed byline/Stripe-link checks; **3 source checks** preserved check/claim/report noindex. Local PurchaseCta rendering produced a disabled button with checkout env unset. Source: render/scan command outputs, summarized in report Phase 6. Production checkout environment is unverified.
-- PROVEN — Secret-signature sweep: **375 text files, 0 selected-pattern hits**; limited scope, not exhaustive clearance. Source: `/tmp/mhsud-run3-security-sweep.json`, report SECURITY-REPORT.
-- PROVEN — Failed external checks: **9 source-discovery requests** (curl exit 6); **1 dependency advisory audit** (exit 1, DNS failure). Sources: source JSON and `/tmp/mhsud-run3-audit.json`, reproduced in report.
-- PROVEN — Skipped: agent baseline/final builds and local HTTP crawl (**0 HTTP URLs checked**) under `BRIEF.md`'s server/build prohibition. Also unverified: browser accessibility, manual keyboard/screen-reader, responsive/performance and changed-page network/BFCache checks. Source: report Phase 6 and session tool transcript. Coordinator verification remains necessary.
+- **PROVEN — existing unit suite:** final `npm test`, `/tmp/mindcheck-tests-final.log`:
+  ```text
+  tests 255
+  pass 255
+  fail 0
+  cancelled 0
+  skipped 0
+  ```
+- **PROVEN — ESLint:** `npm run lint` exited 0 with no errors/warnings (`/tmp/mindcheck-lint.log`).
+- **PROVEN — prebuild checks:** tests 255/255, predeploy checks passed, and content checks passed (`/tmp/mindcheck-build.log`). Content checker reported 0 content files and 196 source files scanned; these are its reported scope, not a claim of clinical review.
+- **PROVEN — source integrity:** 11 checks passed, 0 failed (`/tmp/mindcheck-source.log`).
+- **PROVEN — DOM checks:** 23 passed, 0 failed (`/tmp/mindcheck-dom.log`), plus 2 tools-index checks passed in command output. Four routes rendered HTTP 200 (`/tmp/mindcheck-render.log`).
+- **PROVEN — sitemap equality:** 1 full URL-set comparison passed: 12,709 before/after, 0 added, 0 removed (`/tmp/mindcheck-sitemap.log`).
+- **PROVEN — offline production build:** `NEXT_TELEMETRY_DISABLED=1 NEXT_FONT_GOOGLE_MOCKED_RESPONSES=/tmp/mindcheck-font-mock.cjs npx next build` exited 0; compiled, checked types/lint, and generated 103/103 static entries (`/tmp/mindcheck-offline-build.log`). Fixture uses local Arial via Next.js’s font-response testing hook; no repository font code changed. This is webpack with mocked font responses, not the normal Turbopack release build.
+- **PROVEN — failed/aborted normal builds:** initial `npm run build` failed `EPERM` writing Next telemetry preferences. Telemetry-disabled Turbopack attempt was interrupted after remaining at compilation without progress. Plain `npx next build` then failed `ENOTFOUND fonts.googleapis.com`, unable to fetch DM Sans and Source Serif 4 (`/tmp/mindcheck-webpack-build.log`). First offline fixture also failed because it lacked `@font-face`; corrected fixture build passed. Normal production build remains unverified.
+- **PROVEN — blocked browser checks:** server startup failed `listen EPERM ... 127.0.0.1:4311` (`/tmp/mindcheck-server.log`); headless Chrome launch aborted before checks (`/tmp/mindcheck-browser.log`). Browser assertions completed: 0. Prepared script: `/tmp/mindcheck-browser.mjs`.
+- **PROVEN — skipped checks:** existing Playwright suite, live San Jose filtering/clear/empty-state interaction, JavaScript-disabled browser execution, above-fold desktop/mobile placement, responsive overflow, automated browser accessibility, manual keyboard and screen-reader smoke checks. Sandbox server/browser failures above prevented these checks. Full lists are proven in server HTML, not in an actual JS-disabled browser.
+- **PROVEN — React review:** applied the available React best-practices skill: small client boundary receiving link labels only; local state; stable href keys; no client data fetch; derived filtering; explicit input label/status/focus. Source: `DirectoryBrowse.tsx` and `ToolGrid.tsx`. This source review does not replace browser accessibility checks.
 
-# Gates left untouched
+## Gates left untouched
 
-- PROVEN — This run's edits did not change instrument rights/items/scoring, crisis logic, analytics/privacy-route policy, local storage, legal pages, security headers, service worker or deployment workflows. Source: file-by-file edit inventory above and session edit commands.
-- PROVEN — Checkout implementation and empty example gate remain; local disabled rendering verified. Source: `src/components/FacilityDirectory.tsx`, `.env.example`, render command output. No production-setting assertion is made.
-- PROVEN — Check/claim/report noindex metadata and `/api/*` header rule remain. Source: those page files and `next.config.mjs`; nested API coverage concern is reported separately.
-- PROVEN — No git commands, merge, deployment, publication, outbound messaging or paid-service actions were run. Source: session tool transcript; restrictions in `BRIEF.md` and user instruction. Existing Run 1/2 reports were only read from the external paths, not edited.
+- **PROVEN** Byte comparison confirms unchanged pricing page, listing-check page, claim page, route policy, root layout, crisis banner, directory context, and sitemap (`/tmp/mindcheck-source.log`). No data files changed. Complete source inventory/diff shows no instrument definitions, scoring, rights registry, legal pages, analytics policy, security headers, service worker, or deployment workflows changed.
+- **PROVEN** Operator prices/links/text are byte-identical after relocation. No payment links were introduced; paid launch was not enabled (source and built-link scans above).
+- **PROVEN** noindex rules were not edited; no route file was added or removed; sitemap URL sets are identical. Crisis banner implementation and root placement remain unchanged; four rendered pages confirm top markup.
+- **PROVEN** No git, merge, deploy, publish, send, or spend command was executed in this task’s tool transcript. Only local source changes, local verification, and this handoff were performed.
+- **PROVEN** Coordinator follow-up is prescribed by BRIEF.md “After the run”: recount evidence and perform live preview verification. The skipped/blocked checks above remain coordinator verification work; this handoff does not authorize crossing a hard gate.
 
-# Remaining owner steps (true owner items only, or the word None)
+## Remaining owner steps
 
 None

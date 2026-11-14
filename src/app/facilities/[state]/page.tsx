@@ -1,3 +1,4 @@
+import { DirectoryBrowse } from "@/components/DirectoryBrowse";
 import { DirectoryContext } from "@/components/DirectoryContext";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -42,6 +43,8 @@ export default async function StatePage({ params }: Params) {
       <h1 className="mt-2 text-3xl font-bold text-slate-900">
         Substance use treatment programs in {summary.name}
       </h1>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Cities</h2>
+      <DirectoryBrowse label="Filter cities" items={summary.cities.map((c) => ({ href: `/facilities/${summary.code.toLowerCase()}/${c.slug}`, label: `${c.name} — ${c.count} program${c.count === 1 ? "" : "s"}` }))} />
       <p className="mt-4 text-slate-800">
         {summary.facilityCount.toLocaleString()} programs listed from the SAMHSA National
         Directory (2024 edition, retrieved {index.generatedAt}).
@@ -51,19 +54,7 @@ export default async function StatePage({ params }: Params) {
           " This dataset contains SAMHSA records only for this state; its licensing roster has not been cross-checked."}
       </p>
       <DirectoryContext facilities={facilities} state={summary.code} />
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Cities</h2>
-      <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
-        {summary.cities.map((c) => (
-          <li key={c.slug}>
-            <Link
-              className="block rounded-lg border border-slate-300 px-3 py-2 text-slate-800 hover:bg-slate-50"
-              href={`/facilities/${summary.code.toLowerCase()}/${c.slug}`}
-            >
-              {c.name} — {c.count} program{c.count === 1 ? "" : "s"}
-            </Link>
-          </li>
-        ))}
-      </ul>
+
       <p className="mt-8 text-slate-800">
         Run a program in {summary.name}?{" "}
         <Link className="underline" href="/facilities/check">

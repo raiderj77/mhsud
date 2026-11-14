@@ -59,7 +59,6 @@ export default async function CityPage({ params }: Params) {
         information from people seeking treatment, and programs are listed in alphabetical
         order, never by payment.
       </p>
-      <DirectoryContext facilities={facilities} state={summary.code} />
       <ul className="mt-6 space-y-3">
         {facilities.map((f) => (
           <li key={f.slug} className="rounded-lg border border-slate-300 p-4">
@@ -89,6 +88,8 @@ export default async function CityPage({ params }: Params) {
           </li>
         ))}
       </ul>
+      <DirectoryContext facilities={facilities} state={summary.code} />
+
     </div>
   );
 }
