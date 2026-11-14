@@ -4,6 +4,14 @@ import Link from "next/link";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { DarkModeToggle } from "./ThemeProvider";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import { getToolClassification } from "@/lib/toolClassifications";
+
+/* Restricted (rights-limited, information-only) instruments stay browsable by
+   category but are excluded from search results, matching the screening-tools
+   page's "About restricted instruments" treatment. */
+function isRestrictedInstrument(href: string): boolean {
+  return getToolClassification(href)?.classification === "Information Only";
+}
 
 /* ─── Tool data organized by category ─── */
 type Tool = { href: string; label: string; sub: string };
@@ -178,7 +186,9 @@ export function Navbar() {
     if (search.trim()) {
       const q = search.toLowerCase();
       tools = tools.filter(
-        (t) => t.label.toLowerCase().includes(q) || t.sub.toLowerCase().includes(q) || t.categoryName.toLowerCase().includes(q)
+        (t) =>
+          !isRestrictedInstrument(t.href) &&
+          (t.label.toLowerCase().includes(q) || t.sub.toLowerCase().includes(q) || t.categoryName.toLowerCase().includes(q))
       );
     }
     return tools;
@@ -539,6 +549,7 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
 
   const matchesSearch = (tool: Tool) => {
     if (!search.trim()) return true;
+    if (isRestrictedInstrument(tool.href)) return false;
     const q = search.toLowerCase();
     return tool.label.toLowerCase().includes(q) || tool.sub.toLowerCase().includes(q);
   };
