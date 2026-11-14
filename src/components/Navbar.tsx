@@ -280,6 +280,12 @@ export function Navbar() {
               Recovery
             </Link>
             <Link
+              href="/facilities"
+              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+            >
+              Find treatment
+            </Link>
+            <Link
               href="/for-professionals"
               className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
             >
@@ -669,6 +675,13 @@ function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: 
             className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
           >
             All Screening Tools
+          </Link>
+          <Link
+            href="/facilities"
+            onClick={onClose}
+            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
+          >
+            Find treatment
           </Link>
           <Link
             href="/for-professionals"

@@ -70,7 +70,7 @@ function matchesSearch(query: string, ...fields: string[]): boolean {
 /* ------------------------------------------------------------------ */
 
 export function ToolGrid({
-  tools,
+  tools: allTools,
   toolCategories,
   targetedScreenings,
 }: {
@@ -78,6 +78,8 @@ export function ToolGrid({
   toolCategories: ToolCategory[];
   targetedScreenings: TargetedScreening[];
 }) {
+  const tools = useMemo(() => allTools.filter((tool) => tool.badge !== "Information"), [allTools]);
+  const informationTools = allTools.filter((tool) => tool.badge === "Information");
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
 
@@ -238,6 +240,13 @@ export function ToolGrid({
             </div>
           )
         )}
+      </section>
+      <section aria-labelledby="restricted-instruments" className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
+        <h2 id="restricted-instruments" className="font-serif text-heading font-bold mb-4">About restricted instruments</h2>
+        <p className="mb-4">Information only: these pages have no questionnaire or score.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {informationTools.map((tool) => <ToolCard key={tool.href} tool={tool} headingLevel="h3" />)}
+        </div>
       </section>
 
       {/* ============ TARGETED SCREENINGS SECTION ============ */}

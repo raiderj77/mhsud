@@ -1,3 +1,4 @@
+import { DirectoryBrowse } from "@/components/DirectoryBrowse";
 import { DirectoryContext } from "@/components/DirectoryContext";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -34,6 +35,29 @@ export default async function FacilitiesHubPage() {
         move, change its phone number, or change services after the source was collected.
         Confirm current details with the program directly.
       </p>
+
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900">For people looking for treatment</h2>
+      <p className="mt-3 text-slate-800">
+        Browse the directory below to find a program&rsquo;s own phone number and website, then
+        contact the program directly. This site does not take messages, bookings, or personal
+        information from people seeking treatment, and it does not recommend one program over
+        another. If you need help right now, call or text <strong>988</strong> (Suicide &amp;
+        Crisis Lifeline) or the SAMHSA National Helpline at <strong>1-800-662-4357</strong>.
+      </p>
+
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Sober living homes</h2>
+      <p className="mt-3 text-slate-800">
+        There is no national registry of sober living homes, so this directory does not pretend
+        to list them all. Certified homes (through a NARR state affiliate) and operator-claimed
+        homes are handled on the{" "}
+        <Link className="underline" href="/sober-living">
+          sober living page
+        </Link>
+        .
+      </p>
+
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Browse programs by state</h2>
+      <DirectoryBrowse label="Filter states" items={index.states.map((s) => ({ href: `/facilities/${s.code.toLowerCase()}`, label: `${s.name} — ${s.facilityCount.toLocaleString()} programs` }))} />
 
       <h2 className="mt-8 text-2xl font-semibold text-slate-900">For program operators</h2>
       <ol className="mt-3 list-decimal space-y-2 pl-6 text-slate-800">
@@ -74,41 +98,7 @@ export default async function FacilitiesHubPage() {
         quality of care, and we do not steer people toward any program.
       </p>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">For people looking for treatment</h2>
-      <p className="mt-3 text-slate-800">
-        Browse the directory below to find a program&rsquo;s own phone number and website, then
-        contact the program directly. This site does not take messages, bookings, or personal
-        information from people seeking treatment, and it does not recommend one program over
-        another. If you need help right now, call or text <strong>988</strong> (Suicide &amp;
-        Crisis Lifeline) or the SAMHSA National Helpline at <strong>1-800-662-4357</strong>.
-      </p>
-
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Sober living homes</h2>
-      <p className="mt-3 text-slate-800">
-        There is no national registry of sober living homes, so this directory does not pretend
-        to list them all. Certified homes (through a NARR state affiliate) and operator-claimed
-        homes are handled on the{" "}
-        <Link className="underline" href="/sober-living">
-          sober living page
-        </Link>
-        .
-      </p>
-
       <DirectoryContext facilities={facilities} />
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Browse programs by state</h2>
-      <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
-        {index.states.map((s) => (
-          <li key={s.code}>
-            <Link
-              className="block rounded-lg border border-slate-300 px-3 py-2 text-slate-800 hover:bg-slate-50"
-              href={`/facilities/${s.code.toLowerCase()}`}
-            >
-              {s.name} — {s.facilityCount.toLocaleString()} programs
-            </Link>
-          </li>
-        ))}
-      </ul>
-
       <div className="mt-10">
         <ProvenanceNote />
       </div>

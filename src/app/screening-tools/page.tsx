@@ -574,7 +574,12 @@ export default function ScreeningToolsIndexPage() {
         </ul>
       </nav>
 
-      {CATEGORIES.map((cat) => (
+      {[...CATEGORIES.map((cat) => ({ ...cat, tools: cat.tools.filter((tool) => !INFORMATION_ONLY_PATHS.has(tool.href)) })), {
+        id: "restricted-instruments",
+        title: "About restricted instruments",
+        intro: "Information only: these pages have no questionnaire or score.",
+        tools: CATEGORIES.flatMap((cat) => cat.tools.filter((tool) => INFORMATION_ONLY_PATHS.has(tool.href))),
+      }].map((cat) => (
         <section key={cat.id} id={cat.id} className="mb-12 scroll-mt-24">
           <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
             {cat.title}
@@ -582,6 +587,7 @@ export default function ScreeningToolsIndexPage() {
           <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">
             {cat.intro}
           </p>
+          {cat.tools.length === 0 && <p className="mb-4"><a href="#restricted-instruments" className="text-sage-700 underline dark:text-sage-400">Read about restricted instruments below.</a></p>}
           <ul className="space-y-4">
             {cat.tools.map((tool) => (
               <li
