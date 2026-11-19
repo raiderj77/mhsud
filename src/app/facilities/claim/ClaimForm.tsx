@@ -92,7 +92,7 @@ export default function ClaimForm({ initialFacilityPath }: { initialFacilityPath
     <div>
       <form onSubmit={submit} className="space-y-4 rounded-lg border border-slate-300 p-4">
         <fieldset>
-          <legend className="font-medium text-slate-900">What are you claiming?</legend>
+          <legend className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What are you claiming?</legend>
           <div className="mt-2 space-y-2">
             <label className="flex items-center gap-2">
               <input
@@ -117,25 +117,25 @@ export default function ClaimForm({ initialFacilityPath }: { initialFacilityPath
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="cf-name" className="font-medium text-slate-900">
+            <label htmlFor="cf-name" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               Your name
             </label>
             <input id="cf-name" required value={operatorName} onChange={(e) => setOperatorName(e.target.value)} className={inputCls} autoComplete="name" />
           </div>
           <div>
-            <label htmlFor="cf-role" className="font-medium text-slate-900">
+            <label htmlFor="cf-role" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               Your role (owner, director, marketing, …)
             </label>
             <input id="cf-role" required value={operatorRole} onChange={(e) => setOperatorRole(e.target.value)} className={inputCls} />
           </div>
           <div>
-            <label htmlFor="cf-email" className="font-medium text-slate-900">
+            <label htmlFor="cf-email" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               Work email
             </label>
             <input id="cf-email" type="email" required value={workEmail} onChange={(e) => setWorkEmail(e.target.value)} className={inputCls} autoComplete="email" />
           </div>
           <div>
-            <label htmlFor="cf-phone" className="font-medium text-slate-900">
+            <label htmlFor="cf-phone" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               Work phone (optional)
             </label>
             <input id="cf-phone" type="tel" value={workPhone} onChange={(e) => setWorkPhone(e.target.value)} className={inputCls} autoComplete="tel" />
@@ -145,13 +145,13 @@ export default function ClaimForm({ initialFacilityPath }: { initialFacilityPath
         {segment === "sud" ? (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label htmlFor="cf-path" className="font-medium text-slate-900">
+              <label htmlFor="cf-path" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
                 Your directory page path (from the directory)
               </label>
               <input id="cf-path" value={facilityPath} onChange={(e) => setFacilityPath(e.target.value)} className={inputCls} placeholder="/facilities/ca/los-angeles/program-name" />
             </div>
             <div>
-              <label htmlFor="cf-license" className="font-medium text-slate-900">
+              <label htmlFor="cf-license" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
                 State license / application number (optional, speeds verification)
               </label>
               <input id="cf-license" value={licenseNumber} onChange={(e) => setLicenseNumber(e.target.value)} className={inputCls} />
@@ -168,7 +168,7 @@ export default function ClaimForm({ initialFacilityPath }: { initialFacilityPath
               </span>
             </label>
             <div>
-              <label htmlFor="cf-affiliate" className="font-medium text-slate-900">
+              <label htmlFor="cf-affiliate" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
                 Certifying affiliate (for example CCAPP, GARR, NCARR)
               </label>
               <input id="cf-affiliate" value={affiliateName} onChange={(e) => setAffiliateName(e.target.value)} className={inputCls} />
@@ -179,7 +179,7 @@ export default function ClaimForm({ initialFacilityPath }: { initialFacilityPath
         <button type="submit" disabled={busy} className="inline-flex min-h-[44px] items-center rounded-lg bg-sage-700 px-5 py-2 font-medium text-white disabled:opacity-60">
           {busy ? "Checking…" : "Check eligibility and start the claim"}
         </button>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">
           Business contact details only. Never enter personal information about anyone seeking
           treatment — claims have no field for it, by design.
         </p>

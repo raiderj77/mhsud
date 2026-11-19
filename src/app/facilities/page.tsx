@@ -24,11 +24,11 @@ export default async function FacilitiesHubPage() {
   const facilities = await getAllFacilities();
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <p className="text-sm text-slate-600">Last updated {LAST_UPDATED}</p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">
+      <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">Last updated {LAST_UPDATED}</p>
+      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
         Treatment program directory &amp; listing accuracy service
       </h1>
-      <p className="mt-4 text-lg text-slate-800">
+      <p className="mt-4 text-lg text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         This directory lists {index.totals.facilities.toLocaleString()} substance use treatment
         programs across {index.totals.states} states and territories, built from the federal
         SAMHSA directory and state licensing rosters. This is a dated snapshot, not a live availability service. A program may
@@ -36,8 +36,8 @@ export default async function FacilitiesHubPage() {
         Confirm current details with the program directly.
       </p>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">For people looking for treatment</h2>
-      <p className="mt-3 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">For people looking for treatment</h2>
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Browse the directory below to find a program&rsquo;s own phone number and website, then
         contact the program directly. This site does not take messages, bookings, or personal
         information from people seeking treatment, and it does not recommend one program over
@@ -45,8 +45,8 @@ export default async function FacilitiesHubPage() {
         Crisis Lifeline) or the SAMHSA National Helpline at <strong>1-800-662-4357</strong>.
       </p>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Sober living homes</h2>
-      <p className="mt-3 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Sober living homes</h2>
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         There is no national registry of sober living homes, so this directory does not pretend
         to list them all. Certified homes (through a NARR state affiliate) and operator-claimed
         homes are handled on the{" "}
@@ -56,11 +56,11 @@ export default async function FacilitiesHubPage() {
         .
       </p>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Browse programs by state</h2>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Browse programs by state</h2>
       <DirectoryBrowse label="Filter states" items={index.states.map((s) => ({ href: `/facilities/${s.code.toLowerCase()}`, label: `${s.name} — ${s.facilityCount.toLocaleString()} programs` }))} />
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">For program operators</h2>
-      <ol className="mt-3 list-decimal space-y-2 pl-6 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">For program operators</h2>
+      <ol className="mt-3 list-decimal space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>
           <strong>Run the free listing check.</strong> Enter your program&rsquo;s name and state
           and see exactly what the federal directory and — in California — the state licensing
@@ -90,7 +90,7 @@ export default async function FacilitiesHubPage() {
           .
         </li>
       </ol>
-      <p className="mt-3 text-slate-800">
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Every price on this service is a flat fee for listing work. Fees never vary with how many
         people contact a program, and paying never changes a program&rsquo;s position in this
         directory. We verify legal-status records — licensing for treatment programs,
@@ -102,7 +102,7 @@ export default async function FacilitiesHubPage() {
       <div className="mt-10">
         <ProvenanceNote />
       </div>
-      <p className="mt-6 text-sm text-slate-600">
+      <p className="mt-6 text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">
         Directory data retrieved {index.generatedAt}. Service description page: {SITE_URL}
         {PAGE_PATH}.
       </p>

@@ -17,8 +17,8 @@ export default function CheckPage() {
   const index = getDirectoryIndex();
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <h1 className="text-3xl font-bold text-slate-900">Free listing check</h1>
-      <p className="mt-4 text-lg text-slate-800">
+      <h1 className="text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Free listing check</h1>
+      <p className="mt-4 text-lg text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Enter your program&rsquo;s name and state. The check compares the record held in the
         SAMHSA National Directory (2024 edition) against the California DHCS licensing roster
         where a match exists, and names what is stale or mismatched — with the date each source

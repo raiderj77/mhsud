@@ -51,24 +51,24 @@ export default async function ReportPage({ params }: Params) {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8 print:max-w-none">
-      <p className="text-sm text-slate-600 print:hidden">
+      <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600 print:hidden">
         <Link className="underline" href={facility.path}>
           ← Back to the directory page
         </Link>
       </p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">
+      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
         Listing audit snapshot: {facility.name}
       </h1>
-      <p className="mt-2 text-slate-700">
+      <p className="mt-2 text-slate-700 dark:text-neutral-300 dark:print:!text-slate-700">
         {facility.city}, {facility.stateName} · Snapshot generated from sources retrieved{" "}
         {index.generatedAt} · Free preview — the paid Listing Sprint adds the filing work
         described below. To save this report, use your browser&rsquo;s print function (Save as
         PDF).
       </p>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">What each source says</h2>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What each source says</h2>
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full border-collapse text-left text-slate-800">
+        <table className="w-full border-collapse text-left text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
           <thead>
             <tr>
               <th className="border border-slate-300 px-3 py-2">Field</th>
@@ -90,13 +90,13 @@ export default async function ReportPage({ params }: Params) {
         </table>
       </div>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Findings</h2>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Findings</h2>
       <div className="mt-4">
         <FindingsList findings={findings} />
       </div>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">What a Listing Sprint does with this</h2>
-      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What a Listing Sprint does with this</h2>
+      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>
           Files corrections with SAMHSA through its written update channels, with the
           operator&rsquo;s sign-off on the exact data, and keeps the filed dates on record. The

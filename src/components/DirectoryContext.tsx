@@ -10,7 +10,7 @@ export function DirectoryContext({ facilities, state }: { facilities: Facility[]
     return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   };
   const matched = facilities.filter(f => f.license).length;
-  return <section className="mt-6 rounded-lg border border-slate-300 p-4 text-slate-800">
+  return <section className="mt-6 rounded-lg border border-slate-300 p-4 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
     <h2 className="text-xl font-semibold">About these directory records</h2>
     <p className="mt-2">{facilities.length.toLocaleString()} records across {new Set(facilities.map(f => `${f.state}/${f.citySlug}`)).size.toLocaleString()} cities. Dataset generated {index.generatedAt}. Categories can overlap; counts describe reported services, not current openings.</p>
     {(["careTypes", "settings"] as const).map(key => <div className="mt-3" key={key}><h3 className="font-semibold">{key === "careTypes" ? "Types of care" : "Service settings"}</h3><ul className="list-disc pl-5">{mix(key).map(([label, count]) => <li key={label}>{label}: {count.toLocaleString()}</li>)}</ul></div>)}
