@@ -1,0 +1,44 @@
+{
+  "result_count": 6,
+  "results": [
+    {
+      "number": "1000000001",
+      "enumeration_type": "NPI-1",
+      "basic": {"first_name":"Fixture","last_name":"Alpha","credential":"LCSW","sole_proprietor":"YES"},
+      "addresses": [
+        {"address_purpose":"MAILING","city":"Reno","state":"NV"},
+        {"address_purpose":"LOCATION","address_1":"100 Fixture Way","city":"SACRAMENTO","state":"CA","postal_code":"95814","telephone_number":"9165550100"}
+      ],
+      "taxonomies": [
+        {"code":"1041C0700X","desc":"Clinical Social Worker","license":"TEST01","state":"CA","primary":true},
+        {"code":"101YA0400X","desc":"Addiction (Substance Use Disorder) Counselor","license":"TEST02","state":"CA","primary":false},
+        {"code":"103TC0700X","desc":"Clinical Psychologist","license":"TEST03","state":"NV","primary":false}
+      ]
+    },
+    {
+      "number":"1000000002","enumeration_type":"NPI-1","basic":{"first_name":"Fixture","last_name":"Bravo"},
+      "addresses":[{"address_purpose":"MAILING","city":"Sacramento","state":"CA"},{"address_purpose":"LOCATION","city":"Reno","state":"NV"}],
+      "taxonomies":[{"code":"106H00000X","license":"TEST04","state":"CA"}]
+    },
+    {
+      "number":"1000000003","enumeration_type":"NPI-1","basic":{"first_name":"Fixture","last_name":"Charlie"},
+      "addresses":[{"address_purpose":"LOCATION","city":"Sacramento","state":"CA"}],
+      "taxonomies":[{"code":"101YA0400X","license":"TEST05","state":"CA"},{"code":"101Y00000X","license":" ","state":"CA"}]
+    },
+    {
+      "number":"1000000004","enumeration_type":"NPI-2","basic":{"first_name":"Fixture","last_name":"Delta"},
+      "addresses":[{"address_purpose":"LOCATION","city":"Sacramento","state":"CA"}],
+      "taxonomies":[{"code":"106H00000X","license":"TEST06","state":"CA"}]
+    },
+    {
+      "number":"1000000005","enumeration_type":"NPI-1","basic":{"first_name":"Fixture","last_name":"Echo"},
+      "addresses":[{"address_purpose":"LOCATION","city":"Sacramento","state":"CA"}],
+      "taxonomies":[{"code":"103T00000X","license":"","state":"CA"},{"code":"103TC0700X","license":"TEST07","state":"NV"}]
+    },
+    {
+      "number":"1000000001","enumeration_type":"NPI-1","basic":{"first_name":"Fixture","last_name":"Alpha"},
+      "addresses":[{"address_purpose":"LOCATION","city":"Sacramento","state":"CA"}],
+      "taxonomies":[{"code":"106H00000X","license":"TEST08","state":"CA"}]
+    }
+  ]
+}
