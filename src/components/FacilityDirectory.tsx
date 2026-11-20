@@ -121,7 +121,7 @@ export function PurchaseCta({ label, priceNote }: { label: string; priceNote: st
         >
           {label}
         </a>
-        <p className="mt-1 text-sm text-slate-600">{priceNote}</p>
+        <p className="mt-1 text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">{priceNote}</p>
       </div>
     );
   }
@@ -135,7 +135,7 @@ export function PurchaseCta({ label, priceNote }: { label: string; priceNote: st
       >
         {label} — checkout not open yet
       </button>
-      <p className="mt-1 text-sm text-slate-600">
+      <p className="mt-1 text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">
         {priceNote} Checkout opens after the service terms complete legal review. To ask about
         opening dates, email{" "}
         <a className="underline" href="mailto:hello@mindchecktools.com">

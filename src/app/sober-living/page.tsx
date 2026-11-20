@@ -52,18 +52,18 @@ const AFFILIATES = [
 export default function SoberLivingPage() {
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <p className="text-sm text-slate-600">Last updated {LAST_UPDATED}</p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">
+      <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">Last updated {LAST_UPDATED}</p>
+      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
         Sober living homes: certification first, listings second
       </h1>
-      <p className="mt-4 text-lg text-slate-800">
+      <p className="mt-4 text-lg text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         This directory snapshot contains treatment-program records from SAMHSA and a
         California DHCS licensing roster. It does not yet contain an imported certified-home
         registry. Treatment-program counts elsewhere on this site are not sober living counts.
         Use the certification resources below to check a home directly with its certifying body.
         Listing requirements are:
       </p>
-      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800">
+      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>
           <strong>Certified homes</strong> — homes certified by a NARR state affiliate — are the
           verified seed of the sober living directory, and the only homes eligible for paid
@@ -85,8 +85,8 @@ export default function SoberLivingPage() {
         </li>
       </ul>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Certification registries</h2>
-      <p className="mt-3 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Certification registries</h2>
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Certification is run by state affiliates of the National Alliance for Recovery
         Residences (NARR), applying the NARR Standard. Levels run from Level I (peer-run) to
         Level IV (clinically integrated). To check or start certification, use your
@@ -95,17 +95,17 @@ export default function SoberLivingPage() {
       <ul className="mt-4 space-y-3">
         {AFFILIATES.map((a) => (
           <li key={a.name} className="rounded-lg border border-slate-300 p-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">{a.state}</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">{a.state}</p>
             <a className="mt-1 block text-lg font-semibold text-sage-800 underline" href={a.url} rel="noopener noreferrer">
               {a.name}
             </a>
-            <p className="mt-1 text-slate-700">{a.note}</p>
+            <p className="mt-1 text-slate-700 dark:text-neutral-300 dark:print:!text-slate-700">{a.note}</p>
           </li>
         ))}
       </ul>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Listing services for certified homes</h2>
-      <p className="mt-3 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Listing services for certified homes</h2>
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         For a certified home, the listing problems are the same shape as a treatment
         program&rsquo;s: stale map profiles, wrong phone numbers, a certification listing that
         does not match the home&rsquo;s own site. The same flat-fee service applies, priced for
@@ -118,7 +118,7 @@ export default function SoberLivingPage() {
         changes how a home is ordered or shown. Verification covers certification status only —
         never quality of care.
       </p>
-      <p className="mt-3 text-slate-800">
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Operate a home?{" "}
         <Link className="underline" href="/facilities/claim">
           Claim your listing

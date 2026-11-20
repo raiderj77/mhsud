@@ -53,7 +53,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
     <div>
       <form onSubmit={run} className="space-y-4 rounded-lg border border-slate-300 p-4">
         <div>
-          <label htmlFor="fc-name" className="font-medium text-slate-900">
+          <label htmlFor="fc-name" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
             Program name (as licensed or as listed)
           </label>
           <input
@@ -69,7 +69,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="fc-state" className="font-medium text-slate-900">
+            <label htmlFor="fc-state" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               State
             </label>
             <select
@@ -87,7 +87,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
             </select>
           </div>
           <div>
-            <label htmlFor="fc-city" className="font-medium text-slate-900">
+            <label htmlFor="fc-city" className="font-medium text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               City (optional, narrows results)
             </label>
             <input
@@ -108,7 +108,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
         >
           {busy ? "Checking…" : "Run the free check"}
         </button>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">
           This form asks only for a business&rsquo;s public name and location. Do not enter
           personal information about anyone seeking treatment — the check never needs it.
         </p>
@@ -143,10 +143,10 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
       {response &&
         response.results.map((r) => (
           <section key={r.path} className="mt-8">
-            <h2 className="text-2xl font-semibold text-slate-900">
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
               {r.name} — {r.city}, {r.state} {r.zip}
             </h2>
-            <p className="mt-1 text-slate-700">
+            <p className="mt-1 text-slate-700 dark:text-neutral-300 dark:print:!text-slate-700">
               Federal directory phone: {r.phone ?? "none on file"} · California license match:{" "}
               {r.hasLicenseMatch ? "found" : "not shown for this record"} ·{" "}
               <Link className="underline" href={r.path}>
@@ -156,7 +156,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
             <div className="mt-4">
               <FindingsList findings={r.findings} />
             </div>
-            <p className="mt-4 text-slate-800">
+            <p className="mt-4 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
               This check covers the sources listed above — the ones we actually hold. It does not
               claim to have checked any source it does not name. A Listing Sprint adds the
               remaining channels (including your map and search profiles) with filings through

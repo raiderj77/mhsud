@@ -34,18 +34,18 @@ export default async function StatePage({ params }: Params) {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
+      <nav aria-label="Breadcrumb" className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">
         <Link className="underline" href="/facilities">
           Directory
         </Link>{" "}
         / {summary.name}
       </nav>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">
+      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">
         Substance use treatment programs in {summary.name}
       </h1>
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Cities</h2>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Cities</h2>
       <DirectoryBrowse label="Filter cities" items={summary.cities.map((c) => ({ href: `/facilities/${summary.code.toLowerCase()}/${c.slug}`, label: `${c.name} — ${c.count} program${c.count === 1 ? "" : "s"}` }))} />
-      <p className="mt-4 text-slate-800">
+      <p className="mt-4 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         {summary.facilityCount.toLocaleString()} programs listed from the SAMHSA National
         Directory (2024 edition, retrieved {index.generatedAt}).
         {summary.code === "CA" &&
@@ -55,7 +55,7 @@ export default async function StatePage({ params }: Params) {
       </p>
       <DirectoryContext facilities={facilities} state={summary.code} />
 
-      <p className="mt-8 text-slate-800">
+      <p className="mt-8 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Run a program in {summary.name}?{" "}
         <Link className="underline" href="/facilities/check">
           Check your listing free

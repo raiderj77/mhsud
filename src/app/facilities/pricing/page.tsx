@@ -19,9 +19,9 @@ const LAST_UPDATED = "2026-11-01";
 export default function PricingPage() {
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <p className="text-sm text-slate-600">Last updated {LAST_UPDATED}</p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">Pricing — flat fees only</h1>
-      <p className="mt-4 text-lg text-slate-800">
+      <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">Last updated {LAST_UPDATED}</p>
+      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Pricing — flat fees only</h1>
+      <p className="mt-4 text-lg text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Every price below is a flat fee for listing work on one location. Fees never vary with
         how many people contact a program, and paying never changes a program&rsquo;s position,
         order, or visibility in the public directory. That structure is deliberate: this is a
@@ -29,7 +29,7 @@ export default function PricingPage() {
       </p>
 
       <div className="mt-6 overflow-x-auto">
-        <table className="w-full border-collapse text-left text-slate-800">
+        <table className="w-full border-collapse text-left text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
           <thead>
             <tr>
               <th className="border border-slate-300 px-3 py-2">Service</th>
@@ -74,8 +74,8 @@ export default function PricingPage() {
         </table>
       </div>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">What the Sprint covers</h2>
-      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What the Sprint covers</h2>
+      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>Every finding from the free check, worked to a filed correction or a prepared packet.</li>
         <li>Federal directory corrections filed through SAMHSA&rsquo;s written channels with your sign-off on the exact data.</li>
         <li>State roster mismatches prepared as a correction packet for the license holder to file.</li>
@@ -84,15 +84,15 @@ export default function PricingPage() {
         <li>The Sprint promises filings with dates on record — not instant appearance, which is each directory&rsquo;s own schedule.</li>
       </ul>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">What Directory Care covers</h2>
-      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What Directory Care covers</h2>
+      <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>Monthly re-check of the same channels against your canonical record, with a plain-language drift report: what changed, what we filed, what needs your call.</li>
         <li>Refresh watch: when the annual federal directory update or a new state roster is published, your record in it is verified and flagged if it regressed.</li>
         <li>Your claimed directory page kept current, including operator-set availability notes that are date-stamped and expire automatically.</li>
       </ul>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900">Who can buy</h2>
-      <p className="mt-3 text-slate-800">
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Who can buy</h2>
+      <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         Paid tiers require verification of legal status first: a state license match for
         treatment programs, and current NARR-affiliate certification for sober living homes.
         Verification covers legal status and certification only — we do not evaluate quality of
