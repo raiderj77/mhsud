@@ -18,7 +18,7 @@ const COOKIE_TABLE = [
     category: "Essential",
     consent: "Not required",
     cookies: [
-      { name: "mh-theme", purpose: "Stores your light/dark mode preference", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
+      { name: "mh-theme", purpose: "Legacy item from the former light/dark option. The site is light only now, and nothing on the site reads or sets this preference. It may remain in your browser from an earlier visit, and you can delete it in your browser settings.", duration: "Persistent (localStorage)", provider: "MindCheck Tools" },
       { name: "empire_gpc", purpose: "Remembers a Global Privacy Control signal so any enabled Vercel Web Analytics stays off", duration: "30 days (cookie)", provider: "MindCheck Tools" },
     ],
   },
@@ -40,7 +40,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <header className="mb-10">
           <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">Cookie Policy</h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: September 2, 2026 (provider-status clarification)</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">Last updated: November 21, 2026 (theme preference correction)</p>
         </header>
 
         <div className="prose-mh space-y-8">
