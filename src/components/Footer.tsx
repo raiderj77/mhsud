@@ -57,6 +57,7 @@ const WELLNESS_TOOLS = [
 ];
 
 const RECOVERY_TOOLS = [
+  { href: "/screening-tools#alcohol-substance", label: "Recovery" },
   { href: "/sobriety-calculator", label: "Sobriety Calculator" },
   { href: "/money-saved-recovery-calculator", label: "Money Saved" },
   { href: "/health-recovery-timeline", label: "Health Timeline" },

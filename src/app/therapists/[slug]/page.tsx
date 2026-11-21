@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TherapistBreadcrumbs } from "@/components/TherapistBreadcrumbs";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import { getTherapist, therapistSnapshot } from "@/lib/therapists";
@@ -22,10 +23,7 @@ export default async function TherapistPage({ params }: Props) {
 
   return (
     <article className="mx-auto w-full max-w-4xl px-4 py-8 text-neutral-900 dark:text-neutral-50">
-      <nav aria-label="Breadcrumb" className="text-sm text-neutral-700 dark:text-neutral-300">
-        <Link className="underline" href="/therapists">California therapist directory</Link>
-        {" / "}{provider.name}
-      </nav>
+      <TherapistBreadcrumbs name={provider.name} />
       <h1 className="mt-3 break-words text-3xl font-bold">{provider.name}</h1>
       <p className="mt-2 text-lg text-neutral-800 dark:text-neutral-200">{provider.city}, California</p>
       <section className="mt-6 rounded-lg border border-neutral-400 p-4">

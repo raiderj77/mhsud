@@ -45,6 +45,11 @@ export default async function FacilitiesHubPage() {
         Crisis Lifeline) or the SAMHSA National Helpline at <strong>1-800-662-4357</strong>.
       </p>
 
+      <p className="mt-3 text-slate-800">
+        Looking for an individual provider?{" "}
+        <Link className="inline-flex min-h-[44px] items-center underline" href="/therapists">Browse California therapists</Link>.
+      </p>
+
       <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Sober living homes</h2>
       <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         There is no national registry of sober living homes, so this directory does not pretend

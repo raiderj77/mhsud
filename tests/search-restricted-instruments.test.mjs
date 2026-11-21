@@ -4,8 +4,9 @@ import { readFile } from "node:fs/promises";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
-const [navbar, registry, screeningTools, toolGrid] = await Promise.all([
-  read("src/components/Navbar.tsx"),
+const [conditions, directory, registry, screeningTools, toolGrid] = await Promise.all([
+  read("src/app/conditions/page.tsx"),
+  read("src/lib/screeningDirectory.ts"),
   read("src/lib/toolClassifications.ts"),
   read("src/app/screening-tools/page.tsx"),
   read("src/components/ToolGrid.tsx"),
@@ -25,24 +26,18 @@ test("search's restricted set (registry Information Only) matches the screening-
   assert.deepEqual(registryInformationRoutes, screeningToolsRestricted);
 });
 
-test("navbar search results exclude restricted-instrument entries on desktop and mobile", () => {
-  assert.match(navbar, /import \{ getToolClassification \} from "@\/lib\/toolClassifications"/);
-  assert.match(navbar, /getToolClassification\(href\)\?\.classification === "Information Only"/);
-
-  const desktopFilter = navbar.match(/const filtered = useMemo\([\s\S]*?\}, \[activeCategory, search\]\);/)?.[0] ?? "";
-  assert.match(desktopFilter, /if \(search\.trim\(\)\)[\s\S]*!isRestrictedInstrument\(t\.href\)/);
-
-  const mobileMatch = navbar.match(/const matchesSearch = \(tool: Tool\) => \{[\s\S]*?\n  \};/)?.[0] ?? "";
-  assert.match(mobileMatch, /if \(!search\.trim\(\)\) return true;\s*if \(isRestrictedInstrument\(tool\.href\)\) return false;/);
-});
-
-test("restricted instruments stay browsable in the navbar and listed on the screening-tools page", () => {
-  const navBlock = navbar.match(/const CATEGORIES:[\s\S]*?const ALL_TOOLS/)?.[0] ?? "";
-  const navHrefs = new Set([...navBlock.matchAll(/href:\s*"(\/[^"]+)"/g)].map((match) => match[1]));
-  for (const route of registryInformationRoutes) assert.ok(navHrefs.has(route), `${route} missing from navbar browse list`);
-
-  assert.match(screeningTools, /id: "restricted-instruments"/);
-  assert.match(screeningTools, /title: "About restricted instruments"/);
+test("homepage tool search excludes restricted instruments and links to their information section", () => {
   assert.match(toolGrid, /tool\.badge !== "Information"/);
   assert.match(toolGrid, /About restricted instruments/);
+});
+
+test("restricted instruments stay browsable by condition and on the screening-tools page", () => {
+  const categories = directory.match(/const CATEGORIES:[\s\S]*?export const CLINICAL_GUIDES/)?.[0] ?? "";
+  const routes = new Set([...categories.matchAll(/href:\s*"(\/[^"]+)"/g)].map((match) => match[1]));
+  for (const route of registryInformationRoutes) assert.ok(routes.has(route), `${route} missing from the category directory`);
+
+  assert.match(conditions, /CATEGORIES\.map/);
+  assert.match(conditions, /getToolClassification\(href\)\?\.classification/);
+  assert.match(screeningTools, /id: "restricted-instruments"/);
+  assert.match(screeningTools, /title: "About restricted instruments"/);
 });

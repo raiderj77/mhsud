@@ -4,7 +4,7 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("homepage and shared navigation expose four focused paths", async () => {
+test("homepage keeps the tool paths below the new visitor cards and navigation prioritizes individuals", async () => {
   const [home, navbar, footer] = await Promise.all([
     read("src/app/page.tsx"),
     read("src/components/Navbar.tsx"),
@@ -20,10 +20,15 @@ test("homepage and shared navigation expose four focused paths", async () => {
   assert.ok(home.indexOf("Substance use and recovery") < home.indexOf("Published mental-health screeners"));
   assert.match(home, /Primary focus/);
 
-  for (const route of ["/screening-tools", "/screening-tools#alcohol-substance", "/for-professionals", "/clinical-evidence", "/methodology", "/crisis-resources"]) {
-    assert.ok(navbar.includes(`href=\"${route}\"`), `${route} is missing from the navigation`);
+  assert.ok(home.indexOf("What do you need today?") < home.indexOf("<ToolGrid"));
+  for (const route of ["/screening-tools", "/therapists", "/facilities", "/conditions", "/crisis-resources"]) {
+    assert.ok(navbar.includes(`href="${route}"`), `${route} is missing from the navigation`);
   }
-  for (const route of ["/screening-tools", "/for-professionals", "/clinical-evidence", "/methodology", "/crisis-resources", "/privacy", "/about"]) {
+  for (const route of ["/screening-tools#alcohol-substance", "/for-professionals", "/clinical-evidence", "/methodology", "/about"]) {
+    assert.ok(!navbar.includes(`href="${route}"`), `${route} is still in the header`);
+    assert.ok(footer.includes(route), `${route} is missing from the footer`);
+  }
+  for (const route of ["/screening-tools", "/crisis-resources", "/privacy"]) {
     assert.ok(footer.includes(route), `${route} is missing from the footer`);
   }
 });

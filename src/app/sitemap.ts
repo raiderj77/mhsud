@@ -151,6 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/crisis-resources`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/about/jason-ramirez`, lastModified: may14, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${SITE_URL}/conditions`, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${SITE_URL}/screening-tools`, lastModified: lastUpdated, changeFrequency: "weekly" as const, priority: 0.8 },
     { url: `${SITE_URL}/clinical-evidence`, lastModified: "2026-09-05", changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${SITE_URL}/methodology`, lastModified: "2026-09-05", changeFrequency: "monthly" as const, priority: 0.6 },
