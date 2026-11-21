@@ -1,5 +1,6 @@
 "use client";
 
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -247,6 +248,8 @@ export function SleepMoodClient({ faqData }: Props) {
               <strong>Important:</strong> This is a reflection tool, not a clinical assessment. It cannot diagnose insomnia, sleep apnea, or any sleep disorder. Persistent sleep problems deserve professional evaluation.
             </p>
           </div>
+
+          <ScreeningDirectoryLinks />
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>

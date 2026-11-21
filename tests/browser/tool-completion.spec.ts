@@ -59,11 +59,23 @@ test('AUDIT: all ten questions reach results and reset', async ({ page }) => {
   await page.goto('/audit-alcohol-test');
   await page.getByRole('checkbox').check();
   await page.getByRole('button', { name: 'Begin Self-Check', exact: true }).click();
+  const directories = page.getByRole('navigation', { name: 'Provider directories' });
+  await expect(directories).toHaveCount(0);
   const groups = page.getByRole('radiogroup');
   await expect(groups).toHaveCount(10);
   for (let index = 0; index < 10; index++) await groups.nth(index).getByRole('radio').first().click();
   await page.getByRole('button', { name: 'View My Results', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Start Over', exact: true })).toBeVisible();
+  const therapists = directories.getByRole('link', { name: 'Browse Los Angeles therapists' });
+  const facilities = directories.getByRole('link', { name: 'Browse substance use treatment programs' });
+  await expect(therapists).toBeVisible();
+  await expect(therapists).toHaveAttribute('href', '/therapists');
+  await expect(therapists).toHaveAttribute('rel', 'noreferrer');
+  await expect(facilities).toBeVisible();
+  await expect(facilities).toHaveAttribute('href', '/facilities');
+  await expect(facilities).toHaveAttribute('rel', 'noreferrer');
+  await page.getByRole('button', { name: 'Start Over', exact: true }).click();
+  await expect(directories).toHaveCount(0);
 });
 
 test('coping skills: browse, favorite and select are separate keyboard controls', async ({ page }) => {

@@ -1,5 +1,6 @@
 "use client";
 
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -311,6 +312,8 @@ export function CesdClient({ faqData }: Props) {
             </ul>
           </div>
         </section>
+
+        <ScreeningDirectoryLinks />
 
         {/* Related Tools */}
         <div className="mb-8">
