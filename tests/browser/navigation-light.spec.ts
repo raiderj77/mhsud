@@ -55,10 +55,10 @@ test('conditions links to existing canonical pages and preserves information-onl
   const main = page.locator('main');
   await expect(main.getByRole('region')).toHaveCount(14);
   const alcohol = main.getByRole('region', { name: 'Alcohol and substance use' });
-  const assist = alcohol.getByRole('listitem').filter({ has: page.getByRole('heading', { name: 'WHO ASSIST Information' }) });
+  const assist = alcohol.getByRole('listitem').filter({ has: page.getByRole('heading', { name: 'WHO ASSIST Information', exact: true }) });
   await expect(assist.getByText('Information Only', { exact: true })).toBeVisible();
-  await expect(assist.getByRole('link', { name: 'WHO ASSIST Information' })).toHaveAttribute('href', '/who-assist-substance-screening');
-  const evidenceLink = assist.getByRole('link', { name: 'Clinical evidence for WHO ASSIST Information' });
+  await expect(assist.getByRole('link', { name: 'WHO ASSIST Information', exact: true })).toHaveAttribute('href', '/who-assist-substance-screening');
+  const evidenceLink = assist.getByRole('link', { name: 'Clinical evidence for WHO ASSIST Information', exact: true });
   await expect(evidenceLink).toHaveAttribute('href', '/clinical-evidence#who-assist');
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://mindchecktools.com/conditions');
   const sitemap = await request.get('/sitemap.xml');

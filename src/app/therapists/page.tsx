@@ -101,7 +101,7 @@ export default async function TherapistsPage({ searchParams }: { searchParams: P
         </section>
       )}
       {cities.length > 0 && (
-        <form action="/therapists" method="get" className="mt-6 grid gap-4 sm:grid-cols-2">
+        <form key={JSON.stringify([city, specialty])} action="/therapists" method="get" className="mt-6 grid gap-4 sm:grid-cols-2">
           <label className="block font-medium">
             Practice city
             <select name="city" defaultValue={city} className={selectClass}>
