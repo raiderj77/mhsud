@@ -8,8 +8,12 @@ export function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const hash = publicSectionHash(pathname, window.location.hash);
-    const section = hash ? document.getElementById(hash.slice(1)) : null;
+    const fragment = window.location.hash;
+    const hash = publicSectionHash(pathname, fragment);
+    const isEvidenceSection = pathname === "/clinical-evidence" && /^#[a-z0-9-]+$/.test(fragment);
+    const isTherapistListings = pathname === "/therapists" && fragment === "#listings";
+    const target = isEvidenceSection || isTherapistListings ? fragment : hash;
+    const section = target ? document.getElementById(target.slice(1)) : null;
     if (section) {
       section.scrollIntoView();
       return;

@@ -1,748 +1,140 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef, useEffect, useMemo } from "react";
-import { DarkModeToggle } from "./ThemeProvider";
+import { useEffect, useRef, useState } from "react";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
-import { getToolClassification } from "@/lib/toolClassifications";
 
-/* Restricted (rights-limited, information-only) instruments stay browsable by
-   category but are excluded from search results, matching the screening-tools
-   page's "About restricted instruments" treatment. */
-function isRestrictedInstrument(href: string): boolean {
-  return getToolClassification(href)?.classification === "Information Only";
-}
-
-/* ─── Tool data organized by category ─── */
-type Tool = { href: string; label: string; sub: string };
-type Category = { id: string; name: string; icon: string; tools: Tool[] };
-
-const CATEGORIES: Category[] = [
-  {
-    id: "depression",
-    name: "Depression & Mood",
-    icon: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707",
-    tools: [
-      { href: "/phq-9-depression-test", label: "PHQ-9", sub: "Depression screening" },
-      { href: "/ces-d-depression-scale", label: "CES-D", sub: "Depression scale (20 items)" },
-      { href: "/dass-21-depression-anxiety-stress", label: "DASS-21 info", sub: "Public-use boundary" },
-      { href: "/k6-distress-scale", label: "K6", sub: "Psychological distress" },
-      { href: "/who-5-wellbeing-index", label: "WHO-5", sub: "Well-being index" },
-    ],
-  },
-  {
-    id: "anxiety",
-    name: "Anxiety",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    tools: [
-      { href: "/gad-7-anxiety-test", label: "GAD-7", sub: "Generalized anxiety" },
-      { href: "/spin-social-anxiety-test", label: "SPIN info", sub: "Evidence and rights boundary" },
-    ],
-  },
-  {
-    id: "ptsd",
-    name: "PTSD & Trauma",
-    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-    tools: [
-      { href: "/pcl-5-ptsd-screening", label: "PCL-5", sub: "PTSD checklist (20 items)" },
-      { href: "/pc-ptsd-5-screening", label: "PC-PTSD-5", sub: "PTSD brief screen" },
-      { href: "/ace-questionnaire", label: "ACE info", sub: "Evidence and provenance boundary" },
-    ],
-  },
-  {
-    id: "substance",
-    name: "Substance Use",
-    icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
-    tools: [
-      { href: "/audit-alcohol-test", label: "AUDIT", sub: "WHO alcohol screen (10 items)" },
-      { href: "/audit-c-alcohol-screen", label: "AUDIT-C", sub: "Brief alcohol screen" },
-      { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID info", sub: "Evidence and rights boundary" },
-      { href: "/who-assist-substance-screening", label: "WHO ASSIST info", sub: "Public-use boundary" },
-      { href: "/crafft-substance-screening", label: "CRAFFT info", sub: "Youth approval boundary" },
-    ],
-  },
-  {
-    id: "other",
-    name: "Other Conditions",
-    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-    tools: [
-      { href: "/asrs-adhd-screening", label: "ASRS", sub: "Adult ADHD screening" },
-      { href: "/scoff-eating-disorder-screening", label: "SCOFF info", sub: "Evidence and rights boundary" },
-      { href: "/aq-10-autism-screening", label: "AQ-10 info", sub: "Electronic-use boundary" },
-      { href: "/msi-bpd-screening", label: "MSI-BPD info", sub: "Evidence and rights boundary" },
-    ],
-  },
-  {
-    id: "wellbeing",
-    name: "Stress & Well-Being",
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-    tools: [
-      { href: "/holmes-rahe-stress-inventory", label: "Holmes-Rahe info", sub: "Evidence and rights boundary" },
-      { href: "/burnout-assessment-tool", label: "Burnout", sub: "Burnout assessment" },
-      { href: "/rosenberg-self-esteem-scale", label: "RSES", sub: "Self-esteem scale" },
-      { href: "/ucla-loneliness-scale", label: "UCLA info", sub: "Research-use boundary" },
-      { href: "/athens-insomnia-scale", label: "AIS info", sub: "Permission boundary" },
-      { href: "/brief-resilience-scale", label: "BRS info", sub: "Unresolved rights status" },
-      { href: "/work-stress-check", label: "Work Stress", sub: "Work stress & burnout" },
-      { href: "/sleep-and-mood-check", label: "Sleep & Mood", sub: "Sleep-mood connection" },
-      { href: "/mental-load-calculator", label: "Mental Load", sub: "Cognitive load check" },
-      { href: "/box-breathing-exercise", label: "Box Breathing", sub: "Guided breathing exercise" },
-      { href: "/five-senses-grounding", label: "5-4-3-2-1 Grounding", sub: "Sensory grounding exercise" },
-      { href: "/cognitive-distortion-identifier", label: "Thought Patterns", sub: "CBT distortion identifier" },
-      { href: "/safety-plan", label: "Safety Plan", sub: "Crisis safety planning tool" },
-      { href: "/cbt-thought-record", label: "Thought Record", sub: "CBT thought diary worksheet" },
-      { href: "/worry-time-scheduler", label: "Worry Time Scheduler", sub: "CBT worry postponement" },
-      { href: "/values-card-sort", label: "Values Card Sort", sub: "Personal values exercise" },
-      { href: "/dbt-crisis-skills", label: "DBT Crisis Skills", sub: "Crisis survival skills" },
-      { href: "/attachment-style-quiz", label: "ECR-R info", sub: "Commercial-use boundary" },
-      { href: "/big-five-personality-test", label: "Big Five", sub: "IPIP-NEO-50 personality" },
-    ],
-  },
-  {
-    id: "recovery",
-    name: "Recovery Tools",
-    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
-    tools: [
-      { href: "/sobriety-calculator", label: "Sobriety Calculator", sub: "Track your milestones" },
-      { href: "/money-saved-recovery-calculator", label: "Money Saved", sub: "Recovery savings tracker" },
-      { href: "/health-recovery-timeline", label: "Health Timeline", sub: "Body recovery stages" },
-      { href: "/bac-calculator", label: "BAC Calculator", sub: "Blood alcohol estimate" },
-      { href: "/standard-drinks-calculator", label: "Standard Drinks", sub: "Drink unit converter" },
-      { href: "/halt-check-in", label: "HALT Check-In", sub: "Hungry, Angry, Lonely, Tired" },
-      { href: "/withdrawal-timeline", label: "Withdrawal Timeline", sub: "What to expect" },
-      { href: "/treatment-cost-estimator", label: "Treatment Costs", sub: "Estimate treatment costs" },
-      { href: "/relapse-prevention-plan", label: "Prevention Plan", sub: "Build your plan" },
-      { href: "/urge-surfing-timer", label: "Urge Surfing", sub: "Guided urge timer" },
-      { href: "/readiness-to-change", label: "Readiness", sub: "Stages of change" },
-      { href: "/trigger-identification-worksheet", label: "Triggers", sub: "Identify your triggers" },
-      { href: "/coping-skills-randomizer", label: "Coping Skills", sub: "Random coping strategy" },
-      { href: "/daily-recovery-check-in", label: "Daily Check-In", sub: "Daily recovery reflection" },
-      { href: "/family-impact-assessment", label: "Family Impact", sub: "Family effects assessment" },
-    ],
-  },
-];
-
-const ALL_TOOLS = CATEGORIES.flatMap((c) => c.tools.map((t) => ({ ...t, category: c.id, categoryName: c.name })));
+const itemClass =
+  "flex min-h-[44px] items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-sage-50 hover:text-sage-800";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(false);
-  const [search, setSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [helpOpen, setHelpOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const helpRef = useRef<HTMLDivElement>(null);
+  const helpButtonRef = useRef<HTMLButtonElement>(null);
   const mobileButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const { isOnline } = useOnlineStatus();
 
-  // Add scroll shadow effect
   useEffect(() => {
     function handleScroll() {
       setHasScrolled(window.scrollY > 0);
     }
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown on click outside
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(e.target as Node)
-      ) {
-        setToolsOpen(false);
-      }
+    function handleClick(event: MouseEvent) {
+      if (!helpRef.current?.contains(event.target as Node)) setHelpOpen(false);
     }
-    function handleEsc(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        const activeElement = document.activeElement;
-        const focusWasInDesktopMenu = dropdownRef.current?.contains(activeElement) ?? false;
-        const focusWasInMobileMenu =
-          document.getElementById("mobile-navigation-menu")?.contains(activeElement) ?? false;
-        setToolsOpen(false);
-        setMenuOpen(false);
-        if (focusWasInDesktopMenu || focusWasInMobileMenu) {
-          window.requestAnimationFrame(() => {
-            if (focusWasInDesktopMenu) buttonRef.current?.focus();
-            if (focusWasInMobileMenu) mobileButtonRef.current?.focus();
-          });
+
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      const focus = document.activeElement;
+      if (helpOpen) {
+        setHelpOpen(false);
+        if (helpRef.current?.contains(focus)) {
+          helpButtonRef.current?.focus();
+          return;
         }
       }
+      if (menuOpen) {
+        setMenuOpen(false);
+        if (menuRef.current?.contains(focus)) mobileButtonRef.current?.focus();
+      }
     }
+
     document.addEventListener("mousedown", handleClick);
-    document.addEventListener("keydown", handleEsc);
+    document.addEventListener("keydown", handleEscape);
     return () => {
       document.removeEventListener("mousedown", handleClick);
-      document.removeEventListener("keydown", handleEsc);
+      document.removeEventListener("keydown", handleEscape);
     };
-  }, []);
+  }, [helpOpen, menuOpen]);
 
-  // Filtered tools
-  const filtered = useMemo(() => {
-    let tools = activeCategory === "all" ? ALL_TOOLS : ALL_TOOLS.filter((t) => t.category === activeCategory);
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      tools = tools.filter(
-        (t) =>
-          !isRestrictedInstrument(t.href) &&
-          (t.label.toLowerCase().includes(q) || t.sub.toLowerCase().includes(q) || t.categoryName.toLowerCase().includes(q))
-      );
-    }
-    return tools;
-  }, [activeCategory, search]);
-
-  const closeMobile = () => setMenuOpen(false);
+  function closeNavigation() {
+    setHelpOpen(false);
+    setMenuOpen(false);
+  }
 
   return (
     <nav
-      className={`no-print sticky top-0 z-50 bg-sand-50/95 dark:bg-night-900/95 backdrop-blur-md border-b
-        transition-shadow duration-300
-        ${hasScrolled ? "border-sand-200 dark:border-neutral-800 shadow-md" : "border-sand-100 dark:border-neutral-900"}`}
-      role="navigation"
       aria-label="Main navigation"
+      className={`no-print sticky top-0 z-50 border-b bg-sand-50/95 backdrop-blur-md ${hasScrolled ? "border-sand-200 shadow-md" : "border-sand-100"}`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-14">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex min-h-[44px] items-center gap-2.5 group shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 rounded-lg"
-            aria-label="MindCheck Tools - Home"
-          >
-            <div
-              className="w-8 h-8 rounded-full bg-gradient-to-br from-sage-400 to-sage-600 flex items-center justify-center
-                shadow-sm group-hover:shadow-md group-focus-visible:shadow-md transition-shadow"
-            >
-              <svg
-                className="w-4 h-4 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-            </div>
-            <span className="font-serif font-bold text-lg text-neutral-800 dark:text-neutral-100 tracking-tight">
-              MindCheck
+      <div className="relative mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+        <Link href="/" onClick={closeNavigation} aria-label="MindCheck Tools - Home" className="flex min-h-[44px] shrink-0 items-center gap-2.5 rounded-lg">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-sage-400 to-sage-600 shadow-sm">
+            <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </span>
+          <span className="font-serif text-lg font-bold tracking-tight text-neutral-800">MindCheck</span>
+        </Link>
+
+        <div className="ml-auto flex items-center gap-2 md:order-last md:ml-0">
+          {!isOnline && (
+            <span className="rounded-lg bg-crisis-50 px-2 py-1 text-xs font-medium text-crisis-700" aria-hidden="true">
+              Offline
             </span>
-          </Link>
-
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
-            {/* Offline indicator */}
-            {!isOnline && (
-              <div
-                className="flex items-center gap-1.5 px-3 py-2 rounded-lg
-                  bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
-                  text-crisis-700 dark:text-crisis-300 text-xs font-medium"
-                aria-hidden="true"
-              >
-                <span aria-hidden="true">⚠️</span>
-                <span className="hidden sm:inline">Offline</span>
-              </div>
-            )}
-
-            {/* Tools dropdown trigger */}
-            <button
-              ref={buttonRef}
-              type="button"
-              onClick={() => setToolsOpen(!toolsOpen)}
-              className={`px-3 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
-                ${
-                  toolsOpen
-                    ? "text-sage-700 dark:text-sage-400 bg-sage-50 dark:bg-sage-950/30"
-                    : "text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30"
-                }`}
-              aria-expanded={toolsOpen}
-              aria-controls="desktop-tools-menu"
-            >
-              Screening Tools
-              <svg
-                className={`w-3.5 h-3.5 transition-transform ${toolsOpen ? "rotate-180" : ""}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            <Link
-              href="/screening-tools#alcohol-substance"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-sage-700 dark:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-            >
-              Recovery
-            </Link>
-            <Link
-              href="/facilities"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-            >
-              Find treatment
-            </Link>
-            <Link
-              href="/for-professionals"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-            >
-              Professionals
-            </Link>
-
-            <Link
-              href="/clinical-evidence"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
-                text-neutral-600 dark:text-neutral-300
-                hover:text-sage-700 dark:hover:text-sage-400
-                hover:bg-sage-50 dark:hover:bg-sage-950/30
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
-                transition-colors"
-            >
-              Evidence
-            </Link>
-            <Link
-              href="/crisis-resources"
-              className="px-3 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium
-                text-crisis-600 dark:text-crisis-400
-                hover:bg-crisis-50 dark:hover:bg-crisis-950/30
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crisis-600
-                transition-colors"
-            >
-              Crisis Help
-            </Link>
-            <Link
-              href="/about"
-              className="px-3 py-2.5 min-h-[44px] hidden xl:flex items-center rounded-lg text-sm font-medium
-                text-neutral-600 dark:text-neutral-300
-                hover:text-sage-700 dark:hover:text-sage-400
-                hover:bg-sage-50 dark:hover:bg-sage-950/30
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
-                transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/methodology"
-              className="px-3 py-2.5 min-h-[44px] hidden lg:flex items-center rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-sage-700 dark:hover:text-sage-400 hover:bg-sage-50 dark:hover:bg-sage-950/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-            >
-              Methodology
-            </Link>
-            <div className="ml-2 border-l border-sand-200 dark:border-neutral-700 pl-2">
-              <DarkModeToggle />
-            </div>
-          </div>
-
-          {/* Mobile controls */}
-          <div className="flex md:hidden items-center gap-1">
-            {!isOnline && (
-              <div
-                className="flex items-center gap-1 px-2 py-1 rounded-lg bg-crisis-100 dark:bg-crisis-950 text-crisis-700 dark:text-crisis-300"
-                title="Offline"
-                aria-hidden="true"
-              >
-                <span className="text-sm" aria-hidden="true">
-                  ⚠️
-                </span>
-              </div>
-            )}
-            <DarkModeToggle />
-            <button
-              ref={mobileButtonRef}
-              id="mobile-menu-button"
-              type="button"
-              onClick={() => {
-                setMenuOpen(!menuOpen);
-                setToolsOpen(false);
-              }}
-              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg
-                hover:bg-sand-200 dark:hover:bg-night-700 transition-colors
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-navigation-menu"
-            >
-              {menuOpen ? (
-                <svg
-                  className="w-5 h-5 text-neutral-600 dark:text-neutral-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-5 h-5 text-neutral-600 dark:text-neutral-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* ─── Desktop mega-menu dropdown ─── */}
-      {toolsOpen && (
-        <div
-          ref={dropdownRef}
-          id="desktop-tools-menu"
-          className="hidden md:block absolute left-0 right-0 bg-white dark:bg-night-800 border-b border-sand-200 dark:border-neutral-700 shadow-xl animate-fade-in z-50"
-          role="region"
-          aria-label="Browse mental health tools"
-        >
-          <div className="max-w-6xl mx-auto px-6 py-5">
-            {/* Search */}
-            <div className="relative mb-4">
-              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <label htmlFor="desktop-tool-search" className="sr-only">
-                Search mental health tools
-              </label>
-              <input
-                id="desktop-tool-search"
-                type="search"
-                placeholder="Search tools... (e.g. depression, AUDIT, anxiety)"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600 bg-sand-50 dark:bg-night-900 text-base text-neutral-800 dark:text-neutral-200 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300"
-              />
-            </div>
-
-            <p className="sr-only" role="status" aria-live="polite">
-              {filtered.length} {filtered.length === 1 ? "tool" : "tools"} shown
-            </p>
-
-            {/* Category pills */}
-            <div className="flex flex-wrap gap-1.5 mb-4" role="group" aria-label="Filter tools by category">
-              <button
-                type="button"
-                onClick={() => setActiveCategory("all")}
-                aria-pressed={activeCategory === "all"}
-                className={`px-3 py-1.5 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
-                  activeCategory === "all"
-                    ? "bg-sage-600 text-white"
-                    : "bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:bg-sand-200 dark:hover:bg-night-600"
-                }`}
-              >
-                All Tools
-              </button>
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => setActiveCategory(cat.id)}
-                  aria-pressed={activeCategory === cat.id}
-                  className={`px-3 py-1.5 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
-                    activeCategory === cat.id
-                      ? "bg-sage-600 text-white"
-                      : "bg-sand-100 dark:bg-night-700 text-neutral-600 dark:text-neutral-300 hover:bg-sand-200 dark:hover:bg-night-600"
-                  }`}
-                >
-                  {cat.name}
-                </button>
-              ))}
-            </div>
-
-            {/* Tools grid */}
-            <div className="max-h-[60vh] overflow-y-auto pr-1 -mr-1">
-              {filtered.length === 0 ? (
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 py-8 text-center">No tools match your search.</p>
-              ) : activeCategory === "all" && !search.trim() ? (
-                /* Grouped view when "All" and no search */
-                <div className="space-y-5">
-                  {CATEGORIES.map((cat) => (
-                    <div key={cat.id}>
-                      <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2 flex items-center gap-2">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
-                        </svg>
-                        {cat.name}
-                      </h3>
-                      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1.5">
-                        {cat.tools.map((tool) => (
-                          <Link
-                            key={tool.href}
-                            href={tool.href}
-                            onClick={() => setToolsOpen(false)}
-                            className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors group"
-                          >
-                            <div>
-                              <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
-                                {tool.label}
-                              </p>
-                              <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.sub}</p>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                /* Flat grid for filtered/searched */
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1.5">
-                  {filtered.map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.href}
-                      onClick={() => setToolsOpen(false)}
-                      className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors group"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 group-hover:text-sage-700 dark:group-hover:text-sage-400 transition-colors">
-                          {tool.label}
-                        </p>
-                        <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.sub}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ─── Mobile menu ─── */}
-      {menuOpen && (
-        <MobileMenu categories={CATEGORIES} onClose={closeMobile} />
-      )}
-    </nav>
-  );
-}
-
-/* ─── Mobile menu component ─── */
-function MobileMenu({ categories, onClose }: { categories: Category[]; onClose: () => void }) {
-  const [search, setSearch] = useState("");
-  const [expanded, setExpanded] = useState<string | null>(null);
-  const { isOnline } = useOnlineStatus();
-
-  const matchesSearch = (tool: Tool) => {
-    if (!search.trim()) return true;
-    if (isRestrictedInstrument(tool.href)) return false;
-    const q = search.toLowerCase();
-    return tool.label.toLowerCase().includes(q) || tool.sub.toLowerCase().includes(q);
-  };
-
-  const filteredCategories = categories
-    .map((cat) => ({ ...cat, tools: cat.tools.filter(matchesSearch) }))
-    .filter((cat) => cat.tools.length > 0);
-
-  return (
-    <div
-      id="mobile-navigation-menu"
-      className="md:hidden border-t border-sand-200 dark:border-neutral-700 bg-white dark:bg-night-800 animate-fade-in max-h-[calc(100dvh_-_3.5rem)] overflow-x-hidden overflow-y-auto overscroll-contain pb-[max(0.75rem,env(safe-area-inset-bottom))]"
-      role="region"
-      aria-labelledby="mobile-menu-button"
-    >
-      <div className="px-4 py-3">
-        {/* Offline banner */}
-        {!isOnline && (
-          <div
-            className="mb-3 p-3 rounded-lg bg-crisis-50 dark:bg-crisis-950/30 border border-crisis-200 dark:border-crisis-800/30
-              text-crisis-700 dark:text-crisis-300 text-sm"
-            role="note"
-          >
-            <p className="font-semibold mb-1">You&apos;re offline</p>
-            <p className="text-sm opacity-90">Sensitive tools require an internet connection.</p>
-          </div>
-        )}
-
-        {/* Search */}
-        <div className="relative mb-3">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <label htmlFor="mobile-tool-search" className="sr-only">
-            Search mental health tools
-          </label>
-          <input
-            id="mobile-tool-search"
-            type="search"
-            placeholder="Search tools..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-sand-200 dark:border-neutral-600
-              bg-sand-50 dark:bg-night-900 text-base text-neutral-800 dark:text-neutral-200
-              placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-sage-700 dark:focus:ring-sage-300"
-          />
-        </div>
-
-        {/* Category accordions */}
-        <div className="space-y-1">
-          {filteredCategories.map((cat) => {
-            const isExpanded = expanded === cat.id || Boolean(search.trim());
-            const panelId = `mobile-tools-${cat.id}`;
-            const buttonId = `mobile-tools-button-${cat.id}`;
-
-            return (
-            <div key={cat.id}>
-              <button
-                id={buttonId}
-                type="button"
-                onClick={() => setExpanded(expanded === cat.id ? null : cat.id)}
-                aria-expanded={isExpanded}
-                aria-controls={panelId}
-                className="w-full min-h-[44px] flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
-              >
-                <span className="flex items-center gap-2.5">
-                  <svg className="w-4 h-4 text-sage-500 dark:text-sage-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
-                  </svg>
-                  {cat.name}
-                  <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">({cat.tools.length})</span>
-                </span>
-                <svg
-                  className={`w-4 h-4 text-neutral-400 transition-transform ${isExpanded ? "rotate-180" : ""}`}
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {isExpanded && (
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  className="ml-4 pl-4 border-l-2 border-sage-100 dark:border-sage-900 space-y-0.5 pb-2"
-                >
-                  {cat.tools.map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.href}
-                      onClick={onClose}
-                      className="flex min-h-[44px] flex-col justify-center px-3 py-2 rounded-lg hover:bg-sage-50 dark:hover:bg-sage-950/20 transition-colors"
-                    >
-                      <p className="text-sm font-medium text-neutral-700 dark:text-neutral-200">{tool.label}</p>
-                      <p className="text-xs text-neutral-500 dark:text-neutral-400">{tool.sub}</p>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            );
-          })}
-          {filteredCategories.length === 0 && (
-            <p className="py-6 text-center text-sm text-neutral-600 dark:text-neutral-300" role="status">
-              No tools match your search.
-            </p>
           )}
+          <button
+            ref={mobileButtonRef}
+            id="mobile-menu-button"
+            type="button"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+              setHelpOpen(false);
+            }}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+            className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-neutral-700 hover:bg-sand-200 md:hidden"
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            </svg>
+          </button>
         </div>
 
-        {/* Static nav links */}
-        <div className="border-t border-sand-200 dark:border-neutral-700 mt-3 pt-3 space-y-0.5">
-          <Link
-            href="/screening-tools#alcohol-substance"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-sage-700 dark:text-sage-300 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-          >
-            Substance Use &amp; Recovery
-          </Link>
-          <Link
-            href="/screening-tools"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-          >
-            All Screening Tools
-          </Link>
-          <Link
-            href="/facilities"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-          >
-            Find treatment
-          </Link>
-          <Link
-            href="/for-professionals"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-          >
-            For Professionals
-          </Link>
-          <Link
-            href="/clinical-evidence"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
-              text-neutral-700 dark:text-neutral-200
-              hover:bg-sage-50 dark:hover:bg-sage-950/20
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
-              transition-colors"
-          >
-            Clinical Evidence
-          </Link>
-          <Link
-            href="/about"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
-              text-neutral-700 dark:text-neutral-200
-              hover:bg-sage-50 dark:hover:bg-sage-950/20
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300
-              transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/methodology"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:bg-sage-50 dark:hover:bg-sage-950/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-700 dark:focus-visible:outline-sage-300 transition-colors"
-          >
-            Methodology
-          </Link>
-          <Link
-            href="/crisis-resources"
-            onClick={onClose}
-            className="flex min-h-[44px] items-center px-3 py-2.5 rounded-xl text-sm font-semibold
-              text-crisis-600 dark:text-crisis-400
-              hover:bg-crisis-50 dark:hover:bg-crisis-950/30
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crisis-600
-              transition-colors"
-          >
+        <div
+          ref={menuRef}
+          id="primary-navigation"
+          className={`${menuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] flex-col gap-1 overflow-y-auto border-b border-sand-200 bg-sand-50 p-4 shadow-md md:static md:flex md:max-h-none md:flex-row md:items-center md:overflow-visible md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+        >
+          <Link href="/screening-tools" onClick={closeNavigation} className={itemClass}>Take a Screening</Link>
+          <div ref={helpRef} className="relative">
+            <button
+              ref={helpButtonRef}
+              type="button"
+              onClick={() => setHelpOpen(!helpOpen)}
+              aria-expanded={helpOpen}
+              aria-controls="find-help-links"
+              className={`${itemClass} w-full`}
+            >
+              Find Help
+              <svg className={`h-3.5 w-3.5 ${helpOpen ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul
+              id="find-help-links"
+              hidden={!helpOpen}
+              className="ml-3 border-l border-sand-200 pl-2 md:absolute md:left-0 md:top-full md:ml-0 md:w-48 md:rounded-lg md:border md:bg-white md:p-1 md:shadow-md"
+            >
+              <li><Link href="/therapists" onClick={closeNavigation} className={itemClass}>Therapists</Link></li>
+              <li><Link href="/facilities" onClick={closeNavigation} className={itemClass}>Treatment Centers</Link></li>
+            </ul>
+          </div>
+          <Link href="/conditions" onClick={closeNavigation} className={itemClass}>Conditions</Link>
+          <Link href="/crisis-resources" onClick={closeNavigation} className="flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-medium text-crisis-700 hover:bg-crisis-50 focus-visible:outline-crisis-600">
             Crisis Help
           </Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

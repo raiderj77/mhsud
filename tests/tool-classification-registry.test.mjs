@@ -38,15 +38,18 @@ test("the central tool registry has the required classification fields", async (
 });
 
 test("every maintained navigation tool has a registry record and one visible disclosure", async () => {
-  const [registry, navbar, layout, notice] = await Promise.all([
+  const [registry, footer, directory, layout, notice] = await Promise.all([
     read("src/lib/toolClassifications.ts"),
-    read("src/components/Navbar.tsx"),
+    read("src/components/Footer.tsx"),
+    read("src/lib/screeningDirectory.ts"),
     read("src/app/layout.tsx"),
     read("src/components/ToolClassificationNotice.tsx"),
   ]);
-  const navBlock = navbar.match(/const CATEGORIES:[\s\S]*?const ALL_TOOLS/)?.[0] ?? "";
+  const footerTools = footer.split("const INFO_LINKS")[0];
+  const categoryTools = directory.match(/const CATEGORIES:[\s\S]*?export const CLINICAL_GUIDES/)?.[0] ?? "";
   const routes = new Set([
-    ...[...navBlock.matchAll(/href:\s*"(\/[^\"]+)"/g)].map((match) => match[1]),
+    ...[...`${footerTools}
+${categoryTools}`.matchAll(/href:\s*"(\/[^\"]+)"/g)].map((match) => match[1]).filter(route => !route.includes("#")),
     ...EXTRA_MAINTAINED_TOOLS,
   ]);
   const registered = [...registry.matchAll(/\broute:\s*"(\/[^\"]+)"/g)].map((match) => match[1]);

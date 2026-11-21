@@ -631,6 +631,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-12" aria-labelledby="visitor-needs">
+        <h2 id="visitor-needs" className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">
+          What do you need today?
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <Link href="/screening-tools" className="card block p-5 hover:border-sage-600 hover:shadow-md">
+            <h3 className="font-serif text-xl font-bold text-sage-800 underline underline-offset-4">Take a Screening</h3>
+            <p className="mt-2 text-sm text-neutral-700">Browse published screeners and educational self-checks.</p>
+          </Link>
+          <Link href="/therapists" className="card block p-5 hover:border-sage-600 hover:shadow-md">
+            <h3 className="font-serif text-xl font-bold text-sage-800 underline underline-offset-4">Find a Therapist</h3>
+            <p className="mt-2 text-sm text-neutral-700">Browse California therapist listings by city or specialty.</p>
+          </Link>
+          <Link href="/facilities" className="card block p-5 hover:border-sage-600 hover:shadow-md">
+            <h3 className="font-serif text-xl font-bold text-sage-800 underline underline-offset-4">Find Treatment</h3>
+            <p className="mt-2 text-sm text-neutral-700">Browse substance use treatment programs by state.</p>
+          </Link>
+        </div>
+      </section>
+
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16" aria-labelledby="choose-a-path">
         <h2 id="choose-a-path" className="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
           Choose the path that fits what you need

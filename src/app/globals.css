@@ -64,6 +64,7 @@ main li a:not([class*="btn-"]) {
 
 @layer base {
   html {
+    color-scheme: light;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     -webkit-font-smoothing: antialiased;

@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { CrisisBanner } from "@/components/CrisisBanner";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -70,10 +69,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#faf8f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1b1e" },
-  ],
+  themeColor: "#faf8f5",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -82,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -108,36 +105,22 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SensitiveRouteLifecycle />
         <PrivacySafeAggregateAnalytics />
-        <ThemeProvider>
-          <ScrollToTop />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                try {
-                  const t = localStorage.getItem('mh-theme');
-                  if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch(e) {}
-              `,
-            }}
-          />
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:inline-flex focus:min-h-[44px] focus:items-center focus:px-4 focus:py-2 focus:bg-sage-700 focus:text-white focus:rounded-lg focus:text-base focus:font-medium"
-          >
-            Skip to main content
-          </a>
-          <OfflineIndicator />
-          <CrisisBanner />
-          <AppInstallPrompt />
-          <Navbar />
-          <main id="main-content" tabIndex={-1} className="flex-1 scroll-mt-20 focus:outline-none">
-            <ToolClassificationNotice />
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <ScrollToTop />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:inline-flex focus:min-h-[44px] focus:items-center focus:px-4 focus:py-2 focus:bg-sage-700 focus:text-white focus:rounded-lg focus:text-base focus:font-medium"
+        >
+          Skip to main content
+        </a>
+        <OfflineIndicator />
+        <CrisisBanner />
+        <AppInstallPrompt />
+        <Navbar />
+        <main id="main-content" tabIndex={-1} className="flex-1 scroll-mt-20 focus:outline-none">
+          <ToolClassificationNotice />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

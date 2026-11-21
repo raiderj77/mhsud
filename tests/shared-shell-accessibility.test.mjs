@@ -4,23 +4,22 @@ import test from "node:test";
 
 const read = (file) => readFile(new URL(`../${file}`, import.meta.url), "utf8");
 
-test("shared navigation exposes disclosure state, names search fields, and restores focus", async () => {
+test("shared navigation exposes both disclosures and restores focus", async () => {
   const navbar = await read("src/components/Navbar.tsx");
 
-  assert.match(navbar, /aria-controls="desktop-tools-menu"/);
-  assert.match(navbar, /htmlFor="desktop-tool-search"/);
-  assert.match(navbar, /htmlFor="mobile-tool-search"/);
-  assert.match(navbar, /aria-expanded=\{isExpanded\}/);
-  assert.match(navbar, /aria-controls=\{panelId\}/);
+  assert.match(navbar, /aria-expanded=\{helpOpen\}[\s\S]*aria-controls="find-help-links"/);
+  assert.match(navbar, /aria-expanded=\{menuOpen\}[\s\S]*aria-controls="primary-navigation"/);
+  assert.match(navbar, /id="find-help-links"\s*hidden=\{!helpOpen\}/);
+  assert.match(navbar, /helpButtonRef\.current\?\.focus\(\)/);
   assert.match(navbar, /mobileButtonRef\.current\?\.focus\(\)/);
   assert.doesNotMatch(navbar, /aria-haspopup="true"/);
 });
 
-test("shared shell preserves a keyboard skip target, visible focus, and reduced-motion support", async () => {
-  const [layout, styles, theme] = await Promise.all([
+test("shared shell preserves a keyboard skip target, visible focus, and reduced-motion support in light mode", async () => {
+  const [layout, styles, navbar] = await Promise.all([
     read("src/app/layout.tsx"),
     read("src/app/globals.css"),
-    read("src/components/ThemeProvider.tsx"),
+    read("src/components/Navbar.tsx"),
   ]);
 
   assert.match(layout, /href="#main-content"/);
@@ -28,8 +27,9 @@ test("shared shell preserves a keyboard skip target, visible focus, and reduced-
   assert.match(styles, /outline-sage-700/);
   assert.match(styles, /prefers-reduced-motion: reduce/);
   assert.match(styles, /forced-colors: active/);
-  assert.match(theme, /aria-pressed=\{theme === "dark"\}/);
-  assert.match(theme, /min-h-\[44px\][\s\S]*min-w-\[44px\]/);
+  assert.match(layout, /colorScheme: "light"/);
+  assert.doesNotMatch(layout, /ThemeProvider|mh-theme|prefers-color-scheme/);
+  assert.doesNotMatch(navbar, /DarkModeToggle/);
 });
 
 test("date-only review metadata renders as the same calendar date in every time zone", async () => {
@@ -81,7 +81,7 @@ test("all maintained interactive assessment routes require the shared educationa
     ["/sleep-and-mood-check", "src/app/sleep-and-mood-check/SleepMoodClient.tsx"],
     ["/grief-assessment", "src/app/phq-9-depression-test/PHQ9Client.tsx"],
   ];
-  const hub = await read("src/app/screening-tools/page.tsx");
+  const hub = await read("src/lib/screeningDirectory.ts");
 
   assert.equal(
     new Set(maintainedRoutes.map(([route]) => route)).size,

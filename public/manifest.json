@@ -9,7 +9,7 @@
   "dir": "ltr",
   "display": "standalone",
   "background_color": "#faf8f5",
-  "theme_color": "#1a1b1e",
+  "theme_color": "#faf8f5",
   "categories": ["health", "medical"],
   "icons": [
     {

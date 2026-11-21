@@ -237,12 +237,13 @@ test("retired content stays out of search and internal discovery", async () => {
 });
 
 test("AI discovery files use maintained canonical URLs and scoped clinical claims", async () => {
-  const [sitemap, llms, llmsFull, llmsFullRoute, navbar] = await Promise.all([
+  const [sitemap, llms, llmsFull, llmsFullRoute, navbar, footer] = await Promise.all([
     readFile(new URL("../src/app/sitemap.ts", import.meta.url), "utf8"),
     readFile(new URL("../public/llms.txt", import.meta.url), "utf8"),
     readFile(new URL("../public/llms-full.txt", import.meta.url), "utf8"),
     readFile(new URL("../src/app/llms-full.txt/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../src/components/Navbar.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/Footer.tsx", import.meta.url), "utf8"),
   ]);
 
   const quarantineBlock = sitemap.match(/const QUARANTINED_PATHS = new Set\(\[([\s\S]*?)\]\);/)?.[1] ?? "";
@@ -273,7 +274,7 @@ test("AI discovery files use maintained canonical URLs and scoped clinical claim
   assert.match(llmsFullRoute, /public[\s\S]*llms-full\.txt/);
   assert.doesNotMatch(llmsFullRoute, /https:\/\/mindchecktools\.com/);
   assert.doesNotMatch(navbar, /href="\/blog"/);
-  assert.match(navbar, /href="\/clinical-evidence"/);
+  assert.match(footer, /href: "\/clinical-evidence"/);
 });
 
 test("Google consent and advertising runtimes are removed rather than conditionally enabled", () => {

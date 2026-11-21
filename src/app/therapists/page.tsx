@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TherapistBreadcrumbs } from "@/components/TherapistBreadcrumbs";
 import { createMetadata } from "@/lib/metadata";
 import { registryProviders, therapistSnapshot } from "@/lib/therapists";
 import { LICENSE_NOTE, REGISTRY_URL, SPECIALTIES, therapistPath } from "@/lib/therapistsCore.mjs";
@@ -6,6 +7,27 @@ import { LICENSE_NOTE, REGISTRY_URL, SPECIALTIES, therapistPath } from "@/lib/th
 const PAGE_SIZE = 30;
 const cities = [...new Set(registryProviders.map(provider => provider.city))];
 const specialties = SPECIALTIES.map(item => item.label);
+
+const cityCounts = new Map<string, number>();
+const specialtyCounts = new Map<string, number>();
+for (const provider of registryProviders) {
+  cityCounts.set(provider.city, (cityCounts.get(provider.city) ?? 0) + 1);
+  for (const specialty of provider.specialties) {
+    specialtyCounts.set(specialty, (specialtyCounts.get(specialty) ?? 0) + 1);
+  }
+}
+
+function topFilters(options: string[], counts: Map<string, number>) {
+  return options
+    .filter(option => counts.has(option))
+    .sort((a, b) => (counts.get(b) ?? 0) - (counts.get(a) ?? 0) || a.localeCompare(b))
+    .slice(0, 5);
+}
+
+const browseGroups = [
+  { label: "Top cities", filter: "city", options: topFilters(cities, cityCounts) },
+  { label: "Specialties", filter: "specialty", options: topFilters(specialties, specialtyCounts) },
+];
 
 export const metadata = createMetadata({
   path: "/therapists",
@@ -38,6 +60,7 @@ export default async function TherapistsPage({ searchParams }: { searchParams: P
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8 text-neutral-900 dark:text-neutral-50">
+      <TherapistBreadcrumbs />
       <h1 className="text-3xl font-bold">California therapist directory</h1>
       <p className="mt-3 text-neutral-700 dark:text-neutral-300">
         Browse individual provider records from the CMS National Plan and Provider Enumeration System.
@@ -51,8 +74,34 @@ export default async function TherapistsPage({ searchParams }: { searchParams: P
           {" · "}Data retrieved {therapistSnapshot.generatedAt}
         </p>
       )}
+      <p className="mt-3 text-neutral-700">
+        Looking for a program? <Link href="/facilities" className="inline-flex min-h-[44px] items-center underline">Browse treatment centers</Link>.
+      </p>
       {cities.length > 0 && (
-        <form action="/therapists" method="get" className="mt-6 grid gap-4 sm:grid-cols-2">
+        <section aria-labelledby="browse-therapists" className="mt-4 rounded-xl border border-sand-200 bg-white p-4">
+          <h2 id="browse-therapists" className="font-semibold">Browse therapist listings</h2>
+          {browseGroups.map(({ label, filter, options }) => options.length > 0 && (
+            <div key={filter} className="mt-3">
+              <h3 className="text-sm font-medium">{label}</h3>
+              <ul className="flex flex-wrap gap-2">
+                {options.map(option => (
+                  <li key={option}>
+                    <Link
+                      href={`/therapists?${new URLSearchParams({ [filter]: option })}#listings`}
+                      prefetch={false}
+                      className="inline-flex min-h-[44px] items-center rounded-lg bg-sand-50 px-3 text-sm text-sage-800 underline hover:bg-sage-50"
+                    >
+                      {option}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      )}
+      {cities.length > 0 && (
+        <form key={JSON.stringify([city, specialty])} action="/therapists" method="get" className="mt-6 grid gap-4 sm:grid-cols-2">
           <label className="block font-medium">
             Practice city
             <select name="city" defaultValue={city} className={selectClass}>
@@ -76,7 +125,7 @@ export default async function TherapistsPage({ searchParams }: { searchParams: P
         </form>
       )}
       <section className="mt-8" aria-labelledby="listings">
-        <h2 id="listings" className="text-xl font-semibold">Provider listings</h2>
+        <h2 id="listings" className="scroll-mt-20 text-xl font-semibold">Provider listings</h2>
         {!cities.length ? <p className="mt-2">The registry snapshot has not been loaded yet.</p> : (
           <p className="mt-2">{matches.length ? `${matches.length.toLocaleString()} listings. Page ${page} of ${pageCount}.` : "No listings match these filters."}</p>
         )}

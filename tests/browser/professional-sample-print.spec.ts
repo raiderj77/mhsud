@@ -3,10 +3,11 @@ import { expect, test } from '@playwright/test';
 const samplePath = '/for-professionals/sample-readiness-review';
 
 for (const colorScheme of ['light', 'dark'] as const) {
-  test(`the ${colorScheme} sample prints readable text with or without backgrounds`, async ({ page }, testInfo) => {
+  test(`the sample prints readable text with or without backgrounds under a ${colorScheme} system preference`, async ({ page }, testInfo) => {
     await page.emulateMedia({ colorScheme });
     await page.goto(samplePath);
-    await expect(page.locator('html')).toHaveClass(colorScheme === 'dark' ? /dark/ : /^((?!dark).)*$/);
+    await expect(page.locator('html')).not.toHaveClass(/\bdark\b/);
+    await expect(page.locator('html')).toHaveCSS('color-scheme', 'light');
     await page.locator('body').evaluate(async element => {
       await Promise.all(element.getAnimations().map(animation => animation.finished));
     });

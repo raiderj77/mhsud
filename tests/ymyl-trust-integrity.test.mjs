@@ -116,13 +116,15 @@ test("public application content excludes unrelated private identity details", a
 });
 
 test("screening hub exposes only maintained canonical routes and every maintained tool", async () => {
-  const [hub, sitemapSource] = await Promise.all([
+  const [hub, directory, sitemapSource] = await Promise.all([
     source("src/app/screening-tools/page.tsx"),
+    source("src/lib/screeningDirectory.ts"),
     source("src/app/sitemap.ts"),
   ]);
   const quarantined = quarantinedPaths(sitemapSource);
   const maintained = maintainedSitemapPaths(sitemapSource, quarantined);
-  const hubLinks = literalInternalLinks(hub);
+  const hubLinks = literalInternalLinks(`${hub}
+${directory}`);
   const configUrl = `${pathToFileURL(path.join(root, "next.config.mjs")).href}?ymyl=${Date.now()}`;
   const configModule = await import(configUrl);
   const nextConfig = configModule.default;
@@ -134,7 +136,7 @@ test("screening hub exposes only maintained canonical routes and every maintaine
       .map((redirect) => [redirect.source, redirect]),
   );
 
-  const categoriesBlock = hub.match(/const CATEGORIES:[\s\S]*?const PRACTICAL_TOOLS/)?.[0] ?? "";
+  const categoriesBlock = directory.match(/const CATEGORIES:[\s\S]*?export const CLINICAL_GUIDES/)?.[0] ?? "";
   const categoryRoutes = [
     ...categoriesBlock.matchAll(/\{\s*name:\s*"[^"]+"(?:,\s*acronym:\s*"[^"]+")?,\s*href:\s*"(\/[^"]+)"/g),
   ].map((match) => match[1]);
@@ -318,7 +320,7 @@ test("grief route identifies its PHQ-9 boundary instead of claiming to assess pr
 
 test("published-instrument evidence links to every instrument advertised by the hub map", async () => {
   const [hub, evidence] = await Promise.all([
-    source("src/app/screening-tools/page.tsx"),
+    source("src/lib/screeningDirectory.ts"),
     source("src/app/clinical-evidence/page.tsx"),
   ]);
   const evidenceRoutes = new Set(
