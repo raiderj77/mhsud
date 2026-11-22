@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
@@ -67,11 +68,7 @@ export function Navbar() {
     >
       <div className="relative mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
         <Link href="/" onClick={closeNavigation} aria-label="MindCheck Tools - Home" className="flex min-h-[44px] shrink-0 items-center gap-2.5 rounded-lg">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-sage-400 to-sage-600 shadow-sm">
-            <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </span>
+          <Image src="/logo-mark.svg" alt="" width={32} height={32} unoptimized />
           <span className="font-serif text-lg font-bold tracking-tight text-neutral-800">MindCheck</span>
         </Link>
 

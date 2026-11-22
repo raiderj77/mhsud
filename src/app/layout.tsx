@@ -30,8 +30,11 @@ export const metadata: Metadata = {
   ...createMetadata({ path: "/" }),
   manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: { url: "/favicon-180.png", sizes: "180x180" },
   },
   openGraph: {
     type: "website",
@@ -41,14 +44,14 @@ export const metadata: Metadata = {
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
       "Free, private mental health and substance use self-checks. Screening answers are processed in your browser and are not intentionally sent to MindCheck Tools.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "MindCheck Tools - Free, Private Mental Health Self-Checks",
     description:
       "Free, private mental health and substance use self-checks. Screening answers are processed in your browser and are not intentionally sent to MindCheck Tools.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MindCheck Tools - Free, Private Mental Health Self-Checks" }],
   },
   alternates: {
     canonical: "/",
