@@ -1,4 +1,5 @@
 "use client";
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, type KeyboardEvent } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -215,6 +216,8 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
               <p className="text-sm text-slate-600 dark:text-slate-300">This score falls in a published moderate-to-severe range. Consider speaking with a primary-care or mental-health professional. A full PHQ-9 or GAD-7 can provide more symptom detail but still cannot diagnose a condition.</p>
             )}
           </div>
+
+          <ScreeningDirectoryLinks />
 
           <div className="flex flex-wrap items-center gap-3">
             <button

@@ -1,5 +1,6 @@
 "use client";
 
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -280,6 +281,8 @@ export function AUDITCClient({ faqData }: Props) {
               </div>
             )}
           </div>
+
+          <ScreeningDirectoryLinks />
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>

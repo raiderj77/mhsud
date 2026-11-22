@@ -1,5 +1,6 @@
 "use client";
 
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -205,6 +206,8 @@ export function WorkStressClient({ faqData }: Props) {
               <strong>Important:</strong> This is a self-reflection tool, not a clinical assessment. It uses original questions and cannot diagnose burnout, depression, or any condition. For persistent work-related distress, please talk to a healthcare professional.
             </p>
           </div>
+
+          <ScreeningDirectoryLinks />
 
           <div className="flex gap-3 mb-8">
             <button onClick={handleReset} className="btn-primary flex-1 text-base py-4">Start Over</button>

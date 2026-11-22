@@ -1,5 +1,6 @@
 "use client";
 
+import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
@@ -439,6 +440,8 @@ export function PCL5Client({ faqData }: Props) {
               <p>This is a screening tool, not a diagnosis. Consult a healthcare professional.</p>
             </div>
           </div>
+
+          <ScreeningDirectoryLinks />
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-3 mb-5">
