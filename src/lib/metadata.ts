@@ -46,14 +46,14 @@ export function createMetadata(overrides: Partial<Metadata> & { path: string }):
       siteName: SITE_NAME,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: pageTitle }],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: pageTitle }],
       ...ogOverrides,
     },
     twitter: {
       card: "summary_large_image",
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: pageTitle }],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: pageTitle }],
       ...twOverrides,
     },
     robots: {
@@ -188,7 +188,7 @@ export function articleJsonLd({
     url,
     datePublished,
     dateModified,
-    image: image || `${SITE_URL}/og-default.png`,
+    image: image || `${SITE_URL}/og-image.png`,
     author: {
       "@type": "Organization",
       name: SITE_NAME,
