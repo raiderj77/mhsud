@@ -480,7 +480,7 @@ export function Who5Client({ faqData }: Props) {
         Rate each statement for how you have been feeling over the <strong>last two weeks</strong>.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        5 questions · ~2 minutes · local browser processing · WHO public domain instrument
+        5 questions · ~2 minutes · local browser processing · WHO instrument, CC BY-NC-SA 3.0 IGO licence
       </p>
 
 

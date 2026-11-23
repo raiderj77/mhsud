@@ -236,7 +236,7 @@ export function AUDITClient({ faqData }: Props) {
       <header className="mb-8">
         <div className="flex items-center gap-2 mb-4">
           <span className="badge bg-sage-50 dark:bg-sage-950/30 text-sage-700 dark:text-sage-400">WHO</span>
-          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Public Domain</span>
+          <span className="badge bg-sand-100 dark:bg-night-700 text-neutral-500 dark:text-neutral-400">Free, Noncommercial Use</span>
         </div>
         <h1 className="font-serif text-display font-bold text-neutral-900 dark:text-neutral-50 mb-3">
           AUDIT Alcohol Use Screen
@@ -258,7 +258,7 @@ export function AUDITClient({ faqData }: Props) {
       {!accepted && (
         <DisclaimerGate
           toolName="AUDIT"
-          toolDescription="This self-check uses the Alcohol Use Disorders Identification Test (AUDIT), a 10-item screening tool developed by the World Health Organization. It is in the public domain and can be used freely."
+          toolDescription="This self-check uses the Alcohol Use Disorders Identification Test (AUDIT), a 10-item screening tool developed by the World Health Organization. WHO provides it free of charge for screening. It is not public domain, and it may not be sold or used in conjunction with commercial purposes."
           onAccept={() => setAccepted(true)}
         />
       )}
@@ -583,7 +583,7 @@ export function AUDITClient({ faqData }: Props) {
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-              The AUDIT was developed by the World Health Organization. It is in the public domain and can be reproduced and used freely.
+              The AUDIT was developed by the World Health Organization. WHO provides it free of charge; it may not be sold or used in conjunction with commercial purposes. This screening stays free and separate from any paid product.
             </p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">This tool is for educational purposes only. It is not medical advice, a diagnosis, or a treatment recommendation.</p>
             <ToolReviewerBio />
