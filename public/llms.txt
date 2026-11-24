@@ -77,6 +77,7 @@ Interactive entries are educational self-screens, not diagnostic services. Entri
 - [PHQ-9 score interpretation](https://mindchecktools.com/phq-9-score-interpretation)
 - [GAD-7 score interpretation](https://mindchecktools.com/gad-7-score-interpretation)
 - [AUDIT score interpretation](https://mindchecktools.com/audit-score-interpretation)
+- [What is the AUDIT test](https://mindchecktools.com/what-is-the-audit-test)
 - [PCL-5 score interpretation](https://mindchecktools.com/pcl-5-score-interpretation)
 - [ASRS score interpretation](https://mindchecktools.com/asrs-score-interpretation)
 
