@@ -318,6 +318,9 @@ export function K6Client({ faqData }: Props) {
                 <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank" rel="noopener noreferrer" className="underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300">who.int</a>
               </li>
             </ul>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">
+              The K6 scale is © Ronald C. Kessler, PhD. It is used here free of charge with citation, as permitted by the Harvard Medical School National Comorbidity Survey. The K6 is not in the public domain.
+            </p>
           </div>
         </section>
 
@@ -493,7 +496,7 @@ export function K6Client({ faqData }: Props) {
         A brief measure of nonspecific psychological distress used in national health surveys.
       </p>
       <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mb-8">
-        6 questions · ~2 minutes · local browser processing · Public domain instrument
+        6 questions · ~2 minutes · local browser processing · Free to use with citation (Kessler et al., 2002)
       </p>
 
 

@@ -71,7 +71,7 @@ const FAQ_DATA = [
   {
     question: "Where can I find the official AUDIT and AUDIT-C tools?",
     answer:
-      "The AUDIT is a WHO instrument available for free at the WHO website and in the WHO AUDIT Manual. The AUDIT-C is in the public domain and available through multiple sources including the U.S. Department of Veterans Affairs (VA) health system, which uses it routinely. The tools on MindCheck Tools are based on the validated instruments with standard WHO/VA scoring applied.",
+      "The AUDIT is a WHO instrument available for free at the WHO website and in the WHO AUDIT Manual. The AUDIT-C is available through multiple sources including the U.S. Department of Veterans Affairs (VA) health system, which uses it routinely. It is not public domain; it derives from the WHO AUDIT and is treated here under the same noncommercial boundary. The tools on MindCheck Tools are based on the validated instruments with standard WHO/VA scoring applied.",
   },
 ];
 

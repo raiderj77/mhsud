@@ -434,7 +434,7 @@ export function AUDITCClient({ faqData }: Props) {
 
           <footer className="border-t border-sand-200 dark:border-neutral-700 pt-6 text-center">
             <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-2">
-              The AUDIT-C is derived from the AUDIT developed by the World Health Organization. It is in the public domain.
+              The AUDIT-C is derived from the AUDIT developed by the World Health Organization. It is not public domain. MindCheck Tools treats it under the same noncommercial boundary as the AUDIT and keeps this screening free and separate from any paid product.
             </p>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">This tool is for educational purposes only. Not medical advice, a diagnosis, or a treatment recommendation.</p>
             <ToolReviewerBio />
