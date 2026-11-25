@@ -1,5 +1,7 @@
 import { isValidWorkEmail } from "./facilitiesCore.mjs";
 
+import { cleanLicenseNumber, PROFILE_SLUG } from "./professionalCore.mjs";
+
 export const SPECIALTIES = [
   { prefix: "101Y", query: "Counselor", label: "Counselor" },
   { prefix: "1041", query: "Social Worker", label: "Social Worker" },
@@ -59,9 +61,11 @@ export function normalizeProvider(row) {
 
 export function validateClaim(body) {
   if (!body || typeof body !== "object" || Array.isArray(body)) return null;
-  const allowed = ["slug", "workEmail"];
+  const allowed = ["slug", "workEmail", "licenseNumber"];
   if (Object.keys(body).some(key => !allowed.includes(key))) return null;
   const slug = clean(body.slug);
   const workEmail = clean(body.workEmail);
-  return /^[a-z0-9-]{1,250}$/.test(slug) && isValidWorkEmail(workEmail) ? { slug, workEmail } : null;
+  const licenseNumber = cleanLicenseNumber(body.licenseNumber);
+  if (Object.hasOwn(body, "licenseNumber") && (licenseNumber.length < 4 || licenseNumber.length > 20)) return null;
+  return PROFILE_SLUG.test(slug) && isValidWorkEmail(workEmail) ? { slug, workEmail, licenseNumber } : null;
 }

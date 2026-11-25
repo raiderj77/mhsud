@@ -100,6 +100,22 @@ const nextConfig = {
         ],
       },
       {
+        source: "/therapists/:path(sign-in|dashboard)",
+        headers: [
+          { key: "Cache-Control", value: "private, no-store" },
+          { key: "Referrer-Policy", value: "no-referrer" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      {
+        source: "/therapists/:path(auth|api)/:rest*",
+        headers: [
+          { key: "Cache-Control", value: "private, no-store" },
+          { key: "Referrer-Policy", value: "no-referrer" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      {
         // Health content pages use no-referrer so topic URLs are not disclosed
         // when a user follows an external link.
         source: "/:path(phq-9-depression-test|gad-7-anxiety-test|audit-alcohol-test|audit-c-alcohol-screen|cage-aid-substance-abuse-screening|dass-21-depression-anxiety-stress|pcl-5-ptsd-screening|pc-ptsd-5-screening|spin-social-anxiety-test|msi-bpd-screening|asrs-adhd-screening|scoff-eating-disorder-screening|aq-10-autism-screening|crafft-substance-screening|who-assist-substance-screening|ces-d-depression-scale|k6-distress-scale|phq-4-anxiety-depression-screen|postpartum-depression-test|ace-questionnaire|who-5-wellbeing-index|athens-insomnia-scale|holmes-rahe-stress-inventory|rosenberg-self-esteem-scale|ucla-loneliness-scale|brief-resilience-scale|big-five-personality-test|attachment-style-quiz|burnout-assessment-tool|compassion-fatigue-test|grief-assessment|mental-load-calculator|maternal-mental-health)",
