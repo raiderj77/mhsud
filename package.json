@@ -31,7 +31,7 @@
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "cheerio": "^1.2.0",
-    "eslint": "^8",
+    "eslint": "^10.0.0",
     "eslint-config-next": "15.5.27",
     "playwright-core": "1.62.1",
     "postcss": "^8.5.23",
