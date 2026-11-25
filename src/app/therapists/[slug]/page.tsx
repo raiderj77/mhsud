@@ -3,6 +3,7 @@ import { TherapistBreadcrumbs } from "@/components/TherapistBreadcrumbs";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import { getTherapist, therapistSnapshot } from "@/lib/therapists";
+import { getProfileOverlay, type PublicProfile } from "@/lib/professionalServer";
 import { LICENSE_NOTE, REGISTRY_URL, therapistPath } from "@/lib/therapistsCore.mjs";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,15 +18,41 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
+function ContactCard({ profile }: { profile: PublicProfile }) {
+  return (
+    <section className="mt-6 space-y-3 rounded-lg border border-neutral-400 p-4">
+      <h2 className="text-xl font-semibold">Contact and availability</h2>
+      {profile.phone && <p><a className="inline-flex min-h-[44px] items-center underline" href={`tel:${profile.phone.replace(/[^+0-9]/g, "")}`}>{profile.phone}</a></p>}
+      {profile.website && <p><a className="inline-flex min-h-[44px] items-center underline" href={profile.website} rel="noreferrer nofollow">Visit website</a></p>}
+      {profile.bio && <p className="whitespace-pre-wrap break-words">{profile.bio}</p>}
+      {profile.insurances.length > 0 && (
+        <div><h3 className="font-medium">Insurance accepted</h3><ul className="list-disc pl-5">
+          {profile.insurances.map((item, index) => <li key={index}>{item}</li>)}
+        </ul></div>
+      )}
+      {profile.languages.length > 0 && (
+        <div><h3 className="font-medium">Languages</h3><ul className="list-disc pl-5">
+          {profile.languages.map((item, index) => <li key={index}>{item}</li>)}
+        </ul></div>
+      )}
+      {profile.session_fee && <p>Session fee {profile.session_fee}</p>}
+      {profile.telehealth && <p>Offers telehealth</p>}
+      {profile.accepting_new && <p><span className="rounded border px-2 py-1">Accepting new patients</span></p>}
+    </section>
+  );
+}
+
 export default async function TherapistPage({ params }: Props) {
   const provider = getTherapist((await params).slug);
   if (!provider) notFound();
+  const overlay = await getProfileOverlay(provider.slug);
 
   return (
     <article className="mx-auto w-full max-w-4xl px-4 py-8 text-neutral-900 dark:text-neutral-50">
       <TherapistBreadcrumbs name={provider.name} />
       <h1 className="mt-3 break-words text-3xl font-bold">{provider.name}</h1>
       <p className="mt-2 text-lg text-neutral-800 dark:text-neutral-200">{provider.city}, California</p>
+      {overlay && <ContactCard profile={overlay} />}
       <section className="mt-6 rounded-lg border border-neutral-400 p-4">
         <h2 className="text-xl font-semibold">What the registry shows</h2>
         <dl className="mt-3 space-y-3">
@@ -33,7 +60,7 @@ export default async function TherapistPage({ params }: Props) {
           {provider.credential && <div><dt className="font-medium">Credentials on file</dt><dd>{provider.credential}</dd></div>}
           <div><dt className="font-medium">National Provider Identifier (NPI)</dt><dd>{provider.npi}</dd></div>
         </dl>
-        <p className="mt-4 font-medium">Unclaimed listing</p>
+        <p className="mt-4 font-medium">{overlay ? "Claimed listing" : "Unclaimed listing"}</p>
         <p className="mt-1 text-neutral-700 dark:text-neutral-300">{LICENSE_NOTE}</p>
         <p className="mt-3 text-neutral-700 dark:text-neutral-300">
           Confirm current license status before making an appointment. Contact the provider directly for availability and services.
@@ -45,9 +72,9 @@ export default async function TherapistPage({ params }: Props) {
           <p className="text-sm text-neutral-600 dark:text-neutral-400">Data retrieved {therapistSnapshot.generatedAt}</p>
         )}
       </section>
-      <Link href={`/therapists/claim?provider=${encodeURIComponent(provider.slug)}`} className="mt-4 inline-flex min-h-[44px] items-center underline">
+      {!overlay && <Link href={`/therapists/claim?provider=${encodeURIComponent(provider.slug)}`} className="mt-4 inline-flex min-h-[44px] items-center underline">
         Claim this listing
-      </Link>
+      </Link>}
     </article>
   );
 }

@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 
 export default function ClaimForm({ slug }: { slug: string }) {
   const [workEmail, setWorkEmail] = useState("");
+  const [licenseNumber, setLicenseNumber] = useState("");
   const [busy, setBusy] = useState(false);
   const [reference, setReference] = useState("");
   const [error, setError] = useState("");
@@ -17,11 +18,12 @@ export default function ClaimForm({ slug }: { slug: string }) {
       const response = await fetch("/therapists/api/claim", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, workEmail }),
+        body: JSON.stringify({ slug, workEmail, ...(licenseNumber.trim() ? { licenseNumber } : {}) }),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error);
       setWorkEmail("");
+      setLicenseNumber("");
       setReference(result.reference);
     } catch {
       setError("The claim could not be started. Check your work email and try again.");
@@ -41,6 +43,11 @@ export default function ClaimForm({ slug }: { slug: string }) {
           value={workEmail} onChange={event => { setWorkEmail(event.target.value); setReference(""); }}
           readOnly={busy}
           className="block min-h-[44px] w-full rounded-lg border border-neutral-400 bg-white px-3 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50" />
+        <label htmlFor="therapist-license" className="block font-medium">California license number (optional)</label>
+        <p id="therapist-license-help">Matching the license number on your listing speeds up verification.</p>
+        <input id="therapist-license" type="text" autoComplete="off" aria-describedby="therapist-license-help"
+          value={licenseNumber} onChange={event => setLicenseNumber(event.target.value)} readOnly={busy}
+          className="block min-h-[44px] w-full rounded-lg border border-neutral-400 bg-white px-3 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50" />
         <button type="submit" disabled={busy} className="min-h-[44px] rounded-lg bg-neutral-900 px-4 text-white disabled:opacity-60 dark:bg-neutral-100 dark:text-neutral-900">
           {busy ? "Starting claim…" : "Start claim"}
         </button>
@@ -50,7 +57,7 @@ export default function ClaimForm({ slug }: { slug: string }) {
         {reference && (
           <section className="mt-4 rounded-lg border border-neutral-400 p-4">
             <h2 className="text-xl font-semibold">Claim reference {reference}</h2>
-            <p className="mt-2">Email this reference from your work account to request manual review. The form issues a reference and does not save the claim.</p>
+            <p className="mt-2">Email this reference from your work account to request manual review.</p>
             <a className="mt-2 inline-flex min-h-[44px] items-center underline" href={`mailto:hello@mindchecktools.com?subject=${subject}&body=${body}`}>
               Open claim email
             </a>

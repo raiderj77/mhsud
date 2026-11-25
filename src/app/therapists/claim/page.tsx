@@ -25,7 +25,7 @@ export default async function ClaimPage({ searchParams }: { searchParams: Promis
           <p className="mt-3">Listing for {listing.name} in {listing.city}, California.</p>
           <p className="mt-3 text-neutral-700 dark:text-neutral-300">
             This form is for providers claiming their own listing. Enter only your work email.
-            All claims require manual review.
+            All claims require manual review. Claims with a matching license number are verified first.
           </p>
           <ClaimForm slug={listing.slug} />
         </>

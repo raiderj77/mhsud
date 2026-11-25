@@ -96,9 +96,9 @@ test("streaming CSV uses numbered license and state slots and rejects inactive o
   }
 });
 
-test("claim payload allows only listing slug and a bounded work email", () => {
+test("claim payload allows listing slug, bounded work email, and optional license number", () => {
   const good = { slug: "fixture-alpha-1000000001", workEmail: "provider@example.test" };
-  assert.deepEqual(validateClaim(good), good);
+  assert.deepEqual(validateClaim(good), { ...good, licenseNumber: "" });
   for (const extra of ["patientName", "consumerEmail", "notes", "diagnosis"]) {
     assert.equal(validateClaim({ ...good, [extra]: "fixture" }), null);
   }
