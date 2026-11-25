@@ -10,7 +10,7 @@ test("screening topics fall back to the two public browse routes", () => {
   const snapshot = JSON.parse(read("src/data/therapists/by-state/CA.json"));
   const registry = snapshot.providers.filter(({ listingSource }) => listingSource === "nppes");
   const populated = new Set(registry.flatMap(({ specialties }) => specialties));
-  assert.deepEqual([...new Set(registry.map(({ city }) => city))], ["Los Angeles"]);
+  assert.deepEqual([...new Set(registry.map(({ city }) => city))], ["Aptos", "Aromas", "Ben Lomond", "Boulder Creek", "Capitola", "Carmel", "Carmel Valley", "Carmel-By-The-Sea", "Castroville", "Davenport", "Del Rey Oaks", "Felton", "Gonzales", "Greenfield", "Hollister", "King City", "La Selva Beach", "Los Angeles", "Marina", "Monterey", "Pacific Grove", "Pebble Beach", "Prunedale", "Royal Oaks", "Salinas", "San Juan Bautista", "Santa Cruz", "Scotts Valley", "Seaside", "Soledad", "Soquel", "Watsonville"]);
   assert.deepEqual([...populated].sort(), SPECIALTIES.map(({ label }) => label).sort());
   assert.match(read("src/app/therapists/page.tsx"), /provider\.specialties\.includes\(specialty\)/);
   const facilities = read("src/app/facilities/page.tsx");
