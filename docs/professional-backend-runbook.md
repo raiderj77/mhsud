@@ -1,6 +1,6 @@
 # Therapist professional backend pilot
 
-Before opening the pilot, decide how to display legacy registry credentials containing digits. Public overlays are held for those listings while that decision is pending.
+Registry credentials shown on public listings are pre-existing public registry data and display as they always have. License numbers and email addresses submitted through the claim and sign-in forms are private and never display.
 
 1. Create a free Supabase project. Open **SQL Editor**, paste the contents of [the professional backend migration](../supabase/migrations/20261124000000_therapist_professional_backend.sql), and run it once.
 2. In Supabase, find the project URL, public anon key, and private service-role key. In Vercel, open the MindCheckTools project and add these values under **Settings → Environment Variables**. Add the same three settings to local `.env.local` for the pilot scripts.
