@@ -80,6 +80,7 @@ Interactive entries are educational self-screens, not diagnostic services. Entri
 - [What is the AUDIT test](https://mindchecktools.com/what-is-the-audit-test)
 - [Alcohol withdrawal timeline](https://mindchecktools.com/alcohol-withdrawal-timeline)
 - [Signs of alcoholism](https://mindchecktools.com/signs-of-alcoholism)
+- [What is the DAST-10 test](https://mindchecktools.com/what-is-the-dast-test)
 - [PCL-5 score interpretation](https://mindchecktools.com/pcl-5-score-interpretation)
 - [ASRS score interpretation](https://mindchecktools.com/asrs-score-interpretation)
 
