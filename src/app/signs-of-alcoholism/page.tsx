@@ -105,13 +105,13 @@ const SEVERITY = [
   {
     criteria: "2 to 3",
     severity: "Mild AUD",
-    means: "A real diagnosis, not a technicality. This is the stage where change is easiest.",
+    means: "A real diagnosis, not a technicality. The count is what sets the level, and any single symptom is worth taking seriously.",
   },
   {
     criteria: "4 to 5",
     severity: "Moderate AUD",
     means:
-      "The pattern is established. Willpower-only attempts have usually failed by now, which is information, not shame.",
+      "The pattern reaches across more areas of life. The count is what sets the level, whatever the specific signs are.",
   },
   {
     criteria: "6 or more",
@@ -403,10 +403,10 @@ export default function SignsOfAlcoholismPage() {
               The AUDIT sorts scores into four zones. Whatever your zone, it is always okay to talk with a professional if you are concerned about your drinking.
             </p>
             <p className={P}>
-              <strong>Zone I (score 0 to 7, lower risk).</strong> Keep being mindful of your drinking, especially in stressful stretches. If you recognized several signs despite a low score, trust the recognition and retake the screening in a few months.
+              <strong>Zone I (score 0 to 7, lower risk).</strong> Keep being mindful of your drinking, especially in stressful stretches. If you recognized several signs despite a low score, trust the recognition over the score and talk with a healthcare professional about what you noticed. If any of those signs involve withdrawal symptoms, get medical guidance promptly instead of waiting.
             </p>
             <p className={P}>
-              <strong>Zone II (score 8 to 15, hazardous use).</strong> Your pattern carries increased risk of harm. Practical steps to cut down help at this level, and this is the easiest zone to leave. If cutting down keeps failing, that failure is itself sign 2.
+              <strong>Zone II (score 8 to 15, hazardous use).</strong> Your pattern carries increased risk of harm. Practical steps to cut down help at this level. If cutting down keeps failing, that failure is itself sign 2.
             </p>
             <p className={P}>
               <strong>Zone III (score 16 to 19, harmful use).</strong> Talking with a healthcare professional or a licensed substance use counselor is encouraged. They can look at your whole situation and help plan follow-up.
