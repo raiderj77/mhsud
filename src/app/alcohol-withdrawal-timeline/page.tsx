@@ -17,7 +17,7 @@ const DESCRIPTION =
   "The alcohol withdrawal timeline hour by hour and day by day: when symptoms start, when they peak, when seizures and delirium tremens can happen, and when to get medical help now.";
 
 const LINK_CLASS =
-  "underline text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300";
+  "underline break-all text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300";
 
 const FAQ_DATA = [
   {
