@@ -30,7 +30,6 @@ export default async function DashboardPage() {
           <section key={overlay.slug} className="space-y-3 rounded-lg border p-4">
             <h2 className="text-xl font-semibold">{listing.name}, {listing.city}</h2>
             <Link className="inline-flex min-h-[44px] items-center underline" href={`/therapists/${listing.slug}`}>View public listing</Link>
-            {/\d/.test(listing.credential) && <p>Saved edits will appear publicly after the registry credential display is reviewed.</p>}
             <DashboardForm overlay={overlay} />
           </section>
         );

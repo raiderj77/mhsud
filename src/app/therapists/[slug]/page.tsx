@@ -45,9 +45,7 @@ function ContactCard({ profile }: { profile: PublicProfile }) {
 export default async function TherapistPage({ params }: Props) {
   const provider = getTherapist((await params).slug);
   if (!provider) notFound();
-  // Legacy credentials can contain license numbers. Hold the claimed presentation
-  // for these rows until the registry display policy is resolved.
-  const overlay = /\d/.test(provider.credential) ? null : await getProfileOverlay(provider.slug);
+  const overlay = await getProfileOverlay(provider.slug);
 
   return (
     <article className="mx-auto w-full max-w-4xl px-4 py-8 text-neutral-900 dark:text-neutral-50">
