@@ -418,6 +418,7 @@ export default function AlcoholWithdrawalTimelinePage() {
             <Bullets
               items={[
                 <><Link href="/what-is-the-audit-test" className={LINK_CLASS}>What the AUDIT test is</Link>, the 10-question screening explained</>,
+                <><Link href="/signs-of-alcoholism" className={LINK_CLASS}>Signs of alcoholism</Link>, the full checklist, including high-functioning signs</>,
                 <><Link href="/audit-score-interpretation" className={LINK_CLASS}>AUDIT score interpretation</Link></>,
                 <><Link href="/withdrawal-timeline" className={LINK_CLASS}>Withdrawal timeline tool</Link>, phase-by-phase timelines for alcohol and 7 other substances</>,
                 <><Link href="/audit-vs-audit-c" className={LINK_CLASS}>AUDIT vs AUDIT-C</Link>, the full screening and the 3-question version compared</>,

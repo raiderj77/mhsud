@@ -373,6 +373,7 @@ export default function WhatIsTheAuditTestPage() {
               items={[
                 <><Link href="/audit-score-interpretation" className={LINK_CLASS}>AUDIT score interpretation</Link></>,
                 <><Link href="/alcohol-withdrawal-timeline" className={LINK_CLASS}>Alcohol withdrawal timeline</Link>, how long symptoms last, stage by stage</>,
+                <><Link href="/signs-of-alcoholism" className={LINK_CLASS}>Signs of alcoholism</Link>, the 11 signs clinicians use, in plain language</>,
                 <><Link href="/audit-vs-audit-c" className={LINK_CLASS}>AUDIT vs AUDIT-C</Link>, a comparison of the full 10-question screening and the 3-question version</>,
                 <><Link href="/clinical-evidence#audit" className={LINK_CLASS}>AUDIT clinical evidence</Link></>,
                 <><Link href="/cage-aid-substance-abuse-screening" className={LINK_CLASS}>CAGE-AID information</Link>, a different tool that covers alcohol and other drugs</>,
