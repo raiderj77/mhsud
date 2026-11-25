@@ -21,7 +21,7 @@ test("unconfigured backend exits before data operations and shows notices", asyn
   const signIn = await read("src/app/therapists/sign-in/page.tsx");
   assert.match(signIn, /isProfessionalBackendConfigured\(\) \? <SignInForm \/> : <p>Professional sign-in opens shortly\.<\/p>/);
   const dashboard = await read("src/app/therapists/dashboard/page.tsx");
-  assert.match(dashboard, /if \(!isProfessionalBackendConfigured\(\)\) \{\s*return <p[^>]*>The professional dashboard opens shortly\.<\/p>/);
+  assert.match(dashboard, /if \(!isProfessionalBackendConfigured\(\)\) \{\s*return \(\s*<div[^>]*>\s*<h1[^>]*>Therapist dashboard<\/h1>\s*<p[^>]*>The professional dashboard opens shortly\.<\/p>/);
 });
 
 test("every listing uses the overlay for claimed presentation and renders the registry credential verbatim", async () => {

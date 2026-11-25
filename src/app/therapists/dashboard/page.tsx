@@ -11,7 +11,12 @@ const statusLabels = { pending: "Pending review", approved: "Approved", rejected
 
 export default async function DashboardPage() {
   if (!isProfessionalBackendConfigured()) {
-    return <p className="mx-auto max-w-2xl px-4 py-8">The professional dashboard opens shortly.</p>;
+    return (
+      <div className="mx-auto max-w-2xl px-4 py-8">
+        <h1 className="text-3xl font-bold">Therapist dashboard</h1>
+        <p className="mt-4">The professional dashboard opens shortly.</p>
+      </div>
+    );
   }
 
   const user = await getSessionUser(false);
