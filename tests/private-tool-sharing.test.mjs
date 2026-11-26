@@ -9,6 +9,7 @@ const centralizedClients = [
   ["bac-calculator/BACClient.tsx", "/bac-calculator"],
   ["big-five-personality-test/BigFiveClient.tsx", "/big-five-personality-test"],
   ["burnout-assessment-tool/BurnoutClient.tsx", "/burnout-assessment-tool"],
+  ["cudit-r-cannabis-screening/CUDITRClient.tsx", "/cudit-r-cannabis-screening"],
   ["gad-7-anxiety-test/GAD7Client.tsx", "/gad-7-anxiety-test"],
   ["halt-check-in/HALTClient.tsx", "/halt-check-in"],
   ["health-recovery-timeline/HealthTimelineClient.tsx", "/health-recovery-timeline"],

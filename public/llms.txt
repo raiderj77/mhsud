@@ -34,6 +34,7 @@ Interactive entries are educational self-screens, not diagnostic services. Entri
 - [SPIN social-anxiety information and licensing boundary](https://mindchecktools.com/spin-social-anxiety-test)
 - [AUDIT alcohol use screen](https://mindchecktools.com/audit-alcohol-test)
 - [AUDIT-C alcohol screen](https://mindchecktools.com/audit-c-alcohol-screen)
+- [CUDIT-R cannabis screen](https://mindchecktools.com/cudit-r-cannabis-screening)
 - [CAGE-AID substance-use information and rights boundary](https://mindchecktools.com/cage-aid-substance-abuse-screening)
 - [DASS-21 information and public-use boundary](https://mindchecktools.com/dass-21-depression-anxiety-stress)
 - [ACE Questionnaire information and provenance boundary](https://mindchecktools.com/ace-questionnaire)

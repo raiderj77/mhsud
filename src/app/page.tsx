@@ -156,6 +156,17 @@ const TOOLS: Tool[] = [
     category: "Substance Use & Addiction",
   },
   {
+    href: "/cudit-r-cannabis-screening",
+    title: "CUDIT-R Cannabis Screen",
+    description: "8-item validated cannabis use screen for the past six months, with the published 8 and 12 cut points.",
+    badge: "Validated",
+    time: "~2 min",
+    questions: 8,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
     href: "/cage-aid-substance-abuse-screening",
     title: "CAGE-AID Screening Information",
     description: "Evidence and reproduction-rights context without displaying questions, collecting substance-use answers, or returning a score.",
