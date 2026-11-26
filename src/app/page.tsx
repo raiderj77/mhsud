@@ -156,6 +156,17 @@ const TOOLS: Tool[] = [
     category: "Substance Use & Addiction",
   },
   {
+    href: "/nicotine-dependence-test",
+    title: "FTND Nicotine Dependence Test",
+    description: "6-item Fagerström test of physical nicotine dependence for people who smoke cigarettes.",
+    badge: "Validated",
+    time: "~1 min",
+    questions: 6,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
     href: "/cage-aid-substance-abuse-screening",
     title: "CAGE-AID Screening Information",
     description: "Evidence and reproduction-rights context without displaying questions, collecting substance-use answers, or returning a score.",

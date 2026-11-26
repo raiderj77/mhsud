@@ -99,6 +99,20 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "nicotine-dependence-test": {
+    toolName: "FTND Nicotine Dependence Test",
+    prompts: [
+      "How soon after waking do you usually smoke, and what does that first cigarette do for you?",
+      "Which cigarettes in your day would be hardest to give up, and what makes them different?",
+      "Have you tried to quit or cut down before? What helped, and what got in the way?",
+      "If you decided to talk with a professional about quitting, what would you want to ask first?",
+    ],
+    faqEntries: [
+      { question: "What does my FTND score mean?", answer: "The FTND grades physical nicotine dependence from 0 to 10: 0-2 very low, 3-4 low, 5 medium, 6-7 high, 8-10 very high. Higher scores usually mean quitting takes more support. The score measures dependence, not the harm smoking is doing, and it is not a diagnosis." },
+      { question: "Does a low FTND score mean smoking is safe for me?", answer: "No. The FTND measures physical dependence only. Even light or occasional smoking carries serious health risks, and a low dependence score can make quitting easier to start now." },
+    ],
+  },
+
   /* ─── PTSD ───────────────────────────────────────────────────── */
 
   "pcl-5-ptsd-screening": {

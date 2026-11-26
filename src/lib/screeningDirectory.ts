@@ -27,6 +27,7 @@ export const EVIDENCE_ANCHORS: Record<string, string> = {
   "/ace-questionnaire": "ace",
   "/audit-alcohol-test": "audit",
   "/audit-c-alcohol-screen": "audit-c",
+  "/nicotine-dependence-test": "ftnd",
   "/cage-aid-substance-abuse-screening": "cage-aid",
   "/crafft-substance-screening": "crafft",
   "/asrs-adhd-screening": "asrs",
@@ -83,10 +84,11 @@ export const CATEGORIES: Category[] = [
     id: "alcohol-substance",
     title: "Alcohol and substance use",
     intro:
-      "Maintained alcohol screens plus information-only pages for rights-limited substance-use instruments. Information entries ask no substance-use questions and produce no score or result.",
+      "Maintained alcohol, cannabis, and nicotine screens plus information-only pages for rights-limited substance-use instruments. Information entries ask no substance-use questions and produce no score or result.",
     tools: [
       { name: "AUDIT Alcohol Use Disorders Identification Test", acronym: "AUDIT", href: "/audit-alcohol-test", scoreInterpHref: "/audit-score-interpretation", description: "Ten-item alcohol use screen developed by the World Health Organization.", population: "General adults", items: "10 items", time: "About 3 minutes" },
       { name: "AUDIT-C Quick Alcohol Screen", acronym: "AUDIT-C", href: "/audit-c-alcohol-screen", scoreInterpHref: "/audit-c-score-interpretation", description: "Three-item brief version of the AUDIT focused on consumption.", population: "General adults", items: "3 items", time: "Under 2 minutes" },
+      { name: "FTND Fagerström Test for Nicotine Dependence", acronym: "FTND", href: "/nicotine-dependence-test", scoreInterpHref: "/what-is-the-ftnd-test", description: "Six-item test of physical nicotine dependence for people who smoke cigarettes.", population: "Adults who currently smoke cigarettes", items: "6 items", time: "About 1 minute" },
       { name: "CAGE-AID Screening Information", acronym: "CAGE-AID", href: "/cage-aid-substance-abuse-screening", description: "Evidence and reproduction-rights context without displaying questions, collecting answers, or scoring.", population: "People researching substance-use screening", items: "No questionnaire", time: "About 3 minutes to read" },
       { name: "CRAFFT Youth Screening Information", acronym: "CRAFFT", href: "/crafft-substance-screening", description: "Youth-screening evidence and the approval required before a third-party electronic implementation.", population: "Young people, caregivers, educators, and clinicians", items: "No questionnaire", time: "About 3 minutes to read" },
       { name: "WHO ASSIST Information", acronym: "ASSIST", href: "/who-assist-substance-screening", description: "WHO evidence and public-use limits without questionnaire reproduction, scoring, or individualized intervention guidance.", population: "People researching multi-substance screening", items: "No questionnaire", time: "About 3 minutes to read" },
