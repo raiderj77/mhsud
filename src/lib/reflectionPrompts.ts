@@ -121,6 +121,17 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What does my criteria count mean?", answer: "Clinicians diagnose alcohol use disorder when at least 2 of the 11 DSM-5-TR criteria occur within the same 12 months: 2 to 3 is the mild range, 4 to 5 moderate, 6 or more severe. This self-check counts your own answers in plain language. Only a clinician's interview can confirm whether a criterion is truly met, so treat the count as a recognition step, not a diagnosis." },
       { question: "Can this self-check diagnose alcohol use disorder?", answer: "No. Diagnosis requires a professional interview that weighs timing, context, and other conditions. This tool exists to help you recognize patterns and decide whether a fuller screen, like the AUDIT, or a conversation with a professional is a good next step." },
+  "nicotine-dependence-test": {
+    toolName: "FTND Nicotine Dependence Test",
+    prompts: [
+      "How soon after waking do you usually smoke, and what does that first cigarette do for you?",
+      "Which cigarettes in your day would be hardest to give up, and what makes them different?",
+      "Have you tried to quit or cut down before? What helped, and what got in the way?",
+      "If you decided to talk with a professional about quitting, what would you want to ask first?",
+    ],
+    faqEntries: [
+      { question: "What does my FTND score mean?", answer: "The FTND grades physical nicotine dependence from 0 to 10: 0-2 very low, 3-4 low, 5 medium, 6-7 high, 8-10 very high. Higher scores usually mean quitting takes more support. The score measures dependence, not the harm smoking is doing, and it is not a diagnosis." },
+      { question: "Does a low FTND score mean smoking is safe for me?", answer: "No. The FTND measures physical dependence only. Even light or occasional smoking carries serious health risks, and a low dependence score can make quitting easier to start now." },
     ],
   },
 

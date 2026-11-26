@@ -16,6 +16,7 @@ const centralizedClients = [
   ["health-recovery-timeline/HealthTimelineClient.tsx", "/health-recovery-timeline"],
   ["mental-load-calculator/MentalLoadClient.tsx", "/mental-load-calculator"],
   ["money-saved-recovery-calculator/MoneySavedClient.tsx", "/money-saved-recovery-calculator"],
+  ["nicotine-dependence-test/FTNDClient.tsx", "/nicotine-dependence-test"],
   ["pcl-5-ptsd-screening/PCL5Client.tsx", "/pcl-5-ptsd-screening"],
   ["phq-9-depression-test/PHQ9Client.tsx", "/phq-9-depression-test"],
   ["readiness-to-change/ReadinessClient.tsx", "/readiness-to-change"],
