@@ -422,6 +422,7 @@ export default function SignsOfAlcoholismPage() {
               </h3>
               <Bullets
                 items={[
+                  <>Count the criteria against your own past 12 months with the <Link href="/alcohol-use-disorder-criteria" className={LINK_CLASS}>alcohol use disorder criteria self-check</Link>.</>,
                   <>Take or retake the <Link href="/audit-c-alcohol-screen" className={LINK_CLASS}>AUDIT-C screening</Link> or the <Link href="/audit-alcohol-test" className={LINK_CLASS}>full AUDIT</Link>.</>,
                   <>Browse <Link href="/therapists" className={LINK_CLASS}>therapists</Link> in the MindCheck Tools California directory (listings cover Los Angeles, Monterey, San Benito, and Santa Cruz counties).</>,
                   <>Browse <Link href="/facilities" className={LINK_CLASS}>substance use treatment programs</Link> in the facilities directory.</>,

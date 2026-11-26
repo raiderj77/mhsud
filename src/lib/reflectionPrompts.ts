@@ -110,6 +110,17 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     faqEntries: [
       { question: "What does my CUDIT-R score indicate?", answer: "The CUDIT-R is an 8-question screening for cannabis use over the past six months. A score of 8 or more flags hazardous use, and 12 or more flags possible cannabis use disorder. A score is a starting point for reflection or a professional conversation, not a diagnosis." },
       { question: "Is the CUDIT-R accurate enough to rely on?", answer: "In the original validation study, the CUDIT-R identified current cannabis use disorder with 91% sensitivity and 90% specificity at the cut point of 12. It remains a screening tool: only a qualified professional can assess whether you meet diagnostic criteria." },
+  "alcohol-use-disorder-criteria": {
+    toolName: "Alcohol Use Disorder Criteria Self-Check",
+    prompts: [
+      "Which of the 11 statements felt hardest to answer honestly, and why?",
+      "When did you first notice one of these patterns in your own drinking?",
+      "How has drinking affected the people and responsibilities that matter most to you?",
+      "If you talked with a professional about your count, what would you want them to understand first?",
+    ],
+    faqEntries: [
+      { question: "What does my criteria count mean?", answer: "Clinicians diagnose alcohol use disorder when at least 2 of the 11 DSM-5-TR criteria occur within the same 12 months: 2 to 3 is the mild range, 4 to 5 moderate, 6 or more severe. This self-check counts your own answers in plain language. Only a clinician's interview can confirm whether a criterion is truly met, so treat the count as a recognition step, not a diagnosis." },
+      { question: "Can this self-check diagnose alcohol use disorder?", answer: "No. Diagnosis requires a professional interview that weighs timing, context, and other conditions. This tool exists to help you recognize patterns and decide whether a fuller screen, like the AUDIT, or a conversation with a professional is a good next step." },
     ],
   },
 

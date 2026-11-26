@@ -28,7 +28,7 @@ test("the central tool registry has the required classification fields", async (
   }
   assert.equal([...registry.matchAll(/published\(\{\s*route:/g)].length, 16);
   assert.equal([...registry.matchAll(/information\(\{\s*route:/g)].length, 14);
-  assert.equal([...registry.matchAll(/original\(\{\s*route:/g)].length, 29);
+  assert.equal([...registry.matchAll(/original\(\{\s*route:/g)].length, 30);
   assert.equal([...registry.matchAll(/\broute:\s*"\//g)].length, 59);
   assert.match(registry, /0–36 reflection total[^\n]*without severity bands or clinical cutoffs/i);
   assert.match(registry, /WHO and NIOSH sources provide context, not validation/i);

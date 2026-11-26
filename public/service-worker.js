@@ -39,6 +39,7 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "safety-plan",
   "readiness-to-change",
   "who-5-wellbeing-index",
+  "alcohol-use-disorder-criteria",
   "attachment-style-quiz",
   "box-breathing-exercise",
   "cognitive-distortion-identifier",

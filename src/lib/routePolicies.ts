@@ -10,6 +10,7 @@ const EXPLICIT_SENSITIVE_ROUTES = new Set([
   "safety-plan",
   "readiness-to-change",
   "who-5-wellbeing-index",
+  "alcohol-use-disorder-criteria",
   // Interactive health tools whose slugs do not contain one of the generic
   // screening keywords above. Keep these explicit so they cannot load ads or
   // analytics, inherit shared caches, or send a referrer merely because their
