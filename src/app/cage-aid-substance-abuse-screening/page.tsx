@@ -208,6 +208,13 @@ export default function CageAidInformationPage() {
           </div>
         </section>
 
+        <section className="mt-10" aria-labelledby="cage-related">
+          <h2 id="cage-related" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Related reading</h2>
+          <p className="text-neutral-600 dark:text-neutral-300">
+            <Link href="/what-is-the-cage-questionnaire" className="font-semibold underline">What the CAGE questionnaire is</Link>, how the alcohol-only screen differs from the CAGE-AID.
+          </p>
+        </section>
+
         <section className="mt-10" aria-labelledby="cage-sources">
           <h2 id="cage-sources" className="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-4">Sources</h2>
           <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-300">

@@ -415,6 +415,7 @@ export default function WhatIsTheDastTestPage() {
             <Bullets
               items={[
                 <><Link href="/what-is-the-audit-test" className={LINK_CLASS}>What the AUDIT test is</Link>, the alcohol screening explained, with the questionnaire this site does run</>,
+                <><Link href="/what-is-the-cage-questionnaire" className={LINK_CLASS}>What the CAGE questionnaire is</Link>, how its score is read and what a positive screen means</>,
                 <><Link href="/signs-of-alcoholism" className={LINK_CLASS}>Signs of alcoholism</Link>, the 11 signs clinicians use, in plain language</>,
                 <><Link href="/alcohol-withdrawal-timeline" className={LINK_CLASS}>Alcohol withdrawal timeline</Link>, how long symptoms last, stage by stage</>,
                 <><Link href="/clinical-evidence" className={LINK_CLASS}>Clinical evidence</Link>, sources, validation, and licensing notes for the instruments this site documents, including the DAST-10</>,
