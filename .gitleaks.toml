@@ -1,0 +1,10 @@
+title = "mhsud gitleaks config"
+
+# The therapist dataset is built from the public NPPES registry. The values
+# in its `credential` field are public license numbers, not secrets, but the
+# generic-api-key rule flags them. Allowlist that one rule for that one
+# file only; every other rule and path stays fully enforced.
+[[allowlists]]
+description = "Public NPPES therapist dataset: credential values are public registry license numbers."
+rules = ["generic-api-key"]
+paths = ['^src/data/therapists/by-state/CA\.json$']
