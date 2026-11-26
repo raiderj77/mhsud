@@ -26,7 +26,7 @@ export default function ClaimForm({ slug }: { slug: string }) {
       setLicenseNumber("");
       setReference(result.reference);
     } catch {
-      setError("The claim could not be started. Check your work email and try again.");
+      setError("The claim could not be started. Check your email and try again.");
     } finally {
       setBusy(false);
     }
@@ -38,11 +38,12 @@ export default function ClaimForm({ slug }: { slug: string }) {
   return (
     <div className="mt-6">
       <form method="post" action="/therapists/api/claim" onSubmit={submit} className="space-y-3 rounded-lg border border-neutral-400 p-4">
-        <label htmlFor="therapist-work-email" className="block font-medium">Work email</label>
+        <label htmlFor="therapist-work-email" className="block font-medium">Your email</label>
         <input id="therapist-work-email" required type="email" autoComplete="email" maxLength={254}
           value={workEmail} onChange={event => { setWorkEmail(event.target.value); setReference(""); }}
           readOnly={busy}
           className="block min-h-[44px] w-full rounded-lg border border-neutral-400 bg-white px-3 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50" />
+        <p className="text-neutral-700 dark:text-neutral-300">Use any email you check regularly, a personal email is fine. Your sign-in link is sent here. This email stays private and never appears on your public profile.</p>
         <label htmlFor="therapist-license" className="block font-medium">California license number (optional)</label>
         <p id="therapist-license-help">Matching the license number on your listing speeds up verification.</p>
         <input id="therapist-license" type="text" autoComplete="off" aria-describedby="therapist-license-help"
@@ -57,7 +58,7 @@ export default function ClaimForm({ slug }: { slug: string }) {
         {reference && (
           <section className="mt-4 rounded-lg border border-neutral-400 p-4">
             <h2 className="text-xl font-semibold">Claim reference {reference}</h2>
-            <p className="mt-2">Email this reference from your work account to request manual review.</p>
+            <p className="mt-2">Email this reference from the email you entered above to request manual review.</p>
             <a className="mt-2 inline-flex min-h-[44px] items-center underline" href={`mailto:hello@mindchecktools.com?subject=${subject}&body=${body}`}>
               Open claim email
             </a>
