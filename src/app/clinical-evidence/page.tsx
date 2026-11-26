@@ -191,6 +191,10 @@ const INSTRUMENTS: Instrument[] = [
     rightsSources: [
       { label: "PhenX CUDIT-R protocol", url: "https://www.phenxtoolkit.org/protocols/view/510310" },
       { label: "Matua Raki screening and assessment guide", url: "https://atca.com.au/wp-content/uploads/2021/12/Screening-and-Assessment-AOD-Smoking-and-Gambling-Matua-Raki-NZ.pdf" },
+    ],
+    citationStatus: "Verified on PubMed",
+  },
+  {
     slug: "ftnd",
     acronym: "FTND",
     fullName: "Fagerström Test for Nicotine Dependence",
