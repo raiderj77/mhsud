@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   const body = isJson ? await request.json().catch(() => null) : null;
   const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
   if (!isValidWorkEmail(email)) {
-    return Response.json({ error: "Enter a valid work email." }, { status: 400 });
+    return Response.json({ error: "Enter a valid email." }, { status: 400 });
   }
 
   try {
@@ -23,5 +23,5 @@ export async function POST(request: Request) {
   } catch {
     // The response is deliberately identical for all valid email addresses.
   }
-  return Response.json({ message: "If a sign-in link can be sent, check your work email." });
+  return Response.json({ message: "If a sign-in link can be sent, check your email." });
 }

@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   const body: unknown = await request.json().catch(() => null);
   const claim = validateClaim(body);
   if (!claim) {
-    return Response.json({ error: "A listing and a valid work email are required. Other fields are not accepted." }, { status: 400, headers });
+    return Response.json({ error: "A listing and a valid email are required. Other fields are not accepted." }, { status: 400, headers });
   }
   const listing = getTherapist(claim.slug);
   if (!listing) {

@@ -29,7 +29,7 @@ export default function SignInForm() {
   return (
     <form className="mt-4 space-y-3" method="post" action="/therapists/api/auth/sign-in" onSubmit={submit}>
       <label className="block">
-        Work email
+        Your email
         <input className="block min-h-[44px] w-full rounded border px-3 dark:bg-neutral-900" type="email"
           name="email" autoComplete="email" maxLength={254} required />
       </label>
