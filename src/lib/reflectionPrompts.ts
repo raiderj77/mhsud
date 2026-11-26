@@ -99,6 +99,20 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "cudit-r-cannabis-screening": {
+    toolName: "CUDIT-R Cannabis Screen",
+    prompts: [
+      "How does your cannabis use pattern compare to what you expected before taking this screening?",
+      "Are there specific situations, stress, socializing, boredom, that tend to increase how often or how much you use?",
+      "Have you noticed effects on your memory, motivation, sleep, or responsibilities that you connect with cannabis use?",
+      "If you decided to make one change to your cannabis use, what feels most realistic right now?",
+    ],
+    faqEntries: [
+      { question: "What does my CUDIT-R score indicate?", answer: "The CUDIT-R is an 8-question screening for cannabis use over the past six months. A score of 8 or more flags hazardous use, and 12 or more flags possible cannabis use disorder. A score is a starting point for reflection or a professional conversation, not a diagnosis." },
+      { question: "Is the CUDIT-R accurate enough to rely on?", answer: "In the original validation study, the CUDIT-R identified current cannabis use disorder with 91% sensitivity and 90% specificity at the cut point of 12. It remains a screening tool: only a qualified professional can assess whether you meet diagnostic criteria." },
+    ],
+  },
+
   /* ─── PTSD ───────────────────────────────────────────────────── */
 
   "pcl-5-ptsd-screening": {
