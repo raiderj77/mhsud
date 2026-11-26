@@ -503,6 +503,7 @@ export default function SignsOfAlcoholismPage() {
                 <><Link href="/alcohol-withdrawal-timeline" className={LINK_CLASS}>Alcohol withdrawal timeline</Link>, how long symptoms last, stage by stage</>,
                 <><Link href="/what-is-the-audit-test" className={LINK_CLASS}>What the AUDIT test is</Link>, the 10-question screening explained</>,
                 <><Link href="/audit-score-interpretation" className={LINK_CLASS}>AUDIT score interpretation</Link></>,
+                <><Link href="/what-is-the-dast-test" className={LINK_CLASS}>What the DAST-10 test is</Link>, the drug abuse screening explained</>,
                 <><Link href="/audit-vs-audit-c" className={LINK_CLASS}>AUDIT vs AUDIT-C</Link>, the full screening and the 3-question version compared</>,
               ]}
             />

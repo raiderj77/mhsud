@@ -94,6 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/what-is-the-audit-test`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/alcohol-withdrawal-timeline`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/signs-of-alcoholism`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/what-is-the-dast-test`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/pcl-5-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/asrs-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },
 { url: `${SITE_URL}/dass-21-score-interpretation`, lastModified: lastUpdated, changeFrequency: "monthly" as const, priority: 0.8 },

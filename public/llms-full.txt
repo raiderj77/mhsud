@@ -80,6 +80,7 @@ All interactive answers and scores are processed locally in the browser. MindChe
 - [What Is the AUDIT Test](https://mindchecktools.com/what-is-the-audit-test)
 - [Alcohol Withdrawal Timeline](https://mindchecktools.com/alcohol-withdrawal-timeline)
 - [Signs of Alcoholism](https://mindchecktools.com/signs-of-alcoholism)
+- [What Is the DAST-10 Test](https://mindchecktools.com/what-is-the-dast-test)
 - [PCL 5 Score Interpretation](https://mindchecktools.com/pcl-5-score-interpretation)
 - [ASRS Score Interpretation](https://mindchecktools.com/asrs-score-interpretation)
 - [AUDIT C Score Interpretation](https://mindchecktools.com/audit-c-score-interpretation)
