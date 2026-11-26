@@ -9,6 +9,7 @@ export interface Therapist {
   city: string;
   state: "CA";
   specialties: string[];
+  registryLicenseNumbers?: string[];
   listingSource: "nppes" | "manual-sober-coach";
 }
 

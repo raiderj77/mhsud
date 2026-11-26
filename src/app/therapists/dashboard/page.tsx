@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 import { getTherapist } from "@/lib/therapists";
 import { getClaimsByEmail, getOverlaysByEmail, getSessionUser, isProfessionalBackendConfigured } from "@/lib/professionalServer";
 import DashboardForm, { SignOutButton } from "./DashboardForm";
+import { SharePanel } from "./SharePanel";
+import { ProfileStats } from "./ProfileStats";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Therapist dashboard", robots: { index: false, follow: false } };
@@ -23,6 +25,7 @@ export default async function DashboardPage() {
   if (!user?.email) redirect("/therapists/sign-in");
   const email = user.email.toLowerCase();
   const [overlays, claims] = await Promise.all([getOverlaysByEmail(email), getClaimsByEmail(email)]);
+  const staleBefore = Date.now() - 90 * 24 * 60 * 60 * 1000;
 
   return (
     <div className="mx-auto max-w-2xl space-y-4 px-4 py-8">
@@ -35,7 +38,9 @@ export default async function DashboardPage() {
           <section key={overlay.slug} className="space-y-3 rounded-lg border p-4">
             <h2 className="text-xl font-semibold">{listing.name}, {listing.city}</h2>
             <Link className="inline-flex min-h-[44px] items-center underline" href={`/therapists/${listing.slug}`}>View public listing</Link>
-            <DashboardForm overlay={overlay} />
+            <DashboardForm overlay={overlay} staleBefore={staleBefore} />
+            <SharePanel slug={listing.slug} />
+            <ProfileStats slug={listing.slug} />
           </section>
         );
       })}

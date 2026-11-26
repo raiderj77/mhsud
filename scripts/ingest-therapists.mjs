@@ -100,6 +100,7 @@ export async function collectProviders(rows) {
     if (existing) {
       existing.specialties = SPECIALTIES.map(item => item.label)
         .filter(label => existing.specialties.includes(label) || provider.specialties.includes(label));
+      existing.registryLicenseNumbers = [...new Set([...existing.registryLicenseNumbers, ...provider.registryLicenseNumbers])].sort();
     } else {
       byNpi.set(provider.npi, provider);
     }

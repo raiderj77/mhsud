@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { LOCKED_FIELDS, licenseMatchesCredential, validateProfileEdit } from "../src/lib/professionalCore.mjs";
+import { LOCKED_FIELDS, licenseMatchesCredential, profileStrength, validateProfileEdit, visibleContact } from "../src/lib/professionalCore.mjs";
 import { validateClaim } from "../src/lib/therapistsCore.mjs";
 
 const slug = "fixture-listing-1000000001";
@@ -41,8 +41,32 @@ test("profile edits reject unsafe values and enforce field bounds", () => {
     ["languages", Array(13).fill("English")], ["languages", ["x".repeat(31)]],
     ["languages", [" "]], ["languages", Array(1)], ["sessionFee", "x".repeat(61)],
     ["telehealth", "true"], ["acceptingNew", 1],
+    ["show_phone", 1], ["show_email", "true"], ["public_email", "a@example.test?body=fixture"],
+    ["years_in_practice", -1], ["years_in_practice", 2.5], ["years_in_practice", 101],
   ];
   for (const [field, value] of bad) assert.equal(validateProfileEdit({ slug, [field]: value }), null, field);
+});
+
+test("contact display requires both the saved value and explicit opt-in", () => {
+  const profile = { phone: "+1 (555) 010-0101", public_email: "public@example.test", show_phone: false, show_email: false };
+  assert.deepEqual(visibleContact(profile), { phone: "", email: "" });
+  assert.deepEqual(visibleContact({ ...profile, show_phone: true, show_email: true }), {
+    phone: "+15550100101", email: "public@example.test",
+  });
+  assert.deepEqual(visibleContact({ ...profile, phone: "", public_email: "", show_phone: true, show_email: true }), {
+    phone: "", email: "",
+  });
+});
+
+test("strength names every missing item and counts only opted-in contact details", () => {
+  const profile = {
+    photo_path: "", bio: "Fixture", specialties: ["Fixture specialty"], insurances: [],
+    phone: "5550100101", public_email: "public@example.test", show_phone: true, show_email: false,
+  };
+  assert.deepEqual(profileStrength(profile), { percent: 50, missing: ["Photo", "Insurances", "Public email"] });
+  assert.deepEqual(profileStrength({ ...profile, photo_path: "fixture.jpg", insurances: ["Plan"], show_email: true }), {
+    percent: 100, missing: [],
+  });
 });
 
 test("submitted license matches a full uppercased credential token", () => {
