@@ -62,3 +62,4 @@ Disallow: /admin/
 Disallow: /private/
 
 Sitemap: https://mindchecktools.com/sitemap.xml
+Sitemap: https://mindchecktools.com/therapists/sitemap.xml

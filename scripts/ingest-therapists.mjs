@@ -51,6 +51,8 @@ const COLUMNS = {
   credential: "Provider Credential Text",
   city: "Provider Business Practice Location Address City Name",
   state: "Provider Business Practice Location Address State Name",
+  postal: "Provider Business Practice Location Address Postal Code",
+  phone: "Provider Business Practice Location Address Telephone Number",
   deactivated: "NPI Deactivation Date",
   reactivated: "NPI Reactivation Date",
 };
@@ -84,7 +86,7 @@ export async function* disseminationRows(path) {
       number: read(COLUMNS.number),
       enumeration_type: "NPI-1",
       basic: { first_name: read(COLUMNS.first), last_name: read(COLUMNS.last), credential: read(COLUMNS.credential) },
-      addresses: [{ address_purpose: "LOCATION", city: read(COLUMNS.city), state: read(COLUMNS.state) }],
+      addresses: [{ address_purpose: "LOCATION", city: read(COLUMNS.city), state: read(COLUMNS.state), postal_code: read(COLUMNS.postal), telephone_number: read(COLUMNS.phone) }],
       taxonomies: SLOTS.map(slot => ({ code: read(slot.code), license: read(slot.license), state: read(slot.state) })),
     };
   }
