@@ -86,7 +86,7 @@ export default async function FacilitiesHubPage() {
         <li>
           <strong>If the check finds problems, a Listing Sprint files the fixes.</strong> One
           flat fee per location — $99 for a treatment program — covering correction filings
-          through the written channels each directory provides. Monthly Directory Care ($49 per
+          through the written channels each directory provides. Monthly Directory Care ($45 per
           location) re-checks every source each month, including each new federal refresh and
           state roster release.{" "}
           <Link className="underline" href="/facilities/pricing">
