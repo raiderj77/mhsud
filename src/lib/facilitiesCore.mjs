@@ -15,7 +15,7 @@
  */
 
 export const PRICING = {
-  sud: { sprint: 99, careMonthly: 49, extraSprint: 49, extraCareMonthly: 25 },
+  sud: { sprint: 99, careMonthly: 45, extraSprint: 49, extraCareMonthly: 25 },
   sober: { sprint: 49, careMonthly: 29, extraSprint: 25, extraCareMonthly: 15 },
 };
 

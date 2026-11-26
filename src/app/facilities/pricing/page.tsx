@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     path: "/facilities/pricing",
     title: "Listing Service Pricing — Flat Fees",
     description:
-      "Flat-fee pricing for the treatment program listing service: free listing check, $99 Listing Sprint and $49/month Directory Care per location; $49 Sprint and $29/month for certified sober living homes.",
+      "Flat-fee pricing for the treatment program listing service: free listing check, $99 Listing Sprint and $45/month Directory Care per location; $49 Sprint and $29/month for certified sober living homes.",
   }),
   robots: { index: true, follow: true },
 };
 
-const LAST_UPDATED = "2026-11-01";
+const LAST_UPDATED = "2026-11-26";
 
 export default function PricingPage() {
   return (
@@ -89,6 +89,8 @@ export default function PricingPage() {
         <li>Monthly re-check of the same channels against your canonical record, with a plain-language drift report: what changed, what we filed, what needs your call.</li>
         <li>Refresh watch: when the annual federal directory update or a new state roster is published, your record in it is verified and flagged if it regressed.</li>
         <li>Your claimed directory page kept current, including operator-set availability notes that are date-stamped and expire automatically.</li>
+        <li>Set up and edit your claimed profile page yourselves: services, insurances, photos, and a short program description, updated whenever your team needs.</li>
+        <li>Your clinicians are covered too: the first 3 claimed clinician profiles are included with each location, and each additional clinician profile is $15/month, the standard clinician rate.</li>
       </ul>
 
       <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Who can buy</h2>
