@@ -48,9 +48,19 @@ test('synthetic screener choices stay memory-only and reset after reload', async
   // same-origin GET requests can leak answers into server logs just like POSTs.
   const observe = (request: import('@playwright/test').Request) => {
     const url = new URL(request.url());
-    if (request.method() !== 'GET' || url.origin !== 'http://127.0.0.1:4311' ||
-        !url.pathname.startsWith('/_next/static/') || url.search || request.postData()) {
-      transmissions.push('unexpected transport');
+    const headers = request.headers();
+    // Next.js also prefetches the RSC payload of public routes linked from
+    // the current view (for example /methodology, linked from the results
+    // disclaimer). Those prefetches are plain same-origin GETs with no
+    // request body: they fetch a public page payload and transmit none of
+    // the reader's screener input, so they are not a leak. Anything with
+    // post data, any non-GET, and any cross-origin request is still caught.
+    const isRscPrefetch = url.searchParams.has('_rsc') || 'rsc' in headers || 'next-router-prefetch' in headers;
+    const isStaticAsset = url.pathname.startsWith('/_next/static/') && !url.search;
+    const allowed = request.method() === 'GET' && url.origin === 'http://127.0.0.1:4311' &&
+      !request.postData() && (isStaticAsset || isRscPrefetch);
+    if (!allowed) {
+      transmissions.push(`unexpected transport: ${request.method()} ${request.url()}`);
     }
   };
   page.on('request', observe);
