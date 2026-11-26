@@ -17,7 +17,7 @@ export const PRICES = [
 ];
 
 export const REGISTRY_URL = "https://npiregistry.cms.hhs.gov";
-export const LICENSE_NOTE = "A license number is on file from the national provider registry and has not been independently verified.";
+export const LICENSE_NOTE = "Listing data is shown as reported to the national provider registry and has not been independently verified. Licensure is verified when a listing is claimed.";
 
 function clean(value) {
   return typeof value === "string" ? value.trim() : "";
@@ -36,7 +36,7 @@ export function normalizeProvider(row) {
   if (!address || !first || !last) return null;
 
   const eligibleTaxonomies = (row.taxonomies ?? []).filter(t =>
-    t.state === "CA" && Boolean(clean(t.license)) && /^[A-Z0-9]{9}X$/.test(clean(t.code)) &&
+    /^[A-Z0-9]{9}X$/.test(clean(t.code)) &&
     !clean(t.code).includes("A0400") &&
     !/addiction|substance[ -]use|drug abuse/i.test(clean(t.desc)) &&
     SPECIALTIES.some(({ prefix }) => clean(t.code).startsWith(prefix))
@@ -60,7 +60,7 @@ export function normalizeProvider(row) {
     zip: clean(address.postal_code).replace(/[^0-9]/g, "").slice(0, 5),
     phone: clean(address.telephone_number),
     specialties,
-    registryLicenseNumbers: [...new Set(eligibleTaxonomies.map(t => clean(t.license)))].sort(),
+    registryLicenseNumbers: [...new Set(eligibleTaxonomies.map(t => clean(t.license)).filter(Boolean))].sort(),
     listingSource: "nppes",
   };
 }

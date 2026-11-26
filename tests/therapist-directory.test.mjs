@@ -13,20 +13,33 @@ const run = promisify(execFile);
 const fixture = JSON.parse(await readFile(new URL("./fixtures/therapists-nppes.json", import.meta.url), "utf8"));
 const [eligible, ...others] = fixture.results;
 
-test("ingest keeps CA individual location and same-entry CA license, excluding addiction taxonomy", () => {
+test("ingest lists on a covered-family taxonomy code match; license number and license state no longer gate, addiction taxonomy stays excluded", () => {
   assert.deepEqual(normalizeProvider(eligible), {
     npi: "1000000001", slug: "fixture-alpha-1000000001", name: "Fixture Alpha", credential: "LCSW",
-    city: "Sacramento", state: "CA", zip: "95814", phone: "9165550100", specialties: ["Social Worker"], registryLicenseNumbers: ["TEST01"], listingSource: "nppes",
+    city: "Sacramento", state: "CA", zip: "95814", phone: "9165550100", specialties: ["Social Worker", "Psychologist"], registryLicenseNumbers: ["TEST01", "TEST03"], listingSource: "nppes",
   });
-  assert.deepEqual(others.slice(0, 4).map(normalizeProvider), [null, null, null, null]);
+  const [bravo, charlie, delta, echo] = others.slice(0, 4);
+  assert.equal(normalizeProvider(bravo), null);
+  assert.equal(normalizeProvider(delta), null);
+  assert.deepEqual(normalizeProvider(charlie), {
+    npi: "1000000003", slug: "fixture-charlie-1000000003", name: "Fixture Charlie", credential: "",
+    city: "Sacramento", state: "CA", zip: "", phone: "", specialties: ["Counselor"], registryLicenseNumbers: [], listingSource: "nppes",
+  });
+  assert.deepEqual(normalizeProvider(echo), {
+    npi: "1000000005", slug: "fixture-echo-1000000005", name: "Fixture Echo", credential: "",
+    city: "Sacramento", state: "CA", zip: "", phone: "", specialties: ["Psychologist"], registryLicenseNumbers: ["TEST07"], listingSource: "nppes",
+  });
   const addictionPsychologist = { ...eligible, taxonomies: [{ code: "103TA0400X", state: "CA", license: "TEST" }] };
   assert.equal(normalizeProvider(addictionPsychologist), null);
 });
 
 test("duplicate NPI merges eligible specialties without adding a page", async () => {
   const providers = await collectProviders(fixture.results);
-  assert.equal(providers.length, 1);
-  assert.deepEqual(providers[0].specialties, ["Social Worker", "Marriage & Family Therapist"]);
+  assert.equal(providers.length, 3);
+  const alpha = providers.filter(provider => provider.npi === "1000000001");
+  assert.equal(alpha.length, 1);
+  assert.deepEqual(alpha[0].specialties, ["Social Worker", "Psychologist", "Marriage & Family Therapist"]);
+  assert.deepEqual(alpha[0].registryLicenseNumbers, ["TEST01", "TEST03", "TEST08"]);
 });
 
 test("API queries all four scopes with the documented parameters and paginates", async () => {
@@ -61,7 +74,7 @@ test("API rejects truncated, repeated, and invalid pages", async () => {
   await assert.rejects(collectProviders(registryRows(async () => Response.json({ Errors: [{ description: "fixture error" }] }))), /Unexpected/);
 });
 
-test("streaming CSV uses numbered license and state slots and rejects inactive or malformed data", async () => {
+test("streaming CSV uses numbered license slots without gating on license state and rejects inactive or malformed data", async () => {
   const directory = await mkdtemp(join(tmpdir(), "mct-therapist-csv-"));
   try {
     const path = join(directory, "fictional.csv");
@@ -81,13 +94,13 @@ test("streaming CSV uses numbered license and state slots and rejects inactive o
       record(["1000000002", "1", "Fixture", "Bravo", "", "SACRAMENTO", "CA", "95814", "9165550100", "01/01/2026", ""], ["1041C0700X", "TEST", "CA"]),
       record(["1000000003", "1", "Fixture", "Charlie", "", "SACRAMENTO", "CA", "95814", "9165550100", "", ""], ["1041C0700X", "TEST", "NV"]),
     ].join("\n"));
-    assert.deepEqual((await collectProviders(disseminationRows(path))).map(row => row.npi), ["1000000001"]);
+    assert.deepEqual((await collectProviders(disseminationRows(path))).map(row => row.npi), ["1000000001", "1000000003"]);
     const args = [fileURLToPath(new URL("../scripts/ingest-therapists.mjs", import.meta.url)),
       "--csv", path, "--retrieved-at", "2026-11-19", "--out", directory];
     await run(process.execPath, args);
     const snapshotPath = join(directory, "by-state", "CA.json");
     const snapshot = await readFile(snapshotPath, "utf8");
-    assert.equal(JSON.parse(snapshot).providers.length, 1);
+    assert.equal(JSON.parse(snapshot).providers.length, 2);
     await writeFile(path, "NPI,Entity Type Code\n1000000001,1\n");
     await assert.rejects(run(process.execPath, args), /columns missing/);
     assert.equal(await readFile(snapshotPath, "utf8"), snapshot);
