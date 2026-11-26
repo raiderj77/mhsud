@@ -35,11 +35,14 @@ export function normalizeProvider(row) {
   const last = clean(row.basic?.last_name);
   if (!address || !first || !last) return null;
 
-  const specialties = SPECIALTIES.filter(({ prefix }) => row.taxonomies?.some(t =>
+  const eligibleTaxonomies = (row.taxonomies ?? []).filter(t =>
     t.state === "CA" && Boolean(clean(t.license)) && /^[A-Z0-9]{9}X$/.test(clean(t.code)) &&
-    clean(t.code).startsWith(prefix) &&
     !clean(t.code).includes("A0400") &&
-    !/addiction|substance[ -]use|drug abuse/i.test(clean(t.desc))
+    !/addiction|substance[ -]use|drug abuse/i.test(clean(t.desc)) &&
+    SPECIALTIES.some(({ prefix }) => clean(t.code).startsWith(prefix))
+  );
+  const specialties = SPECIALTIES.filter(({ prefix }) => eligibleTaxonomies.some(t =>
+    clean(t.code).startsWith(prefix)
   )).map(({ label }) => label);
   if (!specialties.length) return null;
 
@@ -55,6 +58,7 @@ export function normalizeProvider(row) {
     city: clean(address.city).toLowerCase().replace(/\b[a-z]/g, letter => letter.toUpperCase()),
     state: "CA",
     specialties,
+    registryLicenseNumbers: [...new Set(eligibleTaxonomies.map(t => clean(t.license)))].sort(),
     listingSource: "nppes",
   };
 }

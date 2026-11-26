@@ -16,7 +16,7 @@ const [eligible, ...others] = fixture.results;
 test("ingest keeps CA individual location and same-entry CA license, excluding addiction taxonomy", () => {
   assert.deepEqual(normalizeProvider(eligible), {
     npi: "1000000001", slug: "fixture-alpha-1000000001", name: "Fixture Alpha", credential: "LCSW",
-    city: "Sacramento", state: "CA", specialties: ["Social Worker"], listingSource: "nppes",
+    city: "Sacramento", state: "CA", specialties: ["Social Worker"], registryLicenseNumbers: ["TEST01"], listingSource: "nppes",
   });
   assert.deepEqual(others.slice(0, 4).map(normalizeProvider), [null, null, null, null]);
   const addictionPsychologist = { ...eligible, taxonomies: [{ code: "103TA0400X", state: "CA", license: "TEST" }] };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { TherapistBreadcrumbs } from "@/components/TherapistBreadcrumbs";
 import { createMetadata } from "@/lib/metadata";
+import { getDirectoryStrength } from "@/lib/professionalServer";
 import { registryProviders, therapistSnapshot } from "@/lib/therapists";
 import { LICENSE_NOTE, REGISTRY_URL, SPECIALTIES, therapistPath } from "@/lib/therapistsCore.mjs";
 
@@ -45,6 +46,11 @@ export default async function TherapistsPage({ searchParams }: { searchParams: P
   const matches = registryProviders.filter(provider =>
     (!city || provider.city === city) && (!specialty || provider.specialties.includes(specialty))
   );
+  const strength = await getDirectoryStrength();
+  if (strength?.size) {
+    matches.sort((a, b) => a.city.localeCompare(b.city) ||
+      (strength.get(b.slug) ?? 0) - (strength.get(a.slug) ?? 0));
+  }
   const pageCount = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
   const requested = Number(search.page);
   const page = Number.isSafeInteger(requested) ? Math.max(1, Math.min(requested, pageCount)) : 1;
