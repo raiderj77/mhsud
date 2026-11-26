@@ -22,6 +22,7 @@ const SCREENING_TOOLS = [
   { heading: "Substance Use", links: [
     { href: "/audit-alcohol-test", label: "AUDIT Alcohol" },
     { href: "/audit-c-alcohol-screen", label: "AUDIT-C Quick Screen" },
+    { href: "/alcohol-use-disorder-criteria", label: "AUD Criteria Self-Check" },
     { href: "/cage-aid-substance-abuse-screening", label: "CAGE-AID Information" },
     { href: "/who-assist-substance-screening", label: "WHO ASSIST Information" },
     { href: "/crafft-substance-screening", label: "CRAFFT Information" },

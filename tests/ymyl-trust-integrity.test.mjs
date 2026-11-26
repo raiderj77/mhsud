@@ -144,8 +144,8 @@ ${directory}`);
   const informationOnlyRoutes = [
     ...informationOnlyBlock.matchAll(/"(\/[^"]+)"/g),
   ].map((match) => match[1]);
-  assert.equal(categoryRoutes.length, 35, "hub must list all 35 maintained assessment and information routes");
-  assert.equal(new Set(categoryRoutes).size, 35, "hub category routes must be unique");
+  assert.equal(categoryRoutes.length, 36, "hub must list all 36 maintained assessment and information routes");
+  assert.equal(new Set(categoryRoutes).size, 36, "hub category routes must be unique");
   assert.equal(informationOnlyRoutes.length, 14, "rights-limited information inventory must stay explicit");
   for (const route of informationOnlyRoutes) {
     assert.equal(categoryRoutes.includes(route), true, `${route} is missing from the primary directory categories`);

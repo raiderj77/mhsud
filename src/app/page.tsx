@@ -156,6 +156,17 @@ const TOOLS: Tool[] = [
     category: "Substance Use & Addiction",
   },
   {
+    href: "/alcohol-use-disorder-criteria",
+    title: "AUD Criteria Self-Check",
+    description: "Count how many of the 11 alcohol use disorder criteria match your past 12 months. Educational, not a diagnosis.",
+    badge: "Original",
+    time: "~2 min",
+    questions: 11,
+    color: "sage",
+    status: "live",
+    category: "Substance Use & Addiction",
+  },
+  {
     href: "/cage-aid-substance-abuse-screening",
     title: "CAGE-AID Screening Information",
     description: "Evidence and reproduction-rights context without displaying questions, collecting substance-use answers, or returning a score.",

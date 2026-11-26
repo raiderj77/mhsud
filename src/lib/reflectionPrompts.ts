@@ -99,6 +99,20 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "alcohol-use-disorder-criteria": {
+    toolName: "Alcohol Use Disorder Criteria Self-Check",
+    prompts: [
+      "Which of the 11 statements felt hardest to answer honestly, and why?",
+      "When did you first notice one of these patterns in your own drinking?",
+      "How has drinking affected the people and responsibilities that matter most to you?",
+      "If you talked with a professional about your count, what would you want them to understand first?",
+    ],
+    faqEntries: [
+      { question: "What does my criteria count mean?", answer: "Clinicians diagnose alcohol use disorder when at least 2 of the 11 DSM-5-TR criteria occur within the same 12 months: 2 to 3 is the mild range, 4 to 5 moderate, 6 or more severe. This self-check counts your own answers in plain language. Only a clinician's interview can confirm whether a criterion is truly met, so treat the count as a recognition step, not a diagnosis." },
+      { question: "Can this self-check diagnose alcohol use disorder?", answer: "No. Diagnosis requires a professional interview that weighs timing, context, and other conditions. This tool exists to help you recognize patterns and decide whether a fuller screen, like the AUDIT, or a conversation with a professional is a good next step." },
+    ],
+  },
+
   /* ─── PTSD ───────────────────────────────────────────────────── */
 
   "pcl-5-ptsd-screening": {

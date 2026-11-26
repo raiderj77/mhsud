@@ -3,6 +3,7 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const centralizedClients = [
+  ["alcohol-use-disorder-criteria/AUDCriteriaClient.tsx", "/alcohol-use-disorder-criteria"],
   ["asrs-adhd-screening/ASRSClient.tsx", "/asrs-adhd-screening"],
   ["audit-alcohol-test/AUDITClient.tsx", "/audit-alcohol-test"],
   ["audit-c-alcohol-screen/AUDITCClient.tsx", "/audit-c-alcohol-screen"],
