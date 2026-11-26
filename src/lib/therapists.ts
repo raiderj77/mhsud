@@ -8,6 +8,8 @@ export interface Therapist {
   credential: string;
   city: string;
   state: "CA";
+  zip?: string;
+  phone?: string;
   specialties: string[];
   registryLicenseNumbers?: string[];
   listingSource: "nppes" | "manual-sober-coach";

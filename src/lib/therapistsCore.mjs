@@ -57,6 +57,8 @@ export function normalizeProvider(row) {
     credential: clean(row.basic?.credential),
     city: clean(address.city).toLowerCase().replace(/\b[a-z]/g, letter => letter.toUpperCase()),
     state: "CA",
+    zip: clean(address.postal_code).replace(/[^0-9]/g, "").slice(0, 5),
+    phone: clean(address.telephone_number),
     specialties,
     registryLicenseNumbers: [...new Set(eligibleTaxonomies.map(t => clean(t.license)))].sort(),
     listingSource: "nppes",

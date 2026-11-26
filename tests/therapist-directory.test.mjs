@@ -16,7 +16,7 @@ const [eligible, ...others] = fixture.results;
 test("ingest keeps CA individual location and same-entry CA license, excluding addiction taxonomy", () => {
   assert.deepEqual(normalizeProvider(eligible), {
     npi: "1000000001", slug: "fixture-alpha-1000000001", name: "Fixture Alpha", credential: "LCSW",
-    city: "Sacramento", state: "CA", specialties: ["Social Worker"], registryLicenseNumbers: ["TEST01"], listingSource: "nppes",
+    city: "Sacramento", state: "CA", zip: "95814", phone: "9165550100", specialties: ["Social Worker"], registryLicenseNumbers: ["TEST01"], listingSource: "nppes",
   });
   assert.deepEqual(others.slice(0, 4).map(normalizeProvider), [null, null, null, null]);
   const addictionPsychologist = { ...eligible, taxonomies: [{ code: "103TA0400X", state: "CA", license: "TEST" }] };
@@ -68,6 +68,7 @@ test("streaming CSV uses numbered license and state slots and rejects inactive o
     const headers = [
       "NPI", "Entity Type Code", "Provider First Name", "Provider Last Name (Legal Name)", "Provider Credential Text",
       "Provider Business Practice Location Address City Name", "Provider Business Practice Location Address State Name",
+      "Provider Business Practice Location Address Postal Code", "Provider Business Practice Location Address Telephone Number",
       "NPI Deactivation Date", "NPI Reactivation Date",
       ...Array.from({ length: 15 }, (_, i) => [
         `Healthcare Provider Taxonomy Code_${i + 1}`, `Provider License Number_${i + 1}`, `Provider License Number State Code_${i + 1}`,
@@ -76,9 +77,9 @@ test("streaming CSV uses numbered license and state slots and rejects inactive o
     const record = (base, taxonomy) => [...base, ...Array(42).fill(""), ...taxonomy].join(",");
     await writeFile(path, [
       headers.join(","),
-      record(["1000000001", "1", "Fixture", "Alpha", "LCSW", "SACRAMENTO", "CA", "", ""], ["1041C0700X", "TEST", "CA"]),
-      record(["1000000002", "1", "Fixture", "Bravo", "", "SACRAMENTO", "CA", "01/01/2026", ""], ["1041C0700X", "TEST", "CA"]),
-      record(["1000000003", "1", "Fixture", "Charlie", "", "SACRAMENTO", "CA", "", ""], ["1041C0700X", "TEST", "NV"]),
+      record(["1000000001", "1", "Fixture", "Alpha", "LCSW", "SACRAMENTO", "CA", "95814", "9165550100", "", ""], ["1041C0700X", "TEST", "CA"]),
+      record(["1000000002", "1", "Fixture", "Bravo", "", "SACRAMENTO", "CA", "95814", "9165550100", "01/01/2026", ""], ["1041C0700X", "TEST", "CA"]),
+      record(["1000000003", "1", "Fixture", "Charlie", "", "SACRAMENTO", "CA", "95814", "9165550100", "", ""], ["1041C0700X", "TEST", "NV"]),
     ].join("\n"));
     assert.deepEqual((await collectProviders(disseminationRows(path))).map(row => row.npi), ["1000000001"]);
     const args = [fileURLToPath(new URL("../scripts/ingest-therapists.mjs", import.meta.url)),
