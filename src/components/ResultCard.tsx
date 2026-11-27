@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useCallback } from "react";
-import { buildResultCardData } from "@/lib/resultCard.mjs";
+import { buildResultCardData, planResultCardMeaning } from "@/lib/resultCard.mjs";
 
 interface Props {
   /** Display name of the tool, as shown on its results screen. */
@@ -147,29 +147,6 @@ const PNG_WIDTH = PNG_SIZE - PNG_MARGIN * 2;
 const SANS = `-apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
 const SERIF = `Georgia, "Times New Roman", serif`;
 
-function wrapLines(
-  ctx: CanvasRenderingContext2D,
-  text: string,
-  maxWidth: number,
-  maxLines: number,
-): string[] {
-  const words = text.split(/\s+/);
-  const lines: string[] = [];
-  let line = "";
-  for (const word of words) {
-    const candidate = line ? `${line} ${word}` : word;
-    if (ctx.measureText(candidate).width <= maxWidth || !line) {
-      line = candidate;
-    } else {
-      lines.push(line);
-      line = word;
-      if (lines.length === maxLines) break;
-    }
-  }
-  if (lines.length < maxLines && line) lines.push(line);
-  return lines;
-}
-
 function fitFontSize(
   ctx: CanvasRenderingContext2D,
   text: string,
@@ -248,12 +225,24 @@ function drawResultCardPng(card: CardData): HTMLCanvasElement {
   ctx.fillStyle = "#2F5D3A";
   ctx.fillText(card.band, x + 28, 600);
 
-  // Meaning (up to three wrapped lines)
+  // Meaning: fit-to-box. The font steps down from 42px until the whole
+  // wrapped text fits the meaning block; words are never dropped. Every
+  // real tool meaning fits (pinned by tests); a meaning that fit at no
+  // size is drawn in full anyway and reported loudly here.
   ctx.fillStyle = "#374151";
-  ctx.font = `400 42px ${SANS}`;
-  const meaningLines = wrapLines(ctx, card.meaning, PNG_WIDTH, 3);
-  meaningLines.forEach((line, i) => {
-    ctx.fillText(line, x, 700 + i * 58);
+  const meaningPlan = planResultCardMeaning((text, size) => {
+    ctx.font = `400 ${size}px ${SANS}`;
+    return ctx.measureText(text).width;
+  }, card.meaning);
+  if (!meaningPlan.fits) {
+    console.error(
+      "Result card meaning does not fit the PNG meaning block at any size:",
+      card.toolName,
+    );
+  }
+  ctx.font = `400 ${meaningPlan.size}px ${SANS}`;
+  meaningPlan.lines.forEach((line, i) => {
+    ctx.fillText(line, x, 700 + i * meaningPlan.lineHeight);
   });
 
   // Footer: invitation, then privacy line

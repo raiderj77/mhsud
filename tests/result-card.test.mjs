@@ -3,11 +3,16 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import {
+  RESULT_CARD_MEANING_MIN_SIZE,
   RESULT_CARD_PRIVACY_LINE,
   RESULT_CARD_SCREENING_LINE,
   buildResultCardData,
   firstSentence,
+  planResultCardMeaning,
 } from "../src/lib/resultCard.mjs";
+import { CUDITR_RANGES } from "../src/lib/cuditrScoring.mjs";
+import { FTND_RANGES } from "../src/lib/ftndScoring.mjs";
+import { AUD_CRITERIA_RANGES } from "../src/lib/audCriteriaScoring.mjs";
 
 const DATE = new Date(2026, 10, 26); // November 26, 2026 (local)
 
@@ -258,4 +263,190 @@ test("the card carries the screening line on screen and in the PNG", async () =>
     uses.length >= 2,
     "the DOM card and the PNG renderer must both show the screening line",
   );
+});
+
+// ---------------------------------------------------------------------------
+// PNG fit: no card meaning may ever truncate silently in the downloaded PNG.
+//
+// The renderer used to wrap the meaning at 42px with a hard 3-line cap and
+// drop the overflow words without a trace (the PCL-5 Mild meaning lost its
+// last word that way). The renderer now plans the meaning with
+// planResultCardMeaning (fit-to-box). This test runs that planner over
+// every wired tool's every band meaning, taken from the tools' real source
+// data (the scoring modules for CUDIT-R, FTND and the AUD criteria check;
+// the range/tier tables inside the client sources for the rest), and
+// asserts each one fits untruncated.
+//
+// Node has no canvas, so the planner is fed a conservative per-character
+// width model instead of canvas measureText. The model's factors were
+// calibrated against real Chromium canvas measurements of every string
+// below on 2026-11-26: the model never wrapped a meaning to fewer lines
+// than Chromium did, so a fit under the model is a fit on device, where
+// the component measures with the real font stack anyway.
+// ---------------------------------------------------------------------------
+
+function charWidthFactor(ch) {
+  if (ch === " ") return 0.28;
+  if ("ilj".includes(ch)) return 0.28;
+  if ("tfr".includes(ch)) return 0.37;
+  if ("mw".includes(ch)) return 0.9;
+  if ("MW".includes(ch)) return 0.95;
+  if (ch >= "A" && ch <= "Z") return 0.72;
+  if (".,;:!?'’()-".includes(ch)) return 0.32;
+  return 0.56; // lowercase, digits, everything else
+}
+
+const conservativeMeasure = (text, size) =>
+  size * [...text].reduce((sum, ch) => sum + charWidthFactor(ch), 0);
+
+const unquote = (raw) => JSON.parse(`"${raw}"`);
+
+function arrayRegion(src, name, file) {
+  const start = src.indexOf(`const ${name}`);
+  assert.ok(start >= 0, `${file}: const ${name} not found`);
+  const end = src.indexOf("\n];", start);
+  assert.ok(end > start, `${file}: const ${name} end not found`);
+  return src.slice(start, end);
+}
+
+function zipPairs(region, file) {
+  const labels = [...region.matchAll(/(?:level|label):\s*"((?:[^"\\]|\\.)*)"/g)].map((m) =>
+    unquote(m[1]),
+  );
+  const texts = [...region.matchAll(/(?:description|message):\s*"((?:[^"\\]|\\.)*)"/g)].map(
+    (m) => unquote(m[1]),
+  );
+  assert.equal(
+    texts.length,
+    labels.length,
+    `${file}: band label/text count mismatch (${labels.length} vs ${texts.length})`,
+  );
+  return labels.map((label, i) => ({ label, text: texts[i] }));
+}
+
+async function collectCardMeanings() {
+  const meanings = [];
+  const add = (tool, band, meaning) => meanings.push({ tool, band, meaning });
+
+  for (const r of CUDITR_RANGES) add("CUDIT-R", r.level, firstSentence(r.description));
+  for (const r of FTND_RANGES) add("FTND", r.level, firstSentence(r.description));
+  for (const r of AUD_CRITERIA_RANGES)
+    add("AUD criteria check", r.level, firstSentence(r.description));
+
+  const tsxTables = [
+    ["audit-alcohol-test/AUDITClient.tsx", "RANGES", "AUDIT", 4],
+    ["audit-c-alcohol-screen/AUDITCClient.tsx", "RANGES", "AUDIT-C", 4],
+    ["gad-7-anxiety-test/GAD7Client.tsx", "RANGES", "GAD-7", 4],
+    ["pcl-5-ptsd-screening/PCL5Client.tsx", "RANGES", "PCL-5", 4],
+    ["phq-9-depression-test/PHQ9Client.tsx", "RANGES", "PHQ-9", 5],
+    ["ces-d-depression-scale/CesdClient.tsx", "RESULT_STATES", "CES-D", 2],
+    ["rosenberg-self-esteem-scale/RSESClient.tsx", "TIERS", "Rosenberg", 3],
+    ["who-5-wellbeing-index/Who5Client.tsx", "TIERS", "WHO-5", 4],
+  ];
+  for (const [file, arrayName, tool, expected] of tsxTables) {
+    const src = await readFile(new URL(`../src/app/${file}`, import.meta.url), "utf8");
+    const pairs = zipPairs(arrayRegion(src, arrayName, file), file);
+    assert.equal(pairs.length, expected, `${file}: expected ${expected} bands`);
+    for (const { label, text } of pairs) add(tool, label, firstSentence(text));
+  }
+
+  // K6: the SPD tier's card meaning is a literal in the ResultCard JSX;
+  // the other tiers pass firstSentence(tier.message).
+  {
+    const file = "k6-distress-scale/K6Client.tsx";
+    const src = await readFile(new URL(`../src/app/${file}`, import.meta.url), "utf8");
+    const pairs = zipPairs(arrayRegion(src, "TIERS", file), file);
+    assert.equal(pairs.length, 3, "K6: expected 3 tiers");
+    const cardJsx = src.match(/<ResultCard[\s\S]*?\/>/)?.[0] ?? "";
+    const spdLiteral = "Your score meets the threshold for serious psychological distress.";
+    assert.ok(cardJsx.includes(spdLiteral), "K6: SPD card literal not found in ResultCard JSX");
+    for (const { label, text } of pairs)
+      add("K6", label, label === "Serious Psychological Distress" ? spdLiteral : firstSentence(text));
+  }
+
+  // ASRS and PC-PTSD-5: both card meanings are literals in the ResultCard JSX.
+  for (const [file, tool] of [
+    ["asrs-adhd-screening/ASRSClient.tsx", "ASRS"],
+    ["pc-ptsd-5-screening/PcPtsd5Client.tsx", "PC-PTSD-5"],
+  ]) {
+    const src = await readFile(new URL(`../src/app/${file}`, import.meta.url), "utf8");
+    const cardJsx = src.match(/<ResultCard[\s\S]*?\/>/)?.[0] ?? "";
+    const meaningExpr = cardJsx.slice(cardJsx.indexOf("meaning="));
+    const literals = [...meaningExpr.matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((m) => unquote(m[1]));
+    assert.equal(literals.length, 2, `${file}: expected 2 card meaning literals`);
+    for (const literal of literals) add(tool, literal.slice(0, 24), literal);
+  }
+
+  // PHQ-4: the CARD_MEANING_BY_LEVEL lookup (Moderate and Severe share one).
+  {
+    const file = "phq-4-anxiety-depression-screen/PHQ4Client.tsx";
+    const src = await readFile(new URL(`../src/app/${file}`, import.meta.url), "utf8");
+    const start = src.indexOf("CARD_MEANING_BY_LEVEL");
+    assert.ok(start >= 0, "PHQ-4: CARD_MEANING_BY_LEVEL not found");
+    const region = src.slice(start, src.indexOf("};", start));
+    const values = new Set(
+      [...region.matchAll(/\w+:\s*"((?:[^"\\]|\\.)*)"/g)].map((m) => unquote(m[1])),
+    );
+    assert.equal(values.size, 3, "PHQ-4: expected 3 distinct card meanings");
+    for (const v of values) add("PHQ-4", v.slice(0, 24), v);
+  }
+
+  return meanings;
+}
+
+test("every wired tool's every band meaning fits the PNG untruncated", async () => {
+  const meanings = await collectCardMeanings();
+  assert.equal(meanings.length, 52, "expected 52 distinct card meanings across the 15 tools");
+  for (const { tool, band, meaning } of meanings) {
+    const plan = planResultCardMeaning(conservativeMeasure, meaning);
+    assert.equal(
+      plan.fits,
+      true,
+      `${tool} (${band}) meaning does not fit the PNG meaning block at any size: "${meaning}"`,
+    );
+    assert.ok(plan.size >= RESULT_CARD_MEANING_MIN_SIZE, `${tool} (${band}): size below minimum`);
+    assert.deepEqual(
+      plan.lines.join(" ").split(/\s+/),
+      meaning.split(/\s+/),
+      `${tool} (${band}): planned lines must contain every word of the meaning, in order`,
+    );
+  }
+});
+
+test("the K6 serious-distress tier sentence would also fit untruncated", async () => {
+  // The K6 card currently shows a shorter substitute for this tier, but the
+  // tier's own first sentence (159 chars) is exactly the shape that used to
+  // clip. The fit-to-box renderer must handle it with room to spare.
+  const src = await readFile(
+    new URL("../src/app/k6-distress-scale/K6Client.tsx", import.meta.url),
+    "utf8",
+  );
+  const pairs = zipPairs(arrayRegion(src, "TIERS", "K6Client.tsx"), "K6Client.tsx");
+  const spd = pairs.find((p) => p.label === "Serious Psychological Distress");
+  assert.ok(spd, "K6 SPD tier not found");
+  const sentence = firstSentence(spd.text);
+  assert.equal(sentence.length, 159);
+  const plan = planResultCardMeaning(conservativeMeasure, sentence);
+  assert.equal(plan.fits, true);
+  assert.deepEqual(plan.lines.join(" ").split(/\s+/), sentence.split(/\s+/));
+});
+
+test("the planner never drops words, and reports an extreme string as not fitting", () => {
+  const extreme = Array.from({ length: 90 }, (_, i) => `word${i}`).join(" ") + " end.";
+  const plan = planResultCardMeaning(conservativeMeasure, extreme);
+  assert.equal(plan.fits, false, "an extreme string must fail loudly, not clip silently");
+  assert.deepEqual(
+    plan.lines.join(" ").split(/\s+/),
+    extreme.split(/\s+/),
+    "even when it cannot fit, the plan must still contain every word",
+  );
+});
+
+test("the PNG renderer plans the meaning with the fit-to-box planner", async () => {
+  const source = await readFile(
+    new URL("../src/components/ResultCard.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(source, /planResultCardMeaning/);
+  assert.doesNotMatch(source, /wrapLines/, "the old capped wrap must be gone");
 });
