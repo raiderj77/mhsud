@@ -1,5 +1,10 @@
 title = "mhsud gitleaks config"
 
+# Extend the default gitleaks ruleset. Without this, a config file replaces
+# the default rules entirely and the scan enforces nothing.
+[extend]
+useDefault = true
+
 # The therapist dataset is built from the public NPPES registry. The values
 # in its `credential` field are public license numbers, not secrets, but the
 # generic-api-key rule flags them. Allowlist that one rule for that one
