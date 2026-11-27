@@ -4,7 +4,8 @@
 // The card carries only what the person already sees on their own results
 // screen: the test name, their score, the band label, a one-line meaning of
 // that band, and the date. It adds MindCheck Tools branding, the tool's
-// canonical URL as an invitation, and the privacy line. It never carries
+// canonical URL as an invitation, the screening line, and the privacy line.
+// It never carries
 // answers.
 //
 // It also never carries norms. MindCheck Tools holds no response data, so
@@ -17,6 +18,8 @@ export const RESULT_CARD_BRAND = "MindCheck Tools";
 export const RESULT_CARD_SITE_URL = "https://mindchecktools.com";
 export const RESULT_CARD_PRIVACY_LINE =
   "Scored in your browser. Your answers are not sent to MindCheck Tools.";
+export const RESULT_CARD_SCREENING_LINE =
+  "This is a screening tool, not a diagnosis.";
 
 const NORM_LANGUAGE =
   /\b(?:percentiles?|averages?|compared\s+(?:to|with)|most\s+people|other\s+people|typical(?:ly)?|norms?|population\s+(?:average|norm))\b/i;
@@ -103,6 +106,7 @@ export function buildResultCardData({ toolName, toolPath, score, band, meaning, 
     dateLabel,
     inviteLine: `Try it yourself, free and private: ${toolUrl}`,
     privacyLine: RESULT_CARD_PRIVACY_LINE,
+    screeningLine: RESULT_CARD_SCREENING_LINE,
     fileName: `${slug}-result-card.png`,
   });
 }

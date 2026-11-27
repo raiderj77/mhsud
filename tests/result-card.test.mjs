@@ -4,6 +4,7 @@ import test from "node:test";
 
 import {
   RESULT_CARD_PRIVACY_LINE,
+  RESULT_CARD_SCREENING_LINE,
   buildResultCardData,
   firstSentence,
 } from "../src/lib/resultCard.mjs";
@@ -58,6 +59,7 @@ test("AUDIT-C card at the screening threshold boundaries", () => {
       "Try it yourself, free and private: https://mindchecktools.com/audit-c-alcohol-screen",
     );
     assert.equal(card.privacyLine, RESULT_CARD_PRIVACY_LINE);
+    assert.equal(card.screeningLine, RESULT_CARD_SCREENING_LINE);
     assert.equal(card.dateLabel, "November 26, 2026");
     assert.equal(card.fileName, "audit-c-alcohol-screen-result-card.png");
   }
@@ -188,12 +190,15 @@ test("firstSentence keeps one line of a band description", () => {
 // exception: its result is a five-trait profile with no single score or
 // band, so a one-score card would misrepresent it.
 const wiredClients = [
+  "alcohol-use-disorder-criteria/AUDCriteriaClient.tsx",
   "audit-alcohol-test/AUDITClient.tsx",
   "audit-c-alcohol-screen/AUDITCClient.tsx",
   "asrs-adhd-screening/ASRSClient.tsx",
   "ces-d-depression-scale/CesdClient.tsx",
+  "cudit-r-cannabis-screening/CUDITRClient.tsx",
   "gad-7-anxiety-test/GAD7Client.tsx",
   "k6-distress-scale/K6Client.tsx",
+  "nicotine-dependence-test/FTNDClient.tsx",
   "pc-ptsd-5-screening/PcPtsd5Client.tsx",
   "pcl-5-ptsd-screening/PCL5Client.tsx",
   "phq-4-anxiety-depression-screen/PHQ4Client.tsx",
@@ -232,4 +237,25 @@ test("the card component never shares or uploads result data", async () => {
   assert.doesNotMatch(source, /navigator\.share|navigator\.clipboard|fetch\(|XMLHttpRequest|sendBeacon/);
   assert.match(source, /canvas\.toBlob/);
   assert.match(source, /URL\.createObjectURL/);
+});
+
+test("the card carries the screening line on screen and in the PNG", async () => {
+  assert.equal(RESULT_CARD_SCREENING_LINE, "This is a screening tool, not a diagnosis.");
+  const card = buildResultCardData({
+    ...AUDITC,
+    score: "3 / 12",
+    band: "At-Threshold (Consider Further Assessment)",
+    meaning: "Your responses are at or near the screening threshold.",
+    date: DATE,
+  });
+  assert.equal(card.screeningLine, RESULT_CARD_SCREENING_LINE);
+  const source = await readFile(
+    new URL("../src/components/ResultCard.tsx", import.meta.url),
+    "utf8",
+  );
+  const uses = source.match(/card\.screeningLine/g) ?? [];
+  assert.ok(
+    uses.length >= 2,
+    "the DOM card and the PNG renderer must both show the screening line",
+  );
 });

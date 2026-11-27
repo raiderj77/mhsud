@@ -21,7 +21,8 @@ type CardData = ReturnType<typeof buildResultCardData>;
 /**
  * The glanceable result card: one screen holding the test name, the
  * person's score, its band, and what the band means, with MindCheck Tools
- * branding, the tool's URL as an invitation, and the privacy line.
+ * branding, the tool's URL as an invitation, the screening line, and the
+ * privacy line.
  *
  * The card is generated entirely on the device. The download renders a PNG
  * on a local canvas and saves it through a blob URL, the same on-device
@@ -103,6 +104,7 @@ export function ResultCard({ toolName, toolPath, score, band, meaning }: Props) 
 
         <p className="text-xs text-sage-600 dark:text-sage-400 break-all">{card.inviteLine}</p>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">{card.privacyLine}</p>
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">{card.screeningLine}</p>
 
         <div className="mt-4">
           <p className="sr-only" role="status" aria-live="polite">
@@ -268,7 +270,8 @@ function drawResultCardPng(card: CardData): HTMLCanvasElement {
 
   ctx.fillStyle = "#6B7280";
   ctx.font = `400 26px ${SANS}`;
-  // Privacy line sits above the footer divider on its own row.
+  // Screening line, then the privacy line, above the footer divider.
+  ctx.fillText(card.screeningLine, x, 866);
   ctx.fillText(card.privacyLine, x, 906);
 
   return canvas;
