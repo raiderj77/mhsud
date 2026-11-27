@@ -56,7 +56,7 @@ export const AUD_CRITERIA_ITEMS = [
   },
 ];
 
-const INTERVIEW_LIMIT = "These ranges apply only if a clinician confirms the criteria in a professional interview. This self-check cannot confirm any criterion or establish a diagnosis.";
+export const INTERVIEW_LIMIT = "These ranges apply only if a clinician confirms the criteria in a professional interview. This self-check cannot confirm any criterion or establish a diagnosis.";
 
 export const AUD_CRITERIA_RANGES = [
   {
