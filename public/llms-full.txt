@@ -97,6 +97,8 @@ All interactive answers and scores are processed locally in the browser. MindChe
 - [About](https://mindchecktools.com/about)
 - [About/jason Ramirez](https://mindchecktools.com/about/jason-ramirez)
 - [Screening Tools](https://mindchecktools.com/screening-tools)
+- [California Therapist Directory](https://mindchecktools.com/therapists)
+- [Substance Use Treatment Facility Directory](https://mindchecktools.com/facilities)
 - [Clinical Evidence](https://mindchecktools.com/clinical-evidence)
 - [Methodology](https://mindchecktools.com/methodology)
 - [Privacy](https://mindchecktools.com/privacy)
@@ -113,4 +115,4 @@ All interactive answers and scores are processed locally in the browser. MindChe
 - Use [crisis resources](https://mindchecktools.com/crisis-resources) for urgent support information.
 - See [privacy](https://mindchecktools.com/privacy), [methodology](https://mindchecktools.com/methodology), and [clinical evidence](https://mindchecktools.com/clinical-evidence) for scope and safeguards.
 
-Last reviewed: 2026-08-17.
+Last reviewed: 2026-11-27.

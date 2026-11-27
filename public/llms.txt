@@ -23,6 +23,11 @@ All interactive answers and scores are processed locally in the browser. MindChe
 - [Recommended mental-health and recovery books](https://mindchecktools.com/recommended-reading): Six edition-specific educational resources with selection reasons, limits, and affiliate disclosure.
 - [Crisis resources](https://mindchecktools.com/crisis-resources)
 
+## Directories
+
+- [California therapist directory](https://mindchecktools.com/therapists): 182,615 provider listings across 1,198 California cities, built from the national provider registry. Listings are shown as reported to the registry and are not independently verified; licensure is verified when a provider claims a listing.
+- [Substance use treatment facility directory](https://mindchecktools.com/facilities): 12,200 treatment programs across the United States, built from the SAMHSA National Directory and state licensing rosters.
+
 ## Published instruments: interactive and information pages
 
 Interactive entries are educational self-screens, not diagnostic services. Entries labeled information contain no questionnaire, scoring, or personal result.
@@ -93,4 +98,4 @@ Interactive entries are educational self-screens, not diagnostic services. Entri
 - [Disclaimer](https://mindchecktools.com/disclaimer)
 - [Accessibility](https://mindchecktools.com/accessibility)
 
-Last reviewed: 2026-08-17.
+Last reviewed: 2026-11-27.

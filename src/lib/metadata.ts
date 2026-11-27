@@ -91,6 +91,10 @@ export function organizationJsonLd() {
           "@type": "ImageObject",
           url: `${SITE_URL}/logo.png`,
         },
+        sameAs: [
+          "https://www.linkedin.com/company/mindcheck-tools",
+          "https://yourfriendlydeveloper.com",
+        ],
       },
       {
         "@type": "WebSite",
