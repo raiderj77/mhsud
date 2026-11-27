@@ -37,6 +37,9 @@ const config: Config = {
         night: {
           700: "#2a2b30", 800: "#212225", 900: "#1a1b1e", 950: "#131416",
         },
+        navy: {
+          DEFAULT: "#1E3A5F",
+        },
       },
       fontFamily: {
         serif: ["var(--font-source-serif)", "Georgia", "serif"],
