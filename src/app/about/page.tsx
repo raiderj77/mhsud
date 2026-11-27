@@ -142,15 +142,18 @@ export default function AboutPage() {
           <section>
             <h2>For product and implementation teams</h2>
             <p>
-              MindCheck Tools documents a proposed fixed-scope implementation
-              readiness review for digital-health and behavioral-health
-              software teams. It uses public or fictional staging evidence and
-              does not accept patient records, assessment answers, scores, or
-              diagnoses.
+              MindCheck Tools publishes free resources for digital-health and
+              behavioral-health software teams. They use public or fictional
+              staging evidence and do not accept patient records, assessment
+              answers, scores, or diagnoses.
             </p>
             <ul>
               <li>
-                Review the <Link href="/for-professionals">professional review scope</Link>.
+                Review the{" "}
+                <Link href="/for-professionals/screening-instrument-rights-guide">
+                  screening instrument rights guide
+                </Link>
+                .
               </li>
               <li>
                 Use the free, printable{" "}

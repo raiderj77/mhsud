@@ -85,7 +85,7 @@ const INFO_LINKS = [
   { href: "/about", label: "About" },
   { href: "/clinical-evidence", label: "Clinical Evidence" },
   { href: "/methodology", label: "Methodology" },
-  { href: "/for-professionals", label: "For Professionals" },
+  { href: "/for-professionals/screening-implementation-checklist", label: "For Professionals" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/consumer-health-data-privacy", label: "Consumer Health Data Privacy" },

@@ -133,7 +133,7 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
             <Link className="underline" href="/facilities/claim">
               claim your listing
             </Link>{" "}
-            and a Listing Sprint intake starts with getting the record created through
+            and the first correction step is getting the record created through
             SAMHSA&rsquo;s written channels. If the name differs from the licensed name, try the
             licensed name.
           </p>
@@ -158,11 +158,11 @@ export default function CheckTool({ states }: { states: Array<{ code: string; na
             </div>
             <p className="mt-4 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
               This check covers the sources listed above — the ones we actually hold. It does not
-              claim to have checked any source it does not name. A Listing Sprint adds the
+              claim to have checked any source it does not name. Directory Care covers the
               remaining channels (including your map and search profiles) with filings through
               each provider&rsquo;s written channels.{" "}
               <Link className="underline" href="/facilities/pricing">
-                See the Sprint scope and pricing
+                See the Directory Care scope and pricing
               </Link>
               .
             </p>
