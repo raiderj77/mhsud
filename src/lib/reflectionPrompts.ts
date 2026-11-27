@@ -99,6 +99,48 @@ export const REFLECTION_PROMPTS: Record<string, ReflectionPromptSet> = {
     ],
   },
 
+  "cudit-r-cannabis-screening": {
+    toolName: "CUDIT-R Cannabis Screen",
+    prompts: [
+      "How does your cannabis use pattern compare to what you expected before taking this screening?",
+      "Are there specific situations, stress, socializing, boredom, that tend to increase how often or how much you use?",
+      "Have you noticed effects on your memory, motivation, sleep, or responsibilities that you connect with cannabis use?",
+      "If you decided to make one change to your cannabis use, what feels most realistic right now?",
+    ],
+    faqEntries: [
+      { question: "What does my CUDIT-R score indicate?", answer: "The CUDIT-R is an 8-question screening for cannabis use over the past six months. A score of 8 or more flags hazardous use, and 12 or more flags possible cannabis use disorder. A score is a starting point for reflection or a professional conversation, not a diagnosis." },
+      { question: "Is the CUDIT-R accurate enough to rely on?", answer: "In the original validation study, the CUDIT-R identified current cannabis use disorder with 91% sensitivity and 90% specificity at the cut point of 12. It remains a screening tool: only a qualified professional can assess whether you meet diagnostic criteria." },
+    ],
+  },
+
+  "alcohol-use-disorder-criteria": {
+    toolName: "Alcohol Use Disorder Criteria Self-Check",
+    prompts: [
+      "Which of the 11 statements felt hardest to answer honestly, and why?",
+      "When did you first notice one of these patterns in your own drinking?",
+      "How has drinking affected the people and responsibilities that matter most to you?",
+      "If you talked with a professional about your count, what would you want them to understand first?",
+    ],
+    faqEntries: [
+      { question: "What does my criteria count mean?", answer: "Clinicians diagnose alcohol use disorder when at least 2 of the 11 DSM-5-TR criteria occur within the same 12 months: 2 to 3 is the mild range, 4 to 5 moderate, 6 or more severe. This self-check counts your own answers in plain language. Only a clinician's interview can confirm whether a criterion is truly met, so treat the count as a recognition step, not a diagnosis." },
+      { question: "Can this self-check diagnose alcohol use disorder?", answer: "No. Diagnosis requires a professional interview that weighs timing, context, and other conditions. This tool exists to help you recognize patterns and decide whether a fuller screen, like the AUDIT, or a conversation with a professional is a good next step." },
+    ],
+  },
+
+  "nicotine-dependence-test": {
+    toolName: "FTND Nicotine Dependence Test",
+    prompts: [
+      "How soon after waking do you usually smoke, and what does that first cigarette do for you?",
+      "Which cigarettes in your day would be hardest to give up, and what makes them different?",
+      "Have you tried to quit or cut down before? What helped, and what got in the way?",
+      "If you decided to talk with a professional about quitting, what would you want to ask first?",
+    ],
+    faqEntries: [
+      { question: "What does my FTND score mean?", answer: "The FTND grades physical nicotine dependence from 0 to 10: 0-2 very low, 3-4 low, 5 medium, 6-7 high, 8-10 very high. Higher scores usually mean quitting takes more support. The score measures dependence, not the harm smoking is doing, and it is not a diagnosis." },
+      { question: "Does a low FTND score mean smoking is safe for me?", answer: "No. The FTND measures physical dependence only. Even light or occasional smoking carries serious health risks, and a low dependence score can make quitting easier to start now." },
+    ],
+  },
+
   /* ─── PTSD ───────────────────────────────────────────────────── */
 
   "pcl-5-ptsd-screening": {

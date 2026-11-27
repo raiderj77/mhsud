@@ -26,10 +26,10 @@ test("the central tool registry has the required classification fields", async (
   for (const label of ["Published Screener", "Original Educational Tool", "Information Only"]) {
     assert.match(registry, new RegExp(`"${label}"`));
   }
-  assert.equal([...registry.matchAll(/published\(\{\s*route:/g)].length, 15);
+  assert.equal([...registry.matchAll(/published\(\{\s*route:/g)].length, 17);
   assert.equal([...registry.matchAll(/information\(\{\s*route:/g)].length, 14);
-  assert.equal([...registry.matchAll(/original\(\{\s*route:/g)].length, 29);
-  assert.equal([...registry.matchAll(/\broute:\s*"\//g)].length, 58);
+  assert.equal([...registry.matchAll(/original\(\{\s*route:/g)].length, 30);
+  assert.equal([...registry.matchAll(/\broute:\s*"\//g)].length, 61);
   assert.match(registry, /0–36 reflection total[^\n]*without severity bands or clinical cutoffs/i);
   assert.match(registry, /WHO and NIOSH sources provide context, not validation/i);
   assert.match(registry, /analyticsPermitted: false/);

@@ -3,17 +3,20 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const centralizedClients = [
+  ["alcohol-use-disorder-criteria/AUDCriteriaClient.tsx", "/alcohol-use-disorder-criteria"],
   ["asrs-adhd-screening/ASRSClient.tsx", "/asrs-adhd-screening"],
   ["audit-alcohol-test/AUDITClient.tsx", "/audit-alcohol-test"],
   ["audit-c-alcohol-screen/AUDITCClient.tsx", "/audit-c-alcohol-screen"],
   ["bac-calculator/BACClient.tsx", "/bac-calculator"],
   ["big-five-personality-test/BigFiveClient.tsx", "/big-five-personality-test"],
   ["burnout-assessment-tool/BurnoutClient.tsx", "/burnout-assessment-tool"],
+  ["cudit-r-cannabis-screening/CUDITRClient.tsx", "/cudit-r-cannabis-screening"],
   ["gad-7-anxiety-test/GAD7Client.tsx", "/gad-7-anxiety-test"],
   ["halt-check-in/HALTClient.tsx", "/halt-check-in"],
   ["health-recovery-timeline/HealthTimelineClient.tsx", "/health-recovery-timeline"],
   ["mental-load-calculator/MentalLoadClient.tsx", "/mental-load-calculator"],
   ["money-saved-recovery-calculator/MoneySavedClient.tsx", "/money-saved-recovery-calculator"],
+  ["nicotine-dependence-test/FTNDClient.tsx", "/nicotine-dependence-test"],
   ["pcl-5-ptsd-screening/PCL5Client.tsx", "/pcl-5-ptsd-screening"],
   ["phq-9-depression-test/PHQ9Client.tsx", "/phq-9-depression-test"],
   ["readiness-to-change/ReadinessClient.tsx", "/readiness-to-change"],
