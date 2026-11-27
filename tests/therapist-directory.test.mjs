@@ -122,8 +122,8 @@ test("claim payload allows listing slug, bounded work email, and optional licens
 });
 
 test("prices match the owner lock and registry status stays explicit", () => {
-  assert.deepEqual(PRICES.map(({ price, paid }) => [price, paid]), [
-    ["Free", false], ["$15/mo", true],
+  assert.deepEqual(PRICES.map(({ price, paid, annual }) => [price, paid, annual]), [
+    ["Free", false, null], ["$15/mo", true, "$150/yr"],
   ]);
   assert.match(LICENSE_NOTE, /has not been independently verified/);
 });

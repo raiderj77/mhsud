@@ -19,14 +19,16 @@ const LAST_UPDATED = "2026-11-26";
 export default function PricingPage() {
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-8">
-      <p className="text-sm text-slate-600 dark:text-neutral-400 dark:print:!text-slate-600">Last updated {LAST_UPDATED}</p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">Pricing — flat fees only</h1>
-      <p className="mt-4 text-lg text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
+      <div className="rounded-lg bg-navy px-5 py-6 text-white print:bg-transparent print:text-slate-900">
+        <p className="text-sm text-neutral-200 print:text-slate-600">Last updated {LAST_UPDATED}</p>
+        <h1 className="mt-2 text-3xl font-bold">Pricing — flat fees only</h1>
+        <p className="mt-4 text-lg text-neutral-100 print:text-slate-800">
         Every price below is a flat fee for listing work on one location. Fees never vary with
         how many people contact a program, and paying never changes a program&rsquo;s position,
         order, or visibility in the public directory. That structure is deliberate: this is a
         listing-administration service, not a referral service.
-      </p>
+        </p>
+      </div>
 
       <div className="mt-6 overflow-x-auto">
         <table className="w-full border-collapse text-left text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
@@ -49,23 +51,25 @@ export default function PricingPage() {
               <th className="border border-slate-300 px-3 py-2 font-medium">
                 Directory Care (monthly, no contract)
               </th>
-              <td className="border border-slate-300 px-3 py-2">${PRICING.sud.careMonthly}/mo</td>
-              <td className="border border-slate-300 px-3 py-2">${PRICING.sober.careMonthly}/mo</td>
+              <td className="border border-slate-300 px-3 py-2">${PRICING.sud.careMonthly}/mo or ${PRICING.sud.careMonthly * 10}/yr (two months free on annual)</td>
+              <td className="border border-slate-300 px-3 py-2">${PRICING.sober.careMonthly}/mo or ${PRICING.sober.careMonthly * 10}/yr (two months free on annual)</td>
             </tr>
             <tr>
               <th className="border border-slate-300 px-3 py-2 font-medium">
                 Each additional location (same operator)
               </th>
               <td className="border border-slate-300 px-3 py-2">
-                Care ${PRICING.sud.extraCareMonthly}/mo
+                Care ${PRICING.sud.extraCareMonthly}/mo or ${PRICING.sud.extraCareMonthly * 10}/yr
               </td>
               <td className="border border-slate-300 px-3 py-2">
-                Care ${PRICING.sober.extraCareMonthly}/mo
+                Care ${PRICING.sober.extraCareMonthly}/mo or ${PRICING.sober.extraCareMonthly * 10}/yr
               </td>
             </tr>
           </tbody>
         </table>
       </div>
+
+      <p className="mt-6 font-medium text-slate-800 dark:text-neutral-100">{"Founding rate: subscribe at today's price and keep it for as long as your subscription stays active."}</p>
 
       <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What Directory Care covers</h2>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">

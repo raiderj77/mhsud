@@ -10,8 +10,8 @@ export const SPECIALTIES = [
 ];
 
 export const PRICES = [
-  { name: "Free basic listing", price: "Free", paid: false },
-  { name: "Claimed + License Verified profile", price: "$15/mo", paid: true },
+  { name: "Free basic listing", price: "Free", annual: null, paid: false },
+  { name: "Claimed + License Verified profile", price: "$15/mo", annual: "$150/yr", paid: true },
 ];
 
 export const REGISTRY_URL = "https://npiregistry.cms.hhs.gov";
