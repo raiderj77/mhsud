@@ -19,6 +19,8 @@ import {
   PRIVATE_SHARE_NOTICE,
   sharePrivateToolLink,
 } from "@/lib/privateToolSharing";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 const TOOL_NAME = "Alcohol Use Disorder Criteria Self-Check";
@@ -172,6 +174,14 @@ export function AUDCriteriaClient({ faqData }: Props) {
               <p className={BODY}>Your answers and count are processed locally in your browser. <Link href="/privacy" className={LINK}>Privacy policy</Link></p>
             </div>
           </section>
+
+          <ResultCard
+            toolName={TOOL_NAME}
+            toolPath={TOOL_PATH}
+            score={`${count} of 11`}
+            band={range.level}
+            meaning={firstSentence(range.description)}
+          />
 
           <section className="card p-5 sm:p-6 mb-5">
             <h2 className={`${HEADING} mb-4`}>Your Response Summary</h2>

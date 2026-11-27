@@ -13,6 +13,8 @@ import {
   PRIVATE_SHARE_NOTICE,
   sharePrivateToolLink,
 } from "@/lib/privateToolSharing";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import {
   CUDITR_GATE_QUESTION,
   CUDITR_QUESTIONS as QUESTIONS,
@@ -231,6 +233,14 @@ export function CUDITRClient({ faqData }: Props) {
               </div>
             </div>
           </div>
+
+          <ResultCard
+            toolName="CUDIT-R Cannabis Screen"
+            toolPath="/cudit-r-cannabis-screening"
+            score={`${totalScore} / 32`}
+            band={range.level}
+            meaning={firstSentence(range.description)}
+          />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h3>
