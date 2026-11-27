@@ -7,6 +7,7 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
@@ -335,6 +336,18 @@ export function ASRSClient({ faqData }: Props) {
                 </div>
               </div>
             </div>
+
+            <ResultCard
+              toolName="ASRS Adult ADHD Self-Check"
+              toolPath="/asrs-adhd-screening"
+              score={`${positiveCount} / 6`}
+              band={screenPositive ? "Positive Screen" : "Negative Screen"}
+              meaning={
+                screenPositive
+                  ? "Your symptom pattern is consistent with adult ADHD."
+                  : "Your responses do not meet the threshold for a positive ADHD screen at this time."
+              }
+            />
 
             {/* Answer Summary with Positive Indicators */}
             <div className="card p-5 sm:p-6 mb-5">

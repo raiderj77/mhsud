@@ -8,6 +8,8 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import { trackAssessmentEvent } from "@/lib/assessmentAnalytics";
 import { printSensitiveResults } from "@/lib/sensitivePrinting";
@@ -360,6 +362,14 @@ export function PHQ9Client({ faqData }: Props) {
                 </div>
               </div>
             </div>
+
+            <ResultCard
+              toolName="PHQ-9 Depression Self-Check"
+              toolPath="/phq-9-depression-test"
+              score={`${totalScore} / 27`}
+              band={range.level}
+              meaning={firstSentence(range.description)}
+            />
 
             {/* Answer Summary */}
             <div className="card p-5 sm:p-6 mb-5">

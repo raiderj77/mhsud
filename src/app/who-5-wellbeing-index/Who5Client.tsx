@@ -7,7 +7,9 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { firstSentence } from "@/lib/resultCard.mjs";
 
 
 /* ------------------------------------------------------------------ */
@@ -221,6 +223,14 @@ export function Who5Client({ faqData }: Props) {
           </p>
         </div>
 
+
+        <ResultCard
+          toolName="WHO-5 Well-Being Index"
+          toolPath="/who-5-wellbeing-index"
+          score={`${pctScore}%`}
+          band={tier.label}
+          meaning={firstSentence(tier.message)}
+        />
 
         {/* PHQ-9 Suggestion */}
         {showPhq9Nudge && (

@@ -7,7 +7,9 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { firstSentence } from "@/lib/resultCard.mjs";
 
 
 /* ------------------------------------------------------------------ */
@@ -206,6 +208,14 @@ export function RSESClient({ faqData }: Props) {
           </p>
         </div>
 
+
+        <ResultCard
+          toolName="Rosenberg Self-Esteem Scale"
+          toolPath="/rosenberg-self-esteem-scale"
+          score={`${totalScore} / 30`}
+          band={tier.label}
+          meaning={firstSentence(tier.message)}
+        />
 
         {/* Low self-esteem follow-up */}
         {isLow && (

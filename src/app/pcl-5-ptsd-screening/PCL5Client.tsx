@@ -8,7 +8,9 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -377,6 +379,14 @@ export function PCL5Client({ faqData }: Props) {
                 </div>
               </div>
             </div>
+
+            <ResultCard
+              toolName="PCL-5 PTSD Screening"
+              toolPath="/pcl-5-ptsd-screening"
+              score={`${totalScore} / 80`}
+              band={range.level}
+              meaning={firstSentence(range.description)}
+            />
 
             {/* Cluster Breakdown */}
             <div className="card p-5 sm:p-6 mb-5">
