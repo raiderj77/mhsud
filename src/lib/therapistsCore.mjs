@@ -12,8 +12,6 @@ export const SPECIALTIES = [
 export const PRICES = [
   { name: "Free basic listing", price: "Free", paid: false },
   { name: "Claimed + License Verified profile", price: "$15/mo", paid: true },
-  { name: "Listing Fix", price: "$99 one-time", paid: true },
-  { name: "Privacy and Screening Readiness Review", price: "$249 one-time", paid: true },
 ];
 
 export const REGISTRY_URL = "https://npiregistry.cms.hhs.gov";

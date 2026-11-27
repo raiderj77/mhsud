@@ -142,8 +142,8 @@ test("guardrails: flat-fee and verify-status-not-quality language is present", a
 // ------------------------------------------------------------------- pricing
 test("pricing matches the locked spec numbers", () => {
   assert.deepEqual(PRICING, {
-    sud: { sprint: 99, careMonthly: 45, extraSprint: 49, extraCareMonthly: 25 },
-    sober: { sprint: 49, careMonthly: 29, extraSprint: 25, extraCareMonthly: 15 },
+    sud: { careMonthly: 45, extraCareMonthly: 25 },
+    sober: { careMonthly: 29, extraCareMonthly: 15 },
   });
 });
 
