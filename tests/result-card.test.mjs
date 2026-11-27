@@ -8,6 +8,11 @@ import {
   buildResultCardData,
   firstSentence,
 } from "../src/lib/resultCard.mjs";
+import {
+  AUD_CRITERIA_RANGES,
+  INTERVIEW_LIMIT,
+  getAudCriteriaRange,
+} from "../src/lib/audCriteriaScoring.mjs";
 
 const DATE = new Date(2026, 10, 26); // November 26, 2026 (local)
 
@@ -237,6 +242,67 @@ test("the card component never shares or uploads result data", async () => {
   assert.doesNotMatch(source, /navigator\.share|navigator\.clipboard|fetch\(|XMLHttpRequest|sendBeacon/);
   assert.match(source, /canvas\.toBlob/);
   assert.match(source, /URL\.createObjectURL/);
+});
+
+// The AUD criteria check counts criteria that only a clinician can confirm
+// in an interview, so its card meaning must keep that limit. The band
+// descriptions carry the limit as their second sentence (INTERVIEW_LIMIT);
+// taking only the first sentence dropped it. The card meaning therefore
+// leads with the limit's first sentence, followed by the results screen's
+// own recognition-step sentence, both verbatim. Pinned for a low band and
+// a high band.
+const AUD = {
+  toolName: "Alcohol Use Disorder Criteria Self-Check",
+  toolPath: "/alcohol-use-disorder-criteria",
+};
+const AUD_CARD_MEANING =
+  "These ranges apply only if a clinician confirms the criteria in a professional interview. Counting criteria at home is a recognition step.";
+const CLINICIAN_QUALIFIER =
+  "only if a clinician confirms the criteria in a professional interview";
+
+test("AUD criteria card keeps the clinician-confirmation limit in its meaning", async () => {
+  // The limit lives inside every range description in the scoring data.
+  for (const range of AUD_CRITERIA_RANGES) {
+    assert.ok(range.description.endsWith(INTERVIEW_LIMIT), range.key);
+  }
+  assert.equal(
+    firstSentence(INTERVIEW_LIMIT),
+    "These ranges apply only if a clinician confirms the criteria in a professional interview.",
+  );
+
+  // The client wires the card meaning from that limit (plus the results
+  // screen's interview note), not from the band description's first
+  // sentence alone.
+  const source = await readFile(
+    new URL(
+      "../src/app/alcohol-use-disorder-criteria/AUDCriteriaClient.tsx",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+  const cardJsx = source.match(/<ResultCard[\s\S]*?\/>/)?.[0];
+  assert.ok(cardJsx, "AUDCriteriaClient must render <ResultCard />");
+  assert.match(cardJsx, /meaning=\{`[^`]*INTERVIEW_LIMIT/);
+  assert.doesNotMatch(cardJsx, /meaning=\{firstSentence\(range\.description\)\}/);
+  assert.ok(source.includes("Counting criteria at home is a recognition step."));
+
+  // The built card carries the qualifier verbatim at a low and a high band.
+  for (const [count, band] of [
+    [1, "Below the Diagnostic Threshold"],
+    [8, "Severe Range (6 or More Criteria)"],
+  ]) {
+    const range = getAudCriteriaRange(count);
+    assert.equal(range?.level, band);
+    const card = buildResultCardData({
+      ...AUD,
+      score: `${count} of 11`,
+      band: range.level,
+      meaning: AUD_CARD_MEANING,
+      date: DATE,
+    });
+    assert.ok(card.meaning.includes(CLINICIAN_QUALIFIER), card.meaning);
+    assert.equal(card.meaning, AUD_CARD_MEANING);
+  }
 });
 
 test("the card carries the screening line on screen and in the PNG", async () => {
