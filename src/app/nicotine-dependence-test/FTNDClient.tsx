@@ -13,6 +13,8 @@ import {
   PRIVATE_SHARE_NOTICE,
   sharePrivateToolLink,
 } from "@/lib/privateToolSharing";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 
 
 import { FTND_QUESTIONS as QUESTIONS, FTND_RANGES as RANGES, scoreFtnd, getFtndRange } from "@/lib/ftndScoring.mjs";
@@ -192,6 +194,14 @@ export function FTNDClient({ faqData }: Props) {
               </div>
             </div>
           </div>
+
+          <ResultCard
+            toolName="FTND Nicotine Dependence Test"
+            toolPath="/nicotine-dependence-test"
+            score={`${totalScore} / 10`}
+            band={range.level}
+            meaning={firstSentence(range.description)}
+          />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h3>
