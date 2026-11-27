@@ -11,6 +11,9 @@ test("claim response keeps its reference and manual review contract", async () =
   assert.match(source, /work_email: claim\.workEmail\.toLowerCase\(\),\s*license_number: claim\.licenseNumber,/);
   assert.equal([...source.matchAll(/return Response\.json\(\{\s*error: "[^"]+" \}, \{ status: (?:400|404|415), headers \}\)/g)].length, 3);
   for (const status of [400, 404, 415]) assert.match(source, new RegExp(`status: ${status}, headers`));
+  // Claim routing must never depend on the registry license set: a listing with
+  // no license number on file still lands in manual review, never auto-decided.
+  assert.doesNotMatch(source, /registryLicenseNumbers/);
 });
 
 test("unconfigured backend exits before data operations and shows notices", async () => {
