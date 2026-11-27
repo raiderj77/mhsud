@@ -7,6 +7,7 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 
 
@@ -294,6 +295,18 @@ export function PcPtsd5Client({ faqData }: Props) {
               : "Your score of " + totalScore + " out of 5 is below the cutoff for a positive screen. This suggests that PTSD symptoms may not be a primary concern at this time. However, if you are experiencing distress or difficulty functioning after a traumatic experience, those concerns are still worth discussing with a healthcare provider."}
           </p>
         </div>
+
+        <ResultCard
+          toolName="PC-PTSD-5 Screen"
+          toolPath="/pc-ptsd-5-screening"
+          score={`${totalScore} / 5`}
+          band={isPositiveScreen ? "Positive Screen" : "Negative Screen"}
+          meaning={
+            isPositiveScreen
+              ? "Your score meets the cutoff (3 or higher) for a positive PTSD screen."
+              : "Your score is below the cutoff for a positive screen."
+          }
+        />
 
         {/* Symptom Breakdown */}
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">

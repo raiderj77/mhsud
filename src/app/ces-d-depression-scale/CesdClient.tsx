@@ -7,7 +7,9 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { firstSentence } from "@/lib/resultCard.mjs";
 
 
 /* ------------------------------------------------------------------ */
@@ -197,6 +199,14 @@ export function CesdClient({ faqData }: Props) {
           </p>
         </div>
 
+
+        <ResultCard
+          toolName="CES-D Depression Scale"
+          toolPath="/ces-d-depression-scale"
+          score={`${totalScore} / 60`}
+          band={resultState.label}
+          meaning={firstSentence(resultState.message)}
+        />
 
         {/* PHQ-9 Nudge */}
         {showPhq9Nudge && (

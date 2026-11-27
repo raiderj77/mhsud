@@ -3,6 +3,7 @@ import { ScreeningDirectoryLinks } from "@/components/ScreeningDirectoryLinks";
 import { useState, type KeyboardEvent } from "react";
 import Link from "next/link";
 import { DisclaimerGate } from "@/components/DisclaimerGate";
+import { ResultCard } from "@/components/ResultCard";
 
 const QUESTIONS = [
   {
@@ -45,6 +46,17 @@ function getResult(total: number, anxiety: number, depression: number) {
 
   return { level, anxietyFlag, depressionFlag };
 }
+
+// First sentences of the "What to do next" paragraphs below, keyed by the
+// level getResult returns, for the glanceable result card. Moderate and
+// Severe share one paragraph on the results screen, so they share its
+// first sentence here.
+const CARD_MEANING_BY_LEVEL: Record<string, string> = {
+  Minimal: "This score falls in the published minimal range.",
+  Mild: "This score falls in the published mild range.",
+  Moderate: "This score falls in a published moderate-to-severe range.",
+  Severe: "This score falls in a published moderate-to-severe range.",
+};
 
 export function PHQ4Client({ faqData }: { faqData: { question: string; answer: string }[] }) {
   const [accepted, setAccepted] = useState(false);
@@ -203,6 +215,14 @@ export function PHQ4Client({ faqData }: { faqData: { question: string; answer: s
               </div>
             </div>
           </div>
+
+          <ResultCard
+            toolName="PHQ-4 Anxiety and Depression Screen"
+            toolPath="/phq-4-anxiety-depression-screen"
+            score={`${total} / 12`}
+            band={`${result.level} Symptoms`}
+            meaning={CARD_MEANING_BY_LEVEL[result.level]}
+          />
 
           <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-5 mb-6">
             <h3 className="font-semibold text-slate-900 dark:text-white mb-3">What to do next</h3>

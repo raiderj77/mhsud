@@ -7,7 +7,9 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
+import { firstSentence } from "@/lib/resultCard.mjs";
 
 
 /* ------------------------------------------------------------------ */
@@ -195,6 +197,18 @@ export function K6Client({ faqData }: Props) {
           </p>
         </div>
 
+
+        <ResultCard
+          toolName="K6 Psychological Distress Scale"
+          toolPath="/k6-distress-scale"
+          score={`${totalScore} / 24`}
+          band={tier.label}
+          meaning={
+            tier.label === "Serious Psychological Distress"
+              ? "Your score meets the threshold for serious psychological distress."
+              : firstSentence(tier.message)
+          }
+        />
 
         {/* SPD Follow-up Recommendation */}
         {isSPD && (

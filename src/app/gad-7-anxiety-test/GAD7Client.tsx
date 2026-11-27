@@ -8,6 +8,8 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
 import { ResultDisclaimer } from "@/components/ResultDisclaimer";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
   PRIVATE_SHARE_NOTICE,
@@ -271,6 +273,14 @@ export function GAD7Client({ faqData }: Props) {
               </div>
             </div>
           </div>
+
+          <ResultCard
+            toolName="GAD-7 Anxiety Self-Check"
+            toolPath="/gad-7-anxiety-test"
+            score={`${totalScore} / 21`}
+            band={range.level}
+            meaning={firstSentence(range.description)}
+          />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h2 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h2>

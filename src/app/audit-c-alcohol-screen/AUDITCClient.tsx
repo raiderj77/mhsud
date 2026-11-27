@@ -7,6 +7,8 @@ import { DisclaimerGate } from "@/components/DisclaimerGate";
 import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import { ReflectionPrompts } from "@/components/ReflectionPrompts";
 import { ReflectionSummary } from "@/components/ReflectionSummary";
+import { ResultCard } from "@/components/ResultCard";
+import { firstSentence } from "@/lib/resultCard.mjs";
 import { REFLECTION_PROMPTS } from "@/lib/reflectionPrompts";
 import {
   PRIVATE_SHARE_COPIED_MESSAGE,
@@ -244,6 +246,14 @@ export function AUDITCClient({ faqData }: Props) {
               </div>
             </div>
           </div>
+
+          <ResultCard
+            toolName="AUDIT-C Quick Alcohol Screen"
+            toolPath="/audit-c-alcohol-screen"
+            score={`${totalScore} / 12`}
+            band={range.level}
+            meaning={firstSentence(range.description)}
+          />
 
           <div className="card p-5 sm:p-6 mb-5">
             <h3 className="font-serif text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Your Response Summary</h3>
