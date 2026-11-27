@@ -10,6 +10,7 @@ import { ToolReviewerBio } from "@/components/ToolReviewerBio";
 import {
   AUD_CRITERIA_ITEMS,
   AUD_CRITERIA_RANGES,
+  INTERVIEW_LIMIT,
   countAudCriteria,
   getAudCriteriaRange,
   hasWithdrawalFlag,
@@ -27,6 +28,7 @@ const TOOL_NAME = "Alcohol Use Disorder Criteria Self-Check";
 const TOOL_PATH = "/alcohol-use-disorder-criteria";
 const LAST_REVIEWED = "November 26, 2026";
 const WITHDRAWAL_NOTE = "You reported withdrawal symptoms. If you drink heavily, do not stop suddenly without medical guidance. Alcohol withdrawal can be medically serious. Talk to a clinician or call SAMHSA's National Helpline (1-800-662-4357) for guidance first.";
+const INTERVIEW_NOTE = "Counting criteria at home is a recognition step. A diagnosis requires a clinician's interview, and clinicians also weigh timing, context, and other conditions.";
 
 const RELATED_TOOLS = [
   { name: "Full AUDIT", description: "10-question WHO alcohol screen", href: "/audit-alcohol-test" },
@@ -159,7 +161,7 @@ export function AUDCriteriaClient({ faqData }: Props) {
               )}
               <p className={BODY}>{range.description}</p>
               <p className={`${BODY} bg-warm-50 dark:bg-warm-950/20 rounded-xl p-4`}>
-                Counting criteria at home is a recognition step. A diagnosis requires a clinician&apos;s interview, and clinicians also weigh timing, context, and other conditions.
+                {INTERVIEW_NOTE}
               </p>
               <p className={`${BODY} bg-sand-50 dark:bg-night-700 rounded-xl p-4`}>
                 <strong>What you can consider next.</strong> {range.suggestion}
@@ -180,7 +182,7 @@ export function AUDCriteriaClient({ faqData }: Props) {
             toolPath={TOOL_PATH}
             score={`${count} of 11`}
             band={range.level}
-            meaning={firstSentence(range.description)}
+            meaning={`${firstSentence(INTERVIEW_LIMIT)} ${firstSentence(INTERVIEW_NOTE)}`}
           />
 
           <section className="card p-5 sm:p-6 mb-5">
