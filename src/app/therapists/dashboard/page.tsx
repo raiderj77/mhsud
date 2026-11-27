@@ -15,7 +15,7 @@ export default async function DashboardPage() {
   if (!isProfessionalBackendConfigured()) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-8">
-        <h1 className="text-3xl font-bold">Therapist dashboard</h1>
+        <h1 className="rounded-lg bg-navy px-5 py-6 text-3xl font-bold text-white">Therapist dashboard</h1>
         <p className="mt-4">The professional dashboard opens shortly.</p>
       </div>
     );
@@ -29,14 +29,14 @@ export default async function DashboardPage() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-4 px-4 py-8">
-      <h1 className="text-3xl font-bold">Therapist dashboard</h1>
+      <h1 className="rounded-lg bg-navy px-5 py-6 text-3xl font-bold text-white">Therapist dashboard</h1>
       <SignOutButton />
       {overlays.map(overlay => {
         const listing = getTherapist(overlay.slug);
         if (!listing) return null;
         return (
           <section key={overlay.slug} className="space-y-3 rounded-lg border p-4">
-            <h2 className="text-xl font-semibold">{listing.name}, {listing.city}</h2>
+            <h2 className="rounded-md bg-navy px-4 py-3 text-xl font-semibold text-white">{listing.name}, {listing.city}</h2>
             <Link className="inline-flex min-h-[44px] items-center underline" href={`/therapists/${listing.slug}`}>View public listing</Link>
             <DashboardForm overlay={overlay} staleBefore={staleBefore} />
             <SharePanel slug={listing.slug} />

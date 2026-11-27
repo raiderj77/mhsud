@@ -56,7 +56,7 @@ function ContactCard({ profile }: { profile: PublicProfile }) {
       {profile.office_area && <p>Service area {profile.office_area}</p>}
       {profile.years_in_practice !== null && <p>Years in practice {profile.years_in_practice}</p>}
       {profile.education && <p>Education {profile.education}</p>}
-      {profile.accepting_new && <p><span className="rounded border px-2 py-1">Accepting new patients</span></p>}
+      {profile.accepting_new && <p><span className="inline-flex items-center rounded-full bg-navy px-3 py-1 text-sm font-medium text-white">Accepting new patients</span></p>}
     </section>
   );
 }
@@ -91,7 +91,13 @@ export default async function TherapistPage({ params }: Props) {
           )}
           <div><dt className="font-medium">National Provider Identifier (NPI)</dt><dd>{provider.npi}</dd></div>
         </dl>
-        <p className="mt-4 font-medium">{overlay ? "Claimed listing" : "Unclaimed listing"}</p>
+        <p className="mt-4">
+          <span className={overlay
+            ? "inline-flex items-center rounded-full bg-navy px-3 py-1 text-sm font-medium text-white"
+            : "inline-flex items-center rounded-full border border-neutral-400 px-3 py-1 text-sm font-medium"}>
+            {overlay ? "Claimed listing" : "Unclaimed listing"}
+          </span>
+        </p>
         <p className="mt-1 text-neutral-700 dark:text-neutral-300">{LICENSE_NOTE}</p>
         <p className="mt-3 text-neutral-700 dark:text-neutral-300">
           Confirm current license status before making an appointment. Contact the provider directly for availability and services.
