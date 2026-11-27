@@ -110,3 +110,116 @@ export function buildResultCardData({ toolName, toolPath, score, band, meaning, 
     fileName: `${slug}-result-card.png`,
   });
 }
+
+/* ------------------------------------------------------------------ */
+/*  PNG meaning layout: fit-to-box, never silent truncation           */
+/* ------------------------------------------------------------------ */
+//
+// The downloadable PNG draws the meaning in a fixed block: first baseline
+// at y 700, and the last baseline must stay at or above y 830 so the text
+// never reaches the screening line below it. At the full 42px size the
+// block holds three lines; a longer meaning steps the font down (never
+// below 28px) until the wrapped text fits the line capacity at that size.
+//
+// Words are never dropped. planResultCardMeaning returns every wrapped
+// line plus `fits`: whether those lines fit the block. Every real tool
+// meaning fits (pinned by tests over the tools' own source data). A
+// hypothetical meaning that fit at no size returns fits: false, so a test
+// fails loudly instead of the PNG quietly clipping words the person never
+// sees are missing.
+
+export const RESULT_CARD_MEANING_MAX_WIDTH = 936; // 1080 canvas, 72px margins
+export const RESULT_CARD_MEANING_START_SIZE = 42;
+export const RESULT_CARD_MEANING_MIN_SIZE = 28;
+export const RESULT_CARD_MEANING_FIRST_BASELINE = 700;
+export const RESULT_CARD_MEANING_LAST_BASELINE = 830;
+
+function meaningLineHeight(size) {
+  return Math.round((size * 58) / 42);
+}
+
+function meaningCapacity(size) {
+  return (
+    1 +
+    Math.floor(
+      (RESULT_CARD_MEANING_LAST_BASELINE - RESULT_CARD_MEANING_FIRST_BASELINE) /
+        meaningLineHeight(size),
+    )
+  );
+}
+
+/**
+ * @typedef {(text: string, sizePx: number) => number} ResultCardMeasure
+ * A width measurer: returns the rendered width of text at a font size.
+ */
+
+/**
+ * Greedy word wrap with no line cap. `measure(text)` returns the rendered
+ * width of a string at the caller's current font. A single word wider than
+ * maxWidth gets its own line rather than being dropped.
+ *
+ * @param {(text: string) => number} measure
+ * @param {string} text
+ * @param {number} maxWidth
+ */
+export function wrapResultCardText(measure, text, maxWidth) {
+  const words = requireText(text, "meaning").split(/\s+/);
+  const lines = [];
+  let line = "";
+  for (const word of words) {
+    const candidate = line ? `${line} ${word}` : word;
+    if (measure(candidate) <= maxWidth || !line) {
+      line = candidate;
+    } else {
+      lines.push(line);
+      line = word;
+    }
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+/**
+ * Plans how the meaning is drawn on the PNG. `measure(text, sizePx)`
+ * returns the rendered width of text at a given font size (the component
+ * supplies canvas measureText; tests supply a conservative model).
+ * Returns the largest size at which the full wrapped text fits the
+ * meaning block, the line height and lines to draw, and whether it fit.
+ *
+ * @param {ResultCardMeasure} measure
+ * @param {string} meaning
+ */
+export function planResultCardMeaning(measure, meaning) {
+  const text = requireText(meaning, "meaning");
+  for (
+    let size = RESULT_CARD_MEANING_START_SIZE;
+    size >= RESULT_CARD_MEANING_MIN_SIZE;
+    size -= 2
+  ) {
+    const lines = wrapResultCardText(
+      (t) => measure(t, size),
+      text,
+      RESULT_CARD_MEANING_MAX_WIDTH,
+    );
+    if (lines.length <= meaningCapacity(size)) {
+      return Object.freeze({
+        size,
+        lineHeight: meaningLineHeight(size),
+        lines: Object.freeze(lines),
+        fits: true,
+      });
+    }
+  }
+  const size = RESULT_CARD_MEANING_MIN_SIZE;
+  const lines = wrapResultCardText(
+    (t) => measure(t, size),
+    text,
+    RESULT_CARD_MEANING_MAX_WIDTH,
+  );
+  return Object.freeze({
+    size,
+    lineHeight: meaningLineHeight(size),
+    lines: Object.freeze(lines),
+    fits: false,
+  });
+}
