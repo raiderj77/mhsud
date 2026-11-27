@@ -84,7 +84,7 @@ export function ClaimCta({ facility }: { facility: Facility }) {
       <h2 className="text-lg font-semibold text-slate-900">Is this your program?</h2>
       <p className="mt-1 text-slate-800">
         Operators can run a free listing check on this page&rsquo;s data, claim the listing, and —
-        once a license match is verified — buy a flat-fee Listing Sprint to file corrections.
+        once a license match is verified — have Directory Care file corrections and re-check the sources each month.
         Claiming never changes how this page is ordered or shown to the public.
       </p>
       <div className="mt-3 flex flex-wrap gap-3">

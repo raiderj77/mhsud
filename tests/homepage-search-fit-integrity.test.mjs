@@ -29,6 +29,6 @@ test("homepage answer block preserves strict YMYL and privacy boundaries", async
   assert.match(home, /href="\/screening-tools"/);
   assert.match(home, /href="\/methodology"/);
   assert.match(home, /href="\/clinical-evidence"/);
-  assert.match(home, /href="\/for-professionals"/);
+  assert.match(home, /href="\/for-professionals\/screening-implementation-checklist"/);
   assert.doesNotMatch(home, /guarantee|diagnose you|clinically proven to improve/i);
 });

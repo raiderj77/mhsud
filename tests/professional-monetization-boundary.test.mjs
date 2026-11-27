@@ -5,49 +5,33 @@ import test from "node:test";
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("professional pages use a no-health-data service boundary", async () => {
-  const [service, checklist, sample] = await Promise.all([
-    read("src/app/for-professionals/page.tsx"),
-    read("src/app/for-professionals/screening-implementation-checklist/page.tsx"),
-    read("src/app/for-professionals/sample-readiness-review/page.tsx"),
-  ]);
+  const checklist = await read(
+    "src/app/for-professionals/screening-implementation-checklist/page.tsx",
+  );
 
-  for (const source of [service, checklist, sample]) {
-    assert.match(source, /patient records/i);
-    assert.match(source, /assessment answers/i);
-    assert.match(source, /scores/i);
-    assert.match(source, /not (?:a )?legal/i);
-    assert.doesNotMatch(source, /HIPAA[- ]compliant|guaranteed compliance|clinically safe/i);
-    assert.doesNotMatch(source, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
-  }
+  assert.match(checklist, /patient records/i);
+  assert.match(checklist, /assessment answers/i);
+  assert.match(checklist, /scores/i);
+  assert.match(checklist, /not (?:a )?legal/i);
+  assert.doesNotMatch(checklist, /HIPAA[- ]compliant|guaranteed compliance|clinically safe/i);
+  assert.doesNotMatch(checklist, /AdSlot|TherapyCTA|EmailCapture|gtag|googlesyndication/i);
 });
 
-test("the founding review offer is bounded, priced, and honest", async () => {
-  const [service, sample] = await Promise.all([
-    read("src/app/for-professionals/page.tsx"),
-    read("src/app/for-professionals/sample-readiness-review/page.tsx"),
-  ]);
+test("the killed readiness review routes are removed and redirect to therapist pricing", async () => {
+  await assert.rejects(read("src/app/for-professionals/page.tsx"));
+  await assert.rejects(read("src/app/for-professionals/sample-readiness-review/page.tsx"));
 
-  assert.match(service, /Founding-client offer/i);
-  assert.match(service, /\$495 fixed scope/);
-  assert.match(service, /five business days/i);
-  assert.match(service, /up to five public or fictional staging routes/i);
-  assert.match(service, /one follow-up email/i);
-  assert.match(service, /Organization and website URL/);
-  assert.match(service, /your name and role/i);
-  assert.match(service, /primary goal and desired timeline/i);
-  assert.match(service, /Best fit—and when to choose someone else/i);
-  assert.match(service, /This site does not collect payment/i);
-  assert.match(service, /payment terms, and cancellation terms are confirmed in writing/i);
-  assert.match(service, /Never email card or bank details/i);
-  assert.doesNotMatch(service, /buy now|checkout|guaranteed|certified compliant/i);
-  assert.doesNotMatch(service, /LimitedAvailability/);
-
-  assert.match(sample, /Fictional sample/i);
-  assert.match(sample, /invented/i);
-  assert.match(sample, /no patient records[\s\S]*real client information/i);
-  assert.match(sample, /Prioritized findings/i);
-  assert.match(sample, /Release gate/i);
-  assert.doesNotMatch(sample, /testimonial|case study/i);
+  const config = await read("next.config.mjs");
+  assert.ok(
+    config.includes('source: "/for-professionals", destination: "/therapists/pricing"'),
+    "the /for-professionals redirect is missing",
+  );
+  assert.ok(
+    config.includes(
+      'source: "/for-professionals/sample-readiness-review", destination: "/therapists/pricing"',
+    ),
+    "the sample-readiness-review redirect is missing",
+  );
 });
 
 test("the internal review runbook preserves the fixed no-health-data operating boundary", async () => {

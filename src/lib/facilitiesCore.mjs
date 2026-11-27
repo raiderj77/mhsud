@@ -87,7 +87,7 @@ export function computeFindings(facility, ctx) {
       `This record comes from the ${SOURCES.samhsa.label} (retrieved ${retrievedAt}). ` +
       SOURCES.samhsa.vintageNote +
       " If the program moved, changed its phone number, or changed services since the survey, the version referral sources see is out of date — and nobody notifies the program.",
-    fix: "A Listing Sprint files corrections through SAMHSA's written update channels and keeps the filed dates on record.",
+    fix: "Directory Care files corrections through SAMHSA's written update channels and keeps the filed dates on record.",
   });
 
   if (!facility.phone) {
@@ -108,7 +108,7 @@ export function computeFindings(facility, ctx) {
       title: "No website address in the federal directory record",
       detail:
         "The federal directory record for this program carries no website address, so this page cannot link to the program's site. (The directory data itself has no website field; the program's own site may still exist.)",
-      fix: "A Listing Sprint confirms the program's website and records it on the claimed page here.",
+      fix: "The program's website can be recorded on the claimed page here once the listing is claimed.",
     });
   }
 
@@ -122,7 +122,7 @@ export function computeFindings(facility, ctx) {
         detail:
           `We could not match this program to a record in the ${SOURCES.caDhcs.label} (retrieved ${retrievedAt}) by facility name and location. ` +
           "This can mean the program is licensed under a different legal name, is certified by another body, or is missing from the roster extract we hold. It is not, by itself, proof that a program is unlicensed.",
-        fix: "A Listing Sprint starts with manual license verification against DHCS records before any listing work is sold.",
+        fix: "Directory Care starts with manual license verification against DHCS records before any listing work begins.",
       });
     } else {
       findings.push({
@@ -143,7 +143,7 @@ export function computeFindings(facility, ctx) {
           detail:
             `The DHCS roster record matched to this program shows an expiration date of ${lic.licenseExpiration}, before the roster retrieval date of ${retrievedAt}. ` +
             "If the license was renewed, the roster extract and every listing built from it are carrying a stale date. If it was not renewed, the program should not be listed as currently licensed.",
-          fix: "Verify current status directly with DHCS. If renewed, a Listing Sprint prepares the correction packet for the record holder to file.",
+          fix: "Verify current status directly with DHCS. If renewed, Directory Care prepares the correction packet for the record holder to file.",
         });
       }
       if (facility.phone && lic.rosterPhone && normPhone(facility.phone) !== normPhone(lic.rosterPhone)) {
@@ -176,8 +176,8 @@ export function computeFindings(facility, ctx) {
       title: `${facility.stateName ?? facility.state} licensing roster is not yet integrated`,
       detail:
         "This check compares the federal directory record against the data sources we hold. State licensing rosters are integrated state by state; California is integrated today. " +
-        "A Listing Sprint for a program in this state includes manual license verification against the state roster before any listing work begins.",
-      fix: "Manual verification is part of the Sprint intake for states whose rosters are not yet integrated.",
+        "Directory Care for a program in this state includes manual license verification against the state roster before any listing work begins.",
+      fix: "Manual verification is part of the Directory Care intake for states whose rosters are not yet integrated.",
     });
   }
 

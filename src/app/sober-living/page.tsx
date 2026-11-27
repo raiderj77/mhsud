@@ -108,8 +108,8 @@ export default function SoberLivingPage() {
       <p className="mt-3 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         For a certified home, the listing problems are the same shape as a treatment
         program&rsquo;s: stale map profiles, wrong phone numbers, a certification listing that
-        does not match the home&rsquo;s own site. The same flat-fee service applies, priced for
-        sober living economics: a $49 Listing Sprint and $29/month Directory Care per home —
+        does not match the home&rsquo;s own site. The same service applies, priced for
+        sober living economics: $29/month Directory Care per home —
         see{" "}
         <Link className="underline" href="/facilities/pricing">
           pricing

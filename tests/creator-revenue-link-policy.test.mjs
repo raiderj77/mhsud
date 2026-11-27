@@ -12,5 +12,5 @@ test("the footer omits unrelated portfolio backlinks", async () => {
     /creatorrevenuecalculator\.com|fibertools\.app|flipmycase\.com|contractextract\.com|medicalbillreader\.com|taxbreaktools\.com|524tracker\.com|aibusinessalternative\.com/i,
   );
   assert.doesNotMatch(footer, /More Free Tools|Sister Sites/i);
-  assert.match(footer, /href: "\/for-professionals"/);
+  assert.match(footer, /href: "\/for-professionals\/screening-implementation-checklist"/);
 });

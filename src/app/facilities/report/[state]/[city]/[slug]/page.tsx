@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import { getDirectoryIndex, getFacility } from "@/lib/facilities";
 import { computeFindings } from "@/lib/facilitiesCore.mjs";
-import { FindingsList, ProvenanceNote, PurchaseCta } from "@/components/FacilityDirectory";
+import { FindingsList, ProvenanceNote } from "@/components/FacilityDirectory";
 
 interface Params {
   params: Promise<{ state: string; city: string; slug: string }>;
@@ -61,8 +61,8 @@ export default async function ReportPage({ params }: Params) {
       </h1>
       <p className="mt-2 text-slate-700 dark:text-neutral-300 dark:print:!text-slate-700">
         {facility.city}, {facility.stateName} · Snapshot generated from sources retrieved{" "}
-        {index.generatedAt} · Free preview — the paid Listing Sprint adds the filing work
-        described below. To save this report, use your browser&rsquo;s print function (Save as
+        {index.generatedAt} · Free preview — how the corrections below get filed is described
+        further down. To save this report, use your browser&rsquo;s print function (Save as
         PDF).
       </p>
 
@@ -95,12 +95,12 @@ export default async function ReportPage({ params }: Params) {
         <FindingsList findings={findings} />
       </div>
 
-      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">What a Listing Sprint does with this</h2>
+      <h2 className="mt-8 text-2xl font-semibold text-slate-900 dark:text-neutral-50 dark:print:!text-slate-900">How these corrections get filed</h2>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800">
         <li>
-          Files corrections with SAMHSA through its written update channels, with the
+          Directory Care files corrections with SAMHSA through its written update channels, with the
           operator&rsquo;s sign-off on the exact data, and keeps the filed dates on record. The
-          Sprint promises <em>filing</em>, not instant appearance — SAMHSA applies corrections on
+          Directory Care promises <em>filing</em>, not instant appearance — SAMHSA applies corrections on
           its own schedule.
         </li>
         <li>
@@ -117,16 +117,22 @@ export default async function ReportPage({ params }: Params) {
           &ldquo;ready for your call&rdquo; — never marked fixed.
         </li>
         <li>
-          One flat fee per location. The fee never depends on how many people contact the
+          Directory Care is one flat monthly fee per location. The fee never depends on how many people contact the
           program, and paying never changes the program&rsquo;s position in this directory.
         </li>
       </ul>
-      <div className="mt-6 print:hidden">
-        <PurchaseCta
-          label="Start a Listing Sprint for this location — $99"
-          priceNote="One-time flat fee for one treatment-program location, after a verified license match. See the claim page to start verification."
-        />
-      </div>
+      <p className="mt-6 text-slate-800 dark:text-neutral-100 dark:print:!text-slate-800 print:hidden">
+        Run the{" "}
+        <Link className="underline" href="/facilities/check">
+          free listing check
+        </Link>{" "}
+        for any location, and see{" "}
+        <Link className="underline" href="/facilities/pricing">
+          Directory Care
+        </Link>{" "}
+        for the monthly service that files corrections like these, keeps the claimed page
+        current, and re-checks every source each month.
+      </p>
 
       <div className="mt-10">
         <ProvenanceNote facility={facility} />

@@ -715,8 +715,8 @@ export default function HomePage() {
           </article>
           <article className="card p-6 md:col-start-2">
             <h3 className="font-serif text-xl font-bold text-neutral-900 dark:text-neutral-50">For professional teams</h3>
-            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Review a fixed-scope, no-health-data screening implementation readiness service and a fictional sample deliverable.</p>
-            <Link href="/for-professionals" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-sage-700 hover:underline dark:text-sage-400">Professional resources &rarr;</Link>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">Use the free, no-health-data screening implementation checklist and instrument rights guide for your own screening pages.</p>
+            <Link href="/for-professionals/screening-implementation-checklist" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-sage-700 hover:underline dark:text-sage-400">Professional resources &rarr;</Link>
           </article>
         </div>
       </section>
@@ -759,7 +759,7 @@ export default function HomePage() {
             <Link href="/clinical-evidence" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
               Review source evidence
             </Link>
-            <Link href="/for-professionals" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
+            <Link href="/for-professionals/screening-implementation-checklist" className="font-semibold text-sage-700 dark:text-sage-400 underline underline-offset-2">
               Professional implementation resources
             </Link>
           </nav>

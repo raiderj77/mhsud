@@ -147,6 +147,8 @@ const nextConfig = {
       { source: "/audit", destination: "/audit-alcohol-test", permanent: true },
       { source: "/depression-test", destination: "/phq-9-depression-test", permanent: true },
       { source: "/anxiety-test", destination: "/gad-7-anxiety-test", permanent: true },
+      { source: "/for-professionals", destination: "/therapists/pricing", permanent: true },
+      { source: "/for-professionals/sample-readiness-review", destination: "/therapists/pricing", permanent: true },
       ...quarantinedRedirects,
       // Next normalizes redirect objects in place, so hand it mutable copies
       // while the audited decision manifest remains immutable.
